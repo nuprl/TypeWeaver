@@ -1,3 +1,33 @@
+# Modified DeepTyper
+
+This is a modified version of DeepTyper (specifically, the `pretrained/readout.py` script) that takes a JavaScript file and outputs TypeScript.
+
+The JavaScript may need preprocessing, because of some limitations:
+
+* All declaration statements must end with `;`
+* If a function is declared as an expression (e.g. `const f = function(x) { return x; };`), it must be the only declaration in its statement.
+
+To run:
+
+    cd pretrained
+    python readout.py file.js
+
+`readout.py` will produce `file.csv` (containing the top 10 type predictions for each token) and `file.ts`.
+
+## Dependencies
+
+DeepTyper relies on older versions of software. I use [asdf](https://github.com/asdf-vm/asdf) and [direnv](https://github.com/asdf-community/asdf-direnv) to manage language versions and environment variables.
+
+* Python 3.6.15, with shared object.
+    * Installed with the [asdf python plugin](https://github.com/danhper/asdf-python): `PYTHON_CONFIGURE_OPTS="--enable-shared" asdf install python 3.6.15`.
+    * Python 2.7 and 3.5 should also work.
+* Open MPI 1.10.3, [installed from source](https://docs.microsoft.com/en-us/cognitive-toolkit/setup-cntk-on-linux#open-mpi), locally.
+    * If libcudart is too new (version 10 or above), then Open MPI needs to be patched by editing `ompi/contrib/vt/vt/vtlib/vt_cudart.c` and changing the struct member `memoryType` to `type` on lines 1878, 1879, 1885.
+* The following Python packages: `numpy`, `pygments`, `scipy`, `requests`, `cntk-gpu` (or `cntk` for the CPU-only version).
+
+Original README follows.
+
+
 # DeepTyper
 This repository contains the code and replication package for [DeepTyper: a deep learning engine recommending type annotations for JavaScript and TypeScript](http://vhellendoorn.github.io/PDF/fse2018-j2t.pdf) (2018).
 
