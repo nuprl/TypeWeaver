@@ -12,7 +12,7 @@ To run:
     cd pretrained
     python readout.py file.js
 
-`readout.py` will produce `file.csv` (containing the top 10 type predictions for each token) and `file.ts`.
+`readout.py` will produce `file.csv` (containing the top 5 type predictions for each token) and `file.ts`.
 
 ## Dependencies
 
