@@ -1,0 +1,20 @@
+This directory is a copy of `npm-nodeps`, but with TypeScript files generated
+by DeepTyper. The type inference was done with commands similar to:
+
+    # starting from the repository root
+    cd DeepTyper/pretrained
+    find ../../data/npm-nodeps-DT-output/ \
+      -type f \
+      -name "*.js" \
+      -exec python readout.py {} \;
+
+There are 8824 files total, taking up 51 MB of space. It took about 2 hours
+(with an RTX6000) to run the type inference.
+
+2500 `*.js` files were given as inputs; these are listed in `type-inf-inputs`.
+
+2467 `*.ts` files were produced; these are listed in `type-inf-outputs`.
+
+33 files resulted in an error; these are listed in `type-inf-fail`.
+
+27 error messages are recorded in `type-inf-errs`; 6 errors are unaccounted for.

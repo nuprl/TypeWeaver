@@ -1,0 +1,1379 @@
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7f0be69e0a29]                                                       + 0x7c5a29
+[0x7f0be6ba1289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7f0c6afc6741]                                                       + 0x2d7741
+[0x7f0c6f8da9e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7f0c6f960084]                                                       + 0x153084
+[0x7f0c6f96550d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0c6f95fb9a]                                                       + 0x152b9a
+[0x7f0c6f9601b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f0c6f8b2f1e]                                                       + 0xa5f1e
+[0x7f0c6f883f2b]    PyObject_Call                                      + 0x4b
+[0x7f0c6f965770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f0c6f95fb9a]                                                       + 0x152b9a
+[0x7f0c6f95ff94]                                                       + 0x152f94
+[0x7f0c6f96550d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0c6f95fb9a]                                                       + 0x152b9a
+[0x7f0c6f95ff94]                                                       + 0x152f94
+[0x7f0c6f96550d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0c6f95f193]                                                       + 0x152193
+[0x7f0c6f96015c]                                                       + 0x15315c
+[0x7f0c6f96550d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0c6f95fb9a]                                                       + 0x152b9a
+[0x7f0c6f95ff94]                                                       + 0x152f94
+[0x7f0c6f96550d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0c6f95fb9a]                                                       + 0x152b9a
+[0x7f0c6f9601b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f0c6f9601df]    PyEval_EvalCode                                    + 0x1f
+[0x7f0c6f9953d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7f0c6f99556f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7f0c6f9af8e8]    Py_Main                                            + 0xff8
+[0x55e5aa2b82b8]    main                                               + 0x178
+[0x7f0c6f6250b3]    __libc_start_main                                  + 0xf3
+[0x55e5aa2b836e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7effd9d93a29]                                                       + 0x7c5a29
+[0x7effd9f54289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7f005e379741]                                                       + 0x2d7741
+[0x7f0062c8d9e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7f0062d13084]                                                       + 0x153084
+[0x7f0062d1850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0062d12b9a]                                                       + 0x152b9a
+[0x7f0062d131b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f0062c65f1e]                                                       + 0xa5f1e
+[0x7f0062c36f2b]    PyObject_Call                                      + 0x4b
+[0x7f0062d18770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f0062d12b9a]                                                       + 0x152b9a
+[0x7f0062d12f94]                                                       + 0x152f94
+[0x7f0062d1850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0062d12b9a]                                                       + 0x152b9a
+[0x7f0062d12f94]                                                       + 0x152f94
+[0x7f0062d1850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0062d12193]                                                       + 0x152193
+[0x7f0062d1315c]                                                       + 0x15315c
+[0x7f0062d1850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0062d12b9a]                                                       + 0x152b9a
+[0x7f0062d12f94]                                                       + 0x152f94
+[0x7f0062d1850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0062d12b9a]                                                       + 0x152b9a
+[0x7f0062d131b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f0062d131df]    PyEval_EvalCode                                    + 0x1f
+[0x7f0062d483d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7f0062d4856f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7f0062d628e8]    Py_Main                                            + 0xff8
+[0x560ac0fcd2b8]    main                                               + 0x178
+[0x7f00629d80b3]    __libc_start_main                                  + 0xf3
+[0x560ac0fcd36e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7fb6f149ea29]                                                       + 0x7c5a29
+[0x7fb6f165f289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7fb6f257c741]                                                       + 0x2d7741
+[0x7fb6f6e909e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7fb6f6f16084]                                                       + 0x153084
+[0x7fb6f6f1b50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fb6f6f15b9a]                                                       + 0x152b9a
+[0x7fb6f6f161b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7fb6f6e68f1e]                                                       + 0xa5f1e
+[0x7fb6f6e39f2b]    PyObject_Call                                      + 0x4b
+[0x7fb6f6f1b770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7fb6f6f15b9a]                                                       + 0x152b9a
+[0x7fb6f6f15f94]                                                       + 0x152f94
+[0x7fb6f6f1b50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fb6f6f15b9a]                                                       + 0x152b9a
+[0x7fb6f6f15f94]                                                       + 0x152f94
+[0x7fb6f6f1b50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fb6f6f15193]                                                       + 0x152193
+[0x7fb6f6f1615c]                                                       + 0x15315c
+[0x7fb6f6f1b50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fb6f6f15b9a]                                                       + 0x152b9a
+[0x7fb6f6f15f94]                                                       + 0x152f94
+[0x7fb6f6f1b50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fb6f6f15b9a]                                                       + 0x152b9a
+[0x7fb6f6f161b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7fb6f6f161df]    PyEval_EvalCode                                    + 0x1f
+[0x7fb6f6f4b3d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7fb6f6f4b56f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7fb6f6f658e8]    Py_Main                                            + 0xff8
+[0x55ff0783a2b8]    main                                               + 0x178
+[0x7fb6f6bdb0b3]    __libc_start_main                                  + 0xf3
+[0x55ff0783a36e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7fd2e91c3a29]                                                       + 0x7c5a29
+[0x7fd2e9384289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7fd36d7a9741]                                                       + 0x2d7741
+[0x7fd3720bd9e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7fd372143084]                                                       + 0x153084
+[0x7fd37214850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fd372142b9a]                                                       + 0x152b9a
+[0x7fd3721431b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7fd372095f1e]                                                       + 0xa5f1e
+[0x7fd372066f2b]    PyObject_Call                                      + 0x4b
+[0x7fd372148770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7fd372142b9a]                                                       + 0x152b9a
+[0x7fd372142f94]                                                       + 0x152f94
+[0x7fd37214850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fd372142b9a]                                                       + 0x152b9a
+[0x7fd372142f94]                                                       + 0x152f94
+[0x7fd37214850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fd372142193]                                                       + 0x152193
+[0x7fd37214315c]                                                       + 0x15315c
+[0x7fd37214850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fd372142b9a]                                                       + 0x152b9a
+[0x7fd372142f94]                                                       + 0x152f94
+[0x7fd37214850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fd372142b9a]                                                       + 0x152b9a
+[0x7fd3721431b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7fd3721431df]    PyEval_EvalCode                                    + 0x1f
+[0x7fd3721783d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7fd37217856f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7fd3721928e8]    Py_Main                                            + 0xff8
+[0x55c42fe072b8]    main                                               + 0x178
+[0x7fd371e080b3]    __libc_start_main                                  + 0xf3
+[0x55c42fe0736e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7f78f8475a29]                                                       + 0x7c5a29
+[0x7f78f8636289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7f797ca5b741]                                                       + 0x2d7741
+[0x7f798136f9e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7f79813f5084]                                                       + 0x153084
+[0x7f79813fa50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f79813f4b9a]                                                       + 0x152b9a
+[0x7f79813f51b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f7981347f1e]                                                       + 0xa5f1e
+[0x7f7981318f2b]    PyObject_Call                                      + 0x4b
+[0x7f79813fa770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f79813f4b9a]                                                       + 0x152b9a
+[0x7f79813f4f94]                                                       + 0x152f94
+[0x7f79813fa50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f79813f4b9a]                                                       + 0x152b9a
+[0x7f79813f4f94]                                                       + 0x152f94
+[0x7f79813fa50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f79813f4193]                                                       + 0x152193
+[0x7f79813f515c]                                                       + 0x15315c
+[0x7f79813fa50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f79813f4b9a]                                                       + 0x152b9a
+[0x7f79813f4f94]                                                       + 0x152f94
+[0x7f79813fa50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f79813f4b9a]                                                       + 0x152b9a
+[0x7f79813f51b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f79813f51df]    PyEval_EvalCode                                    + 0x1f
+[0x7f798142a3d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7f798142a56f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7f79814448e8]    Py_Main                                            + 0xff8
+[0x565384af32b8]    main                                               + 0x178
+[0x7f79810ba0b3]    __libc_start_main                                  + 0xf3
+[0x565384af336e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7f227814ea29]                                                       + 0x7c5a29
+[0x7f227830f289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7f22fc734741]                                                       + 0x2d7741
+[0x7f23010489e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7f23010ce084]                                                       + 0x153084
+[0x7f23010d350d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f23010cdb9a]                                                       + 0x152b9a
+[0x7f23010ce1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f2301020f1e]                                                       + 0xa5f1e
+[0x7f2300ff1f2b]    PyObject_Call                                      + 0x4b
+[0x7f23010d3770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f23010cdb9a]                                                       + 0x152b9a
+[0x7f23010cdf94]                                                       + 0x152f94
+[0x7f23010d350d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f23010cdb9a]                                                       + 0x152b9a
+[0x7f23010cdf94]                                                       + 0x152f94
+[0x7f23010d350d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f23010cd193]                                                       + 0x152193
+[0x7f23010ce15c]                                                       + 0x15315c
+[0x7f23010d350d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f23010cdb9a]                                                       + 0x152b9a
+[0x7f23010cdf94]                                                       + 0x152f94
+[0x7f23010d350d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f23010cdb9a]                                                       + 0x152b9a
+[0x7f23010ce1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f23010ce1df]    PyEval_EvalCode                                    + 0x1f
+[0x7f23011033d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7f230110356f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7f230111d8e8]    Py_Main                                            + 0xff8
+[0x561cd21db2b8]    main                                               + 0x178
+[0x7f2300d930b3]    __libc_start_main                                  + 0xf3
+[0x561cd21db36e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7fa3364caa29]                                                       + 0x7c5a29
+[0x7fa33668b289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7fa3baab0741]                                                       + 0x2d7741
+[0x7fa3bf3c49e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7fa3bf44a084]                                                       + 0x153084
+[0x7fa3bf44f50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fa3bf449b9a]                                                       + 0x152b9a
+[0x7fa3bf44a1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7fa3bf39cf1e]                                                       + 0xa5f1e
+[0x7fa3bf36df2b]    PyObject_Call                                      + 0x4b
+[0x7fa3bf44f770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7fa3bf449b9a]                                                       + 0x152b9a
+[0x7fa3bf449f94]                                                       + 0x152f94
+[0x7fa3bf44f50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fa3bf449b9a]                                                       + 0x152b9a
+[0x7fa3bf449f94]                                                       + 0x152f94
+[0x7fa3bf44f50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fa3bf449193]                                                       + 0x152193
+[0x7fa3bf44a15c]                                                       + 0x15315c
+[0x7fa3bf44f50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fa3bf449b9a]                                                       + 0x152b9a
+[0x7fa3bf449f94]                                                       + 0x152f94
+[0x7fa3bf44f50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fa3bf449b9a]                                                       + 0x152b9a
+[0x7fa3bf44a1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7fa3bf44a1df]    PyEval_EvalCode                                    + 0x1f
+[0x7fa3bf47f3d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7fa3bf47f56f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7fa3bf4998e8]    Py_Main                                            + 0xff8
+[0x5626eab5b2b8]    main                                               + 0x178
+[0x7fa3bf10f0b3]    __libc_start_main                                  + 0xf3
+[0x5626eab5b36e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7ffaf700ca29]                                                       + 0x7c5a29
+[0x7ffaf71cd289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7ffaf80ea741]                                                       + 0x2d7741
+[0x7ffafc9fe9e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7ffafca84084]                                                       + 0x153084
+[0x7ffafca8950d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7ffafca83b9a]                                                       + 0x152b9a
+[0x7ffafca841b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7ffafc9d6f1e]                                                       + 0xa5f1e
+[0x7ffafc9a7f2b]    PyObject_Call                                      + 0x4b
+[0x7ffafca89770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7ffafca83b9a]                                                       + 0x152b9a
+[0x7ffafca83f94]                                                       + 0x152f94
+[0x7ffafca8950d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7ffafca83b9a]                                                       + 0x152b9a
+[0x7ffafca83f94]                                                       + 0x152f94
+[0x7ffafca8950d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7ffafca83193]                                                       + 0x152193
+[0x7ffafca8415c]                                                       + 0x15315c
+[0x7ffafca8950d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7ffafca83b9a]                                                       + 0x152b9a
+[0x7ffafca83f94]                                                       + 0x152f94
+[0x7ffafca8950d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7ffafca83b9a]                                                       + 0x152b9a
+[0x7ffafca841b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7ffafca841df]    PyEval_EvalCode                                    + 0x1f
+[0x7ffafcab93d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7ffafcab956f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7ffafcad38e8]    Py_Main                                            + 0xff8
+[0x5648dea142b8]    main                                               + 0x178
+[0x7ffafc7490b3]    __libc_start_main                                  + 0xf3
+[0x5648dea1436e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7f38756f1a29]                                                       + 0x7c5a29
+[0x7f38758b2289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7f38767cf741]                                                       + 0x2d7741
+[0x7f387b0e39e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7f387b169084]                                                       + 0x153084
+[0x7f387b16e50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f387b168b9a]                                                       + 0x152b9a
+[0x7f387b1691b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f387b0bbf1e]                                                       + 0xa5f1e
+[0x7f387b08cf2b]    PyObject_Call                                      + 0x4b
+[0x7f387b16e770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f387b168b9a]                                                       + 0x152b9a
+[0x7f387b168f94]                                                       + 0x152f94
+[0x7f387b16e50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f387b168b9a]                                                       + 0x152b9a
+[0x7f387b168f94]                                                       + 0x152f94
+[0x7f387b16e50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f387b168193]                                                       + 0x152193
+[0x7f387b16915c]                                                       + 0x15315c
+[0x7f387b16e50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f387b168b9a]                                                       + 0x152b9a
+[0x7f387b168f94]                                                       + 0x152f94
+[0x7f387b16e50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f387b168b9a]                                                       + 0x152b9a
+[0x7f387b1691b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f387b1691df]    PyEval_EvalCode                                    + 0x1f
+[0x7f387b19e3d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7f387b19e56f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7f387b1b88e8]    Py_Main                                            + 0xff8
+[0x56069c3f72b8]    main                                               + 0x178
+[0x7f387ae2e0b3]    __libc_start_main                                  + 0xf3
+[0x56069c3f736e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Invalid sparse CSC format data specified for construction of NDArrayView with shape '[0 x 40195]'; either one of the specified buffers is null or the count (0) of non-zero values is invalid.'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 199, in run_seq
+    mb = sIn.next_minibatch(N)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 457, in create
+    for sample in data]
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 457, in <listcomp>
+    for sample in data]
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 171, in from_data
+    ndav = NDArrayView.from_csr(data, device, borrow=borrow)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 141, in from_csr
+    read_only, borrow)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/cntk_py.py", line 1140, in __init__
+    this = _cntk_py.new_NDArrayView(*args)
+ValueError: Invalid sparse CSC format data specified for construction of NDArrayView with shape '[0 x 40195]'; either one of the specified buffers is null or the count (0) of non-zero values is invalid.
+
+[CALL STACK]
+[0x7f03e0f53a29]                                                       + 0x7c5a29
+[0x7f03e10d9d45]    CNTK::NDArrayView::  NDArrayView  (CNTK::DataType,  CNTK::NDShape const&,  int const*,  int const*,  void const*,  unsigned long,  CNTK::DeviceDescriptor const&,  bool) + 0xf5
+[0x7f046539d3a8]                                                       + 0x13b3a8
+[0x7f046539f065]                                                       + 0x13d065
+[0x7f0469e4dbd9]    PyCFunction_Call                                   + 0xc9
+[0x7f0469eda6e2]    _PyEval_EvalFrameDefault                           + 0x6f42
+[0x7f0469ed2b9a]                                                       + 0x152b9a
+[0x7f0469edbaa9]    _PyFunction_FastCallDict                           + 0x1f9
+[0x7f0469df7151]    _PyObject_FastCallDict                             + 0x131
+[0x7f0469df72a5]    _PyObject_Call_Prepend                             + 0xf5
+[0x7f0469df6f2b]    PyObject_Call                                      + 0x4b
+[0x7f0469e68d7f]                                                       + 0xe8d7f
+[0x7f0469e64149]                                                       + 0xe4149
+[0x7f0469df70ad]    _PyObject_FastCallDict                             + 0x8d
+[0x7f0469ed2d78]                                                       + 0x152d78
+[0x7f0469ed850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0469ed2b9a]                                                       + 0x152b9a
+[0x7f0469ed31b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f0469e25f1e]                                                       + 0xa5f1e
+[0x7f0469df6f2b]    PyObject_Call                                      + 0x4b
+[0x7f0469ed8770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f0469ed2b9a]                                                       + 0x152b9a
+[0x7f0469ed2f94]                                                       + 0x152f94
+[0x7f0469ed8867]    _PyEval_EvalFrameDefault                           + 0x50c7
+[0x7f0469ed2b9a]                                                       + 0x152b9a
+[0x7f0469ed31b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f0469e25f1e]                                                       + 0xa5f1e
+[0x7f0469df6f2b]    PyObject_Call                                      + 0x4b
+[0x7f0469ed8770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f0469ed2b9a]                                                       + 0x152b9a
+[0x7f0469ed2f94]                                                       + 0x152f94
+[0x7f0469ed8867]    _PyEval_EvalFrameDefault                           + 0x50c7
+[0x7f0469ed2b9a]                                                       + 0x152b9a
+[0x7f0469ed2f94]                                                       + 0x152f94
+[0x7f0469ed850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0469ed2b9a]                                                       + 0x152b9a
+[0x7f0469ed31b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f0469e25f1e]                                                       + 0xa5f1e
+[0x7f0469df6f2b]    PyObject_Call                                      + 0x4b
+[0x7f0469ed8770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f0469ed2b9a]                                                       + 0x152b9a
+[0x7f0469ed2f94]                                                       + 0x152f94
+[0x7f0469ed850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0469ed2b9a]                                                       + 0x152b9a
+[0x7f0469ed2f94]                                                       + 0x152f94
+[0x7f0469ed850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0469ed2b9a]                                                       + 0x152b9a
+[0x7f0469ed2f94]                                                       + 0x152f94
+[0x7f0469ed850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0469ed2b9a]                                                       + 0x152b9a
+[0x7f0469ed31b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f0469ed31df]    PyEval_EvalCode                                    + 0x1f
+[0x7f0469f083d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7f0469f0856f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7f0469f228e8]    Py_Main                                            + 0xff8
+[0x55f1487c52b8]    main                                               + 0x178
+[0x7f0469b980b3]    __libc_start_main                                  + 0xf3
+[0x55f1487c536e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Invalid sparse CSC format data specified for construction of NDArrayView with shape '[0 x 40195]'; either one of the specified buffers is null or the count (0) of non-zero values is invalid.'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 199, in run_seq
+    mb = sIn.next_minibatch(N)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 457, in create
+    for sample in data]
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 457, in <listcomp>
+    for sample in data]
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 171, in from_data
+    ndav = NDArrayView.from_csr(data, device, borrow=borrow)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 141, in from_csr
+    read_only, borrow)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/cntk_py.py", line 1140, in __init__
+    this = _cntk_py.new_NDArrayView(*args)
+ValueError: Invalid sparse CSC format data specified for construction of NDArrayView with shape '[0 x 40195]'; either one of the specified buffers is null or the count (0) of non-zero values is invalid.
+
+[CALL STACK]
+[0x7f71c0933a29]                                                       + 0x7c5a29
+[0x7f71c0ab9d45]    CNTK::NDArrayView::  NDArrayView  (CNTK::DataType,  CNTK::NDShape const&,  int const*,  int const*,  void const*,  unsigned long,  CNTK::DeviceDescriptor const&,  bool) + 0xf5
+[0x7f7244d7d3a8]                                                       + 0x13b3a8
+[0x7f7244d7f065]                                                       + 0x13d065
+[0x7f724982dbd9]    PyCFunction_Call                                   + 0xc9
+[0x7f72498ba6e2]    _PyEval_EvalFrameDefault                           + 0x6f42
+[0x7f72498b2b9a]                                                       + 0x152b9a
+[0x7f72498bbaa9]    _PyFunction_FastCallDict                           + 0x1f9
+[0x7f72497d7151]    _PyObject_FastCallDict                             + 0x131
+[0x7f72497d72a5]    _PyObject_Call_Prepend                             + 0xf5
+[0x7f72497d6f2b]    PyObject_Call                                      + 0x4b
+[0x7f7249848d7f]                                                       + 0xe8d7f
+[0x7f7249844149]                                                       + 0xe4149
+[0x7f72497d70ad]    _PyObject_FastCallDict                             + 0x8d
+[0x7f72498b2d78]                                                       + 0x152d78
+[0x7f72498b850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f72498b2b9a]                                                       + 0x152b9a
+[0x7f72498b31b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f7249805f1e]                                                       + 0xa5f1e
+[0x7f72497d6f2b]    PyObject_Call                                      + 0x4b
+[0x7f72498b8770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f72498b2b9a]                                                       + 0x152b9a
+[0x7f72498b2f94]                                                       + 0x152f94
+[0x7f72498b8867]    _PyEval_EvalFrameDefault                           + 0x50c7
+[0x7f72498b2b9a]                                                       + 0x152b9a
+[0x7f72498b31b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f7249805f1e]                                                       + 0xa5f1e
+[0x7f72497d6f2b]    PyObject_Call                                      + 0x4b
+[0x7f72498b8770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f72498b2b9a]                                                       + 0x152b9a
+[0x7f72498b2f94]                                                       + 0x152f94
+[0x7f72498b8867]    _PyEval_EvalFrameDefault                           + 0x50c7
+[0x7f72498b2b9a]                                                       + 0x152b9a
+[0x7f72498b2f94]                                                       + 0x152f94
+[0x7f72498b850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f72498b2b9a]                                                       + 0x152b9a
+[0x7f72498b31b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f7249805f1e]                                                       + 0xa5f1e
+[0x7f72497d6f2b]    PyObject_Call                                      + 0x4b
+[0x7f72498b8770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f72498b2b9a]                                                       + 0x152b9a
+[0x7f72498b2f94]                                                       + 0x152f94
+[0x7f72498b850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f72498b2b9a]                                                       + 0x152b9a
+[0x7f72498b2f94]                                                       + 0x152f94
+[0x7f72498b850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f72498b2b9a]                                                       + 0x152b9a
+[0x7f72498b2f94]                                                       + 0x152f94
+[0x7f72498b850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f72498b2b9a]                                                       + 0x152b9a
+[0x7f72498b31b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f72498b31df]    PyEval_EvalCode                                    + 0x1f
+[0x7f72498e83d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7f72498e856f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7f72499028e8]    Py_Main                                            + 0xff8
+[0x561b9cce82b8]    main                                               + 0x178
+[0x7f72495780b3]    __libc_start_main                                  + 0xf3
+[0x561b9cce836e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7f2eaee01a29]                                                       + 0x7c5a29
+[0x7f2eaefc2289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7f2f333e7741]                                                       + 0x2d7741
+[0x7f2f37cfb9e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7f2f37d81084]                                                       + 0x153084
+[0x7f2f37d8650d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f2f37d80b9a]                                                       + 0x152b9a
+[0x7f2f37d811b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f2f37cd3f1e]                                                       + 0xa5f1e
+[0x7f2f37ca4f2b]    PyObject_Call                                      + 0x4b
+[0x7f2f37d86770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f2f37d80b9a]                                                       + 0x152b9a
+[0x7f2f37d80f94]                                                       + 0x152f94
+[0x7f2f37d8650d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f2f37d80b9a]                                                       + 0x152b9a
+[0x7f2f37d80f94]                                                       + 0x152f94
+[0x7f2f37d8650d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f2f37d80193]                                                       + 0x152193
+[0x7f2f37d8115c]                                                       + 0x15315c
+[0x7f2f37d8650d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f2f37d80b9a]                                                       + 0x152b9a
+[0x7f2f37d80f94]                                                       + 0x152f94
+[0x7f2f37d8650d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f2f37d80b9a]                                                       + 0x152b9a
+[0x7f2f37d811b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f2f37d811df]    PyEval_EvalCode                                    + 0x1f
+[0x7f2f37db63d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7f2f37db656f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7f2f37dd08e8]    Py_Main                                            + 0xff8
+[0x5632914e22b8]    main                                               + 0x178
+[0x7f2f37a460b3]    __libc_start_main                                  + 0xf3
+[0x5632914e236e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7f55a8cdda29]                                                       + 0x7c5a29
+[0x7f55a8e9e289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7f562d2c3741]                                                       + 0x2d7741
+[0x7f5631bd79e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7f5631c5d084]                                                       + 0x153084
+[0x7f5631c6250d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f5631c5cb9a]                                                       + 0x152b9a
+[0x7f5631c5d1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f5631baff1e]                                                       + 0xa5f1e
+[0x7f5631b80f2b]    PyObject_Call                                      + 0x4b
+[0x7f5631c62770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f5631c5cb9a]                                                       + 0x152b9a
+[0x7f5631c5cf94]                                                       + 0x152f94
+[0x7f5631c6250d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f5631c5cb9a]                                                       + 0x152b9a
+[0x7f5631c5cf94]                                                       + 0x152f94
+[0x7f5631c6250d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f5631c5c193]                                                       + 0x152193
+[0x7f5631c5d15c]                                                       + 0x15315c
+[0x7f5631c6250d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f5631c5cb9a]                                                       + 0x152b9a
+[0x7f5631c5cf94]                                                       + 0x152f94
+[0x7f5631c6250d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f5631c5cb9a]                                                       + 0x152b9a
+[0x7f5631c5d1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f5631c5d1df]    PyEval_EvalCode                                    + 0x1f
+[0x7f5631c923d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7f5631c9256f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7f5631cac8e8]    Py_Main                                            + 0xff8
+[0x55e88da592b8]    main                                               + 0x178
+[0x7f56319220b3]    __libc_start_main                                  + 0xf3
+[0x55e88da5936e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7fcc3ef18a29]                                                       + 0x7c5a29
+[0x7fcc3f0d9289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7fccc34fe741]                                                       + 0x2d7741
+[0x7fccc7e129e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7fccc7e98084]                                                       + 0x153084
+[0x7fccc7e9d50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fccc7e97b9a]                                                       + 0x152b9a
+[0x7fccc7e981b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7fccc7deaf1e]                                                       + 0xa5f1e
+[0x7fccc7dbbf2b]    PyObject_Call                                      + 0x4b
+[0x7fccc7e9d770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7fccc7e97b9a]                                                       + 0x152b9a
+[0x7fccc7e97f94]                                                       + 0x152f94
+[0x7fccc7e9d50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fccc7e97b9a]                                                       + 0x152b9a
+[0x7fccc7e97f94]                                                       + 0x152f94
+[0x7fccc7e9d50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fccc7e97193]                                                       + 0x152193
+[0x7fccc7e9815c]                                                       + 0x15315c
+[0x7fccc7e9d50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fccc7e97b9a]                                                       + 0x152b9a
+[0x7fccc7e97f94]                                                       + 0x152f94
+[0x7fccc7e9d50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fccc7e97b9a]                                                       + 0x152b9a
+[0x7fccc7e981b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7fccc7e981df]    PyEval_EvalCode                                    + 0x1f
+[0x7fccc7ecd3d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7fccc7ecd56f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7fccc7ee78e8]    Py_Main                                            + 0xff8
+[0x56376c2162b8]    main                                               + 0x178
+[0x7fccc7b5d0b3]    __libc_start_main                                  + 0xf3
+[0x56376c21636e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7f4cf12c4a29]                                                       + 0x7c5a29
+[0x7f4cf1485289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7f4cf23a2741]                                                       + 0x2d7741
+[0x7f4cf6cb69e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7f4cf6d3c084]                                                       + 0x153084
+[0x7f4cf6d4150d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f4cf6d3bb9a]                                                       + 0x152b9a
+[0x7f4cf6d3c1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f4cf6c8ef1e]                                                       + 0xa5f1e
+[0x7f4cf6c5ff2b]    PyObject_Call                                      + 0x4b
+[0x7f4cf6d41770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f4cf6d3bb9a]                                                       + 0x152b9a
+[0x7f4cf6d3bf94]                                                       + 0x152f94
+[0x7f4cf6d4150d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f4cf6d3bb9a]                                                       + 0x152b9a
+[0x7f4cf6d3bf94]                                                       + 0x152f94
+[0x7f4cf6d4150d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f4cf6d3b193]                                                       + 0x152193
+[0x7f4cf6d3c15c]                                                       + 0x15315c
+[0x7f4cf6d4150d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f4cf6d3bb9a]                                                       + 0x152b9a
+[0x7f4cf6d3bf94]                                                       + 0x152f94
+[0x7f4cf6d4150d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f4cf6d3bb9a]                                                       + 0x152b9a
+[0x7f4cf6d3c1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f4cf6d3c1df]    PyEval_EvalCode                                    + 0x1f
+[0x7f4cf6d713d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7f4cf6d7156f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7f4cf6d8b8e8]    Py_Main                                            + 0xff8
+[0x5570356352b8]    main                                               + 0x178
+[0x7f4cf6a010b3]    __libc_start_main                                  + 0xf3
+[0x55703563536e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7f0d8e0b7a29]                                                       + 0x7c5a29
+[0x7f0d8e278289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7f0e1269d741]                                                       + 0x2d7741
+[0x7f0e16fb19e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7f0e17037084]                                                       + 0x153084
+[0x7f0e1703c50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0e17036b9a]                                                       + 0x152b9a
+[0x7f0e170371b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f0e16f89f1e]                                                       + 0xa5f1e
+[0x7f0e16f5af2b]    PyObject_Call                                      + 0x4b
+[0x7f0e1703c770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f0e17036b9a]                                                       + 0x152b9a
+[0x7f0e17036f94]                                                       + 0x152f94
+[0x7f0e1703c50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0e17036b9a]                                                       + 0x152b9a
+[0x7f0e17036f94]                                                       + 0x152f94
+[0x7f0e1703c50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0e17036193]                                                       + 0x152193
+[0x7f0e1703715c]                                                       + 0x15315c
+[0x7f0e1703c50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0e17036b9a]                                                       + 0x152b9a
+[0x7f0e17036f94]                                                       + 0x152f94
+[0x7f0e1703c50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0e17036b9a]                                                       + 0x152b9a
+[0x7f0e170371b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f0e170371df]    PyEval_EvalCode                                    + 0x1f
+[0x7f0e1706c3d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7f0e1706c56f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7f0e170868e8]    Py_Main                                            + 0xff8
+[0x55ed05f4a2b8]    main                                               + 0x178
+[0x7f0e16cfc0b3]    __libc_start_main                                  + 0xf3
+[0x55ed05f4a36e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7ff2ec324a29]                                                       + 0x7c5a29
+[0x7ff2ec4e5289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7ff2ed402741]                                                       + 0x2d7741
+[0x7ff2f1d169e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7ff2f1d9c084]                                                       + 0x153084
+[0x7ff2f1da150d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7ff2f1d9bb9a]                                                       + 0x152b9a
+[0x7ff2f1d9c1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7ff2f1ceef1e]                                                       + 0xa5f1e
+[0x7ff2f1cbff2b]    PyObject_Call                                      + 0x4b
+[0x7ff2f1da1770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7ff2f1d9bb9a]                                                       + 0x152b9a
+[0x7ff2f1d9bf94]                                                       + 0x152f94
+[0x7ff2f1da150d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7ff2f1d9bb9a]                                                       + 0x152b9a
+[0x7ff2f1d9bf94]                                                       + 0x152f94
+[0x7ff2f1da150d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7ff2f1d9b193]                                                       + 0x152193
+[0x7ff2f1d9c15c]                                                       + 0x15315c
+[0x7ff2f1da150d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7ff2f1d9bb9a]                                                       + 0x152b9a
+[0x7ff2f1d9bf94]                                                       + 0x152f94
+[0x7ff2f1da150d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7ff2f1d9bb9a]                                                       + 0x152b9a
+[0x7ff2f1d9c1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7ff2f1d9c1df]    PyEval_EvalCode                                    + 0x1f
+[0x7ff2f1dd13d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7ff2f1dd156f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7ff2f1deb8e8]    Py_Main                                            + 0xff8
+[0x55bc47b652b8]    main                                               + 0x178
+[0x7ff2f1a610b3]    __libc_start_main                                  + 0xf3
+[0x55bc47b6536e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7feb2c8dba29]                                                       + 0x7c5a29
+[0x7feb2ca9c289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7febb0ec1741]                                                       + 0x2d7741
+[0x7febb57d59e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7febb585b084]                                                       + 0x153084
+[0x7febb586050d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7febb585ab9a]                                                       + 0x152b9a
+[0x7febb585b1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7febb57adf1e]                                                       + 0xa5f1e
+[0x7febb577ef2b]    PyObject_Call                                      + 0x4b
+[0x7febb5860770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7febb585ab9a]                                                       + 0x152b9a
+[0x7febb585af94]                                                       + 0x152f94
+[0x7febb586050d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7febb585ab9a]                                                       + 0x152b9a
+[0x7febb585af94]                                                       + 0x152f94
+[0x7febb586050d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7febb585a193]                                                       + 0x152193
+[0x7febb585b15c]                                                       + 0x15315c
+[0x7febb586050d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7febb585ab9a]                                                       + 0x152b9a
+[0x7febb585af94]                                                       + 0x152f94
+[0x7febb586050d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7febb585ab9a]                                                       + 0x152b9a
+[0x7febb585b1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7febb585b1df]    PyEval_EvalCode                                    + 0x1f
+[0x7febb58903d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7febb589056f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7febb58aa8e8]    Py_Main                                            + 0xff8
+[0x55e7268902b8]    main                                               + 0x178
+[0x7febb55200b3]    __libc_start_main                                  + 0xf3
+[0x55e72689036e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7fedb5ae4a29]                                                       + 0x7c5a29
+[0x7fedb5ca5289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7fee3a0ca741]                                                       + 0x2d7741
+[0x7fee3e9de9e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7fee3ea64084]                                                       + 0x153084
+[0x7fee3ea6950d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fee3ea63b9a]                                                       + 0x152b9a
+[0x7fee3ea641b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7fee3e9b6f1e]                                                       + 0xa5f1e
+[0x7fee3e987f2b]    PyObject_Call                                      + 0x4b
+[0x7fee3ea69770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7fee3ea63b9a]                                                       + 0x152b9a
+[0x7fee3ea63f94]                                                       + 0x152f94
+[0x7fee3ea6950d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fee3ea63b9a]                                                       + 0x152b9a
+[0x7fee3ea63f94]                                                       + 0x152f94
+[0x7fee3ea6950d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fee3ea63193]                                                       + 0x152193
+[0x7fee3ea6415c]                                                       + 0x15315c
+[0x7fee3ea6950d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fee3ea63b9a]                                                       + 0x152b9a
+[0x7fee3ea63f94]                                                       + 0x152f94
+[0x7fee3ea6950d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fee3ea63b9a]                                                       + 0x152b9a
+[0x7fee3ea641b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7fee3ea641df]    PyEval_EvalCode                                    + 0x1f
+[0x7fee3ea993d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7fee3ea9956f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7fee3eab38e8]    Py_Main                                            + 0xff8
+[0x55c44fe5a2b8]    main                                               + 0x178
+[0x7fee3e7290b3]    __libc_start_main                                  + 0xf3
+[0x55c44fe5a36e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7f43b6dbda29]                                                       + 0x7c5a29
+[0x7f43b6f7e289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7f443b3a3741]                                                       + 0x2d7741
+[0x7f443fcb79e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7f443fd3d084]                                                       + 0x153084
+[0x7f443fd4250d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f443fd3cb9a]                                                       + 0x152b9a
+[0x7f443fd3d1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f443fc8ff1e]                                                       + 0xa5f1e
+[0x7f443fc60f2b]    PyObject_Call                                      + 0x4b
+[0x7f443fd42770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f443fd3cb9a]                                                       + 0x152b9a
+[0x7f443fd3cf94]                                                       + 0x152f94
+[0x7f443fd4250d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f443fd3cb9a]                                                       + 0x152b9a
+[0x7f443fd3cf94]                                                       + 0x152f94
+[0x7f443fd4250d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f443fd3c193]                                                       + 0x152193
+[0x7f443fd3d15c]                                                       + 0x15315c
+[0x7f443fd4250d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f443fd3cb9a]                                                       + 0x152b9a
+[0x7f443fd3cf94]                                                       + 0x152f94
+[0x7f443fd4250d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f443fd3cb9a]                                                       + 0x152b9a
+[0x7f443fd3d1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f443fd3d1df]    PyEval_EvalCode                                    + 0x1f
+[0x7f443fd723d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7f443fd7256f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7f443fd8c8e8]    Py_Main                                            + 0xff8
+[0x561de6f672b8]    main                                               + 0x178
+[0x7f443fa020b3]    __libc_start_main                                  + 0xf3
+[0x561de6f6736e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7eff77c33a29]                                                       + 0x7c5a29
+[0x7eff77df4289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7efffc219741]                                                       + 0x2d7741
+[0x7f0000b2d9e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7f0000bb3084]                                                       + 0x153084
+[0x7f0000bb850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0000bb2b9a]                                                       + 0x152b9a
+[0x7f0000bb31b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f0000b05f1e]                                                       + 0xa5f1e
+[0x7f0000ad6f2b]    PyObject_Call                                      + 0x4b
+[0x7f0000bb8770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f0000bb2b9a]                                                       + 0x152b9a
+[0x7f0000bb2f94]                                                       + 0x152f94
+[0x7f0000bb850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0000bb2b9a]                                                       + 0x152b9a
+[0x7f0000bb2f94]                                                       + 0x152f94
+[0x7f0000bb850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0000bb2193]                                                       + 0x152193
+[0x7f0000bb315c]                                                       + 0x15315c
+[0x7f0000bb850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0000bb2b9a]                                                       + 0x152b9a
+[0x7f0000bb2f94]                                                       + 0x152f94
+[0x7f0000bb850d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f0000bb2b9a]                                                       + 0x152b9a
+[0x7f0000bb31b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f0000bb31df]    PyEval_EvalCode                                    + 0x1f
+[0x7f0000be83d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7f0000be856f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7f0000c028e8]    Py_Main                                            + 0xff8
+[0x563f0a9bd2b8]    main                                               + 0x178
+[0x7f00008780b3]    __libc_start_main                                  + 0xf3
+[0x563f0a9bd36e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7f76e8b2ba29]                                                       + 0x7c5a29
+[0x7f76e8cec289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7f776d111741]                                                       + 0x2d7741
+[0x7f7771a259e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7f7771aab084]                                                       + 0x153084
+[0x7f7771ab050d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f7771aaab9a]                                                       + 0x152b9a
+[0x7f7771aab1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f77719fdf1e]                                                       + 0xa5f1e
+[0x7f77719cef2b]    PyObject_Call                                      + 0x4b
+[0x7f7771ab0770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f7771aaab9a]                                                       + 0x152b9a
+[0x7f7771aaaf94]                                                       + 0x152f94
+[0x7f7771ab050d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f7771aaab9a]                                                       + 0x152b9a
+[0x7f7771aaaf94]                                                       + 0x152f94
+[0x7f7771ab050d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f7771aaa193]                                                       + 0x152193
+[0x7f7771aab15c]                                                       + 0x15315c
+[0x7f7771ab050d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f7771aaab9a]                                                       + 0x152b9a
+[0x7f7771aaaf94]                                                       + 0x152f94
+[0x7f7771ab050d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f7771aaab9a]                                                       + 0x152b9a
+[0x7f7771aab1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f7771aab1df]    PyEval_EvalCode                                    + 0x1f
+[0x7f7771ae03d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7f7771ae056f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7f7771afa8e8]    Py_Main                                            + 0xff8
+[0x55920f3b22b8]    main                                               + 0x178
+[0x7f77717700b3]    __libc_start_main                                  + 0xf3
+[0x55920f3b236e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7f456bca9a29]                                                       + 0x7c5a29
+[0x7f456be6a289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7f45f028f741]                                                       + 0x2d7741
+[0x7f45f4ba39e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7f45f4c29084]                                                       + 0x153084
+[0x7f45f4c2e50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f45f4c28b9a]                                                       + 0x152b9a
+[0x7f45f4c291b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f45f4b7bf1e]                                                       + 0xa5f1e
+[0x7f45f4b4cf2b]    PyObject_Call                                      + 0x4b
+[0x7f45f4c2e770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f45f4c28b9a]                                                       + 0x152b9a
+[0x7f45f4c28f94]                                                       + 0x152f94
+[0x7f45f4c2e50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f45f4c28b9a]                                                       + 0x152b9a
+[0x7f45f4c28f94]                                                       + 0x152f94
+[0x7f45f4c2e50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f45f4c28193]                                                       + 0x152193
+[0x7f45f4c2915c]                                                       + 0x15315c
+[0x7f45f4c2e50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f45f4c28b9a]                                                       + 0x152b9a
+[0x7f45f4c28f94]                                                       + 0x152f94
+[0x7f45f4c2e50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f45f4c28b9a]                                                       + 0x152b9a
+[0x7f45f4c291b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f45f4c291df]    PyEval_EvalCode                                    + 0x1f
+[0x7f45f4c5e3d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7f45f4c5e56f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7f45f4c788e8]    Py_Main                                            + 0xff8
+[0x55bba08a72b8]    main                                               + 0x178
+[0x7f45f48ee0b3]    __libc_start_main                                  + 0xf3
+[0x55bba08a736e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7f7650144a29]                                                       + 0x7c5a29
+[0x7f7650305289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7f7651222741]                                                       + 0x2d7741
+[0x7f7655b369e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7f7655bbc084]                                                       + 0x153084
+[0x7f7655bc150d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f7655bbbb9a]                                                       + 0x152b9a
+[0x7f7655bbc1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f7655b0ef1e]                                                       + 0xa5f1e
+[0x7f7655adff2b]    PyObject_Call                                      + 0x4b
+[0x7f7655bc1770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f7655bbbb9a]                                                       + 0x152b9a
+[0x7f7655bbbf94]                                                       + 0x152f94
+[0x7f7655bc150d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f7655bbbb9a]                                                       + 0x152b9a
+[0x7f7655bbbf94]                                                       + 0x152f94
+[0x7f7655bc150d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f7655bbb193]                                                       + 0x152193
+[0x7f7655bbc15c]                                                       + 0x15315c
+[0x7f7655bc150d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f7655bbbb9a]                                                       + 0x152b9a
+[0x7f7655bbbf94]                                                       + 0x152f94
+[0x7f7655bc150d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f7655bbbb9a]                                                       + 0x152b9a
+[0x7f7655bbc1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f7655bbc1df]    PyEval_EvalCode                                    + 0x1f
+[0x7f7655bf13d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7f7655bf156f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7f7655c0b8e8]    Py_Main                                            + 0xff8
+[0x55c1f42012b8]    main                                               + 0x178
+[0x7f76558810b3]    __libc_start_main                                  + 0xf3
+[0x55c1f420136e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7fa04832ea29]                                                       + 0x7c5a29
+[0x7fa0484ef289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7fa0cc914741]                                                       + 0x2d7741
+[0x7fa0d12289e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7fa0d12ae084]                                                       + 0x153084
+[0x7fa0d12b350d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fa0d12adb9a]                                                       + 0x152b9a
+[0x7fa0d12ae1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7fa0d1200f1e]                                                       + 0xa5f1e
+[0x7fa0d11d1f2b]    PyObject_Call                                      + 0x4b
+[0x7fa0d12b3770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7fa0d12adb9a]                                                       + 0x152b9a
+[0x7fa0d12adf94]                                                       + 0x152f94
+[0x7fa0d12b350d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fa0d12adb9a]                                                       + 0x152b9a
+[0x7fa0d12adf94]                                                       + 0x152f94
+[0x7fa0d12b350d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fa0d12ad193]                                                       + 0x152193
+[0x7fa0d12ae15c]                                                       + 0x15315c
+[0x7fa0d12b350d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fa0d12adb9a]                                                       + 0x152b9a
+[0x7fa0d12adf94]                                                       + 0x152f94
+[0x7fa0d12b350d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7fa0d12adb9a]                                                       + 0x152b9a
+[0x7fa0d12ae1b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7fa0d12ae1df]    PyEval_EvalCode                                    + 0x1f
+[0x7fa0d12e33d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7fa0d12e356f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7fa0d12fd8e8]    Py_Main                                            + 0xff8
+[0x56018579b2b8]    main                                               + 0x178
+[0x7fa0d0f730b3]    __libc_start_main                                  + 0xf3
+[0x56018579b36e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+About to throw exception 'Value::Create:: The number of sequences must be > 0'
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 202, in run_seq
+    enhance_data(data, enc)
+  File "readout.py", line 116, in enhance_data
+    mems = s.next_minibatch(minibatch_size)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/io/__init__.py", line 734, in next_minibatch
+    value = Value.create(self._vars[si.name], mb_data)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/internal/swig_helper.py", line 69, in wrapper
+    result = f(*args, **kwds)
+  File "/mnt/data/mhyee/.asdf/installs/python/3.6.15/lib/python3.6/site-packages/cntk/core.py", line 466, in create
+    True)  # always create a copy in Value
+ValueError: Value::Create:: The number of sequences must be > 0
+
+[CALL STACK]
+[0x7f8dce035a29]                                                       + 0x7c5a29
+[0x7f8dce1f6289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7f8e5261b741]                                                       + 0x2d7741
+[0x7f8e56f2f9e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7f8e56fb5084]                                                       + 0x153084
+[0x7f8e56fba50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f8e56fb4b9a]                                                       + 0x152b9a
+[0x7f8e56fb51b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f8e56f07f1e]                                                       + 0xa5f1e
+[0x7f8e56ed8f2b]    PyObject_Call                                      + 0x4b
+[0x7f8e56fba770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f8e56fb4b9a]                                                       + 0x152b9a
+[0x7f8e56fb4f94]                                                       + 0x152f94
+[0x7f8e56fba50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f8e56fb4b9a]                                                       + 0x152b9a
+[0x7f8e56fb4f94]                                                       + 0x152f94
+[0x7f8e56fba50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f8e56fb4193]                                                       + 0x152193
+[0x7f8e56fb515c]                                                       + 0x15315c
+[0x7f8e56fba50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f8e56fb4b9a]                                                       + 0x152b9a
+[0x7f8e56fb4f94]                                                       + 0x152f94
+[0x7f8e56fba50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f8e56fb4b9a]                                                       + 0x152b9a
+[0x7f8e56fb51b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f8e56fb51df]    PyEval_EvalCode                                    + 0x1f
+[0x7f8e56fea3d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7f8e56fea56f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7f8e570048e8]    Py_Main                                            + 0xff8
+[0x5577b70312b8]    main                                               + 0x178
+[0x7f8e56c7a0b3]    __libc_start_main                                  + 0xf3
+[0x5577b703136e]    _start                                             + 0x2e
+-------------------------------------------------------------------
+Traceback (most recent call last):
+  File "readout.py", line 372, in <module>
+    run_seq(content)
+  File "readout.py", line 324, in run_seq
+    pr = pred[ix]
+IndexError: index 1398 is out of bounds for axis 0 with size 1398
+-------------------------------------------------------------------
