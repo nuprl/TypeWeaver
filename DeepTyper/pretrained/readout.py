@@ -25,6 +25,7 @@ class State(Enum):
 	FOR = auto()			# inside for loop header
 	VAR_DECL_1 = auto()		# inside variable declaration, okay to emit type
 	VAR_DECL_2 = auto()		# inside variable declaration, don't emit type
+	VAR_DECL_3 = auto()		# inside variable declaration, finished function expression params
 
 regex = re.compile(r"^[^\d\W]\w*$", re.UNICODE)
 keywords = ["async", "await", "break", "continue", "class", "extends", "constructor", "super", "extends", "const", "let", "var", "debugger", "delete", "do", "while", "export", "import", "for", "each", "in", "of", "function", "return", "get", "set", "if", "else", "instanceof", "typeof", "null", "undefined", "switch", "case", "default", "this", "true", "false", "try", "catch", "finally", "void", "yield", "any", "boolean", "null", "never", "number", "string", "symbol", "undefined", "void", "as", "is", "enum", "type", "interface", "abstract", "implements", "static", "readonly", "private", "protected", "public", "declare", "module", "namespace", "require", "from", "of", "package"]
@@ -205,6 +206,7 @@ def run_seq(seq):
 	ts_buf = []
 	out_buf = []
 	state = State.START
+	state_after_fun = State.START
 	function_type = None
 	last_guess = None
 	for_parens = 0			# counter for matching parens in a for loop header
@@ -224,6 +226,7 @@ def run_seq(seq):
 			if v.strip() == 'function':
 				# entering a function declaration
 				state = State.FUN_DECL
+				state_after_fun = State.START
 			elif v.strip() == 'let' or v.strip() == 'const' or v.strip() == 'var':
 				# entering a variable declaration (not inside a for loop)
 				state = State.VAR_DECL_1
@@ -240,7 +243,7 @@ def run_seq(seq):
 				if function_type != None:
 					ts_buf.append(": %s" % function_type)
 					function_type = None
-				state = State.START
+				state = state_after_fun
 		elif state is State.FOR:
 			# need to count parens so we know when we've exited the for loop header
 			if v.strip() == '(':
@@ -255,7 +258,7 @@ def run_seq(seq):
 			if v.strip() == '=':
 				# on the RHS of a declaration; don't emit type
 				state = State.VAR_DECL_2
-			if v.strip() == '[':
+			elif v.strip() == '[':
 				# inside a destructuring pattern; don't emit type
 				var_decl_brackets += 1
 				state = State.VAR_DECL_2
@@ -263,39 +266,47 @@ def run_seq(seq):
 				# inside a destructuring pattern; don't emit type
 				var_decl_braces += 1
 				state = State.VAR_DECL_2
-			elif v.strip() == ';':
-				# NOTE: we require variable declaration statements to end with ;
+			elif v.strip() == ';' or (v.strip() =='' and ("\n" in v or "\r" in v)):
 				state = State.START
-		elif state is State.VAR_DECL_2:
+		elif state is State.VAR_DECL_2 or state is State.VAR_DECL_3:
 			# this state does not emit types, do we need to start?
-			if v.strip() == 'function' or v.strip() == '(' or v.strip() == '=>':
+			if v.strip() == 'function' or v.strip() == '=>':
 				# this is a function expression or arrow function, used in a variable declaration
-				# search backwards through the buffer, and remove the last type annotation, since it should go after the function
-				for index, item in reversed(list(enumerate(ts_buf))):
-					if item.startswith(": "):
-						function_type = ts_buf[index][2:]
-						del ts_buf[index]
-						break
 				if v.strip() == 'function':
 					# jump out of the var declaration case, now we're in a function declaration
 					state = State.FUN_DECL
-				elif v.strip() == '(':
-					# jump out of the var declaration case, now we're in function params
-					state = State.FUN_PARAMS
-				elif v.strip() == '=>':
+					state_after_fun = State.VAR_DECL_2
+				elif v.strip() == '=>' and not (state is State.VAR_DECL_3):
 					# this is an arrow function without parens for the single parameter
 					# e.g. var f = x => x;
 					# need to insert parens and type annotation in the right places
 					for index, item in reversed(list(enumerate(ts_buf))):
-						# insert ( after the last =
-						if item.strip() == '=':
-							ts_buf.insert(index + 1, ' (')
+						# insert ( after the last = or (
+						if item.strip() == '=' or item.strip() == '(':
+							ts_buf.insert(index + 1, '(')
 							break
 					for index, item in reversed(list(enumerate(ts_buf))):
 						# insert ) and types before the last =>
 						if item.strip() == '=>':
-							ts_buf.insert(index, ": %s): %s " % (last_guess, function_type))
+							insertion = ")"
+							if last_guess != None:
+								insertion = ": %s)" % last_guess
+							if function_type != None:
+								insertion = "%s: %s" % (insertion, function_type)
+							ts_buf.insert(index, insertion + " ")
 							break
+			elif v.strip() == '(':
+				# is this the params for an arrow function, or a function call?
+				# search backwards through the buffer
+				for index, item in reversed(list(enumerate(ts_buf))):
+					if item.isalnum():
+						# alphanumeric token is probably an identifier, so we don't do anything
+						break
+					elif item.strip() == '=':
+						# this is an arrow function, so update the state and continue
+						state = State.FUN_PARAMS
+						state_after_fun = State.VAR_DECL_3
+						continue
 			elif v.strip() == ']':
 				var_decl_brackets -= 1
 				if var_decl_brackets == 0 and var_decl_braces == 0:
@@ -313,8 +324,7 @@ def run_seq(seq):
 			elif v.strip() == ',' and var_decl_brackets == 0 and var_decl_braces == 0:
 				# onto the next variable declaration within the statement
 				state = State.VAR_DECL_1
-			elif v.strip() == ';':
-				# NOTE: we require variable declaration statements to end with ;
+			elif v.strip() == ';' or (v.strip() =='' and ("\n" in v or "\r" in v)):
 				state = State.START
 
 		if v.strip() == '' or tt in Comment:
@@ -341,7 +351,7 @@ def run_seq(seq):
 			if state is State.FUN_DECL:
 				# save the function's type
 				function_type = last_guess
-			elif state is State.FUN_PARAMS or state is State.VAR_DECL_1:
+			elif last_guess != None and (state is State.FUN_PARAMS or state is State.VAR_DECL_1):
 				# write the type to the buffer
 				ts_buf.append(": %s" % last_guess)
 		else:
@@ -357,9 +367,9 @@ def run_seq(seq):
 			ts.write(tt)
 	print("Output to: %s" % ts_outp)
 	# write buffer to csv file
-	# with open(outp, 'w', encoding="utf-8") as f:
-	# 	for tt in out_buf:
-	# 		f.write(tt)
+	#with open(outp, 'w', encoding="utf-8") as f:
+	#	for tt in out_buf:
+	#		f.write(tt)
 
 model = create_model()
 enc, dec = model(x, t)

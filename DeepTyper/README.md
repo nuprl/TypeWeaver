@@ -2,11 +2,6 @@
 
 This is a modified version of DeepTyper (specifically, the `pretrained/readout.py` script) that takes a JavaScript file and outputs TypeScript.
 
-The JavaScript may need preprocessing, because of some limitations:
-
-* All declaration statements must end with `;`
-* If a function is declared as an expression (e.g. `const f = function(x) { return x; };`), it must be the only declaration in its statement.
-
 To run:
 
     cd pretrained
