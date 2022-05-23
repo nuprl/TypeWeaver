@@ -1,54 +1,63 @@
 import { accessSync, constants } from "node:fs";
-import { printNode, Project, SourceFile,
- FunctionDeclaration, VariableDeclaration } from "ts-morph";
+import { printNode, Project, SourceFile, SyntaxKind } from "ts-morph";
+const path = require('node:path');
 
-const filename: string = process.argv[2];
+const jsFilename: string = process.argv[2];
+const jsPath = path.parse(jsFilename);
+const tsFilename: string = path.join(jsPath.dir, jsPath.name + ".ts");
 
 try {
-    accessSync(filename, constants.F_OK);
+    accessSync(jsFilename, constants.F_OK);
 } catch (err) {
-    console.error(filename + ": file does not exist");
+    console.error(jsFilename + ": file does not exist");
     process.exit(1);
 }
 
 const project: Project = new Project();
-const sourceFile: SourceFile = project.addSourceFileAtPath(filename)
+const sourceFile: SourceFile = project.addSourceFileAtPath(jsFilename)
+let outputFile = project.createSourceFile(tsFilename, "", { overwrite: true });
 
-let indent: number = 0;
+// TODO: read in DT CSV file into a data structure, remove unncessary stuff,
+// align identifiers+types and insert types
 
-// VariableStatement -> VariableDeclarationList -> VariableDeclaration
-// FunctionDeclaration
-// FunctionExpression, ArrowFunction
-// MethodDeclaration
-
-function printTree(node: SourceFile): void {
-        console.log(new Array(indent + 1).join(' ') + node.getKindName());
-        indent++;
-        node.forEachChild(printTree);
-        indent--;
+function traverse(node: SourceFile): void {
+    switch (node.getKind()) {
+        case SyntaxKind.FunctionDeclaration:
+            let funDecl = node.asKindOrThrow(SyntaxKind.FunctionDeclaration);
+            funDecl.setReturnType("any");
+            break;
+        case SyntaxKind.Parameter:
+            let param = node.asKindOrThrow(SyntaxKind.Parameter);
+            param.setType("any");
+            break;
+        case SyntaxKind.VariableDeclaration:
+            // Only annotate declarations if it's a variable statement, not for loops
+            //   VariableStatement -> VariableDeclarationList -> VariableDeclaration
+            // Only annotate identifires, not binding patterns (aka destructuring patterns)
+            //   VariableDeclaration -> Identifier
+            let varDecl = node.asKindOrThrow(SyntaxKind.VariableDeclaration);
+            let grandparent = varDecl.getParentOrThrow().getParentOrThrow();
+            let children = varDecl.getChildren();
+            if (grandparent.getKind() === SyntaxKind.VariableStatement
+                && varDecl.getChildCount() > 0
+                && children[0].getKind() === SyntaxKind.Identifier) {
+                varDecl.setType("any");
+            }
+            break;
+        case SyntaxKind.FunctionExpression:
+            // TODO: this should probably be handled as part of a VariableDeclaration
+            // Either we set the return type here, or we set it on the declaration.
+            // We can only set it here if the function expression has a name.
+            let funExpr = node.asKindOrThrow(SyntaxKind.FunctionExpression);
+            if (funExpr.getName() !== undefined) {
+                funExpr.setReturnType("any");
+            }
+            break;
+    }
+    node.forEachChild(traverse);
 }
-//printTree(sourceFile);
+traverse(sourceFile);
 
-const funDecls: FunctionDeclaration[] = sourceFile.getFunctions();
-const varDecls: VariableDeclaration[] = sourceFile.getVariableDeclarations();
-
-// Basic example of setting types
-// But still need to recures into function bodies
-// And extract the types from the CSV file
-const factorDecl: FunctionDeclaration = funDecls[0];
-factorDecl.setReturnType("number");
-factorDecl.getParameters()[0].setType("int");
-
-//const output = printNode(factorDecl.compilerNode);
-const output = printNode(funDecls[0].getVariableDeclarations()[1].compilerNode);
-
-//const output = printNode(sourceFile.compilerNode);
-console.log(output);
-
-// First task: traverse AST (in source code order) and print out every
-// function declaration and variable declaration, in order
-// Probably better to just traverse, instead of using "getFunctions" and "getVariableDeclarations"
-
-// Second task: read in DT CSV file into a data structure, remove unnecessary stuff
-
-// Then align AST with CSV and insert types
+// Write to output file
+//outputFile.insertText(0, sourceFile.getFullText()).saveSync();
+console.log(sourceFile.getFullText());
