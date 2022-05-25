@@ -367,9 +367,9 @@ def run_seq(seq):
 			ts.write(tt)
 	print("Output to: %s" % ts_outp)
 	# write buffer to csv file
-	#with open(outp, 'w', encoding="utf-8") as f:
-	#	for tt in out_buf:
-	#		f.write(tt)
+	with open(outp, 'w', encoding="utf-8") as f:
+		for tt in out_buf:
+			f.write(tt)
 
 model = create_model()
 enc, dec = model(x, t)
