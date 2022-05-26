@@ -1,13 +1,16 @@
-# Modified DeepTyper
+# Modified README
 
-This is a modified version of DeepTyper (specifically, the `pretrained/readout.py` script) that takes a JavaScript file and outputs TypeScript.
+To run a pretrained model and output type predictions, see `pretrained/README.md` for details.
 
 To run:
 
     cd pretrained
     python readout.py file.js
 
-`readout.py` will produce `file.csv` (containing the top 5 type predictions for each token) and `file.ts`.
+`readout.py` will produce `file.csv` (containing the top 5 type predictions for each token).
+It does not produce TypeScript.
+See `../tools/type-inserter` for a tool that reads in an unannotated JavaScript file and
+associated CSV file of type predictions, and outputs TypeScript.
 
 ## Dependencies
 
@@ -20,8 +23,8 @@ DeepTyper relies on older versions of software. I use [asdf](https://github.com/
     * If libcudart is too new (version 10 or above), then Open MPI needs to be patched by editing `ompi/contrib/vt/vt/vtlib/vt_cudart.c` and changing the struct member `memoryType` to `type` on lines 1878, 1879, 1885.
 * The following Python packages: `numpy`, `pygments`, `scipy`, `requests`, `cntk-gpu` (or `cntk` for the CPU-only version).
 
-Original README follows.
 
+# Original README
 
 # DeepTyper
 This repository contains the code and replication package for [DeepTyper: a deep learning engine recommending type annotations for JavaScript and TypeScript](http://vhellendoorn.github.io/PDF/fse2018-j2t.pdf) (2018).
