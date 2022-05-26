@@ -14,19 +14,6 @@ import string
 from pygments.lexers import TypeScriptLexer
 from pygments.token import Comment, Literal
 
-from enum import Enum, auto, unique
-
-# Hacky state machine definition, so we can output type annotations at the right places
-@unique
-class State(Enum):
-	START = auto()
-	FUN_DECL = auto()		# inside function declaration
-	FUN_PARAMS = auto()		# inside params list of function declaration
-	FOR = auto()			# inside for loop header
-	VAR_DECL_1 = auto()		# inside variable declaration, okay to emit type
-	VAR_DECL_2 = auto()		# inside variable declaration, don't emit type
-	VAR_DECL_3 = auto()		# inside variable declaration, finished function expression params
-
 regex = re.compile(r"^[^\d\W]\w*$", re.UNICODE)
 keywords = ["async", "await", "break", "continue", "class", "extends", "constructor", "super", "extends", "const", "let", "var", "debugger", "delete", "do", "while", "export", "import", "for", "each", "in", "of", "function", "return", "get", "set", "if", "else", "instanceof", "typeof", "null", "undefined", "switch", "case", "default", "this", "true", "false", "try", "catch", "finally", "void", "yield", "any", "boolean", "null", "never", "number", "string", "symbol", "undefined", "void", "as", "is", "enum", "type", "interface", "abstract", "implements", "static", "readonly", "private", "protected", "public", "declare", "module", "namespace", "require", "from", "of", "package"]
 
@@ -35,7 +22,6 @@ if len(sys.argv) < 2:
 	exit(1)
 inp = sys.argv[1]
 outp = inp[:len(inp) - inp[::-1].index(".")] + "csv"
-ts_outp = inp[:len(inp) - inp[::-1].index(".")] + "ts"
 source_file = "tokens.vocab"
 target_file = "types.vocab"
 model_file = "model.cntk"
@@ -203,173 +189,30 @@ def run_seq(seq):
 	enhance_data(data, enc)
 	pred = dec.eval({x: data[x], t: data[t]})[0]
 	
-	ts_buf = []
-	out_buf = []
-	state = State.START
-	state_after_fun = State.START
-	function_type = None
-	last_guess = None
-	for_parens = 0			# counter for matching parens in a for loop header
-	var_decl_brackets = 0		# counter for matching square brackets in a variable declaration
-	var_decl_braces = 0		# counter for matching curly braces in a variable declaration
-
-	ix = 0
-	sep = chr(31)
-	for tt, v, in tokens:
-		## tt is the token type; v is the string value of the token
-		# write to csv buffer
-		out_buf.append("%s%s%s" % (v.replace("\t", "\\t").replace("\n", "\\n").replace("\r", "\\r"), sep, str(tt)[6:]))
-		# write to TypeScript buffer
-		ts_buf.append(v)
-
-		if state is State.START:
-			if v.strip() == 'function':
-				# entering a function declaration
-				state = State.FUN_DECL
-				state_after_fun = State.START
-			elif v.strip() == 'let' or v.strip() == 'const' or v.strip() == 'var':
-				# entering a variable declaration (not inside a for loop)
-				state = State.VAR_DECL_1
-			elif v.strip() == 'for':
-				# entering a for loop
-				state = State.FOR
-		elif state is State.FUN_DECL:
-			if v.strip() == '(':
-				# entering params list
-				state = State.FUN_PARAMS
-		elif state is State.FUN_PARAMS:
-			if v.strip() == ')':
-				# exiting params list: output function type and reset state
-				if function_type != None:
-					ts_buf.append(": %s" % function_type)
-					function_type = None
-				state = state_after_fun
-		elif state is State.FOR:
-			# need to count parens so we know when we've exited the for loop header
-			if v.strip() == '(':
-				for_parens += 1
-			elif v.strip() == ')':
-				for_parens -= 1
-				if for_parens == 0:
-					# exiting for loop header
-					state = State.START
-		elif state is State.VAR_DECL_1:
-			# this state emits types, do we need to stop?
-			if v.strip() == '=':
-				# on the RHS of a declaration; don't emit type
-				state = State.VAR_DECL_2
-			elif v.strip() == '[':
-				# inside a destructuring pattern; don't emit type
-				var_decl_brackets += 1
-				state = State.VAR_DECL_2
-			elif v.strip() == '{':
-				# inside a destructuring pattern; don't emit type
-				var_decl_braces += 1
-				state = State.VAR_DECL_2
-			elif v.strip() == ';' or (v.strip() =='' and ("\n" in v or "\r" in v)):
-				state = State.START
-		elif state is State.VAR_DECL_2 or state is State.VAR_DECL_3:
-			# this state does not emit types, do we need to start?
-			if v.strip() == 'function' or v.strip() == '=>':
-				# this is a function expression or arrow function, used in a variable declaration
-				if v.strip() == 'function':
-					# jump out of the var declaration case, now we're in a function declaration
-					state = State.FUN_DECL
-					state_after_fun = State.VAR_DECL_2
-				elif v.strip() == '=>' and not (state is State.VAR_DECL_3):
-					# this is an arrow function without parens for the single parameter
-					# e.g. var f = x => x;
-					# need to insert parens and type annotation in the right places
-					for index, item in reversed(list(enumerate(ts_buf))):
-						# insert ( after the last = or (
-						if item.strip() == '=' or item.strip() == '(':
-							ts_buf.insert(index + 1, '(')
-							break
-					for index, item in reversed(list(enumerate(ts_buf))):
-						# insert ) and types before the last =>
-						if item.strip() == '=>':
-							insertion = ")"
-							if last_guess != None:
-								insertion = ": %s)" % last_guess
-							if function_type != None:
-								insertion = "%s: %s" % (insertion, function_type)
-							ts_buf.insert(index, insertion + " ")
-							break
-			elif v.strip() == '(':
-				# is this the params for an arrow function, or a function call?
-				# search backwards through the buffer
-				for index, item in reversed(list(enumerate(ts_buf))):
-					if item.isalnum():
-						# alphanumeric token is probably an identifier, so we don't do anything
-						break
-					elif item.strip() == '=':
-						# this is an arrow function, so update the state and continue
-						state = State.FUN_PARAMS
-						state_after_fun = State.VAR_DECL_3
-						continue
-			elif v.strip() == ']':
-				var_decl_brackets -= 1
-				if var_decl_brackets == 0 and var_decl_braces == 0:
-					# exiting destructuring pattern
-					state = State.VAR_DECL_1
-			elif v.strip() == '}':
-				var_decl_braces -= 1
-				if var_decl_brackets == 0 and var_decl_braces == 0:
-					# exiting destructuring pattern
-					state = State.VAR_DECL_1
-			elif v.strip() == '[':
-				var_decl_brackets += 1
-			elif v.strip() == '{':
-				var_decl_braces += 1
-			elif v.strip() == ',' and var_decl_brackets == 0 and var_decl_braces == 0:
-				# onto the next variable declaration within the statement
-				state = State.VAR_DECL_1
-			elif v.strip() == ';' or (v.strip() =='' and ("\n" in v or "\r" in v)):
-				state = State.START
-
-		if v.strip() == '' or tt in Comment:
-			# Skip over whitespace and comments
-			out_buf.append('\n')
-			continue
-		pr = pred[ix]
-		ix += 1
-		if v.strip() in keywords or not bool(regex.match(v.strip())):
-			# Skip over keywords and non-identifiers
-			out_buf.append('\n')
-			continue
-
-		r = [i[0] for i in sorted(enumerate(pr), key=lambda x: x[1], reverse=True)]
-		# The top guess for the type
-		guess = target_wl[r[0]]
-		# List of the top 5 guesses; need to remove the $ delimiters
-		gs = [target_wl[r[ix]] for ix in range(5)]
-		gs = [g[1:len(g)-1] if g[0]=="$" else g for g in gs]
-
-		if target_wl[r[0]] != "O":
-			# save the last guess; also needed for arrow functions
-			last_guess = guess[1:len(guess)-1]
-			if state is State.FUN_DECL:
-				# save the function's type
-				function_type = last_guess
-			elif last_guess != None and (state is State.FUN_PARAMS or state is State.VAR_DECL_1):
-				# write the type to the buffer
-				ts_buf.append(": %s" % last_guess)
-		else:
-			last_guess = None
-
-		for i in range(len(gs)):
-			out_buf.append("%s%s%s%.4f" % (sep, gs[i], sep, pr[r[i]]))
-		out_buf.append('\n')
-
-	# write buffer to TypeScrpt file
-	with open(ts_outp, 'w', encoding="utf-8") as ts:
-		for tt in ts_buf:
-			ts.write(tt)
-	print("Output to: %s" % ts_outp)
-	# write buffer to csv file
 	with open(outp, 'w', encoding="utf-8") as f:
-		for tt in out_buf:
-			f.write(tt)
+		ix = 0
+		sep = chr(31)
+		for tt, v, in tokens:
+			f.write("%s%s%s" % (v.replace("\t", "\\t").replace("\n", "\\n").replace("\r", "\\r"), sep, str(tt)[6:]))
+			print(v, end='')
+			if v.strip() == '' or tt in Comment:
+				f.write('\n')
+				continue
+			pr = pred[ix]
+			ix += 1
+			if v.strip() in keywords or not bool(regex.match(v.strip())):
+				f.write('\n')
+				continue
+			r = [i[0] for i in sorted(enumerate(pr), key=lambda x: x[1], reverse=True)]
+			guess = target_wl[r[0]]
+			gs = [target_wl[r[ix]] for ix in range(5)]
+			gs = [g[1:len(g)-1] if g[0]=="$" else g for g in gs]
+			if target_wl[r[0]] != "O":
+				print(" : %s" % guess[1:len(guess)-1], end='')
+			for i in range(len(gs)):
+				f.write("%s%s%s%.4f" % (sep, gs[i], sep, pr[r[i]]))
+			f.write('\n')
+	print()
 
 model = create_model()
 enc, dec = model(x, t)
@@ -377,6 +220,4 @@ trainer = create_trainer()
 
 with open(inp, 'r', encoding="utf-8") as f:
 	content = f.read()
-print()
-print("Inferring types for: %s" % inp)
 run_seq(content)
