@@ -61,7 +61,7 @@ for i in range(0, num_files):
         print(" \033[1;31m[FAIL]\033[0m")
         print(short, file=f_fail)
         print("=" * 40, short, "=" * 40, file=f_err)
-        print(str(result.stderr), file=f_err)
+        print(result.stderr, file=f_err)
 
 f_success.close()
 f_fail.close()
