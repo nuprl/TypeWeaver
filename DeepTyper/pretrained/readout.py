@@ -178,7 +178,8 @@ def run_seq(seq):
 		inputs[i] = source_dict[ws[i]] if ws[i] in source_dict else source_dict["_UNKNOWN_"]
 	N = len(inputs)
 	if N > 4*minibatch_size:
-		return None
+		sys.stderr.write("Error: Input file is too large")
+		sys.exit(1)
 	inputs = scipy.sparse.csr_matrix((np.ones(N, np.float32), (range(N), inputs)), shape=(N, vocab_size))
 	outputs = scipy.sparse.csr_matrix((np.ones(N, np.float32), (range(N), outputs)), shape=(N, num_labels))
 	sIn = C.io.MinibatchSourceFromData(dict(xx=([inputs], C.layers.typing.Sequence[C.layers.typing.tensor]),
@@ -189,29 +190,32 @@ def run_seq(seq):
 	enhance_data(data, enc)
 	pred = dec.eval({x: data[x], t: data[t]})[0]
 	
+	out_buf = []
+	ix = 0
+	sep = chr(31)
+	for tt, v, in tokens:
+		out_buf.append("%s%s%s" % (v.replace("\t", "\\t").replace("\n", "\\n").replace("\r", "\\r"), sep, str(tt)[6:]))
+		print(v, end='')
+		if v.strip() == '' or tt in Comment:
+			out_buf.append('\n')
+			continue
+		pr = pred[ix]
+		ix += 1
+		if v.strip() in keywords or not bool(regex.match(v.strip())):
+			out_buf.append('\n')
+			continue
+		r = [i[0] for i in sorted(enumerate(pr), key=lambda x: x[1], reverse=True)]
+		guess = target_wl[r[0]]
+		gs = [target_wl[r[ix]] for ix in range(5)]
+		gs = [g[1:len(g)-1] if g[0]=="$" else g for g in gs]
+		if target_wl[r[0]] != "O":
+			print(" : %s" % guess[1:len(guess)-1], end='')
+		for i in range(len(gs)):
+			out_buf.append("%s%s%s%.4f" % (sep, gs[i], sep, pr[r[i]]))
+		out_buf.append('\n')
 	with open(outp, 'w', encoding="utf-8") as f:
-		ix = 0
-		sep = chr(31)
-		for tt, v, in tokens:
-			f.write("%s%s%s" % (v.replace("\t", "\\t").replace("\n", "\\n").replace("\r", "\\r"), sep, str(tt)[6:]))
-			print(v, end='')
-			if v.strip() == '' or tt in Comment:
-				f.write('\n')
-				continue
-			pr = pred[ix]
-			ix += 1
-			if v.strip() in keywords or not bool(regex.match(v.strip())):
-				f.write('\n')
-				continue
-			r = [i[0] for i in sorted(enumerate(pr), key=lambda x: x[1], reverse=True)]
-			guess = target_wl[r[0]]
-			gs = [target_wl[r[ix]] for ix in range(5)]
-			gs = [g[1:len(g)-1] if g[0]=="$" else g for g in gs]
-			if target_wl[r[0]] != "O":
-				print(" : %s" % guess[1:len(guess)-1], end='')
-			for i in range(len(gs)):
-				f.write("%s%s%s%.4f" % (sep, gs[i], sep, pr[r[i]]))
-			f.write('\n')
+		for bb in out_buf:
+			f.write(bb)
 	print()
 
 model = create_model()
