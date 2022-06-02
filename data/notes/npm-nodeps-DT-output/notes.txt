@@ -26,7 +26,20 @@ corresponding .csv file); these are listed in `type-inf-success.txt`.
 errors collected in `type-inf-errs.txt`.
 
 
+# TODO
+
+# Type insertion
+
+Took about 20 minutes
+1786 successes
+681 failures
+all errors are the same, looks like mis-alignment of types and identifiers
+even the successes might have misalignment issues
+
+
 # Type checking
+
+NOTE: Below text is outdated; we need to run the CSV-to-TS step first before we can type check
 
 After the TypeScript was generated, the next step is to run the TypeScript
 compiler to type check the output. This was done by running the included
