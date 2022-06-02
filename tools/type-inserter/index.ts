@@ -43,6 +43,7 @@ const csvContents: Buffer = readFileSync(csvFilename);
 const typePredictions: string[] = parse(csvContents, {
     delimiter: "\x1f",
     on_record: (record, _) => record[1].startsWith("Name") ? record[2] : null,
+    quote: false,
     relax_column_count: true,
     trim: true
 });
