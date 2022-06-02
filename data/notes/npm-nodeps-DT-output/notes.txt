@@ -7,7 +7,7 @@ predicted types for the corresponding JavaScript file.
 The type inference was done by executing:
 
     # starting from the repository root
-    cd data/notes/npm-nodeps-DT_output
+    cd data/notes/npm-nodeps-DT-output
     python ../../../tools/infer-types.py ../../npm-nodeps-DT-output
 
 `infer-types.py` can be run from any directory, but it outputs logs to its
