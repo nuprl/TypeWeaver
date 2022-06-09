@@ -36,6 +36,7 @@ interface Record {
     tokenValue: string;
     tokenType: string;
     typePrediction: string;
+    typeProbability: number;
 }
 
 // This class parses the CSV file and maintains an array of type predictions.
@@ -46,7 +47,7 @@ class TypePredictions {
     readonly records: Record[];
 
     // Internal index into the records array, used for searching.
-    private index: number;
+    private index: number = 1;
 
     // Read and parse CSV file, which contains tokens and the probability distribution of
     // predicted types.
@@ -60,14 +61,14 @@ class TypePredictions {
             on_record: function (record, _) {
                 const tokVal = record[0];
                 const tokType = record[1];
-                const pred = record[2];
                 // Only take tokens that are names or reserved keywords
                 // (since they might be identifiers)
                 if (tokType.startsWith("Name") || tokType.startsWith("Keyword") || tokVal === "=>") {
                     return {
                         tokenValue: tokVal,
                         tokenType: tokType,
-                        typePrediction: pred,
+                        typePrediction: record[2],
+                        typeProbability: record[3],
                     }
                 } else {
                     return null;
@@ -78,59 +79,47 @@ class TypePredictions {
             trim: true
         });
     }
-}
 
-const csvContents: Buffer = readFileSync(csvFilename);
-const csvRecords = parse(csvContents, {
-    delimiter: "\x1f",
-    on_record: function (record, _) {
-        const tokVal = record[0];
-        const tokType = record[1];
-        if (tokType.startsWith("Name") || tokType.startsWith("Keyword") || tokVal === "=>") {
-            return record;
-        } else {
-            return null;
-        }
-    },
-    quote: false,
-    relax_column_count: true,
-    trim: true
-});
-let csvLength: number = csvRecords.length;
-let csvIdx: number = 1;
-
-// TODO: be careful about keeping indices within bounds...
-function advanceIdx(idx: number, keyword: string, identifier: string): number {
-    for (let i = idx; i < csvRecords.length - 1; ++i) {
-        const prevRecord = csvRecords[i - 1];
-        const record = csvRecords[i];
-        const nextRecord = csvRecords[i + 1];
-        if (keyword && identifier) {
-            if (record[1] === "Keyword.Declaration" && record[0] === keyword && nextRecord[0] === identifier) {
-                // Because we filtered out comments and whitespace, we can check if
-                // the preceding token is a "for". If so, this declaration is part of
-                // a for loop and we should skip it.
-                if (prevRecord[1] === "Keyword" && prevRecord[0] === "for") {
-                    continue;
+    advanceIdx(keyword: string, identifier: string): number {
+        for (let i = this.index; i < this.records.length - 1; ++i) {
+            const prev = this.records[i - 1];
+            const rec = this.records[i];
+            const next = this.records[i + 1];
+            if (keyword && identifier) {
+                if (rec.tokenType === "Keyword.Declaration" && rec.tokenValue === keyword && next.tokenValue === identifier) {
+                    if (prev.tokenType === "Keyword" && prev.tokenValue === "for") {
+                        continue;
+                    }
+                    this.index = i + 1;
+                    return this.index;
                 }
-                return i + 1;
+            } else if (identifier) {
+                if (next.tokenValue === identifier) {
+                    this.index = i + 1;
+                    return this.index;
+                }
             }
-        } else if (identifier) {
-            if (nextRecord[0] === identifier) {
-                return i + 1;
+        }
+        // TODO: does this mean we have an error?
+        return this.index;
+    }
+
+    debugPrint(): void {
+        for (let r of this.records) {
+            if (r.typePrediction) {
+                console.log(r.tokenValue + " (" + r.tokenType + "): " + r.typePrediction);
+            } else {
+                console.log(r.tokenValue + " (" + r.tokenType + ")");
             }
         }
     }
-    // TODO: this means we have an error
-    return idx;
 }
-
 // TODO: This is basically string search
 
+const records = new TypePredictions(csvFilename);
 
-for (var r of csvRecords) {
-    console.log(r);
-}
+
+records.debugPrint();
 /*
 function debugTraverse(node: SourceFile): void {
     if (node.getChildCount() == 0) {
@@ -170,23 +159,23 @@ function traverse(node: SourceFile): void {
                 ?.getText();
 
             if (varDeclType && varDecl && identifier) {
-                csvIdx = advanceIdx(csvIdx, varDeclType, identifier);
-                const prediction: string = csvRecords[csvIdx][2];
+                const idx = records.advanceIdx(varDeclType, identifier);
+                const prediction: string = records.records[idx].typePrediction;
                 if (prediction) {
                     varDecl.setType(prediction);
-                    //console.log(varDeclType + " " + identifier + ": " + prediction);
-                    //console.log(csvRecords[csvIdx]);
+                    console.log(varDeclType + " " + identifier + ": " + prediction);
+                    console.log(records.records[idx]);
                 }
             } else if (varStmt && varDecl && identifier) {
-                csvIdx = advanceIdx(csvIdx, undefined, identifier);
-                const prediction: string = csvRecords[csvIdx][2];
+                const idx = records.advanceIdx(undefined, identifier);
+                const prediction: string = records.records[idx].typePrediction;
                 if (prediction) {
                     varDecl.setType(prediction);
-                    //console.log(identifier + ": " + prediction);
-                    //console.log(csvRecords[csvIdx]);
+                    console.log(identifier + ": " + prediction);
+                    console.log(records.records[idx]);
                 }
             }
-            //console.log();
+            console.log();
             break;
         }
         case SyntaxKind.FunctionDeclaration: {
@@ -195,28 +184,28 @@ function traverse(node: SourceFile): void {
             const params = funDecl.getParameters();
 
             if (funName) {
-                csvIdx = advanceIdx(csvIdx, "function", funName);
-                const prediction: string = csvRecords[csvIdx][2];
+                const idx = records.advanceIdx("function", funName);
+                const prediction: string = records.records[idx].typePrediction;
                 if (prediction) {
                     funDecl.setReturnType(prediction);
-                    //console.log("function " + funName + ": " + prediction);
-                    //console.log(csvRecords[csvIdx]);
+                    console.log("function " + funName + ": " + prediction);
+                    console.log(records.records[idx]);
                 }
             }
 
             for (let p of params) {
                 let identifier = p.getName();
                 if (identifier) {
-                    csvIdx = advanceIdx(csvIdx, undefined, identifier);
-                    const prediction: string = csvRecords[csvIdx][2];
+                    const idx = records.advanceIdx(undefined, identifier);
+                    const prediction: string = records.records[idx].typePrediction;
                     if (prediction) {
                         p.setType(prediction);
-                        //console.log(identifier + ": " + prediction);
-                        //console.log(csvRecords[csvIdx]);
+                        console.log(identifier + ": " + prediction);
+                        console.log(records.records[idx]);
                     }
                 }
             }
-            //console.log();
+            console.log();
             break;
         }
         case SyntaxKind.FunctionExpression: {
@@ -225,22 +214,22 @@ function traverse(node: SourceFile): void {
             const params = funExpr.getParameters();
 
             if (funName) {
-                csvIdx = advanceIdx(csvIdx, "function", funName);
-                const prediction: string = csvRecords[csvIdx][2];
+                const idx = records.advanceIdx("function", funName);
+                const prediction: string = records.records[idx].typePrediction;
                 if (prediction) {
                     funExpr.setReturnType(prediction);
-                    //console.log("function " + funName + ": " + prediction);
-                    //console.log(csvRecords[csvIdx]);
+                    console.log("function " + funName + ": " + prediction);
+                    console.log(records.records[idx]);
                 }
                 for (let p of params) {
                     let identifier = p.getName();
                     if (identifier) {
-                        csvIdx = advanceIdx(csvIdx, undefined, identifier);
-                        const prediction: string = csvRecords[csvIdx][2];
+                        const idx = records.advanceIdx(undefined, identifier);
+                        const prediction: string = records.records[idx].typePrediction;
                         if (prediction) {
                             p.setType(prediction);
-                            //console.log(identifier + ": " + prediction);
-                            //console.log(csvRecords[csvIdx]);
+                            console.log(identifier + ": " + prediction);
+                            console.log(records.records[idx]);
                         }
                     }
                 }
@@ -248,28 +237,28 @@ function traverse(node: SourceFile): void {
                 const firstParam = params.shift();
                 const firstParamId = firstParam?.getName();
                 if (firstParam) {
-                    csvIdx = advanceIdx(csvIdx, "function", firstParamId);
-                    const prediction: string = csvRecords[csvIdx][2];
+                    const idx = records.advanceIdx("function", firstParamId);
+                    const prediction: string = records.records[idx].typePrediction;
                     if (prediction) {
                         firstParam.setType(prediction);
-                        //console.log(firstParamId + ": " + prediction);
-                        //console.log(csvRecords[csvIdx]);
+                        console.log(firstParamId + ": " + prediction);
+                        console.log(records.records[idx]);
                     }
                     for (let p of params) {
                         let identifier = p.getName();
                         if (identifier) {
-                            csvIdx = advanceIdx(csvIdx, undefined, identifier);
-                            const prediction: string = csvRecords[csvIdx][2];
+                            const idx = records.advanceIdx(undefined, identifier);
+                            const prediction: string = records.records[idx].typePrediction;
                             if (prediction) {
                                 p.setType(prediction);
-                                //console.log(identifier + ": " + prediction);
-                                //console.log(csvRecords[csvIdx]);
+                                console.log(identifier + ": " + prediction);
+                                console.log(records.records[idx]);
                             }
                         }
                     }
                 }
             }
-            //console.log();
+            console.log();
             break;
         }
         case SyntaxKind.ArrowFunction: {
