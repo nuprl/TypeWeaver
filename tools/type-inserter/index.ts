@@ -47,7 +47,7 @@ class TypePredictions {
     readonly records: Record[];
 
     // Internal index into the records array, used for searching.
-    private index: number = 1;
+    private index: number = 0;
 
     // Read and parse CSV file, which contains tokens and the probability distribution of
     // predicted types.
@@ -80,28 +80,34 @@ class TypePredictions {
         });
     }
 
-    advanceIdx(keyword: string, identifier: string): number {
-        for (let i = this.index; i < this.records.length - 1; ++i) {
-            const prev = this.records[i - 1];
-            const rec = this.records[i];
-            const next = this.records[i + 1];
-            if (keyword && identifier) {
-                if (rec.tokenType === "Keyword.Declaration" && rec.tokenValue === keyword && next.tokenValue === identifier) {
-                    if (prev.tokenType === "Keyword" && prev.tokenValue === "for") {
-                        continue;
-                    }
-                    this.index = i + 1;
-                    return this.index;
-                }
-            } else if (identifier) {
-                if (next.tokenValue === identifier) {
-                    this.index = i + 1;
-                    return this.index;
+    findTypesForTokens(tokens: string[]): string[] {
+        console.log(tokens);
+        const n: number = this.records.length;
+        const m: number = tokens.length;
+        for (let i = this.index; i <= n - m; ++i) {
+            let match: boolean = true;
+            let j: number = 0;
+            while (j < m && match) {
+                if (this.records[i + j].tokenValue === tokens[j]) {
+                    j++;
+                } else {
+                    match = false;
                 }
             }
+            if (match) {
+                if (i > 0 && this.records[i - 1].tokenValue === "for") {
+                    continue;
+                }
+                const entries: Record[] = this.records.slice(i, i + m);
+                const predictions: string[] = entries.map(_ => _.typePrediction);
+                console.log("prediction(s): " + predictions);
+                console.log(entries);
+                this.index = i;
+                return predictions;
+            }
         }
-        // TODO: does this mean we have an error?
-        return this.index;
+        // TODO: better handling for this?
+        return undefined;
     }
 
     debugPrint(): void {
@@ -114,13 +120,12 @@ class TypePredictions {
         }
     }
 }
-// TODO: This is basically string search
 
-const records = new TypePredictions(csvFilename);
+const records: TypePredictions = new TypePredictions(csvFilename);
 
 
-records.debugPrint();
 /*
+records.debugPrint();
 function debugTraverse(node: SourceFile): void {
     if (node.getChildCount() == 0) {
         console.log("  " + node.getKindName() + " " + node.getText().split("\n")[0]);
@@ -159,116 +164,85 @@ function traverse(node: SourceFile): void {
                 ?.getText();
 
             if (varDeclType && varDecl && identifier) {
-                const idx = records.advanceIdx(varDeclType, identifier);
-                const prediction: string = records.records[idx].typePrediction;
+                const [_, prediction] = records.findTypesForTokens([varDeclType, identifier]);
                 if (prediction) {
                     varDecl.setType(prediction);
-                    console.log(varDeclType + " " + identifier + ": " + prediction);
-                    console.log(records.records[idx]);
                 }
             } else if (varStmt && varDecl && identifier) {
-                const idx = records.advanceIdx(undefined, identifier);
-                const prediction: string = records.records[idx].typePrediction;
+                // TODO: this can go wrong, hard to align without keyword
+                // e.g. let f = function(x) { let v = x; return v; }, v = 42;
+                // the declaration "v = 42" can take the type from "return v"
+                const [prediction] = records.findTypesForTokens([identifier]);
                 if (prediction) {
                     varDecl.setType(prediction);
-                    console.log(identifier + ": " + prediction);
-                    console.log(records.records[idx]);
                 }
             }
-            console.log();
             break;
         }
         case SyntaxKind.FunctionDeclaration: {
             const funDecl = node.asKindOrThrow(SyntaxKind.FunctionDeclaration);
             const funName = funDecl.getName();
             const params = funDecl.getParameters();
+            const paramNames = params.map(_ => _.getName());
 
-            if (funName) {
-                const idx = records.advanceIdx("function", funName);
-                const prediction: string = records.records[idx].typePrediction;
-                if (prediction) {
-                    funDecl.setReturnType(prediction);
-                    console.log("function " + funName + ": " + prediction);
-                    console.log(records.records[idx]);
-                }
+            const tokens: string[] = ["function", funName].concat(paramNames);
+            const [_, retType, ...paramTypes]: string[] = records.findTypesForTokens(tokens);
+
+            if (funName && retType) {
+                funDecl.setReturnType(retType);
             }
 
-            for (let p of params) {
-                let identifier = p.getName();
-                if (identifier) {
-                    const idx = records.advanceIdx(undefined, identifier);
-                    const prediction: string = records.records[idx].typePrediction;
-                    if (prediction) {
-                        p.setType(prediction);
-                        console.log(identifier + ": " + prediction);
-                        console.log(records.records[idx]);
-                    }
+            for (let i in params) {
+                if (paramNames[i] && paramTypes[i]) {
+                    params[i].setType(paramTypes[i]);
                 }
             }
-            console.log();
             break;
         }
         case SyntaxKind.FunctionExpression: {
+            // TODO: this isn't as robust, if the function expression is anonymous
+            // we're searching for the token sequence "function param1 param2 ..." which may not be unique
             const funExpr = node.asKindOrThrow(SyntaxKind.FunctionExpression);
             const funName = funExpr.getName();
             const params = funExpr.getParameters();
+            const paramNames = params.map(_ => _.getName());
+
+            const tokens: string[] = ["function", funName].concat(paramNames).filter(_ => _);
+            const [_, ...predictions]: string[] = records.findTypesForTokens(tokens);
 
             if (funName) {
-                const idx = records.advanceIdx("function", funName);
-                const prediction: string = records.records[idx].typePrediction;
-                if (prediction) {
-                    funExpr.setReturnType(prediction);
-                    console.log("function " + funName + ": " + prediction);
-                    console.log(records.records[idx]);
-                }
-                for (let p of params) {
-                    let identifier = p.getName();
-                    if (identifier) {
-                        const idx = records.advanceIdx(undefined, identifier);
-                        const prediction: string = records.records[idx].typePrediction;
-                        if (prediction) {
-                            p.setType(prediction);
-                            console.log(identifier + ": " + prediction);
-                            console.log(records.records[idx]);
-                        }
-                    }
-                }
-            } else {
-                const firstParam = params.shift();
-                const firstParamId = firstParam?.getName();
-                if (firstParam) {
-                    const idx = records.advanceIdx("function", firstParamId);
-                    const prediction: string = records.records[idx].typePrediction;
-                    if (prediction) {
-                        firstParam.setType(prediction);
-                        console.log(firstParamId + ": " + prediction);
-                        console.log(records.records[idx]);
-                    }
-                    for (let p of params) {
-                        let identifier = p.getName();
-                        if (identifier) {
-                            const idx = records.advanceIdx(undefined, identifier);
-                            const prediction: string = records.records[idx].typePrediction;
-                            if (prediction) {
-                                p.setType(prediction);
-                                console.log(identifier + ": " + prediction);
-                                console.log(records.records[idx]);
-                            }
-                        }
-                    }
+                const retType: string = predictions.shift();
+                if (retType) {
+                    funExpr.setReturnType(retType);
                 }
             }
-            console.log();
+
+            for (let i in params) {
+                if (paramNames[i] && predictions[i]) {
+                    params[i].setType(predictions[i]);
+                }
+            }
             break;
         }
         case SyntaxKind.ArrowFunction: {
-            // TODO: handle arrow functions
-            // There's no keyword to synchronize with
-            // Probably we'll want a more advanced search that can search for a sequence of tokens, e.g.
-            // (a, b) => ... will search the CSV for the sequence "a", "b", "=>".
+            // TODO: this isn't as robust
+            // we're searching for the token sequence "param1 param2 =>" which may not be unique
+            const arrowFun = node.asKindOrThrow(SyntaxKind.ArrowFunction);
+            const params = arrowFun.getParameters();
+            const paramNames = params.map(_ => _.getName());
+
+            const tokens: string[] = paramNames.concat(["=>"])
+            const predictions: string[] = records.findTypesForTokens(tokens);
+            predictions.pop();
+
+            for (let i in params) {
+                if (paramNames[i] && predictions[i]) {
+                    params[i].setType(predictions[i]);
+                }
+            }
+            break;
         }
     }
-
     node.forEachChild(traverse);
 }
 traverse(outputFile);
