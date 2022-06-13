@@ -129,8 +129,8 @@ class TypePredictions {
             }
         }
         // If we reach this point, we couldn't find anything in the CSV file,
-        // which is probably an error.
-        throw "Searching CSV records failed!"
+        // which is probably an error. Let the caller handle it.
+        return undefined;
     }
 
     debugPrint(): void {
@@ -144,7 +144,7 @@ class TypePredictions {
     }
 }
 
-const records: TypePredictions = new TypePredictions(csvFilename);
+const predictions: TypePredictions = new TypePredictions(csvFilename);
 
 /**
  * This function iterates the AST, querying the CSV records with a token sequence
@@ -196,49 +196,54 @@ function traverse(node: SourceFile): void {
                 ?.getText();
 
             if (varDeclType && varDecl && identifier) {
-                const [_, prediction] = records.findTypesForTokens([varDeclType, identifier]);
-                if (prediction) {
-                    varDecl.setType(prediction);
+                const tokens: string[] = [varDeclType, identifier];
+                const types: string[] = predictions.findTypesForTokens(tokens);
+                if (types && types[1]) {
+                    // types[0] is undefined; corresponds to the var/let/const token.
+                    varDecl.setType(types[1]);
+                } else {
+                    console.error("Searching for types failed on tokens: " + tokens.join(" "));
                 }
             } else if (varStmt && varDecl && identifier) {
-                // TODO: this can go wrong, hard to align without keyword
-                // e.g. let f = function(x) { let v = x; return v; }, v = 42;
-                // the declaration "v = 42" can take the type from "return v"
-                // For now, we do nothing.
-                /*
-                const [prediction] = records.findTypesForTokens([identifier]);
-                if (prediction) {
-                    varDecl.setType(prediction);
-                }
-                */
+                console.error("Found multiple declarations; skipping rest of declarations.");
+                console.error("\t" + varStmt.getText().replace(/\s+/g, " ").slice(0, 80));
             }
             break;
         }
         case SyntaxKind.FunctionDeclaration: {
-            // TODO: default parameters
             const funDecl = node.asKindOrThrow(SyntaxKind.FunctionDeclaration);
             const funName = funDecl.getName();
             const params = funDecl.getParameters();
             const paramNames = params.map(_ => _.getName());
 
             const tokens: string[] = ["function", funName].concat(paramNames);
-            // Pattern match and discard the "undefined" prediction for "function."
-            // Separate out the return type prediction for the function name.
-            const [_, retType, ...paramTypes]: string[] = records.findTypesForTokens(tokens);
 
-            if (retType) {
-                funDecl.setReturnType(retType);
+            if (params.some(_ => _.isOptional())) {
+                console.error("Found optional parameters; skipping function.");
+                console.error("\t" + funDecl.getText().replace(/\s+/g, " ").slice(0, 80));
+                break;
             }
 
-            params.forEach((p, i) => {
-                if (paramTypes[i]) {
-                    p.setType(paramTypes[i]);
+            // Pattern match and discard the "undefined" prediction for "function."
+            // Separate out the return type prediction for the function name.
+            const types: string[] = predictions.findTypesForTokens(tokens);
+
+            if (types) {
+                const [_, retType, ...paramTypes]: string[] = types;
+                if (retType) {
+                    funDecl.setReturnType(retType);
                 }
-            });
+                params.forEach((p, i) => {
+                    if (paramTypes[i]) {
+                        p.setType(paramTypes[i]);
+                    }
+                });
+            } else {
+                console.error("Searching for types failed on tokens: " + tokens.join(" "));
+            }
             break;
         }
         case SyntaxKind.FunctionExpression: {
-            // TODO: default parameters
             const funExpr = node.asKindOrThrow(SyntaxKind.FunctionExpression);
             const funName = funExpr.getName();
             const params = funExpr.getParameters();
@@ -246,40 +251,59 @@ function traverse(node: SourceFile): void {
 
             // funName is optional, so filter it out if it's undefined.
             const tokens: string[] = ["function", funName].concat(paramNames).filter(_ => _);
-            // Pattern match and discard the "undefined" prediction for "function"
-            const [_, ...predictions]: string[] = records.findTypesForTokens(tokens);
 
-            if (funName) {
-                const retType: string = predictions.shift();
-                if (retType) {
-                    funExpr.setReturnType(retType);
-                }
+            if (params.some(_ => _.isOptional())) {
+                console.error("Found optional parameters; skipping function.");
+                console.error("\t" + funExpr.getText().replace(/\s+/g, " ").slice(0, 80));
+                break;
             }
 
-            params.forEach((p, i) => {
-                if (predictions[i]) {
-                    p.setType(predictions[i]);
+            // Pattern match and discard the "undefined" prediction for "function"
+            const types = predictions.findTypesForTokens(tokens);
+
+            if (types) {
+                const [_, ...paramTypes]: string[] = types;
+                if (funName) {
+                    const retType: string = types.shift();
+                    if (retType) {
+                        funExpr.setReturnType(retType);
+                    }
                 }
-            });
+                params.forEach((p, i) => {
+                    if (paramTypes[i]) {
+                        p.setType(paramTypes[i]);
+                    }
+                });
+            } else {
+                console.error("Searching for types failed on tokens: " + tokens.join(" "));
+            }
             break;
         }
         case SyntaxKind.ArrowFunction: {
-            // TODO: default parameters
             const arrowFun = node.asKindOrThrow(SyntaxKind.ArrowFunction);
             const params = arrowFun.getParameters();
             const paramNames = params.map(_ => _.getName());
 
             const tokens: string[] = paramNames.concat(["=>"])
-            const predictions: string[] = records.findTypesForTokens(tokens);
 
-            // Discard the "undefined" prediction for "=>"
-            predictions.pop();
+            if (params.some(_ => _.isOptional())) {
+                console.error("Found optional parameters; skipping function.");
+                console.error("\t" + arrowFun.getText().replace(/\s+/g, " ").slice(0, 80));
+                break;
+            }
 
-            params.forEach((p, i) => {
-                if (predictions[i]) {
-                    p.setType(predictions[i]);
-                }
-            });
+            const types: string[] = predictions.findTypesForTokens(tokens);
+            if (types) {
+                // Discard the "undefined" prediction for "=>"
+                types.pop();
+                params.forEach((p, i) => {
+                    if (types[i]) {
+                        p.setType(types[i]);
+                    }
+                });
+            } else {
+                console.error("Searching for types failed on tokens: " + tokens.join(" "));
+            }
             break;
         }
     }
