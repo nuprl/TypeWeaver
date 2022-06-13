@@ -1,7 +1,8 @@
 import { existsSync, readFileSync } from "node:fs";
 import * as path from "path";
 import { parse } from "csv-parse/sync";
-import { Project, SourceFile, SyntaxKind } from "ts-morph";
+import { ArrowFunction, FunctionDeclaration, FunctionExpression, ParameterDeclaration,
+         Project, SourceFile, SyntaxKind } from "ts-morph";
 
 function printUsageAndExit(error: string): void {
     console.log(error);
@@ -53,7 +54,7 @@ class TypePredictions {
 
     // Read and parse CSV file, which contains tokens and the probability distribution of
     // predicted types.
-    constructor(filename: string, debug = false) {
+    constructor(filename: string, debug: boolean = false) {
         this.debug = debug
         const contents: Buffer = readFileSync(filename);
         this.records = parse(contents, {
@@ -134,7 +135,7 @@ class TypePredictions {
     }
 
     debugPrint(): void {
-        for (let r of this.records) {
+        for (const r of this.records) {
             if (r.typePrediction) {
                 console.log(r.tokenValue + " (" + r.tokenType + "): " + r.typePrediction);
             } else {
@@ -179,6 +180,39 @@ const predictions: TypePredictions = new TypePredictions(csvFilename);
  *   e.g. let [a, b] = c
  */
 function traverse(node: SourceFile): void {
+    /**
+     * Local function for handling function-like nodes, i.e. function expressions,
+     * function declarations, and arrow nodes. Checks if the function has optional
+     * (i.e. default) parameters; if so, skip.
+     *
+     * Otherwise, search for type predictions (and handle the case where the search
+     * fails), and pass the type predictions to the callback.
+     *
+     * @param {FunctionDeclaration | FunctionExpression | ArrowFunction} funNode The function node to handle.
+     * @param {ParameterDeclaration[]} params The function's parameter nodes.
+     * @param {string[]} tokens The token sequence to search for.
+     * @param {(types: string[]) => void} callback Callback that uses the given type predictions to annotate the function.
+     */
+    function handleFunction(
+        funNode: FunctionDeclaration | FunctionExpression | ArrowFunction,
+        params: ParameterDeclaration[],
+        tokens: string[],
+        callback: (types: string[]) => void): void {
+        if (params.some(_ => _.isOptional())) {
+            console.error("Found optional parameters; skipping function.");
+            console.error("\t" + funNode.getText().replace(/\s+/g, " ").slice(0, 80));
+            return;
+        }
+
+        const types: string[] = predictions.findTypesForTokens(tokens);
+        if (!types) {
+            console.error("Searching for types failed on tokens: " + tokens.join(" "));
+            return;
+        }
+
+        callback(types);
+    }
+
     switch (node.getKind()) {
         case SyntaxKind.VariableDeclaration: {
             const varDecl = node.asKindOrThrow(SyntaxKind.VariableDeclaration);
@@ -211,24 +245,15 @@ function traverse(node: SourceFile): void {
             break;
         }
         case SyntaxKind.FunctionDeclaration: {
-            const funDecl = node.asKindOrThrow(SyntaxKind.FunctionDeclaration);
-            const funName = funDecl.getName();
-            const params = funDecl.getParameters();
-            const paramNames = params.map(_ => _.getName());
+            const funDecl: FunctionDeclaration = node.asKindOrThrow(SyntaxKind.FunctionDeclaration);
+            const funName: string = funDecl.getName();
+            const params: ParameterDeclaration[] = funDecl.getParameters();
+            const paramNames: string[] = params.map(_ => _.getName());
 
             const tokens: string[] = ["function", funName].concat(paramNames);
 
-            if (params.some(_ => _.isOptional())) {
-                console.error("Found optional parameters; skipping function.");
-                console.error("\t" + funDecl.getText().replace(/\s+/g, " ").slice(0, 80));
-                break;
-            }
-
-            // Pattern match and discard the "undefined" prediction for "function."
-            // Separate out the return type prediction for the function name.
-            const types: string[] = predictions.findTypesForTokens(tokens);
-
-            if (types) {
+            handleFunction(funDecl, params, tokens, function(types: string[]) {
+                // Discard the "undefined" prediction for the "function" token
                 const [_, retType, ...paramTypes]: string[] = types;
                 if (retType) {
                     funDecl.setReturnType(retType);
@@ -238,31 +263,21 @@ function traverse(node: SourceFile): void {
                         p.setType(paramTypes[i]);
                     }
                 });
-            } else {
-                console.error("Searching for types failed on tokens: " + tokens.join(" "));
-            }
+            });
             break;
         }
         case SyntaxKind.FunctionExpression: {
-            const funExpr = node.asKindOrThrow(SyntaxKind.FunctionExpression);
-            const funName = funExpr.getName();
-            const params = funExpr.getParameters();
-            const paramNames = params.map(_ => _.getName());
+            const funExpr: FunctionExpression = node.asKindOrThrow(SyntaxKind.FunctionExpression);
+            const funName: string = funExpr.getName();
+            const params: ParameterDeclaration[] = funExpr.getParameters();
+            const paramNames: string[] = params.map(_ => _.getName());
 
             // funName is optional, so filter it out if it's undefined.
             const tokens: string[] = ["function", funName].concat(paramNames).filter(_ => _);
 
-            if (params.some(_ => _.isOptional())) {
-                console.error("Found optional parameters; skipping function.");
-                console.error("\t" + funExpr.getText().replace(/\s+/g, " ").slice(0, 80));
-                break;
-            }
-
-            // Pattern match and discard the "undefined" prediction for "function"
-            const types = predictions.findTypesForTokens(tokens);
-
-            if (types) {
-                const [_, ...paramTypes]: string[] = types;
+            handleFunction(funExpr, params, tokens, function(types: string[]) {
+                // Discard the "undefined" prediction for the "function" token
+                types.shift();
                 if (funName) {
                     const retType: string = types.shift();
                     if (retType) {
@@ -270,30 +285,21 @@ function traverse(node: SourceFile): void {
                     }
                 }
                 params.forEach((p, i) => {
-                    if (paramTypes[i]) {
-                        p.setType(paramTypes[i]);
+                    if (types[i]) {
+                        p.setType(types[i]);
                     }
                 });
-            } else {
-                console.error("Searching for types failed on tokens: " + tokens.join(" "));
-            }
+            });
             break;
         }
         case SyntaxKind.ArrowFunction: {
-            const arrowFun = node.asKindOrThrow(SyntaxKind.ArrowFunction);
-            const params = arrowFun.getParameters();
-            const paramNames = params.map(_ => _.getName());
+            const arrowFun: ArrowFunction = node.asKindOrThrow(SyntaxKind.ArrowFunction);
+            const params: ParameterDeclaration[] = arrowFun.getParameters();
+            const paramNames: string[] = params.map(_ => _.getName());
 
             const tokens: string[] = paramNames.concat(["=>"])
 
-            if (params.some(_ => _.isOptional())) {
-                console.error("Found optional parameters; skipping function.");
-                console.error("\t" + arrowFun.getText().replace(/\s+/g, " ").slice(0, 80));
-                break;
-            }
-
-            const types: string[] = predictions.findTypesForTokens(tokens);
-            if (types) {
+            handleFunction(arrowFun, params, tokens, function(types: string[]) {
                 // Discard the "undefined" prediction for "=>"
                 types.pop();
                 params.forEach((p, i) => {
@@ -301,9 +307,7 @@ function traverse(node: SourceFile): void {
                         p.setType(types[i]);
                     }
                 });
-            } else {
-                console.error("Searching for types failed on tokens: " + tokens.join(" "));
-            }
+            });
             break;
         }
     }
