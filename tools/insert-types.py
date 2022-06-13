@@ -1,9 +1,11 @@
+from concurrent import futures
 from pathlib import Path
 from subprocess import PIPE
 import subprocess, sys
 
 inputs_log = "type-ins-inputs.txt"
 success_log = "type-ins-success.txt"
+warn_log = "type-ins-warn.txt"
 fail_log = "type-ins-fail.txt"
 err_log = "type-ins-errs.txt"
 
@@ -44,28 +46,36 @@ with open(inputs_log, mode="w", encoding="utf-8") as f_inputs:
         print(f, file=f_inputs)
 
 f_success = open(success_log, mode="w", encoding="utf-8")
+f_warn = open(warn_log, mode="w", encoding="utf-8")
 f_fail = open(fail_log, mode="w", encoding="utf-8")
 f_err = open(err_log, mode="w", encoding="utf-8")
 
-#num_files = 5
-# TODO: parallelize this
-for i in range(0, num_files):
-    short = short_filenames[i]
-    full = full_filenames[i]
-
-    print("[{}/{}] Inserting types into {}...".format(i+1, num_files, short), end="", flush=True)
-
-    args = ["node", type_inserter_path.name, full]
+def job(i):
+    args = ["node", type_inserter_path.name, full_filenames[i]]
     result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=type_inserter_path.parent)
+    return i, result
 
-    if result.returncode == 0:
-        print(" \033[1;32m[ OK ]\033[0m")
-        print(short, file=f_success)
-    else:
-        print(" \033[1;31m[FAIL]\033[0m")
-        print(short, file=f_fail)
-        print("=" * 40, short, "=" * 40, file=f_err)
-        print(result.stderr, file=f_err)
+with futures.ProcessPoolExecutor() as executor:
+    counter = 0
+    fs = [executor.submit(job, i) for i in range(0, num_files)]
+
+    for f in futures.as_completed(fs):
+        i, result = f.result()
+        short = short_filenames[i]
+        counter += 1
+
+        print("[{}/{}] Inserted types into {}".format(counter, num_files, short), end="", flush=True)
+        if result.returncode == 0:
+            print(" \033[1;32m[ OK ]\033[0m")
+            print(short, file=f_success)
+            if result.stderr:
+                print("=" * 40, short, "=" * 40, file=f_warn)
+                print(result.stderr, file=f_warn)
+        else:
+            print(" \033[1;31m[FAIL]\033[0m")
+            print(short, file=f_fail)
+            print("=" * 40, short, "=" * 40, file=f_err)
+            print(result.stderr, file=f_err)
 
 f_success.close()
 f_fail.close()
