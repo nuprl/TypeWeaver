@@ -28,17 +28,41 @@ errors collected in `type-inf-errs.txt`.
 
 # Type insertion
 
-# TODO: make insert-types.py parallel, fix bug with misalignment...
+This step reads the JavaScript files and their corresponding CSV files, and
+inserts the predicted type annotations, outputing TypeScript.
 
-Took about 20 minutes
-1786 successes
-681 failures
-all errors are the same, looks like mis-alignment of types and identifiers
-all the successes sampled had misalignment issues
+    # starting from the repository root
+    cd data/notes/npm-nodeps-DT-output
+    python ../../../tools/insert-types.py ../../npm-nodeps-DT-output
+
+`insert-types.py` outputs logs to its current working directory.
+
+Using 16 cores, this step took about 2 minutes.
+
+All 2467 files were successfully converted to TypeScript; these are listed in
+`type-ins-success.txt`. There were 0 failures and 0 errors logged.
+
+However, there were 615 warnings in 126 files; these are listed in
+`type-ins-warn.txt`. The warnings fall into the following categories:
+
+  - 7 declaration types could not be found
+    - 2 cases are using a destructuring pattern in function parameters, and
+      type-inserter should be updated to silently skip this
+        - async/internal/asyncEachOfLimit.js
+        - ret/dist/write-set-tokens.js
+    - 1 case is due to an incorrect tokenization by DeepTyper
+        - stealthy-require/lib/index.js
+          `var modulesToKeep = []` has `modulesToKeep` split into two tokens
+    - 4 cases need more investigation (2 files with 2 cases each)
+       - deepmerge/dist/umd.js
+       - deepmerge/dist/cjs.js
+  - 49 functions with default parameters were skipped
+  - 559 declaration statements contained multiple declarations and were skipped
+
 
 # Type checking
 
-NOTE: Below text is outdated; we need to run the CSV-to-TS step first before we can type check
+TODO: Below text is outdated; we need to run the CSV-to-TS step first before we can type check
 
 After the TypeScript was generated, the next step is to run the TypeScript
 compiler to type check the output. This was done by running the included
