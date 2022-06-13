@@ -12,5 +12,5 @@ Currently, only the DeepTyper CSV format is supported.
 
 ## Running
 
-    node index.js path/to/file.js   # assumes path/to/file.csv also exists
-                                    # outputs path/to/file.ts
+    node index.js examples/factors.js   # assumes examples/factors.csv also exists
+                                        # outputs examples/factors.ts
