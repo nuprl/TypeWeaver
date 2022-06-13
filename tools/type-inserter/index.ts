@@ -1,8 +1,9 @@
 import { existsSync, readFileSync } from "node:fs";
 import * as path from "path";
 import { parse } from "csv-parse/sync";
-import { ArrowFunction, FunctionDeclaration, FunctionExpression, ParameterDeclaration,
-         Project, SourceFile, SyntaxKind } from "ts-morph";
+import { ArrowFunction, FunctionDeclaration, FunctionExpression, Identifier,
+         ParameterDeclaration, Project, SourceFile, SyntaxKind, VariableDeclaration,
+         VariableDeclarationKind, VariableStatement } from "ts-morph";
 
 function printUsageAndExit(error: string): void {
     console.log(error);
@@ -152,27 +153,11 @@ const predictions: TypePredictions = new TypePredictions(csvFilename);
  * to get the predicted types for those tokens. It then sets the type annotations
  * for those AST nodes.
  *
- * Specifically:
+ * The nodes we can annotate are:
  *   - variable declarations
- *       e.g. let x = 42 ...
- *       query: [let, x]
- *       types: [T1]
- *       rewriting: let x: T1 = 42 ...
  *   - function declarations
- *       e.g. function f(a, b) { ... }
- *       query: [function, f, a, b]
- *       types: [undefined, T, S1, S2]
- *       rewriting: function f(a: S1, b: S2): T { ... }
  *   - function expressions
- *       e.g. function(a, b, c) { ... }
- *       query: [function, a, b, c]
- *       types: [undefined, T1, T2, T3]
- *       rewriting: function(a: T1, b: T2, c: T3) { ... }
  *   - arrow functions
- *       e.g. (a, b) => a + b
- *       query: [a, b, =>]
- *       types: [T1, T2, undefined]
- *       rewriting: (a: T1, b: T2) => a + b
  *
  * Variable declarations must not be in for...in or for...of statements
  *   e.g. for (var x in/of y) { ... }
@@ -187,17 +172,11 @@ function traverse(node: SourceFile): void {
      *
      * Otherwise, search for type predictions (and handle the case where the search
      * fails), and pass the type predictions to the callback.
-     *
-     * @param {FunctionDeclaration | FunctionExpression | ArrowFunction} funNode The function node to handle.
-     * @param {ParameterDeclaration[]} params The function's parameter nodes.
-     * @param {string[]} tokens The token sequence to search for.
-     * @param {(types: string[]) => void} callback Callback that uses the given type predictions to annotate the function.
      */
-    function handleFunction(
-        funNode: FunctionDeclaration | FunctionExpression | ArrowFunction,
-        params: ParameterDeclaration[],
-        tokens: string[],
-        callback: (types: string[]) => void): void {
+    function handleFunction(funNode: FunctionDeclaration | FunctionExpression | ArrowFunction,
+                            params: ParameterDeclaration[],
+                            tokens: string[],
+                            callback: (types: string[]) => void): void {
         if (params.some(_ => _.isOptional())) {
             console.error("Found optional parameters; skipping function.");
             console.error("\t" + funNode.getText().replace(/\s+/g, " ").slice(0, 80));
@@ -215,36 +194,53 @@ function traverse(node: SourceFile): void {
 
     switch (node.getKind()) {
         case SyntaxKind.VariableDeclaration: {
-            const varDecl = node.asKindOrThrow(SyntaxKind.VariableDeclaration);
-            const varDeclChildren = varDecl.getChildren();
-            const varStmt = varDecl
+            /**
+             * Example: let x = 42
+             * Token sequence: [let, x]
+             * Result: let x: T = 42
+            */
+            const varDecl: VariableDeclaration = node.asKindOrThrow(SyntaxKind.VariableDeclaration);
+            const varStmt: VariableStatement = varDecl
                 .getParentOrThrow()
                 .getParentIfKind(SyntaxKind.VariableStatement);
-            const varDecls = varStmt?.getDeclarations();
-            const varDeclType =
-                (varDecls && varDecls[0] === varDecl)
-                ? varStmt?.getDeclarationKind()
-                : undefined;
-            const identifier = varDecl
-                ?.getChildAtIndexIfKind(0, SyntaxKind.Identifier)
-                ?.getText();
+            const idNode: Identifier = varDecl.getChildAtIndexIfKind(0, SyntaxKind.Identifier);
 
-            if (varDeclType && varDecl && identifier) {
-                const tokens: string[] = [varDeclType, identifier];
-                const types: string[] = predictions.findTypesForTokens(tokens);
-                if (types && types[1]) {
-                    // types[0] is undefined; corresponds to the var/let/const token.
-                    varDecl.setType(types[1]);
-                } else {
-                    console.error("Searching for types failed on tokens: " + tokens.join(" "));
-                }
-            } else if (varStmt && varDecl && identifier) {
+            // Skip this case if any of the following are true
+            //   - grandparent node is not a variable statement (meaning we're in a for loop)
+            //   - first child node is not an identifier (meaning we have a destructuring pattern)
+            //   - this is not the first declaration in a statement
+            //     - the search algorithm does not handle this case, so we ignore it.
+            if (!varStmt || !idNode) {
+                break;
+            } else if (varStmt.getDeclarations()[0] !== varDecl) {
                 console.error("Found multiple declarations; skipping rest of declarations.");
                 console.error("\t" + varStmt.getText().replace(/\s+/g, " ").slice(0, 80));
+                break;
+            }
+
+            const varDeclType: VariableDeclarationKind = varStmt.getDeclarationKind();
+            const identifier: string = idNode.getText();
+
+            const tokens: string[] = [varDeclType, identifier];
+            const types: string[] = predictions.findTypesForTokens(tokens);
+            if (!types) {
+                console.error("Searching for types failed on tokens: " + tokens.join(" "));
+                break;
+            }
+
+            // Discard the "undefined" prediction for the let/const/var token
+            const [_, varType]: string[] = types;
+            if (varType) {
+                varDecl.setType(varType);
             }
             break;
         }
         case SyntaxKind.FunctionDeclaration: {
+            /**
+             * Example: function f(a, b) { ... }
+             * Token sequence: [function, f, a, b]
+             * Result: function f(a: T2, b: T3): T1 { ... }
+            */
             const funDecl: FunctionDeclaration = node.asKindOrThrow(SyntaxKind.FunctionDeclaration);
             const funName: string = funDecl.getName();
             const params: ParameterDeclaration[] = funDecl.getParameters();
@@ -267,6 +263,11 @@ function traverse(node: SourceFile): void {
             break;
         }
         case SyntaxKind.FunctionExpression: {
+            /**
+             * Example: function(a, b, c) { ... }
+             * Token sequence: [function, a, b, c]
+             * Result: function(a: T1, b: T2, c: T3) { ... }
+            */
             const funExpr: FunctionExpression = node.asKindOrThrow(SyntaxKind.FunctionExpression);
             const funName: string = funExpr.getName();
             const params: ParameterDeclaration[] = funExpr.getParameters();
@@ -293,6 +294,11 @@ function traverse(node: SourceFile): void {
             break;
         }
         case SyntaxKind.ArrowFunction: {
+            /**
+             * Example: (a, b) => a + b
+             * Token sequence: [a, b, =>]
+             * Result: (a: T1, b: T2) => a + b
+            */
             const arrowFun: ArrowFunction = node.asKindOrThrow(SyntaxKind.ArrowFunction);
             const params: ParameterDeclaration[] = arrowFun.getParameters();
             const paramNames: string[] = params.map(_ => _.getName());
