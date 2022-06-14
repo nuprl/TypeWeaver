@@ -11,10 +11,10 @@ The type inference was done by executing:
     python ../../../tools/infer-types.py ../../npm-nodeps-DT-output
 
 `infer-types.py` can be run from any directory, but it outputs logs to its
-current working directory.
+current working directory. It took about 135 minutes (with an RTX6000) to run
+the type inference.
 
-There are 8824 files total, taking up 51 MB of space. It took about 135 minutes
-(with an RTX6000) to run the type inference.
+There are 8824 files total, taking up 51 MB of space.
 
 2500 `*.js` files were given as inputs; these are listed in
 `type-inf-inputs.txt`.
@@ -62,37 +62,24 @@ However, there were 615 warnings in 126 files; these are listed in
 
 # Type checking
 
-TODO: Below text is outdated; we need to run the CSV-to-TS step first before we can type check
-
-After the TypeScript was generated, the next step is to run the TypeScript
-compiler to type check the output. This was done by running the included
-`type-check.sh` bash script, which individually type checks each file listed in
-`type-inf-outputs.txt`:
+This step runs the TypeScript compiler (with the `--noEmit` flag) to type check
+the generated TypeScript files (individually, rather than by project).
 
     # starting from the repository root
-    cd data
-    ./type-check.sh npm-nodeps-DT-output
+    cd data/notes/npm-nodeps-DT-output
+    python ../../../tools/check-types.py ../../npm-nodeps-DT-output
 
-Overall, this took about 2 hours to complete.
+Using 16 cores, this step took about 15 minutes.
 
-**Note**: each file, rather than project, was type checked individually.
+There were 2467 inputs; these are listed in `type-check-inputs.txt`.
 
-`@types/node` is a required dependency, since otherwise `module`
-(e.g. `module.exports`) is not defined.
+350 files type checked successfully; these are listed in
+`type-check-success.txt`.
 
-330 files type checked successfully; these are listed in `type-check-pass.txt`.
-Most of these files are very small, or the type annotations were mostly `any`.
-The largest file (`mime/types/other.ts`) is mainly JSON and contains no
-declarations. The second largest file (`pako/lib/zlib/inftrees.ts`) contains
-declarations, but is mostly code and comments. For some files, DeepTyper was
-able to infer types like `string`, `number`, `Function`, and array types.
+2117 fails did not type check; these are listed in `type-check-fail.txt` and
+their errors logged to `type-check-errs.txt`. There were about 28,000 errors.
 
-2137 files failed to type check; these are listed in `type-check-fail.txt`.
-There error messages are recorded in `type-check-errs.txt` and there are over
-18K lines of errors.
-
-Many of these errors are because the modified DeepTyper output invalid
-TypeScript code. But there are also errors where the TypeScript code was
-syntactically valid but did not type check (e.g. `aproba/index.ts`, or
-`async/internal/DoublyLinkedList.ts` which inferred a type `GridApi` that is not
-defined anywhere.)
+TODO: investigate the successes/failures
+  - spot check the successes to see if the types were inserted properly
+  - what are the largest files that succeeded?
+  - are all the errors type checking errors, or did something else go wrong?
