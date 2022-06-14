@@ -5,7 +5,6 @@ import subprocess, sys
 
 inputs_log = "type-check-inputs.txt"
 success_log = "type-check-success.txt"
-warn_log = "type-check-warn.txt"
 fail_log = "type-check-fail.txt"
 err_log = "type-check-errs.txt"
 
@@ -46,7 +45,6 @@ with open(inputs_log, mode="w", encoding="utf-8") as f_inputs:
         print(f, file=f_inputs)
 
 f_success = open(success_log, mode="w", encoding="utf-8")
-f_warn = open(warn_log, mode="w", encoding="utf-8")
 f_fail = open(fail_log, mode="w", encoding="utf-8")
 f_err = open(err_log, mode="w", encoding="utf-8")
 
@@ -68,10 +66,6 @@ with futures.ProcessPoolExecutor() as executor:
         if result.returncode == 0:
             print(" \033[1;32m[ OK ]\033[0m")
             print(short, file=f_success)
-            # compiler errors are printed to stdout
-            if result.stdout:
-                print("=" * 40, short, "=" * 40, file=f_warn)
-                print(result.stdout, file=f_warn)
         else:
             print(" \033[1;31m[FAIL]\033[0m")
             print(short, file=f_fail)

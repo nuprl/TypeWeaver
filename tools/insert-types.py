@@ -78,5 +78,6 @@ with futures.ProcessPoolExecutor() as executor:
             print(result.stderr, file=f_err)
 
 f_success.close()
+f_warn.close()
 f_fail.close()
 f_err.close()
