@@ -29,3 +29,24 @@ However, there were 614 warnings in 125 files. Compared to
 `npm-nodeps-DT-output`, the only difference is a single warning, caused by
 DeepTyper using the TypeScript lexer and incorrectly tokenizing a file. Using
 the JavaScript lexer avoids this warning.
+
+
+# Type checking
+
+    cd data/notes/npm-nodeps-DT-as-JS
+    python ../../../tools/check-types.py ../../npm-nodeps-DT-as-JS
+
+This took about 15 minutes.
+
+There were 2467 inputs.
+
+348 type checked successfully. 2119 failed to type check.
+
+  - failed for npm-nodeps-DT-as-JS but succeeded for npm-nodeps-DT-output
+    - asynckit/lib/streamify.ts
+    - date-fns/isExists/index.ts
+    - pako/lib/zlib/inftress.ts
+    - prr/prr.ts
+  - succeeded for npm-nodeps-DT-as-JS but failed for npm-nodeps-DT-output
+    - pako/lib/utils/common.ts
+    - performance-now/lib/performance-now.ts
