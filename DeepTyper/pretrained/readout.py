@@ -11,11 +11,8 @@ import pygments
 
 import re
 import string
-from pygments.lexers import JavascriptLexer, TypeScriptLexer
+from pygments.lexers import TypeScriptLexer
 from pygments.token import Comment, Literal
-
-#lexer = JavascriptLexer()
-lexer = TypeScriptLexer()
 
 regex = re.compile(r"^[^\d\W]\w*$", re.UNICODE)
 keywords = ["async", "await", "break", "continue", "class", "extends", "constructor", "super", "extends", "const", "let", "var", "debugger", "delete", "do", "while", "export", "import", "for", "each", "in", "of", "function", "return", "get", "set", "if", "else", "instanceof", "typeof", "null", "undefined", "switch", "case", "default", "this", "true", "false", "try", "catch", "finally", "void", "yield", "any", "boolean", "null", "never", "number", "string", "symbol", "undefined", "void", "as", "is", "enum", "type", "interface", "abstract", "implements", "static", "readonly", "private", "protected", "public", "declare", "module", "namespace", "require", "from", "of", "package"]
@@ -172,7 +169,7 @@ def prep(tokens):
 
 # let's run a sequence through
 def run_seq(seq):
-	tokens = list(pygments.lex(seq, lexer))
+	tokens = list(pygments.lex(seq, TypeScriptLexer()))
 	ws, tokens = prep(tokens)
 	# Set up tensors
 	inputs = np.zeros(len(ws))
