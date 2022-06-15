@@ -82,9 +82,6 @@ Found optional parameters; skipping function.
 Found optional parameters; skipping function.
 	(err, ...resultArgs) => { /* istanbul ignore else */ if (typeof console === 'obj
 
-======================================== async/internal/asyncEachOfLimit.js ========================================
-Searching for types failed on tokens: { value, done: iterDone } =>
-
 ======================================== async/internal/onlyOnce.js ========================================
 Found optional parameters; skipping function.
 	function (...args) { if (fn === null) throw new Error("Callback was already call
@@ -757,7 +754,6 @@ Found multiple declarations; skipping rest of declarations.
 	let tokens: any[] = [], rs, c;
 
 ======================================== ret/dist/write-set-tokens.js ========================================
-Searching for types failed on tokens: function isSameSet set { lookup, len }
 Found optional parameters; skipping function.
 	function writeSetTokens(set, isNested = false) { if (isSameSet(set.set, sets.INT
 

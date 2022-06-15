@@ -64,3 +64,8 @@ let xyz = input.map(_ => _ + 1).filter(function(x) { return x % 1 == 0; });
 
 let $foo = 2;
 let test = `abc`;
+
+function pm({ a }) {
+    return a;
+}
+console.log(pm(obj));

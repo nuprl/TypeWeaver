@@ -45,11 +45,7 @@ All 2467 files were successfully converted to TypeScript; these are listed in
 However, there were 615 warnings in 126 files; these are listed in
 `type-ins-warn.txt`. The warnings fall into the following categories:
 
-  - 7 declaration types could not be found
-    - 2 cases are using a destructuring pattern in function parameters, and
-      type-inserter should be updated to silently skip this
-        - async/internal/asyncEachOfLimit.js
-        - ret/dist/write-set-tokens.js
+  - 5 declaration types could not be found
     - 1 case is due to an incorrect tokenization by DeepTyper
         - stealthy-require/lib/index.js
           `var modulesToKeep = []` has `modulesToKeep` split into two tokens

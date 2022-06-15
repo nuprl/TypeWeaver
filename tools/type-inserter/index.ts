@@ -167,8 +167,8 @@ const predictions: TypePredictions = new TypePredictions(csvFilename);
 function traverse(node: SourceFile): void {
     /**
      * Local function for handling function-like nodes, i.e. function expressions,
-     * function declarations, and arrow nodes. Checks if the function has optional
-     * (i.e. default) parameters; if so, skip.
+     * function declarations, and arrow nodes. Checks if the function parameters
+     * have destructuring patterns or are optional (i.e. default); if so, skip.
      *
      * Otherwise, search for type predictions (and handle the case where the search
      * fails), and pass the type predictions to the callback.
@@ -177,6 +177,11 @@ function traverse(node: SourceFile): void {
                             params: ParameterDeclaration[],
                             tokens: string[],
                             callback: (types: string[]) => void): void {
+        if (!params.every(_ => _.getChildAtIndexIfKind(0, SyntaxKind.Identifier))) {
+            // Silently skip destructuring patterns in params
+            return;
+        }
+
         if (params.some(_ => _.isOptional())) {
             console.error("Found optional parameters; skipping function.");
             console.error("\t" + funNode.getText().replace(/\s+/g, " ").slice(0, 80));
@@ -322,6 +327,7 @@ function traverse(node: SourceFile): void {
 traverse(outputFile);
 
 // Print annotated code to console
+//predictions.debugPrint();
 //console.log(outputFile.getFullText());
 
 // Save the modified file

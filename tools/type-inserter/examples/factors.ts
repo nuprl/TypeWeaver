@@ -38,7 +38,7 @@ const fun5: number = function f5(n: number): number { return n; }
 var fun6: number = function f6(n: number): number { return n; }
 
 let fun7: number = (a: number, b: number) => a + b;
-const fun8: number = (a: string) => a;
+const fun8: number = (a: any) => a;
 var fun9: string = (a: any) => a;
 let abc: string = "abc".split('')
 
@@ -60,7 +60,12 @@ let input: number[] = [1,2];
 let obj: complex = { a: 42 };
 let [first, second] = input;
 let { a } = obj;
-let xyz: any[] = input.map((_: number) => _ + 1).filter(function(x: number) { return x % 1 == 0; });
+let xyz: any[] = input.map((_: any) => _ + 1).filter(function(x: any) { return x % 1 == 0; });
 
 let $foo = 2;
 let test: any = `abc`;
+
+function pm({ a }) {
+    return a;
+}
+console.log(pm(obj));
