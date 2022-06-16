@@ -326,8 +326,10 @@ function traverse(node: SourceFile): void {
 }
 traverse(outputFile);
 
-// Print annotated code to console
+// For debugging
 //predictions.debugPrint();
+
+// Print annotated code to console
 //console.log(outputFile.getFullText());
 
 // Save the modified file

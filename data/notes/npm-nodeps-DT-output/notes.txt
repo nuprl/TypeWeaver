@@ -49,9 +49,14 @@ However, there were 613 warnings in 126 files; these are listed in
     - 1 case is due to an incorrect tokenization by DeepTyper
         - stealthy-require/lib/index.js
           `var modulesToKeep = []` has `modulesToKeep` split into two tokens
-    - 4 cases need more investigation (2 files with 2 cases each)
-       - deepmerge/dist/umd.js
-       - deepmerge/dist/cjs.js
+    - 4 cases (2 files with 2 cases each) are a different tokenization issue
+       - deepmerge/dist/{cjs,umd}.js
+         `var canUseSymbol = Symbol.for; var REACT_ELEMENT_TYPE = ...`
+         The token sequences cannot be found in the CSV file, because they are
+         precided by the "for" token. This is a check to prevent matching
+         declarations within for loops, but it gets triggered here because "for"
+         is used as a property name. The tokenizer is unable to distinguish
+         between property names and reserved keywords.
   - 49 functions with default parameters were skipped
   - 559 declarations were part of a multi-declaration statement and were skipped
 
