@@ -42,7 +42,7 @@ Using 16 cores, this step took about 2 minutes.
 All 2467 files were successfully converted to TypeScript; these are listed in
 `type-ins-success.txt`. There were 0 failures and 0 errors logged.
 
-However, there were 615 warnings in 126 files; these are listed in
+However, there were 613 warnings in 126 files; these are listed in
 `type-ins-warn.txt`. The warnings fall into the following categories:
 
   - 5 declaration types could not be found
@@ -53,7 +53,7 @@ However, there were 615 warnings in 126 files; these are listed in
        - deepmerge/dist/umd.js
        - deepmerge/dist/cjs.js
   - 49 functions with default parameters were skipped
-  - 559 declaration statements contained multiple declarations and were skipped
+  - 559 declarations were part of a multi-declaration statement and were skipped
 
 
 # Type checking
