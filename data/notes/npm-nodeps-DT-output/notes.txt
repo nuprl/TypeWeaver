@@ -80,7 +80,57 @@ There were 2467 inputs; these are listed in `type-check-inputs.txt`.
 2117 fails did not type check; these are listed in `type-check-fail.txt` and
 their errors logged to `type-check-errs.txt`. There were about 28,000 errors.
 
-TODO: investigate the successes/failures
+TODO: investigate the successes
   - spot check the successes to see if the types were inserted properly
   - what are the largest files that succeeded?
-  - are all the errors type checking errors, or did something else go wrong?
+
+To produce a list and counts of the different types of errors:
+
+    grep -Po "error TS\d+:" type-check-errs.txt \
+      | sed -E 's/error (TS.{4}):/\1/' \
+      | sort | uniq -c | sort -nr
+
+The list of error numbers is below, along with the error message. There are
+26,667 errors in total, but only 41 are unique error types.
+
+    8913 TS2304 # Cannot find name _
+    8423 TS2322 # Type _ is not assignable to type _
+    2640 TS2339 # Property _ does not exist on type _
+    2458 TS2695 # Left side of comma operator is unused and has no side effects.
+    1366 TS2345 # Argument of type _ is not assignable to parameter of type _
+     691 TS2554 # Expected _ arguments, but got _
+     627 TS2367 # This condition will always return _ because the types _ and _ have no overlap.
+     617 TS2349 # This expression is not callable ...
+     233 TS2678 # Type _ is not comparable to type _
+     140 TS1345 # An expression of type _ cannot be tested for truthiness.
+     136 TS2363 # The right-hand side of an arithmetic operation must be of type ...
+      98 TS2365 # Operator _ cannot be applied to types _ and _
+      84 TS2582 # Cannot find name _. Do you need to install type definitions for a test runner? ...
+      34 TS2362 # The left-hand side of an arithmetic operation must be of type ...
+      28 TS2551 # Property _ does not exist on type _
+      27 TS2552 # Cannot find name _
+      19 TS2355 # A function whose declared type is neither 'void' nor 'any' must return a value.
+      13 TS2802 # Type _ can only be iterated through when using the '--downLevelIteration' flag or with a '--target' of 'es2015' or higher.
+      12 TS2769 # No overload matches this call.
+      12 TS2350 # Only a void function can be called with the 'new' keyword.
+      11 TS2300 # Duplicate identifier _
+      10 TS2526 # A 'this' type is available only in a non-static member of a class or interface.
+      10 TS2451 # Cannot redeclare block-scoped variable ...
+       9 TS2740 # Type _ is missing the following properties from type _ ...
+       8 TS2307 # Cannot find module _ or its corresponding type declarations.
+       7 TS2556 # A spread argument must either have tuple type or be passed as a rest parameter.
+       7 TS2403 # Subsequent variable declarations must have the same type.
+       7 TS1056 # Accessors are only available when targeting ECMAScript 5 and higher.
+       6 TS2749 # _ refers to a value, but it is being used as a type here.
+       4 TS2393 # Duplicate function implementation.
+       4 TS2348 # Value of type ... is not callable. Did you mean to include 'new'?
+       2 TS2540 # Cannot assign to ... because it is a read-only property
+       2 TS2356 # An arithmetic operand must be of type ...
+       2 TS2351 # This expression is not constructable.
+       1 TS2739 # Type '{}' is missing the following properties from type 'JSON' ...
+       1 TS2732 # Cannot find module './pcakage.json'
+       1 TS2661 # Cannot export 'Buffer'. Only local declarations can be exported from a module.
+       1 TS2630 # Cannot assign to 'u' because it is a function.
+       1 TS2538 # Type 'void' cannot be used as an index type.
+       1 TS2394 # This overload signature is not compatible with its implementation signature.
+       1 TS2384 # Overload signatures must all be ambient or non-ambient.
