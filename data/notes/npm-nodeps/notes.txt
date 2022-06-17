@@ -2,6 +2,11 @@ The `npm-nodeps` directory (or tarball) contains a set of "no dependencies"
 packages downloaded from NPM, filtered from the top 1000 most downloaded
 packages.
 
+The download stats were scraped from NPM around August 2021. No packages were
+filtered out. Each package was downloaded as a tarball; the tarball was what
+the package author uploaded to NPM, which might not correspond to the package's
+GitHub repository. NPM does not do any validation or curation on the tarballs.
+
 "No dependencies" means the `package.json` file has the line:
 
     "dependencies": {}
