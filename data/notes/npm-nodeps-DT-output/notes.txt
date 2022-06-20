@@ -77,12 +77,29 @@ There were 2467 inputs; these are listed in `type-check-inputs.txt`.
 350 files type checked successfully; these are listed in
 `type-check-success.txt`.
 
-2117 fails did not type check; these are listed in `type-check-fail.txt` and
+2117 files did not type check; these are listed in `type-check-fail.txt` and
 their errors logged to `type-check-errs.txt`. There were about 28,000 errors.
 
-TODO: investigate the successes
-  - spot check the successes to see if the types were inserted properly
-  - what are the largest files that succeeded?
+From a spot check of the successful files (random sample of 20 out of 350
+successes), 8 files did not have any annotations, and most annotations were
+"any".
+
+The dataset also seems skewed to a small handful of packages with many small and
+simple files, e.g. `date-fns` (122/1992 type checked), `async` (11/129 type
+checked), and `neo-async` (114/114 type checked).
+
+The largest files that type checked successfully were:
+
+  - 26K mime/types/other.ts
+    - no types, only a JSON object
+  - 21K async/index.ts
+    - large list of `requires` and `export`, with `any` annotations
+  - 16K date-fns/locale/index.ts
+    - large list of `requires` and `export`, with `any` annotations
+  - 13K pako/lib/zlib/inftrees.ts
+    - not too many annotations, a lot of comments
+  -  9K mime/types/standard.ts
+    - no types, only a JSON object
 
 To produce a list and counts of the different types of errors:
 
@@ -128,7 +145,7 @@ The list of error numbers is below, along with the error message. There are
        2 TS2356 # An arithmetic operand must be of type ...
        2 TS2351 # This expression is not constructable.
        1 TS2739 # Type '{}' is missing the following properties from type 'JSON' ...
-       1 TS2732 # Cannot find module './pcakage.json'
+       1 TS2732 # Cannot find module './package.json'
        1 TS2661 # Cannot export 'Buffer'. Only local declarations can be exported from a module.
        1 TS2630 # Cannot assign to 'u' because it is a function.
        1 TS2538 # Type 'void' cannot be used as an index type.
