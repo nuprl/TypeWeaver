@@ -1,11 +1,13 @@
 from pathlib import Path
 from subprocess import PIPE
-import subprocess, sys
+import os, subprocess, sys
 
-inputs_log = "type-inf-inputs.txt"
-success_log = "type-inf-success.txt"
-fail_log = "type-inf-fail.txt"
-err_log = "type-inf-errs.txt"
+pid = os.getpid()
+
+inputs_log = "type-inf-inputs.{}.txt".format(pid)
+success_log = "type-inf-success.{}.txt".format(pid)
+fail_log = "type-inf-fail.{}.txt".format(pid)
+err_log = "type-inf-errs.{}.txt".format(pid)
 
 current_path = Path(__file__).parent
 deep_typer_path = Path(current_path, "..", "DeepTyper", "pretrained", "readout.py").resolve()
@@ -49,8 +51,15 @@ f_err = open(err_log, mode="w", encoding="utf-8")
 for i in range(0, num_files):
     short = short_filenames[i]
     full = full_filenames[i]
+    csv = full.with_suffix(".csv")
 
     print("[{}/{}] Inferring types for {}...".format(i+1, num_files, short), end="", flush=True)
+
+    # Skip if a previous run had already generated a CSV file
+    if csv.exists() and csv.is_file():
+        print(" \033[1;33m[SKIP]\033[0m")
+        continue
+
     args = ["python", deep_typer_path.name, full]
     result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=deep_typer_path.parent)
 
