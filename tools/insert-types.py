@@ -67,15 +67,15 @@ with futures.ProcessPoolExecutor() as executor:
         print("[{}/{}] Inserted types into {}".format(counter, num_files, short), end="", flush=True)
         if result.returncode == 0:
             print(" \033[1;32m[ OK ]\033[0m")
-            print(short, file=f_success)
+            print(short, file=f_success, flush=True)
             if result.stderr:
                 print("=" * 40, short, "=" * 40, file=f_warn)
-                print(result.stderr, file=f_warn)
+                print(result.stderr, file=f_warn, flush=True)
         else:
             print(" \033[1;31m[FAIL]\033[0m")
-            print(short, file=f_fail)
+            print(short, file=f_fail, flush=True)
             print("=" * 40, short, "=" * 40, file=f_err)
-            print(result.stderr, file=f_err)
+            print(result.stderr, file=f_err, flush=True)
 
 f_success.close()
 f_warn.close()

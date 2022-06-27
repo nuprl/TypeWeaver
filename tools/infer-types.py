@@ -65,12 +65,12 @@ for i in range(0, num_files):
 
     if result.returncode == 0:
         print(" \033[1;32m[ OK ]\033[0m")
-        print(short, file=f_success)
+        print(short, file=f_success, flush=True)
     else:
         print(" \033[1;31m[FAIL]\033[0m")
-        print(short, file=f_fail)
+        print(short, file=f_fail, flush=True)
         print("=" * 40, short, "=" * 40, file=f_err)
-        print(result.stderr, file=f_err)
+        print(result.stderr, file=f_err, flush=True)
 
 f_success.close()
 f_fail.close()
