@@ -1,0 +1,601 @@
+======================================== fs-monkey/lib/patchFs.js ========================================
+Found multiple declarations; skipping rest of declarations.
+	var normalCompletion: boolean = true, didErr = false, err;
+Found multiple declarations; skipping rest of declarations.
+	var normalCompletion: boolean = true, didErr = false, err;
+/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:2300
+            throw new ManipulationError(sourceFile.getFilePath(), oldFileText, newFileText, message);
+            ^
+
+ManipulationError: Manipulation error: A syntax error was inserted.
+
+[96m../../data/top1k-plus-DT-output/fs-monkey/lib/patchFs.ts[0m:[93m25[0m:[93m20[0m - [91merror[0m[90m TS1110: [0mType expected.
+
+[7m25[0m   var patchMethod: ... = function patchMethod(key) {
+[7m  [0m [91m                   ~~~[0m
+[96m../../data/top1k-plus-DT-output/fs-monkey/lib/patchFs.ts[0m:[93m25[0m:[93m24[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m25[0m   var patchMethod: ... = function patchMethod(key) {
+[7m  [0m [91m                       ~[0m
+[96m../../data/top1k-plus-DT-output/fs-monkey/lib/patchFs.ts[0m:[93m25[0m:[93m26[0m - [91merror[0m[90m TS1389: [0m'function' is not allowed as a variable declaration name.
+
+[7m25[0m   var patchMethod: ... = function patchMethod(key) {
+[7m  [0m [91m                         ~~~~~~~~[0m
+
+Error replacing tree: The children of the old and new trees were expected to have the same count (16:18).
+
+-- Details --
+Path: /mnt/data/mhyee/not-type-inference/data/top1k-plus-DT-output/fs-monkey/lib/patchFs.ts
+Text: "...unction patch(key: any, newValue: any): void {\n    bkp[key] = fs[key];\n    fs[key] = newValue;\n  };\n\n  var patchMethod: ... = function patchMethod(key) {\n    return patch(key, vol[key].bind(vol));\n  };\n\n  var _iterator = _createForOfIteratorHelper(_list..."
+Stack: Error: Error replacing tree: The children of the old and new trees were expected to have the same count (16:18).
+    at ParentFinderReplacementNodeHandler.handleChildren (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1438:19)
+    at ParentFinderReplacementNodeHandler.handleNode (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1432:18)
+    at ParentFinderReplacementNodeHandler.handleNode (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1572:19)
+    at NodeHandlerHelper.handleForValues (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1375:21)
+    at ParentFinderReplacementNodeHandler.handleChildren (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1442:25)
+    at ParentFinderReplacementNodeHandler.handleNode (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1432:18)
+    at ParentFinderReplacementNodeHandler.handleNode (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1572:19)
+    at NodeHandlerHelper.handleForValues (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1375:21)
+    at ParentFinderReplacementNodeHandler.handleChildren (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1442:25)
+    at ParentFinderReplacementNodeHandler.handleNode (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1432:18)
+    at throwError (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:2300:19)
+    at doManipulation (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:2294:13)
+    at insertIntoParentTextRange (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:2319:5)
+    at VariableDeclaration.setType (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:10002:13)
+    at traverse (/mnt/data/mhyee/not-type-inference/tools/type-inserter/index.js:213:25)
+    at VariableDeclarationList.forEachChild (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:3241:37)
+    at traverse (/mnt/data/mhyee/not-type-inference/tools/type-inserter/index.js:293:10)
+    at VariableStatement.forEachChild (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:3241:37)
+    at traverse (/mnt/data/mhyee/not-type-inference/tools/type-inserter/index.js:293:10)
+    at Block.forEachChild (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:3241:37) {
+  filePath: '/mnt/data/mhyee/not-type-inference/data/top1k-plus-DT-output/fs-monkey/lib/patchFs.ts',
+  oldText: '"use strict";\n' +
+    '\n' +
+    'Object.defineProperty(exports, "__esModule", {\n' +
+    '  value: true\n' +
+    '});\n' +
+    'exports["default"] = patchFs;\n' +
+    '\n' +
+    'var _lists: any = require("./util/lists");\n' +
+    '\n' +
+    'function _createForOfIteratorHelper(o: any, allowArrayLike: any): void { var it: any; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i: number = 0; var F: void = function F(): void {}; return { s: F, n: function n(): number { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e: any): void { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion: boolean = true, didErr = false, err; return { s: function s(): any { it = o[Symbol.iterator](); }, n: function n(): number { var step: any = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2: any): void { didErr = true; err = _e2; }, f: function f(): void { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }\n' +
+    '\n' +
+    'function _unsupportedIterableToArray(o: any, minLen: number): any { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n: string = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n' +
+    '\n' +
+    'function _arrayLikeToArray(arr: any, len: number): any { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n' +
+    '\n' +
+    'function patchFs(vol: any): any {\n' +
+    "  var fs: any = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : require('fs');\n" +
+    '  var bkp: {} = {};\n' +
+    '\n' +
+    '  var patch: void = function patch(key: any, newValue: any): void {\n' +
+    '    bkp[key] = fs[key];\n' +
+    '    fs[key] = newValue;\n' +
+    '  };\n' +
+    '\n' +
+    '  var patchMethod = function patchMethod(key) {\n' +
+    '    return patch(key, vol[key].bind(vol));\n' +
+    '  };\n' +
+    '\n' +
+    '  var _iterator = _createForOfIteratorHelper(_lists.fsProps),\n' +
+    '      _step;\n' +
+    '\n' +
+    '  try {\n' +
+    '    for (_iterator.s(); !(_step = _iterator.n()).done;) {\n' +
+    '      var prop = _step.value;\n' +
+    "      if (typeof vol[prop] !== 'undefined') patch(prop, vol[prop]);\n" +
+    '    }\n' +
+    '  } catch (err) {\n' +
+    '    _iterator.e(err);\n' +
+    '  } finally {\n' +
+    '    _iterator.f();\n' +
+    '  }\n' +
+    '\n' +
+    "  if (typeof vol.StatWatcher === 'function') {\n" +
+    "    patch('StatWatcher', vol.FSWatcher.bind(null, vol));\n" +
+    '  }\n' +
+    '\n' +
+    "  if (typeof vol.FSWatcher === 'function') {\n" +
+    "    patch('FSWatcher', vol.StatWatcher.bind(null, vol));\n" +
+    '  }\n' +
+    '\n' +
+    "  if (typeof vol.ReadStream === 'function') {\n" +
+    "    patch('ReadStream', vol.ReadStream.bind(null, vol));\n" +
+    '  }\n' +
+    '\n' +
+    "  if (typeof vol.WriteStream === 'function') {\n" +
+    "    patch('WriteStream', vol.WriteStream.bind(null, vol));\n" +
+    '  }\n' +
+    '\n' +
+    "  if (typeof vol._toUnixTimestamp === 'function') patchMethod('_toUnixTimestamp');\n" +
+    '\n' +
+    '  var _iterator2 = _createForOfIteratorHelper(_lists.fsAsyncMethods),\n' +
+    '      _step2;\n' +
+    '\n' +
+    '  try {\n' +
+    '    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {\n' +
+    '      var method = _step2.value;\n' +
+    "      if (typeof vol[method] === 'function') patchMethod(method);\n" +
+    '    }\n' +
+    '  } catch (err) {\n' +
+    '    _iterator2.e(err);\n' +
+    '  } finally {\n' +
+    '    _iterator2.f();\n' +
+    '  }\n' +
+    '\n' +
+    '  var _iterator3 = _createForOfIteratorHelper(_lists.fsSyncMethods),\n' +
+    '      _step3;\n' +
+    '\n' +
+    '  try {\n' +
+    '    for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {\n' +
+    '      var _method = _step3.value;\n' +
+    "      if (typeof vol[_method] === 'function') patchMethod(_method);\n" +
+    '    }\n' +
+    '  } catch (err) {\n' +
+    '    _iterator3.e(err);\n' +
+    '  } finally {\n' +
+    '    _iterator3.f();\n' +
+    '  }\n' +
+    '\n' +
+    '  return function unpatch() {\n' +
+    '    for (var key in bkp) {\n' +
+    '      fs[key] = bkp[key];\n' +
+    '    }\n' +
+    '  };\n' +
+    '}\n' +
+    '\n' +
+    ';',
+  newText: '"use strict";\n' +
+    '\n' +
+    'Object.defineProperty(exports, "__esModule", {\n' +
+    '  value: true\n' +
+    '});\n' +
+    'exports["default"] = patchFs;\n' +
+    '\n' +
+    'var _lists: any = require("./util/lists");\n' +
+    '\n' +
+    'function _createForOfIteratorHelper(o: any, allowArrayLike: any): void { var it: any; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i: number = 0; var F: void = function F(): void {}; return { s: F, n: function n(): number { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e: any): void { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion: boolean = true, didErr = false, err; return { s: function s(): any { it = o[Symbol.iterator](); }, n: function n(): number { var step: any = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2: any): void { didErr = true; err = _e2; }, f: function f(): void { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }\n' +
+    '\n' +
+    'function _unsupportedIterableToArray(o: any, minLen: number): any { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n: string = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n' +
+    '\n' +
+    'function _arrayLikeToArray(arr: any, len: number): any { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n' +
+    '\n' +
+    'function patchFs(vol: any): any {\n' +
+    "  var fs: any = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : require('fs');\n" +
+    '  var bkp: {} = {};\n' +
+    '\n' +
+    '  var patch: void = function patch(key: any, newValue: any): void {\n' +
+    '    bkp[key] = fs[key];\n' +
+    '    fs[key] = newValue;\n' +
+    '  };\n' +
+    '\n' +
+    '  var patchMethod: ... = function patchMethod(key) {\n' +
+    '    return patch(key, vol[key].bind(vol));\n' +
+    '  };\n' +
+    '\n' +
+    '  var _iterator = _createForOfIteratorHelper(_lists.fsProps),\n' +
+    '      _step;\n' +
+    '\n' +
+    '  try {\n' +
+    '    for (_iterator.s(); !(_step = _iterator.n()).done;) {\n' +
+    '      var prop = _step.value;\n' +
+    "      if (typeof vol[prop] !== 'undefined') patch(prop, vol[prop]);\n" +
+    '    }\n' +
+    '  } catch (err) {\n' +
+    '    _iterator.e(err);\n' +
+    '  } finally {\n' +
+    '    _iterator.f();\n' +
+    '  }\n' +
+    '\n' +
+    "  if (typeof vol.StatWatcher === 'function') {\n" +
+    "    patch('StatWatcher', vol.FSWatcher.bind(null, vol));\n" +
+    '  }\n' +
+    '\n' +
+    "  if (typeof vol.FSWatcher === 'function') {\n" +
+    "    patch('FSWatcher', vol.StatWatcher.bind(null, vol));\n" +
+    '  }\n' +
+    '\n' +
+    "  if (typeof vol.ReadStream === 'function') {\n" +
+    "    patch('ReadStream', vol.ReadStream.bind(null, vol));\n" +
+    '  }\n' +
+    '\n' +
+    "  if (typeof vol.WriteStream === 'function') {\n" +
+    "    patch('WriteStream', vol.WriteStream.bind(null, vol));\n" +
+    '  }\n' +
+    '\n' +
+    "  if (typeof vol._toUnixTimestamp === 'function') patchMethod('_toUnixTimestamp');\n" +
+    '\n' +
+    '  var _iterator2 = _createForOfIteratorHelper(_lists.fsAsyncMethods),\n' +
+    '      _step2;\n' +
+    '\n' +
+    '  try {\n' +
+    '    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {\n' +
+    '      var method = _step2.value;\n' +
+    "      if (typeof vol[method] === 'function') patchMethod(method);\n" +
+    '    }\n' +
+    '  } catch (err) {\n' +
+    '    _iterator2.e(err);\n' +
+    '  } finally {\n' +
+    '    _iterator2.f();\n' +
+    '  }\n' +
+    '\n' +
+    '  var _iterator3 = _createForOfIteratorHelper(_lists.fsSyncMethods),\n' +
+    '      _step3;\n' +
+    '\n' +
+    '  try {\n' +
+    '    for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {\n' +
+    '      var _method = _step3.value;\n' +
+    "      if (typeof vol[_method] === 'function') patchMethod(_method);\n" +
+    '    }\n' +
+    '  } catch (err) {\n' +
+    '    _iterator3.e(err);\n' +
+    '  } finally {\n' +
+    '    _iterator3.f();\n' +
+    '  }\n' +
+    '\n' +
+    '  return function unpatch() {\n' +
+    '    for (var key in bkp) {\n' +
+    '      fs[key] = bkp[key];\n' +
+    '    }\n' +
+    '  };\n' +
+    '}\n' +
+    '\n' +
+    ';'
+}
+
+======================================== rxjs/dist/esm/internal/Subject.js ========================================
+/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:2300
+            throw new ManipulationError(sourceFile.getFilePath(), oldFileText, newFileText, message);
+            ^
+
+ManipulationError: Manipulation error: A syntax error was inserted.
+
+[96m../../data/top1k-plus-DT-output/rxjs/dist/esm/internal/Subject.ts[0m:[93m29[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m29[0m                 const copy: void)[] = this.observers.slice();
+[7m  [0m [91m                                ~[0m
+
+  [96m../../data/top1k-plus-DT-output/rxjs/dist/esm/internal/Subject.ts[0m:[93m28[0m:[93m34[0m
+    [7m28[0m             if (!this.isStopped) {
+    [7m  [0m [96m                                 ~[0m
+    The parser expected to find a '}' to match the '{' token here.
+  [96m../../data/top1k-plus-DT-output/rxjs/dist/esm/internal/Subject.ts[0m:[93m26[0m:[93m28[0m
+    [7m26[0m         errorContext(() => {
+    [7m  [0m [96m                           ~[0m
+    The parser expected to find a '}' to match the '{' token here.
+[96m../../data/top1k-plus-DT-output/rxjs/dist/esm/internal/Subject.ts[0m:[93m29[0m:[93m35[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m29[0m                 const copy: void)[] = this.observers.slice();
+[7m  [0m [91m                                  [0m
+[96m../../data/top1k-plus-DT-output/rxjs/dist/esm/internal/Subject.ts[0m:[93m34[0m:[93m10[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m34[0m         });
+[7m  [0m [91m         ~[0m
+[96m../../data/top1k-plus-DT-output/rxjs/dist/esm/internal/Subject.ts[0m:[93m35[0m:[93m5[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m35[0m     }
+[7m  [0m [91m    ~[0m
+[96m../../data/top1k-plus-DT-output/rxjs/dist/esm/internal/Subject.ts[0m:[93m36[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m36[0m     error(err) {
+[7m  [0m [91m               ~[0m
+[96m../../data/top1k-plus-DT-output/rxjs/dist/esm/internal/Subject.ts[0m:[93m49[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m49[0m     complete() {
+[7m  [0m [91m               ~[0m
+[96m../../data/top1k-plus-DT-output/rxjs/dist/esm/internal/Subject.ts[0m:[93m61[0m:[93m19[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m61[0m     unsubscribe() {
+[7m  [0m [91m                  ~[0m
+[96m../../data/top1k-plus-DT-output/rxjs/dist/esm/internal/Subject.ts[0m:[93m65[0m:[93m5[0m - [91merror[0m[90m TS1434: [0mUnexpected keyword or identifier.
+
+[7m65[0m     get observed() {
+[7m  [0m [91m    ~~~[0m
+[96m../../data/top1k-plus-DT-output/rxjs/dist/esm/internal/Subject.ts[0m:[93m65[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m65[0m     get observed() {
+[7m  [0m [91m                   ~[0m
+[96m../../data/top1k-plus-DT-output/rxjs/dist/esm/internal/Subject.ts[0m:[93m69[0m:[93m31[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m69[0m     _trySubscribe(subscriber) {
+[7m  [0m [91m                              ~[0m
+[96m../../data/top1k-plus-DT-output/rxjs/dist/esm/internal/Subject.ts[0m:[93m73[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m73[0m     _subscribe(subscriber) {
+[7m  [0m [91m                           ~[0m
+[96m../../data/top1k-plus-DT-output/rxjs/dist/esm/internal/Subject.ts[0m:[93m78[0m:[93m33[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m78[0m     _innerSubscribe(subscriber) {
+[7m  [0m [91m                                ~[0m
+[96m../../data/top1k-plus-DT-output/rxjs/dist/esm/internal/Subject.ts[0m:[93m84[0m:[93m41[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m84[0m     _checkFinalizedStatuses(subscriber) {
+[7m  [0m [91m                                        ~[0m
+[96m../../data/top1k-plus-DT-output/rxjs/dist/esm/internal/Subject.ts[0m:[93m93[0m:[93m20[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m93[0m     asObservable() {
+[7m  [0m [91m                   ~[0m
+[96m../../data/top1k-plus-DT-output/rxjs/dist/esm/internal/Subject.ts[0m:[93m98[0m:[93m1[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m98[0m }
+[7m  [0m [91m~[0m
+
+Error replacing tree: The children of the old and new trees were expected to have the same count (10:30).
+
+-- Details --
+Path: /mnt/data/mhyee/not-type-inference/data/top1k-plus-DT-output/rxjs/dist/esm/internal/Subject.ts
+Text: "...{\n        errorContext(() => {\n            this._throwIfClosed();\n            if (!this.isStopped) {\n                const copy: void)[] = this.observers.slice();\n                for (const observer of copy) {\n                    observer.next(value);\n          ..."
+Stack: Error: Error replacing tree: The children of the old and new trees were expected to have the same count (10:30).
+    at ParentFinderReplacementNodeHandler.handleChildren (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1438:19)
+    at ParentFinderReplacementNodeHandler.handleNode (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1432:18)
+    at ParentFinderReplacementNodeHandler.handleNode (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1572:19)
+    at doManipulation (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:2284:21)
+    at insertIntoParentTextRange (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:2319:5)
+    at VariableDeclaration.setType (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:10002:13)
+    at traverse (/mnt/data/mhyee/not-type-inference/tools/type-inserter/index.js:213:25)
+    at VariableDeclarationList.forEachChild (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:3241:37)
+    at traverse (/mnt/data/mhyee/not-type-inference/tools/type-inserter/index.js:293:10)
+    at VariableStatement.forEachChild (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:3241:37)
+    at throwError (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:2300:19)
+    at doManipulation (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:2294:13)
+    at insertIntoParentTextRange (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:2319:5)
+    at VariableDeclaration.setType (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:10002:13)
+    at traverse (/mnt/data/mhyee/not-type-inference/tools/type-inserter/index.js:213:25)
+    at VariableDeclarationList.forEachChild (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:3241:37)
+    at traverse (/mnt/data/mhyee/not-type-inference/tools/type-inserter/index.js:293:10)
+    at VariableStatement.forEachChild (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:3241:37)
+    at traverse (/mnt/data/mhyee/not-type-inference/tools/type-inserter/index.js:293:10)
+    at Block.forEachChild (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:3241:37) {
+  filePath: '/mnt/data/mhyee/not-type-inference/data/top1k-plus-DT-output/rxjs/dist/esm/internal/Subject.ts',
+  oldText: "import { Observable } from './Observable';\n" +
+    "import { Subscription, EMPTY_SUBSCRIPTION } from './Subscription';\n" +
+    "import { ObjectUnsubscribedError } from './util/ObjectUnsubscribedError';\n" +
+    "import { arrRemove } from './util/arrRemove';\n" +
+    "import { errorContext } from './util/errorContext';\n" +
+    'export class Subject extends Observable {\n' +
+    '    constructor() {\n' +
+    '        super();\n' +
+    '        this.closed = false;\n' +
+    '        this.observers = [];\n' +
+    '        this.isStopped = false;\n' +
+    '        this.hasError = false;\n' +
+    '        this.thrownError = null;\n' +
+    '    }\n' +
+    '    lift(operator) {\n' +
+    '        const subject: any = new AnonymousSubject(this, this);\n' +
+    '        subject.operator = operator;\n' +
+    '        return subject;\n' +
+    '    }\n' +
+    '    _throwIfClosed() {\n' +
+    '        if (this.closed) {\n' +
+    '            throw new ObjectUnsubscribedError();\n' +
+    '        }\n' +
+    '    }\n' +
+    '    next(value) {\n' +
+    '        errorContext(() => {\n' +
+    '            this._throwIfClosed();\n' +
+    '            if (!this.isStopped) {\n' +
+    '                const copy = this.observers.slice();\n' +
+    '                for (const observer of copy) {\n' +
+    '                    observer.next(value);\n' +
+    '                }\n' +
+    '            }\n' +
+    '        });\n' +
+    '    }\n' +
+    '    error(err) {\n' +
+    '        errorContext(() => {\n' +
+    '            this._throwIfClosed();\n' +
+    '            if (!this.isStopped) {\n' +
+    '                this.hasError = this.isStopped = true;\n' +
+    '                this.thrownError = err;\n' +
+    '                const { observers } = this;\n' +
+    '                while (observers.length) {\n' +
+    '                    observers.shift().error(err);\n' +
+    '                }\n' +
+    '            }\n' +
+    '        });\n' +
+    '    }\n' +
+    '    complete() {\n' +
+    '        errorContext(() => {\n' +
+    '            this._throwIfClosed();\n' +
+    '            if (!this.isStopped) {\n' +
+    '                this.isStopped = true;\n' +
+    '                const { observers } = this;\n' +
+    '                while (observers.length) {\n' +
+    '                    observers.shift().complete();\n' +
+    '                }\n' +
+    '            }\n' +
+    '        });\n' +
+    '    }\n' +
+    '    unsubscribe() {\n' +
+    '        this.isStopped = this.closed = true;\n' +
+    '        this.observers = null;\n' +
+    '    }\n' +
+    '    get observed() {\n' +
+    '        var _a;\n' +
+    '        return ((_a = this.observers) === null || _a === void 0 ? void 0 : _a.length) > 0;\n' +
+    '    }\n' +
+    '    _trySubscribe(subscriber) {\n' +
+    '        this._throwIfClosed();\n' +
+    '        return super._trySubscribe(subscriber);\n' +
+    '    }\n' +
+    '    _subscribe(subscriber) {\n' +
+    '        this._throwIfClosed();\n' +
+    '        this._checkFinalizedStatuses(subscriber);\n' +
+    '        return this._innerSubscribe(subscriber);\n' +
+    '    }\n' +
+    '    _innerSubscribe(subscriber) {\n' +
+    '        const { hasError, isStopped, observers } = this;\n' +
+    '        return hasError || isStopped\n' +
+    '            ? EMPTY_SUBSCRIPTION\n' +
+    '            : (observers.push(subscriber), new Subscription(() => arrRemove(observers, subscriber)));\n' +
+    '    }\n' +
+    '    _checkFinalizedStatuses(subscriber) {\n' +
+    '        const { hasError, thrownError, isStopped } = this;\n' +
+    '        if (hasError) {\n' +
+    '            subscriber.error(thrownError);\n' +
+    '        }\n' +
+    '        else if (isStopped) {\n' +
+    '            subscriber.complete();\n' +
+    '        }\n' +
+    '    }\n' +
+    '    asObservable() {\n' +
+    '        const observable = new Observable();\n' +
+    '        observable.source = this;\n' +
+    '        return observable;\n' +
+    '    }\n' +
+    '}\n' +
+    'Subject.create = (destination, source) => {\n' +
+    '    return new AnonymousSubject(destination, source);\n' +
+    '};\n' +
+    'export class AnonymousSubject extends Subject {\n' +
+    '    constructor(destination, source) {\n' +
+    '        super();\n' +
+    '        this.destination = destination;\n' +
+    '        this.source = source;\n' +
+    '    }\n' +
+    '    next(value) {\n' +
+    '        var _a, _b;\n' +
+    '        (_b = (_a = this.destination) === null || _a === void 0 ? void 0 : _a.next) === null || _b === void 0 ? void 0 : _b.call(_a, value);\n' +
+    '    }\n' +
+    '    error(err) {\n' +
+    '        var _a, _b;\n' +
+    '        (_b = (_a = this.destination) === null || _a === void 0 ? void 0 : _a.error) === null || _b === void 0 ? void 0 : _b.call(_a, err);\n' +
+    '    }\n' +
+    '    complete() {\n' +
+    '        var _a, _b;\n' +
+    '        (_b = (_a = this.destination) === null || _a === void 0 ? void 0 : _a.complete) === null || _b === void 0 ? void 0 : _b.call(_a);\n' +
+    '    }\n' +
+    '    _subscribe(subscriber) {\n' +
+    '        var _a, _b;\n' +
+    '        return (_b = (_a = this.source) === null || _a === void 0 ? void 0 : _a.subscribe(subscriber)) !== null && _b !== void 0 ? _b : EMPTY_SUBSCRIPTION;\n' +
+    '    }\n' +
+    '}\n' +
+    '//# sourceMappingURL=Subject.js.map',
+  newText: "import { Observable } from './Observable';\n" +
+    "import { Subscription, EMPTY_SUBSCRIPTION } from './Subscription';\n" +
+    "import { ObjectUnsubscribedError } from './util/ObjectUnsubscribedError';\n" +
+    "import { arrRemove } from './util/arrRemove';\n" +
+    "import { errorContext } from './util/errorContext';\n" +
+    'export class Subject extends Observable {\n' +
+    '    constructor() {\n' +
+    '        super();\n' +
+    '        this.closed = false;\n' +
+    '        this.observers = [];\n' +
+    '        this.isStopped = false;\n' +
+    '        this.hasError = false;\n' +
+    '        this.thrownError = null;\n' +
+    '    }\n' +
+    '    lift(operator) {\n' +
+    '        const subject: any = new AnonymousSubject(this, this);\n' +
+    '        subject.operator = operator;\n' +
+    '        return subject;\n' +
+    '    }\n' +
+    '    _throwIfClosed() {\n' +
+    '        if (this.closed) {\n' +
+    '            throw new ObjectUnsubscribedError();\n' +
+    '        }\n' +
+    '    }\n' +
+    '    next(value) {\n' +
+    '        errorContext(() => {\n' +
+    '            this._throwIfClosed();\n' +
+    '            if (!this.isStopped) {\n' +
+    '                const copy: void)[] = this.observers.slice();\n' +
+    '                for (const observer of copy) {\n' +
+    '                    observer.next(value);\n' +
+    '                }\n' +
+    '            }\n' +
+    '        });\n' +
+    '    }\n' +
+    '    error(err) {\n' +
+    '        errorContext(() => {\n' +
+    '            this._throwIfClosed();\n' +
+    '            if (!this.isStopped) {\n' +
+    '                this.hasError = this.isStopped = true;\n' +
+    '                this.thrownError = err;\n' +
+    '                const { observers } = this;\n' +
+    '                while (observers.length) {\n' +
+    '                    observers.shift().error(err);\n' +
+    '                }\n' +
+    '            }\n' +
+    '        });\n' +
+    '    }\n' +
+    '    complete() {\n' +
+    '        errorContext(() => {\n' +
+    '            this._throwIfClosed();\n' +
+    '            if (!this.isStopped) {\n' +
+    '                this.isStopped = true;\n' +
+    '                const { observers } = this;\n' +
+    '                while (observers.length) {\n' +
+    '                    observers.shift().complete();\n' +
+    '                }\n' +
+    '            }\n' +
+    '        });\n' +
+    '    }\n' +
+    '    unsubscribe() {\n' +
+    '        this.isStopped = this.closed = true;\n' +
+    '        this.observers = null;\n' +
+    '    }\n' +
+    '    get observed() {\n' +
+    '        var _a;\n' +
+    '        return ((_a = this.observers) === null || _a === void 0 ? void 0 : _a.length) > 0;\n' +
+    '    }\n' +
+    '    _trySubscribe(subscriber) {\n' +
+    '        this._throwIfClosed();\n' +
+    '        return super._trySubscribe(subscriber);\n' +
+    '    }\n' +
+    '    _subscribe(subscriber) {\n' +
+    '        this._throwIfClosed();\n' +
+    '        this._checkFinalizedStatuses(subscriber);\n' +
+    '        return this._innerSubscribe(subscriber);\n' +
+    '    }\n' +
+    '    _innerSubscribe(subscriber) {\n' +
+    '        const { hasError, isStopped, observers } = this;\n' +
+    '        return hasError || isStopped\n' +
+    '            ? EMPTY_SUBSCRIPTION\n' +
+    '            : (observers.push(subscriber), new Subscription(() => arrRemove(observers, subscriber)));\n' +
+    '    }\n' +
+    '    _checkFinalizedStatuses(subscriber) {\n' +
+    '        const { hasError, thrownError, isStopped } = this;\n' +
+    '        if (hasError) {\n' +
+    '            subscriber.error(thrownError);\n' +
+    '        }\n' +
+    '        else if (isStopped) {\n' +
+    '            subscriber.complete();\n' +
+    '        }\n' +
+    '    }\n' +
+    '    asObservable() {\n' +
+    '        const observable = new Observable();\n' +
+    '        observable.source = this;\n' +
+    '        return observable;\n' +
+    '    }\n' +
+    '}\n' +
+    'Subject.create = (destination, source) => {\n' +
+    '    return new AnonymousSubject(destination, source);\n' +
+    '};\n' +
+    'export class AnonymousSubject extends Subject {\n' +
+    '    constructor(destination, source) {\n' +
+    '        super();\n' +
+    '        this.destination = destination;\n' +
+    '        this.source = source;\n' +
+    '    }\n' +
+    '    next(value) {\n' +
+    '        var _a, _b;\n' +
+    '        (_b = (_a = this.destination) === null || _a === void 0 ? void 0 : _a.next) === null || _b === void 0 ? void 0 : _b.call(_a, value);\n' +
+    '    }\n' +
+    '    error(err) {\n' +
+    '        var _a, _b;\n' +
+    '        (_b = (_a = this.destination) === null || _a === void 0 ? void 0 : _a.error) === null || _b === void 0 ? void 0 : _b.call(_a, err);\n' +
+    '    }\n' +
+    '    complete() {\n' +
+    '        var _a, _b;\n' +
+    '        (_b = (_a = this.destination) === null || _a === void 0 ? void 0 : _a.complete) === null || _b === void 0 ? void 0 : _b.call(_a);\n' +
+    '    }\n' +
+    '    _subscribe(subscriber) {\n' +
+    '        var _a, _b;\n' +
+    '        return (_b = (_a = this.source) === null || _a === void 0 ? void 0 : _a.subscribe(subscriber)) !== null && _b !== void 0 ? _b : EMPTY_SUBSCRIPTION;\n' +
+    '    }\n' +
+    '}\n' +
+    '//# sourceMappingURL=Subject.js.map'
+}
+

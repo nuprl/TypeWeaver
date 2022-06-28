@@ -53,7 +53,7 @@ However, there were 613 warnings in 126 files; these are listed in
        - deepmerge/dist/{cjs,umd}.js
          `var canUseSymbol = Symbol.for; var REACT_ELEMENT_TYPE = ...`
          The token sequences cannot be found in the CSV file, because they are
-         precided by the "for" token. This is a check to prevent matching
+         preceded by the "for" token. This is a check to prevent matching
          declarations within for loops, but it gets triggered here because "for"
          is used as a property name. The tokenizer is unable to distinguish
          between property names and reserved keywords.
