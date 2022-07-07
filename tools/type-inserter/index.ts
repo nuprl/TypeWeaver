@@ -7,20 +7,22 @@ import { ArrowFunction, FunctionDeclaration, FunctionExpression, Identifier,
 
 function printUsageAndExit(error: string): void {
     console.log(error);
-    console.log("Usage: node index.js <file.js>");
+    console.log("Usage: node index.js <file.js> [file.csv]");
     console.log("  file.js is expected to be a JavaScript file (without type annotations)");
-    console.log("  file.csv must also exist, and contains the predicted types for input.js");
+    console.log("  If file.csv is not given, then it is assumed to exist in the same directory as file.js");
     console.log("Outputs: file.ts");
     process.exit(1);
 }
 
-if (process.argv.length != 3) {
+if (process.argv.length < 3) {
     printUsageAndExit("No input file provided.");
 }
 
 const jsFilename: string = process.argv[2];
 const jsPath: path.ParsedPath = path.parse(jsFilename);
-const csvFilename: string = path.join(jsPath.dir, jsPath.name + ".csv");
+const csvFilename: string = process.argv.length == 4
+    ? process.argv[3]
+    : path.join(jsPath.dir, jsPath.name + ".csv");
 
 if (!existsSync(jsFilename)) {
     printUsageAndExit("File does not exist: " + jsFilename);
