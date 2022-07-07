@@ -57,8 +57,6 @@ def deeptyper_infer(directory):
     num_skip = 0
 
     for subdir, short_subdir in zip(subdirs, short_subdirs):
-        out_subdir = Path(out_directory, short_subdir).resolve()
-
         files = sorted([f.resolve() for f in subdir.rglob("*.js") if f.is_file()])
         short_files = [f.relative_to(directory) for f in files]
 
@@ -139,75 +137,82 @@ def weave_types(directory):
     short_subdirs = [sd.relative_to(csv_in_directory) for sd in csv_subdirs]
     js_subdirs = [Path(directory, d).resolve() for d in short_subdirs]
 
+    csv_files = [f.resolve()
+                 for subdir in csv_subdirs
+                 for f in subdir.rglob("*.csv") if f.is_file()]
+    short_files = [f.relative_to(csv_in_directory) for f in csv_files]
+    js_files = [Path(directory, f).resolve() for f in short_files]
+
     num_subdirs = len(csv_subdirs)
-    num_files = len([f.resolve()
-                     for subdir in csv_subdirs
-                     for f in subdir.rglob("*.csv") if f.is_file()])
+    num_files = len(csv_files)
     print("Found {} files in {} packages".format(num_files, num_subdirs))
 
-    i = 0
+    counter = 0
     num_ok = 0
     num_fail = 0
     num_skip = 0
 
-    for csv_subdir, js_subdir, short_subdir in zip(csv_subdirs, js_subdirs, short_subdirs):
-        out_subdir = Path(out_directory, short_subdir).resolve()
+    def job(i):
+        csv_file = csv_files[i]
+        js_file = js_files[i]
+        short_file = short_files[i]
 
-        csv_files = sorted([f.resolve() for f in csv_subdir.rglob("*.csv") if f.is_file()])
-        short_files = [f.relative_to(csv_in_directory) for f in csv_files]
-        js_files = [Path(directory, f).resolve().with_suffix(".js") for f in short_files]
+        ts_file = Path(out_directory, short_file).resolve().with_suffix(".ts")
+        err_file = ts_file.with_suffix(".err")
 
-        for csv_file, js_file, short_file in zip(csv_files, js_files, short_files):
-            i += 1
-            print("[{}/{}] {} ... ".format(i, num_files, short_file), end="", flush=True)
+        # Confirm that the JS file actually exists; we only assumed it exists based on the CSV file
+        if not js_file.exists():
+            # TODO: return some skip flag or string or result object
+            # num_skip += 1
+            # print(ANSI_YELLOW + "[SKIP]" + ANSI_RESET, end="")
+            # print(" Missing JavaScript file!", flush=True)
+            pass
 
-            ts_file = Path(out_directory, short_file).resolve().with_suffix(".ts")
-            err_file = ts_file.with_suffix(".err")
+        # If either file exists and the timestamps are newer than the input, then skip
+        if ts_file.exists() or err_file.exists():
+            input_mtime = file.stat().st_mtime
+            output_mtime = ts_file.stat().st_mtime if ts_file.exists() else err_file.stat().st_mtime
+            if input_mtime < output_mtime:
+                # TODO: return some skip flag or string or result object
+                # num_skip += 1
+                # print(ANSI_YELLOW + "[SKIP]" + ANSI_RESET, flush=True)
+                pass
 
-            # Confirm that the JS file actually exists; we only assumed it exists based on the CSV file
-            if not js_file.exists():
-                num_skip += 1
-                print(ANSI_YELLOW + "[SKIP]" + ANSI_RESET, end="")
-                print(" Missing JavaScript file!", flush=True)
-                continue
+        # Run type-inserter if the output files do not exist,
+        # or the output file timestamps are older than the input
+        args = ["node", type_inserter_path.name, js_file, csv_file]
+        result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=type_inserter_path.parent)
 
-            # If either file exists and the timestamps are newer than the input, then skip
-            if ts_file.exists() or err_file.exists():
-                input_mtime = file.stat().st_mtime
-                output_mtime = ts_file.stat().st_mtime if ts_file.exists() else err_file.stat().st_mtime
-                if input_mtime < output_mtime:
-                    num_skip += 1
-                    print(ANSI_YELLOW + "[SKIP]" + ANSI_RESET, flush=True)
-                    continue
+        # Create target directories for output
+        ts_file.parent.mkdir(parents=True, exist_ok=True)
 
-            # TODO Run type-inserter, first serial then paralell
+        if result.returncode == 0:
+            ts_output = js_file.with_suffix(".ts")
+            if ts_output.exists():
+                ts_output.rename(ts_file)
+            # TODO: return some result
+            #     num_ok += 1
+            #     print(ANSI_GREEN + "[ OK ]" + ANSI_RESET, flush=True)
+            # else:
+            #     print("Error: expected .ts file to be created on successful run")
 
-            # Run type-inserter if the output files do not exist,
-            # or the output file timestamps are older than the input
-            args = ["node", type_inserter_path.name, js_file, csv_file]
-            result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=type_inserter_path.parent)
-
-            # Create target directories for output
-            ts_file.parent.mkdir(parents=True, exist_ok=True)
-
-            if result.returncode == 0:
-                ts_output = js_file.with_suffix(".ts")
-                if ts_output.exists():
-                    ts_output.rename(ts_file)
-                    num_ok += 1
-                    print(ANSI_GREEN + "[ OK ]" + ANSI_RESET, flush=True)
-                else:
-                    print("Error: expected .ts file to be created on successful run")
-
-                if result.stderr:
-                    warn_file = ts_file.with_suffix(".warn")
-                    with open(warn_file, mode="w", encoding="utf-8") as f:
-                        print(result.stderr, file=f)
-            else:
-                with open(err_file, mode="w", encoding="utf-8") as f:
+            if result.stderr:
+                warn_file = ts_file.with_suffix(".warn")
+                with open(warn_file, mode="w", encoding="utf-8") as f:
                     print(result.stderr, file=f)
-                num_fail += 1
-                print(ANSI_RED + "[FAIL]" + ANSI_RESET, flush=True)
+        else:
+            with open(err_file, mode="w", encoding="utf-8") as f:
+                print(result.stderr, file=f)
+            # TODO: return some result
+            # num_fail += 1
+            # print(ANSI_RED + "[FAIL]" + ANSI_RESET, flush=True)
+
+        return i
+
+    # TODO: submit job to executor, print results
+
+    # i += 1
+    # print("[{}/{}] {} ... ".format(i, num_files, short_file), end="", flush=True)
 
     print("Number of successes: {}".format(num_ok))
     print("Number of fails: {}".format(num_fail))
@@ -236,3 +241,27 @@ def main():
         run_pipeline_step(weave_types, "type weaving", directory)
 
 main()
+
+# from concurrent import futures
+#
+# def job(i):
+#     args = ["node", type_inserter_path.name, full_filenames[i]]
+#     result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=type_inserter_path.parent)
+#     return i, result
+#
+# with futures.ProcessPoolExecutor() as executor:
+#     counter = 0
+#     fs = [executor.submit(job, i) for i in range(0, num_files)]
+#
+#     for f in futures.as_completed(fs):
+#         i, result = f.result()
+#         short = short_filenames[i]
+#         counter += 1
+#
+#         print("[{}/{}] Inserted types into {}".format(counter, num_files, short), end="", flush=True)
+#         if result.returncode == 0:
+#             print(" \033[1;32m[ OK ]\033[0m")
+#             print(short, file=f_success, flush=True)
+#             if result.stderr:
+#                 print("=" * 40, short, "=" * 40, file=f_warn)
+#                 print(result.stderr, file=f_warn, flush=True)
