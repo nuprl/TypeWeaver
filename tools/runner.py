@@ -16,8 +16,8 @@ class ResultStatus(Enum):
     SKIP = 2
 
 class Result:
-    def __init__(self, i, status, string):
-        self.i = i
+    def __init__(self, short_file, status, string):
+        self.short_file = short_file
         self.status = status
         self.string = string
 
@@ -154,20 +154,20 @@ def deeptyper_infer(directory, dataset):
     print("Number of fails: {}".format(num_fail))
     print("Number of skips: {}".format(num_skip))
 
-def weave_types_job(i, type_inserter_path, csv_file, js_file, short_file, out_directory):
+def weave_types_job(type_inserter_path, csv_file, js_file, short_file, out_directory):
     ts_file = Path(out_directory, short_file).resolve().with_suffix(".ts")
     err_file = ts_file.with_suffix(".err")
 
     # Confirm that the JS file actually exists; we only assumed it exists based on the CSV file
     if not js_file.exists():
-        return Result(i, ResultStatus.SKIP, "{}[SKIP]{} Missing JavaScript file!".format(ANSI_YELLOW, ANSI_RESET))
+        return Result(short_file, ResultStatus.SKIP, "{}[SKIP]{} Missing JavaScript file!".format(ANSI_YELLOW, ANSI_RESET))
 
     # If either file exists and the timestamps are newer than the input, then skip
     if ts_file.exists() or err_file.exists():
         input_mtime = csv_file.stat().st_mtime
         output_mtime = ts_file.stat().st_mtime if ts_file.exists() else err_file.stat().st_mtime
         if input_mtime < output_mtime:
-            return Result(i, ResultStatus.SKIP, "{}[SKIP]{}".format(ANSI_YELLOW, ANSI_RESET))
+            return Result(short_file, ResultStatus.SKIP, "{}[SKIP]{}".format(ANSI_YELLOW, ANSI_RESET))
 
     # Delete the old files
     if ts_file.exists():
@@ -192,13 +192,13 @@ def weave_types_job(i, type_inserter_path, csv_file, js_file, short_file, out_di
         ts_output = js_file.with_suffix(".ts")
         if ts_output.exists():
             ts_output.rename(ts_file)
-            return Result(i, ResultStatus.OK, "{}[ OK ]{}".format(ANSI_GREEN, ANSI_RESET))
+            return Result(short_file, ResultStatus.OK, "{}[ OK ]{}".format(ANSI_GREEN, ANSI_RESET))
         else:
-            return Result(i, ResultStatus.FAIL, "Error: expected .ts file to be created on successful run")
+            return Result(short_file, ResultStatus.FAIL, "Error: expected .ts file to be created on successful run")
     else:
         with open(err_file, mode="w", encoding="utf-8") as f:
             print(result.stderr, file=f)
-            return Result(i, ResultStatus.FAIL, "{}[FAIL]{}".format(ANSI_RED, ANSI_RESET))
+            return Result(short_file, ResultStatus.FAIL, "{}[FAIL]{}".format(ANSI_RED, ANSI_RESET))
 
 def weave_types(directory, dataset):
     """Run type weaving to combine JavaScript and the associated CSV file (with type predictions) to produce TypeScript."""
@@ -245,11 +245,11 @@ def weave_types(directory, dataset):
     num_skip = 0
 
     with futures.ProcessPoolExecutor() as executor:
-        fs = [executor.submit(weave_types_job, i, type_inserter_path, csv_files[i], js_files[i], short_files[i], out_directory) for i in range(0, num_files)]
+        fs = [executor.submit(weave_types_job, type_inserter_path, csv_file, js_file, short_file, out_directory) for csv_file, js_file, short_file in zip(csv_files, js_files, short_files)]
 
         for f in futures.as_completed(fs):
             result = f.result()
-            short_file = short_files[result.i]
+            short_file = result.short_file
             counter += 1
 
             print("[{}/{}] {} ... ".format(counter, num_files, short_file), end="", flush=True)
