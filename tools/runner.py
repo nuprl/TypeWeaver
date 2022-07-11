@@ -23,10 +23,28 @@ class Result:
 
 def parse_args():
     parser = argparse.ArgumentParser(description="JavaScript type inference runner script.")
-    parser.add_argument("directory", help="contains JavaScript packages to infer types for")
-    group = parser.add_argument_group(title="pipeline step", description="One of the pipeline steps to run. At least one step is required.")
-    group.add_argument("--infer", help="Run type inference", action="store_true")
-    group.add_argument("--weave", help="Run type weaving: take JavaScript and CSV (containing type predictions) to produce TypeScript", action="store_true")
+    parser.add_argument(
+        "--directory",
+        required=True,
+        help="root directory containing input and output directories")
+    parser.add_argument(
+        "--dataset",
+        required=True,
+        help="name of directory (within DIRECTORY) that contains JavaScript packages")
+
+    # TODO: other useful flags: force, ncores
+
+    group = parser.add_argument_group(
+        title="pipeline step",
+        description="One of the pipeline steps to run. At least one step is required.")
+    group.add_argument(
+        "--infer",
+        help="run type inference",
+        action="store_true")
+    group.add_argument(
+        "--weave",
+        help="run type weaving: take JavaScript and CSV (containing type predictions) to produce TypeScript",
+        action="store_true")
 
     args = parser.parse_args()
     if not (args.infer or args.weave):
@@ -39,9 +57,15 @@ def parse_args():
         print("{}: error: directory {} does not exist".format(parser.prog, args.directory))
         exit(2)
 
+    dataset_source = Path(args.directory, "original", args.dataset).resolve()
+    if not dataset_source.exists():
+        parser.print_usage()
+        print("{}: error: directory {} does not exist".format(parser.prog, dataset_source))
+        exit(2)
+
     return args
 
-def deeptyper_infer(directory):
+def deeptyper_infer(directory, dataset):
     """Run DeepTyper's type inference on the JavaScript projects within the given directory."""
 
     deeptyper_path = Path(Path(__file__).parent, "..", "DeepTyper", "pretrained", "readout.py").resolve()
@@ -50,13 +74,16 @@ def deeptyper_infer(directory):
         exit(1)
     print("Inferring types with DeepTyper: {}".format(deeptyper_path))
 
+    in_directory = Path(directory, "original", dataset).resolve()
+    print("Input directory: {}".format(in_directory))
+
     # Create the out directory, if it doesn't already exist
-    out_directory = Path(directory, "..", "DeepTyper-out", "predictions").resolve()
+    out_directory = Path(directory, "DeepTyper-out", dataset, "predictions").resolve()
     out_directory.mkdir(parents=True, exist_ok=True)
     print("Output directory: {}".format(out_directory))
 
-    subdirs = sorted([sd.resolve() for sd in directory.iterdir()])
-    short_subdirs = [sd.relative_to(directory) for sd in subdirs]
+    subdirs = sorted([sd.resolve() for sd in in_directory.iterdir()])
+    short_subdirs = [sd.relative_to(in_directory) for sd in subdirs]
 
     num_subdirs = len(subdirs)
     num_files = len([f.resolve()
@@ -71,7 +98,7 @@ def deeptyper_infer(directory):
 
     for subdir, short_subdir in zip(subdirs, short_subdirs):
         files = sorted([f.resolve() for f in subdir.rglob("*.js") if f.is_file()])
-        short_files = [f.relative_to(directory) for f in files]
+        short_files = [f.relative_to(in_directory) for f in files]
 
         for file, short_file in zip(files, short_files):
             i += 1
@@ -88,6 +115,12 @@ def deeptyper_infer(directory):
                     num_skip += 1
                     print(ANSI_YELLOW + "[SKIP]" + ANSI_RESET, flush=True)
                     continue
+
+            # Delete the old files
+            if csv_file.exists():
+                csv_file.unlink()
+            if err_file.exists():
+                err_file.unlink()
 
             # Run DeepTyper if the output files do not exist,
             # or the output file timestamps are older than the input
@@ -136,6 +169,12 @@ def weave_types_job(i, type_inserter_path, csv_file, js_file, short_file, out_di
         if input_mtime < output_mtime:
             return Result(i, ResultStatus.SKIP, "{}[SKIP]{}".format(ANSI_YELLOW, ANSI_RESET))
 
+    # Delete the old files
+    if ts_file.exists():
+        ts_file.unlink()
+    if err_file.exists():
+        err_file.unlink()
+
     # Run type-inserter if the output files do not exist,
     # or the output file timestamps are older than the input
     args = ["node", type_inserter_path.name, js_file, csv_file]
@@ -161,7 +200,7 @@ def weave_types_job(i, type_inserter_path, csv_file, js_file, short_file, out_di
             print(result.stderr, file=f)
             return Result(i, ResultStatus.FAIL, "{}[FAIL]{}".format(ANSI_RED, ANSI_RESET))
 
-def weave_types(directory):
+def weave_types(directory, dataset):
     """Run type weaving to combine JavaScript and the associated CSV file (with type predictions) to produce TypeScript."""
 
     type_inserter_path = Path(Path(__file__).parent, "type-inserter", "index.js").resolve()
@@ -171,8 +210,8 @@ def weave_types(directory):
     print("Weaving types with: {}".format(type_inserter_path))
 
     # Set up the input directories (JavaScript and CSV)
-    js_in_directory = directory
-    csv_in_directory = Path(directory, "..", "DeepTyper-out", "predictions").resolve()
+    js_in_directory = Path(directory, "original", dataset).resolve()
+    csv_in_directory = Path(directory, "DeepTyper-out", dataset, "predictions").resolve()
     if not csv_in_directory.exists():
         print("error: type predictions directory {} does not exist".format(csv_in_directory))
         exit(1)
@@ -181,20 +220,20 @@ def weave_types(directory):
     print("Input directory (type predictions): {}".format(csv_in_directory))
 
     # Create the out directory, if it doesn't already exist
-    out_directory = Path(directory, "..", "DeepTyper-out", "baseline").resolve()
+    out_directory = Path(directory, "DeepTyper-out", dataset, "baseline").resolve()
     out_directory.mkdir(parents=True, exist_ok=True)
     print("Output directory: {}".format(out_directory))
 
     # Not all JS files have predictions, so base our subdirectories and files on the csv_in_directory
     csv_subdirs = sorted([sd.resolve() for sd in csv_in_directory.iterdir()])
     short_subdirs = [sd.relative_to(csv_in_directory) for sd in csv_subdirs]
-    js_subdirs = [Path(directory, d).resolve() for d in short_subdirs]
+    js_subdirs = [Path(js_in_directory, d).resolve() for d in short_subdirs]
 
     csv_files = [f.resolve()
                  for subdir in csv_subdirs
                  for f in subdir.rglob("*.csv") if f.is_file()]
     short_files = [f.relative_to(csv_in_directory) for f in csv_files]
-    js_files = [Path(directory, f).resolve().with_suffix(".js") for f in short_files]
+    js_files = [Path(js_in_directory, f).resolve().with_suffix(".js") for f in short_files]
 
     num_subdirs = len(csv_subdirs)
     num_files = len(csv_files)
@@ -240,12 +279,14 @@ def run_pipeline_step(pipeline_step, description, *args):
 def main():
     args = parse_args()
     directory = Path(args.directory).resolve()
+    dataset = Path(args.dataset)
     print("Source directory: {}".format(directory))
+    print("Dataset: {}".format(dataset))
 
     if args.infer:
-        run_pipeline_step(deeptyper_infer, "type inference", directory)
+        run_pipeline_step(deeptyper_infer, "type inference", directory, dataset)
 
     if args.weave:
-        run_pipeline_step(weave_types, "type weaving", directory)
+        run_pipeline_step(weave_types, "type weaving", directory, dataset)
 
 main()
