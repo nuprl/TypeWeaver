@@ -23,4 +23,3 @@ Using jq (https://stedolan.github.io/jq/), these were the approximate steps:
     diff pkgs deps_sorted | grep ">" | cut -d" " -f2
 
 These steps were repeated until no more new dependencies were discovered.
-
