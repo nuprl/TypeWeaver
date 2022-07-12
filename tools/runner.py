@@ -271,7 +271,7 @@ def weave_types(directory, dataset):
     print("Number of skips: {}".format(num_skip))
 
 def typecheck_job(tsc_path, subdir, short_subdir, out_directory):
-    out_file = Path(out_directory, short_subdir).resolve().with_suffix(".out")
+    out_file = Path(str(Path(out_directory, short_subdir)) + ".out").resolve()
     err_file = out_file.with_suffix(".err")
     warn_file = out_file.with_suffix(".warn")
 
