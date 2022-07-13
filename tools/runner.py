@@ -54,8 +54,8 @@ def parse_args():
         action="store_true")
     group.add_argument(
         "--typecheck",
-        help="run type checking",
-        action="store_true")
+        metavar="STAGE",
+        help="run type checking on directory STAGE (within DIRECTORY)")
 
     args = parser.parse_args()
     if not (args.infer or args.weave or args.typecheck):
@@ -329,6 +329,7 @@ def typecheck(args):
 
     directory = Path(args.directory).resolve()
     dataset = Path(args.dataset)
+    typecheck_dir = Path(args.typecheck)
 
     tsc_path = Path(Path(__file__).parent, "node_modules", ".bin", "tsc").resolve()
     if not tsc_path.exists():
@@ -337,14 +338,14 @@ def typecheck(args):
     print("Type checking with: {}".format(tsc_path))
 
     # Set up the input directories
-    in_directory = Path(directory, "DeepTyper-out", dataset, "baseline").resolve()
+    in_directory = Path(directory, "DeepTyper-out", dataset, typecheck_dir).resolve()
     if not in_directory.exists():
         print("error: directory {} does not exist".format(in_directory))
         exit(1)
     print("Input directory: {}".format(in_directory))
 
     # Create the out directory, if it doesn't already exist
-    out_directory = in_directory.with_name("baseline-checked")
+    out_directory = in_directory.with_name("{}-checked".format(typecheck_dir))
     out_directory.mkdir(parents=True, exist_ok=True)
     print("Output directory: {}".format(out_directory))
 
