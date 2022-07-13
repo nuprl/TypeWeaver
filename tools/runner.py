@@ -3,7 +3,7 @@ from datetime import datetime
 from enum import Enum
 from pathlib import Path
 from subprocess import PIPE
-import argparse, subprocess
+import argparse, os, subprocess
 
 ANSI_RED = "\033[0;31m"
 ANSI_GREEN = "\033[0;32m"
@@ -22,6 +22,8 @@ class Result:
         self.string = string
 
 def parse_args():
+    cpu_count = os.cpu_count();
+
     parser = argparse.ArgumentParser(description="JavaScript type inference runner script.")
     parser.add_argument(
         "--directory",
@@ -31,8 +33,13 @@ def parse_args():
         "--dataset",
         required=True,
         help="name of directory (within DIRECTORY) that contains JavaScript packages")
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=cpu_count,
+        help="maximum number of workers to use, defaults to {}, the number of processors on the machine".format(cpu_count))
 
-    # TODO: other useful flags: force, ncores
+    # TODO: other useful flags: force
 
     group = parser.add_argument_group(
         title="pipeline step",
@@ -69,8 +76,11 @@ def parse_args():
 
     return args
 
-def deeptyper_infer(directory, dataset):
+def deeptyper_infer(args):
     """Run DeepTyper's type inference on the JavaScript projects within the given directory."""
+
+    directory = Path(args.directory).resolve()
+    dataset = Path(args.dataset)
 
     deeptyper_path = Path(Path(__file__).parent, "..", "DeepTyper", "pretrained", "readout.py").resolve()
     if not deeptyper_path.exists():
@@ -206,8 +216,11 @@ def weave_types_job(type_inserter_path, csv_file, js_file, short_file, out_direc
             print(result.stderr, file=f)
             return Result(short_file, ResultStatus.FAIL, "{}[FAIL]{}".format(ANSI_RED, ANSI_RESET))
 
-def weave_types(directory, dataset):
+def weave_types(args):
     """Run type weaving to combine JavaScript and the associated CSV file (with type predictions) to produce TypeScript."""
+
+    directory = Path(args.directory).resolve()
+    dataset = Path(args.dataset)
 
     type_inserter_path = Path(Path(__file__).parent, "type-inserter", "index.js").resolve()
     if not type_inserter_path.exists():
@@ -249,7 +262,7 @@ def weave_types(directory, dataset):
     num_fail = 0
     num_skip = 0
 
-    with futures.ProcessPoolExecutor() as executor:
+    with futures.ProcessPoolExecutor(max_workers=args.workers) as executor:
         fs = [executor.submit(weave_types_job, type_inserter_path, csv_file, js_file, short_file, out_directory) for csv_file, js_file, short_file in zip(csv_files, js_files, short_files)]
 
         for f in futures.as_completed(fs):
@@ -311,8 +324,11 @@ def typecheck_job(tsc_path, subdir, short_subdir, out_directory):
             print(result.stdout, file=f)
             return Result(short_subdir, ResultStatus.FAIL, "{}[FAIL]{}".format(ANSI_RED, ANSI_RESET))
 
-def typecheck(directory, dataset):
+def typecheck(args):
     """Run type checking"""
+
+    directory = Path(args.directory).resolve()
+    dataset = Path(args.dataset)
 
     tsc_path = Path(Path(__file__).parent, "node_modules", ".bin", "tsc").resolve()
     if not tsc_path.exists():
@@ -343,7 +359,7 @@ def typecheck(directory, dataset):
     num_fail = 0
     num_skip = 0
 
-    with futures.ProcessPoolExecutor() as executor:
+    with futures.ProcessPoolExecutor(max_workers=args.workers) as executor:
         fs = [executor.submit(typecheck_job, tsc_path, subdir, short_subdir, out_directory) for subdir, short_subdir in zip(subdirs, short_subdirs)]
 
         for f in futures.as_completed(fs):
@@ -377,18 +393,16 @@ def run_pipeline_step(pipeline_step, description, *args):
 
 def main():
     args = parse_args()
-    directory = Path(args.directory).resolve()
-    dataset = Path(args.dataset)
-    print("Source directory: {}".format(directory))
-    print("Dataset: {}".format(dataset))
+    print("Source directory: {}".format(args.directory))
+    print("Dataset: {}".format(args.dataset))
 
     if args.infer:
-        run_pipeline_step(deeptyper_infer, "type inference", directory, dataset)
+        run_pipeline_step(deeptyper_infer, "type inference", args)
 
     if args.weave:
-        run_pipeline_step(weave_types, "type weaving", directory, dataset)
+        run_pipeline_step(weave_types, "type weaving", args)
 
     if args.typecheck:
-        run_pipeline_step(typecheck, "type checking", directory, dataset)
+        run_pipeline_step(typecheck, "type checking", args)
 
 main()
