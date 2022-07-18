@@ -263,7 +263,8 @@ def weave_types(args):
     num_skip = 0
 
     with futures.ProcessPoolExecutor(max_workers=args.workers) as executor:
-        fs = [executor.submit(weave_types_job, type_inserter_path, csv_file, js_file, short_file, out_directory) for csv_file, js_file, short_file in zip(csv_files, js_files, short_files)]
+        fs = [executor.submit(weave_types_job, type_inserter_path, csv_file, js_file, short_file, out_directory)
+              for csv_file, js_file, short_file in zip(csv_files, js_files, short_files)]
 
         for f in futures.as_completed(fs):
             result = f.result()
@@ -283,7 +284,7 @@ def weave_types(args):
     print("Number of fails: {}".format(num_fail))
     print("Number of skips: {}".format(num_skip))
 
-def typecheck_job(tsc_path, subdir, short_subdir, out_directory):
+def typecheck_job(tsc_path, subdir, short_subdir, in_directory, out_directory):
     out_file = Path(str(Path(out_directory, short_subdir)) + ".out").resolve()
     err_file = out_file.with_suffix(".err")
     warn_file = out_file.with_suffix(".warn")
@@ -308,8 +309,9 @@ def typecheck_job(tsc_path, subdir, short_subdir, out_directory):
 
     # Run tsc if the output files do not exist,
     # or the output file timestamps are older than the input
-    args = [tsc_path, "--noEmit", *ts_files]
-    result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=tsc_path.parent)
+    typeroots = Path(Path(tsc_path).parent, "..", "..", "@types").resolve()
+    args = [tsc_path, "--noEmit", "--typeRoots", typeroots, *ts_files]
+    result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=in_directory)
 
     if result.returncode == 0:
         # tsc prints errors to stdout
@@ -361,7 +363,8 @@ def typecheck(args):
     num_skip = 0
 
     with futures.ProcessPoolExecutor(max_workers=args.workers) as executor:
-        fs = [executor.submit(typecheck_job, tsc_path, subdir, short_subdir, out_directory) for subdir, short_subdir in zip(subdirs, short_subdirs)]
+        fs = [executor.submit(typecheck_job, tsc_path, subdir, short_subdir, in_directory, out_directory)
+              for subdir, short_subdir in zip(subdirs, short_subdirs)]
 
         for f in futures.as_completed(fs):
             result = f.result()
