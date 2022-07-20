@@ -57,7 +57,7 @@ for (const cc in aaa) { let bb: number = 2; aa }
 let bb: number = 42;
 
 let input: number[] = [1,2];
-let obj: complex = { a: 42 };
+let obj: any = { a: 42 };
 let [first, second] = input;
 let { a } = obj;
 let xyz: any[] = input.map((_: any) => _ + 1).filter(function(x: any) { return x % 1 == 0; });

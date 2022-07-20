@@ -71,10 +71,12 @@ class TypePredictions {
                 // Only take tokens that are names or keywords (since they might be identifiers).
                 // Also keep "=>" tokens, to use for searching arrow functions.
                 if (tokType.startsWith("Name") || tokType.startsWith("Keyword") || tokVal === "=>") {
+                    // TODO: maybe this should be configurable with a flag
+                    const prediction = record[2] === "complex" ? "any" : record[2];
                     return {
                         tokenValue: tokVal,
                         tokenType: tokType,
-                        typePrediction: record[2],
+                        typePrediction: prediction,
                         typeProbability: record[3],
                     }
                 } else {
