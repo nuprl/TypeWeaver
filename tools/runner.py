@@ -50,8 +50,8 @@ def parse_args():
         action="store_true")
     group.add_argument(
         "--weave",
-        help="run type weaving: take JavaScript and CSV (containing type predictions) to produce TypeScript",
-        action="store_true")
+        metavar="WEAVEOUT",
+        help="run type weaving: take JavaScript and CSV (containing type predictions) to produce TypeScript, and output to directory WEAVEOUT (within DIRECTORY)")
     group.add_argument(
         "--typecheck",
         metavar="STAGE",
@@ -221,6 +221,7 @@ def weave_types(args):
 
     directory = Path(args.directory).resolve()
     dataset = Path(args.dataset)
+    weaveout_dir = Path(args.weave)
 
     type_inserter_path = Path(Path(__file__).parent, "type-inserter", "index.js").resolve()
     if not type_inserter_path.exists():
@@ -238,7 +239,7 @@ def weave_types(args):
     print("Input directory (type predictions): {}".format(csv_in_directory))
 
     # Create the out directory, if it doesn't already exist
-    out_directory = Path(directory, "DeepTyper-out", dataset, "baseline").resolve()
+    out_directory = Path(directory, "DeepTyper-out", dataset, weaveout_dir).resolve()
     out_directory.mkdir(parents=True, exist_ok=True)
     print("Output directory: {}".format(out_directory))
 
