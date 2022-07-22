@@ -12,7 +12,7 @@
 
 This will load the model (which takes about 40 seconds) and then prompt for a directory to a project.
 LambdaNet will read all the .ts files from that directory and perform type inference (which takes about 2 seconds with a GPU).
-The output is preceded by `[info]`, but should be easily parsed:
+The output is in the format:
 
     ({start_line},{start_col})-({end_line},{end_col}): [1]({percent1}) {type1}
 

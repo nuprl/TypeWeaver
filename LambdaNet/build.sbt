@@ -16,6 +16,8 @@ scalacOptions ++= Seq(
 fork in run := true
 connectInput in run := true  // for StdIn to work
 
+outputStrategy := Some(StdoutOutput)
+
 val runOnMac = System.getProperty("os.name") == "Mac OS X"
 val memories = {
   if(new File("configs/memory.txt").exists()) {
