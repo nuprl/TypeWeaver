@@ -104,11 +104,13 @@ object TypeInferenceService {
       print("Enter project path: ")
       System.out.flush()
       try {
-        val line = scala.io.StdIn.readLine()
-        if(line.strip().nonEmpty) {
-          val sourcePath = Path(line, amm.pwd)
-          val results = service.predictOnProject(sourcePath, warnOnErrors = false)
-          PredictionResults(results).prettyPrint()
+        val line = Option(scala.io.StdIn.readLine())
+        line match {
+          case Some(line) if line.strip().nonEmpty =>
+            val sourcePath = Path(line, amm.pwd)
+            val results = service.predictOnProject(sourcePath, warnOnErrors = false)
+            PredictionResults(results).prettyPrint()
+          case _ => return
         }
       } catch {
         case e: Throwable =>
