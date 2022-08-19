@@ -77,12 +77,12 @@ object TypeInferenceService {
             val rankedList = map(n).distr.zipWithIndex
               .map {
                 case ((p, ty), i) => {
-                  val acc = "%.2f".format(p * 100)
-                  s"[${i + 1}]($acc%) ${ty.showSimple}"
+                  val acc = "%.4f".format(p)
+                  s"${ty.showSimple},$acc"
                 }
               }
-              .mkString(", ")
-            println(s"$span: $rankedList")
+              .mkString(",")
+            println(s"$span,$rankedList")
           }
       }
     }

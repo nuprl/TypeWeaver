@@ -150,6 +150,7 @@ object ProgramParsing {
         val name = f.last
         if (declarationFileMode) name.endsWith(".d.ts")
         else {
+          // TODO(mhyee): change this to grab only .js files
           name.endsWith(".ts") ||
           name.endsWith(".d.ts") ||
           name.endsWith(".tsx")

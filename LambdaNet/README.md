@@ -14,7 +14,7 @@ This will load the model (which takes about 40 seconds) and then prompt for a di
 LambdaNet will read all the .ts files from that directory and perform type inference (which takes about 2 seconds with a GPU).
 The output is in the format:
 
-    ({start_line},{start_col})-({end_line},{end_col}): [1]({percent1}) {type1}
+    start_line,start_col,end_line,end_col,type1,prob1,type2,prob2,type3,prob3,type4,prob4,type5,prob5
 
 There are 5 predictions in total, separated by commas. For multiple files, LambdaNet will print a header, e.g. `=== File: file.ts ===`.
 

@@ -9,6 +9,16 @@ To run:
 
 `readout.py` will produce `file.csv` (containing the top 5 type predictions for each token).
 It does not produce TypeScript.
+
+The output is in the format:
+
+    token,token type,type1,prob1,type2,prob2,type3,prob3,type4,prob4,type5,prob5
+
+The type predictions may be omitted for non-identifier tokens.
+
+The output uses the ASCII control character US (unit separator), which is
+typically rendered as `^_`.
+
 See `../tools/type-inserter` for a tool that reads in an unannotated JavaScript file and
 associated CSV file of type predictions, and outputs TypeScript.
 

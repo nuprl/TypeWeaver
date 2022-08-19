@@ -255,8 +255,7 @@ object PredicateGraph {
         val prefix = if (n.fromLib) "L" else "P"
         n.nameOpt match {
           case Some(name) =>
-            val idPart = if (n.fromProject) s":${n.getId}" else ""
-            s"${name.name}$idPart"
+            s"${name.name}"
           case None =>
             s"$prefix${n.getId}"
         }
