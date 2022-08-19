@@ -149,12 +149,7 @@ object ProgramParsing {
       .filter { f =>
         val name = f.last
         if (declarationFileMode) name.endsWith(".d.ts")
-        else {
-          // TODO(mhyee): change this to grab only .js files
-          name.endsWith(".ts") ||
-          name.endsWith(".d.ts") ||
-          name.endsWith(".tsx")
-        }
+        else name.endsWith(".js")
       }
       .map(_.relativeTo(root))
 
@@ -208,7 +203,7 @@ object ProgramParsing {
     SimpleMath.withErrorMessage {
       val command = s"node ${pwd / RelPath("scripts/ts/parsingFromFile.js")} " +
         s"--src ${srcFiles.mkString(" ")}" +
-        s"--lib ${srcFiles.mkString(" ")}"
+        s" --lib ${srcFiles.mkString(" ")}"
       s"Failed command: $command"
     } {
       val r = %%(

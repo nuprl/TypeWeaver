@@ -1391,6 +1391,7 @@ export function getSrcSpan(node: ts.Node): SrcSpan {
 
 export function parseFiles(sources: string[], libraryFiles: string[]): [GModule[], string[]] {
   let program = ts.createProgram(libraryFiles, {
+    allowJs: true,
     target: ts.ScriptTarget.ES2015,
     module: ts.ModuleKind.CommonJS
   });
