@@ -65,13 +65,15 @@ object TypeInferenceService {
     }
 
   case class PredictionResults(
+      sourcePath: Path,
       map: Map[PredicateGraph.PNode, TopNDistribution[PredicateGraph.PType]]
   ) {
     def prettyPrint(): Unit = {
       val byFile = map.keys.groupBy(_.srcSpan.get.srcFile).toSeq.sortBy(_._1)
       byFile.foreach {
         case (file, nodes) =>
-          println(s"=== File: $file ===")
+          val filePath = sourcePath / amm.RelPath(file.toString.stripSuffix(file.ext) + "csv")
+          amm.write.over(filePath, "")
           nodes.toSeq.sortBy(_.srcSpan.get.start).foreach { n =>
             val span = n.srcSpan.get.showShort()
             val rankedList = map(n).distr.zipWithIndex
@@ -82,8 +84,9 @@ object TypeInferenceService {
                 }
               }
               .mkString(",")
-            println(s"$span,$rankedList")
+            amm.write.append(filePath, s"$span,$rankedList\n")
           }
+          println(s"Wrote: $filePath")
       }
     }
   }
@@ -109,7 +112,7 @@ object TypeInferenceService {
           case Some(line) if line.strip().nonEmpty =>
             val sourcePath = Path(line, amm.pwd)
             val results = service.predictOnProject(sourcePath, warnOnErrors = false)
-            PredictionResults(results).prettyPrint()
+            PredictionResults(sourcePath, results).prettyPrint()
           case _ => return
         }
       } catch {

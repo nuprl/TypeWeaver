@@ -410,4 +410,5 @@ def main():
     if args.typecheck:
         run_pipeline_step(typecheck, "type checking", args)
 
-main()
+if __name__ == "__main__":
+    main()

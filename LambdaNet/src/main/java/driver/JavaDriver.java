@@ -35,7 +35,7 @@ public class JavaDriver {
                 String[] skipSet = {"node_modules"};
                 var results =
                         predService.predictOnProject(sourcePath, false, skipSet);
-                new TypeInferenceService.PredictionResults(results).prettyPrint();
+                new TypeInferenceService.PredictionResults(sourcePath, results).prettyPrint();
                 System.out.println("DONE");
             } catch (Throwable e) {
                 System.out.println("Got exception: " + e.getMessage());
