@@ -26,6 +26,11 @@ def parse_args():
 
     parser = argparse.ArgumentParser(description="JavaScript type inference runner script.")
     parser.add_argument(
+        "--engine",
+        required=True,
+        choices=['DeepTyper', 'LambdaNet'],
+        help="engine to use for type inference, also determines the CSV format for type weaving and directory for type checking")
+    parser.add_argument(
         "--directory",
         required=True,
         help="root directory containing input and output directories")
@@ -58,6 +63,11 @@ def parse_args():
         help="run type checking on directory STAGE (within DIRECTORY)")
 
     args = parser.parse_args()
+    if (args.infer or args.weave) and not args.engine:
+        parser.print_usage()
+        print("{}: error: engine is required for type inference and type weaving".format(parser.prog))
+        exit(2)
+
     if not (args.infer or args.weave or args.typecheck):
         parser.print_usage()
         print("{}: error: at least one pipeline step argument is required".format(parser.prog))
@@ -163,6 +173,97 @@ def deeptyper_infer(args):
                     print(result.stderr, file=f)
                 num_fail += 1
                 print(ANSI_RED + "[FAIL]" + ANSI_RESET, flush=True)
+
+    print("Number of successes: {}".format(num_ok))
+    print("Number of fails: {}".format(num_fail))
+    print("Number of skips: {}".format(num_skip))
+
+def lambdanet_infer(args):
+    """Run LambdaNet's type inference on the JavaScript projects within the given directory."""
+
+    directory = Path(args.directory).resolve()
+    dataset = Path(args.dataset)
+
+    lambdanet_path = Path(Path(__file__).parent, "..", "LambdaNet").resolve()
+    if not lambdanet_path.exists():
+        print("Could not find LambdaNet: {}".format(lambdanet_path))
+        exit(1)
+    print("Inferring types with LambdaNet: {}".format(lambdanet_path))
+
+    in_directory = Path(directory, "original", dataset).resolve()
+    print("Input directory: {}".format(in_directory))
+
+    # Create the out directory, if it doesn't already exist
+    out_directory = Path(directory, "LambdaNet-out", dataset, "predictions").resolve()
+    out_directory.mkdir(parents=True, exist_ok=True)
+    print("Output directory: {}".format(out_directory))
+
+    subdirs = sorted([sd.resolve() for sd in in_directory.iterdir()])
+    short_subdirs = [sd.relative_to(in_directory) for sd in subdirs]
+
+    num_subdirs = len(subdirs)
+    print("Found {} packages".format(num_subdirs))
+
+    i = 0
+    num_ok = 0
+    num_fail = 0
+    num_skip = 0
+
+    # - handle LambdaNet failures
+    #   - sometimes no file generated if no annotations required
+    #   - sometimes we get an exception, "Got exception" in output
+    #   - how to separate out different projects from within a batch?
+    # TODO: batch it up to avoid startup cost
+    #   - 8 projects takes 8 minutes without batching
+    #   - 1m20s when batched togetheR
+
+    for subdir, short_subdir in zip(subdirs, short_subdirs):
+        i += 1
+        print("[{}/{}] {} ... ".format(i, num_subdirs, short_subdir), end="", flush=True)
+
+        input_files = [f.resolve() for f in subdir.rglob("*.js") if f.is_file()]
+        input_timestamps = sorted([f.stat().st_mtime for f in input_files], reverse=True)
+        input_latest = input_timestamps[0] if input_timestamps else None
+
+        output_dir = Path(out_directory, short_subdir).resolve()
+        output_files = [f.resolve() for f in output_dir.rglob("*") if f.is_file() and (f.suffix == ".csv" or f.suffix == ".err")]
+        output_timestamps = sorted([f.stat().st_mtime for f in output_files], reverse=True)
+        output_latest = output_timestamps[0] if output_timestamps else None
+
+        # If output timestamps are newer than input timestamps, then skip
+        if input_latest and output_latest and input_latest < output_latest:
+            num_skip += 1
+            print(ANSI_YELLOW + "[SKIP]" + ANSI_RESET, flush=True)
+            continue
+
+        # Delete the old output files
+        for f in output_files:
+            f.unlink()
+
+        # Run LambdaNet if the outputs do not exist,
+        # or the output timestamps are older than the inputs
+        args = ["sbt", "runMain lambdanet.TypeInferenceService"]
+        p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=lambdanet_path)
+        stdout, stderr = p.communicate(str(subdir))
+        returncode = p.wait()
+
+        # Move output files to output directory, creating target directories if necessary
+        csv_files = [f.resolve() for f in subdir.rglob("*.csv") if f.is_file()]
+        short_csv_files = [f.relative_to(subdir) for f in csv_files]
+        for file, short_file in zip(csv_files, short_csv_files):
+            output_file = Path(output_dir, short_file)
+            output_file.parent.mkdir(parents=True, exist_ok=True)
+            file.rename(output_file)
+
+        if returncode == 0:
+            num_ok += 1
+            print(ANSI_GREEN + "[ OK ]" + ANSI_RESET, flush=True)
+        else:
+            num_fail += 1
+            print(ANSI_RED + "[FAIL]" + ANSI_RESET, flush=True)
+        # TODO: save the error output somewhere
+        # print(stdout)
+        # print(stderr)
 
     print("Number of successes: {}".format(num_ok))
     print("Number of fails: {}".format(num_fail))
@@ -401,8 +502,10 @@ def main():
     print("Source directory: {}".format(args.directory))
     print("Dataset: {}".format(args.dataset))
 
-    if args.infer:
+    if args.infer and "DeepTyper" == args.engine:
         run_pipeline_step(deeptyper_infer, "type inference", args)
+    elif args.infer and "LambdaNet" == args.engine:
+        run_pipeline_step(lambdanet_infer, "type inference", args)
 
     if args.weave:
         run_pipeline_step(weave_types, "type weaving", args)
