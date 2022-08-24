@@ -106,8 +106,8 @@ object TypeInferenceService {
     while (true) {
       print("Enter project path: ")
       System.out.flush()
+      val line = Option(scala.io.StdIn.readLine())
       try {
-        val line = Option(scala.io.StdIn.readLine())
         line match {
           case Some(line) if line.strip().nonEmpty =>
             val sourcePath = Path(line, amm.pwd)
@@ -117,8 +117,9 @@ object TypeInferenceService {
         }
       } catch {
         case e: Throwable =>
-          println(s"Got exception: ${e.getMessage}")
+          println(s"Got exception for: '${line.getOrElse("unknown")}'")
           e.printStackTrace(System.out)
+          println(s"End stacktrace for: '${line.getOrElse("")}'")
       }
     }
   }

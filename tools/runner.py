@@ -211,8 +211,12 @@ def lambdanet_infer(args):
 
     # TODO: batch it up to avoid startup cost
     #   - 8 projects takes 8 minutes without batching
-    #   - 1m20s when batched togetheR
-
+    #   - 1m20s when batched together
+    # TODO: parse standard output
+    # - check for "Got exception for: '${line.getOrElse("unknown")}'"
+    # - if so, then there's an error
+    # - extract the stacktrace, up to "End stacktrace for: '${line.getOrElse("")}'"
+    # - output error file, record error
     for subdir, short_subdir in zip(subdirs, short_subdirs):
         i += 1
         print("[{}/{}] {} ... ".format(i, num_subdirs, short_subdir), end="", flush=True)
@@ -252,12 +256,6 @@ def lambdanet_infer(args):
                 output_file.parent.mkdir(parents=True, exist_ok=True)
                 file.rename(output_file)
 
-        # TODO: parse standard output
-        # - check for "Got exception for: '${line.getOrElse("unknown")}'"
-        # - if so, then there's an error
-        # - extract the stacktrace, up to "End stacktrace for: '${line.getOrElse("")}'"
-        # - output error file, record error
-
         if "Got exception for:" not in stdout:
             # If no output file was produced (because the js file has no types), create a placeholder file anyway
             for f in short_csv_files:
@@ -266,10 +264,11 @@ def lambdanet_infer(args):
             num_ok += 1
             print(ANSI_GREEN + "[ OK ]" + ANSI_RESET, flush=True)
         else:
+            err_file = Path(output_dir, "output.err")
+            with open(err_file, mode="w", encoding="utf-8") as f:
+                print(stdout, file=f)
             num_fail += 1
             print(ANSI_RED + "[FAIL]" + ANSI_RESET, flush=True)
-            # TODO: save the error output somewhere
-            print(stdout)
 
     print("Number of successes: {}".format(num_ok))
     print("Number of fails: {}".format(num_fail))
