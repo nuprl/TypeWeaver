@@ -265,7 +265,7 @@ def lambdanet_infer(args):
             print(ANSI_GREEN + "[ OK ]" + ANSI_RESET, flush=True)
         else:
             err_file = Path(output_dir, "output.err")
-            err_file.touch()
+            err_file.parent.mkdir(parents=True, exist_ok=True)
             with open(err_file, mode="w", encoding="utf-8") as f:
                 print(stdout, file=f)
             num_fail += 1
