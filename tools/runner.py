@@ -259,7 +259,9 @@ def lambdanet_infer(args):
         if "Got exception for:" not in stdout:
             # If no output file was produced (because the js file has no types), create a placeholder file anyway
             for f in short_csv_files:
-                Path(output_dir, f).touch(exist_ok=True)
+                out_file = Path(output_dir, f)
+                out_file.parent.mkdir(parents=True, exist_ok=True)
+                out_file.touch(exist_ok=True)
 
             num_ok += 1
             print(ANSI_GREEN + "[ OK ]" + ANSI_RESET, flush=True)
