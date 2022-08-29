@@ -3,7 +3,7 @@ from datetime import datetime
 from enum import Enum
 from pathlib import Path
 from subprocess import PIPE
-import argparse, os, subprocess
+import argparse, os, socket, subprocess, time
 
 ANSI_RED = "\033[0;31m"
 ANSI_GREEN = "\033[0;32m"
@@ -28,7 +28,7 @@ def parse_args():
     parser.add_argument(
         "--engine",
         required=True,
-        choices=['DeepTyper', 'LambdaNet'],
+        choices=["DeepTyper", "LambdaNet", "LambdaNet-server"],
         help="engine to use for type inference, also determines the CSV format for type weaving and directory for type checking")
     parser.add_argument(
         "--directory",
@@ -43,6 +43,11 @@ def parse_args():
         type=int,
         default=cpu_count,
         help="maximum number of workers to use, defaults to {}, the number of processors on the machine".format(cpu_count))
+    parser.add_argument(
+        "--port",
+        type=int,
+        default=17891,
+        help="Port number for LambdaNet-server to use")
 
     # TODO: other useful flags: force
 
@@ -209,14 +214,6 @@ def lambdanet_infer(args):
     num_fail = 0
     num_skip = 0
 
-    # TODO: batch it up to avoid startup cost
-    #   - 8 projects takes 8 minutes without batching
-    #   - 1m20s when batched together
-    # TODO: parse standard output
-    # - check for "Got exception for: '${line.getOrElse("unknown")}'"
-    # - if so, then there's an error
-    # - extract the stacktrace, up to "End stacktrace for: '${line.getOrElse("")}'"
-    # - output error file, record error
     for subdir, short_subdir in zip(subdirs, short_subdirs):
         i += 1
         print("[{}/{}] {} ... ".format(i, num_subdirs, short_subdir), end="", flush=True)
@@ -256,22 +253,125 @@ def lambdanet_infer(args):
                 output_file.parent.mkdir(parents=True, exist_ok=True)
                 file.rename(output_file)
 
-        if "Got exception for:" not in stdout:
+        if "Exception, wrote:" not in stdout:
             # If no output file was produced (because the js file has no types), create a placeholder file anyway
             for f in short_csv_files:
                 out_file = Path(output_dir, f)
                 out_file.parent.mkdir(parents=True, exist_ok=True)
                 out_file.touch(exist_ok=True)
-
             num_ok += 1
             print(ANSI_GREEN + "[ OK ]" + ANSI_RESET, flush=True)
         else:
-            err_file = Path(output_dir, "output.err")
-            err_file.parent.mkdir(parents=True, exist_ok=True)
-            with open(err_file, mode="w", encoding="utf-8") as f:
-                print(stdout, file=f)
+            output_file = Path(output_dir, "output.err")
+            output_file.parent.mkdir(parents=True, exist_ok=True)
+            err_file = Path(subdir, "output.err")
+            err_file.rename(output_file)
             num_fail += 1
             print(ANSI_RED + "[FAIL]" + ANSI_RESET, flush=True)
+
+    print("Number of successes: {}".format(num_ok))
+    print("Number of fails: {}".format(num_fail))
+    print("Number of skips: {}".format(num_skip))
+
+def lambdanet_server_infer(args):
+    """Run LambdaNet's type inference on the JavaScript projects within the given directory."""
+
+    directory = Path(args.directory).resolve()
+    dataset = Path(args.dataset)
+    port = args.port
+
+    lambdanet_path = Path(Path(__file__).parent, "..", "LambdaNet").resolve()
+    if not lambdanet_path.exists():
+        print("Could not find LambdaNet: {}".format(lambdanet_path))
+        exit(1)
+    print("Inferring types with LambdaNet (server version): {}".format(lambdanet_path))
+
+    in_directory = Path(directory, "original", dataset).resolve()
+    print("Input directory: {}".format(in_directory))
+
+    # Create the out directory, if it doesn't already exist
+    out_directory = Path(directory, "LambdaNet-out", dataset, "predictions").resolve()
+    out_directory.mkdir(parents=True, exist_ok=True)
+    print("Output directory: {}".format(out_directory))
+
+    subdirs = sorted([sd.resolve() for sd in in_directory.iterdir() if len(list(sd.rglob("*.js")))])
+    short_subdirs = [sd.relative_to(in_directory) for sd in subdirs]
+
+    num_subdirs = len(subdirs)
+    print("Found {} packages".format(num_subdirs))
+
+    i = 0
+    num_ok = 0
+    num_fail = 0
+    num_skip = 0
+
+    print("Starting LambdaNet...", flush=True)
+    args = ["sbt", f"runMain lambdanet.TypeInferenceService {args.port}"]
+    p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=lambdanet_path)
+    time.sleep(15)
+
+    with socket.socket(socket.AF_INET6, socket.SOCK_STREAM) as s:
+        s.connect(("", port))
+        data = s.recv(1024).decode("utf-8") # Connection opened
+        data = s.recv(1024).decode("utf-8") # Service ready
+
+        for subdir, short_subdir in zip(subdirs, short_subdirs):
+            i += 1
+            print("[{}/{}] {} ... ".format(i, num_subdirs, short_subdir), end="", flush=True)
+
+            input_files = [f.resolve() for f in subdir.rglob("*.js") if f.is_file()]
+            input_timestamps = sorted([f.stat().st_mtime for f in input_files], reverse=True)
+            input_latest = input_timestamps[0] if input_timestamps else None
+
+            output_dir = Path(out_directory, short_subdir).resolve()
+            output_files = [f.resolve() for f in output_dir.rglob("*") if f.is_file() and (f.suffix == ".csv" or f.suffix == ".err")]
+            output_timestamps = sorted([f.stat().st_mtime for f in output_files], reverse=True)
+            output_latest = output_timestamps[0] if output_timestamps else None
+
+            # If output timestamps are newer than input timestamps, then skip
+            if input_latest and output_latest and input_latest < output_latest:
+                num_skip += 1
+                print(ANSI_YELLOW + "[SKIP]" + ANSI_RESET, flush=True)
+                continue
+
+            # Delete the old output files
+            for f in output_files:
+                f.unlink()
+
+            # Submit a job request to LambdaNet
+            s.sendall(f"{subdir}\n".encode("utf-8"))
+
+            # Wait for response
+            response = int(s.recv(4).decode("utf-8"))
+
+            # Move output files to output directory, creating target directories if necessary
+            csv_files = [f.with_suffix(".csv") for f in input_files]
+            short_csv_files = [f.relative_to(subdir) for f in csv_files]
+            for file, short_file in zip(csv_files, short_csv_files):
+                if file.exists():
+                    output_file = Path(output_dir, short_file)
+                    output_file.parent.mkdir(parents=True, exist_ok=True)
+                    file.rename(output_file)
+
+            if response == 0:
+                # If no output file was produced (because the js file has no types), create a placeholder file anyway
+                for f in short_csv_files:
+                    out_file = Path(output_dir, f)
+                    out_file.parent.mkdir(parents=True, exist_ok=True)
+                    out_file.touch(exist_ok=True)
+                num_ok += 1
+                print(ANSI_GREEN + "[ OK ]" + ANSI_RESET, flush=True)
+            else:
+                output_file = Path(output_dir, "output.err")
+                output_file.parent.mkdir(parents=True, exist_ok=True)
+                err_file = Path(subdir, "output.err")
+                err_file.rename(output_file)
+                num_fail += 1
+                print(ANSI_RED + "[FAIL]" + ANSI_RESET, flush=True)
+
+        # Shutdown LambdaNet
+        print("Shutting down LambdaNet...")
+        s.sendall(b":q")
 
     print("Number of successes: {}".format(num_ok))
     print("Number of fails: {}".format(num_fail))
@@ -500,7 +600,7 @@ def run_pipeline_step(pipeline_step, description, *args):
     end_time = datetime.now()
 
     duration = end_time - start_time
-    total_seconds = duration.total_seconds()
+    total_seconds = round(duration.total_seconds())
     hours, remainder = divmod(total_seconds, 3600)
     minutes, seconds = divmod(remainder, 60)
     print(f"Time for {description}: {hours}:{minutes:02}:{seconds:02}")
@@ -514,6 +614,8 @@ def main():
         run_pipeline_step(deeptyper_infer, "type inference", args)
     elif args.infer and "LambdaNet" == args.engine:
         run_pipeline_step(lambdanet_infer, "type inference", args)
+    elif args.infer and "LambdaNet-server" == args.engine:
+        run_pipeline_step(lambdanet_server_infer, "type inference", args)
 
     if args.weave:
         run_pipeline_step(weave_types, "type weaving", args)

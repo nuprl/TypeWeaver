@@ -9,11 +9,15 @@ import lambdanet.architecture.GATArchitecture
 import lambdanet.train.{DataSet, TopNDistribution}
 import lambdanet.translation.PredicateGraph
 
+import java.io.{PrintWriter, BufferedReader, InputStreamReader, StringWriter}
+import java.net.ServerSocket
+
 import scala.collection.parallel.ForkJoinTaskSupport
 import scala.concurrent.{Await,Future}
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
 import scala.concurrent.forkjoin.ForkJoinPool
+import scala.io.Source
 import scala.util.Random
 
 object TypeInferenceService {
@@ -94,7 +98,7 @@ object TypeInferenceService {
     }
   }
 
-  def main(args: Array[String]): Unit = {
+  def startService() = {
     val modelDir = amm.pwd / "models" / "newParsing-GAT1-fc2-newSim-decay-6"
     val paramPath = modelDir / "params.serialized"
     val modelCachePath = modelDir / "model.serialized"
@@ -103,31 +107,83 @@ object TypeInferenceService {
     val model =
       loadModel(paramPath, modelCachePath, modelConfig, numOfThreads = 8)
 
-    val service = model.PredictionService(numOfThreads = 8, predictTopK = 5)
+    model.PredictionService(numOfThreads = 8, predictTopK = 5)
+  }
+
+  def repl(): Unit = {
+    val service = startService()
     printResult("Type Inference Service successfully started.")
     printResult(s"Current working directory: ${amm.pwd}")
     while (true) {
       print("Enter project path: ")
       System.out.flush()
       val line = Option(scala.io.StdIn.readLine())
-      try {
-        line match {
-          case Some(line) if line.strip().nonEmpty =>
+      line match {
+        case Some(line) if line.strip().nonEmpty =>
+          try {
             val sourcePath = Path(line, amm.pwd)
-            val results = Await.result(
-              Future {
+            val results = Await.result(Future {
                 service.predictOnProject(sourcePath, warnOnErrors = false)
-              },
-              2.minutes)
+              }, 2.minutes)
             PredictionResults(sourcePath, results).prettyPrint()
-          case _ => return
-        }
-      } catch {
-        case e: Throwable =>
-          println(s"Got exception for: '${line.getOrElse("unknown")}'")
-          e.printStackTrace(System.out)
-          println(s"End stacktrace for: '${line.getOrElse("")}'")
+          } catch {
+            case e: Throwable =>
+              val filePath = Path(line, amm.pwd) / amm.RelPath("output.err")
+              val sw = new StringWriter
+              e.printStackTrace(new PrintWriter(sw))
+              amm.write.over(filePath, sw.toString)
+              println(s"Exception, wrote: '$filePath'")
+          }
+        case _ => return
       }
+    }
+  }
+
+  def server(port: Int): Unit = {
+    try {
+      println(s"Waiting for connection on port: $port")
+      val serverSocket = new ServerSocket(port)
+      val clientSocket = serverSocket.accept()
+      new PrintWriter(clientSocket.getOutputStream, true) {
+        println(s"Connection opened, close by sending ':q'.")
+        val service = startService()
+        println("Service ready.")
+        Source.fromInputStream(clientSocket.getInputStream).getLines
+          .takeWhile(!_.toLowerCase.startsWith(":q"))
+          .foreach { line =>
+            Console.println(s"Handling: $line")
+            try {
+              val sourcePath = Path(line, amm.pwd)
+              val results = Await.result(Future {
+                  service.predictOnProject(sourcePath, warnOnErrors = false)
+                }, 2.minutes)
+              PredictionResults(sourcePath, results).prettyPrint()
+              println("0")
+            } catch {
+              case e: Throwable =>
+                val filePath = Path(line, amm.pwd) / amm.RelPath("output.err")
+                val sw = new StringWriter
+                e.printStackTrace(new PrintWriter(sw))
+                amm.write.over(filePath, sw.toString)
+                println("1")
+            }
+          }
+        Console.println(s"Gracefully closing connection")
+        clientSocket.close()
+      }
+    } catch {
+      case e: Throwable =>
+        println(s"Got exception: ${e.getMessage}")
+        e.printStackTrace(System.out)
+    }
+  }
+
+  def main(args: Array[String]): Unit = {
+    args.length match {
+      case 1 =>
+        val port = args(0).toInt
+        server(port)
+      case _ => repl()
     }
   }
 }
