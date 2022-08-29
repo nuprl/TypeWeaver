@@ -198,7 +198,7 @@ def lambdanet_infer(args):
     out_directory.mkdir(parents=True, exist_ok=True)
     print("Output directory: {}".format(out_directory))
 
-    subdirs = sorted([sd.resolve() for sd in in_directory.iterdir()])
+    subdirs = sorted([sd.resolve() for sd in in_directory.iterdir() if len(list(sd.rglob("*.js")))])
     short_subdirs = [sd.relative_to(in_directory) for sd in subdirs]
 
     num_subdirs = len(subdirs)
@@ -500,7 +500,7 @@ def run_pipeline_step(pipeline_step, description, *args):
     end_time = datetime.now()
 
     duration = end_time - start_time
-    total_seconds = duration.seconds
+    total_seconds = duration.total_seconds()
     hours, remainder = divmod(total_seconds, 3600)
     minutes, seconds = divmod(remainder, 60)
     print(f"Time for {description}: {hours}:{minutes:02}:{seconds:02}")

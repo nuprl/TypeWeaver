@@ -10,6 +10,9 @@ import lambdanet.train.{DataSet, TopNDistribution}
 import lambdanet.translation.PredicateGraph
 
 import scala.collection.parallel.ForkJoinTaskSupport
+import scala.concurrent.{Await,Future}
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.duration._
 import scala.concurrent.forkjoin.ForkJoinPool
 import scala.util.Random
 
@@ -111,7 +114,11 @@ object TypeInferenceService {
         line match {
           case Some(line) if line.strip().nonEmpty =>
             val sourcePath = Path(line, amm.pwd)
-            val results = service.predictOnProject(sourcePath, warnOnErrors = false)
+            val results = Await.result(
+              Future {
+                service.predictOnProject(sourcePath, warnOnErrors = false)
+              },
+              2.minutes)
             PredictionResults(sourcePath, results).prettyPrint()
           case _ => return
         }
