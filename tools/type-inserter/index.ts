@@ -4,30 +4,47 @@ import { parse } from "csv-parse/sync";
 import { ArrowFunction, FunctionDeclaration, FunctionExpression, Identifier,
          Node, ParameterDeclaration, Project, SourceFile, SyntaxKind,
          VariableDeclaration, VariableDeclarationKind, VariableStatement } from "ts-morph";
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
 
-function printUsageAndExit(error: string): void {
-    console.log(error);
-    console.log("Usage: node index.js <file.js> [file.csv]");
-    console.log("  file.js is expected to be a JavaScript file (without type annotations)");
-    console.log("  If file.csv is not given, then it is assumed to exist in the same directory as file.js");
-    console.log("Outputs: file.ts");
-    process.exit(1);
-}
+const yargsBuilder = yargs(hideBin(process.argv))
+    .option("format", {
+        alias: "f",
+        demandOption: true,
+        describe: "specify CSV format",
+        choices: ["DeepTyper", "LambdaNet"]
+    })
+    .option("types", {
+        alias: "t",
+        describe: "specify CSV file containing type annotations",
+        string: true
+    }).
+    check((argv, options) => {
+        const files = argv._;
+        if (files.length < 1) {
+            throw new Error("Input file must be provided.");
+        } else if (files.length > 1) {
+            throw new Error("Only 1 input file may be provided.");
+        } else {
+            return true;
+        }
+    })
+    .help("help");
 
-if (process.argv.length < 3) {
-    printUsageAndExit("No input file provided.");
-}
+const argv = yargsBuilder.parseSync();
 
-const jsFilename: string = process.argv[2];
+const jsFilename: string = argv._[0].toString();
 const jsPath: path.ParsedPath = path.parse(jsFilename);
-const csvFilename: string = process.argv.length == 4
-    ? process.argv[3]
+const csvFilename: string = argv.types
+    ? argv.types
     : path.join(jsPath.dir, jsPath.name + ".csv");
 
 if (!existsSync(jsFilename)) {
-    printUsageAndExit("File does not exist: " + jsFilename);
+    console.log("File does not exist: " + jsFilename);
+    yargsBuilder.showHelp();
 } else if (!existsSync(csvFilename)) {
-    printUsageAndExit("File does not exist: " + csvFilename);
+    console.log("File does not exist: " + csvFilename);
+    yargsBuilder.showHelp();
 }
 
 // Read and parse unannotated JavaScript source.
