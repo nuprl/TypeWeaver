@@ -9,7 +9,6 @@ interface Record {
     tokenValue: string;
     tokenType: string;
     typePrediction: string;
-    typeProbability: number;
 }
 
 /**
@@ -46,8 +45,7 @@ class TypePredictions {
                         tokenValue: tokVal,
                         tokenType: tokType,
                         typePrediction: prediction,
-                        typeProbability: record[3],
-                    }
+                    };
                 } else {
                     return null;
                 }
@@ -71,7 +69,7 @@ class TypePredictions {
      * @param {string[]} tokens The sequence of tokens to search for type predictions.
      * @return {string[]} Array of types corresponding to tokens.
      */
-    findTypesForTokens(tokens: string[]): string[] | undefined {
+    public findTypesForTokens(tokens: string[]): string[] | undefined {
         const n: number = this.records.length;
         const m: number = tokens.length;
 
@@ -112,7 +110,7 @@ class TypePredictions {
         return undefined;
     }
 
-    debugPrint(): void {
+    private debugPrint(): void {
         for (const r of this.records) {
             if (r.typePrediction) {
                 console.log(r.tokenValue + " (" + r.tokenType + "): " + r.typePrediction);
@@ -123,7 +121,7 @@ class TypePredictions {
     }
 }
 
-export class DeepTyper {
+export default class DeepTyper {
     private readonly debug: boolean;
     private readonly predictions: TypePredictions;
 

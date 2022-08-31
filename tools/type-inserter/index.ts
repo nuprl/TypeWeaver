@@ -3,7 +3,7 @@ import * as path from "path";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 
-import { DeepTyper } from "./deeptyper";
+import DeepTyper from "./deeptyper";
 
 const yargsBuilder = yargs(hideBin(process.argv))
     .option("format", {
