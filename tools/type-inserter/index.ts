@@ -4,6 +4,7 @@ import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
 
 import DeepTyper from "./deeptyper";
+import LambdaNet from "./lambdanet";
 
 const yargsBuilder = yargs(hideBin(process.argv))
     .option("format", {
@@ -56,6 +57,6 @@ switch (argv.format) {
         (new DeepTyper(jsFilename, csvFilename, argv.debug)).run();
         break;
     case "LambdaNet":
-        console.log("TODO: LambdaNet");
+        (new LambdaNet(jsFilename, csvFilename, argv.debug)).run();
         break;
 }
