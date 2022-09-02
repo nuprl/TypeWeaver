@@ -3,7 +3,8 @@
 This tool parses an unannotated JavaScript file and associated CSV file
 containing type predictions, and outputs a valid TypeScript file.
 
-Currently, only the DeepTyper CSV format is supported.
+Currently, DeepTyper and LambdaNet are supported. Note that by default,
+LambdaNet outputs in a non-CSV format; we use a modified version of LambdaNet.
 
 ## Setup and build
 
@@ -12,5 +13,13 @@ Currently, only the DeepTyper CSV format is supported.
 
 ## Running
 
-    node index.js examples/factors.js   # assumes examples/factors.csv also exists
-                                        # outputs examples/factors.ts
+    node index.js examples/factors-dt.js --format DeepTyper
+
+By default, `type-inserter` assumes that for an input file `file.js`, a
+corresponding CSV file `file.csv` exists in the same directory, containing type
+predictions in the specified format.
+
+The CSV file can be provided explicitly:
+
+    node index.js examples/factors-dt.js --format DeepTyper \
+        --types examples/factors-dt.csv
