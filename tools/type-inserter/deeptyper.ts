@@ -5,7 +5,7 @@ import { ArrowFunction, FunctionDeclaration, FunctionExpression, Identifier,
          Node, ParameterDeclaration, Project, SourceFile, SyntaxKind,
          VariableDeclaration, VariableDeclarationKind, VariableStatement } from "ts-morph";
 
-interface Record {
+interface CVSRecord {
     tokenValue: string;
     tokenType: string;
     typePrediction: string;
@@ -19,7 +19,7 @@ interface Record {
  */
 class TypePredictions {
     private readonly debug: boolean;
-    private readonly records: Record[];
+    private readonly records: CVSRecord[];
     // Internal index into the records array, used for searching.
     private index: number = 0;
 
@@ -33,7 +33,7 @@ class TypePredictions {
             delimiter: "\x1f",
             // The columns are:
             //   token_val, token_type, type1, prob1, ...
-            on_record: function (record, _) {
+            on_record: (record, _): CVSRecord | null => {
                 const tokVal = record[0];
                 const tokType = record[1];
                 // Only take tokens that are names or keywords (since they might be identifiers).
@@ -67,7 +67,8 @@ class TypePredictions {
      * while traversing the AST.
      *
      * @param {string[]} tokens The sequence of tokens to search for type predictions.
-     * @return {string[]} Array of types corresponding to tokens.
+     * @return {string[] | undefined} Array of types corresponding to tokens, or
+     *  undefined if no prediction is available.
      */
     public findTypesForTokens(tokens: string[]): string[] | undefined {
         const n: number = this.records.length;
@@ -90,7 +91,7 @@ class TypePredictions {
                 if (i > 0 && this.records[i - 1].tokenValue === "for") {
                     continue;
                 }
-                const entries: Record[] = this.records.slice(i, i + m);
+                const entries: CVSRecord[] = this.records.slice(i, i + m);
                 const predictions: string[] = entries.map(_ => _.typePrediction);
 
                 // Update the index, so that search resumes from this point instead
@@ -141,7 +142,7 @@ export default class DeepTyper {
     }
 
     /**
-    * This function iterates the AST, querying the CSV records with a token sequence
+    * This function traverses the AST, querying the CSV records with a token sequence
     * to get the predicted types for those tokens. It then sets the type annotations
     * for those AST nodes.
     *
@@ -166,9 +167,9 @@ export default class DeepTyper {
         * fails), and pass the type predictions to the callback.
         */
         const handleFunction = (funNode: FunctionDeclaration | FunctionExpression | ArrowFunction,
-                                params: ParameterDeclaration[],
                                 tokens: string[],
                                 callback: (types: string[]) => void): void => {
+            const params: ParameterDeclaration[] = funNode.getParameters();
             if (!params.every(_ => _.getChildAtIndexIfKind(0, SyntaxKind.Identifier))) {
                 // Silently skip destructuring patterns in params
                 return;
@@ -187,7 +188,7 @@ export default class DeepTyper {
             }
 
             callback(types);
-        }
+        };
 
         switch (node.getKind()) {
             case SyntaxKind.VariableDeclaration: {
@@ -202,7 +203,7 @@ export default class DeepTyper {
                     .getParentIfKind(SyntaxKind.VariableStatement);
                 const idNode: Identifier | undefined = varDecl.getChildAtIndexIfKind(0, SyntaxKind.Identifier);
 
-                // Skip this case if any of the following are true
+                // Skip this case if any of the following are true:
                 //   - grandparent node is not a variable statement (meaning we're in a for loop)
                 //   - first child node is not an identifier (meaning we have a destructuring pattern)
                 //   - this is not the first declaration in a statement
@@ -247,7 +248,7 @@ export default class DeepTyper {
                     ? ["function", funName].concat(paramNames)
                     : ["function"].concat(paramNames);
 
-                handleFunction(funDecl, params, tokens, function(types: string[]) {
+                handleFunction(funDecl, tokens, (types: string[]) => {
                     // Discard the "undefined" prediction for the "function" token
                     const [_, retType, ...paramTypes]: string[] = types;
                     if (retType) {
@@ -276,7 +277,7 @@ export default class DeepTyper {
                     ? ["function", funName].concat(paramNames)
                     : ["function"].concat(paramNames);
 
-                handleFunction(funExpr, params, tokens, function(types: string[]) {
+                handleFunction(funExpr, tokens, (types: string[]) => {
                     // Discard the "undefined" prediction for the "function" token
                     types.shift();
                     if (funName) {
@@ -306,7 +307,7 @@ export default class DeepTyper {
 
                 const tokens: string[] = paramNames.concat(["=>"])
 
-                handleFunction(arrowFun, params, tokens, function(types: string[]) {
+                handleFunction(arrowFun, tokens, function(types: string[]) {
                     // Discard the "undefined" prediction for "=>"
                     types.pop();
                     params.forEach((p, i) => {
