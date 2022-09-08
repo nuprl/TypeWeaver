@@ -1,0 +1,17 @@
+/*
+    Issue #384 should preserve order of declarations
+    when diff contains everride declarations
+*/
+
+.a {
+    display: flex;
+    box-sizing: border-box;
+    transition: .3s;
+    transition-property: color, background;
+}
+
+.b {
+    display: flex;
+    box-sizing: border-box;
+    transition: inherit;
+}

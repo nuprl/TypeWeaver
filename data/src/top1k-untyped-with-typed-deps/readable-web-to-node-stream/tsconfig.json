@@ -1,0 +1,24 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": false,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "ES2017",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "dom"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "stream": [ "readable-stream" ],
+      "assert": [ "assert" ]
+    },
+    "strict": true
+  }
+}

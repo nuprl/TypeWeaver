@@ -1,0 +1,17 @@
+name: 'Tests: SES'
+
+on: [pull_request, push]
+
+jobs:
+  tests:
+    uses: ljharb/actions/.github/workflows/node.yml@main
+    with:
+      range: '>= 12'
+      type: majors
+      command: npm run test:ses
+
+  SES:
+    needs: [tests]
+    runs-on: ubuntu-latest
+    steps:
+      - run: 'echo tests completed'
