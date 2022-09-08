@@ -3,17 +3,24 @@
 The two datasets, `top1k-typed-with-typed-deps` and
 `top1k-untyped-with-typed-deps`, are taken from the `top1k-plus` dataset.
 
-Together, the two datasets represent `top1k-with-typed-deps`, the 142 packages
+Together, the two datasets represent `top1k-with-typed-deps`, the 141 packages
 from the `top1k-plus` dataset that (1) contain code, (2) have at least one
 dependency, and (3) have all dependencies contain type definitions in
 DefinitelyTyped. Note that this dataset **excludes** packages with zero
 dependencies.
 
-The 142 packages are split into the two final datasets:
+The 141 packages are split into the two final datasets:
 `top1k-typed-with-typed-deps` are the 78 packages that are themselves typed
 (i.e. they contain type definitions in DefinitelyTyped) and
-`top1k-untyped-with-typed-deps` are the 64 packages that do not have type
+`top1k-untyped-with-typed-deps` are the 63 packages that do not have type
 definitions.
+
+Note: `@babel_runtime` was excluded from the dataset, as it is an extremely
+large project.
+
+`top1k-typed-with-typed-deps.csv` and `top1k-untyped-with-typed-deps.csv`
+contain some basic statistics about the number of lines of JavaScript and
+TypeScript code.
 
 ## `top1k-plus`
 
@@ -50,3 +57,9 @@ does not do any validation or curation of the tarballs.
 
 The `src` directory contains the source code of the packages, as downloaded
 from GitHub.
+
+The GitHub repository URL was obtained by running:
+
+    npm view [package] repository.url
+
+After cloning the repository, the `.git` directory was deleted to save space.
