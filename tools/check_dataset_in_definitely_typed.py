@@ -8,11 +8,9 @@
 # Results are printed in CSV format
 
 from pathlib import Path
-import argparse, bisect, json, os, re
+import argparse, bisect, json, re
 
 def parse_args():
-    cpu_count = os.cpu_count();
-
     parser = argparse.ArgumentParser(description="Checks if packages and their dependencies are DefinitelyTyped")
     parser.add_argument(
         "--typings",
