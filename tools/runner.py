@@ -268,7 +268,7 @@ def lambdanet_infer(args):
     print("Number of fails: {}".format(num_fail))
     print("Number of skips: {}".format(num_skip))
 
-def weave_types_job(type_inserter_path, csv_file, js_file, short_file, out_directory):
+def weave_types_job(engine, type_inserter_path, csv_file, js_file, short_file, out_directory):
     ts_file = Path(out_directory, short_file).resolve().with_suffix(".ts")
     err_file = ts_file.with_suffix(".err")
     warn_file = ts_file.with_suffix(".warn")
@@ -294,7 +294,7 @@ def weave_types_job(type_inserter_path, csv_file, js_file, short_file, out_direc
 
     # Run type-inserter if the output files do not exist,
     # or the output file timestamps are older than the input
-    args = ["node", type_inserter_path.name, js_file, csv_file]
+    args = ["node", type_inserter_path.name, "--format", engine, "--types", csv_file, js_file]
     result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=type_inserter_path.parent)
 
     # Create target directories for output
@@ -322,6 +322,7 @@ def weave_types(args):
     directory = Path(args.directory).resolve()
     dataset = Path(args.dataset)
     weaveout_dir = Path(args.weave)
+    engine_dir = f"{args.engine}-out"
 
     type_inserter_path = Path(Path(__file__).parent, "type-inserter", "index.js").resolve()
     if not type_inserter_path.exists():
@@ -331,7 +332,7 @@ def weave_types(args):
 
     # Set up the input directories (JavaScript and CSV)
     js_in_directory = Path(directory, "original", dataset).resolve()
-    csv_in_directory = Path(directory, "DeepTyper-out", dataset, "predictions").resolve()
+    csv_in_directory = Path(directory, engine_dir, dataset, "predictions").resolve()
     if not csv_in_directory.exists():
         print("error: type predictions directory {} does not exist".format(csv_in_directory))
         exit(1)
@@ -339,7 +340,7 @@ def weave_types(args):
     print("Input directory (type predictions): {}".format(csv_in_directory))
 
     # Create the out directory, if it doesn't already exist
-    out_directory = Path(directory, "DeepTyper-out", dataset, weaveout_dir).resolve()
+    out_directory = Path(directory, engine_dir, dataset, weaveout_dir).resolve()
     out_directory.mkdir(parents=True, exist_ok=True)
     print("Output directory: {}".format(out_directory))
 
@@ -348,9 +349,9 @@ def weave_types(args):
     short_subdirs = [sd.relative_to(csv_in_directory) for sd in csv_subdirs]
     js_subdirs = [Path(js_in_directory, d).resolve() for d in short_subdirs]
 
-    csv_files = [f.resolve()
-                 for subdir in csv_subdirs
-                 for f in subdir.rglob("*.csv") if f.is_file()]
+    csv_files = sorted([f.resolve()
+                        for subdir in csv_subdirs
+                        for f in subdir.rglob("*.csv") if f.is_file()])
     short_files = [f.relative_to(csv_in_directory) for f in csv_files]
     js_files = [Path(js_in_directory, f).resolve().with_suffix(".js") for f in short_files]
 
@@ -364,7 +365,7 @@ def weave_types(args):
     num_skip = 0
 
     with futures.ProcessPoolExecutor(max_workers=args.workers) as executor:
-        fs = [executor.submit(weave_types_job, type_inserter_path, csv_file, js_file, short_file, out_directory)
+        fs = [executor.submit(weave_types_job, args.engine, type_inserter_path, csv_file, js_file, short_file, out_directory)
               for csv_file, js_file, short_file in zip(csv_files, js_files, short_files)]
 
         for f in futures.as_completed(fs):
@@ -433,6 +434,7 @@ def typecheck(args):
     directory = Path(args.directory).resolve()
     dataset = Path(args.dataset)
     typecheck_dir = Path(args.typecheck)
+    engine_dir = f"{args.engine}-out"
 
     tsc_path = Path(Path(__file__).parent, "node_modules", ".bin", "tsc").resolve()
     if not tsc_path.exists():
@@ -441,7 +443,7 @@ def typecheck(args):
     print("Type checking with: {}".format(tsc_path))
 
     # Set up the input directories
-    in_directory = Path(directory, "DeepTyper-out", dataset, typecheck_dir).resolve()
+    in_directory = Path(directory, engine_dir, dataset, typecheck_dir).resolve()
     if not in_directory.exists():
         print("error: directory {} does not exist".format(in_directory))
         exit(1)
@@ -501,9 +503,9 @@ def main():
     print("Source directory: {}".format(args.directory))
     print("Dataset: {}".format(args.dataset))
 
-    if args.infer and "DeepTyper" == args.engine:
+    if args.infer and args.engine == "DeepTyper":
         run_pipeline_step(deeptyper_infer, "type inference", args)
-    elif args.infer and "LambdaNet" == args.engine:
+    elif args.infer and args.engine == "LambdaNet":
         run_pipeline_step(lambdanet_infer, "type inference", args)
 
     if args.weave:
