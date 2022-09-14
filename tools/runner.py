@@ -3,7 +3,7 @@ from datetime import datetime
 from enum import Enum
 from pathlib import Path
 from subprocess import PIPE
-import argparse, os, subprocess
+import argparse, os, subprocess, threading, time
 
 ANSI_RED = "\033[0;31m"
 ANSI_GREEN = "\033[0;32m"
@@ -178,6 +178,9 @@ def deeptyper_infer(args):
     print("Number of fails: {}".format(num_fail))
     print("Number of skips: {}".format(num_skip))
 
+def send_data_to(proc, data):
+    proc.communicate(data)
+
 def lambdanet_infer(args):
     """Run LambdaNet's type inference on the JavaScript projects within the given directory."""
 
@@ -209,10 +212,10 @@ def lambdanet_infer(args):
     num_fail = 0
     num_skip = 0
 
-    for subdir, short_subdir in zip(subdirs, short_subdirs):
-        i += 1
-        print("[{}/{}] {} ... ".format(i, num_subdirs, short_subdir), end="", flush=True)
+    skipped_subdirs = set()
+    subdirs_to_run = []
 
+    for subdir, short_subdir in zip(subdirs, short_subdirs):
         input_files = [f.resolve() for f in subdir.rglob("*.js") if f.is_file()]
         input_timestamps = sorted([f.stat().st_mtime for f in input_files], reverse=True)
         input_latest = input_timestamps[0] if input_timestamps else None
@@ -225,19 +228,39 @@ def lambdanet_infer(args):
         # If output timestamps are newer than input timestamps, then skip
         if input_latest and output_latest and input_latest < output_latest:
             num_skip += 1
-            print(ANSI_YELLOW + "[SKIP]" + ANSI_RESET, flush=True)
+            skipped_subdirs.add(short_subdir)
             continue
+
+        # Update list of projects to process
+        subdirs_to_run.append(str(subdir))
 
         # Delete the old output files
         for f in output_files:
             f.unlink()
 
-        # Run LambdaNet if the outputs do not exist,
-        # or the output timestamps are older than the inputs
-        args = ["sbt", "runMain lambdanet.TypeInferenceService"]
-        p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=lambdanet_path)
-        stdout, stderr = p.communicate(str(subdir))
-        returncode = p.wait()
+    subdirs_string = "\n".join(subdirs_to_run)
+
+    args = ["sbt", "runMain lambdanet.TypeInferenceService --writeDoneFile"]
+    p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=lambdanet_path)
+    threading.Thread(target=send_data_to, args=[p, subdirs_string]).start()
+
+    for subdir, short_subdir in zip(subdirs, short_subdirs):
+        i += 1
+        print("[{}/{}] {} ... ".format(i, num_subdirs, short_subdir), end="", flush=True)
+
+        if short_subdir in skipped_subdirs:
+            print(ANSI_YELLOW + "[SKIP]" + ANSI_RESET, flush=True)
+            continue
+
+        input_files = [f.resolve() for f in subdir.rglob("*.js") if f.is_file()]
+        output_dir = Path(out_directory, short_subdir).resolve()
+
+        done_file = Path(subdir, "done.ok")
+        err_file = Path(subdir, "output.err")
+        while True:
+            if done_file.exists() or err_file.exists():
+                break
+            time.sleep(10)
 
         # Move output files to output directory, creating target directories if necessary
         csv_files = [f.with_suffix(".csv") for f in input_files]
@@ -248,13 +271,14 @@ def lambdanet_infer(args):
                 output_file.parent.mkdir(parents=True, exist_ok=True)
                 file.rename(output_file)
 
-        if "Exception, wrote:" not in stdout:
+        if done_file.exists():
             # If no output file was produced (because the js file has no types), create a placeholder file anyway
             for f in short_csv_files:
                 out_file = Path(output_dir, f)
                 out_file.parent.mkdir(parents=True, exist_ok=True)
                 out_file.touch(exist_ok=True)
             num_ok += 1
+            done_file.unlink()
             print(ANSI_GREEN + "[ OK ]" + ANSI_RESET, flush=True)
         else:
             output_file = Path(output_dir, "output.err")
@@ -263,6 +287,10 @@ def lambdanet_infer(args):
             err_file.rename(output_file)
             num_fail += 1
             print(ANSI_RED + "[FAIL]" + ANSI_RESET, flush=True)
+
+    # If we reach this point, either LambdaNet has finished processing everything,
+    # or there was nothing left to process, so we can kill it
+    p.terminate()
 
     print("Number of successes: {}".format(num_ok))
     print("Number of fails: {}".format(num_fail))

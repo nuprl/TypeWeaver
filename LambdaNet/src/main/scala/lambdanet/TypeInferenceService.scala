@@ -119,6 +119,10 @@ object TypeInferenceService {
                 service.predictOnProject(sourcePath, warnOnErrors = false)
               }, 2.minutes)
             PredictionResults(sourcePath, results).prettyPrint()
+            if (!args.isEmpty && args(0).equals("--writeDoneFile")) {
+              val filePath = Path(line, amm.pwd) / amm.RelPath("done.ok")
+              amm.write.over(filePath, "")
+            }
           } catch {
             case e: Throwable =>
               val filePath = Path(line, amm.pwd) / amm.RelPath("output.err")
