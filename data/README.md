@@ -65,8 +65,10 @@ The GitHub repository URL was obtained by running:
 
 After cloning the repository, the `.git` directory was deleted to save space.
 
-Note: Some packages are actually extracted from a larger package. For example,
-the package `eslint-import-resolver-node` is part of the `eslint-plugin-import`
-repository, so the entire `eslint-plugin-import` source code was downloaded.
-`eslint-plugin-import` also contains other "subpackages," but they are not
-included in our dataset.
+### Duplicates
+
+Some packages are actually extracted from a larger repository, so it is possible
+to download duplicate repositories. For example:
+
+  * `eslint-import-resolver-node` is part of `eslint-plugin-import`
+  * `bser` and `fb-watchman` are from `watchman`

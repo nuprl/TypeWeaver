@@ -33,11 +33,28 @@ def normalize_name(path):
     # A scoped package saved as "@foo_bar" is named "@foo/bar" on NPM
     return re.sub(r"@(.*)_(.*)", r"@\1/\2", str(path))
 
-def download_for_package(pkg, cwd):
+def strip_git_suffix(string):
+    if string.endswith(".git"):
+        return string[:-4]
+    else:
+        return string
+
+def get_repo(string):
+    split_colon = re.split(":", string)
+    split_slash = re.split("/", string)
+    if len(split_slash) == 2:
+        # split as ["git@github.com:abc", "def.git"]
+        return strip_git_suffix(split_colon[1])
+    else:
+        return split_slash[-2] + "/" + strip_git_suffix(split_slash[-1])
+
+def download_package(pkg, cwd):
     # Get repository URL
     args = ["npm", "view", normalize_name(pkg), "repository.url"]
     result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8")
-    url = re.sub(r"(.*)//(.*)", r"https://\2", result.stdout.rstrip())
+    output = result.stdout.rstrip()
+    url = re.sub(r"(.*)//(.*)", r"https://\2", output)
+    repo = get_repo(output)
 
     # Clone the repo
     args = ["git", "clone", "--depth", "1", url, pkg]
@@ -47,7 +64,7 @@ def download_for_package(pkg, cwd):
     git_dir = Path(cwd, pkg, ".git")
     shutil.rmtree(git_dir, ignore_errors=True)
 
-    return pkg
+    return pkg, repo
 
 def main():
     args = parse_args()
@@ -60,10 +77,22 @@ def main():
     output_dir = Path(args.output).resolve()
 
     counter = 0
+    repos = {}
     for package in packages:
         counter += 1
         print("[{}/{}] {} ... ".format(counter, num_pkgs, package), flush=True)
-        download_for_package(package, output_dir)
+        _, repo = download_package(package, output_dir)
+        if repo in repos.keys():
+            print("Duplicate: " + repo)
+            repos[repo] += 1
+        else:
+            repos[repo] = 1
+
+    duplicates = [k for k, v in repos.items() if v > 1]
+    if duplicates:
+        print("Duplicate repos downloaded!")
+        for d in duplicates:
+            print(d)
 
 if __name__ == "__main__":
     main()
