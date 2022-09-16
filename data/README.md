@@ -3,20 +3,21 @@
 The two datasets, `top1k-typed-with-typed-deps` and
 `top1k-untyped-with-typed-deps`, are taken from the `top1k-plus` dataset.
 
-Together, the two datasets represent `top1k-with-typed-deps`, the 141 packages
+Together, the two datasets represent `top1k-with-typed-deps`, the 137 packages
 from the `top1k-plus` dataset that (1) contain code, (2) have at least one
 dependency, and (3) have all dependencies contain type definitions in
 DefinitelyTyped. Note that this dataset **excludes** packages with zero
 dependencies.
 
-The 141 packages are split into the two final datasets:
-`top1k-typed-with-typed-deps` are the 78 packages that are themselves typed
-(i.e. they contain type definitions in DefinitelyTyped) and
-`top1k-untyped-with-typed-deps` are the 63 packages that do not have type
-definitions.
+The 137 packages are split into the two final datasets:
+`top1k-typed-with-typed-deps` are the 93 packages that are themselves typed
+(i.e. they contain type definitions in DefinitelyTyped, or include their own
+*.d.ts type definitions) and `top1k-untyped-with-typed-deps` are the 44 packages
+that do not have type definitions.
 
-Note: `@babel_runtime` was excluded from the dataset, as it is an extremely
-large project.
+Notes: `@babel_runtime` was excluded from the dataset, as it is an extremely
+large project. 15 other packages were manually reclassified as typed, while 4
+TypeScript packages were removed.
 
 `top1k-typed-with-typed-deps.csv` and `top1k-untyped-with-typed-deps.csv`
 contain some basic statistics about the number of lines of JavaScript and
@@ -63,3 +64,9 @@ The GitHub repository URL was obtained by running:
     npm view [package] repository.url
 
 After cloning the repository, the `.git` directory was deleted to save space.
+
+Note: Some packages are actually extracted from a larger package. For example,
+the package `eslint-import-resolver-node` is part of the `eslint-plugin-import`
+repository, so the entire `eslint-plugin-import` source code was downloaded.
+`eslint-plugin-import` also contains other "subpackages," but they are not
+included in our dataset.
