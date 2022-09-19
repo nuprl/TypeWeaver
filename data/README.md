@@ -17,7 +17,7 @@ their own `.d.ts` type definitions) and `top1k-untyped-with-typed-deps` are the
 
 Notes: `@babel_runtime` was excluded from the dataset, as it is an extremely
 large project. 16 other packages were manually reclassified as typed, while 4
-TypeScript packages were removed.
+TypeScript packages were removed. Test directories were also removed.
 
 `top1k-typed-with-typed-deps.csv` and `top1k-untyped-with-typed-deps.csv`
 contain some basic statistics about the number of lines of JavaScript and
