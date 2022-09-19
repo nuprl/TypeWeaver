@@ -9,10 +9,10 @@ dependency, and (3) have all dependencies contain type definitions in
 DefinitelyTyped. Note that this dataset **excludes** packages with zero
 dependencies.
 
-The 137 packages are split into the two final datasets:
+The 136 packages are split into the two final datasets:
 `top1k-typed-with-typed-deps` are the 93 packages that are themselves typed
 (i.e. they contain type definitions in DefinitelyTyped, or include their own
-*.d.ts type definitions) and `top1k-untyped-with-typed-deps` are the 44 packages
+*.d.ts type definitions) and `top1k-untyped-with-typed-deps` are the 43 packages
 that do not have type definitions.
 
 Notes: `@babel_runtime` was excluded from the dataset, as it is an extremely
