@@ -10,13 +10,13 @@ DefinitelyTyped. Note that this dataset **excludes** packages with zero
 dependencies.
 
 The 136 packages are split into the two final datasets:
-`top1k-typed-with-typed-deps` are the 93 packages that are themselves typed
-(i.e. they contain type definitions in DefinitelyTyped, or include their own
-*.d.ts type definitions) and `top1k-untyped-with-typed-deps` are the 43 packages
-that do not have type definitions.
+`top1k-typed-with-typed-deps` are the 94 packages that are themselves typed
+(i.e. they contain type definitions in DefinitelyTyped, or include or generate
+their own `.d.ts` type definitions) and `top1k-untyped-with-typed-deps` are the
+42 packages that do not have type definitions.
 
 Notes: `@babel_runtime` was excluded from the dataset, as it is an extremely
-large project. 15 other packages were manually reclassified as typed, while 4
+large project. 16 other packages were manually reclassified as typed, while 4
 TypeScript packages were removed.
 
 `top1k-typed-with-typed-deps.csv` and `top1k-untyped-with-typed-deps.csv`
@@ -64,6 +64,18 @@ The GitHub repository URL was obtained by running:
     npm view [package] repository.url
 
 After cloning the repository, the `.git` directory was deleted to save space.
+
+### Generated `.d.ts` type definitions
+
+Some packages include type annotations in the JSDoc and configure the compiler
+to emit `.d.ts` type definitions.
+
+These packages can be found by parsing the `tsconfig.json` files:
+
+    for i in `find . -type f -name "tsconfig.json"`; do \
+        jq -e '.compilerOptions.declaration' $i > /dev/null \
+            && echo $i | cut -d'/' -f2; \
+    done
 
 ### Duplicates
 
