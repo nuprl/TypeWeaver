@@ -82,6 +82,7 @@ def main():
         counter += 1
         print("[{}/{}] {} ... ".format(counter, num_pkgs, package), flush=True)
         _, repo = download_package(package, output_dir)
+        print("Cloned repo: " + repo)
         if repo in repos.keys():
             print("Duplicate: " + repo)
             repos[repo] += 1
