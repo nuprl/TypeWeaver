@@ -9,14 +9,15 @@ dependency, and (3) have all dependencies contain type definitions in
 DefinitelyTyped. Note that this dataset **excludes** packages with zero
 dependencies.
 
-The 136 packages are split into the two final datasets:
-`top1k-typed-with-typed-deps` are the 94 packages that are themselves typed
+The 135 packages are split into the two final datasets:
+`top1k-typed-with-typed-deps` are the 93 packages that are themselves typed
 (i.e. they contain type definitions in DefinitelyTyped, or include or generate
 their own `.d.ts` type definitions) and `top1k-untyped-with-typed-deps` are the
 42 packages that do not have type definitions.
 
 Notes: `@babel_runtime` was excluded from the dataset, as it is an extremely
-large project. 16 other packages were manually reclassified as typed, while 4
+large project. `bser` was excluded, as its source repository is a duplicate of
+`fb-watchman`'s. 16 other packages were manually reclassified as typed, while 4
 TypeScript packages were removed. Test directories (`test` and `tests`) were
 also removed.
 
