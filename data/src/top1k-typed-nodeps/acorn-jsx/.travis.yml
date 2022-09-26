@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - '4'
+  - '6'
+  - '8'
+  - '10'
+  - '12'
+  - '14'
+env:
+  - ACORN_VERSION=6
+  - ACORN_VERSION=7
+  - ACORN_VERSION=8
+
+install:
+  - npm install -D acorn@$ACORN_VERSION

@@ -1,0 +1,38 @@
+{
+	"name": "shebang-regex",
+	"version": "4.0.0",
+	"description": "Regular expression for matching a shebang line",
+	"license": "MIT",
+	"repository": "sindresorhus/shebang-regex",
+	"funding": "https://github.com/sponsors/sindresorhus",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "https://sindresorhus.com"
+	},
+	"type": "module",
+	"exports": "./index.js",
+	"engines": {
+		"node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+	},
+	"scripts": {
+		"test": "xo && ava && tsd"
+	},
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"keywords": [
+		"regex",
+		"regexp",
+		"shebang",
+		"match",
+		"test",
+		"line"
+	],
+	"devDependencies": {
+		"ava": "^3.15.0",
+		"tsd": "^0.17.0",
+		"xo": "^0.44.0"
+	}
+}
