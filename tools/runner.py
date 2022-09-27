@@ -296,7 +296,7 @@ def lambdanet_infer(args):
     print("Number of fails: {}".format(num_fail))
     print("Number of skips: {}".format(num_skip))
 
-def weave_types_job(engine, type_inserter_path, csv_file, js_file, short_file, out_directory):
+def weave_types_job(engine, type_weaver_path, csv_file, js_file, short_file, out_directory):
     ts_file = Path(out_directory, short_file).resolve().with_suffix(".ts")
     err_file = ts_file.with_suffix(".err")
     warn_file = ts_file.with_suffix(".warn")
@@ -320,10 +320,10 @@ def weave_types_job(engine, type_inserter_path, csv_file, js_file, short_file, o
     if warn_file.exists():
         warn_file.unlink()
 
-    # Run type-inserter if the output files do not exist,
+    # Run type_weaver if the output files do not exist,
     # or the output file timestamps are older than the input
-    args = ["node", type_inserter_path.name, "--format", engine, "--types", csv_file, js_file]
-    result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=type_inserter_path.parent)
+    args = ["node", type_weaver_path.name, "--format", engine, "--types", csv_file, js_file]
+    result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=type_weaver_path.parent)
 
     # Create target directories for output
     ts_file.parent.mkdir(parents=True, exist_ok=True)
@@ -352,11 +352,11 @@ def weave_types(args):
     weaveout_dir = Path(args.weave)
     engine_dir = f"{args.engine}-out"
 
-    type_inserter_path = Path(Path(__file__).parent, "type-inserter", "index.js").resolve()
-    if not type_inserter_path.exists():
-        print("Could not find type-inserter: {}".format(type_inserter_path))
+    type_weaver_path = Path(Path(__file__).parent, "type_weaver", "index.js").resolve()
+    if not type_weaver_path.exists():
+        print("Could not find type_weaver: {}".format(type_weaver_path))
         exit(1)
-    print("Weaving types with: {}".format(type_inserter_path))
+    print("Weaving types with: {}".format(type_weaver_path))
 
     # Set up the input directories (JavaScript and CSV)
     js_in_directory = Path(directory, "original", dataset).resolve()
@@ -393,7 +393,7 @@ def weave_types(args):
     num_skip = 0
 
     with futures.ProcessPoolExecutor(max_workers=args.workers) as executor:
-        fs = [executor.submit(weave_types_job, args.engine, type_inserter_path, csv_file, js_file, short_file, out_directory)
+        fs = [executor.submit(weave_types_job, args.engine, type_weaver_path, csv_file, js_file, short_file, out_directory)
               for csv_file, js_file, short_file in zip(csv_files, js_files, short_files)]
 
         for f in futures.as_completed(fs):

@@ -1,4 +1,4 @@
-# type-inserter
+# type_weaver
 
 This tool parses an unannotated JavaScript file and associated CSV file
 containing type predictions, and outputs a valid TypeScript file.
@@ -15,7 +15,7 @@ LambdaNet outputs in a non-CSV format; we use a modified version of LambdaNet.
 
     node index.js examples/factors-dt.js --format DeepTyper
 
-By default, `type-inserter` assumes that for an input file `file.js`, a
+By default, `type_weaver` assumes that for an input file `file.js`, a
 corresponding CSV file `file.csv` exists in the same directory, containing type
 predictions in the specified format.
 
