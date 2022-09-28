@@ -1,16 +1,16 @@
-# tools
+# run_migration_pipeline
 
 To install dependencies, run:
 
     npm install
 
-## runner.py
+## main.py
 
-The main script is `runner.py`, which runs the evaluation pipeline. The script
+The main script is `main.py`, which runs the evaluation pipeline. The script
 assumes a specific directory structure for the dataset and outputs. The script
 runs incrementally, by checking the timestamps of inputs and outputs.
 
-The top directory, `data` in this example, should be passed to `runner.py`
+The top directory, `data` in this example, should be passed to `main.py`
 with the `--directory data` option.
 
     data/
@@ -28,9 +28,9 @@ option.
             |-- corpus/
             |-- test_dataset/
 
-### infer
+## infer
 
-Running `runner.py` with the `--infer` flag runs the type inference step of the
+Running `main.py` with the `--infer` flag runs the type inference step of the
 pipeline. Currently, it uses DeepTyper as its inference engine.
 
 As input, the script takes every `.js` file in `data/original/corpus` and
@@ -63,7 +63,7 @@ In this example, type inference on `pkgA/index.js`, `pkgA/lib.js`, and
 `pkgB/a.js` succeeded, inference on `pkgB/b.js` failed, and `pkgB/c.md` was
 ignored.
 
-### weave
+## weave
 
 Type weaving, specified with the `--weave` flag, takes an original `.js` file
 and the predictions `.csv` file, generating a `.ts` file with type annotations.
@@ -104,7 +104,7 @@ well as `DeepTyper-out/corpus/predictions/`. Outputs are written to
 In this example, type weaving succeeded on `pkgA/index.js` but generated a
 warning. Weaving also succeeded on `pkgA/lib.js` and `pkgB/a.js`.
 
-### typecheck
+## typecheck
 
 Type checking runs on each package, rather than each file. All the `.ts` files 
 for a package are passed to `tsc` on the command line. If type checking
