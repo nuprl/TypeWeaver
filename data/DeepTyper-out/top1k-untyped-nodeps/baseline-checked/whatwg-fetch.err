@@ -1,0 +1,57 @@
+whatwg-fetch/fetch.ts(42,7): error TS2322: Type '(obj: any) => boolean' is not assignable to type 'number'.
+whatwg-fetch/fetch.ts(88,13): error TS2339: Property 'forEach' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(169,34): error TS2304: Cannot find name 'EwsXmlReader'.
+whatwg-fetch/fetch.ts(170,22): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: {} | PromiseLike<{}>) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: {} | PromiseLike<{}>) => void' is not assignable to type 'void'.
+whatwg-fetch/fetch.ts(172,7): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+whatwg-fetch/fetch.ts(175,7): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+whatwg-fetch/fetch.ts(244,85): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+whatwg-fetch/fetch.ts(339,52): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
+whatwg-fetch/fetch.ts(348,15): error TS2339: Property 'bodyUsed' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(351,22): error TS2339: Property 'url' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(352,30): error TS2339: Property 'credentials' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(354,22): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(354,40): error TS2339: Property 'headers' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(356,25): error TS2339: Property 'method' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(357,23): error TS2339: Property 'mode' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(358,25): error TS2339: Property 'signal' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(359,24): error TS2339: Property '_bodyInit' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(360,20): error TS2339: Property '_bodyInit' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(361,13): error TS2339: Property 'bodyUsed' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(369,20): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(389,11): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+whatwg-fetch/fetch.ts(390,25): error TS2339: Property 'test' does not exist on type 'string'.
+whatwg-fetch/fetch.ts(395,13): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+whatwg-fetch/fetch.ts(396,36): error TS2339: Property 'test' does not exist on type 'string'.
+whatwg-fetch/fetch.ts(403,10): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(419,3): error TS2322: Type 'FormData' is not assignable to type 'string'.
+whatwg-fetch/fetch.ts(423,22): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(423,22): error TS2554: Expected 1 arguments, but got 0.
+whatwg-fetch/fetch.ts(460,18): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(468,10): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(471,14): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(477,28): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(478,12): error TS2540: Cannot assign to 'type' because it is a read-only property.
+whatwg-fetch/fetch.ts(489,10): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(507,22): error TS2345: Argument of type '(resolve: any, reject: void) => any' is not assignable to parameter of type '(resolve: (value: Response | PromiseLike<Response>) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'reject' and 'reject' are incompatible.
+    Type '(reason?: any) => void' is not assignable to type 'void'.
+whatwg-fetch/fetch.ts(508,28): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(511,14): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+whatwg-fetch/fetch.ts(529,17): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(535,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+whatwg-fetch/fetch.ts(541,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+whatwg-fetch/fetch.ts(547,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+whatwg-fetch/fetch.ts(555,9): error TS2322: Type 'string' is not assignable to type 'boolean'.
+whatwg-fetch/fetch.ts(559,30): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string | URL'.
+whatwg-fetch/fetch.ts(600,29): error TS2339: Property '_bodyInit' does not exist on type 'Request'.
+whatwg-fetch/fetch.ts(600,72): error TS2339: Property '_bodyInit' does not exist on type 'Request'.
+

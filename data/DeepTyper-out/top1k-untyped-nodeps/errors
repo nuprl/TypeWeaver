@@ -1,0 +1,1151 @@
+has-unicode/index.ts(13,7): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+has-unicode/index.ts(15,17): error TS2339: Property 'test' does not exist on type 'string'.
+
+stealthy-require/lib/index.ts(3,5): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+stealthy-require/lib/index.ts(23,23): error TS2339: Property 'test' does not exist on type 'string'.
+
+mixin-deep/index.ts(3,27): error TS2322: Type '(val: any) => boolean' is not assignable to type 'boolean'.
+mixin-deep/index.ts(7,29): error TS2322: Type '(key: string) => boolean' is not assignable to type 'boolean'.
+mixin-deep/index.ts(11,7): error TS2322: Type '(target: any, ...rest: any[]) => any' is not assignable to type 'void'.
+mixin-deep/index.ts(13,9): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+mixin-deep/index.ts(15,13): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+mixin-deep/index.ts(26,7): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+mixin-deep/index.ts(26,24): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+mixin-deep/index.ts(27,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+
+aproba/index.ts(26,63): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+aproba/index.ts(27,48): error TS2554: Expected 1 arguments, but got 2.
+aproba/index.ts(28,42): error TS2554: Expected 1 arguments, but got 2.
+aproba/index.ts(29,56): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+aproba/index.ts(30,50): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+aproba/index.ts(75,30): error TS2345: Argument of type '(typeCode: number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+  Types of parameters 'typeCode' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'number'.
+aproba/index.ts(79,17): error TS2345: Argument of type 'string' is not assignable to parameter of type 'string[]'.
+aproba/index.ts(88,9): error TS2322: Type 'string' is not assignable to type 'any[]'.
+  Type 'string' is not assignable to type 'any[]'.
+aproba/index.ts(101,7): error TS2339: Property 'code' does not exist on type 'Error'.
+aproba/index.ts(104,3): error TS2322: Type 'Error' is not assignable to type 'string'.
+
+querystring-es3/decode.ts(72,16): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+querystring-es3/decode.ts(82,24): error TS2322: Type '(xs: any) => boolean' is not assignable to type 'boolean'.
+querystring-es3/encode.ts(24,5): error TS2322: Type '(v: any) => string | number' is not assignable to type 'string'.
+querystring-es3/encode.ts(48,16): error TS2349: This expression is not callable.
+  Type 'string[]' has no call signatures.
+querystring-es3/encode.ts(48,33): error TS2345: Argument of type '(k: string) => any' is not assignable to parameter of type 'string'.
+querystring-es3/encode.ts(49,43): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+querystring-es3/encode.ts(50,11): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+querystring-es3/encode.ts(51,28): error TS2345: Argument of type '(v: string) => string' is not assignable to parameter of type 'string'.
+querystring-es3/encode.ts(52,42): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+querystring-es3/encode.ts(55,40): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+querystring-es3/encode.ts(62,29): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+querystring-es3/encode.ts(63,29): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+querystring-es3/encode.ts(66,24): error TS2322: Type '(xs: any) => boolean' is not assignable to type 'boolean'.
+querystring-es3/encode.ts(74,14): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+querystring-es3/encode.ts(79,28): error TS2322: Type '(obj: any) => any[]' is not assignable to type 'string[]'.
+
+normalize-range/index.ts(36,10): error TS2451: Cannot redeclare block-scoped variable 'name'.
+normalize-range/index.ts(41,31): error TS2339: Property 'bind' does not exist on type 'void'.
+normalize-range/index.ts(43,5): error TS2322: Type '{ wrap: any; limit: any; validate: (value: any) => any; test: (value: any) => boolean; toString: any; name: any; }' is not assignable to type 'Function'.
+  Object literal may only specify known properties, and 'wrap' does not exist in type 'Function'.
+../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17694,15): error TS2451: Cannot redeclare block-scoped variable 'name'.
+
+resolve-alpn/index.ts(4,71): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: unknown) => void' is not assignable to type 'void'.
+resolve-alpn/index.ts(5,6): error TS2322: Type 'boolean' is not assignable to type 'number'.
+resolve-alpn/index.ts(9,34): error TS2322: Type '() => Promise<void>' is not assignable to type 'Promise<void>'.
+resolve-alpn/index.ts(15,15): error TS2339: Property 'resolveSocket' does not exist on type '{}'.
+resolve-alpn/index.ts(16,4): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+resolve-alpn/index.ts(24,4): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+resolve-alpn/index.ts(28,35): error TS2322: Type '() => Promise<void>' is not assignable to type 'Promise<void>'.
+resolve-alpn/index.ts(29,3): error TS2322: Type 'boolean' is not assignable to type 'number'.
+resolve-alpn/index.ts(30,3): error TS2349: This expression is not callable.
+  Type 'Promise<void>' has no call signatures.
+resolve-alpn/index.ts(40,4): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+
+reusify/benchmarks/createNoCodeFunction.ts(3,5): error TS2300: Duplicate identifier 'fib'.
+reusify/benchmarks/fib.ts(3,10): error TS2300: Duplicate identifier 'fib'.
+reusify/benchmarks/reuseNoCodeFunction.ts(3,5): error TS2300: Duplicate identifier 'reusify'.
+reusify/benchmarks/reuseNoCodeFunction.ts(19,13): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
+reusify/reusify.ts(3,10): error TS2300: Duplicate identifier 'reusify'.
+reusify/reusify.ts(27,3): error TS2322: Type '{ get: () => any; release: (obj: any) => void; }' is not assignable to type 'void'.
+
+console-control-strings/index.ts(119,29): error TS2339: Property 'map' does not exist on type 'string'.
+
+fs-monkey/demo/fs-1.ts(1,19): error TS2307: Cannot find module 'memfs' or its corresponding type declarations.
+fs-monkey/demo/fs-1.ts(2,23): error TS2307: Cannot find module 'fs-monkey' or its corresponding type declarations.
+fs-monkey/demo/require-1.ts(1,19): error TS2307: Cannot find module 'memfs' or its corresponding type declarations.
+fs-monkey/demo/require-1.ts(2,28): error TS2307: Cannot find module 'fs-monkey' or its corresponding type declarations.
+fs-monkey/demo/require-2.ts(1,19): error TS2307: Cannot find module 'memfs' or its corresponding type declarations.
+fs-monkey/demo/require-2.ts(2,28): error TS2307: Cannot find module 'fs-monkey' or its corresponding type declarations.
+fs-monkey/demo/require-2.ts(3,19): error TS2307: Cannot find module 'unionfs' or its corresponding type declarations.
+fs-monkey/demo/yolo-1.ts(1,23): error TS2307: Cannot find module 'fs-monkey' or its corresponding type declarations.
+fs-monkey/src/correctPath.ts(23,5): error TS2322: Type 'boolean' is not assignable to type 'string'.
+fs-monkey/src/index.ts(1,21): error TS2307: Cannot find module './patchFs' or its corresponding type declarations.
+fs-monkey/src/patchRequire.ts(80,25): error TS2339: Property '_makeLong' does not exist on type 'PlatformPath'.
+fs-monkey/src/patchRequire.ts(108,55): error TS2339: Property '_makeLong' does not exist on type 'PlatformPath'.
+fs-monkey/src/patchRequire.ts(111,13): error TS2322: Type 'boolean' is not assignable to type 'string'.
+fs-monkey/src/patchRequire.ts(141,17): error TS2322: Type 'string' is not assignable to type 'boolean'.
+fs-monkey/src/patchRequire.ts(154,9): error TS2322: Type 'string | boolean' is not assignable to type 'boolean'.
+  Type 'string' is not assignable to type 'boolean'.
+
+websocket-extensions/lib/parser.ts(15,27): error TS2351: This expression is not constructable.
+  Type 'void' has no construct signatures.
+websocket-extensions/lib/parser.ts(56,23): error TS2322: Type '(key: any, value: any) => void' is not assignable to type 'void'.
+websocket-extensions/lib/parser.ts(58,42): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+websocket-extensions/lib/parser.ts(70,29): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+websocket-extensions/lib/parser.ts(76,20): error TS2322: Type '() => void' is not assignable to type 'void'.
+websocket-extensions/lib/parser.ts(81,8): error TS2339: Property 'prototype' does not exist on type 'void'.
+websocket-extensions/lib/parser.ts(89,8): error TS2339: Property 'prototype' does not exist on type 'void'.
+websocket-extensions/lib/parser.ts(95,8): error TS2339: Property 'prototype' does not exist on type 'void'.
+websocket-extensions/lib/parser.ts(99,8): error TS2339: Property 'prototype' does not exist on type 'void'.
+websocket-extensions/lib/pipeline/cell.ts(11,19): error TS2351: This expression is not constructable.
+  Type 'void' has no construct signatures.
+websocket-extensions/lib/pipeline/cell.ts(12,19): error TS2351: This expression is not constructable.
+  Type 'void' has no construct signatures.
+websocket-extensions/lib/pipeline/functor.ts(5,21): error TS2322: Type '(session: any, method: any) => void' is not assignable to type 'void'.
+websocket-extensions/lib/pipeline/functor.ts(8,42): error TS2339: Property 'QUEUE_SIZE' does not exist on type 'void'.
+websocket-extensions/lib/pipeline/functor.ts(13,9): error TS2339: Property 'QUEUE_SIZE' does not exist on type 'void'.
+websocket-extensions/lib/pipeline/functor.ts(15,9): error TS2339: Property 'prototype' does not exist on type 'void'.
+websocket-extensions/lib/pipeline/functor.ts(30,23): error TS2322: Type '(err: Error, msg: any) => void' is not assignable to type 'void'.
+websocket-extensions/lib/pipeline/functor.ts(31,11): error TS2447: The '^' operator is not allowed for boolean types. Consider using '!==' instead.
+websocket-extensions/lib/pipeline/functor.ts(48,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+websocket-extensions/lib/pipeline/functor.ts(52,9): error TS2339: Property 'prototype' does not exist on type 'void'.
+websocket-extensions/lib/pipeline/functor.ts(57,9): error TS2339: Property 'prototype' does not exist on type 'void'.
+websocket-extensions/lib/pipeline/index.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Pipeline' must be of type 'any', but here has type 'void'.
+websocket-extensions/lib/pipeline/index.ts(6,22): error TS2322: Type '(sessions: any) => void' is not assignable to type 'void'.
+websocket-extensions/lib/pipeline/index.ts(7,50): error TS2304: Cannot find name 'Session'.
+websocket-extensions/lib/pipeline/index.ts(36,7): error TS2322: Type '(index: number, error: any, msg: any) => any' is not assignable to type 'void'.
+websocket-extensions/lib/pipeline/index.ts(41,7): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+websocket-extensions/lib/pipeline/index.ts(44,3): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+websocket-extensions/lib/pipeline/pledge.ts(5,20): error TS2322: Type '() => void' is not assignable to type 'void'.
+websocket-extensions/lib/pipeline/ring_buffer.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'RingBuffer' must be of type 'any', but here has type 'void'.
+websocket-extensions/lib/pipeline/ring_buffer.ts(3,24): error TS2322: Type '(bufferSize: number) => void' is not assignable to type 'void'.
+websocket-extensions/lib/websocket_extensions.ts(6,24): error TS2322: Type '() => void' is not assignable to type 'void'.
+websocket-extensions/spec/parser_spec.ts(4,38): error TS2410: The 'with' statement is not supported. All symbols in a 'with' block will have type 'any'.
+websocket-extensions/spec/websocket_extensions_spec.ts(3,5): error TS2304: Cannot find name 'FakeClock'.
+websocket-extensions/spec/websocket_extensions_spec.ts(5,42): error TS2410: The 'with' statement is not supported. All symbols in a 'with' block will have type 'any'.
+
+acorn-import-assertions/src/index.ts(1,25): error TS2307: Cannot find module 'acorn' or its corresponding type declarations.
+acorn-import-assertions/src/index.ts(16,11): error TS2339: Property 'tokTypes' does not exist on type 'String'.
+acorn-import-assertions/src/index.ts(16,25): error TS2339: Property 'TokenType' does not exist on type 'String'.
+acorn-import-assertions/src/index.ts(18,3): error TS2322: Type 'typeof (Anonymous class)' is not assignable to type 'string'.
+acorn-import-assertions/src/index.ts(217,14): error TS2339: Property 'key' does not exist on type 'Node'.
+acorn-import-assertions/src/index.ts(222,32): error TS2339: Property 'key' does not exist on type 'Node'.
+acorn-import-assertions/src/index.ts(225,28): error TS2339: Property 'key' does not exist on type 'Node'.
+acorn-import-assertions/src/index.ts(234,14): error TS2339: Property 'value' does not exist on type 'Node'.
+
+assign-symbols/index.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'toString'.
+assign-symbols/index.ts(10,26): error TS2322: Type '() => string' is not assignable to type 'string'.
+assign-symbols/index.ts(11,7): error TS2322: Type '(v: PropertyKey) => boolean' is not assignable to type 'string'.
+assign-symbols/index.ts(27,24): error TS2339: Property 'call' does not exist on type 'string'.
+../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17783,18): error TS2451: Cannot redeclare block-scoped variable 'toString'.
+
+oauth-sign/index.ts(1,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'any'.
+oauth-sign/index.ts(4,17): error TS2339: Property 'createHmac' does not exist on type 'Crypto'.
+oauth-sign/index.ts(8,17): error TS2339: Property 'createSign' does not exist on type 'Crypto'.
+oauth-sign/index.ts(70,7): error TS2322: Type 'string' is not assignable to type 'any[]'.
+
+source-map-url/source-map-url.ts(5,14): error TS2304: Cannot find name 'define'.
+source-map-url/source-map-url.ts(5,39): error TS2304: Cannot find name 'define'.
+source-map-url/source-map-url.ts(6,5): error TS2304: Cannot find name 'define'.
+
+style-loader/babel.config.ts(3,24): error TS2304: Cannot find name '_ZonePrivate'.
+style-loader/src/index.ts(1,8): error TS1259: Module '"path"' can only be default-imported using the 'esModuleInterop' flag
+style-loader/src/index.ts(21,8): error TS2307: Cannot find module './utils' or its corresponding type declarations.
+style-loader/src/index.ts(23,20): error TS2732: Cannot find module './options.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+style-loader/src/index.ts(25,25): error TS2322: Type '{ (): void; pitch(request: any): any; }' is not assignable to type 'void'.
+style-loader/src/index.ts(27,11): error TS2339: Property 'pitch' does not exist on type 'void'.
+style-loader/src/index.ts(42,9): error TS2322: Type 'string' is not assignable to type 'boolean'.
+  Type 'string' is not assignable to type 'boolean'.
+style-loader/src/index.ts(49,9): error TS2322: Type 'string' is not assignable to type 'boolean'.
+  Type 'string' is not assignable to type 'boolean'.
+style-loader/src/runtime/injectStylesIntoLinkTag.ts(8,14): error TS2304: Cannot find name '__webpack_nonce__'.
+style-loader/src/runtime/injectStylesIntoLinkTag.ts(8,50): error TS2304: Cannot find name '__webpack_nonce__'.
+style-loader/src/runtime/injectStylesIntoLinkTag.ts(15,9): error TS2741: Property 'align' is missing in type 'HTMLLinkElement' but required in type 'HTMLDivElement'.
+style-loader/src/runtime/injectStylesIntoLinkTag.ts(17,15): error TS2339: Property 'rel' does not exist on type 'HTMLDivElement'.
+style-loader/src/runtime/injectStylesIntoLinkTag.ts(18,15): error TS2339: Property 'href' does not exist on type 'HTMLDivElement'.
+style-loader/src/runtime/injectStylesIntoLinkTag.ts(28,19): error TS2339: Property 'href' does not exist on type 'HTMLDivElement'.
+style-loader/src/runtime/injectStylesIntoStyleTag.ts(63,25): error TS2322: Type '(newObj: any) => void' is not assignable to type 'void'.
+style-loader/src/runtime/insertBySelector.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'memo'.
+style-loader/src/runtime/insertStyleElement.ts(3,9): error TS2741: Property 'align' is missing in type 'HTMLStyleElement' but required in type 'HTMLDivElement'.
+style-loader/src/runtime/insertStyleElement.ts(8,3): error TS2322: Type 'HTMLDivElement' is not assignable to type 'string'.
+style-loader/src/runtime/isOldIE.ts(1,5): error TS2451: Cannot redeclare block-scoped variable 'memo'.
+style-loader/src/runtime/isOldIE.ts(11,5): error TS2588: Cannot assign to 'memo' because it is a constant.
+style-loader/src/runtime/setAttributesWithAttributes.ts(2,10): error TS2393: Duplicate function implementation.
+style-loader/src/runtime/setAttributesWithAttributes.ts(4,12): error TS2304: Cannot find name '__webpack_nonce__'.
+style-loader/src/runtime/setAttributesWithAttributes.ts(4,48): error TS2304: Cannot find name '__webpack_nonce__'.
+style-loader/src/runtime/setAttributesWithAttributesAndNonce.ts(2,10): error TS2393: Duplicate function implementation.
+style-loader/src/runtime/setAttributesWithoutAttributes.ts(2,10): error TS2393: Duplicate function implementation.
+style-loader/src/runtime/setAttributesWithoutAttributes.ts(2,64): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
+style-loader/src/runtime/setAttributesWithoutAttributes.ts(4,12): error TS2304: Cannot find name '__webpack_nonce__'.
+style-loader/src/runtime/setAttributesWithoutAttributes.ts(4,48): error TS2304: Cannot find name '__webpack_nonce__'.
+style-loader/src/runtime/setAttributesWithoutAttributes.ts(7,18): error TS2339: Property 'setAttribute' does not exist on type 'string'.
+style-loader/src/runtime/singletonStyleDomAPI.ts(13,10): error TS2393: Duplicate function implementation.
+style-loader/src/runtime/singletonStyleDomAPI.ts(53,39): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+style-loader/src/runtime/singletonStyleDomAPI.ts(76,10): error TS2393: Duplicate function implementation.
+style-loader/src/runtime/styleDomAPI.ts(2,10): error TS2393: Duplicate function implementation.
+style-loader/src/runtime/styleDomAPI.ts(56,10): error TS2393: Duplicate function implementation.
+style-loader/src/runtime/styleDomAPI.ts(59,3): error TS2322: Type '{ update: (obj: any) => void; remove: () => void; }' is not assignable to type 'string'.
+
+async-each/index.ts(29,14): error TS2304: Cannot find name 'define'.
+async-each/index.ts(29,40): error TS2304: Cannot find name 'define'.
+async-each/index.ts(30,5): error TS2304: Cannot find name 'define'.
+
+domain-browser/source/index.ts(11,9): error TS2339: Property 'createDomain' does not exist on type '{}'.
+domain-browser/source/index.ts(11,31): error TS2339: Property 'create' does not exist on type '{}'.
+
+deep-is/index.ts(1,24): error TS2322: Type '(start?: number, end?: number) => any[]' is not assignable to type 'string[]'.
+deep-is/index.ts(2,5): error TS2322: Type '(obj: any) => any[]' is not assignable to type 'boolean'.
+deep-is/index.ts(11,26): error TS2322: Type '(actual: any, expected: any) => boolean' is not assignable to type 'boolean'.
+deep-is/index.ts(57,31): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+deep-is/index.ts(72,16): error TS2339: Property 'call' does not exist on type 'string[]'.
+deep-is/index.ts(73,16): error TS2339: Property 'call' does not exist on type 'string[]'.
+deep-is/index.ts(74,12): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+deep-is/index.ts(77,19): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+deep-is/index.ts(78,14): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+deep-is/index.ts(99,10): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+
+path-dirname/index.ts(44,5): error TS2322: Type 'string' is not assignable to type 'boolean'.
+path-dirname/index.ts(89,15): error TS2322: Type 'string' is not assignable to type 'boolean'.
+path-dirname/index.ts(116,5): error TS2322: Type 'string' is not assignable to type 'boolean'.
+path-dirname/index.ts(134,7): error TS2322: Type 'string' is not assignable to type 'boolean'.
+path-dirname/index.ts(138,3): error TS2322: Type 'string' is not assignable to type 'boolean'.
+
+async-limiter/example/index.ts(10,10): error TS2304: Cannot find name 'JestApi'.
+async-limiter/example/index.ts(14,22): error TS2345: Argument of type '(resolve: void) => NodeJS.Timeout' is not assignable to parameter of type '(resolve: (value: {} | PromiseLike<{}>) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: {} | PromiseLike<{}>) => void' is not assignable to type 'void'.
+async-limiter/example/index.ts(14,52): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(callback: () => void, ms?: number): Timeout', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type '() => void'.
+  Overload 2 of 3, '(callback: (args: void) => void, ms?: number): Timeout', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type '(args: void) => void'.
+  Overload 3 of 3, '(handler: TimerHandler, timeout?: number, ...arguments: any[]): number', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type 'TimerHandler'.
+async-limiter/example/index.ts(21,10): error TS2393: Duplicate function implementation.
+async-limiter/index.ts(3,25): error TS2304: Cannot find name 'Options'.
+async-limiter/index.ts(5,12): error TS2350: Only a void function can be called with the 'new' keyword.
+async-limiter/index.ts(19,10): error TS2393: Duplicate function implementation.
+async-limiter/index.ts(29,14): error TS2304: Cannot find name 'Job'.
+
+resolve-url/resolve-url.ts(5,14): error TS2304: Cannot find name 'define'.
+resolve-url/resolve-url.ts(5,39): error TS2304: Cannot find name 'define'.
+resolve-url/resolve-url.ts(6,5): error TS2304: Cannot find name 'define'.
+resolve-url/resolve-url.ts(21,9): error TS2741: Property 'align' is missing in type 'HTMLBaseElement' but required in type 'HTMLDivElement'.
+resolve-url/resolve-url.ts(22,10): error TS2339: Property 'href' does not exist on type 'HTMLDivElement'.
+resolve-url/resolve-url.ts(25,19): error TS2339: Property 'href' does not exist on type 'HTMLDivElement'.
+resolve-url/resolve-url.ts(31,9): error TS2741: Property 'align' is missing in type 'HTMLAnchorElement' but required in type 'HTMLDivElement'.
+resolve-url/resolve-url.ts(35,9): error TS2339: Property 'href' does not exist on type 'HTMLDivElement'.
+resolve-url/resolve-url.ts(36,20): error TS2339: Property 'href' does not exist on type 'HTMLDivElement'.
+resolve-url/resolve-url.ts(37,12): error TS2339: Property 'href' does not exist on type 'HTMLDivElement'.
+
+is-accessor-descriptor/index.ts(10,27): error TS2322: Type '(val: any) => boolean' is not assignable to type 'boolean'.
+is-accessor-descriptor/index.ts(15,8): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+is-accessor-descriptor/index.ts(23,8): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+is-accessor-descriptor/index.ts(25,26): error TS2322: Type '(value: any) => boolean' is not assignable to type 'boolean'.
+is-accessor-descriptor/index.ts(52,7): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+
+es-module-lexer/bench/index.ts(5,8): error TS1192: Module '"fs"' has no default export.
+es-module-lexer/bench/index.ts(6,15): error TS2307: Cannot find module 'kleur' or its corresponding type declarations.
+es-module-lexer/bench/index.ts(35,33): error TS2307: Cannot find module '../dist/lexer.asm.js' or its corresponding type declarations.
+es-module-lexer/bench/index.ts(47,39): error TS2307: Cannot find module '../dist/lexer.js' or its corresponding type declarations.
+es-module-lexer/lexer.ts(30,102): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
+es-module-lexer/lexer.ts(35,9): error TS2339: Property 'd' does not exist on type 'String'.
+es-module-lexer/lexer.ts(35,12): error TS2339: Property 's' does not exist on type 'String'.
+es-module-lexer/lexer.ts(38,8): error TS2339: Property 'n' does not exist on type 'string'.
+es-module-lexer/lexer.ts(38,26): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+es-module-lexer/lexer.ts(169,23): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
+es-module-lexer/lexer.ts(216,3): error TS2322: Type 'any[]' is not assignable to type 'void'.
+es-module-lexer/lexer.ts(224,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(233,13): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(237,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(239,23): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
+es-module-lexer/lexer.ts(246,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(248,14): error TS2339: Property 'e' does not exist on type 'number'.
+es-module-lexer/lexer.ts(250,9): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(251,14): error TS2339: Property 'a' does not exist on type 'number'.
+es-module-lexer/lexer.ts(252,18): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+es-module-lexer/lexer.ts(257,14): error TS2339: Property 'e' does not exist on type 'number'.
+es-module-lexer/lexer.ts(258,14): error TS2339: Property 'se' does not exist on type 'number'.
+es-module-lexer/lexer.ts(259,18): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+es-module-lexer/lexer.ts(268,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(307,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(315,35): error TS2345: Argument of type 'number' is not assignable to parameter of type 'boolean'.
+es-module-lexer/lexer.ts(325,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(328,9): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(331,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(340,9): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(342,9): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(359,9): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(361,9): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(370,9): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(383,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(393,11): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(403,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(412,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(419,33): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
+es-module-lexer/lexer.ts(464,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+es-module-lexer/lexer.ts(488,15): error TS2322: Type 'string' is not assignable to type 'boolean'.
+es-module-lexer/lexer.ts(489,15): error TS2322: Type 'string' is not assignable to type 'boolean'.
+es-module-lexer/lexer.ts(490,15): error TS2322: Type 'string' is not assignable to type 'boolean'.
+es-module-lexer/lexer.ts(491,15): error TS2322: Type 'number' is not assignable to type 'boolean'.
+es-module-lexer/lexer.ts(492,15): error TS2322: Type 'string' is not assignable to type 'boolean'.
+es-module-lexer/lexer.ts(493,14): error TS2322: Type 'string' is not assignable to type 'boolean'.
+es-module-lexer/lexer.ts(494,15): error TS2322: Type 'string' is not assignable to type 'boolean'.
+es-module-lexer/lexer.ts(495,15): error TS2322: Type 'string' is not assignable to type 'boolean'.
+es-module-lexer/lexer.ts(498,7): error TS2322: Type 'string' is not assignable to type 'boolean'.
+es-module-lexer/lexer.ts(514,9): error TS2322: Type 'string' is not assignable to type 'boolean'.
+es-module-lexer/lexer.ts(519,9): error TS2322: Type 'string' is not assignable to type 'boolean'.
+es-module-lexer/lexer.ts(521,7): error TS2322: Type 'string' is not assignable to type 'boolean'.
+es-module-lexer/lexer.ts(567,23): error TS2322: Type 'string' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(569,3): error TS2322: Type 'string' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(581,5): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(585,5): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(588,37): error TS2345: Argument of type 'number' is not assignable to parameter of type 'boolean'.
+es-module-lexer/lexer.ts(595,19): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
+es-module-lexer/lexer.ts(601,9): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(601,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+es-module-lexer/lexer.ts(602,12): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+es-module-lexer/lexer.ts(604,3): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(612,3): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(620,5): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(622,21): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
+es-module-lexer/lexer.ts(624,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(627,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(634,5): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(636,21): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
+es-module-lexer/lexer.ts(643,5): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(646,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(656,8): error TS2339: Property 'a' does not exist on type 'number'.
+es-module-lexer/lexer.ts(657,8): error TS2339: Property 'se' does not exist on type 'number'.
+es-module-lexer/lexer.ts(671,9): error TS2322: Type 'number' is not assignable to type 'boolean'.
+es-module-lexer/lexer.ts(674,7): error TS2322: Type 'number' is not assignable to type 'boolean'.
+es-module-lexer/lexer.ts(677,3): error TS2322: Type 'number' is not assignable to type 'boolean'.
+es-module-lexer/lexer.ts(721,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+es-module-lexer/lexer.ts(765,7): error TS2322: Type 'number' is not assignable to type 'boolean'.
+es-module-lexer/lexer.ts(767,3): error TS2322: Type 'number' is not assignable to type 'boolean'.
+es-module-lexer/lexer.ts(794,5): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(795,3): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(815,11): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(823,15): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(826,15): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(828,15): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(834,11): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(838,9): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(847,11): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(851,7): error TS2322: Type 'number | true' is not assignable to type 'number'.
+  Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(854,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(865,11): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(870,11): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/lexer.ts(873,3): error TS2322: Type 'boolean' is not assignable to type 'number'.
+es-module-lexer/src/lexer.asm.ts(30,11): error TS2304: Cannot find name 'asmInit'.
+es-module-lexer/src/lexer.asm.ts(32,16): error TS2339: Property 'su' does not exist on type 'number'.
+es-module-lexer/src/lexer.asm.ts(35,7): error TS2339: Property 'ses' does not exist on type 'number'.
+es-module-lexer/src/lexer.asm.ts(36,7): error TS2339: Property 'sa' does not exist on type 'number'.
+es-module-lexer/src/lexer.asm.ts(40,12): error TS2339: Property 'p' does not exist on type 'number'.
+es-module-lexer/src/lexer.asm.ts(41,20): error TS2339: Property 'e' does not exist on type 'number'.
+es-module-lexer/src/lexer.asm.ts(46,14): error TS2339: Property 'ri' does not exist on type 'number'.
+es-module-lexer/src/lexer.asm.ts(47,24): error TS2339: Property 'is' does not exist on type 'number'.
+es-module-lexer/src/lexer.asm.ts(47,38): error TS2339: Property 'ie' does not exist on type 'number'.
+es-module-lexer/src/lexer.asm.ts(47,52): error TS2339: Property 'ai' does not exist on type 'number'.
+es-module-lexer/src/lexer.asm.ts(47,66): error TS2339: Property 'id' does not exist on type 'number'.
+es-module-lexer/src/lexer.asm.ts(47,81): error TS2339: Property 'ss' does not exist on type 'number'.
+es-module-lexer/src/lexer.asm.ts(47,96): error TS2339: Property 'se' does not exist on type 'number'.
+es-module-lexer/src/lexer.asm.ts(49,13): error TS2339: Property 'ip' does not exist on type 'number'.
+es-module-lexer/src/lexer.asm.ts(50,7): error TS2322: Type 'string' is not assignable to type 'number'.
+es-module-lexer/src/lexer.asm.ts(50,44): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+es-module-lexer/src/lexer.asm.ts(53,14): error TS2339: Property 're' does not exist on type 'number'.
+es-module-lexer/src/lexer.asm.ts(54,24): error TS2339: Property 'es' does not exist on type 'number'.
+es-module-lexer/src/lexer.asm.ts(54,38): error TS2339: Property 'ee' does not exist on type 'number'.
+es-module-lexer/src/lexer.asm.ts(54,53): error TS2339: Property 'els' does not exist on type 'number'.
+es-module-lexer/src/lexer.asm.ts(54,69): error TS2339: Property 'ele' does not exist on type 'number'.
+es-module-lexer/src/lexer.asm.ts(59,55): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
+es-module-lexer/src/lexer.asm.ts(60,80): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
+es-module-lexer/src/lexer.asm.ts(64,35): error TS2339: Property 'f' does not exist on type 'number'.
+es-module-lexer/src/lexer.asm.ts(99,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+es-module-lexer/src/lexer.asm.ts(123,15): error TS2322: Type 'string' is not assignable to type 'number'.
+es-module-lexer/src/lexer.asm.ts(124,15): error TS2322: Type 'string' is not assignable to type 'number'.
+es-module-lexer/src/lexer.asm.ts(125,15): error TS2322: Type 'string' is not assignable to type 'number'.
+es-module-lexer/src/lexer.asm.ts(127,15): error TS2322: Type 'string' is not assignable to type 'number'.
+es-module-lexer/src/lexer.asm.ts(128,14): error TS2322: Type 'string' is not assignable to type 'number'.
+es-module-lexer/src/lexer.asm.ts(129,15): error TS2322: Type 'string' is not assignable to type 'number'.
+es-module-lexer/src/lexer.asm.ts(130,15): error TS2322: Type 'string' is not assignable to type 'number'.
+es-module-lexer/src/lexer.asm.ts(133,7): error TS2322: Type 'string' is not assignable to type 'number'.
+es-module-lexer/src/lexer.asm.ts(149,9): error TS2322: Type 'string' is not assignable to type 'number'.
+es-module-lexer/src/lexer.asm.ts(154,9): error TS2322: Type 'string' is not assignable to type 'number'.
+es-module-lexer/src/lexer.asm.ts(156,7): error TS2322: Type 'string' is not assignable to type 'number'.
+es-module-lexer/src/lexer.asm.ts(202,23): error TS2322: Type 'string' is not assignable to type 'number'.
+es-module-lexer/src/lexer.asm.ts(204,3): error TS2322: Type 'string' is not assignable to type 'number'.
+
+growly/lib/gntp.ts(2,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'any'.
+growly/lib/gntp.ts(15,10): error TS2300: Duplicate identifier 'GNTP'.
+growly/lib/gntp.ts(53,12): error TS2339: Property 'state' does not exist on type '{}'.
+growly/lib/gntp.ts(86,26): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
+growly/lib/gntp.ts(146,15): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
+growly/lib/gntp.ts(174,18): error TS2339: Property 'state' does not exist on type 'string'.
+growly/lib/gntp.ts(174,44): error TS2339: Property 'state' does not exist on type 'string'.
+growly/lib/growly.ts(1,5): error TS2300: Duplicate identifier 'GNTP'.
+growly/lib/growly.ts(146,15): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
+
+v8-compile-cache/bench/_measure.ts(7,31): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+v8-compile-cache/bench/_measure.ts(23,34): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+v8-compile-cache/bench/require-babel-core.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'WITH_CACHE'.
+v8-compile-cache/bench/require-flow-parser.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'WITH_CACHE'.
+v8-compile-cache/bench/require-rxjs-bundle.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'WITH_CACHE'.
+v8-compile-cache/bench/require-rxjs-module.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'WITH_CACHE'.
+v8-compile-cache/bench/require-yarn.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'WITH_CACHE'.
+v8-compile-cache/v8-compile-cache.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
+v8-compile-cache/v8-compile-cache.ts(19,10): error TS2339: Property '_blobFilename' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(20,10): error TS2339: Property '_mapFilename' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(21,10): error TS2339: Property '_lockFilename' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(22,10): error TS2339: Property '_directory' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(27,34): error TS2339: Property '_memoryBlobs' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(28,19): error TS2339: Property '_invalidationKeys' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(29,41): error TS2339: Property '_storedMap' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(30,19): error TS2339: Property '_storedMap' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(36,34): error TS2339: Property '_memoryBlobs' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(37,16): error TS2339: Property '_invalidationKeys' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(38,21): error TS2339: Property '_memoryBlobs' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(40,41): error TS2339: Property '_storedMap' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(41,33): error TS2339: Property '_storedMap' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(43,21): error TS2339: Property '_storedBlob' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(49,10): error TS2339: Property '_invalidationKeys' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(50,10): error TS2339: Property '_memoryBlobs' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(51,10): error TS2339: Property '_dirty' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(55,34): error TS2339: Property '_memoryBlobs' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(56,12): error TS2339: Property '_dirty' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(57,19): error TS2339: Property '_memoryBlobs' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(59,34): error TS2339: Property '_invalidationKeys' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(60,12): error TS2339: Property '_dirty' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(61,19): error TS2339: Property '_invalidationKeys' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(63,34): error TS2339: Property '_storedMap' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(64,12): error TS2339: Property '_dirty' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(65,19): error TS2339: Property '_storedMap' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(70,17): error TS2339: Property '_dirty' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(79,23): error TS2339: Property '_directory' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(80,29): error TS2339: Property '_lockFilename' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(87,29): error TS2339: Property '_blobFilename' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(88,29): error TS2339: Property '_mapFilename' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(90,26): error TS2339: Property '_lockFilename' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(98,12): error TS2339: Property '_storedBlob' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(98,47): error TS2339: Property '_blobFilename' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(99,12): error TS2339: Property '_storedMap' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(99,57): error TS2339: Property '_mapFilename' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(101,12): error TS2339: Property '_storedBlob' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(102,12): error TS2339: Property '_storedMap' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(104,10): error TS2339: Property '_dirty' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(105,10): error TS2339: Property '_memoryBlobs' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(106,10): error TS2339: Property '_invalidationKeys' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(114,65): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
+v8-compile-cache/v8-compile-cache.ts(120,40): error TS2339: Property '_memoryBlobs' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(121,32): error TS2339: Property '_memoryBlobs' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(122,41): error TS2339: Property '_invalidationKeys' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(126,40): error TS2339: Property '_storedMap' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(128,33): error TS2339: Property '_storedMap' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(129,32): error TS2339: Property '_storedBlob' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache/v8-compile-cache.ts(143,10): error TS2551: Property '_cacheStore' does not exist on type 'NativeCompileCache'. Did you mean 'setCacheStore'?
+v8-compile-cache/v8-compile-cache.ts(144,10): error TS2339: Property '_previousModuleCompile' does not exist on type 'NativeCompileCache'.
+v8-compile-cache/v8-compile-cache.ts(148,10): error TS2551: Property '_cacheStore' does not exist on type 'NativeCompileCache'. Did you mean 'setCacheStore'?
+v8-compile-cache/v8-compile-cache.ts(154,10): error TS2339: Property '_previousModuleCompile' does not exist on type 'NativeCompileCache'.
+v8-compile-cache/v8-compile-cache.ts(197,38): error TS2339: Property '_previousModuleCompile' does not exist on type 'NativeCompileCache'.
+v8-compile-cache/v8-compile-cache.ts(234,8): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
+v8-compile-cache/v8-compile-cache.ts(238,28): error TS2551: Property '_cacheStore' does not exist on type 'NativeCompileCache'. Did you mean 'setCacheStore'?
+v8-compile-cache/v8-compile-cache.ts(249,12): error TS2551: Property '_cacheStore' does not exist on type 'NativeCompileCache'. Did you mean 'setCacheStore'?
+v8-compile-cache/v8-compile-cache.ts(251,12): error TS2551: Property '_cacheStore' does not exist on type 'NativeCompileCache'. Did you mean 'setCacheStore'?
+v8-compile-cache/v8-compile-cache.ts(273,33): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+v8-compile-cache/v8-compile-cache.ts(281,7): error TS2554: Expected 2 arguments, but got 1.
+v8-compile-cache/v8-compile-cache.ts(282,7): error TS2554: Expected 2 arguments, but got 1.
+../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18084,13): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
+
+is-primitive/bench.ts(8,3): error TS2322: Type 'number' is not assignable to type 'string'.
+is-primitive/bench.ts(9,3): error TS2322: Type '() => void' is not assignable to type 'string'.
+is-primitive/bench.ts(10,3): error TS2322: Type '{}' is not assignable to type 'string'.
+is-primitive/bench.ts(11,3): error TS2322: Type 'Date' is not assignable to type 'string'.
+is-primitive/bench.ts(12,3): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+is-primitive/bench.ts(13,3): error TS2322: Type 'symbol' is not assignable to type 'string'.
+is-primitive/bench.ts(17,3): error TS2322: Type 'boolean' is not assignable to type 'string'.
+is-primitive/bench.ts(18,3): error TS2322: Type 'boolean' is not assignable to type 'string'.
+is-primitive/bench.ts(19,3): error TS2322: Type 'number' is not assignable to type 'string'.
+is-primitive/bench.ts(20,3): error TS2322: Type 'number' is not assignable to type 'string'.
+
+regjsgen/regjsgen.ts(22,76): error TS2339: Property 'nodeType' does not exist on type 'NodeModule'.
+regjsgen/regjsgen.ts(25,7): error TS2322: Type 'typeof globalThis' is not assignable to type 'boolean'.
+regjsgen/regjsgen.ts(26,33): error TS2339: Property 'global' does not exist on type 'true'.
+regjsgen/regjsgen.ts(26,69): error TS2339: Property 'window' does not exist on type 'true'.
+regjsgen/regjsgen.ts(26,105): error TS2339: Property 'self' does not exist on type 'true'.
+regjsgen/regjsgen.ts(79,18): error TS2339: Property 'test' does not exist on type 'string'.
+regjsgen/regjsgen.ts(137,12): error TS2554: Expected 3 arguments, but got 2.
+regjsgen/regjsgen.ts(145,9): error TS2322: Type 'string' is not assignable to type 'boolean'.
+regjsgen/regjsgen.ts(147,9): error TS2322: Type 'string' is not assignable to type 'boolean'.
+regjsgen/regjsgen.ts(149,9): error TS2322: Type 'string' is not assignable to type 'boolean'.
+regjsgen/regjsgen.ts(151,9): error TS2322: Type 'string' is not assignable to type 'boolean'.
+regjsgen/regjsgen.ts(211,12): error TS2554: Expected 3 arguments, but got 2.
+regjsgen/regjsgen.ts(217,5): error TS2322: Type 'string' is not assignable to type 'void'.
+regjsgen/regjsgen.ts(257,15): error TS2554: Expected 3 arguments, but got 2.
+regjsgen/regjsgen.ts(259,5): error TS2322: Type 'string' is not assignable to type 'void'.
+regjsgen/regjsgen.ts(335,38): error TS2554: Expected 0 arguments, but got 1.
+regjsgen/regjsgen.ts(339,37): error TS2554: Expected 0 arguments, but got 1.
+regjsgen/regjsgen.ts(364,30): error TS2554: Expected 0 arguments, but got 1.
+regjsgen/regjsgen.ts(401,14): error TS2304: Cannot find name 'define'.
+regjsgen/regjsgen.ts(401,45): error TS2304: Cannot find name 'define'.
+regjsgen/regjsgen.ts(401,71): error TS2304: Cannot find name 'define'.
+regjsgen/regjsgen.ts(403,5): error TS2304: Cannot find name 'define'.
+
+duplexer/index.ts(5,20): error TS2322: Type '(start?: number, end?: number) => any[]' is not assignable to type 'any[]'.
+duplexer/index.ts(19,25): error TS2304: Cannot find name 'EwsServiceXmlWriter'.
+duplexer/index.ts(19,54): error TS2304: Cannot find name 'EwsXmlReader'.
+duplexer/index.ts(68,37): error TS2339: Property 'call' does not exist on type 'any[]'.
+duplexer/index.ts(79,33): error TS2339: Property 'call' does not exist on type 'any[]'.
+
+@sellside_emitter/examples.ts(4,19): error TS2322: Type '(msg: any) => void' is not assignable to type 'void'.
+@sellside_emitter/examples.ts(7,5): error TS2339: Property 'on' does not exist on type '{}'.
+@sellside_emitter/examples.ts(8,5): error TS2339: Property 'on' does not exist on type '{}'.
+@sellside_emitter/examples.ts(9,5): error TS2339: Property 'on' does not exist on type '{}'.
+@sellside_emitter/examples.ts(10,5): error TS2339: Property 'emit' does not exist on type '{}'.
+@sellside_emitter/index.ts(36,15): error TS2551: Property '_listeners' does not exist on type 'Emitter'. Did you mean 'listeners'?
+@sellside_emitter/index.ts(37,15): error TS2551: Property '_only' does not exist on type 'Emitter'. Did you mean 'only'?
+@sellside_emitter/index.ts(38,29): error TS2551: Property '_listeners' does not exist on type 'Emitter'. Did you mean 'listeners'?
+@sellside_emitter/index.ts(39,17): error TS2551: Property '_listeners' does not exist on type 'Emitter'. Did you mean 'listeners'?
+@sellside_emitter/index.ts(39,50): error TS2551: Property '_listeners' does not exist on type 'Emitter'. Did you mean 'listeners'?
+@sellside_emitter/index.ts(56,14): error TS2551: Property '_only' does not exist on type 'Emitter'. Did you mean 'only'?
+@sellside_emitter/index.ts(56,28): error TS2551: Property '_only' does not exist on type 'Emitter'. Did you mean 'only'?
+@sellside_emitter/index.ts(57,19): error TS2554: Expected 3 arguments, but got 2.
+@sellside_emitter/index.ts(78,22): error TS2322: Type '{ (): void; fn: any; }' is not assignable to type 'void'.
+@sellside_emitter/index.ts(82,8): error TS2339: Property 'fn' does not exist on type 'void'.
+@sellside_emitter/index.ts(104,10): error TS2554: Expected 1 arguments, but got 0.
+@sellside_emitter/index.ts(115,32): error TS2551: Property '_only' does not exist on type 'Emitter'. Did you mean 'only'?
+@sellside_emitter/index.ts(116,12): error TS2554: Expected 2 arguments, but got 1.
+@sellside_emitter/index.ts(120,32): error TS2551: Property '_only' does not exist on type 'Emitter'. Did you mean 'only'?
+@sellside_emitter/index.ts(122,16): error TS2339: Property '_first' does not exist on type 'Emitter'.
+@sellside_emitter/index.ts(126,10): error TS2551: Property '_only' does not exist on type 'Emitter'. Did you mean 'only'?
+@sellside_emitter/index.ts(148,10): error TS2554: Expected 1 arguments, but got 0.
+@sellside_emitter/index.ts(152,12): error TS2551: Property '_listeners' does not exist on type 'Emitter'. Did you mean 'listeners'?
+@sellside_emitter/index.ts(153,12): error TS2551: Property '_only' does not exist on type 'Emitter'. Did you mean 'only'?
+@sellside_emitter/index.ts(159,12): error TS2551: Property '_listeners' does not exist on type 'Emitter'. Did you mean 'listeners'?
+@sellside_emitter/index.ts(160,12): error TS2551: Property '_only' does not exist on type 'Emitter'. Did you mean 'only'?
+@sellside_emitter/index.ts(213,19): error TS2339: Property 'hasListeners' does not exist on type 'Emitter'.
+@sellside_emitter/index.ts(216,19): error TS2551: Property 'addListener' does not exist on type 'Emitter'. Did you mean 'listeners'?
+@sellside_emitter/index.ts(217,19): error TS2339: Property 'addEventListener' does not exist on type 'Emitter'.
+@sellside_emitter/index.ts(220,19): error TS2339: Property 'removeListener' does not exist on type 'Emitter'.
+@sellside_emitter/index.ts(221,19): error TS2339: Property 'removeListeners' does not exist on type 'Emitter'.
+@sellside_emitter/index.ts(222,19): error TS2339: Property 'removeAllListeners' does not exist on type 'Emitter'.
+@sellside_emitter/index.ts(223,19): error TS2339: Property 'removeEventListener' does not exist on type 'Emitter'.
+
+../../../../tools/node_modules/@types/node/buffer.d.ts(97,14): error TS2661: Cannot export 'Buffer'. Only local declarations can be exported from a module.
+../../../../tools/node_modules/@types/node/buffer.d.ts(2195,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Buffer' must be of type 'any', but here has type 'BufferConstructor'.
+
+infer-owner/index.ts(6,47): error TS2345: Argument of type '(res: void, rej: void) => any' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'res' and 'resolve' are incompatible.
+    Type '(value: unknown) => void' is not assignable to type 'void'.
+infer-owner/index.ts(7,45): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+infer-owner/index.ts(7,55): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+
+asynckit/bench.ts(4,5): error TS2300: Duplicate identifier 'async'.
+asynckit/bench.ts(54,7): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+asynckit/lib/abort.ts(9,10): error TS2300: Duplicate identifier 'abort'.
+asynckit/lib/async.ts(1,5): error TS2300: Duplicate identifier 'defer'.
+asynckit/lib/async.ts(13,10): error TS2300: Duplicate identifier 'async'.
+asynckit/lib/defer.ts(8,10): error TS2300: Duplicate identifier 'defer'.
+asynckit/lib/iterate.ts(2,5): error TS2300: Duplicate identifier 'abort'.
+asynckit/lib/iterate.ts(16,10): error TS2300: Duplicate identifier 'iterate'.
+asynckit/lib/readable_asynckit.ts(12,10): error TS2300: Duplicate identifier 'ReadableAsyncKit'.
+asynckit/lib/readable_parallel.ts(1,5): error TS2300: Duplicate identifier 'parallel'.
+asynckit/lib/readable_parallel.ts(14,10): error TS2300: Duplicate identifier 'ReadableParallel'.
+asynckit/lib/readable_serial.ts(1,5): error TS2300: Duplicate identifier 'serial'.
+asynckit/lib/readable_serial.ts(14,10): error TS2300: Duplicate identifier 'ReadableSerial'.
+asynckit/lib/readable_serial_ordered.ts(18,10): error TS2300: Duplicate identifier 'ReadableSerialOrdered'.
+asynckit/lib/terminator.ts(1,5): error TS2300: Duplicate identifier 'abort'.
+asynckit/lib/terminator.ts(14,10): error TS2300: Duplicate identifier 'terminator'.
+asynckit/parallel.ts(1,5): error TS2300: Duplicate identifier 'iterate'.
+asynckit/parallel.ts(3,5): error TS2300: Duplicate identifier 'terminator'.
+asynckit/parallel.ts(17,10): error TS2300: Duplicate identifier 'parallel'.
+asynckit/serial.ts(1,5): error TS2300: Duplicate identifier 'serialOrdered'.
+asynckit/serial.ts(14,10): error TS2300: Duplicate identifier 'serial'.
+asynckit/serialOrdered.ts(1,5): error TS2300: Duplicate identifier 'iterate'.
+asynckit/serialOrdered.ts(3,5): error TS2300: Duplicate identifier 'terminator'.
+asynckit/serialOrdered.ts(21,10): error TS2300: Duplicate identifier 'serialOrdered'.
+asynckit/serialOrdered.ts(62,3): error TS2322: Type 'number' is not assignable to type 'boolean'.
+  Type 'number' is not assignable to type 'boolean'.
+asynckit/serialOrdered.ts(74,3): error TS2322: Type 'number' is not assignable to type 'boolean'.
+asynckit/serialOrdered.ts(74,15): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+asynckit/stream.ts(3,5): error TS2300: Duplicate identifier 'ReadableAsyncKit'.
+asynckit/stream.ts(4,5): error TS2300: Duplicate identifier 'ReadableParallel'.
+asynckit/stream.ts(5,5): error TS2300: Duplicate identifier 'ReadableSerial'.
+asynckit/stream.ts(6,5): error TS2300: Duplicate identifier 'ReadableSerialOrdered'.
+
+fs.realpath/old.ts(53,19): error TS2551: Property 'throwDeprecation' does not exist on type 'Process'. Did you mean 'traceDeprecation'?
+fs.realpath/old.ts(55,25): error TS2339: Property 'noDeprecation' does not exist on type 'Process'.
+fs.realpath/old.ts(75,7): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+fs.realpath/old.ts(77,7): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+fs.realpath/old.ts(82,7): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+fs.realpath/old.ts(84,7): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+fs.realpath/old.ts(112,42): error TS2339: Property 'exec' does not exist on type 'string'.
+fs.realpath/old.ts(130,16): error TS2551: Property 'lastIndex' does not exist on type 'string'. Did you mean 'lastIndexOf'?
+fs.realpath/old.ts(131,46): error TS2339: Property 'exec' does not exist on type 'string'.
+fs.realpath/old.ts(135,22): error TS2551: Property 'lastIndex' does not exist on type 'string'. Did you mean 'lastIndexOf'?
+fs.realpath/old.ts(214,42): error TS2339: Property 'exec' does not exist on type 'string'.
+fs.realpath/old.ts(242,16): error TS2551: Property 'lastIndex' does not exist on type 'string'. Did you mean 'lastIndexOf'?
+fs.realpath/old.ts(243,46): error TS2339: Property 'exec' does not exist on type 'string'.
+fs.realpath/old.ts(247,22): error TS2551: Property 'lastIndex' does not exist on type 'string'. Did you mean 'lastIndexOf'?
+fs.realpath/old.ts(286,9): error TS2554: Expected 3 arguments, but got 2.
+
+require-main-filename/index.ts(9,3): error TS2322: Type 'boolean' is not assignable to type 'string'.
+
+pop-iterate/array-iterator.ts(3,5): error TS2300: Duplicate identifier 'Iteration'.
+pop-iterate/array-iterator.ts(6,10): error TS2300: Duplicate identifier 'ArrayIterator'.
+pop-iterate/iteration.ts(4,10): error TS2300: Duplicate identifier 'Iteration'.
+pop-iterate/object-iterator.ts(3,5): error TS2300: Duplicate identifier 'Iteration'.
+pop-iterate/object-iterator.ts(4,5): error TS2300: Duplicate identifier 'ArrayIterator'.
+pop-iterate/object-iterator.ts(7,10): error TS2300: Duplicate identifier 'ObjectIterator'.
+pop-iterate/pop-iterate.ts(3,5): error TS2300: Duplicate identifier 'ArrayIterator'.
+pop-iterate/pop-iterate.ts(4,5): error TS2300: Duplicate identifier 'ObjectIterator'.
+pop-iterate/pop-iterate.ts(9,16): error TS2304: Cannot find name 'empty'.
+pop-iterate/pop-iterate.ts(17,16): error TS2554: Expected 4 arguments, but got 1.
+
+@trysound_sax/examples/example.ts(15,15): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+@trysound_sax/examples/example.ts(21,2): error TS2554: Expected 0 arguments, but got 1.
+@trysound_sax/examples/pretty-print.ts(64,10): error TS2384: Overload signatures must all be ambient or non-ambient.
+../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17768,18): error TS2394: This overload signature is not compatible with its implementation signature.
+
+copy-descriptor/examples/proto.ts(22,10): error TS2749: 'App' refers to a value, but is being used as a type here. Did you mean 'typeof App'?
+copy-descriptor/examples/proto.ts(22,16): error TS2350: Only a void function can be called with the 'new' keyword.
+
+../../../../tools/node_modules/@types/node/globals.d.ts(27,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'process' must be of type 'any', but here has type 'Process'.
+../../../../tools/node_modules/@types/node/process.d.ts(5,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'process' must be of type 'any', but here has type 'Process'.
+
+toidentifier/scripts/version-history.ts(7,5): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+toidentifier/scripts/version-history.ts(13,23): error TS2339: Property 'test' does not exist on type 'string'.
+toidentifier/scripts/version-history.ts(58,14): error TS2339: Property 'length' does not exist on type 'number'.
+toidentifier/scripts/version-history.ts(59,5): error TS2322: Type 'string' is not assignable to type 'number'.
+
+map-cache/index.ts(10,23): error TS2322: Type '(v: PropertyKey) => boolean' is not assignable to type 'boolean'.
+map-cache/index.ts(83,40): error TS2339: Property 'call' does not exist on type 'boolean'.
+
+wrappy/wrappy.ts(8,24): error TS2554: Expected 2 arguments, but got 1.
+
+strip-eof/index.ts(2,8): error TS2322: Type 'number | "\n"' is not assignable to type 'string'.
+  Type 'number' is not assignable to type 'string'.
+strip-eof/index.ts(2,61): error TS2554: Expected 1 arguments, but got 0.
+strip-eof/index.ts(3,8): error TS2322: Type 'number | "\r"' is not assignable to type 'number'.
+  Type 'string' is not assignable to type 'number'.
+strip-eof/index.ts(3,61): error TS2554: Expected 1 arguments, but got 0.
+strip-eof/index.ts(9,6): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
+strip-eof/index.ts(13,2): error TS2322: Type 'string' is not assignable to type 'boolean'.
+
+is-descriptor/index.ts(3,27): error TS2322: Type '(val: any) => boolean' is not assignable to type 'boolean'.
+is-descriptor/index.ts(8,8): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+is-descriptor/index.ts(15,8): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+
+electron-to-chromium/automated-update.ts(3,6): error TS2304: Cannot find name 'which'.
+electron-to-chromium/automated-update.ts(4,3): error TS2304: Cannot find name 'echo'.
+electron-to-chromium/automated-update.ts(5,3): error TS2304: Cannot find name 'exit'.
+electron-to-chromium/automated-update.ts(7,6): error TS2304: Cannot find name 'which'.
+electron-to-chromium/automated-update.ts(8,3): error TS2304: Cannot find name 'echo'.
+electron-to-chromium/automated-update.ts(9,3): error TS2304: Cannot find name 'exit'.
+electron-to-chromium/automated-update.ts(12,1): error TS2304: Cannot find name 'exec'.
+electron-to-chromium/automated-update.ts(15,5): error TS2304: Cannot find name 'exec'.
+electron-to-chromium/automated-update.ts(16,5): error TS2304: Cannot find name 'echo'.
+electron-to-chromium/automated-update.ts(17,5): error TS2304: Cannot find name 'exit'.
+electron-to-chromium/automated-update.ts(21,5): error TS2304: Cannot find name 'exec'.
+electron-to-chromium/automated-update.ts(22,5): error TS2304: Cannot find name 'exec'.
+electron-to-chromium/automated-update.ts(23,5): error TS2304: Cannot find name 'exec'.
+electron-to-chromium/automated-update.ts(25,5): error TS2304: Cannot find name 'exec'.
+electron-to-chromium/automated-update.ts(28,9): error TS2304: Cannot find name 'exec'.
+electron-to-chromium/automated-update.ts(29,9): error TS2304: Cannot find name 'exec'.
+electron-to-chromium/automated-update.ts(30,9): error TS2304: Cannot find name 'exec'.
+electron-to-chromium/automated-update.ts(31,9): error TS2304: Cannot find name 'exec'.
+electron-to-chromium/automated-update.ts(32,9): error TS2304: Cannot find name 'exec'.
+electron-to-chromium/automated-update.ts(33,9): error TS2304: Cannot find name 'exec'.
+electron-to-chromium/automated-update.ts(34,9): error TS2304: Cannot find name 'echo'.
+electron-to-chromium/automated-update.ts(35,11): error TS2304: Cannot find name 'exit'.
+electron-to-chromium/automated-update.ts(37,9): error TS2304: Cannot find name 'echo'.
+electron-to-chromium/automated-update.ts(38,9): error TS2304: Cannot find name 'exit'.
+
+is-negative-zero/index.ts(4,2): error TS2322: Type 'boolean' is not assignable to type 'number'.
+
+node-domexception/index.ts(7,10): error TS2554: Expected 1 arguments, but got 0.
+
+run-async/index.ts(26,44): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: {} | PromiseLike<{}>) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: {} | PromiseLike<{}>) => void' is not assignable to type 'void'.
+run-async/index.ts(28,36): error TS2322: Type '(value: any) => void' is not assignable to type 'void'.
+run-async/index.ts(33,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+run-async/index.ts(37,35): error TS2322: Type '(value: any) => void' is not assignable to type 'void'.
+run-async/index.ts(42,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+run-async/index.ts(61,15): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+run-async/index.ts(63,15): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+run-async/index.ts(78,11): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+
+json-parse-even-better-errors/index.ts(3,24): error TS2322: Type '(char: string) => string' is not assignable to type 'string'.
+json-parse-even-better-errors/index.ts(16,9): error TS2322: Type 'number' is not assignable to type 'string'.
+json-parse-even-better-errors/index.ts(22,10): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+json-parse-even-better-errors/index.ts(27,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+json-parse-even-better-errors/index.ts(29,11): error TS2322: Type 'string | number' is not assignable to type 'number'.
+  Type 'string' is not assignable to type 'number'.
+json-parse-even-better-errors/index.ts(29,25): error TS2365: Operator '>=' cannot be applied to types 'string' and 'number'.
+json-parse-even-better-errors/index.ts(56,10): error TS2339: Property 'code' does not exist on type 'JSONParseError'.
+json-parse-even-better-errors/index.ts(57,10): error TS2339: Property 'systemError' does not exist on type 'JSONParseError'.
+json-parse-even-better-errors/index.ts(60,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+json-parse-even-better-errors/index.ts(61,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+json-parse-even-better-errors/index.ts(62,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+json-parse-even-better-errors/index.ts(72,7): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+json-parse-even-better-errors/index.ts(75,26): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+json-parse-even-better-errors/index.ts(96,63): error TS2339: Property 'length' does not exist on type 'never'.
+json-parse-even-better-errors/index.ts(112,26): error TS2322: Type '(txt: string) => string' is not assignable to type 'string'.
+json-parse-even-better-errors/index.ts(119,23): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+json-parse-even-better-errors/index.ts(119,38): error TS2345: Argument of type 'string' is not assignable to parameter of type '(this: any, key: string, value: any) => any'.
+
+is-potential-custom-element-name/index.ts(5,5): error TS2322: Type '(string: any) => boolean' is not assignable to type 'string'.
+
+es6-object-assign/dist/object-assign-auto.min.ts(1,105): error TS2322: Type 'NodeRequire' is not assignable to type 'string'.
+es6-object-assign/dist/object-assign-auto.min.ts(1,167): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+es6-object-assign/dist/object-assign-auto.min.ts(1,191): error TS2554: Expected 1 arguments, but got 2.
+es6-object-assign/dist/object-assign-auto.min.ts(1,256): error TS2339: Property 'code' does not exist on type 'Error'.
+es6-object-assign/dist/object-assign-auto.min.ts(1,380): error TS2554: Expected 2 arguments, but got 1.
+es6-object-assign/dist/object-assign-auto.min.ts(1,485): error TS2339: Property 'length' does not exist on type 'number'.
+es6-object-assign/dist/object-assign-auto.min.ts(1,496): error TS2554: Expected 2 arguments, but got 1.
+es6-object-assign/dist/object-assign-auto.min.ts(1,504): error TS2322: Type '(u: any, f: string) => any' is not assignable to type 'boolean'.
+es6-object-assign/dist/object-assign-auto.min.ts(1,1192): error TS2345: Argument of type 'number[]' is not assignable to parameter of type 'number'.
+es6-object-assign/dist/object-assign-auto.ts(1,174): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+es6-object-assign/dist/object-assign-auto.ts(1,365): error TS2554: Expected 2 arguments, but got 1.
+es6-object-assign/dist/object-assign-auto.ts(1,420): error TS2322: Type 'NodeRequire' is not assignable to type 'number'.
+es6-object-assign/dist/object-assign-auto.ts(1,493): error TS2554: Expected 2 arguments, but got 1.
+es6-object-assign/dist/object-assign.min.ts(1,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
+es6-object-assign/dist/object-assign.min.ts(1,121): error TS2304: Cannot find name 'define'.
+es6-object-assign/dist/object-assign.min.ts(1,129): error TS2304: Cannot find name 'define'.
+es6-object-assign/dist/object-assign.min.ts(1,140): error TS2304: Cannot find name 'define'.
+es6-object-assign/dist/object-assign.min.ts(1,489): error TS2554: Expected 1 arguments, but got 2.
+es6-object-assign/dist/object-assign.min.ts(1,554): error TS2339: Property 'code' does not exist on type 'Error'.
+es6-object-assign/dist/object-assign.min.ts(1,678): error TS2554: Expected 2 arguments, but got 1.
+es6-object-assign/dist/object-assign.min.ts(1,794): error TS2554: Expected 2 arguments, but got 1.
+es6-object-assign/dist/object-assign.ts(1,112): error TS2304: Cannot find name 'define'.
+es6-object-assign/dist/object-assign.ts(1,133): error TS2304: Cannot find name 'define'.
+es6-object-assign/dist/object-assign.ts(1,145): error TS2304: Cannot find name 'define'.
+es6-object-assign/dist/object-assign.ts(1,561): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+es6-object-assign/dist/object-assign.ts(1,752): error TS2554: Expected 2 arguments, but got 1.
+es6-object-assign/dist/object-assign.ts(1,807): error TS2322: Type 'NodeRequire' is not assignable to type 'number'.
+es6-object-assign/dist/object-assign.ts(1,880): error TS2554: Expected 2 arguments, but got 1.
+
+weak-map/bench.ts(2,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'WeakMap' must be of type 'WeakMapConstructor', but here has type 'any'.
+weak-map/bench.ts(10,1): error TS2582: Cannot find name 'suite'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+weak-map/bench.ts(11,5): error TS2304: Cannot find name 'bench'.
+weak-map/bench.ts(16,5): error TS2304: Cannot find name 'bench'.
+weak-map/bench.ts(22,5): error TS2304: Cannot find name 'bench'.
+weak-map/bench.ts(28,5): error TS2304: Cannot find name 'bench'.
+weak-map/bench.ts(35,5): error TS2304: Cannot find name 'bench'.
+weak-map/weak-map.ts(102,14): error TS2304: Cannot find name 'ses'.
+weak-map/weak-map.ts(102,37): error TS2304: Cannot find name 'ses'.
+weak-map/weak-map.ts(102,48): error TS2304: Cannot find name 'ses'.
+weak-map/weak-map.ts(126,14): error TS2304: Cannot find name 'ses'.
+weak-map/weak-map.ts(127,5): error TS2304: Cannot find name 'ses'.
+weak-map/weak-map.ts(173,24): error TS2322: Type '(o: any) => string[]' is not assignable to type 'string[]'.
+weak-map/weak-map.ts(175,7): error TS2322: Type '(o: any) => boolean' is not assignable to type 'string'.
+weak-map/weak-map.ts(247,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map/weak-map.ts(249,14): error TS2349: This expression is not callable.
+  Type 'string[]' has no call signatures.
+weak-map/weak-map.ts(258,51): error TS2339: Property 'getPropertyNames' does not exist on type 'ObjectConstructor'.
+weak-map/weak-map.ts(259,5): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map/weak-map.ts(261,16): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map/weak-map.ts(311,10): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+weak-map/weak-map.ts(342,7): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map/weak-map.ts(370,5): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map/weak-map.ts(373,16): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map/weak-map.ts(377,5): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map/weak-map.ts(380,16): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map/weak-map.ts(384,5): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map/weak-map.ts(387,16): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map/weak-map.ts(410,7): error TS2322: Type '() => any' is not assignable to type 'void'.
+weak-map/weak-map.ts(411,27): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+weak-map/weak-map.ts(469,22): error TS2361: The right-hand side of an 'in' expression must not be a primitive.
+weak-map/weak-map.ts(501,37): error TS2339: Property 'prototype' does not exist on type 'void'.
+weak-map/weak-map.ts(509,14): error TS2339: Property 'prototype' does not exist on type 'void'.
+weak-map/weak-map.ts(580,31): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+weak-map/weak-map.ts(621,39): error TS2351: This expression is not constructable.
+  Type 'void' has no construct signatures.
+weak-map/weak-map.ts(632,41): error TS2351: This expression is not constructable.
+  Type 'void' has no construct signatures.
+weak-map/weak-map.ts(648,41): error TS2339: Property 'prototype' does not exist on type 'void'.
+weak-map/weak-map.ts(654,17): error TS2367: This condition will always return 'false' since the types 'string' and '(map: any) => void' have no overlap.
+weak-map/weak-map.ts(662,44): error TS2339: Property 'prototype' does not exist on type 'void'.
+
+at-least-node/matrix.test.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'test'.
+at-least-node/matrix.test.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'semver'.
+at-least-node/matrix.test.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'atLeastNode'.
+at-least-node/matrix.test.ts(9,21): error TS2322: Type '{ (t: any, nodeVersion: string, requestedVersion: string, expectedResult: any): void; title(providedTitle: string, nodeVersion: string, requestedVersion: string, expectedResult: string): string; }' is not assignable to type 'void'.
+at-least-node/matrix.test.ts(17,7): error TS2339: Property 'title' does not exist on type 'void'.
+at-least-node/matrix.test.ts(25,17): error TS2345: Argument of type '(patch: string) => number' is not assignable to parameter of type '(value: number, index: number, array: number[]) => void'.
+  Types of parameters 'patch' and 'value' are incompatible.
+    Type 'number' is not assignable to type 'string'.
+at-least-node/sanity.test.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'test'.
+at-least-node/sanity.test.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'semver'.
+at-least-node/sanity.test.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'atLeastNode'.
+
+vm-browserify/example/run/bundle.ts(1,192): error TS2554: Expected 1 arguments, but got 2.
+vm-browserify/example/run/bundle.ts(1,257): error TS2339: Property 'code' does not exist on type 'Error'.
+vm-browserify/example/run/bundle.ts(1,381): error TS2554: Expected 2 arguments, but got 1.
+vm-browserify/example/run/bundle.ts(1,496): error TS2554: Expected 2 arguments, but got 1.
+vm-browserify/example/run/bundle.ts(2,5): error TS2322: Type '(xs: any, item: any) => any' is not assignable to type 'number'.
+vm-browserify/example/run/bundle.ts(18,5): error TS2322: Type '(xs: any, fn: any) => any' is not assignable to type 'void'.
+vm-browserify/example/run/bundle.ts(25,24): error TS2322: Type '(obj: any, name: string, value: any) => void' is not assignable to type 'void'.
+vm-browserify/example/run/bundle.ts(57,52): error TS2749: 'Context' refers to a value, but is being used as a type here. Did you mean 'typeof Context'?
+vm-browserify/example/run/bundle.ts(63,31): error TS2540: Cannot assign to 'style' because it is a read-only property.
+vm-browserify/example/run/bundle.ts(69,26): error TS2339: Property 'eval' does not exist on type 'Window'.
+vm-browserify/example/run/bundle.ts(69,50): error TS2339: Property 'execScript' does not exist on type 'Window'.
+vm-browserify/example/run/bundle.ts(74,21): error TS2339: Property 'eval' does not exist on type 'Window'.
+vm-browserify/example/run/bundle.ts(77,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+vm-browserify/example/run/bundle.ts(80,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+vm-browserify/example/run/bundle.ts(90,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+vm-browserify/example/run/bundle.ts(94,31): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+vm-browserify/example/run/bundle.ts(99,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+vm-browserify/example/run/bundle.ts(101,13): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+vm-browserify/example/run/bundle.ts(119,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+vm-browserify/example/run/bundle.ts(127,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+vm-browserify/example/run/bundle.ts(142,67): error TS2749: 'Context' refers to a value, but is being used as a type here. Did you mean 'typeof Context'?
+vm-browserify/example/run/bundle.ts(145,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+vm-browserify/index.ts(1,5): error TS2322: Type '(xs: any, item: any) => any' is not assignable to type 'number'.
+vm-browserify/index.ts(17,5): error TS2322: Type '(xs: any, fn: any) => any' is not assignable to type 'void'.
+vm-browserify/index.ts(24,24): error TS2322: Type '(obj: any, name: string, value: any) => void' is not assignable to type 'void'.
+vm-browserify/index.ts(56,52): error TS2749: 'Context' refers to a value, but is being used as a type here. Did you mean 'typeof Context'?
+vm-browserify/index.ts(62,31): error TS2540: Cannot assign to 'style' because it is a read-only property.
+vm-browserify/index.ts(68,26): error TS2339: Property 'eval' does not exist on type 'Window'.
+vm-browserify/index.ts(68,50): error TS2339: Property 'execScript' does not exist on type 'Window'.
+vm-browserify/index.ts(73,21): error TS2339: Property 'eval' does not exist on type 'Window'.
+vm-browserify/index.ts(76,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+vm-browserify/index.ts(79,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+vm-browserify/index.ts(89,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+vm-browserify/index.ts(93,31): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+vm-browserify/index.ts(98,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+vm-browserify/index.ts(100,13): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+vm-browserify/index.ts(118,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+vm-browserify/index.ts(126,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+vm-browserify/index.ts(141,67): error TS2749: 'Context' refers to a value, but is being used as a type here. Did you mean 'typeof Context'?
+vm-browserify/index.ts(144,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+
+@gar_promisify/index.ts(16,26): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: unknown) => void' is not assignable to type 'void'.
+@gar_promisify/index.ts(17,63): error TS2496: The 'arguments' object cannot be referenced in an arrow function in ES3 and ES5. Consider using a standard function expression.
+@gar_promisify/index.ts(17,63): error TS2802: Type 'IArguments' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+@gar_promisify/index.ts(19,20): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+@gar_promisify/index.ts(21,11): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+
+aws-sign2/index.ts(22,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'any'.
+aws-sign2/index.ts(72,17): error TS2339: Property 'createHmac' does not exist on type 'Crypto'.
+aws-sign2/index.ts(127,7): error TS2322: Type 'any[]' is not assignable to type 'string'.
+aws-sign2/index.ts(134,12): error TS2339: Property 'join' does not exist on type 'string'.
+
+../../../../tools/node_modules/@types/node/buffer.d.ts(97,14): error TS2661: Cannot export 'Buffer'. Only local declarations can be exported from a module.
+../../../../tools/node_modules/@types/node/buffer.d.ts(2195,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Buffer' must be of type 'any', but here has type 'BufferConstructor'.
+
+minimalistic-crypto-utils/lib/utils.ts(48,34): error TS2554: Expected 0 arguments, but got 1.
+
+@humanwhocodes_object-schema/src/merge-strategy.ts(14,7): error TS2451: Cannot redeclare block-scoped variable 'MergeStrategy'.
+@humanwhocodes_object-schema/src/object-schema.ts(11,9): error TS2451: Cannot redeclare block-scoped variable 'MergeStrategy'.
+@humanwhocodes_object-schema/src/object-schema.ts(12,9): error TS2451: Cannot redeclare block-scoped variable 'ValidationStrategy'.
+@humanwhocodes_object-schema/src/validation-strategy.ts(14,7): error TS2451: Cannot redeclare block-scoped variable 'ValidationStrategy'.
+
+pseudomap/pseudomap.ts(14,11): error TS2339: Property 'forEach' does not exist on type '{}'.
+pseudomap/pseudomap.ts(84,3): error TS2322: Type 'boolean' is not assignable to type 'void'.
+pseudomap/pseudomap.ts(97,9): error TS1345: An expression of type 'void' cannot be tested for truthiness.
+pseudomap/pseudomap.ts(106,9): error TS1345: An expression of type 'void' cannot be tested for truthiness.
+pseudomap/pseudomap.ts(112,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+
+snapdragon-node/example.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'Node'.
+snapdragon-node/example.ts(2,22): error TS2554: Expected 0 arguments, but got 1.
+snapdragon-node/example.ts(3,22): error TS2554: Expected 0 arguments, but got 2.
+snapdragon-node/index.ts(20,7): error TS2300: Duplicate identifier 'Node'.
+snapdragon-node/index.ts(29,12): error TS2339: Property 'type' does not exist on type 'Node'.
+snapdragon-node/index.ts(31,14): error TS2339: Property 'value' does not exist on type 'Node'.
+snapdragon-node/index.ts(51,16): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+snapdragon-node/index.ts(92,27): error TS2339: Property 'isNode' does not exist on type 'Function'.
+snapdragon-node/index.ts(93,18): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+snapdragon-node/index.ts(95,10): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(95,23): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(97,5): error TS2554: Expected 2 arguments, but got 1.
+snapdragon-node/index.ts(98,10): error TS2339: Property 'size' does not exist on type 'Node'.
+snapdragon-node/index.ts(99,17): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(121,27): error TS2339: Property 'isNode' does not exist on type 'Function'.
+snapdragon-node/index.ts(122,18): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+snapdragon-node/index.ts(124,10): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(124,23): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(126,5): error TS2554: Expected 2 arguments, but got 1.
+snapdragon-node/index.ts(127,10): error TS2339: Property 'size' does not exist on type 'Node'.
+snapdragon-node/index.ts(128,17): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(152,14): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(152,28): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(153,12): error TS2339: Property 'size' does not exist on type 'Node'.
+snapdragon-node/index.ts(154,19): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(179,14): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(179,28): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(180,12): error TS2339: Property 'size' does not exist on type 'Node'.
+snapdragon-node/index.ts(181,19): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(198,15): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(199,29): error TS2339: Property 'isNode' does not exist on type 'Function'.
+snapdragon-node/index.ts(202,30): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(206,12): error TS2339: Property 'size' does not exist on type 'Node'.
+snapdragon-node/index.ts(207,19): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(229,29): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(229,44): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(230,47): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(231,30): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(232,30): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(260,26): error TS2339: Property 'isNode' does not exist on type 'Function'.
+snapdragon-node/index.ts(261,33): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(261,48): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(285,31): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(285,46): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(343,17): error TS2339: Property 'parent' does not exist on type 'Node'.
+snapdragon-node/index.ts(343,33): error TS2339: Property 'parent' does not exist on type 'Node'.
+snapdragon-node/index.ts(343,62): error TS2339: Property 'parent' does not exist on type 'Node'.
+snapdragon-node/index.ts(365,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+snapdragon-node/index.ts(366,17): error TS2339: Property 'parent' does not exist on type 'Node'.
+snapdragon-node/index.ts(366,31): error TS2339: Property 'parent' does not exist on type 'Node'.
+snapdragon-node/index.ts(393,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+snapdragon-node/index.ts(396,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+snapdragon-node/index.ts(400,14): error TS2551: Property '_index' does not exist on type 'Node'. Did you mean 'index'?
+snapdragon-node/index.ts(400,50): error TS2551: Property '_index' does not exist on type 'Node'. Did you mean 'index'?
+snapdragon-node/index.ts(403,17): error TS2551: Property '_index' does not exist on type 'Node'. Did you mean 'index'?
+snapdragon-node/index.ts(424,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+snapdragon-node/index.ts(426,52): error TS2339: Property 'parent' does not exist on type 'Node'.
+snapdragon-node/index.ts(453,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+snapdragon-node/index.ts(455,52): error TS2339: Property 'parent' does not exist on type 'Node'.
+snapdragon-node/index.ts(480,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+snapdragon-node/index.ts(481,31): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(481,45): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(504,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+snapdragon-node/index.ts(505,31): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(505,45): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(505,56): error TS2339: Property 'nodes' does not exist on type 'Node'.
+snapdragon-node/index.ts(525,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+snapdragon-node/index.ts(526,17): error TS2339: Property 'parent' does not exist on type 'Node'.
+snapdragon-node/index.ts(526,31): error TS2339: Property 'parent' does not exist on type 'Node'.
+snapdragon-node/index.ts(567,15): error TS2339: Property 'isNode' does not exist on type '{ new (): Node; prototype: Node; readonly ATTRIBUTE_NODE: number; readonly CDATA_SECTION_NODE: number; readonly COMMENT_NODE: number; readonly DOCUMENT_FRAGMENT_NODE: number; ... 13 more ...; readonly TEXT_NODE: number; }'.
+snapdragon-node/index.ts(590,15): error TS2339: Property 'isNode' does not exist on type '{ new (): Node; prototype: Node; readonly ATTRIBUTE_NODE: number; readonly CDATA_SECTION_NODE: number; readonly COMMENT_NODE: number; readonly DOCUMENT_FRAGMENT_NODE: number; ... 13 more ...; readonly TEXT_NODE: number; }'.
+snapdragon-node/index.ts(658,17): error TS2339: Property 'isNode' does not exist on type '{ new (): Node; prototype: Node; readonly ATTRIBUTE_NODE: number; readonly CDATA_SECTION_NODE: number; readonly COMMENT_NODE: number; readonly DOCUMENT_FRAGMENT_NODE: number; ... 13 more ...; readonly TEXT_NODE: number; }'.
+snapdragon-node/index.ts(659,42): error TS2554: Expected 0 arguments, but got 3.
+snapdragon-node/index.ts(663,7): error TS2554: Expected 2 arguments, but got 1.
+../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(10040,11): error TS2300: Duplicate identifier 'Node'.
+../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(10040,11): error TS2451: Cannot redeclare block-scoped variable 'Node'.
+../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(10122,13): error TS2300: Duplicate identifier 'Node'.
+../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(10122,13): error TS2451: Cannot redeclare block-scoped variable 'Node'.
+
+json-stable-stringify-without-jsonify/index.ts(9,9): error TS2322: Type '(node: any) => (a: any, b: any) => any' is not assignable to type 'boolean'.
+json-stable-stringify-without-jsonify/index.ts(22,13): error TS2322: Type 'string' is not assignable to type 'boolean'.
+  Type 'string' is not assignable to type 'boolean'.
+json-stable-stringify-without-jsonify/index.ts(36,13): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+json-stable-stringify-without-jsonify/index.ts(51,31): error TS2349: This expression is not callable.
+  Type 'string[]' has no call signatures.
+json-stable-stringify-without-jsonify/index.ts(51,60): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+json-stable-stringify-without-jsonify/index.ts(71,5): error TS2322: Type '(x: any) => boolean' is not assignable to type 'any[]'.
+json-stable-stringify-without-jsonify/index.ts(75,28): error TS2322: Type '(obj: any) => any[]' is not assignable to type 'string[]'.
+json-stable-stringify-without-jsonify/index.ts(76,24): error TS2322: Type '(v: PropertyKey) => boolean' is not assignable to type 'boolean'.
+json-stable-stringify-without-jsonify/index.ts(79,17): error TS2339: Property 'call' does not exist on type 'boolean'.
+
+figgy-pudding/index.ts(5,10): error TS2339: Property '__specs' does not exist on type 'FiggyPudding'.
+figgy-pudding/index.ts(6,22): error TS2339: Property '__specs' does not exist on type 'FiggyPudding'.
+figgy-pudding/index.ts(7,23): error TS2339: Property '__specs' does not exist on type 'FiggyPudding'.
+figgy-pudding/index.ts(8,34): error TS2339: Property '__specs' does not exist on type 'FiggyPudding'.
+figgy-pudding/index.ts(9,36): error TS2339: Property '__specs' does not exist on type 'FiggyPudding'.
+figgy-pudding/index.ts(13,34): error TS2802: Type 'Set<unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+figgy-pudding/index.ts(14,16): error TS2339: Property '__specs' does not exist on type 'FiggyPudding'.
+figgy-pudding/index.ts(20,10): error TS2339: Property '__opts' does not exist on type 'FiggyPudding'.
+figgy-pudding/index.ts(21,10): error TS2339: Property '__providers' does not exist on type 'FiggyPudding'.
+figgy-pudding/index.ts(24,10): error TS2339: Property '__isFiggyPudding' does not exist on type 'FiggyPudding'.
+figgy-pudding/index.ts(29,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+figgy-pudding/index.ts(31,30): error TS2802: Type 'Generator<any[], void, unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+figgy-pudding/index.ts(31,35): error TS2554: Expected 1 arguments, but got 0.
+figgy-pudding/index.ts(43,38): error TS2339: Property '__specs' does not exist on type 'FiggyPudding'.
+figgy-pudding/index.ts(46,43): error TS2339: Property '__opts' does not exist on type 'FiggyPudding'.
+figgy-pudding/index.ts(49,26): error TS2339: Property '__providers' does not exist on type 'FiggyPudding'.
+figgy-pudding/index.ts(61,30): error TS2802: Type 'Generator<any[], void, unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+figgy-pudding/index.ts(61,35): error TS2554: Expected 1 arguments, but got 0.
+figgy-pudding/index.ts(66,23): error TS2802: Type 'Generator<any[], void, unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+figgy-pudding/index.ts(66,28): error TS2554: Expected 1 arguments, but got 0.
+figgy-pudding/index.ts(71,27): error TS2802: Type 'Generator<any[], void, unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+figgy-pudding/index.ts(71,32): error TS2554: Expected 1 arguments, but got 0.
+figgy-pudding/index.ts(77,12): error TS2339: Property '__specs' does not exist on type 'FiggyPudding'.
+figgy-pudding/index.ts(78,12): error TS2339: Property '__opts' does not exist on type 'FiggyPudding'.
+figgy-pudding/index.ts(79,20): error TS2339: Property '__providers' does not exist on type 'FiggyPudding'.
+
+console-browserify/index.ts(6,20): error TS2322: Type '(start?: number, end?: number) => any[]' is not assignable to type 'any[]'.
+console-browserify/index.ts(15,5): error TS2740: Type '{}' is missing the following properties from type 'Console': assert, clear, count, countReset, and 19 more.
+console-browserify/index.ts(33,9): error TS2451: Cannot redeclare block-scoped variable 'name'.
+console-browserify/index.ts(35,18): error TS2538: Type 'void' cannot be used as an index type.
+console-browserify/index.ts(36,17): error TS2538: Type 'void' cannot be used as an index type.
+console-browserify/index.ts(84,32): error TS2339: Property 'call' does not exist on type 'any[]'.
+../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17694,15): error TS2451: Cannot redeclare block-scoped variable 'name'.
+
+use/examples/app.ts(22,36): error TS2350: Only a void function can be called with the 'new' keyword.
+use/examples/app.ts(28,10): error TS2393: Duplicate function implementation.
+use/examples/app.ts(84,28): error TS2749: 'App' refers to a value, but is being used as a type here. Did you mean 'typeof App'?
+use/examples/app.ts(89,10): error TS2749: 'App' refers to a value, but is being used as a type here. Did you mean 'typeof App'?
+use/examples/layered.ts(2,5): error TS2300: Duplicate identifier 'define'.
+use/examples/layered.ts(5,10): error TS2393: Duplicate function implementation.
+use/examples/layered.ts(11,10): error TS2350: Only a void function can be called with the 'new' keyword.
+use/examples/layered.ts(14,14): error TS2350: Only a void function can be called with the 'new' keyword.
+use/examples/layered.ts(19,8): error TS2304: Cannot find name 'JQuery'.
+use/index.ts(149,10): error TS2300: Duplicate identifier 'define'.
+
+@istanbuljs_schema/index.ts(19,6): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+@istanbuljs_schema/index.ts(457,42): error TS2361: The right-hand side of an 'in' expression must not be a primitive.
+
+nan/tools/1to2.ts(17,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'length' must be of type 'number', but here has type 'any'.
+nan/tools/1to2.ts(177,3): error TS2322: Type 'number' is not assignable to type 'string'.
+nan/tools/1to2.ts(182,2): error TS2322: Type 'string' is not assignable to type 'number'.
+nan/tools/1to2.ts(187,1): error TS2304: Cannot find name 'master'.
+nan/tools/1to2.ts(396,37): error TS2304: Cannot find name 'master'.
+nan/tools/1to2.ts(396,62): error TS2304: Cannot find name 'master'.
+
+whatwg-fetch/fetch.ts(42,7): error TS2322: Type '(obj: any) => boolean' is not assignable to type 'number'.
+whatwg-fetch/fetch.ts(88,13): error TS2339: Property 'forEach' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(169,34): error TS2304: Cannot find name 'EwsXmlReader'.
+whatwg-fetch/fetch.ts(170,22): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: {} | PromiseLike<{}>) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: {} | PromiseLike<{}>) => void' is not assignable to type 'void'.
+whatwg-fetch/fetch.ts(172,7): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+whatwg-fetch/fetch.ts(175,7): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+whatwg-fetch/fetch.ts(244,85): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+whatwg-fetch/fetch.ts(339,52): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
+whatwg-fetch/fetch.ts(348,15): error TS2339: Property 'bodyUsed' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(351,22): error TS2339: Property 'url' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(352,30): error TS2339: Property 'credentials' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(354,22): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(354,40): error TS2339: Property 'headers' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(356,25): error TS2339: Property 'method' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(357,23): error TS2339: Property 'mode' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(358,25): error TS2339: Property 'signal' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(359,24): error TS2339: Property '_bodyInit' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(360,20): error TS2339: Property '_bodyInit' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(361,13): error TS2339: Property 'bodyUsed' does not exist on type '{}'.
+whatwg-fetch/fetch.ts(369,20): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(389,11): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+whatwg-fetch/fetch.ts(390,25): error TS2339: Property 'test' does not exist on type 'string'.
+whatwg-fetch/fetch.ts(395,13): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+whatwg-fetch/fetch.ts(396,36): error TS2339: Property 'test' does not exist on type 'string'.
+whatwg-fetch/fetch.ts(403,10): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(419,3): error TS2322: Type 'FormData' is not assignable to type 'string'.
+whatwg-fetch/fetch.ts(423,22): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(423,22): error TS2554: Expected 1 arguments, but got 0.
+whatwg-fetch/fetch.ts(460,18): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(468,10): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(471,14): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(477,28): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(478,12): error TS2540: Cannot assign to 'type' because it is a read-only property.
+whatwg-fetch/fetch.ts(489,10): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(507,22): error TS2345: Argument of type '(resolve: any, reject: void) => any' is not assignable to parameter of type '(resolve: (value: Response | PromiseLike<Response>) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'reject' and 'reject' are incompatible.
+    Type '(reason?: any) => void' is not assignable to type 'void'.
+whatwg-fetch/fetch.ts(508,28): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(511,14): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+whatwg-fetch/fetch.ts(529,17): error TS2350: Only a void function can be called with the 'new' keyword.
+whatwg-fetch/fetch.ts(535,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+whatwg-fetch/fetch.ts(541,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+whatwg-fetch/fetch.ts(547,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+whatwg-fetch/fetch.ts(555,9): error TS2322: Type 'string' is not assignable to type 'boolean'.
+whatwg-fetch/fetch.ts(559,30): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string | URL'.
+whatwg-fetch/fetch.ts(600,29): error TS2339: Property '_bodyInit' does not exist on type 'Request'.
+whatwg-fetch/fetch.ts(600,72): error TS2339: Property '_bodyInit' does not exist on type 'Request'.
+
+unicode-match-property-value-ecmascript/index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'propertyToValueAliases'.
+unicode-match-property-value-ecmascript/index.ts(5,7): error TS2322: Type '(property: string, value: string) => any' is not assignable to type 'void'.
+unicode-match-property-value-ecmascript/scripts/build.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'propertyToValueAliases'.
+

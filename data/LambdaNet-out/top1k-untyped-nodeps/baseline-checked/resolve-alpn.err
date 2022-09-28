@@ -1,0 +1,16 @@
+resolve-alpn/index.ts(4,65): error TS2339: Property 'connect' does not exist on type 'String'.
+resolve-alpn/index.ts(4,89): error TS2345: Argument of type '(resolve: Function, reject: String) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'reject' and 'reject' are incompatible.
+    Type '(reason?: any) => void' is not assignable to type 'String'.
+resolve-alpn/index.ts(12,10): error TS2339: Property 'off' does not exist on type 'Object'.
+resolve-alpn/index.ts(13,10): error TS2339: Property 'off' does not exist on type 'Object'.
+resolve-alpn/index.ts(15,15): error TS2339: Property 'resolveSocket' does not exist on type 'Object'.
+resolve-alpn/index.ts(16,34): error TS2339: Property 'alpnProtocol' does not exist on type 'Object'.
+resolve-alpn/index.ts(20,12): error TS2339: Property 'emit' does not exist on type 'Object'.
+resolve-alpn/index.ts(23,11): error TS2339: Property 'destroy' does not exist on type 'Object'.
+resolve-alpn/index.ts(24,34): error TS2339: Property 'alpnProtocol' does not exist on type 'Object'.
+resolve-alpn/index.ts(37,11): error TS2339: Property 'on' does not exist on type 'Object'.
+resolve-alpn/index.ts(38,11): error TS2339: Property 'once' does not exist on type 'Object'.
+resolve-alpn/index.ts(40,4): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+

@@ -1,0 +1,135 @@
+asynckit/bench.ts(4,5): error TS2300: Duplicate identifier 'async'.
+asynckit/bench.ts(4,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+asynckit/bench.ts(9,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+asynckit/bench.ts(12,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+asynckit/bench.ts(16,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
+asynckit/bench.ts(22,2): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+asynckit/bench.ts(22,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+asynckit/bench.ts(31,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'String'.
+asynckit/bench.ts(35,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+asynckit/bench.ts(37,12): error TS2339: Property 'ifError' does not exist on type 'String'.
+asynckit/bench.ts(38,12): error TS2339: Property 'equal' does not exist on type 'String'.
+asynckit/bench.ts(44,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+asynckit/bench.ts(48,12): error TS2339: Property 'parallel' does not exist on type 'String'.
+asynckit/bench.ts(53,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'String'.
+asynckit/bench.ts(57,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+asynckit/bench.ts(59,12): error TS2339: Property 'ifError' does not exist on type 'String'.
+asynckit/bench.ts(60,12): error TS2339: Property 'equal' does not exist on type 'String'.
+asynckit/bench.ts(69,25): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
+asynckit/lib/abort.ts(9,10): error TS2300: Duplicate identifier 'abort'.
+asynckit/lib/abort.ts(9,32): error TS2304: Cannot find name 'Void'.
+asynckit/lib/abort.ts(11,21): error TS2339: Property 'jobs' does not exist on type 'Object'.
+asynckit/lib/abort.ts(14,9): error TS2339: Property 'jobs' does not exist on type 'Object'.
+asynckit/lib/abort.ts(23,30): error TS2304: Cannot find name 'Void'.
+asynckit/lib/abort.ts(25,24): error TS2538: Type 'String' cannot be used as an index type.
+asynckit/lib/abort.ts(27,15): error TS2538: Type 'String' cannot be used as an index type.
+asynckit/lib/async.ts(1,5): error TS2300: Duplicate identifier 'defer'.
+asynckit/lib/async.ts(13,10): error TS2300: Duplicate identifier 'async'.
+asynckit/lib/async.ts(20,64): error TS2304: Cannot find name 'Void'.
+asynckit/lib/async.ts(28,43): error TS2304: Cannot find name 'Void'.
+asynckit/lib/defer.ts(8,10): error TS2300: Duplicate identifier 'defer'.
+asynckit/lib/defer.ts(8,29): error TS2304: Cannot find name 'Void'.
+asynckit/lib/defer.ts(24,16): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(callback: () => void, ms?: number): Timeout', gave the following error.
+    Argument of type 'Number' is not assignable to parameter of type '() => void'.
+      Type 'Number' provides no match for the signature '(): void'.
+  Overload 2 of 3, '(callback: (args: void) => void, ms?: number): Timeout', gave the following error.
+    Argument of type 'Number' is not assignable to parameter of type '(args: void) => void'.
+      Type 'Number' provides no match for the signature '(args: void): void'.
+  Overload 3 of 3, '(handler: TimerHandler, timeout?: number, ...arguments: any[]): number', gave the following error.
+    Argument of type 'Number' is not assignable to parameter of type 'TimerHandler'.
+      Type 'Number' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+asynckit/lib/iterate.ts(2,5): error TS2300: Duplicate identifier 'abort'.
+asynckit/lib/iterate.ts(16,10): error TS2300: Duplicate identifier 'iterate'.
+asynckit/lib/iterate.ts(16,86): error TS2304: Cannot find name 'Void'.
+asynckit/lib/iterate.ts(19,67): error TS2339: Property 'index' does not exist on type 'Object'.
+asynckit/lib/iterate.ts(19,82): error TS2339: Property 'index' does not exist on type 'Object'.
+asynckit/lib/iterate.ts(21,9): error TS2339: Property 'jobs' does not exist on type 'Object'.
+asynckit/lib/iterate.ts(21,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+  Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 4 more.
+asynckit/lib/iterate.ts(21,48): error TS2538: Type 'String' cannot be used as an index type.
+asynckit/lib/iterate.ts(25,11): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
+asynckit/lib/iterate.ts(25,24): error TS2339: Property 'jobs' does not exist on type 'Object'.
+asynckit/lib/iterate.ts(31,18): error TS2339: Property 'jobs' does not exist on type 'Object'.
+asynckit/lib/iterate.ts(42,13): error TS2339: Property 'results' does not exist on type 'Object'.
+asynckit/lib/iterate.ts(46,27): error TS2339: Property 'results' does not exist on type 'Object'.
+asynckit/lib/iterate.ts(61,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+asynckit/lib/readable_asynckit.ts(12,10): error TS2300: Duplicate identifier 'ReadableAsyncKit'.
+asynckit/lib/readable_asynckit.ts(12,30): error TS2304: Cannot find name 'Void'.
+asynckit/lib/readable_asynckit.ts(14,20): error TS2339: Property 'super_' does not exist on type 'String'.
+asynckit/lib/readable_asynckit.ts(31,21): error TS2304: Cannot find name 'Void'.
+asynckit/lib/readable_asynckit.ts(51,20): error TS2304: Cannot find name 'Void'.
+asynckit/lib/readable_asynckit.ts(56,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+asynckit/lib/readable_asynckit.ts(60,36): error TS2339: Property 'callback' does not exist on type 'String'.
+asynckit/lib/readable_asynckit.ts(65,23): error TS2339: Property 'iterator' does not exist on type 'String'.
+asynckit/lib/readable_asynckit.ts(72,32): error TS2339: Property 'apply' does not exist on type 'Object'.
+asynckit/lib/readable_asynckit.ts(88,19): error TS2304: Cannot find name 'Void'.
+asynckit/lib/readable_parallel.ts(1,5): error TS2300: Duplicate identifier 'parallel'.
+asynckit/lib/readable_parallel.ts(14,10): error TS2300: Duplicate identifier 'ReadableParallel'.
+asynckit/lib/readable_serial.ts(1,5): error TS2300: Duplicate identifier 'serial'.
+asynckit/lib/readable_serial.ts(14,10): error TS2300: Duplicate identifier 'ReadableSerial'.
+asynckit/lib/readable_serial.ts(16,25): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+asynckit/lib/readable_serial.ts(18,16): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+asynckit/lib/readable_serial.ts(22,18): error TS2339: Property 'super_' does not exist on type 'String'.
+asynckit/lib/readable_serial_ordered.ts(1,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+asynckit/lib/readable_serial_ordered.ts(6,43): error TS2339: Property 'ascending' does not exist on type 'Function'.
+asynckit/lib/readable_serial_ordered.ts(7,43): error TS2339: Property 'descending' does not exist on type 'Function'.
+asynckit/lib/readable_serial_ordered.ts(18,10): error TS2300: Duplicate identifier 'ReadableSerialOrdered'.
+asynckit/lib/readable_serial_ordered.ts(20,25): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+asynckit/lib/readable_serial_ordered.ts(22,16): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+asynckit/lib/readable_serial_ordered.ts(26,25): error TS2339: Property 'super_' does not exist on type 'String'.
+asynckit/lib/state.ts(13,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+asynckit/lib/state.ts(30,15): error TS2339: Property 'keyedList' does not exist on type 'Object'.
+asynckit/lib/state.ts(30,69): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+asynckit/lib/state.ts(30,79): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+asynckit/lib/streamify.ts(18,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+asynckit/lib/streamify.ts(23,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+asynckit/lib/streamify.ts(54,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+asynckit/lib/streamify.ts(76,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+asynckit/lib/streamify.ts(81,11): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
+asynckit/lib/streamify.ts(102,71): error TS2304: Cannot find name 'Void'.
+asynckit/lib/streamify.ts(110,38): error TS2339: Property 'value' does not exist on type 'Object'.
+asynckit/lib/streamify.ts(119,36): error TS2339: Property 'value' does not exist on type 'Object'.
+asynckit/lib/streamify.ts(130,71): error TS2304: Cannot find name 'Void'.
+asynckit/lib/terminator.ts(1,5): error TS2300: Duplicate identifier 'abort'.
+asynckit/lib/terminator.ts(14,10): error TS2300: Duplicate identifier 'terminator'.
+asynckit/lib/terminator.ts(14,40): error TS2304: Cannot find name 'Void'.
+asynckit/parallel.ts(1,5): error TS2300: Duplicate identifier 'iterate'.
+asynckit/parallel.ts(3,5): error TS2300: Duplicate identifier 'terminator'.
+asynckit/parallel.ts(17,10): error TS2300: Duplicate identifier 'parallel'.
+asynckit/parallel.ts(17,72): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+asynckit/parallel.ts(21,16): error TS2339: Property 'index' does not exist on type 'Object'.
+asynckit/parallel.ts(23,68): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+asynckit/parallel.ts(32,29): error TS2339: Property 'jobs' does not exist on type 'Object'.
+asynckit/parallel.ts(34,30): error TS2339: Property 'results' does not exist on type 'Object'.
+asynckit/parallel.ts(39,11): error TS2339: Property 'index' does not exist on type 'Object'.
+asynckit/serial.ts(1,5): error TS2300: Duplicate identifier 'serialOrdered'.
+asynckit/serial.ts(14,10): error TS2300: Duplicate identifier 'serial'.
+asynckit/serial.ts(14,70): error TS2304: Cannot find name 'Void'.
+asynckit/serialOrdered.ts(1,5): error TS2300: Duplicate identifier 'iterate'.
+asynckit/serialOrdered.ts(3,5): error TS2300: Duplicate identifier 'terminator'.
+asynckit/serialOrdered.ts(21,10): error TS2300: Duplicate identifier 'serialOrdered'.
+asynckit/serialOrdered.ts(21,97): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+asynckit/serialOrdered.ts(25,93): error TS2304: Cannot find name 'Void'.
+asynckit/serialOrdered.ts(33,11): error TS2339: Property 'index' does not exist on type 'Object'.
+asynckit/serialOrdered.ts(36,15): error TS2339: Property 'index' does not exist on type 'Object'.
+asynckit/serialOrdered.ts(43,26): error TS2339: Property 'results' does not exist on type 'Object'.
+asynckit/serialOrdered.ts(74,15): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+asynckit/serialOrdered.ts(74,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+asynckit/stream.ts(3,5): error TS2300: Duplicate identifier 'ReadableAsyncKit'.
+asynckit/stream.ts(4,5): error TS2300: Duplicate identifier 'ReadableParallel'.
+asynckit/stream.ts(4,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+asynckit/stream.ts(5,5): error TS2300: Duplicate identifier 'ReadableSerial'.
+asynckit/stream.ts(6,5): error TS2300: Duplicate identifier 'ReadableSerialOrdered'.
+asynckit/stream.ts(17,1): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+asynckit/stream.ts(19,1): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+asynckit/stream.ts(20,1): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+asynckit/stream.ts(21,1): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+

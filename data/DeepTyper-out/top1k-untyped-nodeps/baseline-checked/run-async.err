@@ -1,0 +1,16 @@
+run-async/index.ts(26,44): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: {} | PromiseLike<{}>) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: {} | PromiseLike<{}>) => void' is not assignable to type 'void'.
+run-async/index.ts(28,36): error TS2322: Type '(value: any) => void' is not assignable to type 'void'.
+run-async/index.ts(33,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+run-async/index.ts(37,35): error TS2322: Type '(value: any) => void' is not assignable to type 'void'.
+run-async/index.ts(42,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+run-async/index.ts(61,15): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+run-async/index.ts(63,15): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+run-async/index.ts(78,11): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+

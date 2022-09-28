@@ -1,0 +1,17 @@
+fs-monkey/demo/fs-1.ts(1,19): error TS2307: Cannot find module 'memfs' or its corresponding type declarations.
+fs-monkey/demo/fs-1.ts(2,23): error TS2307: Cannot find module 'fs-monkey' or its corresponding type declarations.
+fs-monkey/demo/require-1.ts(1,19): error TS2307: Cannot find module 'memfs' or its corresponding type declarations.
+fs-monkey/demo/require-1.ts(2,28): error TS2307: Cannot find module 'fs-monkey' or its corresponding type declarations.
+fs-monkey/demo/require-2.ts(1,19): error TS2307: Cannot find module 'memfs' or its corresponding type declarations.
+fs-monkey/demo/require-2.ts(2,28): error TS2307: Cannot find module 'fs-monkey' or its corresponding type declarations.
+fs-monkey/demo/require-2.ts(3,19): error TS2307: Cannot find module 'unionfs' or its corresponding type declarations.
+fs-monkey/demo/yolo-1.ts(1,23): error TS2307: Cannot find module 'fs-monkey' or its corresponding type declarations.
+fs-monkey/src/correctPath.ts(23,5): error TS2322: Type 'boolean' is not assignable to type 'string'.
+fs-monkey/src/index.ts(1,21): error TS2307: Cannot find module './patchFs' or its corresponding type declarations.
+fs-monkey/src/patchRequire.ts(80,25): error TS2339: Property '_makeLong' does not exist on type 'PlatformPath'.
+fs-monkey/src/patchRequire.ts(108,55): error TS2339: Property '_makeLong' does not exist on type 'PlatformPath'.
+fs-monkey/src/patchRequire.ts(111,13): error TS2322: Type 'boolean' is not assignable to type 'string'.
+fs-monkey/src/patchRequire.ts(141,17): error TS2322: Type 'string' is not assignable to type 'boolean'.
+fs-monkey/src/patchRequire.ts(154,9): error TS2322: Type 'string | boolean' is not assignable to type 'boolean'.
+  Type 'string' is not assignable to type 'boolean'.
+
