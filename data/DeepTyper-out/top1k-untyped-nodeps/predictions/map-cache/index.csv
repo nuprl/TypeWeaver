@@ -1,0 +1,243 @@
+Text
+/*!\n * map-cache <https://github.com/jonschlinkert/map-cache>\n *\n * Copyright (c) 2015, Jon Schlinkert.\n * Licensed under the MIT License.\n */Comment.Multiline
+\n\nText.Whitespace
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+hasOwnName.Otherboolean0.9133any0.0276complex0.0210string0.0077number0.0064
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9997Object0.0002complex0.0000any0.0000Object[]0.0000
+.Punctuation
+prototypeName.OtherObject0.6512any0.0355complex0.0288any[]0.0148{}0.0111
+.Punctuation
+hasOwnPropertyName.Othercomplex0.9185any0.0408Object0.0172string0.0075boolean0.0049
+;Punctuation
+\n\nText.Whitespace
+/**\n * Expose `MapCache`\n */Comment.Multiline
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+MapCacheName.Otherany0.6318string0.2319void0.0413complex0.0246boolean0.0098
+;Punctuation
+\n\nText.Whitespace
+/**\n * Creates a cache object to store key/value pairs.\n *\n * ```js\n * var cache = new MapCache();\n * ```\n *\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+MapCacheName.Othervoid0.8202any0.0675string0.0472boolean0.0208Function0.0145
+(Punctuation
+dataName.Otherany0.4739string0.4660Object0.0119Buffer0.0095number0.0035
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+__data__Name.Otherany0.5765string0.0723boolean0.0611{}0.0540complex0.0487
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+dataName.Otherany0.7238string0.1497Object0.0342complex0.0134{}0.0102
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Adds `value` to `key` on the cache.\n *\n * ```js\n * cache.set('foo', 'bar');\n * ```\n *\n * @param {String} `key` The key of the value to cache.\n * @param {*} `value` The value to cache.\n * @returns {Object} Returns the `Cache` object for chaining.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+MapCacheName.Otherany0.6918void0.1476complex0.0987Function0.0052string0.0045
+.Punctuation
+prototypeName.Otherany0.7801Object0.0342complex0.0194Function0.0117void0.0117
+.Punctuation
+setName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+mapSetName.Otherany0.3976void0.2731string0.1628boolean0.0638complex0.0339
+(Punctuation
+keyName.Otherstring0.7035any0.2854complex0.0021number0.0015Object0.0005
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.6638string0.3161number0.0031boolean0.0025complex0.0022
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+keyName.Otherstring0.6610any0.3289complex0.0034number0.0017boolean0.0006
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'__proto__'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+__data__Name.Otherany0.4408complex0.3372{}0.1381Object0.0223Function0.0076
+[Punctuation
+keyName.Otherstring0.8462any0.1391number0.0063complex0.0038void0.0009
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valueName.Otherany0.8575string0.1133number0.0057void0.0035complex0.0035
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Gets the cached value for `key`.\n *\n * ```js\n * cache.get('foo');\n * //=> 'bar'\n * ```\n *\n * @param {String} `key` The key of the value to get.\n * @returns {*} Returns the cached value.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+MapCacheName.Otherany0.7601void0.0896complex0.0569Function0.0115string0.0054
+.Punctuation
+prototypeName.Otherany0.6639Object0.0566complex0.0180void0.0169Function0.0127
+.Punctuation
+getName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+mapGetName.Otherany0.5249string0.2149boolean0.1678void0.0319complex0.0107
+(Punctuation
+keyName.Otherstring0.6637any0.3268number0.0020complex0.0017boolean0.0004
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+keyName.Otherstring0.6287any0.3663number0.0014complex0.0007boolean0.0003
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'__proto__'Literal.String.Single
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+undefinedName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+this.__data__Keyword.Type
+[Punctuation
+keyName.Otherstring0.7142any0.2682number0.0083complex0.0045void0.0010
+]Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Checks if a cached value for `key` exists.\n *\n * ```js\n * cache.has('foo');\n * //=> true\n * ```\n *\n * @param {String} `key` The key of the entry to check.\n * @returns {Boolean} Returns `true` if an entry for `key` exists, else `false`.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+MapCacheName.Otherany0.8012complex0.0683void0.0487boolean0.0128Function0.0059
+.Punctuation
+prototypeName.Otherany0.7393Object0.0224any[]0.0147complex0.0139Function0.0075
+.Punctuation
+hasName.Otherboolean0.7275any0.2530string0.0085number0.0016void0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+mapHasName.Otherboolean0.9225any0.0473string0.0144void0.0056complex0.0022
+(Punctuation
+keyName.Otherstring0.6651any0.3223number0.0030complex0.0021boolean0.0011
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+keyName.Otherstring0.6972any0.2970number0.0020complex0.0007boolean0.0006
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'__proto__'Literal.String.Single
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+hasOwnName.Otherboolean0.8825any0.0857complex0.0084false0.0056true0.0043
+.Punctuation
+callName.Otherany0.9794complex0.0071T0.0019number0.0019string0.0012
+(Punctuation
+thisKeyword
+.Punctuation
+__data__Name.Othervoid0.4936any0.2760string0.0848boolean0.0262Function0.0209
+,Punctuation
+ Text.Whitespace
+keyName.Otherstring0.5823any0.4007number0.0029complex0.0028void0.0022
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Removes `key` and its value from the cache.\n *\n * ```js\n * cache.del('foo');\n * ```\n * @title .del\n * @param {String} `key` The key of the value to remove.\n * @returns {Boolean} Returns `true` if the entry was removed successfully, else `false`.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+MapCacheName.Otherany0.7594void0.1049complex0.0439Function0.0117boolean0.0100
+.Punctuation
+prototypeName.Otherany0.8248Object0.0109void0.0091Function0.0073complex0.0069
+.Punctuation
+delName.Otherany0.9193boolean0.0444string0.0067complex0.0054Promise<any>0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+mapDeleteName.Otherboolean0.6490any0.2357string0.0300complex0.0278void0.0058
+(Punctuation
+keyName.Otherany0.6132string0.3624complex0.0065number0.0024boolean0.0012
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+hasName.Otherboolean0.9309any0.0379string0.0057{}0.0027false0.0018
+(Punctuation
+keyName.Otherstring0.7572any0.2305number0.0028complex0.0023{}0.0004
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+thisKeyword
+.Punctuation
+__data__Name.Othercomplex0.4618any0.3494{}0.1253Object0.0070object0.0024
+[Punctuation
+keyName.Otherstring0.8124any0.1697number0.0075complex0.0032void0.0008
+]Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

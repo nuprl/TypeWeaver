@@ -1,0 +1,1030 @@
+varKeyword.Declaration
+ Text.Whitespace
+GNTPName.Otherany0.8641void0.0111string0.0103Function0.0061number0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./gntp.js'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Interface for registering Growl applications and sending Growl notifications.\n *\n * @api private\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+GrowlyName.Othervoid0.9380any0.0383string0.0044complex0.0024Function0.0021
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+appnameName.Otherany0.4190string0.3913RegExp0.1180string[]0.0061Date0.0030
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'Growly'Literal.String.Single
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+notificationsName.Otherany0.8736string0.0698any[]0.0126complex0.0060number0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+labelsName.Otherany0.7147string0.1288any[]0.0314number0.0268string[]0.0232
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+countName.Othernumber0.9733any0.0221boolean0.0015string0.0012void0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+registeredName.Otherboolean0.9795any0.0062true0.0047false0.0043number0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+hostName.Otherany0.8364string0.1354number0.0121void0.0051complex0.0036
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+portName.Otherany0.6796number0.2578string0.0385complex0.0064void0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Returns an array of label strings extracted from each notification object in\n * `Growly.notifications`.\n *\n * @param {Array} notifications\n * @return {Array} notification labels\n * @api private\n */Comment.Multiline
+\n\nText.Whitespace
+GrowlyName.Otherany0.9054void0.0380complex0.0129Function0.0025Promise<void>0.0018
+.Punctuation
+prototypeName.Otherany0.9310void0.0044Function0.0041Object0.0024Date0.0016
+.Punctuation
+getLabelsName.Otherany0.9716string0.0055complex0.0042number0.0020any[]0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+notificationsName.Otherany0.9385any[]0.0313string0.0113string[]0.0054complex0.0008
+.Punctuation
+mapName.Otherany0.9811U[]0.0129complex0.0043string0.0003any[]0.0002
+(Punctuation
+functionKeyword.Declaration
+(Punctuation
+notifName.Otherany0.4771NotificationsService0.0566complex0.0244string0.0090PromiseConstructor0.0087
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+notifName.Otherany0.9324complex0.0604PromiseConstructor0.0012string0.0007number0.0002
+.Punctuation
+labelName.Otherany0.7264string0.2674complex0.0038number0.0010string[]0.0002
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Set the host to be used by GNTP requests.\n *\n * @param {String} host\n * @param {Number} port\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+GrowlyName.Otherany0.7672void0.1545complex0.0167Function0.0044Promise<void>0.0029
+.Punctuation
+prototypeName.Otherany0.8206void0.0116Function0.0080Object0.0072Observable<any>0.0041
+.Punctuation
+setHostName.Otherany0.7772void0.1918string0.0046complex0.0045Function0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+hostName.Otherany0.7990string0.1726void0.0095number0.0059complex0.0023
+,Punctuation
+ Text.Whitespace
+portName.Otherany0.7445number0.1752string0.0631complex0.0044void0.0036
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+hostName.Otherany0.6132string0.3480number0.0253void0.0079complex0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+hostName.Otherany0.8668string0.1023number0.0198void0.0047complex0.0022
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+portName.Otherany0.5666number0.3786string0.0455complex0.0028void0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+portName.Otherany0.6912number0.2697string0.0294complex0.0030void0.0014
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Register an application with the name `appname` (required), icon `appicon`, and\n * a list of notification types `notifications`. If provided, `callback` will be\n * called when the request completes with the first argument being an `err` error\n * object if the request failed.\n *\n * Each object in the `notifications` array defines a type of notification the\n * application will have with the following properties:\n *\n *  - `.label` name used to identify the type of notification being used (required)\n *  - `.dispname` name users will see in Growl's preference panel (defaults to `.label`)\n *  - `.enabled` whether or not notifications of this type are enabled (defaults to true)\n *  - `.icon` default icon notifications of this type should use (url, file path, or Buffer object)\n *\n *  Example registration:\n *\n *      growl.register('My Application', 'path/to/icon.png', [\n *          { label: 'success', dispname: 'Success', icon: 'path/to/success.png' },\n *          { label: 'warning', dispname: 'Warning', icon: 'path/to/warning.png', enabled: false }\n *      ], function(err) { console.log(err || 'Registration successful!'); });\n *\n * @param {String} appname\n * @param {String|Buffer} appicon\n * @param {Array} notifications\n * @param {Function} callback\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+GrowlyName.Otherany0.7745void0.1672complex0.0183Promise<void>0.0039Function0.0018
+.Punctuation
+prototypeName.Otherany0.9078void0.0132Object0.0064Function0.0039any[]0.0019
+.Punctuation
+registerName.Otherany0.4907void0.4794complex0.0127string0.0021Promise<void>0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+appnameName.Otherany0.9482string0.0137void0.0076Function0.0012any[]0.0011
+,Punctuation
+ Text.Whitespace
+appiconName.Otherany0.9643string0.0138void0.0057Function0.0008any[]0.0007
+,Punctuation
+ Text.Whitespace
+notificationsName.Otherany0.9388string0.0244any[]0.0181void0.0029string[]0.0020
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.8729Function0.0515void0.0504string0.0038boolean0.0034
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+gntpName.Otherany0.9328void0.0352string0.0058complex0.0032boolean0.0015
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+appiconName.Otherany0.9447complex0.0154string0.0122void0.0043{}0.0018
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'object'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+notificationsName.Otherany0.9255string0.0421any[]0.0125complex0.0034string[]0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+appiconName.Otherany0.9056string0.0363void0.0041complex0.0031any[]0.0029
+;Punctuation
+\n        Text.Whitespace
+appiconName.Otherany0.9004string0.0325void0.0054Function0.0038RegExp0.0030
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+notificationsName.Otherany0.8457any[]0.0568string0.0429complex0.0102string[]0.0086
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+!Operator
+notificationsName.Otherany0.8846any[]0.0506string0.0315string[]0.0060complex0.0033
+.Punctuation
+lengthName.Otherany0.5913number0.4038string0.0026void0.0007complex0.0005
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+notificationsName.Othercomplex0.5503any0.3300any[]0.0790string0.0033string[]0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+{Punctuation
+ Text.Whitespace
+labelName.Otherstring0.9910any0.0076number0.0004string[]0.0002RegExp0.0002
+:Operator
+ Text.Whitespace
+'default'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+dispnameName.Otherstring0.9606any0.0189RegExp0.0174string[]0.0010number0.0006
+:Operator
+ Text.Whitespace
+'Default Notification'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+enabledName.Otherboolean0.9850any0.0097false0.0014string0.0010true0.0009
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+ Text.Whitespace
+}Punctuation
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+argumentsName.OtherIArguments0.9449any0.0194any[]0.0147string[]0.0016complex0.0012
+[Punctuation
+argumentsName.OtherIArguments0.9764any[]0.0084any0.0049string[]0.0028string0.0003
+.Punctuation
+lengthName.Othernumber0.9090any0.0869string0.0027boolean0.0004complex0.0004
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+callbackName.Otherany0.8789Function0.0448void0.0074number0.0039boolean0.0036
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+argumentsName.OtherIArguments0.9455any0.0286any[]0.0092string[]0.0007any[][]0.0004
+[Punctuation
+argumentsName.OtherIArguments0.9846any[]0.0044any0.0036string[]0.0010any[][]0.0002
+.Punctuation
+lengthName.Othernumber0.8872any0.1096string0.0019void0.0004complex0.0003
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+callbackName.Othervoid0.8619any0.1042Function0.0159boolean0.0038Promise<void>0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+thisKeyword
+.Punctuation
+appnameName.Otherany0.7240string0.0619number0.0382void0.0286boolean0.0188
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+appnameName.Otherany0.8427string0.0326complex0.0198void0.0172number0.0164
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+notificationsName.Otherany0.7760string0.0488any[]0.0397complex0.0130string[]0.0042
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+notificationsName.Otherany0.8147string0.0699any[]0.0336complex0.0136string[]0.0061
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+labelsName.Otherany0.4875string0.1571any[]0.0987string[]0.0885complex0.0479
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+getLabelsName.Otherany0.4247complex0.2287void0.0778string0.0350any[]0.0342
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+registeredName.Otherboolean0.9889any0.0039true0.0021false0.0016number0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n\n    Text.Whitespace
+gntpName.Otherany0.9632complex0.0027string0.0022number0.0012void0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.9384string0.0163complex0.0051void0.0034number0.0033
+ Text.Whitespace
+GNTPName.Otherany0.9924void0.0026complex0.0023string0.0007number0.0004
+(Punctuation
+'REGISTER'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+hostName.Otherany0.6000string0.3436number0.0352void0.0118complex0.0052
+:Operator
+ Text.Whitespace
+this.hostKeyword.Type
+,Punctuation
+ Text.Whitespace
+portName.Otherany0.4309number0.4253string0.1148void0.0101complex0.0079
+:Operator
+ Text.Whitespace
+this.portKeyword.Type
+ Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+gntpName.Otherany0.8914Set<string>0.0117Set<any>0.0090complex0.0028void0.0022
+.Punctuation
+addName.Otherany0.7538void0.1923complex0.0215Promise<void>0.0051Set<string>0.0046
+(Punctuation
+'Application-Name'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+appnameName.Otherany0.7369void0.0977string0.0351complex0.0211number0.0121
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+gntpName.Otherany0.8408Set<string>0.0224Set<any>0.0192complex0.0031void0.0024
+.Punctuation
+addName.Otherany0.7629void0.1917complex0.0160Promise<void>0.0046Set<string>0.0044
+(Punctuation
+'Application-Icon'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+appiconName.Otherany0.7457void0.1308string0.0226complex0.0163number0.0127
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+gntpName.Otherany0.8038Set<string>0.0213Set<any>0.0191complex0.0035void0.0028
+.Punctuation
+addName.Otherany0.8029void0.1555complex0.0173Promise<void>0.0041Set<string>0.0026
+(Punctuation
+'Notifications-Count'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+notificationsName.Otherany0.7066any[]0.1549string0.0442string[]0.0246complex0.0094
+.Punctuation
+lengthName.Othernumber0.7318any0.2631string0.0025complex0.0008void0.0008
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+gntpName.Othercomplex0.7252any0.2000void0.0230{}0.0030Promise<void>0.0016
+.Punctuation
+newlineName.Othervoid0.9261any0.0468complex0.0190boolean0.0034Promise<void>0.0016
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+notificationsName.Otherany[]0.5056any0.1850complex0.0605string[]0.0563any[][]0.0103
+.Punctuation
+forEachName.Othercomplex0.6854void0.1903any0.1020v...0.0133Promise<void>0.0015
+(Punctuation
+functionKeyword.Declaration
+(Punctuation
+notifName.Othercomplex0.1472NotificationsService0.1268any0.0601PromiseConstructor0.0091Post0.0055
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+notifName.Otherany0.7413complex0.2322PromiseConstructor0.0045string0.0008NotificationsService0.0006
+.Punctuation
+enabledName.Otherboolean0.4899any0.4124complex0.0775string0.0079false0.0046
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+ Text.Whitespace
+notifName.Otherany0.8811complex0.1038PromiseConstructor0.0016string0.0008void0.0006
+.Punctuation
+enabledName.Otherboolean0.6971any0.2851complex0.0089string0.0037false0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n        Text.Whitespace
+gntpName.Otherany0.8697Set<string>0.0102Set<any>0.0044RegExp0.0044complex0.0022
+.Punctuation
+addName.Otherany0.8620void0.0928complex0.0265Promise<void>0.0021Set<string>0.0018
+(Punctuation
+'Notification-Name'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+notifName.Otherany0.8216complex0.1583PromiseConstructor0.0029string0.0007any[]0.0004
+.Punctuation
+labelName.Otherstring0.7664any0.2276complex0.0033number0.0012string[]0.0005
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+gntpName.Otherany0.8744Set<string>0.0104Set<any>0.0041complex0.0018HTMLDivElement0.0018
+.Punctuation
+addName.Otherany0.7125void0.2338complex0.0304Promise<void>0.0041Set<string>0.0017
+(Punctuation
+'Notification-Display-Name'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+notifName.Otherany0.9302complex0.0675string0.0004PromiseConstructor0.0002any[]0.0001
+.Punctuation
+dispnameName.Otherany0.7194string0.1360number0.0410complex0.0350void0.0175
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+gntpName.Otherany0.9449Set<string>0.0037complex0.0028Set<any>0.0022void0.0008
+.Punctuation
+addName.Otherany0.8113void0.1330complex0.0343Promise<void>0.0033Set<string>0.0015
+(Punctuation
+'Notification-Enabled'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+notifName.Otherany0.9156complex0.0793string0.0005PromiseConstructor0.0004string[]0.0002
+.Punctuation
+enabledName.Otherboolean0.5452any0.3813complex0.0569string0.0103false0.0023
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+'True'Literal.String.Single
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+'False'Literal.String.Single
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+gntpName.Otherany0.8139Set<string>0.0152Set<any>0.0064complex0.0031HTMLDivElement0.0022
+.Punctuation
+addName.Otherany0.8625void0.0701complex0.0286Promise<void>0.0043Set<string>0.0038
+(Punctuation
+'Notification-Icon'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+notifName.Othercomplex0.4715any0.4473PromiseConstructor0.0052Window0.0016string0.0016
+.Punctuation
+iconName.Otherstring0.8920any0.0796complex0.0159number0.0039void0.0017
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+gntpName.Othercomplex0.5960any0.2933void0.0249{}0.0036Set<string>0.0027
+.Punctuation
+newlineName.Othervoid0.9524any0.0317complex0.0105boolean0.0018Promise<void>0.0011
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+gntpName.Otherany0.8944complex0.0120Subscription0.0034void0.0022HTMLDivElement0.0010
+.Punctuation
+sendName.Otherany0.5358void0.2858complex0.1492Promise<void>0.0155Promise<any>0.0031
+(Punctuation
+callbackName.Othervoid0.4984any0.3659Function0.0801boolean0.0064Promise<void>0.0057
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Send a notification with `text` content. Growly will lazily register itself\n * if the user hasn't already before sending the notification.\n *\n * A notification can have the following `opts` options:\n *\n *  - `.label` type of notification to use (defaults to the first registered type)\n *  - `.title` title of the notification\n *  - `.icon` url, file path, or Buffer instance for the notification's icon.\n *  - `.sticky` whether or not to sticky the notification (defaults to false)\n *  - `.priority` the priority of the notification from lowest (-2) to highest (2)\n *  - `.coalescingId` replace/update the matching previous notification. May be ignored.\n *\n * If provided, `callback` will be called when the user interacts with the notification.\n * The first argument will be an `err` error object, and the second argument an `action`\n * string equal to either 'clicked' or 'closed' (whichever action the user took.)\n *\n * Example notification:\n *\n *     growl.notify('Stuffs broken!', { label: 'warning' }, function(err, action) {\n *         console.log('Action:', action);\n *     });\n *\n * @param {String} text\n * @param {Object} opts\n * @param {Function} callback\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+GrowlyName.Otherany0.7322void0.2108complex0.0222Promise<void>0.0046Function0.0028
+.Punctuation
+prototypeName.Otherany0.8804void0.0151Function0.0067Object0.0043Error0.0016
+.Punctuation
+notifyName.Othervoid0.6350any0.3495complex0.0063Promise<void>0.0031Function0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+textName.Otherstring0.5135any0.4808complex0.0019void0.0010number0.0009
+,Punctuation
+ Text.Whitespace
+optsName.Otherany0.9376complex0.0054{}0.0029Options0.0023string0.0023
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.8163void0.0793Function0.0585boolean0.0085string0.0070
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+selfName.Otherthis0.5482any0.2632void0.1145complex0.0046Promise<void>0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+,Punctuation
+\n        Text.Whitespace
+gntpName.Otherany0.9548void0.0099complex0.0072string0.0040number0.0029
+;Punctuation
+\n\n    Text.Whitespace
+/* Lazy registration. */Comment.Multiline
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+thisKeyword
+.Punctuation
+registeredName.Otherboolean0.9360any0.0245string0.0078void0.0076number0.0048
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+thisKeyword
+.Punctuation
+registerName.Othervoid0.9080any0.0468complex0.0342Promise<void>0.0028boolean0.0014
+(Punctuation
+thisKeyword
+.Punctuation
+appnameName.Otherany0.8175string0.0467void0.0198complex0.0101number0.0087
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+errName.Otherany0.7336Error0.2470string0.0061void0.0010complex0.0008
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.5895Error0.3920string0.0062complex0.0010void0.0009
+)Punctuation
+ Text.Whitespace
+consoleName.OtherConsole0.9996any0.0003void0.0000NumberConstructor0.0000complex0.0000
+.Punctuation
+logName.Othervoid0.9982any0.0011complex0.0003boolean0.0001Promise<void>0.0001
+(Punctuation
+errName.Otherany0.8323Error0.1503string0.0070complex0.0024void0.0011
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+selfName.Otherthis0.4659any0.4050void0.0449Window0.0096complex0.0084
+.Punctuation
+notifyName.Othervoid0.6881any0.2907complex0.0091Promise<void>0.0037boolean0.0019
+.Punctuation
+callName.Otherany0.9825void0.0121complex0.0016T0.0004number0.0003
+(Punctuation
+selfName.Otherany0.8399void0.0456this0.0396complex0.0125string0.0067
+,Punctuation
+ Text.Whitespace
+textName.Otherany0.5676string0.4216complex0.0063number0.0009void0.0008
+,Punctuation
+ Text.Whitespace
+optsName.Otherany0.8948complex0.0183{}0.0152Options0.0043string0.0031
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.7858void0.1192Function0.0326string0.0152boolean0.0085
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+optsName.Otherany0.8642{}0.0279complex0.0174Options0.0043number0.0029
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optsName.Otherany0.8861{}0.0238complex0.0144Options0.0052number0.0029
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+optsName.Otherany0.9462complex0.0177{}0.0046number0.0015string0.0013
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+callbackName.Otherany0.8926Function0.0205boolean0.0147string0.0137void0.0091
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optsName.Otherany0.9238{}0.0124complex0.0120number0.0064string0.0027
+;Punctuation
+\n        Text.Whitespace
+optsName.Otherany0.8939{}0.0348complex0.0191Options0.0036number0.0025
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+gntpName.Otherany0.9485complex0.0051string0.0037void0.0012number0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.9340string0.0171complex0.0083void0.0022number0.0020
+ Text.Whitespace
+GNTPName.Otherany0.9906complex0.0043void0.0019string0.0010number0.0003
+(Punctuation
+'NOTIFY'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+hostName.Otherany0.6422string0.2946number0.0447void0.0088complex0.0059
+:Operator
+ Text.Whitespace
+this.hostKeyword.Type
+,Punctuation
+ Text.Whitespace
+portName.Otherany0.4662number0.3693string0.1337void0.0118complex0.0086
+:Operator
+ Text.Whitespace
+this.portKeyword.Type
+ Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+gntpName.Otherany0.7941Set<any>0.0091Set<string>0.0088void0.0037complex0.0032
+.Punctuation
+addName.Otherany0.7430void0.1693complex0.0282Promise<void>0.0060Set<string>0.0052
+(Punctuation
+'Application-Name'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+thisKeyword
+.Punctuation
+appnameName.Otherany0.4631void0.3345string0.0421number0.0359complex0.0167
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+gntpName.Otherany0.6877Set<string>0.0162Set<any>0.0148void0.0057complex0.0038
+.Punctuation
+addName.Otherany0.7133void0.1756complex0.0320Promise<void>0.0079Set<string>0.0051
+(Punctuation
+'Notification-Name'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+optsName.Otherany0.6493complex0.0862Options0.0164{}0.0057number0.0015
+.Punctuation
+labelName.Otherany0.9008string0.0923complex0.0040number0.0010any[]0.0003
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+labelsName.Otherany[]0.3356any0.2807string[]0.1840number[]0.0851complex0.0331
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+gntpName.Otherany0.7747Set<string>0.0120Set<any>0.0077complex0.0035void0.0030
+.Punctuation
+addName.Otherany0.8082void0.1352complex0.0195Promise<void>0.0034Set<string>0.0030
+(Punctuation
+'Notification-ID'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+++Operator
+thisKeyword
+.Punctuation
+countName.Othernumber0.9755any0.0172void0.0031string0.0018boolean0.0010
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+gntpName.Otherany0.7726Set<string>0.0139Set<any>0.0106void0.0055complex0.0032
+.Punctuation
+addName.Otherany0.7212void0.2292complex0.0178Promise<void>0.0035number0.0019
+(Punctuation
+'Notification-Title'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+optsName.Otherany0.5163complex0.0790Options0.0181{}0.0060void0.0030
+.Punctuation
+titleName.Otherany0.7923string0.1955complex0.0037number0.0019string[]0.0014
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+gntpName.Otherany0.8101Set<string>0.0154Set<any>0.0073void0.0040complex0.0039
+.Punctuation
+addName.Otherany0.7910void0.1573complex0.0202Promise<void>0.0028Set<string>0.0025
+(Punctuation
+'Notification-Text'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+textName.Otherany0.7752string0.2084complex0.0083void0.0014string[]0.0014
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+gntpName.Otherany0.8052Set<string>0.0176Set<any>0.0087void0.0050complex0.0042
+.Punctuation
+addName.Otherany0.7624void0.1687complex0.0277Promise<void>0.0037Set<string>0.0031
+(Punctuation
+'Notification-Sticky'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+optsName.Otherany0.3381complex0.1194Options0.0311{}0.0068any[]0.0026
+.Punctuation
+stickyName.Otherany0.5021boolean0.4641string0.0246complex0.0038void0.0010
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+'True'Literal.String.Single
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+'False'Literal.String.Single
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+gntpName.Otherany0.5231Set<string>0.0387Set<any>0.0158RegExp0.0055complex0.0048
+.Punctuation
+addName.Otherany0.7786void0.1273complex0.0402Set<string>0.0061Promise<void>0.0031
+(Punctuation
+'Notification-Priority'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+optsName.Otherany0.3903complex0.3013Options0.0195{}0.0082any[]0.0025
+.Punctuation
+priorityName.Otherany0.4520string0.2817number0.2095complex0.0265void0.0110
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+gntpName.Otherany0.6488Set<string>0.0311Set<any>0.0169complex0.0066void0.0031
+.Punctuation
+addName.Otherany0.8052void0.1037complex0.0483Set<string>0.0045Promise<void>0.0024
+(Punctuation
+'Notification-Icon'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+optsName.Othercomplex0.2807any0.1094Options0.0245{}0.0089any[]0.0033
+.Punctuation
+iconName.Otherstring0.8140any0.1311complex0.0393void0.0044number0.0034
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+gntpName.Otherany0.8214Set<string>0.0196Set<any>0.0063complex0.0050void0.0037
+.Punctuation
+addName.Otherany0.8118void0.1251complex0.0322Set<string>0.0038Promise<void>0.0019
+(Punctuation
+'Notification-Coalescing-ID'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+optsName.Otherany0.5879complex0.1228Options0.0227{}0.0072any[]0.0018
+.Punctuation
+coalescingIdName.Otherany0.7116string0.0754complex0.0729boolean0.0211void0.0176
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+gntpName.Otherany0.7133Set<string>0.0306Set<any>0.0122complex0.0066void0.0030
+.Punctuation
+addName.Otherany0.8799void0.0753complex0.0235Set<string>0.0030Promise<void>0.0019
+(Punctuation
+'Notification-Callback-Context'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.5871boolean0.1332void0.0783Function0.0407string0.0158
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+'context'Literal.String.Single
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+gntpName.Otherany0.6954Set<string>0.0259Set<any>0.0080complex0.0054RegExp0.0029
+.Punctuation
+addName.Otherany0.8855void0.0706complex0.0167Set<string>0.0037Promise<void>0.0025
+(Punctuation
+'Notification-Callback-Context-Type'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.5935boolean0.0805void0.0804Function0.0535string0.0126
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+'string'Literal.String.Single
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+gntpName.Otherany0.6867Set<string>0.0224Set<any>0.0083complex0.0036Dictionary<string>0.0019
+.Punctuation
+addName.Otherany0.8342void0.1211complex0.0137Set<string>0.0041Promise<void>0.0038
+(Punctuation
+'Notification-Callback-Target'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+gntpName.Othercomplex0.6333any0.2747void0.0275{}0.0025T0.0014
+.Punctuation
+newlineName.Othervoid0.8871any0.0799complex0.0230boolean0.0040Promise<void>0.0015
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+gntpName.Otherany0.9096complex0.0346void0.0014Subscription0.0009any[]0.0005
+.Punctuation
+sendName.Otherany0.6619void0.2145complex0.1085Promise<void>0.0064Promise<any>0.0011
+(Punctuation
+functionKeyword.Declaration
+(Punctuation
+errName.Otherany0.6270Error0.3274string0.0141void0.0017Event0.0015
+,Punctuation
+ Text.Whitespace
+respName.Otherany0.9716string0.0037Response0.0022void0.0017Buffer0.0015
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+callbackName.Otherany0.6927void0.1256boolean0.0826Function0.0476string0.0074
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+errName.Otherany0.8043Error0.1585string0.0114boolean0.0033void0.0016
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+callbackName.Otherany0.5269void0.2626Function0.1070boolean0.0121Callback0.0065
+(Punctuation
+errName.Otherany0.7155Error0.2580string0.0105complex0.0016never0.0010
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+callbackName.Otherany0.8319void0.0468boolean0.0386Function0.0289string0.0113
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+respName.Otherany0.9845string0.0008Response0.0008complex0.0005void0.0005
+.Punctuation
+stateName.Otherany0.9884string0.0077complex0.0007number0.0006void0.0005
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'CALLBACK'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+callbackName.Otherany0.5392void0.3020Function0.0661boolean0.0137Callback0.0057
+(Punctuation
+undefinedKeyword.Constant
+,Punctuation
+ Text.Whitespace
+respName.Otherany0.9816complex0.0013string0.0011number0.0009{}0.0007
+[Punctuation
+'Notification-Callback-Result'Literal.String.Single
+]Punctuation
+.Punctuation
+toLowerCaseName.Otherany0.7483string0.2469number0.0009void0.0009complex0.0007
+(Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Expose an instance of the Growly object.\n */Comment.Multiline
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.9442string0.0175complex0.0040void0.0020number0.0014
+ Text.Whitespace
+GrowlyName.Otherany0.9960void0.0012complex0.0010string0.0008number0.0002
+(Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
