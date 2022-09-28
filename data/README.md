@@ -5,7 +5,7 @@ There are four datasets, extracted from the `top1k-plus` dataset:
   * `top1k-typed-nodeps`
     * **291** packages that are typed and have no dependencies
   * `top1k-untyped-nodeps`
-    * **103** packages that are untyped and have no dependencies
+    * **102** packages that are untyped and have no dependencies
   * `top1k-typed-with-typed-deps`
     * **92** packages that are typed and all their dependencies are typed
   * `top1k-untyped-with-typed-deps`
