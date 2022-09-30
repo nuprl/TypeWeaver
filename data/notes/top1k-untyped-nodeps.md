@@ -62,6 +62,9 @@ Summary:
     Number of skips: 0
     Time for type checking: 0:00:31
 
+Note: 102 projects were type checked; however, this includes projects that were
+not fully migrated to TypeScript.
+
 For a per-file count of type checking failures, we use `find` to count the
 number of JavaScript files in the dataset, and `grep` the errors to count the
 number of files with compiler errors:
@@ -170,7 +173,7 @@ number of files with compiler errors:
 
     find original/top1k-untyped-nodeps -name "*.js" -type f | wc -l
 
-    grep "^[^ ]" DeepTyper/top1k-untyped-nodeps \
+    grep "^[^ ]" LambdaNet/top1k-untyped-nodeps \
         | cut -d"(" -f1 | sort | uniq | wc -l
 
 There are 263 JavaScript files in the dataset, and 184 had type checking errors.
