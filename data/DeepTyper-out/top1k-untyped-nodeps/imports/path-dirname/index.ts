@@ -1,6 +1,6 @@
 'use strict';
 
-var path: any = require('path');
+import path from 'path';
 var inspect: any = require('util').inspect;
 
 function assertPath(path: string): void {

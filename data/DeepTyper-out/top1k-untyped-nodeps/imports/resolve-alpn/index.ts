@@ -1,5 +1,5 @@
 'use strict';
-const tls: any = require('tls');
+import tls from 'tls';
 
 module.exports = (options = {}, connect = tls.connect) => new Promise((resolve: void, reject: void) => {
 	let timeout: number = false;

@@ -1,9 +1,9 @@
 'use strict'
 
-var cheerio: any = require('cheerio')
-var Acho: any = require('acho')
-var got: any = require('got')
-var fs: any = require('fs')
+import cheerio from 'cheerio'
+import Acho from 'acho'
+import got from 'got'
+import fs from 'fs'
 var log: any = Acho()
 
 var CONST: any = {

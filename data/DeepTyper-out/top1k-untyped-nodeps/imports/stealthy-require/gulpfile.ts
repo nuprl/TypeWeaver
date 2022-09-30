@@ -1,12 +1,12 @@
 'use strict';
 
-var gulp: any = require('gulp');
-var istanbul: any = require('gulp-istanbul');
-var mocha: any = require('gulp-mocha');
-var chalk: any = require('chalk');
-var rimraf: any = require('rimraf');
-var eslint: any = require('gulp-eslint');
-var mkdirp: any = require('mkdirp');
+import gulp from 'gulp';
+import istanbul from 'gulp-istanbul';
+import mocha from 'gulp-mocha';
+import chalk from 'chalk';
+import rimraf from 'rimraf';
+import eslint from 'gulp-eslint';
+import mkdirp from 'mkdirp';
 
 
 var paths: any = {

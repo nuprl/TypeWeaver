@@ -1,6 +1,6 @@
 'use strict';
 
-var slice: any = require('array-slice');
+import slice from 'array-slice';
 
 module.exports = function () {
   var args: any[] = slice(arguments);

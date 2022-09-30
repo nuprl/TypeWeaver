@@ -1,7 +1,7 @@
 'use strict';
 
-const fs: any = require('fs');
-const regenerate: any = require('regenerate');
+import fs from 'fs';
+import regenerate from 'regenerate';
 
 // https://html.spec.whatwg.org/multipage/scripting.html#valid-custom-element-name
 

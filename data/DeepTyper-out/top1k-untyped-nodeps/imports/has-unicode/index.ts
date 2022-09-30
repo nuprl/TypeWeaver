@@ -1,5 +1,5 @@
 "use strict"
-var os: any = require("os")
+import os from 'os'
 
 var hasUnicode: any = module.exports = function () {
   // Recent Win32 platforms (>XP) CAN support unicode in the console but

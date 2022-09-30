@@ -1,6 +1,6 @@
 'use strict';
-var path: any = require('path');
-var fs: any = require('fs');
+import path from 'path';
+import fs from 'fs';
 var nm: any = require('./');
 
 var nms: string = nm.toString();

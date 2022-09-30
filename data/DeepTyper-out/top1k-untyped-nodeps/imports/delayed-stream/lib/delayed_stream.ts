@@ -1,5 +1,5 @@
 var Stream: any = require('stream').Stream;
-var util: any = require('util');
+import util from 'util';
 
 module.exports = DelayedStream;
 function DelayedStream(): void {

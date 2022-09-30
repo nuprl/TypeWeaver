@@ -81,7 +81,7 @@ class FiggyPudding {
   }
 }
 try {
-  const util: any = require('util')
+  import util from 'util'
   FiggyPudding.prototype[util.inspect.custom] = function (depth: any, opts: any) {
     return (
       this[Symbol.toStringTag] + ' '

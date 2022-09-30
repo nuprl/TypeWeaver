@@ -4,7 +4,7 @@
 
 module.exports = function() {
 	// Import Events
-	var events: any = require("events");
+	import events from 'events';
 
 	// Export Domain
 	var domain: {} = {};

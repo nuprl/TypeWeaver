@@ -2,11 +2,11 @@
 // the rest we don't care about.
 
 var sax: any = require('../lib/sax.js')
-var fs: any = require('fs')
-var path: any = require('path')
+import fs from 'fs'
+import path from 'path'
 var xmlFile: any = path.resolve(__dirname, 'shopping.xml')
-var util: any = require('util')
-var http: any = require('http')
+import util from 'util'
+import http from 'http'
 
 fs.readFile(xmlFile, function (er: any, d: any) {
   http.createServer(function (req: any, res: any) {
