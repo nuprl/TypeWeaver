@@ -1,30 +1,8 @@
 import * as fs from "node:fs";
 import * as path from "path";
+import * as ts from "ts-morph";
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
-
-function transformRequire(line: string, debug: boolean = false): string {
-    const regexes: {pattern: RegExp, replacement: string}[] = [
-        {
-            //        (var|let|const)   (foo): T      =    require ("    module    " )
-            pattern: /(var|let|const)\s+(\S+):\s+\S+\s+=\s+require\(['"]([^.]\S+)['"]\)(;|$)/,
-            //            import foo from 'module'
-            replacement: "import $2 from '$3'$4"
-        }
-    ];
-
-    let retVal = line;
-    for (const r of regexes) {
-        retVal = line.replace(r.pattern, r.replacement);
-        if (debug && r.pattern.test(line)) {
-            console.log("Matched: " + r.pattern);
-            console.log("\tBefore: " + line);
-            console.log("\tAfter:  " + retVal);
-        }
-    }
-
-    return retVal;
-}
 
 const yargsBuilder = yargs(hideBin(process.argv))
     .option("output", {
@@ -52,31 +30,77 @@ const yargsBuilder = yargs(hideBin(process.argv))
 
 const argv = yargsBuilder.parseSync();
 
-const inputFilename: string = argv._[0].toString();
+const inputFilename: string = path.resolve(argv._[0].toString());
 const outputFilename: string = typeof argv.output === "undefined"
     ? inputFilename
-    : argv.output as string;
+    : path.resolve(argv.output);
 
 if (!fs.existsSync(inputFilename)) {
     console.log("File does not exist: " + inputFilename);
     yargsBuilder.showHelp();
 }
 
-// Read in file
-const contents: string[] = fs.readFileSync(inputFilename).toString().split("\n");
-const outputBuffer: string[] = [];
+const project: ts.Project = new ts.Project();
+const sourceFile: ts.SourceFile = project.addSourceFileAtPath(inputFilename);
+let outputFile: ts.SourceFile = sourceFile.copyImmediatelySync(outputFilename, { overwrite: true });
 
-// Transform each line
-contents.forEach((line, index) => {
-    outputBuffer[index] = transformRequire(line, argv.debug);
-});
+function liftDeclarations(file: ts.SourceFile): void {
+    for (const node of file.getChildSyntaxListOrThrow().getChildren()) {
+        if (node.getKind() === ts.SyntaxKind.VariableStatement && node.getIndentationLevel() === 0) {
+            const varStmt: ts.VariableStatement = node.asKindOrThrow(ts.SyntaxKind.VariableStatement);
+            const declKind: ts.VariableDeclarationKind = varStmt.getDeclarationKind();
+            const decls: ts.VariableDeclaration[] = varStmt.getDeclarations()
 
-// Write output file
-fs.writeFileSync(outputFilename, outputBuffer.join("\n"));
+            if (decls.length == 1) {
+                continue;
+            }
 
-if (argv.debug) {
-    console.log();
-    for (const line of outputBuffer) {
-        console.log(line);
+            const newDeclText: string = decls.map(d => `${declKind} ${d.getText()};`).join("\n");
+
+            if (argv.debug) {
+                console.log("Rewriting: " + varStmt.getText());
+            }
+
+            varStmt.replaceWithText(newDeclText);
+        }
     }
 }
+
+function traverse(file: ts.Node): void {
+    for (const node of file.getChildSyntaxListOrThrow().getChildren()) {
+        if (node.getKind() === ts.SyntaxKind.VariableStatement && node.getIndentationLevel() === 0) {
+            const varStmt: ts.VariableStatement = node.asKindOrThrow(ts.SyntaxKind.VariableStatement);
+
+            const decl: ts.VariableDeclaration = varStmt.getDeclarations()[0];
+            const importName: ts.Identifier | undefined = decl.getChildAtIndexIfKind(0, ts.SyntaxKind.Identifier);
+            const callExpr: ts.CallExpression | undefined = decl.getChildAtIndexIfKind(2, ts.SyntaxKind.CallExpression);
+
+            if (decl.getChildCount() === 3 && importName && callExpr) {
+                const funID: ts.Identifier | undefined = callExpr.getChildAtIndexIfKind(0, ts.SyntaxKind.Identifier);
+                const args: ts.Node[] = callExpr.getArguments()
+                const arg: ts.Node | undefined =
+                    args.length == 1 && args[0].getKind() === ts.SyntaxKind.StringLiteral
+                    ? args[0] : undefined;
+
+                if (funID && funID.getText() === "require" && arg) {
+                    const importStr: string = `import ${importName.getText()} from ${arg.getText()};`;
+
+                    if (argv.debug) {
+                        console.log("Rewriting: " + varStmt.getText());
+                    }
+
+                    varStmt.replaceWithText(importStr);
+                }
+            }
+        }
+    }
+}
+
+
+liftDeclarations(outputFile);
+traverse(outputFile);
+
+if (argv.debug) {
+    console.log(outputFile.getFullText());
+}
+outputFile.saveSync();
