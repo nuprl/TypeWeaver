@@ -6,7 +6,7 @@ var asynckit: any = require('./')
   , expected = 0
   ;
 
-import Benchmark from 'benchmark';
+var Benchmark: any = require('benchmark');
 var suite: any = new Benchmark.Suite;
 
 var source: any[] = [];

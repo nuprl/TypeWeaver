@@ -1,8 +1,8 @@
 'use strict';
 
-import fs from 'fs';
-import jsesc from 'jsesc';
-import canonicalProperties from 'unicode-canonical-property-names-ecmascript';
+const fs: any = require('fs');
+const jsesc: any = require('jsesc');
+const canonicalProperties: any = require('unicode-canonical-property-names-ecmascript');
 
 const parsePropertyAliases: any = function() {
 	const map: any = new Map();

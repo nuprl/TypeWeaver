@@ -2,9 +2,9 @@
 
 // copy/pasted, and adjusted, from: https://github.com/acornjs/acorn-class-fields/blob/master/run_test262.js
 
-import path from 'path';
-import run from 'test262-parser-runner';
-import acorn from 'acorn';
+const path: any = require("path");
+const run: any = require("test262-parser-runner");
+const acorn: any = require("acorn");
 const Parser: any = acorn.Parser.extend(require(".").importAssertions);
 
 const unsupportedFeatures: any[] = [];

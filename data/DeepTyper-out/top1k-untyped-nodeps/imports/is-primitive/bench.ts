@@ -1,4 +1,4 @@
-import Benchmark from 'benchmark';
+const Benchmark: any = require('benchmark');
 const suite: any = new Benchmark.Suite();
 
 const array: any = { boolean: true, number: true, string: true, symbol: true, undefined: true };

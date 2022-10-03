@@ -1,5 +1,5 @@
 
-import define from 'define-property';
+var define: any = require('define-property');
 var use: any = require('..');
 
 function App(name: string): any {

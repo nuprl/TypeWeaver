@@ -1,4 +1,4 @@
-import crypto from 'crypto'
+var crypto: any = require('crypto')
 
 function sha (key: string, body: any, algorithm: string): string {
   return crypto.createHmac(algorithm, key).update(body).digest('base64')

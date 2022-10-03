@@ -19,7 +19,7 @@
  * Module dependencies.
  */
 
-import crypto from 'crypto'
+var crypto: any = require('crypto')
   , parse = require('url').parse
   ;
 

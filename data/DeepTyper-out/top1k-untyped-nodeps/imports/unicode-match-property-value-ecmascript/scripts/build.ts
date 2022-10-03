@@ -1,7 +1,7 @@
 'use strict';
 
-import valueAliases from 'unicode-property-value-aliases-ecmascript';
-import jsesc from 'jsesc';
+const valueAliases: any = require('unicode-property-value-aliases-ecmascript');
+const jsesc: any = require('jsesc');
 
 const propertyToValueAliases: any = new Map(valueAliases);
 

@@ -1,9 +1,9 @@
 'use strict';
 
-import gulp from 'gulp';
-import mocha from 'gulp-mocha';
-import istanbul from 'gulp-istanbul';
-import eslint from 'gulp-eslint';
+var gulp: any = require('gulp');
+var mocha: any = require('gulp-mocha');
+var istanbul: any = require('gulp-istanbul');
+var eslint: any = require('gulp-eslint');
 
 gulp.task('coverage', function() {
   return gulp.src('index.js')

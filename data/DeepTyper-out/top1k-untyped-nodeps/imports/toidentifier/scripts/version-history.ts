@@ -1,7 +1,7 @@
 'use strict'
 
-import fs from 'fs'
-import path from 'path'
+var fs: any = require('fs')
+var path: any = require('path')
 
 var HISTORY_FILE_PATH: any = path.join(__dirname, '..', 'HISTORY.md')
 var MD_HEADER_REGEXP: string = /^====*$/

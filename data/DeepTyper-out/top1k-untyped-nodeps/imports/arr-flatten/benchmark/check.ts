@@ -1,9 +1,9 @@
 'use strict';
 
-import path from 'path';
-import util from 'util';
-import glob from 'glob';
-import bold from 'ansi-bold';
+var path: any = require('path');
+var util: any = require('util');
+var glob: any = require('glob');
+var bold: any = require('ansi-bold');
 
 /**
  * Sanity check

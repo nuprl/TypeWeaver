@@ -5,7 +5,7 @@ realpath.realpathSync = realpathSync
 realpath.monkeypatch = monkeypatch
 realpath.unmonkeypatch = unmonkeypatch
 
-import fs from 'fs'
+var fs: any = require('fs')
 var origRealpath: any = fs.realpath
 var origRealpathSync: any = fs.realpathSync
 

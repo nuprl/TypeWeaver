@@ -1,5 +1,5 @@
-import test from 'ava'
-import semver from 'semver'
+const test: any = require('ava')
+const semver: any = require('semver')
 
 // not using rewire
 const atLeastNode: any = require('.')
