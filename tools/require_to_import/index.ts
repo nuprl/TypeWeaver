@@ -66,6 +66,12 @@ function liftDeclarations(file: ts.SourceFile): void {
     }
 }
 
+// TODO: handling "./abc.js" or "./abc.json"
+// handling "." or ".."
+// const { foo } = require('bar')
+// var a = require('b').a
+// handling exports, non-default exports
+
 function traverse(file: ts.Node): void {
     for (const node of file.getChildSyntaxListOrThrow().getChildren()) {
         if (node.getKind() === ts.SyntaxKind.VariableStatement && node.getIndentationLevel() === 0) {
