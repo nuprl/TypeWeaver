@@ -58,7 +58,7 @@ function liftDeclarations(file: ts.SourceFile): void {
             const newDeclText: string = decls.map(d => `${declKind} ${d.getText()};`).join("\n");
 
             if (argv.debug) {
-                console.log("Rewriting: " + varStmt.getText());
+                console.log("Lifting: " + varStmt.getText());
             }
 
             varStmt.replaceWithText(newDeclText);
@@ -72,11 +72,15 @@ function traverse(file: ts.Node): void {
             const varStmt: ts.VariableStatement = node.asKindOrThrow(ts.SyntaxKind.VariableStatement);
 
             const decl: ts.VariableDeclaration = varStmt.getDeclarations()[0];
-            const importName: ts.Identifier | undefined = decl.getChildAtIndexIfKind(0, ts.SyntaxKind.Identifier);
-            const callExpr: ts.CallExpression | undefined = decl.getChildAtIndexIfKind(2, ts.SyntaxKind.CallExpression);
 
-            if (decl.getChildCount() === 3 && importName && callExpr) {
-                const funID: ts.Identifier | undefined = callExpr.getChildAtIndexIfKind(0, ts.SyntaxKind.Identifier);
+            const importName: ts.Identifier | undefined =
+                decl.getChildAtIndexIfKind(0, ts.SyntaxKind.Identifier);
+            const callExpr: ts.CallExpression | undefined =
+                decl.getChildAtIndexIfKind(decl.getChildCount() - 1, ts.SyntaxKind.CallExpression);
+
+            if (importName && callExpr) {
+                const funID: ts.Identifier | undefined =
+                    callExpr.getChildAtIndexIfKind(0, ts.SyntaxKind.Identifier);
                 const args: ts.Node[] = callExpr.getArguments()
                 const arg: ts.Node | undefined =
                     args.length == 1 && args[0].getKind() === ts.SyntaxKind.StringLiteral
@@ -87,6 +91,7 @@ function traverse(file: ts.Node): void {
 
                     if (argv.debug) {
                         console.log("Rewriting: " + varStmt.getText());
+                        console.log("       To: " + importStr);
                     }
 
                     varStmt.replaceWithText(importStr);
@@ -95,7 +100,6 @@ function traverse(file: ts.Node): void {
         }
     }
 }
-
 
 liftDeclarations(outputFile);
 traverse(outputFile);
