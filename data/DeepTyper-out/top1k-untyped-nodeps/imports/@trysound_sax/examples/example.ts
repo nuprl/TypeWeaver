@@ -1,13 +1,13 @@
-var fs: any = require('fs'),
-  util = require('util'),
-  path = require('path'),
-  xml = fs.readFileSync(path.join(__dirname, 'test.xml'), 'utf8'),
-  sax = require('../lib/sax'),
-  strict = sax.parser(true),
-  loose = sax.parser(false, {trim: true}),
-  inspector = function (ev: any) { return function (data: any) {
+import fs from 'fs';
+import util from 'util';
+import path from 'path';
+var xml = fs.readFileSync(path.join(__dirname, 'test.xml'), 'utf8');
+import sax from '../lib/sax';
+var strict = sax.parser(true);
+var loose = sax.parser(false, {trim: true});
+var inspector = function (ev: any) { return function (data: any) {
       console.error('%s %s %j', this.line + ':' + this.column, ev, data)
-    }}
+    }};
 
 sax.EVENTS.forEach(function (ev: any) {
   loose['on' + ev] = inspector(ev)

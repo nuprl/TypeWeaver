@@ -1,6 +1,6 @@
-var sax: any = require('../lib/sax'),
-  printer = sax.createStream(false, {lowercasetags: true, trim: true}),
-  fs = require('fs')
+import sax from '../lib/sax';
+var printer = sax.createStream(false, {lowercasetags: true, trim: true});
+import fs from 'fs';
 
 function entity (str: any): any {
   return str.replace('"', '&quot;')

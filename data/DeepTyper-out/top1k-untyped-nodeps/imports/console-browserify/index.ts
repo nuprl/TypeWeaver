@@ -1,6 +1,6 @@
 /*global window, global*/
-var util: any = require("util")
-var assert: any = require("assert")
+import util from "util";
+import assert from "assert";
 function now(): number { return new Date().getTime() }
 
 var slice: any[] = Array.prototype.slice

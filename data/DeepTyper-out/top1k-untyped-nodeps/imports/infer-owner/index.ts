@@ -1,5 +1,5 @@
 const cache: any = new Map()
-const fs: any = require('fs')
+import fs from 'fs';
 const { dirname, resolve } = require('path')
 
 

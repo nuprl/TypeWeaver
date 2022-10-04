@@ -1,7 +1,6 @@
-var iterate: any    = require('./lib/iterate.js')
-  , initState  = require('./lib/state.js')
-  , terminator = require('./lib/terminator.js')
-  ;
+import iterate from './lib/iterate.js';
+import initState from './lib/state.js';
+import terminator from './lib/terminator.js';
 
 // Public API
 module.exports = serialOrdered;

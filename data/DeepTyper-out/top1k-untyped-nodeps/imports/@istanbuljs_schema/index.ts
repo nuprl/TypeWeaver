@@ -1,7 +1,7 @@
 'use strict';
 
-const defaultExclude: any = require('./default-exclude.js');
-const defaultExtension: any = require('./default-extension.js');
+import defaultExclude from './default-exclude.js';
+import defaultExtension from './default-extension.js';
 
 const nycCommands: any = {
 	all: [null, 'check-coverage', 'instrument', 'merge', 'report'],

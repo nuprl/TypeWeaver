@@ -1,5 +1,5 @@
 'use strict'
-var consoleControl: any = require('./index.js')
+import consoleControl from './index.js';
 
 process.stdout.write(consoleControl.goto(1, 1) + consoleControl.eraseData())
 for (var ii = 0; ii < 20; ++ii) {

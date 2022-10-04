@@ -1,4 +1,4 @@
-var GNTP: any = require('./gntp.js');
+import GNTP from './gntp.js';
 
 /**
  * Interface for registering Growl applications and sending Growl notifications.

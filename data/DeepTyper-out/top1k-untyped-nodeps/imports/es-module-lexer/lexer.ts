@@ -1,18 +1,20 @@
-let source: string, pos, end,
-  openTokenDepth,
-  lastTokenPos,
-  openTokenPosStack,
-  openClassPosStack,
-  curDynamicImport,
-  templateStackDepth,
-  facade,
-  lastSlashWasDivision,
-  nextBraceIsClass,
-  templateDepth,
-  templateStack,
-  imports,
-  exports,
-  name;
+let source: string;
+let pos;
+let end;
+let openTokenDepth;
+let lastTokenPos;
+let openTokenPosStack;
+let openClassPosStack;
+let curDynamicImport;
+let templateStackDepth;
+let facade;
+let lastSlashWasDivision;
+let nextBraceIsClass;
+let templateDepth;
+let templateStack;
+let imports;
+let exports;
+let name;
 
 function addImport (ss: any, s: string, e: any, d: any): boolean {
   const impt: any = { ss, se: d === -2 ? e : d === -1 ? e + 1 : 0, s, e, d, a: -1, n: undefined };

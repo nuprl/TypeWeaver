@@ -1,7 +1,7 @@
 "use strict";
 
-var Iteration: any = require("./iteration");
-var ArrayIterator: any = require("./array-iterator");
+import Iteration from "./iteration";
+import ArrayIterator from "./array-iterator";
 
 module.exports = ObjectIterator;
 function ObjectIterator(iterable: any, start: number, stop: number, step: number): void {

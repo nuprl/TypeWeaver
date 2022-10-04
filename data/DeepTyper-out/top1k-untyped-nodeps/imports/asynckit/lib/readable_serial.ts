@@ -1,4 +1,4 @@
-var serial: any = require('../serial.js');
+import serial from '../serial.js';
 
 // API
 module.exports = ReadableSerial;

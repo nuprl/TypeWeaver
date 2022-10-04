@@ -1,4 +1,7 @@
-let asm: number, asmBuffer, allocSize = 2<<19, addr;
+let asm: number;
+let asmBuffer;
+let allocSize = 2<<19;
+let addr;
 
 const copy: any = new Uint8Array(new Uint16Array([1]).buffer)[0] === 1 ? function (src: string, outBuf16: number) {
   const len: number = src.length;
@@ -15,7 +18,8 @@ const copy: any = new Uint8Array(new Uint16Array([1]).buffer)[0] === 1 ? functio
 };
 const words: string = 'xportmportlassetafromsyncunctionssertvoyiedelecontininstantybreareturdebuggeawaithrwhileforifcatcfinallels';
 
-let source: string, name;
+let source: string;
+let name;
 export function parse (_source, _name = '@') {
   source = _source;
   name = _name;

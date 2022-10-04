@@ -1,7 +1,7 @@
 'use strict';
 
-var Parser: any   = require('./parser'),
-    Pipeline = require('./pipeline');
+import Parser from './parser';
+import Pipeline from './pipeline';
 
 var Extensions: void = function() {
   this._rsv1 = this._rsv2 = this._rsv3 = null;

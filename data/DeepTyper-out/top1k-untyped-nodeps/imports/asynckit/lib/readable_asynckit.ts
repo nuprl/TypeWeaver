@@ -1,6 +1,5 @@
-var streamify: any = require('./streamify.js')
-  , defer     = require('./defer.js')
-  ;
+import streamify from './streamify.js';
+import defer from './defer.js';
 
 // API
 module.exports = ReadableAsyncKit;

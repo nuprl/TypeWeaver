@@ -20,9 +20,9 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-var pathModule: any = require('path');
+import pathModule from 'path';
 var isWindows: boolean = process.platform === 'win32';
-var fs: any = require('fs');
+import fs from 'fs';
 
 // JavaScript implementation of realpath, ported from node pre-v6
 

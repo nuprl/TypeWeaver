@@ -1,7 +1,7 @@
-var net: any = require('net'),
-    crypto = require('crypto'),
-    format = require('util').format,
-    fs = require('fs');
+import net from 'net';
+import crypto from 'crypto';
+var format = require('util').format;
+import fs from 'fs';
 
 var nl: string = '\r\n';
 

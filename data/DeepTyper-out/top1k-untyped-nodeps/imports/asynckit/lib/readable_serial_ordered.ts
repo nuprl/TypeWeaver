@@ -1,4 +1,4 @@
-var serialOrdered: any = require('../serialOrdered.js');
+import serialOrdered from '../serialOrdered.js';
 
 // API
 module.exports = ReadableSerialOrdered;

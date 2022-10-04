@@ -1,6 +1,5 @@
-var abort: any = require('./abort.js')
-  , async = require('./async.js')
-  ;
+import abort from './abort.js';
+import async from './async.js';
 
 // API
 module.exports = terminator;

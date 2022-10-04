@@ -1,4 +1,4 @@
-var equal: any = require('../');
+import equal from '../';
 console.dir([
     equal(
         { a : [ 2, 3 ], b : [ 4 ] },

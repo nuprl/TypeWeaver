@@ -1,3 +1,3 @@
-var growly: any = require('../lib/growly.js');
+import growly from '../lib/growly.js';
 
 growly.notify('Hello, world!');

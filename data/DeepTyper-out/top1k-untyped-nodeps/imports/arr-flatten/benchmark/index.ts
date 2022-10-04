@@ -1,6 +1,6 @@
 'use strict';
 
-var Suite: any = require('benchmarked');
+import Suite from 'benchmarked';
 var suite: any = new Suite({
   result: false,
   fixtures: 'fixtures/*.js',

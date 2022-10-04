@@ -1,11 +1,11 @@
 'use strict';
 
-const Module: any = require('module');
-const crypto: any = require('crypto');
-const fs: any = require('fs');
-const path: any = require('path');
-const vm: any = require('vm');
-const os: any = require('os');
+import Module from 'module';
+import crypto from 'crypto';
+import fs from 'fs';
+import path from 'path';
+import vm from 'vm';
+import os from 'os';
 
 const hasOwnProperty: any = Object.prototype.hasOwnProperty;
 

@@ -1,6 +1,6 @@
-const test: any = require('ava')
-const rewire: any = require('rewire')
-const semver: any = require('semver')
+import test from 'ava';
+import rewire from 'rewire';
+import semver from 'semver';
 
 // loading with rewire to mock process.versions.node
 const atLeastNode: any = rewire('.')

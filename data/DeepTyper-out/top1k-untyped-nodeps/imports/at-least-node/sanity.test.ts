@@ -1,8 +1,8 @@
-const test: any = require('ava')
-const semver: any = require('semver')
+import test from 'ava';
+import semver from 'semver';
 
 // not using rewire
-const atLeastNode: any = require('.')
+import atLeastNode from '.';
 
 // make sure logic isn't backwards in the matrix tests
 // and make sure rewire isn't causing bugs

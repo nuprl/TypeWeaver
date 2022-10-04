@@ -4,7 +4,9 @@ const leftCurlyBrace: number = "{".charCodeAt(0);
 const space: number = " ".charCodeAt(0);
 
 const keyword: string = "assert";
-const FUNC_STATEMENT: number = 1, FUNC_HANGING_STATEMENT = 2, FUNC_NULLABLE_ID = 4
+const FUNC_STATEMENT: number = 1;
+const FUNC_HANGING_STATEMENT = 2;
+const FUNC_NULLABLE_ID = 4;
 
 export function importAssertions(Parser: any): string {
   // Use supplied version acorn version if present, to avoid

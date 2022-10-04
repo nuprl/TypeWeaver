@@ -1,6 +1,6 @@
 'use strict'
 
-var fib: any = require('./fib')
+import fib from './fib';
 var max: number = 100000000
 var start: number = Date.now()
 

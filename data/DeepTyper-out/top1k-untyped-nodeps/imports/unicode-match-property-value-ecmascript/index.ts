@@ -1,6 +1,6 @@
 'use strict';
 
-const propertyToValueAliases: any = require('./data/mappings.js');
+import propertyToValueAliases from './data/mappings.js';
 
 const matchPropertyValue: void = function(property: string, value: string) {
 	const aliasToValue: any = propertyToValueAliases.get(property);
