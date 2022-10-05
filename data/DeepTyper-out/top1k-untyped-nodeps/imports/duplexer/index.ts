@@ -1,4 +1,4 @@
-import Stream from "stream";
+var Stream: any = require("stream")
 var writeMethods: string[] = ["write", "end", "destroy"]
 var readMethods: string[] = ["resume", "pause"]
 var readEvents: string[] = ["data", "close"]

@@ -1,4 +1,4 @@
-import parallel from '../parallel.js';
+var parallel: any = require('../parallel.js');
 
 // API
 module.exports = ReadableParallel;

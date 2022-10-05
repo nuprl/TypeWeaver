@@ -1,6 +1,6 @@
 'use strict';
 
-import RingBuffer from './ring_buffer';
+var RingBuffer: any = require('./ring_buffer');
 
 var Functor: void = function(session: any, method: any) {
   this._session = session;

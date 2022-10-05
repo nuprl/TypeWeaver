@@ -1,13 +1,21 @@
 #!/usr/bin/env node
-import commander from 'commander';
-import fs from 'fs';
-import glob from 'glob';
-var groups = [];
-var total = 0;
-var warning1 = '/* ERROR: Rewrite using Buffer */\n';
-var warning2 = '\\/\\* ERROR\\: Rewrite using Buffer \\*\\/\\n';
-var length;
-var i;
+/*********************************************************************
+ * NAN - Native Abstractions for Node.js
+ *
+ * Copyright (c) 2018 NAN contributors
+ *
+ * MIT License <https://github.com/nodejs/nan/blob/master/LICENSE.md>
+ ********************************************************************/
+
+var commander: any = require('commander'),
+    fs = require('fs'),
+    glob = require('glob'),
+    groups = [],
+    total = 0,
+    warning1 = '/* ERROR: Rewrite using Buffer */\n',
+    warning2 = '\\/\\* ERROR\\: Rewrite using Buffer \\*\\/\\n',
+    length,
+    i;
 
 fs.readFile(__dirname + '/package.json', 'utf8', function (err: any, data: any) {
   if (err) {

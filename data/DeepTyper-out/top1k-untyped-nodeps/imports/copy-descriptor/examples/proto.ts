@@ -1,6 +1,6 @@
 'use strict';
 
-import copy from '..';
+var copy: any = require('..');
 
 function App(): any {
   this.cache = {};

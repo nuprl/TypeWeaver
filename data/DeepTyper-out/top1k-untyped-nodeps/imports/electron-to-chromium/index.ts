@@ -1,7 +1,7 @@
-import versions from './versions';
-import fullVersions from './full-versions';
-import chromiumVersions from './chromium-versions';
-import fullChromiumVersions from './full-chromium-versions';
+var versions: any = require('./versions');
+var fullVersions: any = require('./full-versions');
+var chromiumVersions: any = require('./chromium-versions');
+var fullChromiumVersions: any = require('./full-chromium-versions');
 
 var electronToChromium: any = function (query: any) {
   var number = getQueryString(query);

@@ -1,9 +1,10 @@
-var inherits: any              = require('util').inherits;
-var Readable              = require('stream').Readable;
-import ReadableAsyncKit from './lib/readable_asynckit.js';
-import ReadableParallel from './lib/readable_parallel.js';
-import ReadableSerial from './lib/readable_serial.js';
-import ReadableSerialOrdered from './lib/readable_serial_ordered.js';
+var inherits: any              = require('util').inherits
+  , Readable              = require('stream').Readable
+  , ReadableAsyncKit      = require('./lib/readable_asynckit.js')
+  , ReadableParallel      = require('./lib/readable_parallel.js')
+  , ReadableSerial        = require('./lib/readable_serial.js')
+  , ReadableSerialOrdered = require('./lib/readable_serial_ordered.js')
+  ;
 
 // API
 module.exports =

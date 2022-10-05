@@ -5,13 +5,13 @@ realpath.realpathSync = realpathSync
 realpath.monkeypatch = monkeypatch
 realpath.unmonkeypatch = unmonkeypatch
 
-import fs from 'fs';
+var fs: any = require('fs')
 var origRealpath: any = fs.realpath
 var origRealpathSync: any = fs.realpathSync
 
 var version: any = process.version
 var ok: boolean = /^v[0-5]\./.test(version)
-import old from './old.js';
+var old: any = require('./old.js')
 
 function newError (er: any): any {
   return er && er.syscall === 'realpath' && (

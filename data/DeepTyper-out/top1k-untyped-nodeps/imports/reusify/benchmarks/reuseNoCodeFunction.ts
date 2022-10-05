@@ -1,7 +1,7 @@
 'use strict'
 
-import reusify from '../';
-import fib from './fib';
+var reusify: any = require('../')
+var fib: any = require('./fib')
 var instance: any = reusify(MyObject)
 var max: number = 100000000
 var start: number = Date.now()

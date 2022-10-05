@@ -1,5 +1,5 @@
 'use strict';
-import Limiter from '../';
+const Limiter: any = require('../');
 
 const concurrency: number = 1;
 console.log(`Running async-limiter demo with concurrency '${concurrency}'. ` +

@@ -1,7 +1,7 @@
 'use strict';
 
-import Functor from './functor';
-import Pledge from './pledge';
+var Functor: any = require('./functor'),
+    Pledge  = require('./pledge');
 
 var Cell: any = function(tuple: any) {
   this._ext     = tuple[0];

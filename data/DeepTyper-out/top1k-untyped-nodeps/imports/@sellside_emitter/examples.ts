@@ -1,4 +1,4 @@
-import emitter from './';
+const emitter: any = require('./');
 const obj: {} = {};
 let n: number = 0;
 const log: void = (msg: any) => console.log(msg, ++n);

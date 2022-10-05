@@ -1,5 +1,5 @@
-import Extensions from "../lib/websocket_extensions";
-var test       = require("jstest").Test;
+var Extensions: any = require("../lib/websocket_extensions"),
+    test       = require("jstest").Test
     FakeClock  = test.FakeClock
 
 test.describe("Extensions", function() { with(this) {

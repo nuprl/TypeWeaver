@@ -1,11 +1,12 @@
 /* eslint no-console: "off" */
 
-import asynckit from './';
-import async from 'async';
-import assert from 'assert';
-var expected = 0;
+var asynckit: any = require('./')
+  , async    = require('async')
+  , assert   = require('assert')
+  , expected = 0
+  ;
 
-import Benchmark from 'benchmark';
+var Benchmark: any = require('benchmark');
 var suite: any = new Benchmark.Suite;
 
 var source: any[] = [];

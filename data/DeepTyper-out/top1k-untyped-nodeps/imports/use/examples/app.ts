@@ -1,6 +1,6 @@
 
-import util from 'util';
-import plugins from 'base-plugins';
+var util: any = require('util');
+var plugins: any = require('base-plugins');
 
 function Factory(config: any): void {
   this.use = function(fn: any) {

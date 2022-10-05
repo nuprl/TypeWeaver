@@ -1,6 +1,6 @@
 'use strict';
 
-import RingBuffer from './ring_buffer';
+var RingBuffer: any = require('./ring_buffer');
 
 var Pledge: void = function() {
   this._complete  = false;

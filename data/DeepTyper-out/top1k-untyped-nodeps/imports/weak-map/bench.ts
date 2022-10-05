@@ -1,5 +1,5 @@
 
-import WeakMap from "./weak-map";
+var WeakMap: any = require("./weak-map");
 
 var keys: any[] = [];
 for (var i = 0; i < 1000; i++) {

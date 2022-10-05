@@ -1,4 +1,4 @@
-import defer from './defer.js';
+var defer: any = require('./defer.js');
 
 // API
 module.exports = async;

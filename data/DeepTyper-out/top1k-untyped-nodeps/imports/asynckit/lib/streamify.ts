@@ -1,4 +1,4 @@
-import async from './async.js';
+var async = require('./async.js');
 
 // API
 module.exports = {

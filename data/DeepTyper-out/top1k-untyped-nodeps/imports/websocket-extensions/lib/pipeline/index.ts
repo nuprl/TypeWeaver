@@ -1,7 +1,7 @@
 'use strict';
 
-import Cell from './cell';
-import Pledge from './pledge';
+var Cell: any   = require('./cell'),
+    Pledge = require('./pledge');
 
 var Pipeline: void = function(sessions: any) {
   this._cells   = sessions.map(function(session: Session) { return new Cell(session) });

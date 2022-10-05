@@ -1,8 +1,8 @@
 'use strict';
 
-import fs from 'fs';
-import path from 'path';
-import write from 'write';
+var fs: any = require('fs');
+var path: any = require('path');
+var write: any = require('write');
 var cwd: any = path.join.bind(path, __dirname, 'code');
 
 [

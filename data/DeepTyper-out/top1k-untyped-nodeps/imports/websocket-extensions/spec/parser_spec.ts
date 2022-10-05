@@ -1,5 +1,5 @@
-import Parser from '../lib/parser';
-var test   = require('jstest').Test;
+var Parser: any = require('../lib/parser'),
+    test   = require('jstest').Test
 
 test.describe("Parser", function() { with(this) {
   describe("parseHeader", function() { with(this) {

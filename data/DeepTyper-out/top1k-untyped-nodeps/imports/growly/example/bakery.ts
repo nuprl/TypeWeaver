@@ -1,11 +1,11 @@
-import growly from '../lib/growly.js';
+var growly: any = require('../lib/growly.js');
 
 var notifications: any = [
         { label: 'muffin', dispname: 'Muffin' },
         { label: 'cake', dispname: 'Cake' }
-    ];
-var muffinopts = { label: 'muffin', icon: 'muffin.png' };
-var cakeopts = { label: 'cake', title: 'Cake is ready!', icon: 'cake.png', sticky: true };
+    ],
+    muffinopts = { label: 'muffin', icon: 'muffin.png' },
+    cakeopts = { label: 'cake', title: 'Cake is ready!', icon: 'cake.png', sticky: true };
 
 growly.register('Bakery', 'muffin.png', notifications, function(err: any) {
     if (err) { 

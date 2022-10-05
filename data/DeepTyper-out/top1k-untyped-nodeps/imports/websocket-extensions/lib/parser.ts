@@ -1,12 +1,12 @@
 'use strict';
 
-var TOKEN: RegExp    = /([!#\$%&'\*\+\-\.\^_`\|~0-9A-Za-z]+)/;
-var NOTOKEN  = /([^!#\$%&'\*\+\-\.\^_`\|~0-9A-Za-z])/g;
-var QUOTED   = /"((?:\\[\x00-\x7f]|[^\x00-\x08\x0a-\x1f\x7f"\\])*)"/;
-var PARAM    = new RegExp(TOKEN.source + '(?:=(?:' + TOKEN.source + '|' + QUOTED.source + '))?');
-var EXT      = new RegExp(TOKEN.source + '(?: *; *' + PARAM.source + ')*', 'g');
-var EXT_LIST = new RegExp('^' + EXT.source + '(?: *, *' + EXT.source + ')*$');
-var NUMBER   = /^-?(0|[1-9][0-9]*)(\.[0-9]+)?$/;
+var TOKEN: RegExp    = /([!#\$%&'\*\+\-\.\^_`\|~0-9A-Za-z]+)/,
+    NOTOKEN  = /([^!#\$%&'\*\+\-\.\^_`\|~0-9A-Za-z])/g,
+    QUOTED   = /"((?:\\[\x00-\x7f]|[^\x00-\x08\x0a-\x1f\x7f"\\])*)"/,
+    PARAM    = new RegExp(TOKEN.source + '(?:=(?:' + TOKEN.source + '|' + QUOTED.source + '))?'),
+    EXT      = new RegExp(TOKEN.source + '(?: *; *' + PARAM.source + ')*', 'g'),
+    EXT_LIST = new RegExp('^' + EXT.source + '(?: *, *' + EXT.source + ')*$'),
+    NUMBER   = /^-?(0|[1-9][0-9]*)(\.[0-9]+)?$/;
 
 var hasOwnProperty: any = Object.prototype.hasOwnProperty;
 

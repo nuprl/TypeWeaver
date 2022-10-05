@@ -1,7 +1,7 @@
 'use strict'
 
-import fs from 'fs';
-import statusCodes from './';
+const fs: any = require('fs')
+const statusCodes: any = require('./')
 
 const code: string = 'module.exports = ' + JSON.stringify(statusCodes, null, 2) + '\n'
 

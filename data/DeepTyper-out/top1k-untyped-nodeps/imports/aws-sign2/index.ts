@@ -15,8 +15,13 @@
  * limitations under the License.
  */
 
-import crypto from 'crypto';
-var parse = require('url').parse;
+/**
+ * Module dependencies.
+ */
+
+var crypto: any = require('crypto')
+  , parse = require('url').parse
+  ;
 
 /**
  * Valid keys.
