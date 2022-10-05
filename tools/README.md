@@ -1,5 +1,9 @@
 # tools
 
+To install dependencies, run:
+
+    npm install
+
 ## runner.py
 
 The main script is `runner.py`, which runs the evaluation pipeline. The script
