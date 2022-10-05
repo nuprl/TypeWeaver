@@ -14,7 +14,23 @@ class ResultStatus(Enum):
     SKIP = 2
 
 class Result:
-    def __init__(self, name, status, string):
+    def __init__(self, name, status):
         self.name = name
         self.status = status
-        self.string = string
+
+    def is_ok(self):
+        return self.status is ResultStatus.OK
+
+    def is_fail(self):
+        return self.status is ResultStatus.FAIL
+
+    def is_skip(self):
+        return self.status is ResultStatus.SKIP
+
+    def message(self):
+        if self.is_ok():
+            return "[ OK ]"
+        elif self.is_fail():
+            return "[FAIL]"
+        elif self.is_skip():
+            return "[SKIP]"

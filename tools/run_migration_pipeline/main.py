@@ -5,7 +5,8 @@ from pathlib import Path
 from subprocess import PIPE
 import argparse, os, subprocess, threading, time
 
-from infer import deeptyper, lambdanet
+#from inference_engine import deeptyper as DT
+import inference_engine
 import util
 
 ANSI_RED = "\033[0;31m"
@@ -325,9 +326,11 @@ def main():
     print("Dataset: {}".format(args.dataset))
 
     if args.infer and args.engine == "DeepTyper":
-        run_pipeline_step(deeptyper.infer, "type inference", args)
+        deeptyper = inference_engine.DeepTyper(args)
+        #run_pipeline_step(inference_engine.deeptyper.infer, "type inference", args)
     elif args.infer and args.engine == "LambdaNet":
-        run_pipeline_step(lambdanet.infer, "type inference", args)
+        pass
+        #run_pipeline_step(inferrence_engine.lambdanet.infer, "type inference", args)
 
     if args.weave:
         run_pipeline_step(weave_types, "type weaving", args)
