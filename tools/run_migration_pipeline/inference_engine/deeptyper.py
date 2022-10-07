@@ -5,8 +5,6 @@ import subprocess
 from util import Result, ResultStatus
 import util
 
-# TODO: Test this some more, refactor, maybe make a base class
-
 class DeepTyper:
     path = Path(util.tools_root, "..", "DeepTyper", "pretrained", "readout.py").resolve()
 
@@ -25,21 +23,21 @@ class DeepTyper:
         Takes the full path to a package and returns its short name, i.e. the
         name of the package without its path.
         """
-        return Path(package).parts[-1]
+        return Path(package).relative_to(self.in_directory)
 
     def get_skip_set(self, packages):
         """
-        Get the packages that should be skipped. A package is skipped if its
-        latest output is newer than its latest input. This assumes inputs will
-        not be modified while outputs are being written, i.e. no race
+        Return the set of packages that should be skipped. A package is skipped
+        if its latest output is newer than its latest input. This assumes inputs
+        will not be modified while outputs are being written, i.e. no race
         conditions.
         """
-        to_skip = set()
-        for package in packages:
+        def should_skip(package):
             input_timestamps = sorted([f.stat().st_mtime
-                                    for f in package.rglob("*.js")
-                                    if f.is_file], reverse=True)
+                                       for f in package.rglob("*.js")
+                                       if f.is_file], reverse=True)
             input_latest = input_timestamps[0] if input_timestamps else None
+            input_count = len(input_timestamps)
 
             output_dir = Path(self.out_directory, self.short_name(package)).resolve()
             output_files = [f.resolve()
@@ -47,17 +45,12 @@ class DeepTyper:
                             if f.is_file() and (f.suffix == ".csv" or f.suffix == ".err")]
             output_timestamps = sorted([f.stat().st_mtime for f in output_files], reverse=True)
             output_latest = output_timestamps[0] if output_timestamps else None
+            output_count = len(output_timestamps)
 
             # If output timestamps are newer than input timestamps, then skip
-            if input_latest and output_latest and input_latest < output_latest:
-                to_skip.add(package)
-                continue
+            return input_latest and output_latest and input_count == output_count and input_latest < output_latest
 
-            # Delete the old output files
-            for f in output_files:
-                f.unlink()
-
-        return to_skip
+        return { p for p in packages if should_skip(p) }
 
     def infer_on_package(self, package, to_skip):
         """
@@ -69,34 +62,64 @@ class DeepTyper:
         if package in to_skip:
             return Result(package, ResultStatus.SKIP)
 
+        all_ok = True
         files = sorted([f.resolve() for f in package.rglob("*.js") if f.is_file()])
-
         for file in files:
             csv_file = Path(self.out_directory, self.short_name(file)).resolve().with_suffix(".csv")
             err_file = csv_file.with_suffix(".err")
 
-            # Run DeepTyper if the output files do not exist,
-            # or the output file timestamps are older than the input
+            # Delete csv/err output if they exist
+            if csv_file.exists():
+                csv_file.unlink()
+            if err_file.exists():
+                err_file.unlink()
+
+            # Run DeepTyper on the file
             args = ["python", self.path.name, file]
             result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
 
             # Create target directories for output
             csv_file.parent.mkdir(parents=True, exist_ok=True)
 
-            if result.returncode == 0:
-                csv_output = file.with_suffix(".csv")
-                if csv_output.exists():
-                    csv_output.rename(csv_file)
-                    return Result(package, ResultStatus.OK)
-                else:
-                    print("Error: expected .csv file to be created on successful run")
-                # DeepTyper warnings are unhelpful; every execution generates warnings
+            csv_output = file.with_suffix(".csv")
+            if result.returncode == 0 and csv_output.exists():
+                csv_output.rename(csv_file)
             else:
+                all_ok = False
                 with open(err_file, mode="w", encoding="utf-8") as f:
-                    print(result.stderr, file=f)
-                    return Result(package, ResultStatus.FAIL)
+                    if result.returncode != 0:
+                        print(result.stderr, file=f)
+                    else:
+                        print("Error: expected {} to be created on successful run".format(csv_output), file=f)
 
-    def run():
+        if all_ok:
+            return Result(package, ResultStatus.OK)
+        else:
+            return Result(package, ResultStatus.FAIL)
+
+    def infer_on_dataset(self, packages):
+        num_ok = 0
+        num_fail = 0
+        num_skip = 0
+
+        # Compute the packages to skip
+        to_skip = self.get_skip_set(packages)
+
+        for i, package in enumerate(packages):
+            print("[{}/{}] {} ... ".format(i + 1, len(packages), self.short_name(package)), end="", flush=True)
+
+            result = self.infer_on_package(package, to_skip)
+            print(result.message(), flush=True)
+            if result.is_ok():
+                num_ok += 1
+            elif result.is_skip():
+                num_skip += 1
+            elif result.is_fail():
+                num_fail += 1
+
+        return num_ok, num_fail, num_skip
+
+    def run(self):
         """
         Run type inference on a dataset, and track how many packages succeeded,
         failed, or were skipped.
@@ -106,33 +129,15 @@ class DeepTyper:
 
         # Get the packages we want as inputs
         packages = sorted([p.resolve()
-                        for p in self.in_directory.iterdir()
-                        if len(list(p.rglob("*.js")))])
-        num_packages = len(packages)
+                           for p in self.in_directory.iterdir()
+                           if len(list(p.rglob("*.js")))])
 
         print("Inferring types with DeepTyper: {}".format(self.path))
         print("Input directory: {}".format(self.in_directory))
         print("Output directory: {}".format(self.out_directory))
-        print("Found {} packages".format(num_packages))
+        print("Found {} packages".format(len(packages)))
 
-        num_ok = 0
-        num_fail = 0
-        num_skip = 0
-
-        # Compute the packages to skip
-        to_skip = self.get_skip_set(packages)
-
-        for i, package in enumerate(packages):
-            print("[{}/{}] {} ... ".format(i + 1, num_packages, self.short_name(package)), end="", flush=True)
-
-            result = self.infer_on_package(package)
-            print(result.string, flush=True)
-            if result.is_ok():
-                num_ok += 1
-            elif result.is_skip():
-                num_skip += 1
-            elif result.is_fail():
-                num_fail += 1
+        num_ok, num_fail, num_skip = self.infer_on_dataset(packages)
 
         print("Number of successes: {}".format(num_ok))
         print("Number of fails: {}".format(num_fail))

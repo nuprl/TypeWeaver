@@ -5,7 +5,6 @@ from pathlib import Path
 from subprocess import PIPE
 import argparse, os, subprocess, threading, time
 
-#from inference_engine import deeptyper as DT
 import inference_engine
 import util
 
@@ -47,8 +46,6 @@ def parse_args():
         type=int,
         default=cpu_count,
         help="maximum number of workers to use, defaults to {}, the number of processors on the machine".format(cpu_count))
-
-    # TODO: other useful flags: force
 
     group = parser.add_argument_group(
         title="pipeline step",
@@ -327,7 +324,7 @@ def main():
 
     if args.infer and args.engine == "DeepTyper":
         deeptyper = inference_engine.DeepTyper(args)
-        #run_pipeline_step(inference_engine.deeptyper.infer, "type inference", args)
+        run_pipeline_step(deeptyper.run, "type inference")
     elif args.infer and args.engine == "LambdaNet":
         pass
         #run_pipeline_step(inferrence_engine.lambdanet.infer, "type inference", args)
