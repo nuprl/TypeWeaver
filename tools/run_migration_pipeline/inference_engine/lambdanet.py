@@ -1,123 +1,182 @@
 from pathlib import Path
+from subprocess import PIPE
+import subprocess, threading, time
 
 import util
+from util import Result, ResultStatus
 
-path = Path(util.tools_root, "..", "LambdaNet").resolve()
-if not path.exists():
-    print("Could not find LambdaNet: {}".format(path))
-    exit(1)
+class LambdaNet:
+    path = Path(util.tools_root, "..", "LambdaNet").resolve()
 
-def send_data_to(proc, data):
-    proc.communicate(data)
+    SLEEP_TIME = 5
 
-def infer(args):
-    """Run LambdaNet's type inference on the JavaScript projects within the given directory."""
+    def __init__(self, args):
+        if not self.path.exists():
+            print("Could not find DeepTyper: {}".format(self.path))
+            exit(1)
 
-    directory = Path(args.directory).resolve()
-    dataset = Path(args.dataset)
+        self.directory = Path(args.directory).resolve()
+        self.dataset = Path(args.dataset)
+        self.in_directory = Path(self.directory, "original", self.dataset).resolve()
+        self.out_directory = Path(self.directory, "LambdaNet-out", self.dataset, "predictions").resolve()
 
-    print("Inferring types with LambdaNet: {}".format(path))
+    def short_name(self, package):
+        """
+        Takes the full path to a package and returns its short name, i.e. the
+        name of the package without its path.
+        """
+        return Path(package).relative_to(self.in_directory)
 
-    in_directory = Path(directory, "original", dataset).resolve()
-    print("Input directory: {}".format(in_directory))
+    def get_skip_set(self, packages):
+        """
+        Return the set of packages that should be skipped. A package is skipped
+        if its latest output is newer than its latest input. This assumes inputs
+        will not be modified while outputs are being written, i.e. no race
+        conditions.
+        """
+        def should_skip(package):
+            input_timestamps = sorted([f.stat().st_mtime
+                                       for f in package.rglob("*.js")
+                                       if f.is_file], reverse=True)
+            input_latest = input_timestamps[0] if input_timestamps else None
+            input_count = len(input_timestamps)
 
-    # Create the out directory, if it doesn't already exist
-    out_directory = Path(directory, "LambdaNet-out", dataset, "predictions").resolve()
-    out_directory.mkdir(parents=True, exist_ok=True)
-    print("Output directory: {}".format(out_directory))
+            output_dir = Path(self.out_directory, self.short_name(package)).resolve()
+            output_files = [f.resolve()
+                            for f in output_dir.rglob("*")
+                            if f.is_file() and (f.suffix == ".csv" or f.suffix == ".err")]
+            output_timestamps = sorted([f.stat().st_mtime for f in output_files], reverse=True)
+            output_latest = output_timestamps[0] if output_timestamps else None
+            output_count = len(output_timestamps)
 
-    subdirs = sorted([sd.resolve() for sd in in_directory.iterdir() if len(list(sd.rglob("*.js")))])
-    short_subdirs = [sd.relative_to(in_directory) for sd in subdirs]
+            # If there is an error, LambdaNet outputs a single output.err file
+            # Treat the project as complete, even if the input count doesn't match the output count
+            output_err = Path(self.out_directory, self.short_name(package), "output.err").resolve()
+            all_outputs = output_err.exists() or input_count == output_count
 
-    num_subdirs = len(subdirs)
-    print("Found {} packages".format(num_subdirs))
+            # If output timestamps are newer than input timestamps, then skip
+            return input_latest and output_latest and all_outputs and input_latest < output_latest
 
-    i = 0
-    num_ok = 0
-    num_fail = 0
-    num_skip = 0
+        return { p for p in packages if should_skip(p) }
 
-    skipped_subdirs = set()
-    subdirs_to_run = []
+    def infer_on_package(self, package, to_skip):
+        """
+        Run inference on a single package, skipping packages that have already
+        been processed. For DeepTyper, this means running inference on each file
+        in the package. Also record the result, writing the type predictions or
+        errors to the filesystem.
+        """
+        if package in to_skip:
+            return Result(package, ResultStatus.SKIP)
 
-    for subdir, short_subdir in zip(subdirs, short_subdirs):
-        input_files = [f.resolve() for f in subdir.rglob("*.js") if f.is_file()]
-        input_timestamps = sorted([f.stat().st_mtime for f in input_files], reverse=True)
-        input_latest = input_timestamps[0] if input_timestamps else None
-
-        output_dir = Path(out_directory, short_subdir).resolve()
-        output_files = [f.resolve() for f in output_dir.rglob("*") if f.is_file() and (f.suffix == ".csv" or f.suffix == ".err")]
-        output_timestamps = sorted([f.stat().st_mtime for f in output_files], reverse=True)
-        output_latest = output_timestamps[0] if output_timestamps else None
-
-        # If output timestamps are newer than input timestamps, then skip
-        if input_latest and output_latest and input_latest < output_latest:
-            num_skip += 1
-            skipped_subdirs.add(short_subdir)
-            continue
-
-        # Update list of projects to process
-        subdirs_to_run.append(str(subdir))
+        input_files = [f.resolve() for f in package.rglob("*.js") if f.is_file()]
+        output_dir = Path(self.out_directory, self.short_name(package)).resolve()
 
         # Delete the old output files
+        output_files = [f.resolve()
+                        for f in output_dir.rglob("*")
+                        if f.is_file() and (f.suffix == ".csv" or f.suffix == ".err")]
         for f in output_files:
             f.unlink()
 
-    subdirs_string = "\n".join(subdirs_to_run)
-
-    args = ["sbt", "runMain lambdanet.TypeInferenceService --writeDoneFile"]
-    p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=path)
-    threading.Thread(target=send_data_to, args=[p, subdirs_string]).start()
-
-    for subdir, short_subdir in zip(subdirs, short_subdirs):
-        i += 1
-        print("[{}/{}] {} ... ".format(i, num_subdirs, short_subdir), end="", flush=True)
-
-        if short_subdir in skipped_subdirs:
-            print(ANSI_YELLOW + "[SKIP]" + ANSI_RESET, flush=True)
-            continue
-
-        input_files = [f.resolve() for f in subdir.rglob("*.js") if f.is_file()]
-        output_dir = Path(out_directory, short_subdir).resolve()
-
-        done_file = Path(subdir, "done.ok")
-        err_file = Path(subdir, "output.err")
+        done_file = Path(package, "done.ok")
+        err_file = Path(package, "output.err")
         while True:
             if done_file.exists() or err_file.exists():
                 break
-            time.sleep(10)
-
-        # Move output files to output directory, creating target directories if necessary
-        csv_files = [f.with_suffix(".csv") for f in input_files]
-        short_csv_files = [f.relative_to(subdir) for f in csv_files]
-        for file, short_file in zip(csv_files, short_csv_files):
-            if file.exists():
-                output_file = Path(output_dir, short_file)
-                output_file.parent.mkdir(parents=True, exist_ok=True)
-                file.rename(output_file)
+            time.sleep(self.SLEEP_TIME)
 
         if done_file.exists():
-            # If no output file was produced (because the js file has no types), create a placeholder file anyway
-            for f in short_csv_files:
-                out_file = Path(output_dir, f)
-                out_file.parent.mkdir(parents=True, exist_ok=True)
-                out_file.touch(exist_ok=True)
-            num_ok += 1
+            # Success, so (some) CSV files were written
+            csv_files = [f.with_suffix(".csv") for f in input_files]
+            for file in csv_files:
+                output_file = Path(self.out_directory, self.short_name(file))
+                output_file.parent.mkdir(parents=True, exist_ok=True)
+                if file.exists():
+                    # Move CSV files to output directory, creating target directories if necessary
+                    file.rename(output_file)
+                else:
+                    # No CSV file created, because the JS file had no types, so create a placeholder
+                    output_file.touch(exist_ok=True)
             done_file.unlink()
-            print(ANSI_GREEN + "[ OK ]" + ANSI_RESET, flush=True)
+            return Result(package, ResultStatus.OK)
         else:
+            # Move the error file to the output directory
             output_file = Path(output_dir, "output.err")
             output_file.parent.mkdir(parents=True, exist_ok=True)
-            err_file = Path(subdir, "output.err")
             err_file.rename(output_file)
-            num_fail += 1
-            print(ANSI_RED + "[FAIL]" + ANSI_RESET, flush=True)
+            return Result(package, ResultStatus.FAIL)
 
-    # If we reach this point, either LambdaNet has finished processing everything,
-    # or there was nothing left to process, so we can kill it
-    p.terminate()
+    def infer_on_dataset(self, packages):
+        """
+        Run type inference on a dataset. Print a running log, and track how many
+        packages succeeded, failed, or were skipped.
+        """
+        num_ok = 0
+        num_fail = 0
+        num_skip = 0
 
-    print("Number of successes: {}".format(num_ok))
-    print("Number of fails: {}".format(num_fail))
-    print("Number of skips: {}".format(num_skip))
+        # Compute the packages to skip
+        to_skip = self.get_skip_set(packages)
 
+        # Create a string with the packages to run, one per line
+        packages_to_run = set(packages).difference(to_skip)
+        packages_list = [str(p) for p in packages_to_run]
+        packages_string = "\n".join(sorted(packages_list))
+
+        # Skip if there are no packages to run
+        if not packages_list:
+            # Need to print here, since we're skipping the main package loop,
+            # to avoid starting up LambdaNet
+            for i, package in enumerate(packages):
+                print("[{}/{}] {} ... [SKIP]".format(i + 1, len(packages), self.short_name(package)), flush=True)
+            return 0, 0, len(to_skip)
+
+        def send_data_to(proc, data):
+            proc.communicate(data)
+
+        args = ["sbt", "runMain lambdanet.TypeInferenceService --writeDoneFile"]
+        p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path)
+        threading.Thread(target=send_data_to, args=[p, packages_string]).start()
+
+        for i, package in enumerate(packages):
+            print("[{}/{}] {} ... ".format(i + 1, len(packages), self.short_name(package)), end="", flush=True)
+            result = self.infer_on_package(package, to_skip)
+            print(result.message(), flush=True)
+
+            if result.is_ok():
+                num_ok += 1
+            elif result.is_skip():
+                num_skip += 1
+            elif result.is_fail():
+                num_fail += 1
+
+        # If we reach this point, either LambdaNet has finished processing everything,
+        # or there was nothing left to process, so we can kill it
+        p.terminate()
+
+        return num_ok, num_fail, num_skip
+
+    def run(self):
+        """
+        Run type inference on a dataset, and track how many packages succeeded,
+        failed, or were skipped.
+        """
+        # Create the out directory, if it doesn't already exist
+        self.out_directory.mkdir(parents=True, exist_ok=True)
+
+        # Get the packages we want as inputs
+        packages = sorted([p.resolve()
+                           for p in self.in_directory.iterdir()
+                           if len(list(p.rglob("*.js")))])
+
+        print("Inferring types with LambdaNet: {}".format(self.path))
+        print("Input directory: {}".format(self.in_directory))
+        print("Output directory: {}".format(self.out_directory))
+        print("Found {} packages".format(len(packages)))
+
+        num_ok, num_fail, num_skip = self.infer_on_dataset(packages)
+
+        print("Number of successes: {}".format(num_ok))
+        print("Number of fails: {}".format(num_fail))
+        print("Number of skips: {}".format(num_skip))

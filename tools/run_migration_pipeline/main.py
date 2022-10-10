@@ -326,8 +326,8 @@ def main():
         deeptyper = inference_engine.DeepTyper(args)
         run_pipeline_step(deeptyper.run, "type inference")
     elif args.infer and args.engine == "LambdaNet":
-        pass
-        #run_pipeline_step(inferrence_engine.lambdanet.infer, "type inference", args)
+        lambdanet = inference_engine.LambdaNet(args)
+        run_pipeline_step(lambdanet.run, "type inference")
 
     if args.weave:
         run_pipeline_step(weave_types, "type weaving", args)

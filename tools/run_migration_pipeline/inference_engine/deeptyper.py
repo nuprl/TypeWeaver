@@ -2,8 +2,8 @@ from pathlib import Path
 from subprocess import PIPE
 import subprocess
 
-from util import Result, ResultStatus
 import util
+from util import Result, ResultStatus
 
 class DeepTyper:
     path = Path(util.tools_root, "..", "DeepTyper", "pretrained", "readout.py").resolve()
@@ -98,6 +98,10 @@ class DeepTyper:
             return Result(package, ResultStatus.FAIL)
 
     def infer_on_dataset(self, packages):
+        """
+        Run type inference on a dataset. Print a running log, and track how many
+        packages succeeded, failed, or were skipped.
+        """
         num_ok = 0
         num_fail = 0
         num_skip = 0
@@ -107,9 +111,9 @@ class DeepTyper:
 
         for i, package in enumerate(packages):
             print("[{}/{}] {} ... ".format(i + 1, len(packages), self.short_name(package)), end="", flush=True)
-
             result = self.infer_on_package(package, to_skip)
             print(result.message(), flush=True)
+
             if result.is_ok():
                 num_ok += 1
             elif result.is_skip():
@@ -121,8 +125,7 @@ class DeepTyper:
 
     def run(self):
         """
-        Run type inference on a dataset, and track how many packages succeeded,
-        failed, or were skipped.
+        Run type inference.
         """
         # Create the out directory, if it doesn't already exist
         self.out_directory.mkdir(parents=True, exist_ok=True)
