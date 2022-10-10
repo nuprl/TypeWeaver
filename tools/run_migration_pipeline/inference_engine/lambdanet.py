@@ -20,12 +20,12 @@ class LambdaNet:
         self.in_directory = Path(self.directory, "original", self.dataset).resolve()
         self.out_directory = Path(self.directory, "LambdaNet-out", self.dataset, "predictions").resolve()
 
-    def short_name(self, package):
+    def short_name(self, name):
         """
-        Takes the full path to a package and returns its short name, i.e. the
-        name of the package without its path.
+        Takes the full (input) path to a package or file, and returns its short
+        name, i.e. the relative path to that package or file.
         """
-        return Path(package).relative_to(self.in_directory)
+        return Path(name).relative_to(self.in_directory)
 
     def get_skip_set(self, packages):
         """
@@ -51,7 +51,7 @@ class LambdaNet:
 
             # If there is an error, LambdaNet outputs a single output.err file
             # Treat the project as complete, even if the input count doesn't match the output count
-            output_err = Path(self.out_directory, self.short_name(package), "output.err").resolve()
+            output_err = Path(output_dir, "output.err").resolve()
             all_outputs = output_err.exists() or input_count == output_count
 
             # If output timestamps are newer than input timestamps, then skip
@@ -124,20 +124,12 @@ class LambdaNet:
         packages_list = [str(p) for p in packages_to_run]
         packages_string = "\n".join(sorted(packages_list))
 
-        # Skip if there are no packages to run
-        if not packages_list:
-            # Need to print here, since we're skipping the main package loop,
-            # to avoid starting up LambdaNet
-            for i, package in enumerate(packages):
-                print("[{}/{}] {} ... [SKIP]".format(i + 1, len(packages), self.short_name(package)), flush=True)
-            return 0, 0, len(to_skip)
-
-        def send_data_to(proc, data):
-            proc.communicate(data)
-
-        args = ["sbt", "runMain lambdanet.TypeInferenceService --writeDoneFile"]
-        p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path)
-        threading.Thread(target=send_data_to, args=[p, packages_string]).start()
+        # Only start LambdaNet if there are packages to run
+        p = None
+        if packages_list:
+            args = ["sbt", "runMain lambdanet.TypeInferenceService --writeDoneFile"]
+            p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path)
+            threading.Thread(target=util.send_data_to, args=[p, packages_string]).start()
 
         for i, package in enumerate(packages):
             print("[{}/{}] {} ... ".format(i + 1, len(packages), self.short_name(package)), end="", flush=True)
@@ -151,16 +143,16 @@ class LambdaNet:
             elif result.is_fail():
                 num_fail += 1
 
-        # If we reach this point, either LambdaNet has finished processing everything,
-        # or there was nothing left to process, so we can kill it
-        p.terminate()
+        if p:
+            # If we reach this point, either LambdaNet has finished processing everything,
+            # or there was nothing left to process, so we can kill it
+            p.terminate()
 
         return num_ok, num_fail, num_skip
 
     def run(self):
         """
-        Run type inference on a dataset, and track how many packages succeeded,
-        failed, or were skipped.
+        Run type inference.
         """
         # Create the out directory, if it doesn't already exist
         self.out_directory.mkdir(parents=True, exist_ok=True)

@@ -34,3 +34,6 @@ class Result:
             return "[FAIL]"
         elif self.is_skip():
             return "[SKIP]"
+
+def send_data_to(proc, data):
+    proc.communicate(data)

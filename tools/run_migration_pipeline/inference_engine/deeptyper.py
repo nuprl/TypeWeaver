@@ -18,12 +18,12 @@ class DeepTyper:
         self.in_directory = Path(self.directory, "original", self.dataset).resolve()
         self.out_directory = Path(self.directory, "DeepTyper-out", self.dataset, "predictions").resolve()
 
-    def short_name(self, package):
+    def short_name(self, name):
         """
-        Takes the full path to a package and returns its short name, i.e. the
-        name of the package without its path.
+        Takes the full (input) path to a package or file, and returns its short
+        name, i.e. the relative path to that package or file.
         """
-        return Path(package).relative_to(self.in_directory)
+        return Path(name).relative_to(self.in_directory)
 
     def get_skip_set(self, packages):
         """
