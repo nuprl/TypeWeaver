@@ -45,7 +45,7 @@ def parse_args():
         "--workers",
         type=int,
         default=cpu_count,
-        help="maximum number of workers to use, defaults to {}, the number of processors on the machine".format(cpu_count))
+        help=f"maximum number of workers to use, defaults to {cpu_count}, the number of processors on the machine")
 
     group = parser.add_argument_group(
         title="pipeline step",
@@ -66,23 +66,23 @@ def parse_args():
     args = parser.parse_args()
     if (args.infer or args.weave) and not args.engine:
         parser.print_usage()
-        print("{}: error: engine is required for type inference and type weaving".format(parser.prog))
+        print("error: engine is required for type inference and type weaving")
         exit(2)
 
     if not (args.infer or args.weave or args.typecheck):
         parser.print_usage()
-        print("{}: error: at least one pipeline step argument is required".format(parser.prog))
+        print("error: at least one pipeline step argument is required")
         exit(2)
 
     if not Path(args.directory).exists():
         parser.print_usage()
-        print("{}: error: directory {} does not exist".format(parser.prog, args.directory))
+        print(f"error: directory does not exist: {args.directory}")
         exit(2)
 
     dataset_source = Path(args.directory, "original", args.dataset).resolve()
     if not dataset_source.exists():
         parser.print_usage()
-        print("{}: error: directory {} does not exist".format(parser.prog, dataset_source))
+        print(f"error: dataset directory does not exist: {dataset_source}")
         exit(2)
 
     return args

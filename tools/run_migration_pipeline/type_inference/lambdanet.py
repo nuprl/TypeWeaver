@@ -12,7 +12,7 @@ class LambdaNet:
 
     def __init__(self, args):
         if not self.path.exists():
-            print("Could not find DeepTyper: {}".format(self.path))
+            print(f"error: could not find LambdaNet: {self.path}")
             exit(1)
 
         self.directory = Path(args.directory).resolve()
@@ -23,7 +23,8 @@ class LambdaNet:
     def short_name(self, name):
         """
         Takes the full (input) path to a package or file, and returns its short
-        name, i.e. the relative path to that package or file.
+        name, i.e. the relative path to that package or file from the input
+        directory.
         """
         return Path(name).relative_to(self.in_directory)
 
@@ -62,8 +63,7 @@ class LambdaNet:
     def infer_on_package(self, package, to_skip):
         """
         Run inference on a single package, skipping packages that have already
-        been processed. For DeepTyper, this means running inference on each file
-        in the package. Also record the result, writing the type predictions or
+        been processed. Also record the result, writing the type predictions or
         errors to the filesystem.
         """
         if package in to_skip:
@@ -157,18 +157,19 @@ class LambdaNet:
         # Create the out directory, if it doesn't already exist
         self.out_directory.mkdir(parents=True, exist_ok=True)
 
-        # Get the packages we want as inputs
+        # Get the packages we want as inputs. Make sure we only get packages
+        # that actually contain JS files.
         packages = sorted([p.resolve()
                            for p in self.in_directory.iterdir()
                            if len(list(p.rglob("*.js")))])
 
-        print("Inferring types with LambdaNet: {}".format(self.path))
-        print("Input directory: {}".format(self.in_directory))
-        print("Output directory: {}".format(self.out_directory))
-        print("Found {} packages".format(len(packages)))
+        print(f"Inferring types with LambdaNet: {self.path}")
+        print(f"Input directory: {self.in_directory}")
+        print(f"Output directory: {self.out_directory}")
+        print(f"Found {len(packages)} packages")
 
         num_ok, num_fail, num_skip = self.infer_on_dataset(packages)
 
-        print("Number of successes: {}".format(num_ok))
-        print("Number of fails: {}".format(num_fail))
-        print("Number of skips: {}".format(num_skip))
+        print(f"Number of successes: {num_ok}")
+        print(f"Number of fails: {num_fail}")
+        print(f"Number of skips: {num_skip}")
