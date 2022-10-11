@@ -212,7 +212,8 @@ def main():
         run_pipeline_step(lambdanet.run, "type inference")
 
     if args.weave:
-        run_pipeline_step(type_weaving.weave_types, "type weaving", args)
+        type_weaver = type_weaving.TypeWeaver(args)
+        run_pipeline_step(type_weaver.run, "type weaving")
 
     if args.typecheck:
         run_pipeline_step(typecheck, "type checking", args)

@@ -3,122 +3,184 @@ from pathlib import Path
 from subprocess import PIPE
 import subprocess
 
+import util
 from util import Result, ResultStatus
 
-def weave_types_job(engine, type_weaver_path, csv_file, js_file, short_file, out_directory):
-    ts_file = Path(out_directory, short_file).resolve().with_suffix(".ts")
-    err_file = ts_file.with_suffix(".err")
-    warn_file = ts_file.with_suffix(".warn")
+class TypeWeaver:
+    path = Path(util.tools_root, "type_weaver", "index.js").resolve()
 
-    # Confirm that the JS file actually exists; we only assumed it exists based on the CSV file
-    if not js_file.exists():
-        return Result(short_file, ResultStatus.SKIP)
+    def __init__(self, args):
+        if not self.path.exists():
+            print(f"error: could not find type_weaver: {self.path}")
+            exit(1)
 
-    # If either file exists and the timestamps are newer than the input, then skip
-    if ts_file.exists() or err_file.exists():
-        input_mtime = csv_file.stat().st_mtime
-        output_mtime = ts_file.stat().st_mtime if ts_file.exists() else err_file.stat().st_mtime
-        if input_mtime < output_mtime:
-            return Result(short_file, ResultStatus.SKIP)
+        self.directory = Path(args.directory).resolve()
+        self.dataset = Path(args.dataset)
+        self.engine = args.engine
+        self.workers = args.workers
+        self.js_directory = Path(self.directory, "original", self.dataset).resolve()
+        self.csv_directory = Path(self.directory, f"{self.engine}-out", self.dataset, "predictions").resolve()
+        self.out_directory = Path(self.directory, f"{self.engine}-out", self.dataset, args.weave).resolve()
 
-    # Delete the old files
-    if ts_file.exists():
-        ts_file.unlink()
-    if err_file.exists():
-        err_file.unlink()
-    if warn_file.exists():
-        warn_file.unlink()
+        if not self.csv_directory.exists():
+            print(f"error: type predictions directory does not exist: {self.csv_directory}")
+            exit(2)
 
-    # Run type_weaver if the output files do not exist,
-    # or the output file timestamps are older than the input
-    args = ["node", type_weaver_path.name, "--format", engine, "--types", csv_file, js_file]
-    result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=type_weaver_path.parent)
+    def short_name(self, name):
+        """
+        Takes the full (input) path to a package or file, and returns its short
+        name, i.e. the relative path to that package or file from the input
+        directory.
+        """
+        return Path(name).relative_to(self.js_directory)
 
-    # Create target directories for output
-    ts_file.parent.mkdir(parents=True, exist_ok=True)
+    def get_skip_set(self, packages):
+        """
+        Return the set of packages that should be skipped. A package is skipped
+        if its latest output is newer than its latest input. This assumes inputs
+        will not be modified while outputs are being written, i.e. no race
+        conditions.
+        """
+        def should_skip(package):
+            predictions_dir = Path(self.csv_directory, self.short_name(package))
+            input_timestamps = sorted([f.stat().st_mtime
+                                       for f in predictions_dir.rglob("*.csv")
+                                       if f.is_file], reverse=True)
+            input_latest = input_timestamps[0] if input_timestamps else None
+            input_count = len(input_timestamps)
 
-    if result.returncode == 0:
-        if result.stderr:
-            with open(warn_file, mode="w", encoding="utf-8") as f:
-                print(result.stderr, file=f)
+            output_dir = Path(self.out_directory, self.short_name(package)).resolve()
+            output_files = [f.resolve()
+                            for f in output_dir.rglob("*")
+                            if f.is_file() and (f.suffix == ".ts" or f.suffix == ".err")]
+            output_timestamps = sorted([f.stat().st_mtime for f in output_files], reverse=True)
+            output_latest = output_timestamps[0] if output_timestamps else None
+            output_count = len(output_timestamps)
 
-        ts_output = js_file.with_suffix(".ts")
-        if ts_output.exists():
-            ts_output.rename(ts_file)
-            return Result(short_file, ResultStatus.OK)
+            # If output timestamps are newer than input timestamps, then skip
+            return input_latest and output_latest and input_count == output_count and input_latest < output_latest
+
+        return { p for p in packages if should_skip(p) }
+
+    def weave_on_package(self, package, to_skip):
+        """
+        Run type weaving on a single package, skipping packages that have
+        already been processed. This function will call type_weaver on all
+        JavaScript files in the package. Also record the result, writing the
+        TypeScript file or errors/warnings to the filesystem.
+        """
+        if package in to_skip:
+            return Result(package, ResultStatus.SKIP)
+
+        all_ok = True
+        js_files = sorted([f.resolve() for f in package.rglob("*.js") if f.is_file()])
+        csv_files = [Path(self.csv_directory, self.short_name(f)).with_suffix(".csv") for f in js_files]
+
+        for js_file, csv_file in zip(js_files, csv_files):
+            ts_file = Path(self.out_directory, self.short_name(js_file)).resolve().with_suffix(".ts")
+            err_file = ts_file.with_suffix(".err")
+            warn_file = ts_file.with_suffix(".warn")
+
+            # Delete old outputs if they exist
+            if ts_file.exists():
+                ts_file.unlink()
+            if err_file.exists():
+                err_file.unlink()
+            if warn_file.exists():
+                warn_file.unlink()
+
+            # Run type_weaver on the file
+            args = ["node", self.path.name, "--format", self.engine, "--types", csv_file, js_file]
+            result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
+
+            # Create target directories for output
+            ts_file.parent.mkdir(parents=True, exist_ok=True)
+
+            ts_output = js_file.with_suffix(".ts")
+            if result.returncode == 0 and ts_output.exists():
+                ts_output.rename(ts_file)
+                if result.stderr:
+                    with open(warn_file, mode="w", encoding="utf-8") as f:
+                        print(result.stderr, file=f)
+            else:
+                all_ok = False
+                with open(err_file, mode="w", encoding="utf-8") as f:
+                    if result.returncode != 0:
+                        print(result.stderr, file=f)
+                    else:
+                        print(f"error: expected {ts_output} to be created on successful run", file=f)
+
+        if all_ok:
+            return Result(package, ResultStatus.OK)
         else:
-            return Result(short_file, ResultStatus.FAIL) # "Error: expected .ts file to be created on successful run")
-    else:
-        with open(err_file, mode="w", encoding="utf-8") as f:
-            print(result.stderr, file=f)
-            return Result(short_file, ResultStatus.FAIL)
+            return Result(package, ResultStatus.FAIL)
 
-def weave_types(args):
-    """Run type weaving to combine JavaScript and the associated CSV file (with type predictions) to produce TypeScript."""
+    def weave_on_dataset(self, packages):
+        """
+        Run type weaving on a dataset. Print a running log, and track how many
+        packages succeeded, failed, or were skipped.
+        """
+        num_ok = 0
+        num_fail = 0
+        num_skip = 0
 
-    directory = Path(args.directory).resolve()
-    dataset = Path(args.dataset)
-    weaveout_dir = Path(args.weave)
-    engine_dir = f"{args.engine}-out"
+        # Compute the packages to skip
+        to_skip = self.get_skip_set(packages)
 
-    type_weaver_path = Path(Path(__file__).parent, "..", "type_weaver", "index.js").resolve()
-    if not type_weaver_path.exists():
-        print("Could not find type_weaver: {}".format(type_weaver_path))
-        exit(1)
-    print("Weaving types with: {}".format(type_weaver_path))
+        with futures.ProcessPoolExecutor(max_workers=self.workers) as executor:
+            fs = [executor.submit(self.weave_on_package, package, to_skip) for package in packages]
 
-    # Set up the input directories (JavaScript and CSV)
-    js_in_directory = Path(directory, "original", dataset).resolve()
-    csv_in_directory = Path(directory, engine_dir, dataset, "predictions").resolve()
-    if not csv_in_directory.exists():
-        print("error: type predictions directory {} does not exist".format(csv_in_directory))
-        exit(1)
-    print("Input directory (JavaScript): {}".format(js_in_directory))
-    print("Input directory (type predictions): {}".format(csv_in_directory))
+            # While the process pool executes the jobs, wait for each result in order.
+            # This prints the log in alphabetic order, rather than in completion order.
+            # But we still get the speedup from using multiple workers.
+            for i, f in enumerate(fs):
+                print("[{}/{}] {} ... ".format(i + 1, len(packages), self.short_name(packages[i])), end="", flush=True)
+                result = f.result()
+                print(result.message(), flush=True)
 
-    # Create the out directory, if it doesn't already exist
-    out_directory = Path(directory, engine_dir, dataset, weaveout_dir).resolve()
-    out_directory.mkdir(parents=True, exist_ok=True)
-    print("Output directory: {}".format(out_directory))
+                if result.is_ok():
+                    num_ok += 1
+                elif result.is_skip():
+                    num_skip += 1
+                elif result.is_fail():
+                    num_fail += 1
 
-    # Not all JS files have predictions, so base our subdirectories and files on the csv_in_directory
-    csv_subdirs = sorted([sd.resolve() for sd in csv_in_directory.iterdir()])
-    short_subdirs = [sd.relative_to(csv_in_directory) for sd in csv_subdirs]
-    js_subdirs = [Path(js_in_directory, d).resolve() for d in short_subdirs]
+        return num_ok, num_fail, num_skip
 
-    csv_files = sorted([f.resolve()
-                        for subdir in csv_subdirs
-                        for f in subdir.rglob("*.csv") if f.is_file()])
-    short_files = [f.relative_to(csv_in_directory) for f in csv_files]
-    js_files = [Path(js_in_directory, f).resolve().with_suffix(".js") for f in short_files]
+    def run(self):
+        """
+        Run type weaving.
+        """
+        # Create the out directory, if it doesn't already exist
+        self.out_directory.mkdir(parents=True, exist_ok=True)
 
-    num_subdirs = len(csv_subdirs)
-    num_files = len(csv_files)
-    print("Found {} files in {} packages".format(num_files, num_subdirs))
+        # Get the packages we want as inputs, but look at the directories with
+        # CSV files, and skip directories that contain .err files, since those
+        # had errors during inference. We only want to do type weaving for
+        # packages if inference succeeded on all the JavaScript files.
+        predictions = sorted([p.resolve()
+                              for p in self.csv_directory.iterdir()
+                              if len(list(p.rglob("*.err"))) == 0])
+        packages = [Path(self.js_directory, p.parts[-1]) for p in predictions]
 
-    counter = 0
-    num_ok = 0
-    num_fail = 0
-    num_skip = 0
+        # Make sure that every JS file has a corresponding CSV file.
+        # The helper function gets all files in directory that match *.ext,
+        # but strips the extensions so we can compare them.
+        def files_with_ext(directory, ext):
+            return sorted([f.relative_to(directory).with_suffix("")
+                           for f in directory.rglob(f"*.{ext}")])
+        packages = [package
+                    for package, prediction in zip(packages, predictions)
+                    if files_with_ext(package, "js") == files_with_ext(prediction, "csv")]
 
-    with futures.ProcessPoolExecutor(max_workers=args.workers) as executor:
-        fs = [executor.submit(weave_types_job, args.engine, type_weaver_path, csv_file, js_file, short_file, out_directory)
-              for csv_file, js_file, short_file in zip(csv_files, js_files, short_files)]
+        print(f"Weaving types with: {self.path}")
+        print(f"Input directory (JS): {self.js_directory}")
+        print(f"Input directory (CSV): {self.csv_directory}")
+        print(f"Output directory: {self.out_directory}")
+        print(f"Found {len(packages)} packages")
 
-        for f in futures.as_completed(fs):
-            result = f.result()
-            name = result.name
-            counter += 1
+        num_ok, num_fail, num_skip = self.weave_on_dataset(packages)
 
-            print("[{}/{}] {} ... ".format(counter, num_files, name), end="", flush=True)
-            print(result.message())
-            if result.status is ResultStatus.OK:
-                num_ok += 1
-            elif result.status is ResultStatus.SKIP:
-                num_skip += 1
-            elif result.status is ResultStatus.FAIL:
-                num_fail += 1
-
-    print("Number of successes: {}".format(num_ok))
-    print("Number of fails: {}".format(num_fail))
-    print("Number of skips: {}".format(num_skip))
+        print(f"Number of successes: {num_ok}")
+        print(f"Number of fails: {num_fail}")
+        print(f"Number of skips: {num_skip}")
