@@ -62,7 +62,7 @@ class TypeWeaver:
 
         return { p for p in packages if should_skip(p) }
 
-    def weave_on_package(self, package, to_skip):
+    def weave_package(self, package, to_skip):
         """
         Run type weaving on a single package, skipping packages that have
         already been processed. This function will call type_weaver on all
@@ -115,7 +115,7 @@ class TypeWeaver:
         else:
             return Result(package, ResultStatus.FAIL)
 
-    def weave_on_dataset(self, packages):
+    def weave_dataset(self, packages):
         """
         Run type weaving on a dataset. Print a running log, and track how many
         packages succeeded, failed, or were skipped.
@@ -128,7 +128,7 @@ class TypeWeaver:
         to_skip = self.get_skip_set(packages)
 
         with futures.ProcessPoolExecutor(max_workers=self.workers) as executor:
-            fs = [executor.submit(self.weave_on_package, package, to_skip) for package in packages]
+            fs = [executor.submit(self.weave_package, package, to_skip) for package in packages]
 
             # While the process pool executes the jobs, wait for each result in order.
             # This prints the log in alphabetic order, rather than in completion order.
@@ -173,13 +173,13 @@ class TypeWeaver:
                     for package, prediction in zip(packages, predictions)
                     if files_with_ext(package, "js") == files_with_ext(prediction, "csv")]
 
-        print(f"Weaving types with: {self.path}")
+        print(f"Type weaving with: {self.path}")
         print(f"Input directory (JS): {self.js_directory}")
         print(f"Input directory (CSV): {self.csv_directory}")
         print(f"Output directory: {self.out_directory}")
         print(f"Found {len(packages)} packages")
 
-        num_ok, num_fail, num_skip = self.weave_on_dataset(packages)
+        num_ok, num_fail, num_skip = self.weave_dataset(packages)
 
         print(f"Number of successes: {num_ok}")
         print(f"Number of fails: {num_fail}")
