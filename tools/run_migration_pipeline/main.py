@@ -12,7 +12,7 @@ def parse_args():
     parser.add_argument(
         "--engine",
         required=True,
-        choices=["DeepTyper", "LambdaNet"],
+        choices=["DeepTyper", "LambdaNet", "Incoder"],
         help="engine to use for type inference, also determines the CSV format for type weaving and directory for type checking")
     parser.add_argument(
         "--directory",
@@ -22,6 +22,10 @@ def parse_args():
         "--dataset",
         required=True,
         help="name of directory (within DIRECTORY) that contains JavaScript packages")
+    parser.add_argument(
+        "--infer-out",
+        default="baseline",
+        help="name of directory (within DIRECTORY) to write TypeScript, when the engine is Incoder; defaults to baseline")
     parser.add_argument(
         "--workers",
         type=int,
@@ -85,6 +89,9 @@ def main():
     elif args.infer and args.engine == "LambdaNet":
         lambdanet = type_inference.LambdaNet(args)
         run_pipeline_step(lambdanet.run, "type inference")
+    elif args.infer and args.engine == "Incoder":
+        incoder = type_inference.Incoder(args)
+        run_pipeline_step(incoder.run, "type inference")
 
     if args.weave:
         type_weaver = type_weaving.TypeWeaver(args)
