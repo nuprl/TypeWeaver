@@ -3,7 +3,7 @@ from pathlib import Path
 import typing as t
 import re
 import subprocess
-from tqdm.auto import tqdm
+import sys
 
 BOS = "<|endoftext|>"
 EOM = "<|endofmask|>"
@@ -145,7 +145,8 @@ class TypeInference:
             validate_process = subprocess.run(
                 [VALIDATE_TYPE_EXEC],
                 input=filled_type,
-                capture_output=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
                 encoding="utf-8",
                 check=False,
             )
@@ -165,7 +166,7 @@ class TypeInference:
             )
 
         infilled_prefix = parts[0]
-        for part_index, part in tqdm(enumerate(parts[1:])):
+        for part_index, part in enumerate(parts[1:]):
             suffix = "".join(parts[part_index + 1 :])
             clipped_prefix, clipped_suffix = _clip_text(
                 infilled_prefix, suffix, self.max_context_length
@@ -185,3 +186,27 @@ class TypeInference:
         return self._infill(
             "\n".join(lines), infill_marker="???"
         )
+
+def main():
+    import model
+
+    if len(sys.argv) < 2:
+        print("error: missing argument: pass JavaScript file as argument")
+        exit(1)
+
+    m = model.init_model("facebook/incoder-1B")
+    typeinf = TypeInference(**m)
+
+    input_file = Path(sys.argv[1])
+    output_file = input_file.with_suffix(".ts")
+
+    if not input_file.exists():
+        print(f"error: file does not exist: {input_file}")
+
+    result = typeinf.infer(input_file)
+
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write(result)
+
+if __name__ == "__main__":
+    main()
