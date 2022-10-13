@@ -1,9 +1,10 @@
-import torch
 from pathlib import Path
+import argparse
 import typing as t
 import re
 import subprocess
 import sys
+import traceback
 
 BOS = "<|endoftext|>"
 EOM = "<|endofmask|>"
@@ -187,26 +188,76 @@ class TypeInference:
             "\n".join(lines), infill_marker="???"
         )
 
-def main():
-    import model
+def _parse_args():
+    parser = argparse.ArgumentParser(
+        description="Runs Incoder to infer types for JavaScript",
+        epilog="One of --files or --directories must be provided")
 
-    if len(sys.argv) < 2:
-        print("error: missing argument: pass JavaScript file as argument")
+    parser.add_argument(
+        "--files",
+        nargs="+",
+        help="JavaScript files to run type inference on")
+    parser.add_argument(
+        "--directories",
+        nargs="+",
+        help="JavaScript directories to run type inference on")
+
+    args = parser.parse_args()
+
+    if args.files and args.directories:
+        parser.print_usage()
+        print(f"error: one of --files or --directories must be provided, not both")
+        exit(1)
+    elif args.files:
+        for f in args.files:
+            if not Path(f).exists():
+                parser.print_usage()
+                print(f"error: file does not exist: {f}")
+                exit(1)
+    elif args.directories:
+        for d in args.directories:
+            if not Path(d).exists():
+                parser.print_usage()
+                print(f"error: directory does not exist: {d}")
+                exit(1)
+    else:
+        parser.print_usage()
+        print("error: need to provide arguments")
         exit(1)
 
+    return args
+
+def _infer_on_file(typeinf, input_file):
+    output_file = input_file.with_suffix(".ts")
+    error_file = input_file.with_suffix(".err")
+
+    try:
+        result = typeinf.infer(input_file)
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write(result)
+    except:
+        error = traceback.format_exc()
+        with open(error_file, "w", encoding="utf-8") as f:
+            f.write(error)
+
+def _infer_on_directory(typeinf, directory):
+    files = [f for f in directory.rglob("*.js") if f.is_file()]
+    for f in files:
+        _infer_on_file(typeinf, f)
+
+def main():
+    args = _parse_args()
+
+    import model
     m = model.init_model("facebook/incoder-1B")
     typeinf = TypeInference(**m)
 
-    input_file = Path(sys.argv[1])
-    output_file = input_file.with_suffix(".ts")
-
-    if not input_file.exists():
-        print(f"error: file does not exist: {input_file}")
-
-    result = typeinf.infer(input_file)
-
-    with open(output_file, "w", encoding="utf-8") as f:
-        f.write(result)
+    if args.files:
+        for f in args.files:
+            _infer_on_file(typeinf, Path(f))
+    elif args.directories:
+        for d in args.directories:
+            _infer_on_directory(typeinf, Path(d))
 
 if __name__ == "__main__":
     main()

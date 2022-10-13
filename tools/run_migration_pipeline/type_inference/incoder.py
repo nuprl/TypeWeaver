@@ -76,7 +76,7 @@ class Incoder:
                 err_file.unlink()
 
             # Run Incoder on the file
-            args = ["python", self.path.name, file]
+            args = ["python", self.path.name, "--file", file]
             result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
 
             # Create target directories for output
