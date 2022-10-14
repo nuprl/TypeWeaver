@@ -1,12 +1,14 @@
 from pathlib import Path
 from subprocess import PIPE
-import subprocess
+import subprocess, time
 
 import util
 from util import Result, ResultStatus
 
 class Incoder:
     path = Path(util.tools_root, "..", "Incoder", "py", "main.py").resolve()
+
+    SLEEP_TIME = 5
 
     def __init__(self, args):
         if not self.path.exists():
@@ -56,44 +58,42 @@ class Incoder:
     def infer_on_package(self, package, to_skip):
         """
         Run inference on a single package, skipping packages that have already
-        been processed. For Incoder, this means running inference on each file
-        in the package. Also record the result, writing the type predictions or
+        been processed. Also record the result, writing the type predictions or
         errors to the filesystem.
         """
         if package in to_skip:
             return Result(package, ResultStatus.SKIP)
 
-        all_ok = True
-        files = sorted([f.resolve() for f in package.rglob("*.js") if f.is_file()])
-        for file in files:
-            ts_file = Path(self.out_directory, self.short_name(file)).resolve().with_suffix(".ts")
-            err_file = ts_file.with_suffix(".err")
+        input_files = [f.resolve() for f in package.rglob("*.js") if f.is_file()]
+        output_dir = Path(self.out_directory, self.short_name(package)).resolve()
 
-            # Delete ts/err output if they exist
-            if ts_file.exists():
-                ts_file.unlink()
-            if err_file.exists():
-                err_file.unlink()
+        # Delete the old output files
+        output_files = [f.resolve()
+                        for f in output_dir.rglob("*")
+                        if f.is_file() and (f.suffix == ".ts" or f.suffix == ".err")]
+        for f in output_files:
+            f.unlink()
 
-            # Run Incoder on the file
-            args = ["python", self.path.name, "--file", file]
-            result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
+        # Poll until the done file is created
+        done_file = Path(package, "incoder.done")
+        while True:
+            if done_file.exists():
+                break
+            time.sleep(self.SLEEP_TIME)
 
-            # Create target directories for output
-            ts_file.parent.mkdir(parents=True, exist_ok=True)
+        # Get the output files, .ts and .err (but they are in the input directory)
+        ts_files = [f.resolve() for f in package.rglob("*.ts") if f.is_file()]
+        err_files = [f.resolve() for f in package.rglob("*.err") if f.is_file()]
 
-            ts_output = file.with_suffix(".ts")
-            if result.returncode == 0 and ts_output.exists():
-                ts_output.rename(ts_file)
-            else:
-                all_ok = False
-                with open(err_file, mode="w", encoding="utf-8") as f:
-                    if result.returncode != 0:
-                        print(result.stderr, file=f)
-                    else:
-                        print(f"error: expected {ts_output} to be created on successful run", file=f)
+        # Move files to their output directory
+        for file in (ts_files + err_files):
+            output_file = Path(self.out_directory, self.short_name(file))
+            output_file.parent.mkdir(parents=True, exist_ok=True)
+            file.rename(output_file)
 
-        if all_ok:
+        done_file.unlink()
+
+        if not err_files:
             return Result(package, ResultStatus.OK)
         else:
             return Result(package, ResultStatus.FAIL)
@@ -110,6 +110,16 @@ class Incoder:
         # Compute the packages to skip
         to_skip = self.get_skip_set(packages)
 
+        # Create a list of the packages to run
+        packages_to_run = set(packages).difference(to_skip)
+        packages_list = sorted([str(p) for p in packages_to_run])
+
+        # Only start Incoder if there are packages to run
+        p = None
+        if packages_list:
+            args = ["python", self.path.name, "--write-done-file", "--directories", *packages_list]
+            p = subprocess.Popen(args, stdin=PIPE, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=self.path.parent)
+
         for i, package in enumerate(packages):
             print("[{}/{}] {} ... ".format(i + 1, len(packages), self.short_name(package)), end="", flush=True)
             result = self.infer_on_package(package, to_skip)
@@ -121,6 +131,11 @@ class Incoder:
                 num_skip += 1
             elif result.is_fail():
                 num_fail += 1
+
+        if p:
+            # If we reach this point, either Incoder has finished processing everything,
+            # or there was nothing left to process, so we can kill it
+            p.terminate()
 
         return num_ok, num_fail, num_skip
 

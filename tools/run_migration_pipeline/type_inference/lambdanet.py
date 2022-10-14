@@ -79,6 +79,7 @@ class LambdaNet:
         for f in output_files:
             f.unlink()
 
+        # Poll until either the done or error files are created
         done_file = Path(package, "done.ok")
         err_file = Path(package, "output.err")
         while True:
@@ -121,8 +122,8 @@ class LambdaNet:
 
         # Create a string with the packages to run, one per line
         packages_to_run = set(packages).difference(to_skip)
-        packages_list = [str(p) for p in packages_to_run]
-        packages_string = "\n".join(sorted(packages_list))
+        packages_list = sorted([str(p) for p in packages_to_run])
+        packages_string = "\n".join(packages_list)
 
         # Only start LambdaNet if there are packages to run
         p = None

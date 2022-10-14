@@ -245,7 +245,7 @@ def _infer_on_file(typeinf, input_file):
             f.write(error)
 
 def _infer_on_directory(typeinf, directory, write_done_file = False):
-    files = [f for f in directory.rglob("*.js") if f.is_file()]
+    files = sorted([f for f in directory.rglob("*.js") if f.is_file()])
     for f in files:
         _infer_on_file(typeinf, f)
 
@@ -261,10 +261,10 @@ def main():
     typeinf = TypeInference(**m)
 
     if args.files:
-        for f in args.files:
+        for f in sorted(args.files):
             _infer_on_file(typeinf, Path(f))
     elif args.directories:
-        for d in args.directories:
+        for d in sorted(args.directories):
             _infer_on_directory(typeinf, Path(d), args.write_done_file)
 
 if __name__ == "__main__":
