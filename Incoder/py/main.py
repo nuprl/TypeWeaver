@@ -201,6 +201,10 @@ def _parse_args():
         "--directories",
         nargs="+",
         help="JavaScript directories to run type inference on")
+    parser.add_argument(
+        "--write-done-file",
+        action="store_true",
+        help=argparse.SUPPRESS)
 
     args = parser.parse_args()
 
@@ -240,10 +244,14 @@ def _infer_on_file(typeinf, input_file):
         with open(error_file, "w", encoding="utf-8") as f:
             f.write(error)
 
-def _infer_on_directory(typeinf, directory):
+def _infer_on_directory(typeinf, directory, write_done_file = False):
     files = [f for f in directory.rglob("*.js") if f.is_file()]
     for f in files:
         _infer_on_file(typeinf, f)
+
+    if write_done_file:
+        done_file = Path(directory, "incoder.done")
+        done_file.touch(exist_ok=True)
 
 def main():
     args = _parse_args()
@@ -257,7 +265,7 @@ def main():
             _infer_on_file(typeinf, Path(f))
     elif args.directories:
         for d in args.directories:
-            _infer_on_directory(typeinf, Path(d))
+            _infer_on_directory(typeinf, Path(d), args.write_done_file)
 
 if __name__ == "__main__":
     main()
