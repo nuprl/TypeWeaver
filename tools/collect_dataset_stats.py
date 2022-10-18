@@ -12,7 +12,7 @@
 
 from pathlib import Path
 from subprocess import PIPE
-import argparse, json, re, subprocess
+import argparse, json, subprocess
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Collects statistics for a JavaScript dataset")
