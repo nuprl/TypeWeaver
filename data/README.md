@@ -3,7 +3,7 @@
 There are four datasets, extracted from the `top1k-plus` dataset:
 
   * `top1k-typed-nodeps`
-    * **291** packages that are typed and have no dependencies
+    * **288** packages that are typed and have no dependencies
   * `top1k-untyped-nodeps`
     * **102** packages that are untyped and have no dependencies
   * `top1k-typed-with-typed-deps`
@@ -116,23 +116,24 @@ Some packages failed to download, for the following reasons:
 ## Data cleaning and manual reclassification
 
 This process was mostly done by hand, so some packages and files may have been
-missed. 98 packages were removed, leaving behind **528** packages in the final
+missed. 102 packages were removed, leaving behind **524** packages in the final
 dataset.
 
 ### Excluding packages
 
 Packages meeting any of the following criteria were deleted:
 
-  * the package was implemented in TypeScript
+  * the package was implemented in TypeScript or CoffeeScript
   * the package was too large, i.e. it had over 10 KLOC of JavaScript or
     TypeScript
   * the package was built from within a monorepo
 
-This is a JavaScript dataset, so we exclude TypeScript projects. We also
-excluded packages that were too large to handle, which includes packages with
-significant amounts of code or packages built from monorepos. Excluding
-monorepos also helps us exclude duplicate source repositories, since multiple
-packages can refer to the same source code repository.
+This is a JavaScript dataset, so we exclude TypeScript and CoffeeScript
+projects. We also excluded packages that were too large to handle, which
+includes packages with significant amounts of code or packages built from
+monorepos. Excluding monorepos also helps us exclude duplicate source
+repositories, since multiple packages can refer to the same source code
+repository.
 
 ### Deleting test files and directories
 
