@@ -119,6 +119,8 @@ This process was mostly done by hand, so some packages and files may have been
 missed. 102 packages were removed, leaving behind **524** packages in the final
 dataset.
 
+Broken and recursive symlinks were deleted.
+
 ### Excluding packages
 
 Packages meeting any of the following criteria were deleted:
