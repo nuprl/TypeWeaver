@@ -1,0 +1,182 @@
+{
+  "name": "nanoid",
+  "version": "4.0.0",
+  "description": "A tiny (116 bytes), secure URL-friendly unique string ID generator",
+  "keywords": [
+    "uuid",
+    "random",
+    "id",
+    "url"
+  ],
+  "scripts": {
+    "clean": "rm -R coverage",
+    "unit": "uvu . .test.js$",
+    "test": "c8 pnpm unit && eslint . && pnpm clean && size-limit",
+    "start": "vite test/demo/ --open"
+  },
+  "type": "module",
+  "engines": {
+    "node": "^14 || ^16 || >=18"
+  },
+  "author": "Andrey Sitnik <andrey@sitnik.ru>",
+  "license": "MIT",
+  "repository": "ai/nanoid",
+  "exports": {
+    ".": {
+      "browser": "./index.browser.js",
+      "default": "./index.js"
+    },
+    "./async": {
+      "browser": "./async/index.browser.js",
+      "default": "./async/index.js"
+    },
+    "./non-secure": "./non-secure/index.js",
+    "./package.json": "./package.json"
+  },
+  "browser": {
+    "./index.js": "./index.browser.js",
+    "./async/index.js": "./async/index.browser.js",
+    "./async/index.cjs": "./async/index.browser.cjs"
+  },
+  "react-native": {
+    "./async/index.js": "./async/index.native.js"
+  },
+  "bin": "./bin/nanoid.js",
+  "sideEffects": false,
+  "types": "./index.d.ts",
+  "devDependencies": {
+    "@babel/core": "^7.19.1",
+    "@logux/eslint-config": "^47.2.0",
+    "@lukeed/uuid": "^2.0.0",
+    "@napi-rs/uuid": "^0.2.2",
+    "@originjs/vite-plugin-commonjs": "^1.0.3",
+    "@size-limit/file": "^8.1.0",
+    "@size-limit/webpack": "^8.1.0",
+    "@types/node": "^18.7.18",
+    "benchmark": "^2.1.4",
+    "c8": "^7.12.0",
+    "clean-publish": "^4.0.1",
+    "cuid": "^2.1.8",
+    "eslint": "^8.23.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.5",
+    "eslint-plugin-prefer-let": "^3.0.1",
+    "eslint-plugin-promise": "^6.0.1",
+    "picocolors": "^1.0.0",
+    "postcss": "^8.4.16",
+    "rndm": "^1.2.0",
+    "secure-random-string": "^1.1.3",
+    "shortid": "^2.2.16",
+    "size-limit": "^8.1.0",
+    "terser": "^5.15.0",
+    "uid": "^2.0.0",
+    "uid-safe": "^2.1.5",
+    "uuid": "^9.0.0",
+    "uvu": "^0.5.6",
+    "vite": "^3.1.1"
+  },
+  "size-limit": [
+    {
+      "name": "nanoid",
+      "import": "{ nanoid }",
+      "limit": "116 B"
+    },
+    {
+      "name": "customAlphabet",
+      "import": "{ customAlphabet }",
+      "limit": "174 B"
+    },
+    {
+      "name": "urlAlphabet",
+      "import": "{ urlAlphabet }",
+      "limit": "61 B"
+    },
+    {
+      "name": "non-secure nanoid",
+      "import": "{ nanoid }",
+      "path": "non-secure/index.js",
+      "limit": "118 B"
+    },
+    {
+      "name": "non-secure customAlphabet",
+      "import": "{ customAlphabet }",
+      "path": "non-secure/index.js",
+      "limit": "69 B"
+    },
+    {
+      "name": "async nanoid",
+      "import": "{ nanoid }",
+      "path": "async/index.js",
+      "limit": "136 B"
+    },
+    {
+      "name": "async customAlphabet",
+      "import": "{ customAlphabet }",
+      "path": "async/index.js",
+      "limit": "157 B"
+    },
+    {
+      "name": "Brotli all",
+      "brotli": true,
+      "import": "{ nanoid, customAlphabet, urlAlphabet }",
+      "limit": "260 B"
+    },
+    {
+      "name": "Brotli non-secure",
+      "brotli": true,
+      "import": "{ nanoid, customAlphabet }",
+      "path": "non-secure/index.js",
+      "limit": "116 B"
+    },
+    {
+      "name": "Brotli async",
+      "brotli": true,
+      "import": "{ nanoid, customAlphabet }",
+      "path": "async/index.js",
+      "limit": "211 B"
+    }
+  ],
+  "eslintConfig": {
+    "extends": "@logux/eslint-config",
+    "rules": {
+      "consistent-return": "off",
+      "func-style": "off",
+      "yoda": "off"
+    },
+    "overrides": [
+      {
+        "files": "*.native.js",
+        "rules": {
+          "n/no-missing-require": "off",
+          "global-require": "off"
+        }
+      }
+    ]
+  },
+  "eslintIgnore": [
+    "test/demo/build",
+    "nanoid.js",
+    "**/errors.ts"
+  ],
+  "prettier": {
+    "arrowParens": "avoid",
+    "jsxSingleQuote": false,
+    "quoteProps": "consistent",
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none"
+  },
+  "clean-publish": {
+    "cleanDocs": true,
+    "cleanComments": true
+  },
+  "c8": {
+    "exclude": [
+      "**/*.test.*"
+    ],
+    "lines": 100,
+    "reporter": "lcov",
+    "check-coverage": true
+  }
+}

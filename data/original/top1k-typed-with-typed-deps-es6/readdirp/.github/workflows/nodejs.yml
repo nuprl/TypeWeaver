@@ -1,0 +1,27 @@
+name: Node CI
+on: [push, pull_request]
+env:
+  CI: true
+
+jobs:
+  build:
+    name: node ${{ matrix.node }} @ ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [8, 10, 12, 14]
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Use Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+
+      - run: npm install
+
+      - name: Run mocha tests
+        run: npm run nyc -- npm run mocha

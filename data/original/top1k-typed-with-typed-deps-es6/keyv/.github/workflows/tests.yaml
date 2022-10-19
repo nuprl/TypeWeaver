@@ -1,0 +1,39 @@
+name: tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ '16', '18' ]
+    name: Node ${{ matrix.node }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+      
+      - name: Start Services
+        run: yarn test:services:start
+
+      - name: Install Dependencies  
+        run: yarn
+        
+      - name: Test Packages
+        run: yarn test
+
+      - name: Generate Code Coverage Report
+        run: yarn coverage
+
+      - name: Code Coverage
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_KEY }}
+          files: ./packages/keyv/coverage.lcov,./packages/mysql/coverage.lcov,./packages/test-suite/coverage.lcov,./packages/sqlite/coverage.lcov,./packages/postgres/coverage.lcov,./packages/mongo/coverage.lcov,./packages/redis/coverage.lcov,./packages/memcache/coverage.lcov,./packages/etcd/coverage.lcov,./packages/offline/coverage.lcov,./packages/tiered/coverage.lcov

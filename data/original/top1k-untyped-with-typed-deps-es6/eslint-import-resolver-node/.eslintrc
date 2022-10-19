@@ -1,0 +1,151 @@
+{
+    "root": true,
+    "plugins": [
+        "eslint-plugin",
+        "import",
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:eslint-plugin/recommended",
+        "plugin:import/recommended",
+    ],
+    "env": {
+        "node": true,
+        "es6": true,
+    },
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2020,
+    },
+    "rules": {
+        "comma-dangle": ["error", {
+            "arrays": "always-multiline",
+            "objects": "always-multiline",
+            "imports": "always-multiline",
+            "exports": "always-multiline",
+            "functions": "always-multiline",
+        }],
+        "comma-style": [2, "last"],
+        "curly": [2, "multi-line"],
+        "eol-last": [2, "always"],
+        "eqeqeq": [2, "allow-null"],
+        "func-call-spacing": 2,
+        "indent": [2, 2],
+        "keyword-spacing": ["error", {
+          "before": true,
+          "after": true,
+          "overrides": {
+            "return": { "after": true },
+            "throw": { "after": true },
+            "case": { "after": true }
+          }
+        }],
+        "max-len": 0,
+        "no-cond-assign": [2, "always"],
+        "no-return-assign": [2, "always"],
+        "no-var": 2,
+        "object-curly-spacing": [2, "always"],
+        "object-shorthand": ["error", "always", {
+            "ignoreConstructors": false,
+            "avoidQuotes": true,
+        }],
+        "one-var": [2, "never"],
+        "prefer-const": 2,
+        "quotes": [2, "single", {
+            "allowTemplateLiterals": true,
+            "avoidEscape": true,
+        }],
+        "semi": [2, "always"],
+        "space-before-function-paren": ["error", {
+            "anonymous": "always",
+            "named": "never",
+            "asyncArrow": "always",
+        }],
+
+        "eslint-plugin/consistent-output": [
+            "error",
+            "always",
+        ],
+        "eslint-plugin/meta-property-ordering": "error",
+        "eslint-plugin/no-deprecated-context-methods": "error",
+        "eslint-plugin/no-deprecated-report-api": "off",
+        "eslint-plugin/prefer-replace-text": "error",
+        "eslint-plugin/report-message-format": "error",
+        "eslint-plugin/require-meta-schema": "error",
+        "eslint-plugin/require-meta-type": "error",
+
+        // dog fooding
+        "import/no-extraneous-dependencies": "error",
+        "import/unambiguous": "off",
+    },
+
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "paths": [
+                    "src",
+                ],
+            },
+        },
+    },
+
+    "overrides": [
+        {
+            "files": "scripts/**",
+            "rules": {
+                "no-console": "off",
+            },
+        },
+        {
+            "files": "resolvers/**",
+            "env": {
+                "es6": false,
+            },
+        },
+        {
+            "files": "resolvers/webpack/**",
+            "rules": {
+                "import/no-extraneous-dependencies": 1,
+                "no-console": 1,
+            },
+            "env": {
+                "es6": true,
+            },
+        },
+        {
+            "files": [
+                "resolvers/*/test/**/*",
+            ],
+            "env": {
+                "mocha": true,
+                "es6": false
+            },
+        },
+        {
+            "files": "utils/**",
+            "parserOptions": {
+                "ecmaVersion": 6,
+            },
+            "rules": {
+                "comma-dangle": ["error", {
+                    "arrays": "always-multiline",
+                    "objects": "always-multiline",
+                    "imports": "always-multiline",
+                    "exports": "always-multiline",
+                    "functions": "never"
+                }],
+                "no-console": 1,
+            },
+        },
+        {
+            "files": "tests/**",
+            "env": {
+                "mocha": true,
+            },
+            "rules": {
+                "max-len": 0,
+                "import/default": 0,
+            },
+        },
+    ],
+}

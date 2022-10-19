@@ -1,6 +1,6 @@
 # README
 
-There are four datasets, extracted from the `top1k-plus` dataset:
+There are eight datasets, extracted from the `top1k-plus` dataset:
 
   * `top1k-typed-nodeps`
     * **288** packages that are typed and have no dependencies
@@ -11,7 +11,12 @@ There are four datasets, extracted from the `top1k-plus` dataset:
   * `top1k-untyped-with-typed-deps`
     * **42** packages that are untyped and all their dependencies are typed
 
-"Typed" means the package has type definitions in the
+Each of the above datasets has a corresponding `-es6` dataset, where the
+packages have been migrated from CommonJS modules (which use `require` and
+`module.exports`) to ECMAScript 6 modules (which use `import` and `export`).
+This gives us a total of eight datasets.
+
+`typed` means the package has type definitions in the
 [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
 repository.
 
@@ -155,9 +160,31 @@ incorrectly excluded from the dataset, because their dependencies were
 incorrectly classified as untyped.
 
 Packages that generate `.d.ts` files can be found by parsing the `tsconfig.json`
-files :
+files:
 
     for i in `find . -type f -name "tsconfig.json"`; do \
         jq -e '.compilerOptions.declaration' $i > /dev/null \
             && echo $i | cut -d'/' -f2; \
     done
+
+
+## Migrating to ES6
+
+Most packages in the dataset were written using CommonJS modules, which use
+`require` to import modules and `module.exports` to export. When migrated to
+TypeScript, `require` is typed as a function that returns `any`; thus the
+benefits of typing are lost. In contrast, ECMAScript 6 modules, which use
+`import` and `export`, preserve types across module boundaries.
+
+We duplicate our original dataset and convert packages to use ES6 modules.
+Our `tools/transform_require_to_import.py` script copies the dataset and
+uses [`cjs-to-es6`](https://github.com/nolanlawson/cjs-to-es6) to transform
+the packages in place.
+
+The migration succeeded on all packages. Some errors (where the migration
+script deleted blank lines and introduced errors) were manually corrected.
+
+The migration process is not perfect, but should handle most of the cases.
+Additionally, the evaulation with the TypeScript compiler sets the
+[`esModuleInterop`](https://www.typescriptlang.org/tsconfig#esModuleInterop)
+option.

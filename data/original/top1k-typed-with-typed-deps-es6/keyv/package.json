@@ -1,0 +1,22 @@
+{
+  "name": "@keyv/mono-repo",
+  "version": "1.0.0",
+  "description": "Keyv Mono Repo",
+  "repository": "https://github.com/jaredwray/keyv.git",
+  "author": "Jared Wray <me@jaredwray.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "yarn workspaces run test",
+    "test:services:start": "docker-compose -f ./docker-compose.yaml up -d",
+    "test:services:stop": "docker-compose -f ./docker-compose.yaml down -v",
+    "coverage": "yarn workspaces run coverage",
+    "clean": "rm -rf node_modules && rm -rf yarn.lock && yarn workspaces run clean"
+  },
+  "dependencies": {
+    "@types/node": "^18.0.0"
+  }
+}
