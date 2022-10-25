@@ -14,6 +14,8 @@ from pathlib import Path
 from subprocess import PIPE
 import argparse, json, subprocess
 
+import util
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Collects statistics for a JavaScript dataset")
     parser.add_argument(
@@ -22,25 +24,9 @@ def parse_args():
         help="name of directory that contains JavaScript packages")
 
     args = parser.parse_args()
-    if not Path(args.dataset).exists():
-        parser.print_usage()
-        print("{}: error: directory {} does not exist".format(parser.prog, args.dataset))
-        exit(2)
+    util.check_exists(args.dataset)
 
     return args
-
-def get_dependencies(path):
-    package_json = Path(path, "package.json")
-
-    if not package_json.exists():
-        return []
-
-    with open(package_json) as f:
-        data = json.load(f)
-        if "dependencies" not in data.keys():
-            return []
-
-        return list(data["dependencies"].keys())
 
 def get_loc(path):
     args = ["cloc", "--include-lang=JavaScript,TypeScript", "--json", path]
@@ -73,7 +59,7 @@ def main():
 
     for package in packages:
         path = Path(dataset_dir, package)
-        deps = get_dependencies(path)
+        deps = util.get_dependencies(path)
         num_deps = len(deps)
         js_loc, ts_loc = get_loc(path)
         js_num_files, js_size = get_files(path, "js")

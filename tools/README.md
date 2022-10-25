@@ -21,6 +21,7 @@ A collection of scripts and tools.
 * `type_weaver/index.ts`: weaves an unannotated JavaScript file with a CSV file
   of type predictions, to produce a type annotated TypeScript file
 
+`util.py` contains some common utility functions.
 
 ## Dependencies
 

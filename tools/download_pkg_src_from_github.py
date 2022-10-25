@@ -5,6 +5,8 @@ from pathlib import Path
 from subprocess import PIPE
 import argparse, re, shutil, subprocess
 
+import util
+
 def parse_args():
     parser = argparse.ArgumentParser(description="Downloads NPM package source code from GitHub")
     parser.add_argument(
@@ -17,15 +19,8 @@ def parse_args():
         help="name of directory to save source code")
 
     args = parser.parse_args()
-    if not Path(args.dataset).exists():
-        parser.print_usage()
-        print("{}: error: directory {} does not exist".format(parser.prog, args.dataset))
-        exit(2)
-
-    if not Path(args.output).exists():
-        parser.print_usage()
-        print("{}: error: directory {} does not exist".format(parser.prog, args.output))
-        exit(2)
+    util.check_exists(args.dataset)
+    util.check_exists(args.output)
 
     return args
 
