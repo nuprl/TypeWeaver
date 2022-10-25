@@ -12,6 +12,9 @@ A collection of scripts and tools.
 * `download_pkg_src_from_github.py`: takes a JavaScript dataset and downloads
   package source code from GitHub
 
+* `install_dependency_type_defs.py`: takes a JavaScript dataset and installs
+  type definitions for each package's dependencies
+
 * `run_migration_pipeline/main.py`: runs the evaluation pipeline (inference,
   type weaving, and type checking) on a dataset
 
