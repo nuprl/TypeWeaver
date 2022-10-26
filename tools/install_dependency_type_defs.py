@@ -60,7 +60,7 @@ def main():
 
     if len(failures) > 0:
         print("Warning! The following type definitions failed to install! Please investigate!")
-        print(failures)
+        print(" ".join(failures))
 
 if __name__ == "__main__":
     main()

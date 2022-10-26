@@ -1,20 +1,22 @@
 # README
 
-There are eight datasets, extracted from the `top1k-plus` dataset:
+There are four datasets, extracted from the `top1k-plus` dataset:
 
   * `top1k-typed-nodeps`
     * **287** packages that are typed and have no dependencies
   * `top1k-untyped-nodeps`
     * **102** packages that are untyped and have no dependencies
   * `top1k-typed-with-typed-deps`
-    * **90** packages that are typed and all their dependencies are typed
+    * **85** packages that are typed and all their dependencies are typed
   * `top1k-untyped-with-typed-deps`
-    * **41** packages that are untyped and all their dependencies are typed
+    * **40** packages that are untyped and all their dependencies are typed
 
-Each of the above datasets has a corresponding `-es6` dataset, where the
-packages have been migrated from CommonJS modules (which use `require` and
-`module.exports`) to ECMAScript 6 modules (which use `import` and `export`).
-This gives us a total of eight datasets.
+There are **514** packages in total.
+
+Additionally, each of the above datasets has a corresponding `-es6` dataset,
+where the packages have been migrated from CommonJS modules (which use
+`require` and `module.exports`) to ECMAScript 6 modules (which use `import` and
+`export`). This gives us a total of eight datasets.
 
 `typed` means the package has type definitions in the
 [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
@@ -69,6 +71,7 @@ definitions in DefinitelyTyped. It also checks that a package contains
 JavaScript files and is not simply a package of JSON files or type definitions.
 The results were saved in `top1k-plus.csv`:
 
+    cd data
     python ../tools/check_dataset_in_definitely_typed.py \
         --dataset /path/to/top1k-plus \
         --typings /path/to/DefinitelyTyped \
@@ -97,6 +100,7 @@ Therefore, we need to download the original source code from the packages'
 GitHub repositories. This is what the `tools/download_pkg_src_from_github.py`
 script does:
 
+    cd data
     for i in `ls from_tarballs`; do \
         mkdir -p originals/$i; \
         python ../tools/download_pkg_src_from_github.py \
@@ -121,8 +125,7 @@ Some packages failed to download, for the following reasons:
 ## Data cleaning and manual reclassification
 
 This process was mostly done by hand, so some packages and files may have been
-missed. 106 packages were removed, leaving behind **520** packages in the final
-dataset.
+missed. 106 packages were removed, leaving behind **520** packages.
 
 Broken and recursive symlinks were deleted.
 
@@ -145,6 +148,7 @@ repository.
 One way to check for monorepos is to compare the package's directory with the
 name specified in `package.json`:
 
+    cd data/original
     for i in `find . -maxdepth 3 -name "package.json"`; do \
         dir=`echo $i | cut -d'/' -f3`; \
         name=`jq -r ".name" $i`; \
@@ -173,10 +177,49 @@ incorrectly classified as untyped.
 Packages that generate `.d.ts` files can be found by parsing the `tsconfig.json`
 files:
 
+    cd data
     for i in `find . -type f -name "tsconfig.json"`; do \
         jq -e '.compilerOptions.declaration' $i > /dev/null \
             && echo $i | cut -d'/' -f2; \
     done
+
+
+## Installing type definitions of dependencies
+
+We selected our dataset to contain packages that either have no dependencies, or
+packages with dependencies that all have type definitions. The next step is to
+install those type definitions.
+
+The `tools/install_dependency_type_defs.py` script iterates over a dataset,
+parses the `package.json` file, and installs dependency type definitions.
+
+The following mapping is used from packages to type definitions:
+
+  * `@types/package` -> `@types/package`
+  * `@abc/def` -> `@types/abc__def`
+  * `package` -> `@types/package`
+
+Dependencies are installed to `data/node_modules`. Some type definitions have
+their own dependencies (which themselves may be actual packages and not type
+definitions), which are transitively installed.
+
+Dependencies that fail to install are investigated, and the packages that depend
+on it are removed from the dataset. The automatic classification script may have
+some errors, but the ultimate authority is whether a type definition can be
+installed.
+
+The depending packages can be identified by running the following (assuming the
+failed dependencies are `dep1`, `dep2`, and `dep3`):
+
+    cd data/original
+    for i in `find . -maxdepth 3 -name "package.json"`; do \
+        for d in dep1 dep2 dep3; do \
+            jq -e ".dependencies | has(\"$d\")" $i > /dev/null \
+                && echo $i $d; \
+        done ; \
+    done
+
+6 packages were removed, leaving a total of **514**.
 
 
 ## Migrating to ES6
@@ -191,6 +234,17 @@ We duplicate our original dataset and convert packages to use ES6 modules.
 Our `tools/transform_require_to_import.py` script copies the dataset and
 uses [`cjs-to-es6`](https://github.com/nolanlawson/cjs-to-es6) to transform
 the packages in place.
+
+We ran the following commands:
+
+    python tools/transform_require_to_import.py \
+        --dataset data/original/top1k-typed-nodeps/
+    python tools/transform_require_to_import.py \
+        --dataset data/original/top1k-untyped-nodeps/
+    python tools/transform_require_to_import.py \
+        --dataset data/original/top1k-typed-with-typed-deps/
+    python tools/transform_require_to_import.py \
+        --dataset data/original/top1k-untyped-with-typed-deps/
 
 The migration succeeded on all packages. Some errors (where the migration
 script deleted blank lines and introduced errors) were manually corrected.
