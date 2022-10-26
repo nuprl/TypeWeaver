@@ -3,13 +3,13 @@
 There are eight datasets, extracted from the `top1k-plus` dataset:
 
   * `top1k-typed-nodeps`
-    * **288** packages that are typed and have no dependencies
+    * **287** packages that are typed and have no dependencies
   * `top1k-untyped-nodeps`
     * **102** packages that are untyped and have no dependencies
   * `top1k-typed-with-typed-deps`
-    * **92** packages that are typed and all their dependencies are typed
+    * **90** packages that are typed and all their dependencies are typed
   * `top1k-untyped-with-typed-deps`
-    * **42** packages that are untyped and all their dependencies are typed
+    * **41** packages that are untyped and all their dependencies are typed
 
 Each of the above datasets has a corresponding `-es6` dataset, where the
 packages have been migrated from CommonJS modules (which use `require` and
@@ -121,7 +121,7 @@ Some packages failed to download, for the following reasons:
 ## Data cleaning and manual reclassification
 
 This process was mostly done by hand, so some packages and files may have been
-missed. 102 packages were removed, leaving behind **524** packages in the final
+missed. 106 packages were removed, leaving behind **520** packages in the final
 dataset.
 
 Broken and recursive symlinks were deleted.
@@ -141,6 +141,17 @@ includes packages with significant amounts of code or packages built from
 monorepos. Excluding monorepos also helps us exclude duplicate source
 repositories, since multiple packages can refer to the same source code
 repository.
+
+One way to check for monorepos is to compare the package's directory with the
+name specified in `package.json`:
+
+    for i in `find . -maxdepth 3 -name "package.json"`; do \
+        dir=`echo $i | cut -d'/' -f3`; \
+        name=`jq -r ".name" $i`; \
+        [[ $dir != $name ]] && echo $i $name; \
+    done
+
+If the names are different, then the package _may_ be a monorepo.
 
 ### Deleting test files and directories
 
