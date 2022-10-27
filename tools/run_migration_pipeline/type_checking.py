@@ -84,11 +84,9 @@ class TypeChecker:
 
         # TODO: pass all files or specify a tsconfig.json?
         ts_files = [f.relative_to(package) for f in package.rglob("*.ts") if f.is_file()]
-        # TODO: point to type_roots and deps in data directory
-        type_roots = Path(util.tools_root, "node_modules", "@types").resolve()
 
         # TODO: is --esModuleInterop needed?
-        args = [self.path, "--noEmit", "--strict", "--esModuleInterop", "--typeRoots", type_roots, *ts_files]
+        args = [self.path, "--noEmit", "--strict", "--esModuleInterop", *ts_files]
         result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=package)
 
         if result.returncode == 0:
