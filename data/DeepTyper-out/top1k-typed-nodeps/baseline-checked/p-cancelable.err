@@ -1,0 +1,41 @@
+index.ts(2,14): error TS7006: Parameter 'reason' implicitly has an 'any' type.
+index.ts(7,6): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+index.ts(20,12): error TS7006: Parameter 'userFunction' implicitly has an 'any' type.
+index.ts(21,11): error TS7019: Rest parameter 'arguments_' implicitly has an 'any[]' type.
+index.ts(27,2): error TS18028: Private identifiers are only available when targeting ECMAScript 2015 and higher.
+index.ts(28,2): error TS18028: Private identifiers are only available when targeting ECMAScript 2015 and higher.
+index.ts(29,2): error TS18028: Private identifiers are only available when targeting ECMAScript 2015 and higher.
+index.ts(30,2): error TS18028: Private identifiers are only available when targeting ECMAScript 2015 and higher.
+index.ts(31,2): error TS7008: Member '#reject' implicitly has an 'any' type.
+index.ts(31,2): error TS18028: Private identifiers are only available when targeting ECMAScript 2015 and higher.
+index.ts(33,14): error TS7006: Parameter 'executor' implicitly has an 'any' type.
+index.ts(34,31): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: unknown) => void' is not assignable to type 'void'.
+index.ts(37,28): error TS2322: Type '(value: any) => void' is not assignable to type 'void'.
+index.ts(38,60): error TS2339: Property 'shouldReject' does not exist on type 'void'.
+index.ts(39,6): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(44,27): error TS2322: Type '(error: any) => void' is not assignable to type 'void'.
+index.ts(45,60): error TS2339: Property 'shouldReject' does not exist on type 'void'.
+index.ts(46,6): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(51,27): error TS2322: Type '(handler: any) => void' is not assignable to type 'void'.
+index.ts(56,31): error TS2345: Argument of type 'any' is not assignable to parameter of type 'never'.
+index.ts(73,7): error TS7006: Parameter 'onFulfilled' implicitly has an 'any' type.
+index.ts(73,20): error TS7006: Parameter 'onRejected' implicitly has an 'any' type.
+index.ts(77,8): error TS7006: Parameter 'onRejected' implicitly has an 'any' type.
+index.ts(81,10): error TS7006: Parameter 'onFinally' implicitly has an 'any' type.
+index.ts(85,9): error TS7006: Parameter 'reason' implicitly has an 'any' type.
+index.ts(95,6): error TS2349: This expression is not callable.
+  Type 'never' has no call signatures.
+index.ts(108,6): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+index.ts(112,2): error TS18028: Private identifiers are only available when targeting ECMAScript 2015 and higher.
+index.ts(112,12): error TS7006: Parameter 'state' implicitly has an 'any' type.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

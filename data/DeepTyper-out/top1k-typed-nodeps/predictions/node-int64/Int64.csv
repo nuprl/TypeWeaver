@@ -1,0 +1,1628 @@
+Text
+//     Int64.jsComment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+//     Copyright (c) 2012 Robert KiefferComment.Single
+\nText.Whitespace
+//     MIT License - http://opensource.org/licenses/mit-license.phpComment.Single
+\n\nText.Whitespace
+/**\n * Support for handling 64-bit int numbers in Javascript (node.js)\n *\n * JS Numbers are IEEE-754 binary double-precision floats, which limits the\n * range of values that can be represented with integer precision to:\n *\n * 2^^53 <= N <= 2^53\n *\n * Int64 objects wrap a node Buffer that holds the 8-bytes of int64 data.  These\n * objects operate directly on the buffer which means that if they are created\n * using an existing buffer then setting the value will modify the Buffer, and\n * vice-versa.\n *\n * Internal Representation\n *\n * The internal buffer format is Big Endian.  I.e. the most-significant byte is\n * at buffer[0], the least-significant at buffer[7].  For the purposes of\n * converting to/from JS native numbers, the value is assumed to be a signed\n * integer stored in 2's complement form.\n *\n * For details about IEEE-754 see:\n * http://en.wikipedia.org/wiki/Double_precision_floating-point_format\n */Comment.Multiline
+\n\nText.Whitespace
+// Useful masks and values for bit twiddlingComment.Single
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+MASK31Name.Othernumber0.9872any0.0078string0.0009boolean0.0006number[]0.0005
+ Text.Whitespace
+=Operator
+  Text.Whitespace
+0x7fffffffLiteral.Number.Hex
+,Punctuation
+ Text.Whitespace
+VAL31Name.Othernumber0.9823any0.0144string0.0013boolean0.0006number[]0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0x80000000Literal.Number.Hex
+;Punctuation
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+MASK32Name.Othernumber0.9920any0.0058string0.0005boolean0.0003number[]0.0003
+ Text.Whitespace
+=Operator
+  Text.Whitespace
+0xffffffffLiteral.Number.Hex
+,Punctuation
+ Text.Whitespace
+VAL32Name.Othernumber0.9866any0.0104string0.0010boolean0.0007number[]0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0x100000000Literal.Number.Hex
+;Punctuation
+\n\nText.Whitespace
+// Map for converting hex octets to stringsComment.Single
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+_HEXName.Otherany[]0.8418number[]0.0481any0.0110Function[]0.0091any[][]0.0069
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\nText.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9937any0.0057string0.0003boolean0.0001number[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9722any0.0266string0.0005boolean0.0002void0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+256Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9791any0.0199string0.0005boolean0.0002void0.0001
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+_HEXName.Otherany0.2756any[]0.2626number[]0.2040string[]0.0715{}0.0291
+[Punctuation
+iName.Othernumber0.9805any0.0159string0.0029boolean0.0002void0.0002
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+iName.Othernumber0.9273any0.0691string0.0024boolean0.0005number[]0.0001
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+0xFLiteral.Number.Hex
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+''Literal.String.Single
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+'0'Literal.String.Single
+)Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+iName.Othernumber0.9037any0.0913string0.0032boolean0.0005void0.0003
+.Punctuation
+toStringName.Otherstring0.5950any0.3756number0.0104complex0.0082boolean0.0020
+(Punctuation
+16Literal.Number.Float
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+//Comment.Single
+\nText.Whitespace
+// Int64Comment.Single
+\nText.Whitespace
+//Comment.Single
+\n\nText.Whitespace
+/**\n * Constructor accepts any of the following argument types:\n *\n * new Int64(buffer[, offset=0]) - Existing Buffer with byte offset\n * new Int64(Uint8Array[, offset=0]) - Existing Uint8Array with a byte offset\n * new Int64(string)             - Hex string (throws if n is outside int64 range)\n * new Int64(number)             - Number (throws if n is outside int64 range)\n * new Int64(hi, lo)             - Raw bits as two 32-bit values\n */Comment.Multiline
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+Int64Name.Otherany0.8715string0.0611number0.0507void0.0073boolean0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+a1Name.Otherany0.6836string0.1353number0.0915Buffer0.0138boolean0.0087
+,Punctuation
+ Text.Whitespace
+a2Name.Otherany0.6520string0.1407number0.1263boolean0.0263void0.0074
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+a1Name.Otherany0.9619string0.0113number0.0109boolean0.0044void0.0018
+ Text.Whitespace
+instanceofOperator.Word
+ Text.Whitespace
+BufferName.Otherany0.9740string0.0082Buffer0.0054void0.0048number0.0009
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+bufferName.Otherany0.8910Buffer0.0504string0.0114complex0.0090any[]0.0065
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+a1Name.Otherany0.5706number0.3424string0.0408void0.0061complex0.0055
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+offsetName.Othernumber0.9317any0.0640string0.0018boolean0.0004void0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+a2Name.Othernumber0.8744any0.1167string0.0049boolean0.0010void0.0004
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ObjectName.BuiltinObjectConstructor0.9993Object0.0003any0.0002complex0.0000FunctionConstructor0.0000
+.Punctuation
+prototypeName.OtherObject0.8428any0.0183{}0.0160Function0.0107void0.0087
+.Punctuation
+toStringName.Otherstring0.7838any0.1908complex0.0127number0.0038void0.0023
+.Punctuation
+callName.Otherany0.9881string0.0041void0.0032number0.0023complex0.0008
+(Punctuation
+a1Name.Otherany0.5005string0.2224number0.2125void0.0156Buffer0.0061
+)Punctuation
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+'[object Uint8Array]'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// Under Browserify, Buffers can extend Uint8Arrays rather than anComment.Single
+\n    Text.Whitespace
+// instance of Buffer. We could assume the passed in Uint8Array is actuallyComment.Single
+\n    Text.Whitespace
+// a buffer but that won't handle the case where a raw Uint8Array is passedComment.Single
+\n    Text.Whitespace
+// in. We construct a new Buffer just in case.Comment.Single
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+bufferName.Otherany0.9926Buffer0.0034string0.0013void0.0007number0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.9930string0.0031Buffer0.0008void0.0005number0.0005
+ Text.Whitespace
+BufferName.Otherany0.9886void0.0040Buffer0.0028string0.0016number0.0005
+(Punctuation
+a1Name.Othernumber0.7938any0.1308string0.0463void0.0103boolean0.0036
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+offsetName.Othernumber0.9027any0.0936string0.0016void0.0005boolean0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+a2Name.Othernumber0.8641any0.1303string0.0030boolean0.0005void0.0003
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+bufferName.Otherany0.9453Buffer0.0351any[]0.0025string0.0019complex0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+bufferName.Otherany0.8775Buffer0.0953complex0.0045any[]0.0037ArrayBuffer0.0028
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+newOperator.Wordany0.9940string0.0032number0.0007void0.0005Buffer0.0003
+ Text.Whitespace
+BufferName.Otherany0.9853void0.0054Buffer0.0027string0.0016number0.0010
+(Punctuation
+8Literal.Number.Float
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+offsetName.Othernumber0.9525any0.0444void0.0010string0.0006boolean0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+setValueName.Othervoid0.9724any0.0158boolean0.0036Function0.0014Promise<void>0.0011
+.Punctuation
+applyName.Otherany0.9799void0.0129number0.0019any[]0.0010Function0.0008
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+argumentsName.OtherIArguments0.9952any[]0.0014any0.0002Position0.0000any[][]0.0000
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\n\nText.Whitespace
+// Max integer value that JS can accurately representComment.Single
+\nText.Whitespace
+Int64Name.Otherany0.6287number0.0107complex0.0072number[][]0.0036ClientRect0.0024
+.Punctuation
+MAX_INTName.Othernumber0.6842any0.3042void0.0031boolean0.0028string0.0023
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+MathName.BuiltinMath0.9996ArrayConstructor0.0000PointerCoordinates0.0000number0.0000NumberConstructor0.0000
+.Punctuation
+powName.Othernumber0.9878any0.0061void0.0020complex0.0012T0.0005
+(Punctuation
+2Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+53Literal.Number.Float
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// Min integer value that JS can accurately representComment.Single
+\nText.Whitespace
+Int64Name.Otherany0.7119number0.0167complex0.0130ClientRect0.0031number[][]0.0029
+.Punctuation
+MIN_INTName.Othernumber0.7868any0.2099void0.0010string0.0006boolean0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+-Operator
+MathName.BuiltinMath0.9997number0.0000ArrayConstructor0.0000any0.0000PointerCoordinates0.0000
+.Punctuation
+powName.Othernumber0.9890any0.0061void0.0014complex0.0009boolean0.0005
+(Punctuation
+2Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+53Literal.Number.Float
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+Int64Name.Otherany0.8703number0.0221complex0.0087Function0.0056void0.0025
+.Punctuation
+prototypeName.Otherany0.4988Object0.0428any[]0.0345Function0.0314number0.0186
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n\n  Text.Whitespace
+constructorName.Other
+:Operator
+ Text.Whitespace
+Int64Keyword.Typeany0.5054number0.4585string0.0149boolean0.0041any[]0.0028
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Do in-place 2's compliment.  See\n   * http://en.wikipedia.org/wiki/Two's_complement\n   */Comment.Multiline
+\n  Text.Whitespace
+_2scompName.Othernumber0.7745any0.0963void0.0799boolean0.0208string0.0106
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+bName.Otherany0.6978number0.1614T0.0074Buffer0.0034Date0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+bufferName.Otherany0.5689Buffer0.3320any[]0.0158number0.0134ArrayBuffer0.0099
+,Punctuation
+ Text.Whitespace
+oName.Othernumber0.5895any0.4011string0.0055complex0.0009boolean0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+offsetName.Othernumber0.9221any0.0755string0.0011number[]0.0002complex0.0002
+,Punctuation
+ Text.Whitespace
+carryName.Othernumber0.9764any0.0221string0.0006boolean0.0003number[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9727any0.0259string0.0008boolean0.0002complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+oName.Othernumber0.7310any0.2653string0.0025boolean0.0002complex0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+7Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9254any0.0731string0.0009boolean0.0002void0.0001
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+oName.Othernumber0.6209any0.3754string0.0021complex0.0004Date0.0002
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9445any0.0545string0.0005boolean0.0001void0.0001
+--Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+vName.Othernumber0.8187any0.1704string0.0059boolean0.0025void0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+bName.Otherany0.6708any[]0.0897number[]0.0288number0.0084number[][]0.0083
+[Punctuation
+iName.Othernumber0.9453any0.0518string0.0023boolean0.0001void0.0001
+]Punctuation
+ Text.Whitespace
+^Operator
+ Text.Whitespace
+0xffLiteral.Number.Hex
+)Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+carryName.Othernumber0.8210any0.1322string0.0437boolean0.0010void0.0005
+;Punctuation
+\n      Text.Whitespace
+bName.Otherany0.7123any[]0.0641number[]0.0558number0.0189number[][]0.0113
+[Punctuation
+iName.Othernumber0.9703any0.0277string0.0015boolean0.0001void0.0001
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+vName.Othernumber0.7184any0.2769string0.0017boolean0.0004void0.0003
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0xffLiteral.Number.Hex
+;Punctuation
+\n      Text.Whitespace
+carryName.Othernumber0.9356any0.0582string0.0037boolean0.0009void0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+vName.Othernumber0.6987any0.2918string0.0061boolean0.0008void0.0005
+ Text.Whitespace
+>>Operator
+ Text.Whitespace
+8Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Set the value. Takes any of the following arguments:\n   *\n   * setValue(string) - A hexidecimal string\n   * setValue(number) - Number (throws if n is outside int64 range)\n   * setValue(hi, lo) - Raw bits as two 32-bit values\n   */Comment.Multiline
+\n  Text.Whitespace
+setValueName.Othervoid0.8820boolean0.0682any0.0150any[]0.0045number0.0041
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+hiName.Othernumber0.9012any0.0836string0.0069boolean0.0005number[]0.0004
+,Punctuation
+ Text.Whitespace
+loName.Othernumber0.9342any0.0579string0.0028Buffer0.0003boolean0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+negateName.Otherboolean0.9694number0.0124any0.0114false0.0012Boolean0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+argumentsName.OtherIArguments0.9902any[]0.0025any0.0004string[]0.0001Expression[]0.0001
+.Punctuation
+lengthName.Othernumber0.9854any0.0136string0.0005boolean0.0001complex0.0001
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+(Punctuation
+hiName.Othernumber0.9244any0.0467string0.0079complex0.0018number[]0.0013
+)Punctuation
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+'number'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+// Simplify bitfield retrieval by using abs() value.  We restore signComment.Single
+\n        Text.Whitespace
+// laterComment.Single
+\n        Text.Whitespace
+negateName.Othernumber0.6424any0.1707boolean0.1389void0.0057any[]0.0043
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+hiName.Othernumber0.9585any0.0392string0.0009complex0.0002boolean0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n        Text.Whitespace
+hiName.Othernumber0.9734any0.0233string0.0011boolean0.0004number[]0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+MathName.BuiltinMath0.9997number0.0000Window0.0000NumberConstructor0.0000ArrayConstructor0.0000
+.Punctuation
+absName.Othernumber0.9856any0.0048T0.0014complex0.0005string0.0005
+(Punctuation
+hiName.Othernumber0.9652any0.0223string0.0014number[]0.0012complex0.0004
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+loName.Othernumber0.9764any0.0224string0.0003boolean0.0002number[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+hiName.Othernumber0.9445any0.0535string0.0006boolean0.0002Date0.0001
+ Text.Whitespace
+%Operator
+ Text.Whitespace
+VAL32Name.Othernumber0.9090any0.0838string0.0010boolean0.0006complex0.0005
+;Punctuation
+\n        Text.Whitespace
+hiName.Othernumber0.9687any0.0289string0.0010number[]0.0003boolean0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+hiName.Othernumber0.9209any0.0753string0.0011number[]0.0003complex0.0002
+ Text.Whitespace
+/Operator
+ Text.Whitespace
+VAL32Name.Othernumber0.9305any0.0639string0.0015complex0.0005boolean0.0004
+;Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+hiName.Othernumber0.9286any0.0664string0.0026complex0.0003boolean0.0003
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+VAL32Name.Othernumber0.9604any0.0305string0.0023boolean0.0013complex0.0004
+)Punctuation
+ Text.Whitespace
+throwKeywordany0.4299Error0.1822number0.1208string0.0389never0.0096
+ Text.Whitespace
+newOperator.Wordany0.6311string0.1254Error0.0217number0.0200Buffer0.0042
+ Text.Whitespace
+RangeErrorName.ExceptionRangeErrorConstructor0.6113ErrorConstructor0.0063SetConstructor0.0028MapConstructor0.0015IState0.0013
+(Punctuation
+hiName.Othernumber0.8555any0.1040string0.0230complex0.0011number[]0.0009
+  Text.Whitespace
++Operator
+ Text.Whitespace
+' is outside Int64 range'Literal.String.Single
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+hiName.Othernumber0.8658any0.1136string0.0081complex0.0027number[]0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+hiName.Othernumber0.8655any0.1222string0.0053complex0.0008number[]0.0006
+ Text.Whitespace
+|Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+(Punctuation
+hiName.Othernumber0.8891any0.0615string0.0176complex0.0053number[]0.0030
+)Punctuation
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+hiName.Othernumber0.5726any0.3106string0.1026complex0.0030number[]0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+hiName.Othernumber0.7333any0.2314string0.0216complex0.0017number[]0.0007
+ Text.Whitespace
++Operator
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+.Punctuation
+replaceName.Othercomplex0.6168any0.3662void0.0038number0.0036string0.0015
+(Punctuation
+/^0x/Literal.String.Regex
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+loName.Othernumber0.8901any0.0820string0.0263number[]0.0002void0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+hiName.Othernumber0.7120any0.1470string0.1018number[]0.0021string[]0.0010
+.Punctuation
+substrName.Otherstring0.5782any0.3906number0.0278complex0.0008string[]0.0004
+(Punctuation
+-Operator
+8Literal.Number.Float
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+hiName.Othernumber0.9118any0.0723string0.0129number[]0.0007complex0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+hiName.Othernumber0.4666any0.2349string0.1290string[]0.0308number[]0.0258
+.Punctuation
+lengthName.Othernumber0.9225any0.0756string0.0011void0.0002complex0.0001
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+8Literal.Number.Float
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+hiName.Othernumber0.6657any0.1634string0.1556number[]0.0012string[]0.0008
+.Punctuation
+substrName.Otherstring0.4965any0.4724number0.0276complex0.0009string[]0.0003
+(Punctuation
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+hiName.Othernumber0.4455any0.1708string0.1382string[]0.0794number[]0.0682
+.Punctuation
+lengthName.Othernumber0.9568any0.0413string0.0014void0.0001complex0.0001
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+8Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+''Literal.String.Single
+;Punctuation
+\n        Text.Whitespace
+hiName.Othernumber0.9802any0.0169string0.0016number[]0.0003complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parseIntName.Builtinnumber0.9965any0.0022string0.0004boolean0.0001complex0.0001
+(Punctuation
+hiName.Othernumber0.9012any0.0705string0.0260number[]0.0005complex0.0003
+,Punctuation
+ Text.Whitespace
+16Literal.Number.Float
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+loName.Othernumber0.9847any0.0136string0.0011void0.0001boolean0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parseIntName.Builtinnumber0.9972any0.0015string0.0005boolean0.0001number[]0.0001
+(Punctuation
+loName.Othernumber0.9098any0.0728string0.0144number[]0.0003void0.0002
+,Punctuation
+ Text.Whitespace
+16Literal.Number.Float
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+throwKeywordError0.6105any0.2420string0.0288number0.0244complex0.0094
+ Text.Whitespace
+newOperator.Wordany0.8591Error0.0596string0.0516ErrorConstructor0.0093complex0.0023
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor1.0000Error0.0000never0.0000any0.0000LogLevel.Error0.0000
+(Punctuation
+hiName.Othernumber0.8687any0.0817string0.0397number[]0.0009complex0.0008
+ Text.Whitespace
++Operator
+ Text.Whitespace
+' must be a Number or String'Literal.String.Single
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// Technically we should throw if hi or lo is outside int32 range here, butComment.Single
+\n    Text.Whitespace
+// it's not worth the effort. Anything past the 32'nd bit is ignored.Comment.Single
+\n\n    Text.Whitespace
+// Copy bytes to bufferComment.Single
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+bName.Otherany0.5977number0.1451ArrayBuffer0.0076Buffer0.0054number[]0.0036
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+bufferName.Otherany0.6383Buffer0.2269any[]0.0270ArrayBuffer0.0195number0.0140
+,Punctuation
+ Text.Whitespace
+oName.Othernumber0.7283any0.2602string0.0065complex0.0016number[]0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+offsetName.Othernumber0.9464any0.0507string0.0010complex0.0004number[]0.0003
+;Punctuation
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9966any0.0030string0.0002boolean0.0001number[]0.0000
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+7Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9774any0.0218string0.0003boolean0.0001number[]0.0000
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9851any0.0144string0.0002boolean0.0001void0.0000
+--Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+bName.Otherany0.4009any[]0.1099number[]0.0586number[][]0.0166{}0.0088
+[Punctuation
+oName.Othernumber0.8323any0.1597string0.0060number[]0.0004complex0.0003
++Operator
+iName.Othernumber0.9836any0.0148string0.0012boolean0.0001number[]0.0001
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+loName.Othernumber0.9618any0.0351string0.0008number[]0.0003void0.0002
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0xffLiteral.Number.Hex
+;Punctuation
+\n      Text.Whitespace
+loName.Othernumber0.9888any0.0097string0.0008boolean0.0002number[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+iName.Othernumber0.9820any0.0172string0.0004boolean0.0001number[]0.0001
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+4Literal.Number.Float
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+hiName.Othernumber0.9774any0.0138number[]0.0025string0.0020boolean0.0005
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+loKeyword.Typenumber0.9855any0.0122string0.0011number[]0.0002boolean0.0001
+ Text.Whitespace
+>>>Operator
+ Text.Whitespace
+8Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// Restore sign of passed argumentComment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+negateName.Otherboolean0.6163number0.1007any0.0525void0.0503string0.0116
+)Punctuation
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_2scompName.Othervoid0.7813number0.0934any0.0558boolean0.0351string0.0040
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Convert to a native JS number.\n   *\n   * WARNING: Do not expect this value to be accurate to integer precision for\n   * large (positive or negative) numbers!\n   *\n   * @param allowImprecise If true, no check is performed to verify the\n   * returned value is accurate to integer precision.  If false, imprecise\n   * numbers (very large positive or negative numbers) will be forced to +/-\n   * Infinity.\n   */Comment.Multiline
+\n  Text.Whitespace
+toNumberName.Othernumber0.6335any0.1391boolean0.0960void0.0695complex0.0163
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+allowImpreciseName.Otherany0.5394number0.3821string0.0238boolean0.0063any[]0.0025
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+bName.Otherany0.4143number0.0929ArrayBuffer0.0080Buffer0.0055number[][]0.0054
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+bufferName.Otherany0.6622Buffer0.2002any[]0.0206ArrayBuffer0.0186number0.0134
+,Punctuation
+ Text.Whitespace
+oName.Othernumber0.5461any0.4420string0.0053complex0.0017number[]0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+offsetName.Othernumber0.9418any0.0557string0.0010complex0.0003number[]0.0002
+;Punctuation
+\n\n    Text.Whitespace
+// Running sum of octets, doing a 2's complementComment.Single
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+negateName.Othernumber0.4864any0.3332boolean0.1126string0.0105void0.0074
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bName.Otherany0.4005any[]0.0589number[]0.0440number0.0427number[][]0.0159
+[Punctuation
+oName.Othernumber0.8447any0.1433string0.0076number[]0.0007complex0.0003
+]Punctuation
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0x80Literal.Number.Hex
+,Punctuation
+ Text.Whitespace
+xName.Othernumber0.9651any0.0326string0.0010boolean0.0003number[]0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+carryName.Othernumber0.9760any0.0221string0.0009boolean0.0004number[]0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9944any0.0050string0.0002boolean0.0001number[]0.0000
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+7Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+mName.Othernumber0.9897any0.0094string0.0004boolean0.0002number[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9548any0.0440string0.0004boolean0.0003void0.0001
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9669any0.0322string0.0003boolean0.0002void0.0001
+--Operator
+,Punctuation
+ Text.Whitespace
+mName.Othernumber0.9634any0.0347string0.0011boolean0.0004number[]0.0001
+ Text.Whitespace
+*=Operator
+ Text.Whitespace
+256Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+vName.Othernumber0.6793any0.3067string0.0103boolean0.0012number[]0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bName.Otherany0.3642any[]0.1537number[]0.1023number[][]0.0202number0.0128
+[Punctuation
+oName.Othernumber0.8428any0.1516string0.0042number[]0.0002complex0.0002
++Operator
+iName.Othernumber0.9792any0.0189string0.0015boolean0.0001number[]0.0001
+]Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+// 2's complement for negative numbersComment.Single
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+negateName.Otherboolean0.7406number0.1176any0.0818string0.0095void0.0049
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+vName.Othernumber0.9350any0.0586string0.0034boolean0.0018void0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+vName.Othernumber0.8404any0.1544string0.0028boolean0.0009void0.0002
+ Text.Whitespace
+^Operator
+ Text.Whitespace
+0xffLiteral.Number.Hex
+)Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+carryName.Othernumber0.9020any0.0805string0.0154boolean0.0010number[]0.0003
+;Punctuation
+\n        Text.Whitespace
+carryName.Othernumber0.9446any0.0516string0.0021boolean0.0012void0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+vName.Othernumber0.7943any0.2002string0.0027boolean0.0010complex0.0002
+ Text.Whitespace
+>>Operator
+ Text.Whitespace
+8Literal.Number.Float
+;Punctuation
+\n        Text.Whitespace
+vName.Othernumber0.8163any0.1791boolean0.0015string0.0010void0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+vName.Othernumber0.8023any0.1924string0.0013boolean0.0007{}0.0003
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0xffLiteral.Number.Hex
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+xName.Othernumber0.9577any0.0367string0.0043number[]0.0003boolean0.0002
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+vName.Othernumber0.8878any0.1054string0.0052boolean0.0002number[]0.0002
+ Text.Whitespace
+*Operator
+ Text.Whitespace
+mName.Othernumber0.9769any0.0200string0.0023boolean0.0002number[]0.0001
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// Return Infinity if we've lost integer precisionComment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+allowImpreciseName.Othernumber0.6088boolean0.1929any0.1794string0.0086{}0.0018
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+xName.Othernumber0.8211any0.1715string0.0035boolean0.0012{}0.0008
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+Int64Name.Otherany0.6494number0.0742complex0.0111number[]0.0086{}0.0080
+.Punctuation
+MAX_INTName.Othernumber0.8921any0.0977string0.0046boolean0.0034complex0.0005
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+negateName.Otherboolean0.7139any0.1155number0.0943any[]0.0069string0.0068
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+-Operator
+InfinityName.Othernumber0.9895any0.0092boolean0.0004string0.0003number[]0.0001
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+InfinityKeyword.Typenumber0.9929any0.0059string0.0004boolean0.0003void0.0001
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+negateName.Otherboolean0.4807number0.2355any0.1787string0.0120Function0.0079
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+-Operator
+xName.Othernumber0.8983any0.0911{}0.0023string0.0021boolean0.0011
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+xKeyword.Typenumber0.9104any0.0814string0.0024{}0.0015boolean0.0009
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Convert to a JS Number. Returns +/-Infinity for values that can't be\n   * represented to integer precision.\n   */Comment.Multiline
+\n  Text.Whitespace
+valueOfName.Othernumber0.9478any0.0352boolean0.0070string0.0069complex0.0005
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+toNumberName.Othernumber0.7757any0.1866void0.0181boolean0.0070complex0.0023
+(Punctuation
+falseKeyword.Constant
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Return string value\n   *\n   * @param radix Just like Number#toString()'s radix\n   */Comment.Multiline
+\n  Text.Whitespace
+toStringName.Otherstring0.7798any0.1918number0.0205complex0.0029boolean0.0020
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+radixName.Othernumber0.9265any0.0673string0.0036complex0.0008boolean0.0005
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+valueOfName.Othernumber0.9288any0.0550string0.0095boolean0.0016Date0.0006
+(Punctuation
+)Punctuation
+.Punctuation
+toStringName.Otherstring0.5380any0.4383number0.0120complex0.0055string)0.0011
+(Punctuation
+radixName.Othernumber0.9035any0.0931string0.0018boolean0.0005complex0.0004
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+10Literal.Number.Float
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Return a string showing the buffer octets, with MSB on the left.\n   *\n   * @param sep separator string. default is '' (empty string)\n   */Comment.Multiline
+\n  Text.Whitespace
+toOctetStringName.Othernumber0.3250any0.2839string0.1602void0.1150boolean0.0613
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+sepName.Otherany0.8783string0.0947number0.0031Buffer0.0007any[]0.0006
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+outName.Otherany[]0.3950any0.1571number[]0.1290string[]0.0271complex0.0227
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.7928string0.0502any[]0.0167number[]0.0097complex0.0081
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9991any0.0000T[]0.0000number[]0.0000number[][]0.0000
+(Punctuation
+8Literal.Number.Float
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+bName.Otherany0.6185number0.1550T0.0080ArrayBuffer0.0058number[][]0.0051
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+bufferName.Otherany0.6269Buffer0.1832any[]0.0351ArrayBuffer0.0220number0.0197
+,Punctuation
+ Text.Whitespace
+oName.Othernumber0.6309any0.3575string0.0051complex0.0027any[]0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+offsetName.Othernumber0.9344any0.0611string0.0011complex0.0007number[]0.0004
+;Punctuation
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9927any0.0067string0.0003complex0.0001number[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9783any0.0208string0.0003boolean0.0001void0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+8Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9680any0.0309string0.0004number[]0.0001boolean0.0001
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+outName.Otherany0.7388any[]0.1540string0.0170number[]0.0154{}0.0127
+[Punctuation
+iName.Othernumber0.9662any0.0294string0.0035number[]0.0001void0.0001
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+_HEXName.Otherany0.7607number0.0942{}0.0412complex0.0234number[]0.0206
+[Punctuation
+bName.Otherany0.7019any[]0.0460number[]0.0191string0.0176complex0.0169
+[Punctuation
+oName.Othernumber0.5267any0.4452string0.0248complex0.0008void0.0004
++Operator
+iName.Othernumber0.9659any0.0291string0.0040boolean0.0002void0.0001
+]Punctuation
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+outName.Otherany0.4970any[]0.3831string[]0.0200number[]0.0133string0.0079
+.Punctuation
+joinName.Otherany0.6388string0.2420complex0.0628number0.0332void0.0044
+(Punctuation
+sepName.Otherany0.8394string0.1462number0.0057boolean0.0010{}0.0008
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Returns the int64's 8 bytes in a buffer.\n   *\n   * @param {bool} [rawBuffer=false]  If no offset and this is true, return the internal buffer.  Should only be used if\n   *                                  you're discarding the Int64 afterwards, as it breaks encapsulation.\n   */Comment.Multiline
+\n  Text.Whitespace
+toBufferName.Otherany0.3791string0.3360void0.1093number0.0282complex0.0258
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+rawBufferName.Otherany0.6198number0.2330string0.0710boolean0.0094Buffer0.0078
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+rawBufferName.Otherany0.4320number0.3067boolean0.1739string0.0543void0.0029
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+offsetName.Othernumber0.9154any0.0818string0.0011void0.0002boolean0.0001
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+bufferName.Otherany0.8964Buffer0.0551ArrayBuffer0.0073any[]0.0067complex0.0034
+;Punctuation
+\n\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+outName.Otherany0.9895string0.0027void0.0014any[]0.0012number0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.9906string0.0046number0.0008void0.0005Buffer0.0004
+ Text.Whitespace
+BufferName.Otherany0.9905void0.0024Buffer0.0020string0.0018number0.0007
+(Punctuation
+8Literal.Number.Float
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+bufferName.Otherany0.9067Buffer0.0258complex0.0191any[]0.0044void0.0032
+.Punctuation
+copyName.Otherany0.9233complex0.0318void0.0296number0.0038any[]0.0012
+(Punctuation
+outName.Otherany0.4923number0.1353string0.0988any[]0.0429number[]0.0174
+,Punctuation
+ Text.Whitespace
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+thisKeyword
+.Punctuation
+offsetName.Othernumber0.9789any0.0194string0.0007void0.0003complex0.0001
+,Punctuation
+ Text.Whitespace
+thisKeyword
+.Punctuation
+offsetName.Othernumber0.9602any0.0382string0.0006void0.0004boolean0.0001
+ Text.Whitespace
++Operator
+ Text.Whitespace
+8Literal.Number.Float
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+outName.Otherany0.8952string0.0345number0.0210any[]0.0149{}0.0058
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Copy 8 bytes of int64 into target buffer at target offset.\n   *\n   * @param {Buffer} targetBuffer       Buffer to copy into.\n   * @param {number} [targetOffset=0]   Offset into target buffer.\n   */Comment.Multiline
+\n  Text.Whitespace
+copyName.Othervoid0.9580any0.0203number0.0037boolean0.0027string0.0020
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+targetBufferName.Otherany0.6998number0.1788string0.0657Buffer0.0051boolean0.0030
+,Punctuation
+ Text.Whitespace
+targetOffsetName.Otherany0.8667string0.0428number0.0343Buffer0.0026{}0.0023
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+bufferName.Otherany0.9420complex0.0148Buffer0.0147any[]0.0020void0.0019
+.Punctuation
+copyName.Otherany0.9343complex0.0270void0.0239number0.0038T0.0016
+(Punctuation
+targetBufferName.Otherany0.5690number0.3573string0.0336complex0.0074number[]0.0053
+,Punctuation
+ Text.Whitespace
+targetOffsetName.Otherany0.8897number0.0870string0.0126complex0.0027{}0.0008
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+thisKeyword
+.Punctuation
+offsetName.Othernumber0.9483any0.0496string0.0011void0.0003complex0.0002
+,Punctuation
+ Text.Whitespace
+thisKeyword
+.Punctuation
+offsetName.Othernumber0.9382any0.0599string0.0009void0.0003boolean0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+8Literal.Number.Float
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Returns a number indicating whether this comes before or after or is the\n   * same as the other in sort order.\n   *\n   * @param {Int64} other  Other Int64 to compare.\n   */Comment.Multiline
+\n  Text.Whitespace
+compareName.Othernumber0.7372boolean0.0990any0.0787void0.0385string0.0267
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+otherName.Otherany0.4276Buffer0.0212number0.0091any[]0.0064Type0.0039
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n    Text.Whitespace
+// If sign bits differ ...Comment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+(Punctuation
+thisKeyword
+.Punctuation
+bufferName.Otherany0.7390Buffer0.1183any[]0.0406complex0.0087T[]0.0051
+[Punctuation
+thisKeyword
+.Punctuation
+offsetName.Othernumber0.9547any0.0421string0.0022complex0.0002number[]0.0001
+]Punctuation
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0x80Literal.Number.Hex
+)Punctuation
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+(Punctuation
+otherName.Otherany0.1013Buffer0.0079Dimension0.0038Position0.0034number0.0032
+.Punctuation
+bufferName.Otherany0.7564complex0.0701Buffer0.0459any[]0.0158number0.0082
+[Punctuation
+otherName.Otherany0.1377Position0.0072Point0.0063Buffer0.0062number0.0059
+.Punctuation
+offsetName.Othernumber0.9181any0.0781string0.0015complex0.0004number[]0.0002
+]Punctuation
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+0x80Literal.Number.Hex
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+otherName.Otherany0.1830Buffer0.0106Position0.0045IPosition0.0040SymbolicTensor0.0036
+.Punctuation
+bufferName.Otherany0.8172Buffer0.0338complex0.0254any[]0.0249T[]0.0037
+[Punctuation
+otherName.Otherany0.1279Buffer0.0115Position0.0050IPosition0.0040Point0.0036
+.Punctuation
+offsetName.Othernumber0.8863any0.1088string0.0016complex0.0004number[]0.0002
+]Punctuation
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+bufferName.Otherany0.6245Buffer0.1378any[]0.0614T[]0.0163complex0.0155
+[Punctuation
+thisKeyword
+.Punctuation
+offsetName.Othernumber0.9800any0.0174string0.0015complex0.0002void0.0001
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// otherwise, compare bytes lexicographicallyComment.Single
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9905any0.0087string0.0003boolean0.0001number[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9702any0.0289string0.0003boolean0.0002void0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+8Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9589any0.0400string0.0005boolean0.0002complex0.0001
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+bufferName.Otherany0.7267Buffer0.1079any[]0.0511complex0.0127number0.0061
+[Punctuation
+thisKeyword
+.Punctuation
+offsetName.Othernumber0.9470any0.0506string0.0015complex0.0002number[]0.0001
++Operator
+iName.Othernumber0.9798any0.0180string0.0017boolean0.0001number[]0.0001
+]Punctuation
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+otherName.Otherany0.2006Buffer0.0076number0.0048Position0.0046IPosition0.0045
+.Punctuation
+bufferName.Otherany0.8808Buffer0.0226complex0.0197any[]0.0180number0.0068
+[Punctuation
+otherName.Otherany0.1286Position0.0069complex0.0052Point0.0035number0.0033
+.Punctuation
+offsetName.Othernumber0.8282any0.1683string0.0016complex0.0005number[]0.0002
++Operator
+iName.Othernumber0.9719any0.0261string0.0014boolean0.0001number[]0.0001
+]Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+bufferName.Otherany0.7895Buffer0.0743any[]0.0476complex0.0089T[]0.0071
+[Punctuation
+thisKeyword
+.Punctuation
+offsetName.Othernumber0.9181any0.0791string0.0017complex0.0002void0.0001
++Operator
+iName.Othernumber0.9737any0.0239string0.0019boolean0.0001number[]0.0000
+]Punctuation
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+otherName.Otherany0.2026Buffer0.0089number0.0049Position0.0038Dimension0.0030
+.Punctuation
+bufferName.Otherany0.8432complex0.0394Buffer0.0315any[]0.0211number0.0075
+[Punctuation
+otherName.Otherany0.1004Position0.0057complex0.0053Buffer0.0050number0.0043
+.Punctuation
+offsetName.Othernumber0.8803any0.1161string0.0022complex0.0003void0.0002
++Operator
+iName.Othernumber0.9906any0.0077string0.0013boolean0.0001number[]0.0001
+]Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Returns a boolean indicating if this integer is equal to other.\n   *\n   * @param {Int64} other  Other Int64 to compare.\n   */Comment.Multiline
+\n  Text.Whitespace
+equalsName.Otherboolean0.9818number0.0071any0.0035string0.0025true0.0009
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+otherName.Otherany0.1518number0.0168Date0.0162Point0.0041Buffer0.0038
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+compareName.Othernumber0.8331any0.0682boolean0.0641string0.0055complex0.0051
+(Punctuation
+otherName.Otherany0.2681number0.0159Date0.0101Buffer0.0034Point0.0032
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Pretty output in console.log\n   */Comment.Multiline
+\n  Text.Whitespace
+inspectName.Otherstring0.9639any0.0197boolean0.0046string[]0.0032number0.0026
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+'[Int64 value:'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+thisKeyword
+ Text.Whitespace
++Operator
+ Text.Whitespace
+' octets:'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+toOctetStringName.Otherstring0.6385number0.2351any0.1130boolean0.0034void0.0019
+(Punctuation
+' 'Literal.String.Single
+)Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+']'Literal.String.Single
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

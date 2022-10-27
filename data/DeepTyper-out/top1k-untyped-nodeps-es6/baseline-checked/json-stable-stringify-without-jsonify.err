@@ -1,0 +1,23 @@
+example/nested.ts(3,13): error TS2554: Expected 2 arguments, but got 1.
+example/str.ts(3,13): error TS2554: Expected 2 arguments, but got 1.
+index.ts(1,36): error TS7006: Parameter 'opts' implicitly has an 'any' type.
+index.ts(22,13): error TS2322: Type 'string' is not assignable to type 'boolean'.
+  Type 'string' is not assignable to type 'boolean'.
+index.ts(31,13): error TS2322: Type 'undefined' is not assignable to type 'string'.
+index.ts(36,13): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+index.ts(51,31): error TS2349: This expression is not callable.
+  Type 'string[]' has no call signatures.
+index.ts(51,60): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(71,5): error TS2322: Type '(arg: any) => arg is any[]' is not assignable to type 'any[]'.
+index.ts(75,28): error TS2322: Type '{ (o: object): string[]; (o: {}): string[]; }' is not assignable to type 'string[]'.
+index.ts(76,24): error TS2322: Type '(v: PropertyKey) => boolean' is not assignable to type 'boolean'.
+index.ts(79,17): error TS2339: Property 'call' does not exist on type 'boolean'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

@@ -1,0 +1,74 @@
+example/enroll/js/browserify.ts(2,33): error TS2339: Property 'resolve' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(3,28): error TS2339: Property 'modules' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(11,9): error TS2339: Property 'paths' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(12,9): error TS2339: Property 'modules' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(13,9): error TS2339: Property 'extensions' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(15,9): error TS2339: Property '_core' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(23,9): error TS2339: Property 'resolve' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(27,21): error TS2339: Property '_core' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(28,33): error TS2339: Property 'modules' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(44,25): error TS2339: Property 'modules' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(48,41): error TS2339: Property 'extensions' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(49,40): error TS2339: Property 'extensions' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(50,29): error TS2339: Property 'modules' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(57,25): error TS2339: Property 'modules' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(58,40): error TS2339: Property 'modules' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(78,17): error TS2322: Type 'string' is not assignable to type 'any[]'.
+example/enroll/js/browserify.ts(103,13): error TS2322: Type 'any[]' is not assignable to type 'string'.
+example/enroll/js/browserify.ts(108,9): error TS2339: Property 'alias' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(108,27): error TS7006: Parameter 'from' implicitly has an 'any' type.
+example/enroll/js/browserify.ts(109,29): error TS2339: Property 'modules' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(112,23): error TS2339: Property 'resolve' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(115,23): error TS2339: Property 'resolve' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(123,16): error TS2339: Property 'modules' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(129,21): error TS2339: Property 'modules' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(129,47): error TS2339: Property 'modules' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(132,21): error TS2339: Property 'modules' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(132,43): error TS2339: Property 'modules' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(137,9): error TS2339: Property 'define' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(138,32): error TS2339: Property '_core' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(140,19): error TS2339: Property 'modules' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(147,24): error TS2339: Property 'resolve' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(149,32): error TS2339: Property 'modules' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(150,31): error TS2339: Property 'define' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(153,13): error TS2339: Property 'modules' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(154,17): error TS2339: Property 'modules' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(163,17): error TS2339: Property 'modules' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(168,37): error TS2740: Type '{}' is missing the following properties from type 'Process': stdout, stderr, stdin, openStdin, and 50 more.
+example/enroll/js/browserify.ts(172,9): error TS2322: Type 'false | ({ <K extends keyof WindowEventMap>(type: K, listener: (this: Window, ev: WindowEventMap[K]) => any, options?: boolean | AddEventListenerOptions | undefined): void; (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | ... 1 more ... | undefined): void; } & { ...; })' is not assignable to type 'boolean'.
+  Type '{ <K extends keyof WindowEventMap>(type: K, listener: (this: Window, ev: WindowEventMap[K]) => any, options?: boolean | AddEventListenerOptions | undefined): void; (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | ... 1 more ... | undefined): void; } & { ...; }' is not assignable to type 'boolean'.
+example/enroll/js/browserify.ts(173,12): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
+example/enroll/js/browserify.ts(199,14): error TS2339: Property 'binding' does not exist on type 'Process'.
+example/enroll/js/browserify.ts(199,31): error TS2339: Property 'binding' does not exist on type 'Process'.
+example/enroll/js/browserify.ts(200,34): error TS2554: Expected 2 arguments, but got 1.
+example/enroll/js/browserify.ts(209,9): error TS2339: Property 'define' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(210,5): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+example/enroll/js/browserify.ts(214,9): error TS2339: Property 'define' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(215,5): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+example/enroll/js/browserify.ts(219,9): error TS2339: Property 'define' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(220,5): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+example/enroll/js/browserify.ts(224,9): error TS2339: Property 'define' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(225,5): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+example/enroll/js/browserify.ts(229,9): error TS2339: Property 'define' does not exist on type '(file: string, cwd: string) => any'.
+example/enroll/js/browserify.ts(230,5): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+example/enroll/js/browserify.ts(233,1): error TS2554: Expected 2 arguments, but got 1.
+example/enroll/js/main.ts(1,19): error TS2554: Expected 2 arguments, but got 1.
+example/enroll/server.ts(1,20): error TS2554: Expected 2 arguments, but got 1.
+example/enroll/server.ts(5,23): error TS2554: Expected 2 arguments, but got 1.
+example/enroll/server.ts(9,29): error TS2345: Argument of type 'string | 8080' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
+main.ts(9,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+main.ts(9,64): error TS2345: Argument of type '{ (id?: number | undefined): void; (timeoutId: string | number | Timeout | undefined): void; }' is not assignable to parameter of type 'number'.
+main.ts(12,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+main.ts(12,65): error TS2345: Argument of type '{ (id?: number | undefined): void; (intervalId: string | number | Timeout | undefined): void; }' is not assignable to parameter of type 'number'.
+main.ts(17,13): error TS2339: Property 'close' does not exist on type 'number'.
+main.ts(22,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+main.ts(23,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+main.ts(54,1): error TS2554: Expected 2 arguments, but got 1.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

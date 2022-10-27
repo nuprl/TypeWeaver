@@ -1,0 +1,230 @@
+examples/benchmark/benchmark.ts(6,15): error TS7006: Parameter 'event' implicitly has an 'any' type.
+examples/benchmark/benchmark.ts(36,15): error TS7006: Parameter 'event' implicitly has an 'any' type.
+examples/benchmark/benchmark.ts(70,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+examples/benchmark/browser.ts(1,23): error TS2307: Cannot find module './node_modules/uuid/dist/esm-browser/index.js' or its corresponding type declarations.
+examples/benchmark/browser.ts(7,24): error TS2339: Property 'Benchmark' does not exist on type 'Window & typeof globalThis'.
+examples/benchmark/node.ts(1,23): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/benchmark/node.ts(2,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+examples/browser-esmodules/example.ts(11,8): error TS2307: Cannot find module './node_modules/uuid/dist/esm-browser/index.js' or its corresponding type declarations.
+examples/browser-esmodules/example.ts(12,23): error TS2307: Cannot find module './node_modules/uuid/dist/esm-browser/index.js' or its corresponding type declarations.
+examples/browser-esmodules/example.ts(28,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
+examples/browser-rollup/example-all.ts(11,8): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-rollup/example-all.ts(12,23): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-rollup/example-all.ts(33,9): error TS2322: Type 'string' is not assignable to type 'RegExp'.
+examples/browser-rollup/example-v1.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-rollup/example-v4.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-rollup/size-v1.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-rollup/size-v3.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-rollup/size-v4.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-rollup/size-v5.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-webpack/example-all-require.ts(1,1): error TS6200: Definitions of the following identifiers conflict with those in another file: NIL_UUID, uuidParse, uuidStringify, uuidv1, uuidv3, uuidv4, uuidv5, uuidValidate, uuidVersion, uuid
+examples/browser-webpack/example-all-require.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'uuid'.
+examples/browser-webpack/example-all.ts(11,8): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-webpack/example-all.ts(12,23): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-webpack/example-all.ts(33,9): error TS2322: Type 'string' is not assignable to type 'RegExp'.
+examples/browser-webpack/example-v1.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-webpack/example-v4.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-webpack/size-v1.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-webpack/size-v3.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-webpack/size-v4.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-webpack/size-v5.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/node-commonjs/example.ts(1,1): error TS6200: Definitions of the following identifiers conflict with those in another file: NIL_UUID, uuidParse, uuidStringify, uuidv1, uuidv3, uuidv4, uuidv5, uuidValidate, uuidVersion, uuid
+examples/node-commonjs/example.ts(29,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
+examples/node-jest/jsdom.test.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'uuid'.
+examples/node-jest/jsdom.test.ts(5,1): error TS2582: Cannot find name 'test'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+examples/node-jest/jsdom.test.ts(7,3): error TS2304: Cannot find name 'expect'.
+examples/node-jest/node.test.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'uuid'.
+examples/node-jest/node.test.ts(3,1): error TS2582: Cannot find name 'test'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+examples/node-jest/node.test.ts(5,3): error TS2304: Cannot find name 'expect'.
+examples/node-webpack/example-all.ts(1,72): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/node-webpack/example-all.ts(2,23): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/node-webpack/example-all.ts(17,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
+examples/node-webpack/example-v1.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/node-webpack/example-v4.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+src/md5-browser.ts(32,3): error TS2322: Type 'number' is not assignable to type 'string'.
+src/md5-browser.ts(51,3): error TS2322: Type 'any[]' is not assignable to type 'number'.
+src/md5-browser.ts(66,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(67,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(74,25): error TS2339: Property 'length' does not exist on type 'number'.
+src/md5-browser.ts(80,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(81,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(82,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(83,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(84,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(85,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(86,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(87,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(88,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(89,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(90,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(91,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(92,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(93,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(94,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(95,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(97,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(98,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(99,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(100,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(101,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(102,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(103,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(104,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(105,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(106,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(107,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(108,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(109,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(110,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(111,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(112,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(114,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(115,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(116,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(117,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(118,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(119,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(120,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(121,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(122,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(123,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(124,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(125,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(126,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(127,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(128,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(129,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(131,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(132,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(133,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(134,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(135,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(136,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(137,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(138,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(139,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(140,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(141,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(142,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(143,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(144,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(145,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(146,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/md5-browser.ts(154,3): error TS2322: Type 'number[]' is not assignable to type 'number'.
+src/md5-browser.ts(163,5): error TS2322: Type 'never[]' is not assignable to type 'number'.
+src/native-browser.ts(1,7): error TS2322: Type 'false | (() => string)' is not assignable to type 'boolean'.
+  Type '() => string' is not assignable to type 'boolean'.
+src/sha1-browser.ts(3,57): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
+src/sha1-browser.ts(44,11): error TS2740: Type 'Uint32Array' is missing the following properties from type 'number[]': pop, push, concat, shift, and 5 more.
+src/sha1-browser.ts(95,3): error TS2322: Type 'number[]' is not assignable to type 'void'.
+src/stringify.ts(13,33): error TS7006: Parameter 'arr' implicitly has an 'any' type.
+src/stringify.ts(40,20): error TS7006: Parameter 'arr' implicitly has an 'any' type.
+src/uuid-bin.ts(32,17): error TS2554: Expected 3 arguments, but got 0.
+src/uuid-bin.ts(55,17): error TS2554: Expected 3 arguments, but got 0.
+src/v1.ts(33,14): error TS2322: Type 'any[]' is not assignable to type 'number'.
+src/v1.ts(34,9): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
+  Property '0' does not exist on type 'Number'.
+src/v1.ts(35,9): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
+  Property '1' does not exist on type 'Number'.
+src/v1.ts(36,9): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Number'.
+  Property '2' does not exist on type 'Number'.
+src/v1.ts(37,9): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Number'.
+  Property '3' does not exist on type 'Number'.
+src/v1.ts(38,9): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Number'.
+  Property '4' does not exist on type 'Number'.
+src/v1.ts(39,9): error TS7053: Element implicitly has an 'any' type because expression of type '5' can't be used to index type 'Number'.
+  Property '5' does not exist on type 'Number'.
+src/v1.ts(45,32): error TS7053: Element implicitly has an 'any' type because expression of type '6' can't be used to index type 'Number'.
+  Property '6' does not exist on type 'Number'.
+src/v1.ts(45,53): error TS7053: Element implicitly has an 'any' type because expression of type '7' can't be used to index type 'Number'.
+  Property '7' does not exist on type 'Number'.
+src/v35.ts(13,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
+src/v35.ts(16,14): error TS2322: Type 'string' is not assignable to type 'RegExp'.
+src/v35.ts(20,37): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
+src/v35.ts(54,5): error TS2322: Type 'string' is not assignable to type 'void'.
+src/v35.ts(67,10): error TS2322: Type '{ (value: any, namespace: any, buf: any, offset: number): void; name: string; DNS: RegExp; URL: string; }' is not assignable to type 'void'.
+src/v4.ts(6,7): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
+src/v4.ts(15,3): error TS7053: Element implicitly has an 'any' type because expression of type '6' can't be used to index type 'Number'.
+  Property '6' does not exist on type 'Number'.
+src/v4.ts(15,14): error TS7053: Element implicitly has an 'any' type because expression of type '6' can't be used to index type 'Number'.
+  Property '6' does not exist on type 'Number'.
+src/v4.ts(16,3): error TS7053: Element implicitly has an 'any' type because expression of type '8' can't be used to index type 'Number'.
+  Property '8' does not exist on type 'Number'.
+src/v4.ts(16,14): error TS7053: Element implicitly has an 'any' type because expression of type '8' can't be used to index type 'Number'.
+  Property '8' does not exist on type 'Number'.
+src/v4.ts(23,25): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+src/version.ts(8,3): error TS2322: Type 'number' is not assignable to type 'string'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

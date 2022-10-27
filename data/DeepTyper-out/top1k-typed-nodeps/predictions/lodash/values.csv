@@ -1,0 +1,62 @@
+importKeyword
+ Text.Whitespace
+baseValuesName.Otherany0.2377complex0.1615void0.1038Promise<void>0.0362boolean0.0355
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseValues.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+keysName.Otherany0.4962string[]0.2310complex0.1372string0.0166any[]0.0151
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./keys.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Creates an array of the own enumerable string keyed property values of `object`.\n *\n * **Note:** Non-object values are coerced to objects.\n *\n * @since 0.1.0\n * @category Object\n * @param {Object} object The object to query.\n * @returns {Array} Returns the array of property values.\n * @see keys, valuesIn\n * @example\n *\n * function Foo() {\n *   this.a = 1\n *   this.b = 2\n * }\n *\n * Foo.prototype.c = 3\n *\n * values(new Foo)\n * // => [1, 2] (iteration order is not guaranteed)\n *\n * values('hi')\n * // => ['h', 'i']\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+valuesName.Otherany0.4502any[]0.0813T[]0.0777string[]0.0305{}0.0242
+(Punctuation
+objectName.Otherany0.8670object0.0382Object0.0249number0.0123{}0.0107
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+objectName.Otherany0.6256Object0.1498object0.1240{}0.0279number0.0189
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+baseValuesName.Otherany0.9092string0.0258complex0.0236void0.0147number0.0044
+(Punctuation
+objectName.Otherany0.6510object0.1290Object0.0910{}0.0290number0.0164
+,Punctuation
+ Text.Whitespace
+keysName.Otherstring[]0.4230any0.2835any[]0.0656complex0.0586string0.0225
+(Punctuation
+objectName.Otherany0.5109object0.1636Object0.0989{}0.0577number0.0201
+)Punctuation
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+valuesName.Otherany0.1537any[]0.0493complex0.0379T[]0.0155number[]0.0150
+\nText.Whitespace

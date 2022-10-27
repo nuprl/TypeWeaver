@@ -1,0 +1,246 @@
+importKeyword
+ Text.Whitespace
+StackName.Otherany0.9739complex0.0078string0.0030boolean0.0022void0.0011
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./Stack.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+assignMergeValueName.Otherany0.5399string0.0746boolean0.0365complex0.0286void0.0121
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./assignMergeValue.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+baseForName.Otherany0.4158string0.1119boolean0.0883complex0.0317void0.0289
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./baseFor.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+baseMergeDeepName.Otherany0.3401boolean0.1542string0.1179complex0.0288void0.0264
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./baseMergeDeep.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isObjectName.Otherboolean0.5779complex0.1865any0.1381void0.0136string0.0110
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'../isObject.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+keysInName.Otherany0.3021boolean0.1392string0.1204complex0.0939void0.0692
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'../keysIn.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * The base implementation of `merge` without support for multiple sources.\n *\n * @private\n * @param {Object} object The destination object.\n * @param {Object} source The source object.\n * @param {number} srcIndex The index of `source`.\n * @param {Function} [customizer] The function to customize merged values.\n * @param {Object} [stack] Tracks traversed source values and their merged\n *  counterparts.\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+baseMergeName.Otherany0.3254string0.2095boolean0.0798complex0.0725void0.0712
+(Punctuation
+objectName.Otherany0.8754string0.0237complex0.0185Object0.0181object0.0110
+,Punctuation
+ Text.Whitespace
+sourceName.Otherany0.5196string0.3319number0.0091Error0.0082complex0.0031
+,Punctuation
+ Text.Whitespace
+srcIndexName.Otherany0.5326string0.3607number0.0367boolean0.0199void0.0038
+,Punctuation
+ Text.Whitespace
+customizerName.Otherany0.4796string0.3828number0.0577boolean0.0409complex0.0035
+,Punctuation
+ Text.Whitespace
+stackName.Otherstring0.5989any0.3124Error0.0218boolean0.0060number0.0047
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+objectName.Otherany0.8943string0.0488number0.0204Object0.0090complex0.0066
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+sourceName.Otherstring0.5064any0.4217number0.0259Error0.0054{}0.0023
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+baseForName.Otherany0.4548void0.2491complex0.0922string0.0531Promise<{}>0.0221
+(Punctuation
+sourceName.Otherany0.6104string0.3326number0.0040Error0.0038complex0.0032
+,Punctuation
+ Text.Whitespace
+(Punctuation
+srcValueName.Otherany0.5832string0.3157number0.0353boolean0.0244void0.0038
+,Punctuation
+ Text.Whitespace
+keyName.Otherstring0.7924any0.1845number0.0143complex0.0016boolean0.0009
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isObjectName.Otherboolean0.8206any0.0898complex0.0740string0.0037number0.0018
+(Punctuation
+srcValueName.Otherany0.6018boolean0.1842string0.1528number0.0259complex0.0082
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+stackName.Otherany0.6151string0.2061boolean0.0355Error0.0164void0.0109
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+(Punctuation
+stackName.Otherany0.7380string0.1432Error0.0235boolean0.0043{}0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.8181string0.1380Error0.0064boolean0.0057number0.0035
+ Text.Whitespace
+StackName.Otherany0.9982string0.0011complex0.0004boolean0.0001number0.0001
+)Punctuation
+\n      Text.Whitespace
+baseMergeDeepName.Otherany0.4749void0.2811string0.0867complex0.0402boolean0.0272
+(Punctuation
+objectName.Otherany0.8393Object0.0374string0.0296object0.0255{}0.0147
+,Punctuation
+ Text.Whitespace
+sourceName.Otherstring0.5628any0.3344number0.0090Error0.0056Object0.0024
+,Punctuation
+ Text.Whitespace
+keyName.Otherstring0.8063any0.1784number0.0086complex0.0011void0.0005
+,Punctuation
+ Text.Whitespace
+srcIndexName.Otherstring0.4984any0.3845number0.0487boolean0.0290void0.0074
+,Punctuation
+ Text.Whitespace
+baseMergeName.Otherstring0.4997any0.3726number0.0516boolean0.0389void0.0069
+,Punctuation
+ Text.Whitespace
+customizerName.Otherstring0.4928any0.3828number0.0514boolean0.0411void0.0082
+,Punctuation
+ Text.Whitespace
+stackName.Otherstring0.5420any0.3572Error0.0229boolean0.0034void0.0034
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+newValueName.Otherany0.4842string0.4526boolean0.0265number0.0213complex0.0023
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+customizerName.Otherany0.3890string0.3254boolean0.2124number0.0424Error0.0040
+\n        Text.Whitespace
+?Operator
+ Text.Whitespace
+customizerName.Otherany0.4775string0.3221boolean0.0961number0.0393complex0.0149
+(Punctuation
+objectName.Otherany0.9274Object0.0160{}0.0128complex0.0105object0.0093
+[Punctuation
+keyName.Otherstring0.8267any0.1526number0.0099complex0.0048symbol0.0008
+]Punctuation
+,Punctuation
+ Text.Whitespace
+srcValueName.Otherany0.5895string0.2492number0.0627boolean0.0392void0.0158
+,Punctuation
+ Text.Whitespace
+`Literal.String.Backtick
+${Literal.String.Interpol
+keyName.Otherstring0.7374any0.2324number0.0189complex0.0040void0.0017
+}Literal.String.Interpol
+`Literal.String.Backtick
+,Punctuation
+ Text.Whitespace
+objectName.Otherany0.7536Object0.1020object0.0483string0.0226{}0.0182
+,Punctuation
+ Text.Whitespace
+sourceName.Otherstring0.5096any0.4298number0.0072Error0.0032Object0.0030
+,Punctuation
+ Text.Whitespace
+stackName.Otherstring0.6221any0.2856Error0.0187boolean0.0084void0.0074
+)Punctuation
+\n        Text.Whitespace
+:Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+\n\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+newValueName.Otherany0.7686string0.1913number0.0227boolean0.0073complex0.0018
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+newValueName.Otherany0.8612string0.0859boolean0.0241number0.0132complex0.0025
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+srcValueName.Otherany0.5734string0.2860boolean0.0531number0.0393complex0.0129
+\n      Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+assignMergeValueName.Othervoid0.5177any0.2849complex0.0642string0.0441boolean0.0248
+(Punctuation
+objectName.Otherany0.9116Object0.0248object0.0169string0.0114complex0.0101
+,Punctuation
+ Text.Whitespace
+keyName.Otherstring0.5296any0.4381number0.0147complex0.0062void0.0016
+,Punctuation
+ Text.Whitespace
+newValueName.Otherany0.8338string0.1210number0.0214boolean0.0049{}0.0026
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+ Text.Whitespace
+keysInName.Otherany0.4598void0.1592string0.1529number0.0677boolean0.0509
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+baseMergeName.Otherany0.5376string0.0346void0.0288boolean0.0163complex0.0161
+\nText.Whitespace

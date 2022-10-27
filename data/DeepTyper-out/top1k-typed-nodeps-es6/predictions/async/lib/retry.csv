@@ -1,0 +1,518 @@
+importKeyword
+ Text.Whitespace
+wrapAsyncName.Otherany0.1081complex0.0644boolean0.0629void0.0473string0.0269
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/wrapAsync.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+promiseCallbackName.Otherany0.2900string0.1043boolean0.0847number0.0724void0.0589
+,Punctuation
+ Text.Whitespace
+PROMISE_SYMBOLName.Otherany0.2782string0.1287boolean0.1287number0.0854complex0.0714
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/promiseCallback.js'Literal.String.Single
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+constantName.Otherstring0.2934any0.2425boolean0.1313number0.0684complex0.0178
+(Punctuation
+valueName.Otherstring0.5174any0.3750number0.0638boolean0.0175complex0.0022
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+valueName.Otherany0.4198string0.4052number0.1049boolean0.0412{}0.0038
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Attempts to get a successful response from `task` no more than `times` times\n * before returning an error. If the task is successful, the `callback` will be\n * passed the result of the successful task. If all attempts fail, the callback\n * will be passed the error and result (if any) of the final attempt.\n *\n * @name retry\n * @static\n * @memberOf module:ControlFlow\n * @method\n * @category Control Flow\n * @see [async.retryable]{@link module:ControlFlow.retryable}\n * @param {Object|number} [opts = {times: 5, interval: 0}| 5] - Can be either an\n * object with `times` and `interval` or a number.\n * * `times` - The number of attempts to make before giving up.  The default\n *   is `5`.\n * * `interval` - The time to wait between retries, in milliseconds.  The\n *   default is `0`. The interval may also be specified as a function of the\n *   retry count (see example).\n * * `errorFilter` - An optional synchronous function that is invoked on\n *   erroneous result. If it returns `true` the retry attempts will continue;\n *   if the function returns `false` the retry flow is aborted with the current\n *   attempt's error and result being returned to the final callback.\n *   Invoked with (err).\n * * If `opts` is a number, the number specifies the number of times to retry,\n *   with the default interval of `0`.\n * @param {AsyncFunction} task - An async function to retry.\n * Invoked with (callback).\n * @param {Function} [callback] - An optional callback which is called when the\n * task has succeeded, or after the final failed attempt. It receives the `err`\n * and `result` arguments of the last attempt at completing the `task`. Invoked\n * with (err, results).\n * @returns {Promise} a promise if no callback provided\n *\n * @example\n *\n * // The `retry` function can be used as a stand-alone control flow by passing\n * // a callback, as shown below:\n *\n * // try calling apiMethod 3 times\n * async.retry(3, apiMethod, function(err, result) {\n *     // do something with the result\n * });\n *\n * // try calling apiMethod 3 times, waiting 200 ms between each retry\n * async.retry({times: 3, interval: 200}, apiMethod, function(err, result) {\n *     // do something with the result\n * });\n *\n * // try calling apiMethod 10 times with exponential backoff\n * // (i.e. intervals of 100, 200, 400, 800, 1600, ... milliseconds)\n * async.retry({\n *   times: 10,\n *   interval: function(retryCount) {\n *     return 50 * Math.pow(2, retryCount);\n *   }\n * }, apiMethod, function(err, result) {\n *     // do something with the result\n * });\n *\n * // try calling apiMethod the default 5 times no delay between each retry\n * async.retry(apiMethod, function(err, result) {\n *     // do something with the result\n * });\n *\n * // try calling apiMethod only when error condition satisfies, all other\n * // errors will abort the retry control flow and return to final callback\n * async.retry({\n *   errorFilter: function(err) {\n *     return err.message === 'Temporary error'; // only retry on a specific error\n *   }\n * }, apiMethod, function(err, result) {\n *     // do something with the result\n * });\n *\n * // to retry individual methods that are not as reliable within other\n * // control flow functions, use the `retryable` wrapper:\n * async.auto({\n *     users: api.getUsers.bind(api),\n *     payments: async.retryable(3, api.getPayments.bind(api))\n * }, function(err, results) {\n *     // do something with the results\n * });\n *\n */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+DEFAULT_TIMESName.Othernumber0.9734any0.0151string0.0028void0.0024boolean0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+5Literal.Number.Float
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+DEFAULT_INTERVALName.Othernumber0.9581any0.0213void0.0079string0.0035boolean0.0035
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+retryName.Othervoid0.8102any0.0324complex0.0219number0.0096boolean0.0064
+(Punctuation
+optsName.Otherany0.8471Options0.0066number0.0056string0.0049boolean0.0020
+,Punctuation
+ Text.Whitespace
+taskName.Otherany0.7198number0.0380string0.0338boolean0.0121Task0.0101
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.7439Function0.0699number0.0141void0.0059Callback0.0041
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+optionsName.Otherany0.3022complex0.2250Options0.0191ConnectionOptions0.0108number0.0083
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+timesName.Otherany0.5348number0.2671string0.1236complex0.0232boolean0.0084
+:Operator
+ Text.Whitespace
+DEFAULT_TIMESKeyword.Typenumber0.3869any0.3470string0.1621boolean0.0196void0.0161
+,Punctuation
+\n        Text.Whitespace
+intervalFuncName.Otherany0.6903string0.0600number0.0470boolean0.0296complex0.0110
+:Operator
+ Text.Whitespace
+constantKeyword.Typeany0.3631string0.1385number0.0558boolean0.0258complex0.0124
+(Punctuation
+DEFAULT_INTERVALName.Otherany0.5384string0.2561number0.1234boolean0.0200complex0.0076
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+argumentsName.OtherIArguments0.9804any[]0.0049any0.0013string[]0.0012Expression[]0.0002
+.Punctuation
+lengthName.Othernumber0.9516any0.0444string0.0017boolean0.0008complex0.0004
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+3Literal.Number.Float
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+optsName.Otherany0.9502complex0.0073string0.0039number0.0032boolean0.0021
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+callbackName.Otherany0.7084Function0.0896number0.0361void0.0102boolean0.0098
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+taskName.Otherany0.8301number0.0358string0.0137Task0.0087Function0.0060
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+promiseCallbackName.Otherany0.5750number0.1360boolean0.0490string0.0425complex0.0295
+(Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+taskName.Otherany0.7641string0.0479number0.0320boolean0.0098Task0.0080
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optsName.Otherany0.8638number0.0164string0.0157complex0.0062boolean0.0031
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+parseTimesName.Othervoid0.8232any0.1157complex0.0112string0.0091number0.0062
+(Punctuation
+optionsName.Otherany0.2096Options0.0555ConnectionOptions0.0125complex0.0104number0.0102
+,Punctuation
+ Text.Whitespace
+optsName.Otherany0.7276Options0.0144number0.0142complex0.0121{}0.0078
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+callbackName.Otherany0.6662Function0.1013void0.0498boolean0.0154number0.0146
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+callbackName.Otherany0.5948Function0.1041void0.0289number0.0149Callback0.0095
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+promiseCallbackName.Otherany0.5859boolean0.1377void0.0987number0.0309complex0.0281
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+taskName.Otherany0.8164string0.0170number0.0143Task0.0099complex0.0086
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+throwKeywordany0.7451Error0.2065complex0.0127string0.0059{}0.0057
+ Text.Whitespace
+newOperator.Wordany0.3750Error0.3134ErrorConstructor0.2533string0.0152complex0.0075
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor1.0000Error0.0000any0.0000complex0.0000never0.0000
+(Punctuation
+"Invalid arguments for async.retry"Literal.String.Double
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+_taskName.Otherany0.6487complex0.0228void0.0119number0.0106boolean0.0071
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+wrapAsyncName.Otherany0.5391complex0.0699number0.0366void0.0273boolean0.0104
+(Punctuation
+taskName.Otherany0.6081number0.0567Task0.0321string0.0256boolean0.0101
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+attemptName.Othernumber0.9897any0.0067void0.0007string0.0007boolean0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n    Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+retryAttemptName.Othervoid0.6860any0.1016complex0.0554boolean0.0339number0.0337
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+_taskName.Otherany0.4635complex0.2135void0.0594boolean0.0155Error0.0101
+(Punctuation
+(Punctuation
+errName.Otherany0.6209Error0.3470string0.0080complex0.0021number0.0015
+,Punctuation
+ Text.Whitespace
+...Punctuation
+argsName.Otherany[]0.7792any0.1225string[]0.0096IArguments0.0049complex0.0031
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.6736Error0.2243boolean0.0605complex0.0070string0.0053
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+falseKeyword.Constant
+)Punctuation
+ Text.Whitespace
+returnKeyword
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.5820Error0.3151boolean0.0326string0.0123complex0.0106
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+attemptName.Othernumber0.9627any0.0332string0.0013boolean0.0010complex0.0004
+++Operator
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+optionsName.Otherany0.4470complex0.0388Options0.0260number0.0141never0.0032
+.Punctuation
+timesName.Otherany0.5118number0.4388string0.0219complex0.0123boolean0.0030
+ Text.Whitespace
+&&Operator
+\n                Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+optionsName.Otherany0.3337Options0.0310complex0.0303never0.0059number0.0047
+.Punctuation
+errorFilterName.Otherany0.7333number0.1053string0.0802boolean0.0274complex0.0226
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+'function'Literal.String.Single
+ Text.Whitespace
+||Operator
+\n                    Text.Whitespace
+optionsName.Otherany0.2675Options0.0689complex0.0326number0.0155{}0.0065
+.Punctuation
+errorFilterName.Otherany0.4381boolean0.1887complex0.1245number0.1159string0.0591
+(Punctuation
+errName.Otherany0.7250Error0.2148string0.0186complex0.0102number0.0076
+)Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+setTimeoutName.Othercomplex0.9883any0.0061number0.0025string0.0009void0.0004
+(Punctuation
+retryAttemptName.Othernumber0.3589any0.2915void0.1785string0.0392boolean0.0326
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.3174complex0.0506Options0.0489number0.0230void0.0065
+.Punctuation
+intervalFuncName.Otherany0.3849void0.2864number0.2140boolean0.0558complex0.0162
+(Punctuation
+attemptName.Othernumber0.9839any0.0139string0.0010void0.0003boolean0.0003
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+callbackName.Otherany0.5172void0.1953Function0.1080never0.0100number0.0090
+(Punctuation
+errName.Otherany0.7969Error0.1758string0.0110number0.0028complex0.0020
+,Punctuation
+ Text.Whitespace
+...Punctuation
+argsName.Otherany[]0.9385any0.0286string[]0.0098IArguments0.0027number[]0.0018
+)Punctuation
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+retryAttemptName.Othervoid0.7528any0.1208boolean0.0197string0.0118complex0.0106
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.2963{}0.0483Function0.0240void0.0159any[]0.0140
+[Punctuation
+PROMISE_SYMBOLName.Otherany0.3493string0.2620number0.1282void0.0255complex0.0225
+]Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+parseTimesName.Othervoid0.2653any0.2486string0.1670boolean0.1454number0.0757
+(Punctuation
+accName.Otherany0.5873Object0.0175number0.0132Error0.0108complex0.0094
+,Punctuation
+ Text.Whitespace
+tName.Otherany0.7208string0.0624number0.0162boolean0.0087never0.0045
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+tName.Otherany0.8707string0.0299complex0.0202boolean0.0078never0.0051
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'object'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+accName.Othercomplex0.4659any0.3398Error0.0042number0.0027{}0.0027
+.Punctuation
+timesName.Othernumber0.6742any0.2176string0.0789complex0.0120boolean0.0055
+ Text.Whitespace
+=Operator
+ Text.Whitespace
++Operator
+tName.Otherany0.8363string0.0062number0.0057complex0.0036Error0.0021
+.Punctuation
+timesName.Otherany0.8273number0.1263string0.0280complex0.0079boolean0.0016
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+DEFAULT_TIMESName.Otherany0.4199number0.3188boolean0.1113string0.1030complex0.0156
+;Punctuation
+\n\n        Text.Whitespace
+accName.Othercomplex0.4356any0.3132boolean0.0058Window0.0039number0.0026
+.Punctuation
+intervalFuncName.Otherboolean0.4023any0.3352string0.1120number0.0748complex0.0210
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+tName.Otherany0.9061complex0.0059string0.0034number0.0021never0.0017
+.Punctuation
+intervalName.Otherany0.9397string0.0409number0.0117complex0.0056boolean0.0008
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+ Text.Whitespace
+?Operator
+\n            Text.Whitespace
+t.intervalName.Other
+ Text.Whitespace
+:Operator
+\n            Text.Whitespace
+constantKeyword.Typestring0.6045any0.2034number0.0439boolean0.0346complex0.0141
+(Punctuation
++Operator
+tName.Otherany0.8924string0.0082number0.0028Error0.0026complex0.0023
+.Punctuation
+intervalName.Otherany0.9555number0.0201string0.0197complex0.0029boolean0.0002
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+DEFAULT_INTERVALName.Otherany0.3487number0.2944string0.2898boolean0.0304complex0.0120
+)Punctuation
+;Punctuation
+\n\n        Text.Whitespace
+accName.Otherany0.3465complex0.3325Error0.0046Window0.0034{}0.0032
+.Punctuation
+errorFilterName.Otherany0.5164string0.1771number0.1149boolean0.1088complex0.0336
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+tName.Otherany0.9208string0.0047complex0.0045Error0.0022RegExp0.0014
+.Punctuation
+errorFilterName.Otherany0.7838string0.1416number0.0258boolean0.0174complex0.0120
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+tName.Otherany0.9146string0.0267complex0.0117boolean0.0068never0.0042
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'number'Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+tName.Otherany0.9264string0.0374complex0.0069never0.0039number0.0037
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+accName.Othercomplex0.4611any0.3607Error0.0039{}0.0033number0.0022
+.Punctuation
+timesName.Othernumber0.5836any0.3132string0.0828complex0.0091boolean0.0026
+ Text.Whitespace
+=Operator
+ Text.Whitespace
++Operator
+tName.Otherany0.8509number0.0589string0.0534never0.0039complex0.0028
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+DEFAULT_TIMESName.Otherany0.4669number0.2721string0.1757boolean0.0610complex0.0034
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+throwKeywordany0.5592Error0.3767complex0.0147string0.0076never0.0075
+ Text.Whitespace
+newOperator.WordErrorConstructor0.4627Error0.3008any0.1889string0.0125complex0.0046
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor1.0000Error0.0000any0.0000never0.0000LogLevel.Error0.0000
+(Punctuation
+"Invalid arguments for async.retry"Literal.String.Double
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

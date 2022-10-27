@@ -1,0 +1,41 @@
+importKeyword
+ Text.Whitespace
+flowName.Otherany0.5262complex0.0151T[]0.0113Promise<any>0.0112T0.0078
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./flow.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * This method is like `flow` except that it composes a function that\n * invokes the given functions from right to left.\n *\n * @since 3.0.0\n * @category Util\n * @param {Function[]} [funcs] The functions to invoke.\n * @returns {Function} Returns the new composite function.\n * @see flow\n * @example\n *\n * import add from 'lodash/add'\n *\n * function square(n) {\n *   return n * n\n * }\n *\n * const addSquare = flowRight(square, add)\n * addSquare(1, 2)\n * // => 9\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+flowRightName.Otherany0.3309complex0.0528Promise<any>0.0257string0.0207any[]0.0130
+(Punctuation
+...Punctuation
+funcsName.Otherany[]0.4719any0.1739string[]0.0186T[]0.0054complex0.0048
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+flowName.Otherany0.9015Promise<any>0.0082number0.0027complex0.0027any[]0.0025
+(Punctuation
+...Punctuation
+funcsName.Otherany[]0.7810any0.0879string[]0.0061T[]0.0044number[]0.0037
+.Punctuation
+reverseName.Otherany[]0.7594any0.1144T[]0.0186string[]0.0131number[]0.0121
+(Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+flowRightName.Otherany0.2100any[]0.0297complex0.0183void0.0121string0.0084
+\nText.Whitespace

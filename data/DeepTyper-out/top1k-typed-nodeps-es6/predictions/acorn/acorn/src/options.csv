@@ -1,0 +1,746 @@
+importKeyword
+ Text.Whitespace
+{Punctuation
+hasOwnName.Otherboolean0.9450complex0.0282number0.0053any0.0046true0.0039
+,Punctuation
+ Text.Whitespace
+isArrayName.Othercomplex0.5752boolean0.3938void0.0112any0.0086number0.0021
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./util.js"Literal.String.Double
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+SourceLocationName.Otherany0.6838complex0.2211void0.0591string0.0104boolean0.0075
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./locutil.js"Literal.String.Double
+\n\nText.Whitespace
+Text
+// A second argument must be given to configure the parser process.Comment.Single
+\nText.Whitespace
+// These options are recognized (only `ecmaVersion` is required):Comment.Single
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+defaultOptionsName.Othercomplex0.7457{}0.0502any0.0446Schema0.0081Object0.0036
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+// `ecmaVersion` indicates the ECMAScript version to parse. Must beComment.Single
+\n  Text.Whitespace
+// either 3, 5, 6 (or 2015), 7 (2016), 8 (2017), 9 (2018), 10Comment.Single
+\n  Text.Whitespace
+// (2019), 11 (2020), 12 (2021), 13 (2022), 14 (2023), or `"latest"`Comment.Single
+\n  Text.Whitespace
+// (the latest version the library supports). This influencesComment.Single
+\n  Text.Whitespace
+// support for strict mode, the set of reserved words, and supportComment.Single
+\n  Text.Whitespace
+// for new syntax features.Comment.Single
+\n  Text.Whitespace
+ecmaVersionName.Othernull0.9975boolean0.0005undefined0.0002void0.0001{}0.0001
+:Operator
+ Text.Whitespace
+nullKeyword.Type
+,Punctuation
+\n  Text.Whitespace
+// `sourceType` indicates the mode the code should be parsed in.Comment.Single
+\n  Text.Whitespace
+// Can be either `"script"` or `"module"`. This influences globalComment.Single
+\n  Text.Whitespace
+// strict mode and parsing of `import` and `export` declarations.Comment.Single
+\n  Text.Whitespace
+sourceTypeName.Otherstring0.9908any0.0032RegExp0.0029boolean0.0009number0.0005
+:Operator
+ Text.Whitespace
+"script"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+// `onInsertedSemicolon` can be a callback that will be calledComment.Single
+\n  Text.Whitespace
+// when a semicolon is automatically inserted. It will be passedComment.Single
+\n  Text.Whitespace
+// the position of the comma as an offset, and if `locations` isComment.Single
+\n  Text.Whitespace
+// enabled, it is given the location as a `{line, column}` objectComment.Single
+\n  Text.Whitespace
+// as second argument.Comment.Single
+\n  Text.Whitespace
+onInsertedSemicolonName.Othernull0.9994boolean0.0001undefined0.0001complex0.0000{}0.0000
+:Operator
+ Text.Whitespace
+nullKeyword.Type
+,Punctuation
+\n  Text.Whitespace
+// `onTrailingComma` is similar to `onInsertedSemicolon`, but forComment.Single
+\n  Text.Whitespace
+// trailing commas.Comment.Single
+\n  Text.Whitespace
+onTrailingCommaName.Othernull0.9994boolean0.0001undefined0.0001complex0.0000{}0.0000
+:Operator
+ Text.Whitespace
+nullKeyword.Type
+,Punctuation
+\n  Text.Whitespace
+// By default, reserved words are only enforced if ecmaVersion >= 5.Comment.Single
+\n  Text.Whitespace
+// Set `allowReserved` to a boolean value to explicitly turn this onComment.Single
+\n  Text.Whitespace
+// an off. When this option has the value "never", reserved wordsComment.Single
+\n  Text.Whitespace
+// and keywords can also not be used as property names.Comment.Single
+\n  Text.Whitespace
+allowReservedName.Othernull0.9988boolean0.0005undefined0.0001complex0.0000void0.0000
+:Operator
+ Text.Whitespace
+nullKeyword.Type
+,Punctuation
+\n  Text.Whitespace
+// When enabled, a return at the top level is not considered anComment.Single
+\n  Text.Whitespace
+// error.Comment.Single
+\n  Text.Whitespace
+allowReturnOutsideFunctionName.Otherboolean0.9975false0.0009true0.0005number0.0002string0.0002
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+\n  Text.Whitespace
+// When enabled, import/export statements are not constrained toComment.Single
+\n  Text.Whitespace
+// appearing at the top of the program, and an import.meta expressionComment.Single
+\n  Text.Whitespace
+// in a script isn't considered an error.Comment.Single
+\n  Text.Whitespace
+allowImportExportEverywhereName.Otherboolean0.9962false0.0013true0.0009number0.0004complex0.0002
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+\n  Text.Whitespace
+// By default, await identifiers are allowed to appear at the top-level scope only if ecmaVersion >= 2022.Comment.Single
+\n  Text.Whitespace
+// When enabled, await identifiers are allowed to appear at the top-level scope,Comment.Single
+\n  Text.Whitespace
+// but they are still not allowed in non-async functions.Comment.Single
+\n  Text.Whitespace
+allowAwaitOutsideFunctionName.Othernull0.9990boolean0.0002undefined0.0001complex0.0000undefined[]0.0000
+:Operator
+ Text.Whitespace
+nullKeyword.Type
+,Punctuation
+\n  Text.Whitespace
+// When enabled, super identifiers are not constrained toComment.Single
+\n  Text.Whitespace
+// appearing in methods and do not raise an error when they appear elsewhere.Comment.Single
+\n  Text.Whitespace
+allowSuperOutsideMethodName.Othernull0.9983boolean0.0006undefined0.0002void0.0001complex0.0001
+:Operator
+ Text.Whitespace
+nullKeyword.Type
+,Punctuation
+\n  Text.Whitespace
+// When enabled, hashbang directive in the beginning of file isComment.Single
+\n  Text.Whitespace
+// allowed and treated as a line comment. Enabled by default whenComment.Single
+\n  Text.Whitespace
+// `ecmaVersion` >= 2023.Comment.Single
+\n  Text.Whitespace
+allowHashBangName.Otherboolean0.9976false0.0009true0.0005number0.0002any0.0001
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+\n  Text.Whitespace
+// When `locations` is on, `loc` properties holding objects withComment.Single
+\n  Text.Whitespace
+// `start` and `end` properties in `{line, column}` form (withComment.Single
+\n  Text.Whitespace
+// line being 1-based and column 0-based) will be attached to theComment.Single
+\n  Text.Whitespace
+// nodes.Comment.Single
+\n  Text.Whitespace
+locationsName.Otherboolean0.9929false0.0027true0.0009complex0.0007number0.0004
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+\n  Text.Whitespace
+// A function can be passed as `onToken` option, which willComment.Single
+\n  Text.Whitespace
+// cause Acorn to call that function with object in the sameComment.Single
+\n  Text.Whitespace
+// format as tokens returned from `tokenizer().getToken()`. NoteComment.Single
+\n  Text.Whitespace
+// that you are not allowed to call the parser from theComment.Single
+\n  Text.Whitespace
+// callback—that will corrupt its internal state.Comment.Single
+\n  Text.Whitespace
+onTokenName.Othernull0.9725void0.0163complex0.0025any0.0016boolean0.0006
+:Operator
+ Text.Whitespace
+nullKeyword.Type
+,Punctuation
+\n  Text.Whitespace
+// A function can be passed as `onComment` option, which willComment.Single
+\n  Text.Whitespace
+// cause Acorn to call that function with `(block, text, start,Comment.Single
+\n  Text.Whitespace
+// end)` parameters whenever a comment is skipped. `block` is aComment.Single
+\n  Text.Whitespace
+// boolean indicating whether this is a block (`/* */`) comment,Comment.Single
+\n  Text.Whitespace
+// `text` is the content of the comment, and `start` and `end` areComment.Single
+\n  Text.Whitespace
+// character offsets that denote the start and end of the comment.Comment.Single
+\n  Text.Whitespace
+// When the `locations` option is on, two more parameters areComment.Single
+\n  Text.Whitespace
+// passed, the full `{line, column}` locations of the start andComment.Single
+\n  Text.Whitespace
+// end of the comments. Note that you are not allowed to call theComment.Single
+\n  Text.Whitespace
+// parser from the callback—that will corrupt its internal state.Comment.Single
+\n  Text.Whitespace
+onCommentName.Othernull0.9983boolean0.0007undefined0.0001void0.0001complex0.0000
+:Operator
+ Text.Whitespace
+nullKeyword.Type
+,Punctuation
+\n  Text.Whitespace
+// Nodes have their start and end characters offsets recorded inComment.Single
+\n  Text.Whitespace
+// `start` and `end` properties (directly on the node, rather thanComment.Single
+\n  Text.Whitespace
+// the `loc` object, which holds line/column data. To also add aComment.Single
+\n  Text.Whitespace
+// [semi-standardized][range] `range` property holding a `[start,Comment.Single
+\n  Text.Whitespace
+// end]` array with the same numbers, set the `ranges` option toComment.Single
+\n  Text.Whitespace
+// `true`.Comment.Single
+\n  Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+// [range]: https://bugzilla.mozilla.org/show_bug.cgi?id=745678Comment.Single
+\n  Text.Whitespace
+rangesName.Otherboolean0.9975false0.0010true0.0005string0.0002number0.0001
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+,Punctuation
+\n  Text.Whitespace
+// It is possible to parse multiple files into a single AST byComment.Single
+\n  Text.Whitespace
+// passing the tree produced by parsing the first file asComment.Single
+\n  Text.Whitespace
+// `program` option in subsequent parses. This will add theComment.Single
+\n  Text.Whitespace
+// toplevel forms of the parsed file to the `Program` (top) nodeComment.Single
+\n  Text.Whitespace
+// of an existing parse tree.Comment.Single
+\n  Text.Whitespace
+programName.Othernull0.9979undefined[]0.0002undefined0.0001V0.0001void0.0001
+:Operator
+ Text.Whitespace
+nullKeyword.Type
+,Punctuation
+\n  Text.Whitespace
+// When `locations` is on, you can pass this to record the sourceComment.Single
+\n  Text.Whitespace
+// file in every node's `loc` object.Comment.Single
+\n  Text.Whitespace
+sourceFileName.Othernull0.9964complex0.0003{}0.0002void0.0002Function0.0002
+:Operator
+ Text.Whitespace
+nullKeyword.Type
+,Punctuation
+\n  Text.Whitespace
+// This value, if given, is stored in every node, whetherComment.Single
+\n  Text.Whitespace
+// `locations` is on or off.Comment.Single
+\n  Text.Whitespace
+directSourceFileName.Othernull0.9977boolean0.0007undefined0.0001undefined[]0.0001Function0.0001
+:Operator
+ Text.Whitespace
+nullKeyword.Type
+,Punctuation
+\n  Text.Whitespace
+// When enabled, parenthesized expressions are represented byComment.Single
+\n  Text.Whitespace
+// (non-standard) ParenthesizedExpression nodesComment.Single
+\n  Text.Whitespace
+preserveParensName.Otherboolean0.9988false0.0002true0.0002number0.0002any0.0001
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+// Interpret and default an options objectComment.Single
+\n\nText.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+warnedAboutEcmaVersionName.Otherboolean0.9963any0.0012false0.0007number0.0004complex0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+getOptionsName.Othercomplex0.2441any0.2382void0.0818{}0.0516number0.0254
+(Punctuation
+optsName.Otherany0.6381Options0.0535{}0.0252complex0.0163Object0.0043
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+optionsName.Other{}0.4699any0.1416Options0.0700complex0.0133T0.0047
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+\n\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+optName.Otherstring0.8919any0.0810complex0.0066boolean0.0046number0.0044
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+defaultOptionsName.Othercomplex0.3947{}0.3301any0.0526Schema0.0076Options0.0068
+)Punctuation
+\n    Text.Whitespace
+optionsName.Other{}0.4176complex0.1725Options0.0873any0.0694Object0.0065
+[Punctuation
+optName.Otherstring0.7904any0.1565complex0.0232number0.0072{}0.0041
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optsName.Otherany0.6062Options0.1133{}0.0789complex0.0577Object0.0051
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+hasOwnName.Otherboolean0.7664complex0.1558any0.0353{}0.0131false0.0038
+(Punctuation
+optsName.Otherany0.3899Options0.1897{}0.0964complex0.0662Object0.0060
+,Punctuation
+ Text.Whitespace
+optName.Otherstring0.5071any0.2363complex0.0529Function0.0131{}0.0113
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+optsName.Otherany0.6093Options0.1079{}0.0728complex0.0480Object0.0047
+[Punctuation
+optName.Otherstring0.7827any0.1447number0.0114complex0.0109{}0.0041
+]Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+defaultOptionsName.Other{}0.3250any0.2578complex0.1498Options0.0136Config0.0111
+[Punctuation
+optName.Otherstring0.7994any0.1526complex0.0151number0.0063RegExp0.0023
+]Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optionsName.OtherOptions0.1539any0.1413complex0.0213ConnectionOptions0.0152{}0.0145
+.Punctuation
+ecmaVersionName.Otherany0.4445boolean0.3749string0.0858complex0.0319number0.0205
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"latest"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+optionsName.Otherany0.3103Options0.1114complex0.0385{}0.0239ConnectionOptions0.0103
+.Punctuation
+ecmaVersionName.Otherany0.4866number0.3822boolean0.0846void0.0190complex0.0087
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+1e8Literal.Number.Float
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.2143Options0.1869{}0.0293complex0.0269ConnectionOptions0.0134
+.Punctuation
+ecmaVersionName.Otherboolean0.5425any0.3101number0.0593string0.0271void0.0180
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+warnedAboutEcmaVersionName.Otherboolean0.9759any0.0155complex0.0021string0.0016number0.0014
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+consoleName.OtherConsole0.8045any0.1272void0.0292string0.0049boolean0.0035
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"object"Literal.String.Double
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+consoleName.OtherConsole0.9885any0.0058void0.0024boolean0.0002Function0.0002
+.Punctuation
+warnName.Othervoid0.8690boolean0.0869any0.0291complex0.0054string0.0044
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+warnedAboutEcmaVersionName.Otherboolean0.9888any0.0062number0.0010void0.0009false0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+\n      Text.Whitespace
+consoleName.OtherConsole0.9954void0.0013any0.0012boolean0.0001Function0.0000
+.Punctuation
+warnName.Othervoid0.9924any0.0022complex0.0016boolean0.0016Function0.0003
+(Punctuation
+"Since Acorn 8.0.0, options.ecmaVersion is required.\nDefaulting to 2020, but this will stop working in the future."Literal.String.Double
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+optionsName.Otherany0.2354Options0.0640complex0.0490{}0.0253Config0.0103
+.Punctuation
+ecmaVersionName.Othernumber0.4733any0.4188boolean0.0533void0.0258complex0.0075
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+11Literal.Number.Float
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.1610Options0.1381complex0.0463{}0.0209ConnectionOptions0.0103
+.Punctuation
+ecmaVersionName.Othernumber0.7865any0.1517boolean0.0430void0.0062complex0.0039
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+2015Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+optionsName.Otherany0.1807Options0.1498complex0.0955{}0.0435ConnectionOptions0.0066
+.Punctuation
+ecmaVersionName.Othernumber0.6421any0.2772boolean0.0430void0.0127complex0.0120
+ Text.Whitespace
+-=Operator
+ Text.Whitespace
+2009Literal.Number.Float
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optionsName.OtherOptions0.1853any0.1414complex0.0695{}0.0289ConnectionOptions0.0096
+.Punctuation
+allowReservedName.Otherboolean0.5203any0.1931number0.1867complex0.0386string0.0101
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+\n    Text.Whitespace
+optionsName.Otherany0.1607Options0.1360complex0.0702{}0.0250Config0.0111
+.Punctuation
+allowReservedName.Otherboolean0.7205any0.1599number0.0886complex0.0121void0.0055
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.OtherOptions0.1800any0.1668complex0.0967{}0.0135Config0.0083
+.Punctuation
+ecmaVersionName.Othernumber0.6806any0.2164boolean0.0679complex0.0162string0.0060
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+5Literal.Number.Float
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optsName.Otherany0.6792complex0.0758Options0.0733{}0.0313boolean0.0101
+.Punctuation
+allowHashBangName.Otherboolean0.4127any0.3418number0.1694complex0.0270string0.0144
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+\n    Text.Whitespace
+optionsName.Otherany0.2115Options0.1427complex0.0720{}0.0313Config0.0096
+.Punctuation
+allowHashBangName.Otherboolean0.8017any0.1105number0.0671complex0.0073void0.0048
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.3058Options0.1548complex0.0885{}0.0174number0.0110
+.Punctuation
+ecmaVersionName.Othernumber0.7825any0.1767boolean0.0204complex0.0069string0.0067
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+14Literal.Number.Float
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isArrayName.Othercomplex0.5206boolean0.4391any0.0202{}0.0042void0.0025
+(Punctuation
+optionsName.Otherany0.2176complex0.1836Options0.1499{}0.0144Config0.0068
+.Punctuation
+onTokenName.Otherany0.4034complex0.2156void0.1925number0.1141boolean0.0389
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+tokensName.Otherany0.2401any[]0.1411Token[]0.0510boolean0.0444number0.0312
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.OtherOptions0.2020complex0.1038any0.0853ConnectionOptions0.0159{}0.0092
+.Punctuation
+onTokenName.Othervoid0.3566any0.1984complex0.1731number0.0929boolean0.0327
+\n    Text.Whitespace
+optionsName.Otherany0.1801Options0.1320complex0.0601ConnectionOptions0.0187{}0.0086
+.Punctuation
+onTokenName.Othervoid0.4686any0.3189number0.0737boolean0.0498complex0.0461
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+tokenName.Otherstring0.8431any0.1186number0.0159complex0.0075Token0.0020
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+tokensName.Otherany[]0.2025Token[]0.0813any0.0381string[]0.0291number[]0.0206
+.Punctuation
+pushName.Othernumber0.9889any0.0070boolean0.0014void0.0007string0.0006
+(Punctuation
+tokenName.Otherstring0.7031any0.2147number0.0250complex0.0227{}0.0067
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isArrayName.Othercomplex0.6108boolean0.3470any0.0157{}0.0042any[]0.0026
+(Punctuation
+optionsName.OtherOptions0.1749complex0.0988any0.0802{}0.0101any[]0.0097
+.Punctuation
+onCommentName.Otherboolean0.4251number0.2175any0.1437complex0.0995void0.0328
+)Punctuation
+)Punctuation
+\n    Text.Whitespace
+optionsName.Otherany0.1515Options0.1413complex0.0904{}0.0182any[]0.0108
+.Punctuation
+onCommentName.Otherboolean0.5244any0.2934complex0.0639number0.0454void0.0195
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pushCommentName.Othercomplex0.4542boolean0.3081any0.1048{}0.0187any[]0.0183
+(Punctuation
+optionsName.Otherany0.1741Options0.1737complex0.0917{}0.0171any[]0.0145
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.2484Options0.1789complex0.0934{}0.0206any[]0.0105
+.Punctuation
+onCommentName.Otherboolean0.7164any0.1086number0.0866void0.0276complex0.0266
+)Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+optionsName.OtherOptions0.2797complex0.0743any0.0729{}0.0485any[]0.0268
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+pushCommentName.Othervoid0.3047boolean0.2192any0.1652complex0.1127{}0.0412
+(Punctuation
+optionsName.OtherOptions0.2429any0.1321{}0.0161ConnectionOptions0.0158Config0.0101
+,Punctuation
+ Text.Whitespace
+arrayName.Otherany[]0.4977any0.2766string[]0.0911number[]0.0231complex0.0180
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+blockName.Otherany0.4374string0.1322number0.0256BlockDTO0.0175Date0.0166
+,Punctuation
+ Text.Whitespace
+textName.Otherstring0.8464any0.1386number0.0080string[]0.0012complex0.0010
+,Punctuation
+ Text.Whitespace
+startName.Othernumber0.7798any0.1303string0.0324Position0.0100Date0.0095
+,Punctuation
+ Text.Whitespace
+endName.Othernumber0.3960any0.3475string0.0684Date0.0281boolean0.0191
+,Punctuation
+ Text.Whitespace
+startLocName.Otherany0.6125string0.2479number0.0274object0.0114Object0.0095
+,Punctuation
+ Text.Whitespace
+endLocName.Otherany0.7527string0.1380number0.0382complex0.0186boolean0.0094
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+commentName.Othercomplex0.2383any0.1044VideoComment0.0225{}0.0182string0.0142
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+typeKeyword.Reserved
+:Operator
+ Text.Whitespace
+blockName.Otherany0.3800string0.1967boolean0.0653T0.0382Date0.0311
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+"Block"Literal.String.Double
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+"Line"Literal.String.Double
+,Punctuation
+\n      Text.Whitespace
+valueName.Otherstring0.9468any0.0435number0.0065complex0.0016boolean0.0005
+:Operator
+ Text.Whitespace
+textKeyword.Typestring0.9113any0.0782number0.0051complex0.0032string[]0.0003
+,Punctuation
+\n      Text.Whitespace
+startName.Othernumber0.7303any0.1356string0.0739boolean0.0122Date0.0071
+:Operator
+ Text.Whitespace
+startKeyword.Typenumber0.6997any0.1734string0.0671boolean0.0091Date0.0084
+,Punctuation
+\n      Text.Whitespace
+endName.Othernumber0.4963any0.3202string0.0706boolean0.0288Date0.0099
+:Operator
+ Text.Whitespace
+endKeyword.Typeany0.5003number0.2071string0.0886complex0.0333boolean0.0292
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optionsName.Othercomplex0.1674Options0.1365any0.0701ConnectionOptions0.0081{}0.0066
+.Punctuation
+locationsName.Otherboolean0.7933complex0.0755any[]0.0230any0.0172string0.0141
+)Punctuation
+\n      Text.Whitespace
+commentName.Otherany0.1070VideoComment0.0610complex0.0560Comment0.0239VideoCommentModel0.0081
+.Punctuation
+locName.Otherany0.2623complex0.0538SourceLocation0.0308string0.0172number0.0059
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.0394complex0.0054string0.0033FormData0.0033Expression0.0031
+ Text.Whitespace
+SourceLocationName.Otherany0.9281complex0.0619void0.0042string0.0012number0.0009
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+startLocName.Otherany0.7243string0.1622complex0.0205object0.0060string[]0.0058
+,Punctuation
+ Text.Whitespace
+endLocName.Otherany0.5492complex0.2123string0.1064number0.0264{}0.0144
+)Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optionsName.Othercomplex0.2039any0.0793Options0.0426any[]0.0065Config0.0062
+.Punctuation
+rangesName.Otherboolean0.7402any0.0842number0.0444string0.0401complex0.0348
+)Punctuation
+\n      Text.Whitespace
+commentName.OtherVideoComment0.0740complex0.0720any0.0570Comment0.0147VideoCommentModel0.0090
+.Punctuation
+rangeName.Otherany0.4005complex0.3146any[]0.0714string[]0.0622number[]0.0609
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+startName.Othernumber0.5904any0.2200string0.1117complex0.0075Date0.0074
+,Punctuation
+ Text.Whitespace
+endName.Othernumber0.5895any0.2913string0.0561complex0.0080Date0.0066
+]Punctuation
+\n    Text.Whitespace
+arrayName.Otherany[]0.4462string[]0.1282any0.1176number[]0.0396T[]0.0247
+.Punctuation
+pushName.Othernumber0.9781any0.0167string0.0015boolean0.0010void0.0006
+(Punctuation
+commentName.Otherany0.1058VideoComment0.0937complex0.0515string0.0138Comment0.0100
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

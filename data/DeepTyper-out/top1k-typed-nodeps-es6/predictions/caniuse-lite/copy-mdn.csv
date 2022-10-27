@@ -1,0 +1,1477 @@
+importKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+writeFileSyncName.Otherany0.9529void0.0375complex0.0034string0.0019number0.0018
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'fs'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+agentsName.Otherany0.7815string0.0612complex0.0465boolean0.0339void0.0220
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'caniuse-db/data.json'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+bcdName.Otherany0.5199string0.0885complex0.0884void0.0817boolean0.0730
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'@mdn/browser-compat-data'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/**\n * This function maps the browser keys from @mdn/browser-compat-data, to caniuse's format.\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+bcdBrowserToCanIUseBrowserName.Otherstring0.3136any0.3049boolean0.2365void0.0680complex0.0185
+(Punctuation
+bcdBrowserName.Otherany0.4538string0.4404boolean0.0503number0.0147RegExp0.0030
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+browserName.Otherstring0.5292any0.3716boolean0.0397RegExp0.0127number0.0063
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bcdBrowserName.Otherany0.5446string0.3375boolean0.0390RegExp0.0229number0.0091
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+browserName.Otherstring0.6412any0.2782RegExp0.0225boolean0.0169number0.0037
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'samsunginternet_android'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+browserName.Otherstring0.8132any0.1231RegExp0.0340boolean0.0079string[]0.0030
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'samsung'Literal.String.Single
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+browserName.Otherstring0.6462any0.2702RegExp0.0297boolean0.0174complex0.0032
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'safari_ios'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+browserName.Otherstring0.7999any0.1300RegExp0.0400boolean0.0080string[]0.0035
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'ios_saf'Literal.String.Single
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+browserName.Otherstring0.6476any0.2725RegExp0.0283boolean0.0165complex0.0032
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'opera_android'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+browserName.Otherstring0.7984any0.1289RegExp0.0423boolean0.0080string[]0.0036
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'op_mob'Literal.String.Single
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+browserName.Otherstring0.6519any0.2688RegExp0.0280boolean0.0161complex0.0034
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'chrome_android'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+browserName.Otherstring0.7991any0.1261RegExp0.0443boolean0.0080string[]0.0036
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'and_chr'Literal.String.Single
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+browserName.Otherstring0.6568any0.2642RegExp0.0278boolean0.0159complex0.0035
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'firefox_android'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+browserName.Otherstring0.8000any0.1232RegExp0.0461boolean0.0080string[]0.0037
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'and_ff'Literal.String.Single
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+browserName.Otherstring0.6723any0.2532RegExp0.0241boolean0.0154complex0.0035
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'webview_android'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+browserName.Otherstring0.7950any0.1303RegExp0.0395boolean0.0092string[]0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'android'Literal.String.Single
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+browserName.Otherstring0.4198any0.2621boolean0.0671RegExp0.0576string[]0.0164
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n *\n * If versionAdded is a range take the upper end of the range as the value.\n *\n * Version matches if all are true:\n * The versionAdded isn't null or false (it exists)\n * The versionAdded isn't "preview", used for preview browsers such as Safari TP.\n * The versionAdded is true\n * The current version is greater than or equal to the versionAdded.\n * The current version is less than the BCD version_Removed if exists.\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+versionMatchesName.Otherboolean0.4117any0.2791string0.2350complex0.0148number0.0111
+(Punctuation
+browserVersionName.Otherany0.5353string0.3662number0.0222boolean0.0059Object0.0040
+,Punctuation
+ Text.Whitespace
+versionAddedName.Otherany0.7156string0.1284boolean0.1123number0.0174complex0.0020
+,Punctuation
+ Text.Whitespace
+versionRemovedName.Otherany0.6196boolean0.2318string0.1087number0.0154complex0.0046
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+versionAddedName.Otherany0.7819string0.1728boolean0.0319complex0.0052number0.0029
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'preview'Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+!Operator
+versionAddedName.Otherboolean0.5033any0.3893string0.0607number0.0320complex0.0037
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+versionAddedName.Otherany0.8644string0.0498boolean0.0465complex0.0160number0.0087
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'string'Literal.String.Single
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+versionAddedName.Otherany0.4971string0.3180string[]0.1443boolean0.0136RegExp0.0081
+.Punctuation
+includesName.Otherboolean0.5310any0.3930complex0.0569string0.0123void0.0018
+(Punctuation
+'≤'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+versionAddedName.Otherany0.5887string0.3956number0.0069boolean0.0054complex0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+versionAddedName.Otherany0.9396complex0.0113string0.0051RegExpMatchArray0.0015RegExp0.0011
+.Punctuation
+version_addedName.Otherany0.8500string0.1462number0.0018complex0.0006boolean0.0005
+.Punctuation
+replaceName.Otherany0.5470complex0.4497string0.0009boolean0.0005number0.0004
+(Punctuation
+'≤'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+versionIsGreaterOrEqualToVersionAddedName.Othernumber0.8241any0.0955boolean0.0436string0.0331complex0.0019
+ Text.Whitespace
+=Operator
+\n    Text.Whitespace
+parseFloatName.Builtinnumber0.9825any0.0076boolean0.0056string0.0022complex0.0012
+(Punctuation
+browserVersionName.Otherstring0.7034any0.2392number0.0339complex0.0086boolean0.0019
+)Punctuation
+ Text.Whitespace
+>=Operator
+ Text.Whitespace
+parseFloatName.Builtinnumber0.9823any0.0069boolean0.0064string0.0016complex0.0016
+(Punctuation
+versionAddedName.Otherany0.7199string0.2313number0.0291complex0.0080boolean0.0038
+)Punctuation
+\n\n  Text.Whitespace
+/**\n   * BCD data occasionally uses true for version_added.\n   * This is generally when the feature has been supported for so long that it's unknown when it was supported.\n   * Here we just treat this as supported.\n   */Comment.Multiline
+\n  Text.Whitespace
+versionIsGreaterOrEqualToVersionAddedName.Otherany0.4887number0.2053boolean0.1948string0.0863complex0.0094
+ Text.Whitespace
+||=Operator
+ Text.Whitespace
+versionAddedName.Otherany0.4059boolean0.3700number0.1543string0.0498complex0.0104
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+trueKeyword.Constant
+\n\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+versionIsLessThanVersionRemovedName.Otherboolean0.4752number0.3069any0.1238string0.0860complex0.0048
+ Text.Whitespace
+=Operator
+\n    Text.Whitespace
+!Operator
+versionRemovedName.Otherboolean0.4262any0.2947number0.1989string0.0657complex0.0070
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+parseFloatName.Builtinnumber0.9733boolean0.0127any0.0096string0.0024complex0.0010
+(Punctuation
+browserVersionName.Otherstring0.4979any0.4040number0.0645complex0.0125boolean0.0059
+)Punctuation
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+parseFloatName.Builtinnumber0.9609boolean0.0179any0.0151complex0.0024string0.0020
+(Punctuation
+versionRemovedName.Otherany0.6917string0.2524boolean0.0236number0.0170complex0.0056
+)Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+\n    Text.Whitespace
+versionIsGreaterOrEqualToVersionAddedName.Otherany0.7672string0.1519boolean0.0424number0.0137complex0.0061
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+versionIsLessThanVersionRemovedName.Otherany0.5001string0.3498boolean0.0813number0.0203complex0.0116
+\n  Text.Whitespace
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+unknownName.Other{}0.9334any0.0400complex0.0095any[]0.0031Object0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * This function maps support data from @mdn/browser-compat-data, to caniuse's\n * format.\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+bcdDataToCanIUseDataName.Otherany0.5557string0.1195complex0.1146void0.0409any[]0.0288
+(Punctuation
+bcdDataName.Otherany0.5793string0.3792number0.0118boolean0.0037complex0.0029
+,Punctuation
+ Text.Whitespace
+titleName.Otherstring0.7634any0.2304number0.0014complex0.0011void0.0006
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany0.6268complex0.2847string0.0041{}0.0040any[]0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+titleName.Otherstring0.8023any0.1838number0.0048complex0.0037void0.0016
+,Punctuation
+\n    Text.Whitespace
+specName.Otherany0.5413string0.2014number0.1486boolean0.0278complex0.0189
+:Operator
+ Text.Whitespace
+bcdData.spec_urlKeyword.Type
+,Punctuation
+\n    Text.Whitespace
+statsName.Other{}0.9873any0.0024complex0.0022boolean0.0013{}[]0.0008
+:Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+statusName.Otherstring0.9913RegExp0.0025any0.0022number0.0013boolean0.0005
+:Operator
+ Text.Whitespace
+'other'Literal.String.Single
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+supportDataName.Otherany0.7418string0.1939boolean0.0171complex0.0154number0.0085
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bcdDataName.Otherany0.7823complex0.1498{}0.0053any[]0.0033Object0.0013
+.Punctuation
+supportName.Otherany0.5890string0.3479string[]0.0299any[]0.0134complex0.0114
+\n\n  Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9965complex0.0021any0.0006Object0.0002{}0.0001
+.Punctuation
+keysName.Otherstring[]0.9465complex0.0296any[]0.0121any0.0033string0.0028
+(Punctuation
+supportDataName.Otherany0.6877complex0.2265{}0.0375any[]0.0133string0.0054
+)Punctuation
+.Punctuation
+forEachName.Othervoid0.8824complex0.0649any0.0363v...0.0076{}0.0016
+(Punctuation
+browserName.Otherstring0.8459any0.1147complex0.0102boolean0.0049number0.0043
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+browserDataRawName.Otherany0.7905string0.1313boolean0.0320complex0.0178number0.0049
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+supportDataName.Otherany0.7905complex0.1196{}0.0247any[]0.0168string0.0127
+[Punctuation
+browserName.Otherstring0.9360any0.0463number0.0043boolean0.0037complex0.0018
+]Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+caniuseBrowserName.Otherany0.6901string0.1369boolean0.0859complex0.0387number0.0149
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bcdBrowserToCanIUseBrowserName.Otherany0.5396string0.2112boolean0.0941complex0.0880number0.0157
+(Punctuation
+browserName.Otherstring0.7436any0.2036complex0.0094boolean0.0072RegExp0.0046
+)Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+agentsName.Otherany0.7886complex0.1007{}0.0484boolean0.0108any[]0.0073
+[Punctuation
+caniuseBrowserName.Otherstring0.7410any0.1716number0.0481boolean0.0232complex0.0048
+]Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+unknownName.Otherany0.4188{}0.2884complex0.2262any[]0.0276T0.0033
+[Punctuation
+caniuseBrowserName.Otherstring0.7795any0.1602number0.0269boolean0.0138complex0.0086
+]Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+unknownName.Otherany0.4402{}0.3369complex0.1651any[]0.0234T0.0039
+[Punctuation
+caniuseBrowserName.Otherstring0.7092any0.2208number0.0363boolean0.0163complex0.0073
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+\n        Text.Whitespace
+consoleName.OtherConsole0.9889any0.0043void0.0026complex0.0001boolean0.0001
+.Punctuation
+warnName.Othervoid0.9587any0.0185complex0.0177boolean0.0019string0.0004
+(Punctuation
+`Literal.String.Backtick
+Unknown browser Literal.String.Backtick
+${Literal.String.Interpol
+caniuseBrowserName.Otherany0.4550string0.4254number0.0426boolean0.0199complex0.0151
+}Literal.String.Interpol
+`Literal.String.Backtick
+)Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+returnKeyword
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+resultName.Otherany0.6784complex0.2243{}0.0203any[]0.0038void0.0023
+.Punctuation
+statsName.Otherany0.8388complex0.0912{}0.0479any[]0.0043void0.0014
+[Punctuation
+caniuseBrowserName.Otherstring0.6325any0.2792number0.0402{}0.0126complex0.0094
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+\n    Text.Whitespace
+// Loop through all versions for the current browserComment.Single
+\n    Text.Whitespace
+agentsName.Otherany0.6028complex0.2550{}0.0974any[]0.0151string[]0.0012
+[Punctuation
+caniuseBrowserName.Otherstring0.6727any0.2040number0.0792complex0.0127void0.0068
+]Punctuation
+.Punctuation
+versionsName.Otherany0.9626complex0.0125any[]0.0085string[]0.0066{}0.0024
+.Punctuation
+forEachName.Otherany0.8389void0.0857complex0.0651v...0.0032{}0.0012
+(Punctuation
+versionName.Otherstring0.4916any0.3997number0.0390complex0.0322{}0.0116
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+versionName.Otherstring0.6095any0.3197complex0.0330number0.0195boolean0.0107
+)Punctuation
+ Text.Whitespace
+returnKeyword
+\n\n      Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+browserDataName.Otherany0.8567string0.0472complex0.0223boolean0.0198any[]0.0049
+\n      Text.Whitespace
+// Browser support data in BCD can either be an object or an array.Comment.Single
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+ArrayName.BuiltinArrayConstructor0.9995any0.0000Math0.0000ObjectConstructor0.0000complex0.0000
+.Punctuation
+isArrayName.Othercomplex0.9962any0.0016any[]0.0005boolean0.0004{}0.0003
+(Punctuation
+browserDataRawName.Otherany0.7016complex0.1974any[]0.0561number0.0057{}0.0054
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+// If it's not an array it's already in the correct format to process.Comment.Single
+\n        Text.Whitespace
+browserDataName.Otherany0.6081any[]0.1686complex0.0825number0.0230string0.0158
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+browserDataRawName.Otherany0.5628any[]0.1822complex0.0752string0.0413number0.0366
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+// This allows us to ignore preview browsers such as Safari Tech Preview.Comment.Single
+\n        Text.Whitespace
+browserDataRawName.Otherany0.7330any[]0.1535complex0.0378string[]0.0108{}0.0092
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+browserDataRawName.Otherany0.8817any[]0.0554complex0.0316string[]0.0077string0.0034
+.Punctuation
+filterName.Othercomplex0.8440any0.1438v...0.0022boolean0.0014string0.0012
+(Punctuation
+\n          Text.Whitespace
+entryName.Otherany0.6081complex0.0652any[]0.0151string0.0103{}0.0062
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+entryName.Otherany0.6762complex0.0502any[]0.0065this0.0053{}0.0049
+.Punctuation
+version_addedName.Otherany0.7980string0.1569boolean0.0110complex0.0102string[]0.0062
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'preview'Literal.String.Single
+\n        Text.Whitespace
+)Punctuation
+\n\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+browserDataRawName.Otherany0.8425string[]0.0467any[]0.0364string0.0271complex0.0099
+.Punctuation
+lengthName.Otherany0.5174number0.4764string0.0022complex0.0018boolean0.0007
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+browserDataName.Otherany0.9186string0.0356number0.0187complex0.0061void0.0038
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+browserDataRawName.Otherany0.8208any[]0.0482complex0.0367string[]0.0255string0.0110
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+entryName.Otherany0.5923complex0.0741T0.0187string0.0157{}0.0078
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+browserDataRawName.Otherany0.5885any[]0.1452complex0.1032string0.0415string[]0.0282
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+versionMatchName.Otherany0.5941boolean0.0981string0.0766complex0.0726number0.0592
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+versionMatchesName.Otherany0.4040complex0.2095string0.1943boolean0.0497number0.0456
+(Punctuation
+\n              Text.Whitespace
+versionName.Otherstring0.5371any0.3361complex0.0547number0.0491{}0.0051
+,Punctuation
+\n              Text.Whitespace
+entryName.Otherany0.4436complex0.0913this0.0079{}0.0070string0.0048
+.Punctuation
+version_addedName.Otherany0.4626string0.3182number0.0917complex0.0584boolean0.0191
+,Punctuation
+\n              Text.Whitespace
+entryName.Otherany0.3937complex0.0914{}0.0073T0.0059Set<any>0.0057
+.Punctuation
+version_removedName.Otherany0.4947string0.2731number0.1079complex0.0501boolean0.0307
+\n            Text.Whitespace
+)Punctuation
+\n\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+versionMatchName.Otherany0.3969boolean0.3303string0.1158complex0.0505number0.0253
+)Punctuation
+ Text.Whitespace
+continueKeyword
+\n\n            Text.Whitespace
+// If fully supported unprefixedComment.Single
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+\n              Text.Whitespace
+!Operator
+entryName.Otherany0.1925complex0.0457Set<any>0.0100this0.0083T0.0060
+.Punctuation
+flagsName.Otherany0.5513string0.1402number0.0694string[]0.0501complex0.0241
+ Text.Whitespace
+&&Operator
+\n              Text.Whitespace
+!Operator
+entryName.Otherany0.3003complex0.0861Set<any>0.0081this0.0078T0.0051
+.Punctuation
+partial_implementationName.Otherany0.5334boolean0.2271string0.1361complex0.0376number0.0362
+ Text.Whitespace
+&&Operator
+\n              Text.Whitespace
+!Operator
+entryName.Otherany0.2545complex0.0769this0.0069Set<any>0.0066T0.0056
+.Punctuation
+prefixName.Otherany0.5605string0.3823complex0.0301boolean0.0125number0.0044
+ Text.Whitespace
+&&Operator
+\n              Text.Whitespace
+!Operator
+entryName.Otherany0.4860complex0.0732this0.0064Set<any>0.0047void0.0045
+.Punctuation
+alternative_nameName.Otherany0.6078boolean0.1515string0.1333number0.0442complex0.0281
+\n            Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n              Text.Whitespace
+browserDataName.Otherany0.6638number0.1123boolean0.0795string0.0349complex0.0086
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+entryName.Otherany0.2743complex0.0357any[]0.0142{}0.0137T0.0125
+\n              Text.Whitespace
+breakKeyword
+\n            Text.Whitespace
+}Punctuation
+\n\n            Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+nonFlaggedDataIndexName.Othernumber0.5444any0.3678boolean0.0610string0.0103complex0.0040
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+browserDataRawName.Otherany0.7076any[]0.1038string[]0.0751complex0.0313number[]0.0167
+.Punctuation
+findIndexName.Othercomplex0.5716any0.3892number0.0196any...0.0018any[]0.0018
+(Punctuation
+e1Name.Otherany0.8406string0.0351boolean0.0194complex0.0143number0.0139
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+!Operator
+e1Name.Otherany0.8544complex0.0131boolean0.0081any[]0.0051string0.0029
+.Punctuation
+flagsName.Otherany0.8229string0.0586number0.0372string[]0.0337any[]0.0113
+)Punctuation
+\n            Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+nonPartialName.Othernumber0.6073any0.2718boolean0.0967string0.0088complex0.0050
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+browserDataRawName.Otherany0.6382any[]0.1320string[]0.0963complex0.0384number[]0.0198
+.Punctuation
+findIndexName.Othercomplex0.5913any0.3693number0.0192any[]0.0021any...0.0013
+(Punctuation
+\n              Text.Whitespace
+e2Name.Otherany0.8377string0.0483boolean0.0272number0.0204complex0.0170
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+!Operator
+e2Name.Otherany0.8766boolean0.0209string0.0131complex0.0126RegExp0.0045
+.Punctuation
+flagsName.Otherany0.8216string0.0604number0.0287string[]0.0213boolean0.0082
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+e2Name.Otherany0.8404complex0.0740boolean0.0060{}0.0026string0.0017
+.Punctuation
+partial_implementationName.Otherany0.5632boolean0.2041string0.1381number0.0562complex0.0164
+\n            Text.Whitespace
+)Punctuation
+\n\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+entryName.Otherany0.4966complex0.0700T0.0094Set<any>0.0069{}0.0064
+.Punctuation
+flagsName.Otherany0.7924number0.0916string0.0523string[]0.0161complex0.0086
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+nonFlaggedDataIndexName.Othernumber0.5479any0.4014string0.0276boolean0.0149complex0.0024
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n              Text.Whitespace
+// Prefer non-flagged over flagged dataComment.Single
+\n              Text.Whitespace
+continueKeyword
+\n            Text.Whitespace
+}Punctuation
+\n\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+entryName.Otherany0.3748complex0.0825this0.0081Set<any>0.0068T0.0049
+.Punctuation
+partial_implementationName.Otherany0.4652boolean0.3626string0.0872number0.0421complex0.0195
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+nonPartialName.Otherboolean0.4639any0.3985string0.0671number0.0299complex0.0143
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n              Text.Whitespace
+// Prefer non-partial over partial dataComment.Single
+\n              Text.Whitespace
+continueKeyword
+\n            Text.Whitespace
+}Punctuation
+\n\n            Text.Whitespace
+browserDataName.Otherany0.4818string0.4027boolean0.0352number0.0314complex0.0092
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+entryName.Otherany0.3180string0.0436complex0.0401{}0.0159any[]0.0155
+\n          Text.Whitespace
+}Punctuation
+\n\n          Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+browserDataName.Otherany0.5433boolean0.2666string0.0606complex0.0563any[]0.0143
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+browserDataName.Othercomplex0.6051any0.3084any[]0.0054{}0.0034boolean0.0030
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n              Text.Whitespace
+version_addedName.Otherboolean0.9896any0.0060string0.0009number0.0008complex0.0006
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+\n            Text.Whitespace
+}Punctuation
+\n          Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+supportedName.Otherboolean0.9794any0.0138string0.0016number0.0011false0.0008
+ Text.Whitespace
+=Operator
+\n        Text.Whitespace
+!Operator
+browserDataName.Otherany0.8504complex0.0238boolean0.0190string0.0044RegExp0.0020
+.Punctuation
+flagsName.Otherany0.7176string0.0965number0.0319string[]0.0202boolean0.0172
+ Text.Whitespace
+&&Operator
+\n        Text.Whitespace
+versionMatchesName.Otherany0.4852boolean0.3479string0.0701complex0.0561number0.0065
+(Punctuation
+\n          Text.Whitespace
+versionName.Otherany0.5424string0.3919complex0.0315number0.0169{}0.0037
+,Punctuation
+\n          Text.Whitespace
+browserDataName.Otherany0.9099complex0.0380string0.0037{}0.0030boolean0.0028
+.Punctuation
+version_addedName.Otherany0.6682string0.1682boolean0.0898number0.0250complex0.0203
+,Punctuation
+\n          Text.Whitespace
+browserDataName.Otherany0.9051complex0.0349boolean0.0036{}0.0035RegExp0.0033
+.Punctuation
+version_removedName.Otherany0.6776boolean0.1695string0.0985complex0.0158number0.0153
+\n        Text.Whitespace
+)Punctuation
+\n\n      Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+valueName.Otherstring0.7094any0.2400RegExp0.0254boolean0.0073complex0.0046
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'n'Literal.String.Single
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+browserDataName.Otherany0.8293complex0.0215boolean0.0122RegExp0.0079string0.0039
+.Punctuation
+partial_implementationName.Otherany0.4911boolean0.4580string0.0368complex0.0047number0.0038
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+supportedName.Otherboolean0.9584any0.0320string0.0053number0.0008complex0.0007
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+valueName.Otherstring0.6127any0.3530RegExp0.0129complex0.0051boolean0.0045
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'a'Literal.String.Single
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+supportedName.Otherboolean0.9431any0.0396string0.0093false0.0016complex0.0015
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+valueName.Otherstring0.6033any0.3644RegExp0.0113complex0.0054boolean0.0040
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'y'Literal.String.Single
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+\n        Text.Whitespace
+valueName.Otherany0.4978string0.4783complex0.0107boolean0.0032number0.0019
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'n'Literal.String.Single
+ Text.Whitespace
+&&Operator
+\n        Text.Whitespace
+(Punctuation
+browserDataName.Otherany0.8088complex0.0264string0.0035RegExp0.0014RegExpMatchArray0.0013
+.Punctuation
+prefixName.Otherany0.7018string0.2791complex0.0107boolean0.0036number0.0015
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+browserDataName.Otherany0.8655complex0.0486string0.0052boolean0.0025{}0.0019
+.Punctuation
+alternative_nameName.Otherany0.7600string0.1238boolean0.0877complex0.0134number0.0074
+)Punctuation
+\n      Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+valueName.Otherstring0.7731any0.2140complex0.0047boolean0.0018number0.0015
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+' x'Literal.String.Single
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+resultName.Otherany0.4518complex0.2259{}0.0272T0.0078any[]0.0055
+.Punctuation
+statsName.Otherany0.6746complex0.1795{}0.0933any[]0.0094void0.0057
+[Punctuation
+caniuseBrowserName.Otherstring0.7526any0.1390number0.0796complex0.0062{}0.0039
+]Punctuation
+[Punctuation
+versionName.Otherstring0.7934any0.1659number0.0244complex0.0097{}0.0031
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valueName.Otherany0.6282string0.3132complex0.0167{}0.0116number0.0093
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany0.4817{}0.1288complex0.0929void0.0133string0.0075
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+featuresName.Otherstring0.6440any0.1850RegExp0.0326string[]0.0210number0.0115
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'./node_modules/caniuse-db/features-json/'Literal.String.Single
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+autofillDataName.Otherany0.5786string0.1981complex0.0406string[]0.0368RegExp0.0213
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bcdDataToCanIUseDataName.Otherany0.5432string0.1914complex0.1442number0.0146string[]0.0102
+(Punctuation
+\n  Text.Whitespace
+bcdName.Otherany0.9294complex0.0246{}0.0046string0.0041RegExp0.0030
+.Punctuation
+cssName.Otherany0.8363complex0.0782{}0.0155string0.0155void0.0033
+.Punctuation
+selectorsName.Otherany0.9163complex0.0582string0.0069{}0.0038RegExp0.0010
+.Punctuation
+autofillName.Otherany0.9110complex0.0616string0.0082{}0.0030RegExp0.0019
+.Punctuation
+__compatName.Otherany0.7573string0.2033complex0.0101string[]0.0064boolean0.0041
+,Punctuation
+\n  Text.Whitespace
+':autofill CSS pseudo-class'Literal.String.Single
+\nText.Whitespace
+)Punctuation
+\nText.Whitespace
+writeFileSyncName.Otherany0.9012void0.0730complex0.0110number0.0041string0.0028
+(Punctuation
+featuresName.Otherstring0.8382any0.1245number0.0254complex0.0025string[]0.0021
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'css-autofill.json'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+JSONName.BuiltinJSON0.9994complex0.0002any0.0000ArrayConstructor0.0000ObjectConstructor0.0000
+.Punctuation
+stringifyName.Othercomplex0.9970any0.0021string0.0004void0.0001{}0.0001
+(Punctuation
+autofillDataName.Otherany0.6984complex0.1802{}0.0272string0.0157any[]0.0049
+)Punctuation
+)Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+fileSelectorButtonDataName.Otherany0.6454string0.2165complex0.0316number0.0239string[]0.0175
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bcdDataToCanIUseDataName.Otherany0.4926string0.2817complex0.1301number0.0190boolean0.0141
+(Punctuation
+\n  Text.Whitespace
+bcdName.Otherany0.9544complex0.0136{}0.0062string0.0022RegExp0.0006
+.Punctuation
+cssName.Otherany0.8501complex0.0724{}0.0283string0.0105void0.0023
+.Punctuation
+selectorsName.Otherany0.8600complex0.0979{}0.0196string0.0049Object0.0022
+[Punctuation
+'file-selector-button'Literal.String.Single
+]Punctuation
+.Punctuation
+__compatName.Otherany0.6458string0.2547number0.0192complex0.0184boolean0.0165
+,Punctuation
+\n  Text.Whitespace
+'::file-selector-button CSS pseudo-element'Literal.String.Single
+\nText.Whitespace
+)Punctuation
+\nText.Whitespace
+writeFileSyncName.Otherany0.9305void0.0471complex0.0096number0.0042string0.0028
+(Punctuation
+\n  Text.Whitespace
+featuresName.Otherstring0.8068any0.1501number0.0307complex0.0032string[]0.0022
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'css-file-selector-button.json'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+JSONName.BuiltinJSON0.9995complex0.0001any0.0000ArrayConstructor0.0000ObjectConstructor0.0000
+.Punctuation
+stringifyName.Othercomplex0.9975any0.0017string0.0003void0.0001{}0.0000
+(Punctuation
+fileSelectorButtonDataName.Otherany0.7454complex0.1439{}0.0266string0.0097any[]0.0056
+)Punctuation
+\nText.Whitespace
+)Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+stretchDataName.Otherany0.7148string0.1274complex0.0326number0.0315any[]0.0184
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bcdDataToCanIUseDataName.Otherany0.5980complex0.1657string0.1416number0.0159boolean0.0145
+(Punctuation
+\n  Text.Whitespace
+bcdName.Otherany0.9462complex0.0278{}0.0030string0.0021void0.0005
+.Punctuation
+cssName.Otherany0.6979complex0.2344{}0.0246string0.0060void0.0020
+.Punctuation
+propertiesName.Otherany0.7669complex0.1976{}0.0095Object0.0043string0.0024
+.Punctuation
+widthName.Otherany0.8885complex0.1053{}0.0017string0.0006number0.0005
+.Punctuation
+stretchName.Otherany0.9840complex0.0142string0.0009{}0.0003number0.0001
+.Punctuation
+__compatName.Otherany0.9345string0.0399complex0.0094number0.0033void0.0031
+,Punctuation
+\n  Text.Whitespace
+'width: stretch property'Literal.String.Single
+\nText.Whitespace
+)Punctuation
+\nText.Whitespace
+writeFileSyncName.Otherany0.8977void0.0836complex0.0085number0.0031string0.0024
+(Punctuation
+featuresName.Otherstring0.8164any0.1514number0.0211complex0.0028string[]0.0017
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'css-width-stretch.json'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+JSONName.BuiltinJSON0.9994complex0.0001any0.0001ArrayConstructor0.0000ObjectConstructor0.0000
+.Punctuation
+stringifyName.Othercomplex0.9973any0.0020string0.0004void0.0001{}0.0000
+(Punctuation
+stretchDataName.Otherany0.7148complex0.1773{}0.0297string0.0112any[]0.0043
+)Punctuation
+)Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+printColorAdjustDataName.Otherany0.7463string0.1142complex0.0335number0.0278any[]0.0151
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bcdDataToCanIUseDataName.Otherany0.5890complex0.1586string0.1553number0.0176boolean0.0166
+(Punctuation
+\n  Text.Whitespace
+bcdName.Otherany0.9318complex0.0178{}0.0112string0.0013Error0.0010
+.Punctuation
+cssName.Otherany0.8672complex0.0549{}0.0209string0.0152void0.0026
+.Punctuation
+propertiesName.Otherany0.7946complex0.1364{}0.0319Object0.0084string0.0032
+[Punctuation
+'print-color-adjust'Literal.String.Single
+]Punctuation
+.Punctuation
+__compatName.Otherany0.8690string0.0896number0.0096complex0.0068void0.0051
+,Punctuation
+\n  Text.Whitespace
+'print-color-adjust property'Literal.String.Single
+\nText.Whitespace
+)Punctuation
+\nText.Whitespace
+writeFileSyncName.Otherany0.9242void0.0553complex0.0082number0.0042string0.0030
+(Punctuation
+\n  Text.Whitespace
+featuresName.Otherstring0.7764any0.1878number0.0248complex0.0030string[]0.0017
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'css-print-color-adjust.json'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+JSONName.BuiltinJSON0.9994complex0.0001any0.0001ArrayConstructor0.0000ObjectConstructor0.0000
+.Punctuation
+stringifyName.Othercomplex0.9969any0.0023string0.0004void0.0001{}0.0000
+(Punctuation
+printColorAdjustDataName.Otherany0.7339complex0.1693{}0.0281string0.0089any[]0.0038
+)Punctuation
+\nText.Whitespace
+)Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+unicodeBidiIsolateName.Otherany0.7732string0.0971complex0.0306number0.0255any[]0.0130
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bcdDataToCanIUseDataName.Otherany0.6298string0.1430complex0.1389boolean0.0152number0.0142
+(Punctuation
+\n  Text.Whitespace
+bcdName.Otherany0.9366complex0.0153{}0.0105string0.0013Error0.0011
+.Punctuation
+cssName.Otherany0.8732complex0.0489{}0.0202string0.0140Object0.0023
+.Punctuation
+propertiesName.Otherany0.8099complex0.1257{}0.0279Object0.0074string0.0032
+[Punctuation
+'unicode-bidi'Literal.String.Single
+]Punctuation
+.Punctuation
+isolateName.Otherany0.9104complex0.0612boolean0.0020{}0.0016string0.0010
+.Punctuation
+__compatName.Otherany0.8723string0.0737complex0.0109boolean0.0085number0.0076
+,Punctuation
+\n  Text.Whitespace
+'isolate from unicode-bidi'Literal.String.Single
+\nText.Whitespace
+)Punctuation
+\nText.Whitespace
+writeFileSyncName.Otherany0.9361void0.0430complex0.0079number0.0047string0.0031
+(Punctuation
+\n  Text.Whitespace
+featuresName.Otherstring0.7804any0.1868number0.0226complex0.0028string[]0.0016
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'mdn-css-unicode-bidi-isolate.json'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+JSONName.BuiltinJSON0.9994complex0.0002any0.0001ArrayConstructor0.0000ObjectConstructor0.0000
+.Punctuation
+stringifyName.Othercomplex0.9970any0.0022string0.0004void0.0001{}0.0000
+(Punctuation
+unicodeBidiIsolateName.Otherany0.7206complex0.1839{}0.0270string0.0089any[]0.0042
+)Punctuation
+\nText.Whitespace
+)Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+unicodeBidiPlaintextName.Otherany0.7593string0.1003complex0.0345number0.0276any[]0.0154
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bcdDataToCanIUseDataName.Otherany0.6156complex0.1581string0.1355number0.0161boolean0.0152
+(Punctuation
+\n  Text.Whitespace
+bcdName.Otherany0.9338complex0.0171{}0.0099string0.0013Error0.0010
+.Punctuation
+cssName.Otherany0.8785complex0.0534{}0.0186string0.0117void0.0025
+.Punctuation
+propertiesName.Otherany0.8205complex0.1197{}0.0275Object0.0064string0.0032
+[Punctuation
+'unicode-bidi'Literal.String.Single
+]Punctuation
+.Punctuation
+plaintextName.Otherany0.9328complex0.0500string0.0041{}0.0033void0.0015
+.Punctuation
+__compatName.Otherany0.9211string0.0549number0.0056complex0.0050void0.0021
+,Punctuation
+\n  Text.Whitespace
+'plaintext from unicode-bidi'Literal.String.Single
+\nText.Whitespace
+)Punctuation
+\nText.Whitespace
+writeFileSyncName.Otherany0.9199void0.0592complex0.0083number0.0043string0.0030
+(Punctuation
+\n  Text.Whitespace
+featuresName.Otherstring0.7582any0.2080number0.0231complex0.0029string[]0.0015
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'mdn-css-unicode-bidi-plaintext.json'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+JSONName.BuiltinJSON0.9994complex0.0001any0.0001ArrayConstructor0.0000ObjectConstructor0.0000
+.Punctuation
+stringifyName.Othercomplex0.9964any0.0026string0.0005void0.0001{}0.0001
+(Punctuation
+unicodeBidiPlaintextName.Otherany0.7682complex0.1443{}0.0252string0.0090any[]0.0041
+)Punctuation
+\nText.Whitespace
+)Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+unicodeBidiIsolateOverrideName.Otherany0.7986string0.0813complex0.0293number0.0195any[]0.0164
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bcdDataToCanIUseDataName.Otherany0.6407string0.1411complex0.1332boolean0.0145number0.0141
+(Punctuation
+\n  Text.Whitespace
+bcdName.Otherany0.9389complex0.0152{}0.0115string0.0011Error0.0009
+.Punctuation
+cssName.Otherany0.8860complex0.0431{}0.0210string0.0137Object0.0021
+.Punctuation
+propertiesName.Otherany0.8076complex0.1263{}0.0310Object0.0081string0.0029
+[Punctuation
+'unicode-bidi'Literal.String.Single
+]Punctuation
+[Punctuation
+'isolate-override'Literal.String.Single
+]Punctuation
+.Punctuation
+__compatName.Otherany0.9319string0.0451number0.0065void0.0037complex0.0032
+,Punctuation
+\n  Text.Whitespace
+'isolate-override from unicode-bidi'Literal.String.Single
+\nText.Whitespace
+)Punctuation
+\nText.Whitespace
+writeFileSyncName.Otherany0.9272void0.0541complex0.0068number0.0041string0.0032
+(Punctuation
+\n  Text.Whitespace
+featuresName.Otherstring0.7710any0.1973number0.0220complex0.0025string[]0.0015
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'mdn-css-unicode-bidi-isolate-override.json'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+JSONName.BuiltinJSON0.9995complex0.0001any0.0001ArrayConstructor0.0000ObjectConstructor0.0000
+.Punctuation
+stringifyName.Othercomplex0.9967any0.0024string0.0004void0.0001{}0.0000
+(Punctuation
+unicodeBidiIsolateOverrideName.Otherany0.7587complex0.1503{}0.0255string0.0105any[]0.0033
+)Punctuation
+\nText.Whitespace
+)Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+textDecorationColorDataName.Otherany0.7557string0.1217complex0.0305number0.0255any[]0.0112
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bcdDataToCanIUseDataName.Otherany0.6101string0.1634complex0.1431number0.0146boolean0.0142
+(Punctuation
+\n  Text.Whitespace
+bcdName.Otherany0.9372complex0.0151{}0.0106string0.0013Error0.0009
+.Punctuation
+cssName.Otherany0.8843complex0.0475{}0.0184string0.0145void0.0024
+.Punctuation
+propertiesName.Otherany0.8142complex0.1213{}0.0298Object0.0081string0.0033
+[Punctuation
+'text-decoration-color'Literal.String.Single
+]Punctuation
+.Punctuation
+__compatName.Otherany0.8756string0.0884number0.0085complex0.0060void0.0047
+,Punctuation
+\n  Text.Whitespace
+'text-decoration-color property'Literal.String.Single
+\nText.Whitespace
+)Punctuation
+\nText.Whitespace
+writeFileSyncName.Otherany0.9246void0.0555complex0.0074number0.0042string0.0032
+(Punctuation
+\n  Text.Whitespace
+featuresName.Otherstring0.7806any0.1877number0.0215complex0.0026string[]0.0016
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'mdn-text-decoration-color.json'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+JSONName.BuiltinJSON0.9995complex0.0001any0.0001ArrayConstructor0.0000ObjectConstructor0.0000
+.Punctuation
+stringifyName.Othercomplex0.9966any0.0025string0.0004void0.0001{}0.0000
+(Punctuation
+textDecorationColorDataName.Otherany0.7604complex0.1478{}0.0256string0.0105any[]0.0033
+)Punctuation
+\nText.Whitespace
+)Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+textDecorationLineDataName.Otherany0.7538string0.1245complex0.0298number0.0254any[]0.0105
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bcdDataToCanIUseDataName.Otherany0.6083string0.1665complex0.1411number0.0144boolean0.0144
+(Punctuation
+\n  Text.Whitespace
+bcdName.Otherany0.9354complex0.0148{}0.0106string0.0014Error0.0010
+.Punctuation
+cssName.Otherany0.8847complex0.0465{}0.0181string0.0147void0.0024
+.Punctuation
+propertiesName.Otherany0.8153complex0.1199{}0.0294Object0.0081string0.0034
+[Punctuation
+'text-decoration-line'Literal.String.Single
+]Punctuation
+.Punctuation
+__compatName.Otherany0.8735string0.0906number0.0085complex0.0059void0.0047
+,Punctuation
+\n  Text.Whitespace
+'text-decoration-line property'Literal.String.Single
+\nText.Whitespace
+)Punctuation
+\nText.Whitespace
+writeFileSyncName.Otherany0.9243void0.0556complex0.0072number0.0042string0.0033
+(Punctuation
+\n  Text.Whitespace
+featuresName.Otherstring0.7859any0.1834number0.0207complex0.0025string[]0.0016
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'mdn-text-decoration-line.json'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+JSONName.BuiltinJSON0.9995complex0.0001any0.0000ArrayConstructor0.0000ObjectConstructor0.0000
+.Punctuation
+stringifyName.Othercomplex0.9965any0.0025string0.0004void0.0001{}0.0000
+(Punctuation
+textDecorationLineDataName.Otherany0.7637complex0.1432{}0.0250string0.0108any[]0.0031
+)Punctuation
+\nText.Whitespace
+)Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+textDecorationStyleDataName.Otherany0.7539string0.1272complex0.0287number0.0243any[]0.0095
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bcdDataToCanIUseDataName.Otherany0.6096string0.1705complex0.1359boolean0.0147number0.0138
+(Punctuation
+\n  Text.Whitespace
+bcdName.Otherany0.9326complex0.0142{}0.0104string0.0014Error0.0010
+.Punctuation
+cssName.Otherany0.8843complex0.0451{}0.0178string0.0150void0.0025
+.Punctuation
+propertiesName.Otherany0.8164complex0.1179{}0.0290Object0.0083string0.0034
+[Punctuation
+'text-decoration-style'Literal.String.Single
+]Punctuation
+.Punctuation
+__compatName.Otherany0.8712string0.0931number0.0084complex0.0058void0.0047
+,Punctuation
+\n  Text.Whitespace
+'text-decoration-style property'Literal.String.Single
+\nText.Whitespace
+)Punctuation
+\nText.Whitespace
+writeFileSyncName.Otherany0.9248void0.0549complex0.0070number0.0043string0.0035
+(Punctuation
+\n  Text.Whitespace
+featuresName.Otherstring0.7948any0.1759number0.0195complex0.0023string[]0.0016
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'mdn-text-decoration-style.json'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+JSONName.BuiltinJSON0.9995complex0.0001any0.0000ArrayConstructor0.0000ObjectConstructor0.0000
+.Punctuation
+stringifyName.Othercomplex0.9963any0.0027string0.0005void0.0001{}0.0000
+(Punctuation
+textDecorationStyleDataName.Otherany0.7515complex0.1453{}0.0259string0.0121T0.0030
+)Punctuation
+\nText.Whitespace
+)Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+textDecorationShorthandDataName.Otherany0.7194string0.1690complex0.0280number0.0224boolean0.0077
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bcdDataToCanIUseDataName.Otherany0.5921string0.2093complex0.1217boolean0.0150number0.0120
+(Punctuation
+\n  Text.Whitespace
+bcdName.Otherany0.9208complex0.0142{}0.0112string0.0018Error0.0011
+.Punctuation
+cssName.Otherany0.8716complex0.0521{}0.0197string0.0172Object0.0026
+.Punctuation
+propertiesName.Otherany0.7864complex0.1404{}0.0325Object0.0099string0.0045
+[Punctuation
+'text-decoration'Literal.String.Single
+]Punctuation
+.Punctuation
+shorthandName.Otherany0.9824complex0.0103string0.0031{}0.0002void0.0002
+.Punctuation
+__compatName.Otherany0.8898string0.0984number0.0027complex0.0026boolean0.0011
+,Punctuation
+\n  Text.Whitespace
+'text-decoration shorthand property'Literal.String.Single
+\nText.Whitespace
+)Punctuation
+\nText.Whitespace
+writeFileSyncName.Otherany0.9241void0.0556complex0.0057number0.0048string0.0034
+(Punctuation
+\n  Text.Whitespace
+featuresName.Otherstring0.8308any0.1334number0.0261complex0.0020string[]0.0014
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'mdn-text-decoration-shorthand.json'Literal.String.Single
+,Punctuation
+\n  Text.Whitespace
+JSONName.BuiltinJSON0.9997complex0.0001any0.0000ObjectConstructor0.0000ArrayConstructor0.0000
+.Punctuation
+stringifyName.Othercomplex0.9974any0.0017string0.0003void0.0001{}0.0000
+(Punctuation
+textDecorationShorthandDataName.Otherany0.7600complex0.0829{}0.0213string0.0133any[]0.0064
+)Punctuation
+\nText.Whitespace
+)Punctuation
+\nText.Whitespace

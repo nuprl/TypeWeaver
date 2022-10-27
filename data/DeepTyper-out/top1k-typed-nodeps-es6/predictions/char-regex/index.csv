@@ -1,0 +1,555 @@
+Text
+// Based on https://github.com/lodash/lodash/blob/6018350ac10d5ce6a5b7db625140b82aeab804df/.internal/unicodeSize.jsComment.Single
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+charRegexName.Othervoid0.4892string0.2137any0.0786complex0.0294number0.0246
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+// Unicode character classesComment.Single
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+astralRangeName.OtherRegExp0.7266string0.2616any0.0063string[]0.0008number0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\ud800-\\udfff'Literal.String.Single
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+comboMarksRangeName.OtherRegExp0.8532string0.1414any0.0023string[]0.0006boolean0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\u0300-\\u036f'Literal.String.Single
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+comboHalfMarksRangeName.OtherRegExp0.8387string0.1562any0.0022string[]0.0006boolean0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\ufe20-\\ufe2f'Literal.String.Single
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+comboSymbolsRangeName.OtherRegExp0.8325string0.1626any0.0021string[]0.0006boolean0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\u20d0-\\u20ff'Literal.String.Single
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+comboMarksExtendedRangeName.OtherRegExp0.8108string0.1841any0.0022string[]0.0007number0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\u1ab0-\\u1aff'Literal.String.Single
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+comboMarksSupplementRangeName.OtherRegExp0.7483string0.2454any0.0031string[]0.0008number0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\u1dc0-\\u1dff'Literal.String.Single
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+comboRangeName.Otherstring0.9392number0.0311any0.0225boolean0.0026RegExp0.0023
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+comboMarksRangeName.Otherstring0.9017number0.0686any0.0263boolean0.0015void0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+comboHalfMarksRangeName.Otherstring0.8467number0.1072any0.0437boolean0.0009void0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+comboSymbolsRangeName.Otherstring0.7871number0.1560any0.0545boolean0.0008void0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+comboMarksExtendedRangeName.Otherstring0.7298number0.2038any0.0636boolean0.0009void0.0004
+ Text.Whitespace
++Operator
+ Text.Whitespace
+comboMarksSupplementRangeName.Otherstring0.8010any0.1090number0.0838RegExp0.0020boolean0.0016
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+varRangeName.OtherRegExp0.6538string0.3344any0.0078string[]0.0009boolean0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\ufe0e\\ufe0f'Literal.String.Single
+;Punctuation
+\n\n\tText.Whitespace
+// Telugu charactersComment.Single
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+teluguVowelsName.OtherRegExp0.8321string0.1625any0.0026string[]0.0007boolean0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\u0c05-\\u0c0c\\u0c0e-\\u0c10\\u0c12-\\u0c14\\u0c60-\\u0c61'Literal.String.Single
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+teluguVowelsDiacriticName.OtherRegExp0.8482string0.1469any0.0023string[]0.0006boolean0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\u0c3e-\\u0c44\\u0c46-\\u0c48\\u0c4a-\\u0c4c\\u0c62-\\u0c63'Literal.String.Single
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+teluguConsonantsName.OtherRegExp0.8566string0.1386any0.0022string[]0.0006boolean0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\u0c15-\\u0c28\\u0c2a-\\u0c39'Literal.String.Single
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+teluguConsonantsRareName.OtherRegExp0.8620string0.1332any0.0022string[]0.0006boolean0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\u0c58-\\u0c5a'Literal.String.Single
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+teluguModifiersName.OtherRegExp0.8616string0.1333any0.0022string[]0.0007boolean0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\u0c01-\\u0c03\\u0c4d\\u0c55\\u0c56'Literal.String.Single
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+teluguNumeralsName.OtherRegExp0.8515string0.1418any0.0029string[]0.0010boolean0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\u0c66-\\u0c6f\\u0c78-\\u0c7e'Literal.String.Single
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+teluguSingleName.Otherstring0.7085any0.1979RegExp0.0542boolean0.0115number0.0091
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+[Literal.String.Backtick
+${Literal.String.Interpol
+teluguVowelsName.Otherstring0.8737any0.0736RegExp0.0198number0.0106boolean0.0081
+}Literal.String.Interpol
+(?:Literal.String.Backtick
+${Literal.String.Interpol
+teluguConsonantsName.Otherstring0.9029any0.0463RegExp0.0196boolean0.0093number0.0089
+}Literal.String.Interpol
+(?!Literal.String.Backtick
+\\Literal.String.Backtick
+u0c4d))Literal.String.Backtick
+${Literal.String.Interpol
+teluguNumeralsName.Otherstring0.8629any0.0684RegExp0.0246number0.0098string[]0.0076
+}Literal.String.Interpol
+${Literal.String.Interpol
+teluguConsonantsRareName.Otherstring0.8595any0.0768number0.0176RegExp0.0141void0.0078
+}Literal.String.Interpol
+]Literal.String.Backtick
+`Literal.String.Backtick
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+teluguDoubleName.Otherstring0.5932any0.3042RegExp0.0479number0.0094boolean0.0094
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+[Literal.String.Backtick
+${Literal.String.Interpol
+teluguConsonantsName.Otherstring0.8341any0.0916RegExp0.0373number0.0074boolean0.0069
+}Literal.String.Interpol
+${Literal.String.Interpol
+teluguConsonantsRareName.Otherstring0.8515any0.0764RegExp0.0250boolean0.0112number0.0098
+}Literal.String.Interpol
+][Literal.String.Backtick
+${Literal.String.Interpol
+teluguVowelsDiacriticName.Otherstring0.8528any0.0749RegExp0.0259boolean0.0115number0.0097
+}Literal.String.Interpol
+]|[Literal.String.Backtick
+${Literal.String.Interpol
+teluguConsonantsName.Otherstring0.8237any0.0899RegExp0.0332boolean0.0113void0.0099
+}Literal.String.Interpol
+${Literal.String.Interpol
+teluguConsonantsRareName.Otherstring0.8165any0.0916RegExp0.0360number0.0134boolean0.0100
+}Literal.String.Interpol
+][Literal.String.Backtick
+${Literal.String.Interpol
+teluguModifiersName.Otherstring0.7948any0.1186RegExp0.0212number0.0157void0.0153
+}Literal.String.Interpol
+`Literal.String.Backtick
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+teluguTripleName.Otherstring0.5396any0.3844RegExp0.0296number0.0127complex0.0053
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+[Literal.String.Backtick
+${Literal.String.Interpol
+teluguConsonantsName.Otherstring0.8665any0.0905number0.0162RegExp0.0095void0.0033
+}Literal.String.Interpol
+]Literal.String.Backtick
+\\Literal.String.Backtick
+u0c4d[Literal.String.Backtick
+${Literal.String.Interpol
+teluguConsonantsName.Otherstring0.8084any0.1178number0.0216RegExp0.0120void0.0117
+}Literal.String.Interpol
+]Literal.String.Backtick
+`Literal.String.Backtick
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+teluguName.Otherstring0.6139RegExp0.2335any0.1197number0.0094boolean0.0039
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+(?:Literal.String.Backtick
+${Literal.String.Interpol
+teluguTripleName.Otherstring0.8014any0.1392number0.0184RegExp0.0148complex0.0063
+}Literal.String.Interpol
+|Literal.String.Backtick
+${Literal.String.Interpol
+teluguDoubleName.Otherany0.5577string0.3767complex0.0240number0.0202RegExp0.0038
+}Literal.String.Interpol
+|Literal.String.Backtick
+${Literal.String.Interpol
+teluguSingleName.Otherstring0.7052any0.2100number0.0368void0.0094complex0.0089
+}Literal.String.Interpol
+)Literal.String.Backtick
+`Literal.String.Backtick
+;Punctuation
+\n\n\tText.Whitespace
+// Unicode capture groupsComment.Single
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+astralName.Otherstring0.5264any0.4151RegExp0.0188number0.0109complex0.0061
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+[Literal.String.Backtick
+${Literal.String.Interpol
+astralRangeName.Otherstring0.8464any0.1025number0.0177RegExp0.0069void0.0054
+}Literal.String.Interpol
+]Literal.String.Backtick
+`Literal.String.Backtick
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+comboName.Otherany0.7444string0.1484number0.0785complex0.0056void0.0023
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+[Literal.String.Backtick
+${Literal.String.Interpol
+comboRangeName.Otherstring0.7721any0.1218number0.0631RegExp0.0105void0.0079
+}Literal.String.Interpol
+]Literal.String.Backtick
+`Literal.String.Backtick
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+fitzName.OtherRegExp0.8947string0.0974any0.0032string[]0.0009number0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\ud83c[\\udffb-\\udfff]'Literal.String.Single
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+modifierName.Otherstring0.5568any0.3762number0.0263RegExp0.0225complex0.0030
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+(?:Literal.String.Backtick
+${Literal.String.Interpol
+comboName.Otherstring0.5371number0.2325any0.2099complex0.0069string[]0.0017
+}Literal.String.Interpol
+|Literal.String.Backtick
+${Literal.String.Interpol
+fitzName.Otherstring0.7449any0.1570number0.0639boolean0.0064void0.0058
+}Literal.String.Interpol
+)Literal.String.Backtick
+`Literal.String.Backtick
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nonAstralName.Otherstring0.5555RegExp0.3112any0.0894number0.0176boolean0.0051
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+[^Literal.String.Backtick
+${Literal.String.Interpol
+astralRangeName.Otherstring0.8736any0.0584number0.0240RegExp0.0198boolean0.0041
+}Literal.String.Interpol
+]Literal.String.Backtick
+`Literal.String.Backtick
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+regionalName.OtherRegExp0.7705string0.2205any0.0042string[]0.0011boolean0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'(?:\\ud83c[\\udde6-\\uddff]){2}'Literal.String.Single
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+surrogatePairName.OtherRegExp0.8094string0.1841any0.0030string[]0.0010boolean0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'[\\ud800-\\udbff][\\udc00-\\udfff]'Literal.String.Single
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+zeroWidthJoinerName.OtherRegExp0.8174string0.1764any0.0030string[]0.0010boolean0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\u200d'Literal.String.Single
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+blackFlagName.OtherRegExp0.8178string0.1754any0.0031string[]0.0011boolean0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'(?:\\ud83c\\udff4\\udb40\\udc67\\udb40\\udc62\\udb40(?:\\udc65|\\udc73|\\udc77)\\udb40(?:\\udc6e|\\udc63|\\udc6c)\\udb40(?:\\udc67|\\udc74|\\udc73)\\udb40\\udc7f)'Literal.String.Single
+;Punctuation
+\n\n\tText.Whitespace
+// Unicode regexesComment.Single
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+optModifierName.Otherstring0.4777RegExp0.4623any0.0360string[]0.0062boolean0.0046
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+${Literal.String.Interpol
+modifierName.Otherstring0.6753any0.2521number0.0388boolean0.0093void0.0091
+}Literal.String.Interpol
+?Literal.String.Backtick
+`Literal.String.Backtick
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+optVarName.Otherstring0.6958any0.2230RegExp0.0409number0.0106boolean0.0056
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+[Literal.String.Backtick
+${Literal.String.Interpol
+varRangeName.Otherstring0.8614any0.0851RegExp0.0191number0.0122string[]0.0042
+}Literal.String.Interpol
+]?Literal.String.Backtick
+`Literal.String.Backtick
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+optJoinName.Otherstring0.6793RegExp0.2436any0.0395number0.0110string[]0.0048
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+(?:Literal.String.Backtick
+${Literal.String.Interpol
+zeroWidthJoinerName.Otherstring0.8476any0.0489RegExp0.0386number0.0176string[]0.0113
+}Literal.String.Interpol
+(?:Literal.String.Backtick
+${Literal.String.Interpol
+[Punctuation
+nonAstralName.Otherstring0.9448any0.0336number0.0102string[]0.0036boolean0.0019
+,Punctuation
+ Text.Whitespace
+regionalName.Otherstring0.8887any0.0700number0.0217string[]0.0063boolean0.0044
+,Punctuation
+ Text.Whitespace
+surrogatePairName.Otherstring0.9068any0.0573number0.0292boolean0.0020string[]0.0013
+]Punctuation
+.Punctuation
+joinName.Otherstring0.9716any0.0249complex0.0010number0.0010boolean0.0005
+(Punctuation
+'|'Literal.String.Single
+)Punctuation
+}Literal.String.Interpol
+)Literal.String.Backtick
+${Literal.String.Interpol
+optVarName.Otherstring0.9351any0.0372number0.0220void0.0018boolean0.0013
+ Text.Whitespace
++Operator
+ Text.Whitespace
+optModifierName.Otherstring0.8615any0.0760number0.0547RegExp0.0022boolean0.0019
+}Literal.String.Interpol
+)*Literal.String.Backtick
+`Literal.String.Backtick
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+seqName.Otherstring0.5456number0.4109any0.0391boolean0.0021complex0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optVarName.Otherstring0.8289number0.1201any0.0481boolean0.0007complex0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+optModifierName.Otherstring0.7801number0.1632any0.0542boolean0.0007complex0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+optJoinName.Otherstring0.7462any0.1436number0.1039RegExp0.0017boolean0.0012
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nonAstralComboName.Otherstring0.8244RegExp0.0969any0.0539number0.0109boolean0.0059
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+${Literal.String.Interpol
+nonAstralName.Otherstring0.8703any0.0448RegExp0.0358number0.0207boolean0.0089
+}Literal.String.Interpol
+${Literal.String.Interpol
+comboName.Otherstring0.6404number0.2225any0.1135complex0.0044boolean0.0025
+}Literal.String.Interpol
+?Literal.String.Backtick
+`Literal.String.Backtick
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+symbolName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+(?:Literal.String.Backtick
+${Literal.String.Interpol
+[Punctuation
+blackFlagName.Otherstring0.9212any0.0455number0.0127string[]0.0067RegExp0.0045
+,Punctuation
+ Text.Whitespace
+nonAstralComboName.Otherstring0.8406any0.0798number0.0523string[]0.0064boolean0.0056
+,Punctuation
+ Text.Whitespace
+comboName.Othernumber0.4917string0.3286any0.1724complex0.0022boolean0.0008
+,Punctuation
+ Text.Whitespace
+regionalName.Otherstring0.6136number0.2045any0.1437boolean0.0184complex0.0046
+,Punctuation
+ Text.Whitespace
+surrogatePairName.Otherstring0.6614any0.1514number0.1512boolean0.0153complex0.0048
+,Punctuation
+ Text.Whitespace
+astralName.Otherstring0.7323number0.1399any0.1166boolean0.0046complex0.0018
+]Punctuation
+.Punctuation
+joinName.Otherstring0.9731any0.0211complex0.0017number0.0015boolean0.0007
+(Punctuation
+'|'Literal.String.Single
+)Punctuation
+}Literal.String.Interpol
+)Literal.String.Backtick
+`Literal.String.Backtick
+;Punctuation
+\n\n\tText.Whitespace
+// Match string symbols (https://mathiasbynens.be/notes/javascript-unicode)Comment.Single
+\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+newOperator.WordRegExp0.2671string0.2571any0.1185RegExpConstructor0.0414Date0.0181
+ Text.Whitespace
+RegExpName.BuiltinRegExpConstructor0.9995RegExp0.0001ErrorConstructor0.0000any0.0000RegExp[]0.0000
+(Punctuation
+`Literal.String.Backtick
+${Literal.String.Interpol
+fitzName.Otherstring0.8050RegExp0.1431any0.0222number0.0125boolean0.0050
+}Literal.String.Interpol
+(?=Literal.String.Backtick
+${Literal.String.Interpol
+fitzName.Otherstring0.8157RegExp0.0952any0.0396number0.0211boolean0.0104
+}Literal.String.Interpol
+)|Literal.String.Backtick
+${Literal.String.Interpol
+teluguName.Otherstring0.7959any0.0910number0.0593RegExp0.0218boolean0.0063
+}Literal.String.Interpol
+|Literal.String.Backtick
+${Literal.String.Interpol
+symbolName.Other
+ Text.Whitespace
++Operator
+ Text.Whitespace
+seqName.Othernumber0.7053string0.2488any0.0344boolean0.0033complex0.0032
+}Literal.String.Interpol
+`Literal.String.Backtick
+,Punctuation
+ Text.Whitespace
+'g'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

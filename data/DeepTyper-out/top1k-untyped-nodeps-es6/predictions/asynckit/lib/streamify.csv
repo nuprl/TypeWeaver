@@ -1,0 +1,520 @@
+importKeyword
+ Text.Whitespace
+asyncKeyword
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./async.js'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+// APIComment.Single
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+iteratorName.Otherany0.5751Promise<any>0.0226string0.0183number0.0158boolean0.0122
+:Operator
+ Text.Whitespace
+wrapIteratorKeyword.Typeany0.6824void0.0373Promise<void>0.0279boolean0.0269string0.0223
+,Punctuation
+\n  Text.Whitespace
+callbackName.Otherany0.4171Function0.1548void0.1307boolean0.0367Promise<void>0.0295
+:Operator
+ Text.Whitespace
+wrapCallbackKeyword.Typeany0.7167void0.0590boolean0.0432string0.0260Promise<void>0.0222
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Wraps iterators with long signature\n *\n * @this    ReadableAsyncKit#\n * @param   {function} iterator - function to wrap\n * @returns {function} - wrapped function\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+wrapIteratorName.Otherany0.4788void0.2949Promise<void>0.0435string0.0265Promise<{}>0.0183
+(Punctuation
+iteratorName.Otherany0.5065string0.0334Promise<any>0.0085boolean0.0085Function0.0074
+)Punctuation
+\nText.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+streamName.Otherany0.6213Promise<void>0.0396this0.0394void0.0319Function0.0116
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+itemName.Otherany0.8978string0.0623Function0.0044number0.0026Error0.0019
+,Punctuation
+ Text.Whitespace
+keyName.Otherstring0.6673any0.3253number0.0020Function0.0007void0.0005
+,Punctuation
+ Text.Whitespace
+cbName.Otherany0.7538Function0.1720string0.0320number0.0079void0.0068
+)Punctuation
+\n  Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+aborterName.Otherany0.8615string0.0388number0.0194void0.0172boolean0.0097
+\n      Text.Whitespace
+,Punctuation
+ Text.Whitespace
+wrappedCbName.Otherany0.6032Promise<void>0.1284Promise<any>0.0576Promise<{}>0.0445void0.0445
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+asyncKeyword
+(Punctuation
+wrapIteratorCallbackName.Otherany0.9585string0.0078Function0.0062number0.0033void0.0032
+.Punctuation
+callName.Otherany0.9939complex0.0015number0.0006string0.0005T0.0004
+(Punctuation
+streamName.Otherany0.9483string0.0064complex0.0019Function0.0016void0.0011
+,Punctuation
+ Text.Whitespace
+cbName.Otherany0.8243Function0.0960string0.0387void0.0188number0.0096
+,Punctuation
+ Text.Whitespace
+keyName.Otherstring0.5807any0.4113number0.0032complex0.0013void0.0004
+)Punctuation
+)Punctuation
+\n      Text.Whitespace
+;Punctuation
+\n\n    Text.Whitespace
+streamName.Otherany0.9258complex0.0018string0.0016any[]0.0010Function0.0009
+.Punctuation
+jobsName.Otherany0.9944complex0.0015string0.0005boolean0.0005{}0.0003
+[Punctuation
+keyName.Otherstring0.8081any0.1865number0.0030complex0.0009void0.0003
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+wrappedCbName.Otherany0.9240string0.0400number0.0115void0.0075complex0.0022
+;Punctuation
+\n\n    Text.Whitespace
+// it's either shortcut (item, cb)Comment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+iteratorName.Otherany0.8836string0.0133string[]0.0098any[]0.0045complex0.0040
+.Punctuation
+lengthName.Othernumber0.5494any0.4459string0.0023complex0.0006void0.0005
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+2Literal.Number.Float
+)Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+aborterName.Otherany0.8508void0.0525number0.0349string0.0188boolean0.0103
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+iteratorName.Otherany0.9372complex0.0039Promise<any>0.0026string0.0026number0.0025
+(Punctuation
+itemName.Otherany0.8868string0.0661T0.0054number0.0042Function0.0037
+,Punctuation
+ Text.Whitespace
+wrappedCbName.Otherany0.8457string0.0815void0.0266number0.0128boolean0.0077
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+// or long format (item, key, cb)Comment.Single
+\n    Text.Whitespace
+elseKeyword
+\n    Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+aborterName.Otherany0.7670void0.1188boolean0.0276string0.0223number0.0203
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+iteratorName.Otherany0.8722complex0.0132Function0.0067string0.0058void0.0040
+(Punctuation
+itemName.Otherany0.8999string0.0574Function0.0044T0.0041number0.0040
+,Punctuation
+ Text.Whitespace
+keyName.Otherstring0.5337any0.4563number0.0031complex0.0019void0.0012
+,Punctuation
+ Text.Whitespace
+wrappedCbName.Otherany0.8115string0.0805void0.0434number0.0272Function0.0089
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+aborterName.Otherany0.7700string0.0588void0.0466boolean0.0404number0.0231
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Wraps provided callback function\n * allowing to execute snitch function before\n * real callback\n *\n * @this    ReadableAsyncKit#\n * @param   {function} callback - function to wrap\n * @returns {function} - wrapped function\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+wrapCallbackName.Otherany0.8347void0.0852string0.0174Function0.0129boolean0.0041
+(Punctuation
+callbackName.Otherany0.4632Function0.3890string0.0148void0.0133boolean0.0122
+)Punctuation
+\nText.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+streamName.Otherany0.8248this0.0131void0.0088Function0.0065Promise<void>0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+wrappedName.Otherany0.9678void0.0099Function0.0062string0.0031boolean0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+errorName.Otherany0.7760Error0.1548string0.0428number0.0036boolean0.0014
+,Punctuation
+ Text.Whitespace
+resultName.Otherany0.9589string0.0205number0.0050Buffer0.0016boolean0.0016
+)Punctuation
+\n  Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+finisherName.Otherany0.9428void0.0207string0.0066Function0.0060any[]0.0023
+.Punctuation
+callName.Otherany0.9952complex0.0012string0.0004number0.0004void0.0004
+(Punctuation
+streamName.Otherany0.9253string0.0082void0.0022complex0.0022Function0.0021
+,Punctuation
+ Text.Whitespace
+errorName.Otherany0.6362Error0.1813string0.1208void0.0096number0.0031
+,Punctuation
+ Text.Whitespace
+resultName.Otherany0.9272string0.0520number0.0030void0.0030Error0.0018
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.5871Function0.2401void0.0915Callback0.0078string0.0069
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+wrappedName.Otherany0.8978void0.0465Function0.0196string0.0071boolean0.0016
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Wraps provided iterator callback function\n * makes sure snitch only called once,\n * but passes secondary calls to the original callback\n *\n * @this    ReadableAsyncKit#\n * @param   {function} callback - callback to wrap\n * @param   {number|string} key - iteration key\n * @returns {function} wrapped callback\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+wrapIteratorCallbackName.Otherany0.6981void0.2090string0.0235Function0.0131boolean0.0053
+(Punctuation
+callbackName.Otherany0.4648Function0.3521void0.0386string0.0178boolean0.0094
+,Punctuation
+ Text.Whitespace
+keyName.Otherstring0.7063any0.2876number0.0017Function0.0008void0.0004
+)Punctuation
+\nText.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+streamName.Otherany0.6545void0.0370this0.0305Promise<void>0.0132Function0.0120
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+errorName.Otherany0.6273Error0.2923string0.0510boolean0.0019number0.0015
+,Punctuation
+ Text.Whitespace
+outputName.Otherany0.8598string0.0593Error0.0125Function0.0012object0.0010
+)Punctuation
+\n  Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// don't repeat yourselfComment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+(Punctuation
+keyName.Otherstring0.8605any0.1354complex0.0014number0.0010string[]0.0001
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+streamName.Otherany0.2735complex0.0037Stream<number>0.0034ViewBase0.0032Function0.0030
+.Punctuation
+jobsName.Otherany0.9767string0.0052complex0.0033{}0.0009boolean0.0008
+)Punctuation
+)Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+callbackName.Otherany0.3778Function0.3588void0.1381Callback0.0123Error0.0054
+(Punctuation
+errorName.Otherany0.5368Error0.3721string0.0665{}0.0020void0.0017
+,Punctuation
+ Text.Whitespace
+outputName.Otherany0.8674string0.0377Error0.0272{}0.0021void0.0015
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+returnKeyword
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// clean up jobsComment.Single
+\n    Text.Whitespace
+deleteOperator.Word
+ Text.Whitespace
+streamName.Otherany0.7591string0.0035Stream<number>0.0019Promise<void>0.0017complex0.0017
+.Punctuation
+jobsName.Otherany0.9838complex0.0017string0.0014boolean0.0008{}0.0007
+[Punctuation
+keyName.Otherstring0.9099any0.0870number0.0012complex0.0005void0.0003
+]Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+streamerName.Otherany0.9752string0.0055void0.0042Function0.0022any[]0.0016
+.Punctuation
+callName.Otherany0.9967complex0.0010string0.0004number0.0003void0.0002
+(Punctuation
+streamName.Otherany0.8931complex0.0059string0.0052Promise<void>0.0027void0.0014
+,Punctuation
+ Text.Whitespace
+errorName.Otherany0.5311Error0.3279string0.0811{}0.0052void0.0049
+,Punctuation
+ Text.Whitespace
+{Punctuation
+keyName.Otherstring0.7132any0.2830number0.0015void0.0008complex0.0005
+:Operator
+ Text.Whitespace
+keyKeyword.Typestring0.7700any0.2253number0.0019complex0.0008void0.0007
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.7779string0.2007Error0.0033void0.0031complex0.0015
+:Operator
+ Text.Whitespace
+outputKeyword.Typeany0.8949string0.0691Error0.0075void0.0022{}0.0011
+}Punctuation
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.4610Function0.2471void0.2144boolean0.0071Callback0.0053
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Stream wrapper for iterator callback\n *\n * @this  ReadableAsyncKit#\n * @param {mixed} error - error response\n * @param {mixed} output - iterator output\n * @param {function} callback - callback that expects iterator results\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+streamerName.Othervoid0.9531any0.0382Promise<void>0.0015string0.0012boolean0.0008
+(Punctuation
+errorName.OtherError0.5064any0.4313string0.0345boolean0.0027void0.0019
+,Punctuation
+ Text.Whitespace
+outputName.Otherany0.9042string0.0248Error0.0197void0.0022Function0.0017
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.4481Function0.3683void0.0325boolean0.0130Callback0.0096
+)Punctuation
+\nText.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errorName.OtherError0.5251any0.3566string0.0224boolean0.0204false0.0056
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+thisKeyword
+.Punctuation
+errorName.Otherany0.4453Error0.4120string0.0644boolean0.0103InternError0.0066
+)Punctuation
+\n  Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+errorName.Otherany0.4897Error0.3602string0.0496boolean0.0062void0.0057
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+errorName.Otherany0.7166Error0.2084string0.0403boolean0.0034void0.0033
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+pauseName.Othervoid0.7014any0.2321Function0.0092Promise<{}>0.0071Promise<void>0.0055
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+emitName.Otherany0.6244void0.3325complex0.0376Promise<void>0.0017boolean0.0007
+(Punctuation
+'error'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+errorName.Otherany0.7840Error0.1667string0.0266void0.0038boolean0.0022
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+// send back value only, as expectedComment.Single
+\n    Text.Whitespace
+callbackName.Otherany0.5421Function0.2035void0.1387boolean0.0084Error0.0076
+(Punctuation
+errorName.Otherany0.6649Error0.3018string0.0169{}0.0015boolean0.0014
+,Punctuation
+ Text.Whitespace
+outputName.Otherany0.9450Error0.0129string0.0061{}0.0008Function0.0007
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+outputName.Otherany0.8802Error0.0197string0.0035{}0.0014complex0.0014
+.Punctuation
+valueName.Otherany0.8927string0.0953boolean0.0017void0.0014complex0.0014
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// stream stuffComment.Single
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+pushName.Othernumber0.6360any0.1767void0.1586boolean0.0058Promise<void>0.0034
+(Punctuation
+outputName.Otherany0.5704Error0.0241string0.0162void0.0071never0.0050
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+// back to original trackComment.Single
+\n  Text.Whitespace
+// send back value only, as expectedComment.Single
+\n  Text.Whitespace
+callbackName.Otherany0.3585Function0.2473void0.2413boolean0.0127Promise<void>0.0069
+(Punctuation
+errorName.OtherError0.6164any0.3222string0.0209boolean0.0030false0.0021
+,Punctuation
+ Text.Whitespace
+outputName.Otherany0.9066Error0.0202string0.0072never0.0013Function0.0011
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+outputName.Otherany0.7719Error0.0190string0.0030never0.0019complex0.0015
+.Punctuation
+valueName.Otherany0.8953string0.0918boolean0.0024void0.0016complex0.0015
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Stream wrapper for finishing callback\n *\n * @this  ReadableAsyncKit#\n * @param {mixed} error - error response\n * @param {mixed} output - iterator output\n * @param {function} callback - callback that expects final results\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+finisherName.Othervoid0.9829any0.0116Promise<void>0.0017string0.0006boolean0.0004
+(Punctuation
+errorName.Otherany0.4971Error0.4132string0.0570void0.0041boolean0.0031
+,Punctuation
+ Text.Whitespace
+outputName.Otherany0.8816string0.0272Error0.0220void0.0035Function0.0025
+,Punctuation
+ Text.Whitespace
+callbackName.OtherFunction0.5155any0.2931void0.0598boolean0.0100Callback0.0079
+)Punctuation
+\nText.Whitespace
+{Punctuation
+\n  Text.Whitespace
+// signal end of the streamComment.Single
+\n  Text.Whitespace
+// only for successfully finished streamsComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+errorName.Otherany0.5925Error0.2943string0.0577boolean0.0125number0.0029
+)Punctuation
+\n  Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+pushName.Othernumber0.6302any0.2326void0.1069Function0.0044Promise<void>0.0034
+(Punctuation
+nullKeyword.Constant
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// back to original trackComment.Single
+\n  Text.Whitespace
+callbackName.Othervoid0.4696any0.3170Function0.1277Promise<void>0.0049Callback0.0043
+(Punctuation
+errorName.Otherany0.5080Error0.4232string0.0345{}0.0021void0.0020
+,Punctuation
+ Text.Whitespace
+outputName.Otherany0.7111string0.0379Error0.0340{}0.0058object0.0027
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

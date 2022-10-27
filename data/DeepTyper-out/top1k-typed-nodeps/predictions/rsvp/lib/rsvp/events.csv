@@ -1,0 +1,452 @@
+functionKeyword.Declaration
+ Text.Whitespace
+callbacksForName.Otherany0.2132complex0.0881string0.0505boolean0.0439Object0.0389
+(Punctuation
+objectName.Otherany0.7819Object0.0935object0.0329string0.0146number0.0093
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+callbacksName.Otherany0.8112Object0.0121complex0.0100object0.0078number0.0058
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objectName.Otherany0.8382Object0.0620complex0.0211object0.0117number0.0047
+.Punctuation
+_promiseCallbacksName.Otherany0.9073string0.0205complex0.0153number0.0098Object0.0064
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+callbacksName.Otherany0.6792string0.0171boolean0.0123complex0.0096{}0.0071
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+callbacksName.Otherany0.8543complex0.0068{}0.0051object0.0033Object0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objectName.Otherany0.8979Object0.0392object0.0111complex0.0101{}0.0036
+.Punctuation
+_promiseCallbacksName.Otherany0.9054complex0.0251{}0.0199Object0.0057object0.0042
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbacksName.Otherany0.2923complex0.0168any[]0.0153{}0.0094T0.0051
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n  @class EventTarget\n  @for rsvp\n  @public\n*/Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+{Punctuation
+\n\n  Text.Whitespace
+/**\n    `EventTarget.mixin` extends an object with EventTarget methods. For\n    Example:\n\n    ```javascript\n    import EventTarget from 'rsvp';\n\n    let object = {};\n\n    EventTarget.mixin(object);\n\n    object.on('finished', function(event) {\n      // handle event\n    });\n\n    object.trigger('finished', { detail: value });\n    ```\n\n    `EventTarget.mixin` also works with prototypes:\n\n    ```javascript\n    import EventTarget from 'rsvp';\n\n    let Person = function() {};\n    EventTarget.mixin(Person.prototype);\n\n    let yehuda = new Person();\n    let tom = new Person();\n\n    yehuda.on('poke', function(event) {\n      console.log('Yehuda says OW');\n    });\n\n    tom.on('poke', function(event) {\n      console.log('Tom says OW');\n    });\n\n    yehuda.trigger('poke');\n    tom.trigger('poke');\n    ```\n\n    @method mixin\n    @for rsvp\n    @private\n    @param {Object} object object to extend with EventTarget methods\n  */Comment.Multiline
+\n  Text.Whitespace
+mixinName.Otherany0.8676void0.0765complex0.0143Function0.0055boolean0.0039
+(Punctuation
+objectName.Otherany0.7258Object0.1394object0.0253complex0.0075number0.0048
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+objectName.Otherany0.7119Object0.1494object0.0188complex0.0159Event0.0044
+.Punctuation
+onName.Otherany0.8275complex0.0310void0.0167boolean0.0120Object0.0068
+      Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+onName.Otherany0.4711void0.1173boolean0.0883complex0.0510string0.0201
+;Punctuation
+\n    Text.Whitespace
+objectName.Otherany0.8518Object0.0670complex0.0092object0.0085Event0.0040
+.Punctuation
+offName.Otherany0.9807boolean0.0089complex0.0039void0.0026string0.0007
+     Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+offName.Otherany0.5964void0.1641boolean0.1550complex0.0379string0.0086
+;Punctuation
+\n    Text.Whitespace
+objectName.Otherany0.8623Object0.0323complex0.0208object0.0044number0.0035
+.Punctuation
+triggerName.Otherany0.6903string0.1275number0.0240void0.0190boolean0.0066
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+triggerName.Otherany0.4378string0.3935void0.0508number0.0239boolean0.0112
+;Punctuation
+\n    Text.Whitespace
+objectName.Otherany0.8835Object0.0475object0.0133complex0.0077{}0.0021
+.Punctuation
+_promiseCallbacksName.Otherany0.9566string0.0111void0.0038complex0.0038Object0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+objectName.Otherany0.8796Object0.0638object0.0190complex0.0051{}0.0044
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n    Registers a callback to be executed when `eventName` is triggered\n\n    ```javascript\n    object.on('event', function(eventInfo){\n      // handle the event\n    });\n\n    object.trigger('event');\n    ```\n\n    @method on\n    @for EventTarget\n    @private\n    @param {String} eventName name of the event to listen for\n    @param {Function} callback function to be called when the event is triggered.\n  */Comment.Multiline
+\n  Text.Whitespace
+onName.Othervoid0.8184any0.0685boolean0.0312complex0.0159Function0.0137
+(Punctuation
+eventNameName.Otherstring0.7447any0.2495number0.0017void0.0009complex0.0008
+,Punctuation
+ Text.Whitespace
+callbackName.OtherFunction0.5262any0.3639void0.0537string0.0086boolean0.0062
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+callbackName.Otherany0.5726Function0.2552void0.0346string0.0302boolean0.0223
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+throwKeywordany0.8099complex0.1149Error0.0155boolean0.0136{}0.0124
+ Text.Whitespace
+newOperator.Wordany0.6432boolean0.1048complex0.0701{}0.0341string0.0296
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9878ErrorConstructor0.0025BooleanConstructor0.0002MapConstructor0.0002any0.0001
+(Punctuation
+'Callback must be a function'Literal.String.Single
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+allCallbacksName.Otherany0.8095string0.0337complex0.0243number0.0096void0.0093
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+callbacksForName.Otherany0.6697complex0.1324string0.0315void0.0273number0.0085
+(Punctuation
+thisKeyword
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+callbacksName.Otherany0.9173complex0.0071string0.0045JQuery0.0021any[]0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+allCallbacksName.Otherany0.8725complex0.0927{}0.0079Object0.0021any[]0.0016
+[Punctuation
+eventNameName.Otherstring0.8845any0.1060number0.0047void0.0012complex0.0011
+]Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+callbacksName.Otherany0.8176complex0.0255any[]0.0085string0.0054boolean0.0051
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+callbacksName.Otherany0.9745complex0.0059string0.0032any[]0.0009Function0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+allCallbacksName.Otherany0.8600complex0.1048{}0.0142Object0.0026any[]0.0016
+[Punctuation
+eventNameName.Otherstring0.8426any0.1495number0.0038void0.0010complex0.0008
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+callbacksName.Otherany0.8481any[]0.0330complex0.0116string[]0.0095string0.0049
+.Punctuation
+indexOfName.Othernumber0.7811any0.2103void0.0027string0.0020boolean0.0015
+(Punctuation
+callbackName.Otherany0.6582Function0.2219void0.0444number0.0266string0.0138
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+callbacksName.Otherany0.7590any[]0.0658Function[]0.0102string[]0.0058void)[]0.0055
+.Punctuation
+pushName.Othernumber0.7916any0.2003void0.0041boolean0.0010string0.0009
+(Punctuation
+callbackName.Otherany0.6067Function0.2394void0.0813number0.0127string0.0092
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n    You can use `off` to stop firing a particular callback for an event:\n\n    ```javascript\n    function doStuff() { // do stuff! }\n    object.on('stuff', doStuff);\n\n    object.trigger('stuff'); // doStuff will be called\n\n    // Unregister ONLY the doStuff callback\n    object.off('stuff', doStuff);\n    object.trigger('stuff'); // doStuff will NOT be called\n    ```\n\n    If you don't pass a `callback` argument to `off`, ALL callbacks for the\n    event will not be executed when the event fires. For example:\n\n    ```javascript\n    let callback1 = function(){};\n    let callback2 = function(){};\n\n    object.on('stuff', callback1);\n    object.on('stuff', callback2);\n\n    object.trigger('stuff'); // callback1 and callback2 will be executed.\n\n    object.off('stuff');\n    object.trigger('stuff'); // callback1 and callback2 will not be executed!\n    ```\n\n    @method off\n    @for rsvp\n    @private\n    @param {String} eventName event to stop listening to\n    @param {Function} [callback] optional argument. If given, only the function\n    given will be removed from the event's callback queue. If no `callback`\n    argument is given, all callbacks will be removed from the event's callback\n    queue.\n  */Comment.Multiline
+\n  Text.Whitespace
+offName.Othervoid0.7069any0.1939boolean0.0591complex0.0136Function0.0072
+(Punctuation
+eventNameName.Otherstring0.7874any0.2062number0.0029void0.0009complex0.0007
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.4563Function0.4509void0.0432string0.0083number0.0066
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+allCallbacksName.Otherany0.8438string0.0333complex0.0265Function0.0123number0.0119
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+callbacksForName.Otherany0.7673complex0.0960string0.0305Function0.0159void0.0122
+(Punctuation
+thisKeyword
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+callbackName.OtherFunction0.4379any0.4377void0.0461boolean0.0139string0.0077
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+allCallbacksName.Otherany0.6328complex0.2028{}0.1180void0.0049Object0.0047
+[Punctuation
+eventNameName.Otherstring0.9023any0.0866number0.0061void0.0012complex0.0007
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n      Text.Whitespace
+returnKeyword
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+callbacksName.Otherany0.9260complex0.0069string0.0039number0.0018any[]0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+allCallbacksName.Otherany0.8689complex0.1006{}0.0111Object0.0015any[]0.0013
+[Punctuation
+eventNameName.Otherstring0.8726any0.1153number0.0078void0.0011complex0.0010
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+indexName.Othernumber0.9263any0.0684string0.0027boolean0.0009void0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+callbacksName.Otherany0.8197string[]0.0272any[]0.0250complex0.0167number0.0114
+.Punctuation
+indexOfName.Othernumber0.9063any0.0884void0.0015string0.0015complex0.0008
+(Punctuation
+callbackName.Otherany0.6228void0.1323Function0.1273number0.0379string0.0225
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+indexName.Othernumber0.8533any0.1424string0.0027boolean0.0006void0.0002
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+callbacksName.Otherany0.8684any[]0.0439complex0.0146string[]0.0075number[]0.0020
+.Punctuation
+spliceName.Otherany0.5635complex0.4196void0.0063number0.0024any[]0.0014
+(Punctuation
+indexName.Othernumber0.9229any0.0733string0.0025boolean0.0003void0.0003
+,Punctuation
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n    Use `trigger` to fire custom events. For example:\n\n    ```javascript\n    object.on('foo', function(){\n      console.log('foo event happened!');\n    });\n    object.trigger('foo');\n    // 'foo event happened!' logged to the console\n    ```\n\n    You can also pass a value as a second argument to `trigger` that will be\n    passed as an argument to all event listeners for the event:\n\n    ```javascript\n    object.on('foo', function(value){\n      console.log(value.name);\n    });\n\n    object.trigger('foo', { name: 'bar' });\n    // 'bar' logged to the console\n    ```\n\n    @method trigger\n    @for rsvp\n    @private\n    @param {String} eventName name of the event to be triggered\n    @param {*} [options] optional value to be passed to any event handlers for\n    the given `eventName`\n  */Comment.Multiline
+\n  Text.Whitespace
+triggerName.Othervoid0.9258any0.0333string0.0027Promise<void>0.0024boolean0.0020
+(Punctuation
+eventNameName.Otherstring0.8286any0.1650number0.0030complex0.0006void0.0004
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.8099number0.0328string0.0224Options0.0060Object0.0042
+,Punctuation
+ Text.Whitespace
+labelName.Otherstring0.6852any0.2935number0.0055complex0.0013any[]0.0007
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+allCallbacksName.Otherany0.7228string0.0867complex0.0332any[]0.0201number0.0169
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+callbacksForName.Otherany0.6253complex0.1220string0.1035number0.0221void0.0144
+(Punctuation
+thisKeyword
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+callbacksName.Otherany0.8533complex0.0082string0.0066any[]0.0032number0.0025
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+allCallbacksName.Otherany0.8322complex0.1027{}0.0136Object0.0034any[]0.0022
+[Punctuation
+eventNameName.Otherstring0.8564any0.1291number0.0086complex0.0015void0.0011
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+callbacksName.Otherany0.7396any[]0.0182complex0.0116boolean0.0090number0.0066
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// Don't cache the callbacks.length since it may growComment.Single
+\n      Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+callbackName.Otherany0.6573Function0.1660void0.0631number0.0219boolean0.0089
+;Punctuation
+\n      Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9936any0.0051string0.0008boolean0.0001void0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9850any0.0128string0.0010void0.0003boolean0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+callbacksName.Otherany0.8689complex0.0176any[]0.0147string0.0051number0.0029
+.Punctuation
+lengthName.Othernumber0.7484any0.2474string0.0016void0.0009complex0.0004
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9844any0.0142string0.0006void0.0003boolean0.0001
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+callbackName.Otherany0.6318Function0.1403void0.0778number0.0613string0.0298
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+callbacksName.Otherany0.6335any[]0.0367complex0.0125NodeListOf<Element>0.0055Function[]0.0042
+[Punctuation
+iName.Othernumber0.9700any0.0215string0.0064void0.0004boolean0.0002
+]Punctuation
+;Punctuation
+\n        Text.Whitespace
+callbackName.Otherany0.5121Function0.1979void0.1601number0.0222string0.0087
+(Punctuation
+optionsName.Otherany0.8517number0.0196string0.0192{}0.0052Options0.0052
+,Punctuation
+ Text.Whitespace
+labelName.Otherstring0.7346any0.2401number0.0070complex0.0013Object0.0012
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

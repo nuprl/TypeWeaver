@@ -1,0 +1,74 @@
+Text
+/**\n * A specialized version of `lastIndexOf` which performs strict equality\n * comparisons of values, i.e. `===`.\n *\n * @private\n * @param {Array} array The array to inspect.\n * @param {*} value The value to search for.\n * @param {number} fromIndex The index to search from.\n * @returns {number} Returns the index of the matched value, else `-1`.\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+strictLastIndexOfName.Otherany0.2234string0.1926boolean0.1439number0.1413complex0.0347
+(Punctuation
+arrayName.Otherany0.4802string0.1583number0.0500any[]0.0491string[]0.0293
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.7317string0.1392number0.1100boolean0.0033Date0.0013
+,Punctuation
+ Text.Whitespace
+fromIndexName.Othernumber0.7765any0.2165string0.0051boolean0.0009complex0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+indexName.Othernumber0.8074any0.1821string0.0072boolean0.0021complex0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+fromIndexName.Othernumber0.7436any0.2518string0.0034boolean0.0006complex0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+\n  Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+indexName.Othernumber0.9406any0.0569string0.0015boolean0.0004complex0.0001
+--Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+arrayName.Otherany0.5685string[]0.1304any[]0.0731string0.0625number0.0488
+[Punctuation
+indexName.Othernumber0.9584any0.0353string0.0051boolean0.0004complex0.0001
+]Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+valueName.Othernumber0.4659any0.3195string0.2011boolean0.0028Date0.0016
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+indexName.Othernumber0.8971any0.0943string0.0060boolean0.0008void0.0003
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+indexName.Othernumber0.8393any0.1451string0.0086boolean0.0014complex0.0010
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+strictLastIndexOfName.Otherany0.3745number0.0974string0.0241void0.0159boolean0.0136
+\nText.Whitespace

@@ -1,0 +1,112 @@
+importKeyword
+ Text.Whitespace
+doWhilstName.Otherany0.1359complex0.1023void0.0867boolean0.0284Promise<void>0.0192
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./doWhilst.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+wrapAsyncName.Otherany0.2781complex0.0992void0.0847boolean0.0520string0.0329
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/wrapAsync.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Like ['doWhilst']{@link module:ControlFlow.doWhilst}, except the `test` is inverted. Note the\n * argument ordering differs from `until`.\n *\n * @name doUntil\n * @static\n * @memberOf module:ControlFlow\n * @method\n * @see [async.doWhilst]{@link module:ControlFlow.doWhilst}\n * @category Control Flow\n * @param {AsyncFunction} iteratee - An async function which is called each time\n * `test` fails. Invoked with (callback).\n * @param {AsyncFunction} test - asynchronous truth test to perform after each\n * execution of `iteratee`. Invoked with (...args, callback), where `...args` are the\n * non-error args from the previous callback of `iteratee`\n * @param {Function} [callback] - A callback which is called after the test\n * function has passed and repeated execution of `iteratee` has stopped. `callback`\n * will be passed an error and any arguments passed to the final `iteratee`'s\n * callback. Invoked with (err, [results]);\n * @returns {Promise} a promise, if no callback is passed\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+doUntilName.Othervoid0.3542any0.1956complex0.0853string0.0736boolean0.0342
+(Punctuation
+iterateeName.Otherany0.4986string0.1517number0.0296void0.0084Error0.0067
+,Punctuation
+ Text.Whitespace
+testName.Otherany0.7503string0.1635number0.0189boolean0.0148void0.0075
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.7036Function0.1823void0.0336boolean0.0183string0.0070
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+_testName.Otherany0.5622string0.1312void0.0872boolean0.0732number0.0329
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+wrapAsyncName.Otherany0.6087string0.1070complex0.0951void0.0366boolean0.0264
+(Punctuation
+testName.Otherany0.8121string0.0954boolean0.0140complex0.0133number0.0094
+)Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+doWhilstName.Othervoid0.5490any0.2072complex0.1020string0.0220boolean0.0151
+(Punctuation
+iterateeName.Otherany0.8727string0.0583number0.0091void0.0067any[]0.0036
+,Punctuation
+ Text.Whitespace
+(Punctuation
+...Punctuation
+argsName.Otherany[]0.7187any0.2161string[]0.0129complex0.0118void0.0028
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+cbName.Otherany0.6853void0.1190boolean0.0497Function0.0469number0.0218
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+argsName.Otherany0.6034any[]0.2299string[]0.0576complex0.0112string0.0031
+.Punctuation
+popName.Otherany0.9038any[]0.0085complex0.0084string0.0077Function0.0048
+(Punctuation
+)Punctuation
+\n        Text.Whitespace
+_testName.Otherany0.6696void0.1605string0.0424complex0.0268boolean0.0192
+(Punctuation
+...Punctuation
+argsName.Otherany[]0.6452any0.2525string[]0.0307complex0.0204void0.0029
+,Punctuation
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.7211Error0.2218string0.0168complex0.0033void0.0028
+,Punctuation
+ Text.Whitespace
+truthName.Otherany0.7865string0.0632void0.0451boolean0.0257Error0.0124
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+cbName.Othervoid0.4911any0.3709Function0.0681boolean0.0097number0.0048
+ Text.Whitespace
+(Punctuation
+errName.OtherError0.4986any0.4117string0.0196complex0.0056void0.0038
+,Punctuation
+ Text.Whitespace
+!Operator
+truthName.Otherany0.7912boolean0.0574string0.0323number0.0240void0.0177
+)Punctuation
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.4455void0.3326Function0.1257boolean0.0303number0.0107
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

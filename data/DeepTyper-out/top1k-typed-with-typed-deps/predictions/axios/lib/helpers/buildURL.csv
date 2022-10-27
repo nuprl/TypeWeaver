@@ -1,0 +1,286 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+utilsName.Otherany0.4808complex0.3250string[]0.0324string0.0223void0.0175
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'../utils.js'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+AxiosURLSearchParamsName.Otherstring0.4063any0.2015boolean0.1211void0.0445RegExp0.0353
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'../helpers/AxiosURLSearchParams.js'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/**\n * It replaces all instances of the characters `:`, `$`, `,`, `+`, `[`, and `]` with their\n * URI encoded counterparts\n *\n * @param {string} val The value to be encoded.\n *\n * @returns {string} The encoded value.\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+encodeName.Otherstring0.9518any0.0206complex0.0128boolean0.0047string[]0.0024
+(Punctuation
+valName.Otherstring0.8633any0.0899number0.0373Date0.0029boolean0.0012
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+encodeURIComponentName.Builtinstring0.9984any0.0007complex0.0003string[]0.0002number0.0001
+(Punctuation
+valName.Otherstring0.8478any0.1346number0.0130Date0.0014complex0.0011
+)Punctuation
+.Punctuation
+\n    Text.Whitespace
+replaceName.Othercomplex0.9774any0.0181string0.0027void0.0004number0.0002
+(Punctuation
+/%3A/giLiteral.String.Regex
+,Punctuation
+ Text.Whitespace
+':'Literal.String.Single
+)Punctuation
+.Punctuation
+\n    Text.Whitespace
+replaceName.Othercomplex0.9555any0.0333string0.0075void0.0009boolean0.0004
+(Punctuation
+/%24/gLiteral.String.Regex
+,Punctuation
+ Text.Whitespace
+'$'Literal.String.Single
+)Punctuation
+.Punctuation
+\n    Text.Whitespace
+replaceName.Othercomplex0.9470any0.0430string0.0065void0.0008boolean0.0004
+(Punctuation
+/%2C/giLiteral.String.Regex
+,Punctuation
+ Text.Whitespace
+','Literal.String.Single
+)Punctuation
+.Punctuation
+\n    Text.Whitespace
+replaceName.Othercomplex0.9420any0.0478string0.0066void0.0008boolean0.0004
+(Punctuation
+/%20/gLiteral.String.Regex
+,Punctuation
+ Text.Whitespace
+'+'Literal.String.Single
+)Punctuation
+.Punctuation
+\n    Text.Whitespace
+replaceName.Othercomplex0.9385any0.0514string0.0065void0.0008boolean0.0004
+(Punctuation
+/%5B/giLiteral.String.Regex
+,Punctuation
+ Text.Whitespace
+'['Literal.String.Single
+)Punctuation
+.Punctuation
+\n    Text.Whitespace
+replaceName.Othercomplex0.9344any0.0550string0.0068void0.0008boolean0.0004
+(Punctuation
+/%5D/giLiteral.String.Regex
+,Punctuation
+ Text.Whitespace
+']'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Build a URL by appending params to the end\n *\n * @param {string} url The base of the url (e.g., http://www.google.com)\n * @param {object} [params] The params to be appended\n * @param {?object} options\n *\n * @returns {string} The formatted url\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+buildURLName.Otherstring0.8932any0.0549boolean0.0361number0.0065string[]0.0021
+(Punctuation
+urlName.Otherstring0.9797any0.0184number0.0005boolean0.0002complex0.0002
+,Punctuation
+ Text.Whitespace
+paramsName.Otherany0.6598string0.1598number0.0213Date0.0147complex0.0118
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.2480string0.0553Options0.0506number0.0142Buffer0.0087
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+/*eslint no-param-reassign:0*/Comment.Multiline
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+paramsName.Otherany0.7108string0.1279number0.0239complex0.0221boolean0.0190
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+urlName.Otherstring0.9431any0.0547number0.0006boolean0.0005complex0.0005
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+hashmarkIndexName.Othernumber0.3099string0.2881boolean0.2386any0.1537complex0.0040
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+urlName.Otherstring0.9547any0.0424string[]0.0007complex0.0006number0.0005
+.Punctuation
+indexOfName.Othernumber0.8067any0.1692string0.0171complex0.0055boolean0.0005
+(Punctuation
+'#'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+hashmarkIndexName.Othernumber0.6933any0.1524string0.1266boolean0.0232Date0.0012
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+urlName.Otherstring0.9211any0.0759complex0.0012number0.0004boolean0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+urlName.Otherstring0.9372any0.0601complex0.0008string[]0.0005number0.0003
+.Punctuation
+sliceName.Otherstring0.9050any0.0771string[]0.0078complex0.0044number0.0010
+(Punctuation
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+hashmarkIndexName.Otherstring0.7996number0.0946any0.0654boolean0.0337complex0.0030
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+_encodeName.Otherboolean0.3864string0.3603any0.2175number0.0157complex0.0057
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.5021complex0.0735string0.0564Options0.0364number0.0166
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.3961complex0.0915Options0.0467string0.0282number0.0084
+.Punctuation
+encodeName.Otherany0.4931string0.3949complex0.0746boolean0.0180string[]0.0067
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+encodeName.Otherstring0.5829any0.3054complex0.0750boolean0.0131string[]0.0094
+;Punctuation
+\n\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+serializerParamsName.Otherstring0.8626any0.0967boolean0.0194number0.0096complex0.0046
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+utilsName.Otherany0.7661complex0.2153string0.0076string[]0.0023any[]0.0013
+.Punctuation
+isURLSearchParamsName.Otherstring0.7261any0.1803boolean0.0379complex0.0210string[]0.0104
+(Punctuation
+paramsName.Otherany0.7522string0.0277complex0.0208number0.0082Object0.0071
+)Punctuation
+ Text.Whitespace
+?Operator
+\n    Text.Whitespace
+paramsName.Otherany0.8384complex0.0247string0.0141number0.0093Buffer0.0022
+.Punctuation
+toStringName.Otherany0.8963string0.0906complex0.0082number0.0005string)0.0005
+(Punctuation
+)Punctuation
+ Text.Whitespace
+:Operator
+\n    Text.Whitespace
+newOperator.Wordany0.6084string0.3699number0.0042complex0.0020boolean0.0009
+ Text.Whitespace
+AxiosURLSearchParamsName.Otherany0.7709string0.2139complex0.0065number0.0027boolean0.0019
+(Punctuation
+paramsName.Otherany0.6714string0.1195complex0.0439number0.0390Object0.0129
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.2505Options0.0949string0.0381complex0.0275number0.0141
+)Punctuation
+.Punctuation
+toStringName.Otherany0.6149string0.3698complex0.0107number0.0009string)0.0005
+(Punctuation
+_encodeName.Otherstring0.8933any0.0902boolean0.0075number0.0057complex0.0012
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+serializerParamsName.Otherboolean0.5150string0.3183any0.1515number0.0090complex0.0020
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+urlName.Otherstring0.9683any0.0301number0.0008complex0.0003boolean0.0002
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+(Punctuation
+urlName.Otherstring0.8713any0.1263complex0.0006string[]0.0006number0.0005
+.Punctuation
+indexOfName.Othernumber0.8050any0.1830string0.0092complex0.0018boolean0.0003
+(Punctuation
+'?'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+'?'Literal.String.Single
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+'&'Literal.String.Single
+)Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+serializerParamsName.Otherstring0.9091any0.0519number0.0316boolean0.0055complex0.0004
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+urlName.Otherstring0.9260any0.0717number0.0006complex0.0004boolean0.0004
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

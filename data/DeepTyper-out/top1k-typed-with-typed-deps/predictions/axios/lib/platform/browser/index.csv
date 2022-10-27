@@ -1,0 +1,178 @@
+importKeyword
+ Text.Whitespace
+URLSearchParamsName.Otherany0.0894complex0.0889string0.0238number0.0100T[]0.0087
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./classes/URLSearchParams.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+FormDataName.Othercomplex0.8084any0.1451string0.0038any[]0.0020number0.0012
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./classes/FormData.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Determine if we're running in a standard browser environment\n *\n * This allows axios to run in a web worker, and react-native.\n * Both environments support XMLHttpRequest, but not fully standard globals.\n *\n * web workers:\n *  typeof window -> undefined\n *  typeof document -> undefined\n *\n * react-native:\n *  navigator.product -> 'ReactNative'\n * nativescript\n *  navigator.product -> 'NativeScript' or 'NS'\n *\n * @returns {boolean}\n */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isStandardBrowserEnvName.Otherboolean0.5789string0.2143number0.1307any0.0252complex0.0228
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+(Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+productName.Otherstring0.8616number0.0577any0.0511complex0.0103Product0.0032
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+navigatorName.OtherNavigator0.6482complex0.1242boolean0.0355string0.0287any0.0287
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'undefined'Literal.String.Single
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+(Punctuation
+\n    Text.Whitespace
+(Punctuation
+productName.Otherstring0.8374any0.0681number0.0429complex0.0168boolean0.0147
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+navigatorName.OtherNavigator0.8110complex0.0084string0.0077any0.0039RegExpMatchArray0.0036
+.Punctuation
+productName.Otherstring0.9135any0.0248number0.0215complex0.0185Product0.0043
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'ReactNative'Literal.String.Single
+ Text.Whitespace
+||Operator
+\n    Text.Whitespace
+productName.Otherstring0.9394any0.0327number0.0120complex0.0028boolean0.0027
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'NativeScript'Literal.String.Single
+ Text.Whitespace
+||Operator
+\n    Text.Whitespace
+productName.Otherstring0.9079any0.0519number0.0203complex0.0058boolean0.0035
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'NS'Literal.String.Single
+)Punctuation
+\n  Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+windowName.BuiltinWindow0.9837any0.0004complex0.0003Date0.0001ClassDecorator0.0001
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'undefined'Literal.String.Single
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+documentName.BuiltinDocument0.3902any0.1506boolean0.0932number0.0879complex0.0627
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'undefined'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+(Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+isBrowserName.Otherboolean0.9977false0.0013true0.0003string0.0002any0.0001
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n  Text.Whitespace
+classesName.Othercomplex0.9975any0.0007{}0.0005any[]0.0001string[]0.0001
+:Operator
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+URLSearchParamsName.Otherany0.2847complex0.0570string0.0510number0.0186ActionType0.0139
+,Punctuation
+\n    Text.Whitespace
+FormDataName.Othercomplex0.6108any0.1921string0.0143ActionType0.0054any[]0.0041
+,Punctuation
+\n    Text.Whitespace
+BlobName.Othercomplex0.9579any0.0119string0.0104any[]0.0018string[]0.0015
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n  Text.Whitespace
+isStandardBrowserEnvName.Otherstring0.4011boolean0.2173any0.1676number0.1175void0.0380
+,Punctuation
+\n  Text.Whitespace
+protocolsName.Otherstring[]0.9902RegExp[]0.0024string[][]0.0023number[]0.0009any[]0.0007
+:Operator
+ Text.Whitespace
+[Punctuation
+'http'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'https'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'file'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'blob'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'url'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'data'Literal.String.Single
+]Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

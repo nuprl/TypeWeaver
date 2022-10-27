@@ -1,0 +1,65 @@
+build/es5.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'JSON5'.
+build/package.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+build/package.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+build/package.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'JSON5'.
+build/package.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'pkg'.
+build/unicode.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+build/unicode.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+lib/cli.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+lib/cli.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+lib/cli.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'pkg'.
+lib/cli.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'JSON5'.
+lib/cli.ts(67,27): error TS2571: Object is of type 'unknown'.
+lib/cli.ts(113,13): error TS2322: Type 'boolean' is not assignable to type 'string'.
+lib/cli.ts(122,5): error TS2322: Type '{ convert: any; space: any; validate: boolean; outFile: string; version: any; help: string; defaults: any[]; }' is not assignable to type 'void'.
+lib/cli.ts(125,9): error TS2454: Variable 'validate' is used before being assigned.
+lib/cli.ts(126,9): error TS2454: Variable 'outFile' is used before being assigned.
+lib/cli.ts(128,9): error TS2454: Variable 'help' is used before being assigned.
+lib/index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'JSON5'.
+lib/parse.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'util'.
+lib/parse.ts(21,5): error TS2322: Type 'undefined' is not assignable to type 'string'.
+lib/parse.ts(133,20): error TS2554: Expected 2 arguments, but got 1.
+lib/parse.ts(210,20): error TS2554: Expected 2 arguments, but got 1.
+lib/parse.ts(686,20): error TS7006: Parameter 'type' implicitly has an 'any' type.
+lib/parse.ts(687,5): error TS2322: Type '{ type: any; value: any; line: number; column: number; }' is not assignable to type 'string'.
+lib/parse.ts(696,21): error TS2494: Using a string in a 'for...of' statement is only supported in ECMAScript 5 and higher.
+lib/parse.ts(707,10): error TS2384: Overload signatures must all be ambient or non-ambient.
+lib/parse.ts(940,19): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
+lib/parse.ts(1076,9): error TS2322: Type 'string' is not assignable to type 'void'.
+lib/parse.ts(1079,5): error TS2322: Type 'string' is not assignable to type 'void'.
+lib/parse.ts(1084,9): error TS2339: Property 'lineNumber' does not exist on type 'Error'.
+lib/parse.ts(1085,9): error TS2339: Property 'columnNumber' does not exist on type 'Error'.
+lib/parse.ts(1086,5): error TS2322: Type 'Error' is not assignable to type 'string'.
+lib/register.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+lib/register.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'JSON5'.
+lib/register.ts(10,9): error TS2571: Object is of type 'unknown'.
+lib/register.ts(10,41): error TS2571: Object is of type 'unknown'.
+lib/stringify.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'util'.
+lib/stringify.ts(24,9): error TS2322: Type 'never[]' is not assignable to type 'string'.
+lib/stringify.ts(39,30): error TS2339: Property 'push' does not exist on type 'string'.
+lib/stringify.ts(61,54): error TS2304: Cannot find name 'View'.
+lib/stringify.ts(72,34): error TS2339: Property 'call' does not exist on type 'string'.
+lib/stringify.ts(90,39): error TS2554: Expected 1 arguments, but got 2.
+lib/stringify.ts(101,9): error TS2322: Type 'undefined' is not assignable to type 'string'.
+lib/stringify.ts(174,13): error TS2322: Type 'string | string[]' is not assignable to type 'string[]'.
+  Type 'string' is not assignable to type 'string[]'.
+lib/stringify.ts(210,37): error TS2554: Expected 1 arguments, but got 2.
+lib/stringify.ts(213,56): error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'number'.
+  Type 'undefined' is not assignable to type 'number'.
+lib/stringify.ts(215,37): error TS2554: Expected 1 arguments, but got 2.
+lib/stringify.ts(219,61): error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'number'.
+  Type 'undefined' is not assignable to type 'number'.
+lib/stringify.ts(220,41): error TS2554: Expected 1 arguments, but got 2.
+lib/util.ts(4,23): error TS7006: Parameter 'c' implicitly has an 'any' type.
+lib/util.ts(8,20): error TS7006: Parameter 'c' implicitly has an 'any' type.
+lib/util.ts(17,23): error TS7006: Parameter 'c' implicitly has an 'any' type.
+lib/util.ts(28,14): error TS7006: Parameter 'c' implicitly has an 'any' type.
+lib/util.ts(32,17): error TS7006: Parameter 'c' implicitly has an 'any' type.
+rollup.config.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'pkg'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

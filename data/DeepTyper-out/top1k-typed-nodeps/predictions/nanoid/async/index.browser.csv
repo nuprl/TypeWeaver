@@ -1,0 +1,455 @@
+exportKeyword
+ Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+randomName.Othernumber0.2381any0.2302Promise<any>0.0221Promise<number>0.0181Promise<void>0.0166
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+asyncKeyword
+ Text.Whitespace
+bytesName.Othernumber0.1935any0.1778any[]0.0452complex0.0294string0.0213
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+cryptoName.Otherany0.9982complex0.0006number0.0006string0.0001boolean0.0000
+.Punctuation
+getRandomValuesName.Otherany0.9179number0.0473string0.0054Promise<any>0.0042complex0.0040
+(Punctuation
+newOperator.Wordstring0.4455any0.3497number0.0698boolean0.0107complex0.0043
+ Text.Whitespace
+Uint8ArrayName.Builtinany0.8917number0.0518string0.0428complex0.0037boolean0.0029
+(Punctuation
+bytesName.Othernumber0.2196any0.0815Uint8Array0.0240ArrayBuffer0.0191Buffer0.0170
+)Punctuation
+)Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+customAlphabetName.Othernumber0.8125string0.0654any0.0378boolean0.0237Promise<any>0.0029
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+alphabetName.Othernumber0.8150string0.1190any0.0359boolean0.0062number[]0.0008
+,Punctuation
+ Text.Whitespace
+defaultSizeName.Othernumber0.9873string0.0062any0.0038boolean0.0011Buffer0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+21Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+// First, a bitmask is necessary to generate the ID. The bitmask makes bytesComment.Single
+\n  Text.Whitespace
+// values closer to the alphabet size. The bitmask calculates the closestComment.Single
+\n  Text.Whitespace
+// `2^31 - 1` number, which exceeds the alphabet size.Comment.Single
+\n  Text.Whitespace
+// For example, the bitmask for the alphabet size 30 is 31 (00011111).Comment.Single
+\n  Text.Whitespace
+// `Math.clz32` is not used, because it is not available in browsers.Comment.Single
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+maskName.Othernumber0.9408string0.0372any0.0158boolean0.0036void0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+2Literal.Number.Float
+ Text.Whitespace
+<<Operator
+ Text.Whitespace
+(Punctuation
+MathName.BuiltinMath0.9996ArrayConstructor0.0000PointerCoordinates0.0000ClientRect0.0000number0.0000
+.Punctuation
+logName.Othernumber0.7857complex0.0492void0.0448any0.0354string0.0300
+(Punctuation
+alphabetName.Otherstring0.4166number0.1952string[]0.1876any0.1257number[]0.0296
+.Punctuation
+lengthName.Othernumber0.9908any0.0080string0.0008boolean0.0001void0.0001
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+/Operator
+ Text.Whitespace
+MathName.BuiltinMath0.9993number0.0000ClientRect0.0000PointerCoordinates0.0000complex0.0000
+.Punctuation
+LN2Name.Othernumber0.9924string0.0033any0.0025boolean0.0006number[]0.0002
+)Punctuation
+)Punctuation
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+\n  Text.Whitespace
+// Though, the bitmask solution is not perfect since the bytes exceedingComment.Single
+\n  Text.Whitespace
+// the alphabet size are refused. Therefore, to reliably generate the ID,Comment.Single
+\n  Text.Whitespace
+// the random bytes redundancy has to be satisfied.Comment.Single
+\n\n  Text.Whitespace
+// Note: every hardware random generator call is performance expensive,Comment.Single
+\n  Text.Whitespace
+// because the system call for entropy collection takes a lot of time.Comment.Single
+\n  Text.Whitespace
+// So, to avoid additional system calls, extra bytes are requested in advance.Comment.Single
+\n\n  Text.Whitespace
+// Next, a step determines how many random bytes to generate.Comment.Single
+\n  Text.Whitespace
+// The number of random bytes gets decided upon the ID size, mask,Comment.Single
+\n  Text.Whitespace
+// alphabet size, and magic number 1.6 (using 1.6 peaks at performanceComment.Single
+\n  Text.Whitespace
+// according to benchmarks).Comment.Single
+\n\n  Text.Whitespace
+// `-~f => Math.ceil(f)` if f is a floatComment.Single
+\n  Text.Whitespace
+// `-~i => i + 1` if i is an integerComment.Single
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+stepName.Othernumber0.9967any0.0025string0.0004boolean0.0001void0.0000
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+-Operator
+~Operator
+(Punctuation
+(Punctuation
+1.6Literal.Number.Float
+ Text.Whitespace
+*Operator
+ Text.Whitespace
+maskName.Othernumber0.9737any0.0223string0.0031boolean0.0002void0.0001
+ Text.Whitespace
+*Operator
+ Text.Whitespace
+defaultSizeName.Othernumber0.9842any0.0072string0.0069boolean0.0005number[]0.0002
+)Punctuation
+ Text.Whitespace
+/Operator
+ Text.Whitespace
+alphabetName.Othernumber0.5654any0.1866string0.1721string[]0.0165number[]0.0133
+.Punctuation
+lengthName.Othernumber0.9926any0.0064string0.0006boolean0.0001void0.0001
+)Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+asyncKeyword
+ Text.Whitespace
+(Punctuation
+sizeName.Othernumber0.9375string0.0453any0.0131boolean0.0021complex0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+defaultSizeName.Othernumber0.9251string0.0464any0.0164boolean0.0080void0.0002
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+idName.Otherstring0.9685any0.0175number0.0116boolean0.0008complex0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+''Literal.String.Single
+\n    Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+trueKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+bytesName.Otherany0.8025number0.0960complex0.0110string0.0082any[]0.0077
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+cryptoName.Otherany0.9962number0.0015complex0.0013string0.0002boolean0.0001
+.Punctuation
+getRandomValuesName.Otherany0.6170number0.3108string0.0210boolean0.0178complex0.0087
+(Punctuation
+newOperator.Wordany0.4043string0.3992number0.1134boolean0.0119complex0.0039
+ Text.Whitespace
+Uint8ArrayName.Builtinany0.7692number0.1188string0.0968boolean0.0090complex0.0026
+(Punctuation
+stepName.Othernumber0.9545any0.0215string0.0166complex0.0007boolean0.0004
+)Punctuation
+)Punctuation
+\n      Text.Whitespace
+// A compact alternative for `for (var i = 0; i < step; i++)`.Comment.Single
+\n      Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9863any0.0111string0.0014boolean0.0007void0.0000
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stepName.Othernumber0.9750any0.0167string0.0061boolean0.0005void0.0002
+\n      Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+iName.Othernumber0.9857any0.0127string0.0005boolean0.0005void0.0000
+--Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+// Adding `|| ''` refuses a random byte that exceeds the alphabet size.Comment.Single
+\n        Text.Whitespace
+idName.Otherstring0.8630number0.1028any0.0323boolean0.0005complex0.0003
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+alphabetName.Otherany0.3345number0.2610string0.1750complex0.0544number[]0.0266
+[Punctuation
+bytesName.Othernumber[]0.1591any0.0667string[]0.0523any[]0.0409number0.0344
+[Punctuation
+iName.Othernumber0.9921any0.0042string0.0031boolean0.0002void0.0000
+]Punctuation
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+maskName.Othernumber0.7436any0.1421string0.1046boolean0.0007symbol0.0005
+]Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+''Literal.String.Single
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+idName.Otherstring0.9500any0.0280number0.0156string[]0.0026complex0.0004
+.Punctuation
+lengthName.Othernumber0.9887any0.0096string0.0013boolean0.0001complex0.0001
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+sizeName.Othernumber0.9733string0.0190any0.0065boolean0.0003complex0.0002
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+idName.Otherstring0.8043number0.1288any0.0616boolean0.0006void0.0003
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+nanoidName.Othernumber0.2226Promise<{}>0.0997string0.0946any0.0835Promise<void>0.0690
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+asyncKeyword
+ Text.Whitespace
+(Punctuation
+sizeName.Othernumber0.9857string0.0110any0.0020boolean0.0004number[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+21Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+idName.Otherstring0.9916any0.0043number0.0023RegExp0.0002boolean0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+''Literal.String.Single
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+bytesName.Otherany0.8132number0.1077string0.0283complex0.0116any[]0.0063
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+cryptoName.Otherany0.9966number0.0014complex0.0011string0.0002any[]0.0000
+.Punctuation
+getRandomValuesName.Otherany0.6048number0.3224string0.0357boolean0.0104complex0.0074
+(Punctuation
+newOperator.Wordstring0.6143any0.2646number0.0742boolean0.0065complex0.0036
+ Text.Whitespace
+Uint8ArrayName.Builtinany0.6547string0.1678number0.1623boolean0.0078complex0.0038
+(Punctuation
+sizeName.Othernumber0.9110string0.0639any0.0217complex0.0012boolean0.0006
+)Punctuation
+)Punctuation
+\n\n  Text.Whitespace
+// A compact alternative for `for (var i = 0; i < step; i++)`.Comment.Single
+\n  Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+sizeName.Othernumber0.9887any0.0083string0.0024boolean0.0003complex0.0001
+--Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// It is incorrect to use bytes exceeding the alphabet size.Comment.Single
+\n    Text.Whitespace
+// The following mask reduces the random byte in the 0-255 valueComment.Single
+\n    Text.Whitespace
+// range to the 0-63 value range. Therefore, adding hacks, suchComment.Single
+\n    Text.Whitespace
+// as empty string fallback or magic numbers, is unneccessary becauseComment.Single
+\n    Text.Whitespace
+// the bitmask trims bytes down to the alphabet size.Comment.Single
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+byteKeyword.Reservednumber0.9689any0.0205string0.0096boolean0.0003complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bytesName.Otherany0.2278number[]0.1892complex0.0737any[]0.0681number0.0300
+[Punctuation
+sizeName.Othernumber0.9864string0.0103any0.0027boolean0.0002complex0.0001
+]Punctuation
+ Text.Whitespace
+&Operator
+ Text.Whitespace
+63Literal.Number.Float
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+byteKeyword.Reservednumber0.9744any0.0211string0.0037boolean0.0003complex0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+36Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// `0-9a-z`Comment.Single
+\n      Text.Whitespace
+idName.Otherstring0.9182number0.0544any0.0263boolean0.0003complex0.0003
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+byteKeyword.Reservednumber0.9119any0.0659string0.0193boolean0.0006complex0.0004
+.Punctuation
+toStringName.Otherstring0.8468any0.1408number0.0048complex0.0045boolean0.0006
+(Punctuation
+36Literal.Number.Float
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+byteKeyword.Reservednumber0.9588any0.0320string0.0081boolean0.0004complex0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+62Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// `A-Z`Comment.Single
+\n      Text.Whitespace
+idName.Otherstring0.9816number0.0106any0.0074boolean0.0001complex0.0001
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+(Punctuation
+byteKeyword.Reservednumber0.9146any0.0642string0.0200complex0.0003boolean0.0002
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+26Literal.Number.Float
+)Punctuation
+.Punctuation
+toStringName.Otherstring0.8677any0.1210complex0.0043number0.0042boolean0.0006
+(Punctuation
+36Literal.Number.Float
+)Punctuation
+.Punctuation
+toUpperCaseName.Otherstring0.9071any0.0851number0.0063void0.0003complex0.0003
+(Punctuation
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+byteKeyword.Reservednumber0.9434any0.0440string0.0114boolean0.0004complex0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+63Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+idName.Otherstring0.9843any0.0103number0.0050complex0.0001boolean0.0001
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+'_'Literal.String.Single
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+idName.Otherstring0.9873any0.0076number0.0047complex0.0001boolean0.0001
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+'-'Literal.String.Single
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+idName.Otherstring0.9461any0.0271number0.0245complex0.0005boolean0.0004
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

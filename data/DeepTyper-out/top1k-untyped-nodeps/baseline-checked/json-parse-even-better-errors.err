@@ -1,0 +1,33 @@
+index.ts(3,24): error TS2322: Type '(char: string) => string' is not assignable to type 'string'.
+index.ts(16,9): error TS2322: Type 'number | null' is not assignable to type 'string'.
+  Type 'null' is not assignable to type 'string'.
+index.ts(22,10): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+index.ts(27,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(29,11): error TS2322: Type 'string | number' is not assignable to type 'number'.
+  Type 'string' is not assignable to type 'number'.
+index.ts(29,25): error TS2365: Operator '>=' cannot be applied to types 'string' and 'number'.
+index.ts(51,16): error TS7006: Parameter 'er' implicitly has an 'any' type.
+index.ts(51,20): error TS7006: Parameter 'txt' implicitly has an 'any' type.
+index.ts(51,25): error TS7006: Parameter 'context' implicitly has an 'any' type.
+index.ts(51,34): error TS7006: Parameter 'caller' implicitly has an 'any' type.
+index.ts(56,10): error TS2339: Property 'code' does not exist on type 'JSONParseError'.
+index.ts(57,10): error TS2339: Property 'systemError' does not exist on type 'JSONParseError'.
+index.ts(60,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+index.ts(61,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+index.ts(62,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+index.ts(72,7): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+index.ts(75,26): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+index.ts(96,63): error TS2339: Property 'length' does not exist on type 'never'.
+index.ts(112,26): error TS2322: Type '(txt: string) => string' is not assignable to type 'string'.
+index.ts(119,23): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+index.ts(119,38): error TS2345: Argument of type 'string' is not assignable to parameter of type '(this: any, key: string, value: any) => any'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

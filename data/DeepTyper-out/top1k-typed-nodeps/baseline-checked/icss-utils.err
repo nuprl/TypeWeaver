@@ -1,0 +1,42 @@
+src/createICSSRules.ts(1,29): error TS7006: Parameter 'imports' implicitly has an 'any' type.
+src/createICSSRules.ts(1,38): error TS7006: Parameter 'postcss' implicitly has an 'any' type.
+src/createICSSRules.ts(34,29): error TS7006: Parameter 'exports' implicitly has an 'any' type.
+src/createICSSRules.ts(34,38): error TS7006: Parameter 'postcss' implicitly has an 'any' type.
+src/createICSSRules.ts(62,7): error TS2322: Type '(imports: any, exports: any, postcss: any, mode: any) => any[]' is not assignable to type 'void'.
+src/createICSSRules.ts(62,7): error TS2451: Cannot redeclare block-scoped variable 'createICSSRules'.
+src/extractICSS.ts(4,7): error TS2322: Type '(rule: Rule) => {}' is not assignable to type 'void'.
+src/extractICSS.ts(4,37): error TS2304: Cannot find name 'Rule'.
+src/extractICSS.ts(10,5): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
+  No index signature with a parameter of type 'string' was found on type '{}'.
+src/extractICSS.ts(21,7): error TS2451: Cannot redeclare block-scoped variable 'extractICSS'.
+src/extractICSS.ts(21,27): error TS7006: Parameter 'css' implicitly has an 'any' type.
+src/extractICSS.ts(27,5): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
+  No index signature with a parameter of type 'string' was found on type '{}'.
+src/extractICSS.ts(28,7): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
+  No index signature with a parameter of type 'string' was found on type '{}'.
+src/extractICSS.ts(29,7): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+src/extractICSS.ts(38,32): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+src/extractICSS.ts(47,15): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'RegExpExecArray'.
+  Type 'null' is not assignable to type 'RegExpExecArray'.
+src/extractICSS.ts(61,15): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'RegExpExecArray'.
+  Type 'null' is not assignable to type 'RegExpExecArray'.
+src/index.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'replaceValueSymbols'.
+src/index.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'replaceSymbols'.
+src/index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'extractICSS'.
+src/index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'createICSSRules'.
+src/replaceSymbols.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'replaceValueSymbols'.
+src/replaceSymbols.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'replaceSymbols'.
+src/replaceSymbols.ts(3,30): error TS2322: Type '(css: string, replacements: any) => void' is not assignable to type 'void'.
+src/replaceSymbols.ts(4,7): error TS2339: Property 'walk' does not exist on type 'string'.
+src/replaceValueSymbols.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'replaceValueSymbols'.
+src/replaceValueSymbols.ts(3,37): error TS2322: Type '(value: string, replacements: RegExp) => string' is not assignable to type 'string'.
+src/replaceValueSymbols.ts(7,33): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'RegExp'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

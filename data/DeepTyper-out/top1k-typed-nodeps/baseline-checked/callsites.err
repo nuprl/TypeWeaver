@@ -1,0 +1,12 @@
+index.ts(3,2): error TS2322: Type '(_: any, stack: string) => string' is not assignable to type '(err: Error, stackTraces: CallSite[]) => any'.
+  Types of parameters 'stack' and 'stackTraces' are incompatible.
+    Type 'CallSite[]' is not assignable to type 'string'.
+index.ts(4,8): error TS2322: Type 'string' is not assignable to type 'Error'.
+index.ts(4,23): error TS2532: Object is possibly 'undefined'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

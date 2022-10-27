@@ -1,0 +1,601 @@
+Text
+/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAuthor Maël Nison @arcanis\n*/Comment.Multiline
+\n\nText.Whitespace
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+/** @typedef {import("./Resolver")} Resolver */Comment.Multiline
+\nText.Whitespace
+/** @typedef {import("./Resolver").ResolveStepHook} ResolveStepHook */Comment.Multiline
+\nText.Whitespace
+/**\n * @typedef {Object} PnpApiImpl\n * @property {function(string, string, object): string} resolveToUnqualified\n */Comment.Multiline
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+classKeyword.Declaration
+ Text.Whitespace
+PnpPluginName.Otherany0.9976string0.0010complex0.0006number0.0003void0.0001
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+/**\n\t * @param {string | ResolveStepHook} source source\n\t * @param {PnpApiImpl} pnpApi pnpApi\n\t * @param {string | ResolveStepHook} target target\n\t */Comment.Multiline
+\n\tText.Whitespace
+constructorKeyword.Reserved
+(Punctuation
+sourceName.Otherstring0.5596any0.0947number0.0378Object0.0124Buffer0.0072
+,Punctuation
+ Text.Whitespace
+pnpApiName.Otherstring0.3506number0.2969boolean0.1574any0.1303Function0.0076
+,Punctuation
+ Text.Whitespace
+targetName.OtherObject0.2912number0.1411Function0.1248any0.1088string0.0665
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+thisKeyword
+.Punctuation
+sourceName.Otherstring0.2323any0.0759number0.0249Date0.0128Function0.0084
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+sourceName.Otherstring0.3726any0.1645number0.0272Date0.0112ArrayBuffer0.0083
+;Punctuation
+\n\t\tText.Whitespace
+thisKeyword
+.Punctuation
+pnpApiName.Otherboolean0.4014number0.1963any0.1666string0.1172void0.0169
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pnpApiName.Otherboolean0.2725number0.2421any0.2299string0.1388void0.0197
+;Punctuation
+\n\t\tText.Whitespace
+thisKeyword
+.Punctuation
+targetName.Otherany0.3609Function0.1496Object0.1195number0.0633string0.0502
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+targetName.Otherany0.2265Object0.2178Function0.1229number0.1096string0.0415
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+/**\n\t * @param {Resolver} resolver the resolver\n\t * @returns {void}\n\t */Comment.Multiline
+\n\tText.Whitespace
+applyName.Othervoid0.4265any0.3297complex0.0990boolean0.0229Function0.0176
+(Punctuation
+resolverName.OtherResolver0.0477any0.0392ComponentFactoryResolver0.0328Range0.0139Buffer0.0069
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+targetName.Otherany0.2532Object0.1420number0.0674string0.0551Date0.0515
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+resolverName.Otherany0.2268Resolver0.0164ComponentFactoryResolver0.0122number0.0083string0.0076
+.Punctuation
+ensureHookName.Otherany0.4187complex0.1075boolean0.0949number0.0731string0.0621
+(Punctuation
+thisKeyword
+.Punctuation
+targetName.Otherany0.2627Object0.1703string0.0558object0.0485number0.0476
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+resolverName.Otherany0.2154Resolver0.0270ComponentFactoryResolver0.0080Range0.0052Rule0.0051
+\n\t\t\tText.Whitespace
+.Punctuation
+getHookName.Otherany0.6920void0.0923complex0.0631boolean0.0315string0.0137
+(Punctuation
+thisKeyword
+.Punctuation
+sourceName.Otherany0.3604string0.2579number0.0223complex0.0097HTMLElement0.0038
+)Punctuation
+\n\t\t\tText.Whitespace
+.Punctuation
+tapAsyncName.Otherany0.7897complex0.0286void0.0215string0.0164boolean0.0058
+(Punctuation
+"PnpPlugin"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+(Punctuation
+requestName.Otherany0.8361Request0.0595string0.0112number0.0086complex0.0058
+,Punctuation
+ Text.Whitespace
+resolveContextName.Otherany0.6803number0.0907string0.0903boolean0.0432void0.0147
+,Punctuation
+ Text.Whitespace
+callbackName.OtherFunction0.3805any0.3412void0.0196number0.0130Callback0.0102
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+reqName.Otherany0.9547string0.0226Request0.0060complex0.0040number0.0035
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requestName.Otherany0.7133Request0.1291complex0.0303T0.0053FinalizedRequest0.0045
+.Punctuation
+requestName.Otherany0.8866complex0.0578string0.0131number0.0102Request0.0091
+;Punctuation
+\n\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+reqName.Otherany0.9164string0.0275complex0.0129boolean0.0112number0.0085
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.4858Function0.1147void0.0651Callback0.0149boolean0.0054
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n\t\t\t\tText.Whitespace
+// The trailing slash indicates to PnP that this value is a folder rather than a fileComment.Single
+\n\t\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+issuerName.Otherany0.4980string0.4925complex0.0037number0.0030{}0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+${Literal.String.Interpol
+requestName.Otherany0.7704complex0.1276Request0.0154string0.0111number0.0059
+.Punctuation
+pathName.Otherany0.7881string0.1975complex0.0075number0.0051{}0.0002
+}Literal.String.Interpol
+/Literal.String.Backtick
+`Literal.String.Backtick
+;Punctuation
+\n\n\t\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+packageMatchName.OtherRegExpExecArray0.4468RegExp0.2455any0.1327boolean0.0206Date0.0204
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/^(@[^/]+\/)?[^/]+/Literal.String.Regex
+.Punctuation
+execName.OtherRegExpExecArray0.7042any0.2163complex0.0262string0.0082Promise<number>0.0058
+(Punctuation
+reqName.Otherany0.8258string0.1231number0.0175complex0.0124RegExpExecArray0.0041
+)Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+packageMatchName.Otherany0.3388boolean0.2614string0.1691number0.1224RegExpExecArray0.0258
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.3395void0.0946Function0.0776Callback0.0185Promise<{}>0.0125
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n\t\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+packageNameName.Otherany0.6609string0.3183number0.0065void0.0033complex0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+packageMatchName.Otherany0.4878RegExpExecArray0.1933string[]0.0561complex0.0517any[]0.0390
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+innerRequestName.Otherany0.5006string0.4306RegExp0.0128RegExpExecArray0.0060complex0.0053
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+.Literal.String.Backtick
+${Literal.String.Interpol
+reqName.Otherany0.7806string0.1565string[]0.0115complex0.0092any[]0.0081
+.Punctuation
+sliceName.Otherany0.7226string0.2041string[]0.0189complex0.0148any[]0.0081
+(Punctuation
+packageNameName.Otherstring0.6429any0.3113number0.0151complex0.0095any[]0.0052
+.Punctuation
+lengthName.Othernumber0.7023any0.2892string0.0052complex0.0015boolean0.0003
+)Punctuation
+}Literal.String.Interpol
+`Literal.String.Backtick
+;Punctuation
+\n\n\t\t\t\tText.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+resolutionName.Otherany0.5690number0.3878string0.0347complex0.0020boolean0.0008
+;Punctuation
+\n\t\t\t\tText.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+apiResolutionName.Otherany0.5616number0.1391boolean0.1287string0.0990void0.0165
+;Punctuation
+\n\t\t\t\tText.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\tText.Whitespace
+resolutionName.Otherany0.7593number0.1543string0.0709complex0.0058boolean0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+pnpApiName.Otherany0.8503complex0.0303string0.0079number0.0060{}0.0018
+.Punctuation
+resolveToUnqualifiedName.Otherany0.7191complex0.1117string0.0490number0.0225boolean0.0077
+(Punctuation
+packageNameName.Otherstring0.6201any0.3507number0.0119complex0.0043{}0.0025
+,Punctuation
+ Text.Whitespace
+issuerName.Otherany0.5354string0.4514complex0.0041number0.0020{}0.0014
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+considerBuiltinsName.Otherboolean0.9975any0.0008string0.0005number0.0003true0.0003
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+\n\t\t\t\t\tText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+resolveContextName.Otherany0.7327complex0.0211boolean0.0113false0.0031{}0.0019
+.Punctuation
+fileDependenciesName.Otherboolean0.7880any0.1562string0.0300number0.0113complex0.0024
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+apiResolutionName.Otherany0.8135boolean0.0485string0.0431number0.0273complex0.0038
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+pnpApiName.Otherany0.7446complex0.0075RegExp0.0045string0.0041number0.0029
+.Punctuation
+resolveToUnqualifiedName.Otherany0.7315boolean0.0643complex0.0623string0.0340number0.0099
+(Punctuation
+"pnpapi"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+issuerName.Otherstring0.5102any0.4726complex0.0056number0.0021{}0.0013
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\t\tText.Whitespace
+considerBuiltinsName.Otherboolean0.9979any0.0006string0.0004false0.0003number0.0002
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+\n\t\t\t\t\t\tText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+errorName.Otherany0.9988Error0.0004string0.0003complex0.0002number0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+errorName.Otherany0.9927Error0.0031complex0.0015string0.0004boolean0.0002
+.Punctuation
+codeName.Otherany0.9882string0.0099complex0.0005number0.0005void0.0002
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"MODULE_NOT_FOUND"Literal.String.Double
+ Text.Whitespace
+&&Operator
+\n\t\t\t\t\t\tText.Whitespace
+errorName.Otherany0.9840Error0.0067complex0.0020string0.0011void0.0003
+.Punctuation
+pnpCodeName.Otherany0.9673string0.0271boolean0.0015complex0.0013number0.0006
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+"UNDECLARED_DEPENDENCY"Literal.String.Double
+\n\t\t\t\t\tText.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+// This is not a PnP managed dependency.Comment.Single
+\n\t\t\t\t\t\tText.Whitespace
+// Try to continue resolving with our alternativesComment.Single
+\n\t\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+resolveContextName.Otherany0.7482complex0.0400boolean0.0133string0.0035void0.0027
+.Punctuation
+logName.Otherany0.6597string0.1609void0.0611boolean0.0511number0.0280
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\t\tText.Whitespace
+resolveContextName.Otherany0.7497complex0.0139Set<string>0.0063Logger0.0043Set<any>0.0033
+.Punctuation
+logName.Otherany0.6702void0.2746complex0.0098number0.0081string0.0040
+(Punctuation
+`request is not managed by the pnpapi`Literal.String.Backtick
+)Punctuation
+;Punctuation
+\n\t\t\t\t\t\t\tText.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+lineName.Otherstring0.5613any0.4141number0.0170complex0.0033boolean0.0007
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+errorName.Otherany0.9622complex0.0079Error0.0064any[]0.0010string0.0009
+.Punctuation
+messageName.Otherany0.8660string0.1313complex0.0008string[]0.0006number0.0003
+.Punctuation
+splitName.Otherany0.6996complex0.2931string0.0005string[]0.0004any[]0.0003
+(Punctuation
+"\n"Literal.String.Double
+)Punctuation
+.Punctuation
+filterName.Othercomplex0.5976any0.3834v...0.0035void0.0012valu...0.0010
+(Punctuation
+BooleanName.BuiltinBooleanConstructor0.8316any0.0274boolean0.0047false0.0039string0.0037
+)Punctuation
+)Punctuation
+\n\t\t\t\t\t\t\t\tText.Whitespace
+resolveContextName.Otherany0.6998string0.0045Set<string>0.0044number0.0032complex0.0024
+.Punctuation
+logName.Otherany0.8859void0.0526complex0.0072number0.0054string0.0042
+(Punctuation
+`Literal.String.Backtick
+  Literal.String.Backtick
+${Literal.String.Interpol
+lineName.Otherstring0.6876any0.1856number0.1196boolean0.0020complex0.0013
+}Literal.String.Interpol
+`Literal.String.Backtick
+)Punctuation
+;Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Othervoid0.3002any0.2635Function0.0680Promise<{}>0.0188Callback0.0121
+(Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.3722void0.1750Function0.0660this0.0177Callback0.0113
+(Punctuation
+errorName.Otherany0.9356Error0.0384string0.0112complex0.0015number0.0013
+)Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+}Punctuation
+\n\n\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+resolutionName.Otherany0.8044string0.0998number0.0865complex0.0034{}0.0007
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+packageNameName.Otherstring0.5861any0.3742number0.0216complex0.0053void0.0040
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.2331void0.1958Function0.1007Promise<{}>0.0136Promise<void>0.0114
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+apiResolutionName.Otherany0.6413boolean0.2363string0.0250false0.0109complex0.0065
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+resolveContextName.Otherany0.6821complex0.0167boolean0.0078false0.0034Set<string>0.0031
+.Punctuation
+fileDependenciesName.Otherboolean0.4529any0.4355string0.0692number0.0115void0.0063
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\tText.Whitespace
+resolveContextName.Otherany0.5042Set<string>0.0624Set<any>0.0427complex0.0212{}0.0036
+.Punctuation
+fileDependenciesName.Otherany0.4914Set<string>0.1075Set<any>0.0748boolean0.0162void0.0102
+.Punctuation
+addName.Otherany0.4410Set<string>0.2236Set<any>0.0994void0.0348boolean0.0100
+(Punctuation
+apiResolutionName.Otherany0.5612string0.3203boolean0.0258number0.0246complex0.0154
+)Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+}Punctuation
+\n\n\t\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+objName.Othercomplex0.4371any0.3305{}0.0431boolean0.0086any[]0.0085
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\tText.Whitespace
+...Punctuation
+requestName.Otherany0.5711complex0.1121any[]0.0434string0.0312Request0.0247
+,Punctuation
+\n\t\t\t\t\tText.Whitespace
+pathName.Otherstring0.5874any0.3419complex0.0256number0.0247{}0.0047
+:Operator
+ Text.Whitespace
+resolutionKeyword.Typeany0.6018string0.2312number0.1561complex0.0026boolean0.0025
+,Punctuation
+\n\t\t\t\t\tText.Whitespace
+requestName.Otherany0.6268number0.1418string0.0782complex0.0576boolean0.0450
+:Operator
+ Text.Whitespace
+innerRequestKeyword.Typeany0.4751boolean0.1892number0.1848string0.0664complex0.0127
+,Punctuation
+\n\t\t\t\t\tText.Whitespace
+ignoreSymlinksName.Otherboolean0.9941any0.0025number0.0011string0.0008true0.0004
+:Operator
+ Text.Whitespace
+trueKeyword.Type
+,Punctuation
+\n\t\t\t\t\tText.Whitespace
+fullySpecifiedName.Otherboolean0.9675any0.0131string0.0095number0.0043true0.0007
+:Operator
+ Text.Whitespace
+request.fullySpecifiedKeyword.Type
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+innerRequestName.Otherboolean0.3578string0.3324any0.2651number0.0277complex0.0030
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+"."Literal.String.Double
+\n\t\t\t\tText.Whitespace
+}Punctuation
+;Punctuation
+\n\t\t\t\tText.Whitespace
+resolverName.Otherany0.0928Resolver0.0250ComponentFactoryResolver0.0084URI0.0058Cache0.0052
+.Punctuation
+doResolveName.Otherany0.5370complex0.2091void0.2072Promise<any>0.0055number0.0039
+(Punctuation
+\n\t\t\t\t\tText.Whitespace
+targetName.OtherObject0.2999any0.2136string0.0774number0.0628Date0.0583
+,Punctuation
+\n\t\t\t\t\tText.Whitespace
+objName.Otherany0.2930complex0.2183{}0.1466Object0.1007object0.0717
+,Punctuation
+\n\t\t\t\t\tText.Whitespace
+`Literal.String.Backtick
+resolved by pnp to Literal.String.Backtick
+${Literal.String.Interpol
+resolutionName.Otherany0.5265number0.3059string0.1474complex0.0114{}0.0019
+}Literal.String.Interpol
+`Literal.String.Backtick
+,Punctuation
+\n\t\t\t\t\tText.Whitespace
+resolveContextName.Otherany0.5187number0.1804string0.1097boolean0.0449void0.0378
+,Punctuation
+\n\t\t\t\t\tText.Whitespace
+(Punctuation
+errName.Otherany0.5927Error0.3330string0.0128number0.0017Buffer0.0016
+,Punctuation
+ Text.Whitespace
+resultName.Otherany0.8999string0.0381number0.0187Buffer0.0060boolean0.0048
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.5016Error0.4612string0.0136boolean0.0025number0.0018
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.3806void0.1597Function0.1438Callback0.0222Error0.0066
+(Punctuation
+errName.OtherError0.5862any0.3756string0.0067complex0.0018{}0.0010
+)Punctuation
+;Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+resultName.Otherany0.8812string0.0448boolean0.0376number0.0083void0.0079
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.4301Function0.1432void0.1410Callback0.0171boolean0.0091
+(Punctuation
+nullKeyword.Constant
+,Punctuation
+ Text.Whitespace
+resultName.Otherany0.8477string0.0464boolean0.0284number0.0245void0.0225
+)Punctuation
+;Punctuation
+\n\t\t\t\t\t\tText.Whitespace
+// Skip alternativesComment.Single
+\n\t\t\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.3636Function0.1484void0.1431Callback0.0216Promise<void>0.0090
+(Punctuation
+nullKeyword.Constant
+,Punctuation
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+;Punctuation
+\n\t\t\t\t\tText.Whitespace
+}Punctuation
+\n\t\t\t\tText.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

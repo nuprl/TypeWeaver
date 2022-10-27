@@ -1,0 +1,53 @@
+index.ts(7,7): error TS2322: Type '(process: any) => any' is not assignable to type 'boolean'.
+index.ts(21,6): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(56,10): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(70,24): error TS2322: Type '() => void' is not assignable to type 'void'.
+index.ts(74,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(82,31): error TS2322: Type '() => void' is not assignable to type 'void'.
+index.ts(83,21): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(90,37): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
+  No index signature with a parameter of type 'string' was found on type '{}'.
+index.ts(99,29): error TS2322: Type '(event: any, code: any, signal: any) => void' is not assignable to type 'void'.
+index.ts(111,5): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
+  No index signature with a parameter of type 'string' was found on type '{}'.
+index.ts(113,12): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(122,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(123,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(125,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(145,20): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(158,25): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
+  No index signature with a parameter of type 'string' was found on type '{}'.
+index.ts(171,42): error TS2322: Type '(code: any) => void' is not assignable to type 'void'.
+index.ts(173,10): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(177,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(179,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(185,7): error TS2322: Type '(ev: any, arg: any) => any' is not assignable to type 'boolean'.
+index.ts(186,26): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(191,48): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(193,7): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(195,7): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(199,40): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/node/ts4.8/globals.d.ts(27,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'process' must be of type 'any', but here has type 'Process'.
+../../../../node_modules/@types/node/ts4.8/process.d.ts(5,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'process' must be of type 'any', but here has type 'Process'.
+

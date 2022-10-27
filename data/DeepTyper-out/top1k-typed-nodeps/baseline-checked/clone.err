@@ -1,0 +1,35 @@
+clone.ts(4,32): error TS7006: Parameter 'type' implicitly has an 'any' type.
+clone.ts(102,41): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(pattern: string | RegExp, flags?: string | undefined): RegExp', gave the following error.
+    Argument of type 'boolean' is not assignable to parameter of type 'string'.
+  Overload 2 of 3, '(pattern: string, flags?: string | undefined): RegExp', gave the following error.
+    Argument of type 'boolean' is not assignable to parameter of type 'string'.
+clone.ts(154,11): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'PropertyDescriptor'.
+  Type 'undefined' is not assignable to type 'PropertyDescriptor'.
+clone.ts(160,13): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'PropertyDescriptor'.
+  Type 'undefined' is not assignable to type 'PropertyDescriptor'.
+clone.ts(161,13): error TS2367: This condition will always return 'false' since the types '((v: any) => void) | undefined' and 'string' have no overlap.
+clone.ts(181,16): error TS2403: Subsequent variable declarations must have the same type.  Variable 'i' must be of type 'string', but here has type 'number'.
+clone.ts(181,23): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
+clone.ts(181,43): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+clone.ts(184,30): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
+clone.ts(185,13): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'PropertyDescriptor'.
+  Type 'undefined' is not assignable to type 'PropertyDescriptor'.
+clone.ts(196,16): error TS2403: Subsequent variable declarations must have the same type.  Variable 'i' must be of type 'string', but here has type 'number'.
+clone.ts(196,23): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
+clone.ts(196,52): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+clone.ts(197,53): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
+clone.ts(198,13): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'PropertyDescriptor'.
+  Type 'undefined' is not assignable to type 'PropertyDescriptor'.
+clone.ts(224,17): error TS2322: Type '() => void' is not assignable to type 'void'.
+clone.ts(225,5): error TS2339: Property 'prototype' does not exist on type 'void'.
+clone.ts(226,14): error TS2351: This expression is not constructable.
+  Type 'void' has no construct signatures.
+clone.ts(256,3): error TS2322: Type 'string' is not assignable to type 'boolean'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

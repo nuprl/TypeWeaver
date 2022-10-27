@@ -1,0 +1,285 @@
+Text
+/*\n  Copyright (C) 2014 Yusuke Suzuki <utatane.tea@gmail.com>\n\n  Redistribution and use in source and binary forms, with or without\n  modification, are permitted provided that the following conditions are met:\n\n    * Redistributions of source code must retain the above copyright\n      notice, this list of conditions and the following disclaimer.\n    * Redistributions in binary form must reproduce the above copyright\n      notice, this list of conditions and the following disclaimer in the\n      documentation and/or other materials provided with the distribution.\n\n  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 'AS IS'\n  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n  ARE DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY\n  DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n  (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\n  LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND\n  ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF\n  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n*/Comment.Multiline
+\n\nText.Whitespace
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+gulpName.Otherany0.9975any[]0.0006string0.0006complex0.0004void0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'gulp'Literal.String.Single
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+gitName.Otherany0.9857string0.0086complex0.0006any[]0.0004{}0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'gulp-git'Literal.String.Single
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+bumpName.Otherany0.9788string0.0174number0.0008Function0.0004void0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'gulp-bump'Literal.String.Single
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+filterName.Otherany0.9974string0.0017complex0.0003Function0.0001boolean0.0000
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'gulp-filter'Literal.String.Single
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+tagVersionName.Otherany0.9822string0.0138number0.0007boolean0.0005Function0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'gulp-tag-version'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+TESTName.Otherstring[]0.4409any0.1432string0.0798string[][]0.0172boolean0.0118
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+ Text.Whitespace
+'test/*.js'Literal.String.Single
+ Text.Whitespace
+]Punctuation
+;Punctuation
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+POWEREDName.Otherstring[]0.9420string0.0243any0.0162any[]0.0099boolean0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+ Text.Whitespace
+'powered-test/*.js'Literal.String.Single
+ Text.Whitespace
+]Punctuation
+;Punctuation
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+SOURCEName.Otherstring[]0.7311string[][]0.0497string0.0142RegExp[]0.0111any[]0.0067
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+ Text.Whitespace
+'src/**/*.js'Literal.String.Single
+ Text.Whitespace
+]Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Bumping version number and tagging the repository with it.\n * Please read http://semver.org/\n *\n * You can use the commands\n *\n *     gulp patch     # makes v0.1.0 -> v0.1.1\n *     gulp feature   # makes v0.1.1 -> v0.2.0\n *     gulp release   # makes v0.2.1 -> v1.0.0\n *\n * To bump the version numbers accordingly after you did a patch,\n * introduced a feature or made a backwards-incompatible release.\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+incName.Otherany0.7076string0.0402number0.0070Date0.0068HTMLElement0.0054
+(Punctuation
+importanceName.Otherstring0.6302any0.3494number0.0081string[]0.0029boolean0.0009
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// get all the files to bump version inComment.Single
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+gulpName.Otherany0.9979complex0.0007any[]0.0005string0.0004void0.0001
+.Punctuation
+srcName.Otherany0.9983string0.0006complex0.0004any[]0.0003string[]0.0001
+(Punctuation
+[Punctuation
+'./package.json'Literal.String.Single
+]Punctuation
+)Punctuation
+\n        Text.Whitespace
+// bump the version number in those filesComment.Single
+\n        Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9966complex0.0012string0.0006number0.0002boolean0.0002
+(Punctuation
+bumpName.Otherany0.9800string0.0108complex0.0033boolean0.0014any[]0.0010
+(Punctuation
+{Punctuation
+typeKeyword.Reserved
+:Operator
+ Text.Whitespace
+importanceName.Otherany0.5825string0.4048number0.0036string[]0.0031complex0.0017
+}Punctuation
+)Punctuation
+)Punctuation
+\n        Text.Whitespace
+// save it back to filesystemComment.Single
+\n        Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9985complex0.0007string0.0004number0.0001void0.0001
+(Punctuation
+gulpName.Otherany0.9994complex0.0002string0.0002any[]0.0001number0.0000
+.Punctuation
+destName.Otherany0.9992complex0.0004string0.0003void0.0000number0.0000
+(Punctuation
+'./'Literal.String.Single
+)Punctuation
+)Punctuation
+\n        Text.Whitespace
+// commit the changed version numberComment.Single
+\n        Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9981complex0.0009string0.0003number0.0001boolean0.0001
+(Punctuation
+gitName.Otherany0.9930string0.0054complex0.0007number0.0001string[]0.0001
+.Punctuation
+commitName.Otherany0.9672string0.0203complex0.0051boolean0.0016string[]0.0004
+(Punctuation
+'Bumps package version'Literal.String.Single
+)Punctuation
+)Punctuation
+\n        Text.Whitespace
+// read only one file to get the version numberComment.Single
+\n        Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9982complex0.0005string0.0005number0.0001boolean0.0001
+(Punctuation
+filterName.Otherany0.9968complex0.0022string0.0006void0.0001any[]0.0000
+(Punctuation
+'package.json'Literal.String.Single
+)Punctuation
+)Punctuation
+\n        Text.Whitespace
+// **tag it in the repository**Comment.Single
+\n        Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9974complex0.0010string0.0006number0.0002boolean0.0001
+(Punctuation
+tagVersionName.Otherany0.9871string0.0092complex0.0009boolean0.0006number0.0004
+(Punctuation
+{Punctuation
+\n            Text.Whitespace
+prefixName.Otherstring0.9987any0.0003number0.0002RegExp0.0002string[]0.0002
+:Operator
+ Text.Whitespace
+''Literal.String.Single
+\n        Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+gulpName.Otherany0.9978complex0.0011any[]0.0004string0.0003void0.0002
+.Punctuation
+taskName.Otherany0.9994complex0.0003void0.0001string0.0000any[]0.0000
+(Punctuation
+'patch'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+[Punctuation
+ Text.Whitespace
+]Punctuation
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+incName.Otherany0.4176Promise<{}>0.0412void0.0232string0.0192Promise<string>0.0090
+(Punctuation
+'patch'Literal.String.Single
+)Punctuation
+;Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+\nText.Whitespace
+gulpName.Otherany0.9987complex0.0006any[]0.0002string0.0002void0.0001
+.Punctuation
+taskName.Otherany0.9994complex0.0003void0.0001string0.0000number0.0000
+(Punctuation
+'minor'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+[Punctuation
+ Text.Whitespace
+]Punctuation
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+incName.Otherany0.3263Promise<{}>0.0531void0.0252string0.0160Promise<void>0.0095
+(Punctuation
+'minor'Literal.String.Single
+)Punctuation
+;Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+\nText.Whitespace
+gulpName.Otherany0.9988complex0.0005string0.0002any[]0.0002void0.0001
+.Punctuation
+taskName.Otherany0.9994complex0.0003void0.0001string0.0000number0.0000
+(Punctuation
+'major'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+[Punctuation
+ Text.Whitespace
+]Punctuation
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+incName.Otherany0.0718Promise<{}>0.0419void0.0179Promise<string>0.0098Promise<void>0.0095
+(Punctuation
+'major'Literal.String.Single
+)Punctuation
+;Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+\nText.Whitespace

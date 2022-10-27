@@ -1,0 +1,172 @@
+importKeyword
+ Text.Whitespace
+getTagName.Otherany0.8195string0.0341complex0.0273void0.0064RegExp0.0033
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/getTag.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isArrayLikeName.Othercomplex0.5696any0.3843boolean0.0058string0.0053void0.0037
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isArrayLike.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isStringName.Othercomplex0.9547boolean0.0189any0.0185number0.0016{}0.0010
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isString.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+stringSizeName.Otherany0.3653complex0.1836string0.1451boolean0.0906number0.0389
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/stringSize.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/** `Object#toString` result references. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+mapTagName.OtherRegExp0.4376string0.3779any0.1300string[]0.0117boolean0.0105
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'[object Map]'Literal.String.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+setTagName.Otherstring0.6635any0.1663RegExp0.0857string[]0.0274complex0.0098
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'[object Set]'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Gets the size of `collection` by returning its length for array-like\n * values or the number of own enumerable string keyed properties for objects.\n *\n * @since 0.1.0\n * @category Collection\n * @param {Array|Object|string} collection The collection to inspect.\n * @returns {number} Returns the collection size.\n * @example\n *\n * size([1, 2, 3])\n * // => 3\n *\n * size({ 'a': 1, 'b': 2 })\n * // => 2\n *\n * size('pebbles')\n * // => 7\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+sizeName.Othernumber0.5711any0.2109string0.1654complex0.0341boolean0.0046
+(Punctuation
+collectionName.Otherany0.3789string0.3656number0.0739any[]0.0259complex0.0230
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+collectionName.Otherstring0.4006any0.3393number0.1379any[]0.0124complex0.0115
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+0Literal.Number.Float
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isArrayLikeName.Othercomplex0.7236any0.2339boolean0.0205string0.0056any[]0.0021
+(Punctuation
+collectionName.Otherany0.4403string0.2768complex0.0790any[]0.0529number0.0205
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+isStringName.Othercomplex0.9552any0.0253boolean0.0157string0.0012number0.0006
+(Punctuation
+collectionName.Otherany0.5129string0.1441complex0.0953any[]0.0624number0.0224
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+stringSizeName.Otherany0.6063string0.0973complex0.0714number0.0699any[]0.0453
+(Punctuation
+collectionName.Otherany0.3677string0.1858any[]0.1213complex0.0459number0.0402
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+collectionName.Otherany0.3783any[]0.2980string0.0898complex0.0417string[]0.0285
+.Punctuation
+lengthName.Othernumber0.9398any0.0545string0.0025complex0.0017boolean0.0004
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+tagName.Otherany0.9111number0.0429string0.0322complex0.0048boolean0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+getTagName.Otherany0.9372string0.0375number0.0071complex0.0059void0.0006
+(Punctuation
+collectionName.Otherany0.3124any[]0.1480string0.1448complex0.1216number0.0205
+)Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+tagName.Otherany0.7288number0.1593string0.0645complex0.0206boolean0.0038
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+mapTagName.Otherany0.5855number0.3230string0.0513boolean0.0180complex0.0113
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+tagName.Otherany0.7608number0.1789string0.0413complex0.0061boolean0.0043
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+setTagName.Otherany0.7669string0.1364number0.0369complex0.0100string[]0.0061
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+collectionName.Otherany0.3937complex0.1201string0.0218any[]0.0158TranslationCollection0.0094
+.Punctuation
+sizeName.Othernumber0.7599any0.1907string0.0326complex0.0116boolean0.0014
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9992complex0.0002any0.0001Object0.0000{}0.0000
+.Punctuation
+keysName.Otherstring[]0.9899complex0.0029any[]0.0025number[]0.0013string0.0004
+(Punctuation
+collectionName.Otherany0.2774any[]0.1096complex0.0661string0.0341string[]0.0212
+)Punctuation
+.Punctuation
+lengthName.Othernumber0.9401any0.0494string0.0034void0.0017complex0.0012
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+sizeName.Othernumber0.5347any0.3036string0.1084complex0.0124void0.0063
+\nText.Whitespace

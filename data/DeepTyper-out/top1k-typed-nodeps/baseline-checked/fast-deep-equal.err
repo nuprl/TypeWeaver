@@ -1,0 +1,119 @@
+benchmark/index.ts(58,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+build.ts(8,32): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+build.ts(9,32): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+build.ts(11,36): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+build.ts(12,36): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+spec/es6tests.ts(48,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(49,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(54,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(60,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(61,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(72,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(73,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(78,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(79,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(84,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(85,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(90,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(90,28): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(91,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(91,28): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(96,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(96,28): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(97,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(97,28): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(102,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(102,28): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(103,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(103,28): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(114,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(115,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(120,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(121,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(126,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(127,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(144,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(173,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(174,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(179,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(185,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(186,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(197,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(198,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(203,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(204,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(209,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(210,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(215,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(216,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(233,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(234,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(239,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(240,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(279,55): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(length?: number | undefined): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'number'.
+  Overload 2 of 3, '(array: Iterable<bigint>): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'Iterable<bigint>'.
+      The types returned by '[Symbol.iterator]().next(...)' are incompatible between these types.
+        Type 'IteratorResult<string, any>' is not assignable to type 'IteratorResult<bigint, any>'.
+          Type 'IteratorYieldResult<string>' is not assignable to type 'IteratorResult<bigint, any>'.
+            Type 'IteratorYieldResult<string>' is not assignable to type 'IteratorYieldResult<bigint>'.
+              Type 'string' is not assignable to type 'bigint'.
+  Overload 3 of 3, '(buffer: ArrayBufferLike, byteOffset?: number | undefined, length?: number | undefined): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'ArrayBufferLike'.
+      Type 'string[]' is missing the following properties from type 'SharedArrayBuffer': byteLength, [Symbol.species], [Symbol.toStringTag]
+spec/es6tests.ts(280,55): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(length?: number | undefined): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'number'.
+  Overload 2 of 3, '(array: Iterable<bigint>): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'Iterable<bigint>'.
+  Overload 3 of 3, '(buffer: ArrayBufferLike, byteOffset?: number | undefined, length?: number | undefined): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'ArrayBufferLike'.
+spec/es6tests.ts(286,55): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(length?: number | undefined): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'number'.
+  Overload 2 of 3, '(array: Iterable<bigint>): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'Iterable<bigint>'.
+  Overload 3 of 3, '(buffer: ArrayBufferLike, byteOffset?: number | undefined, length?: number | undefined): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'ArrayBufferLike'.
+spec/es6tests.ts(287,55): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(length?: number | undefined): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'number'.
+  Overload 2 of 3, '(array: Iterable<bigint>): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'Iterable<bigint>'.
+  Overload 3 of 3, '(buffer: ArrayBufferLike, byteOffset?: number | undefined, length?: number | undefined): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'ArrayBufferLike'.
+spec/index.spec.ts(7,5): error TS2451: Cannot redeclare block-scoped variable 'assert'.
+spec/index.spec.ts(18,3): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(19,16): error TS2339: Property 'forEach' does not exist on type 'string'.
+spec/index.spec.ts(20,7): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(22,24): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(22,34): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(23,32): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+spec/index.spec.ts(25,24): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(25,34): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(26,32): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+spec/react.spec.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'assert'.
+spec/react.spec.ts(13,27): error TS7006: Parameter 'nextProps' implicitly has an 'any' type.
+spec/react.spec.ts(33,3): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/react.spec.ts(38,5): error TS2304: Cannot find name 'beforeEach'.
+spec/react.spec.ts(44,5): error TS2304: Cannot find name 'afterEach'.
+spec/react.spec.ts(48,5): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/react.spec.ts(49,7): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/react.spec.ts(50,9): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/react.spec.ts(55,9): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/react.spec.ts(60,9): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

@@ -1,0 +1,195 @@
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+safeToStringName.Otherany0.5357string0.4327number0.0061RegExp0.0034boolean0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+"./safe-to-string"Literal.String.Double
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+reNewLineName.Otherstring0.8922RegExp0.0849any0.0169string[]0.0011boolean0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/[\n\r\u2028\u2029]/gLiteral.String.Regex
+;Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+valueName.Otherstring0.8896any0.1003number0.0025boolean0.0012RegExp0.0006
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+stringKeyword.Type
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+safeToStringName.Otherstring0.9756any0.0175string[]0.0025number0.0013RegExp0.0007
+(Punctuation
+valueName.Otherstring0.9208any0.0742number0.0019boolean0.0008complex0.0006
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+stringKeyword.Type
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+"<Non-coercible to string value>"Literal.String.Double
+;Punctuation
+\n\tText.Whitespace
+// Trim if too longComment.Single
+\n\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+stringKeyword.Type
+.Punctuation
+lengthName.Othernumber0.9111any0.0779string0.0094boolean0.0006complex0.0006
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+100Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+stringKeyword.Type
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stringKeyword.Type
+.Punctuation
+sliceName.Otherstring0.9506any0.0406string[]0.0036complex0.0020number0.0007
+(Punctuation
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+99Literal.Number.Float
+)Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+"…"Literal.String.Double
+;Punctuation
+\n\tText.Whitespace
+// Replace eventual new linesComment.Single
+\n\tText.Whitespace
+stringKeyword.Type
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stringKeyword.Type
+.Punctuation
+replaceName.Othercomplex0.8231any0.1563string0.0134boolean0.0028void0.0013
+(Punctuation
+reNewLineName.Otherstring0.4819RegExp0.4439any0.0532boolean0.0083string[]0.0065
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+charKeyword.Reservedstring0.9373any0.0601number0.0009boolean0.0005string[]0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+switchKeyword
+ Text.Whitespace
+(Punctuation
+charKeyword.Reservedstring0.9556any0.0424number0.0009boolean0.0003string[]0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+caseKeyword
+ Text.Whitespace
+"\n"Literal.String.Double
+:Operator
+\n\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+"\\n"Literal.String.Double
+;Punctuation
+\n\t\t\tText.Whitespace
+caseKeyword
+ Text.Whitespace
+"\r"Literal.String.Double
+:Operator
+\n\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+"\\r"Literal.String.Double
+;Punctuation
+\n\t\t\tText.Whitespace
+caseKeyword
+ Text.Whitespace
+"\u2028"Literal.String.Double
+:Operator
+\n\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+"\\u2028"Literal.String.Double
+;Punctuation
+\n\t\t\tText.Whitespace
+caseKeyword
+ Text.Whitespace
+"\u2029"Literal.String.Double
+:Operator
+\n\t\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+"\\u2029"Literal.String.Double
+;Punctuation
+\n\t\t\tText.Whitespace
+/* istanbul ignore next */Comment.Multiline
+\n\t\t\tText.Whitespace
+defaultName.Other
+:Operator
+\n\t\t\t\tText.Whitespace
+throwKeyword.Typeany0.5617Error0.3449string0.0535complex0.0106never0.0048
+ Text.Whitespace
+newOperator.WordErrorConstructor0.3474Error0.2678any0.2414string0.0882never0.0038
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9999Error0.0000any0.0000never0.0000LogLevel.Error0.0000
+(Punctuation
+"Unexpected character"Literal.String.Double
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\tText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+stringKeyword.Type
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

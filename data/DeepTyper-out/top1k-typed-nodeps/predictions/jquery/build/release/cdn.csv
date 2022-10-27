@@ -1,0 +1,906 @@
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+\n\tText.Whitespace
+fsName.Otherany0.9907string0.0041complex0.0015number0.0003any[]0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+ Text.Whitespace
+"fs"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+,Punctuation
+\n\tText.Whitespace
+shellName.Otherany0.9632string0.0069void0.0031complex0.0024NodeRequire0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+ Text.Whitespace
+"shelljs"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+,Punctuation
+\n\tText.Whitespace
+pathName.Otherany0.9861string0.0130complex0.0003number0.0002NodeRequire0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+ Text.Whitespace
+"path"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+,Punctuation
+\n\n\tText.Whitespace
+cdnFolderName.Otherstring0.5092any0.3115RegExp0.1641string[]0.0052complex0.0030
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+"dist/cdn"Literal.String.Double
+,Punctuation
+\n\n\tText.Whitespace
+releaseFilesName.Otherany0.7403complex0.2244string0.0251{}0.0012number0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+"jquery-VER.js"Literal.String.Double
+:Operator
+ Text.Whitespace
+"dist/jquery.js"Literal.String.Double
+,Punctuation
+\n\t\tText.Whitespace
+"jquery-VER.min.js"Literal.String.Double
+:Operator
+ Text.Whitespace
+"dist/jquery.min.js"Literal.String.Double
+,Punctuation
+\n\t\tText.Whitespace
+"jquery-VER.min.map"Literal.String.Double
+:Operator
+ Text.Whitespace
+"dist/jquery.min.map"Literal.String.Double
+,Punctuation
+\n\t\tText.Whitespace
+"jquery-VER.slim.js"Literal.String.Double
+:Operator
+ Text.Whitespace
+"dist/jquery.slim.js"Literal.String.Double
+,Punctuation
+\n\t\tText.Whitespace
+"jquery-VER.slim.min.js"Literal.String.Double
+:Operator
+ Text.Whitespace
+"dist/jquery.slim.min.js"Literal.String.Double
+,Punctuation
+\n\t\tText.Whitespace
+"jquery-VER.slim.min.map"Literal.String.Double
+:Operator
+ Text.Whitespace
+"dist/jquery.slim.min.map"Literal.String.Double
+\n\tText.Whitespace
+}Punctuation
+,Punctuation
+\n\n\tText.Whitespace
+googleFilesCDNName.Otherstring[]0.9703string0.0090any[]0.0055RegExp0.0054any0.0030
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+\n\t\tText.Whitespace
+"jquery.js"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"jquery.min.js"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"jquery.min.map"Literal.String.Double
+,Punctuation
+\n\t\tText.Whitespace
+"jquery.slim.js"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"jquery.slim.min.js"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"jquery.slim.min.map"Literal.String.Double
+\n\tText.Whitespace
+]Punctuation
+,Punctuation
+\n\n\tText.Whitespace
+msFilesCDNName.Otherstring[]0.9663string0.0112any[]0.0060RegExp0.0058any0.0038
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+\n\t\tText.Whitespace
+"jquery-VER.js"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"jquery-VER.min.js"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"jquery-VER.min.map"Literal.String.Double
+,Punctuation
+\n\t\tText.Whitespace
+"jquery-VER.slim.js"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"jquery-VER.slim.min.js"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"jquery-VER.slim.min.map"Literal.String.Double
+\n\tText.Whitespace
+]Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Generates copies for the CDNs\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+makeReleaseCopiesName.Othervoid0.9795string0.0075any0.0053complex0.0029boolean0.0008
+(Punctuation
+ Text.Whitespace
+ReleaseName.Otherstring0.5886any0.3499boolean0.0126number0.0097string[]0.0087
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+shellName.Otherany0.5503Shell0.0147complex0.0141void0.0123string0.0094
+.Punctuation
+mkdirName.Otherany0.7118void0.2355complex0.0238string0.0124Promise<void>0.0056
+(Punctuation
+ Text.Whitespace
+"-p"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+cdnFolderName.Otherany0.4833string0.3699void0.0567boolean0.0449complex0.0182
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+ObjectName.BuiltinObjectConstructor0.9974complex0.0011any0.0008Object0.0001{}0.0000
+.Punctuation
+keysName.Otherstring[]0.9900complex0.0046string0.0017any[]0.0011any0.0009
+(Punctuation
+ Text.Whitespace
+releaseFilesName.Otherany0.5793string0.1482complex0.1277string[]0.0542{}0.0379
+ Text.Whitespace
+)Punctuation
+.Punctuation
+forEachName.Othervoid0.9749any0.0132complex0.0084v...0.0008Promise<void>0.0006
+(Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+ Text.Whitespace
+keyName.Otherstring0.9589any0.0377number0.0017complex0.0006void0.0004
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+textName.Otherstring0.8226any0.1735number0.0010complex0.0010void0.0006
+,Punctuation
+\n\t\t\tText.Whitespace
+builtFileName.Otherstring0.7276any0.2637number0.0045complex0.0012boolean0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+releaseFilesName.Otherany0.6108complex0.2313{}0.0595string0.0313string[]0.0072
+[Punctuation
+ Text.Whitespace
+keyName.Otherstring0.9342any0.0611number0.0023complex0.0015void0.0004
+ Text.Whitespace
+]Punctuation
+,Punctuation
+\n\t\t\tText.Whitespace
+unpathedFileName.Otherstring0.7085any0.2704number0.0122boolean0.0041void0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+keyName.Otherstring0.9120any0.0855number0.0011complex0.0005void0.0002
+.Punctuation
+replaceName.Othercomplex0.9123any0.0846string0.0014void0.0006boolean0.0003
+(Punctuation
+ Text.Whitespace
+/VER/gLiteral.String.Regex
+,Punctuation
+ Text.Whitespace
+ReleaseName.Otherany0.6261RegExp0.2090string0.0542complex0.0238RegExpMatchArray0.0056
+.Punctuation
+newVersionName.Otherstring0.8162any0.1712RegExp0.0033complex0.0025number0.0022
+ Text.Whitespace
+)Punctuation
+,Punctuation
+\n\t\t\tText.Whitespace
+releaseFileName.Otherstring0.9002any0.0858number0.0061boolean0.0022RegExp0.0022
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+cdnFolderName.Otherstring0.8825any0.0920number0.0191RegExp0.0019boolean0.0014
+ Text.Whitespace
++Operator
+ Text.Whitespace
+"/"Literal.String.Double
+ Text.Whitespace
++Operator
+ Text.Whitespace
+unpathedFileName.Otherstring0.7022any0.2527number0.0384boolean0.0020void0.0011
+;Punctuation
+\n\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+/\.map$/Literal.String.Regex
+.Punctuation
+testName.Otherboolean0.9664string0.0095any0.0094void0.0082complex0.0030
+(Punctuation
+ Text.Whitespace
+releaseFileName.Otherstring0.8810any0.0994number0.0088boolean0.0065RegExp0.0010
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n\t\t\tText.Whitespace
+// Map files need to reference the new uncompressed name;Comment.Single
+\n\t\t\tText.Whitespace
+// assume that all files reside in the same directory.Comment.Single
+\n\t\t\tText.Whitespace
+// "file":"jquery.min.js" ... "sources":["jquery.js"]Comment.Single
+\n\t\t\tText.Whitespace
+textName.Otherany0.5122string0.4840number0.0017complex0.0005string[]0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+fsName.Otherany0.9970string0.0016complex0.0010number0.0002any[]0.0000
+.Punctuation
+readFileSyncName.Otherany0.8034complex0.1504string0.0427number0.0009void0.0005
+(Punctuation
+ Text.Whitespace
+builtFileName.Otherstring0.8431any0.1402number0.0095RegExp0.0023string[]0.0013
+,Punctuation
+ Text.Whitespace
+"utf8"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+\n\t\t\t\tText.Whitespace
+.Punctuation
+replaceName.Othercomplex0.5370any0.4587void0.0014string0.0013number0.0003
+(Punctuation
+ Text.Whitespace
+/"file":"([^"]+)"/Literal.String.Regex
+,Punctuation
+\n\t\t\t\t\tText.Whitespace
+"\"file\":\""Literal.String.Double
+ Text.Whitespace
++Operator
+ Text.Whitespace
+unpathedFileName.Otherstring0.8259any0.1693number0.0025string[]0.0005void0.0005
+.Punctuation
+replaceName.Othercomplex0.7949any0.1992string0.0031void0.0012boolean0.0004
+(Punctuation
+ Text.Whitespace
+/\.min\.map/Literal.String.Regex
+,Punctuation
+ Text.Whitespace
+".min.js\""Literal.String.Double
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+)Punctuation
+\n\t\t\t\tText.Whitespace
+.Punctuation
+replaceName.Othercomplex0.6473any0.3466string0.0024void0.0017boolean0.0004
+(Punctuation
+ Text.Whitespace
+/"sources":\["([^"]+)"\]/Literal.String.Regex
+,Punctuation
+\n\t\t\t\t\tText.Whitespace
+"\"sources\":[\""Literal.String.Double
+ Text.Whitespace
++Operator
+ Text.Whitespace
+unpathedFileName.Otherstring0.8369any0.1583number0.0023RegExp0.0007string[]0.0006
+.Punctuation
+replaceName.Othercomplex0.8066any0.1884string0.0027void0.0010boolean0.0004
+(Punctuation
+ Text.Whitespace
+/\.min\.map/Literal.String.Regex
+,Punctuation
+ Text.Whitespace
+".js"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+"\"]"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+fsName.Otherany0.9974complex0.0010string0.0009number0.0002void0.0001
+.Punctuation
+writeFileSyncName.Otherany0.9366complex0.0488void0.0124string0.0010number0.0005
+(Punctuation
+ Text.Whitespace
+releaseFileName.Otherstring0.7206any0.2641number0.0088string[]0.0013complex0.0013
+,Punctuation
+ Text.Whitespace
+textName.Otherstring0.5886any0.4085number0.0012complex0.0005string[]0.0004
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+builtFileName.Otherstring0.7485any0.2107number0.0212boolean0.0098complex0.0028
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+releaseFileName.Otherstring0.6915any0.2535number0.0268boolean0.0157void0.0037
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+shellName.Otherany0.9256complex0.0077void0.0050string0.0034string[]0.0013
+.Punctuation
+cpName.Otherany0.8026void0.1627complex0.0160number0.0060string0.0026
+(Punctuation
+ Text.Whitespace
+"-f"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+builtFileName.Otherstring0.6057any0.3336number0.0239void0.0164boolean0.0049
+,Punctuation
+ Text.Whitespace
+releaseFileName.Otherstring0.5091any0.3757number0.0496void0.0369boolean0.0155
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+makeArchivesName.Othervoid0.9819any0.0105string0.0035complex0.0011boolean0.0005
+(Punctuation
+ Text.Whitespace
+ReleaseName.Otherstring0.5298any0.3931number0.0233void0.0196boolean0.0098
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.4403Function0.3973void0.0786string0.0128boolean0.0082
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n\tText.Whitespace
+ReleaseName.Otherany0.9849string0.0020void0.0017Function0.0010complex0.0008
+.Punctuation
+chdirName.Otherany0.9791void0.0060string0.0054number0.0026Function0.0013
+(Punctuation
+ Text.Whitespace
+ReleaseName.Otherany0.9793complex0.0071string0.0035void0.0004number0.0004
+.Punctuation
+dirName.Otherany0.9708complex0.0212string0.0019void0.0003number0.0002
+.Punctuation
+repoName.Otherany0.8566string0.1369number0.0033complex0.0010{}0.0003
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+makeArchiveName.Othervoid0.8704any0.0697string0.0386complex0.0051number0.0038
+(Punctuation
+ Text.Whitespace
+cdnName.Otherany0.5675string0.4287number0.0022boolean0.0002void0.0002
+,Punctuation
+ Text.Whitespace
+filesName.Otherany0.7052string[]0.1748any[]0.0550string0.0280number0.0102
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.5830Function0.3056void0.0227number0.0080string0.0072
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+ReleaseName.Otherany0.9190string0.0041complex0.0038RegExp0.0021boolean0.0018
+.Punctuation
+preReleaseName.Otherany0.6224boolean0.2049string0.1478number0.0148void0.0026
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+consoleName.OtherConsole0.9998any0.0000void0.0000Assert0.0000NumberConstructor0.0000
+.Punctuation
+logName.Othervoid0.9991any0.0004complex0.0001string0.0001number0.0000
+(Punctuation
+ Text.Whitespace
+"Skipping archive creation for "Literal.String.Double
+ Text.Whitespace
++Operator
+ Text.Whitespace
+cdnName.Otherany0.5475string0.4492number0.0024void0.0003complex0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+"; this is a beta release."Literal.String.Double
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+callbackName.Otherany0.5350Function0.2450void0.1623Callback0.0058number0.0049
+(Punctuation
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+returnKeyword
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\n\t\tText.Whitespace
+consoleName.OtherConsole0.9998any0.0000void0.0000Assert0.0000NumberConstructor0.0000
+.Punctuation
+logName.Othervoid0.9992any0.0004complex0.0001Promise<void>0.0001string0.0000
+(Punctuation
+ Text.Whitespace
+"Creating production archive for "Literal.String.Double
+ Text.Whitespace
++Operator
+ Text.Whitespace
+cdnName.Otherany0.6288string0.3674number0.0029complex0.0002void0.0002
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\t\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+sumName.Othernumber0.6614any0.3064string0.0197complex0.0072void0.0014
+,Punctuation
+\n\t\t\tText.Whitespace
+archiverName.Otherany0.9841string0.0063number0.0025boolean0.0007complex0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+ Text.Whitespace
+"archiver"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+(Punctuation
+ Text.Whitespace
+"zip"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+,Punctuation
+\n\t\t\tText.Whitespace
+md5fileName.Otherstring0.9041any0.0852number0.0057boolean0.0023string[]0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+cdnFolderName.Otherstring0.7865any0.1404number0.0678boolean0.0028complex0.0006
+ Text.Whitespace
++Operator
+ Text.Whitespace
+"/"Literal.String.Double
+ Text.Whitespace
++Operator
+ Text.Whitespace
+cdnName.Otherstring0.7408any0.2553number0.0031void0.0002complex0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+"-md5.txt"Literal.String.Double
+,Punctuation
+\n\t\t\tText.Whitespace
+outputName.Otherany0.9570string0.0354number0.0012any[]0.0009Buffer0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+fsName.Otherany0.9988string0.0007complex0.0003number0.0001any[]0.0000
+.Punctuation
+createWriteStreamName.Otherany0.9931complex0.0060string0.0005number0.0001any[]0.0001
+(Punctuation
+\n\t\t\t\tText.Whitespace
+cdnFolderName.Otherstring0.8727any0.1010number0.0241boolean0.0006complex0.0005
+ Text.Whitespace
++Operator
+ Text.Whitespace
+"/"Literal.String.Double
+ Text.Whitespace
++Operator
+ Text.Whitespace
+cdnName.Otherstring0.8205any0.1764number0.0023void0.0003complex0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+"-jquery-"Literal.String.Double
+ Text.Whitespace
++Operator
+ Text.Whitespace
+ReleaseName.Otherany0.9123string0.0236complex0.0055number0.0019RegExp0.0014
+.Punctuation
+newVersionName.Otherstring0.7171any0.2801number0.0011complex0.0007string[]0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+".zip"Literal.String.Double
+\n\t\t\tText.Whitespace
+)Punctuation
+,Punctuation
+\n\t\t\tText.Whitespace
+rverName.Otherstring0.9219any0.0559RegExp0.0173number0.0012boolean0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/VER/Literal.String.Regex
+;Punctuation
+\n\n\t\tText.Whitespace
+outputName.Otherany0.9374string0.0177number0.0007Buffer0.0007void0.0006
+.Punctuation
+onName.Otherany0.8350complex0.0931void0.0201EventEmitter0.0066string0.0025
+(Punctuation
+ Text.Whitespace
+"close"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.5184void0.2707Function0.1620number0.0117string0.0109
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\t\tText.Whitespace
+outputName.Otherany0.9655string0.0071Buffer0.0006Function0.0004void0.0004
+.Punctuation
+onName.Otherany0.8411complex0.0727void0.0150EventEmitter0.0092Function0.0022
+(Punctuation
+ Text.Whitespace
+"error"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+ Text.Whitespace
+errName.Otherany0.6890Error0.2546string0.0416never0.0024number0.0019
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+throwKeywordany0.7464Error0.2251string0.0119complex0.0045never0.0025
+ Text.Whitespace
+errName.Otherany0.5169Error0.4614string0.0120complex0.0015never0.0010
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\t\tText.Whitespace
+archiverName.Otherany0.9844string0.0010complex0.0007number0.0004boolean0.0003
+.Punctuation
+pipeName.Otherany0.9276void0.0316complex0.0053Function0.0037string0.0027
+(Punctuation
+ Text.Whitespace
+outputName.Otherany0.9042string0.0835number0.0016void0.0013Buffer0.0008
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\t\tText.Whitespace
+filesName.Otherany0.5794string[]0.3190any[]0.0667string0.0205complex0.0036
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+filesName.Otherany0.4723string[]0.3654any[]0.1226complex0.0075string0.0068
+.Punctuation
+mapName.OtherU[]0.7170any0.2484complex0.0254string0.0008boolean0.0007
+(Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+ Text.Whitespace
+itemName.Otherstring0.5931any0.3958number0.0050Date0.0008complex0.0008
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+"dist"Literal.String.Double
+ Text.Whitespace
++Operator
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+rverName.OtherRegExp0.5615any0.2389string0.1872string[]0.0025Date0.0014
+.Punctuation
+testName.Otherboolean0.9027any0.0404string0.0386void0.0082number0.0065
+(Punctuation
+ Text.Whitespace
+itemName.Otherstring0.6143any0.3698number0.0071boolean0.0013Date0.0012
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+"/cdn"Literal.String.Double
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+""Literal.String.Double
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+"/"Literal.String.Double
+ Text.Whitespace
++Operator
+\n\t\t\t\tText.Whitespace
+itemName.Otherstring0.7842any0.2087number0.0056void0.0003string[]0.0002
+.Punctuation
+replaceName.Otherany0.5335complex0.4593void0.0026string0.0025boolean0.0006
+(Punctuation
+ Text.Whitespace
+rverName.OtherRegExp0.4767string0.3135any0.1673number0.0113boolean0.0074
+,Punctuation
+ Text.Whitespace
+ReleaseName.Otherany0.9224RegExp0.0348complex0.0118string0.0060RegExpMatchArray0.0010
+.Punctuation
+newVersionName.Otherstring0.7779any0.2117RegExp0.0031number0.0022string[]0.0011
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\t\tText.Whitespace
+sumName.Otherany0.8056number0.1529string0.0208complex0.0142any[]0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ReleaseName.Otherany0.8654RegExp0.0899string0.0211number0.0034complex0.0017
+.Punctuation
+execName.Otherany0.7033RegExpExecArray0.1329complex0.0336Promise<number>0.0284number0.0078
+(Punctuation
+ Text.Whitespace
+"md5 -r "Literal.String.Double
+ Text.Whitespace
++Operator
+ Text.Whitespace
+filesName.Otherstring[]0.7180any0.1712any[]0.0909complex0.0042string0.0035
+.Punctuation
+joinName.Otherstring0.6126any0.3738complex0.0058number0.0035string[]0.0018
+(Punctuation
+ Text.Whitespace
+" "Literal.String.Double
+ Text.Whitespace
+)Punctuation
+,Punctuation
+ Text.Whitespace
+"Error retrieving md5sum"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+fsName.Otherany0.9973complex0.0009string0.0008number0.0003Buffer0.0001
+.Punctuation
+writeFileSyncName.Otherany0.9332complex0.0516void0.0127number0.0008string0.0007
+(Punctuation
+ Text.Whitespace
+md5fileName.Otherstring0.6351any0.3345number0.0243complex0.0021void0.0010
+,Punctuation
+ Text.Whitespace
+sumName.Othernumber0.4572any0.4360string0.0932complex0.0091T0.0009
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+filesName.Otherstring[]0.3822any0.3096any[]0.2680complex0.0053string0.0045
+.Punctuation
+pushName.Othernumber0.9553any0.0370void0.0030string0.0024complex0.0006
+(Punctuation
+ Text.Whitespace
+md5fileName.Otherany0.4942string0.4563number0.0322string[]0.0042complex0.0028
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\t\tText.Whitespace
+filesName.Otherany0.4389string[]0.3618any[]0.1404complex0.0102string0.0041
+.Punctuation
+forEachName.Othervoid0.7751any0.1512complex0.0466v...0.0135Promise<void>0.0020
+(Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+ Text.Whitespace
+fileName.Otherstring0.9108any0.0743File0.0035number0.0015string[]0.0011
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+archiverName.Otherany0.9903string0.0008complex0.0006number0.0003void0.0001
+.Punctuation
+appendName.Otherany0.9191void0.0335complex0.0073Promise<any>0.0056Promise<void>0.0015
+(Punctuation
+ Text.Whitespace
+fsName.Otherany0.9990string0.0005complex0.0003number0.0000void0.0000
+.Punctuation
+createReadStreamName.Otherany0.9843complex0.0131string0.0017void0.0001number0.0001
+(Punctuation
+ Text.Whitespace
+fileName.Otherstring0.9120any0.0823number0.0016string[]0.0006File0.0006
+ Text.Whitespace
+)Punctuation
+,Punctuation
+\n\t\t\t\tText.Whitespace
+{Punctuation
+ Text.Whitespace
+nameName.Otherany0.6041string0.3756void0.0038number0.0033complex0.0032
+:Operator
+ Text.Whitespace
+path.basenameKeyword.Type
+(Punctuation
+ Text.Whitespace
+fileName.Otherstring0.8272any0.1587File0.0037number0.0025string[]0.0009
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\t\tText.Whitespace
+archiverName.Otherany0.9794complex0.0019number0.0005string0.0004ExpectStatic0.0003
+.Punctuation
+finalizeName.OtherPromise<void>0.2636any0.2483void0.0537Promise<any>0.0458Promise<{}>0.0313
+(Punctuation
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+buildGoogleCDNName.Othervoid0.9702any0.0139Promise<void>0.0040string0.0021complex0.0016
+(Punctuation
+ Text.Whitespace
+callbackName.Otherany0.5016Function0.2985void0.0538string0.0178boolean0.0126
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+makeArchiveName.Othervoid0.7143any0.2411string0.0132complex0.0057Promise<void>0.0048
+(Punctuation
+ Text.Whitespace
+"googlecdn"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+googleFilesCDNName.Otherstring0.7641any0.1930void0.0113number0.0098boolean0.0075
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.5224Function0.2088void0.1508string0.0396boolean0.0206
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+buildMicrosoftCDNName.Othervoid0.9655any0.0181string0.0033Function0.0025Promise<void>0.0018
+(Punctuation
+ Text.Whitespace
+callbackName.Otherany0.4669Function0.3511void0.0452string0.0239boolean0.0123
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+makeArchiveName.Othervoid0.6513any0.2967string0.0196complex0.0073Function0.0049
+(Punctuation
+ Text.Whitespace
+"mscdn"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+msFilesCDNName.Otherstring0.7447any0.2138void0.0121number0.0091boolean0.0059
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.5026Function0.2310void0.1518string0.0254boolean0.0147
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+buildGoogleCDNName.Othervoid0.8921any0.0839string0.0056complex0.0032Promise<void>0.0031
+(Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+buildMicrosoftCDNName.Othervoid0.6927any0.2455string0.0312Function0.0083number0.0029
+(Punctuation
+ Text.Whitespace
+callbackName.Otherany0.5391Function0.1989void0.1217string0.0448boolean0.0127
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+makeReleaseCopiesName.Otherstring0.8124any0.1281number0.0206boolean0.0178void0.0056
+:Operator
+ Text.Whitespace
+makeReleaseCopiesKeyword.Typestring0.6588any0.2588boolean0.0344number0.0202void0.0105
+,Punctuation
+\n\tText.Whitespace
+makeArchivesName.Otherstring0.5177any0.2859boolean0.1085number0.0413void0.0082
+:Operator
+ Text.Whitespace
+makeArchivesKeyword.Typestring0.4916any0.3788boolean0.0583number0.0325void0.0081
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

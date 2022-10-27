@@ -1,0 +1,38 @@
+index.ts(3,7): error TS2322: Type '(offset?: number) => (code: number) => string' is not assignable to type 'number'.
+index.ts(5,7): error TS2322: Type '(offset?: number) => (code: number) => string' is not assignable to type 'number'.
+index.ts(7,7): error TS2322: Type '(offset?: number) => (red: number, green: number, blue: number) => string' is not assignable to type 'number'.
+index.ts(73,51): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(o: { [s: string]: unknown; } | ArrayLike<unknown>): [string, unknown][]', gave the following error.
+    Argument of type 'unknown' is not assignable to parameter of type '{ [s: string]: unknown; } | ArrayLike<unknown>'.
+  Overload 2 of 2, '(o: {}): [string, any][]', gave the following error.
+    Argument of type 'unknown' is not assignable to parameter of type '{}'.
+index.ts(75,21): error TS2571: Object is of type 'unknown'.
+index.ts(76,22): error TS2571: Object is of type 'unknown'.
+index.ts(79,4): error TS2571: Object is of type 'unknown'.
+index.ts(81,14): error TS2571: Object is of type 'unknown'.
+index.ts(81,24): error TS2571: Object is of type 'unknown'.
+index.ts(98,22): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+index.ts(99,25): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+index.ts(100,25): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+index.ts(101,24): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+index.ts(102,27): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+index.ts(103,27): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+index.ts(132,11): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'RegExpExecArray'.
+  Type 'null' is not assignable to type 'RegExpExecArray'.
+index.ts(140,24): error TS2802: Type 'string' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+index.ts(217,7): error TS2322: Type 'void' is not assignable to type 'number'.
+screenshot.ts(25,21): error TS2339: Property 'black' does not exist on type 'number'.
+screenshot.ts(34,47): error TS2339: Property 'reset' does not exist on type 'number'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

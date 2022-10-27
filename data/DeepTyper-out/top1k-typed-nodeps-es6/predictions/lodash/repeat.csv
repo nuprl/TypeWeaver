@@ -1,0 +1,135 @@
+Text
+/**\n * Repeats the given string `n` times.\n *\n * @since 3.0.0\n * @category String\n * @param {string} [string=''] The string to repeat.\n * @param {number} [n=1] The number of times to repeat the string.\n * @returns {string} Returns the repeated string.\n * @example\n *\n * repeat('*', 3)\n * // => '***'\n *\n * repeat('abc', 2)\n * // => 'abcabc'\n *\n * repeat('abc', 0)\n * // => ''\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+repeatName.Otherstring0.4692any0.1529complex0.0357boolean0.0162string[]0.0128
+(Punctuation
+stringKeyword.Type
+,Punctuation
+ Text.Whitespace
+nName.Othernumber0.7873any0.1261string0.0804complex0.0014boolean0.0010
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+resultName.Otherstring0.9503any0.0409RegExp0.0028boolean0.0013number0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+''Literal.String.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+stringKeyword.Type
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+nName.Othernumber0.9257any0.0631string0.0074complex0.0013boolean0.0010
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+1Literal.Number.Float
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+nName.Othernumber0.8737any0.1147string0.0074complex0.0022boolean0.0013
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+NumberName.BuiltinNumberConstructor0.9854Math0.0010complex0.0007Number0.0003Console0.0002
+.Punctuation
+MAX_SAFE_INTEGERName.Othernumber0.9909any0.0048string0.0030boolean0.0006complex0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherstring0.8786any0.0870number0.0217boolean0.0023string[]0.0020
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+// Leverage the exponentiation by squaring algorithm for a faster repeat.Comment.Single
+\n  Text.Whitespace
+// See https://en.wikipedia.org/wiki/Exponentiation_by_squaring for more details.Comment.Single
+\n  Text.Whitespace
+doKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nName.Othernumber0.8364any0.1536string0.0059boolean0.0018complex0.0013
+ Text.Whitespace
+%Operator
+ Text.Whitespace
+2Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+resultName.Otherstring0.9651any0.0316number0.0024complex0.0002boolean0.0002
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+stringKeyword.Type
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+nName.Othernumber0.9751any0.0141string0.0094boolean0.0008complex0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+MathName.BuiltinMath0.9997complex0.0000string[]0.0000number0.0000any0.0000
+.Punctuation
+floorName.Othernumber0.9916string0.0043any0.0031boolean0.0006complex0.0002
+(Punctuation
+nName.Othernumber0.9671any0.0290string0.0032complex0.0002boolean0.0002
+ Text.Whitespace
+/Operator
+ Text.Whitespace
+2Literal.Number.Float
+)Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nName.Othernumber0.8994any0.0729string0.0188boolean0.0059complex0.0015
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+stringKeyword.Type
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+stringKeyword.Type
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+nName.Othernumber0.8739any0.0837string0.0359boolean0.0017complex0.0015
+)Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherstring0.8234any0.1438number0.0113boolean0.0046string[]0.0042
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+repeatName.Otherstring0.5235any0.1006number0.0375boolean0.0333complex0.0232
+\nText.Whitespace

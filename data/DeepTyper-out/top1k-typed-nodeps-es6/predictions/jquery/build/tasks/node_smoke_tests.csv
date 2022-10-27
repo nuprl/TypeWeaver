@@ -1,0 +1,238 @@
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+gruntName.Otherany0.2284string0.0726IGrunt0.0348Path0.0156object0.0080
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+fsName.Otherany0.9964string0.0022complex0.0007void0.0001number0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+ Text.Whitespace
+"fs"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+spawnTestName.Otherany0.9776string0.0169void0.0011number0.0007Function0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+ Text.Whitespace
+"./lib/spawn_test.js"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+testsDirName.OtherRegExp0.5767string0.4010any0.0112string[]0.0056boolean0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+"./test/node_smoke_tests/"Literal.String.Double
+;Punctuation
+\n\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nodeSmokeTestsName.Otherany[]0.9132string[]0.0338any0.0218number[]0.0054any[][]0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+// Fire up all tests defined in test/node_smoke_tests/*.js in spawned sub-processes.Comment.Single
+\n\tText.Whitespace
+// All the files under test/node_smoke_tests/*.js are supposed to exit with 0 codeComment.Single
+\n\tText.Whitespace
+// on success or another one on failure. Spawning in sub-processes isComment.Single
+\n\tText.Whitespace
+// important so that the tests & the main process don't interfere withComment.Single
+\n\tText.Whitespace
+// each other, e.g. so that they don't share the require cache.Comment.Single
+\n\n\tText.Whitespace
+fsName.Otherany0.9991complex0.0004string0.0002any[]0.0002void0.0000
+.Punctuation
+readdirSyncName.Otherany0.9892complex0.0086string0.0013any[]0.0003string[]0.0001
+(Punctuation
+ Text.Whitespace
+testsDirName.Otherstring0.7140any0.2354number0.0151boolean0.0109any[]0.0083
+ Text.Whitespace
+)Punctuation
+\n\t\tText.Whitespace
+.Punctuation
+filterName.Otherany0.9876complex0.0104any[]0.0007string0.0005boolean0.0001
+(Punctuation
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+testFilePathName.Otherstring0.9625any0.0325number0.0017boolean0.0012any[]0.0008
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+\n\t\t\tText.Whitespace
+fsName.Otherany0.9988complex0.0006string0.0002any[]0.0001number0.0001
+.Punctuation
+statSyncName.Otherany0.9655complex0.0318number0.0004U[]0.0004string0.0003
+(Punctuation
+ Text.Whitespace
+testsDirName.Otherstring0.8594any0.0971number0.0364boolean0.0032complex0.0010
+ Text.Whitespace
++Operator
+ Text.Whitespace
+testFilePathName.Otherstring0.9839any0.0117number0.0017string[]0.0006any[]0.0006
+ Text.Whitespace
+)Punctuation
+.Punctuation
+isFileName.Otherany0.8892boolean0.0620complex0.0373string0.0049any[]0.0015
+(Punctuation
+)Punctuation
+ Text.Whitespace
+&&Operator
+\n\t\t\t\tText.Whitespace
+/\.js$/Literal.String.Regex
+.Punctuation
+testName.Otherboolean0.9858any0.0071string0.0029number0.0014true0.0006
+(Punctuation
+ Text.Whitespace
+testFilePathName.Otherstring0.9764any0.0200number0.0009any[]0.0009string[]0.0008
+ Text.Whitespace
+)Punctuation
+\n\t\tText.Whitespace
+)Punctuation
+\n\t\tText.Whitespace
+.Punctuation
+forEachName.Otherany0.8129void0.1416complex0.0274v...0.0050number0.0032
+(Punctuation
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+testFilePathName.Otherstring0.9846any0.0119number0.0015boolean0.0005any[]0.0004
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+taskNameName.Otherstring0.9679any0.0281number0.0014void0.0007boolean0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+node_Literal.String.Backtickstring0.5896any0.2716RegExp0.1023string[]0.0087HTMLElement0.0015
+${Literal.String.Interpol
+ Text.Whitespace
+testFilePathName.Otherstring0.9840any0.0145number0.0006string[]0.0002boolean0.0002
+.Punctuation
+replaceName.Othercomplex0.6812any0.3040void0.0062string0.0041boolean0.0011
+(Punctuation
+ Text.Whitespace
+/\.js$/Literal.String.Regex
+,Punctuation
+ Text.Whitespace
+""Literal.String.Double
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+}Literal.String.Interpol
+`Literal.String.Backtick
+;Punctuation
+\n\n\t\t\tText.Whitespace
+gruntName.Otherany0.9938string0.0033void0.0008complex0.0004any[]0.0003
+.Punctuation
+registerTaskName.Otherany0.9900void0.0081complex0.0009string0.0007Promise<void>0.0000
+(Punctuation
+ Text.Whitespace
+taskNameName.Otherstring0.9650any0.0282void0.0018number0.0012boolean0.0005
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\t\tText.Whitespace
+spawnTestName.Othervoid0.6506any0.2712string0.0276Promise<void>0.0276complex0.0051
+(Punctuation
+ Text.Whitespace
+thisKeyword
+.Punctuation
+asyncKeyword
+(Punctuation
+)Punctuation
+,Punctuation
+ Text.Whitespace
+`Literal.String.Backtick
+node "test/node_smoke_tests/Literal.String.Backtick
+${Literal.String.Interpol
+ Text.Whitespace
+testFilePathName.Otherstring0.9952any0.0029number0.0010boolean0.0002string[]0.0002
+ Text.Whitespace
+}Literal.String.Interpol
+"Literal.String.Backtick
+`Literal.String.Backtick
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\t\t\tText.Whitespace
+nodeSmokeTestsName.Otherany[]0.6654string[]0.2248any0.0322Function[]0.0143string0.0057
+.Punctuation
+pushName.Othernumber0.9737any0.0111void0.0089boolean0.0016string0.0013
+(Punctuation
+ Text.Whitespace
+taskNameName.Otherstring0.9847any0.0105number0.0008void0.0006any[]0.0003
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+gruntName.Otherany0.9865string0.0040void0.0017complex0.0009any[]0.0006
+.Punctuation
+registerTaskName.Otherany0.9858void0.0113string0.0013complex0.0009Promise<void>0.0001
+(Punctuation
+ Text.Whitespace
+"node_smoke_tests"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+nodeSmokeTestsName.Otherstring0.9599any0.0154boolean0.0094void0.0051number0.0043
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

@@ -1,0 +1,18 @@
+matrix.test.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'test'.
+matrix.test.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'semver'.
+matrix.test.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'atLeastNode'.
+matrix.test.ts(9,21): error TS2322: Type '{ (t: any, nodeVersion: string, requestedVersion: string, expectedResult: any): void; title(providedTitle: string, nodeVersion: string, requestedVersion: string, expectedResult: string): string; }' is not assignable to type 'void'.
+matrix.test.ts(17,7): error TS2339: Property 'title' does not exist on type 'void'.
+matrix.test.ts(25,17): error TS2345: Argument of type '(patch: string) => number' is not assignable to parameter of type '(value: number, index: number, array: number[]) => void'.
+  Types of parameters 'patch' and 'value' are incompatible.
+    Type 'number' is not assignable to type 'string'.
+sanity.test.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'test'.
+sanity.test.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'semver'.
+sanity.test.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'atLeastNode'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

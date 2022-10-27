@@ -1,0 +1,2631 @@
+Text
+/*\n * portfinder.js: A simple tool to find an open port on the current machine.\n *\n * (C) 2011, Charlie Robbins\n *\n */Comment.Multiline
+\n\nText.Whitespace
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+fsName.Otherany0.9898complex0.0045string0.0021void0.0004number0.0002
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'fs'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+osName.Otherany0.9961string0.0018complex0.0015void0.0002number0.0001
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'os'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+netName.Otherany0.9759void0.0166string0.0025complex0.0012number0.0004
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'net'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+pathName.Otherany0.7994string0.1846complex0.0075string[]0.0016void0.0014
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'path'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+_asyncName.Otherany0.6539void0.1527string0.0554Promise<void>0.0426boolean0.0188
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'async'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+debugName.Otherany0.8886void0.0611complex0.0223boolean0.0056string0.0045
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'debug'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+mkdirpName.Otherany0.9904void0.0078string0.0010complex0.0005Function0.0001
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'mkdirp'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+debugTestPortName.Otherany0.8891string0.0240void0.0226Function0.0048number0.0035
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+debugName.Otherany0.9588complex0.0082void0.0050string0.0039Function0.0024
+(Punctuation
+'portfinder:testPort'Literal.String.Single
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+debugGetPortName.Otherany0.9422string0.0223void0.0085number0.0057boolean0.0040
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+debugName.Otherany0.9741void0.0041complex0.0034string0.0031boolean0.0015
+(Punctuation
+'portfinder:getPort'Literal.String.Single
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+debugDefaultHostsName.Otherany0.9540string0.0169void0.0082number0.0044boolean0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+debugName.Otherany0.9742void0.0048complex0.0039string0.0023Function0.0016
+(Punctuation
+'portfinder:defaultHosts'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+internalsName.Otherany0.4880{}0.4553void0.0135complex0.0100T0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+internalsName.Otherany0.9246void0.0100complex0.0038{}0.0012Function0.0010
+.Punctuation
+testPortName.Othervoid0.5866any0.3984complex0.0038Function0.0026Promise<void>0.0025
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+optionsName.Otherany0.9014Options0.0104{}0.0043Function0.0041number0.0031
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.7409Function0.1695void0.0518boolean0.0067number0.0053
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+callbackName.Otherany0.8606Function0.0607void0.0399boolean0.0193number0.0039
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+callbackName.Otherany0.9140Function0.0367void0.0092{}0.0075boolean0.0058
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.9499{}0.0067Function0.0038Options0.0028number0.0026
+;Punctuation
+\n    Text.Whitespace
+optionsName.Otherany0.9165{}0.0381Options0.0033complex0.0023void0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+optionsName.Otherany0.8142complex0.0243Options0.0164{}0.0057void0.0030
+.Punctuation
+serverName.Otherany0.9298string0.0253Server0.0078void0.0075complex0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.8496complex0.0578Options0.0104{}0.0051Function0.0021
+.Punctuation
+serverName.Otherany0.9033Server0.0228string0.0135void0.0117complex0.0066
+  Text.Whitespace
+||Operator
+ Text.Whitespace
+netName.Otherany0.9918complex0.0015void0.0015JQuery0.0003string0.0002
+.Punctuation
+createServerName.Otherany0.9803complex0.0036void0.0019Server0.0014string0.0008
+(Punctuation
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+//Comment.Single
+\n    Text.Whitespace
+// Create an empty listener for the port testing server.Comment.Single
+\n    Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+debugTestPortName.Othervoid0.9011any0.0667complex0.0092Promise<void>0.0076string0.0017
+(Punctuation
+"entered testPort(): trying"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.8168complex0.0140Options0.0134{}0.0068NodeRequire0.0038
+.Punctuation
+hostName.Otherany0.7574string0.2153number0.0135complex0.0058void0.0041
+,Punctuation
+ Text.Whitespace
+"port"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.9357complex0.0117Options0.0035void0.0034{}0.0023
+.Punctuation
+portName.Otherany0.8534number0.1056string0.0304complex0.0048void0.0030
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+onListenName.Othervoid0.9923any0.0033complex0.0009Promise<void>0.0009string0.0006
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+debugTestPortName.Othervoid0.8075any0.1566string0.0087complex0.0069Promise<void>0.0043
+(Punctuation
+"done w/ testPort(): OK"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.6810Options0.0207complex0.0126{}0.0070NodeRequire0.0044
+.Punctuation
+hostName.Otherany0.5317string0.4425number0.0147complex0.0054void0.0018
+,Punctuation
+ Text.Whitespace
+"port"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.8068complex0.0219Options0.0100{}0.0055void0.0040
+.Punctuation
+portName.Otherany0.7239number0.2206string0.0444complex0.0052void0.0023
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+optionsName.Otherany0.7379complex0.0183Options0.0176{}0.0041ConnectionOptions0.0035
+.Punctuation
+serverName.Otherany0.9027Server0.0213void0.0142string0.0060OmniSharpServer0.0024
+.Punctuation
+removeListenerName.Otherany0.9223void0.0631complex0.0084string0.0013Function0.0009
+(Punctuation
+'error'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+onErrorName.Othervoid0.9595any0.0323Function0.0022Promise<void>0.0016boolean0.0011
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+optionsName.Otherany0.9296complex0.0110Options0.0027void0.0020Function0.0018
+.Punctuation
+serverName.Otherany0.9374void0.0135Server0.0115string0.0018Function0.0017
+.Punctuation
+closeName.Otherany0.8488void0.1360Promise<void>0.0050complex0.0022Function0.0014
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+callbackName.Otherany0.6404void0.1861Function0.1197Promise<void>0.0064Promise<any>0.0027
+(Punctuation
+nullKeyword.Constant
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.8857complex0.0129Options0.0075{}0.0036void0.0026
+.Punctuation
+portName.Otherany0.8085number0.1313string0.0501complex0.0046void0.0018
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+onErrorName.Othervoid0.9494any0.0386complex0.0026Function0.0025Promise<void>0.0012
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.8031Error0.1753string0.0061Buffer0.0012number0.0005
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+debugTestPortName.Othervoid0.6616any0.2785complex0.0162string0.0068Promise<void>0.0056
+(Punctuation
+"done w/ testPort(): failed"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.6505Options0.0269complex0.0076{}0.0057ConnectionOptions0.0046
+.Punctuation
+hostName.Otherany0.6097string0.3739number0.0074complex0.0045void0.0013
+,Punctuation
+ Text.Whitespace
+"w/ port"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.7279Options0.0130complex0.0106{}0.0066IOptions0.0039
+.Punctuation
+portName.Otherany0.7521number0.1931string0.0461complex0.0047void0.0010
+,Punctuation
+ Text.Whitespace
+"with error"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+errName.Otherany0.9203Error0.0440complex0.0097{}0.0010void0.0010
+.Punctuation
+codeName.Otherany0.9849string0.0074number0.0053void0.0010complex0.0007
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+optionsName.Otherany0.8398complex0.0103Options0.0061{}0.0038T0.0023
+.Punctuation
+serverName.Otherany0.9113Server0.0233void0.0147string0.0074Function0.0018
+.Punctuation
+removeListenerName.Otherany0.9242void0.0611complex0.0070string0.0021Function0.0008
+(Punctuation
+'listening'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+onListenName.Othervoid0.7186any0.2081string0.0379number0.0163complex0.0066
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+(Punctuation
+errName.Otherany0.9548Error0.0292complex0.0037string0.0012{}0.0006
+.Punctuation
+codeName.Otherany0.9851string0.0121complex0.0012number0.0007boolean0.0002
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+'EADDRINUSE'Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+errName.Otherany0.9482Error0.0333complex0.0051string0.0015{}0.0011
+.Punctuation
+codeName.Otherany0.9861string0.0103number0.0018complex0.0007boolean0.0002
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+'EACCES'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.6261void0.2000Function0.0979boolean0.0075Callback0.0046
+(Punctuation
+errName.Otherany0.8184Error0.1627string0.0056{}0.0014complex0.0014
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+nextPortName.Otherany0.7332string0.1208number0.0528void0.0352boolean0.0114
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nextPortName.Otherany0.7240string0.1147complex0.0563number0.0297void0.0153
+(Punctuation
+optionsName.Otherany0.8815complex0.0145Options0.0076{}0.0040number0.0030
+.Punctuation
+portName.Otherany0.7767number0.1597string0.0546complex0.0048void0.0008
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nextPortName.Otherany0.8016number0.1467string0.0173boolean0.0108complex0.0061
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+exportsName.Otherany0.8393complex0.1132any[]0.0039Object0.0030{}0.0029
+.Punctuation
+highestPortName.Otherany0.9412number0.0258string0.0153complex0.0062boolean0.0039
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.6733void0.1299Function0.0766boolean0.0092Callback0.0077
+(Punctuation
+newOperator.Wordany0.6586ErrorConstructor0.1547Error0.1331string0.0200complex0.0046
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor1.0000any0.0000Error0.0000complex0.0000never0.0000
+(Punctuation
+'No open ports available'Literal.String.Single
+)Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+internalsName.Otherany0.9540complex0.0030void0.0012Error0.0008string0.0007
+.Punctuation
+testPortName.Otherany0.5322void0.4377complex0.0088Promise<void>0.0048string0.0030
+(Punctuation
+{Punctuation
+\n      Text.Whitespace
+portName.Othernumber0.5364any0.3819string0.0680complex0.0030void0.0020
+:Operator
+ Text.Whitespace
+nextPortKeyword.Typenumber0.4394any0.4016string0.1133void0.0124boolean0.0052
+,Punctuation
+\n      Text.Whitespace
+hostName.Otherany0.6525string0.2920number0.0407void0.0040complex0.0026
+:Operator
+ Text.Whitespace
+options.hostKeyword.Type
+,Punctuation
+\n      Text.Whitespace
+serverName.Otherany0.7792string0.1320void0.0256number0.0134Server0.0071
+:Operator
+ Text.Whitespace
+options.serverKeyword.Type
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.5942void0.2462Function0.0750Promise<void>0.0089number0.0067
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+optionsName.Otherany0.8389complex0.0105Options0.0086void0.0041{}0.0026
+.Punctuation
+serverName.Otherany0.8840Server0.0390void0.0093OmniSharpServer0.0034string0.0016
+.Punctuation
+onceName.Otherany0.9739void0.0179complex0.0020Function0.0010string0.0003
+(Punctuation
+'error'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+onErrorName.Othervoid0.9581any0.0333Promise<void>0.0019Function0.0012boolean0.0011
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+optionsName.Otherany0.9269complex0.0038Options0.0023void0.0013Promise<any>0.0010
+.Punctuation
+serverName.Otherany0.9441Server0.0153void0.0047string0.0017OmniSharpServer0.0012
+.Punctuation
+onceName.Otherany0.9872void0.0082complex0.0010Function0.0005string0.0003
+(Punctuation
+'listening'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+onListenName.Othervoid0.7221any0.2104string0.0264number0.0209boolean0.0058
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.7573complex0.0137Options0.0091Promise<any>0.0039void0.0029
+.Punctuation
+hostName.Otherany0.8677string0.0911number0.0176void0.0092boolean0.0056
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+optionsName.Otherany0.8794complex0.0130Options0.0060Promise<any>0.0021void0.0017
+.Punctuation
+serverName.Otherany0.9574Server0.0107void0.0055string0.0020OmniSharpServer0.0008
+.Punctuation
+listenName.Otherany0.9211void0.0347complex0.0289string0.0017number0.0016
+(Punctuation
+optionsName.Otherany0.7813complex0.0164Options0.0108void0.0043Promise<any>0.0039
+.Punctuation
+portName.Otherany0.6880number0.2536string0.0502complex0.0045void0.0009
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.8682complex0.0229Options0.0064string0.0034number0.0030
+.Punctuation
+hostName.Otherany0.6374string0.3109number0.0370complex0.0067void0.0044
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+/*\n      Judgement of service without host\n      example:\n        express().listen(options.port)\n    */Comment.Multiline
+\n    Text.Whitespace
+optionsName.Otherany0.9035complex0.0105Options0.0054void0.0018Promise<any>0.0018
+.Punctuation
+serverName.Otherany0.9641void0.0070Server0.0062string0.0021Function0.0010
+.Punctuation
+listenName.Otherany0.9103void0.0407complex0.0329number0.0026string0.0020
+(Punctuation
+optionsName.Otherany0.7301complex0.0274Options0.0183void0.0053{}0.0052
+.Punctuation
+portName.Otherany0.6225number0.2583string0.1100complex0.0032void0.0017
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// ### @basePort {Number}Comment.Single
+\nText.Whitespace
+// The lowest port to begin any port search fromComment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+basePortName.Othernumber0.9398any0.0283void0.0178string0.0020boolean0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+8000Literal.Number.Float
+;Punctuation
+\n\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// ### function setBasePort (port)Comment.Single
+\nText.Whitespace
+// #### @port {Number} The new base portComment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+setBasePortName.Othervoid0.9733any0.0139Promise<void>0.0021Function0.0019number0.0018
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+portName.Otherany0.4768number0.4052string0.0773complex0.0048Function0.0046
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+basePortName.Otherany0.4392number0.3516string0.1368void0.0139Function0.0081
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+portName.Othernumber0.4874any0.4062string0.0797complex0.0051Function0.0025
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// ### @highestPort {Number}Comment.Single
+\nText.Whitespace
+// Largest port number is an unsigned short 2**16 -1=65335Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+highestPortName.Othernumber0.9111any0.0365void0.0273string0.0037Function0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+65535Literal.Number.Float
+;Punctuation
+\n\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// ### function setHighestPort (port)Comment.Single
+\nText.Whitespace
+// #### @port {Number} The new highest portComment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+setHighestPortName.Othervoid0.9677any0.0166Function0.0026number0.0022Promise<void>0.0022
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+portName.Otherany0.5011number0.3728string0.0840Function0.0052Buffer0.0048
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+highestPortName.Otherany0.3898number0.3389string0.1958Function0.0106boolean0.0088
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+portName.Othernumber0.4629any0.3904string0.1192complex0.0041Function0.0029
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// ### @basePath {string}Comment.Single
+\nText.Whitespace
+// Default path to begin any socket search fromComment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+basePathName.Otherstring0.7668any0.1900RegExp0.0166void0.0050number0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'/tmp/portfinder'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// ### function getPort (options, callback)Comment.Single
+\nText.Whitespace
+// #### @options {Object} Settings to use when finding the necessary portComment.Single
+\nText.Whitespace
+// #### @callback {function} Continuation to respond to when complete.Comment.Single
+\nText.Whitespace
+// Responds with a unbound port on the current machine.Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+getPortName.Othervoid0.5446any0.2123number0.0348Promise<void>0.0277Promise<{}>0.0204
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.8655Options0.0061Function0.0037T0.0029number0.0029
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.7082Function0.1980void0.0305number0.0083boolean0.0078
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+callbackName.Otherany0.8308Function0.0831void0.0241boolean0.0229number0.0087
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+callbackName.Otherany0.8658Function0.0593void0.0092boolean0.0087{}0.0080
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.9156{}0.0076number0.0036Function0.0034Options0.0032
+;Punctuation
+\n    Text.Whitespace
+optionsName.Otherany0.8688{}0.0441Options0.0042T0.0032complex0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+optionsName.Otherany0.7379complex0.0210Options0.0104{}0.0065IOptions0.0034
+.Punctuation
+portName.Otherany0.4911number0.4801complex0.0110string0.0104void0.0011
+   Text.Whitespace
+=Operator
+ Text.Whitespace
+NumberName.BuiltinNumberConstructor0.9967Number0.0005complex0.0001Math0.0001Window0.0000
+(Punctuation
+optionsName.Otherany0.6423complex0.0146Options0.0126{}0.0050NumberConstructor0.0032
+.Punctuation
+portName.Otherany0.6354number0.2880string0.0657complex0.0054Object0.0006
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+NumberName.BuiltinNumberConstructor0.9967Number0.0004Math0.0001complex0.0001any0.0001
+(Punctuation
+exportsName.Otherany0.9666complex0.0276{}0.0006any[]0.0005Object0.0005
+.Punctuation
+basePortName.Otherany0.9533string0.0218number0.0141complex0.0055void0.0022
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+optionsName.Otherany0.8001complex0.0184Options0.0078{}0.0044ConnectionOptions0.0026
+.Punctuation
+hostName.Otherany0.7747string0.1932number0.0172complex0.0076void0.0031
+   Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.8145complex0.0336Options0.0070string0.0041{}0.0037
+.Punctuation
+hostName.Otherany0.6380string0.3172number0.0214complex0.0152void0.0032
+    Text.Whitespace
+||Operator
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+optionsName.Otherany0.7692complex0.0137Options0.0081{}0.0048number0.0032
+.Punctuation
+stopPortName.Otherany0.7183number0.2070boolean0.0233complex0.0160string0.0108
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+NumberName.BuiltinNumberConstructor0.9965Number0.0004complex0.0001number[][]0.0000Math0.0000
+(Punctuation
+optionsName.Otherany0.5983Options0.0152complex0.0142{}0.0071NumberConstructor0.0061
+.Punctuation
+stopPortName.Otherany0.4841string0.3865number0.0819complex0.0161boolean0.0069
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+NumberName.BuiltinNumberConstructor0.9970Number0.0003any0.0001complex0.0001Math0.0001
+(Punctuation
+exportsName.Otherany0.9630complex0.0279{}0.0014Object0.0009any[]0.0006
+.Punctuation
+highestPortName.Otherany0.9503string0.0269number0.0131complex0.0037void0.0019
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+(Punctuation
+!Operator
+optionsName.Otherany0.6324Options0.0268complex0.0175{}0.0062ConnectionOptions0.0044
+.Punctuation
+startPortName.Otherany0.4810boolean0.2699string0.1105number0.0781void0.0277
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+optionsName.Otherany0.6080Options0.0194complex0.0097{}0.0053NumberConstructor0.0051
+.Punctuation
+startPortName.Otherany0.5535number0.4063string0.0098boolean0.0089complex0.0062
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+NumberName.BuiltinNumberConstructor0.9971Number0.0004any0.0001complex0.0000number0.0000
+(Punctuation
+optionsName.Otherany0.6141Options0.0162complex0.0121{}0.0056ConnectionOptions0.0041
+.Punctuation
+portName.Otherany0.7243number0.2057string0.0618complex0.0045void0.0006
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+(Punctuation
+optionsName.Otherany0.5751Options0.0263complex0.0173{}0.0061ConnectionOptions0.0049
+.Punctuation
+startPortName.Othernumber0.5605any0.4097string0.0113boolean0.0094void0.0044
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+throwKeywordany0.9597Error0.0234string0.0058complex0.0047number0.0030
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9997any0.0002Error0.0000complex0.0000void0.0000
+(Punctuation
+'Provided options.startPort('Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+optionsName.Otherany0.7951Options0.0167complex0.0153{}0.0058number0.0042
+.Punctuation
+startPortName.Otherany0.6805string0.2241number0.0847boolean0.0031complex0.0031
+ Text.Whitespace
++Operator
+ Text.Whitespace
+') is less than 0, which are cannot be bound.'Literal.String.Single
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+ifKeyword
+(Punctuation
+optionsName.Otherany0.6941Options0.0260complex0.0159number0.0068{}0.0057
+.Punctuation
+stopPortName.Otherany0.5832number0.2574boolean0.0673string0.0415void0.0252
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+optionsName.Otherany0.8346complex0.0176{}0.0104Options0.0087number0.0066
+.Punctuation
+startPortName.Otherany0.8880number0.0676string0.0227boolean0.0067void0.0067
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+throwKeywordany0.9581Error0.0237complex0.0060string0.0054number0.0033
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9996any0.0003Error0.0000complex0.0000void0.0000
+(Punctuation
+'Provided options.stopPort('Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+optionsName.Otherany0.8650complex0.0156Options0.0110{}0.0037number0.0031
+.Punctuation
+stopPortName.Otherany0.8113string0.1236number0.0569complex0.0025boolean0.0023
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'is less than options.startPort ('Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+optionsName.Otherany0.8652complex0.0158Options0.0095{}0.0053string0.0030
+.Punctuation
+startPortName.Otherany0.7877string0.1522number0.0507void0.0030boolean0.0026
+ Text.Whitespace
++Operator
+ Text.Whitespace
+')'Literal.String.Single
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.5761Options0.0237complex0.0208{}0.0178T0.0070
+.Punctuation
+hostName.Otherany0.6668string0.2498number0.0428complex0.0208boolean0.0086
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+exportsName.Otherany0.8656complex0.1204{}0.0022any[]0.0021Object0.0011
+.Punctuation
+_defaultHostsName.Otherany0.8638string[]0.0701any[]0.0283string0.0166complex0.0133
+.Punctuation
+indexOfName.Otherany0.5787number0.4138complex0.0033string0.0020void0.0010
+(Punctuation
+optionsName.Otherany0.8170complex0.0170Options0.0096{}0.0067string0.0039
+.Punctuation
+hostName.Otherstring0.5563any0.4050number0.0303complex0.0039void0.0007
+)Punctuation
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+exportsName.Otherany0.8770complex0.0944any[]0.0062{}0.0039Object0.0023
+.Punctuation
+_defaultHostsName.Otherany0.9311any[]0.0363string[]0.0115complex0.0101string0.0020
+.Punctuation
+pushName.Othernumber0.5139any0.4778complex0.0025string0.0018void0.0015
+(Punctuation
+optionsName.Otherany0.7399complex0.0397Options0.0160{}0.0113any[]0.0052
+.Punctuation
+hostName.Otherstring0.5439any0.4170number0.0211complex0.0107any[]0.0021
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+openPortsName.Otherany[]0.9405any0.0209string[]0.0130number[]0.0044{}0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+,Punctuation
+ Text.Whitespace
+currentHostName.Otherany0.7715number0.0766string0.0413void0.0329any[]0.0199
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+_asyncName.Otherany0.9766complex0.0145any[]0.0015{}0.0009string0.0006
+.Punctuation
+eachSeriesName.Otherany0.9570complex0.0116Promise<any>0.0054string0.0051T0.0047
+(Punctuation
+exportsName.Otherany0.9509complex0.0388any[]0.0017{}0.0016Object0.0009
+.Punctuation
+_defaultHostsName.Otherany0.9270string0.0206number0.0133complex0.0110any[]0.0103
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+hostName.Otherany0.8539string0.1255number0.0109complex0.0019any[]0.0010
+,Punctuation
+ Text.Whitespace
+nextName.Otherany0.8670string0.0428Function0.0136number0.0105void0.0089
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+debugGetPortName.Othervoid0.7993any0.1364complex0.0265string0.0051Promise<void>0.0042
+(Punctuation
+"in eachSeries() iteration callback: host is"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+hostName.Otherany0.8205string0.1421number0.0131complex0.0100void0.0016
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+internalsName.Otherany0.9707complex0.0115any[]0.0012string0.0009{}0.0008
+.Punctuation
+testPortName.Otherany0.9269complex0.0245void0.0094number0.0080string0.0072
+(Punctuation
+{Punctuation
+ Text.Whitespace
+hostName.Otherany0.7365string0.2273number0.0303complex0.0027void0.0008
+:Operator
+ Text.Whitespace
+hostKeyword.Typeany0.7128string0.2324number0.0436complex0.0040any[]0.0011
+,Punctuation
+ Text.Whitespace
+portName.Othernumber0.6573any0.2362string0.0826any[]0.0076complex0.0071
+:Operator
+ Text.Whitespace
+options.portKeyword.Type
+ Text.Whitespace
+}Punctuation
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+errName.Otherany0.8853Error0.0910string0.0067Buffer0.0014number0.0012
+,Punctuation
+ Text.Whitespace
+portName.Otherany0.6927number0.2533string0.0382complex0.0045Buffer0.0019
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.7932Error0.1813string0.0104boolean0.0015number0.0014
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+debugGetPortName.Othervoid0.7470any0.1867complex0.0232string0.0086Promise<void>0.0059
+(Punctuation
+"in eachSeries() iteration callback testPort() callback"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"with an err:"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+errName.Otherany0.9630Error0.0269complex0.0023string0.0007never0.0004
+.Punctuation
+codeName.Otherany0.9803string0.0106number0.0064void0.0009complex0.0006
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+currentHostName.Otherany0.7939string0.1510number0.0165void0.0144Function0.0029
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+hostName.Otherany0.8365string0.1354number0.0151complex0.0045void0.0024
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nextName.Otherany0.8690Function0.0184string0.0156Promise<any>0.0141void0.0126
+(Punctuation
+errName.Otherany0.8177Error0.1610string0.0071{}0.0025complex0.0019
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+debugGetPortName.Othervoid0.6689any0.2622complex0.0272string0.0101Promise<{}>0.0033
+(Punctuation
+"in eachSeries() iteration callback testPort() callback"Literal.String.Double
+,Punctuation
+\n                    Text.Whitespace
+"with a success for port"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+portName.Otherany0.4825number0.4236string0.0745complex0.0044void0.0023
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+openPortsName.Otherany[]0.6798any0.1771string[]0.0492number[]0.0150{}0.0050
+.Punctuation
+pushName.Othernumber0.9724any0.0248string0.0009void0.0007boolean0.0004
+(Punctuation
+portName.Otherany0.6136number0.3115string0.0643complex0.0021void0.0011
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nextName.Otherany0.7682Function0.0347string0.0286Promise<any>0.0266void0.0123
+(Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+errName.Otherany0.7147Error0.2518string0.0081Buffer0.0025complex0.0013
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.7291Error0.2456string0.0081boolean0.0017number0.0010
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+debugGetPortName.Othervoid0.6863any0.2303complex0.0313string0.0132Promise<void>0.0041
+(Punctuation
+"in eachSeries() result callback: err is"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+errName.Otherany0.6449Error0.3266string0.0114complex0.0028{}0.0018
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+// If we get EADDRNOTAVAIL it means the host is not bindable, so remove itComment.Single
+\n      Text.Whitespace
+// from exports._defaultHosts and start over. For ubuntu, we use EINVAL for the sameComment.Single
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.9101Error0.0714complex0.0027string0.0013boolean0.0007
+.Punctuation
+codeName.Otherany0.9864string0.0106complex0.0009number0.0009boolean0.0004
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'EADDRNOTAVAIL'Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+errName.Otherany0.9448Error0.0408complex0.0028string0.0014{}0.0008
+.Punctuation
+codeName.Otherany0.9900string0.0074number0.0012complex0.0007void0.0002
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'EINVAL'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.6785complex0.0202Options0.0202{}0.0073T0.0069
+.Punctuation
+hostName.Otherany0.6716string0.2859number0.0314complex0.0053void0.0022
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+currentHostName.Otherstring0.4246any0.3861number0.1539boolean0.0191void0.0075
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+// if bad address matches host given by user, tell themComment.Single
+\n          Text.Whitespace
+//Comment.Single
+\n          Text.Whitespace
+// NOTE: We may need to one day handle `my-non-existent-host.local` if usersComment.Single
+\n          Text.Whitespace
+// report frustration with passing in hostnames that DONT map to bindableComment.Single
+\n          Text.Whitespace
+// hosts, without showing them a good error.Comment.Single
+\n          Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+msgName.Otherstring0.9554any0.0419number0.0014complex0.0004void0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'Provided host 'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+optionsName.Otherany0.8522complex0.0207{}0.0059Options0.0053T0.0048
+.Punctuation
+hostName.Otherany0.7196string0.2559number0.0191complex0.0027void0.0013
+ Text.Whitespace
++Operator
+ Text.Whitespace
+' could NOT be bound. Please provide a different host address or hostname'Literal.String.Single
+;Punctuation
+\n          Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.5900void0.1419Function0.1173boolean0.0174T0.0127
+(Punctuation
+ErrorName.ExceptionErrorConstructor0.9988any0.0008Error0.0003complex0.0000string0.0000
+(Punctuation
+msgName.Otherstring0.7968any0.1902any[]0.0022number0.0019complex0.0018
+)Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+idxName.Otherany0.5357number0.4587string0.0020boolean0.0014complex0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+exportsName.Otherany0.9549complex0.0395any[]0.0011number0.0005{}0.0005
+.Punctuation
+_defaultHostsName.Otherany0.9836any[]0.0052string0.0037string[]0.0036complex0.0022
+.Punctuation
+indexOfName.Otherany0.8256number0.1693complex0.0020void0.0012string0.0009
+(Punctuation
+currentHostName.Otherany0.4696string0.2456number0.1472void0.0572complex0.0152
+)Punctuation
+;Punctuation
+\n          Text.Whitespace
+exportsName.Otherany0.9084complex0.0708any[]0.0037{}0.0032Object0.0015
+.Punctuation
+_defaultHostsName.Otherany0.8919any[]0.0464complex0.0397string[]0.0110number[]0.0021
+.Punctuation
+spliceName.Otherany0.5921complex0.3985void0.0038any[]0.0019number0.0008
+(Punctuation
+idxName.Othernumber0.9413any0.0548string0.0025void0.0006boolean0.0002
+,Punctuation
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+;Punctuation
+\n          Text.Whitespace
+returnKeyword
+ Text.Whitespace
+getPortName.Otherany0.4902number0.2824Promise<{}>0.0594void0.0238Promise<void>0.0204
+(Punctuation
+optionsName.Otherany0.9355number0.0067complex0.0035any[]0.0033{}0.0029
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.8144Function0.0906void0.0372number0.0261boolean0.0088
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+// error is not accounted for, file ticket, handle special caseComment.Single
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.7781Function0.0873void0.0860boolean0.0073number0.0073
+(Punctuation
+errName.Otherany0.8719Error0.1128string0.0037number0.0015{}0.0014
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// sort so we can compare first host to last hostComment.Single
+\n    Text.Whitespace
+openPortsName.Otherany0.6306any[]0.1328string[]0.0944number[]0.0209complex0.0090
+.Punctuation
+sortName.Otherany0.6845any[]0.1610complex0.0299number0.0283string[]0.0244
+(Punctuation
+functionKeyword.Declaration
+(Punctuation
+aName.Otherany0.8988number0.0678string0.0195complex0.0030Date0.0018
+,Punctuation
+ Text.Whitespace
+bName.Otherany0.9077number0.0497string0.0293complex0.0018{}0.0013
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+aName.Otherany0.7413number0.2375string0.0115complex0.0028{}0.0018
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+bName.Otherany0.6864number0.2809string0.0258complex0.0014{}0.0011
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+debugGetPortName.Othervoid0.7080any0.2382complex0.0132number0.0083Promise<void>0.0075
+(Punctuation
+"in eachSeries() result callback: openPorts is"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+openPortsName.Otherany0.7516number0.0868string0.0851void0.0240any[]0.0137
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+openPortsName.Otherany0.7597any[]0.0918string[]0.0375number[]0.0248complex0.0122
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+openPortsName.Otherany0.6336any[]0.1872string[]0.0393complex0.0334number[]0.0232
+[Punctuation
+openPortsName.Otherany0.5818any[]0.1499string[]0.1338string0.0368number[]0.0204
+.Punctuation
+lengthName.Othernumber0.6123any0.3836string0.0023complex0.0007void0.0003
+-Operator
+1Literal.Number.Float
+]Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// if first === last, we found an open portComment.Single
+\n      Text.Whitespace
+ifKeyword
+(Punctuation
+openPortsName.Otherany0.6113any[]0.1805complex0.0775number[]0.0266string[]0.0138
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+<=Operator
+ Text.Whitespace
+optionsName.Otherany0.8400complex0.0092number0.0089{}0.0044Options0.0034
+.Punctuation
+stopPortName.Otherany0.7781number0.1859string0.0193boolean0.0064void0.0034
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.7140Function0.1244void0.0785number0.0135boolean0.0055
+(Punctuation
+nullKeyword.Constant
+,Punctuation
+ Text.Whitespace
+openPortsName.Otherany0.5527any[]0.2286string[]0.0646complex0.0337number[]0.0282
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+msgName.Otherstring0.9670any0.0308number0.0012complex0.0003void0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'No open ports found in between 'Literal.String.Single
++Operator
+ Text.Whitespace
+optionsName.Otherany0.7325complex0.0380Options0.0114{}0.0059string0.0043
+.Punctuation
+startPortName.Otherany0.7630string0.1453number0.0793complex0.0041boolean0.0038
+ Text.Whitespace
++Operator
+ Text.Whitespace
+' and 'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+optionsName.Otherany0.8635complex0.0147{}0.0059string0.0058Options0.0050
+.Punctuation
+stopPortName.Otherany0.8089string0.1023number0.0480void0.0202boolean0.0095
+;Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.6363Function0.1199void0.0858boolean0.0144T0.0093
+(Punctuation
+ErrorName.ExceptionErrorConstructor0.9969any0.0019Error0.0006string0.0000complex0.0000
+(Punctuation
+msgName.Otherstring0.8926any0.1006number0.0020complex0.0008Error0.0007
+)Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// otherwise, try again, using sorted port, aka, highest open for >= 1 hostComment.Single
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+getPortName.Otherany0.4860number0.1701Promise<{}>0.1258Promise<void>0.0380void0.0333
+(Punctuation
+\n        Text.Whitespace
+{Punctuation
+ Text.Whitespace
+portName.Otherany0.6910number0.2276string0.0667complex0.0044void0.0025
+:Operator
+ Text.Whitespace
+openPorts.popKeyword.Type
+(Punctuation
+)Punctuation
+,Punctuation
+ Text.Whitespace
+hostName.Otherany0.5345string0.4413number0.0185complex0.0017boolean0.0008
+:Operator
+ Text.Whitespace
+options.hostKeyword.Type
+,Punctuation
+ Text.Whitespace
+startPortName.Otherany0.5186string0.3069number0.0992boolean0.0223any[]0.0145
+:Operator
+ Text.Whitespace
+options.startPortKeyword.Type
+,Punctuation
+ Text.Whitespace
+stopPortName.Otherany0.5309string0.2653number0.0964boolean0.0311any[]0.0200
+:Operator
+ Text.Whitespace
+options.stopPortKeyword.Type
+ Text.Whitespace
+}Punctuation
+,Punctuation
+\n        Text.Whitespace
+callbackName.Otherany0.6848void0.1567Function0.0666number0.0141boolean0.0102
+\n      Text.Whitespace
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// ### function getPortPromise (options)Comment.Single
+\nText.Whitespace
+// #### @options {Object} Settings to use when finding the necessary portComment.Single
+\nText.Whitespace
+// Responds a promise to an unbound port on the current machine.Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+getPortPromiseName.Othervoid0.4082any0.3059Promise<{}>0.0647Promise<any>0.0459Promise<void>0.0296
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.7287Options0.0303{}0.0128complex0.0107any[]0.0049
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+PromiseName.BuiltinPromiseConstructor0.5346any0.3940complex0.0441Promise<any>0.0046number0.0035
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.8852Error0.0898complex0.0086string0.0040{}0.0026
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9997any0.0001Error0.0001complex0.0000any[]0.0000
+(Punctuation
+'Native promise support is not available in this version of node.'Literal.String.Single
+ Text.Whitespace
++Operator
+\n      Text.Whitespace
+'Please install a polyfill and assign Promise to global.Promise before calling this method'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+optionsName.Otherany0.5225Options0.0382{}0.0274Promise<any>0.0140complex0.0089
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+optionsName.Otherany0.6335{}0.1230Promise<any>0.0163complex0.0123Options0.0115
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newOperator.Wordany0.6216PromiseConstructor0.1080Promise<{}>0.0660Promise<any>0.0254complex0.0116
+ Text.Whitespace
+PromiseName.BuiltinPromiseConstructor0.9750any0.0204complex0.0019Promise<any>0.0008Promise<{}>0.0005
+(Punctuation
+functionKeyword.Declaration
+(Punctuation
+resolveName.Otherany0.5040void0.4520Function0.0198string0.0087number0.0045
+,Punctuation
+ Text.Whitespace
+rejectName.Othervoid0.5820any0.3565Function0.0351boolean0.0065string0.0047
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+getPortName.Otherany0.8528number0.0499void0.0304complex0.0105Promise<{}>0.0068
+(Punctuation
+optionsName.Otherany0.9110complex0.0055Options0.0043number0.0036{}0.0027
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+errName.Otherany0.8244Error0.1590string0.0058number0.0011never0.0011
+,Punctuation
+ Text.Whitespace
+portName.Otherany0.5967number0.3496string0.0388complex0.0035Function0.0025
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.6567Error0.3212string0.0073number0.0017boolean0.0014
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+rejectName.Othervoid0.8070any0.1705Function0.0069complex0.0052Error0.0021
+(Punctuation
+errName.Otherany0.7251Error0.2580string0.0043never0.0018{}0.0011
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+resolveName.Othervoid0.9221any0.0696Function0.0020complex0.0016number0.0007
+(Punctuation
+portName.Otherany0.6254number0.2927string0.0670Function0.0018complex0.0016
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// ### function getPorts (count, options, callback)Comment.Single
+\nText.Whitespace
+// #### @count {Number} The number of ports to findComment.Single
+\nText.Whitespace
+// #### @options {Object} Settings to use when finding the necessary portComment.Single
+\nText.Whitespace
+// #### @callback {function} Continuation to respond to when complete.Comment.Single
+\nText.Whitespace
+// Responds with an array of unbound ports on the current machine.Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+getPortsName.Othervoid0.9915any0.0039Promise<void>0.0008complex0.0008Function0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+countName.Otherany0.7214number0.2426string0.0140void0.0090Function0.0031
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.8624Options0.0100Function0.0045number0.0040{}0.0031
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.6410Function0.2744void0.0442boolean0.0077number0.0071
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+callbackName.Otherany0.7809Function0.1288void0.0360boolean0.0216number0.0067
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+callbackName.Otherany0.8432Function0.0914void0.0113boolean0.0086{}0.0068
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.9037{}0.0102Function0.0056Options0.0044number0.0039
+;Punctuation
+\n    Text.Whitespace
+optionsName.Otherany0.8488{}0.0563Options0.0054never0.0045complex0.0041
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+lastPortName.Otherany0.7638string0.0597void0.0528number0.0156complex0.0126
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+_asyncName.Otherany0.9419complex0.0078void0.0029any[]0.0014{}0.0007
+.Punctuation
+timesSeriesName.Othervoid0.6297any0.3379complex0.0183string0.0023number0.0015
+(Punctuation
+countName.Othernumber0.6730any0.3022string0.0149void0.0040boolean0.0014
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+indexName.Othernumber0.5660any0.4256string0.0059boolean0.0005void0.0004
+,Punctuation
+ Text.Whitespace
+asyncCallbackName.Otherany0.5652number0.2392void0.0970string0.0425boolean0.0291
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+lastPortName.Otherany0.6199boolean0.2385number0.0487string0.0350void0.0189
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+optionsName.Otherany0.8104complex0.0185Options0.0094{}0.0054number0.0041
+.Punctuation
+portName.Otherany0.8669number0.0953string0.0266complex0.0062void0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nextPortName.Otherany0.6048void0.1554number0.1218string0.0744complex0.0169
+(Punctuation
+lastPortName.Otherany0.5732number0.2076string0.0953void0.0760any[]0.0138
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+getPortName.Othervoid0.5127any0.3731number0.0525complex0.0100Promise<{}>0.0072
+(Punctuation
+optionsName.Otherany0.8911Options0.0083complex0.0071number0.0055{}0.0035
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.8393Error0.1424string0.0061number0.0011never0.0010
+,Punctuation
+ Text.Whitespace
+portName.Otherany0.5894number0.3602string0.0326complex0.0058Function0.0022
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.6547Error0.3166string0.0110boolean0.0017number0.0017
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+asyncCallbackName.Othervoid0.8837any0.0808complex0.0133string0.0040Function0.0027
+(Punctuation
+errName.Otherany0.7076Error0.2658string0.0079complex0.0022number0.0017
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+lastPortName.Otherany0.8681string0.0716number0.0416void0.0087complex0.0025
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+portName.Otherany0.8134number0.1519string0.0224complex0.0048Function0.0014
+;Punctuation
+\n        Text.Whitespace
+asyncCallbackName.Othervoid0.9548any0.0341complex0.0037number0.0018string0.0017
+(Punctuation
+nullKeyword.Constant
+,Punctuation
+ Text.Whitespace
+portName.Otherany0.6125number0.3185string0.0506complex0.0035void0.0024
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.4692void0.3028Function0.1729boolean0.0070number0.0037
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// ### function getSocket (options, callback)Comment.Single
+\nText.Whitespace
+// #### @options {Object} Settings to use when finding the necessary portComment.Single
+\nText.Whitespace
+// #### @callback {function} Continuation to respond to when complete.Comment.Single
+\nText.Whitespace
+// Responds with a unbound socket using the specified directory and baseComment.Single
+\nText.Whitespace
+// name on the current machine.Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+getSocketName.Othervoid0.9903any0.0046Function0.0013Promise<void>0.0007complex0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.8221Options0.0092Function0.0068{}0.0049void0.0038
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.6019Function0.2922void0.0525number0.0084boolean0.0075
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+callbackName.Otherany0.8184Function0.1034void0.0286boolean0.0151number0.0069
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+callbackName.Otherany0.8658Function0.0691void0.0112boolean0.0073{}0.0069
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.9103{}0.0103Function0.0045Options0.0039number0.0035
+;Punctuation
+\n    Text.Whitespace
+optionsName.Otherany0.8408{}0.0676Options0.0051complex0.0034Function0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+optionsName.Otherany0.7283complex0.0325Options0.0121{}0.0112number0.0075
+.Punctuation
+modName.Otherany0.7069number0.2286string0.0392complex0.0178void0.0018
+  Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.7535complex0.0487Options0.0142number0.0076ConnectionOptions0.0051
+.Punctuation
+modName.Otherany0.7248number0.1984string0.0524complex0.0174void0.0010
+    Text.Whitespace
+||Operator
+ Text.Whitespace
+parseIntName.Builtinnumber0.9592any0.0340string0.0034complex0.0010boolean0.0008
+(Punctuation
+755Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+8Literal.Number.Float
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+optionsName.Otherany0.8869complex0.0128Options0.0058{}0.0043string0.0028
+.Punctuation
+pathName.Otherany0.7773string0.2172complex0.0034number0.0005{}0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.8084complex0.0148Options0.0137{}0.0085T0.0046
+.Punctuation
+pathName.Otherany0.8027string0.1883complex0.0068number0.0004boolean0.0003
+   Text.Whitespace
+||Operator
+ Text.Whitespace
+exportsName.Otherany0.9525complex0.0403{}0.0017any[]0.0009Object0.0006
+.Punctuation
+basePathName.Otherany0.9825string0.0157void0.0008complex0.0005number0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'.sock'Literal.String.Single
+;Punctuation
+\n\n  Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+// Tests the specified socketComment.Single
+\n  Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+testSocketName.Othervoid0.9924any0.0040string0.0009complex0.0007boolean0.0007
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+fsName.Otherany0.9982complex0.0007string0.0001any[]0.0001Buffer0.0000
+.Punctuation
+statName.Otherany0.9683void0.0178complex0.0094string0.0005Promise<any>0.0004
+(Punctuation
+optionsName.Otherany0.8640complex0.0152Options0.0080string0.0050{}0.0047
+.Punctuation
+pathName.Otherany0.6870string0.3057complex0.0048number0.0005any[]0.0004
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.9320Error0.0525string0.0089complex0.0006number0.0005
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+//Comment.Single
+\n      Text.Whitespace
+// If file we're checking doesn't exist (thus, stating it emits ENOENT),Comment.Single
+\n      Text.Whitespace
+// we should be OK with listening on this socket.Comment.Single
+\n      Text.Whitespace
+//Comment.Single
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.9003Error0.0846string0.0070boolean0.0010complex0.0008
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.9696Error0.0226complex0.0014string0.0011{}0.0003
+.Punctuation
+codeName.Otherany0.9897string0.0086number0.0005complex0.0005void0.0002
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+'ENOENT'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+callbackName.Otherany0.6648void0.2027Function0.0958boolean0.0029Callback0.0020
+(Punctuation
+nullKeyword.Constant
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.8727complex0.0092Options0.0088{}0.0055string0.0027
+.Punctuation
+pathName.Otherany0.6622string0.3267complex0.0043number0.0012any[]0.0009
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n        Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+callbackName.Otherany0.5011void0.3366Function0.1262boolean0.0028string0.0027
+(Punctuation
+errName.Otherany0.9026Error0.0767string0.0104complex0.0017{}0.0014
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+//Comment.Single
+\n        Text.Whitespace
+// This file exists, so it isn't possible to listen on it. Lets tryComment.Single
+\n        Text.Whitespace
+// next socket.Comment.Single
+\n        Text.Whitespace
+//Comment.Single
+\n        Text.Whitespace
+optionsName.Otherany0.8171complex0.0339{}0.0131Options0.0120void0.0035
+.Punctuation
+pathName.Otherany0.7203string0.2674complex0.0082void0.0008number0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nextSocketName.Otherany0.6213string0.3010complex0.0299void0.0229number0.0042
+(Punctuation
+optionsName.Otherany0.8748complex0.0239Options0.0123{}0.0061string0.0028
+.Punctuation
+pathName.Otherany0.7988string0.1913complex0.0064{}0.0008number0.0006
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+getSocketName.Othervoid0.8936any0.0804complex0.0082string0.0041Promise<void>0.0025
+(Punctuation
+optionsName.Otherany0.8659{}0.0112Options0.0091complex0.0084string0.0028
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.7401void0.1160Function0.1035boolean0.0056number0.0053
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+// Create the target `dir` then test connectionComment.Single
+\n  Text.Whitespace
+// against the socket.Comment.Single
+\n  Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+createAndTestSocketName.Othervoid0.6570any0.2507string0.0308complex0.0205boolean0.0069
+ Text.Whitespace
+(Punctuation
+dirName.Otherstring0.6081any0.3839number0.0017Function0.0006complex0.0005
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+mkdirpName.Otherany0.8942void0.0904complex0.0070Function0.0017string0.0016
+(Punctuation
+dirName.Otherstring0.5318any0.4645number0.0011complex0.0004any[]0.0002
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.7642Options0.0194complex0.0047string0.0045{}0.0037
+.Punctuation
+modName.Otherany0.6509string0.2551number0.0785complex0.0050boolean0.0022
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.8707Error0.1063string0.0110never0.0009number0.0008
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.8068Error0.1678string0.0095boolean0.0018number0.0014
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+callbackName.Otherany0.6750Function0.1705void0.0811boolean0.0092number0.0050
+(Punctuation
+errName.Otherany0.7863Error0.1894string0.0073{}0.0023complex0.0020
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+optionsName.Otherany0.8440complex0.0180Options0.0089void0.0055{}0.0038
+.Punctuation
+existsName.Otherboolean0.6190any0.3689void0.0036true0.0021string0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+testSocketName.Othervoid0.9632any0.0271complex0.0027string0.0022boolean0.0012
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+// Check if the parent directory of the targetComment.Single
+\n  Text.Whitespace
+// socket path exists. If it does, test connectionComment.Single
+\n  Text.Whitespace
+// against the socket. Otherwise, create the directoryComment.Single
+\n  Text.Whitespace
+// then test connection.Comment.Single
+\n  Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+checkAndTestSocketName.Othervoid0.5067any0.3089string0.1107boolean0.0315complex0.0136
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+dirName.Otherany0.8348string0.1635complex0.0006number0.0004boolean0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherany0.9876string0.0074complex0.0028Path0.0010any[]0.0003
+.Punctuation
+dirnameName.Otherany0.8349complex0.1483string0.0101Path0.0011{}0.0010
+(Punctuation
+optionsName.Otherany0.7000complex0.0193Options0.0135string0.0127{}0.0079
+.Punctuation
+pathName.Otherstring0.7217any0.2697complex0.0037number0.0014string[]0.0010
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+fsName.Otherany0.9954complex0.0019string0.0003any[]0.0002Buffer0.0001
+.Punctuation
+statName.Otherany0.9598complex0.0244void0.0095string0.0011number0.0008
+(Punctuation
+dirName.Otherstring0.6233any0.3719number0.0021complex0.0013any[]0.0002
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.9243Error0.0459string0.0210number0.0013Buffer0.0007
+,Punctuation
+ Text.Whitespace
+statsName.Otherany0.9683Buffer0.0044Stats0.0014string0.0013complex0.0013
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.8565Error0.1145string0.0111boolean0.0037complex0.0020
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+!Operator
+statsName.Otherany0.9821complex0.0020Stats0.0008Buffer0.0007number0.0004
+.Punctuation
+isDirectoryName.Otherany0.9510boolean0.0333complex0.0117string0.0011void0.0005
+(Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+createAndTestSocketName.Otherany0.6252string0.1218void0.0961boolean0.0326complex0.0225
+(Punctuation
+dirName.Otherany0.5781string0.4140number0.0015complex0.0009boolean0.0009
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+optionsName.Otherany0.6995complex0.0185Options0.0096{}0.0059any[]0.0059
+.Punctuation
+existsName.Otherboolean0.7481any0.2396string0.0026true0.0024number0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n      Text.Whitespace
+testSocketName.Othervoid0.9208any0.0509string0.0073complex0.0066boolean0.0028
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+// If it has been explicitly stated that theComment.Single
+\n  Text.Whitespace
+// target `options.path` already exists, thenComment.Single
+\n  Text.Whitespace
+// simply test the socket.Comment.Single
+\n  Text.Whitespace
+//Comment.Single
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+optionsName.Otherany0.6786Options0.0266complex0.0129Promise<any>0.0059IOptions0.0053
+.Punctuation
+existsName.Otherboolean0.7132any0.2709string0.0034complex0.0023number0.0022
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+testSocketName.Otherany0.7011string0.1050boolean0.0777void0.0153complex0.0151
+(Punctuation
+)Punctuation
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+checkAndTestSocketName.Otherany0.6861void0.1405string0.0750complex0.0141number0.0136
+(Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// ### function nextPort (port)Comment.Single
+\nText.Whitespace
+// #### @port {Number} Port to increment from.Comment.Single
+\nText.Whitespace
+// Gets the next port in sequence from theComment.Single
+\nText.Whitespace
+// specified `port`.Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nextPortName.Otherstring0.4274any0.2783number0.2063boolean0.0415void0.0270
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+portName.Otherany0.5898number0.3358string0.0607complex0.0030Function0.0018
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+portName.Othernumber0.8008any0.1740string0.0233complex0.0008void0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// ### function nextSocket (socketPath)Comment.Single
+\nText.Whitespace
+// #### @socketPath {string} Path to increment fromComment.Single
+\nText.Whitespace
+// Gets the next socket path in sequence from theComment.Single
+\nText.Whitespace
+// specified `socketPath`.Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+nextSocketName.Othervoid0.6631any0.2404string0.0472number0.0103complex0.0084
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+socketPathName.Otherany0.8825string0.0855boolean0.0068number0.0047Function0.0028
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+dirName.Otherany0.9112string0.0876complex0.0005number0.0002any[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherany0.9938string0.0046complex0.0011Path0.0001any[]0.0001
+.Punctuation
+dirnameName.Otherany0.9291complex0.0559string0.0130{}0.0003any[]0.0002
+(Punctuation
+socketPathName.Otherstring0.5450any0.4246number0.0177boolean0.0049complex0.0017
+)Punctuation
+,Punctuation
+\n      Text.Whitespace
+nameName.Otherany0.9079string0.0915complex0.0003number0.0002boolean0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherany0.9956string0.0028complex0.0013any[]0.0000Path0.0000
+.Punctuation
+basenameName.Otherany0.9555complex0.0400string0.0034{}0.0003any[]0.0002
+(Punctuation
+socketPathName.Otherany0.5698string0.3943number0.0176boolean0.0051RegExp0.0042
+,Punctuation
+ Text.Whitespace
+'.sock'Literal.String.Single
+)Punctuation
+,Punctuation
+\n      Text.Whitespace
+matchName.Otherany0.9586string0.0204RegExpMatchArray0.0045RegExpExecArray0.0038complex0.0038
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nameName.Otherany0.8875string0.1115complex0.0004number0.0003boolean0.0001
+.Punctuation
+matchName.Otherany0.8637complex0.1265string0.0067boolean0.0012any[]0.0004
+(Punctuation
+/^([a-zA-z]+)(\d*)$/iLiteral.String.Regex
+)Punctuation
+,Punctuation
+\n      Text.Whitespace
+indexName.Othernumber0.8906any0.1041string0.0033complex0.0007boolean0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parseIntName.Builtinnumber0.9308any0.0598string0.0068boolean0.0010complex0.0006
+(Punctuation
+matchName.Otherany0.9550string0.0251any[]0.0041complex0.0041RegExpExecArray0.0038
+[Punctuation
+2Literal.Number.Float
+]Punctuation
+)Punctuation
+,Punctuation
+\n      Text.Whitespace
+baseName.Otherany0.7476string0.2482number0.0023complex0.0008any[]0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+matchName.Otherany0.9512string0.0162any[]0.0077complex0.0070RegExpMatchArray0.0068
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isNaNName.Builtinboolean0.9440any0.0318string0.0119number0.0055complex0.0036
+(Punctuation
+indexName.Othernumber0.7823any0.2115string0.0051boolean0.0003complex0.0003
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+indexName.Othernumber0.9004any0.0967string0.0021boolean0.0002complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+indexName.Othernumber0.9413any0.0511string0.0067void0.0003complex0.0002
+ Text.Whitespace
++=Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+pathName.Otherany0.9957complex0.0017string0.0017any[]0.0004string[]0.0002
+.Punctuation
+joinName.Otherany0.9867complex0.0097string0.0028number0.0004void0.0001
+(Punctuation
+dirName.Otherstring0.6861any0.3106number0.0021complex0.0004boolean0.0002
+,Punctuation
+ Text.Whitespace
+baseName.Otherstring0.5926any0.3929number0.0128complex0.0004boolean0.0002
+ Text.Whitespace
++Operator
+ Text.Whitespace
+indexName.Othernumber0.5942any0.3605string0.0441boolean0.0003complex0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'.sock'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * @desc List of internal hostnames provided by your machine. A user\n *       provided hostname may also be provided when calling portfinder.getPort,\n *       which would then be added to the default hosts we lookup and return here.\n *\n * @return {array}\n *\n * Long Form Explantion:\n *\n *    - Input: (os.networkInterfaces() w/ MacOS 10.11.5+ and running a VM)\n *\n *        { lo0:\n *         [ { address: '::1',\n *             netmask: 'ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff',\n *             family: 'IPv6',\n *             mac: '00:00:00:00:00:00',\n *             scopeid: 0,\n *             internal: true },\n *           { address: '127.0.0.1',\n *             netmask: '255.0.0.0',\n *             family: 'IPv4',\n *             mac: '00:00:00:00:00:00',\n *             internal: true },\n *           { address: 'fe80::1',\n *             netmask: 'ffff:ffff:ffff:ffff::',\n *             family: 'IPv6',\n *             mac: '00:00:00:00:00:00',\n *             scopeid: 1,\n *             internal: true } ],\n *        en0:\n *         [ { address: 'fe80::a299:9bff:fe17:766d',\n *             netmask: 'ffff:ffff:ffff:ffff::',\n *             family: 'IPv6',\n *             mac: 'a0:99:9b:17:76:6d',\n *             scopeid: 4,\n *             internal: false },\n *           { address: '10.0.1.22',\n *             netmask: '255.255.255.0',\n *             family: 'IPv4',\n *             mac: 'a0:99:9b:17:76:6d',\n *             internal: false } ],\n *        awdl0:\n *         [ { address: 'fe80::48a8:37ff:fe34:aaef',\n *             netmask: 'ffff:ffff:ffff:ffff::',\n *             family: 'IPv6',\n *             mac: '4a:a8:37:34:aa:ef',\n *             scopeid: 8,\n *             internal: false } ],\n *        vnic0:\n *         [ { address: '10.211.55.2',\n *             netmask: '255.255.255.0',\n *             family: 'IPv4',\n *             mac: '00:1c:42:00:00:08',\n *             internal: false } ],\n *        vnic1:\n *         [ { address: '10.37.129.2',\n *             netmask: '255.255.255.0',\n *             family: 'IPv4',\n *             mac: '00:1c:42:00:00:09',\n *             internal: false } ] }\n *\n *    - Output:\n *\n *         [\n *          '0.0.0.0',\n *          '::1',\n *          '127.0.0.1',\n *          'fe80::1',\n *          '10.0.1.22',\n *          'fe80::48a8:37ff:fe34:aaef',\n *          '10.211.55.2',\n *          '10.37.129.2'\n *         ]\n *\n *     Note we export this so we can use it in our tests, otherwise this API is private\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+_defaultHostsName.Othervoid0.8991any0.0567complex0.0110Promise<void>0.0048Function0.0045
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+interfacesName.Other{}0.5647any0.3817complex0.0217Object0.0033object0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+tryKeyword
+{Punctuation
+\n    Text.Whitespace
+interfacesName.Otherany0.9616any[]0.0147complex0.0100{}0.0051string0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+osName.Otherany0.9991complex0.0007string0.0001any[]0.0000number0.0000
+.Punctuation
+networkInterfacesName.Otherany0.8617complex0.0909any[]0.0220string0.0074string[]0.0048
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+catchKeyword
+(Punctuation
+eName.Otherany0.9993complex0.0002string0.0002Error0.0001number0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// As of October 2016, Windows Subsystem for Linux (WSL) does not supportComment.Single
+\n    Text.Whitespace
+// the os.networkInterfaces() call and throws instead. For this platform,Comment.Single
+\n    Text.Whitespace
+// assume 0.0.0.0 as the only addressComment.Single
+\n    Text.Whitespace
+//Comment.Single
+\n    Text.Whitespace
+// - https://github.com/Microsoft/BashOnWindows/issues/468Comment.Single
+\n    Text.Whitespace
+//Comment.Single
+\n    Text.Whitespace
+// - Workaround is a mix of good work from the community:Comment.Single
+\n    Text.Whitespace
+//   - https://github.com/http-party/node-portfinder/commit/8d7e30a648ff5034186551fa8a6652669dec2f2fComment.Single
+\n    Text.Whitespace
+//   - https://github.com/yarnpkg/yarn/pull/772/filesComment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+eName.Otherany0.9987complex0.0004Error0.0003string0.0002number0.0001
+.Punctuation
+syscallName.Otherany0.9910string0.0046void0.0012number0.0011boolean0.0006
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'uv_interface_addresses'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// swallow error because we're just going to use defaultsComment.Single
+\n      Text.Whitespace
+// documented @ https://github.com/nodejs/node/blob/4b65a65e75f48ff447cabd5500ce115fb5ad4c57/doc/api/net.md#L231Comment.Single
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+throwKeywordany0.9422Error0.0323string0.0084complex0.0058{}0.0041
+ Text.Whitespace
+eName.Otherany0.9911Error0.0045complex0.0012string0.0011{}0.0006
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+interfaceNamesName.Otherstring[]0.4697any0.2391string0.1837any[]0.0381complex0.0244
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998complex0.0001Object0.0000any0.0000{}0.0000
+.Punctuation
+keysName.Otherstring[]0.9925complex0.0031string0.0014any[]0.0010number[]0.0003
+(Punctuation
+interfacesName.Otherany0.6730complex0.1313{}0.0643string[]0.0290any[]0.0158
+)Punctuation
+,Punctuation
+\n      Text.Whitespace
+hiddenButImportantHostName.Otherstring0.6377any0.1460string[]0.1068RegExp0.0843complex0.0028
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'0.0.0.0'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+// !important - dont remove, hence the naming :)Comment.Single
+\n      Text.Whitespace
+resultsName.Otherany[]0.5626string[]0.1509any0.0961complex0.0691number[]0.0186
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+hiddenButImportantHostName.Otherstring0.6501number0.1850any0.1212string[]0.0127complex0.0075
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9956any0.0035string0.0005complex0.0001boolean0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9904any0.0081string0.0010void0.0001complex0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+interfaceNamesName.Otherstring[]0.6218any0.2026any[]0.0673string0.0258string[][]0.0072
+.Punctuation
+lengthName.Othernumber0.9477any0.0501string0.0013complex0.0002void0.0002
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9854any0.0134string0.0008boolean0.0001void0.0001
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+_interfaceName.Otherany0.8480string0.0443string[]0.0175number0.0108any[]0.0070
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+interfacesName.Otherany0.6705string[]0.0823complex0.0409any[]0.0315{}0.0198
+[Punctuation
+interfaceNamesName.Otherstring[]0.8728any[]0.0576any0.0392number[]0.0047string0.0039
+[Punctuation
+iName.Othernumber0.9736any0.0154string0.0097complex0.0002number[]0.0002
+]Punctuation
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+jName.Othernumber0.9938any0.0052string0.0005complex0.0001boolean0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+jName.Othernumber0.9905any0.0080string0.0006void0.0003boolean0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+_interfaceName.Otherstring[]0.5189any0.2830any[]0.0824string0.0285number[]0.0116
+.Punctuation
+lengthName.Othernumber0.9254any0.0721string0.0015complex0.0003void0.0002
+;Punctuation
+ Text.Whitespace
+jName.Othernumber0.9859any0.0129string0.0008boolean0.0001void0.0001
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+currName.Otherany0.7924string0.0466number0.0146any[]0.0131T0.0115
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+_interfaceName.Otherany0.4066string[]0.2459any[]0.1948number[]0.0279complex0.0221
+[Punctuation
+jName.Othernumber0.9786any0.0136string0.0068complex0.0002boolean0.0002
+]Punctuation
+;Punctuation
+\n      Text.Whitespace
+resultsName.Otherany[]0.8093string[]0.0687any0.0434complex0.0165number[]0.0132
+.Punctuation
+pushName.Othernumber0.9876any0.0098string0.0007void0.0004boolean0.0003
+(Punctuation
+currName.Otherany0.6658T0.0240string0.0137{}0.0096Error0.0087
+.Punctuation
+addressName.Otherany0.7786string0.2121number0.0029string[]0.0013complex0.0012
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// add null value, For createServer function, do not use host.Comment.Single
+\n  Text.Whitespace
+resultsName.Otherany[]0.8717any0.0402string[]0.0133complex0.0111number[]0.0038
+.Punctuation
+pushName.Othernumber0.9708any0.0257string0.0012void0.0006boolean0.0005
+(Punctuation
+nullKeyword.Constant
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+debugDefaultHostsName.Othervoid0.8370any0.0972string0.0109complex0.0107Function0.0061
+(Punctuation
+"exports._defaultHosts is: %o"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+resultsName.Otherany[]0.4331string[]0.0651any0.0593complex0.0238number[]0.0120
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultsName.Otherany[]0.5755string[]0.0583any0.0563complex0.0158number[]0.0121
+;Punctuation
+\nText.Whitespace
+}Punctuation
+(Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace

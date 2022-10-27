@@ -1,0 +1,89 @@
+examples/bench.ts(7,29): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
+examples/bench.ts(14,29): error TS2322: Type '(directory: string) => Promise<void>' is not assignable to type 'Promise<void>'.
+examples/bench.ts(35,1): error TS2349: This expression is not callable.
+  Type 'Promise<void>' has no call signatures.
+examples/grep.ts(4,16): error TS2307: Cannot find module 'event-stream' or its corresponding type declarations.
+examples/grep.ts(11,29): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+examples/grep.ts(30,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+examples/list.ts(7,29): error TS2322: Type '(directory: string) => Promise<void>' is not assignable to type 'Promise<void>'.
+examples/list.ts(25,1): error TS2349: This expression is not callable.
+  Type 'Promise<void>' has no call signatures.
+index.ts(24,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
+index.ts(25,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
+index.ts(26,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
+index.ts(27,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
+index.ts(54,14): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+index.ts(72,30): error TS2339: Property 'highWaterMark' does not exist on type '{}'.
+index.ts(77,10): error TS2339: Property '_fileFilter' does not exist on type 'ReaddirpStream'.
+index.ts(78,10): error TS2339: Property '_directoryFilter' does not exist on type 'ReaddirpStream'.
+index.ts(83,12): error TS2339: Property '_stat' does not exist on type 'ReaddirpStream'.
+index.ts(85,12): error TS2339: Property '_stat' does not exist on type 'ReaddirpStream'.
+index.ts(88,10): error TS2339: Property '_maxDepth' does not exist on type 'ReaddirpStream'.
+index.ts(89,10): error TS2339: Property '_wantsDir' does not exist on type 'ReaddirpStream'.
+index.ts(90,10): error TS2339: Property '_wantsFile' does not exist on type 'ReaddirpStream'.
+index.ts(91,10): error TS2339: Property '_wantsEverything' does not exist on type 'ReaddirpStream'.
+index.ts(92,10): error TS2339: Property '_root' does not exist on type 'ReaddirpStream'.
+index.ts(93,10): error TS2339: Property '_isDirent' does not exist on type 'ReaddirpStream'.
+index.ts(94,10): error TS2339: Property '_statsProp' does not exist on type 'ReaddirpStream'.
+index.ts(94,28): error TS2339: Property '_isDirent' does not exist on type 'ReaddirpStream'.
+index.ts(95,10): error TS2339: Property '_rdOptions' does not exist on type 'ReaddirpStream'.
+index.ts(95,63): error TS2339: Property '_isDirent' does not exist on type 'ReaddirpStream'.
+index.ts(98,10): error TS2339: Property 'parents' does not exist on type 'ReaddirpStream'.
+index.ts(99,10): error TS2339: Property 'reading' does not exist on type 'ReaddirpStream'.
+index.ts(100,10): error TS2339: Property 'parent' does not exist on type 'ReaddirpStream'.
+index.ts(103,15): error TS7006: Parameter 'batch' implicitly has an 'any' type.
+index.ts(104,14): error TS2339: Property 'reading' does not exist on type 'ReaddirpStream'.
+index.ts(105,10): error TS2339: Property 'reading' does not exist on type 'ReaddirpStream'.
+index.ts(109,50): error TS2339: Property 'parent' does not exist on type 'ReaddirpStream'.
+index.ts(116,19): error TS2322: Type 'void | "file" | "directory"' is not assignable to type 'boolean'.
+  Type 'void' is not assignable to type 'boolean'.
+index.ts(117,17): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
+index.ts(117,51): error TS2339: Property '_directoryFilter' does not exist on type 'ReaddirpStream'.
+index.ts(118,33): error TS2339: Property '_maxDepth' does not exist on type 'ReaddirpStream'.
+index.ts(119,22): error TS2339: Property 'parents' does not exist on type 'ReaddirpStream'.
+index.ts(122,24): error TS2339: Property '_wantsDir' does not exist on type 'ReaddirpStream'.
+index.ts(126,25): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
+index.ts(126,85): error TS2339: Property '_fileFilter' does not exist on type 'ReaddirpStream'.
+index.ts(127,24): error TS2339: Property '_wantsFile' does not exist on type 'ReaddirpStream'.
+index.ts(134,36): error TS2339: Property 'parents' does not exist on type 'ReaddirpStream'.
+index.ts(139,16): error TS2339: Property 'parent' does not exist on type 'ReaddirpStream'.
+index.ts(144,20): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Error | undefined'.
+index.ts(146,12): error TS2339: Property 'reading' does not exist on type 'ReaddirpStream'.
+index.ts(150,21): error TS7006: Parameter 'path' implicitly has an 'any' type.
+index.ts(150,27): error TS7006: Parameter 'depth' implicitly has an 'any' type.
+index.ts(153,40): error TS2339: Property '_rdOptions' does not exist on type 'ReaddirpStream'.
+index.ts(157,14): error TS2454: Variable 'files' is used before being assigned.
+index.ts(160,22): error TS7006: Parameter 'dirent' implicitly has an 'any' type.
+index.ts(160,30): error TS7006: Parameter 'path' implicitly has an 'any' type.
+index.ts(163,37): error TS2339: Property '_isDirent' does not exist on type 'ReaddirpStream'.
+index.ts(165,45): error TS2339: Property '_root' does not exist on type 'ReaddirpStream'.
+index.ts(166,18): error TS2339: Property '_statsProp' does not exist on type 'ReaddirpStream'.
+index.ts(166,37): error TS2339: Property '_isDirent' does not exist on type 'ReaddirpStream'.
+index.ts(166,69): error TS2339: Property '_stat' does not exist on type 'ReaddirpStream'.
+index.ts(173,12): error TS7006: Parameter 'err' implicitly has an 'any' type.
+index.ts(181,23): error TS7006: Parameter 'entry' implicitly has an 'any' type.
+index.ts(184,44): error TS2339: Property '_statsProp' does not exist on type 'ReaddirpStream'.
+index.ts(219,18): error TS7006: Parameter 'entry' implicitly has an 'any' type.
+index.ts(220,44): error TS2339: Property '_statsProp' does not exist on type 'ReaddirpStream'.
+index.ts(222,26): error TS2339: Property '_wantsEverything' does not exist on type 'ReaddirpStream'.
+index.ts(242,24): error TS7006: Parameter 'root' implicitly has an 'any' type.
+index.ts(243,22): error TS2339: Property 'entryType' does not exist on type '{}'.
+index.ts(243,43): error TS2339: Property 'type' does not exist on type '{}'.
+index.ts(245,21): error TS2339: Property 'type' does not exist on type '{}'.
+index.ts(254,11): error TS2339: Property 'root' does not exist on type '{}'.
+index.ts(258,39): error TS2322: Type '(root: any, options?: {}) => Promise<unknown>' is not assignable to type 'Promise<any>'.
+index.ts(258,40): error TS7006: Parameter 'root' implicitly has an 'any' type.
+index.ts(259,22): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: unknown) => void' is not assignable to type 'void'.
+index.ts(263,24): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(264,36): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

@@ -1,0 +1,81 @@
+importKeyword
+ Text.Whitespace
+filterName.Otherany0.3524complex0.1858string0.0557boolean0.0547Filter0.0232
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./filter.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+filterObjectName.Otherboolean0.3781any0.2116string0.0738string[]0.0720complex0.0393
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./filterObject.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+negateName.Otherboolean0.2919void0.1794any0.0887string0.0659number0.0287
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./negate.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * The opposite of `filter` this method returns the elements of `collection`\n * that `predicate` does **not** return truthy for.\n *\n * @since 0.1.0\n * @category Collection\n * @param {Array|Object} collection The collection to iterate over.\n * @param {Function} predicate The function invoked per iteration.\n * @returns {Array} Returns the new filtered array.\n * @see pull, pullAll, pullAllBy, pullAllWith, pullAt, remove, filter\n * @example\n *\n * const users = [\n *   { 'user': 'barney', 'active': true },\n *   { 'user': 'fred',   'active': false }\n * ]\n *\n * reject(users, ({ active }) => active)\n * // => objects for ['fred']\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+rejectName.Otherany0.4288void0.2281complex0.0365boolean0.0318Function0.0249
+(Punctuation
+collectionName.Otherany0.5587string0.0798number0.0179boolean0.0094TranslationCollection0.0062
+,Punctuation
+ Text.Whitespace
+predicateName.Otherboolean0.6501any0.2583string0.0293number0.0121Function0.0019
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+funcName.Otherany0.8532boolean0.0769string0.0197number0.0138Function0.0116
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9998ObjectConstructor0.0000Math0.0000any0.0000JSON0.0000
+.Punctuation
+isArrayName.Othercomplex0.9919any0.0032boolean0.0015any[]0.0012number0.0003
+(Punctuation
+collectionName.Otherany0.6528complex0.1127any[]0.0515boolean0.0343string0.0309
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+filterName.Otherany0.6287boolean0.1794string0.1225complex0.0233number0.0221
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+filterObjectKeyword.Typeboolean0.4155any0.4148string0.0989any[]0.0185number0.0153
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+funcName.Otherany0.6737boolean0.1501string0.0504Function0.0326void0.0303
+(Punctuation
+collectionName.Otherany0.5634any[]0.1749string0.0780boolean0.0270complex0.0243
+,Punctuation
+ Text.Whitespace
+negateName.Otherboolean0.3787void0.2311any0.2252any[]0.0336number0.0281
+(Punctuation
+predicateName.Otherboolean0.5919any0.3146number0.0191string0.0133any[]0.0074
+)Punctuation
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+rejectName.Otherany0.3656void0.2539Function0.0305complex0.0109boolean0.0105
+\nText.Whitespace

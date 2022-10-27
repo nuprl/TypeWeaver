@@ -1,0 +1,66 @@
+importKeyword
+ Text.Whitespace
+getTagName.Otherany0.7291string0.0637void0.0436complex0.0408boolean0.0170
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/getTag.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isObjectLikeName.Otherboolean0.4749any0.2952string0.0746complex0.0567void0.0210
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isObjectLike.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Checks if `value` is classified as a `Number` primitive or object.\n *\n * **Note:** To exclude `Infinity`, `-Infinity`, and `NaN`, which are\n * classified as numbers, use the `Number.isFinite` method.\n *\n * @since 0.1.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is a number, else `false`.\n * @see isInteger, toInteger, toNumber\n * @example\n *\n * isNumber(3)\n * // => true\n *\n * isNumber(Number.MIN_VALUE)\n * // => true\n *\n * isNumber(Infinity)\n * // => true\n *\n * isNumber('3')\n * // => false\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isNumberName.Otherboolean0.9398complex0.0349any0.0169number0.0023string0.0014
+(Punctuation
+valueName.Otherany0.8902string0.0595boolean0.0249number0.0148complex0.0068
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.9311string0.0410complex0.0141number0.0068boolean0.0042
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'number'Literal.String.Single
+ Text.Whitespace
+||Operator
+\n    Text.Whitespace
+(Punctuation
+isObjectLikeName.Otherboolean0.5713any0.3219string0.0814complex0.0157number0.0037
+(Punctuation
+valueName.Otherany0.6881string0.2678boolean0.0271number0.0092complex0.0039
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+getTagName.Otherany0.8013string0.1642boolean0.0210complex0.0062void0.0018
+(Punctuation
+valueName.Otherany0.8389string0.1255boolean0.0153number0.0112complex0.0050
+)Punctuation
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+'[object Number]'Literal.String.Single
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+isNumberName.Otherboolean0.6273complex0.2631any0.0528false0.0059number0.0045
+\nText.Whitespace

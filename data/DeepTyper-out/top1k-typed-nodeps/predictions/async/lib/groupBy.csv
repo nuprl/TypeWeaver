@@ -1,0 +1,49 @@
+importKeyword
+ Text.Whitespace
+groupByLimitName.Otherany0.3551boolean0.0632complex0.0541void0.0349string0.0267
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./groupByLimit.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Returns a new object, where each value corresponds to an array of items, from\n * `coll`, that returned the corresponding key. That is, the keys of the object\n * correspond to the values passed to the `iteratee` callback.\n *\n * Note: Since this function applies the `iteratee` to each item in parallel,\n * there is no guarantee that the `iteratee` functions will complete in order.\n * However, the values for each key in the `result` will be in the same order as\n * the original `coll`. For Objects, the values will roughly be in the order of\n * the original Objects' keys (but this can vary across JavaScript engines).\n *\n * @name groupBy\n * @static\n * @memberOf module:Collections\n * @method\n * @category Collection\n * @param {Array|Iterable|AsyncIterable|Object} coll - A collection to iterate over.\n * @param {AsyncFunction} iteratee - An async function to apply to each item in\n * `coll`.\n * The iteratee should complete with a `key` to group the value under.\n * Invoked with (value, callback).\n * @param {Function} [callback] - A callback which is called when all `iteratee`\n * functions have finished, or an error occurs. Result is an `Object` whoses\n * properties are arrays of values which returned the corresponding key.\n * @returns {Promise} a promise, if no callback is passed\n * @example\n *\n * // dir1 is a directory that contains file1.txt, file2.txt\n * // dir2 is a directory that contains file3.txt, file4.txt\n * // dir3 is a directory that contains file5.txt\n * // dir4 does not exist\n *\n * const files = ['dir1/file1.txt','dir2','dir4']\n *\n * // asynchronous function that detects file type as none, file, or directory\n * function detectFile(file, callback) {\n *     fs.stat(file, function(err, stat) {\n *         if (err) {\n *             return callback(null, 'none');\n *         }\n *         callback(null, stat.isDirectory() ? 'directory' : 'file');\n *     });\n * }\n *\n * //Using callbacks\n * async.groupBy(files, detectFile, function(err, result) {\n *     if(err) {\n *         console.log(err);\n *     } else {\n *\t       console.log(result);\n *         // {\n *         //     file: [ 'dir1/file1.txt' ],\n *         //     none: [ 'dir4' ],\n *         //     directory: [ 'dir2']\n *         // }\n *         // result is object containing the files grouped by type\n *     }\n * });\n *\n * // Using Promises\n * async.groupBy(files, detectFile)\n * .then( result => {\n *     console.log(result);\n *     // {\n *     //     file: [ 'dir1/file1.txt' ],\n *     //     none: [ 'dir4' ],\n *     //     directory: [ 'dir2']\n *     // }\n *     // result is object containing the files grouped by type\n * }).catch( err => {\n *     console.log(err);\n * });\n *\n * // Using async/await\n * async () => {\n *     try {\n *         let result = await async.groupBy(files, detectFile);\n *         console.log(result);\n *         // {\n *         //     file: [ 'dir1/file1.txt' ],\n *         //     none: [ 'dir4' ],\n *         //     directory: [ 'dir2']\n *         // }\n *         // result is object containing the files grouped by type\n *     }\n *     catch (err) {\n *         console.log(err);\n *     }\n * }\n *\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+groupByName.Otherany0.0428string0.0421boolean0.0405number0.0131string[]0.0114
+ Text.Whitespace
+(Punctuation
+collName.Otherany0.2384any[]0.0317string0.0165object0.0160{}0.0077
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.4862number0.1085string0.0896boolean0.0083Buffer0.0067
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.3262number0.1563Function0.0895string0.0110boolean0.0108
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+groupByLimitName.Otherany0.2831boolean0.0944void0.0638complex0.0598string0.0483
+(Punctuation
+collName.Otherany0.4333any[]0.0501{}0.0236string0.0227number0.0202
+,Punctuation
+ Text.Whitespace
+InfinityKeyword.Constantnumber0.9829any0.0122number[]0.0007string0.0007void0.0006
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.6453number0.1092string0.0196Object0.0139Function0.0103
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.4847Function0.1643number0.0736void0.0699{}0.0106
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

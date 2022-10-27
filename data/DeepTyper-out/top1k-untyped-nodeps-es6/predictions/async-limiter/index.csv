@@ -1,0 +1,460 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+QueueName.Otherany0.6947number0.0314complex0.0232void0.0214string0.0071
+(Punctuation
+optionsName.OtherOptions0.1077any0.0833IOptions0.0132ConnectionOptions0.0120Config0.0084
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+(Punctuation
+thisKeyword
+ Text.Whitespace
+instanceofOperator.Word
+ Text.Whitespace
+QueueName.Otherany0.9778complex0.0057number0.0027symbol0.0027string0.0010
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newOperator.Wordany0.9230complex0.0275string0.0092number0.0034{}0.0024
+ Text.Whitespace
+QueueName.Otherany0.9961complex0.0010number0.0008void0.0004symbol0.0002
+(Punctuation
+optionsName.OtherOptions0.1470any0.0635ConnectionOptions0.0157Config0.0107IOptions0.0090
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+optionsName.OtherOptions0.0600any0.0266ConnectionOptions0.0138{}0.0109IOptions0.0097
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.0947Options0.0565ConnectionOptions0.0318{}0.0166IOptions0.0116
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+concurrencyName.Othernumber0.9818any0.0059void0.0044string0.0021boolean0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.0394ConnectionOptions0.0225Options0.0186complex0.0172number0.0098
+.Punctuation
+concurrencyName.Othernumber0.9843any0.0102string0.0014void0.0013complex0.0013
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+InfinityKeyword.Constantnumber0.9967any0.0017boolean0.0005complex0.0003string0.0002
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+pendingName.Othernumber0.9961any0.0022boolean0.0005string0.0003void0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+jobsName.Otherany[]0.1119string[]0.0744T[]0.0221number[]0.0137any0.0136
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+onDoneCbsName.Otherany[]0.2460any0.0599any[][]0.0484complex0.0245Function[]0.0232
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+_doneName.Othervoid0.6708any0.2169Promise<void>0.0344Function0.0173Promise<any>0.0121
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+doneName.Othervoid0.8502any0.1114Function0.0129Promise<void>0.0075boolean0.0028
+.Punctuation
+bindName.Otherany0.9815void0.0107Function0.0013complex0.0008number0.0008
+(Punctuation
+thisKeyword
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+_runName.Othervoid0.3524Promise<void>0.3474any0.1731Promise<any>0.0269Function0.0074
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+runName.Othervoid0.4786Promise<void>0.4415any0.0192Promise<any>0.0134complex0.0091
+.Punctuation
+bindName.Otherany0.9792void0.0096Function0.0015complex0.0011T0.0010
+(Punctuation
+thisKeyword
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+// Called upon completion of a job. Calls run() againComment.Single
+\nText.Whitespace
+// to pluck the next job off the queue, if it exists.Comment.Single
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+doneName.Othervoid0.9941any0.0022boolean0.0008Function0.0008Promise<void>0.0007
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+pendingName.Othernumber0.9934any0.0038void0.0008boolean0.0005string0.0004
+--Operator
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+_runName.Othervoid0.9529Promise<void>0.0203any0.0162complex0.0021Promise<any>0.0015
+(Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+runName.Othervoid0.9046Promise<void>0.0318any0.0150boolean0.0121complex0.0107
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+// Do we have capacity for jobs?Comment.Single
+\n  Text.Whitespace
+// If so, start them, uip to the concurrency limitComment.Single
+\n  Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+pendingName.Othernumber0.9881any0.0049boolean0.0032void0.0017string0.0008
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+concurrencyName.Othernumber0.9802any0.0090void0.0040string0.0026complex0.0009
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+jobsName.Otherstring[]0.0930any[]0.0727any0.0687number[]0.0210User[]0.0076
+.Punctuation
+lengthName.Othernumber0.9816any0.0171string0.0005void0.0004boolean0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+pendingName.Othernumber0.9983any0.0009boolean0.0003string0.0002void0.0001
+++Operator
+;Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+jobName.OtherJob0.5872void0.0247this0.0084any0.0067boolean0.0049
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+jobsName.Otherany[]0.0569string[]0.0431number[]0.0203any0.0162Job[]0.0107
+.Punctuation
+shiftName.Otherstring0.2027any0.0999number0.0782complex0.0455void0.0200
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+jobName.Othervoid0.4581Job0.2111any0.0385boolean0.0091Promise<void>0.0066
+(Punctuation
+thisKeyword
+.Punctuation
+_doneName.Otherany0.2696string0.0910void0.0777any[]0.0509string[]0.0379
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// Are we done processing all jobs? If so, call onDone callbacksComment.Single
+\n  Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+lengthName.Othernumber0.9861any0.0122string0.0006void0.0003boolean0.0003
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+onDoneCbsName.Otherany0.2743string[]0.2384any[]0.1539Function[]0.0297void)[]0.0198
+.Punctuation
+lengthName.Othernumber0.9707any0.0271string0.0010void0.0004boolean0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+cbName.Otherany0.7551void0.1212Function0.0540string0.0220number0.0151
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+onDoneCbsName.Otherany[]0.3370any0.2206string[]0.1591complex0.0334Function[]0.0326
+.Punctuation
+popName.Otherany0.5105string0.2072complex0.0797number0.0376Function0.0087
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+cbName.Otherany0.5192void0.3053Function0.1488number0.0057boolean0.0040
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+// Replicate popular array methods to queue up jobs.Comment.Single
+\nText.Whitespace
+[Punctuation
+'push'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'splice'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'unshift'Literal.String.Single
+]Punctuation
+.Punctuation
+forEachName.Othervoid0.8736complex0.0911any0.0253v...0.0038boolean0.0011
+(Punctuation
+functionKeyword.Declaration
+(Punctuation
+methodName.Otherstring0.7419any0.1504void0.0209Function0.0116complex0.0104
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+QueueName.Otherany0.9867complex0.0055void0.0017number0.0016string0.0007
+.Punctuation
+prototypeName.Otherany0.7290Object0.0211void0.0191Function0.0114{}0.0105
+[Punctuation
+methodName.Otherstring0.8649any0.1135void0.0048complex0.0039number0.0036
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+methodResultName.Otherany0.6710any[]0.1388string[]0.0154complex0.0140void0.0118
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9975any0.0002ObjectConstructor0.0000SetConstructor0.0000T[]0.0000
+.Punctuation
+prototypeName.Otherany0.1975Object0.1294any[]0.0842{}0.0277Function0.0219
+[Punctuation
+methodName.Otherstring0.8202any0.1181void0.0086complex0.0076Function0.0073
+]Punctuation
+.Punctuation
+applyName.Otherany0.9880void0.0026any[]0.0016complex0.0016number0.0014
+(Punctuation
+thisKeyword
+.Punctuation
+jobsName.Otherany0.1819any[]0.1065string[]0.0632Error0.0084T[]0.0081
+,Punctuation
+ Text.Whitespace
+argumentsName.OtherIArguments0.9846any0.0028any[]0.0019string[]0.0003{}0.0002
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+processName.Otherany0.9783Process0.0014complex0.0010void0.0008Assert0.0005
+.Punctuation
+nextTickName.Otherany0.9525void0.0328Function0.0021Promise<void>0.0019complex0.0010
+(Punctuation
+thisKeyword
+.Punctuation
+_runName.Otherany0.7130void0.1582Promise<void>0.0457number0.0176string0.0134
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+methodResultName.Otherany0.4932any[]0.1852Promise<void>0.0166complex0.0159void0.0156
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998Object0.0001any0.0000FunctionConstructor0.0000Object[]0.0000
+.Punctuation
+definePropertyName.Othercomplex0.9969any0.0013void0.0012string0.0001number0.0000
+(Punctuation
+QueueName.Otherany0.9736complex0.0187number0.0014void0.0009symbol0.0006
+.Punctuation
+prototypeName.Otherany0.4683Object0.0367Function0.0175void0.0172any[]0.0151
+,Punctuation
+ Text.Whitespace
+'length'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+getName.Other
+:Operator
+ Text.Whitespace
+functionKeyword.Type
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+pendingName.Othernumber0.9774any0.0175string0.0027boolean0.0007void0.0005
+ Text.Whitespace
++Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+jobsName.Otherany[]0.1587any0.1355string[]0.0851number[]0.0263void)[]0.0148
+.Punctuation
+lengthName.Othernumber0.9283any0.0682string0.0016void0.0006complex0.0003
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// Simply adds a callback to the end of the job listComment.Single
+\nText.Whitespace
+QueueName.Otherany0.9846complex0.0044number0.0034void0.0018Function0.0006
+.Punctuation
+prototypeName.Otherany0.7194void0.0356Object0.0189Function0.0123any[]0.0122
+.Punctuation
+onDoneName.Othervoid0.5862any0.3918complex0.0055Function0.0030boolean0.0029
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+cbName.Otherany0.8809Function0.0634void0.0302string0.0128boolean0.0029
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+cbName.Otherany0.7648void0.1045Function0.0696complex0.0133string0.0121
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+thisKeyword
+.Punctuation
+onDoneCbsName.Otherany0.4345any[]0.2224Function[]0.0537void)[]0.0489string[]0.0260
+.Punctuation
+pushName.Othernumber0.9565any0.0362void0.0032boolean0.0009string0.0006
+(Punctuation
+cbName.Otherany0.6392void0.2170Function0.0859number0.0141string0.0131
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+// If there are no jobs in the queue, this will call `cb()` in the next tick.Comment.Single
+\n  Text.Whitespace
+// This is intended for that there is predictable behavior even when running aComment.Single
+\n  Text.Whitespace
+// job list of length 0.Comment.Single
+\n  Text.Whitespace
+processName.Otherany0.9699Process0.0041complex0.0011void0.0008Function0.0006
+.Punctuation
+nextTickName.Otherany0.9624void0.0241Promise<void>0.0026Function0.0019complex0.0013
+(Punctuation
+thisKeyword
+.Punctuation
+_runName.Otherany0.4934void0.2505Promise<void>0.1677number0.0101string0.0070
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+QueueName.Otherany0.8940number0.0229complex0.0072void0.0040symbol0.0032
+;Punctuation
+\nText.Whitespace

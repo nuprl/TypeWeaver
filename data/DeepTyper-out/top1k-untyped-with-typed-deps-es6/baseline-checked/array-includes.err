@@ -1,0 +1,21 @@
+implementation.ts(3,33): error TS2307: Cannot find module 'es-abstract/2021/ToIntegerOrInfinity' or its corresponding type declarations.
+implementation.ts(4,22): error TS2307: Cannot find module 'es-abstract/2021/ToLength' or its corresponding type declarations.
+implementation.ts(5,22): error TS2307: Cannot find module 'es-abstract/2021/ToObject' or its corresponding type declarations.
+implementation.ts(6,27): error TS2307: Cannot find module 'es-abstract/2021/SameValueZero' or its corresponding type declarations.
+implementation.ts(19,6): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
+implementation.ts(20,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+implementation.ts(20,31): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[searchElement: any, fromIndex?: number | undefined]'.
+implementation.ts(23,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(4,36): error TS2307: Cannot find module 'es-abstract/2021/RequireObjectCoercible' or its corresponding type declarations.
+index.ts(9,36): error TS2345: Argument of type 'boolean' is not assignable to parameter of type '(this: unknown, ...args: readonly unknown[]) => unknown'.
+index.ts(15,35): error TS2322: Type '(array: any, searchElement: any) => boolean' is not assignable to type 'boolean'.
+index.ts(20,8): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'object'.
+polyfill.ts(10,10): error TS2322: Type '(searchElement: any, fromIndex?: number | undefined) => boolean' is not assignable to type 'boolean'.
+polyfill.ts(12,9): error TS2322: Type '(searchElement: any) => boolean' is not assignable to type 'boolean'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

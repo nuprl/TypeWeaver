@@ -1,0 +1,282 @@
+importKeyword
+ Text.Whitespace
+getTagName.Otherany0.7190string0.0811complex0.0590void0.0182RegExp0.0050
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/getTag.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isArgumentsName.Otherany0.5423boolean0.1678complex0.0916string0.0899string[]0.0228
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isArguments.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isArrayLikeName.Otherany0.5865complex0.3709string0.0047any[]0.0044void0.0042
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isArrayLike.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isBufferName.Otherany0.4849complex0.1675string0.0971boolean0.0341any[]0.0281
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isBuffer.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isPrototypeName.Otherboolean0.4677any0.2613string0.0959complex0.0948void0.0290
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/isPrototype.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isTypedArrayName.Otherboolean0.6059any0.1730string0.1146complex0.0474number0.0113
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isTypedArray.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/** Used to check objects for own properties. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+hasOwnPropertyName.Othercomplex0.8194any0.1442{}0.0066string0.0065boolean0.0064
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999complex0.0000any0.0000Object0.0000{}0.0000
+.Punctuation
+prototypeName.OtherObject0.7544complex0.0413{}0.0282any0.0226any[]0.0177
+.Punctuation
+hasOwnPropertyName.Othercomplex0.9553any0.0368boolean0.0031string0.0014Object0.0009
+\n\nText.Whitespace
+Text
+/**\n * Checks if `value` is an empty object, collection, map, or set.\n *\n * Objects are considered empty if they have no own enumerable string keyed\n * properties.\n *\n * Array-like values such as `arguments` objects, arrays, buffers, strings, or\n * jQuery-like collections are considered empty if they have a `length` of `0`.\n * Similarly, maps and sets are considered empty if they have a `size` of `0`.\n *\n * @since 0.1.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is empty, else `false`.\n * @example\n *\n * isEmpty(null)\n * // => true\n *\n * isEmpty(true)\n * // => true\n *\n * isEmpty(1)\n * // => true\n *\n * isEmpty([1, 2, 3])\n * // => false\n *\n * isEmpty('abc')\n * // => false\n *\n * isEmpty({ 'a': 1 })\n * // => false\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isEmptyName.Otherboolean0.9249any0.0373string0.0184complex0.0111false0.0012
+(Punctuation
+valueName.Otherany0.5879string0.3827complex0.0078boolean0.0051number0.0044
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+valueName.Otherany0.9280string0.0486complex0.0077boolean0.0074number0.0017
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isArrayLikeName.Otherany0.7209complex0.2238boolean0.0329string0.0041any[]0.0022
+(Punctuation
+valueName.Otherany0.9164string0.0608complex0.0140boolean0.0026any[]0.0013
+)Punctuation
+ Text.Whitespace
+&&Operator
+\n      Text.Whitespace
+(Punctuation
+ArrayName.BuiltinArrayConstructor0.9995any0.0001complex0.0000ObjectConstructor0.0000Math0.0000
+.Punctuation
+isArrayName.Othercomplex0.9940any0.0028any[]0.0012boolean0.0008{}0.0001
+(Punctuation
+valueName.Otherany0.9464complex0.0333string0.0078any[]0.0073number0.0010
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.9511complex0.0189string0.0172any[]0.0040number0.0029
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'string'Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.8532any[]0.0763complex0.0438string[]0.0053number[]0.0050
+.Punctuation
+spliceName.Otherany0.9225complex0.0626string0.0059number0.0035boolean0.0027
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+ Text.Whitespace
+||Operator
+\n        Text.Whitespace
+isBufferName.Otherany0.4312boolean0.1767complex0.1504string0.1191any[]0.0321
+(Punctuation
+valueName.Otherany0.9441string0.0285complex0.0159any[]0.0036number0.0019
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+isTypedArrayName.Otherboolean0.9763any0.0132complex0.0042string0.0033number0.0009
+(Punctuation
+valueName.Otherany0.9373string0.0394complex0.0097any[]0.0034boolean0.0026
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+isArgumentsName.Otherboolean0.9812any0.0110string0.0034complex0.0020number0.0010
+(Punctuation
+valueName.Otherany0.9403string0.0396complex0.0063any[]0.0034boolean0.0026
+)Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+!Operator
+valueName.Otherany0.8875string0.0906any[]0.0116complex0.0032string[]0.0031
+.Punctuation
+lengthName.Otherany0.7872number0.2087string0.0018complex0.0011boolean0.0003
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+tagName.Otherany0.9258string0.0626complex0.0033number0.0020boolean0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+getTagName.Otherany0.8396string0.1455complex0.0069boolean0.0017number0.0011
+(Punctuation
+valueName.Otherany0.8814string0.1018complex0.0074number0.0019any[]0.0017
+)Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+tagName.Otherany0.6919string0.2918complex0.0052number0.0030boolean0.0017
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+'[object Map]'Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+tagName.Otherany0.7679string0.2171complex0.0050number0.0042boolean0.0013
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+'[object Set]'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+!Operator
+valueName.Otherany0.9824complex0.0074any[]0.0011string0.0009{}0.0005
+.Punctuation
+sizeName.Otherany0.9664number0.0240string0.0070complex0.0012boolean0.0006
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isPrototypeName.Otherboolean0.9632any0.0251string0.0041complex0.0039number0.0019
+(Punctuation
+valueName.Otherany0.9542string0.0256complex0.0078number0.0046boolean0.0040
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+!Operator
+ObjectName.BuiltinObjectConstructor0.9997any0.0001complex0.0000Object0.0000any[]0.0000
+.Punctuation
+keysName.Otherstring[]0.9697any[]0.0117complex0.0049string0.0036any0.0032
+(Punctuation
+valueName.Otherany0.9700complex0.0181string0.0057any[]0.0020{}0.0011
+)Punctuation
+.Punctuation
+lengthName.Othernumber0.7622any0.2335string0.0021complex0.0008void0.0004
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+keyName.Otherstring0.8637any0.1321complex0.0019number0.0007string[]0.0004
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+valueName.Otherany0.9629complex0.0224string0.0049any[]0.0029{}0.0023
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+hasOwnPropertyName.Othercomplex0.8218any0.1641boolean0.0045{}0.0022string0.0017
+.Punctuation
+callName.Otherany0.9598string0.0285boolean0.0063complex0.0020number0.0014
+(Punctuation
+valueName.Otherany0.9357string0.0534boolean0.0030complex0.0024number0.0014
+,Punctuation
+ Text.Whitespace
+keyName.Otherstring0.5540any0.4301complex0.0072number0.0025boolean0.0015
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+isEmptyName.Otherboolean0.7488any0.1608complex0.0198string0.0148false0.0069
+\nText.Whitespace

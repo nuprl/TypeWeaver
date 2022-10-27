@@ -1,0 +1,160 @@
+Found optional parameters; skipping function.
+	export default function patchFs(vol, fs = require('fs')) { const bkp = {}; const
+/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:2300
+            throw new ManipulationError(sourceFile.getFilePath(), oldFileText, newFileText, message);
+            ^
+
+ManipulationError: Manipulation error: A syntax error was inserted.
+
+[96m../../data/original/top1k-untyped-nodeps-es6/fs-monkey/src/patchFs.ts[0m:[93m12[0m:[93m24[0m - [91merror[0m[90m TS1110: [0mType expected.
+
+[7m12[0m     const patchMethod: ... = key => patch(key, vol[key].bind(vol));
+[7m  [0m [91m                       ~~~[0m
+[96m../../data/original/top1k-untyped-nodeps-es6/fs-monkey/src/patchFs.ts[0m:[93m12[0m:[93m28[0m - [91merror[0m[90m TS1134: [0mVariable declaration expected.
+
+[7m12[0m     const patchMethod: ... = key => patch(key, vol[key].bind(vol));
+[7m  [0m [91m                           ~[0m
+[96m../../data/original/top1k-untyped-nodeps-es6/fs-monkey/src/patchFs.ts[0m:[93m12[0m:[93m34[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m12[0m     const patchMethod: ... = key => patch(key, vol[key].bind(vol));
+[7m  [0m [91m                                 ~~[0m
+
+Error replacing tree: The children of the old and new trees were expected to have the same count (19:20).
+
+-- Details --
+Path: /mnt/data/mhyee/not-type-inference/data/original/top1k-untyped-nodeps-es6/fs-monkey/src/patchFs.ts
+Text: "... = (key: string, newValue: any) => {\n        bkp[key] = fs[key];\n        fs[key] = newValue;\n    };\n\n    const patchMethod: ... = key => patch(key, vol[key].bind(vol));\n\n    // General properties\n    for(let prop of fsProps)\n        if(typeof vol[prop] !== 'undefined'..."
+Stack: Error: Error replacing tree: The children of the old and new trees were expected to have the same count (19:20).
+    at ParentFinderReplacementNodeHandler.handleChildren (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1438:19)
+    at ParentFinderReplacementNodeHandler.handleNode (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1432:18)
+    at ParentFinderReplacementNodeHandler.handleNode (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1572:19)
+    at NodeHandlerHelper.handleForValues (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1375:21)
+    at ParentFinderReplacementNodeHandler.handleChildren (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1442:25)
+    at ParentFinderReplacementNodeHandler.handleNode (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1432:18)
+    at ParentFinderReplacementNodeHandler.handleNode (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1572:19)
+    at NodeHandlerHelper.handleForValues (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1375:21)
+    at ParentFinderReplacementNodeHandler.handleChildren (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1442:25)
+    at ParentFinderReplacementNodeHandler.handleNode (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:1432:18)
+    at throwError (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:2300:19)
+    at doManipulation (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:2294:13)
+    at insertIntoParentTextRange (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:2319:5)
+    at VariableDeclaration.setType (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:10002:13)
+    at DeepTyper.traverse (/mnt/data/mhyee/not-type-inference/tools/type_weaver/deeptyper.js:215:33)
+    at VariableDeclarationList.forEachChild (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:3241:37)
+    at DeepTyper.traverse (/mnt/data/mhyee/not-type-inference/tools/type_weaver/deeptyper.js:299:18)
+    at VariableStatement.forEachChild (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:3241:37)
+    at DeepTyper.traverse (/mnt/data/mhyee/not-type-inference/tools/type_weaver/deeptyper.js:299:18)
+    at Block.forEachChild (/mnt/data/mhyee/not-type-inference/tools/node_modules/ts-morph/dist/ts-morph.js:3241:37) {
+  filePath: '/mnt/data/mhyee/not-type-inference/data/original/top1k-untyped-nodeps-es6/fs-monkey/src/patchFs.ts',
+  oldText: "import {fsProps, fsAsyncMethods, fsSyncMethods} from './util/lists';\n" +
+    '\n' +
+    '\n' +
+    "export default function patchFs(vol, fs = require('fs')) {\n" +
+    '    const bkp: {} = {};\n' +
+    '\n' +
+    '    const patch: void = (key: string, newValue: any) => {\n' +
+    '        bkp[key] = fs[key];\n' +
+    '        fs[key] = newValue;\n' +
+    '    };\n' +
+    '\n' +
+    '    const patchMethod = key => patch(key, vol[key].bind(vol));\n' +
+    '\n' +
+    '    // General properties\n' +
+    '    for(let prop of fsProps)\n' +
+    "        if(typeof vol[prop] !== 'undefined')\n" +
+    '            patch(prop, vol[prop]);\n' +
+    '\n' +
+    '\n' +
+    '    // Bind the first argument of some constructors, this is relevant for `memfs`.\n' +
+    '    // TODO: Maybe in the future extend this function such that it internally creates\n' +
+    '    // TODO: the below four constructor functions.\n' +
+    "    if(typeof vol.StatWatcher === 'function') {\n" +
+    "        patch('StatWatcher', vol.FSWatcher.bind(null, vol));\n" +
+    '    }\n' +
+    "    if(typeof vol.FSWatcher === 'function') {\n" +
+    "        patch('FSWatcher', vol.StatWatcher.bind(null, vol));\n" +
+    '    }\n' +
+    "    if(typeof vol.ReadStream === 'function') {\n" +
+    "        patch('ReadStream', vol.ReadStream.bind(null, vol));\n" +
+    '    }\n' +
+    "    if(typeof vol.WriteStream === 'function') {\n" +
+    "        patch('WriteStream', vol.WriteStream.bind(null, vol));\n" +
+    '    }\n' +
+    '\n' +
+    '\n' +
+    '    // Extra hidden function\n' +
+    "    if(typeof vol._toUnixTimestamp === 'function')\n" +
+    "        patchMethod('_toUnixTimestamp');\n" +
+    '\n' +
+    '\n' +
+    '    // Main API\n' +
+    '    for(let method of fsAsyncMethods)\n' +
+    "        if(typeof vol[method] === 'function')\n" +
+    '            patchMethod(method);\n' +
+    '\n' +
+    '    for(let method of fsSyncMethods)\n' +
+    "        if(typeof vol[method] === 'function')\n" +
+    '            patchMethod(method);\n' +
+    '\n' +
+    '    // Give user back a method to revert the changes.\n' +
+    '    return function unpatch () {\n' +
+    '        for (const key in bkp) fs[key] = bkp[key];\n' +
+    '    };\n' +
+    '};\n',
+  newText: "import {fsProps, fsAsyncMethods, fsSyncMethods} from './util/lists';\n" +
+    '\n' +
+    '\n' +
+    "export default function patchFs(vol, fs = require('fs')) {\n" +
+    '    const bkp: {} = {};\n' +
+    '\n' +
+    '    const patch: void = (key: string, newValue: any) => {\n' +
+    '        bkp[key] = fs[key];\n' +
+    '        fs[key] = newValue;\n' +
+    '    };\n' +
+    '\n' +
+    '    const patchMethod: ... = key => patch(key, vol[key].bind(vol));\n' +
+    '\n' +
+    '    // General properties\n' +
+    '    for(let prop of fsProps)\n' +
+    "        if(typeof vol[prop] !== 'undefined')\n" +
+    '            patch(prop, vol[prop]);\n' +
+    '\n' +
+    '\n' +
+    '    // Bind the first argument of some constructors, this is relevant for `memfs`.\n' +
+    '    // TODO: Maybe in the future extend this function such that it internally creates\n' +
+    '    // TODO: the below four constructor functions.\n' +
+    "    if(typeof vol.StatWatcher === 'function') {\n" +
+    "        patch('StatWatcher', vol.FSWatcher.bind(null, vol));\n" +
+    '    }\n' +
+    "    if(typeof vol.FSWatcher === 'function') {\n" +
+    "        patch('FSWatcher', vol.StatWatcher.bind(null, vol));\n" +
+    '    }\n' +
+    "    if(typeof vol.ReadStream === 'function') {\n" +
+    "        patch('ReadStream', vol.ReadStream.bind(null, vol));\n" +
+    '    }\n' +
+    "    if(typeof vol.WriteStream === 'function') {\n" +
+    "        patch('WriteStream', vol.WriteStream.bind(null, vol));\n" +
+    '    }\n' +
+    '\n' +
+    '\n' +
+    '    // Extra hidden function\n' +
+    "    if(typeof vol._toUnixTimestamp === 'function')\n" +
+    "        patchMethod('_toUnixTimestamp');\n" +
+    '\n' +
+    '\n' +
+    '    // Main API\n' +
+    '    for(let method of fsAsyncMethods)\n' +
+    "        if(typeof vol[method] === 'function')\n" +
+    '            patchMethod(method);\n' +
+    '\n' +
+    '    for(let method of fsSyncMethods)\n' +
+    "        if(typeof vol[method] === 'function')\n" +
+    '            patchMethod(method);\n' +
+    '\n' +
+    '    // Give user back a method to revert the changes.\n' +
+    '    return function unpatch () {\n' +
+    '        for (const key in bkp) fs[key] = bkp[key];\n' +
+    '    };\n' +
+    '};\n'
+}
+

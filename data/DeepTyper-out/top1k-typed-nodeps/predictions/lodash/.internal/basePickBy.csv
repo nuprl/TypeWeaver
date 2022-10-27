@@ -1,0 +1,155 @@
+importKeyword
+ Text.Whitespace
+baseGetName.Otherany0.1045complex0.0611void0.0466boolean0.0251Promise<void>0.0211
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./baseGet.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+baseSetName.Otherany0.1405void0.0740string0.0576complex0.0544boolean0.0491
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./baseSet.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+castPathName.Otherany0.1839void0.0896string0.0610complex0.0589boolean0.0417
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./castPath.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * The base implementation of `pickBy`.\n *\n * @private\n * @param {Object} object The source object.\n * @param {string[]} paths The property paths to pick.\n * @param {Function} predicate The function invoked per property.\n * @returns {Object} Returns the new object.\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+basePickByName.Otherany0.2301string0.1143complex0.0731void0.0598boolean0.0398
+(Punctuation
+objectName.Otherany0.8196Object0.0215object0.0196number0.0092string0.0080
+,Punctuation
+ Text.Whitespace
+pathsName.Otherany0.5003string[]0.0627any[]0.0297string0.0088complex0.0042
+,Punctuation
+ Text.Whitespace
+predicateName.Otherboolean0.7278any0.2266string0.0130number0.0109complex0.0030
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+indexName.Othernumber0.9877any0.0113string0.0005boolean0.0002complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+lengthName.Othernumber0.9420any0.0548string0.0010complex0.0004boolean0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathsName.Otherstring[]0.1999any0.1843any[]0.0586complex0.0160T[]0.0091
+.Punctuation
+lengthName.Othernumber0.8063any0.1872string0.0022complex0.0015boolean0.0004
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany0.6795{}0.1482number0.0594complex0.0148string0.0044
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+\n\n  Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+++Operator
+indexName.Othernumber0.9844any0.0142string0.0006boolean0.0002complex0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+lengthName.Othernumber0.9449any0.0529string0.0011void0.0002boolean0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+pathName.Otherany0.6290string0.2880string[]0.0252complex0.0224Path0.0035
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathsName.Otherstring[]0.6587any0.1429any[]0.0826number[]0.0167complex0.0116
+[Punctuation
+indexName.Othernumber0.9512any0.0402string0.0063complex0.0006boolean0.0005
+]Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+valueName.Otherany0.6642string0.1281number0.0537boolean0.0305complex0.0168
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+baseGetName.Otherany0.6395string0.1351number0.0507complex0.0490boolean0.0231
+(Punctuation
+objectName.Otherany0.8046Object0.0587number0.0338object0.0316string0.0177
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.6290any0.3083complex0.0160Path0.0100string[]0.0059
+)Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+predicateName.Otherboolean0.9509any0.0186complex0.0090void0.0039string0.0026
+(Punctuation
+valueName.Otherany0.8001string0.0966boolean0.0485number0.0236complex0.0055
+,Punctuation
+ Text.Whitespace
+pathName.Otherany0.4813string0.4344Path0.0235complex0.0148string[]0.0071
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+baseSetName.Othervoid0.3649any0.3401complex0.1671string0.0194number0.0127
+(Punctuation
+resultName.Otherany0.4063string0.1051{}0.0890number0.0504boolean0.0468
+,Punctuation
+ Text.Whitespace
+castPathName.Otherany0.3235boolean0.1478complex0.1172string0.1112void0.1022
+(Punctuation
+pathName.Otherstring0.5729any0.3750complex0.0155Path0.0084string[]0.0044
+,Punctuation
+ Text.Whitespace
+objectName.Otherany0.7819object0.0541Object0.0512{}0.0273number0.0193
+)Punctuation
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.5934string0.1796number0.0642{}0.0442complex0.0194
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany0.3589{}0.1105any[]0.0213complex0.0195string0.0189
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+basePickByName.Otherany0.2224complex0.0200void0.0192string0.0185number0.0113
+\nText.Whitespace

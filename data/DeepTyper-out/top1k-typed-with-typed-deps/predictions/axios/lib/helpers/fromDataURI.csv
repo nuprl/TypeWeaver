@@ -1,0 +1,348 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+AxiosErrorName.Otherany0.9718complex0.0113boolean0.0028void0.0022string0.0018
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'../core/AxiosError.js'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+parseProtocolName.Otherboolean0.3671any0.2074void0.0998string0.0936complex0.0209
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./parseProtocol.js'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+platformName.Otherany0.4914string0.2360complex0.0617string[]0.0380Platform0.0138
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'../platform/index.js'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+DATA_URL_PATTERNName.OtherRegExp0.8861string0.0985string[]0.0034any0.0033boolean0.0023
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/^(?:([^;]+);)?(?:[^;]+;)?(base64|),([\s\S]*)$/Literal.String.Regex
+;Punctuation
+\n\nText.Whitespace
+/**\n * Parse data uri to a Buffer or Blob\n *\n * @param {String} uri\n * @param {?Boolean} asBlob\n * @param {?Object} options\n * @param {?Function} options.Blob\n *\n * @returns {Buffer|Blob}\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+fromDataURIName.Otherboolean0.3138any0.2080string0.1487complex0.0281void0.0253
+(Punctuation
+uriName.Otherstring0.9070any0.0635URI0.0186boolean0.0016number0.0009
+,Punctuation
+ Text.Whitespace
+asBlobName.Otherstring0.4786boolean0.2989any0.1548number0.0137RegExp0.0061
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.1871Options0.1464boolean0.0243string0.0208IOptions0.0080
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+_BlobName.Otherboolean0.5626any0.2012string0.0555string[]0.0392RegExpMatchArray0.0105
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+optionsName.Otherany0.2197Options0.1322complex0.0343boolean0.0172string0.0139
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.OtherOptions0.1037any0.0533complex0.0256string[]0.0128ConnectionOptions0.0127
+.Punctuation
+BlobName.Othercomplex0.7603any0.1994string0.0305string[]0.0026number0.0018
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+platformName.Otherany0.5102complex0.0750string[]0.0658string0.0487Platform0.0359
+.Punctuation
+classesName.Othercomplex0.5425any0.1201string[]0.0797any[]0.0161string0.0051
+.Punctuation
+BlobName.Othercomplex0.9274any0.0596string0.0107number0.0006string[]0.0004
+;Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+protocolName.Otherany0.5253string0.4258complex0.0315string[]0.0032any[]0.0026
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parseProtocolName.Otherstring0.5346any0.3598boolean0.0354complex0.0325string[]0.0053
+(Punctuation
+uriName.Otherstring0.7847any0.2108complex0.0011number0.0009boolean0.0008
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+asBlobName.Otherstring0.3751any0.3167boolean0.2602number0.0239complex0.0029
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+_BlobName.Otherboolean0.7609string0.1371any0.0760number0.0099true0.0026
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+asBlobName.Otherboolean0.9852any0.0090string0.0028number0.0009true0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+trueKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+protocolName.Otherstring0.6589any0.3234complex0.0126boolean0.0017number0.0006
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'data'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+uriName.Otherstring0.8886any0.1086number0.0008complex0.0006boolean0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+protocolName.Otherstring0.5947any0.3863complex0.0074string[]0.0061any[]0.0015
+.Punctuation
+lengthName.Otherany0.7919number0.1809string0.0210complex0.0036boolean0.0009
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+uriName.Otherstring0.7653any0.2304number0.0010string[]0.0006complex0.0006
+.Punctuation
+sliceName.Otherstring0.5480any0.4218string[]0.0131complex0.0054any[]0.0039
+(Punctuation
+protocolName.Otherstring0.5149any0.4665complex0.0084string[]0.0026any[]0.0026
+.Punctuation
+lengthName.Othernumber0.5330any0.4522string0.0120complex0.0013boolean0.0004
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+uriName.Otherstring0.6717any0.3237number0.0019boolean0.0006complex0.0006
+;Punctuation
+\n\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+matchName.OtherRegExpExecArray0.8858any0.0775RegExpMatchArray0.0127RegExp0.0021boolean0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+DATA_URL_PATTERNName.OtherRegExp0.8980any0.0480RegExpExecArray0.0270string0.0121boolean0.0025
+.Punctuation
+execName.OtherRegExpExecArray0.9113any0.0488RegExp0.0043string0.0043Promise<number>0.0022
+(Punctuation
+uriName.Otherstring0.6237any0.3723number0.0013complex0.0012boolean0.0004
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+matchName.OtherRegExpExecArray0.8331any0.1304RegExpMatchArray0.0115string0.0103boolean0.0021
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+throwKeywordany0.9234string0.0224Error0.0159RegExpExecArray0.0084boolean0.0025
+ Text.Whitespace
+newOperator.Wordany0.9659string0.0225Error0.0019boolean0.0007RegExpExecArray0.0007
+ Text.Whitespace
+AxiosErrorName.Otherany0.9967string0.0013complex0.0005boolean0.0003void0.0001
+(Punctuation
+'Invalid URL'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+AxiosErrorName.Otherany0.9869complex0.0025RegExpExecArray0.0016string0.0013RegExp0.0004
+.Punctuation
+ERR_INVALID_URLName.Otherstring0.6964any0.2701number0.0140boolean0.0132string[]0.0017
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+mimeName.Otherany0.6424string0.3405number0.0048void0.0016RegExpExecArray0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+matchName.OtherRegExpExecArray0.7343any0.2295RegExpMatchArray0.0089string0.0074any[]0.0024
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isBase64Name.Otherstring0.5785any0.3404boolean0.0255number0.0234RegExpExecArray0.0151
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+matchName.OtherRegExpExecArray0.7825any0.1805RegExpMatchArray0.0128string0.0066string[]0.0019
+[Punctuation
+2Literal.Number.Float
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+bodyName.Otherany0.7528string0.2153RegExpExecArray0.0053HTMLElement0.0044RegExpMatchArray0.0043
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+matchName.OtherRegExpExecArray0.7437any0.2032RegExpMatchArray0.0161string0.0115string[]0.0038
+[Punctuation
+3Literal.Number.Float
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+bufferName.Otherany0.9914string0.0059Buffer0.0014number0.0003complex0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+BufferName.Otherany0.9976complex0.0005string0.0004Buffer0.0003void0.0002
+.Punctuation
+fromKeyword.Reserved
+(Punctuation
+decodeURIComponentName.Builtinstring0.9824any0.0153number0.0008boolean0.0005complex0.0004
+(Punctuation
+bodyName.Otherany0.8207string0.1612HTMLElement0.0043complex0.0042number0.0011
+)Punctuation
+,Punctuation
+ Text.Whitespace
+isBase64Name.Otherboolean0.8815string0.0750any0.0263false0.0032number0.0030
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+'base64'Literal.String.Single
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+'utf8'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+asBlobName.Otherboolean0.3787string0.3054any0.2712number0.0096RegExpExecArray0.0044
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+_BlobName.Otherstring0.3809boolean0.2935any0.2826number0.0134RegExpExecArray0.0036
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+throwKeywordany0.9630string0.0173Error0.0079complex0.0011number0.0011
+ Text.Whitespace
+newOperator.Wordany0.9748string0.0191Error0.0011boolean0.0004number0.0004
+ Text.Whitespace
+AxiosErrorName.Otherany0.9967string0.0014complex0.0007boolean0.0003any[]0.0001
+(Punctuation
+'Blob is not supported'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+AxiosErrorName.Otherany0.9904complex0.0024string0.0015RegExpExecArray0.0003boolean0.0003
+.Punctuation
+ERR_NOT_SUPPORTName.Otherstring0.6829any0.2788boolean0.0214number0.0094string[]0.0015
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newOperator.Wordany0.9175string0.0425Error0.0016number0.0010URI0.0010
+ Text.Whitespace
+_BlobName.Otherany0.9893string0.0050complex0.0012boolean0.0007number0.0004
+(Punctuation
+[Punctuation
+bufferName.Otherany0.7754Buffer0.1229string0.0400ArrayBuffer0.0180complex0.0028
+]Punctuation
+,Punctuation
+ Text.Whitespace
+{Punctuation
+typeKeyword.Reserved
+:Operator
+ Text.Whitespace
+mimeName.Otherstring0.7403any0.2514number0.0032complex0.0005string[]0.0004
+}Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+bufferName.Otherany0.8954Buffer0.0522string0.0163ArrayBuffer0.0051any[]0.0030
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+throwKeywordany0.8777Error0.0315string0.0219complex0.0070never0.0028
+ Text.Whitespace
+newOperator.Wordany0.9603string0.0244Error0.0020complex0.0005any[]0.0005
+ Text.Whitespace
+AxiosErrorName.Otherany0.9975string0.0009complex0.0007void0.0001any[]0.0001
+(Punctuation
+'Unsupported protocol 'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+protocolName.Otherany0.6060string0.3745complex0.0100string[]0.0010never0.0010
+,Punctuation
+ Text.Whitespace
+AxiosErrorName.Otherany0.9922complex0.0030string0.0003void0.0002Error0.0001
+.Punctuation
+ERR_NOT_SUPPORTName.Otherstring0.4620any0.4606boolean0.0436number0.0156void0.0053
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

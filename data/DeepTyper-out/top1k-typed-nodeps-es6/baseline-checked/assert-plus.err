@@ -1,0 +1,18 @@
+assert.ts(14,5): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+assert.ts(26,57): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+assert.ts(29,9): error TS2345: Argument of type '{ message: string; actual: any; expected: string; operator: string; stackStartFunction: Function; }' is not assignable to parameter of type '{ message?: string | undefined; actual?: unknown; expected?: unknown; operator?: string | undefined; stackStartFn?: Function | undefined; }'.
+  Object literal may only specify known properties, and 'stackStartFunction' does not exist in type '{ message?: string | undefined; actual?: unknown; expected?: unknown; operator?: string | undefined; stackStartFn?: Function | undefined; }'.
+assert.ts(94,61): error TS2339: Property 'test' does not exist on type 'string'.
+assert.ts(110,17): error TS2554: Expected 5 arguments, but got 3.
+assert.ts(204,18): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'typeof assert'.
+  No index signature with a parameter of type 'string' was found on type 'typeof assert'.
+assert.ts(213,28): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

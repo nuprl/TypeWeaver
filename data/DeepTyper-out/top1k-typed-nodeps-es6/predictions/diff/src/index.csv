@@ -1,0 +1,241 @@
+Text
+/* See LICENSE file for terms of use */Comment.Multiline
+\n\nText.Whitespace
+/*\n * Text diff implementation.\n *\n * This library supports the following APIS:\n * JsDiff.diffChars: Character by character diff\n * JsDiff.diffWords: Word (as defined by \b regex) diff which ignores whitespace\n * JsDiff.diffLines: Line based diff\n *\n * JsDiff.diffCss: Diff targeted at CSS content\n *\n * These methods are based on the implementation proposed in\n * "An O(ND) Difference Algorithm and its Variations" (Myers, 1986).\n * http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.4.6927\n */Comment.Multiline
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+DiffName.Otherany0.9152complex0.0226void0.0141string[]0.0137string0.0038
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./diff/base'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+diffCharsName.Otherany0.7559complex0.1059void0.0196boolean0.0152string0.0133
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./diff/character'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+diffWordsName.Otherany0.5805complex0.1338void0.0471string0.0150boolean0.0120
+,Punctuation
+ Text.Whitespace
+diffWordsWithSpaceName.Otherany0.5955complex0.1856void0.0424string0.0169boolean0.0130
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./diff/word'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+diffLinesName.Otherany0.5672complex0.1434void0.0588string0.0154boolean0.0110
+,Punctuation
+ Text.Whitespace
+diffTrimmedLinesName.Otherany0.5676complex0.2041void0.0473string0.0177boolean0.0115
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./diff/line'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+diffSentencesName.Otherany0.7349complex0.1318void0.0330string0.0149boolean0.0088
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./diff/sentence'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+diffCssName.Otherany0.7254complex0.1346void0.0352string0.0165boolean0.0090
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./diff/css'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+diffJsonName.Otherany0.5291complex0.1491void0.0731string0.0175boolean0.0103
+,Punctuation
+ Text.Whitespace
+canonicalizeName.Otherany0.5475complex0.2080void0.0523string0.0196boolean0.0102
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./diff/json'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+diffArraysName.Otherany0.7208complex0.1360void0.0370string0.0168boolean0.0091
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./diff/array'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+applyPatchName.Otherany0.5022complex0.1576void0.0782string0.0181boolean0.0108
+,Punctuation
+ Text.Whitespace
+applyPatchesName.Otherany0.5011complex0.2184void0.0642string0.0219boolean0.0117
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./patch/apply'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+parsePatchName.Otherany0.8148complex0.0873void0.0184T0.0085string0.0076
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./patch/parse'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+mergeName.Otherany0.2696complex0.1035void0.0989string0.0392Promise<void>0.0351
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./patch/merge'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+structuredPatchName.Otherany0.5922complex0.1433void0.0729string0.0198boolean0.0132
+,Punctuation
+ Text.Whitespace
+createTwoFilesPatchName.Otherany0.4281complex0.1873void0.0810string0.0273boolean0.0209
+,Punctuation
+ Text.Whitespace
+createPatchName.Otherany0.5572complex0.2141void0.0495string0.0221boolean0.0142
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./patch/create'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+convertChangesToDMPName.Otherany0.7663complex0.1192void0.0244string0.0182boolean0.0087
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./convert/dmp'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+convertChangesToXMLName.Otherany0.7634complex0.1348void0.0221string0.0148boolean0.0075
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./convert/xml'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+DiffName.Otherany0.9708complex0.0134any[]0.0034string[]0.0030void0.0026
+,Punctuation
+\n\n  Text.Whitespace
+diffCharsName.Otherany0.7661complex0.0449void0.0273boolean0.0118any[]0.0104
+,Punctuation
+\n  Text.Whitespace
+diffWordsName.Otherany0.6807complex0.0656void0.0261boolean0.0201any[]0.0123
+,Punctuation
+\n  Text.Whitespace
+diffWordsWithSpaceName.Otherany0.6634complex0.0717void0.0290boolean0.0258any[]0.0133
+,Punctuation
+\n  Text.Whitespace
+diffLinesName.Otherany0.6636complex0.0728void0.0299boolean0.0287any[]0.0136
+,Punctuation
+\n  Text.Whitespace
+diffTrimmedLinesName.Otherany0.6594complex0.0734boolean0.0313void0.0305any[]0.0138
+,Punctuation
+\n  Text.Whitespace
+diffSentencesName.Otherany0.6531complex0.0734boolean0.0338void0.0306any[]0.0140
+,Punctuation
+\n\n  Text.Whitespace
+diffCssName.Otherany0.6447complex0.0731boolean0.0363void0.0306any[]0.0140
+,Punctuation
+\n  Text.Whitespace
+diffJsonName.Otherany0.6343complex0.0727boolean0.0390void0.0306any[]0.0141
+,Punctuation
+\n\n  Text.Whitespace
+diffArraysName.Otherany0.6218complex0.0722boolean0.0420void0.0308any[]0.0142
+,Punctuation
+\n\n  Text.Whitespace
+structuredPatchName.Otherany0.6070complex0.0717boolean0.0452void0.0312any[]0.0142
+,Punctuation
+\n  Text.Whitespace
+createTwoFilesPatchName.Otherany0.5902complex0.0714boolean0.0488void0.0317any[]0.0143
+,Punctuation
+\n  Text.Whitespace
+createPatchName.Otherany0.5709complex0.0716boolean0.0522void0.0324any[]0.0146
+,Punctuation
+\n  Text.Whitespace
+applyPatchName.Otherany0.5527complex0.0732boolean0.0534void0.0335any[]0.0149
+,Punctuation
+\n  Text.Whitespace
+applyPatchesName.Otherany0.5405complex0.0875boolean0.0479void0.0313any[]0.0144
+,Punctuation
+\n  Text.Whitespace
+parsePatchName.Otherany0.3739complex0.2080void0.0179boolean0.0140{}0.0128
+,Punctuation
+\n  Text.Whitespace
+mergeName.Otherany0.3702complex0.1077void0.0395string0.0346any[]0.0213
+,Punctuation
+\n  Text.Whitespace
+convertChangesToDMPName.Otherany0.2873complex0.1006boolean0.0723void0.0391number0.0282
+,Punctuation
+\n  Text.Whitespace
+convertChangesToXMLName.Otherany0.3022complex0.0874boolean0.0697number0.0296void0.0280
+,Punctuation
+\n  Text.Whitespace
+canonicalizeName.Otherany0.3957boolean0.0930complex0.0735number0.0425void0.0262
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

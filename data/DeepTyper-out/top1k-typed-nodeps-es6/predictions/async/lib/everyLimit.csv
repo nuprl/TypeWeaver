@@ -1,0 +1,95 @@
+importKeyword
+ Text.Whitespace
+createTesterName.Otherboolean0.0857any0.0801complex0.0623string0.0324void0.0283
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/createTester.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+eachOfLimitName.Otherboolean0.2127any0.1100string0.0893complex0.0506void0.0314
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/eachOfLimit.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+awaitifyName.Otherboolean0.3140any0.1188string0.0917complex0.0526void0.0297
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/awaitify.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * The same as [`every`]{@link module:Collections.every} but runs a maximum of `limit` async operations at a time.\n *\n * @name everyLimit\n * @static\n * @memberOf module:Collections\n * @method\n * @see [async.every]{@link module:Collections.every}\n * @alias allLimit\n * @category Collection\n * @param {Array|Iterable|AsyncIterable|Object} coll - A collection to iterate over.\n * @param {number} limit - The maximum number of async operations at a time.\n * @param {AsyncFunction} iteratee - An async truth test to apply to each item\n * in the collection in parallel.\n * The iteratee must complete with a boolean result value.\n * Invoked with (item, callback).\n * @param {Function} [callback] - A callback which is called after all the\n * `iteratee` functions have finished. Result will be either `true` or `false`\n * depending on the values of the async tests. Invoked with (err, result).\n * @returns {Promise} a promise, if no callback provided\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+everyLimitName.Otherboolean0.5357string0.0972any0.0746number0.0376complex0.0364
+(Punctuation
+collName.Otherany0.4536any[]0.0318string0.0288boolean0.0208Buffer0.0127
+,Punctuation
+ Text.Whitespace
+limitName.Othernumber0.7498any0.1697string0.0463boolean0.0085any[]0.0015
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.5570number0.1586string0.0855boolean0.0315Buffer0.0045
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.3928number0.1360Function0.0760boolean0.0432string0.0219
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+createTesterName.Otherany0.3862boolean0.1219number0.0869complex0.0785string0.0734
+(Punctuation
+boolName.Otherany0.9356boolean0.0106string0.0079number0.0064complex0.0019
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+!Operator
+boolName.Otherany0.8168boolean0.1066string0.0151number0.0095complex0.0041
+,Punctuation
+ Text.Whitespace
+resName.Otherany0.8338boolean0.0983number0.0272string0.0086{}0.0029
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+!Operator
+resName.Otherany0.6747boolean0.1577number0.0447void0.0265complex0.0161
+)Punctuation
+(Punctuation
+eachOfLimitName.Otherany0.4002complex0.1711boolean0.0898number0.0589string0.0430
+(Punctuation
+limitName.Othernumber0.8880any0.0898string0.0112boolean0.0041complex0.0010
+)Punctuation
+,Punctuation
+ Text.Whitespace
+collName.Otherany0.6418any[]0.0695{}0.0198boolean0.0124string0.0087
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.7803number0.0536string0.0354boolean0.0082{}0.0050
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.6475Function0.0874number0.0821void0.0264boolean0.0193
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+awaitifyName.Othervoid0.3539any0.3442complex0.0578string0.0321number0.0263
+(Punctuation
+everyLimitName.Otherany0.3750number0.2136string0.1225boolean0.0794void0.0159
+,Punctuation
+ Text.Whitespace
+4Literal.Number.Float
+)Punctuation
+;Punctuation
+\nText.Whitespace

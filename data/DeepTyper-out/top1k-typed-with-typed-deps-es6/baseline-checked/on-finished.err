@@ -1,0 +1,14 @@
+index.ts(32,5): error TS2322: Type 'typeof setImmediate | ((fn: any) => void)' is not assignable to type 'boolean'.
+  Type 'typeof setImmediate' is not assignable to type 'boolean'.
+index.ts(48,5): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(167,5): error TS2322: Type 'null' is not assignable to type 'any[]'.
+index.ts(174,3): error TS7008: Member 'queue' implicitly has an 'any[]' type.
+index.ts(176,3): error TS2322: Type '{ (err: any): any; queue: any[]; }' is not assignable to type 'void'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

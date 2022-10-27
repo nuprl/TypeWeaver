@@ -1,0 +1,165 @@
+'use strict'Literal.String.Single
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+pathName.Otherany0.9664string0.0305complex0.0015any[]0.0002string[]0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'path'Literal.String.Single
+)Punctuation
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+writeName.Otherany0.9485void0.0297string0.0101complex0.0024number0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./lib/write'Literal.String.Single
+)Punctuation
+\n\nText.Whitespace
+Text
+// all codesComment.Single
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+codesName.Other{}0.4196complex0.2001any[]0.1528any0.0829string[]0.0561
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+\n\nText.Whitespace
+Text
+// initialize with all IANA codesComment.Single
+\nText.Whitespace
+addDataName.Othervoid0.9732Promise<void>0.0079any0.0065complex0.0055Promise<{}>0.0017
+(Punctuation
+codesName.Otherany[]0.6219string[]0.1712any0.0693complex0.0688number0.0228
+,Punctuation
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'../src/iana.json'Literal.String.Single
+)Punctuation
+)Punctuation
+\n\nText.Whitespace
+Text
+// add the codes from nodeComment.Single
+\nText.Whitespace
+addDataName.Othervoid0.9531any0.0236complex0.0085Promise<void>0.0076Function0.0011
+(Punctuation
+codesName.Otherany[]0.5577string[]0.2121complex0.0729any0.0689number0.0283
+,Punctuation
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'../src/node.json'Literal.String.Single
+)Punctuation
+)Punctuation
+\n\nText.Whitespace
+Text
+// add the codes from nginxComment.Single
+\nText.Whitespace
+addDataName.Othervoid0.9605any0.0194Promise<void>0.0074complex0.0066Function0.0009
+(Punctuation
+codesName.Otherany[]0.5661string[]0.2121complex0.0707any0.0663number0.0291
+,Punctuation
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'../src/nginx.json'Literal.String.Single
+)Punctuation
+)Punctuation
+\n\nText.Whitespace
+Text
+// add the codes from apacheComment.Single
+\nText.Whitespace
+addDataName.Othervoid0.9668any0.0156Promise<void>0.0069complex0.0054Function0.0007
+(Punctuation
+codesName.Otherany[]0.5748string[]0.2404complex0.0584any0.0518number0.0235
+,Punctuation
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'../src/apache.json'Literal.String.Single
+)Punctuation
+)Punctuation
+\n\nText.Whitespace
+Text
+// write the JSON objectComment.Single
+\nText.Whitespace
+writeName.Otherany0.8223void0.1434complex0.0169Promise<void>0.0087Promise<any>0.0015
+(Punctuation
+pathName.Otherany0.9990complex0.0006string0.0002any[]0.0001number0.0000
+.Punctuation
+joinName.Otherany0.9506complex0.0481string0.0007void0.0002any[]0.0001
+(Punctuation
+__dirnameName.Otherany0.8906string0.1081number0.0007boolean0.0002void0.0001
+,Punctuation
+ Text.Whitespace
+'../codes.json'Literal.String.Single
+)Punctuation
+,Punctuation
+ Text.Whitespace
+codesName.Otherany[]0.5227string[]0.2979complex0.0590any0.0472void0.0221
+)Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+addDataName.Othervoid0.9866Promise<void>0.0046any0.0042complex0.0016Function0.0005
+ Text.Whitespace
+(Punctuation
+dbName.Otherany0.8065DB0.0483string0.0180{}0.0147number0.0127
+,Punctuation
+ Text.Whitespace
+objName.Otherany0.8779Object0.0278object0.0204{}0.0175string0.0068
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9991any0.0003complex0.0003Object0.0001{}0.0000
+.Punctuation
+keysName.Otherstring[]0.9910complex0.0029any[]0.0020string0.0015any0.0004
+(Punctuation
+objName.Otherany0.6867Object0.1278{}0.0750complex0.0309object0.0259
+)Punctuation
+.Punctuation
+forEachName.Othervoid0.9904any0.0041complex0.0034v...0.0006Promise<void>0.0004
+(Punctuation
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+keyName.Otherstring0.9754any0.0221number0.0010complex0.0004void0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+dbName.Otherany0.9130complex0.0231{}0.0136string0.0097number0.0071
+[Punctuation
+keyName.Otherstring0.9068any0.0819number0.0043complex0.0025PropertyKey0.0004
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+dbName.Otherany0.8745complex0.0397{}0.0169string0.0117number0.0082
+[Punctuation
+keyName.Otherstring0.9042any0.0813number0.0042complex0.0036PropertyKey0.0007
+]Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+objName.Otherany0.8951{}0.0250Object0.0213object0.0117complex0.0088
+[Punctuation
+keyName.Otherstring0.8853any0.0974number0.0043complex0.0021PropertyKey0.0008
+]Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

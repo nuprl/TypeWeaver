@@ -1,0 +1,425 @@
+importKeyword
+ Text.Whitespace
+assocIndexOfName.Otherany0.1307complex0.0579string0.0162Promise<any>0.0077number0.0063
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./assocIndexOf.js'Literal.String.Single
+\n\nText.Whitespace
+classKeyword.Declaration
+ Text.Whitespace
+ListCacheName.Otherany0.9858string0.0048complex0.0042number0.0027symbol0.0004
+ Text.Whitespace
+{Punctuation
+\n\n  Text.Whitespace
+/**\n   * Creates an list cache object.\n   *\n   * @private\n   * @constructor\n   * @param {Array} [entries] The key-value pairs to cache.\n   */Comment.Multiline
+\n  Text.Whitespace
+constructorKeyword.Reserved
+(Punctuation
+entriesName.Otherany0.7350number0.0597string0.0339complex0.0218string[]0.0176
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+indexName.Othernumber0.9934any0.0058string0.0004boolean0.0002complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+lengthName.Othernumber0.9278any0.0692string0.0017boolean0.0004complex0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+entriesName.Othernumber0.4756any0.4061complex0.0332string0.0102any[]0.0098
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+0Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+entries.lengthKeyword.Type
+\n\n    Text.Whitespace
+thisKeyword
+.Punctuation
+clearName.Othernumber0.5783void0.2529boolean0.0736any0.0600complex0.0091
+(Punctuation
+)Punctuation
+\n    Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+++Operator
+indexName.Othernumber0.9914any0.0077string0.0004boolean0.0001complex0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+lengthName.Othernumber0.9674any0.0310string0.0008boolean0.0001complex0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+entryName.Othernumber[]0.3149any0.1613complex0.0690number0.0317string[]0.0247
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+entriesName.Otherany0.2561string[]0.1678number[]0.1291any[]0.0663complex0.0287
+[Punctuation
+indexName.Othernumber0.9796any0.0166string0.0018number[]0.0005complex0.0003
+]Punctuation
+\n      Text.Whitespace
+thisKeyword
+.Punctuation
+setName.Other
+(Punctuation
+entryName.Othernumber[]0.4556complex0.0742string[]0.0546any0.0526any[]0.0280
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+,Punctuation
+ Text.Whitespace
+entryName.Othernumber[]0.6019complex0.0864string[]0.0469any0.0306any[]0.0190
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Removes all key-value entries from the list cache.\n   *\n   * @memberOf ListCache\n   */Comment.Multiline
+\n  Text.Whitespace
+clearName.Othervoid0.9806number0.0054any0.0051boolean0.0022Promise<void>0.0015
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+__data__Name.Othernumber[]0.2717any[]0.2022string[]0.0779any0.0747T[]0.0316
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+sizeName.Othernumber0.9936any0.0044boolean0.0005string0.0005number[]0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Removes `key` and its value from the list cache.\n   *\n   * @memberOf ListCache\n   * @param {string} key The key of the value to remove.\n   * @returns {boolean} Returns `true` if the entry was removed, else `false`.\n   */Comment.Multiline
+\n  Text.Whitespace
+deleteOperator.Word
+(Punctuation
+keyName.Otherstring0.4146any0.3095number0.2350complex0.0141boolean0.0026
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+dataName.Othernumber[]0.1945complex0.1944number0.1555any0.1098any[]0.0583
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+__data__Name.Othernumber0.5835number[]0.1110any0.1000any[]0.0365string0.0335
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+indexName.Othernumber0.9770any0.0166string0.0024boolean0.0016complex0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+assocIndexOfName.Othernumber0.9279any0.0324string0.0147boolean0.0060complex0.0051
+(Punctuation
+dataName.Otherany0.3625number0.3072string0.0736any[]0.0509number[]0.0502
+,Punctuation
+ Text.Whitespace
+keyName.Otherstring0.3514any0.3153number0.2838complex0.0138boolean0.0034
+)Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+indexName.Othernumber0.9796any0.0185boolean0.0008string0.0006complex0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+lastIndexName.Othernumber0.9499any0.0362boolean0.0097string0.0019void0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+dataName.Otherany0.2788any[]0.2516string[]0.1064number[]0.0667string0.0639
+.Punctuation
+lengthName.Othernumber0.8149any0.1803string0.0015complex0.0013boolean0.0008
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+indexName.Othernumber0.9639any0.0327string0.0018boolean0.0009complex0.0002
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+lastIndexName.Othernumber0.9589any0.0287boolean0.0067string0.0014complex0.0006
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+dataName.Otherany[]0.3313number[]0.2578any0.1141string[]0.0795complex0.0496
+.Punctuation
+popName.Otherany0.4237number0.3328string0.1225complex0.0265boolean0.0206
+(Punctuation
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+dataName.Otherany[]0.4605number[]0.1385any0.0807string[]0.0690complex0.0297
+.Punctuation
+spliceName.Othercomplex0.7120any0.2451number0.0161any[]0.0085void0.0024
+(Punctuation
+indexName.Othernumber0.9807any0.0172string0.0013boolean0.0003complex0.0002
+,Punctuation
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+--Operator
+thisKeyword
+.Punctuation
+sizeName.Othernumber0.9423any0.0371boolean0.0093string0.0043complex0.0026
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+trueKeyword.Constant
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Gets the list cache value for `key`.\n   *\n   * @memberOf ListCache\n   * @param {string} key The key of the value to get.\n   * @returns {*} Returns the entry value.\n   */Comment.Multiline
+\n  Text.Whitespace
+getName.Other
+(Punctuation
+keyName.Otherstring0.3830any0.3432number0.2288complex0.0103boolean0.0024
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+dataName.Otherany0.1635number[]0.0924number0.0751complex0.0672any[]0.0384
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+__data__Name.Othernumber0.4838any0.1674number[]0.0697string0.0457any[]0.0302
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+indexName.Othernumber0.9532any0.0367string0.0037boolean0.0012complex0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+assocIndexOfName.Othernumber0.8344any0.0890string0.0217complex0.0111any[]0.0053
+(Punctuation
+dataName.Otherany0.3954number0.1687any[]0.0562number[]0.0381string0.0380
+,Punctuation
+ Text.Whitespace
+keyName.Otherany0.4114number0.2944string0.2486complex0.0085boolean0.0019
+)Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+indexName.Othernumber0.9693any0.0281string0.0010boolean0.0005number[]0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+undefinedName.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+dataKeyword.Typeany[]0.1631any0.1261number[]0.0793any[][]0.0261complex0.0196
+[Punctuation
+indexName.Othernumber0.9716any0.0237string0.0023complex0.0004number[]0.0004
+]Punctuation
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Checks if a list cache value for `key` exists.\n   *\n   * @memberOf ListCache\n   * @param {string} key The key of the entry to check.\n   * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.\n   */Comment.Multiline
+\n  Text.Whitespace
+hasName.Otherboolean0.7349any0.1391string0.0493number0.0435{}0.0031
+(Punctuation
+keyName.Otherstring0.4624any0.2980number0.1922complex0.0125boolean0.0032
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+assocIndexOfName.Othernumber0.3509any0.3340string0.1627boolean0.0547complex0.0322
+(Punctuation
+thisKeyword
+.Punctuation
+__data__Name.Othernumber0.6589any0.1365string0.1092boolean0.0084number[]0.0057
+,Punctuation
+ Text.Whitespace
+keyName.Otherstring0.4700any0.2816number0.1896complex0.0177boolean0.0025
+)Punctuation
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Sets the list cache `key` to `value`.\n   *\n   * @memberOf ListCache\n   * @param {string} key The key of the value to set.\n   * @param {*} value The value to set.\n   * @returns {Object} Returns the list cache instance.\n   */Comment.Multiline
+\n  Text.Whitespace
+setName.Other
+(Punctuation
+keyName.Otherany0.3800string0.3357number0.2382complex0.0103TKey0.0017
+,Punctuation
+ Text.Whitespace
+valueName.Othernumber0.5334any0.3042string0.1095boolean0.0109complex0.0020
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+dataName.Othernumber[]0.1874number0.1537any0.1301complex0.1092any[]0.0663
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+__data__Name.Othernumber0.5433any0.1465number[]0.0976any[]0.0417string0.0372
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+indexName.Othernumber0.9638any0.0275string0.0040boolean0.0011number[]0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+assocIndexOfName.Othernumber0.8850any0.0512string0.0262complex0.0121any[]0.0053
+(Punctuation
+dataName.Otherany0.3252number0.2789string0.1129any[]0.0718number[]0.0609
+,Punctuation
+ Text.Whitespace
+keyName.Otherstring0.5013any0.3155number0.1289complex0.0199any[]0.0033
+)Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+indexName.Othernumber0.9714any0.0264string0.0008boolean0.0006complex0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+++Operator
+thisKeyword
+.Punctuation
+sizeName.Othernumber0.6818any0.1932number[]0.0460complex0.0196any[]0.0181
+\n      Text.Whitespace
+dataName.Otherany[]0.3666number[]0.1569any0.0818any[][]0.0235string[]0.0233
+.Punctuation
+pushName.Othernumber0.9862any0.0103boolean0.0010void0.0005string0.0004
+(Punctuation
+[Punctuation
+keyName.Otherstring0.5496any0.3337number0.0867complex0.0108PropertyKey0.0008
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.5444number0.2961string0.1007boolean0.0042T0.0023
+]Punctuation
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+dataName.Otherany[]0.2080any0.1592number[]0.0786any[][]0.0438string[]0.0203
+[Punctuation
+indexName.Othernumber0.9672any0.0280string0.0025complex0.0005number[]0.0003
+]Punctuation
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valueName.Otherany0.5887number0.2856string0.0351boolean0.0123T0.0066
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+ListCacheName.Otherany0.2623number0.0324string0.0222complex0.0150any[]0.0092
+\nText.Whitespace

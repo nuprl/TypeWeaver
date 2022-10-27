@@ -1,0 +1,59 @@
+lib/extract_description.ts(6,5): error TS2322: Type 'undefined' is not assignable to type 'string'.
+lib/extract_description.ts(9,5): error TS2322: Type 'undefined' is not assignable to type 'string'.
+lib/extract_description.ts(14,7): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/extract_description.ts(16,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/extract_description.ts(19,7): error TS2322: Type 'string' is not assignable to type 'number'.
+lib/fixer.ts(9,19): error TS2732: Cannot find module './typos.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+lib/fixer.ts(11,24): error TS2322: Type '(str: string) => boolean' is not assignable to type 'boolean'.
+lib/fixer.ts(19,17): error TS2554: Expected 0 arguments, but got 1.
+lib/fixer.ts(23,24): error TS2554: Expected 0 arguments, but got 1.
+lib/fixer.ts(41,17): error TS2554: Expected 0 arguments, but got 2.
+lib/fixer.ts(48,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/fixer.ts(58,17): error TS2554: Expected 0 arguments, but got 1.
+lib/fixer.ts(64,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/fixer.ts(67,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/fixer.ts(75,17): error TS2554: Expected 0 arguments, but got 1.
+lib/fixer.ts(80,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/fixer.ts(97,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+lib/fixer.ts(99,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+lib/fixer.ts(115,13): error TS2304: Cannot find name 'IBoard'.
+lib/fixer.ts(121,17): error TS2554: Expected 0 arguments, but got 1.
+lib/fixer.ts(126,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/fixer.ts(133,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/fixer.ts(152,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/fixer.ts(159,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/fixer.ts(166,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/fixer.ts(172,17): error TS2554: Expected 0 arguments, but got 1.
+lib/fixer.ts(183,17): error TS2554: Expected 0 arguments, but got 1.
+lib/fixer.ts(187,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/fixer.ts(235,17): error TS2554: Expected 0 arguments, but got 2.
+lib/fixer.ts(241,17): error TS2554: Expected 0 arguments, but got 1.
+lib/fixer.ts(251,17): error TS2554: Expected 0 arguments, but got 1.
+lib/fixer.ts(257,17): error TS2554: Expected 0 arguments, but got 1.
+lib/fixer.ts(270,13): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+lib/fixer.ts(276,21): error TS2554: Expected 0 arguments, but got 1.
+lib/fixer.ts(287,23): error TS2554: Expected 0 arguments, but got 1.
+lib/fixer.ts(291,54): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+lib/fixer.ts(294,23): error TS2554: Expected 0 arguments, but got 1.
+lib/fixer.ts(300,19): error TS2554: Expected 0 arguments, but got 1.
+lib/fixer.ts(317,17): error TS2554: Expected 0 arguments, but got 1.
+lib/fixer.ts(329,24): error TS2554: Expected 0 arguments, but got 1.
+lib/fixer.ts(336,24): error TS2554: Expected 0 arguments, but got 1.
+lib/fixer.ts(339,24): error TS2554: Expected 0 arguments, but got 1.
+lib/fixer.ts(430,37): error TS7006: Parameter 'type' implicitly has an 'any' type.
+lib/fixer.ts(435,17): error TS2339: Property 'trim' does not exist on type 'never'.
+lib/make_warning.ts(2,22): error TS2732: Cannot find module './warning_messages.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+lib/normalize.ts(38,34): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[]'.
+lib/normalize.ts(41,5): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ warn: () => void; fixRepositoryField: (data: any) => void; fixTypos: (data: any) => void; fixScriptsField: (data: any) => void; fixFilesField: (data: any) => void; fixBinField: (data: any) => void; ... 12 more ...; fixLicenseField: (data: any) => void; }'.
+  No index signature with a parameter of type 'string' was found on type '{ warn: () => void; fixRepositoryField: (data: any) => void; fixTypos: (data: any) => void; fixScriptsField: (data: any) => void; fixFilesField: (data: any) => void; fixBinField: (data: any) => void; ... 12 more ...; fixLicenseField: (data: any) => void; }'.
+lib/normalize.ts(46,19): error TS7006: Parameter 'string' implicitly has an 'any' type.
+lib/safe_format.ts(10,34): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[format?: any, ...param: any[]]'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

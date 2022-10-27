@@ -1,0 +1,234 @@
+varKeyword.Declaration
+ Text.Whitespace
+BufferName.Otherany0.9774string0.0115Buffer0.0017void0.0014number0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'buffer'Literal.String.Single
+)Punctuation
+.Punctuation
+BufferName.Otherany0.9937string0.0034Buffer0.0006complex0.0005number0.0003
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+bufName.Otherany0.5378Buffer0.2368ArrayBuffer0.0671number0.0108string0.0099
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+// If the buffer is backed by a Uint8Array, a faster version will workComment.Single
+\n\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+bufName.Otherany0.7236Buffer0.0627ArrayBuffer0.0298complex0.0120string0.0083
+ Text.Whitespace
+instanceofOperator.Word
+ Text.Whitespace
+Uint8ArrayName.Builtinany0.9848number0.0077complex0.0014string0.0011Buffer0.0009
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+// If the buffer isn't a subarray, return the underlying ArrayBufferComment.Single
+\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+bufName.Otherany0.6175Buffer0.0455ArrayBuffer0.0342complex0.0075Uint8Array0.0059
+.Punctuation
+byteOffsetName.Otherany0.6935number0.2970boolean0.0032string0.0027void0.0007
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+0Literal.Number.Float
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+bufName.Otherany0.5354Buffer0.0866ArrayBuffer0.0645any[]0.0089Response0.0069
+.Punctuation
+byteLengthName.Othernumber0.5242any0.4651void0.0028string0.0028boolean0.0016
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+bufName.Otherany0.3074Buffer0.2560ArrayBuffer0.1396number0.0127Uint8Array0.0081
+.Punctuation
+bufferName.Otherany0.5336Buffer0.3127ArrayBuffer0.0731number0.0071string0.0068
+.Punctuation
+byteLengthName.Othernumber0.6515any0.3357string0.0042void0.0020boolean0.0019
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+bufName.Otherany0.2815Buffer0.2158ArrayBuffer0.1390Uint8Array0.0068Request0.0060
+.Punctuation
+bufferName.Otherany0.7796Buffer0.1188ArrayBuffer0.0311string0.0199complex0.0079
+\n\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+bufName.Otherany0.4221Buffer0.1706ArrayBuffer0.0796complex0.0132Uint8Array0.0113
+.Punctuation
+bufferName.Otherany0.7489Buffer0.1480ArrayBuffer0.0248complex0.0190string0.0168
+.Punctuation
+sliceName.Otherany0.9207string0.0234complex0.0180any[]0.0136string[]0.0063
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+// Otherwise we need to get a proper copyComment.Single
+\n\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+bufName.Otherany0.3391Buffer0.3114ArrayBuffer0.0691Uint8Array0.0077T[]0.0045
+.Punctuation
+bufferName.Otherany0.8508Buffer0.0852string0.0230ArrayBuffer0.0086any[]0.0056
+.Punctuation
+sliceName.Otherany0.9318string0.0206any[]0.0121complex0.0096Buffer0.0041
+(Punctuation
+bufName.Otherany0.5259Buffer0.1454ArrayBuffer0.0686complex0.0081number0.0070
+.Punctuation
+byteOffsetName.Otherany0.6609number0.3053string0.0122boolean0.0045Buffer0.0042
+,Punctuation
+ Text.Whitespace
+bufName.Otherany0.3866Buffer0.1825ArrayBuffer0.0669Uint8Array0.0097complex0.0075
+.Punctuation
+byteOffsetName.Otherany0.6075number0.3833string0.0048boolean0.0013void0.0007
+ Text.Whitespace
++Operator
+ Text.Whitespace
+bufName.Otherany0.5190Buffer0.1441ArrayBuffer0.1247number0.0319string0.0134
+.Punctuation
+byteLengthName.Othernumber0.6152any0.3709string0.0048void0.0038boolean0.0018
+)Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+BufferName.Otherany0.9933Buffer0.0020complex0.0008string0.0006void0.0003
+.Punctuation
+isBufferName.Otherany0.9955string0.0030complex0.0007boolean0.0002number0.0001
+(Punctuation
+bufName.Otherany0.6172Buffer0.1350ArrayBuffer0.0594complex0.0111string0.0084
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+// This is the slow version that will work with any BufferComment.Single
+\n\t\tText.Whitespace
+// implementation (even in old browsers)Comment.Single
+\n\t\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+arrayCopyName.Otherany0.7836number0.0166Buffer0.0072any[]0.0038ArrayBuffer0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.8265string0.0157number0.0065Error0.0054ArrayBuffer0.0047
+ Text.Whitespace
+Uint8ArrayName.Builtinany0.9875number0.0071string0.0013complex0.0009any[]0.0008
+(Punctuation
+bufName.Otherany0.4574Buffer0.1190any[]0.0733ArrayBuffer0.0508number0.0130
+.Punctuation
+lengthName.Othernumber0.6916any0.3038string0.0017complex0.0011void0.0003
+)Punctuation
+\n\t\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+lenName.Othernumber0.9247any0.0719string0.0007boolean0.0006void0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bufName.Otherany0.5675Buffer0.0812any[]0.0666ArrayBuffer0.0213number0.0149
+.Punctuation
+lengthName.Otherany0.7495number0.2449complex0.0017string0.0013void0.0006
+\n\t\tText.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9903any0.0088string0.0004boolean0.0002void0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9791any0.0198string0.0003boolean0.0002void0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+lenName.Othernumber0.9089any0.0886boolean0.0006string0.0005complex0.0002
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9824any0.0167string0.0004boolean0.0002complex0.0000
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+arrayCopyName.Otherany0.7727any[]0.0571number[]0.0112string[]0.0075any[][]0.0071
+[Punctuation
+iName.Othernumber0.9770any0.0195string0.0023boolean0.0004void0.0001
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bufName.Otherany0.6615Buffer0.0532any[]0.0520ArrayBuffer0.0170T[]0.0106
+[Punctuation
+iName.Othernumber0.9817any0.0140string0.0025boolean0.0004void0.0001
+]Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+arrayCopyName.Otherany0.7651Buffer0.0203number0.0049any[]0.0030Response0.0027
+.Punctuation
+bufferName.Otherany0.8496Buffer0.0720complex0.0085string0.0084any[]0.0076
+\n\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+throwKeywordany0.6203Error0.3038complex0.0140string0.0077{}0.0048
+ Text.Whitespace
+newOperator.Wordany0.5139Error0.2471ErrorConstructor0.1382string0.0215complex0.0064
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor1.0000Error0.0000any0.0000never0.0000complex0.0000
+(Punctuation
+'Argument must be a Buffer'Literal.String.Single
+)Punctuation
+\n\tText.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

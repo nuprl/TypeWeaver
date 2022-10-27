@@ -1,0 +1,59 @@
+importKeyword
+ Text.Whitespace
+baseUpdateName.Otherany0.4599complex0.1394void0.0368string0.0313boolean0.0247
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseUpdate.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * This method is like `set` except that it accepts `updater` to produce the\n * value to set. Use `updateWith` to customize `path` creation. The `updater`\n * is invoked with one argument: (value).\n *\n * **Note:** This method mutates `object`.\n *\n * @since 4.6.0\n * @category Object\n * @param {Object} object The object to modify.\n * @param {Array|string} path The path of the property to set.\n * @param {Function} updater The function to produce the updated value.\n * @returns {Object} Returns `object`.\n * @example\n *\n * const object = { 'a': [{ 'b': { 'c': 3 } }] }\n *\n * update(object, 'a[0].b.c', n => n * n)\n * console.log(object.a[0].b.c)\n * // => 9\n *\n * update(object, 'x[0].y.z', n => n ? n + 1 : 0)\n * console.log(object.x[0].y.z)\n * // => 0\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+updateName.Otherany0.4893Promise<any>0.0575string0.0329any[]0.0289complex0.0212
+(Punctuation
+objectName.Otherany0.7176Object0.1019object0.0555string0.0438number0.0107
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.9148any0.0523Path0.0115string[]0.0020Object0.0019
+,Punctuation
+ Text.Whitespace
+updaterName.Otherany0.5571object0.0818string0.0638boolean0.0367Object0.0194
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+objectName.Otherany0.5875Object0.1876object0.1052string0.0246{}0.0194
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+objectName.Otherany0.5315Object0.1135object0.1058complex0.0692string0.0365
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+baseUpdateKeyword.Typeany0.8992complex0.0440void0.0220string0.0119Object0.0053
+(Punctuation
+objectName.Otherany0.7686Object0.1058object0.0587string0.0165complex0.0129
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.8609any0.0939Path0.0117complex0.0075string[]0.0050
+,Punctuation
+ Text.Whitespace
+updaterName.Otherany0.3879void0.1133{}0.0578any[]0.0433boolean0.0353
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+updateName.Otherany0.1591void0.0681Promise<void>0.0228{}0.0169Promise<any>0.0134
+\nText.Whitespace

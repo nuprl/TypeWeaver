@@ -1,0 +1,186 @@
+importKeyword
+ Text.Whitespace
+mapName.Otherany0.3811complex0.1748U[]0.1253string[]0.0081void0.0072
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./map.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Creates a function that iterates over `pairs` and invokes the corresponding\n * function of the first predicate to return truthy. The predicate-function\n * pairs are invoked with the `this` binding and arguments of the created\n * function.\n *\n * @since 4.0.0\n * @category Util\n * @param {Array} pairs The predicate-function pairs.\n * @returns {Function} Returns the new composite function.\n * @example\n *\n * const func = cond([\n *   [matches({ 'a': 1 }),         () => 'matches A'],\n *   [conforms({ 'b': isNumber }), () => 'matches B'],\n *   [() => true,                  () => 'no match']\n * ])\n *\n * func({ 'a': 1, 'b': 2 })\n * // => 'matches A'\n *\n * func({ 'a': 0, 'b': 1 })\n * // => 'matches B'\n *\n * func({ 'a': '1', 'b': '2' })\n * // => 'no match'\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+condName.Otherboolean0.4915string0.1156any0.1052complex0.0141number0.0128
+(Punctuation
+pairsName.Otherany0.6178string0.1053complex0.0880string[]0.0879any[]0.0171
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+lengthName.Otherany0.7180number0.1252string0.0836string[]0.0159any[]0.0133
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pairsName.Otherany0.6153complex0.1420string0.0737string[]0.0498any[]0.0398
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+0Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+pairs.lengthKeyword.Type
+\n\n  Text.Whitespace
+pairsName.Otherany0.4868string[]0.1550string0.1249any[]0.0751complex0.0720
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+!Operator
+lengthName.Otherany0.7555number0.1275any[]0.0324string0.0217string[]0.0183
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+mapName.Otherany0.7869complex0.1118U[]0.0665void0.0024Error0.0015
+(Punctuation
+pairsName.Otherany0.6689complex0.1662string0.0847string[]0.0246any[]0.0126
+,Punctuation
+ Text.Whitespace
+(Punctuation
+pairName.Otherany0.6340complex0.1130string0.0710string[]0.0247any[]0.0179
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+pairName.Otherany0.5392string[]0.1459complex0.1078any[]0.0651number[]0.0445
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+throwKeywordany0.5645complex0.2354string0.0696Error0.0247{}0.0245
+ Text.Whitespace
+newOperator.Wordany0.4005complex0.1147boolean0.0932string0.0715{}0.0339
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9823ErrorConstructor0.0026undefined0.0007BooleanConstructor0.0002complex0.0002
+(Punctuation
+'Expected a function'Literal.String.Single
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+pairName.Otherany0.3873string[]0.2051number[]0.0921any[]0.0605complex0.0541
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+,Punctuation
+ Text.Whitespace
+pairName.Otherany0.3541string[]0.1852number[]0.1296any[]0.0805complex0.0749
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+]Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+...Punctuation
+argsName.Otherany[]0.8189any0.0336string[]0.0227IArguments0.0148number[]0.0031
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+constKeyword.Declaration
+ Text.Whitespace
+pairName.Otherany0.6376complex0.1181string0.0646string[]0.0452any[]0.0245
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+pairsName.Otherany0.3755complex0.2547string[]0.1883any[]0.0825string0.0326
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+pairName.Otherany0.4084string[]0.1716any[]0.1090number[]0.0738complex0.0664
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+.Punctuation
+applyName.Otherany0.9751void0.0045number0.0034string0.0027complex0.0023
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+argsName.Otherany[]0.4491IArguments0.1264any0.1207string[]0.0446string0.0161
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+returnKeyword
+ Text.Whitespace
+pairName.Otherany0.2811any[]0.1692string[]0.1641number[]0.0807complex0.0378
+[Punctuation
+1Literal.Number.Float
+]Punctuation
+.Punctuation
+applyName.Otherany0.9403void0.0169Function0.0056number0.0043complex0.0027
+(Punctuation
+thisKeyword
+,Punctuation
+ Text.Whitespace
+argsName.Otherany[]0.7593IArguments0.0560any0.0430string[]0.0167number[]0.0025
+)Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+condName.Otherany0.0485boolean0.0280{}0.0114false0.0052RowNode0.0050
+\nText.Whitespace

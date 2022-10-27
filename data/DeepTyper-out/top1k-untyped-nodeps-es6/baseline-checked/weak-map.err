@@ -1,0 +1,75 @@
+bench.ts(2,21): error TS2306: File 'weak-map.ts' is not a module.
+bench.ts(10,1): error TS2582: Cannot find name 'suite'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+bench.ts(11,5): error TS2304: Cannot find name 'bench'.
+bench.ts(16,5): error TS2304: Cannot find name 'bench'.
+bench.ts(22,5): error TS2304: Cannot find name 'bench'.
+bench.ts(28,5): error TS2304: Cannot find name 'bench'.
+bench.ts(35,5): error TS2304: Cannot find name 'bench'.
+weak-map.ts(102,14): error TS2304: Cannot find name 'ses'.
+weak-map.ts(102,37): error TS2304: Cannot find name 'ses'.
+weak-map.ts(102,48): error TS2304: Cannot find name 'ses'.
+weak-map.ts(126,14): error TS2304: Cannot find name 'ses'.
+weak-map.ts(127,5): error TS2304: Cannot find name 'ses'.
+weak-map.ts(166,9): error TS1258: A default export must be at the top level of a file or module declaration.
+weak-map.ts(173,24): error TS2322: Type '(o: any) => string[]' is not assignable to type 'string[]'.
+weak-map.ts(175,7): error TS2322: Type '(o: any) => boolean' is not assignable to type 'string'.
+weak-map.ts(247,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map.ts(249,14): error TS2349: This expression is not callable.
+  Type 'string[]' has no call signatures.
+weak-map.ts(258,51): error TS2339: Property 'getPropertyNames' does not exist on type 'ObjectConstructor'.
+weak-map.ts(259,5): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map.ts(261,16): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map.ts(309,33): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
+weak-map.ts(311,10): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+weak-map.ts(313,7): error TS2322: Type 'undefined' is not assignable to type 'boolean'.
+weak-map.ts(342,7): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map.ts(355,7): error TS2322: Type 'undefined' is not assignable to type 'boolean'.
+weak-map.ts(370,5): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map.ts(373,16): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map.ts(377,5): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map.ts(379,25): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
+weak-map.ts(380,16): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map.ts(384,5): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map.ts(387,16): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+weak-map.ts(410,7): error TS2322: Type '() => any' is not assignable to type 'void'.
+weak-map.ts(411,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+weak-map.ts(411,27): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+weak-map.ts(462,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+weak-map.ts(469,22): error TS2361: The right-hand side of an 'in' expression must not be a primitive.
+weak-map.ts(469,45): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Boolean'.
+  No index signature with a parameter of type 'number' was found on type 'Boolean'.
+weak-map.ts(501,37): error TS2339: Property 'prototype' does not exist on type 'void'.
+weak-map.ts(509,14): error TS2339: Property 'prototype' does not exist on type 'void'.
+weak-map.ts(576,9): error TS2322: Type 'undefined' is not assignable to type 'ProxyConstructor'.
+weak-map.ts(580,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+weak-map.ts(580,31): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+weak-map.ts(621,39): error TS2351: This expression is not constructable.
+  Type 'void' has no construct signatures.
+weak-map.ts(624,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+weak-map.ts(632,41): error TS2351: This expression is not constructable.
+  Type 'void' has no construct signatures.
+weak-map.ts(638,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+weak-map.ts(648,41): error TS2339: Property 'prototype' does not exist on type 'void'.
+weak-map.ts(654,17): error TS2367: This condition will always return 'false' since the types 'string' and '(map: any) => void' have no overlap.
+weak-map.ts(662,44): error TS2339: Property 'prototype' does not exist on type 'void'.
+weak-map.ts(663,7): error TS1258: A default export must be at the top level of a file or module declaration.
+weak-map.ts(680,7): error TS2322: Type 'undefined' is not assignable to type 'ProxyConstructor'.
+weak-map.ts(683,5): error TS1258: A default export must be at the top level of a file or module declaration.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

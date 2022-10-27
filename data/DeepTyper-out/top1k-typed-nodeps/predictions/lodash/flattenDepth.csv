@@ -1,0 +1,96 @@
+importKeyword
+ Text.Whitespace
+baseFlattenName.Otherany0.1535complex0.0703boolean0.0618string0.0275void0.0267
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseFlatten.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Recursively flatten `array` up to `depth` times.\n *\n * @since 4.4.0\n * @category Array\n * @param {Array} array The array to flatten.\n * @param {number} [depth=1] The maximum recursion depth.\n * @returns {Array} Returns the new flattened array.\n * @see flatMap, flatMapDeep, flatMapDepth, flattenDeep\n * @example\n *\n * const array = [1, [2, [3, [4]], 5]]\n *\n * flattenDepth(array, 1)\n * // => [1, 2, [3, [4]], 5]\n *\n * flattenDepth(array, 2)\n * // => [1, 2, 3, [4], 5]\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+flattenDepthName.Otherany0.2383complex0.1418string0.0825boolean0.0774number0.0426
+(Punctuation
+arrayName.Otherany0.2879any[]0.0975number0.0717string0.0530string[]0.0362
+,Punctuation
+ Text.Whitespace
+depthName.Othernumber0.9595any0.0326string0.0044boolean0.0007complex0.0005
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+lengthName.Othernumber0.6227any0.3665string0.0065boolean0.0011complex0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+arrayName.Otherany0.6498number0.1101any[]0.0808number[]0.0456string0.0152
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+0Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+array.lengthKeyword.Type
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+lengthName.Othernumber0.7131any0.2798string0.0049boolean0.0005void0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+depthName.Othernumber0.9507any0.0398string0.0045boolean0.0022void0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+depthName.Othernumber0.9577any0.0360string0.0040boolean0.0009complex0.0004
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+1Literal.Number.Float
+ Text.Whitespace
+:Operator
+ Text.Whitespace
++Operator
+depthName.Othernumber0.9298any0.0472string0.0166boolean0.0025complex0.0007
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+baseFlattenName.Otherany0.4060number0.1692void0.1020complex0.0808string0.0554
+(Punctuation
+arrayName.Otherany[]0.3684any0.2770number0.0822number[]0.0705string[]0.0647
+,Punctuation
+ Text.Whitespace
+depthName.Othernumber0.9851any0.0101string0.0022void0.0006boolean0.0006
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+flattenDepthName.Otherany0.2695string0.0265number0.0253void0.0197complex0.0168
+\nText.Whitespace

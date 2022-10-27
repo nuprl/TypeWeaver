@@ -1,0 +1,70 @@
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+ Text.Whitespace
+elemName.Otherany0.9470HTMLElement0.0126string0.0099Element0.0043Node0.0013
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n\tText.Whitespace
+// Support: IE <=11+ (trac-14150)Comment.Single
+\n\tText.Whitespace
+// In IE popup's `window` is the opener window which makes `window.getComputedStyle( elem )`Comment.Single
+\n\tText.Whitespace
+// break. Using `elem.ownerDocument.defaultView` avoids the issue.Comment.Single
+\n\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+viewName.Otherany0.9765string0.0073HTMLElement0.0017View0.0012any[]0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+elemName.Otherany0.9828HTMLElement0.0025Node0.0010Element0.0010complex0.0010
+.Punctuation
+ownerDocumentName.Otherany0.9750Document0.0127complex0.0018number0.0011string0.0006
+.Punctuation
+defaultViewName.Otherany0.9488Window0.0229Function0.0043number0.0035complex0.0030
+;Punctuation
+\n\n\tText.Whitespace
+// `document.implementation.createHTMLDocument( "" )` has a `null` `defaultView`Comment.Single
+\n\tText.Whitespace
+// property; check `defaultView` truthiness to fallback to window in such a case.Comment.Single
+\n\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+!Operator
+viewName.Otherany0.8976string0.0304View0.0056ViewBase0.0045Node0.0040
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+viewName.Otherany0.9364string0.0170View0.0034ViewBase0.0032Window0.0026
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+windowName.BuiltinWindow0.9068any0.0759Function0.0010ClassDecorator0.0007string0.0004
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+viewName.Otherany0.7221View0.0299ViewBase0.0229HTMLElement0.0142Window0.0132
+.Punctuation
+getComputedStyleName.OtherCSSStyleDeclaration0.9228any0.0529string0.0032complex0.0005Style0.0005
+(Punctuation
+ Text.Whitespace
+elemName.Otherany0.9280string0.0232HTMLElement0.0128Object0.0032number0.0032
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

@@ -1,0 +1,75 @@
+dangerous.ts(8,24): error TS2339: Property 'Buffer' does not exist on type '{}'.
+dangerous.ts(16,3): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+dangerous.ts(16,20): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+dangerous.ts(19,33): error TS2339: Property 'Buffer' does not exist on type '{}'.
+dangerous.ts(54,12): error TS2348: Value of type '{ new (size: number): Buffer; prototype: Buffer; }' is not callable. Did you mean to include 'new'?
+safer.ts(15,3): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+safer.ts(15,16): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'typeof import("buffer")'.
+safer.ts(18,24): error TS2339: Property 'Buffer' does not exist on type '{}'.
+safer.ts(25,7): error TS2339: Property 'Buffer' does not exist on type '{}'.
+safer.ts(59,12): error TS2339: Property 'kStringMaxLength' does not exist on type '{}'.
+safer.ts(61,11): error TS2339: Property 'kStringMaxLength' does not exist on type '{}'.
+safer.ts(61,38): error TS2339: Property 'binding' does not exist on type 'Process'.
+safer.ts(68,12): error TS2339: Property 'constants' does not exist on type '{}'.
+safer.ts(69,9): error TS2339: Property 'constants' does not exist on type '{}'.
+safer.ts(70,23): error TS2339: Property 'kMaxLength' does not exist on type '{}'.
+safer.ts(72,13): error TS2339: Property 'kStringMaxLength' does not exist on type '{}'.
+safer.ts(73,11): error TS2339: Property 'constants' does not exist on type '{}'.
+safer.ts(73,47): error TS2339: Property 'kStringMaxLength' does not exist on type '{}'.
+tests.ts(5,18): error TS2307: Cannot find module 'tape' or its corresponding type declarations.
+tests.ts(7,19): error TS2307: Cannot find module './' or its corresponding type declarations.
+tests.ts(69,36): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'BufferConstructor'.
+  No index signature with a parameter of type 'string' was found on type 'BufferConstructor'.
+tests.ts(80,29): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'typeof import("buffer")'.
+  No index signature with a parameter of type 'string' was found on type 'typeof import("buffer")'.
+tests.ts(91,36): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'BufferConstructor'.
+  No index signature with a parameter of type 'string' was found on type 'BufferConstructor'.
+tests.ts(110,29): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
+  No index signature with a parameter of type 'string' was found on type '{}'.
+tests.ts(116,21): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(118,42): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(129,29): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
+  No index signature with a parameter of type 'string' was found on type '{}'.
+tests.ts(135,25): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(138,46): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(164,43): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(165,43): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(187,23): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(188,23): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(188,64): error TS2348: Value of type '{ new (size: number): Buffer; prototype: Buffer; }' is not callable. Did you mean to include 'new'?
+tests.ts(225,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(226,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(227,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(228,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(229,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(230,19): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(233,40): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(234,40): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(235,40): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(237,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(238,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(239,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(240,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(241,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(242,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(260,23): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(261,23): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(267,37): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(268,41): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(270,11): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(271,15): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(272,15): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(286,37): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(287,41): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(312,32): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(331,37): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(332,41): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(349,37): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(350,41): error TS2339: Property 'Buffer' does not exist on type '{}'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

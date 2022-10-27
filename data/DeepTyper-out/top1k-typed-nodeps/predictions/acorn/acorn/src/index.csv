@@ -1,0 +1,434 @@
+Text
+// Acorn is a tiny, fast JavaScript parser written in JavaScript.Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// Acorn was written by Marijn Haverbeke, Ingvar Stepanyan, andComment.Single
+\nText.Whitespace
+// various contributors and released under an MIT license.Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// Git repositories for Acorn are available atComment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+//     http://marijnhaverbeke.nl/git/acornComment.Single
+\nText.Whitespace
+//     https://github.com/acornjs/acorn.gitComment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// Please use the [github bug tracker][ghbt] to report issues.Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// [ghbt]: https://github.com/acornjs/acorn/issuesComment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// [walk]: util/walk.jsComment.Single
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+ParserName.Otherany0.4933void0.3749Promise<void>0.0162boolean0.0142string0.0065
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./state.js"Literal.String.Double
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+"./parseutil.js"Literal.String.Double
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+"./statement.js"Literal.String.Double
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+"./lval.js"Literal.String.Double
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+"./expression.js"Literal.String.Double
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+"./location.js"Literal.String.Double
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+"./scope.js"Literal.String.Double
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+defaultOptionsName.Otherany0.4439string0.0687Schema0.0451complex0.0447number0.0426
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./options.js"Literal.String.Double
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+PositionName.Otherany0.9759number0.0077complex0.0067Position0.0058string0.0018
+,Punctuation
+ Text.Whitespace
+SourceLocationName.Otherany0.5513Position0.0418number0.0373complex0.0323string0.0314
+,Punctuation
+ Text.Whitespace
+getLineInfoName.Otherany0.9134complex0.0197void0.0163string0.0129boolean0.0079
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./locutil.js"Literal.String.Double
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+NodeName.Otherany0.9945complex0.0036string0.0007Node0.0006void0.0001
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./node.js"Literal.String.Double
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+TokenTypeName.Otherany0.9918string0.0039complex0.0027number0.0006boolean0.0004
+,Punctuation
+ Text.Whitespace
+typesName.Otherany0.6238complex0.3129string0.0043string[]0.0042void0.0033
+ Text.Whitespace
+asKeyword.Reserved
+ Text.Whitespace
+tokTypesName.Otherany0.9620complex0.0233void0.0038string0.0026string[]0.0011
+,Punctuation
+ Text.Whitespace
+keywordsName.Otherany0.2916complex0.2486string[]0.2222string0.0516any[]0.0201
+ Text.Whitespace
+asKeyword.Reserved
+ Text.Whitespace
+keywordTypesName.Otherany0.8220complex0.0556void0.0308string[]0.0202string0.0158
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./tokentype.js"Literal.String.Double
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+TokContextName.Otherany0.8143complex0.0486string0.0310void0.0272boolean0.0048
+,Punctuation
+ Text.Whitespace
+typesName.Otherany0.5286complex0.2893string[]0.0170string0.0135any[]0.0062
+ Text.Whitespace
+asKeyword.Reserved
+ Text.Whitespace
+tokContextsName.Otherany0.8625complex0.0541void0.0198string0.0162string[]0.0059
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./tokencontext.js"Literal.String.Double
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+isIdentifierCharName.Otherany0.8408complex0.0454string0.0231void0.0169boolean0.0047
+,Punctuation
+ Text.Whitespace
+isIdentifierStartName.Otherany0.8335complex0.0547string0.0267void0.0127boolean0.0081
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./identifier.js"Literal.String.Double
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+TokenName.Otherany0.9829complex0.0069void0.0023string0.0020boolean0.0003
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./tokenize.js"Literal.String.Double
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+isNewLineName.Otherany0.8768complex0.0345void0.0226string0.0182boolean0.0044
+,Punctuation
+ Text.Whitespace
+lineBreakName.Otherany0.8128complex0.0497void0.0240string0.0212boolean0.0097
+,Punctuation
+ Text.Whitespace
+lineBreakGName.Otherany0.8029complex0.0519void0.0226string0.0174boolean0.0104
+,Punctuation
+ Text.Whitespace
+nonASCIIwhitespaceName.Otherany0.8413complex0.0507string0.0197void0.0184boolean0.0071
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./whitespace.js"Literal.String.Double
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+versionName.Otherstring0.6470any0.0998complex0.0455RegExp0.0161string[]0.0067
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+"8.8.0"Literal.String.Double
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ParserName.Othervoid0.4383any0.1655Promise<void>0.0182string0.0121HTMLDivElement0.0104
+,Punctuation
+\n  Text.Whitespace
+defaultOptionsName.Otherany0.1159Schema0.1028string0.0275Token0.0176number0.0120
+,Punctuation
+\n  Text.Whitespace
+PositionName.Otherany0.9379Position0.0338number0.0103complex0.0067string0.0029
+,Punctuation
+\n  Text.Whitespace
+SourceLocationName.Otherany0.1679Position0.0541string0.0306number0.0271Error0.0229
+,Punctuation
+\n  Text.Whitespace
+getLineInfoName.Otherany0.9588string0.0105complex0.0083number0.0029void0.0025
+,Punctuation
+\n  Text.Whitespace
+NodeName.Otherany0.9850complex0.0099Node0.0015string0.0013Element0.0002
+,Punctuation
+\n  Text.Whitespace
+TokenTypeName.Otherany0.9919string0.0037complex0.0023number0.0006boolean0.0004
+,Punctuation
+\n  Text.Whitespace
+tokTypesName.Otherany0.9899complex0.0042string0.0017void0.0004Promise<void>0.0002
+,Punctuation
+\n  Text.Whitespace
+keywordTypesName.Otherany0.9884complex0.0039string0.0019void0.0004Promise<void>0.0003
+,Punctuation
+\n  Text.Whitespace
+TokContextName.Otherany0.9892complex0.0034string0.0018void0.0004Promise<void>0.0003
+,Punctuation
+\n  Text.Whitespace
+tokContextsName.Otherany0.9896complex0.0030string0.0018void0.0004Promise<void>0.0003
+,Punctuation
+\n  Text.Whitespace
+isIdentifierCharName.Otherany0.9890complex0.0029string0.0018void0.0004Element0.0003
+,Punctuation
+\n  Text.Whitespace
+isIdentifierStartName.Otherany0.9889complex0.0028string0.0017void0.0004Element0.0003
+,Punctuation
+\n  Text.Whitespace
+TokenName.Otherany0.9535complex0.0067Token0.0035Expression0.0022Element0.0015
+,Punctuation
+\n  Text.Whitespace
+isNewLineName.Otherany0.9557complex0.0071string0.0054boolean0.0028void0.0021
+,Punctuation
+\n  Text.Whitespace
+lineBreakName.Otherany0.9501complex0.0077string0.0069boolean0.0034void0.0027
+,Punctuation
+\n  Text.Whitespace
+lineBreakGName.Otherany0.9448complex0.0077string0.0068boolean0.0035void0.0027
+,Punctuation
+\n  Text.Whitespace
+nonASCIIwhitespaceName.Otherany0.9711complex0.0063string0.0051boolean0.0032void0.0025
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+ParserName.Otherany0.1725void0.1382complex0.0540Promise<void>0.0407State0.0170
+.Punctuation
+acornName.Otherany0.7122complex0.1007void0.0215Promise<void>0.0043Element0.0043
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ParserName.Othervoid0.3255any0.0806HTMLDivElement0.0112Element0.0100State0.0084
+,Punctuation
+\n  Text.Whitespace
+versionName.Otherstring0.6049any0.2103complex0.0271number0.0246void0.0098
+,Punctuation
+\n  Text.Whitespace
+defaultOptionsName.Otherany0.1230Schema0.0696string0.0263number0.0220Token0.0118
+,Punctuation
+\n  Text.Whitespace
+PositionName.Otherany0.9348Position0.0320number0.0168complex0.0056string0.0034
+,Punctuation
+\n  Text.Whitespace
+SourceLocationName.Otherany0.1532Position0.0441number0.0257Token0.0223string0.0215
+,Punctuation
+\n  Text.Whitespace
+getLineInfoName.Otherany0.9604string0.0096complex0.0057number0.0033boolean0.0025
+,Punctuation
+\n  Text.Whitespace
+NodeName.Otherany0.9841complex0.0099Node0.0015string0.0015Element0.0003
+,Punctuation
+\n  Text.Whitespace
+TokenTypeName.Otherany0.9912string0.0034complex0.0029number0.0007boolean0.0004
+,Punctuation
+\n  Text.Whitespace
+tokTypesName.Otherany0.9873complex0.0050string0.0015void0.0003boolean0.0003
+,Punctuation
+\n  Text.Whitespace
+keywordTypesName.Otherany0.9862complex0.0047string0.0016void0.0004Promise<void>0.0003
+,Punctuation
+\n  Text.Whitespace
+TokContextName.Otherany0.9871complex0.0040string0.0015void0.0004Promise<void>0.0003
+,Punctuation
+\n  Text.Whitespace
+tokContextsName.Otherany0.9871complex0.0036string0.0015void0.0004boolean0.0003
+,Punctuation
+\n  Text.Whitespace
+isIdentifierCharName.Otherany0.9858complex0.0035string0.0015void0.0004boolean0.0003
+,Punctuation
+\n  Text.Whitespace
+isIdentifierStartName.Otherany0.9838complex0.0035string0.0015Element0.0004boolean0.0004
+,Punctuation
+\n  Text.Whitespace
+TokenName.Otherany0.9477complex0.0062Token0.0027Expression0.0023Token[]0.0017
+,Punctuation
+\n  Text.Whitespace
+isNewLineName.Otherany0.9463complex0.0076string0.0041boolean0.0035void0.0017
+,Punctuation
+\n  Text.Whitespace
+lineBreakName.Otherany0.9297complex0.0083string0.0053boolean0.0045void0.0024
+,Punctuation
+\n  Text.Whitespace
+lineBreakGName.Otherany0.9115complex0.0084string0.0050boolean0.0047void0.0021
+,Punctuation
+\n  Text.Whitespace
+nonASCIIwhitespaceName.Otherany0.9515complex0.0074boolean0.0047string0.0040void0.0018
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+// The main exported interface (under `self.acorn` when in theComment.Single
+\nText.Whitespace
+// browser) is a `parse` function that takes a code string andComment.Single
+\nText.Whitespace
+// returns an abstract syntax tree as specified by [Mozilla parserComment.Single
+\nText.Whitespace
+// API][api].Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// [api]: https://developer.mozilla.org/en-US/docs/SpiderMonkey/Parser_APIComment.Single
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+parseName.Otherany0.0176Expression0.0109complex0.0039Parser0.0038Element[]0.0036
+(Punctuation
+inputName.Otherstring0.3890any0.1085number0.0155Element0.0110Tree0.0105
+,Punctuation
+ Text.Whitespace
+optionsName.OtherOptions0.1303IOptions0.0371any0.0322ConnectionOptions0.0118RequestOptions0.0089
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+ParserName.Otherany0.2406void0.0229Element0.0076this0.0058boolean0.0045
+.Punctuation
+parseName.Otherany0.0774Expression0.0108complex0.0063Schema0.0050Element0.0048
+(Punctuation
+inputName.Otherstring0.6466any0.1115number0.0201Tree0.0063any[]0.0059
+,Punctuation
+ Text.Whitespace
+optionsName.OtherOptions0.1382any0.0517IOptions0.0398ConnectionOptions0.0140FormlyFormOptions0.0049
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+// This function tries to parse a single expression at a givenComment.Single
+\nText.Whitespace
+// offset in a string. Useful for parsing mixed-language formatsComment.Single
+\nText.Whitespace
+// that embed JavaScript expressions.Comment.Single
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+parseExpressionAtName.Otherany0.1334string0.0370complex0.0140Element0.0130number0.0082
+(Punctuation
+inputName.Otherstring0.1798any0.0695Tree0.0212number0.0160Element0.0081
+,Punctuation
+ Text.Whitespace
+posName.Othernumber0.4016any0.1751Position0.0366string0.0147Date0.0113
+,Punctuation
+ Text.Whitespace
+optionsName.OtherOptions0.1459IOptions0.0301any0.0221RequestOptions0.0090ConnectionOptions0.0076
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+ParserName.Otherany0.2749void0.0456Promise<void>0.0098Promise<any>0.0080complex0.0076
+.Punctuation
+parseExpressionAtName.Otherany0.4693complex0.0521string0.0187boolean0.0128void0.0128
+(Punctuation
+inputName.Otherstring0.3175any0.1743number0.0232Element0.0115Token0.0097
+,Punctuation
+ Text.Whitespace
+posName.Othernumber0.4917any0.3263Position0.0238Date0.0143string0.0139
+,Punctuation
+ Text.Whitespace
+optionsName.OtherOptions0.1930any0.0418IOptions0.0311ConnectionOptions0.0153RequestOptions0.0043
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+// Acorn is organized as a tokenizer and a recursive-descent parser.Comment.Single
+\nText.Whitespace
+// The `tokenizer` export provides an interface to the tokenizer.Comment.Single
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+tokenizerName.Otherany0.4590complex0.1455any[]0.0189string0.0188string[]0.0056
+(Punctuation
+inputName.Otherstring0.1173any0.0753Tree0.0148SymbolicTensor0.0118URI0.0081
+,Punctuation
+ Text.Whitespace
+optionsName.OtherOptions0.1336IOptions0.0596any0.0182ConnectionOptions0.0096FirebaseAppOptions0.0061
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+ParserName.Otherany0.4616void0.0367Promise<void>0.0075Promise<any>0.0072Error0.0059
+.Punctuation
+tokenizerName.Otherany0.4760complex0.4479any[]0.0088string0.0028void0.0019
+(Punctuation
+inputName.Otherany0.1779string0.0967never0.0220any[]0.0150Token0.0080
+,Punctuation
+ Text.Whitespace
+optionsName.OtherOptions0.1679any0.0531IOptions0.0428ConnectionOptions0.0164never0.0056
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

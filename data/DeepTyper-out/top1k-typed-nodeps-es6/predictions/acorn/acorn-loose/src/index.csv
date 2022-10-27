@@ -1,0 +1,149 @@
+Text
+// Acorn: Loose parserComment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// This module provides an alternative parser that exposes that sameComment.Single
+\nText.Whitespace
+// interface as the main module's `parse` function, but will try toComment.Single
+\nText.Whitespace
+// parse anything as JavaScript, repairing syntax error the best itComment.Single
+\nText.Whitespace
+// can. There are circumstances in which it will raise an error andComment.Single
+\nText.Whitespace
+// give up, but they are very rare. The resulting AST will be a mostlyComment.Single
+\nText.Whitespace
+// valid JavaScript AST (as per the [Mozilla parser API][api], exceptComment.Single
+\nText.Whitespace
+// that:Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// - Return outside functions is allowedComment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// - Label consistency (no conflicts, break only to existing labels)Comment.Single
+\nText.Whitespace
+//   is not enforced.Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// - Bogus Identifier nodes with a name of `"✖"` are inserted wheneverComment.Single
+\nText.Whitespace
+//   the parser got too confused to return anything meaningful.Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// [api]: https://developer.mozilla.org/en-US/docs/SpiderMonkey/Parser_APIComment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// The expected use for this is to *first* try `acorn.parse`, and onlyComment.Single
+\nText.Whitespace
+// if that fails switch to the loose parser. The loose parser mightComment.Single
+\nText.Whitespace
+// parse badly indented code incorrectly, so **don't** use it as yourComment.Single
+\nText.Whitespace
+// default parser.Comment.Single
+\nText.Whitespace
+//Comment.Single
+\nText.Whitespace
+// Quite a lot of acorn.js is duplicated here. The alternative was toComment.Single
+\nText.Whitespace
+// add a *lot* of extra cruft to that file, making it less readableComment.Single
+\nText.Whitespace
+// and slower. Copying and editing the code allowed me to makeComment.Single
+\nText.Whitespace
+// invasive changes and simplifications without creating a complicatedComment.Single
+\nText.Whitespace
+// tangle.Comment.Single
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+defaultOptionsName.Otherany0.4111complex0.0592Schema0.0387T0.0213{}0.0138
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"acorn"Literal.String.Double
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+{Punctuation
+LooseParserName.Otherany0.8524complex0.0310string0.0198void0.0166boolean0.0125
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./state.js"Literal.String.Double
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+"./tokenize.js"Literal.String.Double
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+"./statement.js"Literal.String.Double
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+"./expression.js"Literal.String.Double
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+{Punctuation
+LooseParserName.Otherany0.7855complex0.0423void0.0233string0.0146symbol0.0129
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./state.js"Literal.String.Double
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+{Punctuation
+isDummyName.Otherany0.8166complex0.0316string0.0177void0.0150boolean0.0118
+}Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./parseutil.js"Literal.String.Double
+\n\nText.Whitespace
+defaultOptionsName.Otherany0.8254complex0.0155Schema0.0115string0.0097number0.0074
+.Punctuation
+tabSizeName.Otherany0.9871number0.0094complex0.0012boolean0.0006string0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+4Literal.Number.Float
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+parseName.Otherany0.1623complex0.0298number0.0128string0.0089void0.0068
+(Punctuation
+inputName.Otherstring0.6111any0.2479number0.0535Date0.0047any[]0.0030
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.1642Options0.0812number0.0170IOptions0.0115string0.0097
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+LooseParserName.Otherany0.9515complex0.0051void0.0015string0.0014number0.0009
+.Punctuation
+parseName.Otherany0.5140complex0.0226void0.0131number0.0105T0.0066
+(Punctuation
+inputName.Otherstring0.8116any0.1117number0.0491any[]0.0033complex0.0031
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.4216number0.0610Options0.0409string0.0397{}0.0208
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

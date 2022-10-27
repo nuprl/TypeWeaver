@@ -1,0 +1,70 @@
+examples/custom-option-arrayOfCommaSepString.ts(17,5): error TS2322: Type 'string[]' is not assignable to type 'string'.
+examples/custom-option-arrayOfCommaSepString.ts(46,68): error TS2571: Object is of type 'unknown'.
+examples/custom-option-duration.ts(27,9): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'RegExpExecArray'.
+  Type 'null' is not assignable to type 'RegExpExecArray'.
+examples/custom-option-duration.ts(32,9): error TS2322: Type 'string' is not assignable to type 'number'.
+examples/custom-option-duration.ts(68,68): error TS2571: Object is of type 'unknown'.
+examples/custom-option-fruit.ts(53,68): error TS2571: Object is of type 'unknown'.
+examples/custom-option-intGteZero.ts(40,68): error TS2571: Object is of type 'unknown'.
+examples/custom-option-time-ago.ts(22,9): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'RegExpExecArray'.
+  Type 'null' is not assignable to type 'RegExpExecArray'.
+examples/custom-option-time-ago.ts(24,13): error TS2322: Type 'string' is not assignable to type 'number'.
+examples/custom-option-time-ago.ts(72,68): error TS2571: Object is of type 'unknown'.
+examples/date.ts(16,41): error TS2571: Object is of type 'unknown'.
+examples/ddcompletion.ts(54,5): error TS2322: Type 'string' is not assignable to type 'string[]'.
+examples/ddcompletion.ts(74,37): error TS2571: Object is of type 'unknown'.
+examples/foo.ts(53,37): error TS2571: Object is of type 'unknown'.
+examples/hello.ts(21,39): error TS2571: Object is of type 'unknown'.
+examples/help.ts(27,38): error TS2571: Object is of type 'unknown'.
+examples/option-groups.ts(29,37): error TS2571: Object is of type 'unknown'.
+examples/option-groups.ts(34,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'help' must be of type 'string', but here has type 'any'.
+lib/dashdash.ts(29,55): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
+lib/dashdash.ts(30,9): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
+  No index signature with a parameter of type 'string' was found on type '{}'.
+lib/dashdash.ts(43,62): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
+lib/dashdash.ts(45,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/dashdash.ts(64,44): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
+lib/dashdash.ts(69,13): error TS2365: Operator '>' cannot be applied to types 'number' and 'string'.
+lib/dashdash.ts(79,5): error TS2322: Type 'any[]' is not assignable to type 'string'.
+lib/dashdash.ts(114,5): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/dashdash.ts(125,5): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/dashdash.ts(136,5): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/dashdash.ts(170,5): error TS2322: Type 'Date' is not assignable to type 'string'.
+lib/dashdash.ts(262,15): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
+lib/dashdash.ts(262,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/dashdash.ts(265,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/dashdash.ts(269,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/dashdash.ts(272,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/dashdash.ts(275,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/dashdash.ts(276,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/dashdash.ts(277,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/dashdash.ts(278,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/dashdash.ts(372,15): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
+lib/dashdash.ts(392,70): error TS7006: Parameter 'from' implicitly has an 'any' type.
+lib/dashdash.ts(628,9): error TS2322: Type 'string' is not assignable to type 'number'.
+lib/dashdash.ts(628,52): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/dashdash.ts(631,9): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/dashdash.ts(631,27): error TS2339: Property 'length' does not exist on type 'number'.
+lib/dashdash.ts(670,21): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/dashdash.ts(672,21): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/dashdash.ts(674,21): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/dashdash.ts(701,37): error TS2339: Property 'length' does not exist on type 'number'.
+lib/dashdash.ts(779,36): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/dashdash.ts(779,54): error TS2339: Property 'join' does not exist on type 'string'.
+lib/dashdash.ts(951,5): error TS2322: Type 'string' is not assignable to type 'void'.
+lib/dashdash.ts(994,5): error TS2322: Type 'string' is not assignable to type 'void'.
+lib/dashdash.ts(1000,12): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/dashdash.ts(1012,42): error TS2339: Property 'argv' does not exist on type 'string'.
+lib/dashdash.ts(1013,35): error TS2339: Property 'env' does not exist on type 'string'.
+lib/dashdash.ts(1021,23): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/dashdash.ts(1084,9): error TS2322: Type 'null' is not assignable to type 'string'.
+lib/dashdash.ts(1090,51): error TS2339: Property 'helpArg' does not exist on type 'string'.
+lib/dashdash.ts(1092,50): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
+lib/dashdash.ts(1094,26): error TS2339: Property 'takesArg' does not exist on type 'string'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

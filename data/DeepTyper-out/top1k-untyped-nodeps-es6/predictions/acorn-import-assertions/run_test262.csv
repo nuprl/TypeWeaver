@@ -1,0 +1,587 @@
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+// copy/pasted, and adjusted, from: https://github.com/acornjs/acorn-class-fields/blob/master/run_test262.jsComment.Single
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+pathName.Otherany0.6865string0.1849complex0.1031void0.0087string[]0.0027
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'path'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+runName.OtherPromise<void>0.4855T0.0969any0.0829void0.0766complex0.0377
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'test262-parser-runner'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+acornName.Otherany0.6031string0.1084boolean0.0700complex0.0422void0.0355
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'acorn'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+ParserName.Otherany0.9507void0.0168complex0.0089string0.0046Promise<any>0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+acornName.Otherany0.9013complex0.0756T0.0022any[]0.0018string[]0.0017
+.Punctuation
+ParserName.Otherany0.8582void0.0325T0.0188string0.0158number0.0082
+.Punctuation
+extendName.Otherany0.9614T0.0239complex0.0048string0.0014number0.0013
+(Punctuation
+requireName.Other
+(Punctuation
+"."Literal.String.Double
+)Punctuation
+.Punctuation
+importAssertionsName.Otherany0.8461string0.0497string[]0.0365boolean0.0110any[]0.0101
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+unsupportedFeaturesName.Otherany[]0.9216string[]0.0260any0.0168number[]0.0077T[]0.0044
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+implementedFeaturesName.Otherstring[]0.9780any[]0.0171number[]0.0014string[][]0.0007RegExp[]0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+"import-assertions"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"json-modules"Literal.String.Double
+]Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+whitelistName.Otherstring[]0.9946any[]0.0042number[]0.0003string[][]0.0002string0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+\n  Text.Whitespace
+// 10 invalid programs did not produce a parsing error (without a corresponding entry in the whitelist file):Comment.Single
+\n  Text.Whitespace
+"language/import/json-invalid.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/import/json-invalid.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/import/json-named-bindings.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/import/json-named-bindings.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/module-code/early-dup-assert-key-export.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/module-code/early-dup-assert-key-export.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/module-code/early-dup-assert-key-import-nobinding.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/module-code/early-dup-assert-key-import-nobinding.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/module-code/early-dup-assert-key-import-withbinding.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/module-code/early-dup-assert-key-import-withbinding.js (strict mode)"Literal.String.Double
+,Punctuation
+\n\n  Text.Whitespace
+// 113 valid programs produced a parsing error (without a corresponding entry in the whitelist file):Comment.Single
+\n  Text.Whitespace
+"language/module-code/import-assertion-newlines.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/module-code/import-assertion-newlines.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-assert-enumeration-abrupt.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-assert-enumeration-abrupt.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-assert-enumeration.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-assert-enumeration.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-await-expr.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-await-expr.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-await-ident.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-await-ident.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-evaluation-abrupt-return.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-evaluation-abrupt-return.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-evaluation-abrupt-throw.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-evaluation-abrupt-throw.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-evaluation-sequence.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-evaluation-sequence.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-get-assert-error.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-get-assert-error.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-in.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-in.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-non-object.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-non-object.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-trailing-comma-fulfill.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-trailing-comma-fulfill.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-trailing-comma-reject.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-trailing-comma-reject.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-yield-expr.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-yield-expr.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/2nd-param-yield-ident-valid.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/trailing-comma-fulfill.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/trailing-comma-fulfill.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/trailing-comma-reject.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/trailing-comma-reject.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-arrow-assignment-expression-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-arrow-assignment-expression-trailing-comma-first.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-arrow-assignment-expression-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-arrow-assignment-expression-trailing-comma-second.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-arrow-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-arrow-trailing-comma-first.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-arrow-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-arrow-trailing-comma-second.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-arrow-function-await-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-arrow-function-await-trailing-comma-first.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-arrow-function-await-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-arrow-function-await-trailing-comma-second.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-arrow-function-return-await-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-arrow-function-return-await-trailing-comma-first.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-arrow-function-return-await-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-arrow-function-return-await-trailing-comma-second.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-function-await-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-function-await-trailing-comma-first.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-function-await-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-function-await-trailing-comma-second.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-function-return-await-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-function-return-await-trailing-comma-first.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-function-return-await-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-function-return-await-trailing-comma-second.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-function-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-function-trailing-comma-first.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-function-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-function-trailing-comma-second.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-gen-await-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-gen-await-trailing-comma-first.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-gen-await-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-async-gen-await-trailing-comma-second.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-block-labeled-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-block-labeled-trailing-comma-first.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-block-labeled-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-block-labeled-trailing-comma-second.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-block-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-block-trailing-comma-first.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-block-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-block-trailing-comma-second.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-do-while-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-do-while-trailing-comma-first.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-do-while-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-do-while-trailing-comma-second.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-else-braceless-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-else-braceless-trailing-comma-first.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-else-braceless-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-else-braceless-trailing-comma-second.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-else-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-else-trailing-comma-first.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-else-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-else-trailing-comma-second.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-function-return-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-function-return-trailing-comma-first.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-function-return-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-function-return-trailing-comma-second.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-function-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-function-trailing-comma-first.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-function-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-function-trailing-comma-second.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-if-braceless-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-if-braceless-trailing-comma-first.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-if-braceless-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-if-braceless-trailing-comma-second.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-if-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-if-trailing-comma-first.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-if-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-if-trailing-comma-second.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-while-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-while-trailing-comma-first.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-while-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-while-trailing-comma-second.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-with-expression-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-with-expression-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-with-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/nested-with-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/top-level-trailing-comma-first.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/top-level-trailing-comma-first.js (strict mode)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/top-level-trailing-comma-second.js (default)"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"language/expressions/dynamic-import/syntax/valid/top-level-trailing-comma-second.js (strict mode)"Literal.String.Double
+,Punctuation
+\nText.Whitespace
+]Punctuation
+;Punctuation
+\n\nText.Whitespace
+runName.OtherT0.2972void0.1571Promise<void>0.1439complex0.1301Promise<any>0.0627
+(Punctuation
+\n  Text.Whitespace
+(Punctuation
+contentName.Otherstring0.5940any0.3697any[]0.0068complex0.0048number0.0027
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5315{}0.0442Options0.0212complex0.0187any[]0.0178
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+\n    Text.Whitespace
+ParserName.Otherany0.9271void0.0215complex0.0077any[]0.0064{}0.0038
+.Punctuation
+parseName.Otherany0.8851complex0.0353void0.0237Promise<any>0.0078U[]0.0053
+(Punctuation
+contentName.Otherstring0.7948any0.1889any[]0.0045number0.0028complex0.0027
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+sourceTypeName.Otherany0.4877string0.4193number0.0704complex0.0075void0.0066
+:Operator
+ Text.Whitespace
+options.sourceTypeKeyword.Type
+,Punctuation
+ Text.Whitespace
+ecmaVersionName.Otherany0.4290string0.2604boolean0.0997complex0.0524string[]0.0507
+:Operator
+ Text.Whitespace
+13Keyword.Type
+ Text.Whitespace
+}Punctuation
+)Punctuation
+,Punctuation
+\n  Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+testsDirectoryName.Otherany0.7051string[]0.0729string0.0717boolean0.0445any[]0.0359
+:Operator
+ Text.Whitespace
+path.dirnameKeyword.Type
+(Punctuation
+requireName.Other
+.Punctuation
+resolveName.Otherany0.9585string0.0195complex0.0110T0.0011void0.0009
+(Punctuation
+"test262/package.json"Literal.String.Double
+)Punctuation
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+skipName.Otherboolean0.7160any0.1300string0.0428void0.0321string[]0.0254
+:Operator
+ Text.Whitespace
+(Punctuation
+testName.Otherany0.8188boolean0.0440complex0.0289Test0.0259string0.0164
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+\n      Text.Whitespace
+!Operator
+testName.Otherany0.8143complex0.0877boolean0.0348Test0.0038void0.0027
+.Punctuation
+attrsName.Otherany0.9421complex0.0331string[]0.0046any[]0.0038boolean0.0012
+.Punctuation
+featuresName.Otherany0.9129string[]0.0348complex0.0137any[]0.0109boolean0.0079
+ Text.Whitespace
+||Operator
+\n      Text.Whitespace
+!Operator
+implementedFeaturesName.Otherstring[]0.7586any[]0.1118any0.0565complex0.0205T[]0.0057
+.Punctuation
+someName.Otherboolean0.7353complex0.1650any0.0821string[]0.0031any[]0.0018
+(Punctuation
+(Punctuation
+fName.Otherstring0.7605boolean0.1052any0.0829RegExp0.0122string[]0.0072
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+testName.Otherany0.7129complex0.1478boolean0.0223void0.0088Test0.0047
+.Punctuation
+attrsName.Otherany0.8717complex0.0665any[]0.0117string[]0.0117boolean0.0015
+.Punctuation
+featuresName.Otherany0.7155string[]0.1895any[]0.0472complex0.0195string0.0072
+.Punctuation
+includesName.Otherboolean0.5127any0.2377string[]0.1855complex0.0298any[]0.0107
+(Punctuation
+fName.Otherstring0.9064any0.0611boolean0.0077number0.0060string[]0.0049
+)Punctuation
+)Punctuation
+ Text.Whitespace
+||Operator
+\n      Text.Whitespace
+unsupportedFeaturesName.Otherstring[]0.7270any[]0.1483any0.0619complex0.0152T[]0.0048
+.Punctuation
+someName.Otherboolean0.8267complex0.0954any0.0643void0.0021string[]0.0019
+(Punctuation
+(Punctuation
+fName.Otherstring0.8105boolean0.0811any0.0748RegExp0.0079number0.0055
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+testName.Otherany0.7675complex0.1127boolean0.0172void0.0100string0.0042
+.Punctuation
+attrsName.Otherany0.8979complex0.0518any[]0.0112string[]0.0110boolean0.0011
+.Punctuation
+featuresName.Otherany0.8152string[]0.1104any[]0.0337complex0.0175string0.0072
+.Punctuation
+includesName.Otherboolean0.4340any0.2639string[]0.2207complex0.0406any[]0.0096
+(Punctuation
+fName.Otherstring0.9162any0.0547boolean0.0069number0.0056string[]0.0053
+)Punctuation
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+whitelistName.Otherstring[]0.9545any[]0.0353any0.0039complex0.0015string0.0008
+,Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+)Punctuation
+;Punctuation
+\nText.Whitespace

@@ -1,0 +1,293 @@
+lib/AsyncParallelBailHook.ts(11,12): error TS7031: Binding element 'onError' implicitly has an 'any' type.
+lib/AsyncParallelBailHook.ts(11,21): error TS7031: Binding element 'onResult' implicitly has an 'any' type.
+lib/AsyncParallelBailHook.ts(11,31): error TS7031: Binding element 'onDone' implicitly has an 'any' type.
+lib/AsyncParallelBailHook.ts(13,44): error TS2339: Property 'options' does not exist on type 'AsyncParallelBailHookCodeFactory'.
+lib/AsyncParallelBailHook.ts(34,13): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+lib/AsyncParallelBailHook.ts(44,13): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+lib/AsyncParallelBailHook.ts(50,4): error TS2322: Type '(i: number, run: number, done: any, doneBreak: string) => string' is not assignable to type '(i: number, run: any) => any'.
+lib/AsyncParallelBailHook.ts(57,13): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/AsyncParallelBailHook.ts(67,22): error TS2554: Expected 1 arguments, but got 0.
+lib/AsyncParallelBailHook.ts(70,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/AsyncParallelBailHook.ts(83,1): error TS7005: Variable 'prototype' implicitly has an 'any' type.
+lib/AsyncParallelHook.ts(11,12): error TS7031: Binding element 'onError' implicitly has an 'any' type.
+lib/AsyncParallelHook.ts(11,21): error TS7031: Binding element 'onDone' implicitly has an 'any' type.
+lib/AsyncParallelHook.ts(12,32): error TS2345: Argument of type '{ onError: (i: number, err: any, done: any, doneBreak: any) => any; onDone: any; }' is not assignable to parameter of type '{ onError: any; onResult: any; onDone: any; rethrowIfPossible: any; onTap?: ((i: number, run: any) => any) | undefined; }'.
+  Type '{ onError: (i: number, err: any, done: any, doneBreak: any) => any; onDone: any; }' is missing the following properties from type '{ onError: any; onResult: any; onDone: any; rethrowIfPossible: any; onTap?: ((i: number, run: any) => any) | undefined; }': onResult, rethrowIfPossible
+lib/AsyncParallelHook.ts(19,22): error TS2554: Expected 1 arguments, but got 0.
+lib/AsyncParallelHook.ts(22,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/AsyncParallelHook.ts(35,1): error TS7005: Variable 'prototype' implicitly has an 'any' type.
+lib/AsyncSeriesBailHook.ts(11,12): error TS7031: Binding element 'onError' implicitly has an 'any' type.
+lib/AsyncSeriesBailHook.ts(11,21): error TS7031: Binding element 'onResult' implicitly has an 'any' type.
+lib/AsyncSeriesBailHook.ts(11,31): error TS7031: Binding element 'resultReturns' implicitly has an 'any' type.
+lib/AsyncSeriesBailHook.ts(11,46): error TS7031: Binding element 'onDone' implicitly has an 'any' type.
+lib/AsyncSeriesBailHook.ts(12,30): error TS2345: Argument of type '{ onError: (i: number, err: any, next: any, doneBreak: any) => any; onResult: (i: number, result: any, next: any) => string; resultReturns: any; onDone: any; }' is not assignable to parameter of type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+  Type '{ onError: (i: number, err: any, next: any, doneBreak: any) => any; onResult: (i: number, result: any, next: any) => string; resultReturns: any; onDone: any; }' is missing the following properties from type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }': doneReturns, rethrowIfPossible
+lib/AsyncSeriesBailHook.ts(24,22): error TS2554: Expected 1 arguments, but got 0.
+lib/AsyncSeriesBailHook.ts(27,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/AsyncSeriesBailHook.ts(40,1): error TS7005: Variable 'prototype' implicitly has an 'any' type.
+lib/AsyncSeriesHook.ts(11,12): error TS7031: Binding element 'onError' implicitly has an 'any' type.
+lib/AsyncSeriesHook.ts(11,21): error TS7031: Binding element 'onDone' implicitly has an 'any' type.
+lib/AsyncSeriesHook.ts(12,30): error TS2345: Argument of type '{ onError: (i: number, err: any, next: any, doneBreak: any) => any; onDone: any; }' is not assignable to parameter of type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+  Type '{ onError: (i: number, err: any, next: any, doneBreak: any) => any; onDone: any; }' is missing the following properties from type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }': onResult, resultReturns, doneReturns, rethrowIfPossible
+lib/AsyncSeriesHook.ts(19,22): error TS2554: Expected 1 arguments, but got 0.
+lib/AsyncSeriesHook.ts(22,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/AsyncSeriesHook.ts(35,1): error TS7005: Variable 'prototype' implicitly has an 'any' type.
+lib/AsyncSeriesLoopHook.ts(11,12): error TS7031: Binding element 'onError' implicitly has an 'any' type.
+lib/AsyncSeriesLoopHook.ts(11,21): error TS7031: Binding element 'onDone' implicitly has an 'any' type.
+lib/AsyncSeriesLoopHook.ts(12,31): error TS2345: Argument of type '{ onError: (i: number, err: any, next: any, doneBreak: any) => any; onDone: any; }' is not assignable to parameter of type '{ onError: any; onDone: any; rethrowIfPossible: any; }'.
+  Property 'rethrowIfPossible' is missing in type '{ onError: (i: number, err: any, next: any, doneBreak: any) => any; onDone: any; }' but required in type '{ onError: any; onDone: any; rethrowIfPossible: any; }'.
+lib/AsyncSeriesLoopHook.ts(19,22): error TS2554: Expected 1 arguments, but got 0.
+lib/AsyncSeriesLoopHook.ts(22,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/AsyncSeriesLoopHook.ts(35,1): error TS7005: Variable 'prototype' implicitly has an 'any' type.
+lib/AsyncSeriesWaterfallHook.ts(11,12): error TS7031: Binding element 'onError' implicitly has an 'any' type.
+lib/AsyncSeriesWaterfallHook.ts(11,21): error TS7031: Binding element 'onResult' implicitly has an 'any' type.
+lib/AsyncSeriesWaterfallHook.ts(11,31): error TS7031: Binding element 'onDone' implicitly has an 'any' type.
+lib/AsyncSeriesWaterfallHook.ts(12,30): error TS2345: Argument of type '{ onError: (i: number, err: any, next: any, doneBreak: any) => any; onResult: (i: number, result: any, next: any) => string; onDone: () => any; }' is not assignable to parameter of type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+  Type '{ onError: (i: number, err: any, next: any, doneBreak: any) => any; onResult: (i: number, result: any, next: any) => string; onDone: () => any; }' is missing the following properties from type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }': resultReturns, doneReturns, rethrowIfPossible
+lib/AsyncSeriesWaterfallHook.ts(17,21): error TS2551: Property '_args' does not exist on type 'AsyncSeriesWaterfallHookCodeFactory'. Did you mean 'args'?
+lib/AsyncSeriesWaterfallHook.ts(22,32): error TS2551: Property '_args' does not exist on type 'AsyncSeriesWaterfallHookCodeFactory'. Did you mean 'args'?
+lib/AsyncSeriesWaterfallHook.ts(27,22): error TS2554: Expected 1 arguments, but got 0.
+lib/AsyncSeriesWaterfallHook.ts(30,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/AsyncSeriesWaterfallHook.ts(45,1): error TS7005: Variable 'prototype' implicitly has an 'any' type.
+lib/Hook.ts(12,7): error TS2322: Type '(...args: any[]) => any' is not assignable to type 'void'.
+lib/Hook.ts(12,38): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
+lib/Hook.ts(13,2): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/Hook.ts(13,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/Hook.ts(14,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/Hook.ts(16,43): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
+lib/Hook.ts(17,2): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/Hook.ts(17,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/Hook.ts(18,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/Hook.ts(20,40): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
+lib/Hook.ts(21,2): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/Hook.ts(21,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/Hook.ts(22,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/Hook.ts(27,8): error TS2339: Property '_args' does not exist on type 'Hook'.
+lib/Hook.ts(28,8): error TS2339: Property 'name' does not exist on type 'Hook'.
+lib/Hook.ts(29,8): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/Hook.ts(30,8): error TS2339: Property 'interceptors' does not exist on type 'Hook'.
+lib/Hook.ts(31,8): error TS2339: Property '_call' does not exist on type 'Hook'.
+lib/Hook.ts(32,8): error TS2339: Property 'call' does not exist on type 'Hook'.
+lib/Hook.ts(33,8): error TS2339: Property '_callAsync' does not exist on type 'Hook'.
+lib/Hook.ts(34,8): error TS2339: Property 'callAsync' does not exist on type 'Hook'.
+lib/Hook.ts(35,8): error TS2339: Property '_promise' does not exist on type 'Hook'.
+lib/Hook.ts(36,8): error TS2339: Property 'promise' does not exist on type 'Hook'.
+lib/Hook.ts(37,8): error TS2339: Property '_x' does not exist on type 'Hook'.
+lib/Hook.ts(45,10): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/Hook.ts(49,14): error TS7006: Parameter 'type' implicitly has an 'any' type.
+lib/Hook.ts(51,15): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/Hook.ts(52,23): error TS2339: Property 'interceptors' does not exist on type 'Hook'.
+lib/Hook.ts(53,15): error TS2339: Property '_args' does not exist on type 'Hook'.
+lib/Hook.ts(58,7): error TS7006: Parameter 'type' implicitly has an 'any' type.
+lib/Hook.ts(58,13): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/Hook.ts(58,22): error TS7006: Parameter 'fn' implicitly has an 'any' type.
+lib/Hook.ts(77,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/Hook.ts(77,15): error TS7006: Parameter 'fn' implicitly has an 'any' type.
+lib/Hook.ts(81,11): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/Hook.ts(81,20): error TS7006: Parameter 'fn' implicitly has an 'any' type.
+lib/Hook.ts(85,13): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/Hook.ts(85,22): error TS7006: Parameter 'fn' implicitly has an 'any' type.
+lib/Hook.ts(89,27): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/Hook.ts(90,34): error TS2339: Property 'interceptors' does not exist on type 'Hook'.
+lib/Hook.ts(101,14): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/Hook.ts(106,15): error TS2339: Property 'name' does not exist on type 'Hook'.
+lib/Hook.ts(117,15): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/Hook.ts(117,39): error TS2339: Property 'interceptors' does not exist on type 'Hook'.
+lib/Hook.ts(120,12): error TS7006: Parameter 'interceptor' implicitly has an 'any' type.
+lib/Hook.ts(122,8): error TS2339: Property 'interceptors' does not exist on type 'Hook'.
+lib/Hook.ts(124,29): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/Hook.ts(125,10): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/Hook.ts(125,46): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/Hook.ts(131,8): error TS2339: Property 'call' does not exist on type 'Hook'.
+lib/Hook.ts(131,20): error TS2339: Property '_call' does not exist on type 'Hook'.
+lib/Hook.ts(132,8): error TS2339: Property 'callAsync' does not exist on type 'Hook'.
+lib/Hook.ts(132,25): error TS2339: Property '_callAsync' does not exist on type 'Hook'.
+lib/Hook.ts(133,8): error TS2339: Property 'promise' does not exist on type 'Hook'.
+lib/Hook.ts(133,23): error TS2339: Property '_promise' does not exist on type 'Hook'.
+lib/Hook.ts(136,10): error TS7006: Parameter 'item' implicitly has an 'any' type.
+lib/Hook.ts(148,24): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/Hook.ts(151,24): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/Hook.ts(152,9): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/Hook.ts(169,8): error TS2551: Property 'taps' does not exist on type 'Hook'. Did you mean 'tap'?
+lib/HookCodeFactory.ts(8,14): error TS7006: Parameter 'config' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(9,8): error TS2339: Property 'config' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(10,8): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(11,8): error TS2551: Property '_args' does not exist on type 'HookCodeFactory'. Did you mean 'args'?
+lib/HookCodeFactory.ts(14,9): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(17,16): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(34,16): error TS2345: Argument of type '{ after: string; }' is not assignable to parameter of type '{ before: any; after: any; }'.
+  Property 'before' is missing in type '{ after: string; }' but required in type '{ before: any; after: any; }'.
+lib/HookCodeFactory.ts(79,10): error TS2454: Variable 'fn' is used before being assigned.
+lib/HookCodeFactory.ts(82,8): error TS7006: Parameter 'instance' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(82,18): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(89,7): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(90,8): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(91,8): error TS2551: Property '_args' does not exist on type 'HookCodeFactory'. Did you mean 'args'?
+lib/HookCodeFactory.ts(95,8): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(96,8): error TS2551: Property '_args' does not exist on type 'HookCodeFactory'. Did you mean 'args'?
+lib/HookCodeFactory.ts(99,26): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(100,12): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(105,29): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(106,35): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(108,58): error TS2345: Argument of type '{ before: string | undefined; }' is not assignable to parameter of type '{ before: any; after: any; }'.
+  Property 'after' is missing in type '{ before: string | undefined; }' but required in type '{ before: any; after: any; }'.
+lib/HookCodeFactory.ts(113,17): error TS2339: Property 'content' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(119,33): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(120,39): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(132,33): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(133,39): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(145,33): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(146,39): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(151,16): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+lib/HookCodeFactory.ts(158,16): error TS2339: Property 'content' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(170,12): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(178,26): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(182,10): error TS7006: Parameter 'tapIndex' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(182,22): error TS7031: Binding element 'onError' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(182,31): error TS7031: Binding element 'onResult' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(182,41): error TS7031: Binding element 'onDone' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(182,49): error TS7031: Binding element 'rethrowIfPossible' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(185,28): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(186,39): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(187,20): error TS2339: Property 'tap' does not exist on type 'Function'.
+lib/HookCodeFactory.ts(193,18): error TS2339: Property 'context' does not exist on type 'Function'.
+lib/HookCodeFactory.ts(198,25): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(206,67): error TS2345: Argument of type '{ before: string | undefined; }' is not assignable to parameter of type '{ before: any; after: any; }'.
+  Property 'after' is missing in type '{ before: string | undefined; }' but required in type '{ before: any; after: any; }'.
+lib/HookCodeFactory.ts(210,42): error TS2345: Argument of type '{ before: string | undefined; }' is not assignable to parameter of type '{ before: any; after: any; }'.
+  Property 'after' is missing in type '{ before: string | undefined; }' but required in type '{ before: any; after: any; }'.
+lib/HookCodeFactory.ts(254,67): error TS2345: Argument of type '{ before: string | undefined; }' is not assignable to parameter of type '{ before: any; after: any; }'.
+  Property 'after' is missing in type '{ before: string | undefined; }' but required in type '{ before: any; after: any; }'.
+lib/HookCodeFactory.ts(277,3): error TS7031: Binding element 'onError' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(278,3): error TS7031: Binding element 'onResult' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(279,3): error TS7031: Binding element 'resultReturns' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(280,3): error TS7031: Binding element 'onDone' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(281,3): error TS7031: Binding element 'doneReturns' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(282,3): error TS7031: Binding element 'rethrowIfPossible' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(284,12): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(285,35): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(290,21): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(294,11): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(298,13): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+lib/HookCodeFactory.ts(300,5): error TS2322: Type '() => string' is not assignable to type 'boolean'.
+lib/HookCodeFactory.ts(303,10): error TS2322: Type '(skipDone: string) => any' is not assignable to type 'string'.
+lib/HookCodeFactory.ts(318,4): error TS2322: Type '() => any' is not assignable to type 'boolean'.
+lib/HookCodeFactory.ts(320,11): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+lib/HookCodeFactory.ts(324,20): error TS7031: Binding element 'onError' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(324,29): error TS7031: Binding element 'onDone' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(324,37): error TS7031: Binding element 'rethrowIfPossible' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(325,12): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(326,34): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(335,28): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(336,34): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(338,57): error TS2345: Argument of type '{ before: string | undefined; }' is not assignable to parameter of type '{ before: any; after: any; }'.
+  Property 'after' is missing in type '{ before: string | undefined; }' but required in type '{ before: any; after: any; }'.
+lib/HookCodeFactory.ts(343,31): error TS2345: Argument of type '{ onError: any; onResult: (i: number, result: any, next: any, doneBreak: string) => string; onDone: any; rethrowIfPossible: any; }' is not assignable to parameter of type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+  Type '{ onError: any; onResult: (i: number, result: any, next: any, doneBreak: string) => string; onDone: any; rethrowIfPossible: any; }' is missing the following properties from type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }': resultReturns, doneReturns
+lib/HookCodeFactory.ts(350,13): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+lib/HookCodeFactory.ts(377,3): error TS7031: Binding element 'onError' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(378,3): error TS7031: Binding element 'onResult' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(379,3): error TS7031: Binding element 'onDone' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(380,3): error TS7031: Binding element 'rethrowIfPossible' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(383,12): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(384,31): error TS2345: Argument of type '{ onError: any; onResult: any; onDone: any; rethrowIfPossible: any; }' is not assignable to parameter of type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+  Type '{ onError: any; onResult: any; onDone: any; rethrowIfPossible: any; }' is missing the following properties from type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }': resultReturns, doneReturns
+lib/HookCodeFactory.ts(393,34): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(399,28): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
+lib/HookCodeFactory.ts(404,30): error TS2322: Type '(skipDone: string) => "_counter = 0;\n" | "_counter = 0;\n_done();\n"' is not assignable to type 'string'.
+lib/HookCodeFactory.ts(436,5): error TS2554: Expected 2 arguments, but got 4.
+lib/HookCodeFactory.ts(444,9): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
+lib/HookCodeFactory.ts(444,17): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
+lib/HookCodeFactory.ts(445,27): error TS2551: Property '_args' does not exist on type 'HookCodeFactory'. Did you mean 'args'?
+lib/HookCodeFactory.ts(455,11): error TS7006: Parameter 'idx' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(459,9): error TS7006: Parameter 'idx' implicitly has an 'any' type.
+lib/HookCodeFactory.ts(463,17): error TS7006: Parameter 'idx' implicitly has an 'any' type.
+lib/HookMap.ts(9,7): error TS2322: Type '(key: string, hook: any) => any' is not assignable to type 'void'.
+lib/HookMap.ts(12,14): error TS7006: Parameter 'factory' implicitly has an 'any' type.
+lib/HookMap.ts(13,8): error TS2339: Property '_map' does not exist on type 'HookMap'.
+lib/HookMap.ts(14,8): error TS2339: Property 'name' does not exist on type 'HookMap'.
+lib/HookMap.ts(15,8): error TS2339: Property '_factory' does not exist on type 'HookMap'.
+lib/HookMap.ts(16,8): error TS2339: Property '_interceptors' does not exist on type 'HookMap'.
+lib/HookMap.ts(19,6): error TS7006: Parameter 'key' implicitly has an 'any' type.
+lib/HookMap.ts(20,15): error TS2339: Property '_map' does not exist on type 'HookMap'.
+lib/HookMap.ts(23,6): error TS7006: Parameter 'key' implicitly has an 'any' type.
+lib/HookMap.ts(28,27): error TS2339: Property '_factory' does not exist on type 'HookMap'.
+lib/HookMap.ts(29,36): error TS2339: Property '_interceptors' does not exist on type 'HookMap'.
+lib/HookMap.ts(33,8): error TS2339: Property '_map' does not exist on type 'HookMap'.
+lib/HookMap.ts(37,12): error TS7006: Parameter 'interceptor' implicitly has an 'any' type.
+lib/HookMap.ts(38,8): error TS2339: Property '_interceptors' does not exist on type 'HookMap'.
+lib/HookMap.ts(49,19): error TS2339: Property 'tap' does not exist on type 'HookMap'.
+lib/HookMap.ts(50,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/HookMap.ts(53,19): error TS2339: Property 'tapAsync' does not exist on type 'HookMap'.
+lib/HookMap.ts(54,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/HookMap.ts(57,19): error TS2339: Property 'tapPromise' does not exist on type 'HookMap'.
+lib/HookMap.ts(58,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/MultiHook.ts(10,14): error TS7006: Parameter 'hooks' implicitly has an 'any' type.
+lib/MultiHook.ts(11,8): error TS2339: Property 'hooks' does not exist on type 'MultiHook'.
+lib/MultiHook.ts(12,8): error TS2339: Property 'name' does not exist on type 'MultiHook'.
+lib/MultiHook.ts(15,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/MultiHook.ts(15,15): error TS7006: Parameter 'fn' implicitly has an 'any' type.
+lib/MultiHook.ts(16,27): error TS2339: Property 'hooks' does not exist on type 'MultiHook'.
+lib/MultiHook.ts(21,11): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/MultiHook.ts(21,20): error TS7006: Parameter 'fn' implicitly has an 'any' type.
+lib/MultiHook.ts(22,27): error TS2339: Property 'hooks' does not exist on type 'MultiHook'.
+lib/MultiHook.ts(27,13): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/MultiHook.ts(27,22): error TS7006: Parameter 'fn' implicitly has an 'any' type.
+lib/MultiHook.ts(28,27): error TS2339: Property 'hooks' does not exist on type 'MultiHook'.
+lib/MultiHook.ts(34,27): error TS2339: Property 'hooks' does not exist on type 'MultiHook'.
+lib/MultiHook.ts(40,12): error TS7006: Parameter 'interceptor' implicitly has an 'any' type.
+lib/MultiHook.ts(41,27): error TS2339: Property 'hooks' does not exist on type 'MultiHook'.
+lib/MultiHook.ts(46,14): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/MultiHook.ts(48,9): error TS2339: Property 'hooks' does not exist on type 'MultiHook'.
+lib/MultiHook.ts(49,9): error TS2339: Property 'name' does not exist on type 'MultiHook'.
+lib/SyncBailHook.ts(11,12): error TS7031: Binding element 'onError' implicitly has an 'any' type.
+lib/SyncBailHook.ts(11,21): error TS7031: Binding element 'onResult' implicitly has an 'any' type.
+lib/SyncBailHook.ts(11,31): error TS7031: Binding element 'resultReturns' implicitly has an 'any' type.
+lib/SyncBailHook.ts(11,46): error TS7031: Binding element 'onDone' implicitly has an 'any' type.
+lib/SyncBailHook.ts(11,54): error TS7031: Binding element 'rethrowIfPossible' implicitly has an 'any' type.
+lib/SyncBailHook.ts(12,30): error TS2345: Argument of type '{ onError: (i: number, err: any) => any; onResult: (i: string, result: any, next: any) => string; resultReturns: any; onDone: any; rethrowIfPossible: any; }' is not assignable to parameter of type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+  Property 'doneReturns' is missing in type '{ onError: (i: number, err: any) => any; onResult: (i: string, result: any, next: any) => string; resultReturns: any; onDone: any; rethrowIfPossible: any; }' but required in type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+lib/SyncBailHook.ts(25,22): error TS2554: Expected 1 arguments, but got 0.
+lib/SyncBailHook.ts(36,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/SyncBailHook.ts(49,1): error TS7005: Variable 'prototype' implicitly has an 'any' type.
+lib/SyncHook.ts(11,12): error TS7031: Binding element 'onError' implicitly has an 'any' type.
+lib/SyncHook.ts(11,21): error TS7031: Binding element 'onDone' implicitly has an 'any' type.
+lib/SyncHook.ts(11,29): error TS7031: Binding element 'rethrowIfPossible' implicitly has an 'any' type.
+lib/SyncHook.ts(12,30): error TS2345: Argument of type '{ onError: (i: any, err: Error) => any; onDone: any; rethrowIfPossible: any; }' is not assignable to parameter of type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+  Type '{ onError: (i: any, err: Error) => any; onDone: any; rethrowIfPossible: any; }' is missing the following properties from type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }': onResult, resultReturns, doneReturns
+lib/SyncHook.ts(20,22): error TS2554: Expected 1 arguments, but got 0.
+lib/SyncHook.ts(31,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/SyncHook.ts(44,1): error TS7005: Variable 'prototype' implicitly has an 'any' type.
+lib/SyncLoopHook.ts(11,12): error TS7031: Binding element 'onError' implicitly has an 'any' type.
+lib/SyncLoopHook.ts(11,21): error TS7031: Binding element 'onDone' implicitly has an 'any' type.
+lib/SyncLoopHook.ts(11,29): error TS7031: Binding element 'rethrowIfPossible' implicitly has an 'any' type.
+lib/SyncLoopHook.ts(20,22): error TS2554: Expected 1 arguments, but got 0.
+lib/SyncLoopHook.ts(31,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/SyncLoopHook.ts(44,1): error TS7005: Variable 'prototype' implicitly has an 'any' type.
+lib/SyncWaterfallHook.ts(11,12): error TS7031: Binding element 'onError' implicitly has an 'any' type.
+lib/SyncWaterfallHook.ts(11,21): error TS7031: Binding element 'onResult' implicitly has an 'any' type.
+lib/SyncWaterfallHook.ts(11,31): error TS7031: Binding element 'resultReturns' implicitly has an 'any' type.
+lib/SyncWaterfallHook.ts(11,46): error TS7031: Binding element 'rethrowIfPossible' implicitly has an 'any' type.
+lib/SyncWaterfallHook.ts(12,30): error TS2345: Argument of type '{ onError: (i: any, err: any) => any; onResult: (i: any, result: any, next: any) => string; onDone: () => any; doneReturns: any; rethrowIfPossible: any; }' is not assignable to parameter of type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+  Property 'resultReturns' is missing in type '{ onError: (i: any, err: any) => any; onResult: (i: any, result: any, next: any) => string; onDone: () => any; doneReturns: any; rethrowIfPossible: any; }' but required in type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
+lib/SyncWaterfallHook.ts(17,21): error TS2551: Property '_args' does not exist on type 'SyncWaterfallHookCodeFactory'. Did you mean 'args'?
+lib/SyncWaterfallHook.ts(22,32): error TS2551: Property '_args' does not exist on type 'SyncWaterfallHookCodeFactory'. Did you mean 'args'?
+lib/SyncWaterfallHook.ts(29,22): error TS2554: Expected 1 arguments, but got 0.
+lib/SyncWaterfallHook.ts(40,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/SyncWaterfallHook.ts(55,1): error TS7005: Variable 'prototype' implicitly has an 'any' type.
+lib/util-browser.ts(7,14): error TS2322: Type '(fn: Function, msg: string) => () => any' is not assignable to type 'void'.
+lib/util-browser.ts(14,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

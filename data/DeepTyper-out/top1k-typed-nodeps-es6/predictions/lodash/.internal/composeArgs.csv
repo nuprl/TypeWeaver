@@ -1,0 +1,227 @@
+Text
+/**\n * Creates an array that is the composition of partially applied arguments,\n * placeholders, and provided arguments into a single array of arguments.\n *\n * @private\n * @param {Array} args The provided arguments.\n * @param {Array} partials The arguments to prepend to those provided.\n * @param {Array} holders The `partials` placeholder indexes.\n * @params {boolean} [isCurried] Specify composing for a curried function.\n * @returns {Array} Returns the new array of composed arguments.\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+composeArgsName.Otherboolean0.1165complex0.1036number0.1035any0.0771string0.0281
+(Punctuation
+argsName.Otherany0.3506any[]0.1247string[]0.0378string0.0319EventData0.0274
+,Punctuation
+ Text.Whitespace
+partialsName.Otherany0.3949string0.1712number0.1235boolean0.0665any[]0.0642
+,Punctuation
+ Text.Whitespace
+holdersName.Othernumber0.6288any0.1677string0.1052boolean0.0765complex0.0021
+,Punctuation
+ Text.Whitespace
+isCurriedName.Othernumber0.6314boolean0.1488any0.1433string0.0588complex0.0025
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+argsLengthName.Othernumber0.9909any0.0063string0.0019boolean0.0004complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+argsName.Otherany[]0.4004any0.1642string[]0.0579IArguments0.0432complex0.0243
+.Punctuation
+lengthName.Othernumber0.7852any0.2077complex0.0017string0.0015void0.0008
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+holdersLengthName.Othernumber0.9773any0.0161boolean0.0034string0.0020complex0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+holdersName.Othernumber0.3674any0.3301string0.0506any[]0.0487number[]0.0278
+.Punctuation
+lengthName.Othernumber0.8660any0.1285complex0.0015string0.0014boolean0.0007
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+leftLengthName.Othernumber0.9752any0.0135boolean0.0066string0.0027complex0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+partialsName.Otherany[]0.6429number[]0.0759any0.0518string[]0.0503complex0.0174
+.Punctuation
+lengthName.Othernumber0.9255any0.0707complex0.0010string0.0009boolean0.0007
+\n\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+argsIndexName.Othernumber0.9954any0.0034boolean0.0006string0.0003complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+leftIndexName.Othernumber0.9935any0.0056string0.0004boolean0.0002complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+rangeLengthName.Othernumber0.9925any0.0059boolean0.0009string0.0002complex0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+MathName.BuiltinMath0.9998number0.0000ArrayConstructor0.0000NumberConstructor0.0000ClientRect0.0000
+.Punctuation
+maxName.Othernumber0.9639complex0.0250any0.0063boolean0.0005number[]0.0004
+(Punctuation
+argsLengthName.Othernumber0.9925any0.0065string0.0006boolean0.0001complex0.0001
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+holdersLengthName.Othernumber0.9853any0.0131string0.0006boolean0.0005complex0.0001
+,Punctuation
+ Text.Whitespace
+0Literal.Number.Float
+)Punctuation
+\n\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany[]0.2579any0.1806number[]0.0899complex0.0558boolean[]0.0298
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.3359number[]0.0704complex0.0492any[]0.0443number0.0361
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9976Math0.0001number[]0.0000NumberConstructor0.0000number0.0000
+(Punctuation
+leftLengthName.Othernumber0.9767any0.0198complex0.0008boolean0.0008string0.0007
+ Text.Whitespace
++Operator
+ Text.Whitespace
+rangeLengthName.Othernumber0.9569any0.0352boolean0.0045string0.0009complex0.0004
+)Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+isUncurriedName.Otherboolean0.7241number0.2572any0.0118string0.0023void0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+!Operator
+isCurriedName.Othernumber0.8021any0.0990boolean0.0861string0.0077complex0.0008
+\n\n  Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+++Operator
+leftIndexName.Othernumber0.9835any0.0142string0.0011boolean0.0002complex0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+leftLengthName.Othernumber0.9688any0.0214boolean0.0041string0.0033complex0.0005
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+resultName.Otherany0.4290any[]0.1019complex0.0657{}0.0321number[]0.0268
+[Punctuation
+leftIndexName.Othernumber0.9878any0.0080string0.0028boolean0.0003complex0.0002
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+partialsName.Otherany[]0.5748number[]0.1172any0.0762complex0.0221number0.0128
+[Punctuation
+leftIndexName.Othernumber0.9916any0.0057string0.0015boolean0.0002complex0.0002
+]Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+++Operator
+argsIndexName.Othernumber0.9849any0.0126boolean0.0010string0.0006void0.0003
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+holdersLengthName.Othernumber0.9716any0.0195boolean0.0055string0.0016complex0.0005
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isUncurriedName.Othernumber0.5095boolean0.4330any0.0426complex0.0055string0.0030
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+argsIndexName.Othernumber0.9611any0.0188boolean0.0145complex0.0019void0.0012
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+argsLengthName.Othernumber0.9908any0.0067string0.0018boolean0.0003complex0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+resultName.Otherany0.3994{}0.1820complex0.1392any[]0.0563Object0.0198
+[Punctuation
+holdersName.Otherany0.4163complex0.2587number0.1577{}0.0269boolean0.0189
+[Punctuation
+argsIndexName.Othernumber0.9301string0.0350any0.0227boolean0.0047complex0.0017
+]Punctuation
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+argsName.Otherany0.6044any[]0.1159complex0.0552IArguments0.0092any[][]0.0067
+[Punctuation
+argsIndexName.Othernumber0.9175any0.0459string0.0215complex0.0032boolean0.0029
+]Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+rangeLengthName.Othernumber0.9722any0.0237boolean0.0028string0.0005complex0.0002
+--Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+resultName.Otherany0.2596any[]0.1406number[]0.0580complex0.0265{}0.0198
+[Punctuation
+leftIndexName.Othernumber0.9961any0.0026string0.0007boolean0.0001complex0.0001
+++Operator
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+argsName.Otherany[]0.4026any0.3447string[]0.0580IArguments0.0167complex0.0142
+[Punctuation
+argsIndexName.Othernumber0.9936any0.0050string0.0007boolean0.0002void0.0001
+++Operator
+]Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany0.2372any[]0.1609complex0.0435{}0.0361number0.0326
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+composeArgsName.Othernumber0.2728any0.2232boolean0.0240complex0.0201string0.0143
+\nText.Whitespace

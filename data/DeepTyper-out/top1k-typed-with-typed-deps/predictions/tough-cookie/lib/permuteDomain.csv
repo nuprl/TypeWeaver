@@ -1,0 +1,254 @@
+Text
+/*!\n * Copyright (c) 2015, Salesforce.com, Inc.\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions are met:\n *\n * 1. Redistributions of source code must retain the above copyright notice,\n * this list of conditions and the following disclaimer.\n *\n * 2. Redistributions in binary form must reproduce the above copyright notice,\n * this list of conditions and the following disclaimer in the documentation\n * and/or other materials provided with the distribution.\n *\n * 3. Neither the name of Salesforce.com nor the names of its contributors may\n * be used to endorse or promote products derived from this software without\n * specific prior written permission.\n *\n * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"\n * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE\n * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR\n * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF\n * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS\n * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN\n * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)\n * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE\n * POSSIBILITY OF SUCH DAMAGE.\n */Comment.Multiline
+\nText.Whitespace
+"use strict"Literal.String.Double
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+pubsuffixName.Otherany0.9323string0.0271number0.0068Function0.0035void0.0028
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+"./pubsuffix-psl"Literal.String.Double
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+// Gives the permutation of all possible domainMatch()es of a given domain. TheComment.Single
+\nText.Whitespace
+// array is in shortest-to-longest order.  Handy for indexing.Comment.Single
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+permuteDomainName.Otherany0.6220string0.1604void0.0436complex0.0172any[]0.0169
+(Punctuation
+domainName.Otherstring0.7688any0.2036string[]0.0092any[]0.0029Error0.0011
+,Punctuation
+ Text.Whitespace
+allowSpecialUseDomainName.Otherany0.4735string0.4376boolean0.0224number0.0172string[]0.0089
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+pubSufName.Otherany0.7930string0.1570number0.0125any[]0.0038complex0.0037
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pubsuffixName.Otherany0.9585string0.0117complex0.0062number0.0011Error0.0009
+.Punctuation
+getPublicSuffixName.Otherany0.7627string0.1526complex0.0221number0.0123any[]0.0078
+(Punctuation
+domainName.Otherstring0.7801any0.1941string[]0.0101any[]0.0058complex0.0020
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+allowSpecialUseDomainName.Otherstring0.6469any0.2473number0.0433boolean0.0182string[]0.0053
+:Operator
+ Text.Whitespace
+allowSpecialUseDomainKeyword.Typestring0.6728any0.2264number0.0474boolean0.0138string[]0.0069
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+pubSufName.Otherany0.5407string0.2853boolean0.0653number0.0191complex0.0184
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+pubSufName.Otherany0.6336string0.2622number0.0497string[]0.0114complex0.0070
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+domainName.Otherstring0.5779any0.3884string[]0.0127number0.0041complex0.0040
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+domainName.Otherstring0.7948any0.1820string[]0.0108complex0.0026any[]0.0016
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// Nuke trailing dotComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+domainName.Otherstring0.5895any0.2366string[]0.1457any[]0.0112complex0.0055
+.Punctuation
+sliceName.Otherstring0.6888any0.2146string[]0.0676complex0.0110any[]0.0072
+(Punctuation
+-Operator
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+"."Literal.String.Double
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+domainName.Otherstring0.4206any0.3818string[]0.1396any[]0.0355complex0.0046
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+domainName.Otherstring0.5243any0.3069string[]0.1341any[]0.0164complex0.0034
+.Punctuation
+sliceName.Otherstring0.5149any0.2793string[]0.1362any[]0.0305complex0.0108
+(Punctuation
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+prefixName.Otherstring0.7553any0.2205string[]0.0143any[]0.0024number0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+domainName.Otherstring0.4946string[]0.2551any0.2135any[]0.0186number[]0.0062
+.Punctuation
+sliceName.Otherstring0.4817any0.3129string[]0.1577any[]0.0214complex0.0104
+(Punctuation
+0Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+-Operator
+(Punctuation
+pubSufName.Otherany0.5857string0.1779string[]0.1769any[]0.0248number[]0.0084
+.Punctuation
+lengthName.Othernumber0.5141any0.4791string0.0052complex0.0006boolean0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+)Punctuation
+;Punctuation
+ Text.Whitespace
+// ".example.com"Comment.Single
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+partsName.Otherstring[]0.9674any0.0175any[]0.0056string0.0036number[]0.0028
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+prefixName.Otherstring0.6898any0.2976string[]0.0091number0.0011complex0.0010
+.Punctuation
+splitName.Othercomplex0.6715any0.3123string[]0.0079string0.0025any[]0.0017
+(Punctuation
+"."Literal.String.Double
+)Punctuation
+.Punctuation
+reverseName.Otherany0.7214string[]0.1864any[]0.0273string0.0168number[]0.0130
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+curName.Otherstring0.4979any0.3963number0.0911boolean0.0035complex0.0030
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pubSufName.Otherany0.5730string0.2703number0.1322complex0.0046string[]0.0043
+;Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+permutationsName.Otherany[]0.2939any0.2268complex0.1317string[]0.1177{}0.0204
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+curName.Otherstring0.6891any0.2107number0.0826complex0.0042{}0.0014
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+partsName.Otherstring[]0.9490any0.0271any[]0.0108string0.0052number[]0.0025
+.Punctuation
+lengthName.Othernumber0.7864any0.2080string0.0037complex0.0006boolean0.0004
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+curName.Otherstring0.5173any0.4274number0.0437string[]0.0017complex0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+${Literal.String.Interpol
+partsName.Otherstring[]0.9505any0.0222any[]0.0076string0.0064number[]0.0041
+.Punctuation
+shiftName.Otherstring0.8353any0.1420number0.0109string[]0.0033complex0.0014
+(Punctuation
+)Punctuation
+}Literal.String.Interpol
+.Literal.String.Backtick
+${Literal.String.Interpol
+curName.Otherstring0.6861any0.2352number0.0560{}0.0063complex0.0027
+}Literal.String.Interpol
+`Literal.String.Backtick
+;Punctuation
+\n    Text.Whitespace
+permutationsName.Otherany[]0.5448string[]0.2301any0.0374complex0.0295{}0.0144
+.Punctuation
+pushName.Othernumber0.9559any0.0365string0.0030complex0.0011void0.0010
+(Punctuation
+curName.Otherstring0.7448any0.1831number0.0329complex0.0118never0.0026
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+permutationsName.Otherany[]0.2809complex0.1938string[]0.0863{}0.0820any0.0443
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportsName.Otherany0.4073complex0.1524Object0.0106{}0.0093any[]0.0045
+.Punctuation
+permuteDomainName.Otherany0.7680string0.0670complex0.0509number0.0202any[]0.0141
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+permuteDomainName.Otherstring0.2504any0.2328number0.1037complex0.0981void0.0427
+;Punctuation
+\nText.Whitespace

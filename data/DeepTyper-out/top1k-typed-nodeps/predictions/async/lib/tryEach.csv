@@ -1,0 +1,199 @@
+importKeyword
+ Text.Whitespace
+eachSeriesName.Otherany0.5572Promise<any>0.0496complex0.0429string[]0.0308string0.0276
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./eachSeries.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+wrapAsyncName.Otherany0.2068void0.0765string0.0735complex0.0484boolean0.0379
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/wrapAsync.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+awaitifyName.Otherany0.2350void0.0998string0.0806complex0.0503Promise<void>0.0397
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/awaitify.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * It runs each task in series but stops whenever any of the functions were\n * successful. If one of the tasks were successful, the `callback` will be\n * passed the result of the successful task. If all tasks fail, the callback\n * will be passed the error and result (if any) of the final attempt.\n *\n * @name tryEach\n * @static\n * @memberOf module:ControlFlow\n * @method\n * @category Control Flow\n * @param {Array|Iterable|AsyncIterable|Object} tasks - A collection containing functions to\n * run, each function is passed a `callback(err, result)` it must call on\n * completion with an error `err` (which can be `null`) and an optional `result`\n * value.\n * @param {Function} [callback] - An optional callback which is called when one\n * of the tasks has succeeded, or all have failed. It receives the `err` and\n * `result` arguments of the last attempt at completing the `task`. Invoked with\n * (err, results).\n * @returns {Promise} a promise, if no callback is passed\n * @example\n * async.tryEach([\n *     function getDataFromFirstWebsite(callback) {\n *         // Try getting the data from the first website\n *         callback(err, data);\n *     },\n *     function getDataFromSecondWebsite(callback) {\n *         // First website failed,\n *         // Try getting the data from the backup website\n *         callback(err, data);\n *     }\n * ],\n * // optional callback\n * function(err, results) {\n *     Now do something with the data.\n * });\n *\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+tryEachName.Otherany0.3254string0.1797complex0.0831void0.0324Promise<any>0.0170
+(Punctuation
+tasksName.Otherany0.7852string0.1079any[]0.0090boolean0.0056symbol0.0044
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.5870Function0.1832void0.0129number0.0106string0.0084
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+errorName.Otherany0.8099string0.1029Error0.0469void0.0094number0.0035
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany0.9139string0.0240void0.0152number0.0106{}0.0060
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+eachSeriesName.Otherany0.8993complex0.0211T0.0129boolean0.0126Promise<any>0.0122
+(Punctuation
+tasksName.Otherany0.7497string0.0839any[]0.0657boolean0.0136complex0.0070
+,Punctuation
+ Text.Whitespace
+(Punctuation
+taskName.Otherany0.8433string0.0387number0.0194boolean0.0119complex0.0044
+,Punctuation
+ Text.Whitespace
+taskCbName.Otherany0.6531string0.0872boolean0.0695number0.0614complex0.0086
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+wrapAsyncName.Otherany0.4477void0.3155complex0.0486string0.0360boolean0.0244
+(Punctuation
+taskName.Otherany0.7591string0.0528number0.0232boolean0.0199complex0.0098
+)Punctuation
+(Punctuation
+(Punctuation
+errName.Otherany0.4852Error0.4762string0.0098{}0.0021complex0.0008
+,Punctuation
+ Text.Whitespace
+...Punctuation
+argsName.Otherany[]0.7969any0.1460string[]0.0083IArguments0.0047string0.0023
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.4591Error0.4409boolean0.0513string0.0099{}0.0039
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+falseKeyword.Constant
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+taskCbName.Otherany0.3939string0.1183void0.0786boolean0.0712any[]0.0476
+(Punctuation
+errName.OtherError0.5936any0.3786string0.0115{}0.0024complex0.0011
+)Punctuation
+;Punctuation
+\n\n            Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+argsName.Otherany0.6273any[]0.3061string[]0.0247string0.0093IArguments0.0043
+.Punctuation
+lengthName.Othernumber0.5114any0.4843string0.0011complex0.0008void0.0006
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+2Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+[Punctuation
+resultName.Otherany0.6588string0.2979number0.0188{}0.0055boolean0.0037
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+argsName.Otherany0.7139any[]0.2151string0.0144IArguments0.0097string[]0.0079
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n                Text.Whitespace
+resultName.Otherany0.8599any[]0.0490string0.0436{}0.0134complex0.0049
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+argsName.Otherany0.7143any[]0.2286string0.0220string[]0.0080{}0.0036
+;Punctuation
+\n            Text.Whitespace
+}Punctuation
+\n            Text.Whitespace
+errorName.Otherany0.8307Error0.0735string0.0456void0.0076{}0.0044
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+errName.Otherany0.8926Error0.0692string0.0195{}0.0048void0.0016
+;Punctuation
+\n            Text.Whitespace
+taskCbName.Othervoid0.6196any0.2753complex0.0348string0.0165{}0.0099
+(Punctuation
+errName.Otherany0.6708Error0.2296{}0.0423string0.0319boolean0.0058
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+;Punctuation
+\n        Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+callbackName.Otherany0.6333Function0.1620void0.1119boolean0.0049{}0.0043
+(Punctuation
+errorName.Otherany0.8379Error0.0865string0.0433{}0.0068number0.0029
+,Punctuation
+ Text.Whitespace
+resultName.Otherany0.8587string0.0736{}0.0175any[]0.0088number0.0071
+)Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+awaitifyName.Otherany0.5314complex0.0822void0.0588string0.0460boolean0.0342
+(Punctuation
+tryEachName.Otherany0.5846string0.1823number0.0448boolean0.0364any[]0.0156
+)Punctuation
+\nText.Whitespace

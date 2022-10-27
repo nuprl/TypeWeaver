@@ -1,0 +1,217 @@
+Text
+// Delegates to `succ` on sucecss or to `fail` on errorComment.Single
+\nText.Whitespace
+// ex: Thing.load(123, iferr(cb, thing => ...))Comment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+iferrName.Otherany0.5478complex0.0456void0.0383string0.0138number0.0096
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+failName.Otherany0.5657void0.1175number0.0420Error0.0360string0.0328
+,Punctuation
+ Text.Whitespace
+succName.Otherany0.4832string0.1410number0.1118boolean0.0242Error0.0189
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.5236Error0.4213string0.0368complex0.0015number0.0012
+,Punctuation
+ Text.Whitespace
+...Punctuation
+aName.Otherany0.4389any[]0.1742{}0.0361string0.0312number0.0245
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+errName.OtherError0.4732any0.4611string0.0201{}0.0057boolean0.0043
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+failName.Otherany0.3490void0.2425Error0.1398complex0.0275number0.0148
+(Punctuation
+errName.Otherany0.6399Error0.3037string0.0438complex0.0024number0.0016
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+succName.Otherany0.4893string0.0989complex0.0745void0.0537Error0.0341
+(Punctuation
+...Punctuation
+aName.Otherany[]0.4280any0.1854number[]0.0600complex0.0531{}0.0506
+)Punctuation
+\n\nText.Whitespace
+Text
+// Like iferr, but also catches errors thrown from `succ` and passes to `fail`Comment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+tiferrName.Otherany0.5102void0.1904complex0.0690any[]0.0213{}0.0106
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+failName.Otherany0.6135void0.1273number0.0599Error0.0280string0.0273
+,Punctuation
+ Text.Whitespace
+succName.Otherany0.5139number0.1773string0.0596void0.0365complex0.0333
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+iferrName.Otherany0.4893void0.2333complex0.1032number0.0143{}0.0126
+(Punctuation
+failName.Otherany0.5917void0.1967number0.0435string0.0240Error0.0216
+,Punctuation
+ Text.Whitespace
+(Punctuation
+...Punctuation
+aName.Otherany0.4564any[]0.1727complex0.0633{}0.0509number0.0342
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+succName.Othervoid0.4070any0.3109string0.0604complex0.0572{}0.0169
+(Punctuation
+...Punctuation
+aName.Otherany[]0.2493any0.1847{}0.0868complex0.0566number[]0.0352
+)Punctuation
+ Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+errName.Otherany0.9782Error0.0169string0.0027number0.0004complex0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+failName.Otherany0.6396void0.2382Error0.0440complex0.0107number0.0074
+(Punctuation
+errName.Otherany0.8377Error0.1461string0.0078{}0.0020complex0.0018
+)Punctuation
+ Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+\n\nText.Whitespace
+Text
+// Delegate to the success function on success, throws the error otherwiseComment.Single
+\nText.Whitespace
+// ex: Thing.load(123, throwerr(thing => ...))Comment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+throwerrName.Otherany0.9533complex0.0094void0.0083number0.0061Promise<void>0.0043
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+iferrName.Otherany0.9046complex0.0545void0.0128Promise<void>0.0042{}0.0029
+.Punctuation
+bindName.Otherany0.9914complex0.0012void0.0008{}0.0007T0.0005
+(Punctuation
+nullKeyword.Constant
+,Punctuation
+ Text.Whitespace
+errName.Otherany0.8803Error0.1044string0.0069{}0.0020complex0.0014
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+throwKeywordany0.8657Error0.1168string0.0072complex0.0035{}0.0023
+ Text.Whitespace
+errName.Otherany0.6905Error0.2943string0.0079{}0.0019complex0.0015
+ Text.Whitespace
+}Punctuation
+)Punctuation
+\n\nText.Whitespace
+Text
+// Prints errors when one is passed, or does nothing otherwiseComment.Single
+\nText.Whitespace
+// ex: Thing.load(123, printerr)Comment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+printerrName.Otherany0.8568Error0.0286string0.0280complex0.0186number0.0062
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+iferrName.Otherany0.8813complex0.0583Error0.0142string0.0108{}0.0040
+(Punctuation
+errName.Otherany0.8910Error0.0946string0.0079complex0.0017{}0.0009
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+consoleName.OtherConsole0.9989any0.0006void0.0001Error0.0000complex0.0000
+.Punctuation
+errorName.Othervoid0.9919any0.0056complex0.0013Promise<void>0.0004string0.0001
+(Punctuation
+errName.Otherany0.9181Error0.0667string0.0107complex0.0012{}0.0008
+)Punctuation
+,Punctuation
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+exportsName.Otherany0.8490complex0.0473any[]0.0146{}0.0145string0.0073
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+iferrName.Otherany0.7146complex0.0888any[]0.0223{}0.0146string0.0082
+\nText.Whitespace
+exportsName.Otherany0.9649complex0.0236{}0.0012any[]0.0010string0.0010
+.Punctuation
+iferrName.Otherany0.9687complex0.0087string0.0075number0.0034any[]0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+iferrName.Otherany0.6739complex0.1019any[]0.0147{}0.0140string0.0130
+\nText.Whitespace
+exportsName.Otherany0.9420complex0.0326{}0.0021any[]0.0016string0.0013
+.Punctuation
+tiferrName.Otherany0.9602complex0.0101string0.0093number0.0050any[]0.0030
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+tiferrName.Otherany0.6578complex0.0943string0.0139any[]0.0136{}0.0123
+\nText.Whitespace
+exportsName.Otherany0.9286complex0.0376{}0.0023any[]0.0017string0.0014
+.Punctuation
+throwerrName.Otherany0.9578string0.0113complex0.0087number0.0063any[]0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+throwerrName.Otherany0.6770complex0.0732string0.0134number0.0118T0.0096
+\nText.Whitespace
+exportsName.Otherany0.9230complex0.0370{}0.0019string0.0017any[]0.0017
+.Punctuation
+printerrName.Otherany0.9287complex0.0147string0.0116number0.0057any[]0.0029
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+printerrName.Otherany0.2794complex0.0647string0.0162any[]0.0127void0.0120
+\nText.Whitespace

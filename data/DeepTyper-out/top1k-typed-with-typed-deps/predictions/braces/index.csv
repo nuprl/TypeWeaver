@@ -1,0 +1,668 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+stringifyName.Otherany0.8645string0.1167complex0.0094void0.0011Function0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./lib/stringify'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+compileName.Otherany0.9504string0.0231number0.0048Function0.0038void0.0038
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./lib/compile'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+expandName.Otherany0.9759string0.0058complex0.0029any[]0.0019void0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./lib/expand'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+parseName.Otherany0.8547complex0.0111void0.0077string0.0057any[]0.0047
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./lib/parse'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Expand the given pattern or create a regex-compatible string.\n *\n * ```js\n * const braces = require('braces');\n * console.log(braces('{a,b,c}', { compile: true })); //=> ['(a|b|c)']\n * console.log(braces('{a,b,c}')); //=> ['a', 'b', 'c']\n * ```\n * @param {String} `str`\n * @param {Object} `options`\n * @return {String}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+bracesName.Otherany0.6556complex0.0227any[]0.0134Promise<any>0.0070string0.0040
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+inputName.Otherany0.7016string0.2307number0.0111any[]0.0086complex0.0063
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.3408{}0.1716Options0.0322object0.0089complex0.0087
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+outputName.Otherany[]0.9139any0.0278T[]0.0042string[]0.0035{}0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ArrayName.BuiltinArrayConstructor0.9997ObjectConstructor0.0000any0.0000Math0.0000any[]0.0000
+.Punctuation
+isArrayName.Othercomplex0.9946any[]0.0019any0.0015{}0.0002boolean0.0002
+(Punctuation
+inputName.Otherany0.7852any[]0.1206complex0.0574string0.0078{}0.0028
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+patternName.Otherstring0.4020any0.3944any[]0.0224complex0.0201RegExp0.0176
+ Text.Whitespace
+ofKeyword
+ Text.Whitespace
+inputName.Otherany0.6649any[]0.2031string0.0529complex0.0230string[]0.0043
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany0.7347any[]0.1846complex0.0077{}0.0024Set<any>0.0019
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bracesName.Otherany0.9446any[]0.0130complex0.0119{}0.0010Set<any>0.0005
+.Punctuation
+createName.Otherany0.8232complex0.0600any[]0.0465{}0.0047T0.0038
+(Punctuation
+patternName.Otherstring0.5090any0.4020complex0.0232any[]0.0212RegExp0.0083
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.4069any[]0.0897{}0.0754complex0.0742Options0.0165
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ArrayName.BuiltinArrayConstructor0.9997ObjectConstructor0.0000any0.0000Math0.0000any[]0.0000
+.Punctuation
+isArrayName.Othercomplex0.9949any[]0.0018any0.0012boolean0.0003{}0.0003
+(Punctuation
+resultName.Otherany[]0.4874any0.4397complex0.0250{}0.0055Object0.0032
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+outputName.Otherany[]0.9579any0.0149string[]0.0034any[][]0.0013Function[]0.0011
+.Punctuation
+pushName.Othernumber0.8714any0.1162void0.0028complex0.0024any[]0.0018
+(Punctuation
+...Punctuation
+resultName.Otherany[]0.8758any0.1003{}0.0050string[]0.0050complex0.0027
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+outputName.Otherany[]0.9441any0.0255string[]0.0032Function[]0.0014T[]0.0009
+.Punctuation
+pushName.Othernumber0.8214any0.1677void0.0030any[]0.0016string0.0013
+(Punctuation
+resultName.Otherany0.5731any[]0.3797{}0.0096string0.0046string[]0.0031
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+outputName.Otherany[]0.9175any0.0326string[]0.0030any[][]0.0021{}0.0016
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+.Punctuation
+concatName.Othercomplex0.8048any0.1757any[]0.0141string0.0009void0.0005
+(Punctuation
+bracesName.Otherany0.8460complex0.0233any[]0.0151Set<any>0.0017{}0.0010
+.Punctuation
+createName.Otherany0.7542complex0.0970any[]0.0485void0.0094{}0.0092
+(Punctuation
+inputName.Otherany0.8120any[]0.1060string0.0324complex0.0229{}0.0045
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.4226any[]0.1247{}0.0337complex0.0296Options0.0287
+)Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optionsName.Otherany0.4674any[]0.0736complex0.0682{}0.0231Options0.0176
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.3922complex0.0476any[]0.0365Options0.0315{}0.0152
+.Punctuation
+expandName.Otherany0.5129boolean0.4334complex0.0221any[]0.0056number0.0036
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+trueKeyword.Constant
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+optionsName.Otherany0.3051any[]0.0476Options0.0348complex0.0308{}0.0157
+.Punctuation
+nodupesName.Otherany0.5663boolean0.3259complex0.0497any[]0.0111{}0.0045
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+trueKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+outputName.Otherany[]0.7606any0.1013Set<any>0.0123{}0.0064string[]0.0056
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+...Punctuation
+newOperator.Wordany0.6348Set<any>0.1134any[]0.0440SetConstructor0.0209Set<string>0.0188
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9642Set<any>0.0102any0.0100any[]0.0004Set<string>0.0004
+(Punctuation
+outputName.Otherany[]0.5213any0.2402{}0.0191complex0.0045Error0.0038
+)Punctuation
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+outputName.Otherany[]0.6890any0.1942{}0.0156complex0.0047string[]0.0021
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Parse the given `str` with the given `options`.\n *\n * ```js\n * // braces.parse(pattern, [, options]);\n * const ast = braces.parse('a/{b,c}/d');\n * console.log(ast);\n * ```\n * @param {String} pattern Brace pattern to parse\n * @param {Object} options\n * @return {Object} Returns an AST\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+bracesName.Otherany0.7307complex0.0136Set<any>0.0054any[]0.0052{}0.0037
+.Punctuation
+parseName.Otherany0.8039complex0.0202any[]0.0137number0.0133{}0.0072
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+inputName.Otherany0.7730string0.1506any[]0.0240number0.0153complex0.0107
+,Punctuation
+ Text.Whitespace
+optionsName.Other{}0.3462any0.3396complex0.0299any[]0.0257T0.0081
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+parseName.Otherany0.6254complex0.0922void0.0246{}0.0235any[]0.0204
+(Punctuation
+inputName.Otherany0.6871string0.2407complex0.0309any[]0.0184number0.0069
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5791{}0.0577any[]0.0417complex0.0375number0.0099
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Creates a braces string from an AST, or an AST node.\n *\n * ```js\n * const braces = require('braces');\n * let ast = braces.parse('foo/{a,b}/bar');\n * console.log(stringify(ast.nodes[2])); //=> '{a,b}'\n * ```\n * @param {String} `input` Brace pattern or AST.\n * @param {Object} `options`\n * @return {Array} Returns an array of expanded values.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+bracesName.Otherany0.8847complex0.0347any[]0.0022{}0.0016this0.0008
+.Punctuation
+stringifyName.Otherany0.7543complex0.1339string0.0944any[]0.0024number0.0017
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+inputName.Otherany0.8998string0.0420complex0.0135any[]0.0110{}0.0060
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.4664{}0.1492complex0.0226any[]0.0157Options0.0099
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+inputName.Otherany0.7463complex0.1471string0.0860any[]0.0065{}0.0033
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+stringifyName.Otherstring0.3712complex0.3683any0.2438any[]0.0033boolean0.0021
+(Punctuation
+bracesName.Otherany0.8674complex0.0110{}0.0015any[]0.0014this0.0013
+.Punctuation
+parseName.Otherany0.8365complex0.0498number0.0059any[]0.0054{}0.0053
+(Punctuation
+inputName.Otherstring0.6402any0.2914complex0.0275number0.0123any[]0.0101
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.4383{}0.0732complex0.0386any[]0.0337string0.0147
+)Punctuation
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5661{}0.0586complex0.0355any[]0.0352Options0.0082
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+stringifyName.Otherstring0.4889any0.3369complex0.1476any[]0.0043boolean0.0031
+(Punctuation
+inputName.Otherany0.8496string0.0595complex0.0310any[]0.0276{}0.0045
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5225{}0.0569any[]0.0346complex0.0258Options0.0107
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Compiles a brace pattern into a regex-compatible, optimized string.\n * This method is called by the main [braces](#braces) function by default.\n *\n * ```js\n * const braces = require('braces');\n * console.log(braces.compile('a/{b,c}/d'));\n * //=> ['a/(b|c)/d']\n * ```\n * @param {String} `input` Brace pattern or AST.\n * @param {Object} `options`\n * @return {Array} Returns an array of expanded values.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+bracesName.Otherany0.6770complex0.0486any[]0.0064{}0.0037Set<any>0.0037
+.Punctuation
+compileName.Otherany0.9595string0.0112number0.0067complex0.0038Promise<any>0.0036
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+inputName.Otherany0.8244string0.1025any[]0.0164number0.0159complex0.0128
+,Punctuation
+ Text.Whitespace
+optionsName.Other{}0.3060any0.2548complex0.0339any[]0.0189T0.0093
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+inputName.Otherany0.8114complex0.1218string0.0421any[]0.0069{}0.0048
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+inputName.Otherany0.9711complex0.0088any[]0.0081string0.0029{}0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bracesName.Otherany0.9262complex0.0172any[]0.0031{}0.0017T0.0005
+.Punctuation
+parseName.Otherany0.8385complex0.0496any[]0.0089number0.0061{}0.0059
+(Punctuation
+inputName.Otherstring0.5436any0.3894complex0.0315number0.0111any[]0.0097
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5130{}0.1162complex0.0596any[]0.0321Options0.0121
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+compileName.Otherany0.5684string0.2711complex0.0322number0.0207Promise<any>0.0182
+(Punctuation
+inputName.Otherany0.7530string0.1435complex0.0348any[]0.0332number0.0084
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5639{}0.0496any[]0.0444complex0.0377number0.0135
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Expands a brace pattern into an array. This method is called by the\n * main [braces](#braces) function when `options.expand` is true. Before\n * using this method it's recommended that you read the [performance notes](#performance))\n * and advantages of using [.compile](#compile) instead.\n *\n * ```js\n * const braces = require('braces');\n * console.log(braces.expand('a/{b,c}/d'));\n * //=> ['a/b/d', 'a/c/d'];\n * ```\n * @param {String} `pattern` Brace pattern\n * @param {Object} `options`\n * @return {Array} Returns an array of expanded values.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+bracesName.Otherany0.7172complex0.0282any[]0.0039{}0.0039Set<any>0.0028
+.Punctuation
+expandName.Otherany0.9131complex0.0536boolean0.0054void0.0049any[]0.0033
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+inputName.Otherany0.8532string0.0702any[]0.0218complex0.0151number0.0148
+,Punctuation
+ Text.Whitespace
+optionsName.Other{}0.2968any0.2445complex0.0335any[]0.0269Options0.0112
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+inputName.Otherany0.7838complex0.1278string0.0537any[]0.0098{}0.0066
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+inputName.Otherany0.9526any[]0.0166complex0.0130string0.0027{}0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bracesName.Otherany0.8941complex0.0224any[]0.0049{}0.0024T0.0008
+.Punctuation
+parseName.Otherany0.7196complex0.0647any[]0.0191number0.0111{}0.0103
+(Punctuation
+inputName.Otherstring0.5072any0.4056complex0.0355any[]0.0195number0.0128
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.5010{}0.0779any[]0.0550complex0.0517number0.0122
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+resultName.Otherany0.6142any[]0.2709complex0.0223string0.0170boolean0.0162
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+expandName.Othercomplex0.4469any0.2890any[]0.1059boolean0.0393string0.0197
+(Punctuation
+inputName.Otherany0.7260string0.1132any[]0.0683complex0.0493number0.0061
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.1858any[]0.0590complex0.0531{}0.0473Options0.0307
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+// filter out empty strings if specifiedComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optionsName.Othercomplex0.0794any0.0754Options0.0520any[]0.0249{}0.0216
+.Punctuation
+noemptyName.Otherboolean0.4532any0.2838complex0.1984any[]0.0077{}0.0073
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+trueKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+resultName.Otherany[]0.4829any0.3919complex0.0192{}0.0158boolean0.0058
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+resultName.Otherany[]0.4987any0.3743complex0.0310{}0.0074boolean0.0052
+.Punctuation
+filterName.Othercomplex0.8770any0.0900v...0.0106boolean0.0031valu...0.0019
+(Punctuation
+BooleanName.BuiltinBooleanConstructor0.9202boolean0.0104false0.0063Boolean0.0059any0.0024
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+// filter out duplicates if specifiedComment.Single
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optionsName.OtherOptions0.0587complex0.0493any0.0443any[]0.0135ConnectionOptions0.0128
+.Punctuation
+nodupesName.Otherboolean0.6274any0.1999complex0.1116any[]0.0052true0.0041
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+trueKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+resultName.Otherany[]0.7082any0.1067Set<any>0.0411boolean0.0100{}0.0079
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+...Punctuation
+newOperator.Wordany0.4965Set<any>0.1707SetConstructor0.0399any[]0.0377Set<string>0.0274
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9751Set<any>0.0081any0.0048number0.0006Set<string>0.0003
+(Punctuation
+resultName.Otherany0.4809any[]0.2109complex0.0373{}0.0332number0.0185
+)Punctuation
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany0.4154any[]0.3673complex0.0679{}0.0485boolean0.0107
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Processes a brace pattern and returns either an expanded array\n * (if `options.expand` is true), a highly optimized regex-compatible string.\n * This method is called by the main [braces](#braces) function.\n *\n * ```js\n * const braces = require('braces');\n * console.log(braces.create('user-{200..300}/project-{a,b,c}-{1..10}'))\n * //=> 'user-(20[0-9]|2[1-9][0-9]|300)/project-(a|b|c)-([1-9]|10)'\n * ```\n * @param {String} `pattern` Brace pattern\n * @param {Object} `options`\n * @return {Array} Returns an array of expanded values.\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+bracesName.Otherany0.7782complex0.0305any[]0.0052{}0.0029Set<any>0.0029
+.Punctuation
+createName.Otherany0.8405complex0.0259void0.0168any[]0.0129{}0.0072
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+inputName.Otherany0.7741string0.0931any[]0.0378complex0.0266number0.0168
+,Punctuation
+ Text.Whitespace
+optionsName.Other{}0.3032any0.1257any[]0.0282Options0.0241complex0.0214
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+inputName.Otherstring0.5165any0.4276complex0.0317number0.0070any[]0.0042
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+''Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+inputName.Otherany0.4785string0.3557any[]0.0855complex0.0308number0.0188
+.Punctuation
+lengthName.Othernumber0.9259any0.0701string0.0018complex0.0011boolean0.0003
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+3Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+inputName.Otherstring0.6679any0.2224complex0.0499number0.0347any[]0.0030
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n Text.Whitespace
+returnKeyword
+ Text.Whitespace
+optionsName.Otherany0.2446complex0.1067Options0.0827{}0.0164ConnectionOptions0.0081
+.Punctuation
+expandName.Otherany0.5964boolean0.3382complex0.0417string0.0054number0.0033
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+trueKeyword.Constant
+\n    Text.Whitespace
+?Operator
+ Text.Whitespace
+bracesName.Otherany0.6459complex0.1081{}0.0031any[]0.0027Options0.0018
+.Punctuation
+compileName.Otherany0.8470string0.0822complex0.0178number0.0127boolean0.0109
+(Punctuation
+inputName.Otherany0.5960string0.2611number0.0371complex0.0325any[]0.0324
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.1187Options0.0817{}0.0469complex0.0254any[]0.0184
+)Punctuation
+\n    Text.Whitespace
+:Operator
+ Text.Whitespace
+bracesName.Otherany0.8047complex0.0489any[]0.0034{}0.0034number[][]0.0013
+.Punctuation
+expandName.Otherany0.7654complex0.1004boolean0.0255void0.0162Promise<any>0.0114
+(Punctuation
+inputName.Otherany0.6620string0.1660any[]0.0601complex0.0540number0.0145
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.4278{}0.0702complex0.0373any[]0.0290Options0.0272
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Expose "braces"\n */Comment.Multiline
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+bracesName.Otherany0.7446complex0.0430string0.0106number0.0058any[]0.0039
+;Punctuation
+\nText.Whitespace

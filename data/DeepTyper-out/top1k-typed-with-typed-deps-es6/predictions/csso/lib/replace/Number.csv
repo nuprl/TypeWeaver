@@ -1,0 +1,213 @@
+constKeyword.Declaration
+ Text.Whitespace
+OMIT_PLUSSIGNName.OtherRegExp0.9845string0.0098any0.0009string[]0.0005boolean0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/^(?:\+|(-))?0*(\d*)(?:\.0*|(\.\d*?)0*)?$/Literal.String.Regex
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+KEEP_PLUSSIGNName.OtherRegExp0.9814string0.0150string[]0.0007boolean0.0005any0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/^([\+\-])?0*(\d*)(?:\.0*|(\.\d*?)0*)?$/Literal.String.Regex
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+unsafeToRemovePlusSignAfterName.OtherSet<string>0.5964Set<any>0.1838Set<number>0.0340symbol0.0066any0.0055
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.2888Set<string>0.2157Set<any>0.0839symbol0.0495object0.0248
+ Text.Whitespace
+SetName.BuiltinSetConstructor0.9884any0.0031Set<any>0.0029Set<string>0.0006Set<number>0.0004
+(Punctuation
+[Punctuation
+\n    Text.Whitespace
+'Dimension'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+'Hash'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+'Identifier'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+'Number'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+'Raw'Literal.String.Single
+,Punctuation
+\n    Text.Whitespace
+'UnicodeRange'Literal.String.Single
+\nText.Whitespace
+]Punctuation
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+packNumberName.Otherboolean0.6106string0.1194any0.0530void0.0384complex0.0143
+(Punctuation
+valueName.Otherstring0.8298any0.1257boolean0.0162number0.0108Date0.0039
+,Punctuation
+ Text.Whitespace
+itemName.Otherany0.4179string0.0602Node0.0242Element0.0075Item0.0065
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+// omit plus sign only if no prev or prev is safe typeComment.Single
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+regexpName.OtherRegExp0.7242any0.0920string0.0309boolean0.0191Date0.0050
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+itemName.Otherany0.4656string0.0517Node0.0118Element0.0084complex0.0074
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+itemName.Otherany0.2671Node0.0178Item0.0083Element0.0067complex0.0064
+.Punctuation
+prevName.Otherany0.6909boolean0.0692string0.0465number0.0145Node0.0071
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+unsafeToRemovePlusSignAfterName.OtherSet<string>0.1487Set<any>0.0845any0.0447RegExp0.0443complex0.0398
+.Punctuation
+hasName.Otherboolean0.9611any0.0165string0.0159number0.0013complex0.0006
+(Punctuation
+itemName.Otherany0.1931string0.0221Node0.0142Token0.0067Item0.0048
+.Punctuation
+prevName.Otherany0.4036string0.0326Node0.0187boolean0.0169Error0.0126
+.Punctuation
+dataName.Otherany0.2583complex0.0296boolean0.0145string0.0130Node0.0067
+.Punctuation
+typeKeyword.Reserved
+)Punctuation
+\n        Text.Whitespace
+?Operator
+ Text.Whitespace
+KEEP_PLUSSIGNName.Otherstring0.5575any0.2491boolean0.0271RegExp0.0195String0.0102
+\n        Text.Whitespace
+:Operator
+ Text.Whitespace
+OMIT_PLUSSIGNKeyword.Typestring0.5793any0.2783boolean0.0306RegExp0.0103number0.0092
+;Punctuation
+\n\n    Text.Whitespace
+// 100 -> '100'Comment.Single
+\n    Text.Whitespace
+// 00100 -> '100'Comment.Single
+\n    Text.Whitespace
+// +100 -> '100'Comment.Single
+\n    Text.Whitespace
+// -100 -> '-100'Comment.Single
+\n    Text.Whitespace
+// 0.123 -> '.123'Comment.Single
+\n    Text.Whitespace
+// 0.12300 -> '.123'Comment.Single
+\n    Text.Whitespace
+// 0.0 -> ''Comment.Single
+\n    Text.Whitespace
+// 0 -> ''Comment.Single
+\n    Text.Whitespace
+// -0 -> '-'Comment.Single
+\n    Text.Whitespace
+valueName.Otherstring0.9365any0.0456boolean0.0047number0.0028complex0.0026
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+StringName.BuiltinStringConstructor0.9968String0.0015string0.0005complex0.0001any0.0000
+(Punctuation
+valueName.Otherstring0.8243any0.1300number0.0220complex0.0067boolean0.0030
+)Punctuation
+.Punctuation
+replaceName.Othercomplex0.9076any0.0824void0.0042string0.0014boolean0.0014
+(Punctuation
+regexpName.OtherRegExp0.9726string0.0064any0.0059RegExpMatchArray0.0010boolean0.0009
+,Punctuation
+ Text.Whitespace
+'$1$2$3'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+valueName.Otherstring0.8277any0.1418boolean0.0145number0.0046RegExp0.0021
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+''Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+valueName.Otherstring0.9298any0.0601boolean0.0034number0.0028complex0.0008
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'-'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+valueName.Otherstring0.9051any0.0813boolean0.0037number0.0029RegExp0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'0'Literal.String.Single
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+// FIXME: is it solution simplier?Comment.Single
+\n    Text.Whitespace
+// value = String(Number(value)).replace(/^(-?)0+\./, '$1.');Comment.Single
+\n\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+valueName.Otherstring0.8123any0.1006boolean0.0450number0.0201String0.0025
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+NumberName.BuiltinNumberConstructor0.9061Number0.0055void0.0016Promise0.0014Console0.0006
+(Punctuation
+nodeName.OtherNode0.0619any0.0402TreeModel0.0397FileNode0.0177Tree0.0149
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+nodeName.Otherany0.1032Node0.0411TreeModel0.0381FileNode0.0110TreeNode0.0104
+.Punctuation
+valueName.Otherstring0.6785any0.2543number0.0210boolean0.0132Date0.0038
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+packNumberName.Otherstring0.7053any0.1289boolean0.0384number0.0273void0.0103
+(Punctuation
+nodeName.Otherany0.4908Node0.0492TreeModel0.0250never0.0081Tree0.0080
+.Punctuation
+valueName.Otherstring0.6761any0.2744number0.0090boolean0.0074Date0.0061
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

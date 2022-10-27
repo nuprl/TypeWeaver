@@ -1,0 +1,161 @@
+importKeyword
+ Text.Whitespace
+castSliceName.Otherany0.1259string0.1018boolean0.0756complex0.0749RegExp0.0361
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/castSlice.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+charsStartIndexName.Otherboolean0.1804string0.1802any0.1656RegExp0.0805complex0.0665
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/charsStartIndex.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+stringToArrayName.Otherstring0.2707boolean0.1940any0.1846complex0.0786RegExp0.0554
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/stringToArray.js'Literal.String.Single
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+methodNameName.Otherstring0.9615any0.0301complex0.0063number0.0003boolean0.0003
+ Text.Whitespace
+=Operator
+  Text.Whitespace
+''Literal.String.Single
+.Punctuation
+trimLeftName.Otherstring0.7605boolean0.1473any0.0602number0.0125string[]0.0047
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+'trimLeft'Literal.String.Single
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+'trimStart'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Removes leading whitespace or specified characters from `string`.\n *\n * @since 4.0.0\n * @category String\n * @param {string} [string=''] The string to trim.\n * @param {string} [chars=whitespace] The characters to trim.\n * @returns {string} Returns the trimmed string.\n * @see trim, trimEnd\n * @example\n *\n * trimStart('  abc  ')\n * // => 'abc  '\n *\n * trimStart('-_-abc-_-', '_-')\n * // => 'abc-_-'\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+trimStartName.Otherstring0.4945any0.4126complex0.0134string[]0.0055number0.0030
+(Punctuation
+stringKeyword.Type
+,Punctuation
+ Text.Whitespace
+charsName.Otherstring0.8231number0.0965any0.0629boolean0.0057complex0.0020
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+stringKeyword.Type
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+charsName.Otherstring0.7650number0.1098any0.0939boolean0.0123complex0.0055
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+stringKeyword.Type
+[Punctuation
+methodNameName.Otherstring0.9837any0.0109complex0.0040number0.0003boolean0.0002
+]Punctuation
+(Punctuation
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+stringKeyword.Type
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+!Operator
+charsName.Otherstring0.8108any0.1027number0.0440complex0.0181boolean0.0165
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+stringKeyword.Type
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+strSymbolsName.Otherstring0.8051any0.1144string[]0.0238boolean0.0158complex0.0116
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+stringToArrayName.Otherstring0.8703any0.0734string[]0.0149complex0.0142boolean0.0069
+(Punctuation
+stringKeyword.Type
+)Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+startName.Otherstring0.5140any0.3062number0.0924string[]0.0174Date0.0143
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+charsStartIndexName.Otherstring0.7347any0.1647complex0.0323number0.0197string[]0.0115
+(Punctuation
+strSymbolsName.Otherstring0.8913any0.0770number0.0079boolean0.0077string[]0.0058
+,Punctuation
+ Text.Whitespace
+stringToArrayName.Otherstring0.9016any0.0562boolean0.0145number0.0105complex0.0063
+(Punctuation
+charsName.Otherstring0.9180any0.0466number0.0240complex0.0042string[]0.0019
+)Punctuation
+)Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+castSliceName.Otherstring0.6861any0.1834string[]0.0530complex0.0209any[]0.0122
+(Punctuation
+strSymbolsName.Otherstring0.8441any0.1193string[]0.0102number0.0083boolean0.0078
+,Punctuation
+ Text.Whitespace
+startName.Otherstring0.5079any0.2474number0.2037Date0.0114boolean0.0094
+)Punctuation
+.Punctuation
+joinName.Otherstring0.9074any0.0854complex0.0026number0.0012string[]0.0006
+(Punctuation
+''Literal.String.Single
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+trimStartName.Otherany0.8091string0.0714complex0.0053number0.0039any[]0.0022
+\nText.Whitespace

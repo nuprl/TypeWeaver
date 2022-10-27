@@ -1,0 +1,84 @@
+importKeyword
+ Text.Whitespace
+baseAssignValueName.Otherany0.6848complex0.0772boolean0.0182string0.0138void0.0077
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseAssignValue.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+reduceName.Othercomplex0.6004any0.3167number0.0218void0.0057{}0.0043
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./reduce.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Creates an object composed of keys generated from the results of running\n * each element of `collection` thru `iteratee`. The corresponding value of\n * each key is the last element responsible for generating the key. The\n * iteratee is invoked with one argument: (value).\n *\n * @since 4.0.0\n * @category Collection\n * @param {Array|Object} collection The collection to iterate over.\n * @param {Function} iteratee The iteratee to transform keys.\n * @returns {Object} Returns the composed aggregate object.\n * @see groupBy, partition\n * @example\n *\n * const array = [\n *   { 'dir': 'left', 'code': 97 },\n *   { 'dir': 'right', 'code': 100 }\n * ]\n *\n * keyBy(array, ({ code }) => String.fromCharCode(code))\n * // => { 'a': { 'dir': 'left', 'code': 97 }, 'd': { 'dir': 'right', 'code': 100 } }\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+keyByName.Otherany0.5857complex0.0847number0.0531void0.0381any[]0.0380
+(Punctuation
+collectionName.Otherany0.1470any[]0.0480string0.0438Collection0.0255number0.0191
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.6320number0.1034string0.0153boolean0.0129any[]0.0105
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+reduceName.Otherany0.7199complex0.1888number0.0470any...0.0083void0.0063
+(Punctuation
+collectionName.Otherany0.3477any[]0.1595string0.0512number0.0343complex0.0198
+,Punctuation
+ Text.Whitespace
+(Punctuation
+resultName.Otherany0.8635number0.0305{}0.0160any[]0.0139boolean0.0093
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.8966number0.0391string0.0124{}0.0077any[]0.0074
+,Punctuation
+ Text.Whitespace
+keyName.Otherany0.8043number0.0915string0.0750any[]0.0060boolean0.0041
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+(Punctuation
+\n    Text.Whitespace
+baseAssignValueName.Otherany0.9018complex0.0195string0.0159number0.0121any[]0.0095
+(Punctuation
+resultName.Otherany0.8015number0.0359{}0.0244any[]0.0232string0.0182
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.8068any[]0.0083number0.0072{}0.0062Position0.0030
+(Punctuation
+valueName.Otherany0.7880number0.0598{}0.0214string0.0208any[]0.0100
+)Punctuation
+,Punctuation
+ Text.Whitespace
+valueName.Otherany0.8166number0.0591string0.0255{}0.0197any[]0.0089
+)Punctuation
+,Punctuation
+ Text.Whitespace
+resultName.Otherany0.7801{}0.0430number0.0274any[]0.0240boolean0.0071
+\n  Text.Whitespace
+)Punctuation
+,Punctuation
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+keyByName.Otherany0.5837any[]0.0183void0.0142complex0.0107number0.0106
+\nText.Whitespace

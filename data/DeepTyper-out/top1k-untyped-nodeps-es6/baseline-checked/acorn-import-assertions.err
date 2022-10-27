@@ -1,0 +1,27 @@
+run_test262.ts(7,17): error TS2307: Cannot find module 'test262-parser-runner' or its corresponding type declarations.
+run_test262.ts(8,19): error TS2307: Cannot find module 'acorn' or its corresponding type declarations.
+src/index.ts(1,25): error TS2307: Cannot find module 'acorn' or its corresponding type declarations.
+src/index.ts(16,11): error TS2339: Property 'tokTypes' does not exist on type 'String'.
+src/index.ts(16,25): error TS2339: Property 'TokenType' does not exist on type 'String'.
+src/index.ts(18,3): error TS2322: Type 'typeof (Anonymous class)' is not assignable to type 'string'.
+src/index.ts(19,17): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
+src/index.ts(24,13): error TS7006: Parameter 'i' implicitly has an 'any' type.
+src/index.ts(28,10): error TS7006: Parameter 't' implicitly has an 'any' type.
+src/index.ts(35,15): error TS7006: Parameter 'code' implicitly has an 'any' type.
+src/index.ts(68,24): error TS7006: Parameter 'node' implicitly has an 'any' type.
+src/index.ts(83,17): error TS7006: Parameter 'node' implicitly has an 'any' type.
+src/index.ts(83,23): error TS7006: Parameter 'exports' implicitly has an 'any' type.
+src/index.ts(116,15): error TS2454: Variable 'isAsync' is used before being assigned.
+src/index.ts(117,98): error TS2454: Variable 'isAsync' is used before being assigned.
+src/index.ts(167,17): error TS7006: Parameter 'node' implicitly has an 'any' type.
+src/index.ts(217,14): error TS2339: Property 'key' does not exist on type 'Node'.
+src/index.ts(222,32): error TS2339: Property 'key' does not exist on type 'Node'.
+src/index.ts(225,28): error TS2339: Property 'key' does not exist on type 'Node'.
+src/index.ts(234,14): error TS2339: Property 'value' does not exist on type 'Node'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

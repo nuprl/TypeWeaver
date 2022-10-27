@@ -1,0 +1,60 @@
+importKeyword
+ Text.Whitespace
+baseCloneName.Otherany0.1460boolean0.0513string0.0473complex0.0418RegExp0.0270
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseClone.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+baseMatchesName.Otherany0.2143string0.0958boolean0.0766RegExp0.0511complex0.0334
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseMatches.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/** Used to compose bitmasks for cloning. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+CLONE_DEEP_FLAGName.Otherany0.3518number0.1618string0.1321boolean0.0939complex0.0122
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+1Literal.Number.Float
+\n\nText.Whitespace
+Text
+/**\n * Creates a function that performs a partial deep comparison between a given\n * object and `source`, returning `true` if the given object has equivalent\n * property values, else `false`.\n *\n * **Note:** The created function is equivalent to `isMatch` with `source`\n * partially applied.\n *\n * Partial comparisons will match empty array and empty object `source`\n * values against any array or object value, respectively. See `isEqual`\n * for a list of supported value comparisons.\n *\n * @since 3.0.0\n * @category Util\n * @param {Object} source The object of property values to match.\n * @returns {Function} Returns the new spec function.\n * @example\n *\n * const objects = [\n *   { 'a': 1, 'b': 2, 'c': 3 },\n *   { 'a': 4, 'b': 5, 'c': 6 }\n * ]\n *\n * filter(objects, matches({ 'a': 4, 'c': 6 }))\n * // => [{ 'a': 4, 'b': 5, 'c': 6 }]\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+matchesName.Otherany0.4702boolean0.0989string0.0780complex0.0353any[]0.0213
+(Punctuation
+sourceName.Otherstring0.6298any0.2942number0.0107complex0.0033Error0.0032
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+baseMatchesName.Otherany0.4860string0.2708boolean0.0504void0.0286number0.0281
+(Punctuation
+baseCloneName.Otherstring0.5120any0.3479boolean0.0334number0.0253complex0.0109
+(Punctuation
+sourceName.Otherstring0.5083any0.3964number0.0233Error0.0049complex0.0047
+,Punctuation
+ Text.Whitespace
+CLONE_DEEP_FLAGName.Otherany0.5315string0.2646number0.0991boolean0.0312complex0.0088
+)Punctuation
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+matchesName.Otherany0.3344boolean0.0565complex0.0352any[]0.0339string[]0.0192
+\nText.Whitespace

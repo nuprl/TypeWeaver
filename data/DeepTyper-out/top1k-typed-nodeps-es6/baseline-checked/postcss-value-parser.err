@@ -1,0 +1,59 @@
+lib/index.ts(6,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/index.ts(7,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/index.ts(8,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/index.ts(10,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/index.ts(14,38): error TS2554: Expected 2 arguments, but got 1.
+lib/parse.ts(3,5): error TS2322: Type 'number' is not assignable to type 'boolean'.
+lib/parse.ts(13,5): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+lib/parse.ts(15,25): error TS7006: Parameter 'input' implicitly has an 'any' type.
+lib/parse.ts(75,16): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
+lib/parse.ts(77,15): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
+lib/parse.ts(95,17): error TS2339: Property 'unclosed' does not exist on type '{ type: string; sourceIndex: number; quote: string; }'.
+lib/parse.ts(98,13): error TS2339: Property 'value' does not exist on type '{ type: string; sourceIndex: number; quote: string; }'.
+lib/parse.ts(99,13): error TS2339: Property 'sourceEndIndex' does not exist on type '{ type: string; sourceIndex: number; quote: string; }'.
+lib/parse.ts(99,36): error TS2339: Property 'unclosed' does not exist on type '{ type: string; sourceIndex: number; quote: string; }'.
+lib/parse.ts(115,15): error TS2339: Property 'unclosed' does not exist on type '{ type: string; sourceIndex: number; sourceEndIndex: number; }'.
+lib/parse.ts(120,13): error TS2339: Property 'value' does not exist on type '{ type: string; sourceIndex: number; sourceEndIndex: number; }'.
+lib/parse.ts(177,29): error TS2367: This condition will always return 'true' since the types 'number' and 'boolean' have no overlap.
+lib/parse.ts(191,19): error TS2339: Property 'unclosed' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
+lib/parse.ts(202,19): error TS2339: Property 'nodes' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
+lib/parse.ts(211,19): error TS2339: Property 'nodes' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
+lib/parse.ts(213,21): error TS2339: Property 'unclosed' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
+lib/parse.ts(214,19): error TS2339: Property 'after' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
+lib/parse.ts(215,19): error TS2339: Property 'nodes' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
+lib/parse.ts(222,19): error TS2339: Property 'after' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
+lib/parse.ts(223,19): error TS2339: Property 'sourceEndIndex' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
+lib/parse.ts(226,17): error TS2339: Property 'after' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
+lib/parse.ts(227,17): error TS2339: Property 'nodes' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
+lib/parse.ts(230,15): error TS2339: Property 'sourceEndIndex' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
+lib/parse.ts(230,38): error TS2339: Property 'unclosed' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
+lib/parse.ts(235,15): error TS2339: Property 'after' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
+lib/parse.ts(236,15): error TS2339: Property 'sourceEndIndex' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
+lib/parse.ts(239,24): error TS2339: Property 'nodes' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
+lib/parse.ts(271,11): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
+lib/parse.ts(294,24): error TS2339: Property 'test' does not exist on type 'string'.
+lib/stringify.ts(15,5): error TS2322: Type 'string' is not assignable to type 'boolean'.
+lib/stringify.ts(23,5): error TS2322: Type 'string' is not assignable to type 'boolean'.
+lib/stringify.ts(45,3): error TS2322: Type 'boolean' is not assignable to type 'string'.
+lib/unit.ts(1,5): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/unit.ts(13,24): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/unit.ts(17,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
+lib/unit.ts(23,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
+lib/unit.ts(26,5): error TS2322: Type 'boolean' is not assignable to type 'number'.
+lib/unit.ts(33,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
+lib/unit.ts(36,5): error TS2322: Type 'boolean' is not assignable to type 'number'.
+lib/unit.ts(40,5): error TS2322: Type 'boolean' is not assignable to type 'number'.
+lib/unit.ts(43,3): error TS2322: Type 'boolean' is not assignable to type 'number'.
+lib/unit.ts(48,25): error TS7006: Parameter 'value' implicitly has an 'any' type.
+lib/unit.ts(56,5): error TS2322: Type 'boolean' is not assignable to type 'string'.
+lib/unit.ts(61,24): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/unit.ts(99,30): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/unit.ts(103,33): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/unit.ts(116,3): error TS2322: Type '{ number: any; unit: any; }' is not assignable to type 'string'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

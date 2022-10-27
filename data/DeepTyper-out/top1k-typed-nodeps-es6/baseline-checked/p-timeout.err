@@ -1,0 +1,30 @@
+index.ts(2,14): error TS7006: Parameter 'message' implicitly has an 'any' type.
+index.ts(13,14): error TS7006: Parameter 'message' implicitly has an 'any' type.
+index.ts(48,53): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: {} | PromiseLike<{}>) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: {} | PromiseLike<{}>) => void' is not assignable to type 'void'.
+index.ts(54,4): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(61,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(65,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(72,6): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(74,6): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(87,4): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(92,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(94,5): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(101,20): error TS2339: Property 'clear' does not exist on type 'Promise<{}>'.
+index.ts(106,2): error TS2322: Type 'Promise<{}>' is not assignable to type 'void'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

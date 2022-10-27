@@ -1,0 +1,290 @@
+Text
+/*!\n * Copyright (c) 2018, Salesforce.com, Inc.\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions are met:\n *\n * 1. Redistributions of source code must retain the above copyright notice,\n * this list of conditions and the following disclaimer.\n *\n * 2. Redistributions in binary form must reproduce the above copyright notice,\n * this list of conditions and the following disclaimer in the documentation\n * and/or other materials provided with the distribution.\n *\n * 3. Neither the name of Salesforce.com nor the names of its contributors may\n * be used to endorse or promote products derived from this software without\n * specific prior written permission.\n *\n * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"\n * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE\n * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR\n * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF\n * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS\n * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN\n * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)\n * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE\n * POSSIBILITY OF SUCH DAMAGE.\n */Comment.Multiline
+\nText.Whitespace
+"use strict"Literal.String.Double
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+pslName.Otherany0.3260string0.1768string[]0.1579boolean0.0690void0.0426
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'psl'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+// RFC 6761Comment.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+SPECIAL_USE_DOMAINSName.Otherstring[]0.9926RegExp[]0.0014RegExp0.0012any[]0.0011string0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+\n  Text.Whitespace
+"local"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"example"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"invalid"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"localhost"Literal.String.Double
+,Punctuation
+\n  Text.Whitespace
+"test"Literal.String.Double
+\nText.Whitespace
+]Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+SPECIAL_TREATMENT_DOMAINSName.Otherstring[]0.9942any[]0.0016RegExp[]0.0010number[]0.0008RegExp0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+"localhost"Literal.String.Double
+,Punctuation
+ Text.Whitespace
+"invalid"Literal.String.Double
+]Punctuation
+;Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+getPublicSuffixName.Otherstring0.5246string[]0.3234any0.0922void0.0117boolean0.0078
+(Punctuation
+domainName.Otherstring0.9351any0.0469string[]0.0134number0.0007any[]0.0004
+,Punctuation
+ Text.Whitespace
+optionsName.Other{}0.1837any0.1409Options0.0297string[]0.0104string0.0074
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+domainPartsName.Otherstring[]0.9441string0.0296any0.0156any[]0.0030complex0.0015
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+domainName.Otherstring0.8889any0.0837string[]0.0233complex0.0011number0.0007
+.Punctuation
+splitName.Othercomplex0.9681any0.0266string[]0.0025string0.0010any[]0.0002
+(Punctuation
+"."Literal.String.Double
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+topLevelDomainName.Otherstring[]0.3856string0.3380any0.1645number0.0385boolean0.0259
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+domainPartsName.Otherstring[]0.9549any[]0.0084any0.0080string0.0076number[]0.0062
+[Punctuation
+domainPartsName.Otherstring[]0.9565string0.0258any0.0076any[]0.0032number[]0.0018
+.Punctuation
+lengthName.Othernumber0.9614any0.0331string0.0042complex0.0004boolean0.0003
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+allowSpecialUseDomainName.Otherboolean0.9429string0.0236any0.0120string[]0.0081number0.0056
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+!Operator
+!Operator
+optionsName.Otherany0.3739complex0.0427string[]0.0417Options0.0299boolean0.0298
+.Punctuation
+allowSpecialUseDomainName.Otherstring0.3971boolean0.2215any0.1816string[]0.1460number0.0294
+;Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+ignoreErrorName.Otherboolean0.9406string0.0219string[]0.0143any0.0129number0.0039
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+!Operator
+!Operator
+optionsName.Otherany0.3277string[]0.0367Options0.0350complex0.0342boolean0.0235
+.Punctuation
+ignoreErrorName.Otherstring0.4611any0.2093boolean0.1767string[]0.1099number0.0192
+;Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+allowSpecialUseDomainName.Otherstring[]0.4194string0.2591boolean0.1875any0.1063RegExp0.0073
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+SPECIAL_USE_DOMAINSName.Otherstring[]0.9576string0.0250any0.0109any[]0.0033number[]0.0008
+.Punctuation
+includesName.Otherboolean0.7593any0.0815string[]0.0700string0.0513complex0.0264
+(Punctuation
+topLevelDomainName.Otherstring0.9141any0.0436string[]0.0325boolean0.0032number0.0021
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+domainPartsName.Otherstring[]0.7194string0.1704any0.0916any[]0.0057number[]0.0025
+.Punctuation
+lengthName.Othernumber0.8999any0.0944string0.0040complex0.0007boolean0.0004
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+secondLevelDomainName.Otherstring0.7736any0.1651string[]0.0321number0.0169boolean0.0040
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+domainPartsName.Otherstring[]0.9056any0.0343string0.0184any[]0.0140number[]0.0077
+[Punctuation
+domainPartsName.Otherstring[]0.8306string0.1233any0.0296any[]0.0046number[]0.0018
+.Punctuation
+lengthName.Othernumber0.9534any0.0408string0.0046complex0.0004boolean0.0002
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+2Literal.Number.Float
+]Punctuation
+;Punctuation
+\n      Text.Whitespace
+// In aforementioned example, the eTLD/pubSuf will be apple.localhostComment.Single
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+`Literal.String.Backtick
+${Literal.String.Interpol
+secondLevelDomainName.Otherstring0.8030string[]0.0653any0.0613boolean0.0410number0.0137
+}Literal.String.Interpol
+.Literal.String.Backtick
+${Literal.String.Interpol
+topLevelDomainName.Otherstring0.8041string[]0.0855any0.0640boolean0.0196number0.0114
+}Literal.String.Interpol
+`Literal.String.Backtick
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+SPECIAL_TREATMENT_DOMAINSName.Otherstring[]0.8389string0.1299any0.0159any[]0.0046RegExp0.0034
+.Punctuation
+includesName.Otherboolean0.7877string0.0698any0.0621complex0.0392string[]0.0322
+(Punctuation
+topLevelDomainName.Otherstring0.9586any0.0190string[]0.0099boolean0.0047RegExp0.0024
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+// For a single word special use domain, e.g. 'localhost' or 'invalid', per RFC 6761,Comment.Single
+\n      Text.Whitespace
+// "Application software MAY recognize {localhost/invalid} names as special, orComment.Single
+\n      Text.Whitespace
+// MAY pass them to name resolution APIs as they would for other domain names."Comment.Single
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+`Literal.String.Backtick
+${Literal.String.Interpol
+topLevelDomainName.Otherstring0.8611string[]0.0490any0.0417boolean0.0260number0.0113
+}Literal.String.Interpol
+`Literal.String.Backtick
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+ignoreErrorName.Otherstring[]0.5269string0.2464boolean0.0915any0.0878RegExp0.0167
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+SPECIAL_USE_DOMAINSName.Otherstring[]0.9517string0.0230any0.0120any[]0.0063number[]0.0017
+.Punctuation
+includesName.Otherboolean0.8085any0.0756string0.0498complex0.0304string[]0.0231
+(Punctuation
+topLevelDomainName.Otherstring0.9632any0.0216string[]0.0052boolean0.0038number0.0025
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.6207Error0.2554string0.0679complex0.0188boolean0.0087
+ Text.Whitespace
+newOperator.Wordany0.4051Error0.2871ErrorConstructor0.1556string0.0969complex0.0088
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor0.9999Error0.0000any0.0000complex0.0000string0.0000
+(Punctuation
+\n      Text.Whitespace
+`Literal.String.Backtick
+Cookie has domain set to the public suffix "Literal.String.Backtick
+${Literal.String.Interpol
+topLevelDomainName.Otherstring0.9013string[]0.0548any0.0245boolean0.0056number0.0043
+}Literal.String.Interpol
+" which is a special use domain. To allow this, configure your CookieJar with {allowSpecialUseDomain:true, rejectPublicSuffixes: false}.Literal.String.Backtick
+`Literal.String.Backtick
+\n    Text.Whitespace
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+pslName.Otherstring[]0.2352any0.2016complex0.1041any[]0.0226Set<string>0.0217
+.Punctuation
+getName.Other
+(Punctuation
+domainName.Otherstring0.9359string[]0.0310any0.0269any[]0.0016complex0.0005
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportsName.Otherany0.2885complex0.1960{}0.0065Object0.0060any[]0.0044
+.Punctuation
+getPublicSuffixName.Otherany0.5116string0.2786string[]0.1043complex0.0401boolean0.0186
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+getPublicSuffixName.Otherstring0.4925string[]0.2310any0.0809complex0.0331boolean0.0324
+;Punctuation
+\nText.Whitespace

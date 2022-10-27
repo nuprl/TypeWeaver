@@ -1,0 +1,517 @@
+Text
+/**\n * The MIT License (MIT)\n * Copyright (c) 2017-present Dmitry Soshnikov <dmitry.soshnikov@gmail.com>\n */Comment.Multiline
+\n\nText.Whitespace
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+compatTranspilerName.Otherany0.9648string0.0160void0.0015number0.0015any[]0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./compat-transpiler'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+generatorName.Otherany0.9717complex0.0046string0.0031void0.0030any[]0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./generator'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+optimizerName.Otherany0.8714Function0.0090void0.0067string0.0032number0.0025
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./optimizer'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+parserName.Otherany0.9865string0.0022any[]0.0005number0.0004RegExp0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./parser'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+transformName.Otherany0.9908string0.0033complex0.0023any[]0.0003NodeRequire0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./transform'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+traverseName.Otherany0.9927complex0.0024string0.0023void0.0006boolean0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./traverse'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+faName.Otherany0.9758string0.0095complex0.0053void0.0007any[]0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./interpreter/finite-automaton'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+RegExpTreeName.Otherany0.8975string0.0594complex0.0197void0.0040number0.0026
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./compat-transpiler/runtime'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * An API object for RegExp processing (parsing/transform/generation).\n */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+regexpTreeName.Othercomplex0.8772any0.0928{}0.0022string0.0016any[]0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+/**\n   * Parser module exposed.\n   */Comment.Multiline
+\n  Text.Whitespace
+parserName.Otherany0.9373string0.0092complex0.0065any[]0.0019number0.0012
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Expose finite-automaton module.\n   */Comment.Multiline
+\n  Text.Whitespace
+faName.Otherany0.7126string0.1804complex0.0668string[]0.0047any[]0.0039
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * `TransformResult` exposed.\n   */Comment.Multiline
+\n  Text.Whitespace
+TransformResultName.Otherany0.7670string0.0906complex0.0212boolean0.0161string[]0.0070
+:Operator
+ Text.Whitespace
+transform.TransformResultKeyword.Type
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Parses a regexp string, producing an AST.\n   *\n   * @param string regexp\n   *\n   *   a regular expression in different formats: string, AST, RegExp.\n   *\n   * @param Object options\n   *\n   *   parsing options for this parse call. Default are:\n   *\n   *     - captureLocations: boolean\n   *     - any other custom options\n   *\n   * @return Object AST\n   */Comment.Multiline
+\n  Text.Whitespace
+parseName.Otherany0.8546complex0.0283Parser0.0042boolean0.0036string0.0032
+(Punctuation
+regexpName.Otherany0.4394RegExp0.3017string0.1916symbol0.0055boolean0.0051
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.4775Options0.0156string0.0134complex0.0104boolean0.0095
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+parserName.Otherany0.9417complex0.0029string0.0015RegExp0.0008any[]0.0004
+.Punctuation
+parseName.Otherany0.8185complex0.0287boolean0.0063Promise<any>0.0039string0.0026
+(Punctuation
+`Literal.String.Backtick
+${Literal.String.Interpol
+regexpName.OtherRegExp0.4916any0.3033string0.0910boolean0.0125symbol0.0059
+}Literal.String.Interpol
+`Literal.String.Backtick
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.3605complex0.0352Options0.0290{}0.0187string0.0125
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Traverses a RegExp AST.\n   *\n   * @param Object ast\n   * @param Object | Array<Object> handlers\n   *\n   * Each `handler` is an object containing handler function for needed\n   * node types. Example:\n   *\n   *   regexpTree.traverse(ast, {\n   *     onChar(node) {\n   *       ...\n   *     },\n   *   });\n   *\n   * The value for a node type may also be an object with functions pre and post.\n   * This enables more context-aware analyses, e.g. measuring star height.\n   */Comment.Multiline
+\n  Text.Whitespace
+traverseName.Otherany0.5515complex0.3645boolean0.0326string0.0239void0.0091
+(Punctuation
+astName.Otherany0.3609string0.1207complex0.0267boolean0.0236number0.0122
+,Punctuation
+ Text.Whitespace
+handlersName.Othercomplex0.1840any0.0766any[]0.0405RegExpMatchArray0.0140number0.0082
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.3752Options0.0439complex0.0282number0.0092ConnectionOptions0.0083
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+traverseName.Othercomplex0.5192any0.4567boolean0.0020void0.0020string0.0015
+.Punctuation
+traverseName.Otherany0.5284complex0.4336boolean0.0119void0.0069string0.0056
+(Punctuation
+astName.Otherany0.6072string0.1401complex0.0283number0.0176boolean0.0163
+,Punctuation
+ Text.Whitespace
+handlersName.Othercomplex0.2587any0.0655any[]0.0404RegExpMatchArray0.0114Object0.0103
+,Punctuation
+ Text.Whitespace
+optionsName.Otherany0.2624complex0.0601Options0.0492ConnectionOptions0.0187{}0.0123
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Transforms a regular expression.\n   *\n   * A regexp can be passed in different formats (string, regexp or AST),\n   * applying a set of transformations. It is a convenient wrapper\n   * on top of "parse-traverse-generate" tool chain.\n   *\n   * @param string | AST | RegExp regexp - a regular expression;\n   * @param Object | Array<Object> handlers - a list of handlers.\n   *\n   * @return TransformResult - a transformation result.\n   */Comment.Multiline
+\n  Text.Whitespace
+transformName.Otherany0.6945complex0.1654string0.0595boolean0.0095RegExp0.0082
+(Punctuation
+regexpName.OtherRegExp0.8891string0.0343any0.0289boolean0.0023symbol0.0020
+,Punctuation
+ Text.Whitespace
+handlersName.Othercomplex0.0492RegExpMatchArray0.0451RegExp0.0228any0.0191any[]0.0189
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+transformName.Otherany0.9286complex0.0445string0.0038RegExp0.0015Promise<any>0.0007
+.Punctuation
+transformName.Otherany0.6577complex0.2617string0.0280boolean0.0092any[]0.0029
+(Punctuation
+regexpName.OtherRegExp0.7200any0.1234string0.0493boolean0.0146symbol0.0098
+,Punctuation
+ Text.Whitespace
+handlersName.Othercomplex0.2028any[]0.0655RegExpMatchArray0.0236RegExp0.0232any0.0216
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Generates a RegExp string from an AST.\n   *\n   * @param Object ast\n   *\n   * Invariant:\n   *\n   *   regexpTree.generate(regexpTree.parse('/[a-z]+/i')); // '/[a-z]+/i'\n   */Comment.Multiline
+\n  Text.Whitespace
+generateName.Otherstring0.5407boolean0.1942complex0.1030any0.0582void0.0111
+(Punctuation
+astName.Otherany0.1566boolean0.0300string0.0203complex0.0123TsSimpleAst0.0090
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+generatorName.Otherany0.5663complex0.3106string0.0082IterableIterator<number>0.0057void0.0044
+.Punctuation
+generateName.Otherstring0.2635any0.1528boolean0.1026complex0.0959Promise<void>0.0354
+(Punctuation
+astName.Otherany0.6683string0.0607number0.0340complex0.0232boolean0.0208
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Creates a RegExp object from a regexp string.\n   *\n   * @param string regexp\n   */Comment.Multiline
+\n  Text.Whitespace
+toRegExpName.Othercomplex0.2445any0.1716string0.1098void0.0823boolean0.0445
+(Punctuation
+regexpName.OtherRegExp0.8180string0.0415any0.0410symbol0.0080boolean0.0061
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+compatName.Otherany0.4765string0.0948complex0.0238Path0.0126{}0.0062
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+compatTranspileName.Otherany0.4715string0.1206complex0.0810RegExp0.0077Promise<any>0.0060
+(Punctuation
+regexpName.OtherRegExp0.8133any0.0649string0.0329symbol0.0149boolean0.0022
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newOperator.WordRegExp0.2711any0.1329string0.1274RegExpConstructor0.0087complex0.0082
+ Text.Whitespace
+RegExpName.BuiltinRegExpConstructor0.9992RegExp0.0001any0.0000Set<any>0.0000ErrorConstructor0.0000
+(Punctuation
+compatName.Otherany0.8906complex0.0148string0.0031never0.0017Path0.0015
+.Punctuation
+getSourceName.Otherany0.8833string0.1057number0.0021T0.0015complex0.0015
+(Punctuation
+)Punctuation
+,Punctuation
+ Text.Whitespace
+compatName.Otherany0.5412complex0.0145string0.0056symbol0.0042Path0.0040
+.Punctuation
+getFlagsName.Othersymbol0.0187any0.0153string0.0087RegExp0.0069Number0.0045
+(Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Optimizes a regular expression by replacing some\n   * sub-expressions with their idiomatic patterns.\n   *\n   * @param string regexp\n   *\n   * @return TransformResult object\n   */Comment.Multiline
+\n  Text.Whitespace
+optimizeName.Othercomplex0.0303any0.0270void0.0217VirtualTree0.0099Promise<string>0.0085
+(Punctuation
+regexpName.OtherRegExp0.5573any0.1029string0.0500symbol0.0420string[]0.0042
+,Punctuation
+ Text.Whitespace
+whitelistName.Otherstring[]0.5694any0.1408any[]0.0980complex0.0284string0.0074
+,Punctuation
+ Text.Whitespace
+{Punctuation
+blacklistName.Otherstring[]0.0930any0.0819Set<string>0.0588{}0.0549boolean0.0402
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+{Punctuation
+}Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+optimizerName.Otherany0.0211Controller0.0055Dataset0.0036TsSimpleAst0.0035VirtualTree0.0034
+.Punctuation
+optimizeName.Otherany0.0259complex0.0161Date0.0113VirtualTree0.0108void0.0097
+(Punctuation
+regexpName.OtherRegExp0.5270any0.0999string0.0505symbol0.0218string[]0.0067
+,Punctuation
+ Text.Whitespace
+{Punctuation
+whitelistName.Otherstring[]0.6684any[]0.1044any0.0707complex0.0521boolean0.0082
+,Punctuation
+ Text.Whitespace
+blacklistName.Otherstring[]0.3846complex0.0683any[]0.0464boolean0.0453Set<string>0.0328
+}Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Translates a regular expression in new syntax or in new format\n   * into equivalent expressions in old syntax.\n   *\n   * @param string regexp\n   *\n   * @return TransformResult object\n   */Comment.Multiline
+\n  Text.Whitespace
+compatTranspileName.Otherany0.3577complex0.3158string0.0344boolean0.0279RegExp0.0068
+(Punctuation
+regexpName.OtherRegExp0.7579any0.0669string0.0390symbol0.0042string[]0.0027
+,Punctuation
+ Text.Whitespace
+whitelistName.Otherstring[]0.6002any0.0862any[]0.0856complex0.0556boolean0.0197
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+compatTranspilerName.Otherany0.8977complex0.0226RegExp0.0022string0.0019Promise<string>0.0011
+.Punctuation
+transformName.Otherany0.8040complex0.1023string0.0130Promise<any>0.0100Promise<string>0.0095
+(Punctuation
+regexpName.OtherRegExp0.7090any0.1257string0.0520symbol0.0072boolean0.0053
+,Punctuation
+ Text.Whitespace
+whitelistName.Otherstring[]0.5495any[]0.1079any0.0983complex0.0872string0.0134
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Executes a regular expression on a string.\n   *\n   * @param RegExp|string re - a regular expression.\n   * @param string string - a testing string.\n   */Comment.Multiline
+\n  Text.Whitespace
+execName.Otherany0.5585complex0.1916void0.0456Promise<number>0.0369Promise<void>0.0234
+(Punctuation
+reName.OtherRegExp0.7275any0.1506RegExpExecArray0.0152string0.0139complex0.0126
+,Punctuation
+ Text.Whitespace
+stringKeyword.Type
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+reName.OtherRegExp0.4897any0.1624complex0.1554RegExpExecArray0.0124string0.0092
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+compatName.Otherany0.6767string0.0447complex0.0323T0.0051{}0.0049
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+compatTranspileName.Otherany0.5171complex0.0913string0.0838Promise<string>0.0097Promise<any>0.0095
+(Punctuation
+reName.OtherRegExp0.6051any0.2595complex0.0351string0.0177RegExpExecArray0.0051
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+extraName.Otherany0.7387string0.0271complex0.0163any[]0.0140Promise<any>0.0054
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+compatName.Otherany0.8047complex0.0094{}0.0070string0.0066T0.0030
+.Punctuation
+getExtraName.Otherany0.8637string0.0203complex0.0135Promise<any>0.0046Promise<string>0.0028
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+extraName.Otherany0.7986complex0.0264string0.0038any[]0.0017{}0.0017
+.Punctuation
+namedCapturingGroupsName.Otherany0.7505string0.1425boolean0.0518complex0.0207number0.0063
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+reName.Otherany0.6530RegExp0.1547complex0.0957string0.0121symbol0.0033
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+newOperator.Wordany0.8066string0.0824complex0.0083RegExp0.0078{}0.0026
+ Text.Whitespace
+RegExpTreeName.Otherany0.9878string0.0052complex0.0029void0.0006boolean0.0004
+(Punctuation
+compatName.Otherany0.8450complex0.0131{}0.0097string0.0080T0.0035
+.Punctuation
+toRegExpName.Otherany0.6511string0.2327complex0.0443boolean0.0067{}0.0059
+(Punctuation
+)Punctuation
+,Punctuation
+ Text.Whitespace
+{Punctuation
+\n          Text.Whitespace
+flagsName.Otherstring0.3907any0.3424string[]0.0870complex0.0192any[]0.0083
+:Operator
+ Text.Whitespace
+compat.getFlagsKeyword.Type
+(Punctuation
+)Punctuation
+,Punctuation
+\n          Text.Whitespace
+sourceName.Otherany0.5023string0.2131any[]0.0315complex0.0261string[]0.0202
+:Operator
+ Text.Whitespace
+compat.getSourceKeyword.Type
+(Punctuation
+)Punctuation
+,Punctuation
+\n          Text.Whitespace
+groupsName.Otherany0.2627complex0.1791string[]0.0815any[]0.0757string0.0497
+:Operator
+ Text.Whitespace
+extra.namedCapturingGroupsKeyword.Type
+,Punctuation
+\n        Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+reName.OtherRegExp0.5549any0.2674string0.0277complex0.0203any[]0.0109
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+compatName.Otherany0.8724complex0.0331string0.0079{}0.0070T0.0020
+.Punctuation
+toRegExpName.Otherany0.7172string0.0945RegExp0.0247complex0.0213Promise<string>0.0067
+(Punctuation
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+reName.Otherany0.4749RegExp0.4457complex0.0169RegExpExecArray0.0049string0.0038
+.Punctuation
+execName.Otherany0.4908Promise<number>0.1055RegExpExecArray0.0686complex0.0580Promise<void>0.0153
+(Punctuation
+stringKeyword.Type
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+regexpTreeName.Otherany0.6577string0.1255RegExp0.0303complex0.0301number0.0095
+;Punctuation
+\nText.Whitespace

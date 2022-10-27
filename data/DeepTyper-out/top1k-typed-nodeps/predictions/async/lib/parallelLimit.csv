@@ -1,0 +1,57 @@
+importKeyword
+ Text.Whitespace
+eachOfLimitName.Otherany0.1611complex0.1267void0.0719boolean0.0244string0.0223
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/eachOfLimit.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+parallelName.Otherany0.8289void0.0762complex0.0374number0.0101boolean0.0065
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/parallel.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * The same as [`parallel`]{@link module:ControlFlow.parallel} but runs a maximum of `limit` async operations at a\n * time.\n *\n * @name parallelLimit\n * @static\n * @memberOf module:ControlFlow\n * @method\n * @see [async.parallel]{@link module:ControlFlow.parallel}\n * @category Control Flow\n * @param {Array|Iterable|AsyncIterable|Object} tasks - A collection of\n * [async functions]{@link AsyncFunction} to run.\n * Each async function can complete with any number of optional `result` values.\n * @param {number} limit - The maximum number of async operations at a time.\n * @param {Function} [callback] - An optional callback to run once all the\n * functions have completed successfully. This function gets a results array\n * (or object) containing all the result arguments passed to the task callbacks.\n * Invoked with (err, results).\n * @returns {Promise} a promise, if a callback is not passed\n */Comment.Multiline
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+parallelLimitName.Otherany0.2570number0.1886complex0.1165void0.1118string0.0654
+(Punctuation
+tasksName.Otherany0.4544number0.3052string0.1164boolean0.0365any[]0.0111
+,Punctuation
+ Text.Whitespace
+limitName.Othernumber0.9293any0.0568string0.0080boolean0.0027complex0.0006
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.5595number0.1614Function0.1211boolean0.0251string0.0227
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+parallelName.Otherany0.9660number0.0093complex0.0066void0.0045boolean0.0036
+(Punctuation
+eachOfLimitName.Otherany0.3413number0.1793complex0.1621any[]0.0789void0.0627
+(Punctuation
+limitName.Othernumber0.9586any0.0315string0.0039boolean0.0019void0.0009
+)Punctuation
+,Punctuation
+ Text.Whitespace
+tasksName.Otherany0.3881void0.1881number0.1104boolean0.0838any[]0.0737
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.4630void0.1385Function0.1222number0.1181boolean0.0501
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace

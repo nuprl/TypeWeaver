@@ -1,0 +1,54 @@
+index.ts(9,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
+index.ts(10,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
+index.ts(11,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
+index.ts(12,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
+index.ts(18,7): error TS2322: Type 'void' is not assignable to type 'IterableIterator<number>'.
+index.ts(63,56): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'string'.
+index.ts(71,56): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'string'.
+index.ts(88,20): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
+index.ts(89,33): error TS2339: Property 'apply' does not exist on type 'IterableIterator<number>'.
+index.ts(91,21): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
+index.ts(92,26): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: unknown) => void' is not assignable to type 'void'.
+index.ts(93,29): error TS2339: Property 'apply' does not exist on type 'IterableIterator<number>'.
+index.ts(96,23): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
+index.ts(101,11): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'string'.
+index.ts(107,21): error TS2339: Property 'apply' does not exist on type 'IterableIterator<number>'.
+index.ts(119,23): error TS7006: Parameter 'type' implicitly has an 'any' type.
+index.ts(134,24): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'string'.
+index.ts(144,25): error TS7031: Binding element 'name' implicitly has an 'any' type.
+index.ts(144,31): error TS7031: Binding element 'arity' implicitly has an 'any' type.
+index.ts(144,38): error TS7031: Binding element 'sync' implicitly has an 'any' type.
+index.ts(144,44): error TS7031: Binding element 'async' implicitly has an 'any' type.
+index.ts(144,51): error TS7031: Binding element 'errback' implicitly has an 'any' type.
+index.ts(147,3): error TS2554: Expected 4 arguments, but got 3.
+index.ts(153,7): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'string'.
+index.ts(200,36): error TS2339: Property 'name' does not exist on type 'IterableIterator<number>'.
+index.ts(200,48): error TS2339: Property 'length' does not exist on type 'IterableIterator<number>'.
+index.ts(200,65): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
+index.ts(201,18): error TS2339: Property 'apply' does not exist on type 'IterableIterator<number>'.
+index.ts(201,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(205,27): error TS7031: Binding element 'name' implicitly has an 'any' type.
+index.ts(205,33): error TS7031: Binding element 'arity' implicitly has an 'any' type.
+index.ts(205,40): error TS7031: Binding element 'sync' implicitly has an 'any' type.
+index.ts(205,46): error TS7031: Binding element 'async' implicitly has an 'any' type.
+index.ts(206,53): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
+index.ts(207,25): error TS7057: 'yield' expression implicitly results in an 'any' type because its containing generator lacks a return-type annotation.
+index.ts(210,34): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(217,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(307,26): error TS7031: Binding element 'value' implicitly has an 'any' type.
+index.ts(307,33): error TS7031: Binding element 'done' implicitly has an 'any' type.
+index.ts(307,41): error TS7006: Parameter 'gen' implicitly has an 'any' type.
+index.ts(318,7): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'string'.
+index.ts(345,11): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'PropertyDescriptor'.
+  Type 'undefined' is not assignable to type 'PropertyDescriptor'.
+index.ts(359,11): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'PropertyDescriptor'.
+  Type 'undefined' is not assignable to type 'PropertyDescriptor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

@@ -1,0 +1,134 @@
+bench/index.ts(3,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+bench/index.ts(4,20): error TS2307: Cannot find module 'ansi-colors' or its corresponding type declarations.
+bench/index.ts(5,25): error TS2307: Cannot find module 'minimist' or its corresponding type declarations.
+bench/index.ts(14,21): error TS2322: Type '(e: any, newline: string) => void' is not assignable to type 'void'.
+bench/index.ts(18,7): error TS2322: Type '{ (name: string, options: any): Suite; skip(name: any): void; }' is not assignable to type 'void'.
+bench/index.ts(35,28): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+bench/index.ts(36,31): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+bench/index.ts(46,20): error TS2322: Type '{ (): void; add(): void; run(): void; }' is not assignable to type 'void'.
+bench/index.ts(47,6): error TS2339: Property 'add' does not exist on type 'void'.
+bench/index.ts(48,6): error TS2339: Property 'run' does not exist on type 'void'.
+bench/index.ts(49,7): error TS2339: Property 'skip' does not exist on type 'void'.
+bench/index.ts(54,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+bench/index.ts(56,26): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+bench/index.ts(59,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+bench/index.ts(61,26): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+bench/index.ts(64,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+bench/index.ts(66,26): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+bench/index.ts(69,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+bench/index.ts(71,26): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+bench/index.ts(74,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+bench/index.ts(76,26): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+bench/index.ts(79,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+bench/index.ts(81,26): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+bench/index.ts(84,1): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+bench/index.ts(86,26): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+index.ts(13,27): error TS2322: Type '(val: any) => boolean' is not assignable to type 'boolean'.
+index.ts(19,31): error TS2322: Type '(value: any) => boolean' is not assignable to type 'boolean'.
+index.ts(23,27): error TS2322: Type '(num: number) => boolean' is not assignable to type 'boolean'.
+index.ts(34,28): error TS2322: Type '(start: number, end: number, options: any) => boolean' is not assignable to type 'boolean'.
+index.ts(41,21): error TS2322: Type '(input: string, maxLength: number, toNumber: number) => string' is not assignable to type 'string'.
+index.ts(47,7): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
+index.ts(53,26): error TS2322: Type '(input: string, maxLength: number) => string' is not assignable to type 'string'.
+index.ts(63,7): error TS2322: Type '(parts: any, options: any) => any' is not assignable to type 'void'.
+index.ts(105,7): error TS2322: Type '(start: number, end: number, options: any) => string' is not assignable to type 'boolean'.
+index.ts(114,26): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
+index.ts(115,68): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
+index.ts(118,7): error TS2322: Type '(start: number, end: number, options: any) => never[]' is not assignable to type 'void'.
+index.ts(123,7): error TS2322: Type '(step: number, options: any) => never[]' is not assignable to type 'void'.
+index.ts(130,7): error TS2322: Type '(start: any, end: any, step?: number, options?: {}) => any' is not assignable to type 'boolean'.
+index.ts(130,31): error TS7006: Parameter 'start' implicitly has an 'any' type.
+index.ts(130,38): error TS7006: Parameter 'end' implicitly has an 'any' type.
+index.ts(135,17): error TS2339: Property 'strictRanges' does not exist on type '{}'.
+index.ts(151,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
+index.ts(151,46): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(152,32): error TS2339: Property 'transform' does not exist on type '{}'.
+index.ts(154,15): error TS2339: Property 'toRegex' does not exist on type '{}'.
+index.ts(155,20): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+index.ts(155,45): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+index.ts(159,7): error TS2322: Type '(num: number) => any' is not assignable to type 'number'.
+index.ts(164,17): error TS2339: Property 'toRegex' does not exist on type '{}'.
+index.ts(165,7): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+index.ts(167,18): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+index.ts(167,22): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+index.ts(173,15): error TS2339: Property 'toRegex' does not exist on type '{}'.
+index.ts(175,9): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(176,9): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(182,27): error TS7006: Parameter 'start' implicitly has an 'any' type.
+index.ts(182,34): error TS7006: Parameter 'end' implicitly has an 'any' type.
+index.ts(183,9): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(183,51): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(184,12): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(188,32): error TS2339: Property 'transform' does not exist on type '{}'.
+index.ts(196,15): error TS2339: Property 'toRegex' does not exist on type '{}'.
+index.ts(204,16): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+index.ts(209,15): error TS2339: Property 'toRegex' does not exist on type '{}'.
+index.ts(210,12): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(216,7): error TS2322: Type '(start: any, end: any, step: any, options?: {}) => any' is not assignable to type 'any[]'.
+index.ts(216,22): error TS7006: Parameter 'start' implicitly has an 'any' type.
+index.ts(216,29): error TS7006: Parameter 'end' implicitly has an 'any' type.
+index.ts(216,34): error TS7006: Parameter 'step' implicitly has an 'any' type.
+index.ts(217,22): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(221,8): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(221,32): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(222,12): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(226,12): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+index.ts(229,7): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(230,12): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+index.ts(237,8): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(238,26): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(238,49): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+index.ts(239,12): error TS2349: This expression is not callable.
+  Type 'any[]' has no call signatures.
+index.ts(242,7): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(242,26): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(243,12): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

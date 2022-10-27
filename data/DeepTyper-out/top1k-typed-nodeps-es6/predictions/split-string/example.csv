@@ -1,0 +1,206 @@
+importKeyword
+ Text.Whitespace
+splitName.Othercomplex0.5643any0.2391string[]0.1271string0.0111any[]0.0031
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./'Literal.String.Single
+;Punctuation
+\n\n\nText.Whitespace
+consoleName.OtherConsole0.9998any0.0001void0.0000string[][]0.0000string[]0.0000
+.Punctuation
+logName.Othervoid0.9878any0.0047string0.0045complex0.0011boolean0.0005
+(Punctuation
+splitName.Othercomplex0.5296any0.4552string[]0.0055string0.0024void0.0016
+(Punctuation
+'a.b."c.d.e.f.g".h.i'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+quotesName.Otherstring[]0.9963RegExp[]0.0009string[][]0.0007any[]0.0006RegExp0.0003
+:Operator
+ Text.Whitespace
+[Punctuation
+'"'Literal.String.Single
+]Punctuation
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+//=> [ 'a', 'b', '"c.d.e.f.g"', 'h', 'i' ]Comment.Single
+\n\nText.Whitespace
+consoleName.OtherConsole0.9998any0.0001void0.0000string[][]0.0000number0.0000
+.Punctuation
+logName.Othervoid0.9913any0.0038string0.0024complex0.0013boolean0.0005
+(Punctuation
+splitName.Othercomplex0.5680any0.4145string[]0.0068string0.0022void0.0020
+(Punctuation
+'a.b."c.d.e.f.g".h.i'Literal.String.Single
+)Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+//=> [ 'a', 'b', '"c.d.e.f.g"', 'h', 'i' ]Comment.Single
+\n\nText.Whitespace
+consoleName.OtherConsole0.9997any0.0001void0.0001string[][]0.0000string[]0.0000
+.Punctuation
+logName.Othervoid0.9883any0.0052string0.0034complex0.0014boolean0.0005
+(Punctuation
+splitName.Othercomplex0.5792any0.4065string[]0.0050string0.0022void0.0015
+(Punctuation
+'a.b.\\"c.d."e.f.g".h.i'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+quotesName.Otherstring[]0.9962RegExp[]0.0010string[][]0.0006any[]0.0006RegExp0.0003
+:Operator
+ Text.Whitespace
+[Punctuation
+'"'Literal.String.Single
+]Punctuation
+}Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+//=> [ 'a', 'b', '"c.d.e.f.g"', 'h', 'i' ]Comment.Single
+\n\nText.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+keepName.Otherboolean0.7136any0.0988void0.0857complex0.0174{}0.0075
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+valueName.Otherany0.6550string0.1279number0.0242boolean0.0217Date0.0101
+,Punctuation
+ Text.Whitespace
+stateName.Otherany0.2463string0.0849boolean0.0672State0.0295number0.0222
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+valueName.Otherstring0.5017any0.4743boolean0.0079number0.0053Date0.0013
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'\\'Literal.String.Single
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+(Punctuation
+valueName.Otherany0.5396string0.4411boolean0.0071number0.0036complex0.0015
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'"'Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+stateName.Otherany0.4898boolean0.0694string0.0280State0.0234number0.0115
+.Punctuation
+prevName.Otherany0.3732boolean0.3003string0.1479number0.0153Date0.0114
+(Punctuation
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'\\'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace
+consoleName.OtherConsole0.9997any0.0001void0.0000number0.0000DOMTokenList0.0000
+.Punctuation
+logName.Othervoid0.9936any0.0027string0.0016complex0.0010boolean0.0005
+(Punctuation
+splitName.Othercomplex0.6427any0.3452string[]0.0022void0.0018string0.0017
+(Punctuation
+'a.b.\\"c.d."e.f.g".h.i'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+quotesName.Otherstring[]0.9942RegExp[]0.0013any[]0.0011string[][]0.0006RegExp0.0005
+:Operator
+ Text.Whitespace
+[Punctuation
+'"'Literal.String.Single
+]Punctuation
+,Punctuation
+ Text.Whitespace
+keepName.Otherboolean0.4106any0.2447void0.1268T0.0470number0.0282
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+//=> [ 'a', 'b', '"c', 'd', 'e.f.g', 'h', 'i' ]Comment.Single
+\n\nText.Whitespace
+// console.log(split('a.[{a.b}].e', { brackets: { '[': ']' } }));Comment.Single
+\nText.Whitespace
+// console.log(split('a.[a.c.{d.e}].b', { brackets: { '[': ']' } }));Comment.Single
+\nText.Whitespace
+// console.log(split('a\\.[a.c.{d.e}].b', { brackets: { '[': ']' } }));Comment.Single
+\nText.Whitespace
+// console.log(split('...a.[a.c.{d.e}].b.s.s.s.s.s.', { brackets: { '[': ']' } }));Comment.Single
+\nText.Whitespace
+//=> [ 'a', '{a', '[{b.c}]', 'd}', 'e' ]Comment.Single
+\nText.Whitespace
+// console.log(split('a.{b.c}.[d.e].f', { brackets: true }));Comment.Single
+\nText.Whitespace
+// //=> [ 'a', '{b.c}', '[d', 'e]', 'f' ]Comment.Single
+\nText.Whitespace
+// console.log(split('«a.b».⟨c.d⟩.[e.f]', { brackets: { '«': '»', '⟨': '⟩' } }));Comment.Single
+\nText.Whitespace
+// //=> [ '«a.b»', '⟨c.d⟩' ]Comment.Single
+\nText.Whitespace
+// const arr = split('a.b.c.a.d.e', state => {Comment.Single
+\nText.Whitespace
+//   console.log(state)Comment.Single
+\nText.Whitespace
+//   return state.prev() === 'a';Comment.Single
+\nText.Whitespace
+// });Comment.Single
+\nText.Whitespace
+// console.log(arr)Comment.Single
+\nText.Whitespace
+// // => [ 'a', 'b.c.a', 'd.e' ]Comment.Single
+\n\nText.Whitespace
+// console.log(split('a.{a.{b.c.d}.c}', { brackets: true }));Comment.Single
+\nText.Whitespace
+// //=> [ 'a', '{a.{b.c.d}.c}' ]Comment.Single
+\n\nText.Whitespace
+// const stash1 = split('a.b.c', state => state.prev() !== 'a');Comment.Single
+\nText.Whitespace
+// console.log(stash1);Comment.Single
+\nText.Whitespace
+// //=> ['a.b', 'c']Comment.Single
+\n\n\nText.Whitespace
+// console.log(split('zzz.{a.{b.{c.{d}.e}.f}.g}.xxx'));Comment.Single
+\nText.Whitespace
+// console.log(split('a.{b.c}|{d.e}', { separator: '|' }));Comment.Single
+\nText.Whitespace
+// console.log(split('a.{b.c}|{d.e}'));Comment.Single
+\nText.Whitespace
+// console.log(split('a.{b.c}.{d.e}'));Comment.Single
+\nText.Whitespace
+// console.log(split('a.{b.c}.{d.e}', { brackets: false }));Comment.Single
+\nText.Whitespace
+// console.log(split('a.{b.c}\\.{d.e}'));Comment.Single
+\nText.Whitespace
+// console.log(split('a.{b.c.[a-b]}.{d.e}'));Comment.Single
+\nText.Whitespace
+// console.log(split('a."a.b.c"\\.{d.e}', { quotes: ['"'], keep: () => true }));Comment.Single
+\nText.Whitespace

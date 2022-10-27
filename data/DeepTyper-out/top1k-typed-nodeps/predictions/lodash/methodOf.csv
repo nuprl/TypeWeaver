@@ -1,0 +1,50 @@
+importKeyword
+ Text.Whitespace
+invokeName.Otherany0.2523Function0.2338T0.2291void0.0662T[]0.0199
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./invoke.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * The opposite of `method` this method creates a function that invokes\n * the method at a given path of `object`. Any additional arguments are\n * provided to the invoked method.\n *\n * @since 3.7.0\n * @category Util\n * @param {Object} object The object to query.\n * @param {Array} [args] The arguments to invoke the method with.\n * @returns {Function} Returns the new invoker function.\n * @example\n *\n * const array = times(3, i => () => i)\n * const object = { 'a': array, 'b': array, 'c': array }\n *\n * map(['a[2]', 'c[0]'], methodOf(object))\n * // => [2, 0]\n *\n * map([['a', '2'], ['c', '0']], methodOf(object))\n * // => [2, 0]f\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+methodOfName.Otherany0.5107string0.0660Function0.0490complex0.0438boolean0.0394
+(Punctuation
+objectName.Otherany0.9101string0.0307Object0.0275object0.0107number0.0034
+,Punctuation
+ Text.Whitespace
+argsName.Otherany0.7990string0.0659any[]0.0331Object0.0213object0.0190
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+pathName.Otherstring0.7057any0.2753Path0.0048object0.0019string[]0.0018
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+invokeName.OtherFunction0.3304any0.3231void0.1789T0.0548Promise<void>0.0202
+(Punctuation
+objectName.Otherany0.8732Object0.0579string0.0274object0.0244number0.0039
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.7998any0.1841Path0.0038complex0.0022string[]0.0014
+,Punctuation
+ Text.Whitespace
+argsName.Otherany0.5765any[]0.2510string0.0266object0.0219IArguments0.0197
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+methodOfName.Otherany0.3263void0.0389Promise<void>0.0147string0.0145Function0.0141
+\nText.Whitespace

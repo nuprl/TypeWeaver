@@ -1,0 +1,194 @@
+index.ts(27,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(34,33): error TS2769: No overload matches this call.
+  Overload 1 of 5, '(a: string, b?: number | undefined): BigInteger', gave the following error.
+    Argument of type 'Buffer' is not assignable to parameter of type 'string'.
+  Overload 2 of 5, '(a: number[], b?: number | undefined): BigInteger', gave the following error.
+    Argument of type 'Buffer' is not assignable to parameter of type 'number[]'.
+      Type 'Buffer' is missing the following properties from type 'number[]': pop, push, concat, shift, and 5 more.
+  Overload 3 of 5, '(a: BigInteger): BigInteger', gave the following error.
+    Argument of type 'Buffer' is not assignable to parameter of type 'BigInteger'.
+      Type 'Buffer' is missing the following properties from type 'BigInteger': s, t, data, DB, and 73 more.
+index.ts(36,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(38,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(41,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(42,45): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(47,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(51,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(11,9): error TS2339: Property 'Barrett' does not exist on type 'BigInteger'.
+lib/ec.ts(14,13): error TS7006: Parameter 'bytes' implicitly has an 'any' type.
+lib/ec.ts(28,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(30,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(34,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(35,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(35,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(39,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(43,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(43,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(43,39): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(43,59): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(47,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(47,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(47,39): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(47,72): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(51,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(52,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(53,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(53,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(58,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(59,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(60,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(60,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(65,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(65,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(65,39): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(65,59): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(69,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(70,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(71,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(71,49): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(71,62): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(96,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(97,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(98,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(102,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(104,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(106,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(111,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(112,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(112,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(112,35): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(114,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(114,47): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(115,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(116,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(120,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(121,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(121,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(121,35): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(123,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(123,47): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(124,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(125,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(129,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(130,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(131,34): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(136,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(137,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(138,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(143,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(144,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(145,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(150,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(150,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(152,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(153,6): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(158,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(158,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(158,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(158,44): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(158,61): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(162,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(163,30): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(168,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(169,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(170,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(174,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(175,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(176,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(180,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(182,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(186,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(187,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(194,38): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(202,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(211,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(214,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(216,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(218,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(219,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(220,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(221,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(227,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(227,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(228,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(228,51): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(232,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(233,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(235,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(236,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(237,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(242,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(244,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(252,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(261,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(267,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(269,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(270,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(271,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(272,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(280,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(280,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(281,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(286,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(287,10): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
+lib/ec.ts(287,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(297,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(307,9): error TS2339: Property 'bitLength' does not exist on type 'number'.
+lib/ec.ts(307,44): error TS2339: Property 'bitLength' does not exist on type 'number'.
+lib/ec.ts(310,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(311,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(314,11): error TS2339: Property 'testBit' does not exist on type 'number'.
+lib/ec.ts(318,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(346,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(347,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(347,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(348,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(348,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(349,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(349,19): error TS2554: Expected 4 arguments, but got 3.
+lib/ec.ts(349,19): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(349,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(350,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(350,30): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(354,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(358,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(362,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(366,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(368,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(368,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(368,57): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(373,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(377,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(377,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(381,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(394,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(439,14): error TS2554: Expected 4 arguments, but got 3.
+lib/ec.ts(439,14): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(447,14): error TS2554: Expected 4 arguments, but got 3.
+lib/ec.ts(447,14): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(520,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(566,14): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/sec.ts(7,10): error TS2614: Module '"./ec.js"' has no exported member 'ECCurveFp'. Did you mean to use 'import ECCurveFp from "./ec.js"' instead?
+lib/sec.ts(14,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/sec.ts(15,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/sec.ts(16,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/sec.ts(17,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/sec.ts(21,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/sec.ts(25,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/sec.ts(29,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/sec.ts(33,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/sec.ts(44,22): error TS7006: Parameter 'string' implicitly has an 'any' type.
+lib/sec.ts(60,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/sec.ts(77,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/sec.ts(94,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/sec.ts(111,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/sec.ts(128,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/sec.ts(145,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/sec.ts(170,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

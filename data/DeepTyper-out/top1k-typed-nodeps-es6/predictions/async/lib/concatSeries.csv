@@ -1,0 +1,65 @@
+importKeyword
+ Text.Whitespace
+concatLimitName.Otherany0.0737complex0.0370void0.0332boolean0.0298string0.0284
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./concatLimit.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+awaitifyName.Otherany0.1373string0.0872boolean0.0842void0.0514complex0.0418
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./internal/awaitify.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * The same as [`concat`]{@link module:Collections.concat} but runs only a single async operation at a time.\n *\n * @name concatSeries\n * @static\n * @memberOf module:Collections\n * @method\n * @see [async.concat]{@link module:Collections.concat}\n * @category Collection\n * @alias flatMapSeries\n * @param {Array|Iterable|AsyncIterable|Object} coll - A collection to iterate over.\n * @param {AsyncFunction} iteratee - A function to apply to each item in `coll`.\n * The iteratee should complete with an array an array of results.\n * Invoked with (item, callback).\n * @param {Function} [callback] - A callback which is called after all the\n * `iteratee` functions have finished, or an error occurs. Results is an array\n * containing the concatenated results of the `iteratee` function. Invoked with\n * (err, results).\n * @returns A Promise, if no callback is passed\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+concatSeriesName.Otherany0.1654string0.1488boolean0.0614complex0.0365number0.0237
+(Punctuation
+collName.Otherany0.4882any[]0.0452string0.0370{}0.0153boolean0.0059
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.6930string0.0716number0.0396boolean0.0045Error0.0039
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.5221number0.1099Function0.0936string0.0194boolean0.0100
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+concatLimitName.Otherany0.4661void0.0907complex0.0379string0.0321{}0.0235
+(Punctuation
+collName.Otherany0.7147any[]0.0526{}0.0272string0.0169object0.0069
+,Punctuation
+ Text.Whitespace
+1Literal.Number.Float
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.7496string0.0273number0.0208any[]0.0085Function0.0048
+,Punctuation
+ Text.Whitespace
+callbackName.Otherany0.6329Function0.1105number0.0513void0.0311string0.0082
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+awaitifyName.Othervoid0.4029any0.3616complex0.0406string0.0203number0.0139
+(Punctuation
+concatSeriesName.Otherany0.4080number0.1578string0.1080boolean0.0272void0.0231
+,Punctuation
+ Text.Whitespace
+3Literal.Number.Float
+)Punctuation
+;Punctuation
+\nText.Whitespace

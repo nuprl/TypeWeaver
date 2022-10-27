@@ -1,0 +1,143 @@
+Text
+/**\n * The MIT License (MIT)\n * Copyright (c) 2017-present Dmitry Soshnikov <dmitry.soshnikov@gmail.com>\n */Comment.Multiline
+\n\nText.Whitespace
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+importKeyword
+ Text.Whitespace
+NFAName.Otherany0.2788void0.2738complex0.0567boolean0.0493Promise<void>0.0350
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./nfa/nfa'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+DFAName.Othervoid0.3207any0.2199complex0.0533boolean0.0500Promise<void>0.0462
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./dfa/dfa'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+nfaFromRegExpName.Othervoid0.2713any0.2370boolean0.0514complex0.0504Promise<void>0.0475
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./nfa/nfa-from-regexp'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+buildersName.Othercomplex0.8292any0.0250string0.0146void0.0047RegExp0.0027
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./nfa/builders'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+{Punctuation
+\n\n  Text.Whitespace
+/**\n   * Export NFA and DFA classes.\n   */Comment.Multiline
+\n  Text.Whitespace
+NFAName.Otherany0.3856complex0.1291string0.0822boolean0.0641void0.0621
+,Punctuation
+\n  Text.Whitespace
+DFAName.Otherany0.2382complex0.1171string0.1047boolean0.0887number0.0388
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Expose builders.\n   */Comment.Multiline
+\n  Text.Whitespace
+buildersName.Othercomplex0.7878any0.0242string0.0193number0.0060void0.0032
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Builds an NFA for the passed regexp.\n   *\n   * @param string | AST | RegExp:\n   *\n   *   a regular expression in different representations: a string,\n   *   a RegExp object, or an AST.\n   */Comment.Multiline
+\n  Text.Whitespace
+toNFAName.Othercomplex0.5451any0.1805string0.0457boolean0.0170RegExp0.0073
+(Punctuation
+regexpName.OtherRegExp0.6204any0.1214string0.1181boolean0.0102number0.0096
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+nfaFromRegExpName.Otherany0.9146complex0.0573string0.0033number0.0008Promise<void>0.0007
+.Punctuation
+buildName.Otherany0.4229complex0.3942boolean0.0329string0.0278Promise<void>0.0160
+(Punctuation
+regexpName.OtherRegExp0.4848any0.1827string0.1688boolean0.0216number0.0162
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Builds DFA for the passed regexp.\n   *\n   * @param string | AST | RegExp:\n   *\n   *   a regular expression in different representations: a string,\n   *   a RegExp object, or an AST.\n   */Comment.Multiline
+\n  Text.Whitespace
+toDFAName.Otherany0.3391complex0.0908string0.0447boolean0.0232RegExp0.0108
+(Punctuation
+regexpName.OtherRegExp0.5317string0.1644any0.1041number0.0157symbol0.0141
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newOperator.Wordany0.8026string0.0818complex0.0073boolean0.0064number0.0038
+ Text.Whitespace
+DFAName.Otherany0.9567complex0.0186string0.0116boolean0.0026void0.0019
+(Punctuation
+thisKeyword
+.Punctuation
+toNFAName.Otherstring0.3676any0.3268complex0.1467boolean0.0336number0.0131
+(Punctuation
+regexpName.OtherRegExp0.7948any0.0695string0.0557symbol0.0037boolean0.0035
+)Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\n\n  Text.Whitespace
+/**\n   * Returns true if regexp accepts the string.\n   */Comment.Multiline
+\n  Text.Whitespace
+testName.Othercomplex0.7714any0.1745boolean0.0140void0.0067string0.0024
+(Punctuation
+regexpName.OtherRegExp0.6440any0.1160string0.1142symbol0.0084boolean0.0080
+,Punctuation
+ Text.Whitespace
+stringKeyword.Type
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+toDFAName.Otherany0.5036complex0.2621string0.0787boolean0.0205Promise<void>0.0098
+(Punctuation
+regexpName.OtherRegExp0.4230string0.3295any0.1482boolean0.0067symbol0.0062
+)Punctuation
+.Punctuation
+matchesName.Otherany0.4918complex0.3377boolean0.0952string0.0342string[]0.0060
+(Punctuation
+stringKeyword.Type
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+,Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

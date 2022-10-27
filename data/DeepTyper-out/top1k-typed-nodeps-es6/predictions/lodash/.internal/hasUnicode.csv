@@ -1,0 +1,155 @@
+Text
+/** Used to compose unicode character classes. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+rsAstralRangeName.OtherRegExp0.8791string0.0855any0.0116number0.0035boolean0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\ud800-\\udfff'Literal.String.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+rsComboMarksRangeName.OtherRegExp0.8969string0.0866any0.0057number0.0021boolean0.0013
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\u0300-\\u036f'Literal.String.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+reComboHalfMarksRangeName.OtherRegExp0.8861string0.0983any0.0054number0.0023boolean0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\ufe20-\\ufe2f'Literal.String.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+rsComboSymbolsRangeName.OtherRegExp0.8679string0.1155any0.0060number0.0027boolean0.0018
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\u20d0-\\u20ff'Literal.String.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+rsComboMarksExtendedRangeName.OtherRegExp0.8507string0.1321any0.0063number0.0028boolean0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\u1ab0-\\u1aff'Literal.String.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+rsComboMarksSupplementRangeName.OtherRegExp0.7533string0.2243any0.0083number0.0038boolean0.0032
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\u1dc0-\\u1dff'Literal.String.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+rsComboRangeName.Otherstring0.8994number0.0404any0.0342RegExp0.0139boolean0.0069
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+rsComboMarksRangeName.Otherstring0.8810number0.0686any0.0425boolean0.0029RegExp0.0020
+ Text.Whitespace
++Operator
+ Text.Whitespace
+reComboHalfMarksRangeName.Otherstring0.7886number0.1383any0.0664boolean0.0023RegExp0.0014
+ Text.Whitespace
++Operator
+ Text.Whitespace
+rsComboSymbolsRangeName.Otherstring0.7368number0.1895any0.0677boolean0.0022RegExp0.0011
+ Text.Whitespace
++Operator
+ Text.Whitespace
+rsComboMarksExtendedRangeName.Otherstring0.6352number0.2842any0.0737boolean0.0024RegExp0.0012
+ Text.Whitespace
++Operator
+ Text.Whitespace
+rsComboMarksSupplementRangeName.Otherstring0.6686number0.2182any0.0910RegExp0.0092boolean0.0067
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+rsVarRangeName.OtherRegExp0.8055string0.1731any0.0104number0.0035boolean0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\ufe0e\\ufe0f'Literal.String.Single
+\n\nText.Whitespace
+Text
+/** Used to compose unicode capture groups. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+rsZWJName.OtherRegExp0.9719string0.0232any0.0011boolean0.0004string[]0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'\\u200d'Literal.String.Single
+\n\nText.Whitespace
+Text
+/** Used to detect strings with [zero-width joiners or code points from the astral planes](http://eev.ee/blog/2015/09/12/dark-corners-of-unicode/). */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+reHasUnicodeName.OtherRegExp0.9631string0.0230boolean0.0022any0.0013RegExp[]0.0009
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+RegExpName.BuiltinRegExpConstructor0.9982RegExp0.0003RegExp[]0.0000RegExpExecArray0.0000Configuration0.0000
+(Punctuation
+`Literal.String.Backtick
+[Literal.String.Backtick
+${Literal.String.Interpol
+rsZWJName.Otherstring0.7964number0.1472any0.0504boolean0.0020RegExp0.0012
+ Text.Whitespace
++Operator
+ Text.Whitespace
+rsAstralRangeName.Otherstring0.7414number0.1825any0.0716boolean0.0015RegExp0.0008
+ Text.Whitespace
++Operator
+ Text.Whitespace
+rsComboRangeName.Otherstring0.7127number0.2153any0.0669boolean0.0020RegExp0.0007
+ Text.Whitespace
++Operator
+ Text.Whitespace
+rsVarRangeName.Otherstring0.6874number0.2262any0.0677RegExp0.0080boolean0.0045
+}Literal.String.Interpol
+]Literal.String.Backtick
+`Literal.String.Backtick
+)Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Checks if `string` contains Unicode symbols.\n *\n * @private\n * @param {string} string The string to inspect.\n * @returns {boolean} Returns `true` if a symbol is found, else `false`.\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+hasUnicodeName.Otherstring0.7954boolean0.0894number0.0598any0.0275RegExp0.0134
+(Punctuation
+stringKeyword.Type
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+reHasUnicodeName.OtherRegExp0.9060string0.0695any0.0135boolean0.0027string[]0.0016
+.Punctuation
+testName.Otherboolean0.6821any0.1393string0.0940complex0.0559number0.0145
+(Punctuation
+stringKeyword.Type
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+hasUnicodeName.Otherany0.3670string0.2468RegExp0.0284number0.0230complex0.0124
+\nText.Whitespace

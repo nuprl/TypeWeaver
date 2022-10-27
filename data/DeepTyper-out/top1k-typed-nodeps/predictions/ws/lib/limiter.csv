@@ -1,0 +1,221 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+kDoneName.Othersymbol0.9343SymbolConstructor0.0225any0.0014{}0.0005number0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+SymbolName.BuiltinSymbolConstructor0.9983symbol0.0012any0.0000A0.0000T0.0000
+(Punctuation
+'kDone'Literal.String.Single
+)Punctuation
+;Punctuation
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+kRunName.Othersymbol0.9855SymbolConstructor0.0100any0.0006number0.0002{}0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+SymbolName.BuiltinSymbolConstructor0.9982symbol0.0014any0.0000A0.0000void0.0000
+(Punctuation
+'kRun'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * A very simple job queue with adjustable concurrency. Adapted from\n * https://github.com/STRML/async-limiter\n */Comment.Multiline
+\nText.Whitespace
+classKeyword.Declaration
+ Text.Whitespace
+LimiterName.Otherany0.9938symbol0.0038number0.0006complex0.0005string0.0005
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+/**\n   * Creates a new `Limiter`.\n   *\n   * @param {Number} [concurrency=Infinity] The maximum number of jobs allowed\n   *     to run concurrently\n   */Comment.Multiline
+\n  Text.Whitespace
+constructorKeyword.Reserved
+(Punctuation
+concurrencyName.Othernumber0.9871any0.0063string0.0019void0.0018boolean0.0004
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+[Punctuation
+kDoneName.Othernumber0.5024symbol0.4091any0.0207string0.0127void0.0032
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+=>Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+thisKeyword
+.Punctuation
+pendingName.Othernumber0.9945any0.0014void0.0009boolean0.0009string0.0004
+--Operator
+;Punctuation
+\n      Text.Whitespace
+thisKeyword
+[Punctuation
+kRunName.Othernumber0.5403symbol0.2907any0.0394string0.0310void0.0153
+]Punctuation
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+concurrencyName.Othernumber0.9828any0.0088void0.0055string0.0007boolean0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+concurrencyName.Othernumber0.9891any0.0062void0.0018string0.0007complex0.0004
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+InfinityKeyword.Constantnumber0.9962any0.0017boolean0.0007number[]0.0003void0.0002
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+jobsName.Otherany[]0.0434string[]0.0203Product[]0.0164number[]0.0158T[]0.0113
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+pendingName.Othernumber0.9929any0.0021void0.0009boolean0.0007number[]0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Adds a job to the queue.\n   *\n   * @param {Function} job The job to run\n   * @public\n   */Comment.Multiline
+\n  Text.Whitespace
+addName.Othervoid0.9959Promise<void>0.0008boolean0.0006any0.0004Subscription0.0002
+(Punctuation
+jobName.OtherJob0.8884any0.0033void0.0021boolean0.0016{}0.0015
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+jobsName.Otherany[]0.0233Job[]0.0176string[]0.0119void)[]0.0077number[]0.0063
+.Punctuation
+pushName.Othernumber0.9854void0.0037any0.0032boolean0.0024Promise<void>0.0004
+(Punctuation
+jobName.OtherJob0.8929any0.0053{}0.0018string0.0016void0.0011
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+thisKeyword
+[Punctuation
+kRunName.Othersymbol0.3374number0.2671string0.0865any0.0422void0.0250
+]Punctuation
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+/**\n   * Removes a job from the queue and runs it if possible.\n   *\n   * @private\n   */Comment.Multiline
+\n  Text.Whitespace
+[Punctuation
+kRunName.Othernumber0.3238symbol0.2895string0.1352void0.0659any0.0533
+]Punctuation
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+pendingName.Othernumber0.9798boolean0.0074void0.0028any0.0020number[]0.0008
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+concurrencyName.Othernumber0.9930any0.0035void0.0015string0.0006boolean0.0003
+)Punctuation
+ Text.Whitespace
+returnKeyword
+;Punctuation
+\n\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+thisKeyword
+.Punctuation
+jobsName.Otherany[]0.0321string[]0.0287Job[]0.0139number[]0.0079SurveyError[]0.0076
+.Punctuation
+lengthName.Othernumber0.9933any0.0051string0.0003boolean0.0003void0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+jobName.OtherJob0.7580View0.0022void0.0020ViewBase0.0018Node<Node>0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+jobsName.Othernumber[]0.0148Job[]0.0139any[]0.0107string[]0.0105Product[]0.0060
+.Punctuation
+shiftName.Othercomplex0.1192number0.0488string0.0351T0.0320any0.0254
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+thisKeyword
+.Punctuation
+pendingName.Othernumber0.9972any0.0005boolean0.0005void0.0004number[]0.0003
+++Operator
+;Punctuation
+\n      Text.Whitespace
+jobName.Othervoid0.3653Job0.3108any0.0185Promise<void>0.0092boolean0.0083
+(Punctuation
+thisKeyword
+[Punctuation
+kDoneName.Othernumber0.4341symbol0.1564string0.1551any0.0521void0.0186
+]Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+LimiterName.Otherany0.9940number0.0019string0.0010complex0.0010symbol0.0006
+;Punctuation
+\nText.Whitespace

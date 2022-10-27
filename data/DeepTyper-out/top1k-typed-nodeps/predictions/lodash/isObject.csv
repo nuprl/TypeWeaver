@@ -1,0 +1,56 @@
+Text
+/**\n * Checks if `value` is the\n * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)\n * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)\n *\n * @since 0.1.0\n * @category Lang\n * @param {*} value The value to check.\n * @returns {boolean} Returns `true` if `value` is an object, else `false`.\n * @example\n *\n * isObject({})\n * // => true\n *\n * isObject([1, 2, 3])\n * // => true\n *\n * isObject(Function)\n * // => true\n *\n * isObject(null)\n * // => false\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isObjectName.Otherboolean0.8176any0.0284complex0.0268void0.0154string0.0061
+(Punctuation
+valueName.Otherany0.7368boolean0.1100string0.0911number0.0134complex0.0061
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+typeKeyword.Reserved
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.8486complex0.0565boolean0.0446string0.0175number0.0105
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+valueName.Otherany0.9316string0.0242boolean0.0142complex0.0093number0.0077
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+(Punctuation
+typeKeyword.Reserved
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'object'Literal.String.Single
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+typeKeyword.Reserved
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+isObjectName.Otherboolean0.3657complex0.2511any0.0311void0.0224false0.0190
+\nText.Whitespace

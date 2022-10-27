@@ -1,0 +1,214 @@
+#!/usr/bin/env nodeComment.Hashbang
+\nText.Whitespace
+Text
+/*\n * A small example using dashdash for option processing, with generated\n * help output. See "hello.js" for the smallest usage example.\n */Comment.Multiline
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+dashdashName.Otherany0.8601string0.0106void0.0090Function0.0081complex0.0055
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'../lib/dashdash'Literal.String.Single
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+optionsName.Othercomplex0.6690any0.1755any[]0.0635{}0.0165Object0.0120
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+namesName.Otherstring[]0.9962any[]0.0009string[][]0.0008RegExp[]0.0005number[]0.0005
+:Operator
+ Text.Whitespace
+[Punctuation
+'verbose'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'v'Literal.String.Single
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+typeKeyword.Reserved
+:Operator
+ Text.Whitespace
+'bool'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+helpName.Otherstring0.9968string[]0.0009any0.0007RegExp0.0005number0.0004
+:Operator
+ Text.Whitespace
+'More verbose output.'Literal.String.Single
+\n    Text.Whitespace
+}Punctuation
+,Punctuation
+\n    Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+namesName.Otherstring[]0.9968any[]0.0010string[][]0.0004RegExp[]0.0004number[]0.0003
+:Operator
+ Text.Whitespace
+[Punctuation
+'help'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+'h'Literal.String.Single
+]Punctuation
+,Punctuation
+\n        Text.Whitespace
+typeKeyword.Reserved
+:Operator
+ Text.Whitespace
+'bool'Literal.String.Single
+,Punctuation
+\n        Text.Whitespace
+helpName.Otherstring0.9967RegExp0.0008string[]0.0008any0.0007number0.0004
+:Operator
+ Text.Whitespace
+'Print this help and exit.'Literal.String.Single
+\n    Text.Whitespace
+}Punctuation
+\nText.Whitespace
+]Punctuation
+;Punctuation
+\n\nText.Whitespace
+// We'll use this `parser` to parse and to generate help output.Comment.Single
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+parserName.Otherany0.9027complex0.0147any[]0.0061number0.0040string0.0028
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+dashdashName.Otherany0.9568complex0.0333string0.0008any[]0.0008Object0.0007
+.Punctuation
+createParserName.Otherany0.8024complex0.1308string0.0086any[]0.0060number0.0052
+(Punctuation
+{Punctuation
+optionsName.Otherany0.4996complex0.1970any[]0.0372{}0.0360Options0.0137
+:Operator
+ Text.Whitespace
+optionsKeyword.Typeany0.6068complex0.1547any[]0.0302{}0.0294number0.0114
+}Punctuation
+)Punctuation
+;Punctuation
+\nText.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+optsName.Otherany0.8410complex0.0733any[]0.0024{}0.0021Options0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parserName.Otherany0.9422complex0.0237any[]0.0019number0.0013Object0.0010
+.Punctuation
+parseName.Otherany0.8238complex0.0522number0.0239boolean0.0122void0.0041
+(Punctuation
+processName.Otherany0.9940complex0.0044void0.0002Process0.0002string0.0001
+.Punctuation
+argvName.Otherany0.9932complex0.0018number0.0017string0.0008string[]0.0006
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+eName.Otherany0.9938Error0.0036string0.0007complex0.0006number0.0004
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+consoleName.OtherConsole0.9998any0.0001void0.0000NumberConstructor0.0000symbol0.0000
+.Punctuation
+errorName.Othervoid0.9981any0.0006complex0.0006Promise<void>0.0001boolean0.0001
+(Punctuation
+'help: error: %s'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+eName.Otherany0.9816Error0.0125complex0.0018string0.0007void0.0005
+.Punctuation
+messageName.Otherany0.9298string0.0671complex0.0011string[]0.0004Error0.0004
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+processName.Otherany0.9955complex0.0030void0.0003Process0.0002string0.0001
+.Punctuation
+exitName.Otherany0.9715void0.0255complex0.0007number0.0006boolean0.0003
+(Punctuation
+1Literal.Number.Float
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+// Use `parser.help()` for formatted options help.Comment.Single
+\nText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+optsName.Otherany0.7341complex0.2396boolean0.0024number0.0019Options0.0019
+.Punctuation
+helpName.Otherany0.5793string0.3851boolean0.0101number0.0079complex0.0047
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+helpName.Otherstring0.5917any0.3225void0.0246complex0.0156number0.0154
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parserName.Otherany0.9562complex0.0226string0.0017number0.0017void0.0007
+.Punctuation
+helpName.Otherany0.7317string0.2253void0.0092number0.0081complex0.0048
+(Punctuation
+)Punctuation
+.Punctuation
+trimRightName.Otherany0.9577void0.0193string0.0077complex0.0053number0.0023
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+consoleName.OtherConsole0.9997any0.0002void0.0000complex0.0000number0.0000
+.Punctuation
+logName.Othervoid0.9986any0.0006complex0.0003Promise<void>0.0001string0.0001
+(Punctuation
+'usage: node help.js [OPTIONS]\n'Literal.String.Single
+\n                Text.Whitespace
++Operator
+ Text.Whitespace
+'options:\n'Literal.String.Single
+\n                Text.Whitespace
++Operator
+ Text.Whitespace
+helpName.Otherstring0.8956any0.0674number0.0129void0.0113string[]0.0039
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+processName.Otherany0.9934complex0.0047void0.0003Process0.0002T0.0002
+.Punctuation
+exitName.Otherany0.9816void0.0147number0.0008complex0.0008Promise<any>0.0004
+(Punctuation
+0Literal.Number.Float
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+// ...Comment.Single
+\nText.Whitespace

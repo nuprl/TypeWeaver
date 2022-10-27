@@ -1,0 +1,252 @@
+importKeyword
+ Text.Whitespace
+jQueryName.Otherany0.9966string0.0017complex0.0005void0.0003any[]0.0002
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"../core.js"Literal.String.Double
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isAttachedName.Otherany0.4799boolean0.2226any[]0.0800complex0.0389string0.0381
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"../core/isAttached.js"Literal.String.Double
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+getStylesName.Otherany0.4304string0.3849void0.0975string[]0.0462complex0.0102
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./var/getStyles.js"Literal.String.Double
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+rcustomPropName.Otherany0.5010void0.2237string0.1117boolean0.0770complex0.0304
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"./var/rcustomProp.js"Literal.String.Double
+;Punctuation
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+rtrimName.Otherany0.4811void0.2292string0.1021boolean0.0812complex0.0311
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+"../var/rtrim.js"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+curCSSName.Otherany0.2790boolean0.2474string0.1936void0.1545complex0.0356
+(Punctuation
+ Text.Whitespace
+elemName.Otherany0.9085string0.0792number0.0030HTMLElement0.0021boolean0.0012
+,Punctuation
+ Text.Whitespace
+nameName.Otherstring0.6106any0.3865number0.0011boolean0.0005complex0.0003
+,Punctuation
+ Text.Whitespace
+computedName.Otherany0.8566string0.0961boolean0.0243number0.0137void0.0012
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+retName.Otherany0.7470string0.2374number0.0070boolean0.0020{}0.0014
+,Punctuation
+\n\t\tText.Whitespace
+isCustomPropName.Otherany0.4068boolean0.3812string0.1707RegExp0.0244number0.0052
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+rcustomPropName.OtherRegExp0.6686any0.2669string0.0422boolean0.0086string[]0.0043
+.Punctuation
+testName.Otherboolean0.5196any0.4276string0.0265complex0.0086number0.0068
+(Punctuation
+ Text.Whitespace
+nameName.Otherany0.6548string0.3425number0.0010complex0.0004void0.0003
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+computedName.Otherany0.9376string0.0497boolean0.0053number0.0038complex0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+computedName.Otherany0.9057string0.0765boolean0.0080number0.0063complex0.0011
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+getStylesName.Otherany0.8140string0.1748string[]0.0036void0.0027any[]0.0017
+(Punctuation
+ Text.Whitespace
+elemName.Otherany0.9544string0.0426number0.0016boolean0.0003HTMLElement0.0002
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\n\tText.Whitespace
+// getPropertyValue is needed for `.css('--customProperty')` (gh-3144)Comment.Single
+\n\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+computedName.Otherany0.9250string0.0415boolean0.0263number0.0036complex0.0008
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+retName.Otherany0.9210string0.0773number0.0009complex0.0003boolean0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+computedName.Otherany0.9711string0.0167boolean0.0013complex0.0013number0.0012
+.Punctuation
+getPropertyValueName.Otherany0.9082string0.0900number0.0011complex0.0002boolean0.0001
+(Punctuation
+ Text.Whitespace
+nameName.Otherany0.6940string0.3044number0.0004complex0.0003boolean0.0002
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+computedName.Otherany0.9768string0.0066boolean0.0053complex0.0029{}0.0019
+[Punctuation
+ Text.Whitespace
+nameName.Otherstring0.6046any0.3931number0.0011complex0.0004boolean0.0003
+ Text.Whitespace
+]Punctuation
+;Punctuation
+\n\n\t\tText.Whitespace
+// trim whitespace for custom property (issue gh-4926)Comment.Single
+\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+isCustomPropName.Otherany0.6134boolean0.2500string0.1255number0.0054complex0.0012
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\n\t\t\tText.Whitespace
+// rtrim treats U+000D CARRIAGE RETURN and U+000C FORM FEEDComment.Single
+\n\t\t\tText.Whitespace
+// as whitespace while CSS does not, but this is not a problemComment.Single
+\n\t\t\tText.Whitespace
+// because CSS preprocessing replaces them with U+000A LINE FEEDComment.Single
+\n\t\t\tText.Whitespace
+// (which *is* CSS whitespace)Comment.Single
+\n\t\t\tText.Whitespace
+// https://www.w3.org/TR/css-syntax-3/#input-preprocessingComment.Single
+\n\t\t\tText.Whitespace
+retName.Otherany0.6626string0.3352number0.0011boolean0.0003complex0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+retName.Otherany0.6385string0.3590number0.0013complex0.0004boolean0.0002
+.Punctuation
+replaceName.Otherany0.5213complex0.4697string0.0049void0.0013boolean0.0012
+(Punctuation
+ Text.Whitespace
+rtrimName.OtherRegExp0.4741any0.3690string0.1312boolean0.0105string[]0.0037
+,Punctuation
+ Text.Whitespace
+"$1"Literal.String.Double
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+ Text.Whitespace
+retName.Otherany0.7241string0.2721number0.0010boolean0.0010complex0.0006
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+""Literal.String.Double
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+!Operator
+isAttachedName.Otherany0.7879boolean0.1613string0.0226any[]0.0121string[]0.0041
+(Punctuation
+ Text.Whitespace
+elemName.Otherany0.9257string0.0673number0.0027HTMLElement0.0016boolean0.0007
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+retName.Otherany0.9345string0.0642number0.0007any[]0.0002boolean0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+jQueryName.Otherany0.9953string0.0033boolean0.0003HTMLElement0.0003complex0.0002
+.Punctuation
+styleName.Otherany0.9802string0.0160complex0.0024void0.0004boolean0.0003
+(Punctuation
+ Text.Whitespace
+elemName.Otherany0.8842string0.1113number0.0012HTMLElement0.0008complex0.0004
+,Punctuation
+ Text.Whitespace
+nameName.Otherany0.6013string0.3962number0.0007complex0.0004boolean0.0004
+ Text.Whitespace
+)Punctuation
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+retName.Otherany0.8294string0.1641number0.0030complex0.0015boolean0.0004
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+?Operator
+\n\n\t\tText.Whitespace
+// Support: IE <=9 - 11+Comment.Single
+\n\t\tText.Whitespace
+// IE returns zIndex value as an integer.Comment.Single
+\n\t\tText.Whitespace
+retName.Otherany0.7052string0.2823number0.0098complex0.0008boolean0.0003
+ Text.Whitespace
++Operator
+ Text.Whitespace
+""Literal.String.Double
+ Text.Whitespace
+:Operator
+\n\t\tText.Whitespace
+retName.Otherany0.6534string0.3240number0.0146{}0.0020complex0.0019
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+curCSSName.Otherany0.8435string0.0693void0.0250boolean0.0236number0.0176
+;Punctuation
+\nText.Whitespace

@@ -1,0 +1,255 @@
+importKeyword
+ Text.Whitespace
+copyArrayName.Otherany0.2702complex0.1092void0.0270string0.0250RegExp0.0218
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/copyArray.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+getTagName.Otherany0.8618complex0.0329string0.0203void0.0058RegExp0.0043
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/getTag.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isArrayLikeName.Othercomplex0.5381any0.4098void0.0064boolean0.0044string0.0034
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isArrayLike.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isStringName.Othercomplex0.9544any0.0274boolean0.0114{}0.0010string0.0008
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isString.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+iteratorToArrayName.Otherany0.3690complex0.2650string0.0562void0.0506boolean0.0330
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/iteratorToArray.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+mapToArrayName.Otherany0.3254complex0.2485void0.0656string0.0562boolean0.0319
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/mapToArray.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+setToArrayName.Otherany0.2984complex0.2367void0.0749string0.0587string[]0.0350
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/setToArray.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+stringToArrayName.Otherany0.2839complex0.2109void0.0735string0.0534boolean0.0376
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/stringToArray.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+valuesName.Otherany0.3173T[]0.1416complex0.1132string[]0.0631any[]0.0562
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./values.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/** `Object#toString` result references. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+mapTagName.OtherRegExp0.6120string0.1678any0.1354string[]0.0159symbol0.0087
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'[object Map]'Literal.String.Single
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+setTagName.OtherRegExp0.2950string0.2810any0.2735string[]0.0165symbol0.0086
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+'[object Set]'Literal.String.Single
+\n\nText.Whitespace
+Text
+/** Built-in value references. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+symIteratorName.Othersymbol0.5011any0.2909{}0.0226complex0.0156SymbolConstructor0.0116
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+SymbolName.BuiltinSymbolConstructor0.9785symbol0.0091any0.0082{}0.0002complex0.0002
+.Punctuation
+iteratorName.Otherany0.6275symbol0.2884complex0.0387{}0.0066any[]0.0040
+\n\nText.Whitespace
+Text
+/**\n * Converts `value` to an array.\n *\n * @since 0.1.0\n * @category Lang\n * @param {*} value The value to convert.\n * @returns {Array} Returns the converted array.\n * @example\n *\n * toArray({ 'a': 1, 'b': 2 })\n * // => [1, 2]\n *\n * toArray('abc')\n * // => ['a', 'b', 'c']\n *\n * toArray(1)\n * // => []\n *\n * toArray(null)\n * // => []\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+toArrayName.Otherany[]0.2228any0.1647TSource[]0.0815number[]0.0759T[]0.0310
+(Punctuation
+valueName.Otherany0.8294string0.0561any[]0.0325number0.0102complex0.0099
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+valueName.Otherany0.8836string0.0445any[]0.0245number0.0073complex0.0066
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+[Punctuation
+]Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isArrayLikeName.Othercomplex0.5612any0.3796boolean0.0149any[]0.0035string0.0027
+(Punctuation
+valueName.Otherany0.9207complex0.0284string0.0237any[]0.0058{}0.0037
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+isStringName.Othercomplex0.9394any0.0399boolean0.0133any[]0.0022string0.0007
+(Punctuation
+valueName.Otherany0.9417complex0.0183string0.0140any[]0.0086{}0.0033
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+stringToArrayName.Otherany0.7652string0.0471any[]0.0439complex0.0382boolean0.0252
+(Punctuation
+valueName.Otherany0.8758string0.0441any[]0.0233complex0.0181number0.0090
+)Punctuation
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+copyArrayName.Otherany0.7764complex0.0528string0.0398any[]0.0393number0.0133
+(Punctuation
+valueName.Otherany0.8381any[]0.0565string0.0265complex0.0260{}0.0184
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+symIteratorName.Otherany0.6884boolean0.1154complex0.0752string0.0363any[]0.0267
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+valueName.Otherany0.8979complex0.0266any[]0.0242{}0.0212string0.0089
+[Punctuation
+symIteratorName.Otherany0.5508string0.3074number0.0530symbol0.0338complex0.0139
+]Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+iteratorToArrayName.Otherany0.4601complex0.2038any[]0.1124boolean0.0509string0.0388
+(Punctuation
+valueName.Otherany0.8837complex0.0376any[]0.0338{}0.0165string0.0046
+[Punctuation
+symIteratorName.Otherany0.4170string0.3562number0.0698symbol0.0430complex0.0402
+]Punctuation
+(Punctuation
+)Punctuation
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+tagName.Otherany0.9628string0.0132complex0.0082number0.0051any[]0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+getTagName.Otherany0.9624string0.0126complex0.0121number0.0019any[]0.0012
+(Punctuation
+valueName.Otherany0.8936string0.0254complex0.0254any[]0.0183{}0.0062
+)Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+funcName.Otherany0.8957boolean0.0309number0.0166string0.0145Function0.0124
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+tagName.Otherany0.8703complex0.0624string0.0232number0.0220any[]0.0039
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+mapTagName.Otherany0.7483boolean0.0843number0.0439complex0.0426string0.0390
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+mapToArrayName.Otherany0.8082string0.0655number0.0544boolean0.0216complex0.0154
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+(Punctuation
+tagName.Otherany0.8621number0.0558complex0.0423string0.0147any[]0.0036
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+setTagName.Otherany0.8419number0.0372complex0.0347string0.0200{}0.0137
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+setToArrayName.Otherany0.7138number0.1018string0.0477complex0.0298any[]0.0270
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+valuesKeyword.Typeany0.7998any[]0.0600number0.0436complex0.0214string0.0113
+)Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+funcName.Otherany0.7895void0.0359number0.0353Function0.0344boolean0.0270
+(Punctuation
+valueName.Otherany0.7708any[]0.0667{}0.0329string0.0306complex0.0217
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+toArrayName.Otherany[]0.1754TSource[]0.1545any0.0773number[]0.0748string[]0.0120
+\nText.Whitespace

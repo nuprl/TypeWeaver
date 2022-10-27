@@ -1,0 +1,104 @@
+importKeyword
+ Text.Whitespace
+arrayReduceName.Otherany0.2102boolean0.0637complex0.0442string0.0335string[]0.0179
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/arrayReduce.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+baseEachName.Otherany0.2362boolean0.1113string0.0564complex0.0437string[]0.0249
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseEach.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+baseReduceName.Otherany0.2869boolean0.1287string0.0653complex0.0549string[]0.0381
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/baseReduce.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Reduces `collection` to a value which is the accumulated result of running\n * each element in `collection` thru `iteratee`, where each successive\n * invocation is supplied the return value of the previous. If `accumulator`\n * is not given, the first element of `collection` is used as the initial\n * value. The iteratee is invoked with four arguments:\n * (accumulator, value, index|key, collection).\n *\n * Many lodash methods are guarded to work as iteratees for methods like\n * `reduce`, `reduceRight`, and `transform`.\n *\n * The guarded methods are:\n * `assign`, `defaults`, `defaultsDeep`, `includes`, `merge`, `orderBy`,\n * and `sortBy`\n *\n * @since 0.1.0\n * @category Collection\n * @param {Array|Object} collection The collection to iterate over.\n * @param {Function} iteratee The function invoked per iteration.\n * @param {*} [accumulator] The initial value.\n * @returns {*} Returns the accumulated value.\n * @see reduceRight, transform\n * @example\n *\n * reduce([1, 2], (sum, n) => sum + n, 0)\n * // => 3\n *\n * reduce({ 'a': 1, 'b': 2, 'c': 1 }, (result, value, key) => {\n *   (result[value] || (result[value] = [])).push(key)\n *   return result\n * }, {})\n * // => { '1': ['a', 'c'], '2': ['b'] } (iteration order is not guaranteed)\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+reduceName.Otherany0.3368complex0.2327number0.1114any...0.0107Promise<any>0.0096
+(Punctuation
+collectionName.Otherany0.3114string0.0971complex0.0327any[]0.0224number0.0097
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.7703string0.0182number0.0103Error0.0034any[]0.0033
+,Punctuation
+ Text.Whitespace
+accumulatorName.Otherany0.8016string0.0398complex0.0111any[]0.0099boolean0.0096
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+funcName.Otherany0.9139number0.0291string0.0183Function0.0114boolean0.0079
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ArrayName.BuiltinArrayConstructor0.9995Math0.0000ObjectConstructor0.0000any0.0000complex0.0000
+.Punctuation
+isArrayName.Othercomplex0.9936any[]0.0017any0.0015boolean0.0007string[]0.0002
+(Punctuation
+collectionName.Othercomplex0.2594any0.2406any[]0.1678string0.0141boolean0.0107
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+arrayReduceName.Otherany0.5458any[]0.1673number0.0985boolean0.0639string0.0267
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+baseReduceKeyword.Typeany0.5216any[]0.1879number0.0976boolean0.0621string[]0.0282
+\n  Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+initAccumName.Otherany0.4405number0.2777boolean0.1078any[]0.0831string0.0370
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+argumentsName.OtherIArguments0.9830any[]0.0101string[]0.0006any0.0006any[][]0.0001
+.Punctuation
+lengthName.Othernumber0.9843any0.0126string0.0008complex0.0007boolean0.0004
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+3Literal.Number.Float
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+funcName.Otherany0.8367number0.0368Function0.0336boolean0.0191void0.0155
+(Punctuation
+collectionName.Otherany0.3161any[]0.1621complex0.1259string0.0252Function0.0090
+,Punctuation
+ Text.Whitespace
+iterateeName.Otherany0.8645any[]0.0129number0.0102string0.0082complex0.0061
+,Punctuation
+ Text.Whitespace
+accumulatorName.Otherany0.7410complex0.0471any[]0.0370{}0.0221string0.0166
+,Punctuation
+ Text.Whitespace
+initAccumName.Otherany0.7232any[]0.0766number0.0467boolean0.0269complex0.0221
+,Punctuation
+ Text.Whitespace
+baseEachName.Otherany0.6585any[]0.1049number0.0592boolean0.0377complex0.0297
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+reduceName.Otherany0.2754complex0.1126number0.0498any[]0.0130any...0.0109
+\nText.Whitespace

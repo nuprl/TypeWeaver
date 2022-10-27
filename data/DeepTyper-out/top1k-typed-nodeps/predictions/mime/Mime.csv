@@ -1,0 +1,641 @@
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/**\n * @param typeMap [Object] Map of MIME type -> Array[extensions]\n * @param ...\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+MimeName.Othervoid0.9309any0.0197Function0.0082complex0.0069boolean0.0039
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+_typesName.Otherany0.6139complex0.3793{}0.0013any[]0.0005Object0.0004
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9997any0.0001Object0.0001complex0.0000Object[]0.0000
+.Punctuation
+createName.Othercomplex0.9722any0.0112{}0.0029Object0.0018void0.0011
+(Punctuation
+nullKeyword.Constant
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+_extensionsName.Otherany0.8157complex0.0297Object0.0271Function0.0081ObjectConstructor0.0055
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9997any0.0001Object0.0000complex0.0000FunctionConstructor0.0000
+.Punctuation
+createName.Othercomplex0.9751any0.0108{}0.0024void0.0017Object0.0008
+(Punctuation
+nullKeyword.Constant
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9944any0.0043string0.0007boolean0.0001complex0.0000
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9796any0.0182string0.0012void0.0002boolean0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+argumentsName.OtherIArguments0.8652any[]0.0503string[]0.0461any0.0073any[][]0.0012
+.Punctuation
+lengthName.Othernumber0.9659any0.0322string0.0010void0.0003boolean0.0002
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9865any0.0123string0.0007void0.0002boolean0.0001
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+thisKeyword
+.Punctuation
+defineName.Othervoid0.9755any0.0079Function0.0019complex0.0016Promise<void>0.0015
+(Punctuation
+argumentsName.OtherIArguments0.9722any[]0.0044any0.0043string[]0.0021Expression[]0.0002
+[Punctuation
+iName.Othernumber0.9840any0.0100string0.0051void0.0002boolean0.0002
+]Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+thisKeyword
+.Punctuation
+defineName.Othervoid0.8345any0.0929Promise<any>0.0119Function0.0067string0.0047
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+defineName.Othervoid0.9302any0.0219Promise<any>0.0049complex0.0040Function0.0025
+.Punctuation
+bindName.Otherany0.9820void0.0072string0.0016Function0.0013complex0.0010
+(Punctuation
+thisKeyword
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+getTypeName.Otherany0.2424void0.0868string0.0745Function0.0257Promise<any>0.0149
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+getTypeName.Otherany0.2523void0.1612string0.0643Promise<any>0.0297Promise<void>0.0169
+.Punctuation
+bindName.Otherany0.9830void0.0024string0.0020number0.0019Program0.0014
+(Punctuation
+thisKeyword
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+getExtensionName.Otherany0.6229complex0.1856string0.0988{}0.0258void0.0121
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+getExtensionName.Otherany0.5663complex0.2380string0.0584{}0.0560void0.0190
+.Punctuation
+bindName.Otherany0.9934void0.0015string0.0014complex0.0005number0.0004
+(Punctuation
+thisKeyword
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Define mimetype -> extension mappings.  Each key is a mime-type that maps\n * to an array of extensions associated with the type.  The first extension is\n * used as the default extension for the type.\n *\n * e.g. mime.define({'audio/ogg', ['oga', 'ogg', 'spx']});\n *\n * If a type declares an extension that has already been defined, an error will\n * be thrown.  To suppress this error and force the extension to be associated\n * with the new type, pass `force`=true.  Alternatively, you may prefix the\n * extension with "*" to map the type to extension, without mapping the\n * extension to the type.\n *\n * e.g. mime.define({'audio/wav', ['wav']}, {'audio/x-wav', ['*wav']});\n *\n *\n * @param map (Object) type definitions\n * @param force (Boolean) if true, force overriding of existing definitions\n */Comment.Multiline
+\nText.Whitespace
+MimeName.Otherany0.8305complex0.0611void0.0347Function0.0045string0.0024
+.Punctuation
+prototypeName.Otherany0.4646Object0.0368any[]0.0166Observable<any>0.0125Function0.0105
+.Punctuation
+defineName.Othervoid0.5703any0.0772Function0.0170Promise<any>0.0144string0.0072
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+typeMapName.Otherany0.8861string0.0270complex0.0148number0.0069{}0.0024
+,Punctuation
+ Text.Whitespace
+forceName.Otherboolean0.8857any0.0939string0.0058complex0.0041number0.0017
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+typeKeyword.Reserved
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+typeMapName.Otherany0.6969complex0.2511string0.0111{}0.0031Object0.0020
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+extensionsName.Otherany0.4642string[]0.1106string0.0669complex0.0513File0.0109
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+typeMapName.Otherany0.5492complex0.3453string0.0123{}0.0123Object0.0028
+[Punctuation
+typeKeyword.Reserved
+]Punctuation
+.Punctuation
+mapName.OtherU[]0.6177any0.2460complex0.1035void0.0026U,...0.0021
+(Punctuation
+functionKeyword.Declaration
+(Punctuation
+tName.Otherstring0.7488any0.1342boolean0.0065number0.0035String0.0028
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+tName.Otherstring0.8838any0.1014boolean0.0028number0.0021string[]0.0008
+.Punctuation
+toLowerCaseName.Otherstring0.8471any0.1497complex0.0007number0.0006string[]0.0006
+(Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+typeKeyword.Reserved
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+typeKeyword.Reserved
+.Punctuation
+toLowerCaseName.Otherstring0.8136any0.1836number0.0007complex0.0007string[]0.0004
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n    Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+letKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9952any0.0033string0.0010boolean0.0001complex0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9900any0.0077string0.0016boolean0.0001void0.0001
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+extensionsName.Otherstring[]0.6956any0.0607complex0.0234string0.0210any[]0.0114
+.Punctuation
+lengthName.Othernumber0.9062any0.0901string0.0021complex0.0005void0.0004
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9853any0.0130string0.0012boolean0.0002void0.0001
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+extName.Otherany0.6364string0.3375number0.0137complex0.0037boolean0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+extensionsName.Otherstring[]0.4798any0.1927any[]0.0291complex0.0259string0.0194
+[Punctuation
+iName.Othernumber0.9520string0.0303any0.0163boolean0.0002void0.0002
+]Punctuation
+;Punctuation
+\n\n      Text.Whitespace
+// '*' prefix = not the preferred type for this extension.  So fixup theComment.Single
+\n      Text.Whitespace
+// extension, and skip it.Comment.Single
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+extName.Otherany0.8089string0.1242complex0.0101number0.0056string[]0.0054
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'*'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+continueKeyword
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+forceName.Otherboolean0.9809any0.0123string0.0022complex0.0015true0.0007
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+(Punctuation
+extName.Otherstring0.6446any0.3419complex0.0022number0.0022boolean0.0019
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_typesName.Othercomplex0.9879any0.0079{}0.0004string0.0003Object0.0001
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+throwKeywordany0.6583Error0.2100complex0.0537string0.0376{}0.0060
+ Text.Whitespace
+newOperator.WordErrorConstructor0.3999any0.2995Error0.2187string0.0332complex0.0113
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor1.0000Error0.0000complex0.0000any0.0000never0.0000
+(Punctuation
+\n          Text.Whitespace
+'Attempt to change mapping for "'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+extName.Otherstring0.6203any0.3466number0.0087complex0.0045never0.0034
+ Text.Whitespace
++Operator
+\n          Text.Whitespace
+'" extension from "'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_typesName.Othercomplex0.9921any0.0059{}0.0009string0.0002Object0.0001
+[Punctuation
+extName.Otherany0.4734string0.4728number0.0127complex0.0085never0.0060
+]Punctuation
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'" to "'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+typeKeyword.Reserved
+ Text.Whitespace
++Operator
+\n          Text.Whitespace
+'". Pass `force=true` to allow this, otherwise remove "'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+extName.Otherany0.5046string0.4587number0.0131complex0.0053never0.0033
+ Text.Whitespace
++Operator
+\n          Text.Whitespace
+'" from the list of extensions for "'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+typeKeyword.Reserved
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'".'Literal.String.Single
+\n        Text.Whitespace
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n\n      Text.Whitespace
+thisKeyword
+.Punctuation
+_typesName.Othercomplex0.9796any0.0179{}0.0014void0.0001string0.0001
+[Punctuation
+extName.Otherany0.4934string0.4744number0.0102complex0.0051never0.0018
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+typeKeyword.Reserved
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n\n    Text.Whitespace
+// Use first extension as defaultComment.Single
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+forceName.Otherboolean0.8303any0.1280complex0.0194string0.0099false0.0032
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+!Operator
+thisKeyword
+.Punctuation
+_extensionsName.Othercomplex0.8784any0.0840{}0.0240boolean0.0010Object0.0007
+[Punctuation
+typeKeyword.Reserved
+]Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+extName.Otherany0.8344string0.1449complex0.0043number0.0040never0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+extensionsName.Otherany0.5752string[]0.1656complex0.0399any[]0.0261string0.0227
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+;Punctuation
+\n      Text.Whitespace
+thisKeyword
+.Punctuation
+_extensionsName.Othercomplex0.9254any0.0286{}0.0233Object0.0012void0.0010
+[Punctuation
+typeKeyword.Reserved
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+(Punctuation
+extName.Otherany0.8124string0.0859complex0.0160string[]0.0042number0.0032
+[Punctuation
+0Literal.Number.Float
+]Punctuation
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'*'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+extName.Otherany0.6635string0.2765number0.0163complex0.0048boolean0.0038
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+ext.sliceKeyword.Type
+(Punctuation
+1Literal.Number.Float
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Lookup a mime type based on extension\n */Comment.Multiline
+\nText.Whitespace
+MimeName.Otherany0.5995void0.1183complex0.0986Function0.0112Object0.0041
+.Punctuation
+prototypeName.Otherany0.4234Object0.0174void0.0128Function0.0075Observable<any>0.0069
+.Punctuation
+getTypeName.Otherany0.7385string0.1223void0.0310complex0.0292Object0.0049
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+pathName.Otherstring0.7480any0.2205complex0.0075string[]0.0067Path0.0049
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+pathName.Otherstring0.8971any0.0865string[]0.0030complex0.0029String0.0026
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+StringName.BuiltinStringConstructor0.9987String0.0007string0.0002any0.0000NumberConstructor0.0000
+(Punctuation
+pathName.Otherstring0.8546any0.1205complex0.0114Path0.0025string[]0.0021
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+lastName.Otherstring0.8752any0.1128number0.0095complex0.0007boolean0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherstring0.8133any0.1796complex0.0022string[]0.0016number0.0007
+.Punctuation
+replaceName.Othercomplex0.9103any0.0867string0.0008void0.0006boolean0.0002
+(Punctuation
+/^.*[/\\]/Literal.String.Regex
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+.Punctuation
+toLowerCaseName.Otherstring0.8802any0.1169complex0.0008number0.0008boolean0.0005
+(Punctuation
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+extName.Otherany0.5130string0.4557number0.0166complex0.0030boolean0.0020
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+lastName.Otherstring0.8694any0.1267number0.0022complex0.0005boolean0.0004
+.Punctuation
+replaceName.Othercomplex0.7910any0.2050string0.0012void0.0005boolean0.0004
+(Punctuation
+/^.*\./Literal.String.Regex
+,Punctuation
+ Text.Whitespace
+''Literal.String.Single
+)Punctuation
+.Punctuation
+toLowerCaseName.Otherstring0.8431any0.1535number0.0011complex0.0007boolean0.0006
+(Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+hasPathName.Otherany0.5090number0.3492boolean0.0775string0.0501complex0.0038
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+lastName.Otherstring0.5599any0.4217number0.0054string[]0.0031boolean0.0030
+.Punctuation
+lengthName.Othernumber0.5338any0.4597string0.0030complex0.0017boolean0.0006
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+pathName.Otherany0.5138string0.4140string[]0.0315complex0.0145any[]0.0056
+.Punctuation
+lengthName.Othernumber0.6392any0.3546string0.0024complex0.0021boolean0.0008
+;Punctuation
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+hasDotName.Otherany0.4829number0.3563string0.0748boolean0.0718complex0.0061
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+extName.Otherany0.5841string0.3401complex0.0107number0.0079string[]0.0069
+.Punctuation
+lengthName.Othernumber0.6319any0.3623string0.0027complex0.0016boolean0.0006
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+lastName.Otherstring0.5710any0.4127number0.0095complex0.0016string[]0.0015
+.Punctuation
+lengthName.Othernumber0.5179any0.4760string0.0026complex0.0015boolean0.0009
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+;Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+(Punctuation
+hasDotName.Otherany0.6207string0.0732complex0.0668boolean0.0390number0.0271
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+!Operator
+hasPathName.Otherany0.3793boolean0.3440complex0.0932string0.0810Function0.0126
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_typesName.Othercomplex0.9932any0.0056{}0.0005Object0.0001string0.0001
+[Punctuation
+extName.Otherstring0.4893any0.4612number0.0162complex0.0117never0.0022
+]Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Return file extension associated with a mime type\n */Comment.Multiline
+\nText.Whitespace
+MimeName.Otherany0.6795complex0.2541void0.0094Function0.0058boolean0.0033
+.Punctuation
+prototypeName.Otherany0.7836Object0.0193Function0.0076complex0.0047any[]0.0037
+.Punctuation
+getExtensionName.Otherany0.7264string0.1203complex0.0745boolean0.0204{}0.0094
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+typeKeyword.Reserved
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+typeKeyword.Reserved
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/^\s*([^;\s]*)/Literal.String.Regex
+.Punctuation
+testName.Otherboolean0.8583string0.0895any0.0258complex0.0117number0.0017
+(Punctuation
+typeKeyword.Reserved
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+RegExpName.BuiltinRegExpConstructor0.9553RegExp0.0042any0.0018ErrorConstructor0.0005FunctionConstructor0.0004
+.Punctuation
+$1Name.Other
+;Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+typeKeyword.Reserved
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+_extensionsName.Othercomplex0.7089any0.2277{}0.0172Object0.0039boolean0.0014
+[Punctuation
+typeKeyword.Reserved
+.Punctuation
+toLowerCaseName.Otherstring0.8872any0.1094number0.0007boolean0.0007complex0.0006
+(Punctuation
+)Punctuation
+]Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+nullKeyword.Constant
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+MimeName.Otherany0.5108string0.1639complex0.0317RegExp0.0154number0.0146
+;Punctuation
+\nText.Whitespace

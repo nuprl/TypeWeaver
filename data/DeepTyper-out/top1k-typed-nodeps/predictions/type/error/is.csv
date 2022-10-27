@@ -1,0 +1,278 @@
+"use strict"Literal.String.Double
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+isPrototypeName.Otherany0.6781string0.2670boolean0.0278number0.0038Function0.0028
+   Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+"../prototype/is"Literal.String.Double
+)Punctuation
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+isPlainObjectName.Otherany0.9684string0.0195boolean0.0067complex0.0015number0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+"../plain-object/is"Literal.String.Double
+)Punctuation
+;Punctuation
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+objectToStringName.Otherstring0.8764any0.0943boolean0.0124number0.0049Object0.0035
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9991Object0.0003any0.0001complex0.0001ArrayConstructor0.0000
+.Punctuation
+prototypeName.OtherObject0.8379{}0.0108Date0.0078complex0.0058any0.0050
+.Punctuation
+toStringName.Otherstring0.9371any0.0408complex0.0084number0.0030string)0.0019
+;Punctuation
+\n\nText.Whitespace
+// Recognize host specific errors (e.g. DOMException)Comment.Single
+\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+errorTaggedStringReName.Otherstring0.5062RegExp0.4436any0.0340boolean0.0088string[]0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/^\[object .*(?:Error|Exception)\]$/Literal.String.Regex
+\n  Text.Whitespace
+,Punctuation
+ Text.Whitespace
+errorNameReName.OtherRegExp0.6082string0.3621any0.0143boolean0.0089string[]0.0023
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+/^[^\s]*(?:Error|Exception)$/Literal.String.Regex
+;Punctuation
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+valueName.Otherany0.8371string0.1342boolean0.0041number0.0020complex0.0018
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+valueName.Otherany0.9246string0.0570boolean0.0057complex0.0050number0.0017
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\n\tText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+nameName.Otherany0.5470string0.4485boolean0.0017complex0.0006number0.0004
+;Punctuation
+\n\tText.Whitespace
+// Sanity check (reject objects which do not expose common Error interface)Comment.Single
+\n\tText.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+nameName.Otherany0.7185string0.2770boolean0.0015complex0.0009number0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valueName.Otherany0.9610string0.0113complex0.0022never0.0010T0.0010
+.Punctuation
+nameName.Otherany0.8839string0.1120complex0.0020number0.0004boolean0.0003
+;Punctuation
+\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+nameName.Otherany0.8086string0.1818complex0.0035boolean0.0018never0.0008
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+"string"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+valueName.Otherany0.9776complex0.0041string0.0016T0.0011number0.0011
+.Punctuation
+messageName.Otherany0.9239string0.0686complex0.0029boolean0.0019number0.0008
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+"string"Literal.String.Double
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+errorName.Otherany0.9978string0.0007number0.0004boolean0.0003Error0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+// Ensure its a native-like Error objectComment.Single
+\n\tText.Whitespace
+// (has [[ErrorData]] slot, or was created to resemble one)Comment.Single
+\n\tText.Whitespace
+// Note: It's not a 100% bulletproof check of confirming that as:Comment.Single
+\n\tText.Whitespace
+// - In ES2015+ string tag can be overriden via Symbol.toStringTag propertyComment.Single
+\n\tText.Whitespace
+// - Host errors do not share native error tag. Still we rely on assumption thatComment.Single
+\n\tText.Whitespace
+//   tag for each error will end either with `Error` or `Exception` stringComment.Single
+\n\tText.Whitespace
+// - In pre ES2015 era, no custom errors will share the error tag.Comment.Single
+\n\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+errorTaggedStringReName.OtherRegExp0.8496any0.0743boolean0.0330string0.0143string[]0.0048
+.Punctuation
+testName.Otherboolean0.9941any0.0033complex0.0009string0.0004false0.0003
+(Punctuation
+objectToStringName.Otherany0.8092boolean0.1323string0.0340complex0.0038RegExp0.0019
+.Punctuation
+callName.Otherany0.9845string0.0094boolean0.0030number0.0010complex0.0005
+(Punctuation
+valueName.Otherany0.9504string0.0334boolean0.0039complex0.0016number0.0008
+)Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\tText.Whitespace
+// Definitely not an ES2015 error instance, but could still be an errorComment.Single
+\n\t\tText.Whitespace
+// (created via e.g. CustomError.prototype = Object.create(Error.prototype))Comment.Single
+\n\t\tText.Whitespace
+tryKeyword
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+nameName.Otherany0.8226string0.1712boolean0.0025number0.0009complex0.0008
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+valueName.Otherany0.9827string0.0046boolean0.0017complex0.0015T0.0007
+.Punctuation
+constructorKeyword.Reserved
+.Punctuation
+nameName.Otherany0.9034string0.0929boolean0.0012complex0.0009number0.0005
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+ Text.Whitespace
+catchKeyword
+ Text.Whitespace
+(Punctuation
+errorName.Otherany0.9969string0.0007number0.0006boolean0.0005Error0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n\t\t\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\t\tText.Whitespace
+}Punctuation
+\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+errorNameReName.OtherRegExp0.8901any0.0344boolean0.0303string0.0064false0.0061
+.Punctuation
+testName.Otherboolean0.9954any0.0019complex0.0009string0.0004false0.0003
+(Punctuation
+nameName.Otherany0.8218string0.1731boolean0.0016complex0.0012number0.0008
+)Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\t\tText.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+isPlainObjectName.Otherboolean0.7083any0.2655string0.0108complex0.0097false0.0014
+(Punctuation
+valueName.Otherany0.9691complex0.0089string0.0083boolean0.0027number0.0019
+)Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+falseKeyword.Constant
+;Punctuation
+\n\tText.Whitespace
+}Punctuation
+\n\n\tText.Whitespace
+returnKeyword
+ Text.Whitespace
+!Operator
+isPrototypeName.Otherboolean0.8919any0.0613string0.0237complex0.0052false0.0035
+(Punctuation
+valueName.Otherany0.8911string0.0536boolean0.0340complex0.0043number0.0033
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

@@ -1,0 +1,195 @@
+modules/index.ts(1,19): error TS2306: File 'tslib.ts' is not a module.
+tslib.es6.ts(17,5): error TS2322: Type '(d: any, b: any) => any' is not assignable to type 'boolean'.
+tslib.es6.ts(18,5): error TS2322: Type '(o: any, proto: object | null) => any' is not assignable to type 'boolean'.
+tslib.es6.ts(21,12): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+tslib.es6.ts(27,5): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+tslib.es6.ts(28,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+tslib.es6.ts(29,80): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+tslib.es6.ts(32,12): error TS2322: Type '() => any' is not assignable to type 'void'.
+tslib.es6.ts(33,5): error TS2322: Type '{ <T extends {}, U>(target: T, source: U): T & U; <T extends {}, U, V>(target: T, source1: U, source2: V): T & U & V; <T extends {}, U, V, W>(target: T, source1: U, source2: V, source3: W): T & ... 2 more ... & W; (target: object, ...sources: any[]): any; }' is not assignable to type 'void'.
+tslib.es6.ts(40,21): error TS2339: Property 'apply' does not exist on type 'void'.
+tslib.es6.ts(40,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+tslib.es6.ts(48,25): error TS2403: Subsequent variable declarations must have the same type.  Variable 'p' must be of type 'string', but here has type 'symbol[]'.
+tslib.es6.ts(56,76): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'PropertyDescriptor'.
+  Type 'undefined' is not assignable to type 'PropertyDescriptor'.
+tslib.es6.ts(57,55): error TS2339: Property 'decorate' does not exist on type 'typeof Reflect'.
+tslib.es6.ts(57,92): error TS2339: Property 'decorate' does not exist on type 'typeof Reflect'.
+tslib.es6.ts(63,5): error TS2322: Type '(target: any, key: string) => void' is not assignable to type 'ClassDecorator'.
+tslib.es6.ts(63,50): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+tslib.es6.ts(66,70): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
+tslib.es6.ts(67,55): error TS2339: Property 'metadata' does not exist on type 'typeof Reflect'.
+tslib.es6.ts(67,95): error TS2339: Property 'metadata' does not exist on type 'typeof Reflect'.
+tslib.es6.ts(73,97): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+tslib.es6.ts(74,100): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+tslib.es6.ts(75,58): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+tslib.es6.ts(81,53): error TS7005: Variable 't' implicitly has an 'any' type.
+tslib.es6.ts(81,69): error TS7005: Variable 't' implicitly has an 'any' type.
+tslib.es6.ts(81,82): error TS7005: Variable 't' implicitly has an 'any' type.
+tslib.es6.ts(81,112): error TS7034: Variable 'f' implicitly has type 'any' in some locations where its type cannot be determined.
+tslib.es6.ts(81,115): error TS7034: Variable 'y' implicitly has type 'any' in some locations where its type cannot be determined.
+tslib.es6.ts(81,118): error TS7034: Variable 't' implicitly has type 'any' in some locations where its type cannot be determined.
+tslib.es6.ts(82,5): error TS2322: Type '{ next: any; throw: any; return: any; }' is not assignable to type 'void'.
+tslib.es6.ts(82,105): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type '{ next: any; throw: any; return: any; }'.
+  Property '[SymbolConstructor.iterator]' does not exist on type '{ next: any; throw: any; return: any; }'.
+tslib.es6.ts(85,13): error TS7005: Variable 'f' implicitly has an 'any' type.
+tslib.es6.ts(87,24): error TS7005: Variable 'y' implicitly has an 'any' type.
+tslib.es6.ts(87,46): error TS7005: Variable 'y' implicitly has an 'any' type.
+tslib.es6.ts(87,68): error TS7005: Variable 'y' implicitly has an 'any' type.
+tslib.es6.ts(87,88): error TS7005: Variable 'y' implicitly has an 'any' type.
+tslib.es6.ts(87,111): error TS7005: Variable 'y' implicitly has an 'any' type.
+tslib.es6.ts(87,120): error TS7005: Variable 'y' implicitly has an 'any' type.
+tslib.es6.ts(87,144): error TS7005: Variable 'y' implicitly has an 'any' type.
+tslib.es6.ts(87,168): error TS7005: Variable 't' implicitly has an 'any' type.
+tslib.es6.ts(88,24): error TS7005: Variable 't' implicitly has an 'any' type.
+tslib.es6.ts(88,44): error TS7005: Variable 't' implicitly has an 'any' type.
+tslib.es6.ts(91,36): error TS2322: Type '{ value: any; done: boolean; }' is not assignable to type 'void'.
+tslib.es6.ts(104,37): error TS2322: Type '{ value: any; done: boolean; }' is not assignable to type 'void'.
+tslib.es6.ts(108,35): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
+tslib.es6.ts(110,9): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'PropertyDescriptor'.
+  Type 'undefined' is not assignable to type 'PropertyDescriptor'.
+tslib.es6.ts(150,5): error TS2322: Type 'any[]' is not assignable to type 'boolean'.
+tslib.es6.ts(155,14): error TS7034: Variable 'ar' implicitly has type 'any[]' in some locations where its type cannot be determined.
+tslib.es6.ts(156,14): error TS7005: Variable 'ar' implicitly has an 'any[]' type.
+tslib.es6.ts(156,24): error TS2554: Expected 2 arguments, but got 1.
+tslib.es6.ts(166,5): error TS2322: Type 'any[]' is not assignable to type 'void'.
+tslib.es6.ts(169,40): error TS7006: Parameter 'from' implicitly has an 'any' type.
+tslib.es6.ts(180,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+tslib.es6.ts(180,39): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+tslib.es6.ts(180,51): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+tslib.es6.ts(180,59): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+tslib.es6.ts(185,65): error TS7034: Variable 'q' implicitly has type 'any[]' in some locations where its type cannot be determined.
+tslib.es6.ts(186,5): error TS2322: Type '{}' is not assignable to type 'void'.
+tslib.es6.ts(186,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.es6.ts(186,39): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.es6.ts(186,54): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.es6.ts(186,65): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type '{}'.
+  Property '[SymbolConstructor.asyncIterator]' does not exist on type '{}'.
+tslib.es6.ts(188,90): error TS7005: Variable 'q' implicitly has an 'any[]' type.
+tslib.es6.ts(189,122): error TS7005: Variable 'q' implicitly has an 'any[]' type.
+tslib.es6.ts(190,49): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.es6.ts(191,48): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.es6.ts(192,55): error TS7005: Variable 'q' implicitly has an 'any[]' type.
+tslib.es6.ts(192,83): error TS7005: Variable 'q' implicitly has an 'any[]' type.
+tslib.es6.ts(192,92): error TS7005: Variable 'q' implicitly has an 'any[]' type.
+tslib.es6.ts(196,20): error TS7034: Variable 'p' implicitly has type 'any' in some locations where its type cannot be determined.
+tslib.es6.ts(197,12): error TS2322: Type '{}' is not assignable to type 'number'.
+tslib.es6.ts(197,20): error TS2554: Expected 2 arguments, but got 1.
+tslib.es6.ts(197,39): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.es6.ts(197,81): error TS2554: Expected 2 arguments, but got 1.
+tslib.es6.ts(197,97): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'Number'.
+  Property '[SymbolConstructor.iterator]' does not exist on type 'Number'.
+tslib.es6.ts(198,45): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
+  No index signature with a parameter of type 'number' was found on type 'Number'.
+tslib.es6.ts(198,92): error TS7005: Variable 'p' implicitly has an 'any' type.
+tslib.es6.ts(198,130): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+tslib.es6.ts(204,115): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.es6.ts(204,129): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.es6.ts(204,144): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.es6.ts(204,155): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type '{}'.
+  Property '[SymbolConstructor.asyncIterator]' does not exist on type '{}'.
+tslib.es6.ts(205,31): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
+tslib.es6.ts(205,94): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: unknown) => void' is not assignable to type 'void'.
+tslib.es6.ts(214,31): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
+tslib.ts(42,100): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+tslib.ts(42,120): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+tslib.ts(43,16): error TS2304: Cannot find name 'define'.
+tslib.ts(43,41): error TS2304: Cannot find name 'define'.
+tslib.ts(44,9): error TS2304: Cannot find name 'define'.
+tslib.ts(44,93): error TS2554: Expected 2 arguments, but got 1.
+tslib.ts(47,38): error TS2554: Expected 2 arguments, but got 1.
+tslib.ts(50,17): error TS2554: Expected 2 arguments, but got 1.
+tslib.ts(58,17): error TS1184: Modifiers cannot appear here.
+tslib.ts(61,16): error TS2322: Type '(id: any, v: any) => void' is not assignable to type 'void'.
+tslib.ts(61,26): error TS2300: Duplicate identifier 'id'.
+tslib.ts(62,13): error TS1184: Modifiers cannot appear here.
+tslib.ts(62,26): error TS2300: Duplicate identifier 'id'.
+tslib.ts(71,17): error TS2322: Type '(d: any, b: any) => void' is not assignable to type 'void'.
+tslib.ts(75,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+tslib.ts(76,84): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+tslib.ts(92,29): error TS2403: Subsequent variable declarations must have the same type.  Variable 'p' must be of type 'string', but here has type 'symbol[]'.
+tslib.ts(99,5): error TS2322: Type '(decorators: any, target: any, key: any, desc: any) => any' is not assignable to type 'void'.
+tslib.ts(101,59): error TS2339: Property 'decorate' does not exist on type 'typeof Reflect'.
+tslib.ts(101,96): error TS2339: Property 'decorate' does not exist on type 'typeof Reflect'.
+tslib.ts(106,5): error TS2322: Type '(paramIndex: number, decorator: any) => (target: any, key: any) => void' is not assignable to type 'ClassDecorator'.
+tslib.ts(111,59): error TS2339: Property 'metadata' does not exist on type 'typeof Reflect'.
+tslib.ts(111,99): error TS2339: Property 'metadata' does not exist on type 'typeof Reflect'.
+tslib.ts(117,101): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+tslib.ts(118,104): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+tslib.ts(119,62): error TS2349: This expression is not callable.
+  Type 'void' has no call signatures.
+tslib.ts(125,57): error TS7005: Variable 't' implicitly has an 'any' type.
+tslib.ts(125,73): error TS7005: Variable 't' implicitly has an 'any' type.
+tslib.ts(125,86): error TS7005: Variable 't' implicitly has an 'any' type.
+tslib.ts(125,116): error TS7034: Variable 'f' implicitly has type 'any' in some locations where its type cannot be determined.
+tslib.ts(125,119): error TS7034: Variable 'y' implicitly has type 'any' in some locations where its type cannot be determined.
+tslib.ts(125,122): error TS7034: Variable 't' implicitly has type 'any' in some locations where its type cannot be determined.
+tslib.ts(126,109): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type '{ next: any; throw: any; return: any; }'.
+  Property '[SymbolConstructor.iterator]' does not exist on type '{ next: any; throw: any; return: any; }'.
+tslib.ts(129,17): error TS7005: Variable 'f' implicitly has an 'any' type.
+tslib.ts(131,28): error TS7005: Variable 'y' implicitly has an 'any' type.
+tslib.ts(131,50): error TS7005: Variable 'y' implicitly has an 'any' type.
+tslib.ts(131,72): error TS7005: Variable 'y' implicitly has an 'any' type.
+tslib.ts(131,92): error TS7005: Variable 'y' implicitly has an 'any' type.
+tslib.ts(131,115): error TS7005: Variable 'y' implicitly has an 'any' type.
+tslib.ts(131,124): error TS7005: Variable 'y' implicitly has an 'any' type.
+tslib.ts(131,148): error TS7005: Variable 'y' implicitly has an 'any' type.
+tslib.ts(131,172): error TS7005: Variable 't' implicitly has an 'any' type.
+tslib.ts(132,28): error TS7005: Variable 't' implicitly has an 'any' type.
+tslib.ts(132,48): error TS7005: Variable 't' implicitly has an 'any' type.
+tslib.ts(135,40): error TS2322: Type '{ value: any; done: boolean; }' is not assignable to type 'void'.
+tslib.ts(148,41): error TS2322: Type '{ value: any; done: boolean; }' is not assignable to type 'void'.
+tslib.ts(156,23): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
+tslib.ts(158,13): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'PropertyDescriptor'.
+  Type 'undefined' is not assignable to type 'PropertyDescriptor'.
+tslib.ts(199,18): error TS7034: Variable 'ar' implicitly has type 'any[]' in some locations where its type cannot be determined.
+tslib.ts(200,18): error TS7005: Variable 'ar' implicitly has an 'any[]' type.
+tslib.ts(213,40): error TS7006: Parameter 'from' implicitly has an 'any' type.
+tslib.ts(224,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+tslib.ts(224,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+tslib.ts(224,55): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+tslib.ts(229,69): error TS7034: Variable 'q' implicitly has type 'any[]' in some locations where its type cannot be determined.
+tslib.ts(230,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.ts(230,43): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.ts(230,58): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.ts(230,69): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type '{}'.
+  Property '[SymbolConstructor.asyncIterator]' does not exist on type '{}'.
+tslib.ts(232,94): error TS7005: Variable 'q' implicitly has an 'any[]' type.
+tslib.ts(233,126): error TS7005: Variable 'q' implicitly has an 'any[]' type.
+tslib.ts(234,53): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.ts(235,52): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.ts(236,59): error TS7005: Variable 'q' implicitly has an 'any[]' type.
+tslib.ts(236,87): error TS7005: Variable 'q' implicitly has an 'any[]' type.
+tslib.ts(236,96): error TS7005: Variable 'q' implicitly has an 'any[]' type.
+tslib.ts(240,21): error TS7034: Variable 'p' implicitly has type 'any' in some locations where its type cannot be determined.
+tslib.ts(241,24): error TS2554: Expected 2 arguments, but got 1.
+tslib.ts(241,43): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.ts(241,85): error TS2554: Expected 2 arguments, but got 1.
+tslib.ts(242,96): error TS7005: Variable 'p' implicitly has an 'any' type.
+tslib.ts(242,134): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+tslib.ts(248,119): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.ts(248,133): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.ts(248,148): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.ts(248,159): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type '{}'.
+  Property '[SymbolConstructor.asyncIterator]' does not exist on type '{}'.
+tslib.ts(249,35): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
+tslib.ts(249,98): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: unknown) => void' is not assignable to type 'void'.
+tslib.ts(258,35): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

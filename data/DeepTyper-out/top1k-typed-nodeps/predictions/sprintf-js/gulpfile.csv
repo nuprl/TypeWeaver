@@ -1,0 +1,359 @@
+'use strict'Literal.String.Single
+\n\nText.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+pkgName.Otherany0.6709string0.2138complex0.0125Promise<any>0.0063boolean0.0061
+         Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'./package.json'Literal.String.Single
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+gulpName.Otherany0.9980string0.0008complex0.0004any[]0.0003number0.0001
+        Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'gulp'Literal.String.Single
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+uglifyName.Otherany0.9546string0.0395any[]0.0018number0.0009complex0.0008
+      Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'gulp-uglify'Literal.String.Single
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+renameName.Otherany0.9908string0.0066void0.0008Function0.0003boolean0.0003
+      Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'gulp-rename'Literal.String.Single
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+sourcemapsName.Otherany0.9936boolean0.0048complex0.0007string0.0007number0.0000
+  Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'gulp-sourcemaps'Literal.String.Single
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+headerName.Otherany0.9924string0.0051complex0.0006Function0.0002void0.0002
+      Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'gulp-header'Literal.String.Single
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+eslintName.Otherany0.9919string0.0039complex0.0038any[]0.0002number0.0000
+      Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'gulp-eslint'Literal.String.Single
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+mochaName.Otherany0.9982string0.0012complex0.0005any[]0.0001{}0.0000
+       Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'gulp-mocha'Literal.String.Single
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+benchmarkName.Otherany0.9958string0.0022void0.0003any[]0.0002Function0.0002
+   Text.Whitespace
+=Operator
+ Text.Whitespace
+requireName.Other
+(Punctuation
+'gulp-benchmark'Literal.String.Single
+)Punctuation
+,Punctuation
+\n    Text.Whitespace
+bannerName.Otherstring0.9701any0.0237void0.0025boolean0.0012string[]0.0008
+      Text.Whitespace
+=Operator
+ Text.Whitespace
+'/*! <%= pkg.name %> v<%= pkg.version %> | Copyright (c) 2007-present, <%= pkg.author %> | <%= pkg.license %> */\n'Literal.String.Single
+\n\nText.Whitespace
+gulpName.Otherany0.9981complex0.0009any[]0.0003string0.0003void0.0001
+.Punctuation
+taskName.Otherany0.9992complex0.0005void0.0001string0.0001any[]0.0000
+(Punctuation
+'benchmark'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+gulpName.Otherany0.9986string0.0003complex0.0002any[]0.0002void0.0001
+\n        Text.Whitespace
+.Punctuation
+srcName.Otherany0.9989complex0.0004string0.0002void0.0001T0.0001
+(Punctuation
+'benchmark/*.js'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+readName.Otherboolean0.9971string0.0007false0.0006true0.0003void0.0003
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+}Punctuation
+)Punctuation
+\n        Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9987complex0.0005string0.0003void0.0001number0.0001
+(Punctuation
+benchmarkName.Otherany0.9973void0.0013complex0.0003string0.0003boolean0.0002
+(Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+\n\nText.Whitespace
+gulpName.Otherany0.9991complex0.0004any[]0.0002string0.0001void0.0001
+.Punctuation
+taskName.Otherany0.9995complex0.0003void0.0001string0.0000any[]0.0000
+(Punctuation
+'lint'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+gulpName.Otherany0.9987string0.0003complex0.0003any[]0.0003void0.0001
+\n        Text.Whitespace
+.Punctuation
+srcName.Otherany0.9994complex0.0002string0.0001any[]0.0001void0.0000
+(Punctuation
+'src/*.js'Literal.String.Single
+)Punctuation
+\n        Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9989string0.0004complex0.0002number0.0001boolean0.0001
+(Punctuation
+eslintName.Otherany0.9890complex0.0083string0.0019any[]0.0005{}0.0000
+(Punctuation
+)Punctuation
+)Punctuation
+\n        Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9983string0.0005complex0.0003number0.0002void0.0001
+(Punctuation
+eslintName.Otherany0.9928complex0.0059string0.0009any[]0.0002number0.0000
+.Punctuation
+formatName.Otherany0.9917string0.0070complex0.0007number0.0003any[]0.0001
+(Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+\n\nText.Whitespace
+gulpName.Otherany0.9991complex0.0003any[]0.0002string0.0001void0.0001
+.Punctuation
+taskName.Otherany0.9995complex0.0003void0.0001string0.0000any[]0.0000
+(Punctuation
+'test'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+[Punctuation
+'lint'Literal.String.Single
+]Punctuation
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+gulpName.Otherany0.9989any[]0.0002string0.0002complex0.0002void0.0001
+\n        Text.Whitespace
+.Punctuation
+srcName.Otherany0.9990complex0.0004string0.0002void0.0001any[]0.0001
+(Punctuation
+'test/*.js'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+{Punctuation
+readName.Otherboolean0.9969false0.0008string0.0007true0.0004any0.0003
+:Operator
+ Text.Whitespace
+falseKeyword.Type
+}Punctuation
+)Punctuation
+\n        Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9988complex0.0005string0.0003number0.0001void0.0001
+(Punctuation
+mochaName.Otherany0.9987complex0.0009string0.0001any[]0.0001void0.0001
+(Punctuation
+{Punctuation
+reporterName.Otherstring0.9945string[]0.0014any0.0012boolean0.0009RegExp0.0007
+:Operator
+ Text.Whitespace
+'nyan'Literal.String.Single
+}Punctuation
+)Punctuation
+)Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+\n\nText.Whitespace
+gulpName.Otherany0.9992complex0.0003any[]0.0002string0.0001number0.0001
+.Punctuation
+taskName.Otherany0.9995complex0.0003void0.0001string0.0000any[]0.0000
+(Punctuation
+'dist'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+[Punctuation
+'test'Literal.String.Single
+]Punctuation
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+gulpName.Otherany0.9984complex0.0004any[]0.0004string0.0002void0.0001
+.Punctuation
+srcName.Otherany0.9993complex0.0002string0.0002any[]0.0001void0.0001
+(Punctuation
+[Punctuation
+\n        Text.Whitespace
+'src/*.js'Literal.String.Single
+\n    Text.Whitespace
+]Punctuation
+)Punctuation
+\n        Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9981string0.0005complex0.0005number0.0001boolean0.0001
+(Punctuation
+sourcemapsName.Otherany0.9983boolean0.0009complex0.0004string0.0001number0.0000
+.Punctuation
+initName.Otherany0.9876boolean0.0081string0.0012number0.0005complex0.0003
+(Punctuation
+)Punctuation
+)Punctuation
+\n        Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9980string0.0007complex0.0002number0.0002boolean0.0001
+(Punctuation
+uglifyName.Otherany0.9803string0.0112any[]0.0042complex0.0021number0.0004
+(Punctuation
+)Punctuation
+)Punctuation
+\n        Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9979string0.0005complex0.0002number0.0002boolean0.0001
+(Punctuation
+renameName.Otherany0.9885string0.0038void0.0028complex0.0013boolean0.0005
+(Punctuation
+{Punctuation
+ Text.Whitespace
+suffixName.Otherstring0.9982RegExp0.0005any0.0005boolean0.0002number0.0002
+:Operator
+ Text.Whitespace
+'.min'Literal.String.Single
+ Text.Whitespace
+}Punctuation
+)Punctuation
+)Punctuation
+\n        Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9972complex0.0008string0.0004boolean0.0002number0.0002
+(Punctuation
+headerName.Otherany0.9677string0.0095complex0.0083void0.0045{}0.0019
+(Punctuation
+bannerName.Otherstring0.9120any0.0487void0.0250boolean0.0059string[]0.0015
+,Punctuation
+ Text.Whitespace
+{Punctuation
+pkgName.Otherstring0.4917any0.0977Package0.0366boolean0.0242Promise<any>0.0190
+:Operator
+ Text.Whitespace
+pkgKeyword.Typestring0.5478any0.1881Promise<any>0.0215boolean0.0206Package0.0184
+}Punctuation
+)Punctuation
+)Punctuation
+\n        Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9969complex0.0011string0.0005number0.0003boolean0.0002
+(Punctuation
+sourcemapsName.Otherany0.9982boolean0.0010complex0.0004string0.0001number0.0000
+.Punctuation
+writeName.Otherany0.9873complex0.0100boolean0.0006string0.0006void0.0004
+(Punctuation
+'.'Literal.String.Single
+)Punctuation
+)Punctuation
+\n        Text.Whitespace
+.Punctuation
+pipeName.Otherany0.9976string0.0008complex0.0006number0.0002void0.0002
+(Punctuation
+gulpName.Otherany0.9991complex0.0003string0.0002any[]0.0002void0.0001
+.Punctuation
+destName.Otherany0.9988string0.0005complex0.0003void0.0002number0.0000
+(Punctuation
+'dist'Literal.String.Single
+)Punctuation
+)Punctuation
+\nText.Whitespace
+}Punctuation
+)Punctuation
+\n\nText.Whitespace
+gulpName.Otherany0.9987complex0.0004any[]0.0003string0.0001void0.0001
+.Punctuation
+taskName.Otherany0.9993complex0.0004void0.0001string0.0000any[]0.0000
+(Punctuation
+'default'Literal.String.Single
+,Punctuation
+ Text.Whitespace
+[Punctuation
+'dist'Literal.String.Single
+]Punctuation
+)Punctuation
+\nText.Whitespace

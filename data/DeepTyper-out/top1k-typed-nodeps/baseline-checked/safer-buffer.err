@@ -1,0 +1,46 @@
+dangerous.ts(16,3): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+dangerous.ts(19,33): error TS2339: Property 'Buffer' does not exist on type '{}'.
+safer.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'safer' must be of type 'any', but here has type '{}'.
+safer.ts(61,38): error TS2339: Property 'binding' does not exist on type 'Process'.
+tests.ts(11,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'dangerous' must be of type '{}', but here has type 'any'.
+tests.ts(131,29): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
+  No index signature with a parameter of type 'string' was found on type '{}'.
+tests.ts(137,25): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(140,46): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(166,43): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(167,43): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(189,23): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(190,23): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(227,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(228,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(229,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(230,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(231,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(232,19): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(235,40): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(236,40): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(237,40): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(239,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(240,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(241,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(242,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(243,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(244,38): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(262,23): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(263,23): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(270,41): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(273,15): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(274,15): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(289,41): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(314,32): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(334,41): error TS2339: Property 'Buffer' does not exist on type '{}'.
+tests.ts(352,41): error TS2339: Property 'Buffer' does not exist on type '{}'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/node/ts4.8/buffer.d.ts(98,14): error TS2661: Cannot export 'Buffer'. Only local declarations can be exported from a module.
+../../../../node_modules/@types/node/ts4.8/buffer.d.ts(2209,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Buffer' must be of type 'any', but here has type 'BufferConstructor'.
+

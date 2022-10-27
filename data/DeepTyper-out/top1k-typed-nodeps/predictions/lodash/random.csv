@@ -1,0 +1,368 @@
+importKeyword
+ Text.Whitespace
+toFiniteName.Otherany0.1886string0.1785number0.1219boolean0.0619complex0.0529
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./toFinite.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/** Built-in method references without a dependency on `root`. */Comment.Multiline
+\nText.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+freeParseFloatName.Othernumber0.9652string0.0237any0.0079boolean0.0016number[]0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+parseFloatName.Builtinnumber0.9936any0.0022string0.0014boolean0.0009void0.0004
+\n\nText.Whitespace
+Text
+/**\n * Produces a random number between the inclusive `lower` and `upper` bounds.\n * If only one argument is provided a number between `0` and the given number\n * is returned. If `floating` is `true`, or either `lower` or `upper` are\n * floats, a floating-point number is returned instead of an integer.\n *\n * **Note:** JavaScript follows the IEEE-754 standard for resolving\n * floating-point values which can produce unexpected results.\n *\n * @since 0.7.0\n * @category Number\n * @param {number} [lower=0] The lower bound.\n * @param {number} [upper=1] The upper bound.\n * @param {boolean} [floating] Specify returning a floating-point number.\n * @returns {number} Returns the random number.\n * @see uniqueId\n * @example\n *\n * random(0, 5)\n * // => an integer between 0 and 5\n *\n * random(5)\n * // => also an integer between 0 and 5\n *\n * random(5, true)\n * // => a floating-point number between 0 and 5\n *\n * random(1.2, 5.2)\n * // => a floating-point number between 1.2 and 5.2\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+randomName.Othernumber0.7168any0.1537void0.0388complex0.0194boolean0.0175
+(Punctuation
+lowerName.Othernumber0.7976string0.0993any0.0984boolean0.0012Date0.0003
+,Punctuation
+ Text.Whitespace
+upperName.Othernumber0.6335string0.2006any0.1584boolean0.0019Error0.0005
+,Punctuation
+ Text.Whitespace
+floatingName.Otherstring0.9753any0.0200number0.0033string[]0.0002boolean0.0002
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+floatingName.Otherstring0.8506any0.1382number0.0083complex0.0006boolean0.0004
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+upperName.Otherany0.8058number0.0954string0.0745complex0.0047{}0.0032
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'boolean'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+floatingName.Otherstring0.6261any0.3611number0.0090complex0.0007boolean0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+upperName.Otherany0.7049string0.2087number0.0736{}0.0027Error0.0014
+\n      Text.Whitespace
+upperName.Otherany0.5877string0.2879number0.1098{}0.0025Error0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+elseKeyword
+ Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+lowerName.Othernumber0.5539any0.3852string0.0436complex0.0052boolean0.0034
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'boolean'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+floatingName.Otherstring0.5726any0.4046number0.0188boolean0.0007void0.0006
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+lowerName.Othernumber0.6606any0.1892string0.1456boolean0.0019void0.0005
+\n      Text.Whitespace
+lowerName.Othernumber0.6778any0.1943string0.1233boolean0.0016undefined0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+lowerName.Othernumber0.8732any0.0908string0.0301boolean0.0037void0.0004
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+upperName.Otherany0.5346number0.3269string0.1271boolean0.0031complex0.0014
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+lowerName.Othernumber0.9702any0.0262string0.0026boolean0.0003void0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+\n    Text.Whitespace
+upperName.Othernumber0.9039any0.0869string0.0070boolean0.0004complex0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+1Literal.Number.Float
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+lowerName.Othernumber0.9353any0.0463string0.0165boolean0.0006void0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+toFiniteName.Othernumber0.7239any0.1302string0.1285complex0.0041void0.0025
+(Punctuation
+lowerName.Othernumber0.9540any0.0317string0.0130boolean0.0003void0.0003
+)Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+upperName.Otherany0.5708number0.3002string0.1147boolean0.0038{}0.0017
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+undefinedKeyword.Constant
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+upperName.Othernumber0.6533any0.2978string0.0434boolean0.0010{}0.0005
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+lowerName.Othernumber0.9528any0.0419string0.0044boolean0.0003void0.0001
+\n      Text.Whitespace
+lowerName.Othernumber0.9768any0.0205string0.0021boolean0.0002void0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+upperName.Otherany0.4628number0.4235string0.0944{}0.0023boolean0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+toFiniteName.Othernumber0.5010string0.2378any0.2342complex0.0049void0.0029
+(Punctuation
+upperName.Othernumber0.4296any0.4183string0.1360{}0.0035complex0.0012
+)Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+lowerName.Othernumber0.9373any0.0563string0.0033boolean0.0019complex0.0004
+ Text.Whitespace
+>Operator
+ Text.Whitespace
+upperName.Othernumber0.8485any0.1139string0.0283boolean0.0029complex0.0011
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+tempName.Othernumber0.7156any0.2437string0.0226boolean0.0070complex0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+lowerName.Othernumber0.9590any0.0350string0.0044boolean0.0009complex0.0001
+\n    Text.Whitespace
+lowerName.Othernumber0.9731any0.0227string0.0029boolean0.0007complex0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+upperName.Othernumber0.6374any0.3001string0.0531complex0.0016boolean0.0015
+\n    Text.Whitespace
+upperName.Othernumber0.6579any0.2424string0.0921boolean0.0010complex0.0007
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+tempName.Othernumber0.6314any0.2989string0.0551boolean0.0036complex0.0028
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+floatingName.Otherstring0.6935any0.2476number0.0531complex0.0018boolean0.0016
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+lowerName.Othernumber0.9685any0.0292string0.0014boolean0.0006complex0.0001
+ Text.Whitespace
+%Operator
+ Text.Whitespace
+1Literal.Number.Float
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+upperName.Othernumber0.9559any0.0398string0.0031boolean0.0006complex0.0001
+ Text.Whitespace
+%Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+randName.Othernumber0.9625any0.0273string0.0048boolean0.0044complex0.0003
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+MathName.BuiltinMath1.0000number0.0000any0.0000string[]0.0000ArrayConstructor0.0000
+.Punctuation
+randomName.Othernumber0.9978boolean0.0006any0.0006string0.0004complex0.0003
+(Punctuation
+)Punctuation
+\n    Text.Whitespace
+constKeyword.Declaration
+ Text.Whitespace
+randLengthName.Otherstring0.6318number0.3153any0.0429boolean0.0052string[]0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+`Literal.String.Backtick
+${Literal.String.Interpol
+randName.Othernumber0.9395any0.0468string0.0083boolean0.0033number[]0.0003
+}Literal.String.Interpol
+`Literal.String.Backtick
+.Punctuation
+lengthName.Othernumber0.9817any0.0168string0.0008complex0.0002boolean0.0002
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+1Literal.Number.Float
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+MathName.BuiltinMath0.9999number0.0000complex0.0000string[]0.0000number[]0.0000
+.Punctuation
+minName.Othernumber0.9955any0.0020complex0.0015string0.0004boolean0.0002
+(Punctuation
+lowerName.Othernumber0.9899any0.0089string0.0009boolean0.0001void0.0001
+ Text.Whitespace
++Operator
+ Text.Whitespace
+(Punctuation
+randName.Othernumber0.9066any0.0866string0.0048boolean0.0009void0.0002
+ Text.Whitespace
+*Operator
+ Text.Whitespace
+(Punctuation
+upperName.Othernumber0.9071any0.0726string0.0189complex0.0005boolean0.0002
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+lowerName.Othernumber0.9833any0.0137string0.0027complex0.0001boolean0.0001
+ Text.Whitespace
++Operator
+ Text.Whitespace
+freeParseFloatName.Othernumber0.9210string0.0529any0.0191complex0.0026boolean0.0017
+(Punctuation
+`Literal.String.Backtick
+1e-Literal.String.Backtick
+${Literal.String.Interpol
+randLengthName.Othernumber0.8476string0.1241any0.0168boolean0.0070complex0.0012
+}Literal.String.Interpol
+`Literal.String.Backtick
+)Punctuation
+)Punctuation
+)Punctuation
+,Punctuation
+ Text.Whitespace
+upperName.Othernumber0.9183any0.0592string0.0188boolean0.0006{}0.0006
+)Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+lowerName.Othernumber0.9820any0.0145string0.0028boolean0.0003void0.0001
+ Text.Whitespace
++Operator
+ Text.Whitespace
+MathName.BuiltinMath1.0000number0.0000complex0.0000NumberConstructor0.0000ArrayConstructor0.0000
+.Punctuation
+floorName.Othernumber0.9991any0.0003string0.0002boolean0.0002complex0.0000
+(Punctuation
+MathName.BuiltinMath1.0000ArrayConstructor0.0000number0.0000DateConstructor0.0000string[]0.0000
+.Punctuation
+randomName.Othernumber0.9989any0.0004boolean0.0002string0.0002complex0.0001
+(Punctuation
+)Punctuation
+ Text.Whitespace
+*Operator
+ Text.Whitespace
+(Punctuation
+upperName.Othernumber0.9340any0.0571string0.0071complex0.0003Date0.0002
+ Text.Whitespace
+-Operator
+ Text.Whitespace
+lowerName.Othernumber0.9918any0.0071string0.0007boolean0.0001void0.0001
+ Text.Whitespace
++Operator
+ Text.Whitespace
+1Literal.Number.Float
+)Punctuation
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+randomName.Othernumber0.7946any0.1202complex0.0115void0.0111string0.0045
+\nText.Whitespace

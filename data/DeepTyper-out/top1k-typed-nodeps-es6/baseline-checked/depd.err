@@ -1,0 +1,60 @@
+benchmark/wrapfunction.ts(6,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+benchmark/wrapfunction.ts(8,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
+benchmark/wrapfunction.ts(15,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
+benchmark/wrapproperty.ts(6,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+benchmark/wrapproperty.ts(8,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
+benchmark/wrapproperty.ts(15,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
+index.ts(29,42): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
+index.ts(38,7): error TS2322: Type 'boolean' is not assignable to type 'string'.
+index.ts(42,3): error TS2322: Type 'boolean' is not assignable to type 'string'.
+index.ts(50,7): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'PropertyDescriptor'.
+  Type 'undefined' is not assignable to type 'PropertyDescriptor'.
+index.ts(86,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(86,40): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(88,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(89,29): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(103,16): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
+index.ts(114,9): error TS2554: Expected 3 arguments, but got 2.
+index.ts(126,3): error TS2322: Type '{ (message: any): any; _file: any; _ignored: boolean; _namespace: any; _traced: any; _warned: any; function: (fn: any, message: string) => any; property: (obj: any, prop: any, message: string) => void; }' is not assignable to type 'void'.
+index.ts(141,40): error TS7006: Parameter 'type' implicitly has an 'any' type.
+index.ts(153,21): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
+index.ts(154,15): error TS2339: Property 'noDeprecation' does not exist on type 'Process'.
+index.ts(162,3): error TS2322: Type 'string' is not assignable to type 'boolean'.
+index.ts(169,20): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
+index.ts(189,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(200,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(222,29): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(223,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(233,35): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(238,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(250,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(259,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(302,5): error TS2322: Type 'undefined' is not assignable to type 'string'.
+index.ts(323,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(327,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(347,42): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(352,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(393,24): error TS2339: Property 'stack' does not exist on type '{}'.
+index.ts(430,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(444,7): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'PropertyDescriptor'.
+  Type 'undefined' is not assignable to type 'PropertyDescriptor'.
+index.ts(454,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(473,14): error TS2532: Object is possibly 'undefined'.
+index.ts(473,14): error TS2684: The 'this' context of type '(() => any) | undefined' is not assignable to method's 'this' of type '(this: PropertyDescriptor) => any'.
+  Type 'undefined' is not assignable to type '(this: PropertyDescriptor) => any'.
+index.ts(481,14): error TS2532: Object is possibly 'undefined'.
+index.ts(481,14): error TS2684: The 'this' context of type '((v: any) => void) | undefined' is not assignable to method's 'this' of type '(this: PropertyDescriptor, v: any) => void'.
+  Type 'undefined' is not assignable to type '(this: PropertyDescriptor, v: any) => void'.
+index.ts(492,28): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
+lib/browser/index.ts(20,16): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
+lib/browser/index.ts(29,3): error TS7005: Variable '_file' implicitly has an 'any' type.
+lib/browser/index.ts(38,3): error TS2322: Type '{ (message: string): any; _file: any; _ignored: boolean; _namespace: any; _traced: boolean; _warned: any; function: (fn: any, message: string) => any; property: (obj: any, prop: string, message: string) => void; }' is not assignable to type 'void'.
+lib/browser/index.ts(68,7): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'PropertyDescriptor'.
+  Type 'undefined' is not assignable to type 'PropertyDescriptor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

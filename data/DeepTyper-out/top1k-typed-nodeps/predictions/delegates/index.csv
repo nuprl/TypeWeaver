@@ -1,0 +1,769 @@
+Text
+/**\n * Expose `Delegator`.\n */Comment.Multiline
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+DelegatorName.Otherany0.6075string0.0167complex0.0138symbol0.0100string[]0.0046
+;Punctuation
+\n\nText.Whitespace
+/**\n * Initialize a delegator.\n *\n * @param {Object} proto\n * @param {String} target\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+DelegatorName.Otherany0.6749void0.0744string0.0310complex0.0162boolean0.0127
+(Punctuation
+protoName.Otherany0.9470string0.0071Object0.0037object0.0034Error0.0030
+,Punctuation
+ Text.Whitespace
+targetName.Otherany0.3912Object0.1834Target0.0740string0.0441Function0.0351
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+(Punctuation
+thisKeyword
+ Text.Whitespace
+instanceofOperator.Word
+ Text.Whitespace
+DelegatorName.Otherany0.9922complex0.0032string0.0008Object0.0003Error0.0003
+)Punctuation
+)Punctuation
+ Text.Whitespace
+returnKeyword
+ Text.Whitespace
+newOperator.Wordany0.9422string0.0109Error0.0054complex0.0035void0.0009
+ Text.Whitespace
+DelegatorName.Otherany0.9963complex0.0015void0.0012string0.0002Error0.0001
+(Punctuation
+protoName.Otherany0.9865Object0.0016complex0.0016Error0.0015void0.0007
+,Punctuation
+ Text.Whitespace
+targetName.Otherany0.2834Object0.2178Target0.2074Function0.0418object0.0201
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+protoName.Otherany0.8910Object0.0068void0.0038Error0.0036complex0.0034
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+protoName.Otherany0.9843Object0.0019complex0.0015Error0.0012string0.0007
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+targetName.Otherany0.4536Object0.1416Function0.1214Target0.0850EventTarget0.0158
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+targetName.Otherany0.4061Object0.2110Function0.1253Target0.0613string0.0139
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+methodsName.Otherany[]0.4677any0.1272string[]0.0454Function[]0.0162any[][]0.0155
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+gettersName.Otherany[]0.4113any0.2546any[][]0.0218string[]0.0160Object0.0131
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+settersName.Otherany[]0.5642complex0.0843T[]0.0523any[][]0.0412any0.0378
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+fluentsName.Otherany0.3145any[]0.2457complex0.0407Function[]0.0231any[][]0.0171
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+[Punctuation
+]Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+Text
+/**\n * Automatically delegate properties\n * from a target prototype\n *\n * @param {Object} proto\n * @param {object} targetProto\n * @param {String} targetProp\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+DelegatorName.Otherany0.8394complex0.0156void0.0041Object0.0018PropertyDescriptor0.0017
+.Punctuation
+autoName.Othervoid0.6078any0.3783complex0.0048boolean0.0026Function0.0012
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+protoName.Otherany0.9656Object0.0058object0.0025string0.0021Error0.0019
+,Punctuation
+ Text.Whitespace
+targetProtoName.Otherany0.8791Object0.0116string0.0082void0.0056boolean0.0051
+,Punctuation
+ Text.Whitespace
+targetPropName.Otherany0.9118boolean0.0107string0.0101Object0.0060void0.0049
+)Punctuation
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+delegatorName.Otherany0.7101Object0.0205any[]0.0181void0.0150boolean0.0133
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+DelegatorName.Otherany0.6221void0.0846complex0.0818boolean0.0309Object0.0301
+(Punctuation
+protoName.Otherany0.9518Object0.0145complex0.0060object0.0034Error0.0025
+,Punctuation
+ Text.Whitespace
+targetPropName.Otherany0.8859Object0.0207void0.0131string0.0106complex0.0084
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+propertiesName.Otherstring[]0.9817any[]0.0088Object0.0018string0.0009any0.0008
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998Object0.0000Object[]0.0000ArrayConstructor0.0000PropertyDescriptor0.0000
+.Punctuation
+getOwnPropertyNamesName.Otherstring[]0.9975string0.0003any[]0.0002number[]0.0002complex0.0002
+(Punctuation
+targetProtoName.Otherany0.7191string[]0.0487Object0.0240void0.0237complex0.0225
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+forKeyword
+ Text.Whitespace
+(Punctuation
+varKeyword.Declaration
+ Text.Whitespace
+iName.Othernumber0.9927any0.0053string0.0012boolean0.0001number[]0.0001
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+0Literal.Number.Float
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9730any0.0217string0.0031void0.0004boolean0.0002
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+propertiesName.Otherstring[]0.9522string[][]0.0073any[]0.0048T[]0.0012Function[]0.0009
+.Punctuation
+lengthName.Othernumber0.9733any0.0239string0.0010void0.0006boolean0.0003
+;Punctuation
+ Text.Whitespace
+iName.Othernumber0.9723any0.0247string0.0020void0.0003boolean0.0002
+++Operator
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+propertyName.Otherstring0.7291any0.2204string[]0.0141Object0.0049complex0.0037
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+propertiesName.Otherstring[]0.9222any[]0.0091any0.0065Object0.0051string[][]0.0041
+[Punctuation
+iName.Othernumber0.9438string0.0280any0.0233void0.0007Object0.0006
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+descriptorName.OtherPropertyDescriptor0.9904any0.0013Object0.0004complex0.0002void0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9995PropertyDescriptor0.0001Object0.0001Object[]0.0000any0.0000
+.Punctuation
+getOwnPropertyDescriptorName.Othercomplex0.9920any0.0019void0.0014PropertyDescriptor0.0008Object0.0004
+(Punctuation
+targetProtoName.Otherany0.4521PropertyDescriptor0.2266Object0.0187void0.0152string0.0095
+,Punctuation
+ Text.Whitespace
+propertyName.Otherstring0.6087any0.2287complex0.0545PropertyDescriptor0.0135string[]0.0130
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+descriptorName.OtherPropertyDescriptor0.9702any0.0038complex0.0014void0.0011Object0.0003
+.Punctuation
+getName.Other
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+delegatorName.Otherany0.6452PropertyDescriptor0.0532T0.0080void0.0065Tensor<Rank>0.0035
+.Punctuation
+getterName.Otherany0.5230T0.3872void0.0483complex0.0125string0.0044
+(Punctuation
+propertyName.Otherstring0.4778any0.4080complex0.0283string[]0.0098{}0.0043
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+descriptorName.OtherPropertyDescriptor0.9461any0.0166complex0.0030void0.0030boolean0.0005
+.Punctuation
+setName.Other
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+delegatorName.Otherany0.8360PropertyDescriptor0.0253complex0.0025void0.0022Function0.0019
+.Punctuation
+setterName.Othervoid0.7431any0.2309Function0.0058string0.0050complex0.0046
+(Punctuation
+propertyName.Otherstring0.6720any0.2377complex0.0302string[]0.0064Object0.0033
+)Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+descriptorName.OtherPropertyDescriptor0.9420any0.0177complex0.0017void0.0006Node0.0006
+.Punctuation
+hasOwnPropertyName.Othercomplex0.5099any0.4641string0.0049void0.0048boolean0.0039
+(Punctuation
+'value'Literal.String.Single
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+// could be undefined but writableComment.Single
+\n      Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+valueName.Otherany0.9203complex0.0215string0.0143number0.0066void0.0065
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+descriptorName.OtherPropertyDescriptor0.8894any0.0632complex0.0046void0.0023Event0.0009
+.Punctuation
+valueName.Otherany0.8657string0.0775complex0.0241Object0.0048number0.0041
+;Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+valueName.Otherany0.9231complex0.0394string0.0144Object0.0056Function0.0025
+ Text.Whitespace
+instanceofOperator.Word
+ Text.Whitespace
+FunctionName.BuiltinFunctionConstructor0.9980Function0.0010any0.0003Function[]0.0001Object0.0001
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+delegatorName.Otherany0.7985Object0.0038PropertyDescriptor0.0033Function[]0.0026Function0.0023
+.Punctuation
+methodName.Othervoid0.4773any0.2850complex0.0991string0.0407Function0.0374
+(Punctuation
+propertyName.Otherstring0.7897any0.1464complex0.0239string[]0.0057Object0.0029
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+delegatorName.Otherany0.5236PropertyDescriptor0.0059void0.0041complex0.0032Tensor<Rank>0.0031
+.Punctuation
+getterName.Otherany0.5887T0.2829void0.0568complex0.0158string0.0095
+(Punctuation
+propertyName.Otherstring0.6029any0.3050complex0.0237string[]0.0064Object0.0044
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n      Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+descriptorName.OtherPropertyDescriptor0.8871any0.0262complex0.0048void0.0015TypedPropertyDescriptor0.0009
+.Punctuation
+writableName.Otherboolean0.4606any0.3651number0.0759string0.0430void0.0402
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n        Text.Whitespace
+delegatorName.Otherany0.9156void0.0043PropertyDescriptor0.0040complex0.0036Function0.0015
+.Punctuation
+setterName.Othervoid0.8383any0.1503Function0.0025complex0.0020string0.0020
+(Punctuation
+propertyName.Otherstring0.6177any0.3043complex0.0139Object0.0065string[]0.0063
+)Punctuation
+;Punctuation
+\n      Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Delegate method `name`.\n *\n * @param {String} name\n * @return {Delegator} self\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+DelegatorName.Otherany0.7083void0.1227complex0.0267Function0.0175Object0.0056
+.Punctuation
+prototypeName.Otherany0.6367Object0.0343Function0.0188void0.0164Observable<any>0.0088
+.Punctuation
+methodName.Otherany0.5842void0.2137complex0.0626string0.0424Function0.0360
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nameName.Otherany0.6743string0.3158complex0.0024string[]0.0005void0.0005
+)Punctuation
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+protoName.Otherany0.9658Object0.0057complex0.0022Function0.0015number0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+protoName.Otherany0.9581Object0.0062complex0.0028number0.0019object0.0017
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+targetName.Otherany0.6082Object0.1316Function0.0979HTMLElement0.0155number0.0090
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+targetName.Otherany0.4791Object0.1960Function0.1692number0.0190HTMLElement0.0105
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+methodsName.Otherany[]0.2571string[]0.1405any0.1248Function[]0.1167void)[]0.0497
+.Punctuation
+pushName.Othernumber0.9611any0.0242void0.0088boolean0.0013Function0.0010
+(Punctuation
+nameName.Otherstring0.5549any0.4274void0.0018complex0.0016string[]0.0013
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+protoName.Otherany0.9623complex0.0129Object0.0092{}0.0032object0.0017
+[Punctuation
+nameName.Otherstring0.7228any0.2669number0.0022complex0.0013void0.0007
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+[Punctuation
+targetName.Otherany0.4819Object0.2696Function0.0364number0.0296string0.0267
+]Punctuation
+[Punctuation
+nameName.Otherstring0.5975any0.3879complex0.0015number0.0015void0.0012
+]Punctuation
+.Punctuation
+applyName.Otherany0.9879Function0.0026void0.0024complex0.0016number0.0015
+(Punctuation
+thisKeyword
+[Punctuation
+targetName.Otherany0.3689Object0.2845string0.0424Function0.0384HTMLElement0.0269
+]Punctuation
+,Punctuation
+ Text.Whitespace
+argumentsName.OtherIArguments0.9917any[]0.0007string[]0.0002any0.0001Expression[]0.0001
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Delegator accessor `name`.\n *\n * @param {String} name\n * @return {Delegator} self\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+DelegatorName.Otherany0.6148void0.0219Function0.0215complex0.0148Object0.0073
+.Punctuation
+prototypeName.Otherany0.4880Object0.0390Function0.0168String0.0099void0.0065
+.Punctuation
+accessName.Otherany0.8073string0.0395Promise<any>0.0228Function0.0110boolean0.0100
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nameName.Otherany0.6493string0.3260complex0.0016never0.0012void0.0011
+)Punctuation
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+.Punctuation
+getterName.Otherany0.4747T0.4692complex0.0105void0.0083Promise<any>0.0054
+(Punctuation
+nameName.Otherany0.5669string0.4135complex0.0022void0.0021never0.0014
+)Punctuation
+.Punctuation
+setterName.Othervoid0.5414any0.4308string0.0072Function0.0035complex0.0034
+(Punctuation
+nameName.Otherany0.5671string0.4048string[]0.0026void0.0024complex0.0019
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Delegator getter `name`.\n *\n * @param {String} name\n * @return {Delegator} self\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+DelegatorName.Otherany0.7073void0.0905complex0.0229Function0.0168Object0.0041
+.Punctuation
+prototypeName.Otherany0.6397Object0.0208Function0.0127void0.0114String0.0061
+.Punctuation
+getterName.Otherany0.7153T0.1803void0.0219string0.0151complex0.0106
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nameName.Otherany0.6672string0.3184complex0.0015never0.0008Error0.0007
+)Punctuation
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+protoName.Otherany0.9671Object0.0042complex0.0012object0.0012void0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+protoName.Otherany0.9451Object0.0064object0.0024complex0.0021void0.0018
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+targetName.Otherany0.5295Object0.1777Function0.1078HTMLElement0.0111number0.0106
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+targetName.Otherany0.4416Object0.2136Function0.1772number0.0278string0.0123
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+gettersName.Otherany0.3405any[]0.3277string[]0.0396Function[]0.0312Object0.0265
+.Punctuation
+pushName.Othernumber0.9355any0.0540void0.0056string0.0011boolean0.0007
+(Punctuation
+nameName.Otherstring0.6090any0.3781complex0.0016string[]0.0013void0.0012
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+protoName.Otherany0.9893Object0.0022complex0.0015void0.0012Function0.0008
+.Punctuation
+__defineGetter__Name.Otherany0.9248void0.0272complex0.0165Object0.0074Function0.0049
+(Punctuation
+nameName.Otherstring0.5719any0.4172number0.0014complex0.0013string[]0.0010
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+)Punctuation
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+[Punctuation
+targetName.Otherany0.4666Object0.2416string0.0406Function0.0288number0.0272
+]Punctuation
+[Punctuation
+nameName.Otherstring0.5714any0.4121number0.0025complex0.0021void0.0019
+]Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Delegator setter `name`.\n *\n * @param {String} name\n * @return {Delegator} self\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+DelegatorName.Otherany0.7525void0.0620complex0.0326Function0.0108Object0.0055
+.Punctuation
+prototypeName.Otherany0.5548Object0.0368void0.0141Function0.0104String0.0074
+.Punctuation
+setterName.Othervoid0.5571any0.4100string0.0065complex0.0050Function0.0033
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+nameName.Otherany0.6661string0.3181complex0.0014string[]0.0009void0.0008
+)Punctuation
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+protoName.Otherany0.9122Object0.0107number0.0032object0.0029complex0.0027
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+protoName.Otherany0.8861Object0.0093object0.0047number0.0034complex0.0033
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+targetName.Otherany0.3725Object0.1576Function0.1227HTMLElement0.0339EventTarget0.0200
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+targetName.Otherany0.4312Object0.1757Function0.1180number0.0322string0.0236
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+settersName.Otherany[]0.5296string[]0.1766any0.0289complex0.0212T[]0.0187
+.Punctuation
+pushName.Othernumber0.9740any0.0176void0.0036complex0.0010string0.0009
+(Punctuation
+nameName.Otherstring0.7799any0.2030complex0.0024string[]0.0022never0.0010
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+protoName.Otherany0.9888complex0.0026Object0.0019void0.0012Function0.0010
+.Punctuation
+__defineSetter__Name.Otherany0.9172complex0.0386void0.0186Function0.0053Object0.0037
+(Punctuation
+nameName.Otherstring0.7827any0.2079complex0.0017number0.0011string[]0.0008
+,Punctuation
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+valName.Otherany0.7858string0.1670number0.0149boolean0.0098Object0.0038
+)Punctuation
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+[Punctuation
+targetName.Otherany0.4347Object0.2857string0.0729number0.0416Function0.0383
+]Punctuation
+[Punctuation
+nameName.Otherstring0.7821any0.2028number0.0031complex0.0025never0.0012
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valName.Otherany0.8034string0.1204number0.0214boolean0.0094complex0.0061
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+/**\n * Delegator fluent accessor\n *\n * @param {String} name\n * @return {Delegator} self\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+DelegatorName.Otherany0.6266void0.0753complex0.0464Function0.0184Object0.0067
+.Punctuation
+prototypeName.Otherany0.4084Object0.0551Function0.0144String0.0122void0.0096
+.Punctuation
+fluentName.Otherany0.5437void0.0557complex0.0325Object0.0251Function0.0140
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+(Punctuation
+nameName.Otherstring0.5023any0.4748complex0.0023string[]0.0019never0.0013
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+protoName.Otherany0.8928Object0.0135void0.0035complex0.0035object0.0031
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+protoName.Otherany0.9067Object0.0109complex0.0039object0.0033number0.0031
+;Punctuation
+\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+targetName.Otherany0.3815Object0.2143Function0.1028HTMLElement0.0177number0.0130
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+thisKeyword
+.Punctuation
+targetName.Otherany0.3369Object0.2606Function0.1553number0.0313string0.0177
+;Punctuation
+\n  Text.Whitespace
+thisKeyword
+.Punctuation
+fluentsName.Otherany0.2886any[]0.1817string[]0.1585Function[]0.1184void)[]0.0221
+.Punctuation
+pushName.Othernumber0.9595any0.0307void0.0056boolean0.0011string0.0011
+(Punctuation
+nameName.Otherstring0.6115any0.3728complex0.0025string[]0.0022void0.0013
+)Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+protoName.Otherany0.9410complex0.0275Object0.0098{}0.0056object0.0044
+[Punctuation
+nameName.Otherstring0.8241any0.1665complex0.0019number0.0015void0.0010
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+(Punctuation
+valName.Otherany0.8655string0.1006boolean0.0041number0.0037Function0.0021
+)Punctuation
+{Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+'undefined'Literal.String.Single
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+valName.Otherany0.9063string0.0267number0.0188boolean0.0109complex0.0071
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+thisKeyword
+[Punctuation
+targetName.Otherany0.5412Object0.1782string0.0533number0.0531Function0.0270
+]Punctuation
+[Punctuation
+nameName.Otherstring0.7983any0.1897number0.0033complex0.0018never0.0007
+]Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+valName.Otherany0.8580string0.0785number0.0272boolean0.0053complex0.0050
+;Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+ Text.Whitespace
+elseKeyword
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+[Punctuation
+targetName.Otherany0.3270Object0.3054string0.0544number0.0310object0.0225
+]Punctuation
+[Punctuation
+nameName.Otherstring0.7734any0.2065number0.0031never0.0023complex0.0020
+]Punctuation
+;Punctuation
+\n    Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+}Punctuation
+;Punctuation
+\n\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+thisKeyword
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\nText.Whitespace

@@ -1,0 +1,260 @@
+importKeyword
+ Text.Whitespace
+castPathName.Otherany0.2198complex0.1232boolean0.0981string0.0490void0.0431
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/castPath.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isArgumentsName.Otherany0.2432boolean0.1927complex0.1086string0.0983void0.0649
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isArguments.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isIndexName.Otherany0.2798boolean0.2435string0.1496complex0.0685void0.0551
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/isIndex.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+isLengthName.Otherany0.8796complex0.0959string0.0202void0.0010boolean0.0005
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./isLength.js'Literal.String.Single
+\nText.Whitespace
+importKeyword
+ Text.Whitespace
+toKeyName.Otherstring0.8188any0.0733complex0.0717number0.0054boolean0.0049
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+'./.internal/toKey.js'Literal.String.Single
+\n\nText.Whitespace
+Text
+/**\n * Checks if `path` is a direct property of `object`.\n *\n * @since 5.0.0\n * @category Object\n * @param {Object} object The object to query.\n * @param {Array|string} path The path to check.\n * @returns {boolean} Returns `true` if `path` exists, else `false`.\n * @see has, hasIn hasPath\n * @example\n *\n * const object = { 'a': { 'b': 2 } }\n * const other = create({ 'a': create({ 'b': 2 }) })\n *\n * hasPathIn(object, 'a.b')\n * // => true\n *\n * hasPathIn(object, ['a', 'b'])\n * // => true\n */Comment.Multiline
+\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+hasPathInName.Otherstring0.4778boolean0.1914any0.1260complex0.0817string[]0.0408
+(Punctuation
+objectName.Otherany0.7656Object0.1165object0.0507string0.0300complex0.0105
+,Punctuation
+ Text.Whitespace
+pathName.Otherstring0.8709any0.1049string[]0.0056complex0.0034Path0.0024
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+pathName.Otherstring0.7088any0.2625complex0.0080string[]0.0063number0.0043
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+castPathName.Otherstring0.5663any0.2349complex0.0826boolean0.0364number0.0246
+(Punctuation
+pathName.Otherstring0.6842any0.2752complex0.0161string[]0.0062number0.0044
+,Punctuation
+ Text.Whitespace
+objectName.Otherany0.8038Object0.0671object0.0555complex0.0375string0.0125
+)Punctuation
+\n\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+indexName.Othernumber0.9741any0.0237string0.0014boolean0.0003complex0.0002
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+-Operator
+1Literal.Number.Float
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+{Punctuation
+ Text.Whitespace
+lengthName.Othernumber0.9596any0.0374string0.0015complex0.0005boolean0.0004
+ Text.Whitespace
+}Punctuation
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+pathName.Otherany0.5710string0.3855complex0.0249number0.0077boolean0.0026
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+resultName.Otherboolean0.9311any0.0434string0.0121number0.0082complex0.0014
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+falseKeyword.Constant
+\n  Text.Whitespace
+letKeyword.Declaration
+ Text.Whitespace
+keyName.Otherstring0.7170any0.2429number0.0217complex0.0110boolean0.0055
+\n\n  Text.Whitespace
+whileKeyword
+ Text.Whitespace
+(Punctuation
+++Operator
+indexName.Othernumber0.9754any0.0211string0.0023complex0.0005boolean0.0003
+ Text.Whitespace
+<Operator
+ Text.Whitespace
+lengthName.Othernumber0.9736any0.0233string0.0021boolean0.0004complex0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+keyName.Otherstring0.7353any0.2278number0.0184boolean0.0104complex0.0059
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+toKeyName.Otherstring0.8463any0.1305complex0.0129number0.0036boolean0.0030
+(Punctuation
+pathName.Otherany0.5296string[]0.1980string0.1427complex0.0502any[]0.0312
+[Punctuation
+indexName.Othernumber0.9368any0.0517string0.0097complex0.0007boolean0.0005
+]Punctuation
+)Punctuation
+\n    Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+(Punctuation
+resultName.Otherany0.6134boolean0.3251string0.0218number0.0153complex0.0047
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objectName.Otherany0.7988Object0.1305object0.0201number0.0117complex0.0101
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+keyName.Otherstring0.8033any0.1616complex0.0127number0.0103boolean0.0097
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9966Object0.0021complex0.0003any0.0002{}0.0001
+(Punctuation
+objectName.Otherany0.7466Object0.1564object0.0379complex0.0258string0.0093
+)Punctuation
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n      Text.Whitespace
+breakKeyword
+\n    Text.Whitespace
+}Punctuation
+\n    Text.Whitespace
+objectName.Otherany0.6173Object0.2660object0.0552{}0.0125complex0.0115
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objectName.Otherany0.6855Object0.1877object0.0382complex0.0372{}0.0186
+[Punctuation
+keyName.Otherstring0.9094any0.0706number0.0096complex0.0079boolean0.0006
+]Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+resultName.Otherany0.8043boolean0.0726number0.0580string0.0446complex0.0104
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+++Operator
+indexName.Othernumber0.9564any0.0376string0.0044complex0.0007boolean0.0004
+ Text.Whitespace
+!=Operator
+ Text.Whitespace
+lengthName.Othernumber0.9697any0.0275string0.0018complex0.0003boolean0.0003
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+returnKeyword
+ Text.Whitespace
+resultName.Otherany0.7399boolean0.1190string0.0826number0.0371complex0.0072
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+lengthName.Othernumber0.7631any0.2214string0.0075boolean0.0029complex0.0021
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+objectName.Otherany0.8830Object0.0466number0.0341complex0.0116object0.0071
+ Text.Whitespace
+==Operator
+ Text.Whitespace
+nullKeyword.Constant
+ Text.Whitespace
+?Operator
+ Text.Whitespace
+0Name.Other
+ Text.Whitespace
+:Operator
+ Text.Whitespace
+object.lengthKeyword.Type
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+!Operator
+!Operator
+lengthName.Othernumber0.6149any0.3690string0.0107boolean0.0040complex0.0005
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+isLengthName.Otherany0.9803complex0.0146string0.0038boolean0.0005number0.0003
+(Punctuation
+lengthName.Othernumber0.8885any0.1056string0.0027boolean0.0014complex0.0008
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+isIndexName.Otherboolean0.9350any0.0382string0.0090complex0.0074number0.0035
+(Punctuation
+keyName.Otherstring0.7414any0.2337number0.0118complex0.0088boolean0.0023
+,Punctuation
+ Text.Whitespace
+lengthName.Othernumber0.9355any0.0603string0.0023boolean0.0007complex0.0004
+)Punctuation
+ Text.Whitespace
+&&Operator
+\n    Text.Whitespace
+(Punctuation
+ArrayName.BuiltinArrayConstructor0.9998Math0.0000ObjectConstructor0.0000any0.0000complex0.0000
+.Punctuation
+isArrayName.Othercomplex0.9961any0.0015boolean0.0008void0.0003any[]0.0002
+(Punctuation
+objectName.Otherany0.7679Object0.1374complex0.0442object0.0214number0.0052
+)Punctuation
+ Text.Whitespace
+||Operator
+ Text.Whitespace
+isArgumentsName.Otherboolean0.6410any0.1195complex0.1010string0.0270number0.0257
+(Punctuation
+objectName.Otherany0.6412Object0.2005complex0.0659object0.0353{}0.0153
+)Punctuation
+)Punctuation
+\nText.Whitespace
+}Punctuation
+\n\nText.Whitespace
+exportKeyword
+ Text.Whitespace
+defaultKeyword
+ Text.Whitespace
+hasPathInName.Otherany0.2466complex0.0543void0.0254any[]0.0175boolean0.0162
+\nText.Whitespace

@@ -1,0 +1,296 @@
+Text
+/*!\n * copy-descriptor <https://github.com/jonschlinkert/copy-descriptor>\n *\n * Copyright (c) 2015, Jon Schlinkert.\n * Licensed under the MIT License.\n */Comment.Multiline
+\n\nText.Whitespace
+'use strict'Literal.String.Single
+;Punctuation
+\n\nText.Whitespace
+/**\n * Copy a descriptor from one object to another.\n *\n * ```js\n * function App() {\n *   this.cache = {};\n * }\n * App.prototype.set = function(key, val) {\n *   this.cache[key] = val;\n *   return this;\n * };\n * Object.defineProperty(App.prototype, 'count', {\n *   get: function() {\n *     return Object.keys(this.cache).length;\n *   }\n * });\n *\n * copy(App.prototype, 'count', 'len');\n *\n * // create an instance\n * var app = new App();\n *\n * app.set('a', true);\n * app.set('b', true);\n * app.set('c', true);\n *\n * console.log(app.count);\n * //=> 3\n * console.log(app.len);\n * //=> 3\n * ```\n * @name copy\n * @param {Object} `receiver` The target object\n * @param {Object} `provider` The provider object\n * @param {String} `from` The key to copy on provider.\n * @param {String} `to` Optionally specify a new key name to use.\n * @return {Object}\n * @api public\n */Comment.Multiline
+\n\nText.Whitespace
+moduleKeyword.Reserved
+.exportsName.Other
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+copyDescriptorName.Othervoid0.5681any0.2257string0.0767complex0.0242boolean0.0135
+(Punctuation
+receiverName.Otherany0.5864string0.3166number0.0097complex0.0038String0.0037
+,Punctuation
+ Text.Whitespace
+providerName.Otherany0.6576string0.1288number0.0151boolean0.0083Provider0.0060
+,Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+,Punctuation
+ Text.Whitespace
+toName.Otherany0.7731string0.1761number0.0284complex0.0035boolean0.0031
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+isObjectName.Otherboolean0.9341any0.0302complex0.0212void0.0028false0.0018
+(Punctuation
+providerName.Otherany0.8126string0.0816complex0.0121number0.0096boolean0.0064
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+providerName.Otherany0.8561string0.0645complex0.0101number0.0064boolean0.0029
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+toName.Otherany0.9577string0.0284number0.0039complex0.0011any[]0.0010
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+fromKeyword.Reserved
+;Punctuation
+\n    Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+providerName.Otherany0.7158string0.1950number0.0113complex0.0032Error0.0030
+;Punctuation
+\n    Text.Whitespace
+providerName.Otherany0.8213string0.1087number0.0046complex0.0025boolean0.0024
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+receiverName.Otherany0.6199string0.3097complex0.0131number0.0084boolean0.0056
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+isObjectName.Otherboolean0.9137complex0.0583any0.0167void0.0025false0.0011
+(Punctuation
+receiverName.Otherany0.7592string0.1739complex0.0237boolean0.0076number0.0045
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+receiverName.Otherany0.6840string0.2460complex0.0127number0.0076boolean0.0043
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.7488complex0.1368Error0.0414boolean0.0161{}0.0147
+ Text.Whitespace
+newOperator.Wordany0.5839complex0.0880boolean0.0700string0.0508Error0.0308
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9920ErrorConstructor0.0017BooleanConstructor0.0002MapConstructor0.0001complex0.0001
+(Punctuation
+'expected the first argument to be an object'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+isObjectName.Otherboolean0.8906complex0.0734any0.0221void0.0034string0.0009
+(Punctuation
+providerName.Otherany0.8285string0.0466complex0.0357number0.0059boolean0.0045
+)Punctuation
+ Text.Whitespace
+&&Operator
+ Text.Whitespace
+typeofOperator.Word
+ Text.Whitespace
+providerName.Otherany0.8477string0.0397complex0.0219number0.0079Error0.0047
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'function'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.6765complex0.1706Error0.0646boolean0.0186string0.0176
+ Text.Whitespace
+newOperator.Wordany0.5648complex0.1048boolean0.0540string0.0533Error0.0352
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9912ErrorConstructor0.0018BooleanConstructor0.0002MapConstructor0.0001complex0.0001
+(Punctuation
+'expected provider to be an object'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+toName.Otherany0.7822string0.1166complex0.0555number0.0147never0.0092
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+toName.Otherany0.9458string0.0278number0.0168complex0.0025Object0.0011
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+fromKeyword.Reserved
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+typeofOperator.Word
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
+!==Operator
+ Text.Whitespace
+'string'Literal.String.Single
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.6362complex0.2058Error0.0616boolean0.0249string0.0153
+ Text.Whitespace
+newOperator.Wordany0.5238complex0.1129boolean0.0697string0.0576Error0.0471
+ Text.Whitespace
+TypeErrorName.ExceptionTypeErrorConstructor0.9911ErrorConstructor0.0023BooleanConstructor0.0002MapConstructor0.0001complex0.0001
+(Punctuation
+'expected key to be a string'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+!Operator
+(Punctuation
+fromKeyword.Reserved
+ Text.Whitespace
+inOperator.Word
+ Text.Whitespace
+providerName.Otherany0.6494complex0.0354string0.0267Error0.0133number0.0071
+)Punctuation
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n    Text.Whitespace
+throwKeywordany0.6588Error0.2662complex0.0322string0.0168{}0.0046
+ Text.Whitespace
+newOperator.Wordany0.3729ErrorConstructor0.2587Error0.2516string0.0520complex0.0102
+ Text.Whitespace
+ErrorName.ExceptionErrorConstructor1.0000Error0.0000any0.0000never0.0000complex0.0000
+(Punctuation
+'property "'Literal.String.Single
+ Text.Whitespace
++Operator
+ Text.Whitespace
+fromKeyword.Reserved
+ Text.Whitespace
++Operator
+ Text.Whitespace
+'" does not exist'Literal.String.Single
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+}Punctuation
+\n\n  Text.Whitespace
+varKeyword.Declaration
+ Text.Whitespace
+valName.OtherObject0.3531any0.2962PropertyDescriptor0.0693object0.0392{}0.0361
+ Text.Whitespace
+=Operator
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9999PropertyDescriptor0.0000Object0.0000Object[]0.0000DateConstructor0.0000
+.Punctuation
+getOwnPropertyDescriptorName.Othercomplex0.9913any0.0028void0.0021string0.0003number0.0003
+(Punctuation
+providerName.Otherany0.7787string0.0672complex0.0131PropertyDescriptor0.0116void0.0051
+,Punctuation
+ Text.Whitespace
+fromKeyword.Reserved
+)Punctuation
+;Punctuation
+\n  Text.Whitespace
+ifKeyword
+ Text.Whitespace
+(Punctuation
+valName.Otherany0.6825boolean0.1283string0.0739Object0.0236number0.0174
+)Punctuation
+ Text.Whitespace
+ObjectName.BuiltinObjectConstructor0.9998Object0.0000PropertyDescriptor0.0000Object[]0.0000any0.0000
+.Punctuation
+definePropertyName.Othercomplex0.9757void0.0113any0.0029boolean0.0021string0.0015
+(Punctuation
+receiverName.Otherany0.6157string0.1785complex0.0355Object0.0145{}0.0118
+,Punctuation
+ Text.Whitespace
+toName.Otherany0.6379string0.2660number0.0243complex0.0236Object0.0072
+,Punctuation
+ Text.Whitespace
+valName.Otherany0.8432boolean0.0367string0.0259{}0.0170Object0.0168
+)Punctuation
+;Punctuation
+\nText.Whitespace
+}Punctuation
+;Punctuation
+\n\nText.Whitespace
+functionKeyword.Declaration
+ Text.Whitespace
+isObjectName.Otherboolean0.9301any0.0327complex0.0185{}0.0029void0.0017
+(Punctuation
+valName.Otherany0.8893boolean0.0255string0.0254Object0.0125{}0.0081
+)Punctuation
+ Text.Whitespace
+{Punctuation
+\n  Text.Whitespace
+returnKeyword
+ Text.Whitespace
+{Punctuation
+}Punctuation
+.Punctuation
+toStringName.Otherstring0.9022any0.0821boolean0.0019complex0.0019number0.0017
+.Punctuation
+callName.Otherany0.9575string0.0143void0.0084boolean0.0063complex0.0028
+(Punctuation
+valName.Otherany0.8485string0.0677Date0.0191boolean0.0085number0.0077
+)Punctuation
+ Text.Whitespace
+===Operator
+ Text.Whitespace
+'[object Object]'Literal.String.Single
+;Punctuation
+\nText.Whitespace
+}Punctuation
+\nText.Whitespace
