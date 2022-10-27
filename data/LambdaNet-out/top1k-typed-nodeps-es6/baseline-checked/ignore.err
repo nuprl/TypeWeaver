@@ -1,0 +1,101 @@
+index.ts(2,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(2,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(23,7): error TS2322: Type 'symbol | "node-ignore"' is not assignable to type 'String'.
+  Type 'symbol' is not assignable to type 'String'.
+index.ts(29,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
+index.ts(39,3): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(match: Number, from: String, to: String) => String | Number' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
+      Types of parameters 'match' and 'substring' are incompatible.
+        Type 'string' is not assignable to type 'Number'.
+index.ts(47,49): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(63,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(147,30): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(177,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(177,47): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+index.ts(227,95): error TS2367: This condition will always return 'false' since the types 'Number' and 'String' have no overlap.
+index.ts(230,9): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+index.ts(260,35): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(294,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(294,34): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(298,31): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(301,16): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(314,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(323,5): error TS7006: Parameter 'origin' implicitly has an 'any' type.
+index.ts(324,5): error TS7006: Parameter 'pattern' implicitly has an 'any' type.
+index.ts(325,5): error TS7006: Parameter 'negative' implicitly has an 'any' type.
+index.ts(326,5): error TS7006: Parameter 'regex' implicitly has an 'any' type.
+index.ts(328,10): error TS2339: Property 'origin' does not exist on type 'IgnoreRule'.
+index.ts(329,10): error TS2339: Property 'pattern' does not exist on type 'IgnoreRule'.
+index.ts(330,10): error TS2339: Property 'negative' does not exist on type 'IgnoreRule'.
+index.ts(331,10): error TS2339: Property 'regex' does not exist on type 'IgnoreRule'.
+index.ts(364,13): error TS2351: This expression is not constructable.
+  Type 'Object' has no construct signatures.
+index.ts(381,17): error TS2339: Property 'isNotRelative' does not exist on type 'Function'.
+index.ts(392,80): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(394,11): error TS2300: Duplicate identifier 'isNotRelative'.
+index.ts(394,11): error TS2339: Property 'isNotRelative' does not exist on type 'Function'.
+index.ts(395,11): error TS2339: Property 'convert' does not exist on type 'Function'.
+index.ts(399,5): error TS7022: 'ignorecase' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
+index.ts(405,10): error TS2339: Property '_rules' does not exist on type 'Ignore'.
+index.ts(406,10): error TS2339: Property '_ignoreCase' does not exist on type 'Ignore'.
+index.ts(407,10): error TS2339: Property '_allowRelativePaths' does not exist on type 'Ignore'.
+index.ts(412,10): error TS2339: Property '_ignoreCache' does not exist on type 'Ignore'.
+index.ts(413,10): error TS2339: Property '_testCache' does not exist on type 'Ignore'.
+index.ts(416,16): error TS7006: Parameter 'pattern' implicitly has an 'any' type.
+index.ts(418,28): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(419,12): error TS2339: Property '_rules' does not exist on type 'Ignore'.
+index.ts(419,26): error TS2339: Property '_rules' does not exist on type 'Ignore'.
+index.ts(420,12): error TS2339: Property '_added' does not exist on type 'Ignore'.
+index.ts(425,53): error TS2339: Property '_ignoreCase' does not exist on type 'Ignore'.
+index.ts(426,12): error TS2339: Property '_added' does not exist on type 'Ignore'.
+index.ts(427,12): error TS2339: Property '_rules' does not exist on type 'Ignore'.
+index.ts(432,8): error TS7006: Parameter 'pattern' implicitly has an 'any' type.
+index.ts(433,10): error TS2339: Property '_added' does not exist on type 'Ignore'.
+index.ts(443,14): error TS2339: Property '_added' does not exist on type 'Ignore'.
+index.ts(451,15): error TS7006: Parameter 'pattern' implicitly has an 'any' type.
+index.ts(471,13): error TS7006: Parameter 'path' implicitly has an 'any' type.
+index.ts(471,19): error TS7006: Parameter 'checkUnignored' implicitly has an 'any' type.
+index.ts(475,10): error TS2339: Property '_rules' does not exist on type 'Ignore'.
+index.ts(476,14): error TS2339: Property 'negative' does not exist on type 'IgnoreRule'.
+index.ts(484,37): error TS2339: Property 'regex' does not exist on type 'IgnoreRule'.
+index.ts(499,10): error TS7006: Parameter 'originalPath' implicitly has an 'any' type.
+index.ts(499,24): error TS7006: Parameter 'cache' implicitly has an 'any' type.
+index.ts(499,31): error TS7006: Parameter 'checkUnignored' implicitly has an 'any' type.
+index.ts(499,47): error TS7006: Parameter 'slices' implicitly has an 'any' type.
+index.ts(502,20): error TS2339: Property 'convert' does not exist on type 'Function'.
+index.ts(507,12): error TS2339: Property '_allowRelativePaths' does not exist on type 'Ignore'.
+index.ts(515,7): error TS7006: Parameter 'path' implicitly has an 'any' type.
+index.ts(515,13): error TS7006: Parameter 'cache' implicitly has an 'any' type.
+index.ts(515,20): error TS7006: Parameter 'checkUnignored' implicitly has an 'any' type.
+index.ts(515,36): error TS7006: Parameter 'slices' implicitly has an 'any' type.
+index.ts(541,33): error TS2551: Property 'ignored' does not exist on type 'Ignore'. Did you mean 'ignores'?
+index.ts(548,12): error TS7006: Parameter 'path' implicitly has an 'any' type.
+index.ts(549,17): error TS2554: Expected 4 arguments, but got 3.
+index.ts(549,34): error TS2339: Property '_ignoreCache' does not exist on type 'Ignore'.
+index.ts(556,11): error TS7006: Parameter 'paths' implicitly has an 'any' type.
+index.ts(561,9): error TS7006: Parameter 'path' implicitly has an 'any' type.
+index.ts(562,17): error TS2554: Expected 4 arguments, but got 3.
+index.ts(562,34): error TS2339: Property '_testCache' does not exist on type 'Ignore'.
+index.ts(569,31): error TS2339: Property 'convert' does not exist on type 'Function'.
+index.ts(571,9): error TS2339: Property 'isPathValid' does not exist on type 'Function'.
+index.ts(574,9): error TS2339: Property 'default' does not exist on type 'Function'.
+index.ts(590,65): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(591,35): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(595,13): error TS2339: Property 'convert' does not exist on type 'Function'.
+index.ts(600,13): error TS2300: Duplicate identifier 'isNotRelative'.
+index.ts(600,13): error TS2339: Property 'isNotRelative' does not exist on type 'Function'.
+index.ts(601,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

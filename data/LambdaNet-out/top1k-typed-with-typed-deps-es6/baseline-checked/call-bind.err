@@ -1,0 +1,37 @@
+callBound.ts(8,82): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+callBound.ts(9,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+callBound.ts(9,38): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(name: keyof Intrinsics, allowMissing?: false | undefined): any', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'keyof Intrinsics'.
+  Overload 2 of 3, '(name: keyof Intrinsics, allowMissing?: boolean | undefined): any', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'keyof Intrinsics'.
+  Overload 3 of 3, '(name: string, allowMissing?: boolean | undefined): unknown', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(6,5): error TS2322: Type '(this: Function, thisArg: any, argArray?: any) => any' is not assignable to type 'String'.
+index.ts(7,5): error TS2322: Type '(this: Function, thisArg: any, ...argArray: any[]) => any' is not assignable to type 'String'.
+index.ts(8,82): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(func: (this: String, ...args: unknown[]) => unknown, thisArg: String): (...args: readonly unknown[]) => unknown', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type '(this: String, ...args: unknown[]) => unknown'.
+      Type 'String' provides no match for the signature '(this: String, ...args: unknown[]): unknown'.
+  Overload 2 of 2, '(func: new (...args: unknown[]) => unknown, thisArg: unknown): new (...args: readonly unknown[]) => unknown', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'new (...args: unknown[]) => unknown'.
+      Type 'String' provides no match for the signature 'new (...args: unknown[]): unknown'.
+index.ts(10,5): error TS2322: Type '((o: any, p: PropertyKey) => PropertyDescriptor | undefined) | undefined' is not assignable to type 'Function'.
+  Type 'undefined' is not assignable to type 'Function'.
+index.ts(11,5): error TS2322: Type '(<T>(o: T, p: PropertyKey, attributes: PropertyDescriptor & ThisType<any>) => T) | undefined' is not assignable to type 'Function'.
+  Type 'undefined' is not assignable to type 'Function'.
+index.ts(19,3): error TS2322: Type 'null' is not assignable to type 'Function'.
+index.ts(23,52): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(23,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(24,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(26,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(39,49): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(46,5): error TS1184: Modifiers cannot appear here.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

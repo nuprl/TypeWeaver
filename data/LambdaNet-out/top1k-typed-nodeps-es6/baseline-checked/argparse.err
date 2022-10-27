@@ -1,0 +1,1005 @@
+argparse.ts(90,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(92,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(99,19): error TS2532: Object is possibly 'undefined'.
+argparse.ts(104,5): error TS2322: Type 'boolean' is not assignable to type 'String'.
+argparse.ts(104,57): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
+argparse.ts(108,43): error TS2538: Type 'String' cannot be used as an index type.
+argparse.ts(111,64): error TS2304: Cannot find name 'Void'.
+argparse.ts(112,12): error TS2538: Type 'String' cannot be used as an index type.
+argparse.ts(116,40): error TS2538: Type 'String' cannot be used as an index type.
+argparse.ts(117,19): error TS2538: Type 'String' cannot be used as an index type.
+argparse.ts(120,49): error TS2304: Cannot find name 'Void'.
+argparse.ts(121,19): error TS2538: Type 'String' cannot be used as an index type.
+argparse.ts(124,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(126,35): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+argparse.ts(126,39): error TS2322: Type 'number' is not assignable to type 'String'.
+argparse.ts(132,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(134,36): error TS2322: Type 'number' is not assignable to type 'never'.
+argparse.ts(136,36): error TS2322: Type 'number' is not assignable to type 'never'.
+argparse.ts(141,62): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(142,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(147,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(156,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(158,71): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+argparse.ts(162,72): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(163,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(163,38): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(splitter: { [Symbol.split](string: string, limit?: number | undefined): string[]; }, limit?: number | undefined): string[]', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.split](string: string, limit?: number | undefined): string[]; }'.
+      Property '[Symbol.split]' is missing in type 'String' but required in type '{ [Symbol.split](string: string, limit?: number | undefined): string[]; }'.
+  Overload 2 of 2, '(separator: string | RegExp, limit?: number | undefined): string[]', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
+argparse.ts(170,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(170,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(178,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(178,53): error TS2304: Cannot find name 'Void'.
+argparse.ts(180,41): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(187,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(192,43): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'Object'.
+  Property '[SymbolConstructor.iterator]' does not exist on type 'Object'.
+argparse.ts(193,27): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(iterable: Iterable<unknown> | ArrayLike<unknown>): unknown[]', gave the following error.
+    Argument of type 'Object' is not assignable to parameter of type 'Iterable<unknown> | ArrayLike<unknown>'.
+      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Overload 2 of 4, '(arrayLike: ArrayLike<unknown>): unknown[]', gave the following error.
+    Argument of type 'Object' is not assignable to parameter of type 'ArrayLike<unknown>'.
+      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+        Property 'length' is missing in type 'Object' but required in type 'ArrayLike<unknown>'.
+argparse.ts(197,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(204,14): error TS2339: Property 'name' does not exist on type 'Object'.
+argparse.ts(204,31): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
+argparse.ts(206,38): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+argparse.ts(209,5): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+argparse.ts(209,16): error TS2339: Property 'name' does not exist on type 'Object'.
+argparse.ts(209,38): error TS2339: Property 'prototype' does not exist on type 'Object'.
+argparse.ts(211,9): error TS2339: Property 'prototype' does not exist on type 'Object'.
+argparse.ts(211,45): error TS2339: Property 'name' does not exist on type 'Object'.
+argparse.ts(212,12): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+argparse.ts(212,23): error TS2339: Property 'name' does not exist on type 'Object'.
+argparse.ts(215,60): error TS2304: Cannot find name 'Void'.
+argparse.ts(218,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
+argparse.ts(219,42): error TS2538: Type 'String' cannot be used as an index type.
+argparse.ts(219,47): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(228,56): error TS2339: Property 'prototype' does not exist on type 'Object'.
+argparse.ts(229,63): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+argparse.ts(230,47): error TS2339: Property 'prototype' does not exist on type 'Object'.
+argparse.ts(232,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+argparse.ts(236,40): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+argparse.ts(250,5): error TS2322: Type 'symbol' is not assignable to type 'Number'.
+argparse.ts(251,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(251,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(253,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(253,28): error TS2532: Object is possibly 'undefined'.
+argparse.ts(256,22): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+argparse.ts(257,34): error TS2531: Object is possibly 'null'.
+argparse.ts(266,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(275,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(278,34): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
+argparse.ts(283,17): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+argparse.ts(283,38): error TS2538: Type 'String' cannot be used as an index type.
+argparse.ts(286,27): error TS2538: Type 'String' cannot be used as an index type.
+argparse.ts(292,34): error TS7031: Binding element 'a' implicitly has an 'any' type.
+argparse.ts(292,37): error TS7031: Binding element 'b' implicitly has an 'any' type.
+argparse.ts(296,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(303,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(307,29): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
+argparse.ts(311,36): error TS2538: Type 'String' cannot be used as an index type.
+argparse.ts(311,48): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+argparse.ts(314,32): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+argparse.ts(320,46): error TS7031: Binding element 'a' implicitly has an 'any' type.
+argparse.ts(320,49): error TS7031: Binding element 'b' implicitly has an 'any' type.
+argparse.ts(330,33): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(332,25): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+argparse.ts(333,20): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+argparse.ts(344,29): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(351,29): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(360,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(363,29): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(371,49): error TS2304: Cannot find name 'Void'.
+argparse.ts(372,19): error TS2538: Type 'String' cannot be used as an index type.
+argparse.ts(372,39): error TS2538: Type 'String' cannot be used as an index type.
+argparse.ts(372,71): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(373,19): error TS2538: Type 'String' cannot be used as an index type.
+argparse.ts(380,27): error TS2740: Type 'ObjectConstructor' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+argparse.ts(390,43): error TS2507: Type 'String' is not a constructor function type.
+argparse.ts(402,21): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
+  No index signature with a parameter of type 'string' was found on type '{}'.
+argparse.ts(426,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+argparse.ts(460,41): error TS2339: Property 'columns' does not exist on type 'Object'.
+argparse.ts(464,14): error TS2339: Property '_prog' does not exist on type 'HelpFormatter'.
+argparse.ts(465,14): error TS2339: Property '_indent_increment' does not exist on type 'HelpFormatter'.
+argparse.ts(466,14): error TS2339: Property '_max_help_position' does not exist on type 'HelpFormatter'.
+argparse.ts(468,14): error TS2339: Property '_width' does not exist on type 'HelpFormatter'.
+argparse.ts(470,14): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(471,14): error TS2339: Property '_level' does not exist on type 'HelpFormatter'.
+argparse.ts(472,14): error TS2339: Property '_action_max_length' does not exist on type 'HelpFormatter'.
+argparse.ts(474,14): error TS2339: Property '_root_section' does not exist on type 'HelpFormatter'.
+argparse.ts(474,35): error TS2339: Property '_Section' does not exist on type 'HelpFormatter'.
+argparse.ts(475,14): error TS2339: Property '_current_section' does not exist on type 'HelpFormatter'.
+argparse.ts(475,38): error TS2339: Property '_root_section' does not exist on type 'HelpFormatter'.
+argparse.ts(477,14): error TS2339: Property '_whitespace_matcher' does not exist on type 'HelpFormatter'.
+argparse.ts(478,14): error TS2339: Property '_long_break_matcher' does not exist on type 'HelpFormatter'.
+argparse.ts(485,14): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(485,38): error TS2339: Property '_indent_increment' does not exist on type 'HelpFormatter'.
+argparse.ts(486,14): error TS2339: Property '_level' does not exist on type 'HelpFormatter'.
+argparse.ts(490,14): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(490,38): error TS2339: Property '_indent_increment' does not exist on type 'HelpFormatter'.
+argparse.ts(491,21): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(492,14): error TS2339: Property '_level' does not exist on type 'HelpFormatter'.
+argparse.ts(495,15): error TS7006: Parameter 'func' implicitly has an 'any' type.
+argparse.ts(495,21): error TS7006: Parameter 'args' implicitly has an 'any' type.
+argparse.ts(496,14): error TS2339: Property '_current_section' does not exist on type 'HelpFormatter'.
+argparse.ts(502,19): error TS7006: Parameter 'heading' implicitly has an 'any' type.
+argparse.ts(504,28): error TS2339: Property '_Section' does not exist on type 'HelpFormatter'.
+argparse.ts(504,48): error TS2339: Property '_current_section' does not exist on type 'HelpFormatter'.
+argparse.ts(506,14): error TS2339: Property '_current_section' does not exist on type 'HelpFormatter'.
+argparse.ts(510,14): error TS2339: Property '_current_section' does not exist on type 'HelpFormatter'.
+argparse.ts(510,38): error TS2339: Property '_current_section' does not exist on type 'HelpFormatter'.
+argparse.ts(514,14): error TS7006: Parameter 'text' implicitly has an 'any' type.
+argparse.ts(520,15): error TS7006: Parameter 'usage' implicitly has an 'any' type.
+argparse.ts(520,22): error TS7006: Parameter 'actions' implicitly has an 'any' type.
+argparse.ts(520,31): error TS7006: Parameter 'groups' implicitly has an 'any' type.
+argparse.ts(527,18): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(532,35): error TS2802: Type 'Generator<any, void, any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+argparse.ts(538,58): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(539,18): error TS2339: Property '_action_max_length' does not exist on type 'HelpFormatter'.
+argparse.ts(539,53): error TS2339: Property '_action_max_length' does not exist on type 'HelpFormatter'.
+argparse.ts(547,19): error TS7006: Parameter 'actions' implicitly has an 'any' type.
+argparse.ts(557,25): error TS2339: Property '_root_section' does not exist on type 'HelpFormatter'.
+argparse.ts(559,38): error TS2339: Property '_long_break_matcher' does not exist on type 'HelpFormatter'.
+argparse.ts(565,17): error TS7006: Parameter 'part_strings' implicitly has an 'any' type.
+argparse.ts(566,36): error TS7006: Parameter 'part' implicitly has an 'any' type.
+argparse.ts(569,19): error TS7006: Parameter 'usage' implicitly has an 'any' type.
+argparse.ts(569,26): error TS7006: Parameter 'actions' implicitly has an 'any' type.
+argparse.ts(569,35): error TS7006: Parameter 'groups' implicitly has an 'any' type.
+argparse.ts(569,43): error TS7006: Parameter 'prefix' implicitly has an 'any' type.
+argparse.ts(576,45): error TS2339: Property '_prog' does not exist on type 'HelpFormatter'.
+argparse.ts(580,50): error TS2339: Property '_prog' does not exist on type 'HelpFormatter'.
+argparse.ts(584,53): error TS2339: Property '_prog' does not exist on type 'HelpFormatter'.
+argparse.ts(598,69): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
+    Argument of type 'any[]' is not assignable to parameter of type 'ConcatArray<never>'.
+      The types returned by 'slice(...)' are incompatible between these types.
+        Type 'any[]' is not assignable to type 'never[]'.
+          Type 'any' is not assignable to type 'never'.
+  Overload 2 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
+    Argument of type 'any[]' is not assignable to parameter of type 'ConcatArray<never>'.
+argparse.ts(598,87): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
+    Argument of type 'any[]' is not assignable to parameter of type 'ConcatArray<never>'.
+  Overload 2 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
+    Argument of type 'any[]' is not assignable to parameter of type 'ConcatArray<never>'.
+argparse.ts(602,35): error TS2339: Property '_width' does not exist on type 'HelpFormatter'.
+argparse.ts(602,49): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(615,34): error TS7006: Parameter 'parts' implicitly has an 'any' type.
+argparse.ts(615,41): error TS7006: Parameter 'indent' implicitly has an 'any' type.
+argparse.ts(620,43): error TS2339: Property 'length' does not exist on type 'never'.
+argparse.ts(642,21): error TS7034: Variable 'lines' implicitly has type 'any[]' in some locations where its type cannot be determined.
+argparse.ts(659,43): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
+    Argument of type 'RegExpMatchArray' is not assignable to parameter of type 'ConcatArray<never>'.
+      The types returned by 'slice(...)' are incompatible between these types.
+        Type 'string[]' is not assignable to type 'never[]'.
+          Type 'string' is not assignable to type 'never'.
+  Overload 2 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
+    Argument of type 'RegExpMatchArray' is not assignable to parameter of type 'ConcatArray<never>'.
+argparse.ts(659,61): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
+    Argument of type 'RegExpMatchArray' is not assignable to parameter of type 'ConcatArray<never>'.
+  Overload 2 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
+    Argument of type 'RegExpMatchArray' is not assignable to parameter of type 'ConcatArray<never>'.
+argparse.ts(663,33): error TS7005: Variable 'lines' implicitly has an 'any[]' type.
+argparse.ts(678,27): error TS7006: Parameter 'actions' implicitly has an 'any' type.
+argparse.ts(678,36): error TS7006: Parameter 'groups' implicitly has an 'any' type.
+argparse.ts(694,29): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+argparse.ts(696,29): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+argparse.ts(699,29): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+argparse.ts(701,29): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+argparse.ts(705,29): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+argparse.ts(707,29): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+argparse.ts(710,29): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+argparse.ts(712,29): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+argparse.ts(716,25): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+argparse.ts(728,17): error TS2571: Object is of type 'unknown'.
+argparse.ts(730,21): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
+  No index signature with a parameter of type 'number' was found on type '{}'.
+argparse.ts(731,28): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
+  No index signature with a parameter of type 'number' was found on type '{}'.
+argparse.ts(732,28): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
+  No index signature with a parameter of type 'number' was found on type '{}'.
+argparse.ts(733,28): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
+  No index signature with a parameter of type 'number' was found on type '{}'.
+argparse.ts(737,25): error TS2571: Object is of type 'unknown'.
+argparse.ts(753,37): error TS2571: Object is of type 'unknown'.
+argparse.ts(758,21): error TS2571: Object is of type 'unknown'.
+argparse.ts(759,28): error TS2571: Object is of type 'unknown'.
+argparse.ts(770,22): error TS2571: Object is of type 'unknown'.
+argparse.ts(781,33): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
+  No index signature with a parameter of type 'number' was found on type '{}'.
+argparse.ts(791,51): error TS2554: Expected 2 arguments, but got 3.
+argparse.ts(798,18): error TS7006: Parameter 'text' implicitly has an 'any' type.
+argparse.ts(800,43): error TS2339: Property '_prog' does not exist on type 'HelpFormatter'.
+argparse.ts(802,40): error TS2339: Property '_width' does not exist on type 'HelpFormatter'.
+argparse.ts(802,54): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(803,38): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(807,20): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(809,43): error TS2339: Property '_action_max_length' does not exist on type 'HelpFormatter'.
+argparse.ts(810,43): error TS2339: Property '_max_help_position' does not exist on type 'HelpFormatter'.
+argparse.ts(811,40): error TS2339: Property '_width' does not exist on type 'HelpFormatter'.
+argparse.ts(812,49): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(818,30): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(823,30): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(829,30): error TS2339: Property '_current_indent' does not exist on type 'HelpFormatter'.
+argparse.ts(852,31): error TS2802: Type 'Generator<any, void, any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+argparse.ts(860,31): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(867,17): error TS7034: Variable 'parts' implicitly has type 'any[]' in some locations where its type cannot be determined.
+argparse.ts(872,25): error TS7005: Variable 'parts' implicitly has an 'any[]' type.
+argparse.ts(888,24): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(888,32): error TS7006: Parameter 'default_metavar' implicitly has an 'any' type.
+argparse.ts(889,13): error TS7034: Variable 'result' implicitly has type 'any' in some locations where its type cannot be determined.
+argparse.ts(899,25): error TS7006: Parameter 'tuple_size' implicitly has an 'any' type.
+argparse.ts(900,31): error TS7005: Variable 'result' implicitly has an 'any' type.
+argparse.ts(903,47): error TS7005: Variable 'result' implicitly has an 'any' type.
+argparse.ts(909,18): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(909,26): error TS7006: Parameter 'default_metavar' implicitly has an 'any' type.
+argparse.ts(934,27): error TS2554: Expected 2-3 arguments, but got 1.
+argparse.ts(943,18): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(944,49): error TS2339: Property '_prog' does not exist on type 'HelpFormatter'.
+argparse.ts(963,24): error TS2538: Type 'String' cannot be used as an index type.
+argparse.ts(970,33): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(978,18): error TS7006: Parameter 'text' implicitly has an 'any' type.
+argparse.ts(978,24): error TS7006: Parameter 'width' implicitly has an 'any' type.
+argparse.ts(979,34): error TS2339: Property '_whitespace_matcher' does not exist on type 'HelpFormatter'.
+argparse.ts(986,16): error TS7006: Parameter 'text' implicitly has an 'any' type.
+argparse.ts(986,22): error TS7006: Parameter 'width' implicitly has an 'any' type.
+argparse.ts(986,29): error TS7006: Parameter 'indent' implicitly has an 'any' type.
+argparse.ts(987,34): error TS2339: Property '_whitespace_matcher' does not exist on type 'HelpFormatter'.
+argparse.ts(994,22): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(998,39): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(1002,41): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(1007,15): error TS2339: Property 'prototype' does not exist on type 'Object'.
+argparse.ts(1009,17): error TS7006: Parameter 'formatter' implicitly has an 'any' type.
+argparse.ts(1009,28): error TS7006: Parameter 'parent' implicitly has an 'any' type.
+argparse.ts(1010,14): error TS2339: Property 'formatter' does not exist on type '_Section'.
+argparse.ts(1011,14): error TS2339: Property 'parent' does not exist on type '_Section'.
+argparse.ts(1012,14): error TS2339: Property 'heading' does not exist on type '_Section'.
+argparse.ts(1013,14): error TS2339: Property 'items' does not exist on type '_Section'.
+argparse.ts(1018,18): error TS2339: Property 'parent' does not exist on type '_Section'.
+argparse.ts(1019,18): error TS2339: Property 'formatter' does not exist on type '_Section'.
+argparse.ts(1021,30): error TS2339: Property 'formatter' does not exist on type '_Section'.
+argparse.ts(1021,57): error TS2339: Property 'items' does not exist on type '_Section'.
+argparse.ts(1021,70): error TS7031: Binding element 'func' implicitly has an 'any' type.
+argparse.ts(1021,76): error TS7031: Binding element 'args' implicitly has an 'any' type.
+argparse.ts(1022,18): error TS2339: Property 'parent' does not exist on type '_Section'.
+argparse.ts(1023,18): error TS2339: Property 'formatter' does not exist on type '_Section'.
+argparse.ts(1033,18): error TS2339: Property 'heading' does not exist on type '_Section'.
+argparse.ts(1033,47): error TS2339: Property 'heading' does not exist on type '_Section'.
+argparse.ts(1034,39): error TS2339: Property 'formatter' does not exist on type '_Section'.
+argparse.ts(1035,64): error TS2339: Property 'heading' does not exist on type '_Section'.
+argparse.ts(1041,21): error TS2339: Property 'formatter' does not exist on type '_Section'.
+argparse.ts(1046,7): error TS2322: Type 'String' is not assignable to type 'Number'.
+argparse.ts(1046,114): error TS2507: Type 'Object' is not a constructor function type.
+argparse.ts(1054,16): error TS7006: Parameter 'text' implicitly has an 'any' type.
+argparse.ts(1054,22): error TS7006: Parameter 'width' implicitly has an 'any' type.
+argparse.ts(1054,29): error TS7006: Parameter 'indent' implicitly has an 'any' type.
+argparse.ts(1055,43): error TS7006: Parameter 'line' implicitly has an 'any' type.
+argparse.ts(1060,100): error TS2507: Type 'Number' is not a constructor function type.
+argparse.ts(1068,18): error TS7006: Parameter 'text' implicitly has an 'any' type.
+argparse.ts(1074,7): error TS2322: Type 'String' is not assignable to type 'Number'.
+argparse.ts(1074,118): error TS2507: Type 'Object' is not a constructor function type.
+argparse.ts(1082,22): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(1098,7): error TS2322: Type 'String' is not assignable to type 'Number'.
+argparse.ts(1098,108): error TS2507: Type 'Object' is not a constructor function type.
+argparse.ts(1107,39): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(1111,41): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(1120,51): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+argparse.ts(1123,25): error TS2339: Property 'option_strings' does not exist on type 'HTMLElement'.
+argparse.ts(1124,25): error TS2339: Property 'option_strings' does not exist on type 'HTMLElement'.
+argparse.ts(1125,59): error TS2339: Property 'metavar' does not exist on type 'HTMLElement'.
+argparse.ts(1126,25): error TS2339: Property 'metavar' does not exist on type 'HTMLElement'.
+argparse.ts(1127,59): error TS2339: Property 'dest' does not exist on type 'HTMLElement'.
+argparse.ts(1128,25): error TS2339: Property 'dest' does not exist on type 'HTMLElement'.
+argparse.ts(1143,17): error TS7006: Parameter 'argument' implicitly has an 'any' type.
+argparse.ts(1143,27): error TS7006: Parameter 'message' implicitly has an 'any' type.
+argparse.ts(1146,14): error TS2339: Property '_argument_name' does not exist on type 'ArgumentError'.
+argparse.ts(1147,14): error TS2551: Property '_message' does not exist on type 'ArgumentError'. Did you mean 'message'?
+argparse.ts(1148,9): error TS2322: Type 'String' is not assignable to type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(1153,18): error TS2339: Property '_argument_name' does not exist on type 'ArgumentError'.
+argparse.ts(1158,44): error TS2551: Property '_message' does not exist on type 'ArgumentError'. Did you mean 'message'?
+argparse.ts(1159,50): error TS2339: Property '_argument_name' does not exist on type 'ArgumentError'.
+argparse.ts(1169,17): error TS7006: Parameter 'message' implicitly has an 'any' type.
+argparse.ts(1179,72): error TS2507: Type 'Object' is not a constructor function type.
+argparse.ts(1179,89): error TS2345: Argument of type 'FunctionConstructor' is not assignable to parameter of type 'String'.
+  Type 'FunctionConstructor' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+argparse.ts(1259,14): error TS2339: Property 'option_strings' does not exist on type 'Action'.
+argparse.ts(1260,14): error TS2339: Property 'dest' does not exist on type 'Action'.
+argparse.ts(1261,14): error TS2339: Property 'nargs' does not exist on type 'Action'.
+argparse.ts(1262,14): error TS2339: Property 'const' does not exist on type 'Action'.
+argparse.ts(1263,14): error TS2339: Property 'default' does not exist on type 'Action'.
+argparse.ts(1264,14): error TS2339: Property 'type' does not exist on type 'Action'.
+argparse.ts(1265,14): error TS2339: Property 'choices' does not exist on type 'Action'.
+argparse.ts(1266,14): error TS2339: Property 'required' does not exist on type 'Action'.
+argparse.ts(1267,14): error TS2339: Property 'help' does not exist on type 'Action'.
+argparse.ts(1268,14): error TS2339: Property 'metavar' does not exist on type 'Action'.
+argparse.ts(1283,42): error TS2554: Expected 3 arguments, but got 2.
+argparse.ts(1287,21): error TS2339: Property 'option_strings' does not exist on type 'Action'.
+argparse.ts(1296,7): error TS2322: Type 'String' is not assignable to type 'Number'.
+argparse.ts(1296,102): error TS2507: Type 'String' is not a constructor function type.
+argparse.ts(1346,10): error TS7006: Parameter 'parser' implicitly has an 'any' type.
+argparse.ts(1346,18): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
+argparse.ts(1346,29): error TS7006: Parameter 'values' implicitly has an 'any' type.
+argparse.ts(1347,18): error TS2339: Property 'option_strings' does not exist on type 'BooleanOptionalAction'.
+argparse.ts(1348,37): error TS2339: Property 'dest' does not exist on type 'BooleanOptionalAction'.
+argparse.ts(1348,43): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
+argparse.ts(1348,44): error TS2532: Object is possibly 'undefined'.
+argparse.ts(1353,21): error TS2339: Property 'option_strings' does not exist on type 'BooleanOptionalAction'.
+argparse.ts(1358,7): error TS2740: Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+argparse.ts(1358,69): error TS2507: Type 'String' is not a constructor function type.
+argparse.ts(1391,33): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(1407,10): error TS7006: Parameter 'parser' implicitly has an 'any' type.
+argparse.ts(1407,18): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
+argparse.ts(1407,29): error TS7006: Parameter 'values' implicitly has an 'any' type.
+argparse.ts(1408,33): error TS2339: Property 'dest' does not exist on type '_StoreAction'.
+argparse.ts(1413,7): error TS2322: Type 'String' is not assignable to type 'Function'.
+argparse.ts(1413,79): error TS2507: Type 'String' is not a constructor function type.
+argparse.ts(1445,10): error TS7006: Parameter 'parser' implicitly has an 'any' type.
+argparse.ts(1445,18): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
+argparse.ts(1446,33): error TS2339: Property 'dest' does not exist on type '_StoreConstAction'.
+argparse.ts(1446,44): error TS2339: Property 'const' does not exist on type '_StoreConstAction'.
+argparse.ts(1451,7): error TS2322: Type 'String' is not assignable to type 'Function'.
+argparse.ts(1451,77): error TS2507: Type 'Function' is not a constructor function type.
+argparse.ts(1480,7): error TS2322: Type 'String' is not assignable to type 'Function'.
+argparse.ts(1480,79): error TS2507: Type 'Function' is not a constructor function type.
+argparse.ts(1509,7): error TS2322: Type 'String' is not assignable to type 'Function'.
+argparse.ts(1509,71): error TS2507: Type 'String' is not a constructor function type.
+argparse.ts(1542,33): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(1558,10): error TS7006: Parameter 'parser' implicitly has an 'any' type.
+argparse.ts(1558,18): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
+argparse.ts(1558,29): error TS7006: Parameter 'values' implicitly has an 'any' type.
+argparse.ts(1559,45): error TS2339: Property 'dest' does not exist on type '_AppendAction'.
+argparse.ts(1559,51): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'String'.
+argparse.ts(1561,15): error TS2339: Property 'push' does not exist on type 'String'.
+argparse.ts(1562,33): error TS2339: Property 'dest' does not exist on type '_AppendAction'.
+argparse.ts(1567,7): error TS2322: Type 'String' is not assignable to type 'Function'.
+argparse.ts(1567,81): error TS2507: Type 'String' is not a constructor function type.
+argparse.ts(1600,10): error TS7006: Parameter 'parser' implicitly has an 'any' type.
+argparse.ts(1600,18): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
+argparse.ts(1601,45): error TS2339: Property 'dest' does not exist on type '_AppendConstAction'.
+argparse.ts(1601,51): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'String'.
+argparse.ts(1603,15): error TS2339: Property 'push' does not exist on type 'String'.
+argparse.ts(1603,25): error TS2339: Property 'const' does not exist on type '_AppendConstAction'.
+argparse.ts(1604,33): error TS2339: Property 'dest' does not exist on type '_AppendConstAction'.
+argparse.ts(1609,7): error TS2322: Type 'String' is not assignable to type 'Function'.
+argparse.ts(1609,69): error TS2507: Type 'String' is not a constructor function type.
+argparse.ts(1636,10): error TS7006: Parameter 'parser' implicitly has an 'any' type.
+argparse.ts(1636,18): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
+argparse.ts(1637,45): error TS2339: Property 'dest' does not exist on type '_CountAction'.
+argparse.ts(1637,51): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'String'.
+argparse.ts(1639,13): error TS2322: Type 'number' is not assignable to type 'String'.
+argparse.ts(1641,33): error TS2339: Property 'dest' does not exist on type '_CountAction'.
+argparse.ts(1641,39): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+argparse.ts(1646,7): error TS2322: Type 'String' is not assignable to type 'Function'.
+argparse.ts(1646,67): error TS2507: Type 'String' is not a constructor function type.
+argparse.ts(1670,10): error TS7006: Parameter 'parser' implicitly has an 'any' type.
+argparse.ts(1677,7): error TS2322: Type 'String' is not assignable to type 'Function'.
+argparse.ts(1677,73): error TS2507: Type 'String' is not a constructor function type.
+argparse.ts(1701,14): error TS2339: Property 'version' does not exist on type '_VersionAction'.
+argparse.ts(1704,10): error TS7006: Parameter 'parser' implicitly has an 'any' type.
+argparse.ts(1705,28): error TS2339: Property 'version' does not exist on type '_VersionAction'.
+argparse.ts(1717,94): error TS2507: Type 'String' is not a constructor function type.
+argparse.ts(1750,14): error TS2339: Property '_prog_prefix' does not exist on type '_SubParsersAction'.
+argparse.ts(1751,14): error TS2339: Property '_parser_class' does not exist on type '_SubParsersAction'.
+argparse.ts(1752,14): error TS2339: Property '_name_parser_map' does not exist on type '_SubParsersAction'.
+argparse.ts(1753,14): error TS2339: Property '_choices_actions' does not exist on type '_SubParsersAction'.
+argparse.ts(1767,45): error TS2339: Property '_prog_prefix' does not exist on type '_SubParsersAction'.
+argparse.ts(1770,50): error TS2345: Argument of type 'never[]' is not assignable to parameter of type 'String'.
+  Type 'never[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+argparse.ts(1777,38): error TS2339: Property '_ChoicesPseudoAction' does not exist on type '_SubParsersAction'.
+argparse.ts(1778,18): error TS2339: Property '_choices_actions' does not exist on type '_SubParsersAction'.
+argparse.ts(1782,31): error TS2339: Property '_parser_class' does not exist on type '_SubParsersAction'.
+argparse.ts(1783,14): error TS2339: Property '_name_parser_map' does not exist on type '_SubParsersAction'.
+argparse.ts(1786,27): error TS2802: Type 'String' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+argparse.ts(1787,18): error TS2339: Property '_name_parser_map' does not exist on type '_SubParsersAction'.
+argparse.ts(1794,21): error TS2339: Property '_choices_actions' does not exist on type '_SubParsersAction'.
+argparse.ts(1797,10): error TS7006: Parameter 'parser' implicitly has an 'any' type.
+argparse.ts(1797,18): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
+argparse.ts(1797,29): error TS7006: Parameter 'values' implicitly has an 'any' type.
+argparse.ts(1802,18): error TS2339: Property 'dest' does not exist on type '_SubParsersAction'.
+argparse.ts(1803,37): error TS2339: Property 'dest' does not exist on type '_SubParsersAction'.
+argparse.ts(1807,26): error TS2339: Property '_name_parser_map' does not exist on type '_SubParsersAction'.
+argparse.ts(1808,27): error TS2339: Property '_name_parser_map' does not exist on type '_SubParsersAction'.
+argparse.ts(1811,39): error TS2339: Property '_name_parser_map' does not exist on type '_SubParsersAction'.
+argparse.ts(1813,23): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+argparse.ts(1826,37): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'String'.
+argparse.ts(1830,60): error TS2345: Argument of type 'never[]' is not assignable to parameter of type 'String'.
+argparse.ts(1831,13): error TS2554: Expected 3 arguments, but got 2.
+argparse.ts(1831,57): error TS2339: Property 'push' does not exist on type 'String'.
+argparse.ts(1837,19): error TS2339: Property 'prototype' does not exist on type 'Object'.
+argparse.ts(1837,97): error TS2507: Type 'String' is not a constructor function type.
+argparse.ts(1838,17): error TS7006: Parameter 'name' implicitly has an 'any' type.
+argparse.ts(1838,23): error TS7006: Parameter 'aliases' implicitly has an 'any' type.
+argparse.ts(1838,32): error TS7006: Parameter 'help' implicitly has an 'any' type.
+argparse.ts(1848,7): error TS2322: Type 'String' is not assignable to type 'Function'.
+argparse.ts(1848,71): error TS2507: Type 'Function' is not a constructor function type.
+argparse.ts(1849,10): error TS7006: Parameter 'parser' implicitly has an 'any' type.
+argparse.ts(1849,18): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
+argparse.ts(1849,29): error TS7006: Parameter 'values' implicitly has an 'any' type.
+argparse.ts(1850,45): error TS2339: Property 'dest' does not exist on type '_ExtendAction'.
+argparse.ts(1850,51): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'String'.
+argparse.ts(1853,33): error TS2339: Property 'dest' does not exist on type '_ExtendAction'.
+argparse.ts(1910,14): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1911,14): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1912,42): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1913,38): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1914,43): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1915,43): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1916,39): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1917,37): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1918,47): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1919,36): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1922,10): error TS7006: Parameter 'string' implicitly has an 'any' type.
+argparse.ts(1925,22): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1927,29): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1930,65): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1931,37): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(1938,43): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1938,56): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1940,51): error TS2571: Object is of type 'unknown'.
+argparse.ts(1942,23): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+argparse.ts(1945,55): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1945,70): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1946,18): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1947,40): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'PathLike'.
+argparse.ts(1948,25): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1949,41): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'PathLike'.
+argparse.ts(1951,70): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1952,33): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(1957,27): error TS2339: Property '_flags' does not exist on type 'FileType'.
+argparse.ts(1958,42): error TS2339: Property '_options' does not exist on type 'FileType'.
+argparse.ts(1959,87): error TS2571: Object is of type 'unknown'.
+argparse.ts(1964,25): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
+    Argument of type 'String[]' is not assignable to parameter of type 'ConcatArray<never>'.
+      The types returned by 'slice(...)' are incompatible between these types.
+        Type 'String[]' is not assignable to type 'never[]'.
+          Type 'String' is not assignable to type 'never'.
+  Overload 2 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
+    Argument of type 'String[]' is not assignable to parameter of type 'ConcatArray<never>'.
+argparse.ts(1970,5): error TS2416: Property 'toString' in type 'FileType' is not assignable to the same property in base type 'Function'.
+  Type '() => String' is not assignable to type '() => string'.
+    Type 'String' is not assignable to type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(1978,61): error TS2507: Type 'Object' is not a constructor function type.
+argparse.ts(1993,11): error TS2339: Property 'prototype' does not exist on type 'Object'.
+argparse.ts(1996,7): error TS2322: Type 'String' is not assignable to type 'Function'.
+argparse.ts(2011,14): error TS2339: Property 'description' does not exist on type '_ActionsContainer'.
+argparse.ts(2012,14): error TS2339: Property 'argument_default' does not exist on type '_ActionsContainer'.
+argparse.ts(2013,14): error TS2339: Property 'prefix_chars' does not exist on type '_ActionsContainer'.
+argparse.ts(2014,14): error TS2339: Property 'conflict_handler' does not exist on type '_ActionsContainer'.
+argparse.ts(2017,14): error TS2339: Property '_registries' does not exist on type '_ActionsContainer'.
+argparse.ts(2035,62): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+argparse.ts(2044,14): error TS2339: Property '_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2045,14): error TS2339: Property '_option_string_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2048,14): error TS2339: Property '_action_groups' does not exist on type '_ActionsContainer'.
+argparse.ts(2049,14): error TS2551: Property '_mutually_exclusive_groups' does not exist on type '_ActionsContainer'. Did you mean 'add_mutually_exclusive_group'?
+argparse.ts(2052,14): error TS2339: Property '_defaults' does not exist on type '_ActionsContainer'.
+argparse.ts(2055,14): error TS2339: Property '_negative_number_matcher' does not exist on type '_ActionsContainer'.
+argparse.ts(2059,14): error TS2339: Property '_has_negative_number_optionals' does not exist on type '_ActionsContainer'.
+argparse.ts(2065,14): error TS7006: Parameter 'registry_name' implicitly has an 'any' type.
+argparse.ts(2065,29): error TS7006: Parameter 'value' implicitly has an 'any' type.
+argparse.ts(2065,36): error TS7006: Parameter 'object' implicitly has an 'any' type.
+argparse.ts(2066,40): error TS2339: Property '_registries' does not exist on type '_ActionsContainer'.
+argparse.ts(2066,68): error TS2345: Argument of type '{}' is not assignable to parameter of type 'String'.
+  Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+argparse.ts(2067,9): error TS2542: Index signature in type 'String' only permits reading.
+argparse.ts(2070,19): error TS7006: Parameter 'registry_name' implicitly has an 'any' type.
+argparse.ts(2070,34): error TS7006: Parameter 'value' implicitly has an 'any' type.
+argparse.ts(2071,29): error TS2339: Property '_registries' does not exist on type '_ActionsContainer'.
+argparse.ts(2071,64): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'String'.
+argparse.ts(2077,18): error TS7006: Parameter 'kwargs' implicitly has an 'any' type.
+argparse.ts(2078,28): error TS2339: Property '_defaults' does not exist on type '_ActionsContainer'.
+argparse.ts(2082,33): error TS2339: Property '_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2089,17): error TS7006: Parameter 'dest' implicitly has an 'any' type.
+argparse.ts(2090,33): error TS2339: Property '_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2095,21): error TS2339: Property '_defaults' does not exist on type '_ActionsContainer'.
+argparse.ts(2127,26): error TS2339: Property 'prefix_chars' does not exist on type '_ActionsContainer'.
+argparse.ts(2132,50): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
+argparse.ts(2136,48): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
+argparse.ts(2142,30): error TS2339: Property '_defaults' does not exist on type '_ActionsContainer'.
+argparse.ts(2143,39): error TS2339: Property '_defaults' does not exist on type '_ActionsContainer'.
+argparse.ts(2144,29): error TS2339: Property 'argument_default' does not exist on type '_ActionsContainer'.
+argparse.ts(2145,39): error TS2339: Property 'argument_default' does not exist on type '_ActionsContainer'.
+argparse.ts(2152,33): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(2155,26): error TS2351: This expression is not constructable.
+  Type 'never' has no construct signatures.
+argparse.ts(2160,33): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(2164,33): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(2171,22): error TS2339: Property '_get_formatter' does not exist on type 'never'.
+argparse.ts(2186,45): error TS2802: Type 'IArguments' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+argparse.ts(2187,14): error TS2339: Property '_action_groups' does not exist on type '_ActionsContainer'.
+argparse.ts(2193,54): error TS2802: Type 'IArguments' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+argparse.ts(2194,14): error TS2551: Property '_mutually_exclusive_groups' does not exist on type '_ActionsContainer'. Did you mean 'add_mutually_exclusive_group'?
+argparse.ts(2198,17): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(2203,14): error TS2339: Property '_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2208,18): error TS2339: Property '_option_string_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2213,22): error TS2339: Property '_negative_number_matcher' does not exist on type '_ActionsContainer'.
+argparse.ts(2214,27): error TS2339: Property '_has_negative_number_optionals' does not exist on type '_ActionsContainer'.
+argparse.ts(2215,26): error TS2339: Property '_has_negative_number_optionals' does not exist on type '_ActionsContainer'.
+argparse.ts(2224,20): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(2225,28): error TS2339: Property '_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2228,28): error TS7006: Parameter 'container' implicitly has an 'any' type.
+argparse.ts(2231,32): error TS2339: Property '_action_groups' does not exist on type '_ActionsContainer'.
+argparse.ts(2234,37): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(2236,13): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+argparse.ts(2246,17): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+argparse.ts(2246,72): error TS2554: Expected 0 arguments, but got 1.
+argparse.ts(2255,39): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+argparse.ts(2263,65): error TS2554: Expected 0 arguments, but got 1.
+argparse.ts(2322,23): error TS2339: Property 'prefix_chars' does not exist on type '_ActionsContainer'.
+argparse.ts(2324,48): error TS2339: Property 'prefix_chars' does not exist on type '_ActionsContainer'.
+argparse.ts(2327,37): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(2332,50): error TS2339: Property 'prefix_chars' does not exist on type '_ActionsContainer'.
+argparse.ts(2347,60): error TS2339: Property 'prefix_chars' does not exist on type '_ActionsContainer'.
+argparse.ts(2350,37): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(2359,23): error TS7006: Parameter 'kwargs' implicitly has an 'any' type.
+argparse.ts(2360,48): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'String'.
+argparse.ts(2362,53): error TS2345: Argument of type 'String' is not assignable to parameter of type 'undefined'.
+argparse.ts(2367,65): error TS2339: Property 'conflict_handler' does not exist on type '_ActionsContainer'.
+argparse.ts(2368,25): error TS2538: Type 'String' cannot be used as an index type.
+argparse.ts(2369,25): error TS2538: Type 'String' cannot be used as an index type.
+argparse.ts(2372,33): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(2372,47): error TS2339: Property 'conflict_handler' does not exist on type '_ActionsContainer'.
+argparse.ts(2376,21): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(2381,30): error TS2339: Property '_option_string_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2382,43): error TS2339: Property '_option_string_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2394,28): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(2394,36): error TS7006: Parameter 'conflicting_actions' implicitly has an 'any' type.
+argparse.ts(2398,58): error TS7031: Binding element 'option_string' implicitly has an 'any' type.
+argparse.ts(2399,19): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+argparse.ts(2402,30): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(2402,38): error TS7006: Parameter 'conflicting_actions' implicitly has an 'any' type.
+argparse.ts(2409,25): error TS2339: Property '_option_string_actions' does not exist on type '_ActionsContainer'.
+argparse.ts(2421,7): error TS2322: Type 'String' is not assignable to type 'Function'.
+argparse.ts(2421,73): error TS2507: Type 'Function' is not a constructor function type.
+argparse.ts(2443,14): error TS2339: Property 'title' does not exist on type '_ArgumentGroup'.
+argparse.ts(2444,14): error TS2339: Property '_group_actions' does not exist on type '_ArgumentGroup'.
+argparse.ts(2447,14): error TS2339: Property '_registries' does not exist on type '_ArgumentGroup'.
+argparse.ts(2448,14): error TS2339: Property '_actions' does not exist on type '_ArgumentGroup'.
+argparse.ts(2449,14): error TS2339: Property '_option_string_actions' does not exist on type '_ArgumentGroup'.
+argparse.ts(2450,14): error TS2339: Property '_defaults' does not exist on type '_ArgumentGroup'.
+argparse.ts(2451,14): error TS2339: Property '_has_negative_number_optionals' does not exist on type '_ArgumentGroup'.
+argparse.ts(2453,14): error TS2339: Property '_mutually_exclusive_groups' does not exist on type '_ArgumentGroup'.
+argparse.ts(2456,17): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(2458,14): error TS2339: Property '_group_actions' does not exist on type '_ArgumentGroup'.
+argparse.ts(2462,20): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(2464,28): error TS2339: Property '_group_actions' does not exist on type '_ArgumentGroup'.
+argparse.ts(2469,7): error TS2322: Type 'String' is not assignable to type 'Function'.
+argparse.ts(2469,91): error TS2507: Type 'Function' is not a constructor function type.
+argparse.ts(2481,14): error TS2339: Property 'required' does not exist on type '_MutuallyExclusiveGroup'.
+argparse.ts(2482,14): error TS2339: Property '_container' does not exist on type '_MutuallyExclusiveGroup'.
+argparse.ts(2485,17): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(2490,23): error TS2339: Property '_container' does not exist on type '_MutuallyExclusiveGroup'.
+argparse.ts(2491,14): error TS2339: Property '_group_actions' does not exist on type '_MutuallyExclusiveGroup'.
+argparse.ts(2495,20): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(2496,14): error TS2339: Property '_container' does not exist on type '_MutuallyExclusiveGroup'.
+argparse.ts(2497,28): error TS2339: Property '_group_actions' does not exist on type '_MutuallyExclusiveGroup'.
+argparse.ts(2502,7): error TS2322: Type 'String' is not assignable to type 'Number'.
+argparse.ts(2502,88): error TS2507: Type 'Object' is not a constructor function type.
+argparse.ts(2502,105): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+argparse.ts(2587,14): error TS2339: Property 'prog' does not exist on type 'ArgumentParser'.
+argparse.ts(2588,14): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
+argparse.ts(2589,14): error TS2339: Property 'epilog' does not exist on type 'ArgumentParser'.
+argparse.ts(2590,14): error TS2339: Property 'formatter_class' does not exist on type 'ArgumentParser'.
+argparse.ts(2591,14): error TS2339: Property 'fromfile_prefix_chars' does not exist on type 'ArgumentParser'.
+argparse.ts(2592,14): error TS2339: Property 'add_help' does not exist on type 'ArgumentParser'.
+argparse.ts(2593,14): error TS2339: Property 'allow_abbrev' does not exist on type 'ArgumentParser'.
+argparse.ts(2594,14): error TS2339: Property 'exit_on_error' does not exist on type 'ArgumentParser'.
+argparse.ts(2596,14): error TS2339: Property 'debug' does not exist on type 'ArgumentParser'.
+argparse.ts(2599,14): error TS2339: Property '_positionals' does not exist on type 'ArgumentParser'.
+argparse.ts(2599,34): error TS2339: Property 'add_argument_group' does not exist on type 'ArgumentParser'.
+argparse.ts(2600,14): error TS2339: Property '_optionals' does not exist on type 'ArgumentParser'.
+argparse.ts(2600,32): error TS2339: Property 'add_argument_group' does not exist on type 'ArgumentParser'.
+argparse.ts(2601,14): error TS2339: Property '_subparsers' does not exist on type 'ArgumentParser'.
+argparse.ts(2604,27): error TS7006: Parameter 'string' implicitly has an 'any' type.
+argparse.ts(2607,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.ts(2608,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.ts(2609,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.ts(2610,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.ts(2610,48): error TS7006: Parameter 'x' implicitly has an 'any' type.
+argparse.ts(2613,37): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(2617,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.ts(2617,50): error TS7006: Parameter 'x' implicitly has an 'any' type.
+argparse.ts(2620,37): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(2624,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.ts(2626,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.ts(2633,18): error TS2339: Property 'add_help' does not exist on type 'ArgumentParser'.
+argparse.ts(2634,18): error TS2339: Property 'add_argument' does not exist on type 'ArgumentParser'.
+argparse.ts(2646,18): error TS2339: Property 'add_argument' does not exist on type 'ArgumentParser'.
+argparse.ts(2652,35): error TS2339: Property 'version' does not exist on type 'ArgumentParser'.
+argparse.ts(2661,18): error TS2339: Property '_add_container_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(2662,32): error TS2339: Property '_defaults' does not exist on type 'ArgumentParser'.
+argparse.ts(2678,42): error TS2554: Expected 3 arguments, but got 2.
+argparse.ts(2691,18): error TS2339: Property '_subparsers' does not exist on type 'ArgumentParser'.
+argparse.ts(2696,44): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+argparse.ts(2700,62): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'String'.
+argparse.ts(2703,18): error TS2339: Property '_subparsers' does not exist on type 'ArgumentParser'.
+argparse.ts(2703,37): error TS2339: Property 'add_argument_group' does not exist on type 'ArgumentParser'.
+argparse.ts(2705,18): error TS2339: Property '_subparsers' does not exist on type 'ArgumentParser'.
+argparse.ts(2705,37): error TS2339: Property '_positionals' does not exist on type 'ArgumentParser'.
+argparse.ts(2713,31): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.ts(2714,38): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
+argparse.ts(2719,34): error TS2339: Property '_pop_action_class' does not exist on type 'ArgumentParser'.
+argparse.ts(2722,14): error TS2339: Property '_subparsers' does not exist on type 'ArgumentParser'.
+argparse.ts(2728,17): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(2730,18): error TS2339: Property '_optionals' does not exist on type 'ArgumentParser'.
+argparse.ts(2732,18): error TS2339: Property '_positionals' does not exist on type 'ArgumentParser'.
+argparse.ts(2738,21): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(2738,37): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(2742,21): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(2742,37): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(2751,26): error TS2339: Property 'length' does not exist on type 'never'.
+argparse.ts(2753,38): error TS2339: Property 'join' does not exist on type 'never'.
+argparse.ts(2765,29): error TS2351: This expression is not constructable.
+  Type 'Object' has no construct signatures.
+argparse.ts(2769,33): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(2771,30): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'Object'.
+argparse.ts(2773,33): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'Object'.
+argparse.ts(2780,43): error TS2339: Property '_defaults' does not exist on type 'ArgumentParser'.
+argparse.ts(2781,26): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'Object'.
+argparse.ts(2782,25): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'Object'.
+argparse.ts(2782,47): error TS2339: Property '_defaults' does not exist on type 'ArgumentParser'.
+argparse.ts(2787,18): error TS2339: Property 'exit_on_error' does not exist on type 'ArgumentParser'.
+argparse.ts(2791,36): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+argparse.ts(2792,32): error TS2571: Object is of type 'unknown'.
+argparse.ts(2801,21): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'Object'.
+argparse.ts(2802,20): error TS2532: Object is possibly 'undefined'.
+argparse.ts(2802,32): error TS2554: Expected 3 arguments, but got 2.
+argparse.ts(2803,21): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'Object'.
+argparse.ts(2809,23): error TS7006: Parameter 'arg_strings' implicitly has an 'any' type.
+argparse.ts(2809,36): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
+argparse.ts(2811,18): error TS2339: Property 'fromfile_prefix_chars' does not exist on type 'ArgumentParser'.
+argparse.ts(2818,38): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.ts(2834,39): error TS2802: Type 'IterableIterator<[string, unknown]>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+argparse.ts(2839,43): error TS2802: Type 'IterableIterator<[string, unknown]>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+argparse.ts(2851,21): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+argparse.ts(2864,13): error TS7034: Variable 'extras' implicitly has type 'any[]' in some locations where its type cannot be determined.
+argparse.ts(2866,28): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(2866,36): error TS7006: Parameter 'argument_strings' implicitly has an 'any' type.
+argparse.ts(2879,35): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+argparse.ts(2892,32): error TS7006: Parameter 'start_index' implicitly has an 'any' type.
+argparse.ts(2895,32): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+argparse.ts(2918,38): error TS2339: Property 'prefix_chars' does not exist on type 'ArgumentParser'.
+argparse.ts(2924,50): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(2930,39): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+argparse.ts(2945,35): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+argparse.ts(2976,35): error TS7006: Parameter 'start_index' implicitly has an 'any' type.
+argparse.ts(3026,26): error TS7005: Variable 'extras' implicitly has an 'any[]' type.
+argparse.ts(3043,33): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3055,44): error TS2554: Expected 3 arguments, but got 2.
+argparse.ts(3069,32): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.ts(3082,33): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(3083,30): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(3094,5): error TS7023: '_read_args_from_files' implicitly has return type 'any' because it does not have a return type annotation and is referenced directly or indirectly in one of its return expressions.
+argparse.ts(3094,27): error TS7006: Parameter 'arg_strings' implicitly has an 'any' type.
+argparse.ts(3096,13): error TS7034: Variable 'new_arg_strings' implicitly has type 'any[]' in some locations where its type cannot be determined.
+argparse.ts(3100,38): error TS2339: Property 'fromfile_prefix_chars' does not exist on type 'ArgumentParser'.
+argparse.ts(3114,39): error TS7005: Variable 'new_arg_strings' implicitly has an 'any[]' type.
+argparse.ts(3116,32): error TS2571: Object is of type 'unknown'.
+argparse.ts(3125,30): error TS7006: Parameter 'arg_line' implicitly has an 'any' type.
+argparse.ts(3129,21): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(3129,29): error TS7006: Parameter 'arg_strings_pattern' implicitly has an 'any' type.
+argparse.ts(3138,17): error TS2464: A computed property name must be of type 'string', 'number', 'symbol', or 'any'.
+argparse.ts(3139,17): error TS2464: A computed property name must be of type 'string', 'number', 'symbol', or 'any'.
+argparse.ts(3141,23): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ undefined: string; }'.
+argparse.ts(3145,23): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+argparse.ts(3152,30): error TS7006: Parameter 'actions' implicitly has an 'any' type.
+argparse.ts(3152,39): error TS7006: Parameter 'arg_strings_pattern' implicitly has an 'any' type.
+argparse.ts(3155,13): error TS7034: Variable 'result' implicitly has type 'any[]' in some locations where its type cannot be determined.
+argparse.ts(3158,45): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(3161,26): error TS7005: Variable 'result' implicitly has an 'any[]' type.
+argparse.ts(3161,59): error TS7006: Parameter 'string' implicitly has an 'any' type.
+argparse.ts(3170,21): error TS7006: Parameter 'arg_string' implicitly has an 'any' type.
+argparse.ts(3177,19): error TS2339: Property 'prefix_chars' does not exist on type 'ArgumentParser'.
+argparse.ts(3182,32): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3183,31): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3195,39): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3196,35): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3222,18): error TS2339: Property '_negative_number_matcher' does not exist on type 'ArgumentParser'.
+argparse.ts(3223,23): error TS2339: Property '_has_negative_number_optionals' does not exist on type 'ArgumentParser'.
+argparse.ts(3238,24): error TS7006: Parameter 'option_string' implicitly has an 'any' type.
+argparse.ts(3243,26): error TS2339: Property 'prefix_chars' does not exist on type 'ArgumentParser'.
+argparse.ts(3245,22): error TS2339: Property 'allow_abbrev' does not exist on type 'ArgumentParser'.
+argparse.ts(3253,60): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3255,43): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3271,56): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3273,39): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3277,39): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3292,24): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(3348,13): error TS2454: Variable 'argv' is used before being assigned.
+argparse.ts(3350,33): error TS2532: Object is possibly 'undefined'.
+argparse.ts(3370,36): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(3372,33): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+argparse.ts(3376,32): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.ts(3387,31): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
+argparse.ts(3390,26): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
+argparse.ts(3392,26): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
+argparse.ts(3406,32): error TS2554: Expected 3 arguments, but got 2.
+argparse.ts(3410,33): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'Object'.
+argparse.ts(3428,40): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.ts(3439,40): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.ts(3444,18): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
+argparse.ts(3452,17): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(3452,25): error TS7006: Parameter 'arg_strings' implicitly has an 'any' type.
+argparse.ts(3492,37): error TS7006: Parameter 'v' implicitly has an 'any' type.
+argparse.ts(3496,37): error TS7006: Parameter 'v' implicitly has an 'any' type.
+argparse.ts(3505,37): error TS7006: Parameter 'v' implicitly has an 'any' type.
+argparse.ts(3515,16): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(3515,24): error TS7006: Parameter 'arg_string' implicitly has an 'any' type.
+argparse.ts(3516,30): error TS2339: Property '_registry_get' does not exist on type 'ArgumentParser'.
+argparse.ts(3519,23): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+argparse.ts(3542,32): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+argparse.ts(3544,27): error TS2571: Object is of type 'unknown'.
+argparse.ts(3545,27): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+argparse.ts(3552,27): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+argparse.ts(3562,18): error TS7006: Parameter 'action' implicitly has an 'any' type.
+argparse.ts(3562,26): error TS7006: Parameter 'value' implicitly has an 'any' type.
+argparse.ts(3568,23): error TS2351: This expression is not constructable.
+  Type 'String' has no construct signatures.
+argparse.ts(3577,34): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
+argparse.ts(3577,46): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3578,34): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.ts(3586,34): error TS2339: Property 'usage' does not exist on type 'ArgumentParser'.
+argparse.ts(3586,46): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
+argparse.ts(3587,34): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.ts(3590,33): error TS2339: Property 'description' does not exist on type 'ArgumentParser'.
+argparse.ts(3593,39): error TS2339: Property '_action_groups' does not exist on type 'ArgumentParser'.
+argparse.ts(3601,33): error TS2339: Property 'epilog' does not exist on type 'ArgumentParser'.
+argparse.ts(3609,25): error TS2339: Property 'formatter_class' does not exist on type 'ArgumentParser'.
+argparse.ts(3609,54): error TS2339: Property 'prog' does not exist on type 'ArgumentParser'.
+argparse.ts(3616,33): error TS2322: Type 'WriteStream & { fd: 1; }' is not assignable to type 'undefined'.
+argparse.ts(3621,33): error TS2322: Type 'WriteStream & { fd: 1; }' is not assignable to type 'undefined'.
+argparse.ts(3625,20): error TS7006: Parameter 'message' implicitly has an 'any' type.
+argparse.ts(3627,37): error TS2322: Type 'WriteStream & { fd: 2; }' is not assignable to type 'undefined'.
+argparse.ts(3628,13): error TS2532: Object is possibly 'undefined'.
+argparse.ts(3637,42): error TS2345: Argument of type 'WriteStream & { fd: 2; }' is not assignable to parameter of type 'undefined'.
+argparse.ts(3642,11): error TS7006: Parameter 'message' implicitly has an 'any' type.
+argparse.ts(3654,18): error TS2339: Property 'debug' does not exist on type 'ArgumentParser'.
+argparse.ts(3656,26): error TS2345: Argument of type 'WriteStream & { fd: 2; }' is not assignable to parameter of type 'undefined'.
+argparse.ts(3657,32): error TS2339: Property 'prog' does not exist on type 'ArgumentParser'.
+argparse.ts(3658,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'undefined'.
+lib/sub.ts(9,46): error TS7019: Rest parameter 'values' implicitly has an 'any[]' type.
+lib/sub.ts(12,49): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(_: String, is_literal: Boolean, is_left_align: Boolean, is_padded: Boolean, name: String, format: String) => string | String' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
+      Type 'string | String' is not assignable to type 'string'.
+        Type 'String' is not assignable to type 'string'.
+          'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/sub.ts(26,19): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
+lib/sub.ts(27,24): error TS2538: Type 'String' cannot be used as an index type.
+lib/sub.ts(45,34): error TS2339: Property 'toFixed' does not exist on type 'never'.
+lib/sub.ts(52,47): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/sub.ts(52,76): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/textwrap.ts(76,13): error TS2339: Property 'width' does not exist on type '{}'.
+lib/textwrap.ts(77,13): error TS2339: Property 'initial_indent' does not exist on type '{}'.
+lib/textwrap.ts(78,13): error TS2339: Property 'subsequent_indent' does not exist on type '{}'.
+lib/textwrap.ts(79,13): error TS2339: Property 'expand_tabs' does not exist on type '{}'.
+lib/textwrap.ts(80,13): error TS2339: Property 'replace_whitespace' does not exist on type '{}'.
+lib/textwrap.ts(81,13): error TS2339: Property 'fix_sentence_endings' does not exist on type '{}'.
+lib/textwrap.ts(82,13): error TS2339: Property 'break_long_words' does not exist on type '{}'.
+lib/textwrap.ts(83,13): error TS2339: Property 'drop_whitespace' does not exist on type '{}'.
+lib/textwrap.ts(84,13): error TS2339: Property 'break_on_hyphens' does not exist on type '{}'.
+lib/textwrap.ts(85,13): error TS2339: Property 'tabsize' does not exist on type '{}'.
+lib/textwrap.ts(86,13): error TS2339: Property 'max_lines' does not exist on type '{}'.
+lib/textwrap.ts(87,13): error TS2339: Property 'placeholder' does not exist on type '{}'.
+lib/textwrap.ts(90,14): error TS2339: Property 'width' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(91,14): error TS2339: Property 'initial_indent' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(92,14): error TS2339: Property 'subsequent_indent' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(93,14): error TS2339: Property 'expand_tabs' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(94,14): error TS2339: Property 'replace_whitespace' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(95,14): error TS2339: Property 'fix_sentence_endings' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(96,14): error TS2339: Property 'break_long_words' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(97,14): error TS2339: Property 'drop_whitespace' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(98,14): error TS2339: Property 'break_on_hyphens' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(99,14): error TS2339: Property 'tabsize' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(100,14): error TS2339: Property 'max_lines' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(101,14): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(108,23): error TS7006: Parameter 'text' implicitly has an 'any' type.
+lib/textwrap.ts(116,18): error TS2339: Property 'expand_tabs' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(117,56): error TS2339: Property 'tabsize' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(119,18): error TS2339: Property 'replace_whitespace' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(125,12): error TS7006: Parameter 'text' implicitly has an 'any' type.
+lib/textwrap.ts(141,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/textwrap.ts(146,23): error TS7006: Parameter 'reversed_chunks' implicitly has an 'any' type.
+lib/textwrap.ts(146,40): error TS7006: Parameter 'cur_line' implicitly has an 'any' type.
+lib/textwrap.ts(146,50): error TS7006: Parameter 'cur_len' implicitly has an 'any' type.
+lib/textwrap.ts(146,59): error TS7006: Parameter 'width' implicitly has an 'any' type.
+lib/textwrap.ts(166,18): error TS2339: Property 'break_long_words' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(184,18): error TS7006: Parameter 'chunks' implicitly has an 'any' type.
+lib/textwrap.ts(198,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/textwrap.ts(199,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/textwrap.ts(200,18): error TS2339: Property 'width' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(201,47): error TS2339: Property 'width' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(203,18): error TS2339: Property 'max_lines' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(204,22): error TS2339: Property 'max_lines' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(205,31): error TS2339: Property 'subsequent_indent' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(207,31): error TS2339: Property 'initial_indent' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(209,38): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(209,76): error TS2339: Property 'width' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(222,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/textwrap.ts(228,31): error TS2339: Property 'subsequent_indent' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(230,31): error TS2339: Property 'initial_indent' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(234,38): error TS2339: Property 'width' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(238,22): error TS2339: Property 'drop_whitespace' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(246,21): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
+lib/textwrap.ts(248,21): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.
+lib/textwrap.ts(260,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/textwrap.ts(260,97): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
+lib/textwrap.ts(264,22): error TS2339: Property 'drop_whitespace' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(265,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/textwrap.ts(270,26): error TS2339: Property 'max_lines' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(271,45): error TS2339: Property 'max_lines' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(273,27): error TS2339: Property 'drop_whitespace' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(283,44): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(284,48): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(289,25): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/textwrap.ts(295,57): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(296,42): error TS2339: Property 'width' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(297,76): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(301,50): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
+lib/textwrap.ts(311,19): error TS7006: Parameter 'text' implicitly has an 'any' type.
+lib/textwrap.ts(318,10): error TS7006: Parameter 'text' implicitly has an 'any' type.
+lib/textwrap.ts(336,10): error TS7006: Parameter 'text' implicitly has an 'any' type.
+lib/textwrap.ts(362,11): error TS2339: Property 'width' does not exist on type 'Object'.
+lib/textwrap.ts(363,9): error TS2740: Type 'TextWrapper' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/textwrap.ts(364,14): error TS2339: Property 'wrap' does not exist on type 'String'.
+lib/textwrap.ts(377,11): error TS2339: Property 'width' does not exist on type 'Object'.
+lib/textwrap.ts(378,9): error TS2322: Type 'TextWrapper' is not assignable to type 'String'.
+lib/textwrap.ts(379,14): error TS2339: Property 'fill' does not exist on type 'String'.
+lib/textwrap.ts(403,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/textwrap.ts(405,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

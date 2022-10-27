@@ -1,0 +1,131 @@
+lib/attributes.ts(8,7): error TS2538: Type 'Number' cannot be used as an index type.
+lib/attributes.ts(12,83): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/attributes.ts(13,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/attributes.ts(13,36): error TS2538: Type 'String' cannot be used as an index type.
+lib/attributes.ts(48,22): error TS2495: Type 'NamedNodeMap' is not an array type or a string type.
+lib/attributes.ts(51,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+lib/attributes.ts(52,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+lib/attributes.ts(56,10): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+lib/attributes.ts(57,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+lib/attributes.ts(59,5): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+lib/attributes.ts(61,9): error TS2322: Type 'null' is not assignable to type 'String'.
+lib/attributes.ts(68,45): error TS2339: Property 'XMLNS' does not exist on type 'Object'.
+lib/attributes.ts(70,37): error TS2339: Property 'XML' does not exist on type 'Object'.
+lib/attributes.ts(73,13): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+lib/attributes.ts(74,13): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+lib/attributes.ts(78,60): error TS2339: Property 'XMLNS' does not exist on type 'Object'.
+lib/attributes.ts(94,11): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+lib/attributes.ts(95,16): error TS2339: Property 'prefixIndex' does not exist on type 'Element'.
+lib/attributes.ts(99,11): error TS2554: Expected 1 arguments, but got 2.
+lib/attributes.ts(116,73): error TS2554: Expected 1 arguments, but got 2.
+lib/constants.ts(24,14): error TS2739: Type 'Set<string>' is missing the following properties from type 'Error': name, message
+lib/serialize.ts(4,8): error TS1192: Module '"lib/attributes"' has no default export.
+lib/serialize.ts(25,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/serialize.ts(27,11): error TS2740: Type 'Attr' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 224 more.
+lib/serialize.ts(28,42): error TS2339: Property 'XMLNS' does not exist on type 'Object'.
+lib/serialize.ts(30,42): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+lib/serialize.ts(33,46): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+lib/serialize.ts(34,46): error TS2339: Property 'XML' does not exist on type 'Object'.
+lib/serialize.ts(45,9): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
+lib/serialize.ts(46,13): error TS2538: Type 'String' cannot be used as an index type.
+lib/serialize.ts(50,13): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
+lib/serialize.ts(51,13): error TS2538: Type 'String' cannot be used as an index type.
+lib/serialize.ts(53,11): error TS2538: Type 'String' cannot be used as an index type.
+lib/serialize.ts(54,7): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+lib/serialize.ts(61,50): error TS2339: Property 'publicId' does not exist on type 'Object'.
+lib/serialize.ts(67,26): error TS2339: Property 'systemId' does not exist on type 'Object'.
+lib/serialize.ts(68,13): error TS2339: Property 'systemId' does not exist on type 'Object'.
+lib/serialize.ts(68,44): error TS2339: Property 'systemId' does not exist on type 'Object'.
+lib/serialize.ts(73,42): error TS2339: Property 'name' does not exist on type 'Object'.
+lib/serialize.ts(74,12): error TS2339: Property 'publicId' does not exist on type 'Object'.
+lib/serialize.ts(75,32): error TS2339: Property 'publicId' does not exist on type 'Object'.
+lib/serialize.ts(76,19): error TS2339: Property 'systemId' does not exist on type 'Object'.
+lib/serialize.ts(79,12): error TS2339: Property 'systemId' does not exist on type 'Object'.
+lib/serialize.ts(80,25): error TS2339: Property 'systemId' does not exist on type 'Object'.
+lib/serialize.ts(93,11): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
+lib/serialize.ts(93,66): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
+lib/serialize.ts(99,26): error TS2339: Property 'data' does not exist on type 'HTMLElement'.
+lib/serialize.ts(99,40): error TS2339: Property 'data' does not exist on type 'HTMLElement'.
+lib/serialize.ts(103,20): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
+lib/serialize.ts(103,35): error TS2339: Property 'data' does not exist on type 'HTMLElement'.
+lib/serialize.ts(113,33): error TS2339: Property 'documentElement' does not exist on type 'Object'.
+lib/serialize.ts(117,28): error TS2339: Property 'childNodes' does not exist on type 'Object'.
+lib/serialize.ts(118,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/serialize.ts(122,7): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Function'.
+  Type 'Boolean' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+lib/serialize.ts(137,28): error TS2339: Property 'childNodes' does not exist on type 'Object'.
+lib/serialize.ts(138,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/serialize.ts(142,7): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Function'.
+lib/serialize.ts(150,48): error TS2339: Property 'data' does not exist on type 'Object'.
+lib/serialize.ts(154,15): error TS2339: Property 'data' does not exist on type 'Object'.
+lib/serialize.ts(161,48): error TS2339: Property 'data' does not exist on type 'Object'.
+lib/serialize.ts(167,11): error TS2339: Property 'data' does not exist on type 'Object'.
+lib/serialize.ts(167,39): error TS2339: Property 'data' does not exist on type 'Object'.
+lib/serialize.ts(171,22): error TS2339: Property 'data' does not exist on type 'Object'.
+lib/serialize.ts(187,9): error TS2322: Type 'String' is not assignable to type 'Number'.
+lib/serialize.ts(193,9): error TS2322: Type 'string | null' is not assignable to type 'Number'.
+  Type 'null' is not assignable to type 'Number'.
+lib/serialize.ts(194,7): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
+lib/serialize.ts(198,27): error TS2339: Property 'XML' does not exist on type 'Object'.
+lib/serialize.ts(203,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/serialize.ts(217,46): error TS2339: Property 'XML' does not exist on type 'Object'.
+lib/serialize.ts(219,9): error TS2322: Type 'Number | null' is not assignable to type 'String'.
+  Type 'null' is not assignable to type 'String'.
+lib/serialize.ts(220,11): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+lib/serialize.ts(222,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/serialize.ts(225,62): error TS2339: Property 'prefixIndex' does not exist on type 'HTMLElement'.
+lib/serialize.ts(227,15): error TS2538: Type 'Number' cannot be used as an index type.
+lib/serialize.ts(228,13): error TS2538: Type 'Number' cannot be used as an index type.
+lib/serialize.ts(230,13): error TS2538: Type 'Number' cannot be used as an index type.
+lib/serialize.ts(235,9): error TS2322: Type 'Number | null' is not assignable to type 'String'.
+  Type 'null' is not assignable to type 'String'.
+lib/serialize.ts(236,11): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+lib/serialize.ts(241,7): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/serialize.ts(245,7): error TS2322: Type 'Number' is not assignable to type 'String'.
+lib/serialize.ts(246,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/serialize.ts(260,23): error TS2339: Property 'HTML' does not exist on type 'Object'.
+lib/serialize.ts(262,19): error TS2339: Property 'has' does not exist on type 'Error'.
+lib/serialize.ts(266,32): error TS2339: Property 'HTML' does not exist on type 'Object'.
+lib/serialize.ts(275,25): error TS2339: Property 'HTML' does not exist on type 'Object'.
+lib/serialize.ts(276,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/serialize.ts(277,12): error TS2339: Property 'content' does not exist on type 'HTMLElement'.
+lib/serialize.ts(279,7): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/serialize.ts(284,25): error TS2495: Type 'NodeListOf<ChildNode>' is not an array type or a string type.
+lib/serialize.ts(285,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/serialize.ts(288,9): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/serialize.ts(299,27): error TS2339: Property 'data' does not exist on type 'Object'.
+lib/serialize.ts(306,16): error TS2339: Property 'nodeType' does not exist on type 'Object'.
+lib/serialize.ts(307,21): error TS2339: Property 'ELEMENT_NODE' does not exist on type 'Object'.
+lib/serialize.ts(309,9): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+lib/serialize.ts(315,21): error TS2339: Property 'DOCUMENT_NODE' does not exist on type 'Object'.
+lib/serialize.ts(320,9): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'Object' is not assignable to type 'boolean'.
+lib/serialize.ts(323,21): error TS2339: Property 'COMMENT_NODE' does not exist on type 'Object'.
+lib/serialize.ts(324,59): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Boolean'.
+lib/serialize.ts(325,21): error TS2339: Property 'TEXT_NODE' does not exist on type 'Object'.
+lib/serialize.ts(326,56): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Boolean'.
+lib/serialize.ts(327,21): error TS2339: Property 'DOCUMENT_FRAGMENT_NODE' does not exist on type 'Object'.
+lib/serialize.ts(332,9): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Boolean'.
+lib/serialize.ts(335,21): error TS2339: Property 'DOCUMENT_TYPE_NODE' does not exist on type 'Object'.
+lib/serialize.ts(340,9): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Boolean'.
+lib/serialize.ts(342,21): error TS2339: Property 'PROCESSING_INSTRUCTION_NODE' does not exist on type 'Object'.
+lib/serialize.ts(344,9): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/serialize.ts(349,21): error TS2339: Property 'ATTRIBUTE_NODE' does not exist on type 'Object'.
+lib/serialize.ts(351,21): error TS2339: Property 'CDATA_SECTION_NODE' does not exist on type 'Object'.
+lib/serialize.ts(361,33): error TS2345: Argument of type 'null' is not assignable to parameter of type 'String'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

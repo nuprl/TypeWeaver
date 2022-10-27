@@ -1,0 +1,69 @@
+example.ts(4,13): error TS2554: Expected 3 arguments, but got 2.
+example.ts(7,13): error TS2554: Expected 3 arguments, but got 1.
+example.ts(10,13): error TS2554: Expected 3 arguments, but got 2.
+example.ts(13,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+example.ts(14,10): error TS2367: This condition will always return 'true' since the types 'Number' and 'string' have no overlap.
+example.ts(14,29): error TS2367: This condition will always return 'true' since the types 'Number' and 'string' have no overlap.
+example.ts(16,13): error TS2554: Expected 3 arguments, but got 2.
+index.ts(3,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(11,35): error TS2339: Property 'separator' does not exist on type 'Object'.
+index.ts(13,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(14,25): error TS2322: Type '{ input: string; separator: Number; stack: any; }' is not assignable to type 'String'.
+  Object literal may only specify known properties, and 'input' does not exist in type 'String'.
+index.ts(15,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(19,9): error TS2339: Property 'bos' does not exist on type 'String'.
+index.ts(20,9): error TS2339: Property 'eos' does not exist on type 'String'.
+index.ts(21,9): error TS2339: Property 'prev' does not exist on type 'String'.
+index.ts(21,29): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(22,9): error TS2339: Property 'next' does not exist on type 'String'.
+index.ts(22,29): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+index.ts(24,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(24,31): error TS2339: Property 'quotes' does not exist on type 'Object'.
+index.ts(25,33): error TS2339: Property 'brackets' does not exist on type 'Object'.
+index.ts(27,15): error TS2339: Property 'brackets' does not exist on type 'Object'.
+index.ts(30,15): error TS2339: Property 'quotes' does not exist on type 'Object'.
+index.ts(35,32): error TS2339: Property 'keep' does not exist on type 'Object'.
+index.ts(35,60): error TS2367: This condition will always return 'true' since the types 'Number' and 'string' have no overlap.
+index.ts(37,40): error TS2339: Property 'block' does not exist on type 'String'.
+index.ts(38,39): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+index.ts(39,41): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(41,11): error TS2339: Property 'value' does not exist on type 'String'.
+index.ts(43,13): error TS2339: Property 'block' does not exist on type 'String'.
+index.ts(43,31): error TS2339: Property 'block' does not exist on type 'String'.
+index.ts(49,28): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(50,31): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+index.ts(56,11): error TS2339: Property 'value' does not exist on type 'String'.
+index.ts(57,11): error TS2339: Property 'index' does not exist on type 'String'.
+index.ts(75,25): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+index.ts(91,17): error TS2339: Property 'brackets' does not exist on type 'Object'.
+index.ts(91,47): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(93,12): error TS2339: Property 'stash' does not exist on type 'Object'.
+index.ts(94,12): error TS2339: Property 'parent' does not exist on type 'Object'.
+index.ts(94,27): error TS2339: Property 'block' does not exist on type 'String'.
+index.ts(95,13): error TS2339: Property 'block' does not exist on type 'String'.
+index.ts(101,17): error TS2339: Property 'brackets' does not exist on type 'Object'.
+index.ts(101,47): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(110,19): error TS2339: Property 'stash' does not exist on type 'Object'.
+index.ts(115,9): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
+index.ts(115,38): error TS2339: Property 'block' does not exist on type 'String'.
+index.ts(120,13): error TS2339: Property 'block' does not exist on type 'String'.
+index.ts(131,17): error TS2339: Property 'strict' does not exist on type 'Object'.
+index.ts(132,11): error TS2322: Type 'number' is not assignable to type 'String'.
+index.ts(132,28): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(132,37): error TS2339: Property 'stash' does not exist on type 'Object'.
+index.ts(133,49): error TS2339: Property 'stash' does not exist on type 'Object'.
+index.ts(136,19): error TS2339: Property 'parent' does not exist on type 'Object'.
+index.ts(136,45): error TS2339: Property 'stash' does not exist on type 'Object'.
+index.ts(137,10): error TS2339: Property 'parent' does not exist on type 'Object'.
+index.ts(137,30): error TS2339: Property 'parent' does not exist on type 'Object'.
+index.ts(141,15): error TS2339: Property 'stash' does not exist on type 'Object'.
+index.ts(146,39): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+index.ts(146,48): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

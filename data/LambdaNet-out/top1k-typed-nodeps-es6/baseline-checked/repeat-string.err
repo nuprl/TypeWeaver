@@ -1,0 +1,189 @@
+benchmark/code/add.ts(9,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/add.ts(9,27): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/add.ts(16,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/add.ts(21,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/add.ts(24,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/add.ts(27,24): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+benchmark/code/array.ts(4,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/for-bitwise.ts(9,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/for-bitwise.ts(10,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+benchmark/code/for-bitwise.ts(12,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/for-bitwise.ts(14,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+benchmark/code/for-join.ts(4,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
+benchmark/code/for-join.ts(5,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/for-join.ts(6,27): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/for-str-cache-2.ts(10,7): error TS2367: This condition will always return 'true' since the types 'Number' and 'String' have no overlap.
+benchmark/code/for-str-cache-2.ts(12,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+benchmark/code/for-str-cache-2.ts(15,35): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/for-str-cache-2.ts(19,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+benchmark/code/for-str-cache-2.ts(22,19): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/for-str-cache-2.ts(23,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/for-str-cache-2.ts(24,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+benchmark/code/for-str-cache-2.ts(28,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+benchmark/code/for-str-cache-2.ts(31,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/for-str-cache-2.ts(32,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+benchmark/code/for-str-cache-2.ts(35,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+benchmark/code/for-str-cache.ts(7,35): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/for-str-cache.ts(11,7): error TS2367: This condition will always return 'true' since the types 'Number' and 'String' have no overlap.
+benchmark/code/for-str-cache.ts(13,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+benchmark/code/for-str-cache.ts(17,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+benchmark/code/for-str-cache.ts(20,21): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/for-str-cache.ts(21,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+benchmark/code/for-str-cache.ts(23,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+benchmark/code/for-str-cache.ts(27,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+benchmark/code/for-str.ts(5,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'String'.
+benchmark/code/for-str.ts(6,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+benchmark/code/native.ts(4,14): error TS2339: Property 'repeat' does not exist on type 'Function'.
+benchmark/code/new-array-for.ts(4,48): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+benchmark/code/new-array-for.ts(5,5): error TS2322: Type 'string' is not assignable to type 'Number'.
+benchmark/code/new-array-for.ts(7,19): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/code/new-array-join.ts(5,20): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+benchmark/code/new-array-join.ts(5,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/code/repeat-string-1.3.0.ts(7,34): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/repeat-string-1.3.0.ts(10,7): error TS2367: This condition will always return 'true' since the types 'Number' and 'String' have no overlap.
+benchmark/code/repeat-string-1.3.0.ts(12,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+benchmark/code/repeat-string-1.3.0.ts(16,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/repeat-string-1.3.0.ts(17,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+benchmark/code/repeat-string-1.3.0.ts(21,28): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+benchmark/code/repeat-string-1.3.0.ts(24,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/repeat-string-1.3.0.ts(25,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+benchmark/code/repeat-string-1.3.0.ts(28,24): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+benchmark/code/repeat-string-1.5.4.ts(50,34): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/repeat-string-1.5.4.ts(57,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/repeat-string-1.5.4.ts(61,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/repeat-string-1.5.4.ts(66,24): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+benchmark/code/repeating.ts(3,23): error TS2307: Cannot find module 'repeating' or its corresponding type declarations.
+benchmark/code/unshift.ts(4,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/unshift.ts(6,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while-array-1.ts(4,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-array-1.ts(5,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while-array-2.ts(4,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-array-2.ts(7,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while-array-2.ts(8,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while-array-3.ts(4,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+benchmark/code/while-array-3.ts(4,31): error TS2339: Property 'join' does not exist on type 'Object'.
+benchmark/code/while-array-3.ts(8,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while-array-3.ts(9,9): error TS2538: Type 'Number' cannot be used as an index type.
+benchmark/code/while-bitwise.ts(9,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while-bitwise.ts(10,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+benchmark/code/while-bitwise.ts(12,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while-bitwise.ts(14,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+benchmark/code/while-square-root.ts(4,34): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while-square-root.ts(5,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+benchmark/code/while-square-root.ts(7,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while-square-root.ts(8,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+benchmark/code/while-square-root.ts(15,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+benchmark/code/while-str-stack.ts(4,34): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while-str-stack.ts(6,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while-str-stack.ts(7,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+benchmark/code/while-str-stack.ts(13,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+benchmark/code/while-str.ts(5,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while-str.ts(6,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+benchmark/code/while.ts(7,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while.ts(8,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+benchmark/code/while.ts(10,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while.ts(11,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+benchmark/helper.ts(5,20): error TS2307: Cannot find module 'repeat-string' or its corresponding type declarations.
+benchmark/helper.ts(6,22): error TS2307: Cannot find module 'isobject' or its corresponding type declarations.
+benchmark/helper.ts(7,18): error TS2307: Cannot find module 'text-table' or its corresponding type declarations.
+benchmark/helper.ts(8,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/helper.ts(12,37): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null | undefined; flag?: string | undefined; } | null | undefined): Buffer', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
+      Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
+  Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string | undefined; } | BufferEncoding): string', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
+  Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string | undefined; }) | null | undefined): string | Buffer', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
+benchmark/helper.ts(13,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/helper.ts(18,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/helper.ts(20,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/helper.ts(28,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/helper.ts(31,22): error TS2322: Type 'undefined' is not assignable to type 'String'.
+benchmark/helper.ts(33,10): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+benchmark/helper.ts(33,50): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/helper.ts(37,7): error TS2339: Property 'title' does not exist on type 'Object'.
+benchmark/helper.ts(37,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/helper.ts(37,49): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/helper.ts(42,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/helper.ts(42,50): error TS2304: Cannot find name 'Void'.
+benchmark/helper.ts(45,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/helper.ts(48,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+benchmark/helper.ts(49,5): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+benchmark/helper.ts(49,13): error TS2339: Property 'name' does not exist on type 'HTMLElement'.
+benchmark/helper.ts(53,7): error TS2322: Type 'number' is not assignable to type 'String'.
+benchmark/helper.ts(53,42): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number[]'.
+  Type 'String' is missing the following properties from type 'number[]': pop, push, join, reverse, and 21 more.
+benchmark/helper.ts(55,30): error TS2339: Property 'title' does not exist on type 'Object'.
+benchmark/helper.ts(58,20): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+benchmark/helper.ts(59,27): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+benchmark/helper.ts(59,42): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+benchmark/helper.ts(65,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/helper.ts(66,15): error TS2339: Property 'name' does not exist on type 'HTMLElement'.
+benchmark/helper.ts(66,42): error TS2554: Expected 2 arguments, but got 3.
+benchmark/helper.ts(66,66): error TS2339: Property 'val' does not exist on type 'HTMLElement'.
+benchmark/helper.ts(71,7): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
+  Type 'null' is not assignable to type 'Object'.
+benchmark/helper.ts(71,47): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/helper.ts(74,7): error TS2339: Property 'name' does not exist on type 'Object'.
+benchmark/helper.ts(74,14): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+benchmark/helper.ts(75,7): error TS2339: Property 'val' does not exist on type 'Object'.
+benchmark/helper.ts(75,13): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+benchmark/helper.ts(76,7): error TS2339: Property 'num' does not exist on type 'Object'.
+benchmark/helper.ts(76,24): error TS2339: Property 'val' does not exist on type 'Object'.
+benchmark/helper.ts(80,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/helper.ts(81,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/helper.ts(84,15): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+benchmark/helper.ts(89,19): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+benchmark/helper.ts(90,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/index.ts(4,18): error TS2307: Cannot find module 'ansi-cyan' or its corresponding type declarations.
+benchmark/index.ts(5,25): error TS2307: Cannot find module 'yargs-parser' or its corresponding type declarations.
+benchmark/index.ts(7,19): error TS2307: Cannot find module 'benchmarked' or its corresponding type declarations.
+benchmark/index.ts(15,10): error TS2339: Property 'dry' does not exist on type 'HTMLElement'.
+benchmark/index.ts(17,9): error TS2339: Property 'dryRun' does not exist on type 'HTMLElement'.
+benchmark/index.ts(18,39): error TS2339: Property 'key' does not exist on type 'Object'.
+benchmark/index.ts(18,52): error TS2339: Property 'key' does not exist on type 'HTMLElement'.
+benchmark/index.ts(19,40): error TS2339: Property 'path' does not exist on type 'HTMLElement'.
+benchmark/index.ts(20,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/index.ts(20,27): error TS2339: Property 'run' does not exist on type 'Object'.
+benchmark/index.ts(29,9): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
+index.ts(50,34): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(55,26): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+index.ts(59,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(63,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(68,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

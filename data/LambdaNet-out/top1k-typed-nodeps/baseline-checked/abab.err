@@ -1,0 +1,55 @@
+index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'atob'.
+index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'btoa'.
+karma.conf.ts(5,36): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+karma.conf.ts(17,21): error TS2339: Property 'ProvidePlugin' does not exist on type 'String'.
+lib/atob.ts(7,10): error TS2384: Overload signatures must all be ambient or non-ambient.
+lib/atob.ts(32,54): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/atob.ts(33,5): error TS2322: Type 'null' is not assignable to type 'String'.
+lib/atob.ts(56,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/atob.ts(57,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/atob.ts(57,15): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/atob.ts(58,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
+lib/atob.ts(63,38): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/atob.ts(64,38): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/atob.ts(65,37): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/atob.ts(77,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/atob.ts(78,35): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/atob.ts(80,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/atob.ts(81,36): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/atob.ts(82,35): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/atob.ts(92,7): error TS2451: Cannot redeclare block-scoped variable 'keystr'.
+lib/atob.ts(96,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/atob.ts(98,3): error TS2322: Type 'Number | undefined' is not assignable to type 'Number'.
+  Type 'undefined' is not assignable to type 'Number'.
+lib/btoa.ts(7,10): error TS2384: Overload signatures must all be ambient or non-ambient.
+lib/btoa.ts(17,29): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/btoa.ts(18,22): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/btoa.ts(19,7): error TS2322: Type 'null' is not assignable to type 'String'.
+lib/btoa.ts(23,29): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
+lib/btoa.ts(24,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/btoa.ts(25,35): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/btoa.ts(26,36): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/btoa.ts(27,20): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/btoa.ts(28,38): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/btoa.ts(29,38): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/btoa.ts(31,20): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/btoa.ts(32,38): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/btoa.ts(33,37): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/btoa.ts(50,7): error TS2451: Cannot redeclare block-scoped variable 'keystr'.
+lib/btoa.ts(53,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/btoa.ts(55,19): error TS2538: Type 'Number' cannot be used as an index type.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18089,18): error TS2451: Cannot redeclare block-scoped variable 'atob'.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18090,18): error TS2451: Cannot redeclare block-scoped variable 'btoa'.
+

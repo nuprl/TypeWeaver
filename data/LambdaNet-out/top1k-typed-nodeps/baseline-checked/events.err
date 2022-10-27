@@ -1,0 +1,162 @@
+events.ts(24,5): error TS2322: Type 'typeof Reflect | null' is not assignable to type 'Object'.
+  Type 'null' is not assignable to type 'Object'.
+events.ts(25,44): error TS2339: Property 'apply' does not exist on type 'Object'.
+events.ts(26,7): error TS2339: Property 'apply' does not exist on type 'Object'.
+events.ts(28,42): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+events.ts(32,19): error TS2339: Property 'ownKeys' does not exist on type 'Object'.
+events.ts(33,22): error TS2339: Property 'ownKeys' does not exist on type 'Object'.
+events.ts(35,52): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+events.ts(35,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+events.ts(37,15): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(...items: ConcatArray<string>[]): string[]', gave the following error.
+    Argument of type 'symbol[]' is not assignable to parameter of type 'ConcatArray<string>'.
+      The types returned by 'slice(...)' are incompatible between these types.
+        Type 'symbol[]' is not assignable to type 'string[]'.
+          Type 'symbol' is not assignable to type 'string'.
+  Overload 2 of 2, '(...items: (string | ConcatArray<string>)[]): string[]', gave the following error.
+    Argument of type 'symbol[]' is not assignable to parameter of type 'string | ConcatArray<string>'.
+      Type 'symbol[]' is not assignable to type 'ConcatArray<string>'.
+events.ts(40,52): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+events.ts(40,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+events.ts(45,47): error TS2304: Cannot find name 'Void'.
+events.ts(53,26): error TS2304: Cannot find name 'Void'.
+events.ts(54,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+events.ts(70,43): error TS2304: Cannot find name 'Void'.
+events.ts(91,12): error TS2339: Property '_events' does not exist on type 'typeof EventEmitter'.
+events.ts(92,12): error TS2339: Property '_events' does not exist on type 'typeof EventEmitter'.
+events.ts(93,10): error TS2339: Property '_events' does not exist on type 'typeof EventEmitter'.
+events.ts(94,10): error TS2339: Property '_eventsCount' does not exist on type 'typeof EventEmitter'.
+events.ts(97,8): error TS2339: Property '_maxListeners' does not exist on type 'typeof EventEmitter'.
+events.ts(97,29): error TS2339: Property '_maxListeners' does not exist on type 'typeof EventEmitter'.
+events.ts(111,12): error TS2339: Property '_maxListeners' does not exist on type 'HTMLElement'.
+events.ts(112,25): error TS2339: Property 'defaultMaxListeners' does not exist on type 'typeof EventEmitter'.
+events.ts(113,15): error TS2339: Property '_maxListeners' does not exist on type 'HTMLElement'.
+events.ts(116,70): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+events.ts(121,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+events.ts(127,34): error TS2339: Property 'error' does not exist on type 'Number'.
+events.ts(133,13): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+events.ts(143,9): error TS2339: Property 'context' does not exist on type 'Error'.
+events.ts(147,32): error TS2538: Type 'String' cannot be used as an index type.
+events.ts(156,49): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+events.ts(158,20): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+events.ts(167,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+events.ts(169,17): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+events.ts(171,19): error TS2339: Property '_events' does not exist on type 'Element'.
+events.ts(173,21): error TS2339: Property '_events' does not exist on type 'Element'.
+events.ts(174,12): error TS2339: Property '_eventsCount' does not exist on type 'Element'.
+events.ts(178,16): error TS2339: Property 'newListener' does not exist on type 'String'.
+events.ts(179,14): error TS2339: Property 'emit' does not exist on type 'Element'.
+events.ts(180,28): error TS2339: Property 'listener' does not exist on type 'Object'.
+events.ts(180,48): error TS2339: Property 'listener' does not exist on type 'Object'.
+events.ts(184,23): error TS2339: Property '_events' does not exist on type 'Element'.
+events.ts(186,23): error TS2538: Type 'String' cannot be used as an index type.
+events.ts(191,23): error TS2538: Type 'String' cannot be used as an index type.
+events.ts(192,14): error TS2339: Property '_eventsCount' does not exist on type 'Element'.
+events.ts(196,25): error TS2538: Type 'String' cannot be used as an index type.
+events.ts(206,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+events.ts(206,26): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'HTMLElement'.
+  Type 'Element' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 113 more.
+events.ts(215,9): error TS2339: Property 'name' does not exist on type 'Object'.
+events.ts(216,9): error TS2339: Property 'emitter' does not exist on type 'Object'.
+events.ts(217,9): error TS2339: Property 'type' does not exist on type 'Object'.
+events.ts(218,9): error TS2339: Property 'count' does not exist on type 'Object'.
+events.ts(219,26): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+events.ts(226,92): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+events.ts(233,63): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+events.ts(237,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+events.ts(238,8): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+events.ts(239,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+events.ts(239,32): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+events.ts(239,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+events.ts(240,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+events.ts(242,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+events.ts(242,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+events.ts(243,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+events.ts(243,32): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+events.ts(250,11): error TS2339: Property 'listener' does not exist on type 'Object'.
+events.ts(251,9): error TS2339: Property 'wrapFn' does not exist on type 'Object'.
+events.ts(271,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+events.ts(279,21): error TS2538: Type 'String' cannot be used as an index type.
+events.ts(287,25): error TS2538: Type 'String' cannot be used as an index type.
+events.ts(288,22): error TS2339: Property 'removeListener' does not exist on type 'Number'.
+events.ts(294,43): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+events.ts(312,18): error TS2538: Type 'String' cannot be used as an index type.
+events.ts(314,20): error TS2339: Property 'removeListener' does not exist on type 'Number'.
+events.ts(315,45): error TS2454: Variable 'originalListener' is used before being assigned.
+events.ts(325,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+events.ts(332,18): error TS2339: Property 'removeListener' does not exist on type 'String'.
+events.ts(336,27): error TS2538: Type 'String' cannot be used as an index type.
+events.ts(340,27): error TS2538: Type 'String' cannot be used as an index type.
+events.ts(347,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+events.ts(349,40): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+events.ts(360,26): error TS2538: Type 'String' cannot be used as an index type.
+events.ts(366,48): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+events.ts(374,29): error TS2304: Cannot find name 'NextFunction'.
+events.ts(374,75): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+events.ts(380,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+events.ts(380,34): error TS2538: Type 'String' cannot be used as an index type.
+events.ts(400,22): error TS2339: Property 'listenerCount' does not exist on type 'Element'.
+events.ts(401,20): error TS2339: Property 'listenerCount' does not exist on type 'Element'.
+events.ts(409,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+events.ts(412,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+events.ts(412,36): error TS2538: Type 'String' cannot be used as an index type.
+events.ts(424,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+events.ts(428,26): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+events.ts(430,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'String'.
+events.ts(431,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+events.ts(435,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+events.ts(435,49): error TS2304: Cannot find name 'Void'.
+events.ts(436,10): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+events.ts(436,35): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+events.ts(437,24): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+events.ts(441,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+events.ts(441,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+events.ts(442,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+events.ts(451,42): error TS2304: Cannot find name 'Void'.
+events.ts(452,15): error TS2339: Property 'removeListener' does not exist on type 'Object'.
+events.ts(456,26): error TS2304: Cannot find name 'Void'.
+events.ts(457,26): error TS2339: Property 'removeListener' does not exist on type 'Object'.
+events.ts(458,17): error TS2339: Property 'removeListener' does not exist on type 'Object'.
+events.ts(463,36): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+events.ts(465,63): error TS2322: Type 'boolean' is not assignable to type '() => Function & FnProps<any>'.
+events.ts(470,92): error TS2304: Cannot find name 'Void'.
+events.ts(471,22): error TS2339: Property 'on' does not exist on type 'Object'.
+events.ts(472,36): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+events.ts(476,113): error TS2304: Cannot find name 'Void'.
+events.ts(477,22): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
+events.ts(478,15): error TS2339: Property 'once' does not exist on type 'Object'.
+events.ts(479,15): error TS2551: Property 'once' does not exist on type 'HTMLElement'. Did you mean 'nonce'?
+events.ts(481,15): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
+events.ts(486,30): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(type: keyof HTMLElementEventMap, listener: (this: HTMLElement, ev: PointerEvent | MouseEvent | UIEvent | Event | ErrorEvent | ... 13 more ... | WheelEvent) => any, options?: boolean | ... 1 more ... | undefined): void', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'keyof HTMLElementEventMap'.
+  Overload 2 of 2, '(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions | undefined): void', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+events.ts(486,72): error TS2304: Cannot find name 'Void'.
+events.ts(489,17): error TS2339: Property 'once' does not exist on type 'Object'.
+events.ts(490,37): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(type: keyof HTMLElementEventMap, listener: (this: HTMLElement, ev: PointerEvent | MouseEvent | UIEvent | Event | ErrorEvent | ... 13 more ... | WheelEvent) => any, options?: boolean | ... 1 more ... | undefined): void', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'keyof HTMLElementEventMap'.
+  Overload 2 of 2, '(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions | undefined): void', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

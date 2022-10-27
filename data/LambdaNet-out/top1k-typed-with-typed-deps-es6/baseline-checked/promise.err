@@ -1,0 +1,271 @@
+build.ts(5,19): error TS2307: Cannot find module 'acorn' or its corresponding type declarations.
+build.ts(6,18): error TS2307: Cannot find module 'acorn/dist/walk' or its corresponding type declarations.
+build.ts(9,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+build.ts(17,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+build.ts(18,13): error TS2538: Type 'String' cannot be used as an index type.
+build.ts(18,33): error TS2538: Type 'String' cannot be used as an index type.
+build.ts(19,16): error TS2538: Type 'String' cannot be used as an index type.
+build.ts(19,43): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+build.ts(22,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+build.ts(23,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+build.ts(27,16): error TS2339: Property 'computed' does not exist on type 'Object'.
+build.ts(28,16): error TS2339: Property 'property' does not exist on type 'Object'.
+build.ts(29,16): error TS2339: Property 'property' does not exist on type 'Object'.
+build.ts(30,20): error TS2339: Property 'property' does not exist on type 'Object'.
+build.ts(30,44): error TS2339: Property 'property' does not exist on type 'Object'.
+build.ts(33,46): error TS2304: Cannot find name 'Void'.
+build.ts(34,23): error TS2339: Property 'start' does not exist on type 'Node'.
+build.ts(34,39): error TS2339: Property 'end' does not exist on type 'Node'.
+build.ts(37,14): error TS2339: Property 'start' does not exist on type 'Node'.
+build.ts(43,44): error TS2345: Argument of type '(filename: Number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+  Types of parameters 'filename' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'Number'.
+build.ts(46,52): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string | ArrayBufferView'.
+  Type 'String' is missing the following properties from type 'BigUint64Array': BYTES_PER_ELEMENT, buffer, byteLength, byteOffset, and 20 more.
+build.ts(51,44): error TS2345: Argument of type '(filename: Number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+  Types of parameters 'filename' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'Number'.
+build.ts(55,56): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string | ArrayBufferView'.
+build.ts(60,44): error TS2345: Argument of type '(filename: Number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+  Types of parameters 'filename' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'Number'.
+build.ts(65,61): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string | ArrayBufferView'.
+polyfill-done.ts(3,30): error TS2339: Property 'done' does not exist on type 'Promise<any>'.
+polyfill-done.ts(4,21): error TS2339: Property 'done' does not exist on type 'Promise<any>'.
+polyfill-done.ts(5,15): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+polyfill-done.ts(5,66): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[onfulfilled?: ((value: any) => unknown) | null | undefined, onrejected?: ((reason: any) => unknown) | null | undefined]'.
+src/core.ts(5,18): error TS2304: Cannot find name 'Void'.
+src/core.ts(24,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/core.ts(25,5): error TS2739: Type '{}' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+src/core.ts(26,23): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+src/core.ts(26,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/core.ts(35,47): error TS2304: Cannot find name 'Void'.
+src/core.ts(43,58): error TS2304: Cannot find name 'Void'.
+src/core.ts(54,31): error TS2304: Cannot find name 'Void'.
+src/core.ts(55,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+src/core.ts(61,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+src/core.ts(62,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+src/core.ts(63,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+src/core.ts(64,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+src/core.ts(66,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+src/core.ts(68,1): error TS7005: Variable '_onHandle' implicitly has an 'any' type.
+src/core.ts(69,1): error TS7005: Variable '_onReject' implicitly has an 'any' type.
+src/core.ts(76,21): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/core.ts(76,33): error TS2345: Argument of type '() => Void' is not assignable to parameter of type 'String'.
+src/core.ts(77,16): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/core.ts(77,28): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+src/core.ts(81,75): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+src/core.ts(82,14): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+src/core.ts(83,14): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+src/core.ts(83,24): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/core.ts(83,36): error TS2345: Argument of type '() => Void' is not assignable to parameter of type 'String'.
+src/core.ts(85,12): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+src/core.ts(85,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/core.ts(85,30): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/core.ts(88,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/core.ts(88,54): error TS2304: Cannot find name 'Void'.
+src/core.ts(89,15): error TS2339: Property '_state' does not exist on type 'HTMLElement'.
+src/core.ts(90,17): error TS2339: Property '_value' does not exist on type 'HTMLElement'.
+src/core.ts(95,12): error TS2339: Property '_state' does not exist on type 'HTMLElement'.
+src/core.ts(96,14): error TS2339: Property '_deferredState' does not exist on type 'HTMLElement'.
+src/core.ts(97,12): error TS2339: Property '_deferredState' does not exist on type 'HTMLElement'.
+src/core.ts(98,12): error TS2339: Property '_deferreds' does not exist on type 'HTMLElement'.
+src/core.ts(101,14): error TS2339: Property '_deferredState' does not exist on type 'HTMLElement'.
+src/core.ts(102,12): error TS2339: Property '_deferredState' does not exist on type 'HTMLElement'.
+src/core.ts(103,12): error TS2339: Property '_deferreds' does not exist on type 'HTMLElement'.
+src/core.ts(103,31): error TS2339: Property '_deferreds' does not exist on type 'HTMLElement'.
+src/core.ts(106,10): error TS2339: Property '_deferreds' does not exist on type 'HTMLElement'.
+src/core.ts(112,68): error TS2304: Cannot find name 'Void'.
+src/core.ts(114,27): error TS2339: Property '_state' does not exist on type 'HTMLElement'.
+src/core.ts(114,51): error TS2339: Property 'onFulfilled' does not exist on type 'HTMLElement'.
+src/core.ts(114,74): error TS2339: Property 'onRejected' does not exist on type 'HTMLElement'.
+src/core.ts(116,16): error TS2339: Property '_state' does not exist on type 'HTMLElement'.
+src/core.ts(117,26): error TS2339: Property 'promise' does not exist on type 'HTMLElement'.
+src/core.ts(117,40): error TS2339: Property '_value' does not exist on type 'HTMLElement'.
+src/core.ts(119,25): error TS2339: Property 'promise' does not exist on type 'HTMLElement'.
+src/core.ts(119,39): error TS2339: Property '_value' does not exist on type 'HTMLElement'.
+src/core.ts(123,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+src/core.ts(123,43): error TS2339: Property '_value' does not exist on type 'HTMLElement'.
+src/core.ts(125,23): error TS2339: Property 'promise' does not exist on type 'HTMLElement'.
+src/core.ts(127,24): error TS2339: Property 'promise' does not exist on type 'HTMLElement'.
+src/core.ts(127,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/core.ts(131,51): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
+src/core.ts(136,7): error TS2345: Argument of type 'TypeError' is not assignable to parameter of type 'Number'.
+  Type 'TypeError' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+src/core.ts(144,9): error TS2367: This condition will always return 'false' since the types 'Function' and 'Number' have no overlap.
+src/core.ts(148,21): error TS2339: Property 'then' does not exist on type 'Object'.
+src/core.ts(151,12): error TS2339: Property '_state' does not exist on type 'Object'.
+src/core.ts(152,12): error TS2339: Property '_value' does not exist on type 'Object'.
+src/core.ts(153,14): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+src/core.ts(154,7): error TS2322: Type 'undefined' is not assignable to type 'String'.
+src/core.ts(157,7): error TS2322: Type 'undefined' is not assignable to type 'String'.
+src/core.ts(160,8): error TS2339: Property '_state' does not exist on type 'Object'.
+src/core.ts(161,8): error TS2339: Property '_value' does not exist on type 'Object'.
+src/core.ts(162,10): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+src/core.ts(165,50): error TS2304: Cannot find name 'Void'.
+src/core.ts(166,8): error TS2339: Property '_state' does not exist on type 'Object'.
+src/core.ts(167,8): error TS2339: Property '_value' does not exist on type 'Object'.
+src/core.ts(171,10): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+src/core.ts(173,37): error TS2304: Cannot find name 'Void'.
+src/core.ts(174,12): error TS2339: Property '_deferredState' does not exist on type 'HTMLElement'.
+src/core.ts(175,23): error TS2339: Property '_deferreds' does not exist on type 'HTMLElement'.
+src/core.ts(176,10): error TS2339: Property '_deferreds' does not exist on type 'HTMLElement'.
+src/core.ts(178,12): error TS2339: Property '_deferredState' does not exist on type 'HTMLElement'.
+src/core.ts(179,30): error TS2339: Property '_deferreds' does not exist on type 'HTMLElement'.
+src/core.ts(180,25): error TS2339: Property '_deferreds' does not exist on type 'HTMLElement'.
+src/core.ts(182,10): error TS2339: Property '_deferreds' does not exist on type 'HTMLElement'.
+src/core.ts(186,77): error TS2304: Cannot find name 'Void'.
+src/core.ts(187,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+src/core.ts(188,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+src/core.ts(189,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+src/core.ts(198,50): error TS2304: Cannot find name 'Void'.
+src/core.ts(200,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+  Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+src/core.ts(207,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+src/done.ts(7,13): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+src/es6-extensions.ts(11,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/es6-extensions.ts(11,32): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
+src/es6-extensions.ts(12,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/es6-extensions.ts(12,33): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
+src/es6-extensions.ts(13,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/es6-extensions.ts(13,32): error TS2345: Argument of type 'null' is not assignable to parameter of type 'String'.
+src/es6-extensions.ts(14,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/es6-extensions.ts(14,37): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'String'.
+src/es6-extensions.ts(15,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/es6-extensions.ts(15,32): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+src/es6-extensions.ts(16,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/es6-extensions.ts(19,24): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/es6-extensions.ts(19,36): error TS2345: Argument of type '() => Void' is not assignable to parameter of type 'String'.
+src/es6-extensions.ts(20,5): error TS2339: Property '_state' does not exist on type 'HTMLElement'.
+src/es6-extensions.ts(21,5): error TS2339: Property '_value' does not exist on type 'HTMLElement'.
+src/es6-extensions.ts(22,3): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+src/es6-extensions.ts(24,9): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+src/es6-extensions.ts(24,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/es6-extensions.ts(38,16): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/es6-extensions.ts(41,14): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/es6-extensions.ts(41,26): error TS2345: Argument of type '(resolve: any, reject: any) => void' is not assignable to parameter of type 'String'.
+src/es6-extensions.ts(41,36): error TS7006: Parameter 'resolve' implicitly has an 'any' type.
+src/es6-extensions.ts(41,45): error TS7006: Parameter 'reject' implicitly has an 'any' type.
+src/es6-extensions.ts(61,9): error TS2339: Property 'all' does not exist on type 'typeof Promise'.
+src/es6-extensions.ts(61,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/es6-extensions.ts(62,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/es6-extensions.ts(64,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/es6-extensions.ts(64,22): error TS2345: Argument of type '(resolve: Function, reject: Function) => any' is not assignable to parameter of type 'String'.
+src/es6-extensions.ts(67,43): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
+src/es6-extensions.ts(69,43): error TS2339: Property 'then' does not exist on type '{}'.
+src/es6-extensions.ts(70,22): error TS2339: Property '_state' does not exist on type '{}'.
+src/es6-extensions.ts(71,23): error TS2339: Property '_value' does not exist on type '{}'.
+src/es6-extensions.ts(73,19): error TS2339: Property '_state' does not exist on type '{}'.
+src/es6-extensions.ts(73,51): error TS2339: Property '_value' does not exist on type '{}'.
+src/es6-extensions.ts(74,19): error TS2339: Property '_state' does not exist on type '{}'.
+src/es6-extensions.ts(74,44): error TS2339: Property '_value' does not exist on type '{}'.
+src/es6-extensions.ts(75,15): error TS2339: Property 'then' does not exist on type '{}'.
+src/es6-extensions.ts(78,11): error TS2322: Type 'undefined' is not assignable to type 'String'.
+src/es6-extensions.ts(80,36): error TS2339: Property 'then' does not exist on type 'Object'.
+src/es6-extensions.ts(82,20): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+src/es6-extensions.ts(82,30): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/es6-extensions.ts(86,13): error TS2322: Type 'undefined' is not assignable to type 'String'.
+src/es6-extensions.ts(91,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/es6-extensions.ts(96,11): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+src/es6-extensions.ts(107,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/es6-extensions.ts(107,38): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+src/es6-extensions.ts(109,40): error TS2339: Property 'then' does not exist on type '{}'.
+src/es6-extensions.ts(110,19): error TS2339: Property 'then' does not exist on type '{}'.
+src/es6-extensions.ts(114,14): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/es6-extensions.ts(120,9): error TS2339: Property 'allSettled' does not exist on type 'typeof Promise'.
+src/es6-extensions.ts(121,18): error TS2339: Property 'all' does not exist on type 'typeof Promise'.
+src/es6-extensions.ts(124,9): error TS2339: Property 'reject' does not exist on type 'typeof Promise'.
+src/es6-extensions.ts(125,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/es6-extensions.ts(125,22): error TS2345: Argument of type '(resolve: Function, reject: Function) => void' is not assignable to parameter of type 'String'.
+src/es6-extensions.ts(130,9): error TS2339: Property 'race' does not exist on type 'typeof Promise'.
+src/es6-extensions.ts(130,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/es6-extensions.ts(131,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/es6-extensions.ts(131,22): error TS2345: Argument of type '(resolve: Function, reject: String) => void' is not assignable to parameter of type 'String'.
+src/es6-extensions.ts(133,15): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+src/finally.ts(8,20): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+src/finally.ts(12,20): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+src/node-extensions.ts(14,9): error TS2339: Property 'denodeify' does not exist on type 'typeof Promise'.
+src/node-extensions.ts(30,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/node-extensions.ts(39,35): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(...items: ConcatArray<string>[]): string[]', gave the following error.
+    Type 'String' is not assignable to type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(...items: (string | ConcatArray<string>)[]): string[]', gave the following error.
+    Type 'String' is not assignable to type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+src/node-extensions.ts(48,19): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+src/node-extensions.ts(50,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/node-extensions.ts(52,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/node-extensions.ts(92,5): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+src/node-extensions.ts(97,9): error TS2339: Property 'nodeify' does not exist on type 'typeof Promise'.
+src/node-extensions.ts(99,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/node-extensions.ts(102,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/node-extensions.ts(102,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+src/node-extensions.ts(104,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+src/node-extensions.ts(107,16): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/node-extensions.ts(107,28): error TS2345: Argument of type '(resolve: any, reject: any) => void' is not assignable to parameter of type 'String'.
+src/node-extensions.ts(107,38): error TS7006: Parameter 'resolve' implicitly has an 'any' type.
+src/node-extensions.ts(107,47): error TS7006: Parameter 'reject' implicitly has an 'any' type.
+src/node-extensions.ts(112,20): error TS2339: Property 'call' does not exist on type 'String'.
+src/rejection-tracking.ts(5,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/rejection-tracking.ts(13,21): error TS2304: Cannot find name 'Void'.
+src/rejection-tracking.ts(20,36): error TS2304: Cannot find name 'Void'.
+src/rejection-tracking.ts(29,15): error TS2339: Property '_state' does not exist on type 'HTMLElement'.
+src/rejection-tracking.ts(30,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/rejection-tracking.ts(30,26): error TS2339: Property '_rejectionId' does not exist on type 'HTMLElement'.
+src/rejection-tracking.ts(32,11): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/rejection-tracking.ts(32,30): error TS2339: Property '_rejectionId' does not exist on type 'HTMLElement'.
+src/rejection-tracking.ts(33,27): error TS2339: Property '_rejectionId' does not exist on type 'HTMLElement'.
+src/rejection-tracking.ts(35,22): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/rejection-tracking.ts(35,41): error TS2339: Property '_rejectionId' does not exist on type 'HTMLElement'.
+src/rejection-tracking.ts(37,14): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/rejection-tracking.ts(37,33): error TS2339: Property '_rejectionId' does not exist on type 'HTMLElement'.
+src/rejection-tracking.ts(41,17): error TS2339: Property '_deferredState' does not exist on type 'HTMLElement'.
+src/rejection-tracking.ts(42,15): error TS2339: Property '_rejectionId' does not exist on type 'HTMLElement'.
+src/rejection-tracking.ts(42,30): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/rejection-tracking.ts(43,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/rejection-tracking.ts(43,26): error TS2339: Property '_rejectionId' does not exist on type 'HTMLElement'.
+src/rejection-tracking.ts(47,42): error TS2339: Property '_rejectionId' does not exist on type 'HTMLElement'.
+src/rejection-tracking.ts(60,37): error TS2304: Cannot find name 'Void'.
+src/rejection-tracking.ts(62,15): error TS2339: Property 'allRejections' does not exist on type 'Element'.
+src/rejection-tracking.ts(64,20): error TS2538: Type 'String' cannot be used as an index type.
+src/rejection-tracking.ts(65,17): error TS2339: Property 'whitelist' does not exist on type 'Element'.
+src/rejection-tracking.ts(68,18): error TS2538: Type 'String' cannot be used as an index type.
+src/rejection-tracking.ts(68,34): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/rejection-tracking.ts(69,19): error TS2339: Property 'onUnhandled' does not exist on type 'Element'.
+src/rejection-tracking.ts(70,20): error TS2538: Type 'String' cannot be used as an index type.
+src/rejection-tracking.ts(71,17): error TS2339: Property 'onUnhandled' does not exist on type 'Element'.
+src/rejection-tracking.ts(72,22): error TS2538: Type 'String' cannot be used as an index type.
+src/rejection-tracking.ts(73,22): error TS2538: Type 'String' cannot be used as an index type.
+src/rejection-tracking.ts(76,20): error TS2538: Type 'String' cannot be used as an index type.
+src/rejection-tracking.ts(78,22): error TS2538: Type 'String' cannot be used as an index type.
+src/rejection-tracking.ts(79,22): error TS2538: Type 'String' cannot be used as an index type.
+src/rejection-tracking.ts(84,35): error TS2304: Cannot find name 'Void'.
+src/rejection-tracking.ts(85,20): error TS2538: Type 'String' cannot be used as an index type.
+src/rejection-tracking.ts(86,19): error TS2339: Property 'onHandled' does not exist on type 'Element'.
+src/rejection-tracking.ts(87,17): error TS2339: Property 'onHandled' does not exist on type 'Element'.
+src/rejection-tracking.ts(87,38): error TS2538: Type 'String' cannot be used as an index type.
+src/rejection-tracking.ts(87,64): error TS2538: Type 'String' cannot be used as an index type.
+src/rejection-tracking.ts(88,30): error TS2538: Type 'String' cannot be used as an index type.
+src/rejection-tracking.ts(90,58): error TS2538: Type 'String' cannot be used as an index type.
+src/rejection-tracking.ts(94,22): error TS2538: Type 'String' cannot be used as an index type.
+src/rejection-tracking.ts(101,46): error TS2304: Cannot find name 'Void'.
+src/rejection-tracking.ts(109,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/rejection-tracking.ts(111,29): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+src/synchronous.ts(6,9): error TS2339: Property 'enableSynchronous' does not exist on type 'typeof Promise'.
+src/synchronous.ts(55,9): error TS2339: Property 'disableSynchronous' does not exist on type 'typeof Promise'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

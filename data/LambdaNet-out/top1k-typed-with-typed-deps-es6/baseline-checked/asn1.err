@@ -1,0 +1,135 @@
+lib/ber/errors.ts(9,5): error TS2322: Type 'String' is not assignable to type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/ber/index.ts(22,25): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ EOC: number; Boolean: number; Integer: number; BitString: number; OctetString: number; Null: number; OID: number; ObjectDescriptor: number; External: number; Real: number; Enumeration: number; PDV: number; ... 18 more ...; Context: number; }'.
+  No index signature with a parameter of type 'string' was found on type '{ EOC: number; Boolean: number; Integer: number; BitString: number; OctetString: number; Null: number; OID: number; ObjectDescriptor: number; External: number; Real: number; Enumeration: number; PDV: number; ... 18 more ...; Context: number; }'.
+lib/ber/index.ts(26,25): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ newInvalidAsn1Error: (msg: String) => Error; }'.
+  No index signature with a parameter of type 'string' was found on type '{ newInvalidAsn1Error: (msg: String) => Error; }'.
+lib/ber/reader.ts(18,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ber/reader.ts(18,31): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
+lib/ber/reader.ts(22,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ber/reader.ts(23,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ber/reader.ts(26,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ber/reader.ts(27,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ber/reader.ts(92,32): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/reader.ts(96,8): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/reader.ts(97,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/reader.ts(100,13): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/ber/reader.ts(103,13): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/ber/reader.ts(105,22): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/reader.ts(110,49): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/reader.ts(132,28): error TS2367: This condition will always return 'true' since the types 'Number' and 'String' have no overlap.
+lib/ber/reader.ts(133,11): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/ber/reader.ts(134,57): error TS2554: Expected 0 arguments, but got 1.
+lib/ber/reader.ts(168,7): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
+lib/ber/reader.ts(169,11): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/ber/reader.ts(170,55): error TS2554: Expected 0 arguments, but got 1.
+lib/ber/reader.ts(177,34): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/reader.ts(188,38): error TS2554: Expected 0 arguments, but got 1.
+lib/ber/reader.ts(195,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ber/reader.ts(199,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ber/reader.ts(205,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/reader.ts(206,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
+lib/ber/reader.ts(206,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/reader.ts(207,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/reader.ts(214,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/reader.ts(215,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/reader.ts(229,7): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
+lib/ber/reader.ts(230,11): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/ber/reader.ts(231,55): error TS2554: Expected 0 arguments, but got 1.
+lib/ber/reader.ts(238,11): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/ber/reader.ts(240,34): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/reader.ts(248,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/reader.ts(249,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/reader.ts(252,8): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/reader.ts(253,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/reader.ts(255,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(28,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ber/writer.ts(30,12): error TS2538: Type 'String' cannot be used as an index type.
+lib/ber/writer.ts(33,9): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'String'.
+  Type 'undefined' is not assignable to type 'String'.
+lib/ber/writer.ts(33,63): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
+lib/ber/writer.ts(34,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
+lib/ber/writer.ts(44,35): error TS2304: Cannot find name 'Void'.
+lib/ber/writer.ts(45,19): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+lib/ber/writer.ts(47,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ber/writer.ts(47,36): error TS2339: Property 'size' does not exist on type 'Object'.
+lib/ber/writer.ts(48,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ber/writer.ts(48,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ber/writer.ts(49,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ber/writer.ts(50,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ber/writer.ts(54,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ber/writer.ts(60,13): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/ber/writer.ts(66,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ber/writer.ts(85,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(90,11): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/ber/writer.ts(92,16): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
+lib/ber/writer.ts(96,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(150,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ber/writer.ts(164,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ber/writer.ts(165,8): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+lib/ber/writer.ts(168,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ber/writer.ts(184,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ber/writer.ts(184,54): error TS2304: Cannot find name 'Void'.
+lib/ber/writer.ts(188,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(189,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(191,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(192,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(193,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(195,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(196,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(197,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(198,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(200,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(201,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(202,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(203,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(204,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(208,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ber/writer.ts(209,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ber/writer.ts(212,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/ber/writer.ts(215,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ber/writer.ts(219,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ber/writer.ts(246,11): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/ber/writer.ts(263,23): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+lib/ber/writer.ts(264,36): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(268,15): error TS2538: Type 'String' cannot be used as an index type.
+lib/ber/writer.ts(271,15): error TS2538: Type 'String' cannot be used as an index type.
+lib/ber/writer.ts(272,15): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+lib/ber/writer.ts(274,15): error TS2538: Type 'String' cannot be used as an index type.
+lib/ber/writer.ts(275,15): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+lib/ber/writer.ts(275,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(276,15): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+lib/ber/writer.ts(279,15): error TS2538: Type 'String' cannot be used as an index type.
+lib/ber/writer.ts(280,15): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+lib/ber/writer.ts(280,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(281,15): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+lib/ber/writer.ts(281,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(282,15): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+lib/ber/writer.ts(284,11): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/ber/writer.ts(294,29): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
+lib/ber/writer.ts(294,51): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
+lib/ber/writer.ts(303,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(304,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.
+lib/ber/writer.ts(306,9): error TS2740: Type 'Buffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 36 more.
+lib/ber/writer.ts(306,36): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

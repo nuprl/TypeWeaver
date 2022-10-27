@@ -1,0 +1,488 @@
+ember-cli-build.ts(3,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+ember-cli-build.ts(4,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+ember-cli-build.ts(11,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+ember-cli-build.ts(19,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+ember-cli-build.ts(20,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+ember-cli-build.ts(25,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+ember-cli-build.ts(79,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+ember-cli-build.ts(100,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+ember-cli-build.ts(101,5): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+ember-cli-build.ts(114,5): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/rsvp.ts(22,8): error TS2339: Property 'async' does not exist on type 'Object'.
+lib/rsvp.ts(23,8): error TS2339: Property 'after' does not exist on type 'Object'.
+lib/rsvp.ts(23,43): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(callback: () => void, ms?: number | undefined): Timeout', gave the following error.
+    Argument of type 'Number' is not assignable to parameter of type '() => void'.
+      Type 'Number' provides no match for the signature '(): void'.
+  Overload 2 of 3, '(callback: (args: void) => void, ms?: number | undefined): Timeout', gave the following error.
+    Argument of type 'Number' is not assignable to parameter of type '(args: void) => void'.
+      Type 'Number' provides no match for the signature '(args: void): void'.
+  Overload 3 of 3, '(handler: TimerHandler, timeout?: number | undefined, ...arguments: any[]): number', gave the following error.
+    Argument of type 'Number' is not assignable to parameter of type 'TimerHandler'.
+      Type 'Number' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+lib/rsvp.ts(24,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp.ts(26,67): error TS2339: Property 'async' does not exist on type 'Object'.
+lib/rsvp.ts(28,16): error TS2304: Cannot find name 'Void'.
+lib/rsvp.ts(29,10): error TS2339: Property 'on' does not exist on type 'Object'.
+lib/rsvp.ts(29,16): error TS2802: Type 'IArguments' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+lib/rsvp.ts(32,17): error TS2304: Cannot find name 'Void'.
+lib/rsvp.ts(33,10): error TS2339: Property 'off' does not exist on type 'Object'.
+lib/rsvp.ts(33,17): error TS2802: Type 'IArguments' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+lib/rsvp.ts(37,52): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
+lib/rsvp.ts(38,34): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
+lib/rsvp.ts(39,27): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
+lib/rsvp.ts(42,10): error TS2554: Expected 0 arguments, but got 2.
+lib/rsvp.ts(42,21): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+lib/rsvp/-internal.ts(17,25): error TS2304: Cannot find name 'Void'.
+lib/rsvp/-internal.ts(19,14): error TS2322: Type 'undefined' is not assignable to type 'Boolean'.
+lib/rsvp/-internal.ts(23,104): error TS2304: Cannot find name 'Void'.
+lib/rsvp/-internal.ts(30,83): error TS2304: Cannot find name 'Void'.
+lib/rsvp/-internal.ts(31,10): error TS2339: Property 'async' does not exist on type 'Object'.
+lib/rsvp/-internal.ts(38,13): error TS2367: This condition will always return 'false' since the types 'Number' and 'String' have no overlap.
+lib/rsvp/-internal.ts(48,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+lib/rsvp/-internal.ts(50,7): error TS2554: Expected 4 arguments, but got 5.
+lib/rsvp/-internal.ts(50,29): error TS2339: Property '_label' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(54,23): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/rsvp/-internal.ts(59,66): error TS2304: Cannot find name 'Void'.
+lib/rsvp/-internal.ts(60,16): error TS2339: Property '_state' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(61,31): error TS2339: Property '_result' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(62,23): error TS2339: Property '_state' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(63,5): error TS2322: Type 'null' is not assignable to type '(reason: any) => void'.
+lib/rsvp/-internal.ts(64,30): error TS2339: Property '_result' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(66,25): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'Object'.
+lib/rsvp/-internal.ts(67,11): error TS2367: This condition will always return 'false' since the types 'Promise' and 'String' have no overlap.
+lib/rsvp/-internal.ts(72,44): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+lib/rsvp/-internal.ts(76,93): error TS2304: Cannot find name 'Void'.
+lib/rsvp/-internal.ts(79,5): error TS2367: This condition will always return 'false' since the types 'String' and '(onFulfillment: Number, onRejection: Number, label: String) => String' have no overlap.
+lib/rsvp/-internal.ts(80,25): error TS2339: Property 'resolve' does not exist on type 'Function'.
+lib/rsvp/-internal.ts(83,32): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Promise'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'Promise': _onError, catch, finally
+lib/rsvp/-internal.ts(85,36): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Number'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+lib/rsvp/-internal.ts(87,22): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/rsvp/-internal.ts(91,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/-internal.ts(91,58): error TS2304: Cannot find name 'Void'.
+lib/rsvp/-internal.ts(99,23): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Function'.
+lib/rsvp/-internal.ts(108,53): error TS2304: Cannot find name 'Void'.
+lib/rsvp/-internal.ts(110,30): error TS2339: Property '_result' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(116,59): error TS2304: Cannot find name 'Void'.
+lib/rsvp/-internal.ts(117,15): error TS2339: Property '_state' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(119,11): error TS2339: Property '_result' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(120,11): error TS2339: Property '_state' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(122,15): error TS2339: Property '_subscribers' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(123,16): error TS2339: Property 'instrument' does not exist on type 'Object'.
+lib/rsvp/-internal.ts(124,7): error TS2554: Expected 3 arguments, but got 2.
+lib/rsvp/-internal.ts(127,12): error TS2339: Property 'async' does not exist on type 'Object'.
+lib/rsvp/-internal.ts(131,61): error TS2304: Cannot find name 'Void'.
+lib/rsvp/-internal.ts(132,15): error TS2339: Property '_state' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(133,11): error TS2339: Property '_state' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(134,11): error TS2339: Property '_result' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(135,10): error TS2339: Property 'async' does not exist on type 'Object'.
+lib/rsvp/-internal.ts(138,104): error TS2304: Cannot find name 'Void'.
+lib/rsvp/-internal.ts(139,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/-internal.ts(139,35): error TS2339: Property '_subscribers' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(142,3): error TS2322: Type 'null' is not assignable to type '(reason: any) => void'.
+lib/rsvp/-internal.ts(145,15): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
+lib/rsvp/-internal.ts(146,15): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
+lib/rsvp/-internal.ts(148,30): error TS2339: Property '_state' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(149,12): error TS2339: Property 'async' does not exist on type 'Object'.
+lib/rsvp/-internal.ts(153,44): error TS2304: Cannot find name 'Void'.
+lib/rsvp/-internal.ts(154,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/-internal.ts(154,36): error TS2339: Property '_subscribers' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(155,33): error TS2339: Property '_state' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(157,14): error TS2339: Property 'instrument' does not exist on type 'Object'.
+lib/rsvp/-internal.ts(158,5): error TS2554: Expected 3 arguments, but got 2.
+lib/rsvp/-internal.ts(158,16): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
+lib/rsvp/-internal.ts(163,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/-internal.ts(163,66): error TS2339: Property '_result' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(167,28): error TS2365: Operator '+' cannot be applied to types 'number' and 'String'.
+lib/rsvp/-internal.ts(170,31): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Promise'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/rsvp/-internal.ts(176,11): error TS2339: Property '_subscribers' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(179,102): error TS2304: Cannot find name 'Void'.
+lib/rsvp/-internal.ts(188,7): error TS2322: Type 'unknown' is not assignable to type 'Object'.
+lib/rsvp/-internal.ts(191,5): error TS2322: Type 'Number' is not assignable to type 'String'.
+lib/rsvp/-internal.ts(194,15): error TS2339: Property '_state' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(196,14): error TS2454: Variable 'value' is used before being assigned.
+lib/rsvp/-internal.ts(196,14): error TS2367: This condition will always return 'false' since the types 'String' and 'Promise' have no overlap.
+lib/rsvp/-internal.ts(197,21): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+lib/rsvp/-internal.ts(199,21): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/rsvp/-internal.ts(199,21): error TS2454: Variable 'error' is used before being assigned.
+lib/rsvp/-internal.ts(201,22): error TS2454: Variable 'value' is used before being assigned.
+lib/rsvp/-internal.ts(202,14): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
+lib/rsvp/-internal.ts(203,22): error TS2454: Variable 'value' is used before being assigned.
+lib/rsvp/-internal.ts(204,14): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
+lib/rsvp/-internal.ts(205,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+  Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+lib/rsvp/-internal.ts(205,21): error TS2454: Variable 'value' is used before being assigned.
+lib/rsvp/-internal.ts(209,74): error TS2304: Cannot find name 'Void'.
+lib/rsvp/-internal.ts(219,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+lib/rsvp/-internal.ts(222,21): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Function'.
+lib/rsvp/all-settled.ts(13,15): error TS7006: Parameter 'Constructor' implicitly has an 'any' type.
+lib/rsvp/all-settled.ts(13,28): error TS7006: Parameter 'entries' implicitly has an 'any' type.
+lib/rsvp/all-settled.ts(13,37): error TS7006: Parameter 'label' implicitly has an 'any' type.
+lib/rsvp/all-settled.ts(75,20): error TS2339: Property 'reject' does not exist on type 'typeof Promise'.
+lib/rsvp/all-settled.ts(78,50): error TS2339: Property 'promise' does not exist on type 'AllSettled'.
+lib/rsvp/all.ts(14,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/all.ts(15,18): error TS2339: Property 'all' does not exist on type 'typeof Promise'.
+lib/rsvp/asap.ts(2,62): error TS2304: Cannot find name 'Void'.
+lib/rsvp/asap.ts(3,9): error TS2538: Type 'Number' cannot be used as an index type.
+lib/rsvp/asap.ts(4,3): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+lib/rsvp/asap.ts(4,9): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/rsvp/asap.ts(5,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
+lib/rsvp/asap.ts(14,7): error TS2322: Type '(Window & typeof globalThis) | undefined' is not assignable to type 'Object'.
+  Type 'undefined' is not assignable to type 'Object'.
+lib/rsvp/asap.ts(16,56): error TS2339: Property 'MutationObserver' does not exist on type 'Object'.
+lib/rsvp/asap.ts(16,90): error TS2339: Property 'WebKitMutationObserver' does not exist on type 'Object'.
+lib/rsvp/asap.ts(44,17): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+lib/rsvp/asap.ts(44,27): error TS2351: This expression is not constructable.
+  Type 'Boolean' has no construct signatures.
+lib/rsvp/asap.ts(45,7): error TS2739: Type 'Text' is missing the following properties from type 'Error': name, message
+lib/rsvp/asap.ts(48,21): error TS2339: Property 'data' does not exist on type 'Error'.
+lib/rsvp/asap.ts(48,44): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/rsvp/asap.ts(53,7): error TS2740: Type 'MessageChannel' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+lib/rsvp/asap.ts(54,11): error TS2339: Property 'port1' does not exist on type 'HTMLElement'.
+lib/rsvp/asap.ts(55,24): error TS2339: Property 'port2' does not exist on type 'HTMLElement'.
+lib/rsvp/asap.ts(64,19): error TS2304: Cannot find name 'Void'.
+lib/rsvp/asap.ts(66,30): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+lib/rsvp/asap.ts(67,23): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+lib/rsvp/asap.ts(71,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+lib/rsvp/asap.ts(72,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+lib/rsvp/asap.ts(81,23): error TS2339: Property 'runOnLoop' does not exist on type 'Enumerator<any>'.
+lib/rsvp/asap.ts(81,42): error TS2339: Property 'runOnContext' does not exist on type 'Enumerator<any>'.
+lib/rsvp/asap.ts(82,5): error TS2322: Type 'Function' is not assignable to type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'Object' is not assignable to type 'boolean'.
+lib/rsvp/asap.ts(84,5): error TS2322: Type 'Function' is not assignable to type 'Boolean'.
+lib/rsvp/asap.ts(97,3): error TS2322: Type 'Boolean' is not assignable to type 'Function'.
+lib/rsvp/config.ts(9,50): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
+lib/rsvp/config.ts(11,12): error TS2538: Type 'String' cannot be used as an index type.
+lib/rsvp/config.ts(13,19): error TS2538: Type 'String' cannot be used as an index type.
+lib/rsvp/defer.ts(40,12): error TS2339: Property 'promise' does not exist on type 'Object'.
+lib/rsvp/defer.ts(41,14): error TS2339: Property 'resolve' does not exist on type 'Object'.
+lib/rsvp/defer.ts(42,14): error TS2339: Property 'reject' does not exist on type 'Object'.
+lib/rsvp/defer.ts(45,3): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'Enumerator<any>': atEnd, item, moveFirst, moveNext
+lib/rsvp/enumerator.ts(18,15): error TS7006: Parameter 'Constructor' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(18,28): error TS7006: Parameter 'input' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(18,35): error TS7006: Parameter 'abortOnReject' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(18,50): error TS7006: Parameter 'label' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(19,10): error TS2339: Property '_instanceConstructor' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(20,10): error TS2339: Property 'promise' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(21,10): error TS2339: Property '_abortOnReject' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(22,10): error TS2339: Property '_isUsingOwnPromise' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(23,10): error TS2339: Property '_isUsingOwnResolve' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(25,16): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
+lib/rsvp/enumerator.ts(25,19): error TS2802: Type 'IArguments' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+lib/rsvp/enumerator.ts(28,9): error TS7006: Parameter 'Constructor' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(28,22): error TS7006: Parameter 'input' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(30,10): error TS2339: Property 'length' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(31,10): error TS2339: Property '_remaining' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(32,10): error TS2339: Property '_result' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(37,14): error TS7006: Parameter 'input' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(38,32): error TS2339: Property 'length' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(39,32): error TS2339: Property 'promise' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(41,29): error TS2339: Property '_state' does not exist on type 'String'.
+lib/rsvp/enumerator.ts(48,14): error TS2339: Property '_remaining' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(49,35): error TS2339: Property '_result' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(50,20): error TS2339: Property 'promise' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(50,29): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+lib/rsvp/enumerator.ts(51,12): error TS2339: Property '_result' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(55,24): error TS7006: Parameter 'entry' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(55,31): error TS7006: Parameter 'i' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(55,34): error TS7006: Parameter 'firstPass' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(56,26): error TS2339: Property '_instanceConstructor' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(58,14): error TS2339: Property '_isUsingOwnResolve' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(64,9): error TS2322: Type 'unknown' is not assignable to type 'Object'.
+lib/rsvp/enumerator.ts(67,11): error TS2454: Variable 'then' is used before being assigned.
+lib/rsvp/enumerator.ts(67,11): error TS2367: This condition will always return 'false' since the types 'String' and '(onFulfillment: Number, onRejection: Number, label: String) => String' have no overlap.
+lib/rsvp/enumerator.ts(70,25): error TS2454: Variable 'then' is used before being assigned.
+lib/rsvp/enumerator.ts(72,23): error TS2339: Property '_isUsingOwnPromise' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(73,22): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/rsvp/enumerator.ts(73,36): error TS2351: This expression is not constructable.
+  Type 'Object' has no construct signatures.
+lib/rsvp/enumerator.ts(75,27): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/rsvp/enumerator.ts(75,27): error TS2454: Variable 'error' is used before being assigned.
+lib/rsvp/enumerator.ts(81,32): error TS2351: This expression is not constructable.
+  Type 'Object' has no construct signatures.
+lib/rsvp/enumerator.ts(84,28): error TS2339: Property 'resolve' does not exist on type 'Object'.
+lib/rsvp/enumerator.ts(88,14): error TS7006: Parameter 'entry' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(88,21): error TS7006: Parameter 'i' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(88,24): error TS7006: Parameter 'firstPass' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(96,14): error TS7006: Parameter 'state' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(96,21): error TS7006: Parameter 'i' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(96,24): error TS7006: Parameter 'value' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(96,31): error TS7006: Parameter 'firstPass' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(97,18): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/rsvp/enumerator.ts(97,33): error TS2339: Property 'promise' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(100,16): error TS2339: Property '_abortOnReject' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(109,16): error TS7006: Parameter 'state' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(109,23): error TS7006: Parameter 'i' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(109,26): error TS7006: Parameter 'value' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(109,33): error TS7006: Parameter 'firstPass' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(110,10): error TS2339: Property '_remaining' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(111,10): error TS2339: Property '_result' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(114,17): error TS7006: Parameter 'promise' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(114,26): error TS7006: Parameter 'i' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(114,29): error TS7006: Parameter 'firstPass' implicitly has an 'any' type.
+lib/rsvp/enumerator.ts(116,16): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'Object'.
+lib/rsvp/enumerator.ts(123,76): error TS2304: Cannot find name 'Void'.
+lib/rsvp/enumerator.ts(124,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/rsvp/enumerator.ts(125,7): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
+lib/rsvp/enumerator.ts(126,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/rsvp/enumerator.ts(126,18): error TS2538: Type 'String' cannot be used as an index type.
+lib/rsvp/enumerator.ts(131,6): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/rsvp/enumerator.ts(131,19): error TS2538: Type 'String' cannot be used as an index type.
+lib/rsvp/events.ts(3,34): error TS2339: Property '_promiseCallbacks' does not exist on type 'Object'.
+lib/rsvp/events.ts(6,5): error TS2739: Type '{}' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+lib/rsvp/events.ts(6,24): error TS2339: Property '_promiseCallbacks' does not exist on type 'Object'.
+lib/rsvp/events.ts(9,3): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/rsvp/events.ts(65,9): error TS7006: Parameter 'object' implicitly has an 'any' type.
+lib/rsvp/events.ts(90,6): error TS7006: Parameter 'eventName' implicitly has an 'any' type.
+lib/rsvp/events.ts(90,17): error TS7006: Parameter 'callback' implicitly has an 'any' type.
+lib/rsvp/events.ts(99,7): error TS2322: Type 'never[]' is not assignable to type 'string'.
+lib/rsvp/events.ts(99,19): error TS2322: Type 'never[]' is not assignable to type 'string'.
+lib/rsvp/events.ts(99,19): error TS2542: Index signature in type 'String' only permits reading.
+lib/rsvp/events.ts(103,17): error TS2339: Property 'push' does not exist on type 'string'.
+lib/rsvp/events.ts(146,7): error TS7006: Parameter 'eventName' implicitly has an 'any' type.
+lib/rsvp/events.ts(146,18): error TS7006: Parameter 'callback' implicitly has an 'any' type.
+lib/rsvp/events.ts(150,7): error TS2322: Type 'never[]' is not assignable to type 'string'.
+lib/rsvp/events.ts(150,7): error TS2542: Index signature in type 'String' only permits reading.
+lib/rsvp/events.ts(158,17): error TS2551: Property 'splice' does not exist on type 'string'. Did you mean 'slice'?
+lib/rsvp/events.ts(192,11): error TS7006: Parameter 'eventName' implicitly has an 'any' type.
+lib/rsvp/events.ts(192,22): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/rsvp/events.ts(192,31): error TS7006: Parameter 'label' implicitly has an 'any' type.
+lib/rsvp/events.ts(201,9): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+lib/rsvp/filter.ts(8,7): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+lib/rsvp/filter.ts(13,14): error TS2339: Property '_remaining' does not exist on type 'FilterEnumerator'.
+lib/rsvp/filter.ts(13,39): error TS2339: Property '_result' does not exist on type 'FilterEnumerator'.
+lib/rsvp/filter.ts(14,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/filter.ts(14,32): error TS2339: Property '_result' does not exist on type 'FilterEnumerator'.
+lib/rsvp/filter.ts(14,64): error TS2367: This condition will always return 'true' since the types 'Number' and 'Function' have no overlap.
+lib/rsvp/filter.ts(15,20): error TS2339: Property 'promise' does not exist on type 'FilterEnumerator'.
+lib/rsvp/filter.ts(16,12): error TS2339: Property '_result' does not exist on type 'FilterEnumerator'.
+lib/rsvp/filter.ts(20,16): error TS7006: Parameter 'state' implicitly has an 'any' type.
+lib/rsvp/filter.ts(20,23): error TS7006: Parameter 'i' implicitly has an 'any' type.
+lib/rsvp/filter.ts(20,26): error TS7006: Parameter 'value' implicitly has an 'any' type.
+lib/rsvp/filter.ts(20,33): error TS7006: Parameter 'firstPass' implicitly has an 'any' type.
+lib/rsvp/filter.ts(22,12): error TS2339: Property '_result' does not exist on type 'FilterEnumerator'.
+lib/rsvp/filter.ts(25,20): error TS2339: Property '_mapFn' does not exist on type 'FilterEnumerator'.
+lib/rsvp/filter.ts(31,25): error TS2454: Variable 'val' is used before being assigned.
+lib/rsvp/filter.ts(34,12): error TS2339: Property '_remaining' does not exist on type 'FilterEnumerator'.
+lib/rsvp/filter.ts(36,14): error TS2339: Property '_result' does not exist on type 'FilterEnumerator'.
+lib/rsvp/filter.ts(133,86): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/filter.ts(135,20): error TS2339: Property 'reject' does not exist on type 'typeof Promise'.
+lib/rsvp/filter.ts(138,18): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+lib/rsvp/filter.ts(139,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/filter.ts(143,71): error TS2339: Property 'promise' does not exist on type 'FilterEnumerator'.
+lib/rsvp/hash-settled.ts(9,15): error TS7006: Parameter 'Constructor' implicitly has an 'any' type.
+lib/rsvp/hash-settled.ts(9,28): error TS7006: Parameter 'object' implicitly has an 'any' type.
+lib/rsvp/hash-settled.ts(9,36): error TS7006: Parameter 'label' implicitly has an 'any' type.
+lib/rsvp/hash-settled.ts(126,18): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+lib/rsvp/hash-settled.ts(127,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/hash-settled.ts(132,54): error TS2554: Expected 3 arguments, but got 4.
+lib/rsvp/hash-settled.ts(132,61): error TS2339: Property 'promise' does not exist on type 'HashSettled'.
+lib/rsvp/hash.ts(95,18): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+lib/rsvp/hash.ts(96,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/hash.ts(100,14): error TS2554: Expected 4 arguments, but got 3.
+lib/rsvp/hash.ts(100,54): error TS2339: Property 'promise' does not exist on type 'PromiseHash'.
+lib/rsvp/instrument.ts(3,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/instrument.ts(5,27): error TS2304: Cannot find name 'Void'.
+lib/rsvp/instrument.ts(10,35): error TS2339: Property 'payload' does not exist on type 'Object'.
+lib/rsvp/instrument.ts(12,15): error TS2339: Property 'guid' does not exist on type 'Object'.
+lib/rsvp/instrument.ts(12,30): error TS2339: Property 'key' does not exist on type 'Object'.
+lib/rsvp/instrument.ts(12,44): error TS2339: Property 'id' does not exist on type 'Object'.
+lib/rsvp/instrument.ts(13,15): error TS2339: Property 'childGuid' does not exist on type 'Object'.
+lib/rsvp/instrument.ts(13,35): error TS2339: Property 'key' does not exist on type 'Object'.
+lib/rsvp/instrument.ts(13,49): error TS2339: Property 'childId' does not exist on type 'Object'.
+lib/rsvp/instrument.ts(14,19): error TS2339: Property 'error' does not exist on type 'Object'.
+lib/rsvp/instrument.ts(15,17): error TS2339: Property 'stack' does not exist on type 'Object'.
+lib/rsvp/instrument.ts(15,33): error TS2339: Property 'error' does not exist on type 'Object'.
+lib/rsvp/instrument.ts(18,7): error TS7053: Element implicitly has an 'any' type because expression of type '"trigger"' can't be used to index type 'Object'.
+  Property 'trigger' does not exist on type 'Object'.
+lib/rsvp/instrument.ts(18,31): error TS2339: Property 'name' does not exist on type 'Object'.
+lib/rsvp/instrument.ts(18,43): error TS2339: Property 'payload' does not exist on type 'Object'.
+lib/rsvp/instrument.ts(24,79): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+lib/rsvp/instrument.ts(24,85): error TS2304: Cannot find name 'Void'.
+lib/rsvp/instrument.ts(28,20): error TS2339: Property '_guidKey' does not exist on type 'String'.
+lib/rsvp/instrument.ts(29,20): error TS2339: Property '_id' does not exist on type 'String'.
+lib/rsvp/instrument.ts(31,23): error TS2339: Property '_result' does not exist on type 'String'.
+lib/rsvp/instrument.ts(33,22): error TS2339: Property '_label' does not exist on type 'String'.
+lib/rsvp/instrument.ts(35,14): error TS7053: Element implicitly has an 'any' type because expression of type '"instrument-with-stack"' can't be used to index type 'Object'.
+  Property 'instrument-with-stack' does not exist on type 'Object'.
+lib/rsvp/instrument.ts(35,66): error TS2339: Property '_label' does not exist on type 'String'.
+lib/rsvp/map.ts(10,15): error TS7006: Parameter 'Constructor' implicitly has an 'any' type.
+lib/rsvp/map.ts(10,28): error TS7006: Parameter 'entries' implicitly has an 'any' type.
+lib/rsvp/map.ts(10,37): error TS7006: Parameter 'mapFn' implicitly has an 'any' type.
+lib/rsvp/map.ts(10,44): error TS7006: Parameter 'label' implicitly has an 'any' type.
+lib/rsvp/map.ts(11,46): error TS2554: Expected 4 arguments, but got 5.
+lib/rsvp/map.ts(14,3): error TS2416: Property '_init' in type 'MapEnumerator' is not assignable to the same property in base type 'Enumerator'.
+  Type '(Constructor: any, input: any, bool: any, label: any, mapFn: any) => void' is not assignable to type '(Constructor: any, input: any) => void'.
+lib/rsvp/map.ts(14,9): error TS7006: Parameter 'Constructor' implicitly has an 'any' type.
+lib/rsvp/map.ts(14,22): error TS7006: Parameter 'input' implicitly has an 'any' type.
+lib/rsvp/map.ts(14,29): error TS7006: Parameter 'bool' implicitly has an 'any' type.
+lib/rsvp/map.ts(14,35): error TS7006: Parameter 'label' implicitly has an 'any' type.
+lib/rsvp/map.ts(14,42): error TS7006: Parameter 'mapFn' implicitly has an 'any' type.
+lib/rsvp/map.ts(16,10): error TS2339: Property 'length' does not exist on type 'MapEnumerator'.
+lib/rsvp/map.ts(17,10): error TS2339: Property '_remaining' does not exist on type 'MapEnumerator'.
+lib/rsvp/map.ts(18,10): error TS2339: Property '_result' does not exist on type 'MapEnumerator'.
+lib/rsvp/map.ts(19,10): error TS2339: Property '_mapFn' does not exist on type 'MapEnumerator'.
+lib/rsvp/map.ts(24,16): error TS7006: Parameter 'state' implicitly has an 'any' type.
+lib/rsvp/map.ts(24,23): error TS7006: Parameter 'i' implicitly has an 'any' type.
+lib/rsvp/map.ts(24,26): error TS7006: Parameter 'value' implicitly has an 'any' type.
+lib/rsvp/map.ts(24,33): error TS7006: Parameter 'firstPass' implicitly has an 'any' type.
+lib/rsvp/map.ts(27,30): error TS2339: Property '_mapFn' does not exist on type 'MapEnumerator'.
+lib/rsvp/map.ts(32,12): error TS2339: Property '_remaining' does not exist on type 'MapEnumerator'.
+lib/rsvp/map.ts(33,12): error TS2339: Property '_result' does not exist on type 'MapEnumerator'.
+lib/rsvp/map.ts(120,78): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/map.ts(122,20): error TS2339: Property 'reject' does not exist on type 'typeof Promise'.
+lib/rsvp/map.ts(125,18): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+lib/rsvp/map.ts(126,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/map.ts(130,65): error TS2339: Property 'promise' does not exist on type 'MapEnumerator'.
+lib/rsvp/node.ts(8,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/node.ts(13,9): error TS2538: Type 'String' cannot be used as an index type.
+lib/rsvp/node.ts(13,17): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Promise'.
+  No index signature with a parameter of type 'number' was found on type 'Promise'.
+lib/rsvp/node.ts(19,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/node.ts(21,32): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/rsvp/node.ts(24,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+lib/rsvp/node.ts(32,10): error TS7006: Parameter 'onFulFillment' implicitly has an 'any' type.
+lib/rsvp/node.ts(32,25): error TS7006: Parameter 'onRejection' implicitly has an 'any' type.
+lib/rsvp/node.ts(33,19): error TS2339: Property 'call' does not exist on type 'String'.
+lib/rsvp/node.ts(168,34): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/rsvp/node.ts(182,34): error TS2339: Property 'then' does not exist on type 'Object'.
+lib/rsvp/node.ts(184,23): error TS2554: Expected 2 arguments, but got 1.
+lib/rsvp/node.ts(185,25): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Function'.
+lib/rsvp/node.ts(193,30): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'String'.
+lib/rsvp/node.ts(196,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+lib/rsvp/node.ts(199,28): error TS2554: Expected 2 arguments, but got 1.
+lib/rsvp/node.ts(201,10): error TS2538: Type 'Number' cannot be used as an index type.
+lib/rsvp/node.ts(203,25): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Function'.
+  Type 'Boolean' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+lib/rsvp/node.ts(206,18): error TS2367: This condition will always return 'false' since the types 'String' and 'boolean' have no overlap.
+lib/rsvp/node.ts(209,37): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'Promise'.
+  Type 'IArguments' is missing the following properties from type 'Promise': _onError, catch, finally
+lib/rsvp/node.ts(216,58): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/rsvp/node.ts(218,56): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/rsvp/node.ts(222,6): error TS2339: Property '__proto__' does not exist on type 'Function'.
+lib/rsvp/node.ts(227,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/node.ts(227,91): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/node.ts(229,14): error TS2339: Property 'apply' does not exist on type 'Object'.
+lib/rsvp/node.ts(231,21): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Function'.
+lib/rsvp/node.ts(236,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/node.ts(237,18): error TS2339: Property 'all' does not exist on type 'typeof Promise'.
+lib/rsvp/node.ts(238,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/promise-hash.ts(9,15): error TS7006: Parameter 'Constructor' implicitly has an 'any' type.
+lib/rsvp/promise-hash.ts(9,28): error TS7006: Parameter 'object' implicitly has an 'any' type.
+lib/rsvp/promise-hash.ts(9,58): error TS7006: Parameter 'label' implicitly has an 'any' type.
+lib/rsvp/promise-hash.ts(13,9): error TS7006: Parameter 'Constructor' implicitly has an 'any' type.
+lib/rsvp/promise-hash.ts(13,22): error TS7006: Parameter 'object' implicitly has an 'any' type.
+lib/rsvp/promise-hash.ts(14,10): error TS2339: Property '_result' does not exist on type 'PromiseHash'.
+lib/rsvp/promise-hash.ts(18,14): error TS7006: Parameter 'input' implicitly has an 'any' type.
+lib/rsvp/promise-hash.ts(19,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/promise-hash.ts(22,18): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/rsvp/promise-hash.ts(22,33): error TS2339: Property 'promise' does not exist on type 'PromiseHash'.
+lib/rsvp/promise-hash.ts(23,10): error TS2339: Property '_remaining' does not exist on type 'PromiseHash'.
+lib/rsvp/promise-hash.ts(28,19): error TS2538: Type 'String' cannot be used as an index type.
+lib/rsvp/promise.ts(18,27): error TS2304: Cannot find name 'Void'.
+lib/rsvp/promise.ts(22,22): error TS2304: Cannot find name 'Void'.
+lib/rsvp/promise.ts(132,15): error TS7006: Parameter 'resolver' implicitly has an 'any' type.
+lib/rsvp/promise.ts(132,25): error TS7006: Parameter 'label' implicitly has an 'any' type.
+lib/rsvp/promise.ts(133,10): error TS2339: Property '_id' does not exist on type 'Promise'.
+lib/rsvp/promise.ts(133,16): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/rsvp/promise.ts(134,10): error TS2339: Property '_label' does not exist on type 'Promise'.
+lib/rsvp/promise.ts(135,10): error TS2339: Property '_state' does not exist on type 'Promise'.
+lib/rsvp/promise.ts(136,10): error TS2339: Property '_result' does not exist on type 'Promise'.
+lib/rsvp/promise.ts(137,10): error TS2339: Property '_subscribers' does not exist on type 'Promise'.
+lib/rsvp/promise.ts(139,12): error TS2339: Property 'instrument' does not exist on type 'Object'.
+lib/rsvp/promise.ts(139,26): error TS2554: Expected 3 arguments, but got 2.
+lib/rsvp/promise.ts(147,12): error TS7006: Parameter 'reason' implicitly has an 'any' type.
+lib/rsvp/promise.ts(148,12): error TS2339: Property 'after' does not exist on type 'Object'.
+lib/rsvp/promise.ts(149,11): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
+lib/rsvp/promise.ts(150,16): error TS2339: Property 'trigger' does not exist on type 'Object'.
+lib/rsvp/promise.ts(150,46): error TS2339: Property '_label' does not exist on type 'Promise'.
+lib/rsvp/promise.ts(183,9): error TS7006: Parameter 'onRejection' implicitly has an 'any' type.
+lib/rsvp/promise.ts(183,22): error TS7006: Parameter 'label' implicitly has an 'any' type.
+lib/rsvp/promise.ts(184,17): error TS2339: Property 'then' does not exist on type 'Promise'.
+lib/rsvp/promise.ts(227,11): error TS7006: Parameter 'callback' implicitly has an 'any' type.
+lib/rsvp/promise.ts(227,21): error TS7006: Parameter 'label' implicitly has an 'any' type.
+lib/rsvp/promise.ts(232,22): error TS2339: Property 'then' does not exist on type 'Promise'.
+lib/rsvp/promise.ts(232,58): error TS2339: Property 'resolve' does not exist on type 'Object'.
+lib/rsvp/promise.ts(233,60): error TS2339: Property 'resolve' does not exist on type 'Object'.
+lib/rsvp/promise.ts(236,20): error TS2339: Property 'then' does not exist on type 'Promise'.
+lib/rsvp/promise.ts(240,9): error TS2339: Property 'cast' does not exist on type 'typeof Promise'.
+lib/rsvp/promise.ts(241,9): error TS2339: Property 'all' does not exist on type 'typeof Promise'.
+lib/rsvp/promise.ts(242,9): error TS2339: Property 'race' does not exist on type 'typeof Promise'.
+lib/rsvp/promise.ts(243,9): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+lib/rsvp/promise.ts(244,9): error TS2339: Property 'reject' does not exist on type 'typeof Promise'.
+lib/rsvp/promise.ts(246,19): error TS2339: Property '_guidKey' does not exist on type 'Promise'.
+lib/rsvp/promise.ts(442,19): error TS2339: Property 'then' does not exist on type 'Promise'.
+lib/rsvp/promise/all.ts(54,62): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/promise/all.ts(56,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/rsvp/promise/all.ts(58,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/rsvp/promise/all.ts(58,75): error TS2339: Property 'promise' does not exist on type 'Enumerator'.
+lib/rsvp/promise/race.ts(82,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/promise/race.ts(84,29): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/rsvp/promise/race.ts(86,16): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/rsvp/promise/race.ts(86,30): error TS2351: This expression is not constructable.
+  Type 'Object' has no construct signatures.
+lib/rsvp/promise/race.ts(89,21): error TS2345: Argument of type 'TypeError' is not assignable to parameter of type 'Function'.
+  Type 'TypeError' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+lib/rsvp/promise/race.ts(95,19): error TS2339: Property 'resolve' does not exist on type 'Object'.
+lib/rsvp/promise/race.ts(95,40): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'Object'.
+lib/rsvp/promise/race.ts(97,43): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+lib/rsvp/promise/reject.ts(48,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/promise/reject.ts(48,28): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/rsvp/promise/reject.ts(49,16): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/rsvp/promise/reject.ts(50,20): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+lib/rsvp/promise/resolve.ts(45,29): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/rsvp/promise/resolve.ts(51,16): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/rsvp/promise/resolve.ts(51,30): error TS2351: This expression is not constructable.
+  Type 'Object' has no construct signatures.
+lib/rsvp/race.ts(14,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/rsvp/race.ts(15,18): error TS2339: Property 'race' does not exist on type 'typeof Promise'.
+lib/rsvp/reject.ts(16,18): error TS2339: Property 'reject' does not exist on type 'typeof Promise'.
+lib/rsvp/resolve.ts(17,18): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+lib/rsvp/rethrow.ts(44,52): error TS2304: Cannot find name 'Void'.
+lib/rsvp/then.ts(13,15): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/rsvp/then.ts(13,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/rsvp/then.ts(16,7): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
+lib/rsvp/then.ts(16,48): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
+lib/rsvp/then.ts(17,12): error TS2339: Property 'instrument' does not exist on type 'Object'.
+lib/rsvp/then.ts(26,10): error TS2339: Property 'instrument' does not exist on type 'Object'.
+lib/rsvp/then.ts(28,7): error TS2367: This condition will always return 'false' since the types 'String' and 'Boolean' have no overlap.
+lib/rsvp/then.ts(29,30): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+lib/rsvp/then.ts(31,28): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
+lib/rsvp/then.ts(32,12): error TS2339: Property 'async' does not exist on type 'Object'.
+lib/rsvp/then.ts(32,46): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Promise'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/rsvp/then.ts(35,3): error TS2322: Type 'Object' is not assignable to type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+server/index.ts(1,32): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+server/index.ts(3,9): error TS2339: Property 'redirect' does not exist on type 'Object'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

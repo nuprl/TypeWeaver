@@ -1,0 +1,43 @@
+index.ts(13,28): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(13,34): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(14,10): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
+index.ts(14,11): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
+index.ts(14,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(14,20): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(14,27): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(14,54): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(18,19): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+index.ts(18,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+index.ts(22,18): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+index.ts(42,29): error TS2322: Type '() => String' is not assignable to type 'String'.
+index.ts(42,29): error TS2769: No overload matches this call.
+  Overload 1 of 6, '(this: (this: null, arg0: String, arg1: Number, arg2: Boolean, arg3: Boolean) => String, thisArg: null, arg0: String, arg1: Number, arg2: Boolean, arg3: Boolean): () => String', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'Number'.
+  Overload 2 of 6, '(this: (this: null, ...args: String[]) => String, thisArg: null, ...args: String[]): (...args: String[]) => String', gave the following error.
+    The 'this' context of type '(min: String, max: Number, minExcl: Boolean, maxExcl: Boolean) => String' is not assignable to method's 'this' of type '(this: null, ...args: String[]) => String'.
+      Types of parameters 'max' and 'args' are incompatible.
+        Type 'String' is not assignable to type 'Number'.
+index.ts(44,32): error TS2769: No overload matches this call.
+  Overload 1 of 6, '(this: (this: null, arg0: Number, arg1: Number, value: Number) => String, thisArg: null, arg0: Number, arg1: Number): (value: Number) => String', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'Number'.
+  Overload 2 of 6, '(this: (this: null, ...args: Number[]) => String, thisArg: null, ...args: Number[]): (...args: Number[]) => String', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'Number'.
+index.ts(45,34): error TS2769: No overload matches this call.
+  Overload 1 of 6, '(this: (this: null, arg0: Number, arg1: Number, value: Number) => Number, thisArg: null, arg0: Number, arg1: Number): (value: Number) => Number', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'Number'.
+  Overload 2 of 6, '(this: (this: null, ...args: Number[]) => Number, thisArg: null, ...args: Number[]): (...args: Number[]) => Number', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'Number'.
+index.ts(47,45): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+index.ts(50,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+index.ts(52,5): error TS2322: Type 'String' is not assignable to type '() => string'.
+  Type 'String' provides no match for the signature '(): string'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

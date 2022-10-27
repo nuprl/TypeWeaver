@@ -1,0 +1,63 @@
+lib/mr.ts(4,37): error TS2304: Cannot find name 'Void'.
+lib/mr.ts(5,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/mr.ts(5,23): error TS2554: Expected 1 arguments, but got 0.
+lib/mr.ts(10,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/mr.ts(14,23): error TS2339: Property 'bitLength' does not exist on type 'Function'.
+lib/mr.ts(15,37): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/mr.ts(20,9): error TS2740: Type 'BN' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+lib/mr.ts(21,12): error TS2339: Property 'cmp' does not exist on type 'String'.
+lib/mr.ts(26,86): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/mr.ts(28,27): error TS2339: Property 'sub' does not exist on type 'Object'.
+lib/mr.ts(29,16): error TS2339: Property 'add' does not exist on type 'Object'.
+lib/mr.ts(33,23): error TS2339: Property 'bitLength' does not exist on type 'Object'.
+lib/mr.ts(34,7): error TS2740: Type 'ReductionContext' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/mr.ts(34,29): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'BN'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'BN': clone, toNumber, toJSON, toArray, and 84 more.
+lib/mr.ts(35,7): error TS2740: Type 'RedBN' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+lib/mr.ts(35,38): error TS2345: Argument of type 'String' is not assignable to parameter of type 'ReductionContext'.
+  Type 'String' is missing the following properties from type 'ReductionContext': m, prime
+lib/mr.ts(38,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/mr.ts(41,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/mr.ts(41,21): error TS2339: Property 'subn' does not exist on type 'Object'.
+lib/mr.ts(43,21): error TS2339: Property 'shrn' does not exist on type 'Object'.
+lib/mr.ts(48,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/mr.ts(53,28): error TS2339: Property 'toRed' does not exist on type 'HTMLElement'.
+lib/mr.ts(54,11): error TS2339: Property 'cmp' does not exist on type 'HTMLElement'.
+lib/mr.ts(54,32): error TS2339: Property 'cmp' does not exist on type 'HTMLElement'.
+lib/mr.ts(58,13): error TS2339: Property 'redSqr' does not exist on type 'HTMLElement'.
+lib/mr.ts(60,13): error TS2339: Property 'cmp' does not exist on type 'HTMLElement'.
+lib/mr.ts(62,13): error TS2339: Property 'cmp' does not exist on type 'HTMLElement'.
+lib/mr.ts(74,23): error TS2339: Property 'bitLength' does not exist on type 'Object'.
+lib/mr.ts(75,7): error TS2322: Type 'ReductionContext' is not assignable to type 'String'.
+lib/mr.ts(75,29): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'BN'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/mr.ts(76,7): error TS2322: Type 'RedBN' is not assignable to type 'String'.
+lib/mr.ts(76,38): error TS2345: Argument of type 'String' is not assignable to parameter of type 'ReductionContext'.
+lib/mr.ts(79,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/mr.ts(82,27): error TS2339: Property 'subn' does not exist on type 'Object'.
+lib/mr.ts(83,23): error TS2339: Property 'testn' does not exist on type 'HTMLElement'.
+lib/mr.ts(84,21): error TS2339: Property 'shrn' does not exist on type 'Object'.
+lib/mr.ts(86,24): error TS2339: Property 'toRed' does not exist on type 'HTMLElement'.
+lib/mr.ts(88,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/mr.ts(91,23): error TS2339: Property 'gcd' does not exist on type 'Object'.
+lib/mr.ts(92,11): error TS2339: Property 'cmpn' does not exist on type 'Number'.
+lib/mr.ts(93,7): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'number' is not assignable to type 'boolean'.
+lib/mr.ts(95,28): error TS2339: Property 'toRed' does not exist on type 'HTMLElement'.
+lib/mr.ts(96,11): error TS2339: Property 'cmp' does not exist on type 'HTMLElement'.
+lib/mr.ts(96,32): error TS2339: Property 'cmp' does not exist on type 'HTMLElement'.
+lib/mr.ts(100,13): error TS2339: Property 'redSqr' does not exist on type 'HTMLElement'.
+lib/mr.ts(102,13): error TS2339: Property 'cmp' does not exist on type 'HTMLElement'.
+lib/mr.ts(103,18): error TS2339: Property 'fromRed' does not exist on type 'HTMLElement'.
+lib/mr.ts(104,13): error TS2339: Property 'cmp' does not exist on type 'HTMLElement'.
+lib/mr.ts(109,13): error TS2339: Property 'redSqr' does not exist on type 'HTMLElement'.
+lib/mr.ts(110,16): error TS2339: Property 'fromRed' does not exist on type 'HTMLElement'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

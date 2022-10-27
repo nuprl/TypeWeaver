@@ -1,0 +1,17 @@
+/**
+ * An example to show a progress bar being interrupted,
+ * displaying messages above the bar while keeping the
+ * progress intact
+ */
+
+import ProgressBar from '../';
+
+var bar: HTMLElement = new ProgressBar(':bar :current/:total', { total: 10 });
+var timer: Number = setInterval(function () {
+    bar.tick();
+    if (bar.complete) {
+        clearInterval(timer);
+    } else if (bar.curr === 5 || bar.curr === 8) {
+        bar.interrupt('interrupt: current progress is ' + bar.curr + '/' + bar.total);
+    }
+}, 1000);

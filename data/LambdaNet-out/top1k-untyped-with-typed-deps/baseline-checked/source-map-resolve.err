@@ -1,0 +1,157 @@
+index.ts(1,5): error TS2300: Duplicate identifier 'atob'.
+index.ts(8,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(9,33): error TS2554: Expected 3 arguments, but got 2.
+index.ts(9,68): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(10,19): error TS2339: Property 'resolve' does not exist on type 'String'.
+index.ts(15,18): error TS2339: Property 'sep' does not exist on type 'String'.
+index.ts(23,76): error TS2304: Cannot find name 'Void'.
+index.ts(27,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(31,5): error TS2571: Object is of type 'unknown'.
+index.ts(37,7): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(39,5): error TS2322: Type 'string' is not assignable to type 'Number'.
+index.ts(41,5): error TS2571: Object is of type 'unknown'.
+index.ts(50,5): error TS2740: Type 'RegExp' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(64,7): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
+  Type 'null' is not assignable to type 'Object'.
+index.ts(64,34): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(matcher: { [Symbol.match](string: string): RegExpMatchArray | null; }): RegExpMatchArray | null', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.match](string: string): RegExpMatchArray | null; }'.
+      Property '[Symbol.match]' is missing in type 'String' but required in type '{ [Symbol.match](string: string): RegExpMatchArray | null; }'.
+  Overload 2 of 2, '(regexp: string | RegExp): RegExpMatchArray | null', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
+index.ts(65,18): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+index.ts(65,30): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+index.ts(70,95): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
+index.ts(75,12): error TS2554: Expected 3 arguments, but got 2.
+index.ts(77,27): error TS2339: Property 'map' does not exist on type 'Object'.
+index.ts(78,36): error TS2345: Argument of type 'null' is not assignable to parameter of type 'Object'.
+index.ts(80,7): error TS2322: Type 'Boolean' is not assignable to type 'String'.
+index.ts(80,58): error TS2339: Property 'url' does not exist on type 'Object'.
+index.ts(83,13): error TS2339: Property 'sourceMapData' does not exist on type 'Object'.
+index.ts(86,13): error TS2339: Property 'map' does not exist on type 'Object'.
+index.ts(88,15): error TS2339: Property 'map' does not exist on type 'Object'.
+index.ts(88,44): error TS2339: Property 'map' does not exist on type 'Object'.
+index.ts(98,27): error TS2339: Property 'map' does not exist on type 'Object'.
+index.ts(101,11): error TS2339: Property 'map' does not exist on type 'Object'.
+index.ts(101,26): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+  Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+index.ts(101,40): error TS2339: Property 'url' does not exist on type 'Object'.
+index.ts(102,11): error TS2339: Property 'map' does not exist on type 'Object'.
+index.ts(102,40): error TS2339: Property 'map' does not exist on type 'Object'.
+index.ts(126,29): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(data: string): string', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(data: string): string', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(128,36): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'Number' is not assignable to parameter of type 'ArrayBufferLike'.
+index.ts(130,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+index.ts(137,5): error TS2322: Type 'string' is not assignable to type 'Boolean'.
+index.ts(137,17): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(data: string): string', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(data: string): string', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(139,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(142,7): error TS2740: Type 'TextDecoder' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+index.ts(142,46): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(143,18): error TS2339: Property 'decode' does not exist on type 'HTMLElement'.
+index.ts(151,5): error TS2322: Type 'null' is not assignable to type 'Object'.
+index.ts(154,7): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
+  Type 'null' is not assignable to type 'Object'.
+index.ts(156,28): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+index.ts(157,33): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+index.ts(158,27): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
+  Property '3' does not exist on type 'Object'.
+index.ts(165,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
+index.ts(167,13): error TS2339: Property 'sourceMapData' does not exist on type 'Error'.
+index.ts(171,12): error TS2339: Property 'map' does not exist on type 'Object'.
+index.ts(172,9): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+index.ts(172,9): error TS2345: Argument of type 'string | Boolean' is not assignable to parameter of type 'String'.
+  Type 'Boolean' is not assignable to type 'String'.
+index.ts(172,88): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(176,7): error TS2571: Object is of type 'unknown'.
+index.ts(182,35): error TS2554: Expected 0 arguments, but got 2.
+index.ts(193,113): error TS2304: Cannot find name 'Void'.
+index.ts(198,29): error TS2339: Property 'sources' does not exist on type 'HTMLElement'.
+index.ts(198,43): error TS2339: Property 'sources' does not exist on type 'HTMLElement'.
+index.ts(205,29): error TS2345: Argument of type 'null' is not assignable to parameter of type 'Object'.
+index.ts(210,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(217,12): error TS2339: Property 'sourcesResolved' does not exist on type 'Object'.
+index.ts(219,14): error TS2339: Property 'sourcesContent' does not exist on type 'Object'.
+index.ts(220,7): error TS2554: Expected 3 arguments, but got 2.
+index.ts(222,11): error TS2322: Type 'Boolean' is not assignable to type 'String'.
+index.ts(224,16): error TS2339: Property 'sourcesContent' does not exist on type 'Object'.
+index.ts(237,12): error TS2339: Property 'sources' does not exist on type 'HTMLElement'.
+index.ts(237,27): error TS2339: Property 'sources' does not exist on type 'HTMLElement'.
+index.ts(238,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+index.ts(242,12): error TS2339: Property 'sourcesResolved' does not exist on type 'Object'.
+index.ts(245,16): error TS2339: Property 'sourcesContent' does not exist on type 'Object'.
+index.ts(247,13): error TS2322: Type 'Boolean' is not assignable to type 'String'.
+index.ts(249,18): error TS2339: Property 'sourcesContent' does not exist on type 'Object'.
+index.ts(251,18): error TS2339: Property 'sourcesContent' does not exist on type 'Object'.
+index.ts(257,3): error TS2322: Type 'Object' is not assignable to type 'HTMLElement'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+index.ts(262,97): error TS2304: Cannot find name 'Void'.
+index.ts(268,33): error TS2339: Property 'sources' does not exist on type 'HTMLElement'.
+index.ts(269,5): error TS2322: Type 'null' is not assignable to type 'String'.
+index.ts(270,24): error TS2339: Property 'sourceRoot' does not exist on type 'Object'.
+index.ts(271,28): error TS2339: Property 'sourceRoot' does not exist on type 'Object'.
+index.ts(272,27): error TS2339: Property 'sourceRoot' does not exist on type 'HTMLElement'.
+index.ts(272,62): error TS2339: Property 'sourceRoot' does not exist on type 'Object'.
+index.ts(273,24): error TS2339: Property 'sourceRoot' does not exist on type 'HTMLElement'.
+index.ts(278,28): error TS2554: Expected 0 arguments, but got 2.
+index.ts(278,40): error TS2339: Property 'sources' does not exist on type 'HTMLElement'.
+index.ts(283,28): error TS2554: Expected 0 arguments, but got 3.
+index.ts(283,78): error TS2339: Property 'sources' does not exist on type 'HTMLElement'.
+index.ts(285,26): error TS2339: Property 'sourcesContent' does not exist on type 'HTMLElement'.
+index.ts(292,105): error TS2304: Cannot find name 'Void'.
+index.ts(295,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+index.ts(305,9): error TS2322: Type 'Boolean' is not assignable to type 'String'.
+index.ts(308,15): error TS2339: Property 'sourceMapData' does not exist on type 'Object'.
+index.ts(311,12): error TS2339: Property 'map' does not exist on type 'Object'.
+index.ts(313,14): error TS2339: Property 'map' does not exist on type 'Object'.
+index.ts(313,40): error TS2339: Property 'map' does not exist on type 'Object'.
+index.ts(331,46): error TS2304: Cannot find name 'Void'.
+index.ts(332,28): error TS2339: Property 'map' does not exist on type 'Object'.
+index.ts(332,41): error TS2339: Property 'sourcesRelativeTo' does not exist on type 'Object'.
+index.ts(336,15): error TS2339: Property 'sourcesResolved' does not exist on type 'Object'.
+index.ts(336,40): error TS2339: Property 'sourcesResolved' does not exist on type 'HTMLElement'.
+index.ts(337,15): error TS2339: Property 'sourcesContent' does not exist on type 'Object'.
+index.ts(337,40): error TS2339: Property 'sourcesContent' does not exist on type 'HTMLElement'.
+index.ts(353,13): error TS2339: Property 'map' does not exist on type 'Object'.
+index.ts(353,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+index.ts(354,13): error TS2339: Property 'map' does not exist on type 'Object'.
+index.ts(354,42): error TS2339: Property 'map' does not exist on type 'Object'.
+index.ts(358,7): error TS2322: Type 'null' is not assignable to type 'HTMLElement'.
+index.ts(361,56): error TS2339: Property 'map' does not exist on type 'Object'.
+index.ts(361,69): error TS2339: Property 'sourcesRelativeTo' does not exist on type 'Object'.
+index.ts(361,88): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+index.ts(362,11): error TS2339: Property 'sourcesResolved' does not exist on type 'Object'.
+index.ts(362,36): error TS2339: Property 'sourcesResolved' does not exist on type 'HTMLElement'.
+index.ts(363,11): error TS2339: Property 'sourcesContent' does not exist on type 'Object'.
+index.ts(363,36): error TS2339: Property 'sourcesContent' does not exist on type 'HTMLElement'.
+index.ts(364,3): error TS2322: Type 'Object' is not assignable to type 'HTMLElement'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18089,18): error TS2300: Duplicate identifier 'atob'.
+

@@ -1,0 +1,109 @@
+.github/workflows/package-json-repo.ts(4,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+.github/workflows/package-json-repo.ts(4,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+.github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'String'.
+.github/workflows/package-json-repo.ts(12,9): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
+  Type 'null' is not assignable to type 'Object'.
+.github/workflows/package-json-repo.ts(13,26): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+.github/workflows/package-json-repo.ts(14,26): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(value: any, replacer?: ((this: any, key: string, value: any) => any) | undefined, space?: string | number | undefined): string', gave the following error.
+    Argument of type 'null' is not assignable to parameter of type '((this: any, key: string, value: any) => any) | undefined'.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[] | null | undefined, space?: string | number | undefined): string', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string | number | undefined'.
+.github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
+iterator.ts(3,11): error TS2339: Property 'prototype' does not exist on type 'Object'.
+yallist.ts(7,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+yallist.ts(8,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+yallist.ts(8,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+yallist.ts(10,12): error TS2554: Expected 1 arguments, but got 0.
+yallist.ts(10,12): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+yallist.ts(31,12): error TS2339: Property 'list' does not exist on type 'Object'.
+yallist.ts(35,29): error TS2339: Property 'next' does not exist on type 'Object'.
+yallist.ts(36,32): error TS2339: Property 'prev' does not exist on type 'Object'.
+yallist.ts(39,10): error TS2339: Property 'prev' does not exist on type 'Function'.
+yallist.ts(43,10): error TS2339: Property 'next' does not exist on type 'HTMLElement'.
+yallist.ts(53,8): error TS2339: Property 'list' does not exist on type 'Object'.
+yallist.ts(54,8): error TS2339: Property 'next' does not exist on type 'Object'.
+yallist.ts(55,8): error TS2339: Property 'prev' does not exist on type 'Object'.
+yallist.ts(56,8): error TS2339: Property 'list' does not exist on type 'Object'.
+yallist.ts(66,12): error TS2339: Property 'list' does not exist on type 'Object'.
+yallist.ts(67,10): error TS2339: Property 'list' does not exist on type 'Object'.
+yallist.ts(71,8): error TS2339: Property 'list' does not exist on type 'Object'.
+yallist.ts(72,8): error TS2339: Property 'next' does not exist on type 'Object'.
+yallist.ts(74,10): error TS2339: Property 'prev' does not exist on type 'Function'.
+yallist.ts(89,12): error TS2339: Property 'list' does not exist on type 'Object'.
+yallist.ts(90,10): error TS2339: Property 'list' does not exist on type 'Object'.
+yallist.ts(94,8): error TS2339: Property 'list' does not exist on type 'Object'.
+yallist.ts(95,8): error TS2339: Property 'prev' does not exist on type 'Object'.
+yallist.ts(97,10): error TS2339: Property 'next' does not exist on type 'HTMLElement'.
+yallist.ts(126,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+yallist.ts(142,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+yallist.ts(191,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+yallist.ts(191,20): error TS2554: Expected 1 arguments, but got 0.
+yallist.ts(191,20): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+yallist.ts(201,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+yallist.ts(201,20): error TS2554: Expected 1 arguments, but got 0.
+yallist.ts(201,20): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+yallist.ts(222,26): error TS2339: Property 'value' does not exist on type 'Object'.
+yallist.ts(223,21): error TS2339: Property 'next' does not exist on type 'Object'.
+yallist.ts(242,26): error TS2339: Property 'value' does not exist on type 'Object'.
+yallist.ts(243,21): error TS2339: Property 'prev' does not exist on type 'Object'.
+yallist.ts(252,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+yallist.ts(261,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+yallist.ts(276,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+yallist.ts(276,20): error TS2554: Expected 1 arguments, but got 0.
+yallist.ts(276,20): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+yallist.ts(304,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+yallist.ts(304,20): error TS2554: Expected 1 arguments, but got 0.
+yallist.ts(304,20): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+yallist.ts(323,74): error TS7019: Rest parameter 'nodes' implicitly has an 'any[]' type.
+yallist.ts(335,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+yallist.ts(357,60): error TS2339: Property 'prev' does not exist on type 'Function'.
+yallist.ts(358,30): error TS2339: Property 'prev' does not exist on type 'Function'.
+yallist.ts(359,12): error TS2339: Property 'prev' does not exist on type 'Function'.
+yallist.ts(359,26): error TS2339: Property 'next' does not exist on type 'Function'.
+yallist.ts(360,12): error TS2339: Property 'next' does not exist on type 'Function'.
+yallist.ts(367,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+yallist.ts(369,14): error TS2554: Expected 0 arguments, but got 4.
+yallist.ts(370,14): error TS2554: Expected 0 arguments, but got 4.
+yallist.ts(370,32): error TS2339: Property 'next' does not exist on type 'Object'.
+yallist.ts(372,16): error TS2339: Property 'next' does not exist on type 'Object'.
+yallist.ts(375,16): error TS2339: Property 'prev' does not exist on type 'Object'.
+yallist.ts(384,45): error TS2304: Cannot find name 'Void'.
+yallist.ts(385,8): error TS2339: Property 'tail' does not exist on type 'Object'.
+yallist.ts(385,24): error TS2554: Expected 0 arguments, but got 4.
+yallist.ts(385,35): error TS2339: Property 'tail' does not exist on type 'Object'.
+yallist.ts(386,13): error TS2339: Property 'head' does not exist on type 'Object'.
+yallist.ts(387,10): error TS2339: Property 'head' does not exist on type 'Object'.
+yallist.ts(387,22): error TS2339: Property 'tail' does not exist on type 'Object'.
+yallist.ts(389,8): error TS2339: Property 'length' does not exist on type 'Object'.
+yallist.ts(392,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+yallist.ts(392,47): error TS2304: Cannot find name 'Void'.
+yallist.ts(393,24): error TS2554: Expected 0 arguments, but got 4.
+yallist.ts(400,10): error TS2300: Duplicate identifier 'Node'.
+yallist.ts(400,83): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
+yallist.ts(401,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+yallist.ts(402,5): error TS2740: Type 'Node' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+yallist.ts(402,21): error TS2554: Expected 0 arguments, but got 4.
+yallist.ts(405,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+yallist.ts(406,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+yallist.ts(409,10): error TS2339: Property 'next' does not exist on type 'HTMLElement'.
+yallist.ts(409,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+yallist.ts(410,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+yallist.ts(412,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+yallist.ts(416,10): error TS2339: Property 'prev' does not exist on type 'Function'.
+yallist.ts(416,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+yallist.ts(417,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+yallist.ts(419,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(10040,11): error TS2300: Duplicate identifier 'Node'.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(10122,13): error TS2300: Duplicate identifier 'Node'.
+

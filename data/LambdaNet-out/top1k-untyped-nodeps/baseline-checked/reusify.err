@@ -1,0 +1,43 @@
+benchmarks/createNoCodeFunction.ts(3,5): error TS2300: Duplicate identifier 'fib'.
+benchmarks/createNoCodeFunction.ts(10,35): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+benchmarks/createNoCodeFunction.ts(27,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmarks/createNoCodeFunction.ts(30,28): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmarks/createNoCodeFunction.ts(30,34): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmarks/fib.ts(3,10): error TS2300: Duplicate identifier 'fib'.
+benchmarks/fib.ts(3,29): error TS2304: Cannot find name 'Void'.
+benchmarks/fib.ts(4,12): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+benchmarks/reuseNoCodeFunction.ts(3,5): error TS2300: Duplicate identifier 'reusify'.
+benchmarks/reuseNoCodeFunction.ts(9,34): error TS2304: Cannot find name 'Void'.
+benchmarks/reuseNoCodeFunction.ts(10,35): error TS2339: Property 'get' does not exist on type 'Object'.
+benchmarks/reuseNoCodeFunction.ts(11,7): error TS2339: Property 'num' does not exist on type 'HTMLElement'.
+benchmarks/reuseNoCodeFunction.ts(12,7): error TS2339: Property 'func' does not exist on type 'HTMLElement'.
+benchmarks/reuseNoCodeFunction.ts(13,7): error TS2339: Property 'num' does not exist on type 'HTMLElement'.
+benchmarks/reuseNoCodeFunction.ts(14,12): error TS2339: Property 'release' does not exist on type 'Object'.
+benchmarks/reuseNoCodeFunction.ts(17,23): error TS2304: Cannot find name 'Void'.
+benchmarks/reuseNoCodeFunction.ts(18,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+benchmarks/reuseNoCodeFunction.ts(19,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmarks/reuseNoCodeFunction.ts(19,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+benchmarks/reuseNoCodeFunction.ts(20,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+benchmarks/reuseNoCodeFunction.ts(21,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+benchmarks/reuseNoCodeFunction.ts(35,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmarks/reuseNoCodeFunction.ts(38,28): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmarks/reuseNoCodeFunction.ts(38,34): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+reusify.ts(3,10): error TS2300: Duplicate identifier 'reusify'.
+reusify.ts(4,26): error TS2351: This expression is not constructable.
+  Type 'Object' has no construct signatures.
+reusify.ts(8,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+reusify.ts(10,17): error TS2339: Property 'next' does not exist on type 'String'.
+reusify.ts(11,22): error TS2339: Property 'next' does not exist on type 'String'.
+reusify.ts(13,18): error TS2351: This expression is not constructable.
+  Type 'Object' has no construct signatures.
+reusify.ts(17,13): error TS2339: Property 'next' does not exist on type 'String'.
+reusify.ts(22,35): error TS2304: Cannot find name 'Void'.
+reusify.ts(23,10): error TS2339: Property 'next' does not exist on type 'Object'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

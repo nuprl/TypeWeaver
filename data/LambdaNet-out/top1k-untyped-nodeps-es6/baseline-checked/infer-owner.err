@@ -1,0 +1,38 @@
+index.ts(1,14): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+index.ts(7,12): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
+  Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
+index.ts(10,18): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(15,13): error TS2339: Property 'uid' does not exist on type 'Object'.
+index.ts(15,18): error TS2339: Property 'gid' does not exist on type 'Object'.
+index.ts(19,9): error TS2322: Type 'string' is not assignable to type 'Number'.
+index.ts(19,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(20,9): error TS2322: Type '((er: String) => any) | null' is not assignable to type 'Function'.
+  Type 'null' is not assignable to type 'Function'.
+index.ts(20,32): error TS2367: This condition will always return 'false' since the types 'Number' and 'String' have no overlap.
+index.ts(21,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(30,18): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(34,9): error TS2322: Type 'string' is not assignable to type 'Number'.
+index.ts(34,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(41,37): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'PathLike'.
+index.ts(43,13): error TS2339: Property 'uid' does not exist on type 'Object'.
+index.ts(43,18): error TS2339: Property 'gid' does not exist on type 'Object'.
+index.ts(47,18): error TS2367: This condition will always return 'true' since the types 'Number' and 'String' have no overlap.
+index.ts(48,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(55,17): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+index.ts(58,18): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(61,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(61,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

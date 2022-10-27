@@ -1,0 +1,95 @@
+Mime.ts(7,18): error TS2304: Cannot find name 'Void'.
+Mime.ts(8,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+Mime.ts(9,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+Mime.ts(12,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+Mime.ts(15,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+Mime.ts(15,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+Mime.ts(15,34): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+Mime.ts(16,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+Mime.ts(16,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+Mime.ts(16,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+Mime.ts(17,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+Mime.ts(17,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+Mime.ts(17,46): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+Mime.ts(41,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+Mime.ts(41,29): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+Mime.ts(51,11): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+Mime.ts(55,22): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
+Mime.ts(58,46): error TS2538: Type 'Object' cannot be used as an index type.
+Mime.ts(64,19): error TS2538: Type 'Object' cannot be used as an index type.
+Mime.ts(69,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+Mime.ts(83,7): error TS2322: Type 'boolean' is not assignable to type 'Number'.
+Mime.ts(84,7): error TS2322: Type 'boolean' is not assignable to type 'Number'.
+Mime.ts(86,46): error TS2538: Type 'String' cannot be used as an index type.
+Mime.ts(93,3): error TS2322: Type 'string | false' is not assignable to type 'String'.
+  Type 'boolean' is not assignable to type 'String'.
+Mime.ts(93,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+cli.ts(6,17): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+cli.ts(7,5): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+index.ts(4,16): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+index.ts(4,25): error TS2554: Expected 0 arguments, but got 2.
+lite.ts(4,16): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lite.ts(4,25): error TS2554: Expected 0 arguments, but got 1.
+src/benchmark.ts(3,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+src/benchmark.ts(9,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/benchmark.ts(13,4): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+src/benchmark.ts(15,31): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/benchmark.ts(21,35): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/benchmark.ts(26,30): error TS2339: Property 'target' does not exist on type 'Object'.
+src/build.ts(6,23): error TS2307: Cannot find module 'mime-score' or its corresponding type declarations.
+src/build.ts(8,19): error TS2307: Cannot find module 'chalk' or its corresponding type declarations.
+src/build.ts(17,9): error TS2339: Property 'type' does not exist on type 'Object'.
+src/build.ts(18,14): error TS2339: Property 'extensions' does not exist on type 'Object'.
+src/build.ts(20,9): error TS2339: Property 'extensions' does not exist on type 'Object'.
+src/build.ts(23,9): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
+src/build.ts(25,36): error TS2538: Type 'Number' cannot be used as an index type.
+src/build.ts(27,10): error TS2339: Property 'pri' does not exist on type 'Object'.
+src/build.ts(27,29): error TS2339: Property 'type' does not exist on type 'Object'.
+src/build.ts(27,38): error TS2339: Property 'source' does not exist on type 'Object'.
+src/build.ts(28,10): error TS2339: Property 'pri' does not exist on type 'Object'.
+src/build.ts(28,29): error TS2339: Property 'type' does not exist on type 'Object'.
+src/build.ts(28,38): error TS2339: Property 'source' does not exist on type 'Object'.
+src/build.ts(30,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+src/build.ts(30,17): error TS2339: Property 'pri' does not exist on type 'Object'.
+src/build.ts(30,26): error TS2339: Property 'pri' does not exist on type 'Object'.
+src/build.ts(31,17): error TS2339: Property 'pri' does not exist on type 'Object'.
+src/build.ts(31,27): error TS2339: Property 'pri' does not exist on type 'Object'.
+src/build.ts(34,12): error TS2339: Property 'extensions' does not exist on type 'HTMLElement'.
+src/build.ts(34,30): error TS2339: Property 'extensions' does not exist on type 'HTMLElement'.
+src/build.ts(39,50): error TS2339: Property 'type' does not exist on type 'Object'.
+src/build.ts(39,70): error TS2339: Property 'pri' does not exist on type 'Object'.
+src/build.ts(40,36): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
+src/build.ts(40,56): error TS2339: Property 'pri' does not exist on type 'HTMLElement'.
+src/build.ts(45,37): error TS2538: Type 'Number' cannot be used as an index type.
+src/build.ts(49,57): error TS2304: Cannot find name 'Void'.
+src/build.ts(50,20): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
+  Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
+src/build.ts(58,32): error TS2345: Argument of type '(k: Number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+  Types of parameters 'k' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'Number'.
+src/build.ts(59,31): error TS2538: Type 'Number' cannot be used as an index type.
+src/build.ts(61,13): error TS2339: Property 'extensions' does not exist on type 'HTMLElement'.
+src/build.ts(62,25): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
+src/build.ts(62,37): error TS2339: Property 'source' does not exist on type 'HTMLElement'.
+src/build.ts(63,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/build.ts(63,22): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
+src/build.ts(63,36): error TS2339: Property 'extensions' does not exist on type 'HTMLElement'.
+src/build.ts(65,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/build.ts(65,19): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
+src/build.ts(65,33): error TS2339: Property 'extensions' does not exist on type 'HTMLElement'.
+src/build.ts(70,16): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+src/build.ts(71,16): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

@@ -1,0 +1,460 @@
+index.ts(10,3): error TS2322: Type 'String | Number' is not assignable to type 'Number'.
+  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+index.ts(16,26): error TS2339: Property 'getN' does not exist on type 'HTMLElement'.
+index.ts(17,36): error TS2339: Property 'bitLength' does not exist on type 'HTMLElement'.
+index.ts(21,11): error TS2403: Subsequent variable declarations must have the same type.  Variable 'curve' must be of type 'Function', but here has type 'HTMLElement'.
+index.ts(21,34): error TS2339: Property 'getCurve' does not exist on type 'HTMLElement'.
+index.ts(27,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(27,22): error TS2339: Property 'decodePointHex' does not exist on type 'Function'.
+index.ts(27,50): error TS2554: Expected 0 arguments, but got 1.
+index.ts(30,7): error TS2740: Type 'BigInteger' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(30,42): error TS2554: Expected 0 arguments, but got 1.
+index.ts(33,24): error TS2339: Property 'subtract' does not exist on type 'HTMLElement'.
+index.ts(34,9): error TS2740: Type 'BigInteger' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+index.ts(34,41): error TS2769: No overload matches this call.
+  Overload 1 of 5, '(a: string, b?: number | undefined): BigInteger', gave the following error.
+    Argument of type 'Buffer' is not assignable to parameter of type 'string'.
+  Overload 2 of 5, '(a: number[], b?: number | undefined): BigInteger', gave the following error.
+    Argument of type 'Buffer' is not assignable to parameter of type 'number[]'.
+      Type 'Buffer' is missing the following properties from type 'number[]': pop, push, concat, shift, and 5 more.
+  Overload 3 of 5, '(a: BigInteger): BigInteger', gave the following error.
+    Argument of type 'Buffer' is not assignable to parameter of type 'BigInteger'.
+      Type 'Buffer' is missing the following properties from type 'BigInteger': s, t, data, DB, and 73 more.
+index.ts(34,62): error TS2339: Property 'bitLength' does not exist on type 'HTMLElement'.
+index.ts(35,14): error TS2339: Property 'mod' does not exist on type 'HTMLElement'.
+index.ts(36,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(36,16): error TS2339: Property 'getG' does not exist on type 'HTMLElement'.
+index.ts(38,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(41,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(42,9): error TS2339: Property 'getCurve' does not exist on type 'HTMLElement'.
+index.ts(42,45): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(46,7): error TS2454: Variable 'priv' is used before being assigned.
+index.ts(47,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(48,7): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(arrayBuffer: WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>, byteOffset?: number | undefined, length?: number | undefined): Buffer', gave the following error.
+    Argument of type 'Number' is not assignable to parameter of type 'WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>'.
+      Type 'Number' is not assignable to type '{ valueOf(): ArrayBuffer | SharedArrayBuffer; }'.
+        The types returned by 'valueOf()' are incompatible between these types.
+          Type 'number' is not assignable to type 'ArrayBuffer | SharedArrayBuffer'.
+  Overload 2 of 4, '(str: WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }, encoding?: BufferEncoding | undefined): Buffer', gave the following error.
+    Argument of type 'Number' is not assignable to parameter of type 'WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }'.
+      Type 'Number' is not assignable to type '{ valueOf(): string; }'.
+        The types returned by 'valueOf()' are incompatible between these types.
+          Type 'number' is not assignable to type 'string'.
+index.ts(48,30): error TS2554: Expected 0 arguments, but got 1.
+index.ts(48,35): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(51,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(52,24): error TS2339: Property 'P' does not exist on type 'String'.
+index.ts(53,32): error TS2339: Property 'P' does not exist on type 'String'.
+index.ts(55,9): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(arrayBuffer: WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>, byteOffset?: number | undefined, length?: number | undefined): Buffer', gave the following error.
+    Argument of type 'Number' is not assignable to parameter of type 'WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>'.
+  Overload 2 of 4, '(str: WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }, encoding?: BufferEncoding | undefined): Buffer', gave the following error.
+    Argument of type 'Number' is not assignable to parameter of type 'WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }'.
+index.ts(56,13): error TS2339: Property 'getX' does not exist on type 'HTMLElement'.
+index.ts(59,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ec.ts(11,9): error TS2339: Property 'Barrett' does not exist on type 'BigInteger'.
+lib/ec.ts(14,13): error TS7006: Parameter 'bytes' implicitly has an 'any' type.
+lib/ec.ts(16,17): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/ec.ts(27,50): error TS2304: Cannot find name 'Void'.
+lib/ec.ts(28,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(30,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(34,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(35,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(35,30): error TS2339: Property 'q' does not exist on type 'String'.
+lib/ec.ts(35,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(35,56): error TS2339: Property 'x' does not exist on type 'String'.
+lib/ec.ts(39,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(43,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(43,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(43,39): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(43,59): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(46,30): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/ec.ts(47,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(47,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(47,39): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(47,52): error TS2339: Property 'toBigInteger' does not exist on type 'Object'.
+lib/ec.ts(47,72): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(51,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(52,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(53,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(53,23): error TS2339: Property 'toBigInteger' does not exist on type 'Object'.
+lib/ec.ts(53,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(58,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(59,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(60,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(60,23): error TS2339: Property 'toBigInteger' does not exist on type 'Object'.
+lib/ec.ts(60,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(65,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(65,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(65,39): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(65,59): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(69,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(70,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(71,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(71,23): error TS2339: Property 'toBigInteger' does not exist on type 'Object'.
+lib/ec.ts(71,49): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(71,62): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(84,23): error TS2339: Property 'shiftLeft' does not exist on type 'String'.
+lib/ec.ts(85,11): error TS2339: Property 'compareTo' does not exist on type 'String'.
+lib/ec.ts(86,15): error TS2339: Property 'subtract' does not exist on type 'String'.
+lib/ec.ts(95,69): error TS2304: Cannot find name 'Void'.
+lib/ec.ts(96,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(97,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(98,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(102,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(104,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(106,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(110,25): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/ec.ts(111,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(112,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(112,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(112,35): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(114,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(114,50): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(115,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(116,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(119,25): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/ec.ts(120,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(121,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(121,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(121,35): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(123,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(123,50): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(124,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(125,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(129,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(130,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(130,39): error TS2339: Property 'isInfinity' does not exist on type 'HTMLElement'.
+lib/ec.ts(131,13): error TS2339: Property 'isInfinity' does not exist on type 'HTMLElement'.
+lib/ec.ts(131,34): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(134,13): error TS2339: Property 'y' does not exist on type 'HTMLElement'.
+lib/ec.ts(136,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(137,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(137,52): error TS2339: Property 'z' does not exist on type 'HTMLElement'.
+lib/ec.ts(138,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(139,10): error TS2339: Property 'equals' does not exist on type 'Object'.
+lib/ec.ts(141,13): error TS2339: Property 'x' does not exist on type 'HTMLElement'.
+lib/ec.ts(143,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(144,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(144,52): error TS2339: Property 'z' does not exist on type 'HTMLElement'.
+lib/ec.ts(145,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(146,12): error TS2339: Property 'equals' does not exist on type 'Object'.
+lib/ec.ts(150,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(150,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(152,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(153,6): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(158,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(158,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(158,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(158,44): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(158,61): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(161,38): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/ec.ts(162,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(163,9): error TS2339: Property 'isInfinity' does not exist on type 'HTMLElement'.
+lib/ec.ts(163,30): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(166,21): error TS2339: Property 'y' does not exist on type 'HTMLElement'.
+lib/ec.ts(168,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(169,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(169,48): error TS2339: Property 'z' does not exist on type 'HTMLElement'.
+lib/ec.ts(170,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(172,21): error TS2339: Property 'x' does not exist on type 'HTMLElement'.
+lib/ec.ts(174,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(175,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(175,48): error TS2339: Property 'z' does not exist on type 'HTMLElement'.
+lib/ec.ts(176,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(178,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'BigInteger'.
+  Type 'String' is missing the following properties from type 'BigInteger': s, t, data, DB, and 74 more.
+lib/ec.ts(179,32): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'BigInteger'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'BigInteger': s, t, data, DB, and 74 more.
+lib/ec.ts(180,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(182,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(185,7): error TS2322: Type 'BigInteger' is not assignable to type 'String'.
+lib/ec.ts(186,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ec.ts(186,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(187,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ec.ts(187,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(188,22): error TS2339: Property 'x' does not exist on type 'HTMLElement'.
+lib/ec.ts(189,22): error TS2339: Property 'y' does not exist on type 'HTMLElement'.
+lib/ec.ts(191,22): error TS2339: Property 'square' does not exist on type 'String'.
+lib/ec.ts(192,23): error TS2339: Property 'multiply' does not exist on type 'Object'.
+lib/ec.ts(193,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ec.ts(194,28): error TS2339: Property 'square' does not exist on type 'Object'.
+lib/ec.ts(194,46): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(198,6): error TS2339: Property 'subtract' does not exist on type 'HTMLElement'.
+lib/ec.ts(199,17): error TS2339: Property 'z' does not exist on type 'HTMLElement'.
+lib/ec.ts(202,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(208,19): error TS2339: Property 'multiply' does not exist on type 'HTMLElement'.
+lib/ec.ts(209,17): error TS2339: Property 'z' does not exist on type 'HTMLElement'.
+lib/ec.ts(210,12): error TS2339: Property 'multiply' does not exist on type 'Object'.
+lib/ec.ts(211,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(214,6): error TS2339: Property 'multiply' does not exist on type 'Object'.
+lib/ec.ts(214,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(215,17): error TS2339: Property 'z' does not exist on type 'HTMLElement'.
+lib/ec.ts(216,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(218,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(219,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(220,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(221,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(226,26): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/ec.ts(227,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(227,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(228,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(228,51): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(231,7): error TS2322: Type 'BigInteger' is not assignable to type 'String'.
+lib/ec.ts(232,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(233,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ec.ts(233,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(235,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(236,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ec.ts(236,28): error TS2339: Property 'multiply' does not exist on type 'Function'.
+lib/ec.ts(236,45): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(237,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(240,27): error TS2339: Property 'square' does not exist on type 'String'.
+lib/ec.ts(241,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'BigInteger'.
+lib/ec.ts(242,11): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/ec.ts(242,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(244,9): error TS2339: Property 'mod' does not exist on type 'HTMLElement'.
+lib/ec.ts(244,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(248,6): error TS2339: Property 'square' does not exist on type 'HTMLElement'.
+lib/ec.ts(249,18): error TS2339: Property 'shiftLeft' does not exist on type 'String'.
+lib/ec.ts(252,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(255,6): error TS2339: Property 'multiply' does not exist on type 'HTMLElement'.
+lib/ec.ts(260,17): error TS2339: Property 'square' does not exist on type 'HTMLElement'.
+lib/ec.ts(261,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(264,6): error TS2339: Property 'square' does not exist on type 'Function'.
+lib/ec.ts(267,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(269,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(270,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(271,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(272,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(279,38): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/ec.ts(280,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(280,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(281,9): error TS2339: Property 'signum' does not exist on type 'Object'.
+lib/ec.ts(281,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(283,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+lib/ec.ts(284,26): error TS2339: Property 'multiply' does not exist on type 'HTMLElement'.
+lib/ec.ts(286,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(287,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(290,14): error TS2339: Property 'bitLength' does not exist on type 'HTMLElement'.
+lib/ec.ts(290,40): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ec.ts(291,11): error TS2339: Property 'twice' does not exist on type 'HTMLElement'.
+lib/ec.ts(293,26): error TS2339: Property 'testBit' does not exist on type 'HTMLElement'.
+lib/ec.ts(294,26): error TS2339: Property 'testBit' does not exist on type 'HTMLElement'.
+lib/ec.ts(297,13): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/ec.ts(297,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(305,73): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/ec.ts(307,9): error TS2339: Property 'bitLength' does not exist on type 'HTMLElement'.
+lib/ec.ts(307,25): error TS2339: Property 'bitLength' does not exist on type 'HTMLElement'.
+lib/ec.ts(307,44): error TS2339: Property 'bitLength' does not exist on type 'HTMLElement'.
+lib/ec.ts(308,14): error TS2339: Property 'bitLength' does not exist on type 'HTMLElement'.
+lib/ec.ts(310,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(311,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ec.ts(311,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(313,11): error TS2339: Property 'twice' does not exist on type 'HTMLElement'.
+lib/ec.ts(314,11): error TS2339: Property 'testBit' does not exist on type 'HTMLElement'.
+lib/ec.ts(315,13): error TS2339: Property 'testBit' does not exist on type 'HTMLElement'.
+lib/ec.ts(316,15): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/ec.ts(318,15): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/ec.ts(318,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(321,13): error TS2339: Property 'testBit' does not exist on type 'HTMLElement'.
+lib/ec.ts(322,15): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/ec.ts(325,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ec.ts(345,56): error TS2304: Cannot find name 'Void'.
+lib/ec.ts(346,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(347,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(347,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(348,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(348,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(349,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(349,19): error TS2554: Expected 4 arguments, but got 3.
+lib/ec.ts(349,19): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(349,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(350,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(350,30): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(353,25): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/ec.ts(354,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(358,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(362,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(366,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(368,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(368,25): error TS2339: Property 'q' does not exist on type 'Object'.
+lib/ec.ts(368,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(368,51): error TS2339: Property 'a' does not exist on type 'Object'.
+lib/ec.ts(368,57): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(368,77): error TS2339: Property 'b' does not exist on type 'Object'.
+lib/ec.ts(373,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(376,44): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/ec.ts(377,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(377,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(377,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/ec.ts(380,34): error TS2304: Cannot find name 'Void'.
+lib/ec.ts(381,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(385,9): error TS2339: Property 'isInfinity' does not exist on type 'HTMLElement'.
+lib/ec.ts(387,6): error TS2339: Property 'getX' does not exist on type 'HTMLElement'.
+lib/ec.ts(391,6): error TS2339: Property 'getY' does not exist on type 'HTMLElement'.
+lib/ec.ts(394,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ec.ts(395,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ec.ts(395,22): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ec.ts(425,11): error TS2454: Variable 'yIsEven' is used before being assigned.
+lib/ec.ts(427,38): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/ec.ts(428,58): error TS2769: No overload matches this call.
+  Overload 1 of 5, '(a: number, c: RandomGenerator): BigInteger', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'number'.
+  Overload 2 of 5, '(a: string, b?: number | undefined): BigInteger', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 3 of 5, '(a: number[], b?: number | undefined): BigInteger', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'number[]'.
+      Type 'String' is missing the following properties from type 'number[]': pop, push, join, reverse, and 21 more.
+lib/ec.ts(429,34): error TS2339: Property 'multiply' does not exist on type 'String'.
+lib/ec.ts(429,45): error TS2339: Property 'square' does not exist on type 'String'.
+lib/ec.ts(430,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ec.ts(430,31): error TS2339: Property 'sqrt' does not exist on type 'HTMLElement'.
+lib/ec.ts(434,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ec.ts(439,14): error TS2554: Expected 4 arguments, but got 3.
+lib/ec.ts(439,14): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(444,38): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/ec.ts(445,35): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/ec.ts(445,44): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/ec.ts(447,14): error TS2554: Expected 4 arguments, but got 3.
+lib/ec.ts(447,14): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(449,44): error TS2769: No overload matches this call.
+  Overload 1 of 5, '(a: number, c: RandomGenerator): BigInteger', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'number'.
+  Overload 2 of 5, '(a: string, b?: number | undefined): BigInteger', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 3 of 5, '(a: number[], b?: number | undefined): BigInteger', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'number[]'.
+lib/ec.ts(450,44): error TS2769: No overload matches this call.
+  Overload 1 of 5, '(a: number, c: RandomGenerator): BigInteger', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'number'.
+  Overload 2 of 5, '(a: string, b?: number | undefined): BigInteger', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 3 of 5, '(a: number[], b?: number | undefined): BigInteger', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'number[]'.
+lib/ec.ts(459,9): error TS2339: Property 'isInfinity' does not exist on type 'HTMLElement'.
+lib/ec.ts(461,6): error TS2339: Property 'getX' does not exist on type 'HTMLElement'.
+lib/ec.ts(465,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ec.ts(465,22): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ec.ts(470,8): error TS2339: Property 'getY' does not exist on type 'HTMLElement'.
+lib/ec.ts(477,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
+lib/ec.ts(486,52): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ec.ts(487,19): error TS2339: Property 'intValue' does not exist on type 'HTMLElement'.
+lib/ec.ts(488,41): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/ec.ts(493,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ec.ts(499,14): error TS2339: Property 'bitLength' does not exist on type 'String'.
+lib/ec.ts(499,28): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+lib/ec.ts(500,30): error TS2339: Property 'shiftRight' does not exist on type 'String'.
+lib/ec.ts(501,25): error TS2339: Property 'subtract' does not exist on type 'String'.
+lib/ec.ts(501,36): error TS2339: Property 'shiftLeft' does not exist on type 'HTMLElement'.
+lib/ec.ts(503,15): error TS2339: Property 'multiply' does not exist on type 'HTMLElement'.
+lib/ec.ts(505,13): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/ec.ts(507,14): error TS2339: Property 'compareTo' does not exist on type 'String'.
+lib/ec.ts(508,13): error TS2339: Property 'subtract' does not exist on type 'String'.
+lib/ec.ts(511,11): error TS2339: Property 'mod' does not exist on type 'String'.
+lib/ec.ts(520,21): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(524,14): error TS2339: Property 'square' does not exist on type 'String'.
+lib/ec.ts(530,44): error TS2339: Property 'shiftRight' does not exist on type 'HTMLElement'.
+lib/ec.ts(535,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ec.ts(535,28): error TS2339: Property 'shiftRight' does not exist on type 'HTMLElement'.
+lib/ec.ts(536,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ec.ts(547,9): error TS2339: Property 'compareTo' does not exist on type 'Object'.
+lib/ec.ts(548,10): error TS2339: Property 'multiply' does not exist on type 'Object'.
+lib/ec.ts(555,9): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+lib/ec.ts(556,9): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+lib/ec.ts(560,13): error TS2339: Property 'testBit' does not exist on type 'String'.
+lib/ec.ts(561,15): error TS2339: Property 'add' does not exist on type 'String'.
+lib/ec.ts(564,13): error TS2339: Property 'shiftRight' does not exist on type 'String'.
+lib/ec.ts(566,14): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ec.ts(566,43): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/ec.ts(568,14): error TS2339: Property 'equals' does not exist on type 'Object'.
+lib/ec.ts(568,42): error TS2339: Property 'equals' does not exist on type 'Object'.
+lib/ec.ts(573,21): error TS2339: Property 'bitLength' does not exist on type 'HTMLElement'.
+lib/ec.ts(574,21): error TS2339: Property 'getLowestSetBit' does not exist on type 'HTMLElement'.
+lib/ec.ts(579,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ec.ts(580,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ec.ts(582,16): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ec.ts(582,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/ec.ts(585,11): error TS2339: Property 'testBit' does not exist on type 'HTMLElement'.
+lib/ec.ts(588,30): error TS2339: Property 'multiply' does not exist on type 'Object'.
+lib/ec.ts(588,54): error TS2339: Property 'multiply' does not exist on type 'Object'.
+lib/ec.ts(589,30): error TS2339: Property 'multiply' does not exist on type 'Object'.
+lib/ec.ts(592,30): error TS2339: Property 'multiply' does not exist on type 'Object'.
+lib/ec.ts(593,30): error TS2339: Property 'multiply' does not exist on type 'Object'.
+lib/ec.ts(593,54): error TS2339: Property 'multiply' does not exist on type 'Object'.
+lib/ec.ts(594,30): error TS2339: Property 'multiply' does not exist on type 'Object'.
+lib/ec.ts(600,26): error TS2339: Property 'multiply' does not exist on type 'Object'.
+lib/ec.ts(601,26): error TS2339: Property 'multiply' does not exist on type 'Object'.
+lib/ec.ts(601,50): error TS2339: Property 'multiply' does not exist on type 'Object'.
+lib/ec.ts(606,28): error TS2339: Property 'multiply' does not exist on type 'Object'.
+lib/sec.ts(7,10): error TS2614: Module '"./ec.js"' has no exported member 'ECCurveFp'. Did you mean to use 'import ECCurveFp from "./ec.js"' instead?
+lib/sec.ts(13,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/sec.ts(13,75): error TS2304: Cannot find name 'Void'.
+lib/sec.ts(14,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/sec.ts(15,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/sec.ts(16,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/sec.ts(17,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/sec.ts(21,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/sec.ts(24,20): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/sec.ts(25,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/sec.ts(29,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/sec.ts(32,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/sec.ts(33,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/sec.ts(44,62): error TS2769: No overload matches this call.
+  Overload 1 of 5, '(a: number, c: RandomGenerator): BigInteger', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'number'.
+  Overload 2 of 5, '(a: string, b?: number | undefined): BigInteger', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 3 of 5, '(a: number[], b?: number | undefined): BigInteger', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'number[]'.
+lib/sec.ts(53,7): error TS2740: Type 'BigInteger' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+lib/sec.ts(55,25): error TS2339: Property 'decodePointHex' does not exist on type 'HTMLElement'.
+lib/sec.ts(60,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/sec.ts(60,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+  Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+lib/sec.ts(66,7): error TS2322: Type 'BigInteger' is not assignable to type 'Function'.
+lib/sec.ts(70,7): error TS2322: Type 'BigInteger' is not assignable to type 'Function'.
+lib/sec.ts(72,25): error TS2339: Property 'decodePointHex' does not exist on type 'HTMLElement'.
+lib/sec.ts(77,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/sec.ts(77,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+lib/sec.ts(87,7): error TS2322: Type 'BigInteger' is not assignable to type 'Function'.
+lib/sec.ts(89,25): error TS2339: Property 'decodePointHex' does not exist on type 'HTMLElement'.
+lib/sec.ts(94,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/sec.ts(94,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+lib/sec.ts(100,7): error TS2322: Type 'BigInteger' is not assignable to type 'Function'.
+lib/sec.ts(104,7): error TS2322: Type 'BigInteger' is not assignable to type 'Function'.
+lib/sec.ts(106,25): error TS2339: Property 'decodePointHex' does not exist on type 'HTMLElement'.
+lib/sec.ts(111,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/sec.ts(111,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+lib/sec.ts(121,7): error TS2322: Type 'BigInteger' is not assignable to type 'Function'.
+lib/sec.ts(123,25): error TS2339: Property 'decodePointHex' does not exist on type 'HTMLElement'.
+lib/sec.ts(128,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/sec.ts(128,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+lib/sec.ts(138,7): error TS2322: Type 'BigInteger' is not assignable to type 'Function'.
+lib/sec.ts(140,25): error TS2339: Property 'decodePointHex' does not exist on type 'HTMLElement'.
+lib/sec.ts(145,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/sec.ts(145,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+lib/sec.ts(163,7): error TS2322: Type 'BigInteger' is not assignable to type 'Function'.
+lib/sec.ts(165,25): error TS2339: Property 'decodePointHex' does not exist on type 'HTMLElement'.
+lib/sec.ts(170,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/sec.ts(170,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

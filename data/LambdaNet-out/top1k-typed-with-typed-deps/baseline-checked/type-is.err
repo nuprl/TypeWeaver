@@ -1,0 +1,54 @@
+index.ts(15,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(16,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(43,41): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(45,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(48,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+index.ts(58,35): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(59,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+index.ts(68,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(69,33): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(70,19): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'String'.
+  Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(93,14): error TS2339: Property 'headers' does not exist on type 'HTMLElement'.
+index.ts(94,16): error TS2339: Property 'headers' does not exist on type 'HTMLElement'.
+index.ts(123,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(123,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(124,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(127,16): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+index.ts(140,27): error TS2339: Property 'headers' does not exist on type 'Object'.
+index.ts(170,7): error TS2322: Type 'string' is not assignable to type 'Boolean'.
+index.ts(172,7): error TS2322: Type 'string' is not assignable to type 'Boolean'.
+index.ts(177,5): error TS2322: Type 'string' is not assignable to type 'Boolean'.
+index.ts(198,7): error TS2367: This condition will always return 'false' since the types 'String' and 'boolean' have no overlap.
+index.ts(203,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(207,49): error TS2339: Property 'length' does not exist on type 'Object'.
+index.ts(212,7): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+index.ts(212,35): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+index.ts(217,7): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+index.ts(218,12): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+index.ts(219,7): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+index.ts(219,64): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+index.ts(223,7): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+index.ts(223,35): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+index.ts(243,8): error TS2339: Property 'parameters' does not exist on type 'String'.
+index.ts(257,44): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(263,26): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

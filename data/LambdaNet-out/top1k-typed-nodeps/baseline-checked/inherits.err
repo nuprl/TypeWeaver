@@ -1,0 +1,33 @@
+.github/workflows/package-json-repo.ts(4,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+.github/workflows/package-json-repo.ts(4,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+.github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'String'.
+.github/workflows/package-json-repo.ts(12,9): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
+  Type 'null' is not assignable to type 'Object'.
+.github/workflows/package-json-repo.ts(13,26): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+.github/workflows/package-json-repo.ts(14,26): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(value: any, replacer?: ((this: any, key: string, value: any) => any) | undefined, space?: string | number | undefined): string', gave the following error.
+    Argument of type 'null' is not assignable to parameter of type '((this: any, key: string, value: any) => any) | undefined'.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[] | null | undefined, space?: string | number | undefined): string', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string | number | undefined'.
+.github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
+inherits.ts(4,19): error TS2339: Property 'inherits' does not exist on type 'String'.
+inherits.ts(5,25): error TS2339: Property 'inherits' does not exist on type 'String'.
+inherits_browser.ts(4,74): error TS2304: Cannot find name 'Void'.
+inherits_browser.ts(6,12): error TS2339: Property 'super_' does not exist on type 'Object'.
+inherits_browser.ts(7,12): error TS2339: Property 'prototype' does not exist on type 'Object'.
+inherits_browser.ts(19,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+inherits_browser.ts(19,71): error TS2304: Cannot find name 'Void'.
+inherits_browser.ts(21,12): error TS2339: Property 'super_' does not exist on type 'Object'.
+inherits_browser.ts(24,12): error TS2339: Property 'prototype' does not exist on type 'Object'.
+inherits_browser.ts(24,28): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+inherits_browser.ts(25,12): error TS2339: Property 'prototype' does not exist on type 'Object'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

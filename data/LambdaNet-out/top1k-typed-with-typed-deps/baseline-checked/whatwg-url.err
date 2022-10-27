@@ -1,0 +1,674 @@
+index.ts(3,9): error TS2451: Cannot redeclare block-scoped variable 'URL'.
+index.ts(3,14): error TS2451: Cannot redeclare block-scoped variable 'URLSearchParams'.
+index.ts(8,5): error TS2339: Property 'install' does not exist on type '{ new (url: string | URL, base?: string | URL | undefined): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }'.
+index.ts(9,17): error TS2339: Property 'install' does not exist on type '{ new (init?: string | Record<string, string> | URLSearchParams | string[][] | undefined): URLSearchParams; prototype: URLSearchParams; toString(): string; }'.
+index.ts(11,34): error TS2339: Property 'URL' does not exist on type 'Object'.
+index.ts(12,46): error TS2339: Property 'URLSearchParams' does not exist on type 'Object'.
+index.ts(14,36): error TS2339: Property 'parseURL' does not exist on type 'String'.
+index.ts(15,41): error TS2339: Property 'basicURLParse' does not exist on type 'String'.
+index.ts(16,40): error TS2339: Property 'serializeURL' does not exist on type 'String'.
+index.ts(17,41): error TS2339: Property 'serializePath' does not exist on type 'String'.
+index.ts(18,41): error TS2339: Property 'serializeHost' does not exist on type 'String'.
+index.ts(19,44): error TS2339: Property 'serializeInteger' does not exist on type 'String'.
+index.ts(20,46): error TS2339: Property 'serializeURLOrigin' does not exist on type 'String'.
+index.ts(21,42): error TS2339: Property 'setTheUsername' does not exist on type 'String'.
+index.ts(22,42): error TS2339: Property 'setThePassword' does not exist on type 'String'.
+index.ts(23,59): error TS2339: Property 'cannotHaveAUsernamePasswordPort' does not exist on type 'String'.
+index.ts(24,43): error TS2339: Property 'hasAnOpaquePath' does not exist on type 'String'.
+index.ts(26,47): error TS2339: Property 'percentDecodeString' does not exist on type 'Object'.
+index.ts(27,46): error TS2339: Property 'percentDecodeBytes' does not exist on type 'Object'.
+lib/URL-impl.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'urlencoded'.
+lib/URL-impl.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'URLSearchParams'.
+lib/URL-impl.ts(7,15): error TS7006: Parameter 'globalObject' implicitly has an 'any' type.
+lib/URL-impl.ts(7,29): error TS7006: Parameter 'constructorArgs' implicitly has an 'any' type.
+lib/URL-impl.ts(13,24): error TS2339: Property 'basicURLParse' does not exist on type 'String'.
+lib/URL-impl.ts(19,27): error TS2339: Property 'basicURLParse' does not exist on type 'String'.
+lib/URL-impl.ts(26,10): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(30,10): error TS2339: Property '_query' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(30,35): error TS2339: Property 'createImpl' does not exist on type '{ new (init?: string | Record<string, string> | URLSearchParams | string[][] | undefined): URLSearchParams; prototype: URLSearchParams; toString(): string; }'.
+lib/URL-impl.ts(31,10): error TS2339: Property '_query' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(34,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(35,16): error TS2339: Property 'serializeURL' does not exist on type 'String'.
+lib/URL-impl.ts(35,34): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(38,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(39,27): error TS2339: Property 'basicURLParse' does not exist on type 'String'.
+lib/URL-impl.ts(44,10): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(46,10): error TS2339: Property '_query' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(49,12): error TS2339: Property '_query' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(49,38): error TS2339: Property 'parseUrlencodedString' does not exist on type 'String'.
+lib/URL-impl.ts(53,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(54,16): error TS2339: Property 'serializeURLOrigin' does not exist on type 'String'.
+lib/URL-impl.ts(54,40): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(57,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(58,20): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(61,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(62,9): error TS2339: Property 'basicURLParse' does not exist on type 'String'.
+lib/URL-impl.ts(62,44): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(65,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(66,17): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(69,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(70,13): error TS2339: Property 'cannotHaveAUsernamePasswordPort' does not exist on type 'String'.
+lib/URL-impl.ts(70,50): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(74,9): error TS2339: Property 'setTheUsername' does not exist on type 'String'.
+lib/URL-impl.ts(74,29): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(77,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(78,17): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(81,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(82,13): error TS2339: Property 'cannotHaveAUsernamePasswordPort' does not exist on type 'String'.
+lib/URL-impl.ts(82,50): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(86,9): error TS2339: Property 'setThePassword' does not exist on type 'String'.
+lib/URL-impl.ts(86,29): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(89,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(90,22): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(97,18): error TS2339: Property 'serializeHost' does not exist on type 'String'.
+lib/URL-impl.ts(100,19): error TS2339: Property 'serializeHost' does not exist on type 'String'.
+lib/URL-impl.ts(100,50): error TS2339: Property 'serializeInteger' does not exist on type 'String'.
+lib/URL-impl.ts(103,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(104,13): error TS2339: Property 'hasAnOpaquePath' does not exist on type 'String'.
+lib/URL-impl.ts(104,34): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(108,9): error TS2339: Property 'basicURLParse' does not exist on type 'String'.
+lib/URL-impl.ts(108,38): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(111,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(112,14): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(116,16): error TS2339: Property 'serializeHost' does not exist on type 'String'.
+lib/URL-impl.ts(116,35): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(119,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(120,13): error TS2339: Property 'hasAnOpaquePath' does not exist on type 'String'.
+lib/URL-impl.ts(120,34): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(124,9): error TS2339: Property 'basicURLParse' does not exist on type 'String'.
+lib/URL-impl.ts(124,38): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(127,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(128,14): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(132,16): error TS2339: Property 'serializeInteger' does not exist on type 'String'.
+lib/URL-impl.ts(132,38): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(135,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(136,13): error TS2339: Property 'cannotHaveAUsernamePasswordPort' does not exist on type 'String'.
+lib/URL-impl.ts(136,50): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(141,12): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(143,11): error TS2339: Property 'basicURLParse' does not exist on type 'String'.
+lib/URL-impl.ts(143,40): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(147,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(148,16): error TS2339: Property 'serializePath' does not exist on type 'String'.
+lib/URL-impl.ts(148,35): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(151,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(152,13): error TS2339: Property 'hasAnOpaquePath' does not exist on type 'String'.
+lib/URL-impl.ts(152,34): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(156,10): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(157,9): error TS2339: Property 'basicURLParse' does not exist on type 'String'.
+lib/URL-impl.ts(157,38): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(160,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(161,14): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(161,42): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(165,21): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(168,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(169,22): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(173,12): error TS2339: Property '_query' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(179,9): error TS2339: Property 'basicURLParse' does not exist on type 'String'.
+lib/URL-impl.ts(180,10): error TS2339: Property '_query' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(180,36): error TS2339: Property 'parseUrlencodedString' does not exist on type 'String'.
+lib/URL-impl.ts(183,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(184,17): error TS2339: Property '_query' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(187,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(188,14): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(188,45): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(192,21): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(195,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/URL-impl.ts(197,12): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(202,10): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URL-impl.ts(203,9): error TS2339: Property 'basicURLParse' does not exist on type 'String'.
+lib/URL-impl.ts(203,42): error TS2339: Property '_url' does not exist on type 'URLImpl'.
+lib/URLSearchParams-impl.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'urlencoded'.
+lib/URLSearchParams-impl.ts(5,15): error TS7006: Parameter 'globalObject' implicitly has an 'any' type.
+lib/URLSearchParams-impl.ts(5,29): error TS7006: Parameter 'constructorArgs' implicitly has an 'any' type.
+lib/URLSearchParams-impl.ts(7,10): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(8,10): error TS2339: Property '_url' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(20,14): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(25,14): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(28,12): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(28,31): error TS2339: Property 'parseUrlencodedString' does not exist on type 'String'.
+lib/URLSearchParams-impl.ts(33,14): error TS2339: Property '_url' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(34,30): error TS2339: Property 'serializeUrlencoded' does not exist on type 'String'.
+lib/URLSearchParams-impl.ts(34,55): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(38,12): error TS2339: Property '_url' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(42,10): error TS7006: Parameter 'name' implicitly has an 'any' type.
+lib/URLSearchParams-impl.ts(42,16): error TS7006: Parameter 'value' implicitly has an 'any' type.
+lib/URLSearchParams-impl.ts(43,10): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(47,10): error TS7006: Parameter 'name' implicitly has an 'any' type.
+lib/URLSearchParams-impl.ts(49,21): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(50,16): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(51,14): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(59,7): error TS7006: Parameter 'name' implicitly has an 'any' type.
+lib/URLSearchParams-impl.ts(60,30): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(68,10): error TS7006: Parameter 'name' implicitly has an 'any' type.
+lib/URLSearchParams-impl.ts(70,30): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(78,7): error TS7006: Parameter 'name' implicitly has an 'any' type.
+lib/URLSearchParams-impl.ts(79,30): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(87,7): error TS7006: Parameter 'name' implicitly has an 'any' type.
+lib/URLSearchParams-impl.ts(87,13): error TS7006: Parameter 'value' implicitly has an 'any' type.
+lib/URLSearchParams-impl.ts(90,21): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(91,16): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(93,16): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(96,16): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(104,12): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(110,10): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(110,22): error TS7006: Parameter 'a' implicitly has an 'any' type.
+lib/URLSearchParams-impl.ts(110,25): error TS7006: Parameter 'b' implicitly has an 'any' type.
+lib/URLSearchParams-impl.ts(124,17): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/URLSearchParams-impl.ts(128,23): error TS2339: Property 'serializeUrlencoded' does not exist on type 'String'.
+lib/URLSearchParams-impl.ts(128,48): error TS2339: Property '_list' does not exist on type 'URLSearchParamsImpl'.
+lib/encoding.ts(2,7): error TS2740: Type 'TextEncoder' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+lib/encoding.ts(3,7): error TS2740: Type 'TextDecoder' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+lib/encoding.ts(5,10): error TS2451: Cannot redeclare block-scoped variable 'utf8Encode'.
+lib/encoding.ts(5,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/encoding.ts(6,22): error TS2339: Property 'encode' does not exist on type 'HTMLElement'.
+lib/encoding.ts(9,10): error TS2451: Cannot redeclare block-scoped variable 'utf8DecodeWithoutBOM'.
+lib/encoding.ts(9,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/encoding.ts(10,22): error TS2339: Property 'decode' does not exist on type 'HTMLElement'.
+lib/infra.ts(14,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/infra.ts(14,42): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/infra.ts(17,10): error TS2451: Cannot redeclare block-scoped variable 'isASCIIHex'.
+lib/percent-encoding.ts(1,1): error TS6200: Definitions of the following identifiers conflict with those in another file: percentDecodeString, isC0ControlPercentEncode, isFragmentPercentEncode, isQueryPercentEncode, isSpecialQueryPercentEncode, isPathPercentEncode, isUserinfoPercentEncode, utf8PercentEncodeCodePoint
+lib/percent-encoding.ts(2,9): error TS2451: Cannot redeclare block-scoped variable 'isASCIIHex'.
+lib/percent-encoding.ts(3,9): error TS2451: Cannot redeclare block-scoped variable 'utf8Encode'.
+lib/percent-encoding.ts(5,10): error TS2393: Duplicate function implementation.
+lib/percent-encoding.ts(6,3): error TS2322: Type 'number | undefined' is not assignable to type 'Number'.
+  Type 'undefined' is not assignable to type 'Number'.
+lib/percent-encoding.ts(11,32): error TS2554: Expected 0 arguments, but got 1.
+lib/percent-encoding.ts(20,10): error TS2451: Cannot redeclare block-scoped variable 'percentDecodeBytes'.
+lib/percent-encoding.ts(21,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/percent-encoding.ts(21,46): error TS2339: Property 'byteLength' does not exist on type 'Object'.
+lib/percent-encoding.ts(23,29): error TS2339: Property 'byteLength' does not exist on type 'Object'.
+lib/percent-encoding.ts(24,26): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+lib/percent-encoding.ts(25,9): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
+lib/percent-encoding.ts(26,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/percent-encoding.ts(27,46): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+lib/percent-encoding.ts(27,75): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+lib/percent-encoding.ts(28,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/percent-encoding.ts(30,63): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+lib/percent-encoding.ts(30,77): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+lib/percent-encoding.ts(31,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/percent-encoding.ts(51,7): error TS2739: Type 'Set<Number>' is missing the following properties from type 'Error': name, message
+lib/percent-encoding.ts(53,71): error TS2339: Property 'has' does not exist on type 'Error'.
+lib/percent-encoding.ts(57,7): error TS2322: Type 'Set<Number>' is not assignable to type 'Error'.
+lib/percent-encoding.ts(59,68): error TS2339: Property 'has' does not exist on type 'Error'.
+lib/percent-encoding.ts(64,37): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
+lib/percent-encoding.ts(68,34): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+lib/percent-encoding.ts(74,7): error TS2322: Type 'Set<Number>' is not assignable to type 'Error'.
+lib/percent-encoding.ts(77,66): error TS2339: Property 'has' does not exist on type 'Error'.
+lib/percent-encoding.ts(81,7): error TS2322: Type 'Set<Number>' is not assignable to type 'Error'.
+lib/percent-encoding.ts(83,71): error TS2339: Property 'has' does not exist on type 'Error'.
+lib/percent-encoding.ts(88,10): error TS2451: Cannot redeclare block-scoped variable 'isURLEncodedPercentEncode'.
+lib/percent-encoding.ts(89,73): error TS2339: Property 'has' does not exist on type 'Object'.
+lib/percent-encoding.ts(98,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/percent-encoding.ts(105,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/percent-encoding.ts(113,3): error TS2322: Type 'String' is not assignable to type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'string' is not assignable to type 'boolean'.
+lib/percent-encoding.ts(113,66): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
+lib/percent-encoding.ts(113,78): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Function'.
+  Type 'Boolean' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+lib/percent-encoding.ts(118,10): error TS2451: Cannot redeclare block-scoped variable 'utf8PercentEncodeString'.
+lib/percent-encoding.ts(118,41): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/percent-encoding.ts(124,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/percent-encoding.ts(124,63): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Function'.
+lib/url-state-machine.ts(1,1): error TS6200: Definitions of the following identifiers conflict with those in another file: percentDecodeString, isC0ControlPercentEncode, isFragmentPercentEncode, isQueryPercentEncode, isSpecialQueryPercentEncode, isPathPercentEncode, isUserinfoPercentEncode, utf8PercentEncodeCodePoint
+lib/url-state-machine.ts(5,9): error TS2451: Cannot redeclare block-scoped variable 'utf8DecodeWithoutBOM'.
+lib/url-state-machine.ts(6,58): error TS2451: Cannot redeclare block-scoped variable 'utf8PercentEncodeString'.
+lib/url-state-machine.ts(10,10): error TS2393: Duplicate function implementation.
+lib/url-state-machine.ts(11,3): error TS2322: Type 'number | undefined' is not assignable to type 'Number'.
+  Type 'undefined' is not assignable to type 'Number'.
+lib/url-state-machine.ts(23,7): error TS2322: Type 'typeof failure' is not assignable to type 'Number'.
+lib/url-state-machine.ts(25,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/url-state-machine.ts(30,27): error TS2538: Type 'String' cannot be used as an index type.
+lib/url-state-machine.ts(31,3): error TS2322: Type 'string | undefined' is not assignable to type 'String'.
+  Type 'undefined' is not assignable to type 'String'.
+lib/url-state-machine.ts(31,16): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
+lib/url-state-machine.ts(31,54): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
+lib/url-state-machine.ts(35,35): error TS2339: Property 'toLowerCase' does not exist on type 'Object'.
+lib/url-state-machine.ts(39,19): error TS2339: Property 'toLowerCase' does not exist on type 'Number'.
+lib/url-state-machine.ts(40,10): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+lib/url-state-machine.ts(40,29): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+lib/url-state-machine.ts(40,50): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+lib/url-state-machine.ts(40,71): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+lib/url-state-machine.ts(44,16): error TS2339: Property 'isASCIIAlpha' does not exist on type 'Object'.
+lib/url-state-machine.ts(47,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/url-state-machine.ts(48,39): error TS2339: Property 'isASCIIAlpha' does not exist on type 'Object'.
+lib/url-state-machine.ts(52,39): error TS2339: Property 'isASCIIAlpha' does not exist on type 'Object'.
+lib/url-state-machine.ts(64,25): error TS2538: Type 'String' cannot be used as an index type.
+lib/url-state-machine.ts(68,30): error TS2339: Property 'scheme' does not exist on type 'String'.
+lib/url-state-machine.ts(72,31): error TS2339: Property 'scheme' does not exist on type 'String'.
+lib/url-state-machine.ts(76,25): error TS2538: Type 'String' cannot be used as an index type.
+lib/url-state-machine.ts(106,18): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/url-state-machine.ts(110,19): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/url-state-machine.ts(114,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/url-state-machine.ts(114,30): error TS2339: Property 'split' does not exist on type 'HTMLElement'.
+lib/url-state-machine.ts(125,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/url-state-machine.ts(127,11): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/url-state-machine.ts(128,9): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
+lib/url-state-machine.ts(148,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'number'.
+lib/url-state-machine.ts(148,29): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(149,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(152,3): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+lib/url-state-machine.ts(160,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(164,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(173,7): error TS2322: Type 'null' is not assignable to type 'Number'.
+lib/url-state-machine.ts(176,22): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(iterable: Iterable<any> | ArrayLike<any>, mapfn: (v: any, k: number) => any, thisArg?: any): any[]', gave the following error.
+    Argument of type 'Object' is not assignable to parameter of type 'Iterable<any> | ArrayLike<any>'.
+      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Overload 2 of 4, '(arrayLike: ArrayLike<any>, mapfn: (v: any, k: number) => any, thisArg?: any): any[]', gave the following error.
+    Argument of type 'Object' is not assignable to parameter of type 'ArrayLike<any>'.
+      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+        Property 'length' is missing in type 'Object' but required in type 'ArrayLike<any>'.
+lib/url-state-machine.ts(176,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/url-state-machine.ts(178,13): error TS2538: Type 'Number' cannot be used as an index type.
+lib/url-state-machine.ts(179,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+lib/url-state-machine.ts(179,15): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/url-state-machine.ts(183,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
+lib/url-state-machine.ts(184,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(188,26): error TS2339: Property 'length' does not exist on type 'Object'.
+lib/url-state-machine.ts(193,15): error TS2538: Type 'Number' cannot be used as an index type.
+lib/url-state-machine.ts(197,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(198,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(206,32): error TS2339: Property 'isASCIIHex' does not exist on type 'Object'.
+lib/url-state-machine.ts(206,49): error TS2538: Type 'Number' cannot be used as an index type.
+lib/url-state-machine.ts(207,15): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(207,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/url-state-machine.ts(207,49): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+lib/url-state-machine.ts(208,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(209,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(212,15): error TS2538: Type 'Number' cannot be used as an index type.
+lib/url-state-machine.ts(217,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(217,18): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(225,20): error TS2538: Type 'Number' cannot be used as an index type.
+lib/url-state-machine.ts(226,13): error TS2322: Type 'null' is not assignable to type 'Number'.
+lib/url-state-machine.ts(229,21): error TS2538: Type 'Number' cannot be used as an index type.
+lib/url-state-machine.ts(230,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(236,20): error TS2339: Property 'isASCIIDigit' does not exist on type 'Object'.
+lib/url-state-machine.ts(236,39): error TS2538: Type 'Number' cannot be used as an index type.
+lib/url-state-machine.ts(240,22): error TS2339: Property 'isASCIIDigit' does not exist on type 'Object'.
+lib/url-state-machine.ts(240,41): error TS2538: Type 'Number' cannot be used as an index type.
+lib/url-state-machine.ts(241,43): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/url-state-machine.ts(241,53): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+lib/url-state-machine.ts(247,25): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(247,25): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
+lib/url-state-machine.ts(252,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(255,17): error TS2538: Type 'Number' cannot be used as an index type.
+lib/url-state-machine.ts(255,31): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
+lib/url-state-machine.ts(255,39): error TS2538: Type 'Number' cannot be used as an index type.
+lib/url-state-machine.ts(257,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(260,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(269,22): error TS2538: Type 'Number' cannot be used as an index type.
+lib/url-state-machine.ts(270,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(271,17): error TS2538: Type 'Number' cannot be used as an index type.
+lib/url-state-machine.ts(274,22): error TS2538: Type 'Number' cannot be used as an index type.
+lib/url-state-machine.ts(278,13): error TS2538: Type 'Number' cannot be used as an index type.
+lib/url-state-machine.ts(279,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(283,25): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(283,38): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(286,28): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+lib/url-state-machine.ts(286,36): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
+lib/url-state-machine.ts(287,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+lib/url-state-machine.ts(287,15): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
+lib/url-state-machine.ts(287,47): error TS2538: Type 'Number' cannot be used as an index type.
+lib/url-state-machine.ts(288,15): error TS2538: Type 'Number' cannot be used as an index type.
+lib/url-state-machine.ts(289,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(290,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(305,20): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+lib/url-state-machine.ts(313,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/url-state-machine.ts(318,15): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+lib/url-state-machine.ts(328,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/url-state-machine.ts(334,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+lib/url-state-machine.ts(338,5): error TS2739: Type 'Boolean' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+lib/url-state-machine.ts(342,9): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/url-state-machine.ts(343,7): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
+lib/url-state-machine.ts(352,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
+  Type 'String' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 276 more.
+lib/url-state-machine.ts(355,3): error TS2322: Type 'String' is not assignable to type 'Number'.
+lib/url-state-machine.ts(358,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/url-state-machine.ts(359,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/url-state-machine.ts(372,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/url-state-machine.ts(380,38): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'String'.
+lib/url-state-machine.ts(381,5): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'number' is not assignable to type 'boolean'.
+lib/url-state-machine.ts(387,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/url-state-machine.ts(388,7): error TS2322: Type 'null' is not assignable to type 'String'.
+lib/url-state-machine.ts(390,7): error TS2322: Type 'null' is not assignable to type 'Number'.
+lib/url-state-machine.ts(396,9): error TS2322: Type 'Number' is not assignable to type 'String'.
+lib/url-state-machine.ts(400,7): error TS2322: Type 'null' is not assignable to type 'Number'.
+lib/url-state-machine.ts(406,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(415,3): error TS2322: Type 'String' is not assignable to type 'Number'.
+lib/url-state-machine.ts(431,40): error TS2322: Type 'boolean' is not assignable to type 'String'.
+lib/url-state-machine.ts(432,31): error TS2339: Property 'toASCII' does not exist on type 'String'.
+lib/url-state-machine.ts(439,26): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+lib/url-state-machine.ts(440,5): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+lib/url-state-machine.ts(442,3): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+lib/url-state-machine.ts(446,3): error TS2322: Type 'string' is not assignable to type 'Boolean'.
+lib/url-state-machine.ts(450,3): error TS2322: Type 'string' is not assignable to type 'Boolean'.
+lib/url-state-machine.ts(453,36): error TS2304: Cannot find name 'Void'.
+lib/url-state-machine.ts(454,11): error TS2339: Property 'path' does not exist on type 'String'.
+lib/url-state-machine.ts(458,11): error TS2339: Property 'scheme' does not exist on type 'String'.
+lib/url-state-machine.ts(466,14): error TS2339: Property 'username' does not exist on type 'String'.
+lib/url-state-machine.ts(466,37): error TS2339: Property 'password' does not exist on type 'String'.
+lib/url-state-machine.ts(470,14): error TS2339: Property 'host' does not exist on type 'String'.
+lib/url-state-machine.ts(470,35): error TS2339: Property 'host' does not exist on type 'String'.
+lib/url-state-machine.ts(470,54): error TS2339: Property 'scheme' does not exist on type 'String'.
+lib/url-state-machine.ts(474,21): error TS2339: Property 'path' does not exist on type 'String'.
+lib/url-state-machine.ts(478,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/url-state-machine.ts(481,119): error TS2304: Cannot find name 'Void'.
+lib/url-state-machine.ts(482,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(483,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(484,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(485,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(486,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(487,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(488,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(489,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(491,8): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(492,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(503,11): error TS2322: Type 'Boolean' is not assignable to type 'String'.
+lib/url-state-machine.ts(503,42): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(504,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(505,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(507,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(510,9): error TS2322: Type 'Boolean' is not assignable to type 'String'.
+lib/url-state-machine.ts(510,41): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(511,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(512,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(514,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(516,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(518,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(519,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(520,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(521,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(523,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(523,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(523,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/url-state-machine.ts(525,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(525,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(525,47): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(526,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(526,34): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(527,11): error TS2322: Type 'string | undefined' is not assignable to type 'String'.
+  Type 'undefined' is not assignable to type 'String'.
+lib/url-state-machine.ts(527,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
+lib/url-state-machine.ts(527,70): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
+lib/url-state-machine.ts(530,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(530,40): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(533,16): error TS2367: This condition will always return 'false' since the types 'Boolean' and 'Number' have no overlap.
+lib/url-state-machine.ts(534,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/url-state-machine.ts(541,13): error TS2339: Property 'isASCIIAlpha' does not exist on type 'Object'.
+lib/url-state-machine.ts(549,5): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+lib/url-state-machine.ts(556,13): error TS2339: Property 'isASCIIAlphanumeric' does not exist on type 'Object'.
+lib/url-state-machine.ts(606,5): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+lib/url-state-machine.ts(614,5): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+lib/url-state-machine.ts(676,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/url-state-machine.ts(740,11): error TS2322: Type 'Number' is not assignable to type 'String'.
+lib/url-state-machine.ts(741,27): error TS2365: Operator '<' cannot be applied to types 'number' and 'String'.
+lib/url-state-machine.ts(744,11): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
+lib/url-state-machine.ts(756,20): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/url-state-machine.ts(760,7): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+lib/url-state-machine.ts(762,21): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/url-state-machine.ts(780,7): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+lib/url-state-machine.ts(787,11): error TS2322: Type 'Number' is not assignable to type 'String'.
+lib/url-state-machine.ts(788,9): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
+lib/url-state-machine.ts(795,20): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/url-state-machine.ts(800,7): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+lib/url-state-machine.ts(807,11): error TS2322: Type 'Number' is not assignable to type 'String'.
+lib/url-state-machine.ts(808,9): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
+lib/url-state-machine.ts(831,13): error TS2339: Property 'isASCIIDigit' does not exist on type 'Object'.
+lib/url-state-machine.ts(833,20): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/url-state-machine.ts(840,9): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+lib/url-state-machine.ts(842,23): error TS2367: This condition will always return 'false' since the types 'Number' and 'String' have no overlap.
+lib/url-state-machine.ts(852,5): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+lib/url-state-machine.ts(858,32): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+lib/url-state-machine.ts(860,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/url-state-machine.ts(861,41): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/url-state-machine.ts(863,58): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/url-state-machine.ts(864,56): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/url-state-machine.ts(886,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/url-state-machine.ts(928,13): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/url-state-machine.ts(940,11): error TS2322: Type 'Number' is not assignable to type 'String'.
+lib/url-state-machine.ts(941,11): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
+lib/url-state-machine.ts(992,13): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/url-state-machine.ts(1025,15): error TS2339: Property 'isASCIIHex' does not exist on type 'Object'.
+lib/url-state-machine.ts(1026,16): error TS2339: Property 'isASCIIHex' does not exist on type 'Object'.
+lib/url-state-machine.ts(1045,16): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/url-state-machine.ts(1050,17): error TS2339: Property 'isASCIIHex' does not exist on type 'Object'.
+lib/url-state-machine.ts(1051,17): error TS2339: Property 'isASCIIHex' does not exist on type 'Object'.
+lib/url-state-machine.ts(1055,16): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/url-state-machine.ts(1068,54): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/url-state-machine.ts(1078,21): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/url-state-machine.ts(1082,15): error TS2339: Property 'isASCIIHex' does not exist on type 'Object'.
+lib/url-state-machine.ts(1083,16): error TS2339: Property 'isASCIIHex' does not exist on type 'Object'.
+lib/url-state-machine.ts(1094,14): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/url-state-machine.ts(1097,15): error TS2339: Property 'isASCIIHex' does not exist on type 'Object'.
+lib/url-state-machine.ts(1098,16): error TS2339: Property 'isASCIIHex' does not exist on type 'Object'.
+lib/url-state-machine.ts(1109,31): error TS2339: Property 'scheme' does not exist on type 'String'.
+lib/url-state-machine.ts(1110,11): error TS2339: Property 'host' does not exist on type 'String'.
+lib/url-state-machine.ts(1113,13): error TS2339: Property 'username' does not exist on type 'String'.
+lib/url-state-machine.ts(1113,36): error TS2339: Property 'password' does not exist on type 'String'.
+lib/url-state-machine.ts(1114,21): error TS2339: Property 'username' does not exist on type 'String'.
+lib/url-state-machine.ts(1115,15): error TS2339: Property 'password' does not exist on type 'String'.
+lib/url-state-machine.ts(1116,27): error TS2339: Property 'password' does not exist on type 'String'.
+lib/url-state-machine.ts(1121,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/url-state-machine.ts(1121,33): error TS2339: Property 'host' does not exist on type 'String'.
+lib/url-state-machine.ts(1123,13): error TS2339: Property 'port' does not exist on type 'String'.
+lib/url-state-machine.ts(1124,25): error TS2339: Property 'port' does not exist on type 'String'.
+lib/url-state-machine.ts(1128,11): error TS2339: Property 'host' does not exist on type 'String'.
+lib/url-state-machine.ts(1128,57): error TS2339: Property 'path' does not exist on type 'String'.
+lib/url-state-machine.ts(1128,80): error TS2339: Property 'path' does not exist on type 'String'.
+lib/url-state-machine.ts(1131,3): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/url-state-machine.ts(1133,11): error TS2339: Property 'query' does not exist on type 'String'.
+lib/url-state-machine.ts(1134,23): error TS2339: Property 'query' does not exist on type 'String'.
+lib/url-state-machine.ts(1137,31): error TS2339: Property 'fragment' does not exist on type 'String'.
+lib/url-state-machine.ts(1138,23): error TS2339: Property 'fragment' does not exist on type 'String'.
+lib/url-state-machine.ts(1145,33): error TS2339: Property 'scheme' does not exist on type 'Object'.
+lib/url-state-machine.ts(1146,3): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/url-state-machine.ts(1146,33): error TS2339: Property 'host' does not exist on type 'Object'.
+lib/url-state-machine.ts(1148,13): error TS2339: Property 'port' does not exist on type 'Object'.
+lib/url-state-machine.ts(1149,25): error TS2339: Property 'port' does not exist on type 'Object'.
+lib/url-state-machine.ts(1157,16): error TS2339: Property 'path' does not exist on type 'String'.
+lib/url-state-machine.ts(1161,29): error TS2339: Property 'path' does not exist on type 'String'.
+lib/url-state-machine.ts(1173,15): error TS2339: Property 'scheme' does not exist on type 'String'.
+lib/url-state-machine.ts(1187,21): error TS2339: Property 'scheme' does not exist on type 'String'.
+lib/url-state-machine.ts(1188,19): error TS2339: Property 'host' does not exist on type 'String'.
+lib/url-state-machine.ts(1189,19): error TS2339: Property 'port' does not exist on type 'String'.
+lib/url-state-machine.ts(1211,28): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/url-state-machine.ts(1211,63): error TS2339: Property 'baseURL' does not exist on type 'Object'.
+lib/url-state-machine.ts(1211,80): error TS2339: Property 'encodingOverride' does not exist on type 'Object'.
+lib/url-state-machine.ts(1211,106): error TS2339: Property 'url' does not exist on type 'Object'.
+lib/url-state-machine.ts(1211,119): error TS2339: Property 'stateOverride' does not exist on type 'Object'.
+lib/url-state-machine.ts(1212,11): error TS2339: Property 'failure' does not exist on type 'HTMLElement'.
+lib/url-state-machine.ts(1216,14): error TS2339: Property 'url' does not exist on type 'HTMLElement'.
+lib/url-state-machine.ts(1220,7): error TS2339: Property 'username' does not exist on type 'String'.
+lib/url-state-machine.ts(1224,7): error TS2339: Property 'password' does not exist on type 'String'.
+lib/url-state-machine.ts(1243,65): error TS2339: Property 'baseURL' does not exist on type 'Object'.
+lib/url-state-machine.ts(1243,100): error TS2339: Property 'encodingOverride' does not exist on type 'Object'.
+lib/urlencoded.ts(2,9): error TS2451: Cannot redeclare block-scoped variable 'utf8Encode'.
+lib/urlencoded.ts(2,21): error TS2451: Cannot redeclare block-scoped variable 'utf8DecodeWithoutBOM'.
+lib/urlencoded.ts(3,9): error TS2451: Cannot redeclare block-scoped variable 'percentDecodeBytes'.
+lib/urlencoded.ts(3,29): error TS2451: Cannot redeclare block-scoped variable 'utf8PercentEncodeString'.
+lib/urlencoded.ts(3,54): error TS2451: Cannot redeclare block-scoped variable 'isURLEncodedPercentEncode'.
+lib/urlencoded.ts(5,10): error TS2393: Duplicate function implementation.
+lib/urlencoded.ts(6,3): error TS2322: Type 'number | undefined' is not assignable to type 'String'.
+  Type 'undefined' is not assignable to type 'String'.
+lib/urlencoded.ts(10,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/urlencoded.ts(11,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/urlencoded.ts(11,54): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'String'.
+  Type 'Element' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+lib/urlencoded.ts(12,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/urlencoded.ts(18,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/urlencoded.ts(23,27): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/urlencoded.ts(29,44): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+lib/urlencoded.ts(30,46): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+lib/urlencoded.ts(46,38): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+lib/urlencoded.ts(46,43): error TS2322: Type 'undefined' is not assignable to type 'String'.
+lib/urlencoded.ts(65,23): error TS2339: Property 'name' does not exist on type 'String'.
+lib/urlencoded.ts(79,62): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/urlencoded.ts(80,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/urlencoded.ts(82,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/urlencoded.ts(84,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/urlencoded.ts(85,12): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/urlencoded.ts(86,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/urlencoded.ts(89,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/urlencoded.ts(94,41): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/urlencoded.ts(94,75): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/urlencoded.ts(98,27): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+live-viewer/live-viewer.ts(3,9): error TS2322: Type 'Element | null' is not assignable to type 'Error'.
+  Type 'null' is not assignable to type 'Error'.
+live-viewer/live-viewer.ts(4,9): error TS2322: Type 'HTMLElement | null' is not assignable to type 'HTMLElement'.
+  Type 'null' is not assignable to type 'HTMLElement'.
+live-viewer/live-viewer.ts(6,9): error TS2322: Type 'TextEncoder' is not assignable to type 'HTMLElement'.
+live-viewer/live-viewer.ts(7,9): error TS2322: Type 'TextDecoder' is not assignable to type 'HTMLElement'.
+live-viewer/live-viewer.ts(11,46): error TS2531: Object is possibly 'null'.
+live-viewer/live-viewer.ts(11,88): error TS2551: Property 'contentDocument' does not exist on type 'Element'. Did you mean 'ownerDocument'?
+live-viewer/live-viewer.ts(12,60): error TS2339: Property 'createElement' does not exist on type 'HTMLElement'.
+live-viewer/live-viewer.ts(13,53): error TS2339: Property 'createElement' does not exist on type 'HTMLElement'.
+live-viewer/live-viewer.ts(14,25): error TS2339: Property 'head' does not exist on type 'HTMLElement'.
+live-viewer/live-viewer.ts(15,25): error TS2339: Property 'body' does not exist on type 'HTMLElement'.
+live-viewer/live-viewer.ts(17,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+live-viewer/live-viewer.ts(29,12): error TS2339: Property 'addEventListener' does not exist on type 'Error'.
+live-viewer/live-viewer.ts(34,22): error TS2304: Cannot find name 'Void'.
+live-viewer/live-viewer.ts(35,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+live-viewer/live-viewer.ts(37,11): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+live-viewer/live-viewer.ts(44,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+live-viewer/live-viewer.ts(44,73): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+live-viewer/live-viewer.ts(44,79): error TS2304: Cannot find name 'Void'.
+live-viewer/live-viewer.ts(45,11): error TS2322: Type 'Element | null' is not assignable to type 'EventTarget'.
+  Type 'null' is not assignable to type 'EventTarget'.
+live-viewer/live-viewer.ts(46,11): error TS2322: Type 'Element | null' is not assignable to type 'Error'.
+  Type 'null' is not assignable to type 'Error'.
+live-viewer/live-viewer.ts(49,14): error TS2339: Property 'hidden' does not exist on type 'EventTarget'.
+live-viewer/live-viewer.ts(50,13): error TS2339: Property 'hidden' does not exist on type 'Error'.
+live-viewer/live-viewer.ts(51,13): error TS2339: Property 'textContent' does not exist on type 'Error'.
+live-viewer/live-viewer.ts(53,14): error TS2339: Property 'hidden' does not exist on type 'EventTarget'.
+live-viewer/live-viewer.ts(54,13): error TS2339: Property 'hidden' does not exist on type 'Error'.
+live-viewer/live-viewer.ts(56,44): error TS2339: Property 'querySelector' does not exist on type 'EventTarget'.
+live-viewer/live-viewer.ts(57,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
+live-viewer/live-viewer.ts(58,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
+live-viewer/live-viewer.ts(63,74): error TS2304: Cannot find name 'Void'.
+live-viewer/live-viewer.ts(68,5): error TS2322: Type 'String | "(empty string)"' is not assignable to type 'string | null'.
+  Type 'String' is not assignable to type 'string'.
+    'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+live-viewer/live-viewer.ts(69,50): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'boolean | undefined'.
+live-viewer/live-viewer.ts(70,48): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'boolean | undefined'.
+live-viewer/live-viewer.ts(73,85): error TS2304: Cannot find name 'Void'.
+live-viewer/live-viewer.ts(75,42): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'boolean | undefined'.
+live-viewer/live-viewer.ts(79,11): error TS2739: Type 'Set<unknown>' is missing the following properties from type 'Error': name, message
+live-viewer/live-viewer.ts(81,11): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+live-viewer/live-viewer.ts(81,34): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+live-viewer/live-viewer.ts(82,20): error TS2339: Property 'add' does not exist on type 'Error'.
+live-viewer/live-viewer.ts(90,17): error TS2339: Property 'href' does not exist on type 'Object'.
+live-viewer/live-viewer.ts(91,19): error TS2339: Property 'href' does not exist on type 'HTMLElement'.
+live-viewer/live-viewer.ts(91,36): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+live-viewer/live-viewer.ts(92,23): error TS2339: Property 'protocol' does not exist on type 'HTMLElement'.
+live-viewer/live-viewer.ts(97,19): error TS2339: Property 'href' does not exist on type 'HTMLElement'.
+live-viewer/live-viewer.ts(97,35): error TS2339: Property 'value' does not exist on type 'Error'.
+live-viewer/live-viewer.ts(98,17): error TS2339: Property 'href' does not exist on type 'Object'.
+live-viewer/live-viewer.ts(98,34): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+live-viewer/live-viewer.ts(99,23): error TS2339: Property 'protocol' does not exist on type 'HTMLElement'.
+live-viewer/live-viewer.ts(106,30): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+live-viewer/live-viewer.ts(108,18): error TS2304: Cannot find name 'whatwgURL'.
+live-viewer/live-viewer.ts(108,41): error TS2339: Property 'value' does not exist on type 'Error'.
+live-viewer/live-viewer.ts(108,58): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+live-viewer/live-viewer.ts(114,40): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+live-viewer/live-viewer.ts(115,52): error TS2339: Property 'value' does not exist on type 'Error'.
+live-viewer/live-viewer.ts(115,92): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+live-viewer/live-viewer.ts(118,31): error TS2304: Cannot find name 'Void'.
+live-viewer/live-viewer.ts(119,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+live-viewer/live-viewer.ts(125,16): error TS2339: Property 'value' does not exist on type 'Error'.
+live-viewer/live-viewer.ts(132,17): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+live-viewer/live-viewer.ts(145,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+live-viewer/live-viewer.ts(145,29): error TS2339: Property 'encode' does not exist on type 'HTMLElement'.
+live-viewer/live-viewer.ts(146,88): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
+live-viewer/live-viewer.ts(147,34): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(data: string): string', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(data: string): string', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+live-viewer/live-viewer.ts(148,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+live-viewer/live-viewer.ts(151,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+live-viewer/live-viewer.ts(152,37): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(data: string): string', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 2, '(data: string): string', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+live-viewer/live-viewer.ts(153,11): error TS2740: Type 'Uint8Array' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 36 more.
+live-viewer/live-viewer.ts(154,39): error TS2339: Property 'decode' does not exist on type 'HTMLElement'.
+scripts/benchmark.ts(2,9): error TS2451: Cannot redeclare block-scoped variable 'URL'.
+scripts/benchmark.ts(3,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+scripts/benchmark.ts(4,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+scripts/benchmark.ts(6,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+scripts/benchmark.ts(6,102): error TS2339: Property 'input' does not exist on type 'Object'.
+scripts/benchmark.ts(19,11): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
+scripts/benchmark.ts(19,57): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
+scripts/benchmark.ts(20,11): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
+scripts/get-latest-platform-tests.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+scripts/get-latest-platform-tests.ts(12,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+scripts/get-latest-platform-tests.ts(14,33): error TS2339: Property 'promisify' does not exist on type 'String'.
+scripts/get-latest-platform-tests.ts(14,50): error TS2339: Property 'pipeline' does not exist on type 'String'.
+scripts/get-latest-platform-tests.ts(29,32): error TS2339: Property 'resolve' does not exist on type 'String'.
+scripts/get-latest-platform-tests.ts(31,5): error TS2339: Property 'rmSync' does not exist on type 'String'.
+scripts/get-latest-platform-tests.ts(31,18): error TS2339: Property 'rmdirSync' does not exist on type 'String'.
+scripts/get-latest-platform-tests.ts(32,4): error TS2339: Property 'mkdirSync' does not exist on type 'String'.
+scripts/get-latest-platform-tests.ts(32,19): error TS2339: Property 'resolve' does not exist on type 'String'.
+scripts/get-latest-platform-tests.ts(56,8): error TS2339: Property 'createWriteStream' does not exist on type 'String'.
+scripts/get-latest-platform-tests.ts(56,31): error TS2339: Property 'resolve' does not exist on type 'String'.
+scripts/transform.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+scripts/transform.ts(3,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+scripts/transform.ts(5,26): error TS2339: Property 'resolve' does not exist on type 'String'.
+scripts/transform.ts(9,13): error TS2339: Property 'addSource' does not exist on type 'HTMLElement'.
+scripts/transform.ts(10,13): error TS2339: Property 'generate' does not exist on type 'HTMLElement'.
+scripts/transform.ts(12,23): error TS2339: Property 'stack' does not exist on type 'Object'.
+webidl2js-wrapper.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'URL'.
+webidl2js-wrapper.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'URLSearchParams'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(14341,11): error TS2451: Cannot redeclare block-scoped variable 'URL'.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(14358,13): error TS2451: Cannot redeclare block-scoped variable 'URL'.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(14368,11): error TS2451: Cannot redeclare block-scoped variable 'URLSearchParams'.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(14387,13): error TS2451: Cannot redeclare block-scoped variable 'URLSearchParams'.
+

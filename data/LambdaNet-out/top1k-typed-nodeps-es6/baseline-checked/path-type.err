@@ -1,0 +1,42 @@
+index.ts(3,87): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(9,42): error TS2538: Type 'Number' cannot be used as an index type.
+index.ts(10,16): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(12,7): error TS2571: Object is of type 'unknown'.
+index.ts(20,85): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(26,13): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(28,7): error TS2571: Object is of type 'unknown'.
+index.ts(36,33): error TS2769: No overload matches this call.
+  Overload 1 of 6, '(this: (this: null, arg0: Number, arg1: "isFile", filePath: String) => any, thisArg: null, arg0: Number, arg1: "isFile"): (filePath: String) => any', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'Number'.
+  Overload 2 of 6, '(this: (this: null, ...args: ("stat" | "isFile")[]) => any, thisArg: null, ...args: ("stat" | "isFile")[]): (...args: ("stat" | "isFile")[]) => any', gave the following error.
+    The 'this' context of type '(fsStatType: Number, statsMethodName: String, filePath: String) => any' is not assignable to method's 'this' of type '(this: null, ...args: ("stat" | "isFile")[]) => any'.
+      Types of parameters 'fsStatType' and 'args' are incompatible.
+        Type 'string' is not assignable to type 'Number'.
+          Type 'string' is not assignable to type 'Number'.
+index.ts(37,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(37,35): error TS2769: No overload matches this call.
+  Overload 1 of 6, '(this: (this: null, arg0: Number, arg1: "isDirectory", filePath: String) => any, thisArg: null, arg0: Number, arg1: "isDirectory"): (filePath: String) => any', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'Number'.
+  Overload 2 of 6, '(this: (this: null, ...args: ("stat" | "isDirectory")[]) => any, thisArg: null, ...args: ("stat" | "isDirectory")[]): (...args: ("stat" | "isDirectory")[]) => any', gave the following error.
+    The 'this' context of type '(fsStatType: Number, statsMethodName: String, filePath: String) => any' is not assignable to method's 'this' of type '(this: null, ...args: ("stat" | "isDirectory")[]) => any'.
+      Types of parameters 'fsStatType' and 'args' are incompatible.
+        Type 'string' is not assignable to type 'Number'.
+          Type 'string' is not assignable to type 'Number'.
+index.ts(38,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(38,33): error TS2769: No overload matches this call.
+  Overload 1 of 6, '(this: (this: null, arg0: Number, arg1: "isSymbolicLink", filePath: String) => any, thisArg: null, arg0: Number, arg1: "isSymbolicLink"): (filePath: String) => any', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'Number'.
+  Overload 2 of 6, '(this: (this: null, ...args: ("lstat" | "isSymbolicLink")[]) => any, thisArg: null, ...args: ("lstat" | "isSymbolicLink")[]): (...args: ("lstat" | "isSymbolicLink")[]) => any', gave the following error.
+    The 'this' context of type '(fsStatType: Number, statsMethodName: String, filePath: String) => any' is not assignable to method's 'this' of type '(this: null, ...args: ("lstat" | "isSymbolicLink")[]) => any'.
+      Types of parameters 'fsStatType' and 'args' are incompatible.
+        Type 'string' is not assignable to type 'Number'.
+          Type 'string' is not assignable to type 'Number'.
+index.ts(40,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(41,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

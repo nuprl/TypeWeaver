@@ -1,0 +1,43 @@
+index.ts(7,35): error TS2339: Property 'DOMException' does not exist on type 'Object'.
+lib/DOMException-impl.ts(2,30): error TS2732: Cannot find module './legacy-error-codes.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+lib/DOMException-impl.ts(3,22): error TS2307: Cannot find module './utils.js' or its corresponding type declarations.
+lib/DOMException-impl.ts(5,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/DOMException-impl.ts(6,15): error TS7006: Parameter 'globalObject' implicitly has an 'any' type.
+lib/DOMException-impl.ts(6,30): error TS7031: Binding element 'message' implicitly has an 'any' type.
+lib/DOMException-impl.ts(6,39): error TS7031: Binding element 'name' implicitly has an 'any' type.
+lib/DOMException-impl.ts(7,10): error TS2339: Property 'name' does not exist on type 'DOMExceptionImpl'.
+lib/DOMException-impl.ts(8,10): error TS2339: Property 'message' does not exist on type 'DOMExceptionImpl'.
+lib/DOMException-impl.ts(11,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+lib/DOMException-impl.ts(12,34): error TS2339: Property 'name' does not exist on type 'DOMExceptionImpl'.
+scripts/generate.ts(3,25): error TS2307: Cannot find module 'webidl2js' or its corresponding type declarations.
+scripts/generate.ts(10,13): error TS2339: Property 'addSource' does not exist on type 'HTMLElement'.
+scripts/generate.ts(11,13): error TS2339: Property 'generate' does not exist on type 'HTMLElement'.
+scripts/generate.ts(13,23): error TS2339: Property 'stack' does not exist on type 'Object'.
+scripts/get-latest-platform-tests.ts(5,19): error TS2307: Cannot find module 'minipass-fetch' or its corresponding type declarations.
+scripts/get-latest-platform-tests.ts(23,14): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(path: PathLike, options: MakeDirectoryOptions & { recursive: true; }): string | undefined', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'PathLike'.
+      Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
+  Overload 2 of 3, '(path: PathLike, options?: Mode | (MakeDirectoryOptions & { recursive?: false | undefined; }) | null | undefined): void', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'PathLike'.
+  Overload 3 of 3, '(path: PathLike, options?: MakeDirectoryOptions | Mode | null | undefined): string | undefined', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'PathLike'.
+scripts/get-latest-platform-tests.ts(25,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+scripts/get-latest-platform-tests.ts(32,24): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+scripts/get-latest-platform-tests.ts(33,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+scripts/get-latest-platform-tests.ts(35,9): error TS2339: Property 'body' does not exist on type 'HTMLElement'.
+scripts/get-latest-platform-tests.ts(35,53): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+scripts/get-latest-platform-tests.ts(40,21): error TS2339: Property 'stack' does not exist on type 'Object'.
+webidl2js-wrapper.ts(2,26): error TS2307: Cannot find module './lib/DOMException.js' or its corresponding type declarations.
+webidl2js-wrapper.ts(6,70): error TS2304: Cannot find name 'Void'.
+webidl2js-wrapper.ts(7,27): error TS2339: Property 'Error' does not exist on type 'Object'.
+webidl2js-wrapper.ts(12,38): error TS2339: Property 'DOMException' does not exist on type 'Object'.
+webidl2js-wrapper.ts(12,75): error TS2339: Property 'Error' does not exist on type 'Object'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

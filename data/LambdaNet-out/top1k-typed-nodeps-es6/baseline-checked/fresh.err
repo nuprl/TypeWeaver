@@ -1,0 +1,71 @@
+benchmark/etag.ts(6,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+benchmark/etag.ts(8,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
+benchmark/etag.ts(14,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
+benchmark/etag.ts(18,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+benchmark/etag.ts(24,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+benchmark/etag.ts(30,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+benchmark/etag.ts(36,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
+benchmark/etag.ts(36,53): error TS2304: Cannot find name 'Void'.
+benchmark/etag.ts(40,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
+benchmark/etag.ts(40,53): error TS2304: Cannot find name 'Void'.
+benchmark/etag.ts(41,24): error TS2339: Property 'target' does not exist on type 'Object'.
+benchmark/etag.ts(44,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
+benchmark/etag.ts(44,46): error TS2304: Cannot find name 'Void'.
+benchmark/etag.ts(48,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
+benchmark/index.ts(16,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/index.ts(16,41): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
+benchmark/index.ts(19,18): error TS2322: Type 'undefined' is not assignable to type 'String'.
+benchmark/index.ts(20,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/index.ts(23,47): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/index.ts(25,45): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/index.ts(27,28): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/index.ts(31,8): error TS2339: Property 'on' does not exist on type 'Object'.
+benchmark/modified.ts(6,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+benchmark/modified.ts(8,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
+benchmark/modified.ts(14,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
+benchmark/modified.ts(18,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+benchmark/modified.ts(24,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+benchmark/modified.ts(30,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
+benchmark/modified.ts(30,53): error TS2304: Cannot find name 'Void'.
+benchmark/modified.ts(34,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
+benchmark/modified.ts(34,53): error TS2304: Cannot find name 'Void'.
+benchmark/modified.ts(35,24): error TS2339: Property 'target' does not exist on type 'Object'.
+benchmark/modified.ts(38,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
+benchmark/modified.ts(38,46): error TS2304: Cannot find name 'Void'.
+benchmark/modified.ts(42,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
+index.ts(35,31): error TS7053: Element implicitly has an 'any' type because expression of type '"if-modified-since"' can't be used to index type 'Object'.
+  Property 'if-modified-since' does not exist on type 'Object'.
+index.ts(36,27): error TS7053: Element implicitly has an 'any' type because expression of type '"if-none-match"' can't be used to index type 'Object'.
+  Property 'if-none-match' does not exist on type 'Object'.
+index.ts(46,30): error TS7053: Element implicitly has an 'any' type because expression of type '"cache-control"' can't be used to index type 'Object'.
+  Property 'cache-control' does not exist on type 'Object'.
+index.ts(47,58): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(53,24): error TS7053: Element implicitly has an 'any' type because expression of type '"etag"' can't be used to index type 'Object'.
+  Property 'etag' does not exist on type 'Object'.
+index.ts(60,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(76,32): error TS7053: Element implicitly has an 'any' type because expression of type '"last-modified"' can't be used to index type 'Object'.
+  Property 'last-modified' does not exist on type 'Object'.
+index.ts(77,67): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+index.ts(77,98): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+index.ts(95,46): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
+index.ts(110,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(112,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(124,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+index.ts(134,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

@@ -1,0 +1,26 @@
+implementation.ts(8,5): error TS2739: Type 'RegExp' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+implementation.ts(14,38): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+implementation.ts(15,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(5,36): error TS2307: Cannot find module 'es-abstract/2021/RequireObjectCoercible' or its corresponding type declarations.
+index.ts(10,32): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type '(this: unknown, ...args: readonly unknown[]) => unknown'.
+  Type 'Boolean' provides no match for the signature '(this: unknown, ...args: readonly unknown[]): unknown'.
+index.ts(11,62): error TS2304: Cannot find name 'Void'.
+polyfill.ts(7,3): error TS2322: Type '() => any' is not assignable to type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'Object' is not assignable to type 'boolean'.
+polyfill.ts(12,3): error TS2322: Type '() => any' is not assignable to type 'Boolean'.
+polyfill.ts(14,2): error TS2322: Type '() => string' is not assignable to type 'Boolean'.
+  Types of property 'valueOf' are incompatible.
+    Type '() => Object' is not assignable to type '() => boolean'.
+shim.ts(7,6): error TS2739: Type 'Boolean' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+shim.ts(11,37): error TS2367: This condition will always return 'true' since the types '() => string' and 'Number' have no overlap.
+shim.ts(13,2): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'number' is not assignable to type 'boolean'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

@@ -1,0 +1,73 @@
+examples.ts(2,7): error TS2740: Type '{}' is missing the following properties from type 'Emitter': listeners, on, once, only, and 3 more.
+examples.ts(4,59): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+examples.ts(10,20): error TS2554: Expected 1 arguments, but got 2.
+index.ts(35,13): error TS7006: Parameter 'event' implicitly has an 'any' type.
+index.ts(36,15): error TS2551: Property '_listeners' does not exist on type 'Emitter'. Did you mean 'listeners'?
+index.ts(36,34): error TS2345: Argument of type 'this' is not assignable to parameter of type 'String'.
+  Type 'Emitter' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(37,15): error TS2551: Property '_only' does not exist on type 'Emitter'. Did you mean 'only'?
+index.ts(37,29): error TS2345: Argument of type 'this' is not assignable to parameter of type 'String'.
+index.ts(38,29): error TS2551: Property '_listeners' does not exist on type 'Emitter'. Did you mean 'listeners'?
+index.ts(39,17): error TS2551: Property '_listeners' does not exist on type 'Emitter'. Did you mean 'listeners'?
+index.ts(39,50): error TS2551: Property '_listeners' does not exist on type 'Emitter'. Did you mean 'listeners'?
+index.ts(55,6): error TS7006: Parameter 'event' implicitly has an 'any' type.
+index.ts(55,13): error TS7006: Parameter 'fn' implicitly has an 'any' type.
+index.ts(56,14): error TS2551: Property '_only' does not exist on type 'Emitter'. Did you mean 'only'?
+index.ts(56,28): error TS2551: Property '_only' does not exist on type 'Emitter'. Did you mean 'only'?
+index.ts(57,19): error TS2554: Expected 3 arguments, but got 2.
+index.ts(77,8): error TS7006: Parameter 'event' implicitly has an 'any' type.
+index.ts(77,15): error TS7006: Parameter 'fn' implicitly has an 'any' type.
+index.ts(79,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(80,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(82,8): error TS2339: Property 'fn' does not exist on type 'Function'.
+index.ts(103,8): error TS7006: Parameter 'event' implicitly has an 'any' type.
+index.ts(103,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
+index.ts(103,24): error TS7006: Parameter 'fn' implicitly has an 'any' type.
+index.ts(104,10): error TS2554: Expected 1 arguments, but got 0.
+index.ts(112,14): error TS2345: Argument of type 'this' is not assignable to parameter of type 'String'.
+index.ts(115,32): error TS2551: Property '_only' does not exist on type 'Emitter'. Did you mean 'only'?
+index.ts(116,12): error TS2554: Expected 2 arguments, but got 1.
+index.ts(120,36): error TS2551: Property '_only' does not exist on type 'Emitter'. Did you mean 'only'?
+index.ts(122,16): error TS2339: Property '_first' does not exist on type 'Emitter'.
+index.ts(126,10): error TS2551: Property '_only' does not exist on type 'Emitter'. Did you mean 'only'?
+index.ts(147,7): error TS7006: Parameter 'event' implicitly has an 'any' type.
+index.ts(147,14): error TS7006: Parameter 'fn' implicitly has an 'any' type.
+index.ts(148,10): error TS2554: Expected 1 arguments, but got 0.
+index.ts(152,12): error TS2551: Property '_listeners' does not exist on type 'Emitter'. Did you mean 'listeners'?
+index.ts(153,12): error TS2551: Property '_only' does not exist on type 'Emitter'. Did you mean 'only'?
+index.ts(159,12): error TS2551: Property '_listeners' does not exist on type 'Emitter'. Did you mean 'listeners'?
+index.ts(160,12): error TS2551: Property '_only' does not exist on type 'Emitter'. Did you mean 'only'?
+index.ts(181,8): error TS7006: Parameter 'event' implicitly has an 'any' type.
+index.ts(182,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(183,11): error TS2740: Type 'never[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+index.ts(204,7): error TS7006: Parameter 'event' implicitly has an 'any' type.
+index.ts(213,19): error TS2339: Property 'hasListeners' does not exist on type 'Emitter'.
+index.ts(216,19): error TS2551: Property 'addListener' does not exist on type 'Emitter'. Did you mean 'listeners'?
+index.ts(217,19): error TS2339: Property 'addEventListener' does not exist on type 'Emitter'.
+index.ts(220,19): error TS2339: Property 'removeListener' does not exist on type 'Emitter'.
+index.ts(221,19): error TS2339: Property 'removeListeners' does not exist on type 'Emitter'.
+index.ts(222,19): error TS2339: Property 'removeAllListeners' does not exist on type 'Emitter'.
+index.ts(223,19): error TS2339: Property 'removeEventListener' does not exist on type 'Emitter'.
+index.ts(230,49): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(230,57): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
+index.ts(233,37): error TS2339: Property 'fn' does not exist on type 'String'.
+index.ts(249,3): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(252,55): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(252,63): error TS2304: Cannot find name 'Void'.
+index.ts(254,16): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+index.ts(255,14): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+index.ts(255,27): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+index.ts(257,14): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+index.ts(257,27): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+index.ts(262,57): error TS2304: Cannot find name 'Void'.
+index.ts(263,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

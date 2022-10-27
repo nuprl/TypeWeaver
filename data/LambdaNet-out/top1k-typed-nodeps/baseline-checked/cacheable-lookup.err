@@ -1,0 +1,180 @@
+benchmark.ts(3,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'CacheableLookup'.
+benchmark.ts(4,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark.ts(6,18): error TS2749: 'CacheableLookup' refers to a value, but is being used as a type here. Did you mean 'typeof CacheableLookup'?
+benchmark.ts(19,13): error TS2339: Property 'ADDRCONFIG' does not exist on type 'String'.
+benchmark.ts(24,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+benchmark.ts(24,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark.ts(27,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark.ts(30,74): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark.ts(33,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark.ts(35,58): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark.ts(37,69): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark.ts(39,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark.ts(40,6): error TS2339: Property 'lookup' does not exist on type 'String'.
+benchmark.ts(41,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark.ts(42,6): error TS2339: Property 'lookup' does not exist on type 'String'.
+benchmark.ts(43,57): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark.ts(44,6): error TS2339: Property 'lookup' does not exist on type 'String'.
+benchmark.ts(46,27): error TS2339: Property 'target' does not exist on type 'Object'.
+benchmark.ts(48,28): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+benchmark.ts(54,20): error TS2345: Argument of type '(resolve: Number) => NodeJS.Timeout' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'resolve' and 'resolve' are incompatible.
+    Type '(value: unknown) => void' is not assignable to type 'Number'.
+benchmark.ts(54,52): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(callback: () => void, ms?: number | undefined): Timeout', gave the following error.
+    Argument of type 'Number' is not assignable to parameter of type '() => void'.
+      Type 'Number' provides no match for the signature '(): void'.
+  Overload 2 of 3, '(callback: (args: void) => void, ms?: number | undefined): Timeout', gave the following error.
+    Argument of type 'Number' is not assignable to parameter of type '(args: void) => void'.
+      Type 'Number' provides no match for the signature '(args: void): void'.
+  Overload 3 of 3, '(handler: TimerHandler, timeout?: number | undefined, ...arguments: any[]): number', gave the following error.
+    Argument of type 'Number' is not assignable to parameter of type 'TimerHandler'.
+      Type 'Number' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+benchmark.ts(56,8): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
+source/index.ts(14,7): error TS2322: Type 'typeof kCacheableLookupCreateConnection' is not assignable to type 'String'.
+source/index.ts(15,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+source/index.ts(16,7): error TS2322: Type 'typeof kExpires' is not assignable to type 'String'.
+source/index.ts(20,39): error TS2749: 'CacheableLookup' refers to a value, but is being used as a type here. Did you mean 'typeof CacheableLookup'?
+source/index.ts(26,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+source/index.ts(41,40): error TS2339: Property 'networkInterfaces' does not exist on type 'String'.
+source/index.ts(42,23): error TS2571: Object is of type 'unknown'.
+source/index.ts(66,53): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+source/index.ts(69,10): error TS2339: Property 'code' does not exist on type 'Object'.
+source/index.ts(70,10): error TS2339: Property 'code' does not exist on type 'Object'.
+source/index.ts(71,10): error TS2339: Property 'code' does not exist on type 'Object'.
+source/index.ts(85,7): error TS2451: Cannot redeclare block-scoped variable 'CacheableLookup'.
+source/index.ts(94,8): error TS2339: Property 'maxTtl' does not exist on type 'CacheableLookup'.
+source/index.ts(95,8): error TS2339: Property 'errorTtl' does not exist on type 'CacheableLookup'.
+source/index.ts(97,8): error TS2339: Property '_cache' does not exist on type 'CacheableLookup'.
+source/index.ts(98,8): error TS2551: Property '_resolver' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
+source/index.ts(99,8): error TS2339: Property '_dnsLookup' does not exist on type 'CacheableLookup'.
+source/index.ts(100,8): error TS2339: Property 'stats' does not exist on type 'CacheableLookup'.
+source/index.ts(105,12): error TS2551: Property '_resolver' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
+source/index.ts(106,9): error TS2551: Property '_resolve4' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
+source/index.ts(106,26): error TS2551: Property '_resolver' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
+source/index.ts(106,55): error TS2551: Property '_resolver' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
+source/index.ts(107,9): error TS2551: Property '_resolve6' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
+source/index.ts(107,26): error TS2551: Property '_resolver' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
+source/index.ts(107,55): error TS2551: Property '_resolver' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
+source/index.ts(109,9): error TS2551: Property '_resolve4' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
+source/index.ts(109,36): error TS2551: Property '_resolver' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
+source/index.ts(109,65): error TS2551: Property '_resolver' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
+source/index.ts(110,9): error TS2551: Property '_resolve6' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
+source/index.ts(110,36): error TS2551: Property '_resolver' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
+source/index.ts(110,65): error TS2551: Property '_resolver' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
+source/index.ts(113,8): error TS2339: Property '_iface' does not exist on type 'CacheableLookup'.
+source/index.ts(115,8): error TS2339: Property '_pending' does not exist on type 'CacheableLookup'.
+source/index.ts(116,8): error TS2339: Property '_nextRemovalTime' does not exist on type 'CacheableLookup'.
+source/index.ts(117,8): error TS2339: Property '_hostnamesToFallback' does not exist on type 'CacheableLookup'.
+source/index.ts(119,8): error TS2339: Property 'fallbackDuration' does not exist on type 'CacheableLookup'.
+source/index.ts(123,10): error TS2339: Property '_hostnamesToFallback' does not exist on type 'CacheableLookup'.
+source/index.ts(131,9): error TS2339: Property '_fallbackInterval' does not exist on type 'CacheableLookup'.
+source/index.ts(138,6): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+source/index.ts(139,8): error TS2554: Expected 1 arguments, but got 0.
+source/index.ts(141,8): error TS2551: Property '_resolver' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
+source/index.ts(144,6): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+source/index.ts(145,15): error TS2551: Property '_resolver' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
+source/index.ts(148,9): error TS7006: Parameter 'hostname' implicitly has an 'any' type.
+source/index.ts(148,19): error TS7006: Parameter 'options' implicitly has an 'any' type.
+source/index.ts(148,28): error TS7006: Parameter 'callback' implicitly has an 'any' type.
+source/index.ts(163,53): error TS2749: 'CacheableLookup' refers to a value, but is being used as a type here. Did you mean 'typeof CacheableLookup'?
+source/index.ts(172,20): error TS7006: Parameter 'hostname' implicitly has an 'any' type.
+source/index.ts(179,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+source/index.ts(181,15): error TS2339: Property 'family' does not exist on type '{}'.
+source/index.ts(182,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+source/index.ts(182,67): error TS2339: Property 'family' does not exist on type 'Object'.
+source/index.ts(184,16): error TS2339: Property 'hints' does not exist on type '{}'.
+source/index.ts(185,33): error TS2339: Property 'hints' does not exist on type '{}'.
+source/index.ts(193,22): error TS2339: Property 'family' does not exist on type '{}'.
+source/index.ts(194,52): error TS2339: Property 'family' does not exist on type 'Object'.
+source/index.ts(197,15): error TS2339: Property 'hints' does not exist on type '{}'.
+source/index.ts(198,11): error TS2339: Property '_iface' does not exist on type 'CacheableLookup'.
+source/index.ts(199,52): error TS2339: Property 'family' does not exist on type 'Object'.
+source/index.ts(204,10): error TS2339: Property 'code' does not exist on type 'Error'.
+source/index.ts(205,10): error TS2339: Property 'hostname' does not exist on type 'Error'.
+source/index.ts(210,15): error TS2339: Property 'all' does not exist on type '{}'.
+source/index.ts(217,14): error TS7006: Parameter 'hostname' implicitly has an 'any' type.
+source/index.ts(219,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+source/index.ts(219,34): error TS2339: Property '_cache' does not exist on type 'CacheableLookup'.
+source/index.ts(222,9): error TS2339: Property 'stats' does not exist on type 'CacheableLookup'.
+source/index.ts(226,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+source/index.ts(226,32): error TS2339: Property '_pending' does not exist on type 'CacheableLookup'.
+source/index.ts(228,10): error TS2339: Property 'stats' does not exist on type 'CacheableLookup'.
+source/index.ts(232,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+source/index.ts(233,10): error TS2339: Property '_pending' does not exist on type 'CacheableLookup'.
+source/index.ts(234,10): error TS2339: Property 'stats' does not exist on type 'CacheableLookup'.
+source/index.ts(238,18): error TS2339: Property '_pending' does not exist on type 'CacheableLookup'.
+source/index.ts(250,17): error TS7006: Parameter 'hostname' implicitly has an 'any' type.
+source/index.ts(253,30): error TS2551: Property '_resolve4' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
+source/index.ts(254,30): error TS2551: Property '_resolve6' does not exist on type 'CacheableLookup'. Did you mean '_resolve'?
+source/index.ts(265,20): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+source/index.ts(267,20): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+source/index.ts(272,20): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+source/index.ts(274,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+source/index.ts(279,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+source/index.ts(296,16): error TS7006: Parameter 'hostname' implicitly has an 'any' type.
+source/index.ts(301,31): error TS2339: Property '_dnsLookup' does not exist on type 'CacheableLookup'.
+source/index.ts(302,31): error TS2339: Property '_dnsLookup' does not exist on type 'CacheableLookup'.
+source/index.ts(320,13): error TS7006: Parameter 'hostname' implicitly has an 'any' type.
+source/index.ts(320,23): error TS7006: Parameter 'data' implicitly has an 'any' type.
+source/index.ts(320,29): error TS7006: Parameter 'cacheTtl' implicitly has an 'any' type.
+source/index.ts(321,12): error TS2339: Property 'maxTtl' does not exist on type 'CacheableLookup'.
+source/index.ts(322,39): error TS2339: Property 'maxTtl' does not exist on type 'CacheableLookup'.
+source/index.ts(323,9): error TS2538: Type 'String' cannot be used as an index type.
+source/index.ts(326,16): error TS2339: Property '_cache' does not exist on type 'CacheableLookup'.
+source/index.ts(330,17): error TS2550: Property 'cause' does not exist on type 'Error'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2022' or later.
+source/index.ts(336,24): error TS2339: Property '_cache' does not exist on type 'CacheableLookup'.
+source/index.ts(342,22): error TS7006: Parameter 'hostname' implicitly has an 'any' type.
+source/index.ts(343,12): error TS2339: Property '_hostnamesToFallback' does not exist on type 'CacheableLookup'.
+source/index.ts(344,16): error TS2339: Property '_dnsLookup' does not exist on type 'CacheableLookup'.
+source/index.ts(349,13): error TS2339: Property 'entries' does not exist on type 'Object'.
+source/index.ts(349,42): error TS2339: Property '_dnsLookup' does not exist on type 'CacheableLookup'.
+source/index.ts(352,14): error TS2339: Property 'entries' does not exist on type 'Object'.
+source/index.ts(352,43): error TS2339: Property 'fallbackDuration' does not exist on type 'CacheableLookup'.
+source/index.ts(354,10): error TS2339: Property '_hostnamesToFallback' does not exist on type 'CacheableLookup'.
+source/index.ts(358,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+source/index.ts(358,33): error TS2339: Property 'entries' does not exist on type 'Object'.
+source/index.ts(358,61): error TS2339: Property 'errorTtl' does not exist on type 'CacheableLookup'.
+source/index.ts(358,78): error TS2339: Property 'cacheTtl' does not exist on type 'Object'.
+source/index.ts(359,35): error TS2339: Property 'entries' does not exist on type 'Object'.
+source/index.ts(361,16): error TS2339: Property 'entries' does not exist on type 'Object'.
+source/index.ts(364,8): error TS7006: Parameter 'ms' implicitly has an 'any' type.
+source/index.ts(365,41): error TS2339: Property '_nextRemovalTime' does not exist on type 'CacheableLookup'.
+source/index.ts(368,22): error TS2339: Property '_removalTimeout' does not exist on type 'CacheableLookup'.
+source/index.ts(370,9): error TS2339: Property '_nextRemovalTime' does not exist on type 'CacheableLookup'.
+source/index.ts(372,9): error TS2339: Property '_removalTimeout' does not exist on type 'CacheableLookup'.
+source/index.ts(373,10): error TS2339: Property '_nextRemovalTime' does not exist on type 'CacheableLookup'.
+source/index.ts(379,44): error TS2339: Property '_cache' does not exist on type 'CacheableLookup'.
+source/index.ts(383,12): error TS2339: Property '_cache' does not exist on type 'CacheableLookup'.
+source/index.ts(390,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+source/index.ts(390,30): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+source/index.ts(395,13): error TS2339: Property '_removalTimeout' does not exist on type 'CacheableLookup'.
+source/index.ts(396,10): error TS2339: Property '_removalTimeout' does not exist on type 'CacheableLookup'.
+source/index.ts(401,10): error TS7006: Parameter 'agent' implicitly has an 'any' type.
+source/index.ts(404,7): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
+source/index.ts(408,9): error TS2538: Type 'String' cannot be used as an index type.
+source/index.ts(413,13): error TS2339: Property 'lookup' does not exist on type 'Object'.
+source/index.ts(416,17): error TS2538: Type 'String' cannot be used as an index type.
+source/index.ts(420,12): error TS7006: Parameter 'agent' implicitly has an 'any' type.
+source/index.ts(423,13): error TS2538: Type 'String' cannot be used as an index type.
+source/index.ts(428,35): error TS2538: Type 'String' cannot be used as an index type.
+source/index.ts(430,17): error TS2538: Type 'String' cannot be used as an index type.
+source/index.ts(436,10): error TS2339: Property '_iface' does not exist on type 'CacheableLookup'.
+source/index.ts(438,8): error TS2339: Property '_iface' does not exist on type 'CacheableLookup'.
+source/index.ts(440,29): error TS2339: Property '_iface' does not exist on type 'CacheableLookup'.
+source/index.ts(440,67): error TS2339: Property '_iface' does not exist on type 'CacheableLookup'.
+source/index.ts(441,9): error TS2339: Property '_cache' does not exist on type 'CacheableLookup'.
+source/index.ts(445,8): error TS7006: Parameter 'hostname' implicitly has an 'any' type.
+source/index.ts(447,9): error TS2339: Property '_cache' does not exist on type 'CacheableLookup'.
+source/index.ts(451,8): error TS2339: Property '_cache' does not exist on type 'CacheableLookup'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

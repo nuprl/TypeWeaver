@@ -1,0 +1,38 @@
+index.ts(22,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'String'.
+index.ts(30,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(57,27): error TS2339: Property 'key' does not exist on type 'Object'.
+index.ts(72,17): error TS2339: Property 'createHmac' does not exist on type 'Crypto'.
+index.ts(72,44): error TS2339: Property 'secret' does not exist on type 'Object'.
+index.ts(72,67): error TS2339: Property 'message' does not exist on type 'Object'.
+index.ts(86,11): error TS2339: Property 'message' does not exist on type 'Object'.
+index.ts(86,34): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+index.ts(102,11): error TS2339: Property 'message' does not exist on type 'Object'.
+index.ts(125,33): error TS2339: Property 'amazonHeaders' does not exist on type 'HTMLElement'.
+index.ts(126,16): error TS2322: Type 'string' is not assignable to type 'Number'.
+index.ts(127,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(128,15): error TS2339: Property 'verb' does not exist on type 'HTMLElement'.
+index.ts(129,15): error TS2339: Property 'md5' does not exist on type 'HTMLElement'.
+index.ts(130,15): error TS2339: Property 'contentType' does not exist on type 'HTMLElement'.
+index.ts(131,15): error TS2339: Property 'date' does not exist on type 'HTMLElement'.
+index.ts(131,30): error TS2339: Property 'date' does not exist on type 'HTMLElement'.
+index.ts(132,25): error TS2339: Property 'resource' does not exist on type 'HTMLElement'.
+index.ts(153,32): error TS2339: Property 'date' does not exist on type 'Object'.
+index.ts(153,54): error TS2339: Property 'resource' does not exist on type 'Object'.
+index.ts(172,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(173,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(177,31): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(200,26): error TS2339: Property 'pathname' does not exist on type 'String'.
+index.ts(201,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(204,19): error TS2339: Property 'query' does not exist on type 'String'.
+index.ts(206,33): error TS2339: Property 'query' does not exist on type 'String'.
+index.ts(206,80): error TS2339: Property 'query' does not exist on type 'String'.
+index.ts(207,14): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

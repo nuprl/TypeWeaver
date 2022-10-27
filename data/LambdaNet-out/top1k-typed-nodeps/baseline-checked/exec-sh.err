@@ -1,0 +1,30 @@
+example/example.ts(6,36): error TS2339: Property 'code' does not exist on type 'Object'.
+lib/exec-sh.ts(34,7): error TS2367: This condition will always return 'false' since the types 'Function' and 'boolean' have no overlap.
+lib/exec-sh.ts(35,17): error TS2322: Type '{ stdio: null; }' is not assignable to type 'Function'.
+  Object literal may only specify known properties, and 'stdio' does not exist in type 'Function'.
+lib/exec-sh.ts(40,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+lib/exec-sh.ts(53,16): error TS2339: Property 'spawn' does not exist on type 'String'.
+lib/exec-sh.ts(53,28): error TS2339: Property 'cmd' does not exist on type 'Object'.
+lib/exec-sh.ts(53,40): error TS2339: Property 'arg' does not exist on type 'Object'.
+lib/exec-sh.ts(56,5): error TS2322: Type 'undefined' is not assignable to type 'String'.
+lib/exec-sh.ts(59,13): error TS2339: Property 'stdout' does not exist on type 'Object'.
+lib/exec-sh.ts(60,11): error TS2339: Property 'stdout' does not exist on type 'Object'.
+lib/exec-sh.ts(61,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
+lib/exec-sh.ts(65,13): error TS2339: Property 'stderr' does not exist on type 'Object'.
+lib/exec-sh.ts(66,11): error TS2339: Property 'stderr' does not exist on type 'Object'.
+lib/exec-sh.ts(67,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
+lib/exec-sh.ts(71,9): error TS2339: Property 'on' does not exist on type 'Object'.
+lib/exec-sh.ts(74,9): error TS2339: Property 'code' does not exist on type 'Error'.
+lib/exec-sh.ts(81,3): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/exec-sh.ts(84,8): error TS2339: Property 'promise' does not exist on type 'Function'.
+lib/exec-sh.ts(88,13): error TS2339: Property 'stdout' does not exist on type 'Object'.
+lib/exec-sh.ts(89,13): error TS2339: Property 'stderr' does not exist on type 'Object'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

@@ -1,0 +1,55 @@
+benchmark/code/no-regex.ts(22,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/code/no-regex.ts(23,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/code/no-regex.ts(24,12): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+benchmark/code/no-regex.ts(25,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+benchmark/code/no-regex.ts(27,20): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+benchmark/code/no-regex.ts(28,12): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+benchmark/code/node-path.ts(1,5): error TS2451: Cannot redeclare block-scoped variable 'path'.
+benchmark/code/node-path.ts(2,6): error TS2339: Property 'sep' does not exist on type 'String'.
+benchmark/code/node-path.ts(5,23): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(form: "NFC" | "NFD" | "NFKC" | "NFKD"): string', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type '"NFC" | "NFD" | "NFKC" | "NFKD"'.
+  Overload 2 of 2, '(form?: string | undefined): string', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/code/node-path.ts(6,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
+benchmark/code/regex.ts(4,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
+benchmark/code/slice-trailing.ts(4,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
+benchmark/code/split.ts(1,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/split.ts(1,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/v2.ts(15,7): error TS2367: This condition will always return 'true' since the types 'Number' and 'boolean' have no overlap.
+benchmark/code/while.ts(1,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while.ts(6,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while.ts(10,11): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+benchmark/code/while.ts(10,29): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+benchmark/code/while.ts(11,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while.ts(17,15): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while.ts(18,11): error TS2367: This condition will always return 'true' since the types 'Number' and 'boolean' have no overlap.
+benchmark/code/while.ts(19,13): error TS2454: Variable 'prev' is used before being assigned.
+benchmark/code/while.ts(25,11): error TS2454: Variable 'prev' is used before being assigned.
+benchmark/code/while.ts(28,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
+benchmark/code/while.ts(31,5): error TS2739: Type 'Boolean' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+benchmark/code/while.ts(39,10): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+benchmark/code/while.ts(39,25): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+benchmark/index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+benchmark/index.ts(4,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/index.ts(6,22): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+example.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+example.ts(3,18): error TS2339: Property 'win32' does not exist on type 'String'.
+index.ts(23,9): error TS2322: Type 'string' is not assignable to type 'Number'.
+index.ts(24,10): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+index.ts(24,24): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+index.ts(30,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(31,7): error TS2367: This condition will always return 'true' since the types 'Number' and 'boolean' have no overlap.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

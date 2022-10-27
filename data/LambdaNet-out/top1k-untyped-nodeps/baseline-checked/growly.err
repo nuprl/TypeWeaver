@@ -1,0 +1,127 @@
+example/bakery.ts(1,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+example/bakery.ts(3,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+example/bakery.ts(10,8): error TS2339: Property 'register' does not exist on type 'String'.
+example/bakery.ts(16,12): error TS2339: Property 'notify' does not exist on type 'String'.
+example/bakery.ts(18,12): error TS2339: Property 'notify' does not exist on type 'String'.
+example/simple.ts(3,8): error TS2339: Property 'notify' does not exist on type 'String'.
+lib/gntp.ts(2,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'String'.
+lib/gntp.ts(15,10): error TS2300: Duplicate identifier 'GNTP'.
+lib/gntp.ts(15,44): error TS2304: Cannot find name 'Void'.
+lib/gntp.ts(17,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/gntp.ts(18,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/gntp.ts(18,22): error TS2339: Property 'host' does not exist on type 'Object'.
+lib/gntp.ts(19,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/gntp.ts(19,22): error TS2339: Property 'port' does not exist on type 'Object'.
+lib/gntp.ts(20,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/gntp.ts(21,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/gntp.ts(22,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/gntp.ts(23,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/gntp.ts(47,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/gntp.ts(48,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/gntp.ts(49,39): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
+lib/gntp.ts(53,12): error TS2339: Property 'state' does not exist on type 'Object'.
+lib/gntp.ts(53,20): error TS2531: Object is possibly 'null'.
+lib/gntp.ts(54,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/gntp.ts(56,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+lib/gntp.ts(70,9): error TS2740: Type 'IArguments' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
+lib/gntp.ts(72,14): error TS2339: Property 'send' does not exist on type 'HTMLElement'.
+lib/gntp.ts(86,29): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
+lib/gntp.ts(106,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/gntp.ts(106,52): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/gntp.ts(107,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/gntp.ts(108,39): error TS2339: Property 'readFileSync' does not exist on type 'String'.
+lib/gntp.ts(147,40): error TS2339: Property 'connect' does not exist on type 'String'.
+lib/gntp.ts(154,12): error TS2339: Property 'on' does not exist on type 'HTMLInputElement'.
+lib/gntp.ts(155,16): error TS2339: Property 'write' does not exist on type 'HTMLInputElement'.
+lib/gntp.ts(155,27): error TS2339: Property 'request' does not exist on type 'HTMLElement'.
+lib/gntp.ts(157,14): error TS2339: Property 'resources' does not exist on type 'HTMLElement'.
+lib/gntp.ts(158,20): error TS2339: Property 'write' does not exist on type 'HTMLInputElement'.
+lib/gntp.ts(158,30): error TS2339: Property 'header' does not exist on type 'Object'.
+lib/gntp.ts(159,20): error TS2339: Property 'write' does not exist on type 'HTMLInputElement'.
+lib/gntp.ts(159,30): error TS2339: Property 'file' does not exist on type 'Object'.
+lib/gntp.ts(160,20): error TS2339: Property 'write' does not exist on type 'HTMLInputElement'.
+lib/gntp.ts(160,26): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
+lib/gntp.ts(164,12): error TS2339: Property 'on' does not exist on type 'HTMLInputElement'.
+lib/gntp.ts(164,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/gntp.ts(168,46): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
+lib/gntp.ts(170,21): error TS2339: Property 'parseResp' does not exist on type 'HTMLElement'.
+lib/gntp.ts(174,18): error TS2339: Property 'state' does not exist on type 'String'.
+lib/gntp.ts(174,44): error TS2339: Property 'state' does not exist on type 'String'.
+lib/gntp.ts(175,20): error TS2339: Property 'end' does not exist on type 'HTMLInputElement'.
+lib/gntp.ts(180,12): error TS2339: Property 'on' does not exist on type 'HTMLInputElement'.
+lib/gntp.ts(182,48): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
+lib/gntp.ts(183,22): error TS2339: Property 'attempts' does not exist on type 'HTMLElement'.
+lib/gntp.ts(183,39): error TS2339: Property 'maxAttempts' does not exist on type 'HTMLElement'.
+lib/gntp.ts(184,22): error TS2339: Property 'retry' does not exist on type 'HTMLElement'.
+lib/gntp.ts(187,53): error TS2339: Property 'host' does not exist on type 'HTMLElement'.
+lib/gntp.ts(187,64): error TS2339: Property 'port' does not exist on type 'HTMLElement'.
+lib/gntp.ts(187,75): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
+lib/gntp.ts(187,95): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
+lib/gntp.ts(194,12): error TS2339: Property 'on' does not exist on type 'HTMLInputElement'.
+lib/gntp.ts(195,87): error TS2339: Property 'host' does not exist on type 'HTMLElement'.
+lib/gntp.ts(195,98): error TS2339: Property 'port' does not exist on type 'HTMLElement'.
+lib/gntp.ts(196,16): error TS2339: Property 'destroy' does not exist on type 'HTMLInputElement'.
+lib/growly.ts(1,5): error TS2300: Duplicate identifier 'GNTP'.
+lib/growly.ts(1,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/growly.ts(9,20): error TS2304: Cannot find name 'Void'.
+lib/growly.ts(10,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/growly.ts(11,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/growly.ts(12,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/growly.ts(13,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/growly.ts(14,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/growly.ts(15,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/growly.ts(16,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/growly.ts(30,22): error TS2339: Property 'label' does not exist on type 'Object'.
+lib/growly.ts(75,64): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/growly.ts(75,86): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/growly.ts(99,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/growly.ts(100,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/growly.ts(101,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/growly.ts(102,10): error TS2339: Property 'newline' does not exist on type 'HTMLElement'.
+lib/growly.ts(105,19): error TS2339: Property 'enabled' does not exist on type 'Object'.
+lib/growly.ts(105,48): error TS2339: Property 'enabled' does not exist on type 'Object'.
+lib/growly.ts(106,14): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/growly.ts(106,45): error TS2339: Property 'label' does not exist on type 'Object'.
+lib/growly.ts(107,14): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/growly.ts(107,53): error TS2339: Property 'dispname' does not exist on type 'Object'.
+lib/growly.ts(108,14): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/growly.ts(108,48): error TS2339: Property 'enabled' does not exist on type 'Object'.
+lib/growly.ts(109,14): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/growly.ts(109,45): error TS2339: Property 'icon' does not exist on type 'Object'.
+lib/growly.ts(110,14): error TS2339: Property 'newline' does not exist on type 'HTMLElement'.
+lib/growly.ts(113,10): error TS2339: Property 'send' does not exist on type 'HTMLElement'.
+lib/growly.ts(146,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/growly.ts(166,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/growly.ts(167,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/growly.ts(167,40): error TS2339: Property 'label' does not exist on type 'Object'.
+lib/growly.ts(168,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/growly.ts(169,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/growly.ts(169,41): error TS2339: Property 'title' does not exist on type 'Object'.
+lib/growly.ts(170,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/growly.ts(171,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/growly.ts(171,42): error TS2339: Property 'sticky' does not exist on type 'Object'.
+lib/growly.ts(172,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/growly.ts(172,44): error TS2339: Property 'priority' does not exist on type 'Object'.
+lib/growly.ts(173,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/growly.ts(173,40): error TS2339: Property 'icon' does not exist on type 'Object'.
+lib/growly.ts(174,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/growly.ts(174,49): error TS2339: Property 'coalescingId' does not exist on type 'Object'.
+lib/growly.ts(175,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/growly.ts(176,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/growly.ts(177,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/growly.ts(178,10): error TS2339: Property 'newline' does not exist on type 'HTMLElement'.
+lib/growly.ts(180,10): error TS2339: Property 'send' does not exist on type 'HTMLElement'.
+lib/growly.ts(183,37): error TS2339: Property 'state' does not exist on type 'Object'.
+lib/growly.ts(184,33): error TS7053: Element implicitly has an 'any' type because expression of type '"Notification-Callback-Result"' can't be used to index type 'Object'.
+  Property 'Notification-Callback-Result' does not exist on type 'Object'.
+lib/growly.ts(193,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

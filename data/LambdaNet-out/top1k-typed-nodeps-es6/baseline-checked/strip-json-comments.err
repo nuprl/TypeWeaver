@@ -1,0 +1,41 @@
+benchmark.ts(8,1): error TS2304: Cannot find name 'bench'.
+benchmark.ts(9,2): error TS2552: Cannot find name 'set'. Did you mean 'Set'?
+benchmark.ts(10,20): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+benchmark.ts(13,1): error TS2304: Cannot find name 'bench'.
+benchmark.ts(14,20): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+benchmark.ts(17,1): error TS2304: Cannot find name 'bench'.
+benchmark.ts(18,20): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+index.ts(1,7): error TS2322: Type 'typeof singleComment' is not assignable to type 'Number'.
+index.ts(2,7): error TS2322: Type 'typeof multiComment' is not assignable to type 'Number'.
+index.ts(5,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(7,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(8,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(12,3): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(13,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
+index.ts(16,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(19,114): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(33,41): error TS2339: Property 'length' does not exist on type 'never'.
+index.ts(49,27): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(51,25): error TS2339: Property 'slice' does not exist on type 'never'.
+index.ts(53,4): error TS2322: Type 'Number' is not assignable to type 'boolean'.
+index.ts(55,14): error TS2367: This condition will always return 'false' since the types 'boolean' and 'Number' have no overlap.
+index.ts(55,51): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(62,14): error TS2367: This condition will always return 'false' since the types 'boolean' and 'Number' have no overlap.
+index.ts(67,34): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(69,25): error TS2339: Property 'slice' does not exist on type 'never'.
+index.ts(71,4): error TS2322: Type 'Number' is not assignable to type 'boolean'.
+index.ts(74,14): error TS2367: This condition will always return 'false' since the types 'boolean' and 'Number' have no overlap.
+index.ts(74,50): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+index.ts(85,27): error TS2339: Property 'slice' does not exist on type 'never'.
+index.ts(92,27): error TS2339: Property 'slice' does not exist on type 'never'.
+index.ts(98,35): error TS2339: Property 'slice' does not exist on type 'never'.
+index.ts(106,63): error TS2339: Property 'slice' does not exist on type 'never'.
+index.ts(106,91): error TS2339: Property 'slice' does not exist on type 'never'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

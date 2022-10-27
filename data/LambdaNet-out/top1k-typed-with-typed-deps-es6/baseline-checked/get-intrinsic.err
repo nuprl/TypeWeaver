@@ -1,0 +1,131 @@
+index.ts(5,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(6,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(7,5): error TS2740: Type 'TypeErrorConstructor' is missing the following properties from type 'RegExp': exec, test, source, global, and 13 more.
+index.ts(21,3): error TS2322: Type 'null' is not assignable to type 'Function'.
+index.ts(26,12): error TS2351: This expression is not constructable.
+  Type 'RegExp' has no construct signatures.
+index.ts(48,85): error TS2339: Property '__proto__' does not exist on type 'Function'.
+index.ts(50,5): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(52,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(52,61): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(55,29): error TS2304: Cannot find name 'AggregateError'.
+index.ts(55,62): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(55,74): error TS2304: Cannot find name 'AggregateError'.
+index.ts(57,56): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(58,77): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(59,38): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(64,48): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(65,46): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(67,50): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(76,58): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(77,58): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(78,35): error TS2304: Cannot find name 'FinalizationRegistry'.
+index.ts(78,74): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(78,86): error TS2304: Cannot find name 'FinalizationRegistry'.
+index.ts(81,52): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(82,54): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(83,54): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(86,82): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(87,46): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(88,40): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(89,72): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(95,48): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(96,44): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(99,48): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(101,40): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(102,72): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(103,68): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(105,78): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(106,36): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(111,54): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(112,68): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(113,56): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(114,56): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(116,48): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(117,22): error TS2304: Cannot find name 'WeakRef'.
+index.ts(117,48): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(117,60): error TS2304: Cannot find name 'WeakRef'.
+index.ts(118,48): error TS2454: Variable 'undefined' is used before being assigned.
+index.ts(130,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(137,25): error TS2339: Property 'prototype' does not exist on type 'Object'.
+index.ts(141,13): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(141,21): error TS2454: Variable 'value' is used before being assigned.
+index.ts(143,9): error TS2454: Variable 'value' is used before being assigned.
+index.ts(204,34): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(func: (this: { (searchValue: string | RegExp, replaceValue: string): string; (searchValue: string | RegExp, replacer: (substring: string, ...args: any[]) => string): string; (searchValue: { ...; }, replaceValue: string): string; (searchValue: { ...; }, replacer: (substring: string, ...args: any[]) => string): string; }, ...args: unknown[]) => string, thisArg: { ...; }): (...args: readonly unknown[]) => string', gave the following error.
+    Argument of type '<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, ...args: A) => R' is not assignable to parameter of type '(this: { (searchValue: string | RegExp, replaceValue: string): string; (searchValue: string | RegExp, replacer: (substring: string, ...args: any[]) => string): string; (searchValue: { ...; }, replaceValue: string): string; (searchValue: { ...; }, replacer: (substring: string, ...args: any[]) => string): string; }, ....'.
+      Types of parameters 'searchValue' and 'args' are incompatible.
+        Type 'unknown' is not assignable to type '{ [Symbol.replace](string: string, replacer: (substring: string, ...args: any[]) => string): string; }'.
+  Overload 2 of 2, '(func: new (...args: unknown[]) => unknown, thisArg: unknown): new (...args: readonly unknown[]) => unknown', gave the following error.
+    Argument of type '<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, ...args: A) => R' is not assignable to parameter of type 'new (...args: unknown[]) => unknown'.
+      Type '<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, ...args: A) => R' provides no match for the signature 'new (...args: unknown[]): unknown'.
+index.ts(205,37): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(func: (this: (start?: number | undefined, end?: number | undefined) => string, ...args: unknown[]) => string, thisArg: (start?: number | undefined, end?: number | undefined) => string): (...args: readonly unknown[]) => string', gave the following error.
+    Argument of type '<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, ...args: A) => R' is not assignable to parameter of type '(this: (start?: number | undefined, end?: number | undefined) => string, ...args: unknown[]) => string'.
+      Types of parameters 'start' and 'args' are incompatible.
+        Type 'unknown' is not assignable to type 'number | undefined'.
+  Overload 2 of 2, '(func: new (...args: unknown[]) => unknown, thisArg: unknown): new (...args: readonly unknown[]) => unknown', gave the following error.
+    Argument of type '<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, ...args: A) => R' is not assignable to parameter of type 'new (...args: unknown[]) => unknown'.
+index.ts(206,33): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(func: (this: (string: string) => RegExpExecArray | null, ...args: unknown[]) => RegExpExecArray | null, thisArg: (string: string) => RegExpExecArray | null): (...args: readonly unknown[]) => RegExpExecArray | null', gave the following error.
+    Argument of type '<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, ...args: A) => R' is not assignable to parameter of type '(this: (string: string) => RegExpExecArray | null, ...args: unknown[]) => RegExpExecArray | null'.
+      Types of parameters 'string' and 'args' are incompatible.
+        Type 'unknown' is not assignable to type 'string'.
+  Overload 2 of 2, '(func: new (...args: unknown[]) => unknown, thisArg: unknown): new (...args: readonly unknown[]) => unknown', gave the following error.
+    Argument of type '<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, ...args: A) => R' is not assignable to parameter of type 'new (...args: unknown[]) => unknown'.
+index.ts(211,69): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(214,6): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+index.ts(214,23): error TS2367: This condition will always return 'true' since the types 'Number' and 'string' have no overlap.
+index.ts(216,13): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+index.ts(216,29): error TS2367: This condition will always return 'true' since the types 'Number' and 'string' have no overlap.
+index.ts(219,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(220,2): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+index.ts(221,35): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+index.ts(230,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
+index.ts(231,26): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(232,25): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+index.ts(235,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
+index.ts(236,34): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(238,12): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+index.ts(241,14): error TS2351: This expression is not constructable.
+  Type 'RegExp' has no construct signatures.
+index.ts(245,11): error TS2454: Variable 'alias' is used before being assigned.
+index.ts(256,13): error TS2351: This expression is not constructable.
+  Type 'RegExp' has no construct signatures.
+index.ts(259,13): error TS2351: This expression is not constructable.
+  Type 'RegExp' has no construct signatures.
+index.ts(265,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(269,44): error TS2339: Property 'name' does not exist on type 'Object'.
+index.ts(270,32): error TS2339: Property 'value' does not exist on type 'Object'.
+index.ts(273,32): error TS2339: Property 'alias' does not exist on type 'Object'.
+index.ts(275,23): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+index.ts(285,6): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+index.ts(285,23): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+index.ts(285,40): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+index.ts(286,9): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+index.ts(286,25): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+index.ts(286,41): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+index.ts(299,26): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
+index.ts(300,23): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(302,10): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
+index.ts(304,16): error TS2351: This expression is not constructable.
+  Type 'RegExp' has no construct signatures.
+index.ts(306,5): error TS2322: Type 'undefined' is not assignable to type 'Object'.
+index.ts(319,61): error TS2339: Property 'get' does not exist on type 'Object'.
+index.ts(320,19): error TS2339: Property 'get' does not exist on type 'Object'.
+index.ts(322,20): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(325,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
+index.ts(326,19): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(330,16): error TS2538: Type 'String' cannot be used as an index type.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

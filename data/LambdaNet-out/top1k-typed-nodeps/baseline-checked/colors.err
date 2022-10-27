@@ -1,0 +1,328 @@
+examples/normal-usage.ts(1,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+examples/normal-usage.ts(3,38): error TS2339: Property 'yellow' does not exist on type '"First some yellow text"'.
+examples/normal-usage.ts(5,35): error TS2339: Property 'yellow' does not exist on type '"Underline that text"'.
+examples/normal-usage.ts(7,36): error TS2339: Property 'red' does not exist on type '"Make it bold and red"'.
+examples/normal-usage.ts(9,46): error TS2339: Property 'rainbow' does not exist on type '"Double Raindows All Day Long"'.
+examples/normal-usage.ts(11,29): error TS2339: Property 'trap' does not exist on type '"Drop the bass"'.
+examples/normal-usage.ts(13,37): error TS2339: Property 'trap' does not exist on type '"DROP THE RAINBOW BASS"'.
+examples/normal-usage.ts(16,42): error TS2339: Property 'italic' does not exist on type '() => string'.
+examples/normal-usage.ts(19,19): error TS2339: Property 'green' does not exist on type '"So "'.
+examples/normal-usage.ts(19,33): error TS2339: Property 'underline' does not exist on type '"are"'.
+examples/normal-usage.ts(19,61): error TS2339: Property 'inverse' does not exist on type '"inverse"'.
+examples/normal-usage.ts(20,17): error TS2339: Property 'yellow' does not exist on type '" styles! "'.
+examples/normal-usage.ts(21,34): error TS2339: Property 'zebra' does not exist on type '"Zebras are so fun!"'.
+examples/normal-usage.ts(26,32): error TS2339: Property 'strikethrough' does not exist on type '"not"'.
+examples/normal-usage.ts(28,40): error TS2339: Property 'black' does not exist on type '"Background color attack!"'.
+examples/normal-usage.ts(29,48): error TS2339: Property 'random' does not exist on type '"Use random styles on everything!"'.
+examples/normal-usage.ts(30,35): error TS2339: Property 'america' does not exist on type '"America, Heck Yeah!"'.
+examples/normal-usage.ts(32,27): error TS2339: Property 'brightCyan' does not exist on type '"Blindingly "'.
+examples/normal-usage.ts(32,51): error TS2339: Property 'brightRed' does not exist on type '"bright? "'.
+examples/normal-usage.ts(32,70): error TS2339: Property 'brightYellow' does not exist on type '"Why "'.
+examples/normal-usage.ts(32,93): error TS2339: Property 'brightGreen' does not exist on type '"not?!"'.
+examples/normal-usage.ts(39,45): error TS2339: Property 'green' does not exist on type '"Generic logging theme as JSON"'.
+examples/normal-usage.ts(41,8): error TS2339: Property 'setTheme' does not exist on type 'String'.
+examples/normal-usage.ts(55,32): error TS2339: Property 'error' does not exist on type '"this is an error"'.
+examples/normal-usage.ts(58,33): error TS2339: Property 'warn' does not exist on type '"this is a warning"'.
+examples/normal-usage.ts(61,32): error TS2339: Property 'input' does not exist on type '"this is an input"'.
+examples/normal-usage.ts(63,45): error TS2339: Property 'green' does not exist on type '"Generic logging theme as file"'.
+examples/normal-usage.ts(67,10): error TS2339: Property 'setTheme' does not exist on type 'String'.
+examples/normal-usage.ts(73,32): error TS2339: Property 'error' does not exist on type '"this is an error"'.
+examples/normal-usage.ts(76,33): error TS2339: Property 'warn' does not exist on type '"this is a warning"'.
+examples/normal-usage.ts(79,32): error TS2339: Property 'input' does not exist on type '"this is an input"'.
+examples/safe-string.ts(1,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'colors' must be of type 'String', but here has type 'Object'.
+examples/safe-string.ts(3,20): error TS2339: Property 'yellow' does not exist on type 'String'.
+examples/safe-string.ts(5,20): error TS2339: Property 'yellow' does not exist on type 'String'.
+examples/safe-string.ts(7,20): error TS2339: Property 'red' does not exist on type 'String'.
+examples/safe-string.ts(9,20): error TS2339: Property 'rainbow' does not exist on type 'String'.
+examples/safe-string.ts(11,20): error TS2339: Property 'trap' does not exist on type 'String'.
+examples/safe-string.ts(13,20): error TS2339: Property 'rainbow' does not exist on type 'String'.
+examples/safe-string.ts(13,35): error TS2339: Property 'trap' does not exist on type 'String'.
+examples/safe-string.ts(16,25): error TS2339: Property 'italic' does not exist on type '() => string'.
+examples/safe-string.ts(19,20): error TS2339: Property 'green' does not exist on type 'String'.
+examples/safe-string.ts(19,42): error TS2339: Property 'underline' does not exist on type 'String'.
+examples/safe-string.ts(20,12): error TS2339: Property 'inverse' does not exist on type 'String'.
+examples/safe-string.ts(20,40): error TS2339: Property 'yellow' does not exist on type 'String'.
+examples/safe-string.ts(22,20): error TS2339: Property 'zebra' does not exist on type 'String'.
+examples/safe-string.ts(24,33): error TS2339: Property 'strikethrough' does not exist on type 'String'.
+examples/safe-string.ts(27,20): error TS2339: Property 'black' does not exist on type 'String'.
+examples/safe-string.ts(28,20): error TS2339: Property 'random' does not exist on type 'String'.
+examples/safe-string.ts(29,20): error TS2339: Property 'america' does not exist on type 'String'.
+examples/safe-string.ts(31,20): error TS2339: Property 'brightCyan' does not exist on type 'String'.
+examples/safe-string.ts(31,55): error TS2339: Property 'brightRed' does not exist on type 'String'.
+examples/safe-string.ts(31,86): error TS2339: Property 'brightYellow' does not exist on type 'String'.
+examples/safe-string.ts(31,116): error TS2339: Property 'brightGreen' does not exist on type 'String'.
+examples/safe-string.ts(40,8): error TS2339: Property 'setTheme' does not exist on type 'String'.
+examples/safe-string.ts(54,20): error TS2339: Property 'error' does not exist on type 'String'.
+examples/safe-string.ts(57,20): error TS2339: Property 'warn' does not exist on type 'String'.
+examples/safe-string.ts(60,20): error TS2339: Property 'input' does not exist on type 'String'.
+examples/safe-string.ts(66,8): error TS2339: Property 'setTheme' does not exist on type 'String'.
+examples/safe-string.ts(69,20): error TS2339: Property 'error' does not exist on type 'String'.
+examples/safe-string.ts(72,20): error TS2339: Property 'warn' does not exist on type 'String'.
+examples/safe-string.ts(75,20): error TS2339: Property 'input' does not exist on type 'String'.
+lib/colors.ts(31,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'colors' must be of type 'String', but here has type 'Function'.
+lib/colors.ts(31,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+lib/colors.ts(34,8): error TS2339: Property 'themes' does not exist on type 'String'.
+lib/colors.ts(37,33): error TS2339: Property 'styles' does not exist on type 'String'.
+lib/colors.ts(41,8): error TS2339: Property 'supportsColor' does not exist on type 'String'.
+lib/colors.ts(43,19): error TS2339: Property 'enabled' does not exist on type 'String'.
+lib/colors.ts(44,10): error TS2339: Property 'enabled' does not exist on type 'String'.
+lib/colors.ts(44,27): error TS2339: Property 'supportsColor' does not exist on type 'String'.
+lib/colors.ts(47,8): error TS2339: Property 'enable' does not exist on type 'String'.
+lib/colors.ts(48,10): error TS2339: Property 'enabled' does not exist on type 'String'.
+lib/colors.ts(51,8): error TS2339: Property 'disable' does not exist on type 'String'.
+lib/colors.ts(52,10): error TS2339: Property 'enabled' does not exist on type 'String'.
+lib/colors.ts(55,8): error TS2339: Property 'stripColors' does not exist on type 'String'.
+lib/colors.ts(55,29): error TS2339: Property 'strip' does not exist on type 'String'.
+lib/colors.ts(60,5): error TS2322: Type '(str: String, style: String) => String' is not assignable to type 'Number'.
+lib/colors.ts(60,30): error TS2339: Property 'stylize' does not exist on type 'String'.
+lib/colors.ts(61,15): error TS2339: Property 'enabled' does not exist on type 'String'.
+lib/colors.ts(65,42): error TS2538: Type 'String' cannot be used as an index type.
+lib/colors.ts(68,19): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
+lib/colors.ts(71,19): error TS2538: Type 'String' cannot be used as an index type.
+lib/colors.ts(74,19): error TS2339: Property 'open' does not exist on type 'HTMLElement'.
+lib/colors.ts(74,41): error TS2339: Property 'close' does not exist on type 'HTMLElement'.
+lib/colors.ts(86,7): error TS2322: Type '() => any' is not assignable to type 'HTMLElement'.
+lib/colors.ts(86,50): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/colors.ts(87,38): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[]'.
+lib/colors.ts(89,11): error TS2551: Property '_styles' does not exist on type 'HTMLElement'. Did you mean 'style'?
+lib/colors.ts(92,11): error TS2339: Property '__proto__' does not exist on type 'HTMLElement'.
+lib/colors.ts(93,3): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+lib/colors.ts(96,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'styles' must be of type 'Object', but here has type 'Function'.
+lib/colors.ts(96,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+lib/colors.ts(98,14): error TS2339: Property 'grey' does not exist on type 'Object'.
+lib/colors.ts(98,32): error TS2339: Property 'gray' does not exist on type 'Object'.
+lib/colors.ts(100,16): error TS2538: Type 'String' cannot be used as an index type.
+lib/colors.ts(101,48): error TS2538: Type 'String' cannot be used as an index type.
+lib/colors.ts(102,9): error TS2538: Type 'String' cannot be used as an index type.
+lib/colors.ts(111,52): error TS2304: Cannot find name 'Void'.
+lib/colors.ts(114,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/colors.ts(121,19): error TS2339: Property 'inspect' does not exist on type 'String'.
+lib/colors.ts(125,15): error TS2339: Property 'enabled' does not exist on type 'String'.
+lib/colors.ts(131,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/colors.ts(131,29): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/colors.ts(134,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/colors.ts(135,29): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+lib/colors.ts(136,16): error TS2339: Property 'open' does not exist on type 'HTMLElement'.
+lib/colors.ts(136,40): error TS2339: Property 'closeRe' does not exist on type 'HTMLElement'.
+lib/colors.ts(136,54): error TS2339: Property 'open' does not exist on type 'HTMLElement'.
+lib/colors.ts(136,67): error TS2339: Property 'close' does not exist on type 'HTMLElement'.
+lib/colors.ts(138,25): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'Object' is not assignable to parameter of type 'string | RegExp'.
+      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/colors.ts(139,21): error TS2339: Property 'close' does not exist on type 'HTMLElement'.
+lib/colors.ts(139,42): error TS2339: Property 'open' does not exist on type 'HTMLElement'.
+lib/colors.ts(147,8): error TS2339: Property 'setTheme' does not exist on type 'String'.
+lib/colors.ts(160,14): error TS2538: Type 'String' cannot be used as an index type.
+lib/colors.ts(161,26): error TS2538: Type 'String' cannot be used as an index type.
+lib/colors.ts(163,31): error TS2538: Type 'String' cannot be used as an index type.
+lib/colors.ts(164,19): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+lib/colors.ts(164,32): error TS2538: Type 'String' cannot be used as an index type.
+lib/colors.ts(168,16): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+lib/colors.ts(168,29): error TS2538: Type 'String' cannot be used as an index type.
+lib/colors.ts(177,9): error TS2538: Type 'String' cannot be used as an index type.
+lib/colors.ts(179,22): error TS2345: Argument of type 'String[]' is not assignable to parameter of type 'Function'.
+  Type 'String[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+lib/colors.ts(187,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/colors.ts(193,8): error TS2339: Property 'trap' does not exist on type 'String'.
+lib/colors.ts(194,8): error TS2339: Property 'zalgo' does not exist on type 'String'.
+lib/colors.ts(197,8): error TS2339: Property 'maps' does not exist on type 'String'.
+lib/colors.ts(198,8): error TS2339: Property 'maps' does not exist on type 'String'.
+lib/colors.ts(199,8): error TS2339: Property 'maps' does not exist on type 'String'.
+lib/colors.ts(200,8): error TS2339: Property 'maps' does not exist on type 'String'.
+lib/colors.ts(201,8): error TS2339: Property 'maps' does not exist on type 'String'.
+lib/colors.ts(203,24): error TS2339: Property 'maps' does not exist on type 'String'.
+lib/colors.ts(205,12): error TS2538: Type 'Object' cannot be used as an index type.
+lib/colors.ts(206,31): error TS2339: Property 'maps' does not exist on type 'String'.
+lib/custom/american.ts(1,44): error TS2304: Cannot find name 'Void'.
+lib/custom/american.ts(2,41): error TS2339: Property 'yellow' does not exist on type '"LIBERTY LIBERTY LIBERTY"'.
+lib/custom/american.ts(3,41): error TS2339: Property 'america' does not exist on type '"LIBERTY LIBERTY LIBERTY"'.
+lib/custom/american.ts(4,41): error TS2339: Property 'yellow' does not exist on type '"LIBERTY LIBERTY LIBERTY"'.
+lib/custom/trap.ts(1,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/custom/trap.ts(37,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/custom/trap.ts(37,29): error TS2538: Type 'String' cannot be used as an index type.
+lib/custom/trap.ts(39,21): error TS2538: Type 'String' cannot be used as an index type.
+lib/custom/trap.ts(40,22): error TS2538: Type 'String' cannot be used as an index type.
+lib/custom/trap.ts(42,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/custom/zalgo.ts(41,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/custom/zalgo.ts(41,35): error TS2339: Property 'up' does not exist on type 'Object'.
+lib/custom/zalgo.ts(41,44): error TS2339: Property 'down' does not exist on type 'Object'.
+lib/custom/zalgo.ts(41,55): error TS2339: Property 'mid' does not exist on type 'Object'.
+lib/custom/zalgo.ts(44,48): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/custom/zalgo.ts(62,5): error TS7053: Element implicitly has an 'any' type because expression of type '"up"' can't be used to index type 'Object'.
+  Property 'up' does not exist on type 'Object'.
+lib/custom/zalgo.ts(63,14): error TS7053: Element implicitly has an 'any' type because expression of type '"up"' can't be used to index type 'Object'.
+  Property 'up' does not exist on type 'Object'.
+lib/custom/zalgo.ts(63,46): error TS7053: Element implicitly has an 'any' type because expression of type '"up"' can't be used to index type 'Object'.
+  Property 'up' does not exist on type 'Object'.
+lib/custom/zalgo.ts(64,5): error TS7053: Element implicitly has an 'any' type because expression of type '"mid"' can't be used to index type 'Object'.
+  Property 'mid' does not exist on type 'Object'.
+lib/custom/zalgo.ts(65,14): error TS7053: Element implicitly has an 'any' type because expression of type '"mid"' can't be used to index type 'Object'.
+  Property 'mid' does not exist on type 'Object'.
+lib/custom/zalgo.ts(65,47): error TS7053: Element implicitly has an 'any' type because expression of type '"mid"' can't be used to index type 'Object'.
+  Property 'mid' does not exist on type 'Object'.
+lib/custom/zalgo.ts(66,5): error TS7053: Element implicitly has an 'any' type because expression of type '"down"' can't be used to index type 'Object'.
+  Property 'down' does not exist on type 'Object'.
+lib/custom/zalgo.ts(67,14): error TS7053: Element implicitly has an 'any' type because expression of type '"down"' can't be used to index type 'Object'.
+  Property 'down' does not exist on type 'Object'.
+lib/custom/zalgo.ts(67,48): error TS7053: Element implicitly has an 'any' type because expression of type '"down"' can't be used to index type 'Object'.
+  Property 'down' does not exist on type 'Object'.
+lib/custom/zalgo.ts(68,5): error TS7053: Element implicitly has an 'any' type because expression of type '"size"' can't be used to index type 'Object'.
+  Property 'size' does not exist on type 'Object'.
+lib/custom/zalgo.ts(69,14): error TS7053: Element implicitly has an 'any' type because expression of type '"size"' can't be used to index type 'Object'.
+  Property 'size' does not exist on type 'Object'.
+lib/custom/zalgo.ts(69,48): error TS7053: Element implicitly has an 'any' type because expression of type '"size"' can't be used to index type 'Object'.
+  Property 'size' does not exist on type 'Object'.
+lib/custom/zalgo.ts(70,5): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+lib/custom/zalgo.ts(71,10): error TS2405: The left-hand side of a 'for...in' statement must be of type 'string' or 'any'.
+lib/custom/zalgo.ts(72,18): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
+  Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+lib/custom/zalgo.ts(77,23): error TS2339: Property 'size' does not exist on type 'Object'.
+lib/custom/zalgo.ts(79,18): error TS2339: Property 'up' does not exist on type 'Object'.
+lib/custom/zalgo.ts(80,18): error TS2339: Property 'mid' does not exist on type 'Object'.
+lib/custom/zalgo.ts(81,18): error TS2339: Property 'down' does not exist on type 'Object'.
+lib/custom/zalgo.ts(84,18): error TS2339: Property 'up' does not exist on type 'Object'.
+lib/custom/zalgo.ts(84,23): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/custom/zalgo.ts(85,18): error TS2339: Property 'mid' does not exist on type 'Object'.
+lib/custom/zalgo.ts(85,24): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/custom/zalgo.ts(86,18): error TS2339: Property 'down' does not exist on type 'Object'.
+lib/custom/zalgo.ts(86,25): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/custom/zalgo.ts(89,18): error TS2339: Property 'up' does not exist on type 'Object'.
+lib/custom/zalgo.ts(89,23): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/custom/zalgo.ts(90,18): error TS2339: Property 'mid' does not exist on type 'Object'.
+lib/custom/zalgo.ts(90,24): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/custom/zalgo.ts(91,18): error TS2339: Property 'down' does not exist on type 'Object'.
+lib/custom/zalgo.ts(91,25): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/custom/zalgo.ts(95,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/custom/zalgo.ts(98,37): error TS2538: Type 'String' cannot be used as an index type.
+lib/custom/zalgo.ts(99,23): error TS2538: Type 'String' cannot be used as an index type.
+lib/custom/zalgo.ts(100,36): error TS2538: Type 'String' cannot be used as an index type.
+lib/custom/zalgo.ts(100,61): error TS2538: Type 'String' cannot be used as an index type.
+lib/extendStringPrototype.ts(1,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'colors' must be of type 'String', but here has type 'Object'.
+lib/extendStringPrototype.ts(8,22): error TS2339: Property '__defineGetter__' does not exist on type 'String'.
+lib/extendStringPrototype.ts(12,19): error TS2339: Property 'strip' does not exist on type 'String'.
+lib/extendStringPrototype.ts(12,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/extendStringPrototype.ts(16,19): error TS2339: Property 'strip' does not exist on type 'String'.
+lib/extendStringPrototype.ts(16,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/extendStringPrototype.ts(20,19): error TS2339: Property 'trap' does not exist on type 'String'.
+lib/extendStringPrototype.ts(20,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/extendStringPrototype.ts(24,19): error TS2339: Property 'zalgo' does not exist on type 'String'.
+lib/extendStringPrototype.ts(24,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/extendStringPrototype.ts(28,19): error TS2339: Property 'zebra' does not exist on type 'String'.
+lib/extendStringPrototype.ts(28,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/extendStringPrototype.ts(32,19): error TS2339: Property 'rainbow' does not exist on type 'String'.
+lib/extendStringPrototype.ts(32,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/extendStringPrototype.ts(36,19): error TS2339: Property 'random' does not exist on type 'String'.
+lib/extendStringPrototype.ts(36,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/extendStringPrototype.ts(40,19): error TS2339: Property 'america' does not exist on type 'String'.
+lib/extendStringPrototype.ts(40,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/extendStringPrototype.ts(46,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/extendStringPrototype.ts(46,37): error TS2339: Property 'styles' does not exist on type 'String'.
+lib/extendStringPrototype.ts(49,21): error TS2339: Property 'stylize' does not exist on type 'String'.
+lib/extendStringPrototype.ts(49,29): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/extendStringPrototype.ts(53,39): error TS2304: Cannot find name 'Void'.
+lib/extendStringPrototype.ts(58,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/extendStringPrototype.ts(70,30): error TS2339: Property 'red' does not exist on type '"warn: "'.
+lib/extendStringPrototype.ts(70,64): error TS2339: Property 'magenta' does not exist on type 'string'.
+lib/extendStringPrototype.ts(74,26): error TS2538: Type 'String' cannot be used as an index type.
+lib/extendStringPrototype.ts(75,18): error TS2538: Type 'String' cannot be used as an index type.
+lib/extendStringPrototype.ts(75,39): error TS2538: Type 'String' cannot be used as an index type.
+lib/extendStringPrototype.ts(77,27): error TS2538: Type 'String' cannot be used as an index type.
+lib/extendStringPrototype.ts(77,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/extendStringPrototype.ts(81,17): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/extendStringPrototype.ts(81,38): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/extendStringPrototype.ts(82,39): error TS2538: Type 'String' cannot be used as an index type.
+lib/extendStringPrototype.ts(83,21): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+lib/extendStringPrototype.ts(83,34): error TS2538: Type 'String' cannot be used as an index type.
+lib/extendStringPrototype.ts(88,18): error TS2538: Type 'String' cannot be used as an index type.
+lib/extendStringPrototype.ts(96,10): error TS2339: Property 'setTheme' does not exist on type 'String'.
+lib/index.ts(22,73): error TS2339: Property 'zalgo' does not exist on type '"testing testing testing testing testing testing testing"'.
+lib/maps/america.ts(4,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/maps/america.ts(5,29): error TS2339: Property 'red' does not exist on type 'Object'.
+lib/maps/america.ts(6,29): error TS2339: Property 'white' does not exist on type 'Object'.
+lib/maps/america.ts(7,29): error TS2339: Property 'blue' does not exist on type 'Object'.
+lib/maps/rainbow.ts(3,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/maps/rainbow.ts(8,14): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+lib/maps/rainbow.ts(8,35): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/maps/random.ts(2,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/maps/random.ts(6,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+lib/maps/random.ts(7,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+lib/maps/zebra.ts(3,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/maps/zebra.ts(3,42): error TS2339: Property 'inverse' does not exist on type 'Object'.
+lib/styles.ts(91,27): error TS2538: Type 'String' cannot be used as an index type.
+lib/styles.ts(92,7): error TS2740: Type 'never[]' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+lib/styles.ts(92,35): error TS2538: Type 'String' cannot be used as an index type.
+lib/styles.ts(93,9): error TS2339: Property 'open' does not exist on type 'HTMLElement'.
+lib/styles.ts(93,28): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+lib/styles.ts(94,9): error TS2339: Property 'close' does not exist on type 'HTMLElement'.
+lib/styles.ts(94,29): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+lib/system/has-flag.ts(31,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/system/has-flag.ts(32,34): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
+lib/system/supports-colors.ts(31,5): error TS2740: Type 'ProcessEnv' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+lib/system/supports-colors.ts(33,5): error TS2322: Type 'undefined' is not assignable to type 'Boolean'.
+lib/system/supports-colors.ts(34,5): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/system/supports-colors.ts(34,28): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/system/supports-colors.ts(34,52): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/system/supports-colors.ts(36,12): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/system/supports-colors.ts(36,32): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/system/supports-colors.ts(36,53): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/system/supports-colors.ts(37,15): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/system/supports-colors.ts(41,20): error TS2339: Property 'FORCE_COLOR' does not exist on type 'HTMLElement'.
+lib/system/supports-colors.ts(42,21): error TS2339: Property 'FORCE_COLOR' does not exist on type 'HTMLElement'.
+lib/system/supports-colors.ts(51,5): error TS2322: Type '{ level: Number; hasBasic: boolean; has256: boolean; has16m: boolean; }' is not assignable to type 'Boolean'.
+  Object literal may only specify known properties, and 'level' does not exist in type 'Boolean'.
+lib/system/supports-colors.ts(63,7): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/system/supports-colors.ts(63,31): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/system/supports-colors.ts(64,10): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/system/supports-colors.ts(68,7): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/system/supports-colors.ts(72,25): error TS2339: Property 'isTTY' does not exist on type 'Boolean'.
+lib/system/supports-colors.ts(85,32): error TS2339: Property 'release' does not exist on type 'String'.
+lib/system/supports-colors.ts(87,19): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+lib/system/supports-colors.ts(87,49): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+lib/system/supports-colors.ts(88,21): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+lib/system/supports-colors.ts(96,14): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
+lib/system/supports-colors.ts(97,15): error TS2339: Property 'CI_NAME' does not exist on type 'HTMLElement'.
+lib/system/supports-colors.ts(105,54): error TS2339: Property 'TEAMCITY_VERSION' does not exist on type 'HTMLElement'.
+lib/system/supports-colors.ts(110,41): error TS2339: Property 'TERM_PROGRAM_VERSION' does not exist on type 'HTMLElement'.
+lib/system/supports-colors.ts(112,17): error TS2339: Property 'TERM_PROGRAM' does not exist on type 'HTMLElement'.
+lib/system/supports-colors.ts(123,33): error TS2339: Property 'TERM' does not exist on type 'HTMLElement'.
+lib/system/supports-colors.ts(127,71): error TS2339: Property 'TERM' does not exist on type 'HTMLElement'.
+lib/system/supports-colors.ts(135,11): error TS2339: Property 'TERM' does not exist on type 'HTMLElement'.
+lib/system/supports-colors.ts(143,7): error TS2322: Type 'Number' is not assignable to type 'String'.
+lib/system/supports-colors.ts(143,37): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'string' is not assignable to type 'boolean'.
+lib/system/supports-colors.ts(144,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+lib/system/supports-colors.ts(149,27): error TS2345: Argument of type 'WriteStream & { fd: 1; }' is not assignable to parameter of type 'String'.
+  Type 'WriteStream & { fd: 1; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/system/supports-colors.ts(150,27): error TS2345: Argument of type 'WriteStream & { fd: 2; }' is not assignable to parameter of type 'String'.
+  Type 'WriteStream & { fd: 2; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

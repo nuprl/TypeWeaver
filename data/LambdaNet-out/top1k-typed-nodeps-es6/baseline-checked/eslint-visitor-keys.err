@@ -1,0 +1,113 @@
+lib/index.ts(12,7): error TS2739: Type 'Set<string>' is missing the following properties from type 'Error': name, message
+lib/index.ts(23,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/index.ts(24,27): error TS2339: Property 'has' does not exist on type 'Error'.
+lib/index.ts(32,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/index.ts(50,19): error TS2739: Type 'Set<unknown>' is missing the following properties from type 'Error': name, message
+lib/index.ts(50,41): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+lib/index.ts(52,31): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+lib/index.ts(53,22): error TS2339: Property 'add' does not exist on type 'Error'.
+lib/index.ts(56,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+lib/index.ts(56,51): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(iterable: Iterable<unknown> | ArrayLike<unknown>): unknown[]', gave the following error.
+    Argument of type 'Error' is not assignable to parameter of type 'Iterable<unknown> | ArrayLike<unknown>'.
+  Overload 2 of 4, '(arrayLike: ArrayLike<unknown>): unknown[]', gave the following error.
+    Argument of type 'Error' is not assignable to parameter of type 'ArrayLike<unknown>'.
+      Property 'length' is missing in type 'Error' but required in type 'ArrayLike<unknown>'.
+lib/index.ts(58,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+lib/index.ts(58,51): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+lib/visitor-keys.ts(307,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/visitor-keys.ts(311,19): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+tools/build-keys-from-ts.ts(17,53): error TS2554: Expected 2 arguments, but got 1.
+tools/build-keys-from-ts.ts(19,9): error TS2345: Argument of type 'string' is not assignable to parameter of type 'HTMLElement'.
+tools/get-keys-from-ts.ts(15,32): error TS2307: Cannot find module '@typescript-eslint/parser' or its corresponding type declarations.
+tools/get-keys-from-ts.ts(16,21): error TS2307: Cannot find module 'esquery' or its corresponding type declarations.
+tools/get-keys-from-ts.ts(26,7): error TS2322: Type 'Set<string>' is not assignable to type 'Error'.
+tools/get-keys-from-ts.ts(42,7): error TS2322: Type 'Set<string>' is not assignable to type 'Error'.
+tools/get-keys-from-ts.ts(46,7): error TS2322: Type 'Set<string>' is not assignable to type 'Error'.
+tools/get-keys-from-ts.ts(56,7): error TS2322: Type 'Set<string>' is not assignable to type 'Error'.
+tools/get-keys-from-ts.ts(66,52): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+tools/get-keys-from-ts.ts(67,22): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
+tools/get-keys-from-ts.ts(68,29): error TS2339: Property 'types' does not exist on type 'HTMLElement'.
+tools/get-keys-from-ts.ts(68,75): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
+  Type 'String' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 276 more.
+tools/get-keys-from-ts.ts(70,25): error TS2339: Property 'literal' does not exist on type 'HTMLElement'.
+tools/get-keys-from-ts.ts(80,62): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+tools/get-keys-from-ts.ts(92,49): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+tools/get-keys-from-ts.ts(92,57): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+tools/get-keys-from-ts.ts(100,27): error TS7031: Binding element 'typeA' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(100,36): error TS7031: Binding element 'typeB' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(100,45): error TS2304: Cannot find name 'Void'.
+tools/get-keys-from-ts.ts(103,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+tools/get-keys-from-ts.ts(103,72): error TS2345: Argument of type '([typeA]: [any], [typeB]: [any]) => Void' is not assignable to parameter of type '(a: [string, unknown], b: [string, unknown]) => number'.
+  Types of parameters '__0' and 'a' are incompatible.
+    Type '[string, unknown]' is not assignable to type '[any]'.
+      Source has 2 element(s) but target allows only 1.
+tools/get-keys-from-ts.ts(111,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+tools/get-keys-from-ts.ts(111,38): error TS2538: Type 'String' cannot be used as an index type.
+tools/get-keys-from-ts.ts(154,64): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+tools/get-keys-from-ts.ts(155,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+tools/get-keys-from-ts.ts(157,38): error TS2339: Property 'extends' does not exist on type 'Object'.
+tools/get-keys-from-ts.ts(189,76): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+tools/get-keys-from-ts.ts(190,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+tools/get-keys-from-ts.ts(190,59): error TS2339: Property 'body' does not exist on type 'Object'.
+tools/get-keys-from-ts.ts(192,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+tools/get-keys-from-ts.ts(221,10): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+tools/get-keys-from-ts.ts(267,41): error TS7006: Parameter 'interfaceName' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(278,36): error TS7006: Parameter 'typeName' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(289,29): error TS7031: Binding element 'property' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(289,39): error TS7031: Binding element 'tsAnnotation' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(299,35): error TS2339: Property 'has' does not exist on type 'Error'.
+tools/get-keys-from-ts.ts(306,48): error TS7006: Parameter 'annType' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(320,14): error TS7023: 'hasValidTypeAncestor' implicitly has return type 'any' because it does not have a return type annotation and is referenced directly or indirectly in one of its return expressions.
+tools/get-keys-from-ts.ts(320,35): error TS7006: Parameter 'interfaceName' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(324,61): error TS7006: Parameter 'hasValid' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(333,50): error TS2339: Property 'has' does not exist on type 'Error'.
+tools/get-keys-from-ts.ts(338,55): error TS7006: Parameter 'type' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(354,38): error TS7031: Binding element 'iName' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(354,45): error TS7031: Binding element 'excluded' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(362,17): error TS7006: Parameter 'hasValid' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(375,34): error TS7006: Parameter 'annotationType' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(375,50): error TS7006: Parameter 'property' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(377,35): error TS2339: Property 'has' does not exist on type 'Error'.
+tools/get-keys-from-ts.ts(383,53): error TS7006: Parameter 'annType' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(387,46): error TS7006: Parameter 'annType' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(391,62): error TS7006: Parameter 'annType' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(395,33): error TS2339: Property 'has' does not exist on type 'Error'.
+tools/get-keys-from-ts.ts(414,46): error TS7006: Parameter 'tsDeclarationNode' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(414,65): error TS7006: Parameter 'node' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(414,71): error TS7006: Parameter 'excludedProperties' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(416,50): error TS7031: Binding element 'property' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(416,60): error TS7031: Binding element 'tsAnnotation' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(431,29): error TS2339: Property 'has' does not exist on type 'Error'.
+tools/get-keys-from-ts.ts(438,49): error TS7006: Parameter 'annType' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(455,47): error TS7031: Binding element 'iName' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(455,54): error TS7031: Binding element 'excluded' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(469,13): error TS7006: Parameter 'prop' implicitly has an 'any' type.
+tools/get-keys-from-ts.ts(483,9): error TS2554: Expected 3 arguments, but got 2.
+tools/get-keys-from-ts.ts(485,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+tools/get-keys-from-ts.ts(485,38): error TS2802: Type 'Set<unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+tools/get-keys-from-ts.ts(485,61): error TS2472: Spread operator in 'new' expressions is only available when targeting ECMAScript 5 and higher.
+tools/get-keys-from-ts.ts(485,61): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
+tools/get-keys-from-ts.ts(485,65): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+tools/get-keys-from-ts.ts(495,20): error TS2802: Type 'Set<unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+tools/get-keys-from-ts.ts(503,20): error TS2802: Type 'Set<unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+tools/get-keys-from-ts.ts(536,76): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+tools/get-keys-from-ts.ts(537,41): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(path: PathLike | FileHandle, options?: ({ encoding?: null | undefined; flag?: OpenMode | undefined; } & Abortable) | null | undefined): Promise<...>', gave the following error.
+    Argument of type 'HTMLElement' is not assignable to parameter of type 'PathLike | FileHandle'.
+  Overload 2 of 3, '(path: PathLike | FileHandle, options?: BufferEncoding | (ObjectEncodingOptions & Abortable & { flag?: OpenMode | undefined; }) | null | undefined): Promise<...>', gave the following error.
+    Argument of type 'HTMLElement' is not assignable to parameter of type 'PathLike | FileHandle'.
+tools/get-keys-from-ts.ts(539,32): error TS2559: Type 'HTMLElement' has no properties in common with type '{ supplementaryDeclarations?: { allTsInterfaceDeclarations: never[]; exportedTsInterfaceDeclarations: never[]; tsTypeDeclarations: never[]; } | undefined; }'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

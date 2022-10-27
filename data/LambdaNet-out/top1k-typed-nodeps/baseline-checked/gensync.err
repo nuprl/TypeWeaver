@@ -1,0 +1,106 @@
+index.ts(5,7): error TS2322: Type 'typeof GENSYNC_START' is not assignable to type 'String'.
+index.ts(6,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(16,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(18,28): error TS2345: Argument of type 'String' is not assignable to parameter of type '{ name: any; arity: any; sync: any; async: any; errback: any; }'.
+  Type 'String' is missing the following properties from type '{ name: any; arity: any; sync: any; async: any; errback: any; }': name, arity, sync, async, errback
+index.ts(29,28): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(30,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(33,29): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(34,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(42,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(48,15): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
+index.ts(60,28): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(61,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(68,29): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(69,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(88,20): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
+index.ts(91,21): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
+index.ts(92,26): error TS2345: Argument of type '(resolve: any, reject: String) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'reject' and 'reject' are incompatible.
+    Type '(reason?: any) => void' is not assignable to type 'String'.
+index.ts(92,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(96,23): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
+index.ts(105,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(113,63): error TS2345: Argument of type '(err: any) => any' is not assignable to parameter of type 'String'.
+index.ts(113,69): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(119,92): error TS2304: Cannot find name 'Void'.
+index.ts(137,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(144,25): error TS7031: Binding element 'name' implicitly has an 'any' type.
+index.ts(144,31): error TS7031: Binding element 'arity' implicitly has an 'any' type.
+index.ts(144,38): error TS7031: Binding element 'sync' implicitly has an 'any' type.
+index.ts(144,44): error TS7031: Binding element 'async' implicitly has an 'any' type.
+index.ts(144,51): error TS7031: Binding element 'errback' implicitly has an 'any' type.
+index.ts(144,63): error TS2304: Cannot find name 'Void'.
+index.ts(147,3): error TS2554: Expected 4 arguments, but got 3.
+index.ts(181,20): error TS7006: Parameter 'args' implicitly has an 'any' type.
+index.ts(184,21): error TS7006: Parameter 'args' implicitly has an 'any' type.
+index.ts(184,27): error TS7006: Parameter 'resolve' implicitly has an 'any' type.
+index.ts(184,36): error TS7006: Parameter 'reject' implicitly has an 'any' type.
+index.ts(188,38): error TS7006: Parameter 'err' implicitly has an 'any' type.
+index.ts(188,43): error TS7006: Parameter 'value' implicitly has an 'any' type.
+index.ts(199,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(200,56): error TS2345: Argument of type '(...args: any[]) => any' is not assignable to parameter of type 'String'.
+index.ts(200,65): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
+index.ts(201,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(205,27): error TS7031: Binding element 'name' implicitly has an 'any' type.
+index.ts(205,33): error TS7031: Binding element 'arity' implicitly has an 'any' type.
+index.ts(205,40): error TS7031: Binding element 'sync' implicitly has an 'any' type.
+index.ts(205,46): error TS7031: Binding element 'async' implicitly has an 'any' type.
+index.ts(205,56): error TS2304: Cannot find name 'Void'.
+index.ts(206,43): error TS2345: Argument of type '(...args: any[]) => Generator<any, any, unknown>' is not assignable to parameter of type 'String'.
+index.ts(206,53): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
+index.ts(207,20): error TS7057: 'yield' expression implicitly results in an 'any' type because its containing generator lacks a return-type annotation.
+index.ts(210,29): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(214,9): error TS7034: Variable 'result' implicitly has type 'any' in some locations where its type cannot be determined.
+index.ts(217,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(219,9): error TS7006: Parameter 'value' implicitly has an 'any' type.
+index.ts(220,15): error TS7005: Variable 'result' implicitly has an 'any' type.
+index.ts(225,9): error TS7006: Parameter 'err' implicitly has an 'any' type.
+index.ts(226,15): error TS7005: Variable 'result' implicitly has an 'any' type.
+index.ts(241,9): error TS2532: Object is possibly 'undefined'.
+index.ts(242,13): error TS2532: Object is possibly 'undefined'.
+index.ts(245,12): error TS2532: Object is possibly 'undefined'.
+index.ts(245,19): error TS2339: Property 'value' does not exist on type '{ err: unknown; }'.
+index.ts(251,28): error TS2339: Property 'next' does not exist on type 'Object'.
+index.ts(252,24): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(257,73): error TS2304: Cannot find name 'Void'.
+index.ts(258,21): error TS2304: Cannot find name 'Void'.
+index.ts(261,32): error TS2339: Property 'next' does not exist on type 'Object'.
+index.ts(262,28): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+index.ts(269,33): error TS2339: Property 'next' does not exist on type 'Object'.
+index.ts(278,23): error TS2345: Argument of type 'String' is not assignable to parameter of type '{ value: any; done: any; }'.
+  Type 'String' is missing the following properties from type '{ value: any; done: any; }': value, done
+index.ts(289,14): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
+index.ts(294,51): error TS2304: Cannot find name 'Void'.
+index.ts(299,5): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+index.ts(307,26): error TS7031: Binding element 'value' implicitly has an 'any' type.
+index.ts(307,33): error TS7031: Binding element 'done' implicitly has an 'any' type.
+index.ts(307,41): error TS7006: Parameter 'gen' implicitly has an 'any' type.
+index.ts(307,47): error TS2304: Cannot find name 'Void'.
+index.ts(312,5): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+index.ts(323,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(323,49): error TS2304: Cannot find name 'Void'.
+index.ts(336,6): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'Object'.
+  Property '[SymbolConstructor.iterator]' does not exist on type 'Object'.
+index.ts(340,72): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(345,11): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'String'.
+  Type 'undefined' is not assignable to type 'String'.
+index.ts(346,31): error TS2339: Property 'configurable' does not exist on type 'String'.
+index.ts(359,11): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'String'.
+  Type 'undefined' is not assignable to type 'String'.
+index.ts(360,35): error TS2339: Property 'configurable' does not exist on type 'String'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

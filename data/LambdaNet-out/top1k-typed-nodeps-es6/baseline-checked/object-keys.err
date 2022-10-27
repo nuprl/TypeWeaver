@@ -1,0 +1,24 @@
+implementation.ts(14,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+implementation.ts(56,10): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+implementation.ts(80,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+implementation.ts(80,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+implementation.ts(85,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+implementation.ts(122,16): error TS2454: Variable 'keysShim' is used before being assigned.
+index.ts(9,10): error TS2339: Property 'shim' does not exist on type 'String'.
+index.ts(13,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(15,5): error TS2554: Expected 0 arguments, but got 2.
+index.ts(17,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(25,3): error TS2322: Type 'String' is not assignable to type '{ (o: object): string[]; (o: {}): string[]; }'.
+  Type 'String' provides no match for the signature '(o: object): string[]'.
+index.ts(27,2): error TS2322: Type '{ (o: object): string[]; (o: {}): string[]; }' is not assignable to type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'Object' is not assignable to type 'boolean'.
+isArguments.ts(5,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

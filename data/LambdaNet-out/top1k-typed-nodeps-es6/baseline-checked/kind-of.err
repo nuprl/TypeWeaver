@@ -1,0 +1,88 @@
+benchmark/code/kind-of.ts(5,19): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'String'.
+benchmark/code/lib-type-of.ts(14,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/regex-exec.ts(16,10): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+benchmark/code/switch.ts(5,19): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'String'.
+  Type 'IArguments' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 41 more.
+benchmark/code/switch.ts(17,7): error TS2367: This condition will always return 'false' since the types 'String' and 'boolean' have no overlap.
+benchmark/code/switch.ts(17,23): error TS2367: This condition will always return 'false' since the types 'String' and 'boolean' have no overlap.
+benchmark/code/switch.ts(93,3): error TS2322: Type 'string | null' is not assignable to type 'String'.
+  Type 'null' is not assignable to type 'String'.
+benchmark/code/switch.ts(100,30): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+benchmark/code/switch.ts(112,49): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
+benchmark/code/switch.ts(113,28): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
+benchmark/fixtures/generator.ts(1,35): error TS2304: Cannot find name 'Void'.
+benchmark/fixtures/object-plain.ts(1,17): error TS2304: Cannot find name 'Void'.
+benchmark/fixtures/object-plain.ts(2,17): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+benchmark/index.ts(4,19): error TS2307: Cannot find module 'benchmarked' or its corresponding type declarations.
+benchmark/index.ts(5,19): error TS2307: Cannot find module 'write' or its corresponding type declarations.
+browser.ts(2,3): error TS1258: A default export must be at the top level of a file or module declaration.
+browser.ts(3,17): error TS2304: Cannot find name 'define'.
+browser.ts(3,38): error TS2304: Cannot find name 'define'.
+browser.ts(3,50): error TS2304: Cannot find name 'define'.
+browser.ts(3,75): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser.ts(3,217): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+browser.ts(3,355): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser.ts(3,419): error TS2538: Type 'String' cannot be used as an index type.
+browser.ts(3,429): error TS2538: Type 'String' cannot be used as an index type.
+browser.ts(3,437): error TS2322: Type 'false | NodeRequire' is not assignable to type 'Function'.
+  Type 'boolean' is not assignable to type 'Function'.
+browser.ts(3,525): error TS2554: Expected 1 arguments, but got 2.
+browser.ts(3,591): error TS2339: Property 'code' does not exist on type 'Error'.
+browser.ts(3,635): error TS2538: Type 'String' cannot be used as an index type.
+browser.ts(3,653): error TS2538: Type 'String' cannot be used as an index type.
+browser.ts(3,666): error TS2339: Property 'exports' does not exist on type 'Object'.
+browser.ts(3,710): error TS2538: Type 'String' cannot be used as an index type.
+browser.ts(3,726): error TS2554: Expected 2 arguments, but got 1.
+browser.ts(3,739): error TS2339: Property 'exports' does not exist on type 'Object'.
+browser.ts(3,765): error TS2538: Type 'String' cannot be used as an index type.
+browser.ts(3,841): error TS2554: Expected 2 arguments, but got 1.
+browser.ts(6,3): error TS1184: Modifiers cannot appear here.
+browser.ts(16,14): error TS2554: Expected 2 arguments, but got 1.
+browser.ts(19,17): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+browser.ts(22,16): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
+browser.ts(24,18): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
+browser.ts(72,5): error TS2322: Type 'string | null' is not assignable to type 'String'.
+  Type 'null' is not assignable to type 'String'.
+browser.ts(81,48): error TS2339: Property 'message' does not exist on type 'Object'.
+browser.ts(81,114): error TS2339: Property 'stackTraceLimit' does not exist on type 'Function'.
+browser.ts(86,23): error TS2339: Property 'toDateString' does not exist on type 'HTMLElement'.
+browser.ts(87,21): error TS2339: Property 'getDate' does not exist on type 'HTMLElement'.
+browser.ts(88,21): error TS2339: Property 'setDate' does not exist on type 'HTMLElement'.
+browser.ts(93,23): error TS2339: Property 'flags' does not exist on type 'HTMLElement'.
+browser.ts(94,21): error TS2339: Property 'ignoreCase' does not exist on type 'HTMLElement'.
+browser.ts(95,21): error TS2339: Property 'multiline' does not exist on type 'HTMLElement'.
+browser.ts(96,21): error TS2339: Property 'global' does not exist on type 'HTMLElement'.
+browser.ts(103,32): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+browser.ts(109,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser.ts(115,11): error TS2571: Object is of type 'unknown'.
+browser.ts(128,51): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
+browser.ts(129,30): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
+index.ts(13,12): error TS2554: Expected 2 arguments, but got 1.
+index.ts(16,15): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+index.ts(19,14): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
+  Type 'String' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 276 more.
+index.ts(21,16): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
+index.ts(69,3): error TS2322: Type 'string | null' is not assignable to type 'String'.
+  Type 'null' is not assignable to type 'String'.
+index.ts(78,46): error TS2339: Property 'message' does not exist on type 'Object'.
+index.ts(78,112): error TS2339: Property 'stackTraceLimit' does not exist on type 'Function'.
+index.ts(83,21): error TS2339: Property 'toDateString' does not exist on type 'HTMLElement'.
+index.ts(84,19): error TS2339: Property 'getDate' does not exist on type 'HTMLElement'.
+index.ts(85,19): error TS2339: Property 'setDate' does not exist on type 'HTMLElement'.
+index.ts(90,21): error TS2339: Property 'flags' does not exist on type 'HTMLElement'.
+index.ts(91,19): error TS2339: Property 'ignoreCase' does not exist on type 'HTMLElement'.
+index.ts(92,19): error TS2339: Property 'multiline' does not exist on type 'HTMLElement'.
+index.ts(93,19): error TS2339: Property 'global' does not exist on type 'HTMLElement'.
+index.ts(100,30): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+index.ts(106,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(112,9): error TS2571: Object is of type 'unknown'.
+index.ts(125,49): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
+index.ts(126,28): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

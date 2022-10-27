@@ -1,0 +1,786 @@
+examples/benchmark/benchmark.ts(1,35): error TS7006: Parameter 'uuid' implicitly has an 'any' type.
+examples/benchmark/benchmark.ts(1,41): error TS7006: Parameter 'Benchmark' implicitly has an 'any' type.
+examples/benchmark/benchmark.ts(6,15): error TS7006: Parameter 'event' implicitly has an 'any' type.
+examples/benchmark/benchmark.ts(23,30): error TS7006: Parameter 'event' implicitly has an 'any' type.
+examples/benchmark/benchmark.ts(36,15): error TS7006: Parameter 'event' implicitly has an 'any' type.
+examples/benchmark/benchmark.ts(66,30): error TS7006: Parameter 'event' implicitly has an 'any' type.
+examples/benchmark/benchmark.ts(70,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+examples/benchmark/browser.ts(1,23): error TS2307: Cannot find module './node_modules/uuid/dist/esm-browser/index.js' or its corresponding type declarations.
+examples/benchmark/browser.ts(7,24): error TS2339: Property 'Benchmark' does not exist on type 'Window & typeof globalThis'.
+examples/benchmark/node.ts(1,23): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/benchmark/node.ts(2,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+examples/browser-esmodules/example.ts(11,8): error TS2307: Cannot find module './node_modules/uuid/dist/esm-browser/index.js' or its corresponding type declarations.
+examples/browser-esmodules/example.ts(12,23): error TS2307: Cannot find module './node_modules/uuid/dist/esm-browser/index.js' or its corresponding type declarations.
+examples/browser-rollup/example-all.ts(11,8): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-rollup/example-all.ts(12,23): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-rollup/example-all.ts(16,20): error TS7006: Parameter 'addTest' implicitly has an 'any' type.
+examples/browser-rollup/example-all.ts(16,29): error TS7006: Parameter 'done' implicitly has an 'any' type.
+examples/browser-rollup/example-v1.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-rollup/example-v4.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-rollup/example-v4.ts(5,20): error TS7006: Parameter 'addTest' implicitly has an 'any' type.
+examples/browser-rollup/example-v4.ts(5,29): error TS7006: Parameter 'done' implicitly has an 'any' type.
+examples/browser-rollup/size-v1.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-rollup/size-v3.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-rollup/size-v4.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-rollup/size-v5.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-webpack/example-all-require.ts(1,1): error TS6200: Definitions of the following identifiers conflict with those in another file: NIL_UUID, uuidParse, uuidStringify, uuidv1, uuidv3, uuidv4, uuidv5, uuidValidate, uuidVersion, uuid
+examples/browser-webpack/example-all-require.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'uuid'.
+examples/browser-webpack/example-all-require.ts(17,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(19,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(21,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(24,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(27,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(34,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(37,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(40,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(47,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(50,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(51,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(52,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(53,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(54,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(56,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(58,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(59,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(60,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(61,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(62,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(63,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(64,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(65,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(67,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(68,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(69,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(70,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all-require.ts(71,3): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+examples/browser-webpack/example-all.ts(11,8): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-webpack/example-all.ts(12,23): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-webpack/example-all.ts(16,20): error TS7006: Parameter 'addTest' implicitly has an 'any' type.
+examples/browser-webpack/example-all.ts(16,29): error TS7006: Parameter 'done' implicitly has an 'any' type.
+examples/browser-webpack/example-v1.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-webpack/example-v4.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-webpack/example-v4.ts(5,20): error TS7006: Parameter 'addTest' implicitly has an 'any' type.
+examples/browser-webpack/example-v4.ts(5,29): error TS7006: Parameter 'done' implicitly has an 'any' type.
+examples/browser-webpack/size-v1.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-webpack/size-v3.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-webpack/size-v4.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/browser-webpack/size-v5.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/node-commonjs/example.ts(1,1): error TS6200: Definitions of the following identifiers conflict with those in another file: NIL_UUID, uuidParse, uuidStringify, uuidv1, uuidv3, uuidv4, uuidv5, uuidValidate, uuidVersion, uuid
+examples/node-jest/jsdom.test.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'uuid'.
+examples/node-jest/jsdom.test.ts(5,1): error TS2582: Cannot find name 'test'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+examples/node-jest/jsdom.test.ts(7,3): error TS2304: Cannot find name 'expect'.
+examples/node-jest/node.test.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'uuid'.
+examples/node-jest/node.test.ts(3,1): error TS2582: Cannot find name 'test'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+examples/node-jest/node.test.ts(5,3): error TS2304: Cannot find name 'expect'.
+examples/node-webpack/example-all.ts(1,72): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/node-webpack/example-all.ts(2,23): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/node-webpack/example-v1.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/node-webpack/example-v4.ts(1,30): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/utils/testpage.ts(1,30): error TS7006: Parameter 'callback' implicitly has an 'any' type.
+examples/utils/testpage.ts(14,20): error TS7006: Parameter 'title' implicitly has an 'any' type.
+examples/utils/testpage.ts(14,27): error TS7006: Parameter 'result' implicitly has an 'any' type.
+src/md5-browser.ts(21,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/md5-browser.ts(38,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/md5-browser.ts(38,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/md5-browser.ts(39,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/md5-browser.ts(46,49): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(46,82): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(58,13): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+src/md5-browser.ts(64,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/md5-browser.ts(66,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(66,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(66,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(67,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(67,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(67,21): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+src/md5-browser.ts(74,25): error TS2339: Property 'length' does not exist on type 'Object'.
+src/md5-browser.ts(80,5): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+src/md5-browser.ts(80,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(80,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(81,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(81,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(81,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(82,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(82,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(82,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(83,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(83,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(83,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(84,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(84,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(84,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(85,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(85,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(85,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(86,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(86,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(86,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(87,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(87,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(87,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(88,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(88,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(88,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(89,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(89,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(89,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(90,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(90,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(90,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(91,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(91,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(91,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(92,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(92,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(92,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(93,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(93,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(93,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(94,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(94,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(94,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(95,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(95,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(95,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(97,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(97,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(97,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(98,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(98,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(98,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(99,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(99,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(99,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(100,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(100,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(100,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(101,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(101,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(101,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(102,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(102,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(102,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(103,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(103,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(103,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(104,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(104,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(104,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(105,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(105,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(105,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(106,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(106,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(106,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(107,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(107,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(107,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(108,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(108,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(108,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(109,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(109,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(109,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(110,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(110,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(110,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(111,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(111,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(111,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(112,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(112,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(112,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(114,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(114,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(114,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(115,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(115,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(115,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(116,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(116,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(116,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(117,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(117,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(117,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(118,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(118,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(118,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(119,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(119,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(119,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(120,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(120,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(120,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(121,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(121,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(121,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(122,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(122,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(122,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(123,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(123,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(123,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(124,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(124,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(124,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(125,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(125,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(125,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(126,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(126,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(126,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(127,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(127,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(127,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(128,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(128,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(128,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(129,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(129,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(129,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(131,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(131,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(131,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(132,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(132,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(132,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(133,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(133,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(133,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(134,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(134,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(134,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(135,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(135,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(135,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(136,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(136,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(136,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(137,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(137,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(137,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(138,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(138,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(138,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(139,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(139,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(139,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(140,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(140,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(140,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(141,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(141,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(141,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(142,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(142,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(142,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(143,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(143,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(143,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(144,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(144,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(144,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(145,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(145,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(145,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(146,5): error TS2322: Type 'String' is not assignable to type 'Number'.
+src/md5-browser.ts(146,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(146,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(161,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/md5-browser.ts(161,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/md5-browser.ts(168,42): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'Number' is not assignable to parameter of type 'ArrayBufferLike'.
+src/md5-browser.ts(168,58): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(171,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/md5-browser.ts(182,24): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(182,39): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(183,24): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(183,36): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(183,48): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(184,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(184,25): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(191,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(191,18): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(191,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(191,40): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(198,3): error TS2322: Type 'Number' is not assignable to type 'String'.
+src/md5-browser.ts(198,48): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
+  Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+src/md5-browser.ts(198,63): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+src/md5-browser.ts(198,71): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+src/md5-browser.ts(198,75): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+src/md5-browser.ts(202,17): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(202,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(202,22): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(202,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(206,17): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(206,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(206,22): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(206,28): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(210,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(210,17): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(210,21): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(210,25): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(214,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5-browser.ts(214,17): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+src/md5-browser.ts(214,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/md5.ts(5,5): error TS2740: Type 'Buffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 36 more.
+src/md5.ts(7,5): error TS2322: Type 'Buffer' is not assignable to type 'String'.
+src/md5.ts(10,3): error TS2322: Type 'Buffer' is not assignable to type 'String'.
+src/md5.ts(10,42): error TS2345: Argument of type 'String' is not assignable to parameter of type 'BinaryLike'.
+  Type 'String' is missing the following properties from type 'BigUint64Array': BYTES_PER_ELEMENT, buffer, byteLength, byteOffset, and 20 more.
+src/parse.ts(3,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/parse.ts(12,3): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+src/parse.ts(13,3): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+src/parse.ts(13,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/parse.ts(14,3): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+src/parse.ts(14,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/parse.ts(15,3): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
+  Property '3' does not exist on type 'Object'.
+src/parse.ts(15,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/parse.ts(18,3): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
+  Property '4' does not exist on type 'Object'.
+src/parse.ts(19,3): error TS7053: Element implicitly has an 'any' type because expression of type '5' can't be used to index type 'Object'.
+  Property '5' does not exist on type 'Object'.
+src/parse.ts(19,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/parse.ts(22,3): error TS7053: Element implicitly has an 'any' type because expression of type '6' can't be used to index type 'Object'.
+  Property '6' does not exist on type 'Object'.
+src/parse.ts(23,3): error TS7053: Element implicitly has an 'any' type because expression of type '7' can't be used to index type 'Object'.
+  Property '7' does not exist on type 'Object'.
+src/parse.ts(23,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/parse.ts(26,3): error TS7053: Element implicitly has an 'any' type because expression of type '8' can't be used to index type 'Object'.
+  Property '8' does not exist on type 'Object'.
+src/parse.ts(27,3): error TS7053: Element implicitly has an 'any' type because expression of type '9' can't be used to index type 'Object'.
+  Property '9' does not exist on type 'Object'.
+src/parse.ts(27,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/parse.ts(31,3): error TS7053: Element implicitly has an 'any' type because expression of type '10' can't be used to index type 'Object'.
+  Property '10' does not exist on type 'Object'.
+src/parse.ts(32,3): error TS7053: Element implicitly has an 'any' type because expression of type '11' can't be used to index type 'Object'.
+  Property '11' does not exist on type 'Object'.
+src/parse.ts(32,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/parse.ts(33,3): error TS7053: Element implicitly has an 'any' type because expression of type '12' can't be used to index type 'Object'.
+  Property '12' does not exist on type 'Object'.
+src/parse.ts(33,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/parse.ts(34,3): error TS7053: Element implicitly has an 'any' type because expression of type '13' can't be used to index type 'Object'.
+  Property '13' does not exist on type 'Object'.
+src/parse.ts(34,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/parse.ts(35,3): error TS7053: Element implicitly has an 'any' type because expression of type '14' can't be used to index type 'Object'.
+  Property '14' does not exist on type 'Object'.
+src/parse.ts(35,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/parse.ts(36,3): error TS7053: Element implicitly has an 'any' type because expression of type '15' can't be used to index type 'Object'.
+  Property '15' does not exist on type 'Object'.
+src/parse.ts(36,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/rng-browser.ts(7,7): error TS2740: Type 'Uint8Array' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 36 more.
+src/rng-browser.ts(13,5): error TS2322: Type 'false | (<T extends ArrayBufferView | null>(array: T) => T)' is not assignable to type 'Function'.
+  Type 'boolean' is not assignable to type 'Function'.
+src/rng.ts(3,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/rng.ts(11,36): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
+src/sha1-browser.ts(3,57): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
+src/sha1-browser.ts(5,10): error TS2678: Type 'number' is not comparable to type 'String'.
+src/sha1-browser.ts(6,15): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(6,19): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(6,30): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(7,10): error TS2678: Type 'number' is not comparable to type 'String'.
+src/sha1-browser.ts(8,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(8,18): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(8,22): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(9,10): error TS2678: Type 'number' is not comparable to type 'String'.
+src/sha1-browser.ts(10,15): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(10,19): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(10,25): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(10,29): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(10,35): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(10,39): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(11,10): error TS2678: Type 'number' is not comparable to type 'String'.
+src/sha1-browser.ts(12,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(12,18): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(12,22): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(17,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(17,16): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(17,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(17,34): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(20,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/sha1-browser.ts(20,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/sha1-browser.ts(21,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/sha1-browser.ts(40,31): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(47,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/sha1-browser.ts(54,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/sha1-browser.ts(57,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/sha1-browser.ts(57,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(58,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/sha1-browser.ts(58,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(58,29): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/sha1-browser.ts(58,31): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(59,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/sha1-browser.ts(59,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(65,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/sha1-browser.ts(65,14): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/sha1-browser.ts(69,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/sha1-browser.ts(69,19): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/sha1-browser.ts(69,30): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/sha1-browser.ts(69,41): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/sha1-browser.ts(69,53): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/sha1-browser.ts(72,21): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+src/sha1-browser.ts(73,21): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+src/sha1-browser.ts(74,21): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+src/sha1-browser.ts(75,21): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
+  Property '3' does not exist on type 'Object'.
+src/sha1-browser.ts(76,21): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
+  Property '4' does not exist on type 'Object'.
+src/sha1-browser.ts(80,26): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
+src/sha1-browser.ts(80,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+src/sha1-browser.ts(80,41): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+src/sha1-browser.ts(80,66): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/sha1-browser.ts(82,7): error TS2322: Type 'Number' is not assignable to type 'String'.
+src/sha1-browser.ts(83,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/sha1-browser.ts(83,16): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+src/sha1-browser.ts(85,7): error TS2322: Type 'Number' is not assignable to type 'String'.
+src/sha1-browser.ts(88,5): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+src/sha1-browser.ts(88,13): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+src/sha1-browser.ts(89,5): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+src/sha1-browser.ts(89,13): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+src/sha1-browser.ts(90,5): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+src/sha1-browser.ts(90,13): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+src/sha1-browser.ts(91,5): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
+  Property '3' does not exist on type 'Object'.
+src/sha1-browser.ts(91,13): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
+  Property '3' does not exist on type 'Object'.
+src/sha1-browser.ts(92,5): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
+  Property '4' does not exist on type 'Object'.
+src/sha1-browser.ts(92,13): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
+  Property '4' does not exist on type 'Object'.
+src/sha1-browser.ts(96,6): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+src/sha1-browser.ts(97,6): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+src/sha1-browser.ts(98,6): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+src/sha1-browser.ts(99,5): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+src/sha1-browser.ts(100,6): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+src/sha1-browser.ts(101,6): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+src/sha1-browser.ts(102,6): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+src/sha1-browser.ts(103,5): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+src/sha1-browser.ts(104,6): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+src/sha1-browser.ts(105,6): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+src/sha1-browser.ts(106,6): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+src/sha1-browser.ts(107,5): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+src/sha1-browser.ts(108,6): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
+  Property '3' does not exist on type 'Object'.
+src/sha1-browser.ts(109,6): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
+  Property '3' does not exist on type 'Object'.
+src/sha1-browser.ts(110,6): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
+  Property '3' does not exist on type 'Object'.
+src/sha1-browser.ts(111,5): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
+  Property '3' does not exist on type 'Object'.
+src/sha1-browser.ts(112,6): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
+  Property '4' does not exist on type 'Object'.
+src/sha1-browser.ts(113,6): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
+  Property '4' does not exist on type 'Object'.
+src/sha1-browser.ts(114,6): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
+  Property '4' does not exist on type 'Object'.
+src/sha1-browser.ts(115,5): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
+  Property '4' does not exist on type 'Object'.
+src/sha1.ts(5,5): error TS2322: Type 'Buffer' is not assignable to type 'String'.
+src/sha1.ts(7,5): error TS2322: Type 'Buffer' is not assignable to type 'String'.
+src/sha1.ts(10,3): error TS2322: Type 'Buffer' is not assignable to type 'String'.
+src/sha1.ts(10,43): error TS2345: Argument of type 'String' is not assignable to parameter of type 'BinaryLike'.
+src/stringify.ts(7,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/stringify.ts(13,46): error TS2322: Type 'number' is not assignable to type 'String'.
+src/stringify.ts(17,15): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/stringify.ts(17,19): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+src/stringify.ts(18,15): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/stringify.ts(18,19): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+src/stringify.ts(19,15): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/stringify.ts(19,19): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+src/stringify.ts(20,15): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/stringify.ts(20,19): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+src/stringify.ts(22,15): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/stringify.ts(22,19): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+src/stringify.ts(23,15): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/stringify.ts(23,19): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+src/stringify.ts(25,15): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/stringify.ts(25,19): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+src/stringify.ts(26,15): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/stringify.ts(26,19): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+src/stringify.ts(28,15): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/stringify.ts(28,19): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+src/stringify.ts(29,15): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/stringify.ts(29,19): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+src/stringify.ts(31,15): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/stringify.ts(31,19): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+src/stringify.ts(32,15): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/stringify.ts(32,19): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+src/stringify.ts(33,15): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/stringify.ts(33,19): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+src/stringify.ts(34,15): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/stringify.ts(34,19): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+src/stringify.ts(35,15): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/stringify.ts(35,19): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+src/stringify.ts(36,15): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/stringify.ts(36,19): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+src/stringify.ts(40,33): error TS2322: Type 'number' is not assignable to type 'String'.
+src/uuid-bin.ts(8,19): error TS2304: Cannot find name 'Void'.
+src/uuid-bin.ts(21,7): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+src/uuid-bin.ts(28,30): error TS2339: Property 'shift' does not exist on type 'String'.
+src/uuid-bin.ts(31,8): error TS2678: Type 'string' is not comparable to type 'Number'.
+src/uuid-bin.ts(32,17): error TS2554: Expected 3 arguments, but got 0.
+src/uuid-bin.ts(35,8): error TS2678: Type 'string' is not comparable to type 'Number'.
+src/uuid-bin.ts(36,31): error TS2339: Property 'shift' does not exist on type 'String'.
+src/uuid-bin.ts(37,34): error TS2339: Property 'shift' does not exist on type 'String'.
+src/uuid-bin.ts(43,22): error TS2339: Property 'URL' does not exist on type 'Object'.
+src/uuid-bin.ts(47,22): error TS2339: Property 'DNS' does not exist on type 'Object'.
+src/uuid-bin.ts(50,17): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+src/uuid-bin.ts(54,8): error TS2678: Type 'string' is not comparable to type 'Number'.
+src/uuid-bin.ts(55,17): error TS2554: Expected 3 arguments, but got 0.
+src/uuid-bin.ts(58,8): error TS2678: Type 'string' is not comparable to type 'Number'.
+src/uuid-bin.ts(59,31): error TS2339: Property 'shift' does not exist on type 'String'.
+src/uuid-bin.ts(60,34): error TS2339: Property 'shift' does not exist on type 'String'.
+src/uuid-bin.ts(65,9): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+src/uuid-bin.ts(66,7): error TS2322: Type 'string' is not assignable to type 'Number'.
+src/uuid-bin.ts(69,9): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+src/uuid-bin.ts(70,7): error TS2322: Type 'string' is not assignable to type 'Number'.
+src/uuid-bin.ts(73,17): error TS2554: Expected 4 arguments, but got 2.
+src/v1.ts(22,30): error TS2339: Property 'node' does not exist on type 'HTMLElement'.
+src/v1.ts(23,34): error TS2339: Property 'clockseq' does not exist on type 'HTMLElement'.
+src/v1.ts(23,67): error TS2339: Property 'clockseq' does not exist on type 'HTMLElement'.
+src/v1.ts(29,39): error TS2339: Property 'random' does not exist on type 'HTMLElement'.
+src/v1.ts(29,58): error TS2339: Property 'rng' does not exist on type 'HTMLElement'.
+src/v1.ts(34,9): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+src/v1.ts(34,9): error TS2322: Type 'number' is not assignable to type 'string'.
+src/v1.ts(35,9): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+src/v1.ts(36,9): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+src/v1.ts(37,9): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
+  Property '3' does not exist on type 'Object'.
+src/v1.ts(38,9): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
+  Property '4' does not exist on type 'Object'.
+src/v1.ts(39,9): error TS7053: Element implicitly has an 'any' type because expression of type '5' can't be used to index type 'Object'.
+  Property '5' does not exist on type 'Object'.
+src/v1.ts(45,32): error TS7053: Element implicitly has an 'any' type because expression of type '6' can't be used to index type 'Object'.
+  Property '6' does not exist on type 'Object'.
+src/v1.ts(45,53): error TS7053: Element implicitly has an 'any' type because expression of type '7' can't be used to index type 'Object'.
+  Property '7' does not exist on type 'Object'.
+src/v1.ts(53,31): error TS2339: Property 'msecs' does not exist on type 'HTMLElement'.
+src/v1.ts(53,61): error TS2339: Property 'msecs' does not exist on type 'HTMLElement'.
+src/v1.ts(57,31): error TS2339: Property 'nsecs' does not exist on type 'HTMLElement'.
+src/v1.ts(57,61): error TS2339: Property 'nsecs' does not exist on type 'HTMLElement'.
+src/v1.ts(57,69): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+src/v1.ts(60,9): error TS2322: Type 'number' is not assignable to type 'String'.
+src/v1.ts(60,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(60,30): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(60,44): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(60,52): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(63,7): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
+src/v1.ts(63,25): error TS2339: Property 'clockseq' does not exist on type 'HTMLElement'.
+src/v1.ts(64,17): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+src/v1.ts(69,8): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
+src/v1.ts(69,49): error TS2339: Property 'nsecs' does not exist on type 'HTMLElement'.
+src/v1.ts(83,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
+src/v1.ts(86,23): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
+src/v1.ts(86,24): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(87,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/v1.ts(87,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(87,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(88,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/v1.ts(88,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(88,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(89,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/v1.ts(89,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(89,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(90,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/v1.ts(90,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(90,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(93,25): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(94,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/v1.ts(94,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(94,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(95,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/v1.ts(95,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(95,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(98,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/v1.ts(98,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(98,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(99,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/v1.ts(99,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(99,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(102,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/v1.ts(102,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(102,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(105,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/v1.ts(105,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(105,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+src/v1.ts(109,5): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+src/v1.ts(109,7): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+src/v1.ts(109,16): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'number' was found on type 'Object'.
+src/v1.ts(112,3): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'number' is not assignable to type 'boolean'.
+src/v35.ts(4,24): error TS7006: Parameter 'str' implicitly has an 'any' type.
+src/v35.ts(19,29): error TS7006: Parameter 'name' implicitly has an 'any' type.
+src/v35.ts(19,35): error TS7006: Parameter 'version' implicitly has an 'any' type.
+src/v35.ts(19,44): error TS7006: Parameter 'hashfunc' implicitly has an 'any' type.
+src/v35.ts(20,25): error TS7006: Parameter 'value' implicitly has an 'any' type.
+src/v35.ts(20,32): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
+src/v35.ts(20,43): error TS7006: Parameter 'buf' implicitly has an 'any' type.
+src/v35.ts(20,48): error TS7006: Parameter 'offset' implicitly has an 'any' type.
+src/v4.ts(5,13): error TS7006: Parameter 'options' implicitly has an 'any' type.
+src/v4.ts(5,22): error TS7006: Parameter 'buf' implicitly has an 'any' type.
+src/v4.ts(5,27): error TS7006: Parameter 'offset' implicitly has an 'any' type.
+src/v4.ts(6,7): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
+src/validate.ts(3,19): error TS7006: Parameter 'uuid' implicitly has an 'any' type.
+src/validate.ts(4,3): error TS2322: Type 'boolean' is not assignable to type 'Number'.
+src/version.ts(3,18): error TS7006: Parameter 'uuid' implicitly has an 'any' type.
+wdio.conf.ts(16,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

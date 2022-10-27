@@ -1,0 +1,140 @@
+benchmark/check.ts(4,18): error TS2307: Cannot find module 'ansi-bold' or its corresponding type declarations.
+benchmark/check.ts(13,60): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/check.ts(14,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/check.ts(14,53): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/check.ts(17,51): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/check.ts(18,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/check.ts(19,40): error TS2339: Property 'apply' does not exist on type 'String'.
+benchmark/check.ts(19,60): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/code/arr-diff-3.0.0.ts(3,21): error TS2307: Cannot find module 'arr-flatten' or its corresponding type declarations.
+benchmark/code/arr-diff-3.0.0.ts(6,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/arr-diff-3.0.0.ts(15,44): error TS2304: Cannot find name 'Void'.
+benchmark/code/arr-diff-3.0.0.ts(16,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/code/arr-diff-3.0.0.ts(18,9): error TS2551: Property 'splice' does not exist on type 'String'. Did you mean 'slice'?
+benchmark/code/arr-diff-3.0.0.ts(19,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/code/filter.ts(3,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/filter.ts(3,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/filter.ts(4,3): error TS2322: Type 'never[]' is not assignable to type 'String'.
+benchmark/code/filter.ts(6,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/code/for-negative.ts(3,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/for-negative.ts(3,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/for-negative.ts(4,3): error TS2322: Type 'never[]' is not assignable to type 'String'.
+benchmark/code/for-negative.ts(7,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/for-negative.ts(9,29): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/for-negative.ts(11,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/code/for.ts(3,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/for.ts(3,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/for.ts(4,3): error TS2322: Type 'never[]' is not assignable to type 'String'.
+benchmark/code/for.ts(7,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/for.ts(11,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/code/forEach.ts(3,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/forEach.ts(3,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/forEach.ts(4,3): error TS2322: Type 'never[]' is not assignable to type 'String'.
+benchmark/code/forEach.ts(6,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/forEach.ts(9,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/code/reduce-concat.ts(3,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/reduce-concat.ts(4,3): error TS2740: Type 'never[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+benchmark/code/reduce-concat.ts(7,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/code/reduce-concat.ts(8,18): error TS2339: Property 'concat' does not exist on type 'Object'.
+benchmark/code/reduce-push.ts(3,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/reduce-push.ts(4,3): error TS2322: Type 'never[]' is not assignable to type 'String'.
+benchmark/code/reduce-push.ts(6,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/reduce-push.ts(7,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/code/while-arguments.ts(8,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while-arguments.ts(9,36): error TS2538: Type 'Number' cannot be used as an index type.
+benchmark/code/while-arguments.ts(14,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-arguments.ts(14,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-arguments.ts(21,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-arguments.ts(23,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while-indexof.ts(3,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-indexof.ts(3,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-indexof.ts(4,3): error TS2322: Type 'never[]' is not assignable to type 'String'.
+benchmark/code/while-indexof.ts(8,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-indexof.ts(10,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while-indexof.ts(12,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/code/while-multi-unshift.ts(3,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-multi-unshift.ts(3,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-multi-unshift.ts(3,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-multi-unshift.ts(5,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-multi-unshift.ts(6,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-multi-unshift.ts(18,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while-multi.ts(3,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-multi.ts(3,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-multi.ts(3,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-multi.ts(5,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-multi.ts(6,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-multi.ts(18,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while-push.ts(3,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-push.ts(3,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-push.ts(4,3): error TS2322: Type 'never[]' is not assignable to type 'String'.
+benchmark/code/while-push.ts(7,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-push.ts(9,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while-push.ts(11,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/code/while-splice-args.ts(10,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-splice-args.ts(10,41): error TS2304: Cannot find name 'Void'.
+benchmark/code/while-splice-args.ts(14,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/while-splice-args.ts(15,21): error TS2538: Type 'Number' cannot be used as an index type.
+benchmark/code/while-splice-args.ts(19,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-splice-args.ts(21,19): error TS2322: Type 'undefined' is not assignable to type 'String'.
+benchmark/code/while-splice-for.ts(3,21): error TS2307: Cannot find module 'arr-flatten' or its corresponding type declarations.
+benchmark/code/while-splice-for.ts(5,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-splice-for.ts(14,44): error TS2304: Cannot find name 'Void'.
+benchmark/code/while-splice-for.ts(15,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/code/while-splice-for.ts(17,9): error TS2551: Property 'splice' does not exist on type 'String'. Did you mean 'slice'?
+benchmark/code/while-splice-for.ts(18,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/code/while-splice-pop-flatten.ts(3,21): error TS2307: Cannot find module 'arr-flatten' or its corresponding type declarations.
+benchmark/code/while-splice-pop-flatten.ts(5,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-splice-pop-flatten.ts(14,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-splice-pop-flatten.ts(14,43): error TS2304: Cannot find name 'Void'.
+benchmark/code/while-splice-pop.ts(3,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-splice-pop.ts(12,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-splice-pop.ts(12,43): error TS2304: Cannot find name 'Void'.
+benchmark/code/while-splice-recurse.ts(3,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-splice-recurse.ts(12,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-splice-recurse.ts(15,5): error TS2322: Type 'undefined' is not assignable to type 'String'.
+benchmark/code/while-splice-recurse.ts(19,5): error TS2322: Type 'undefined' is not assignable to type 'String'.
+benchmark/code/while-splice.ts(3,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-splice.ts(3,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-splice.ts(3,58): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-unshift.ts(3,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-unshift.ts(3,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-unshift.ts(4,3): error TS2322: Type 'never[]' is not assignable to type 'String'.
+benchmark/code/while-unshift.ts(7,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-unshift.ts(9,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/index.ts(4,25): error TS2307: Cannot find module 'minimist' or its corresponding type declarations.
+benchmark/index.ts(7,19): error TS2307: Cannot find module 'benchmarked' or its corresponding type declarations.
+benchmark/index.ts(10,54): error TS2339: Property 'f' does not exist on type 'Object'.
+benchmark/index.ts(11,46): error TS2339: Property 'c' does not exist on type 'Object'.
+benchmark/index.ts(15,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
+index.ts(13,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(14,36): error TS2538: Type 'Number' cannot be used as an index type.
+index.ts(19,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(19,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(19,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(27,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(29,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

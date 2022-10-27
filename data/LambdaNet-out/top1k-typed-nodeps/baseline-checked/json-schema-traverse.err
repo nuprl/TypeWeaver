@@ -1,0 +1,150 @@
+index.ts(3,5): error TS2322: Type '(schema: String, opts: Function, cb: Object) => void' is not assignable to type 'HTMLElement'.
+index.ts(7,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+index.ts(10,13): error TS2339: Property 'cb' does not exist on type 'Function'.
+index.ts(11,57): error TS2339: Property 'pre' does not exist on type 'Object'.
+index.ts(12,25): error TS2339: Property 'post' does not exist on type 'Object'.
+index.ts(14,3): error TS2554: Expected 10 arguments, but got 6.
+index.ts(18,10): error TS2339: Property 'keywords' does not exist on type 'HTMLElement'.
+index.ts(30,10): error TS2339: Property 'arrayKeywords' does not exist on type 'HTMLElement'.
+index.ts(37,10): error TS2339: Property 'propsKeywords' does not exist on type 'HTMLElement'.
+index.ts(45,10): error TS2339: Property 'skipKeywords' does not exist on type 'HTMLElement'.
+index.ts(67,208): error TS2304: Cannot find name 'Void'.
+index.ts(71,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(71,24): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+index.ts(73,29): error TS2339: Property 'arrayKeywords' does not exist on type 'HTMLElement'.
+index.ts(75,48): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
+index.ts(77,34): error TS2339: Property 'propsKeywords' does not exist on type 'HTMLElement'.
+index.ts(80,51): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
+index.ts(82,34): error TS2339: Property 'keywords' does not exist on type 'HTMLElement'.
+index.ts(82,52): error TS2339: Property 'allKeys' does not exist on type 'Object'.
+index.ts(82,81): error TS2339: Property 'skipKeywords' does not exist on type 'HTMLElement'.
+index.ts(83,9): error TS2554: Expected 10 arguments, but got 9.
+spec/fixtures/schema.ts(58,7): error TS2339: Property 'properties' does not exist on type 'Object'.
+spec/fixtures/schema.ts(59,7): error TS2339: Property 'properties' does not exist on type 'Object'.
+spec/fixtures/schema.ts(75,41): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+spec/fixtures/schema.ts(76,41): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+spec/fixtures/schema.ts(78,15): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(79,15): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(79,90): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(80,15): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(80,149): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(81,15): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(81,149): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(82,15): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(82,115): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(83,15): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(83,115): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(85,15): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(85,90): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(86,15): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(86,149): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(87,15): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(87,149): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(88,15): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(88,115): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(89,15): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(89,115): error TS2339: Property 'allOf' does not exist on type 'Object'.
+spec/fixtures/schema.ts(91,41): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+spec/fixtures/schema.ts(92,41): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+spec/fixtures/schema.ts(93,41): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+spec/fixtures/schema.ts(94,41): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+spec/fixtures/schema.ts(106,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+spec/fixtures/schema.ts(108,13): error TS2538: Type 'String' cannot be used as an index type.
+spec/fixtures/schema.ts(109,13): error TS2538: Type 'String' cannot be used as an index type.
+spec/fixtures/schema.ts(109,137): error TS2538: Type 'String' cannot be used as an index type.
+spec/fixtures/schema.ts(110,13): error TS2538: Type 'String' cannot be used as an index type.
+spec/fixtures/schema.ts(110,137): error TS2538: Type 'String' cannot be used as an index type.
+spec/fixtures/schema.ts(111,13): error TS2538: Type 'String' cannot be used as an index type.
+spec/fixtures/schema.ts(111,94): error TS2538: Type 'String' cannot be used as an index type.
+spec/fixtures/schema.ts(112,13): error TS2538: Type 'String' cannot be used as an index type.
+spec/fixtures/schema.ts(112,94): error TS2538: Type 'String' cannot be used as an index type.
+spec/fixtures/schema.ts(117,58): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+spec/fixtures/schema.ts(119,13): error TS2538: Type 'String' cannot be used as an index type.
+spec/fixtures/schema.ts(120,13): error TS2538: Type 'String' cannot be used as an index type.
+spec/fixtures/schema.ts(120,160): error TS2538: Type 'String' cannot be used as an index type.
+spec/fixtures/schema.ts(121,13): error TS2538: Type 'String' cannot be used as an index type.
+spec/fixtures/schema.ts(121,160): error TS2538: Type 'String' cannot be used as an index type.
+spec/fixtures/schema.ts(122,13): error TS2538: Type 'String' cannot be used as an index type.
+spec/fixtures/schema.ts(122,107): error TS2538: Type 'String' cannot be used as an index type.
+spec/fixtures/schema.ts(123,13): error TS2538: Type 'String' cannot be used as an index type.
+spec/fixtures/schema.ts(123,107): error TS2538: Type 'String' cannot be used as an index type.
+spec/index.spec.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'traverse' must be of type 'HTMLElement', but here has type 'Function'.
+spec/index.spec.ts(6,1): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(7,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+spec/index.spec.ts(9,3): error TS2304: Cannot find name 'beforeEach'.
+spec/index.spec.ts(13,3): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(15,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+spec/index.spec.ts(17,5): error TS2349: This expression is not callable.
+  Type 'HTMLElement' has no call signatures.
+spec/index.spec.ts(18,12): error TS2339: Property 'deepStrictEqual' does not exist on type 'String'.
+spec/index.spec.ts(21,3): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(22,5): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(24,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+spec/index.spec.ts(26,7): error TS2349: This expression is not callable.
+  Type 'HTMLElement' has no call signatures.
+spec/index.spec.ts(27,14): error TS2339: Property 'deepStrictEqual' does not exist on type 'String'.
+spec/index.spec.ts(30,5): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(33,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+spec/index.spec.ts(35,7): error TS2349: This expression is not callable.
+  Type 'HTMLElement' has no call signatures.
+spec/index.spec.ts(36,14): error TS2339: Property 'deepStrictEqual' does not exist on type 'String'.
+spec/index.spec.ts(41,3): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(49,5): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(51,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+spec/index.spec.ts(53,17): error TS2339: Property 'someObject' does not exist on type 'Object'.
+spec/index.spec.ts(56,7): error TS2349: This expression is not callable.
+  Type 'HTMLElement' has no call signatures.
+spec/index.spec.ts(57,14): error TS2339: Property 'deepStrictEqual' does not exist on type 'String'.
+spec/index.spec.ts(61,5): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(63,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+spec/index.spec.ts(67,7): error TS2349: This expression is not callable.
+  Type 'HTMLElement' has no call signatures.
+spec/index.spec.ts(68,14): error TS2339: Property 'deepStrictEqual' does not exist on type 'String'.
+spec/index.spec.ts(72,5): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(74,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+spec/index.spec.ts(78,7): error TS2349: This expression is not callable.
+  Type 'HTMLElement' has no call signatures.
+spec/index.spec.ts(79,14): error TS2339: Property 'deepStrictEqual' does not exist on type 'String'.
+spec/index.spec.ts(83,5): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(105,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+spec/index.spec.ts(107,18): error TS2339: Property 'another' does not exist on type 'Object'.
+spec/index.spec.ts(108,18): error TS2339: Property 'properties' does not exist on type 'Object'.
+spec/index.spec.ts(109,18): error TS2339: Property 'properties' does not exist on type 'Object'.
+spec/index.spec.ts(112,7): error TS2349: This expression is not callable.
+  Type 'HTMLElement' has no call signatures.
+spec/index.spec.ts(113,14): error TS2339: Property 'deepStrictEqual' does not exist on type 'String'.
+spec/index.spec.ts(117,3): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(126,5): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(127,7): error TS2349: This expression is not callable.
+  Type 'HTMLElement' has no call signatures.
+spec/index.spec.ts(128,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+spec/index.spec.ts(130,24): error TS2339: Property 'properties' does not exist on type 'Object'.
+spec/index.spec.ts(131,24): error TS2339: Property 'properties' does not exist on type 'Object'.
+spec/index.spec.ts(133,14): error TS2339: Property 'deepStrictEqual' does not exist on type 'String'.
+spec/index.spec.ts(136,5): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(137,7): error TS2349: This expression is not callable.
+  Type 'HTMLElement' has no call signatures.
+spec/index.spec.ts(138,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+spec/index.spec.ts(139,25): error TS2339: Property 'properties' does not exist on type 'Object'.
+spec/index.spec.ts(140,25): error TS2339: Property 'properties' does not exist on type 'Object'.
+spec/index.spec.ts(143,14): error TS2339: Property 'deepStrictEqual' does not exist on type 'String'.
+spec/index.spec.ts(146,5): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(147,7): error TS2349: This expression is not callable.
+  Type 'HTMLElement' has no call signatures.
+spec/index.spec.ts(148,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+spec/index.spec.ts(150,24): error TS2339: Property 'properties' does not exist on type 'Object'.
+spec/index.spec.ts(151,25): error TS2339: Property 'properties' does not exist on type 'Object'.
+spec/index.spec.ts(152,24): error TS2339: Property 'properties' does not exist on type 'Object'.
+spec/index.spec.ts(153,25): error TS2339: Property 'properties' does not exist on type 'Object'.
+spec/index.spec.ts(156,14): error TS2339: Property 'deepStrictEqual' does not exist on type 'String'.
+spec/index.spec.ts(160,24): error TS2304: Cannot find name 'Void'.
+spec/index.spec.ts(164,19): error TS2304: Cannot find name 'Void'.
+spec/index.spec.ts(168,20): error TS2304: Cannot find name 'Void'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

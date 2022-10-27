@@ -1,0 +1,82 @@
+default-exclude.ts(5,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(7,2): error TS2322: Type '{ all: (string | null)[]; testExclude: (string | null)[]; instrument: (string | null)[]; checkCoverage: (string | null)[]; report: (string | null)[]; main: null[]; instrumentOnly: string[]; }' is not assignable to type 'HTMLInputElement'.
+  Object literal may only specify known properties, and 'all' does not exist in type 'HTMLInputElement'.
+index.ts(19,6): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
+index.ts(22,27): error TS2339: Property 'all' does not exist on type 'HTMLInputElement'.
+index.ts(27,27): error TS2339: Property 'all' does not exist on type 'HTMLInputElement'.
+index.ts(47,28): error TS2339: Property 'testExclude' does not exist on type 'HTMLInputElement'.
+index.ts(54,28): error TS2339: Property 'testExclude' does not exist on type 'HTMLInputElement'.
+index.ts(63,28): error TS2339: Property 'testExclude' does not exist on type 'HTMLInputElement'.
+index.ts(73,28): error TS2339: Property 'testExclude' does not exist on type 'HTMLInputElement'.
+index.ts(83,28): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
+index.ts(89,28): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
+index.ts(95,28): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
+index.ts(104,28): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
+index.ts(113,28): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
+index.ts(119,28): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
+index.ts(142,28): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
+index.ts(148,28): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
+index.ts(154,28): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
+index.ts(160,28): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
+index.ts(169,28): error TS2339: Property 'checkCoverage' does not exist on type 'HTMLInputElement'.
+index.ts(177,28): error TS2339: Property 'checkCoverage' does not exist on type 'HTMLInputElement'.
+index.ts(185,28): error TS2339: Property 'checkCoverage' does not exist on type 'HTMLInputElement'.
+index.ts(193,28): error TS2339: Property 'checkCoverage' does not exist on type 'HTMLInputElement'.
+index.ts(201,28): error TS2339: Property 'checkCoverage' does not exist on type 'HTMLInputElement'.
+index.ts(207,28): error TS2339: Property 'checkCoverage' does not exist on type 'HTMLInputElement'.
+index.ts(216,28): error TS2339: Property 'report' does not exist on type 'HTMLInputElement'.
+index.ts(225,28): error TS2339: Property 'report' does not exist on type 'HTMLInputElement'.
+index.ts(232,28): error TS2339: Property 'report' does not exist on type 'HTMLInputElement'.
+index.ts(238,28): error TS2339: Property 'report' does not exist on type 'HTMLInputElement'.
+index.ts(244,28): error TS2339: Property 'report' does not exist on type 'HTMLInputElement'.
+index.ts(250,28): error TS2339: Property 'report' does not exist on type 'HTMLInputElement'.
+index.ts(259,28): error TS2551: Property 'main' does not exist on type 'HTMLInputElement'. Did you mean 'min'?
+index.ts(266,28): error TS2551: Property 'main' does not exist on type 'HTMLInputElement'. Did you mean 'min'?
+index.ts(273,28): error TS2551: Property 'main' does not exist on type 'HTMLInputElement'. Did you mean 'min'?
+index.ts(279,28): error TS2551: Property 'main' does not exist on type 'HTMLInputElement'. Did you mean 'min'?
+index.ts(285,28): error TS2551: Property 'main' does not exist on type 'HTMLInputElement'. Did you mean 'min'?
+index.ts(291,28): error TS2551: Property 'main' does not exist on type 'HTMLInputElement'. Did you mean 'min'?
+index.ts(297,28): error TS2551: Property 'main' does not exist on type 'HTMLInputElement'. Did you mean 'min'?
+index.ts(303,28): error TS2551: Property 'main' does not exist on type 'HTMLInputElement'. Did you mean 'min'?
+index.ts(309,28): error TS2551: Property 'main' does not exist on type 'HTMLInputElement'. Did you mean 'min'?
+index.ts(315,28): error TS2551: Property 'main' does not exist on type 'HTMLInputElement'. Did you mean 'min'?
+index.ts(321,28): error TS2551: Property 'main' does not exist on type 'HTMLInputElement'. Did you mean 'min'?
+index.ts(330,28): error TS2339: Property 'instrumentOnly' does not exist on type 'HTMLInputElement'.
+index.ts(336,28): error TS2339: Property 'instrumentOnly' does not exist on type 'HTMLInputElement'.
+index.ts(342,28): error TS2339: Property 'instrumentOnly' does not exist on type 'HTMLInputElement'.
+index.ts(348,28): error TS2339: Property 'instrumentOnly' does not exist on type 'HTMLInputElement'.
+index.ts(372,29): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
+index.ts(381,29): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
+index.ts(388,29): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
+index.ts(439,45): error TS7031: Binding element 'name' implicitly has an 'any' type.
+index.ts(439,61): error TS7031: Binding element 'value' implicitly has an 'any' type.
+index.ts(439,71): error TS2304: Cannot find name 'Void'.
+index.ts(450,12): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(callbackfn: (previousValue: string, currentValue: string, currentIndex: number, array: string[]) => string, initialValue: string): string', gave the following error.
+    Argument of type '(defaults: String, id: String) => String' is not assignable to parameter of type '(previousValue: string, currentValue: string, currentIndex: number, array: string[]) => string'.
+      Type 'String' is not assignable to type 'string'.
+        'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+  Overload 2 of 3, '(callbackfn: (previousValue: String, currentValue: string, currentIndex: number, array: string[]) => String, initialValue: String): String', gave the following error.
+    Argument of type '{}' is not assignable to parameter of type 'String'.
+      Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(452,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
+index.ts(456,36): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(457,42): error TS2571: Object is of type 'unknown'.
+index.ts(458,15): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(callbackfn: (previousValue: [string, unknown], currentValue: [string, unknown], currentIndex: number, array: [string, unknown][]) => [string, unknown], initialValue: [string, unknown]): [string, unknown]', gave the following error.
+    Argument of type '(defaults: String, [name, { default: value }]: [any, { default: any; }]) => Void' is not assignable to parameter of type '(previousValue: [string, unknown], currentValue: [string, unknown], currentIndex: number, array: [string, unknown][]) => [string, unknown]'.
+      Types of parameters 'defaults' and 'previousValue' are incompatible.
+        Type '[string, unknown]' is not assignable to type 'String'.
+  Overload 2 of 3, '(callbackfn: (previousValue: String, currentValue: [string, unknown], currentIndex: number, array: [string, unknown][]) => String, initialValue: String): String', gave the following error.
+    Argument of type '(defaults: String, [name, { default: value }]: [any, { default: any; }]) => Void' is not assignable to parameter of type '(previousValue: String, currentValue: [string, unknown], currentIndex: number, array: [string, unknown][]) => String'.
+      Types of parameters '__1' and 'currentValue' are incompatible.
+        Type '[string, unknown]' is not assignable to type '[any, { default: any; }]'.
+          Type at position 1 in source is not compatible with type at position 1 in target.
+            Type 'unknown' is not assignable to type '{ default: any; }'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

@@ -1,0 +1,30 @@
+index.ts(33,33): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
+index.ts(34,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(35,12): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+index.ts(38,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(38,22): error TS2339: Property 'headers' does not exist on type 'Object'.
+index.ts(39,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(39,36): error TS2345: Argument of type 'Object' is not assignable to parameter of type '{ headers: Headers; }'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Property 'headers' is missing in type 'Object' but required in type '{ headers: Headers; }'.
+index.ts(84,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(85,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(105,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(107,23): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+index.ts(128,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(129,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(161,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(162,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(196,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(197,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(223,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(225,19): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

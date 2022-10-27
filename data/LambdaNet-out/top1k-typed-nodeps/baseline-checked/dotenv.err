@@ -1,0 +1,50 @@
+lib/cli-options.ts(3,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/cli-options.ts(3,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/cli-options.ts(5,11): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
+  Type 'null' is not assignable to type 'Object'.
+lib/cli-options.ts(7,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+lib/cli-options.ts(7,11): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+lib/cli-options.ts(7,25): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+lib/env-options.ts(5,11): error TS2339: Property 'encoding' does not exist on type 'Object'.
+lib/env-options.ts(9,11): error TS2339: Property 'path' does not exist on type 'Object'.
+lib/env-options.ts(13,11): error TS2339: Property 'debug' does not exist on type 'Object'.
+lib/env-options.ts(17,11): error TS2339: Property 'override' does not exist on type 'Object'.
+lib/main.ts(18,11): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
+  Type 'null' is not assignable to type 'Object'.
+lib/main.ts(18,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/main.ts(19,25): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+lib/main.ts(22,26): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+lib/main.ts(40,9): error TS2538: Type 'String' cannot be used as an index type.
+lib/main.ts(46,34): error TS2304: Cannot find name 'Void'.
+lib/main.ts(50,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/main.ts(51,36): error TS2339: Property 'join' does not exist on type 'String'.
+lib/main.ts(51,44): error TS2339: Property 'homedir' does not exist on type 'String'.
+lib/main.ts(56,33): error TS2339: Property 'resolve' does not exist on type 'String'.
+lib/main.ts(58,53): error TS2339: Property 'debug' does not exist on type 'Object'.
+lib/main.ts(59,56): error TS2339: Property 'override' does not exist on type 'Object'.
+lib/main.ts(62,17): error TS2339: Property 'path' does not exist on type 'Object'.
+lib/main.ts(63,41): error TS2339: Property 'path' does not exist on type 'Object'.
+lib/main.ts(65,17): error TS2339: Property 'encoding' does not exist on type 'Object'.
+lib/main.ts(66,26): error TS2339: Property 'encoding' does not exist on type 'Object'.
+lib/main.ts(72,41): error TS2339: Property 'parse' does not exist on type 'Object'.
+lib/main.ts(72,50): error TS2339: Property 'readFileSync' does not exist on type 'String'.
+lib/main.ts(75,62): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
+lib/main.ts(76,21): error TS2538: Type 'String' cannot be used as an index type.
+lib/main.ts(76,35): error TS2538: Type 'String' cannot be used as an index type.
+lib/main.ts(79,23): error TS2538: Type 'String' cannot be used as an index type.
+lib/main.ts(79,37): error TS2538: Type 'String' cannot be used as an index type.
+lib/main.ts(95,44): error TS2571: Object is of type 'unknown'.
+lib/main.ts(107,38): error TS2339: Property 'config' does not exist on type 'Object'.
+lib/main.ts(108,37): error TS2339: Property 'parse' does not exist on type 'Object'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

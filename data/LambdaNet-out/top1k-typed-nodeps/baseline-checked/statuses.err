@@ -1,0 +1,132 @@
+index.ts(25,8): error TS2339: Property 'message' does not exist on type 'string'.
+index.ts(28,8): error TS2339: Property 'code' does not exist on type 'string'.
+index.ts(31,8): error TS2339: Property 'codes' does not exist on type 'string'.
+index.ts(34,8): error TS2339: Property 'redirect' does not exist on type 'string'.
+index.ts(45,8): error TS2339: Property 'empty' does not exist on type 'string'.
+index.ts(52,8): error TS2339: Property 'retry' does not exist on type 'string'.
+index.ts(66,67): error TS2304: Cannot find name 'Void'.
+index.ts(67,33): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(71,5): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+index.ts(82,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(93,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(96,52): error TS2339: Property 'code' does not exist on type 'string'.
+index.ts(96,58): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
+index.ts(100,17): error TS2339: Property 'code' does not exist on type 'string'.
+index.ts(108,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(109,52): error TS2339: Property 'message' does not exist on type 'string'.
+index.ts(109,61): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
+index.ts(113,17): error TS2339: Property 'message' does not exist on type 'string'.
+index.ts(141,14): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+index.ts(142,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+scripts/build.ts(7,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'codes' must be of type 'String', but here has type 'Function'.
+scripts/build.ts(7,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+scripts/build.ts(22,12): error TS2339: Property 'join' does not exist on type 'String'.
+scripts/build.ts(24,45): error TS2304: Cannot find name 'Void'.
+scripts/build.ts(26,8): error TS2538: Type 'String' cannot be used as an index type.
+scripts/build.ts(26,18): error TS2538: Type 'String' cannot be used as an index type.
+scripts/build.ts(26,30): error TS2538: Type 'String' cannot be used as an index type.
+scripts/fetch-apache.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL | undefined): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'String'.
+scripts/fetch-apache.ts(11,7): error TS2339: Property 'get' does not exist on type 'String'.
+scripts/fetch-apache.ts(11,73): error TS2304: Cannot find name 'Void'.
+scripts/fetch-apache.ts(15,25): error TS2531: Object is possibly 'null'.
+scripts/fetch-apache.ts(15,73): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+scripts/fetch-apache.ts(20,13): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
+  Type 'null' is not assignable to type 'Object'.
+scripts/fetch-apache.ts(20,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+scripts/fetch-apache.ts(21,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+scripts/fetch-apache.ts(21,13): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+scripts/fetch-apache.ts(21,25): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+scripts/fetch-apache.ts(24,16): error TS2339: Property 'join' does not exist on type 'String'.
+scripts/fetch-iana.ts(9,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL | undefined): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'String'.
+scripts/fetch-iana.ts(12,7): error TS2339: Property 'get' does not exist on type 'String'.
+scripts/fetch-iana.ts(12,73): error TS2304: Cannot find name 'Void'.
+scripts/fetch-iana.ts(13,15): error TS2339: Property 'pipe' does not exist on type 'Object'.
+scripts/fetch-iana.ts(13,61): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+scripts/fetch-iana.ts(17,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+scripts/fetch-iana.ts(18,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+scripts/fetch-iana.ts(20,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+scripts/fetch-iana.ts(24,15): error TS2339: Property 'description' does not exist on type 'Object'.
+scripts/fetch-iana.ts(29,15): error TS2339: Property 'value' does not exist on type 'Object'.
+scripts/fetch-iana.ts(33,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+scripts/fetch-iana.ts(33,17): error TS2339: Property 'value' does not exist on type 'Object'.
+scripts/fetch-iana.ts(33,30): error TS2339: Property 'description' does not exist on type 'Object'.
+scripts/fetch-iana.ts(36,16): error TS2339: Property 'join' does not exist on type 'String'.
+scripts/fetch-iana.ts(43,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+scripts/fetch-iana.ts(43,19): error TS2538: Type 'Number' cannot be used as an index type.
+scripts/fetch-iana.ts(51,73): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(s: Function, c: String) => string' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
+      Types of parameters 's' and 'substring' are incompatible.
+        Type 'string' is not assignable to type 'Function'.
+scripts/fetch-nginx.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL | undefined): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'String'.
+scripts/fetch-nginx.ts(11,7): error TS2339: Property 'get' does not exist on type 'String'.
+scripts/fetch-nginx.ts(11,73): error TS2304: Cannot find name 'Void'.
+scripts/fetch-nginx.ts(15,25): error TS2531: Object is possibly 'null'.
+scripts/fetch-nginx.ts(15,71): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+scripts/fetch-nginx.ts(20,13): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
+  Type 'null' is not assignable to type 'Object'.
+scripts/fetch-nginx.ts(20,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+scripts/fetch-nginx.ts(21,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+scripts/fetch-nginx.ts(21,13): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+scripts/fetch-nginx.ts(21,25): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+scripts/fetch-nginx.ts(24,16): error TS2339: Property 'join' does not exist on type 'String'.
+scripts/fetch-node.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL | undefined): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'String'.
+scripts/fetch-node.ts(11,7): error TS2339: Property 'get' does not exist on type 'String'.
+scripts/fetch-node.ts(11,73): error TS2304: Cannot find name 'Void'.
+scripts/fetch-node.ts(15,25): error TS2531: Object is possibly 'null'.
+scripts/fetch-node.ts(15,63): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+scripts/fetch-node.ts(20,13): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
+  Type 'null' is not assignable to type 'Object'.
+scripts/fetch-node.ts(20,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+scripts/fetch-node.ts(21,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+scripts/fetch-node.ts(21,13): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+scripts/fetch-node.ts(21,25): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+scripts/fetch-node.ts(24,16): error TS2339: Property 'join' does not exist on type 'String'.
+scripts/lib/write.ts(5,62): error TS2304: Cannot find name 'Void'.
+scripts/lib/write.ts(6,23): error TS2339: Property 'openSync' does not exist on type 'String'.
+scripts/lib/write.ts(7,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+scripts/lib/write.ts(9,6): error TS2339: Property 'writeSync' does not exist on type 'String'.
+scripts/lib/write.ts(12,8): error TS2339: Property 'writeSync' does not exist on type 'String'.
+scripts/lib/write.ts(13,33): error TS2538: Type 'String' cannot be used as an index type.
+scripts/lib/write.ts(14,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+scripts/lib/write.ts(14,27): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[val: String, index: String, array: any]'.
+scripts/lib/write.ts(17,6): error TS2339: Property 'writeSync' does not exist on type 'String'.
+scripts/lib/write.ts(19,6): error TS2339: Property 'closeSync' does not exist on type 'String'.
+scripts/lib/write.ts(22,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+scripts/lib/write.ts(23,23): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+scripts/version-history.ts(6,38): error TS2339: Property 'join' does not exist on type 'String'.
+scripts/version-history.ts(8,5): error TS2322: Type 'string | undefined' is not assignable to type 'String'.
+  Type 'undefined' is not assignable to type 'String'.
+scripts/version-history.ts(11,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+scripts/version-history.ts(11,34): error TS2339: Property 'readFileSync' does not exist on type 'String'.
+scripts/version-history.ts(24,7): error TS2740: Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+scripts/version-history.ts(26,27): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
+scripts/version-history.ts(35,4): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
+scripts/version-history.ts(38,7): error TS2740: Type 'Date' is missing the following properties from type 'HTMLInputElement': accept, align, alt, autocomplete, and 333 more.
+scripts/version-history.ts(40,22): error TS2339: Property 'getFullYear' does not exist on type 'HTMLInputElement'.
+scripts/version-history.ts(41,17): error TS2339: Property 'getMonth' does not exist on type 'HTMLInputElement'.
+scripts/version-history.ts(42,17): error TS2339: Property 'getDate' does not exist on type 'HTMLInputElement'.
+scripts/version-history.ts(48,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'String'.
+scripts/version-history.ts(49,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

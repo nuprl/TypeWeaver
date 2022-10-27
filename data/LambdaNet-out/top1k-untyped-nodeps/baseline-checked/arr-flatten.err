@@ -1,0 +1,33 @@
+benchmark/check.ts(5,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/check.ts(14,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/check.ts(17,35): error TS2339: Property 'resolve' does not exist on type 'String'.
+benchmark/check.ts(18,27): error TS2339: Property 'basename' does not exist on type 'String'.
+benchmark/check.ts(18,45): error TS2339: Property 'extname' does not exist on type 'String'.
+benchmark/check.ts(21,54): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+benchmark/check.ts(26,26): error TS2339: Property 'inspect' does not exist on type 'String'.
+benchmark/code/arr-flatten-0.1.0 (do-while).ts(2,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/arr-flatten-0.2.0.ts(5,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/arr-flatten-0.2.0.ts(5,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/arr-flatten-0.2.0.ts(5,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/arr-flatten-0.2.0.ts(9,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/arr-flatten-0.2.0.ts(10,21): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/code/do-while-slice.ts(6,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/index.ts(3,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/index.ts(11,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
+benchmark/libs.ts(5,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/libs.ts(6,24): error TS2339: Property 'join' does not exist on type 'String'.
+benchmark/libs.ts(20,20): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+benchmark/libs.ts(21,11): error TS2339: Property 'existsSync' does not exist on type 'String'.
+index.ts(14,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(14,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(14,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(17,19): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

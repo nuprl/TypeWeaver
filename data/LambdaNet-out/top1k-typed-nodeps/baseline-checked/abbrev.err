@@ -1,0 +1,15 @@
+abbrev.ts(5,26): error TS2304: Cannot find name 'Void'.
+abbrev.ts(17,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+abbrev.ts(26,20): error TS2345: Argument of type '(a: Number, b: Number) => Number' is not assignable to parameter of type '(a: any, b: any) => number'.
+  Type 'Number' is not assignable to type 'number'.
+    'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+abbrev.ts(48,15): error TS2538: Type 'String' cannot be used as an index type.
+abbrev.ts(52,7): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

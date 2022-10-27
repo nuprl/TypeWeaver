@@ -1,0 +1,200 @@
+benchmark/index.ts(4,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/index.ts(5,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/index.ts(21,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/index.ts(29,29): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+benchmark/index.ts(30,7): error TS2367: This condition will always return 'false' since the types 'Function' and 'boolean' have no overlap.
+benchmark/index.ts(43,9): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+benchmark/index.ts(56,4): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
+benchmark/index.ts(56,60): error TS2339: Property 'target' does not exist on type 'Object'.
+benchmark/index.ts(58,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+build.ts(4,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+build.ts(7,36): error TS2339: Property 'readFileSync' does not exist on type 'String'.
+build.ts(8,4): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
+build.ts(9,4): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
+build.ts(10,10): error TS2339: Property 'mkdirSync' does not exist on type 'String'.
+build.ts(11,4): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
+build.ts(12,4): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
+spec/es6tests.ts(5,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+spec/es6tests.ts(7,5): error TS2322: Type 'boolean' is not assignable to type 'Number'.
+spec/es6tests.ts(8,5): error TS2322: Type 'boolean' is not assignable to type 'Number'.
+spec/es6tests.ts(48,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(49,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(54,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(55,24): error TS2345: Argument of type '{ a: number; b: string; }' is not assignable to parameter of type 'Function'.
+  Object literal may only specify known properties, and 'a' does not exist in type 'Function'.
+spec/es6tests.ts(60,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(61,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(66,24): error TS2345: Argument of type '{ a: number; b: string; }' is not assignable to parameter of type 'Function'.
+  Object literal may only specify known properties, and 'a' does not exist in type 'Function'.
+spec/es6tests.ts(67,24): error TS2345: Argument of type '{ b: string; a: number; }' is not assignable to parameter of type 'Function'.
+  Object literal may only specify known properties, and 'b' does not exist in type 'Function'.
+spec/es6tests.ts(72,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(73,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(78,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(79,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(84,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(85,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(90,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(90,28): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(91,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(91,28): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(96,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(96,28): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(97,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(97,28): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(102,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(102,28): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(103,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(103,28): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(114,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(115,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(120,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(121,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(126,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(127,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(144,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(173,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(174,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(179,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(180,23): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'String'.
+  Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+spec/es6tests.ts(185,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(186,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(191,23): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'String'.
+spec/es6tests.ts(192,23): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'String'.
+spec/es6tests.ts(197,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(198,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(203,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(204,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(209,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(210,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(215,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(216,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(233,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(234,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(239,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(240,17): error TS2554: Expected 2 arguments, but got 1.
+spec/es6tests.ts(279,55): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(length?: number | undefined): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'number'.
+  Overload 2 of 3, '(array: Iterable<bigint>): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'Iterable<bigint>'.
+      The types returned by '[Symbol.iterator]().next(...)' are incompatible between these types.
+        Type 'IteratorResult<string, any>' is not assignable to type 'IteratorResult<bigint, any>'.
+          Type 'IteratorYieldResult<string>' is not assignable to type 'IteratorResult<bigint, any>'.
+            Type 'IteratorYieldResult<string>' is not assignable to type 'IteratorYieldResult<bigint>'.
+              Type 'string' is not assignable to type 'bigint'.
+  Overload 3 of 3, '(buffer: ArrayBufferLike, byteOffset?: number | undefined, length?: number | undefined): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'ArrayBufferLike'.
+      Type 'string[]' is missing the following properties from type 'SharedArrayBuffer': byteLength, [Symbol.species], [Symbol.toStringTag]
+spec/es6tests.ts(280,55): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(length?: number | undefined): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'number'.
+  Overload 2 of 3, '(array: Iterable<bigint>): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'Iterable<bigint>'.
+  Overload 3 of 3, '(buffer: ArrayBufferLike, byteOffset?: number | undefined, length?: number | undefined): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'ArrayBufferLike'.
+spec/es6tests.ts(286,55): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(length?: number | undefined): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'number'.
+  Overload 2 of 3, '(array: Iterable<bigint>): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'Iterable<bigint>'.
+  Overload 3 of 3, '(buffer: ArrayBufferLike, byteOffset?: number | undefined, length?: number | undefined): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'ArrayBufferLike'.
+spec/es6tests.ts(287,55): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(length?: number | undefined): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'number'.
+  Overload 2 of 3, '(array: Iterable<bigint>): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'Iterable<bigint>'.
+  Overload 3 of 3, '(buffer: ArrayBufferLike, byteOffset?: number | undefined, length?: number | undefined): BigUint64Array', gave the following error.
+    Argument of type 'string[]' is not assignable to parameter of type 'ArrayBufferLike'.
+spec/es6tests.ts(319,45): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+spec/es6tests.ts(320,10): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+spec/es6tests.ts(320,20): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+spec/es6tests.ts(322,16): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+spec/es6tests.ts(330,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+spec/es6tests.ts(330,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+spec/es6tests.ts(333,7): error TS2339: Property 'add' does not exist on type 'Object'.
+spec/es6tests.ts(334,3): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+spec/es6tests.ts(338,3): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+spec/index.spec.ts(7,5): error TS2451: Cannot redeclare block-scoped variable 'assert'.
+spec/index.spec.ts(9,11): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+  Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+spec/index.spec.ts(10,11): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+spec/index.spec.ts(11,11): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+spec/index.spec.ts(13,11): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+spec/index.spec.ts(14,11): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+spec/index.spec.ts(15,11): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+spec/index.spec.ts(17,72): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+spec/index.spec.ts(17,80): error TS2304: Cannot find name 'Void'.
+spec/index.spec.ts(18,3): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(20,7): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(20,22): error TS2339: Property 'description' does not exist on type 'Object'.
+spec/index.spec.ts(21,15): error TS2339: Property 'tests' does not exist on type 'Object'.
+spec/index.spec.ts(22,17): error TS2339: Property 'skip' does not exist on type 'Object'.
+spec/index.spec.ts(22,24): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(22,34): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(22,43): error TS2339: Property 'description' does not exist on type 'Object'.
+spec/index.spec.ts(23,20): error TS2339: Property 'strictEqual' does not exist on type 'String'.
+spec/index.spec.ts(23,47): error TS2339: Property 'value1' does not exist on type 'Object'.
+spec/index.spec.ts(23,60): error TS2339: Property 'value2' does not exist on type 'Object'.
+spec/index.spec.ts(23,74): error TS2339: Property 'equal' does not exist on type 'Object'.
+spec/index.spec.ts(25,17): error TS2339: Property 'skip' does not exist on type 'Object'.
+spec/index.spec.ts(25,24): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(25,34): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/index.spec.ts(25,43): error TS2339: Property 'description' does not exist on type 'Object'.
+spec/index.spec.ts(26,20): error TS2339: Property 'strictEqual' does not exist on type 'String'.
+spec/index.spec.ts(26,47): error TS2339: Property 'value2' does not exist on type 'Object'.
+spec/index.spec.ts(26,60): error TS2339: Property 'value1' does not exist on type 'Object'.
+spec/index.spec.ts(26,74): error TS2339: Property 'equal' does not exist on type 'Object'.
+spec/react.spec.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'assert'.
+spec/react.spec.ts(4,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+spec/react.spec.ts(6,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+spec/react.spec.ts(12,54): error TS2339: Property 'Component' does not exist on type 'HTMLElement'.
+spec/react.spec.ts(13,27): error TS7006: Parameter 'nextProps' implicitly has an 'any' type.
+spec/react.spec.ts(15,26): error TS2339: Property 'props' does not exist on type 'ChildWithShouldComponentUpdate'.
+spec/react.spec.ts(22,33): error TS2339: Property 'Component' does not exist on type 'HTMLElement'.
+spec/react.spec.ts(24,20): error TS2339: Property 'createElement' does not exist on type 'HTMLElement'.
+spec/react.spec.ts(26,17): error TS2339: Property 'createElement' does not exist on type 'HTMLElement'.
+spec/react.spec.ts(26,42): error TS2339: Property 'props' does not exist on type 'Container'.
+spec/react.spec.ts(27,17): error TS2339: Property 'createElement' does not exist on type 'HTMLElement'.
+spec/react.spec.ts(27,42): error TS2339: Property 'props' does not exist on type 'Container'.
+spec/react.spec.ts(33,3): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/react.spec.ts(38,5): error TS2304: Cannot find name 'beforeEach'.
+spec/react.spec.ts(40,26): error TS2339: Property 'stub' does not exist on type 'HTMLElement'.
+spec/react.spec.ts(41,32): error TS2339: Property 'spy' does not exist on type 'HTMLElement'.
+spec/react.spec.ts(44,5): error TS2304: Cannot find name 'afterEach'.
+spec/react.spec.ts(45,15): error TS2339: Property 'restore' does not exist on type 'HTMLElement'.
+spec/react.spec.ts(48,5): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/react.spec.ts(49,7): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/react.spec.ts(50,9): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/react.spec.ts(51,76): error TS2339: Property 'createElement' does not exist on type 'HTMLElement'.
+spec/react.spec.ts(52,24): error TS2339: Property 'update' does not exist on type 'HTMLElement'.
+spec/react.spec.ts(52,37): error TS2339: Property 'createElement' does not exist on type 'HTMLElement'.
+spec/react.spec.ts(53,18): error TS2339: Property 'strictEqual' does not exist on type 'String'.
+spec/react.spec.ts(53,39): error TS2339: Property 'callCount' does not exist on type 'HTMLElement'.
+spec/react.spec.ts(55,9): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/react.spec.ts(56,76): error TS2339: Property 'createElement' does not exist on type 'HTMLElement'.
+spec/react.spec.ts(57,24): error TS2339: Property 'update' does not exist on type 'HTMLElement'.
+spec/react.spec.ts(57,37): error TS2339: Property 'createElement' does not exist on type 'HTMLElement'.
+spec/react.spec.ts(58,18): error TS2339: Property 'strictEqual' does not exist on type 'String'.
+spec/react.spec.ts(58,45): error TS2339: Property 'callCount' does not exist on type 'ChildWithShouldComponentUpdate'.
+spec/react.spec.ts(60,9): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+spec/react.spec.ts(61,76): error TS2339: Property 'createElement' does not exist on type 'HTMLElement'.
+spec/react.spec.ts(62,24): error TS2339: Property 'update' does not exist on type 'HTMLElement'.
+spec/react.spec.ts(62,37): error TS2339: Property 'createElement' does not exist on type 'HTMLElement'.
+spec/react.spec.ts(63,18): error TS2339: Property 'strictEqual' does not exist on type 'String'.
+spec/react.spec.ts(63,45): error TS2339: Property 'callCount' does not exist on type 'ChildWithShouldComponentUpdate'.
+spec/tests.ts(399,19): error TS2304: Cannot find name 'Void'.
+spec/tests.ts(400,19): error TS2304: Cannot find name 'Void'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

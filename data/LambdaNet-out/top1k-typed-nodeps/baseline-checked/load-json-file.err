@@ -1,0 +1,25 @@
+index.ts(5,43): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
+index.ts(5,56): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
+index.ts(7,38): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'BufferSource | undefined'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+index.ts(16,77): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(17,40): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(path: PathLike | FileHandle, options?: ({ encoding?: null | undefined; flag?: OpenMode | undefined; } & Abortable) | null | undefined): Promise<...>', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'PathLike | FileHandle'.
+      Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
+  Overload 2 of 3, '(path: PathLike | FileHandle, options?: BufferEncoding | (ObjectEncodingOptions & Abortable & { flag?: OpenMode | undefined; }) | null | undefined): Promise<...>', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'PathLike | FileHandle'.
+index.ts(21,70): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(22,38): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null | undefined; flag?: string | undefined; } | null | undefined): Buffer', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
+      Type 'String' is not assignable to type 'Buffer'.
+  Overload 2 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string | undefined; }) | null | undefined): string | Buffer', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

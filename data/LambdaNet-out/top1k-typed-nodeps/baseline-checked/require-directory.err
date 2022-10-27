@@ -1,0 +1,46 @@
+index.ts(21,34): error TS2339: Property 'extensions' does not exist on type 'HTMLElement'.
+index.ts(21,73): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(24,15): error TS2339: Property 'include' does not exist on type 'HTMLElement'.
+index.ts(24,34): error TS2339: Property 'include' does not exist on type 'HTMLElement'.
+index.ts(24,72): error TS2339: Property 'include' does not exist on type 'HTMLElement'.
+index.ts(27,15): error TS2339: Property 'include' does not exist on type 'HTMLElement'.
+index.ts(27,41): error TS2339: Property 'include' does not exist on type 'HTMLElement'.
+index.ts(27,76): error TS2339: Property 'include' does not exist on type 'HTMLElement'.
+index.ts(30,15): error TS2339: Property 'exclude' does not exist on type 'HTMLElement'.
+index.ts(30,34): error TS2339: Property 'exclude' does not exist on type 'HTMLElement'.
+index.ts(30,71): error TS2339: Property 'exclude' does not exist on type 'HTMLElement'.
+index.ts(33,15): error TS2339: Property 'exclude' does not exist on type 'HTMLElement'.
+index.ts(33,41): error TS2339: Property 'exclude' does not exist on type 'HTMLElement'.
+index.ts(33,75): error TS2339: Property 'exclude' does not exist on type 'HTMLElement'.
+index.ts(43,5): error TS2322: Type 'null' is not assignable to type 'String'.
+index.ts(49,16): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+index.ts(50,7): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+index.ts(50,23): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+index.ts(56,28): error TS2339: Property 'filename' does not exist on type 'HTMLElement'.
+index.ts(56,58): error TS2339: Property 'filename' does not exist on type 'HTMLElement'.
+index.ts(59,6): error TS2339: Property 'readdirSync' does not exist on type 'String'.
+index.ts(65,12): error TS2339: Property 'statSync' does not exist on type 'String'.
+index.ts(65,54): error TS2339: Property 'recurse' does not exist on type 'Object'.
+index.ts(67,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+index.ts(70,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+index.ts(70,24): error TS2339: Property 'rename' does not exist on type 'Object'.
+index.ts(73,24): error TS2339: Property 'filename' does not exist on type 'HTMLElement'.
+index.ts(73,73): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+index.ts(76,17): error TS2339: Property 'require' does not exist on type 'HTMLElement'.
+index.ts(77,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+index.ts(77,24): error TS2339: Property 'rename' does not exist on type 'Object'.
+index.ts(77,65): error TS2339: Property 'visit' does not exist on type 'Object'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

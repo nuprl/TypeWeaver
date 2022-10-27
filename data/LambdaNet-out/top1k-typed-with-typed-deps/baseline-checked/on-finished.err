@@ -1,0 +1,50 @@
+index.ts(23,5): error TS2740: Type 'Number' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+index.ts(34,66): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[thisArg: any, ...argArray: any[]]'.
+index.ts(53,23): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(66,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(67,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(80,3): error TS2322: Type 'undefined' is not assignable to type 'Boolean'.
+index.ts(91,68): error TS2304: Cannot find name 'Void'.
+index.ts(92,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(93,17): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+index.ts(96,38): error TS2304: Cannot find name 'Void'.
+index.ts(107,39): error TS2304: Cannot find name 'Void'.
+index.ts(109,9): error TS2339: Property 'removeListener' does not exist on type 'Object'.
+index.ts(118,11): error TS2339: Property 'socket' does not exist on type 'Object'.
+index.ts(120,18): error TS2339: Property 'socket' does not exist on type 'Object'.
+index.ts(125,7): error TS2339: Property 'on' does not exist on type 'Object'.
+index.ts(127,11): error TS2339: Property 'socket' does not exist on type 'Object'.
+index.ts(141,58): error TS2304: Cannot find name 'Void'.
+index.ts(142,35): error TS2339: Property '__onFinished' does not exist on type 'Object'.
+index.ts(145,30): error TS2339: Property 'queue' does not exist on type 'HTMLElement'.
+index.ts(146,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+index.ts(146,20): error TS2339: Property '__onFinished' does not exist on type 'Object'.
+index.ts(147,33): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'Function'.
+  Type 'HTMLElement' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+index.ts(150,12): error TS2339: Property 'queue' does not exist on type 'HTMLElement'.
+index.ts(162,38): error TS2304: Cannot find name 'Void'.
+index.ts(163,13): error TS2339: Property '__onFinished' does not exist on type 'Object'.
+index.ts(163,44): error TS2339: Property '__onFinished' does not exist on type 'Object'.
+index.ts(166,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(167,5): error TS2322: Type 'null' is not assignable to type 'any[]'.
+index.ts(174,3): error TS7008: Member 'queue' implicitly has an 'any[]' type.
+index.ts(188,34): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+index.ts(188,60): error TS2304: Cannot find name 'Void'.
+index.ts(194,63): error TS2304: Cannot find name 'Void'.
+index.ts(209,5): error TS2739: Type '{}' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+index.ts(223,18): error TS2339: Property 'AsyncResource' does not exist on type 'HTMLElement'.
+index.ts(224,26): error TS2339: Property 'AsyncResource' does not exist on type 'HTMLElement'.
+index.ts(224,43): error TS2339: Property 'name' does not exist on type 'Object'.
+index.ts(228,8): error TS2454: Variable 'res' is used before being assigned.
+index.ts(228,20): error TS2339: Property 'runInAsyncScope' does not exist on type 'Element'.
+index.ts(233,14): error TS2339: Property 'runInAsyncScope' does not exist on type 'Element'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

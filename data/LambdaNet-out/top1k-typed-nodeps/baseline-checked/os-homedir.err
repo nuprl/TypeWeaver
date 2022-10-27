@@ -1,0 +1,24 @@
+index.ts(5,6): error TS2740: Type 'ProcessEnv' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+index.ts(6,25): error TS2339: Property 'HOME' does not exist on type 'HTMLElement'.
+index.ts(7,25): error TS2339: Property 'LOGNAME' does not exist on type 'HTMLElement'.
+index.ts(7,40): error TS2339: Property 'USER' does not exist on type 'HTMLElement'.
+index.ts(7,52): error TS2339: Property 'LNAME' does not exist on type 'HTMLElement'.
+index.ts(7,65): error TS2339: Property 'USERNAME' does not exist on type 'HTMLElement'.
+index.ts(10,14): error TS2339: Property 'USERPROFILE' does not exist on type 'HTMLElement'.
+index.ts(10,33): error TS2339: Property 'HOMEDRIVE' does not exist on type 'HTMLElement'.
+index.ts(10,49): error TS2339: Property 'HOMEPATH' does not exist on type 'HTMLElement'.
+index.ts(14,3): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'number' is not assignable to type 'boolean'.
+index.ts(18,3): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+index.ts(18,19): error TS2722: Cannot invoke an object which is possibly 'undefined'.
+index.ts(21,2): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+index.ts(24,28): error TS2339: Property 'homedir' does not exist on type 'String'.
+index.ts(24,56): error TS2339: Property 'homedir' does not exist on type 'String'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

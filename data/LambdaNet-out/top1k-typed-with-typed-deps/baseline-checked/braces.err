@@ -1,0 +1,301 @@
+bench/index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
+bench/index.ts(4,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+bench/index.ts(14,39): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
+bench/index.ts(20,31): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+bench/index.ts(21,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
+bench/index.ts(23,12): error TS2339: Property 'run' does not exist on type 'Object'.
+bench/index.ts(23,36): error TS2339: Property 'run' does not exist on type 'Object'.
+bench/index.ts(23,46): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+bench/index.ts(24,11): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+bench/index.ts(28,40): error TS2339: Property 'name' does not exist on type 'Object'.
+bench/index.ts(30,9): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+bench/index.ts(31,35): error TS2740: Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+bench/index.ts(34,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+bench/index.ts(46,6): error TS2339: Property 'add' does not exist on type 'Function'.
+bench/index.ts(47,6): error TS2339: Property 'run' does not exist on type 'Function'.
+bench/index.ts(48,7): error TS2339: Property 'skip' does not exist on type 'Function'.
+bench/index.ts(54,34): error TS2339: Property 'expand' does not exist on type 'Function'.
+bench/index.ts(55,37): error TS2339: Property 'braceExpand' does not exist on type 'HTMLElement'.
+bench/index.ts(59,34): error TS2339: Property 'compile' does not exist on type 'Function'.
+bench/index.ts(60,37): error TS2339: Property 'makeRe' does not exist on type 'HTMLElement'.
+bench/index.ts(64,34): error TS2339: Property 'expand' does not exist on type 'Function'.
+bench/index.ts(65,37): error TS2339: Property 'braceExpand' does not exist on type 'HTMLElement'.
+bench/index.ts(69,34): error TS2339: Property 'compile' does not exist on type 'Function'.
+bench/index.ts(70,37): error TS2339: Property 'makeRe' does not exist on type 'HTMLElement'.
+bench/index.ts(74,34): error TS2339: Property 'expand' does not exist on type 'Function'.
+bench/index.ts(75,37): error TS2339: Property 'braceExpand' does not exist on type 'HTMLElement'.
+bench/index.ts(79,34): error TS2339: Property 'compile' does not exist on type 'Function'.
+bench/index.ts(80,37): error TS2339: Property 'makeRe' does not exist on type 'HTMLElement'.
+bench/index.ts(84,34): error TS2339: Property 'expand' does not exist on type 'Function'.
+bench/index.ts(85,37): error TS2339: Property 'braceExpand' does not exist on type 'HTMLElement'.
+bench/index.ts(89,34): error TS2339: Property 'compile' does not exist on type 'Function'.
+bench/index.ts(90,37): error TS2339: Property 'makeRe' does not exist on type 'HTMLElement'.
+examples/compile.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'compile'.
+examples/compile.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'parse'.
+examples/expand.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
+examples/expand.ts(2,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+examples/expand.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'parse'.
+examples/expand.ts(4,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+examples/expand.ts(7,13): error TS2339: Property 'execSync' does not exist on type 'String'.
+examples/option-transform.ts(3,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+examples/option-transform.ts(4,30): error TS2339: Property 'expand' does not exist on type 'Function'.
+examples/option-transform.ts(5,13): error TS7006: Parameter 'code' implicitly has an 'any' type.
+examples/option-transform.ts(5,19): error TS7006: Parameter 'index' implicitly has an 'any' type.
+examples/option-transform.ts(13,32): error TS2339: Property 'expand' does not exist on type 'Function'.
+examples/option-transform.ts(14,13): error TS7006: Parameter 'value' implicitly has an 'any' type.
+examples/option-transform.ts(14,20): error TS7006: Parameter 'index' implicitly has an 'any' type.
+index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'stringify'.
+index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'compile'.
+index.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'expand'.
+index.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'parse'.
+index.ts(22,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(23,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(27,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(27,34): error TS2339: Property 'create' does not exist on type 'Function'.
+index.ts(35,31): error TS2339: Property 'create' does not exist on type 'Function'.
+index.ts(38,26): error TS2339: Property 'expand' does not exist on type 'Object'.
+index.ts(38,53): error TS2339: Property 'nodupes' does not exist on type 'Object'.
+index.ts(39,18): error TS2802: Type 'Set<unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+index.ts(58,8): error TS2339: Property 'parse' does not exist on type 'Function'.
+index.ts(74,8): error TS2339: Property 'stringify' does not exist on type 'Function'.
+index.ts(74,41): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+index.ts(76,29): error TS2339: Property 'parse' does not exist on type 'Function'.
+index.ts(96,8): error TS2339: Property 'compile' does not exist on type 'Function'.
+index.ts(98,20): error TS2339: Property 'parse' does not exist on type 'Function'.
+index.ts(120,8): error TS2339: Property 'expand' does not exist on type 'Function'.
+index.ts(122,20): error TS2339: Property 'parse' does not exist on type 'Function'.
+index.ts(125,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(128,15): error TS2339: Property 'noempty' does not exist on type 'Object'.
+index.ts(133,15): error TS2339: Property 'nodupes' does not exist on type 'Object'.
+index.ts(134,18): error TS2802: Type 'Set<unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+index.ts(156,8): error TS2339: Property 'create' does not exist on type 'Function'.
+index.ts(156,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(161,17): error TS2339: Property 'expand' does not exist on type 'Object'.
+index.ts(162,14): error TS2339: Property 'compile' does not exist on type 'Function'.
+index.ts(163,14): error TS2339: Property 'expand' does not exist on type 'Function'.
+lib/compile.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'fill'.
+lib/compile.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'utils'.
+lib/compile.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'compile'.
+lib/compile.ts(6,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/compile.ts(7,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/compile.ts(8,38): error TS2339: Property 'isInvalidBrace' does not exist on type 'String'.
+lib/compile.ts(9,9): error TS2322: Type 'boolean' is not assignable to type 'Number'.
+lib/compile.ts(9,36): error TS2339: Property 'invalid' does not exist on type 'Object'.
+lib/compile.ts(9,64): error TS2339: Property 'escapeInvalid' does not exist on type 'Object'.
+lib/compile.ts(10,28): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
+lib/compile.ts(10,53): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
+lib/compile.ts(11,34): error TS2339: Property 'escapeInvalid' does not exist on type 'Object'.
+lib/compile.ts(14,14): error TS2339: Property 'isOpen' does not exist on type 'Object'.
+lib/compile.ts(15,28): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/compile.ts(17,14): error TS2339: Property 'isClose' does not exist on type 'Object'.
+lib/compile.ts(18,28): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/compile.ts(21,14): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/compile.ts(22,39): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/compile.ts(25,14): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/compile.ts(26,39): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/compile.ts(29,14): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/compile.ts(30,19): error TS2339: Property 'prev' does not exist on type 'Object'.
+lib/compile.ts(30,64): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/compile.ts(33,14): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/compile.ts(34,19): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/compile.ts(37,14): error TS2339: Property 'nodes' does not exist on type 'Object'.
+lib/compile.ts(37,28): error TS2339: Property 'ranges' does not exist on type 'Object'.
+lib/compile.ts(38,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/compile.ts(38,31): error TS2339: Property 'reduce' does not exist on type 'String'.
+lib/compile.ts(38,43): error TS2339: Property 'nodes' does not exist on type 'Object'.
+lib/compile.ts(46,14): error TS2339: Property 'nodes' does not exist on type 'Object'.
+lib/compile.ts(47,30): error TS2339: Property 'nodes' does not exist on type 'Object'.
+lib/expand.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'fill'.
+lib/expand.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'stringify'.
+lib/expand.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'utils'.
+lib/expand.ts(5,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/expand.ts(7,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/expand.ts(7,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/expand.ts(7,65): error TS2322: Type 'boolean' is not assignable to type 'Number'.
+lib/expand.ts(8,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/expand.ts(15,28): error TS2339: Property 'flatten' does not exist on type 'String'.
+lib/expand.ts(25,13): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
+lib/expand.ts(30,16): error TS2339: Property 'flatten' does not exist on type 'String'.
+lib/expand.ts(33,7): error TS2451: Cannot redeclare block-scoped variable 'expand'.
+lib/expand.ts(33,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/expand.ts(34,36): error TS2339: Property 'rangeLimit' does not exist on type 'Object'.
+lib/expand.ts(34,75): error TS2339: Property 'rangeLimit' does not exist on type 'Object'.
+lib/expand.ts(37,10): error TS2339: Property 'queue' does not exist on type 'Object'.
+lib/expand.ts(39,9): error TS2322: Type 'Object' is not assignable to type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/expand.ts(40,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/expand.ts(40,27): error TS2339: Property 'queue' does not exist on type 'Object'.
+lib/expand.ts(42,14): error TS2339: Property 'type' does not exist on type 'String'.
+lib/expand.ts(42,36): error TS2339: Property 'type' does not exist on type 'String'.
+lib/expand.ts(42,57): error TS2339: Property 'parent' does not exist on type 'String'.
+lib/expand.ts(43,13): error TS2339: Property 'parent' does not exist on type 'String'.
+lib/expand.ts(44,13): error TS2339: Property 'queue' does not exist on type 'String'.
+lib/expand.ts(47,14): error TS2339: Property 'invalid' does not exist on type 'Object'.
+lib/expand.ts(47,30): error TS2339: Property 'dollar' does not exist on type 'Object'.
+lib/expand.ts(52,14): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/expand.ts(52,39): error TS2339: Property 'invalid' does not exist on type 'Object'.
+lib/expand.ts(52,64): error TS2339: Property 'nodes' does not exist on type 'Object'.
+lib/expand.ts(57,14): error TS2339: Property 'nodes' does not exist on type 'Object'.
+lib/expand.ts(57,28): error TS2339: Property 'ranges' does not exist on type 'Object'.
+lib/expand.ts(58,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/expand.ts(58,31): error TS2339: Property 'reduce' does not exist on type 'String'.
+lib/expand.ts(58,43): error TS2339: Property 'nodes' does not exist on type 'Object'.
+lib/expand.ts(60,17): error TS2339: Property 'exceedsLimit' does not exist on type 'String'.
+lib/expand.ts(60,47): error TS2339: Property 'step' does not exist on type 'Object'.
+lib/expand.ts(64,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/expand.ts(70,12): error TS2339: Property 'nodes' does not exist on type 'Object'.
+lib/expand.ts(74,33): error TS2339: Property 'encloseBrace' does not exist on type 'String'.
+lib/expand.ts(75,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/expand.ts(75,29): error TS2339: Property 'queue' does not exist on type 'Object'.
+lib/expand.ts(76,9): error TS2322: Type 'Object' is not assignable to type 'HTMLElement'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/expand.ts(78,18): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
+lib/expand.ts(78,44): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
+lib/expand.ts(78,69): error TS2551: Property 'parent' does not exist on type 'HTMLElement'. Did you mean 'part'?
+lib/expand.ts(79,21): error TS2551: Property 'parent' does not exist on type 'HTMLElement'. Did you mean 'part'?
+lib/expand.ts(80,21): error TS2339: Property 'queue' does not exist on type 'HTMLElement'.
+lib/expand.ts(83,30): error TS2339: Property 'nodes' does not exist on type 'Object'.
+lib/expand.ts(84,32): error TS2339: Property 'nodes' does not exist on type 'Object'.
+lib/expand.ts(86,17): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/expand.ts(86,42): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/expand.ts(92,17): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/expand.ts(97,17): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/expand.ts(97,32): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/expand.ts(98,46): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/expand.ts(102,17): error TS2339: Property 'nodes' does not exist on type 'Object'.
+lib/expand.ts(110,16): error TS2339: Property 'flatten' does not exist on type 'String'.
+lib/parse.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'stringify'.
+lib/parse.ts(31,7): error TS2451: Cannot redeclare block-scoped variable 'parse'.
+lib/parse.ts(31,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/parse.ts(36,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+lib/parse.ts(37,33): error TS2339: Property 'maxLength' does not exist on type 'HTMLElement'.
+lib/parse.ts(37,84): error TS2339: Property 'maxLength' does not exist on type 'HTMLElement'.
+lib/parse.ts(43,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/parse.ts(44,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/parse.ts(51,7): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/parse.ts(57,41): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/parse.ts(59,14): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/parse.ts(59,38): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/parse.ts(60,12): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/parse.ts(63,22): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/parse.ts(63,46): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/parse.ts(64,12): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/parse.ts(64,26): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/parse.ts(68,11): error TS2339: Property 'nodes' does not exist on type 'String'.
+lib/parse.ts(69,10): error TS2339: Property 'parent' does not exist on type 'Object'.
+lib/parse.ts(70,10): error TS2339: Property 'prev' does not exist on type 'Object'.
+lib/parse.ts(94,44): error TS2339: Property 'keepEscaping' does not exist on type 'Object'.
+lib/parse.ts(112,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/parse.ts(118,9): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
+lib/parse.ts(121,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/parse.ts(131,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/parse.ts(155,17): error TS2339: Property 'type' does not exist on type 'String'.
+lib/parse.ts(170,11): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+lib/parse.ts(173,19): error TS2339: Property 'keepQuotes' does not exist on type 'Object'.
+lib/parse.ts(184,23): error TS2339: Property 'keepQuotes' does not exist on type 'Object'.
+lib/parse.ts(184,44): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
+lib/parse.ts(188,9): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
+lib/parse.ts(200,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/parse.ts(202,33): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/parse.ts(202,47): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/parse.ts(202,80): error TS2339: Property 'dollar' does not exist on type 'String'.
+lib/parse.ts(225,17): error TS2339: Property 'type' does not exist on type 'String'.
+lib/parse.ts(232,13): error TS2339: Property 'close' does not exist on type 'String'.
+lib/parse.ts(235,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/parse.ts(246,17): error TS2339: Property 'ranges' does not exist on type 'String'.
+lib/parse.ts(247,15): error TS2339: Property 'ranges' does not exist on type 'String'.
+lib/parse.ts(248,34): error TS2339: Property 'nodes' does not exist on type 'String'.
+lib/parse.ts(249,15): error TS2339: Property 'nodes' does not exist on type 'String'.
+lib/parse.ts(253,13): error TS2339: Property 'commas' does not exist on type 'String'.
+lib/parse.ts(261,50): error TS2339: Property 'commas' does not exist on type 'String'.
+lib/parse.ts(262,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/parse.ts(262,35): error TS2339: Property 'nodes' does not exist on type 'String'.
+lib/parse.ts(269,16): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/parse.ts(270,15): error TS2339: Property 'range' does not exist on type 'String'.
+lib/parse.ts(271,14): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/parse.ts(272,14): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/parse.ts(274,19): error TS2339: Property 'nodes' does not exist on type 'String'.
+lib/parse.ts(274,47): error TS2339: Property 'nodes' does not exist on type 'String'.
+lib/parse.ts(275,17): error TS2339: Property 'invalid' does not exist on type 'String'.
+lib/parse.ts(276,17): error TS2339: Property 'ranges' does not exist on type 'String'.
+lib/parse.ts(277,16): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/parse.ts(281,15): error TS2339: Property 'ranges' does not exist on type 'String'.
+lib/parse.ts(282,15): error TS2339: Property 'args' does not exist on type 'String'.
+lib/parse.ts(286,16): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/parse.ts(290,16): error TS2339: Property 'value' does not exist on type 'String'.
+lib/parse.ts(290,30): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/parse.ts(292,15): error TS2339: Property 'ranges' does not exist on type 'String'.
+lib/parse.ts(311,15): error TS2339: Property 'type' does not exist on type 'String'.
+lib/parse.ts(312,13): error TS2339: Property 'nodes' does not exist on type 'String'.
+lib/parse.ts(313,19): error TS2339: Property 'nodes' does not exist on type 'Object'.
+lib/parse.ts(314,20): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/parse.ts(314,42): error TS2339: Property 'isOpen' does not exist on type 'Object'.
+lib/parse.ts(315,20): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/parse.ts(315,43): error TS2339: Property 'isClose' does not exist on type 'Object'.
+lib/parse.ts(316,21): error TS2339: Property 'nodes' does not exist on type 'Object'.
+lib/parse.ts(316,33): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/parse.ts(317,16): error TS2339: Property 'invalid' does not exist on type 'Object'.
+lib/parse.ts(323,34): error TS2339: Property 'nodes' does not exist on type 'Object'.
+lib/parse.ts(325,14): error TS2339: Property 'nodes' does not exist on type 'Object'.
+lib/parse.ts(325,46): error TS2339: Property 'nodes' does not exist on type 'String'.
+lib/stringify.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'utils'.
+lib/stringify.ts(6,52): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/stringify.ts(7,41): error TS2339: Property 'escapeInvalid' does not exist on type 'Object'.
+lib/stringify.ts(7,64): error TS2339: Property 'isInvalidBrace' does not exist on type 'String'.
+lib/stringify.ts(8,37): error TS2339: Property 'invalid' does not exist on type 'Object'.
+lib/stringify.ts(8,65): error TS2339: Property 'escapeInvalid' does not exist on type 'Object'.
+lib/stringify.ts(11,14): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/stringify.ts(12,50): error TS2339: Property 'isOpenOrClose' does not exist on type 'String'.
+lib/stringify.ts(13,28): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/stringify.ts(15,19): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/stringify.ts(18,14): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/stringify.ts(19,19): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/stringify.ts(22,14): error TS2339: Property 'nodes' does not exist on type 'Object'.
+lib/stringify.ts(23,30): error TS2339: Property 'nodes' does not exist on type 'Object'.
+lib/utils.ts(17,53): error TS2339: Property 'nodes' does not exist on type 'Object'.
+lib/utils.ts(17,87): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/utils.ts(24,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
+lib/utils.ts(34,28): error TS2339: Property 'nodes' does not exist on type 'Object'.
+lib/utils.ts(37,21): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/utils.ts(37,44): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/utils.ts(37,68): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/utils.ts(38,14): error TS2339: Property 'escaped' does not exist on type 'Object'.
+lib/utils.ts(39,12): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/utils.ts(39,32): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/utils.ts(40,12): error TS2339: Property 'escaped' does not exist on type 'Object'.
+lib/utils.ts(50,12): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/utils.ts(51,13): error TS2339: Property 'commas' does not exist on type 'Object'.
+lib/utils.ts(51,32): error TS2339: Property 'ranges' does not exist on type 'Object'.
+lib/utils.ts(52,10): error TS2339: Property 'invalid' does not exist on type 'Object'.
+lib/utils.ts(63,13): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/utils.ts(64,13): error TS2339: Property 'invalid' does not exist on type 'Object'.
+lib/utils.ts(64,39): error TS2339: Property 'dollar' does not exist on type 'Object'.
+lib/utils.ts(65,14): error TS2339: Property 'commas' does not exist on type 'Object'.
+lib/utils.ts(65,34): error TS2339: Property 'ranges' does not exist on type 'Object'.
+lib/utils.ts(66,11): error TS2339: Property 'invalid' does not exist on type 'Object'.
+lib/utils.ts(69,13): error TS2339: Property 'open' does not exist on type 'Object'.
+lib/utils.ts(69,36): error TS2339: Property 'close' does not exist on type 'Object'.
+lib/utils.ts(70,11): error TS2339: Property 'invalid' does not exist on type 'Object'.
+lib/utils.ts(81,12): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/utils.ts(81,36): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/utils.ts(84,15): error TS2339: Property 'open' does not exist on type 'Object'.
+lib/utils.ts(84,37): error TS2339: Property 'close' does not exist on type 'Object'.
+lib/utils.ts(91,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/utils.ts(91,55): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/utils.ts(92,12): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/utils.ts(92,43): error TS2339: Property 'value' does not exist on type 'Object'.
+lib/utils.ts(93,12): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/utils.ts(93,35): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/utils.ts(101,20): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
+lib/utils.ts(102,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/utils.ts(103,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+

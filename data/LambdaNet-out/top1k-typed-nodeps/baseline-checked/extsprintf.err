@@ -1,0 +1,79 @@
+examples/simple.ts(2,28): error TS2339: Property 'sprintf' does not exist on type 'String'.
+examples/simple.ts(4,16): error TS2339: Property 'printf' does not exist on type 'String'.
+examples/simple.ts(5,16): error TS2339: Property 'fprintf' does not exist on type 'String'.
+lib/extsprintf.ts(6,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/extsprintf.ts(45,6): error TS2740: Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+lib/extsprintf.ts(45,35): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(pattern: string | RegExp, flags?: string | undefined): RegExp', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
+  Overload 2 of 3, '(pattern: string | RegExp): RegExp', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
+  Overload 3 of 3, '(pattern: string, flags?: string | undefined): RegExp', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/extsprintf.ts(48,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/extsprintf.ts(53,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/extsprintf.ts(68,13): error TS2339: Property 'equal' does not exist on type 'String'.
+lib/extsprintf.ts(71,21): error TS2339: Property 'exec' does not exist on type 'HTMLElement'.
+lib/extsprintf.ts(72,10): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+lib/extsprintf.ts(73,23): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+lib/extsprintf.ts(79,13): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+lib/extsprintf.ts(79,32): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+lib/extsprintf.ts(80,21): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
+  Property '1' does not exist on type 'Object'.
+lib/extsprintf.ts(81,11): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
+lib/extsprintf.ts(83,11): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
+  Property '2' does not exist on type 'Object'.
+lib/extsprintf.ts(84,11): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
+  Property '3' does not exist on type 'Object'.
+lib/extsprintf.ts(85,15): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
+  Property '4' does not exist on type 'Object'.
+lib/extsprintf.ts(86,16): error TS7053: Element implicitly has an 'any' type because expression of type '6' can't be used to index type 'Object'.
+  Property '6' does not exist on type 'Object'.
+lib/extsprintf.ts(103,3): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/extsprintf.ts(105,13): error TS2339: Property 'match' does not exist on type 'Element'.
+lib/extsprintf.ts(115,13): error TS2339: Property 'match' does not exist on type 'Element'.
+lib/extsprintf.ts(118,13): error TS2339: Property 'match' does not exist on type 'Element'.
+lib/extsprintf.ts(121,13): error TS2339: Property 'match' does not exist on type 'Element'.
+lib/extsprintf.ts(132,4): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/extsprintf.ts(136,21): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/extsprintf.ts(139,4): error TS2322: Type 'string' is not assignable to type 'Boolean'.
+  Type 'string' is not assignable to type 'Boolean'.
+lib/extsprintf.ts(140,11): error TS2365: Operator '+' cannot be applied to types 'Boolean' and 'String'.
+lib/extsprintf.ts(145,4): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/extsprintf.ts(155,4): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/extsprintf.ts(164,2): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/extsprintf.ts(169,13): error TS2339: Property 'equal' does not exist on type 'String'.
+lib/extsprintf.ts(170,13): error TS2339: Property 'equal' does not exist on type 'String'.
+lib/extsprintf.ts(171,13): error TS2339: Property 'equal' does not exist on type 'String'.
+lib/extsprintf.ts(172,13): error TS2339: Property 'equal' does not exist on type 'String'.
+lib/extsprintf.ts(178,22): error TS2304: Cannot find name 'Void'.
+lib/extsprintf.ts(179,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/extsprintf.ts(185,6): error TS2740: Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+lib/extsprintf.ts(186,17): error TS2339: Property 'write' does not exist on type 'String'.
+lib/extsprintf.ts(186,39): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/extsprintf.ts(186,45): error TS2345: Argument of type 'String' is not assignable to parameter of type '[ofmt: String]'.
+lib/extsprintf.ts(195,4): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/extsprintf.ts(197,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
+lib/extsprintf.ts(212,20): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/extsprintf.ts(212,58): error TS2554: Expected 1 arguments, but got 2.
+lib/extsprintf.ts(215,2): error TS2322: Type 'string' is not assignable to type 'Number'.
+lib/extsprintf.ts(217,9): error TS2550: Property 'cause' does not exist on type 'Error'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2022' or later.
+lib/extsprintf.ts(217,29): error TS2550: Property 'cause' does not exist on type 'Error'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2022' or later.
+lib/extsprintf.ts(218,24): error TS2550: Property 'cause' does not exist on type 'Error'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2022' or later.
+lib/extsprintf.ts(220,4): error TS2322: Type 'string' is not assignable to type 'Number'.
+lib/extsprintf.ts(224,2): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+
