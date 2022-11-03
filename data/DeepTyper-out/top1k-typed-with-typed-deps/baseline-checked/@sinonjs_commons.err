@@ -45,7 +45,7 @@ lib/deprecated.test.ts(44,13): error TS2582: Cannot find name 'describe'. Do you
 lib/deprecated.test.ts(45,17): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
 lib/deprecated.test.ts(51,13): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
 lib/deprecated.test.ts(52,17): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-lib/deprecated.test.ts(53,21): error TS2322: Type 'undefined' is not assignable to type '(message?: any, ...optionalParams: any[]) => void'.
+lib/deprecated.test.ts(53,21): error TS2322: Type 'undefined' is not assignable to type '{ (...data: any[]): void; (message?: any, ...optionalParams: any[]): void; }'.
 lib/deprecated.test.ts(61,5): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
 lib/deprecated.test.ts(65,9): error TS2304: Cannot find name 'beforeEach'.
 lib/deprecated.test.ts(69,9): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
@@ -92,9 +92,6 @@ lib/global.test.ts(6,1): error TS2582: Cannot find name 'describe'. Do you need 
 lib/global.test.ts(7,5): error TS2304: Cannot find name 'before'.
 lib/global.test.ts(9,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/global.test.ts(13,5): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-lib/global.ts(14,19): error TS2304: Cannot find name 'window'.
-lib/global.ts(16,20): error TS2304: Cannot find name 'window'.
-lib/global.ts(19,20): error TS2304: Cannot find name 'self'.
 lib/index.test.ts(17,1): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
 lib/index.test.ts(19,9): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
 lib/index.test.ts(25,9): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.

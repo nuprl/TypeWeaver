@@ -12,5 +12,8 @@ src/index.ts(83,23): error TS7006: Parameter 'exports' implicitly has an 'any' t
 src/index.ts(116,15): error TS2454: Variable 'isAsync' is used before being assigned.
 src/index.ts(117,98): error TS2454: Variable 'isAsync' is used before being assigned.
 src/index.ts(167,17): error TS7006: Parameter 'node' implicitly has an 'any' type.
-src/index.ts(207,21): error TS2304: Cannot find name 'Node'.
+src/index.ts(217,14): error TS2339: Property 'key' does not exist on type 'Node'.
+src/index.ts(222,32): error TS2339: Property 'key' does not exist on type 'Node'.
+src/index.ts(225,28): error TS2339: Property 'key' does not exist on type 'Node'.
+src/index.ts(234,14): error TS2339: Property 'value' does not exist on type 'Node'.
 

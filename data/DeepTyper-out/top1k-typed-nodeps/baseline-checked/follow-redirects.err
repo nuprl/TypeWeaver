@@ -1,4 +1,5 @@
 debug.ts(1,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'debug' must be of type 'any', but here has type 'void'.
+index.ts(2,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL | undefined): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'any'.
 index.ts(21,3): error TS2345: Argument of type 'TypeErrorConstructor' is not assignable to parameter of type 'string'.
 index.ts(24,29): error TS2554: Expected 3 arguments, but got 2.
 index.ts(28,34): error TS2554: Expected 3 arguments, but got 2.
@@ -38,5 +39,4 @@ index.ts(587,31): error TS2351: This expression is not constructable.
   Not all constituents of type 'string | ErrorConstructor' are constructable.
     Type 'string' has no construct signatures.
 index.ts(590,10): error TS2322: Type '{ (properties: any): void; prototype: any; }' is not assignable to type 'void'.
-../../../../node_modules/@types/node/ts4.8/url.d.ts(876,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type 'any', but here has type 'typeof URL'.
 

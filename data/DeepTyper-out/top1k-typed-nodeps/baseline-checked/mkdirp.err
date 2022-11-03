@@ -1,4 +1,7 @@
+bin/cmd.ts(27,5): error TS2451: Cannot redeclare block-scoped variable 'print'.
+bin/cmd.ts(44,5): error TS2630: Cannot assign to 'print' because it is a function.
 bin/cmd.ts(51,10): error TS2339: Property 'mode' does not exist on type '{}'.
+bin/cmd.ts(62,24): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
 index.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'optsArg'.
 index.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'pathArg'.
 index.ts(4,8): error TS2451: Cannot redeclare block-scoped variable 'mkdirpNative'.
@@ -38,4 +41,5 @@ lib/use-native.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'us
 lib/use-native.ts(7,28): error TS2322: Type '(opts: any) => boolean' is not assignable to type 'boolean'.
 lib/use-native.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'useNativeSync'.
 lib/use-native.ts(8,32): error TS2322: Type '(opts: any) => boolean' is not assignable to type 'boolean'.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17768,18): error TS2451: Cannot redeclare block-scoped variable 'print'.
 

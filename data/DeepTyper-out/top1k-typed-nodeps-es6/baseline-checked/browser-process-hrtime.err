@@ -1,4 +1,8 @@
-index.ts(4,18): error TS2304: Cannot find name 'Performance'.
+index.ts(6,3): error TS2322: Type '() => number' is not assignable to type 'number'.
+index.ts(7,15): error TS2339: Property 'mozNow' does not exist on type 'Performance'.
+index.ts(8,15): error TS2339: Property 'msNow' does not exist on type 'Performance'.
+index.ts(9,15): error TS2551: Property 'oNow' does not exist on type 'Performance'. Did you mean 'now'?
+index.ts(10,15): error TS2339: Property 'webkitNow' does not exist on type 'Performance'.
 index.ts(16,42): error TS2339: Property 'call' does not exist on type 'number'.
 index.ts(20,25): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
   Property '0' does not exist on type 'Number'.

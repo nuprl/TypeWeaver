@@ -1,6 +1,5 @@
 index.ts(3,5): error TS2322: Type '(fn: any) => any' is not assignable to type 'void'.
 index.ts(8,5): error TS2322: Type '(Observer: any) => (fn: any) => void' is not assignable to type 'void'.
-index.ts(9,18): error TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
 index.ts(9,47): error TS7034: Variable 'queue' implicitly has type 'any' in some locations where its type cannot be determined.
 index.ts(9,54): error TS7034: Variable 'currentQueue' implicitly has type 'any' in some locations where its type cannot be determined.
 index.ts(12,8): error TS7005: Variable 'queue' implicitly has an 'any' type.
@@ -17,12 +16,8 @@ index.ts(38,15): error TS7005: Variable 'queue' implicitly has an 'any' type.
 index.ts(38,46): error TS7005: Variable 'queue' implicitly has an 'any' type.
 index.ts(55,46): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-index.ts(59,14): error TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
-index.ts(59,40): error TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
-index.ts(60,14): error TS2304: Cannot find name 'MutationObserver'.
 index.ts(60,54): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-index.ts(60,65): error TS2304: Cannot find name 'MutationObserver'.
 index.ts(61,14): error TS2304: Cannot find name 'WebKitMutationObserver'.
 index.ts(61,60): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.

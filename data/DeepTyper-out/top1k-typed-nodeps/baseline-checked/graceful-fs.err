@@ -39,7 +39,11 @@ graceful-fs.ts(328,15): error TS2526: A 'this' type is available only in a non-s
 graceful-fs.ts(328,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 graceful-fs.ts(354,12): error TS2554: Expected 5 arguments, but got 4.
 graceful-fs.ts(362,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-graceful-fs.ts(399,16): error TS2345: Argument of type 'void' is not assignable to parameter of type 'string | number | Timeout | undefined'.
+graceful-fs.ts(399,16): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(timeoutId: string | number | Timeout | undefined): void', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type 'string | number | Timeout | undefined'.
+  Overload 2 of 2, '(id?: number | undefined): void', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type 'number | undefined'.
 graceful-fs.ts(446,5): error TS2322: Type 'Timeout' is not assignable to type 'void'.
 legacy-streams.ts(5,10): error TS2300: Duplicate identifier 'legacy'.
 legacy-streams.ts(12,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.

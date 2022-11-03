@@ -6,6 +6,7 @@ scripts/build.ts(61,10): error TS2393: Duplicate function implementation.
 scripts/build.ts(74,10): error TS2393: Duplicate function implementation.
 scripts/build.ts(94,9): error TS2339: Property 'source' does not exist on type '{}'.
 scripts/fetch-apache.ts(28,5): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+scripts/fetch-apache.ts(33,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL | undefined): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
 scripts/fetch-apache.ts(41,20): error TS2339: Property 'index' does not exist on type 'string'.
 scripts/fetch-apache.ts(43,36): error TS2339: Property 'exec' does not exist on type 'string'.
 scripts/fetch-apache.ts(54,21): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
@@ -65,6 +66,7 @@ scripts/fetch-iana.ts(375,11): error TS2339: Property 'config' does not exist on
 scripts/fetch-iana.ts(383,3): error TS2322: Type 'string | boolean' is not assignable to type 'string'.
   Type 'boolean' is not assignable to type 'string'.
 scripts/fetch-nginx.ts(23,5): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+scripts/fetch-nginx.ts(31,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL | undefined): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
 scripts/fetch-nginx.ts(39,20): error TS2339: Property 'index' does not exist on type 'string'.
 scripts/fetch-nginx.ts(41,36): error TS2339: Property 'exec' does not exist on type 'string'.
 scripts/fetch-nginx.ts(48,21): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
@@ -90,5 +92,4 @@ scripts/version-history.ts(13,23): error TS2339: Property 'test' does not exist 
 scripts/version-history.ts(55,19): error TS7006: Parameter 'number' implicitly has an 'any' type.
 scripts/version-history.ts(58,14): error TS2339: Property 'length' does not exist on type 'number'.
 scripts/version-history.ts(59,5): error TS2322: Type 'string' is not assignable to type 'number'.
-../../../../node_modules/@types/node/ts4.8/url.d.ts(876,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type 'string', but here has type 'typeof URL'.
 

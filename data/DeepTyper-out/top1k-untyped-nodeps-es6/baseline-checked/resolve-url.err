@@ -2,16 +2,12 @@ resolve-url.ts(5,14): error TS2304: Cannot find name 'define'.
 resolve-url.ts(5,39): error TS2304: Cannot find name 'define'.
 resolve-url.ts(6,5): error TS2304: Cannot find name 'define'.
 resolve-url.ts(8,5): error TS1258: A default export must be at the top level of a file or module declaration.
-resolve-url.ts(21,32): error TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
-resolve-url.ts(22,10): error TS2812: Property 'href' does not exist on type 'HTMLDivElement'. Try changing the 'lib' compiler option to include 'dom'.
-resolve-url.ts(25,19): error TS2812: Property 'href' does not exist on type 'HTMLDivElement'. Try changing the 'lib' compiler option to include 'dom'.
-resolve-url.ts(28,33): error TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
-resolve-url.ts(29,10): error TS2812: Property 'insertBefore' does not exist on type 'HTMLHeadElement'. Try changing the 'lib' compiler option to include 'dom'.
-resolve-url.ts(29,34): error TS2812: Property 'firstChild' does not exist on type 'HTMLHeadElement'. Try changing the 'lib' compiler option to include 'dom'.
-resolve-url.ts(31,29): error TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
-resolve-url.ts(35,9): error TS2812: Property 'href' does not exist on type 'HTMLDivElement'. Try changing the 'lib' compiler option to include 'dom'.
-resolve-url.ts(36,20): error TS2812: Property 'href' does not exist on type 'HTMLDivElement'. Try changing the 'lib' compiler option to include 'dom'.
-resolve-url.ts(37,12): error TS2812: Property 'href' does not exist on type 'HTMLDivElement'. Try changing the 'lib' compiler option to include 'dom'.
-resolve-url.ts(40,10): error TS2812: Property 'removeChild' does not exist on type 'HTMLHeadElement'. Try changing the 'lib' compiler option to include 'dom'.
+resolve-url.ts(21,9): error TS2741: Property 'align' is missing in type 'HTMLBaseElement' but required in type 'HTMLDivElement'.
+resolve-url.ts(22,10): error TS2339: Property 'href' does not exist on type 'HTMLDivElement'.
+resolve-url.ts(25,19): error TS2339: Property 'href' does not exist on type 'HTMLDivElement'.
+resolve-url.ts(31,9): error TS2741: Property 'align' is missing in type 'HTMLAnchorElement' but required in type 'HTMLDivElement'.
+resolve-url.ts(35,9): error TS2339: Property 'href' does not exist on type 'HTMLDivElement'.
+resolve-url.ts(36,20): error TS2339: Property 'href' does not exist on type 'HTMLDivElement'.
+resolve-url.ts(37,12): error TS2339: Property 'href' does not exist on type 'HTMLDivElement'.
 resolve-url.ts(42,12): error TS2454: Variable 'resolved' is used before being assigned.
 

@@ -1,4 +1,6 @@
+index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
 index.ts(4,9): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'.
+index.ts(34,40): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
 lib/ec.ts(9,9): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'.
 lib/ec.ts(13,13): error TS7006: Parameter 'bytes' implicitly has an 'any' type.
 lib/ec.ts(27,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
@@ -179,4 +181,6 @@ lib/sec.ts(138,20): error TS7009: 'new' expression, whose target lacks a constru
 lib/sec.ts(144,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 lib/sec.ts(163,20): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 lib/sec.ts(169,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18084,13): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18107,6): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'.
 

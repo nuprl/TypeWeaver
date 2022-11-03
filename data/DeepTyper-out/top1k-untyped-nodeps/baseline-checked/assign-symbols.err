@@ -2,10 +2,11 @@ example.ts(9,3): error TS7053: Element implicitly has an 'any' type because expr
 example.ts(13,3): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type '{}'.
 example.ts(16,15): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type '{}'.
 example.ts(17,15): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type '{}'.
+index.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'toString'.
 index.ts(10,26): error TS2322: Type '() => string' is not assignable to type 'string'.
 index.ts(11,7): error TS2322: Type '(v: PropertyKey) => boolean' is not assignable to type 'string'.
 index.ts(14,19): error TS7006: Parameter 'target' implicitly has an 'any' type.
 index.ts(14,27): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 index.ts(27,24): error TS2339: Property 'call' does not exist on type 'string'.
-index.ts(36,48): error TS2339: Property 'call' does not exist on type 'string'.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17783,18): error TS2451: Cannot redeclare block-scoped variable 'toString'.
 

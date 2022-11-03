@@ -9,9 +9,8 @@ dist/sprintf.min.ts(2,747): error TS2554: Expected 1 arguments, but got 3.
 dist/sprintf.min.ts(2,1035): error TS2554: Expected 1 arguments, but got 2.
 dist/sprintf.min.ts(2,3316): error TS2345: Argument of type 'any[]' is not assignable to parameter of type '[e: any]'.
   Target requires 1 element(s) but source may have fewer.
-dist/sprintf.min.ts(2,3454): error TS2304: Cannot find name 'window'.
-dist/sprintf.min.ts(2,3463): error TS2304: Cannot find name 'window'.
-dist/sprintf.min.ts(2,3480): error TS2304: Cannot find name 'window'.
+dist/sprintf.min.ts(2,3470): error TS2551: Property 'sprintf' does not exist on type 'Window & typeof globalThis'. Did you mean 'print'?
+dist/sprintf.min.ts(2,3487): error TS2339: Property 'vsprintf' does not exist on type 'Window & typeof globalThis'.
 dist/sprintf.min.ts(2,3517): error TS2304: Cannot find name 'define'.
 dist/sprintf.min.ts(2,3525): error TS2304: Cannot find name 'define'.
 dist/sprintf.min.ts(2,3537): error TS2304: Cannot find name 'define'.
@@ -26,7 +25,7 @@ gulpfile.ts(10,19): error TS2307: Cannot find module 'gulp-mocha' or its corresp
 gulpfile.ts(11,23): error TS2307: Cannot find module 'gulp-benchmark' or its corresponding type declarations.
 src/angular-sprintf.ts(3,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 src/angular-sprintf.ts(6,5): error TS2304: Cannot find name 'angular'.
-src/angular-sprintf.ts(10,24): error TS2304: Cannot find name 'sprintf'.
+src/angular-sprintf.ts(10,24): error TS2552: Cannot find name 'sprintf'. Did you mean 'print'?
 src/angular-sprintf.ts(13,44): error TS7006: Parameter '$filter' implicitly has an 'any' type.
 src/angular-sprintf.ts(18,24): error TS2304: Cannot find name 'vsprintf'.
 src/angular-sprintf.ts(21,45): error TS7006: Parameter '$filter' implicitly has an 'any' type.
@@ -36,9 +35,8 @@ src/sprintf.ts(30,36): error TS2345: Argument of type 'string[]' is not assignab
 src/sprintf.ts(45,118): error TS2554: Expected 1 arguments, but got 3.
 src/sprintf.ts(62,92): error TS2554: Expected 1 arguments, but got 2.
 src/sprintf.ts(206,9): error TS2322: Type 'any[]' is not assignable to type 'string'.
-src/sprintf.ts(217,16): error TS2304: Cannot find name 'window'.
-src/sprintf.ts(218,9): error TS2304: Cannot find name 'window'.
-src/sprintf.ts(219,9): error TS2304: Cannot find name 'window'.
+src/sprintf.ts(218,16): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
+src/sprintf.ts(219,16): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
 src/sprintf.ts(221,20): error TS2304: Cannot find name 'define'.
 src/sprintf.ts(221,45): error TS2304: Cannot find name 'define'.
 src/sprintf.ts(222,13): error TS2304: Cannot find name 'define'.

@@ -12,13 +12,10 @@ lib/SymbolTree.ts(115,25): error TS7006: Parameter 'object' implicitly has an 'a
 lib/SymbolTree.ts(129,21): error TS7006: Parameter 'object' implicitly has an 'any' type.
 lib/SymbolTree.ts(143,16): error TS7006: Parameter 'object' implicitly has an 'any' type.
 lib/SymbolTree.ts(157,33): error TS7006: Parameter 'object' implicitly has an 'any' type.
-lib/SymbolTree.ts(158,32): error TS2304: Cannot find name 'Node'.
 lib/SymbolTree.ts(185,19): error TS7006: Parameter 'object' implicitly has an 'any' type.
 lib/SymbolTree.ts(185,27): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/SymbolTree.ts(192,40): error TS2304: Cannot find name 'Node'.
 lib/SymbolTree.ts(220,19): error TS7006: Parameter 'object' implicitly has an 'any' type.
 lib/SymbolTree.ts(220,27): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/SymbolTree.ts(237,44): error TS2304: Cannot find name 'Node'.
 lib/SymbolTree.ts(265,25): error TS7006: Parameter 'parent' implicitly has an 'any' type.
 lib/SymbolTree.ts(265,33): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/SymbolTree.ts(305,26): error TS7006: Parameter 'object' implicitly has an 'any' type.
@@ -27,7 +24,6 @@ lib/SymbolTree.ts(338,21): error TS7006: Parameter 'root' implicitly has an 'any
 lib/SymbolTree.ts(338,27): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/SymbolTree.ts(367,26): error TS7006: Parameter 'parent' implicitly has an 'any' type.
 lib/SymbolTree.ts(367,34): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/SymbolTree.ts(369,35): error TS2304: Cannot find name 'Node'.
 lib/SymbolTree.ts(375,48): error TS2339: Property 'PREV' does not exist on type 'typeof TreeIterator'.
 lib/SymbolTree.ts(375,68): error TS2339: Property 'NEXT' does not exist on type 'typeof TreeIterator'.
 lib/SymbolTree.ts(389,34): error TS7006: Parameter 'object' implicitly has an 'any' type.
@@ -41,23 +37,29 @@ lib/SymbolTree.ts(451,28): error TS7006: Parameter 'options' implicitly has an '
 lib/SymbolTree.ts(458,48): error TS2339: Property 'PRECEDING' does not exist on type 'typeof TreeIterator'.
 lib/SymbolTree.ts(458,73): error TS2339: Property 'FOLLOWING' does not exist on type 'typeof TreeIterator'.
 lib/SymbolTree.ts(473,15): error TS7006: Parameter 'child' implicitly has an 'any' type.
-lib/SymbolTree.ts(474,34): error TS2304: Cannot find name 'Node'.
-lib/SymbolTree.ts(475,35): error TS2304: Cannot find name 'Node'.
-lib/SymbolTree.ts(500,37): error TS2304: Cannot find name 'Node'.
+lib/SymbolTree.ts(475,63): error TS2339: Property 'parent' does not exist on type 'Node'.
+lib/SymbolTree.ts(484,54): error TS2339: Property 'getCachedIndex' does not exist on type 'Node'.
+lib/SymbolTree.ts(493,32): error TS2339: Property 'childIndexCachedUpTo' does not exist on type 'Node'.
+lib/SymbolTree.ts(494,75): error TS2339: Property 'childIndexCachedUpTo' does not exist on type 'Node'.
+lib/SymbolTree.ts(501,30): error TS2339: Property 'setCachedIndex' does not exist on type 'Node'.
+lib/SymbolTree.ts(511,28): error TS2339: Property 'childIndexCachedUpTo' does not exist on type 'Node'.
 lib/SymbolTree.ts(527,23): error TS7006: Parameter 'parent' implicitly has an 'any' type.
-lib/SymbolTree.ts(528,35): error TS2304: Cannot find name 'Node'.
 lib/SymbolTree.ts(563,29): error TS7006: Parameter 'left' implicitly has an 'any' type.
 lib/SymbolTree.ts(563,35): error TS7006: Parameter 'right' implicitly has an 'any' type.
 lib/SymbolTree.ts(645,16): error TS7006: Parameter 'removeObject' implicitly has an 'any' type.
-lib/SymbolTree.ts(647,35): error TS2304: Cannot find name 'Node'.
-lib/SymbolTree.ts(649,33): error TS2304: Cannot find name 'Node'.
+lib/SymbolTree.ts(653,44): error TS2540: Cannot assign to 'firstChild' because it is a read-only property.
+lib/SymbolTree.ts(657,44): error TS2540: Cannot assign to 'lastChild' because it is a read-only property.
+lib/SymbolTree.ts(666,34): error TS2540: Cannot assign to 'previousSibling' because it is a read-only property.
+lib/SymbolTree.ts(676,36): error TS2339: Property 'childrenChanged' does not exist on type 'Node'.
 lib/SymbolTree.ts(695,22): error TS7006: Parameter 'referenceObject' implicitly has an 'any' type.
 lib/SymbolTree.ts(695,39): error TS7006: Parameter 'newObject' implicitly has an 'any' type.
-lib/SymbolTree.ts(699,35): error TS2304: Cannot find name 'Node'.
+lib/SymbolTree.ts(715,36): error TS2540: Cannot assign to 'firstChild' because it is a read-only property.
+lib/SymbolTree.ts(719,36): error TS2339: Property 'childrenChanged' does not exist on type 'Node'.
 lib/SymbolTree.ts(738,21): error TS7006: Parameter 'referenceObject' implicitly has an 'any' type.
 lib/SymbolTree.ts(738,38): error TS7006: Parameter 'newObject' implicitly has an 'any' type.
-lib/SymbolTree.ts(740,33): error TS2304: Cannot find name 'Node'.
-lib/SymbolTree.ts(742,35): error TS2304: Cannot find name 'Node'.
+lib/SymbolTree.ts(754,34): error TS2540: Cannot assign to 'previousSibling' because it is a read-only property.
+lib/SymbolTree.ts(758,36): error TS2540: Cannot assign to 'lastChild' because it is a read-only property.
+lib/SymbolTree.ts(762,36): error TS2339: Property 'childrenChanged' does not exist on type 'Node'.
 lib/SymbolTree.ts(781,22): error TS7006: Parameter 'referenceObject' implicitly has an 'any' type.
 lib/SymbolTree.ts(781,39): error TS7006: Parameter 'newObject' implicitly has an 'any' type.
 lib/SymbolTree.ts(815,21): error TS7006: Parameter 'referenceObject' implicitly has an 'any' type.

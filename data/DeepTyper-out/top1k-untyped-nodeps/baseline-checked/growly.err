@@ -1,3 +1,4 @@
+lib/gntp.ts(2,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'any'.
 lib/gntp.ts(15,10): error TS2300: Duplicate identifier 'GNTP'.
 lib/gntp.ts(15,15): error TS7006: Parameter 'type' implicitly has an 'any' type.
 lib/gntp.ts(17,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
@@ -9,6 +10,7 @@ lib/gntp.ts(22,5): error TS2683: 'this' implicitly has type 'any' because it doe
 lib/gntp.ts(23,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/gntp.ts(53,12): error TS2339: Property 'state' does not exist on type '{}'.
 lib/gntp.ts(56,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
+lib/gntp.ts(86,26): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
 lib/gntp.ts(146,15): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
 lib/gntp.ts(174,18): error TS2339: Property 'state' does not exist on type 'string'.
 lib/gntp.ts(174,44): error TS2339: Property 'state' does not exist on type 'string'.

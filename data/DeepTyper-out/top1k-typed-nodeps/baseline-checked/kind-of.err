@@ -1,14 +1,16 @@
 benchmark/code/kind-of.ts(1,5): error TS2300: Duplicate identifier 'typeOf'.
+benchmark/code/lib-type-of.ts(5,5): error TS2300: Duplicate identifier 'toString'.
 benchmark/code/lib-type-of.ts(5,24): error TS2322: Type '() => string' is not assignable to type 'string'.
 benchmark/code/lib-type-of.ts(14,10): error TS2300: Duplicate identifier 'typeOf'.
 benchmark/code/lib-type-of.ts(14,10): error TS2393: Duplicate function implementation.
-benchmark/code/lib-type-of.ts(15,20): error TS2339: Property 'call' does not exist on type 'string'.
+benchmark/code/lib-typeof.ts(5,5): error TS2300: Duplicate identifier 'toString'.
 benchmark/code/lib-typeof.ts(5,24): error TS2322: Type '() => string' is not assignable to type 'string'.
 benchmark/code/lib-typeof.ts(14,10): error TS2300: Duplicate identifier 'typeOf'.
 benchmark/code/lib-typeof.ts(14,10): error TS2393: Duplicate function implementation.
-benchmark/code/lib-typeof.ts(22,21): error TS2339: Property 'call' does not exist on type 'string'.
+benchmark/code/lib-typeof.ts(22,5): error TS2322: Type 'string' is not assignable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+benchmark/code/switch.ts(1,5): error TS2300: Duplicate identifier 'toString'.
 benchmark/code/switch.ts(1,24): error TS2322: Type '() => string' is not assignable to type 'string'.
-benchmark/code/switch.ts(43,19): error TS2339: Property 'call' does not exist on type 'string'.
+benchmark/code/switch.ts(43,3): error TS2322: Type 'string' is not assignable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 benchmark/code/switch.ts(46,10): error TS2678: Type '"[object Object]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 benchmark/code/switch.ts(47,10): error TS2678: Type '"[object Arguments]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 benchmark/code/switch.ts(49,10): error TS2678: Type '"[object RegExp]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
@@ -42,10 +44,6 @@ benchmark/fixtures/object-plain.ts(2,19): error TS7009: 'new' expression, whose 
 browser.ts(1,112): error TS2304: Cannot find name 'define'.
 browser.ts(1,133): error TS2304: Cannot find name 'define'.
 browser.ts(1,145): error TS2304: Cannot find name 'define'.
-browser.ts(1,184): error TS2304: Cannot find name 'window'.
-browser.ts(1,208): error TS2304: Cannot find name 'window'.
-browser.ts(1,276): error TS2304: Cannot find name 'self'.
-browser.ts(1,298): error TS2304: Cannot find name 'self'.
 browser.ts(1,310): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser.ts(1,569): error TS2554: Expected 1 arguments, but got 2.
 browser.ts(1,634): error TS2339: Property 'code' does not exist on type 'Error'.
@@ -78,8 +76,9 @@ browser.ts(61,10): error TS2678: Type '"[object String Iterator]"' is not compar
 browser.ts(62,10): error TS2678: Type '"[object Array Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 browser.ts(98,10): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
 browser.ts(113,9): error TS2571: Object is of type 'unknown'.
+index.ts(1,5): error TS2300: Duplicate identifier 'toString'.
 index.ts(1,24): error TS2322: Type '() => string' is not assignable to type 'string'.
-index.ts(54,19): error TS2339: Property 'call' does not exist on type 'string'.
+index.ts(54,3): error TS2322: Type 'string' is not assignable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 index.ts(56,10): error TS2678: Type '"[object Object]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 index.ts(58,10): error TS2678: Type '"[object Map Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 index.ts(59,10): error TS2678: Type '"[object Set Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
@@ -90,4 +89,5 @@ index.ts(96,10): error TS2393: Duplicate function implementation.
 index.ts(100,10): error TS2393: Duplicate function implementation.
 index.ts(112,9): error TS2571: Object is of type 'unknown'.
 index.ts(124,10): error TS2393: Duplicate function implementation.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17783,18): error TS2300: Duplicate identifier 'toString'.
 

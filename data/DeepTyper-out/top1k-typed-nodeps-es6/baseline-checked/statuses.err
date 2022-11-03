@@ -14,7 +14,10 @@ scripts/fetch-apache.ts(15,22): error TS2531: Object is possibly 'null'.
 scripts/fetch-apache.ts(21,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
 scripts/fetch-iana.ts(4,20): error TS2307: Cannot find module 'csv-parse' or its corresponding type declarations.
 scripts/fetch-iana.ts(6,21): error TS2307: Cannot find module 'stream-to-array' or its corresponding type declarations.
-scripts/fetch-iana.ts(12,64): error TS2304: Cannot find name 'Response'.
+scripts/fetch-iana.ts(12,47): error TS2345: Argument of type '(res: Response) => void' is not assignable to parameter of type '(res: IncomingMessage) => void'.
+  Types of parameters 'res' and 'res' are incompatible.
+    Type 'IncomingMessage' is missing the following properties from type 'Response': ok, redirected, status, statusText, and 9 more.
+scripts/fetch-iana.ts(13,15): error TS2339: Property 'pipe' does not exist on type 'Response'.
 scripts/fetch-iana.ts(33,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
 scripts/fetch-nginx.ts(3,21): error TS2307: Cannot find module 'raw-body' or its corresponding type declarations.
 scripts/fetch-nginx.ts(15,22): error TS2531: Object is possibly 'null'.

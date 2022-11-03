@@ -2,11 +2,9 @@ index.ts(10,5): error TS1258: A default export must be at the top level of a fil
 index.ts(11,21): error TS2304: Cannot find name 'define'.
 index.ts(11,46): error TS2304: Cannot find name 'define'.
 index.ts(12,5): error TS2304: Cannot find name 'define'.
-index.ts(13,21): error TS2304: Cannot find name 'window'.
-index.ts(14,5): error TS2304: Cannot find name 'window'.
+index.ts(14,12): error TS2339: Property 'isWindows' does not exist on type 'Window & typeof globalThis'.
 index.ts(16,12): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-index.ts(17,21): error TS2304: Cannot find name 'self'.
-index.ts(18,5): error TS2304: Cannot find name 'self'.
+index.ts(18,10): error TS2339: Property 'isWindows' does not exist on type 'Window & typeof globalThis'.
 index.ts(20,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(25,79): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
   Type 'undefined' is not assignable to type 'string'.

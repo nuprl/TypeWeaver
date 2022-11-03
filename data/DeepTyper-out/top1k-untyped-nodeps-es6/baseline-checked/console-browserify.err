@@ -1,8 +1,5 @@
 index.ts(7,20): error TS2322: Type '(start?: number | undefined, end?: number | undefined) => any[]' is not assignable to type 'any[]'.
-index.ts(13,19): error TS2304: Cannot find name 'window'.
-index.ts(13,45): error TS2304: Cannot find name 'window'.
-index.ts(14,15): error TS2304: Cannot find name 'window'.
-index.ts(16,5): error TS2740: Type '{}' is missing the following properties from type 'Console': Console, assert, clear, count, and 19 more.
+index.ts(16,5): error TS2740: Type '{}' is missing the following properties from type 'Console': assert, clear, count, countReset, and 19 more.
 index.ts(36,10): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Console'.
 index.ts(37,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Console'.
 index.ts(46,32): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[message?: any, ...optionalParams: any[]]'.

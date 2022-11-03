@@ -1,5 +1,4 @@
 lib/index.ts(24,5): error TS2322: Type 'boolean' is not assignable to type 'string'.
-lib/index.ts(32,31): error TS2304: Cannot find name 'Node'.
 tools/build-keys-from-ts.ts(17,53): error TS2554: Expected 2 arguments, but got 1.
 tools/get-keys-from-ts.ts(15,32): error TS2307: Cannot find module '@typescript-eslint/parser' or its corresponding type declarations.
 tools/get-keys-from-ts.ts(16,21): error TS2307: Cannot find module 'esquery' or its corresponding type declarations.
@@ -36,6 +35,8 @@ tools/get-keys-from-ts.ts(483,9): error TS2554: Expected 3 arguments, but got 2.
 tools/get-keys-from-ts.ts(485,9): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
   No index signature with a parameter of type 'string' was found on type '{}'.
 tools/get-keys-from-ts.ts(485,38): error TS2802: Type 'Set<string>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+tools/get-keys-from-ts.ts(485,54): error TS2345: Argument of type '{}' is not assignable to parameter of type 'Node'.
+  Type '{}' is missing the following properties from type 'Node': baseURI, childNodes, firstChild, isConnected, and 46 more.
 tools/get-keys-from-ts.ts(485,61): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
 tools/get-keys-from-ts.ts(485,65): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
   No index signature with a parameter of type 'string' was found on type '{}'.

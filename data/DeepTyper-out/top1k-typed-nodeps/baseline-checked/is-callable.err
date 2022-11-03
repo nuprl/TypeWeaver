@@ -15,11 +15,9 @@ index.ts(38,7): error TS2349: This expression is not callable.
 index.ts(39,11): error TS2339: Property 'call' does not exist on type 'string'.
 index.ts(45,21): error TS2322: Type '() => string' is not assignable to type 'string'.
 index.ts(54,31): error TS2322: Type '() => boolean' is not assignable to type 'boolean'.
-index.ts(55,12): error TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
-index.ts(57,21): error TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
+index.ts(57,6): error TS2322: Type 'HTMLAllCollection' is not assignable to type 'boolean'.
 index.ts(58,12): error TS2339: Property 'call' does not exist on type 'string'.
 index.ts(58,32): error TS2339: Property 'call' does not exist on type 'string'.
-index.ts(58,37): error TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
 index.ts(59,20): error TS2322: Type '(value: any) => boolean' is not assignable to type 'boolean'.
 index.ts(64,27): error TS2339: Property 'call' does not exist on type 'string'.
 index.ts(76,7): error TS2349: This expression is not callable.

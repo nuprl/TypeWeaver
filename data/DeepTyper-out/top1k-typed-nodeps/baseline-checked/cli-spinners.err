@@ -6,15 +6,19 @@ example-all.ts(12,29): error TS2322: Type '() => void' is not assignable to type
 example-all.ts(17,31): error TS2322: Type '() => void' is not assignable to type 'void'.
 example-all.ts(20,3): error TS2588: Cannot assign to 'spinner' because it is a constant.
 example-all.ts(25,22): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(callback: () => void, ms?: number | undefined): Timer', gave the following error.
+  Overload 1 of 3, '(callback: () => void, ms?: number | undefined): Timer', gave the following error.
     Argument of type 'void' is not assignable to parameter of type '() => void'.
-  Overload 2 of 2, '(callback: (args: void) => void, ms?: number | undefined): Timer', gave the following error.
+  Overload 2 of 3, '(callback: (args: void) => void, ms?: number | undefined): Timer', gave the following error.
     Argument of type 'void' is not assignable to parameter of type '(args: void) => void'.
+  Overload 3 of 3, '(handler: TimerHandler, timeout?: number | undefined, ...arguments: any[]): number', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type 'TimerHandler'.
 example-all.ts(26,26): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(callback: () => void, ms?: number | undefined): Timeout', gave the following error.
+  Overload 1 of 3, '(callback: () => void, ms?: number | undefined): Timeout', gave the following error.
     Argument of type 'void' is not assignable to parameter of type '() => void'.
-  Overload 2 of 2, '(callback: (args: void) => void, ms?: number | undefined): Timeout', gave the following error.
+  Overload 2 of 3, '(callback: (args: void) => void, ms?: number | undefined): Timeout', gave the following error.
     Argument of type 'void' is not assignable to parameter of type '(args: void) => void'.
+  Overload 3 of 3, '(handler: TimerHandler, timeout?: number | undefined, ...arguments: any[]): number', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type 'TimerHandler'.
 example-all.ts(46,4): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 example-all.ts(52,1): error TS2349: This expression is not callable.

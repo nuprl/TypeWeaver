@@ -4,10 +4,12 @@ benchmark.ts(54,20): error TS2345: Argument of type '(resolve: void) => NodeJS.T
   Types of parameters 'resolve' and 'resolve' are incompatible.
     Type '(value: unknown) => void' is not assignable to type 'void'.
 benchmark.ts(54,50): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(callback: () => void, ms?: number | undefined): Timeout', gave the following error.
+  Overload 1 of 3, '(callback: () => void, ms?: number | undefined): Timeout', gave the following error.
     Argument of type 'void' is not assignable to parameter of type '() => void'.
-  Overload 2 of 2, '(callback: (args: void) => void, ms?: number | undefined): Timeout', gave the following error.
+  Overload 2 of 3, '(callback: (args: void) => void, ms?: number | undefined): Timeout', gave the following error.
     Argument of type 'void' is not assignable to parameter of type '(args: void) => void'.
+  Overload 3 of 3, '(handler: TimerHandler, timeout?: number | undefined, ...arguments: any[]): number', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type 'TimerHandler'.
 source/index.ts(37,7): error TS2322: Type '() => { has4: boolean; has6: boolean; }' is not assignable to type 'void'.
 source/index.ts(42,23): error TS2571: Object is of type 'unknown'.
 source/index.ts(80,7): error TS2322: Type '{ ttl: boolean; }' is not assignable to type 'number'.
