@@ -6,7 +6,6 @@ bench/require-flow-parser.ts(4,7): error TS2451: Cannot redeclare block-scoped v
 bench/require-rxjs-bundle.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'WITH_CACHE'.
 bench/require-rxjs-module.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'WITH_CACHE'.
 bench/require-yarn.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'WITH_CACHE'.
-v8-compile-cache.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
 v8-compile-cache.ts(17,15): error TS7006: Parameter 'directory' implicitly has an 'any' type.
 v8-compile-cache.ts(17,26): error TS7006: Parameter 'prefix' implicitly has an 'any' type.
 v8-compile-cache.ts(19,10): error TS2339: Property '_blobFilename' does not exist on type 'FileSystemBlobStore'.
@@ -74,7 +73,6 @@ v8-compile-cache.ts(154,10): error TS2339: Property '_previousModuleCompile' doe
 v8-compile-cache.ts(197,38): error TS2339: Property '_previousModuleCompile' does not exist on type 'NativeCompileCache'.
 v8-compile-cache.ts(200,18): error TS7006: Parameter 'filename' implicitly has an 'any' type.
 v8-compile-cache.ts(200,28): error TS7006: Parameter 'content' implicitly has an 'any' type.
-v8-compile-cache.ts(234,8): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
 v8-compile-cache.ts(238,28): error TS2551: Property '_cacheStore' does not exist on type 'NativeCompileCache'. Did you mean 'setCacheStore'?
 v8-compile-cache.ts(249,12): error TS2551: Property '_cacheStore' does not exist on type 'NativeCompileCache'. Did you mean 'setCacheStore'?
 v8-compile-cache.ts(251,12): error TS2551: Property '_cacheStore' does not exist on type 'NativeCompileCache'. Did you mean 'setCacheStore'?
@@ -82,11 +80,4 @@ v8-compile-cache.ts(273,33): error TS2345: Argument of type 'number' is not assi
 v8-compile-cache.ts(280,9): error TS2571: Object is of type 'unknown'.
 v8-compile-cache.ts(281,7): error TS2554: Expected 2 arguments, but got 1.
 v8-compile-cache.ts(282,7): error TS2554: Expected 2 arguments, but got 1.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18084,13): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
 

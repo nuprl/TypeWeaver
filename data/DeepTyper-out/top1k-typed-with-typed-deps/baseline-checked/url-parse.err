@@ -6,6 +6,10 @@ index.ts(71,3): error TS2322: Type '[string, string, number]' is not assignable 
 index.ts(72,3): error TS2322: Type '[number, string, undefined, number, number]' is not assignable to type 'string'.
 index.ts(73,3): error TS2322: Type '[RegExp, string, undefined, number]' is not assignable to type 'string'.
 index.ts(74,3): error TS2322: Type '[number, string, undefined, number, number]' is not assignable to type 'string'.
+index.ts(102,14): error TS2304: Cannot find name 'window'.
+index.ts(102,50): error TS2304: Cannot find name 'window'.
+index.ts(104,19): error TS2304: Cannot find name 'self'.
+index.ts(104,53): error TS2304: Cannot find name 'self'.
 index.ts(115,24): error TS2554: Expected 3 arguments, but got 2.
 index.ts(115,24): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 index.ts(117,24): error TS2554: Expected 3 arguments, but got 2.
@@ -37,15 +41,7 @@ index.ts(327,17): error TS2349: This expression is not callable.
   Type 'never' has no call signatures.
 index.ts(350,31): error TS2339: Property 'exec' does not exist on type 'never'.
 index.ts(451,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(561,10): error TS2384: Overload signatures must all be ambient or non-ambient.
 index.ts(565,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(606,43): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17783,18): error TS2394: This overload signature is not compatible with its implementation signature.
 

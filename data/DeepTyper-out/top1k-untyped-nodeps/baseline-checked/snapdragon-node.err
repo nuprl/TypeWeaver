@@ -1,7 +1,7 @@
 example.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'Node'.
-example.ts(2,22): error TS2554: Expected 0 arguments, but got 1.
-example.ts(3,22): error TS2554: Expected 0 arguments, but got 2.
-index.ts(20,7): error TS2300: Duplicate identifier 'Node'.
+example.ts(2,13): error TS2554: Expected 3 arguments, but got 1.
+example.ts(3,13): error TS2554: Expected 3 arguments, but got 2.
+index.ts(20,7): error TS2451: Cannot redeclare block-scoped variable 'Node'.
 index.ts(21,15): error TS7006: Parameter 'type' implicitly has an 'any' type.
 index.ts(21,21): error TS7006: Parameter 'value' implicitly has an 'any' type.
 index.ts(21,28): error TS7006: Parameter 'clone' implicitly has an 'any' type.
@@ -84,24 +84,10 @@ index.ts(525,7): error TS1056: Accessors are only available when targeting ECMAS
 index.ts(526,17): error TS2339: Property 'parent' does not exist on type 'Node'.
 index.ts(526,31): error TS2339: Property 'parent' does not exist on type 'Node'.
 index.ts(545,17): error TS7006: Parameter 'node' implicitly has an 'any' type.
-index.ts(567,15): error TS2339: Property 'isNode' does not exist on type '{ new (): Node; prototype: Node; readonly ATTRIBUTE_NODE: number; readonly CDATA_SECTION_NODE: number; readonly COMMENT_NODE: number; readonly DOCUMENT_FRAGMENT_NODE: number; ... 13 more ...; readonly TEXT_NODE: number; }'.
 index.ts(589,28): error TS7006: Parameter 'type' implicitly has an 'any' type.
-index.ts(590,15): error TS2339: Property 'isNode' does not exist on type '{ new (): Node; prototype: Node; readonly ATTRIBUTE_NODE: number; readonly CDATA_SECTION_NODE: number; readonly COMMENT_NODE: number; readonly DOCUMENT_FRAGMENT_NODE: number; ... 13 more ...; readonly TEXT_NODE: number; }'.
 index.ts(642,23): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
   No index signature with a parameter of type 'string' was found on type '{}'.
-index.ts(658,17): error TS2339: Property 'isNode' does not exist on type '{ new (): Node; prototype: Node; readonly ATTRIBUTE_NODE: number; readonly CDATA_SECTION_NODE: number; readonly COMMENT_NODE: number; readonly DOCUMENT_FRAGMENT_NODE: number; ... 13 more ...; readonly TEXT_NODE: number; }'.
-index.ts(659,42): error TS2554: Expected 0 arguments, but got 3.
 index.ts(663,7): error TS2554: Expected 2 arguments, but got 1.
 index.ts(680,9): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
   No index signature with a parameter of type 'string' was found on type '{}'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(10040,11): error TS2300: Duplicate identifier 'Node'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(10040,11): error TS2451: Cannot redeclare block-scoped variable 'Node'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(10122,13): error TS2300: Duplicate identifier 'Node'.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(10122,13): error TS2451: Cannot redeclare block-scoped variable 'Node'.
 

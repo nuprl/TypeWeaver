@@ -1,3 +1,6 @@
+fetch.ts(3,11): error TS2304: Cannot find name 'self'.
+fetch.ts(3,35): error TS2304: Cannot find name 'self'.
+fetch.ts(15,9): error TS2554: Expected 1-2 arguments, but got 0.
 fetch.ts(42,7): error TS2322: Type '(arg: any) => arg is ArrayBufferView' is not assignable to type 'number'.
 fetch.ts(85,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(88,13): error TS2339: Property 'forEach' does not exist on type '{}'.
@@ -15,8 +18,13 @@ fetch.ts(172,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 fetch.ts(175,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
+fetch.ts(181,15): error TS2304: Cannot find name 'FileReader'.
+fetch.ts(181,32): error TS2304: Cannot find name 'FileReader'.
+fetch.ts(188,15): error TS2304: Cannot find name 'FileReader'.
+fetch.ts(188,32): error TS2304: Cannot find name 'FileReader'.
 fetch.ts(215,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(217,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+fetch.ts(236,36): error TS2304: Cannot find name 'FormData'.
 fetch.ts(244,85): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 fetch.ts(262,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
@@ -25,7 +33,7 @@ fetch.ts(301,3): error TS2683: 'this' implicitly has type 'any' because it does 
 fetch.ts(319,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(324,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(328,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(339,52): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
+fetch.ts(339,52): error TS2749: 'Request' refers to a value, but is being used as a type here. Did you mean 'typeof Request'?
 fetch.ts(340,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(348,15): error TS2339: Property 'bodyUsed' does not exist on type '{}'.
 fetch.ts(351,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
@@ -72,8 +80,9 @@ fetch.ts(396,9): error TS2683: 'this' implicitly has type 'any' because it does 
 fetch.ts(396,36): error TS2339: Property 'test' does not exist on type 'string'.
 fetch.ts(396,41): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(403,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+fetch.ts(407,13): error TS2304: Cannot find name 'FormData'.
+fetch.ts(407,28): error TS2304: Cannot find name 'FormData'.
 fetch.ts(414,28): error TS2532: Object is possibly 'undefined'.
-fetch.ts(419,3): error TS2322: Type 'FormData' is not assignable to type 'string'.
 fetch.ts(423,22): error TS2554: Expected 1 arguments, but got 0.
 fetch.ts(423,22): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 fetch.ts(437,25): error TS2532: Object is possibly 'undefined'.
@@ -90,20 +99,24 @@ fetch.ts(461,3): error TS2683: 'this' implicitly has type 'any' because it does 
 fetch.ts(462,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(468,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 fetch.ts(471,14): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+fetch.ts(477,17): error TS2709: Cannot use namespace 'Response' as a type.
 fetch.ts(477,28): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 fetch.ts(477,41): error TS2345: Argument of type 'null' is not assignable to parameter of type 'string'.
-fetch.ts(478,12): error TS2540: Cannot assign to 'type' because it is a read-only property.
 fetch.ts(489,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 fetch.ts(489,23): error TS2345: Argument of type 'null' is not assignable to parameter of type 'string'.
 fetch.ts(497,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(498,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(500,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(507,22): error TS2345: Argument of type '(resolve: any, reject: void) => any' is not assignable to parameter of type '(resolve: (value: Response | PromiseLike<Response>) => void, reject: (reason?: any) => void) => void'.
+fetch.ts(506,58): error TS2709: Cannot use namespace 'Response' as a type.
+fetch.ts(507,22): error TS2345: Argument of type '(resolve: any, reject: void) => any' is not assignable to parameter of type '(resolve: (value: any) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'reject' and 'reject' are incompatible.
     Type '(reason?: any) => void' is not assignable to type 'void'.
+fetch.ts(508,18): error TS2749: 'Request' refers to a value, but is being used as a type here. Did you mean 'typeof Request'?
 fetch.ts(508,28): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 fetch.ts(511,14): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
+fetch.ts(514,14): error TS2304: Cannot find name 'XMLHttpRequest'.
+fetch.ts(514,35): error TS2304: Cannot find name 'XMLHttpRequest'.
 fetch.ts(529,17): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 fetch.ts(535,9): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
@@ -112,14 +125,4 @@ fetch.ts(541,9): error TS2349: This expression is not callable.
 fetch.ts(547,9): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 fetch.ts(555,9): error TS2322: Type 'string' is not assignable to type 'boolean'.
-fetch.ts(559,30): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string | URL'.
-fetch.ts(573,9): error TS2531: Object is possibly 'null'.
-fetch.ts(600,29): error TS2339: Property '_bodyInit' does not exist on type 'Request'.
-fetch.ts(600,72): error TS2339: Property '_bodyInit' does not exist on type 'Request'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

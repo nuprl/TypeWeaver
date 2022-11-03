@@ -15,9 +15,11 @@ index.ts(38,7): error TS2349: This expression is not callable.
 index.ts(39,11): error TS2339: Property 'call' does not exist on type 'string'.
 index.ts(45,21): error TS2322: Type '() => string' is not assignable to type 'string'.
 index.ts(54,31): error TS2322: Type '() => boolean' is not assignable to type 'boolean'.
-index.ts(57,6): error TS2322: Type 'HTMLAllCollection' is not assignable to type 'boolean'.
+index.ts(55,12): error TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
+index.ts(57,21): error TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
 index.ts(58,12): error TS2339: Property 'call' does not exist on type 'string'.
 index.ts(58,32): error TS2339: Property 'call' does not exist on type 'string'.
+index.ts(58,37): error TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
 index.ts(59,20): error TS2322: Type '(value: any) => boolean' is not assignable to type 'boolean'.
 index.ts(64,27): error TS2339: Property 'call' does not exist on type 'string'.
 index.ts(76,7): error TS2349: This expression is not callable.
@@ -37,10 +39,4 @@ index.ts(94,10): error TS2367: This condition will always return 'false' since t
 index.ts(94,34): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
 index.ts(94,59): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

@@ -9,10 +9,8 @@ index.ts(159,21): error TS7006: Parameter 'normalizeCRLF' implicitly has an 'any
 index.ts(177,20): error TS7006: Parameter 'quote' implicitly has an 'any' type.
 index.ts(220,22): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ quot: string; amp: string; apos: string; lt: string; gt: string; nbsp: string; iexcl: string; cent: string; pound: string; curren: string; yen: string; brvbar: string; sect: string; uml: string; copy: string; ... 237 more ...; diams: string; }'.
   No index signature with a parameter of type 'string' was found on type '{ quot: string; amp: string; apos: string; lt: string; gt: string; nbsp: string; iexcl: string; cent: string; pound: string; curren: string; yen: string; brvbar: string; sect: string; uml: string; copy: string; ... 237 more ...; diams: string; }'.
-index.ts(253,14): error TS2339: Property 'name' does not exist on type 'Node'.
-index.ts(255,14): error TS2339: Property 'name' does not exist on type 'Node'.
-index.ts(286,17): error TS2339: Property 'object' does not exist on type 'Node'.
-index.ts(287,17): error TS2339: Property 'property' does not exist on type 'Node'.
+index.ts(251,17): error TS2304: Cannot find name 'Node'.
+index.ts(285,22): error TS2304: Cannot find name 'Node'.
 index.ts(305,21): error TS2554: Expected 1 arguments, but got 0.
 index.ts(350,31): error TS7006: Parameter 'startPos' implicitly has an 'any' type.
 index.ts(350,41): error TS7006: Parameter 'startLoc' implicitly has an 'any' type.
@@ -24,10 +22,4 @@ index.ts(395,32): error TS2554: Expected 1 arguments, but got 0.
 index.ts(439,19): error TS7006: Parameter 'refShortHandDefaultPos' implicitly has an 'any' type.
 index.ts(448,15): error TS7006: Parameter 'code' implicitly has an 'any' type.
 index.ts(472,19): error TS7006: Parameter 'prevType' implicitly has an 'any' type.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

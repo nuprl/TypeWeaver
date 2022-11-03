@@ -5,9 +5,9 @@ Input directory: /mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-unt
 Output directory: /mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-untyped-with-typed-deps/baseline-checked
 Found 39 packages
 [1/39] @npmcli_move-file ... [FAIL]
-[2/39] array-includes ... [FAIL]
+[2/39] array-includes ... [ OK ]
 [3/39] asn1.js ... [FAIL]
-[4/39] browserify-rsa ... [FAIL]
+[4/39] browserify-rsa ... [ OK ]
 [5/39] browserify-zlib ... [FAIL]
 [6/39] capture-exit ... [FAIL]
 [7/39] create-ecdh ... [FAIL]
@@ -17,20 +17,20 @@ Found 39 packages
 [11/39] for-each ... [FAIL]
 [12/39] fs-write-stream-atomic ... [FAIL]
 [13/39] get-symbol-description ... [FAIL]
-[14/39] has-tostringtag ... [FAIL]
-[15/39] has-values ... [FAIL]
-[16/39] is-nan ... [FAIL]
+[14/39] has-tostringtag ... [ OK ]
+[15/39] has-values ... [ OK ]
+[16/39] is-nan ... [ OK ]
 [17/39] is-symbol ... [FAIL]
-[18/39] is-weakset ... [FAIL]
+[18/39] is-weakset ... [ OK ]
 [19/39] jsprim ... [FAIL]
 [20/39] levn ... [FAIL]
 [21/39] makeerror ... [FAIL]
 [22/39] miller-rabin ... [FAIL]
-[23/39] mississippi ... [FAIL]
+[23/39] mississippi ... [ OK ]
 [24/39] object-is ... [FAIL]
 [25/39] object.assign ... [FAIL]
-[26/39] object.entries ... [FAIL]
-[27/39] object.values ... [FAIL]
+[26/39] object.entries ... [ OK ]
+[27/39] object.values ... [ OK ]
 [28/39] request-promise-core ... [FAIL]
 [29/39] shallow-clone ... [FAIL]
 [30/39] side-channel ... [FAIL]
@@ -42,8 +42,8 @@ Found 39 packages
 [36/39] timers-browserify ... [FAIL]
 [37/39] to-object-path ... [FAIL]
 [38/39] union-value ... [FAIL]
-[39/39] unique-slug ... [FAIL]
-Number of successes: 0
-Number of fails: 39
+[39/39] unique-slug ... [ OK ]
+Number of successes: 10
+Number of fails: 29
 Number of skips: 0
-Time for type checking: 0:00:21
+Time for type checking: 0:00:18

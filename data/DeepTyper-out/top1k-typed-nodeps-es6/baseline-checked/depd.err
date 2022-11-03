@@ -51,10 +51,4 @@ lib/browser/index.ts(29,3): error TS7005: Variable '_file' implicitly has an 'an
 lib/browser/index.ts(38,3): error TS2322: Type '{ (message: string): any; _file: any; _ignored: boolean; _namespace: any; _traced: boolean; _warned: any; function: (fn: any, message: string) => any; property: (obj: any, prop: string, message: string) => void; }' is not assignable to type 'void'.
 lib/browser/index.ts(68,7): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'PropertyDescriptor'.
   Type 'undefined' is not assignable to type 'PropertyDescriptor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

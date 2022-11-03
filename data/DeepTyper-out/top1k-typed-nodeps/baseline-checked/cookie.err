@@ -1,16 +1,6 @@
 benchmark/index.ts(16,39): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 benchmark/index.ts(19,18): error TS2322: Type 'undefined' is not assignable to type 'string'.
-benchmark/parse-top.ts(7,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'top' must be of type 'Window | null', but here has type 'any'.
 benchmark/parse-top.ts(13,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-benchmark/parse-top.ts(17,13): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(o: {}): string[]', gave the following error.
-    Argument of type 'Window | null' is not assignable to parameter of type '{}'.
-      Type 'null' is not assignable to type '{}'.
-  Overload 2 of 2, '(o: object): string[]', gave the following error.
-    Argument of type 'Window | null' is not assignable to parameter of type 'object'.
-      Type 'null' is not assignable to type 'object'.
-benchmark/parse-top.ts(21,52): error TS2531: Object is possibly 'null'.
-benchmark/parse-top.ts(21,56): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
 benchmark/parse-top.ts(39,10): error TS2393: Duplicate function implementation.
 benchmark/parse-top.ts(46,3): error TS2322: Type 'string' is not assignable to type 'void'.
 benchmark/parse.ts(12,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
@@ -42,10 +32,4 @@ scripts/version-history.ts(13,23): error TS2339: Property 'test' does not exist 
 scripts/version-history.ts(55,19): error TS7006: Parameter 'number' implicitly has an 'any' type.
 scripts/version-history.ts(58,14): error TS2339: Property 'length' does not exist on type 'number'.
 scripts/version-history.ts(59,5): error TS2322: Type 'string' is not assignable to type 'number'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

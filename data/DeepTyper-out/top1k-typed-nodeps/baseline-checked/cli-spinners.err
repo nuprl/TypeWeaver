@@ -6,19 +6,15 @@ example-all.ts(12,29): error TS2322: Type '() => void' is not assignable to type
 example-all.ts(17,31): error TS2322: Type '() => void' is not assignable to type 'void'.
 example-all.ts(20,3): error TS2588: Cannot assign to 'spinner' because it is a constant.
 example-all.ts(25,22): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(callback: () => void, ms?: number | undefined): Timer', gave the following error.
+  Overload 1 of 2, '(callback: () => void, ms?: number | undefined): Timer', gave the following error.
     Argument of type 'void' is not assignable to parameter of type '() => void'.
-  Overload 2 of 3, '(callback: (args: void) => void, ms?: number | undefined): Timer', gave the following error.
+  Overload 2 of 2, '(callback: (args: void) => void, ms?: number | undefined): Timer', gave the following error.
     Argument of type 'void' is not assignable to parameter of type '(args: void) => void'.
-  Overload 3 of 3, '(handler: TimerHandler, timeout?: number | undefined, ...arguments: any[]): number', gave the following error.
-    Argument of type 'void' is not assignable to parameter of type 'TimerHandler'.
 example-all.ts(26,26): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(callback: () => void, ms?: number | undefined): Timeout', gave the following error.
+  Overload 1 of 2, '(callback: () => void, ms?: number | undefined): Timeout', gave the following error.
     Argument of type 'void' is not assignable to parameter of type '() => void'.
-  Overload 2 of 3, '(callback: (args: void) => void, ms?: number | undefined): Timeout', gave the following error.
+  Overload 2 of 2, '(callback: (args: void) => void, ms?: number | undefined): Timeout', gave the following error.
     Argument of type 'void' is not assignable to parameter of type '(args: void) => void'.
-  Overload 3 of 3, '(handler: TimerHandler, timeout?: number | undefined, ...arguments: any[]): number', gave the following error.
-    Argument of type 'void' is not assignable to parameter of type 'TimerHandler'.
 example-all.ts(46,4): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 example-all.ts(52,1): error TS2349: This expression is not callable.
@@ -27,10 +23,4 @@ example.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'logUpdate
 example.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'cliSpinners'.
 example.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'spinner'.
 index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'spinners'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

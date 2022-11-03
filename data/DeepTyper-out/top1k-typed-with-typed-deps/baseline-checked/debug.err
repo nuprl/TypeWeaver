@@ -1,9 +1,26 @@
 src/browser.ts(115,10): error TS2393: Duplicate function implementation.
-src/browser.ts(119,73): error TS2339: Property 'type' does not exist on type 'Process'.
-src/browser.ts(119,111): error TS2339: Property '__nwjs' does not exist on type 'Process'.
-src/browser.ts(130,138): error TS2551: Property 'WebkitAppearance' does not exist on type 'CSSStyleDeclaration'. Did you mean 'webkitAppearance'?
-src/browser.ts(132,71): error TS2339: Property 'firebug' does not exist on type 'Console'.
-src/browser.ts(132,98): error TS2339: Property 'exception' does not exist on type 'Console'.
+src/browser.ts(119,13): error TS2304: Cannot find name 'window'.
+src/browser.ts(119,39): error TS2304: Cannot find name 'window'.
+src/browser.ts(119,58): error TS2304: Cannot find name 'window'.
+src/browser.ts(119,96): error TS2304: Cannot find name 'window'.
+src/browser.ts(124,13): error TS2304: Cannot find name 'navigator'.
+src/browser.ts(124,42): error TS2304: Cannot find name 'navigator'.
+src/browser.ts(124,65): error TS2304: Cannot find name 'navigator'.
+src/browser.ts(130,17): error TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
+src/browser.ts(130,45): error TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
+src/browser.ts(130,73): error TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
+src/browser.ts(130,107): error TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
+src/browser.ts(132,11): error TS2304: Cannot find name 'window'.
+src/browser.ts(132,37): error TS2304: Cannot find name 'window'.
+src/browser.ts(132,56): error TS2304: Cannot find name 'window'.
+src/browser.ts(132,83): error TS2304: Cannot find name 'window'.
+src/browser.ts(132,111): error TS2304: Cannot find name 'window'.
+src/browser.ts(135,11): error TS2304: Cannot find name 'navigator'.
+src/browser.ts(135,40): error TS2304: Cannot find name 'navigator'.
+src/browser.ts(135,63): error TS2304: Cannot find name 'navigator'.
+src/browser.ts(137,11): error TS2304: Cannot find name 'navigator'.
+src/browser.ts(137,40): error TS2304: Cannot find name 'navigator'.
+src/browser.ts(137,63): error TS2304: Cannot find name 'navigator'.
 src/browser.ts(146,10): error TS2393: Duplicate function implementation.
 src/browser.ts(147,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 src/browser.ts(148,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
@@ -15,7 +32,7 @@ src/browser.ts(158,32): error TS2683: 'this' implicitly has type 'any' because i
 src/browser.ts(197,10): error TS2393: Duplicate function implementation.
 src/browser.ts(216,10): error TS2393: Duplicate function implementation.
 src/browser.ts(244,26): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-src/browser.ts(248,3): error TS2322: Type 'Storage' is not assignable to type 'boolean'.
+src/browser.ts(248,10): error TS2304: Cannot find name 'localStorage'.
 src/browser.ts(257,8): error TS2451: Cannot redeclare block-scoped variable 'formatters'.
 src/browser.ts(267,43): error TS2571: Object is of type 'unknown'.
 src/common.ts(18,3): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ (namespace: any): any; debug: ...; default: ...; coerce: (val: any) => any; disable: () => void; enable: (namespaces: any) => void; enabled: (name: any) => boolean; humanize: any; destroy: () => void; names: any[]; skips: any[]; formatters: {}; selectColor: (namespace: any) => any; }'.
@@ -55,10 +72,4 @@ src/node.ts(193,14): error TS7019: Rest parameter 'args' implicitly has an 'any[
 src/node.ts(203,10): error TS2393: Duplicate function implementation.
 src/node.ts(220,10): error TS2393: Duplicate function implementation.
 src/node.ts(242,8): error TS2451: Cannot redeclare block-scoped variable 'formatters'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

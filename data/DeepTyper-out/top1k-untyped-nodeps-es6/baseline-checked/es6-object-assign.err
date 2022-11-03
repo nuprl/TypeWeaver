@@ -28,6 +28,10 @@ dist/object-assign.min.ts(1,2): error TS1345: An expression of type 'void' canno
 dist/object-assign.min.ts(1,121): error TS2304: Cannot find name 'define'.
 dist/object-assign.min.ts(1,129): error TS2304: Cannot find name 'define'.
 dist/object-assign.min.ts(1,140): error TS2304: Cannot find name 'define'.
+dist/object-assign.min.ts(1,191): error TS2304: Cannot find name 'window'.
+dist/object-assign.min.ts(1,198): error TS2304: Cannot find name 'window'.
+dist/object-assign.min.ts(1,259): error TS2304: Cannot find name 'self'.
+dist/object-assign.min.ts(1,264): error TS2304: Cannot find name 'self'.
 dist/object-assign.min.ts(1,269): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 dist/object-assign.min.ts(1,489): error TS2554: Expected 1 arguments, but got 2.
 dist/object-assign.min.ts(1,555): error TS2339: Property 'code' does not exist on type 'Error'.
@@ -37,6 +41,10 @@ dist/object-assign.ts(2,3): error TS1258: A default export must be at the top le
 dist/object-assign.ts(3,17): error TS2304: Cannot find name 'define'.
 dist/object-assign.ts(3,38): error TS2304: Cannot find name 'define'.
 dist/object-assign.ts(3,50): error TS2304: Cannot find name 'define'.
+dist/object-assign.ts(3,89): error TS2304: Cannot find name 'window'.
+dist/object-assign.ts(3,113): error TS2304: Cannot find name 'window'.
+dist/object-assign.ts(3,181): error TS2304: Cannot find name 'self'.
+dist/object-assign.ts(3,203): error TS2304: Cannot find name 'self'.
 dist/object-assign.ts(3,215): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 dist/object-assign.ts(3,466): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
@@ -51,10 +59,4 @@ dist/object-assign.ts(26,13): error TS2322: Type 'PropertyDescriptor | undefined
 dist/object-assign.ts(46,3): error TS1258: A default export must be at the top level of a file or module declaration.
 index.ts(23,11): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'PropertyDescriptor'.
   Type 'undefined' is not assignable to type 'PropertyDescriptor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

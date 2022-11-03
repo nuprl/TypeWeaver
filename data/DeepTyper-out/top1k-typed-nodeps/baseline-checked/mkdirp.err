@@ -1,7 +1,4 @@
-bin/cmd.ts(27,5): error TS2451: Cannot redeclare block-scoped variable 'print'.
-bin/cmd.ts(44,5): error TS2630: Cannot assign to 'print' because it is a function.
 bin/cmd.ts(51,10): error TS2339: Property 'mode' does not exist on type '{}'.
-bin/cmd.ts(62,24): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
 index.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'optsArg'.
 index.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'pathArg'.
 index.ts(4,8): error TS2451: Cannot redeclare block-scoped variable 'mkdirpNative'.
@@ -41,11 +38,4 @@ lib/use-native.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'us
 lib/use-native.ts(7,28): error TS2322: Type '(opts: any) => boolean' is not assignable to type 'boolean'.
 lib/use-native.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'useNativeSync'.
 lib/use-native.ts(8,32): error TS2322: Type '(opts: any) => boolean' is not assignable to type 'boolean'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17768,18): error TS2451: Cannot redeclare block-scoped variable 'print'.
 

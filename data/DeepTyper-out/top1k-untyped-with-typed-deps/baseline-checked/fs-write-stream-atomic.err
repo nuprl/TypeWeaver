@@ -1,4 +1,3 @@
-index.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'any'.
 index.ts(18,37): error TS2554: Expected 0 arguments, but got 3.
 index.ts(21,5): error TS2300: Duplicate identifier 'setImmediate'.
 index.ts(35,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
@@ -18,16 +17,8 @@ index.ts(52,49): error TS2683: 'this' implicitly has type 'any' because it does 
 index.ts(53,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(53,49): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(73,10): error TS2322: Type '(fd: any) => void' is not assignable to type 'void'.
-index.ts(108,35): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
-index.ts(109,38): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
 index.ts(130,16): error TS2554: Expected 1 arguments, but got 0.
 index.ts(163,10): error TS2322: Type '(er: any) => void' is not assignable to type 'void'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 ../../../../node_modules/@types/node/ts4.8/timers.d.ts(81,18): error TS2300: Duplicate identifier 'setImmediate'.
 ../../../../node_modules/@types/node/ts4.8/timers.d.ts(84,18): error TS2300: Duplicate identifier 'setImmediate'.
 ../../../../node_modules/@types/node/ts4.8/timers.d.ts(85,19): error TS2300: Duplicate identifier 'setImmediate'.

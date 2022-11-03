@@ -1,7 +1,10 @@
-async/index.browser.ts(1,12): error TS2322: Type '(bytes: number) => Promise<Uint8Array>' is not assignable to type 'number'.
+async/index.browser.ts(1,12): error TS2322: Type '(bytes: number) => Promise<any>' is not assignable to type 'number'.
+async/index.browser.ts(1,54): error TS2304: Cannot find name 'crypto'.
 async/index.browser.ts(3,12): error TS2322: Type '(alphabet: any, defaultSize?: number) => (size?: number) => Promise<string>' is not assignable to type 'number'.
 async/index.browser.ts(3,38): error TS7006: Parameter 'alphabet' implicitly has an 'any' type.
+async/index.browser.ts(30,24): error TS2304: Cannot find name 'crypto'.
 async/index.browser.ts(42,12): error TS2322: Type '(size?: number) => Promise<string>' is not assignable to type 'number'.
+async/index.browser.ts(44,20): error TS2304: Cannot find name 'crypto'.
 async/index.native.ts(1,37): error TS2307: Cannot find module 'expo-random' or its corresponding type declarations.
 async/index.native.ts(7,12): error TS2322: Type '(alphabet: any, defaultSize?: number) => (size: number) => any' is not assignable to type 'number'.
 async/index.native.ts(7,38): error TS7006: Parameter 'alphabet' implicitly has an 'any' type.
@@ -26,7 +29,8 @@ bin/nanoid.ts(51,27): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 bin/nanoid.ts(54,9): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
-index.browser.ts(6,12): error TS2322: Type '(bytes: any) => Uint8Array' is not assignable to type 'number'.
+index.browser.ts(6,12): error TS2322: Type '(bytes: any) => any' is not assignable to type 'number'.
+index.browser.ts(6,45): error TS2304: Cannot find name 'crypto'.
 index.browser.ts(8,12): error TS2322: Type '(alphabet: number, defaultSize: number, getRandom: number) => (size?: number) => string' is not assignable to type 'number'.
 index.browser.ts(14,47): error TS2339: Property 'length' does not exist on type 'number'.
 index.browser.ts(30,63): error TS2339: Property 'length' does not exist on type 'number'.
@@ -40,16 +44,12 @@ index.browser.ts(47,12): error TS2322: Type '(alphabet: any, size?: number) => a
 index.browser.ts(47,38): error TS7006: Parameter 'alphabet' implicitly has an 'any' type.
 index.browser.ts(48,3): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
-index.browser.ts(50,29): error TS2322: Type '(size?: number) => number' is not assignable to type 'number'.
+index.browser.ts(50,12): error TS2322: Type '(size?: number) => any' is not assignable to type 'number'.
+index.browser.ts(51,3): error TS2304: Cannot find name 'crypto'.
 index.browser.ts(60,7): error TS2322: Type 'string' is not assignable to type 'number'.
 index.browser.ts(63,7): error TS2322: Type 'string' is not assignable to type 'number'.
 index.browser.ts(65,7): error TS2322: Type 'string' is not assignable to type 'number'.
 index.browser.ts(67,7): error TS2322: Type 'string' is not assignable to type 'number'.
-index.browser.ts(70,6): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number, initialValue: number): number', gave the following error.
-    Argument of type 'string' is not assignable to parameter of type 'number'.
-  Overload 2 of 3, '(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number, initialValue: number): number', gave the following error.
-    Argument of type 'string' is not assignable to parameter of type 'number'.
 index.ts(13,16): error TS7034: Variable 'poolOffset' implicitly has type 'any' in some locations where its type cannot be determined.
 index.ts(15,5): error TS2322: Type '(bytes: any) => void' is not assignable to type 'number'.
 index.ts(20,14): error TS7005: Variable 'poolOffset' implicitly has an 'any' type.
@@ -79,16 +79,8 @@ index.ts(76,16): error TS7005: Variable 'poolOffset' implicitly has an 'any' typ
 index.ts(76,39): error TS7005: Variable 'poolOffset' implicitly has an 'any' type.
 index.ts(82,11): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'RegExp'.
   No index signature with a parameter of type 'number' was found on type 'RegExp'.
-nanoid.ts(1,12): error TS2322: Type '(t?: number) => number' is not assignable to type 'string'.
-nanoid.ts(1,84): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number, initialValue: number): number', gave the following error.
-    Argument of type '(t: number, e: string) => string' is not assignable to parameter of type '(previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number'.
-      Types of parameters 'e' and 'currentValue' are incompatible.
-        Type 'number' is not assignable to type 'string'.
-  Overload 2 of 3, '(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number, initialValue: number): number', gave the following error.
-    Argument of type '(t: number, e: string) => string' is not assignable to parameter of type '(previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number'.
-      Types of parameters 'e' and 'currentValue' are incompatible.
-        Type 'number' is not assignable to type 'string'.
+nanoid.ts(1,12): error TS2322: Type '(t?: number) => any' is not assignable to type 'string'.
+nanoid.ts(1,35): error TS2304: Cannot find name 'crypto'.
 nanoid.ts(1,108): error TS2322: Type 'string' is not assignable to type 'number'.
 nanoid.ts(1,112): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 nanoid.ts(1,133): error TS2554: Expected 0 arguments, but got 1.
@@ -99,10 +91,4 @@ non-secure/index.ts(10,12): error TS2322: Type '(alphabet: any, defaultSize?: nu
 non-secure/index.ts(10,38): error TS7006: Parameter 'alphabet' implicitly has an 'any' type.
 non-secure/index.ts(23,12): error TS2322: Type '(size?: number) => string' is not assignable to type 'number'.
 url-alphabet/index.ts(4,14): error TS2322: Type 'string' is not assignable to type 'RegExp'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

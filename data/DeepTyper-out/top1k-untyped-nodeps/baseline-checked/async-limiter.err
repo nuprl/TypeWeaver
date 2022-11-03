@@ -3,12 +3,10 @@ example/index.ts(14,22): error TS2345: Argument of type '(resolve: void) => Node
   Types of parameters 'resolve' and 'resolve' are incompatible.
     Type '(value: {} | PromiseLike<{}>) => void' is not assignable to type 'void'.
 example/index.ts(14,52): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(callback: () => void, ms?: number | undefined): Timeout', gave the following error.
+  Overload 1 of 2, '(callback: () => void, ms?: number | undefined): Timeout', gave the following error.
     Argument of type 'void' is not assignable to parameter of type '() => void'.
-  Overload 2 of 3, '(callback: (args: void) => void, ms?: number | undefined): Timeout', gave the following error.
+  Overload 2 of 2, '(callback: (args: void) => void, ms?: number | undefined): Timeout', gave the following error.
     Argument of type 'void' is not assignable to parameter of type '(args: void) => void'.
-  Overload 3 of 3, '(handler: TimerHandler, timeout?: number | undefined, ...arguments: any[]): number', gave the following error.
-    Argument of type 'void' is not assignable to parameter of type 'TimerHandler'.
 example/index.ts(17,17): error TS7006: Parameter 'upperBound' implicitly has an 'any' type.
 example/index.ts(21,10): error TS2393: Duplicate function implementation.
 index.ts(3,25): error TS2304: Cannot find name 'Options'.
@@ -36,10 +34,4 @@ index.ts(34,10): error TS2683: 'this' implicitly has type 'any' because it does 
 index.ts(34,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(35,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(43,45): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

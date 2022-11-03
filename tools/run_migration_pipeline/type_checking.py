@@ -86,7 +86,7 @@ class TypeChecker:
         ts_files = [f.relative_to(package) for f in package.rglob("*.ts") if f.is_file()]
 
         # TODO: is --esModuleInterop needed?
-        args = [self.path, "--noEmit", "--strict", "--esModuleInterop", *ts_files]
+        args = [self.path, "--noEmit", "--strict", "--esModuleInterop", "--lib", "ES2021", *ts_files]
         result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=package)
 
         if result.returncode == 0:

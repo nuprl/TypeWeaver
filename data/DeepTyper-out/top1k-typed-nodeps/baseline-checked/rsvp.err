@@ -1,15 +1,14 @@
 ember-cli-build.ts(20,20): error TS2304: Cannot find name 'TestFile'.
 lib/rsvp.ts(23,41): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(callback: () => void, ms?: number | undefined): Timeout', gave the following error.
+  Overload 1 of 2, '(callback: () => void, ms?: number | undefined): Timeout', gave the following error.
     Argument of type 'void' is not assignable to parameter of type '() => void'.
-  Overload 2 of 3, '(callback: (args: void) => void, ms?: number | undefined): Timeout', gave the following error.
+  Overload 2 of 2, '(callback: (args: void) => void, ms?: number | undefined): Timeout', gave the following error.
     Argument of type 'void' is not assignable to parameter of type '(args: void) => void'.
-  Overload 3 of 3, '(handler: TimerHandler, timeout?: number | undefined, ...arguments: any[]): number', gave the following error.
-    Argument of type 'void' is not assignable to parameter of type 'TimerHandler'.
 lib/rsvp.ts(29,16): error TS2802: Type 'IArguments' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 lib/rsvp.ts(33,17): error TS2802: Type 'IArguments' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
-lib/rsvp.ts(37,52): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-lib/rsvp.ts(38,31): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
+lib/rsvp.ts(37,12): error TS2304: Cannot find name 'window'.
+lib/rsvp.ts(37,45): error TS2304: Cannot find name 'window'.
+lib/rsvp.ts(38,24): error TS2304: Cannot find name 'window'.
 lib/rsvp.ts(42,10): error TS2554: Expected 0 arguments, but got 2.
 lib/rsvp/-internal.ts(9,3): error TS2322: Type 'TypeError' is not assignable to type 'boolean'.
 lib/rsvp/-internal.ts(19,14): error TS2322: Type 'undefined' is not assignable to type 'number'.
@@ -33,8 +32,13 @@ lib/rsvp/all-settled.ts(75,20): error TS2339: Property 'reject' does not exist o
 lib/rsvp/all-settled.ts(78,50): error TS2339: Property 'promise' does not exist on type 'AllSettled'.
 lib/rsvp/all.ts(14,54): error TS2315: Type 'Promise' is not generic.
 lib/rsvp/all.ts(15,18): error TS2339: Property 'all' does not exist on type 'typeof Promise'.
+lib/rsvp/asap.ts(14,36): error TS2304: Cannot find name 'window'.
+lib/rsvp/asap.ts(14,62): error TS2304: Cannot find name 'window'.
+lib/rsvp/asap.ts(17,32): error TS2304: Cannot find name 'self'.
+lib/rsvp/asap.ts(22,10): error TS2304: Cannot find name 'importScripts'.
 lib/rsvp/asap.ts(35,12): error TS2322: Type '() => void' is not assignable to type 'void'.
 lib/rsvp/asap.ts(45,13): error TS2304: Cannot find name 'FileNode'.
+lib/rsvp/asap.ts(45,24): error TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
 lib/rsvp/asap.ts(55,3): error TS2322: Type '() => any' is not assignable to type 'void'.
 lib/rsvp/asap.ts(81,23): error TS2339: Property 'runOnLoop' does not exist on type 'Function'.
 lib/rsvp/asap.ts(81,42): error TS2339: Property 'runOnContext' does not exist on type 'Function'.
@@ -203,10 +207,4 @@ lib/rsvp/reject.ts(16,18): error TS2339: Property 'reject' does not exist on typ
 lib/rsvp/resolve.ts(17,18): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
 lib/rsvp/then.ts(13,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/rsvp/then.ts(32,53): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Function'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

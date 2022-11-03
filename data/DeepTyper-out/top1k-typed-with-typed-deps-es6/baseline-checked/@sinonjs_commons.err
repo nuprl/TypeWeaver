@@ -46,7 +46,7 @@ lib/deprecated.test.ts(43,13): error TS2582: Cannot find name 'describe'. Do you
 lib/deprecated.test.ts(44,17): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
 lib/deprecated.test.ts(50,13): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
 lib/deprecated.test.ts(51,17): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-lib/deprecated.test.ts(52,21): error TS2322: Type 'undefined' is not assignable to type '{ (...data: any[]): void; (message?: any, ...optionalParams: any[]): void; }'.
+lib/deprecated.test.ts(52,21): error TS2322: Type 'undefined' is not assignable to type '(message?: any, ...optionalParams: any[]) => void'.
 lib/deprecated.test.ts(60,5): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
 lib/deprecated.test.ts(64,9): error TS2304: Cannot find name 'beforeEach'.
 lib/deprecated.test.ts(68,9): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
@@ -88,6 +88,9 @@ lib/global.test.ts(6,1): error TS2582: Cannot find name 'describe'. Do you need 
 lib/global.test.ts(7,5): error TS2304: Cannot find name 'before'.
 lib/global.test.ts(9,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/global.test.ts(13,5): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+lib/global.ts(14,19): error TS2304: Cannot find name 'window'.
+lib/global.ts(16,20): error TS2304: Cannot find name 'window'.
+lib/global.ts(19,20): error TS2304: Cannot find name 'self'.
 lib/index.test.ts(3,24): error TS2307: Cannot find module '@sinonjs/referee-sinon' or its corresponding type declarations.
 lib/index.test.ts(17,1): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
 lib/index.test.ts(19,9): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
@@ -161,10 +164,4 @@ lib/value-to-string.test.ts(13,5): error TS2582: Cannot find name 'it'. Do you n
 lib/value-to-string.test.ts(14,37): error TS2345: Argument of type 'null' is not assignable to parameter of type 'string'.
 lib/value-to-string.test.ts(17,5): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
 lib/value-to-string.test.ts(18,37): error TS2345: Argument of type 'undefined' is not assignable to parameter of type 'string'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

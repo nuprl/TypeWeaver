@@ -1,19 +1,23 @@
 Gruntfile.ts(1,34): error TS2304: Cannot find name 'IGrunt'.
-jsesc.ts(1,1): error TS6200: Definitions of the following identifiers conflict with those in another file: object, hasOwnProperty, forOwn, extend, forEach, fourHexEscape, hexadecimal, isArray, isBuffer, isObject, isString, isNumber, isFunction, isMap, isSet, singleEscapes, regexSingleEscape, regexDigit, regexWhitespace, escapeEverythingRegex, escapeNonAsciiRegex
+jsesc.ts(1,1): error TS6200: Definitions of the following identifiers conflict with those in another file: object, hasOwnProperty, forOwn, extend, forEach, fourHexEscape, hexadecimal, toString, isArray, isBuffer, isObject, isString, isNumber, isFunction, isMap, isSet, singleEscapes, regexSingleEscape, regexDigit, regexWhitespace, escapeEverythingRegex, escapeNonAsciiRegex
 jsesc.ts(5,22): error TS2322: Type '(object: any, callback: any) => void' is not assignable to type 'void'.
 jsesc.ts(17,2): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 jsesc.ts(23,23): error TS2322: Type '(array: any, callback: any) => void' is not assignable to type 'void'.
 jsesc.ts(31,31): error TS2322: Type '(hex: string) => string' is not assignable to type 'string'.
 jsesc.ts(35,29): error TS2322: Type '(code: number, lowercase: string) => string' is not assignable to type 'string'.
-jsesc.ts(41,7): error TS2451: Cannot redeclare block-scoped variable 'toString'.
 jsesc.ts(41,26): error TS2322: Type '() => string' is not assignable to type 'string'.
 jsesc.ts(42,26): error TS2322: Type '(arg: any) => arg is any[]' is not assignable to type 'boolean'.
 jsesc.ts(46,27): error TS2322: Type '(value: any) => boolean' is not assignable to type 'boolean'.
+jsesc.ts(48,18): error TS2339: Property 'call' does not exist on type 'string'.
+jsesc.ts(52,12): error TS2339: Property 'call' does not exist on type 'string'.
 jsesc.ts(54,27): error TS2322: Type '(value: any) => boolean' is not assignable to type 'boolean'.
+jsesc.ts(56,12): error TS2339: Property 'call' does not exist on type 'string'.
 jsesc.ts(58,29): error TS2322: Type '(value: any) => boolean' is not assignable to type 'boolean'.
 jsesc.ts(61,24): error TS2322: Type '(value: any) => boolean' is not assignable to type 'boolean'.
+jsesc.ts(62,18): error TS2339: Property 'call' does not exist on type 'string'.
 jsesc.ts(64,24): error TS2322: Type '(value: any) => boolean' is not assignable to type 'boolean'.
+jsesc.ts(65,18): error TS2339: Property 'call' does not exist on type 'string'.
 jsesc.ts(89,7): error TS2322: Type '{ (argument: any, options: any): any; version: string; }' is not assignable to type 'void'.
 jsesc.ts(90,8): error TS2322: Type '() => void' is not assignable to type 'boolean'.
 jsesc.ts(145,26): error TS2349: This expression is not callable.
@@ -68,21 +72,25 @@ jsesc.ts(293,23): error TS2349: This expression is not callable.
 jsesc.ts(295,11): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
 jsesc.ts(316,7): error TS2339: Property 'version' does not exist on type 'void'.
-src/jsesc.ts(1,1): error TS6200: Definitions of the following identifiers conflict with those in another file: object, hasOwnProperty, forOwn, extend, forEach, fourHexEscape, hexadecimal, isArray, isBuffer, isObject, isString, isNumber, isFunction, isMap, isSet, singleEscapes, regexSingleEscape, regexDigit, regexWhitespace, escapeEverythingRegex, escapeNonAsciiRegex
+src/jsesc.ts(1,1): error TS6200: Definitions of the following identifiers conflict with those in another file: object, hasOwnProperty, forOwn, extend, forEach, fourHexEscape, hexadecimal, toString, isArray, isBuffer, isObject, isString, isNumber, isFunction, isMap, isSet, singleEscapes, regexSingleEscape, regexDigit, regexWhitespace, escapeEverythingRegex, escapeNonAsciiRegex
 src/jsesc.ts(5,22): error TS2322: Type '(object: any, callback: any) => void' is not assignable to type 'void'.
 src/jsesc.ts(17,2): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 src/jsesc.ts(23,23): error TS2322: Type '(array: any, callback: any) => void' is not assignable to type 'void'.
 src/jsesc.ts(31,31): error TS2322: Type '(hex: string) => string' is not assignable to type 'string'.
 src/jsesc.ts(35,29): error TS2322: Type '(code: number, lowercase: string) => string' is not assignable to type 'string'.
-src/jsesc.ts(41,7): error TS2451: Cannot redeclare block-scoped variable 'toString'.
 src/jsesc.ts(41,26): error TS2322: Type '() => string' is not assignable to type 'string'.
 src/jsesc.ts(42,26): error TS2322: Type '(arg: any) => arg is any[]' is not assignable to type 'boolean'.
 src/jsesc.ts(46,27): error TS2322: Type '(value: any) => boolean' is not assignable to type 'boolean'.
+src/jsesc.ts(48,18): error TS2339: Property 'call' does not exist on type 'string'.
+src/jsesc.ts(52,12): error TS2339: Property 'call' does not exist on type 'string'.
 src/jsesc.ts(54,27): error TS2322: Type '(value: any) => boolean' is not assignable to type 'boolean'.
+src/jsesc.ts(56,12): error TS2339: Property 'call' does not exist on type 'string'.
 src/jsesc.ts(58,29): error TS2322: Type '(value: any) => boolean' is not assignable to type 'boolean'.
 src/jsesc.ts(61,24): error TS2322: Type '(value: any) => boolean' is not assignable to type 'boolean'.
+src/jsesc.ts(62,18): error TS2339: Property 'call' does not exist on type 'string'.
 src/jsesc.ts(64,24): error TS2322: Type '(value: any) => boolean' is not assignable to type 'boolean'.
+src/jsesc.ts(65,18): error TS2339: Property 'call' does not exist on type 'string'.
 src/jsesc.ts(89,7): error TS2322: Type '{ (argument: any, options: any): any; version: string; }' is not assignable to type 'void'.
 src/jsesc.ts(90,8): error TS2322: Type '() => void' is not assignable to type 'boolean'.
 src/jsesc.ts(145,26): error TS2349: This expression is not callable.
@@ -137,11 +145,4 @@ src/jsesc.ts(293,23): error TS2349: This expression is not callable.
 src/jsesc.ts(295,11): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
 src/jsesc.ts(316,7): error TS2339: Property 'version' does not exist on type 'void'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17783,18): error TS2451: Cannot redeclare block-scoped variable 'toString'.
 

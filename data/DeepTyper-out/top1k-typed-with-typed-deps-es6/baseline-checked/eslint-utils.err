@@ -2,18 +2,14 @@ rollup.config.ts(5,24): error TS2307: Cannot find module 'rollup-plugin-sourcema
 rollup.config.ts(6,25): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 src/find-variable.ts(16,27): error TS2339: Property 'name' does not exist on type 'never'.
 src/find-variable.ts(28,5): error TS2322: Type 'null' is not assignable to type 'string'.
-src/get-function-head-location.ts(10,17): error TS2339: Property 'id' does not exist on type 'Node'.
+src/get-function-head-location.ts(9,40): error TS2304: Cannot find name 'Node'.
 src/get-function-head-location.ts(11,22): error TS2339: Property 'getTokenAfter' does not exist on type 'string'.
-src/get-function-head-location.ts(11,41): error TS2339: Property 'id' does not exist on type 'Node'.
 src/get-function-head-location.ts(12,22): error TS2339: Property 'getFirstToken' does not exist on type 'string'.
-src/get-function-head-location.ts(22,30): error TS2339: Property 'parent' does not exist on type 'Node'.
-src/get-function-head-location.ts(26,14): error TS2339: Property 'type' does not exist on type 'Node'.
+src/get-function-head-location.ts(21,47): error TS2304: Cannot find name 'Node'.
 src/get-function-head-location.ts(27,47): error TS2339: Property 'getTokenBefore' does not exist on type 'string'.
-src/get-function-head-location.ts(27,67): error TS2339: Property 'body' does not exist on type 'Node'.
 src/get-function-head-location.ts(29,28): error TS2339: Property 'loc' does not exist on type 'string'.
 src/get-function-head-location.ts(30,26): error TS2339: Property 'loc' does not exist on type 'string'.
 src/get-function-head-location.ts(37,57): error TS2339: Property 'loc' does not exist on type 'string'.
-src/get-function-head-location.ts(39,22): error TS2339: Property 'loc' does not exist on type 'Node'.
 src/get-function-head-location.ts(40,57): error TS2339: Property 'loc' does not exist on type 'string'.
 src/get-function-head-location.ts(43,5): error TS2322: Type '{ start: any; end: any; }' is not assignable to type 'void'.
 src/get-function-name-with-kind.ts(61,34): error TS2554: Expected 2 arguments, but got 1.
@@ -21,6 +17,10 @@ src/get-function-name-with-kind.ts(65,52): error TS2339: Property 'getText' does
 src/get-property-name.ts(16,17): error TS2322: Type 'null' is not assignable to type 'string'.
 src/get-property-name.ts(30,17): error TS2322: Type 'null' is not assignable to type 'string'.
 src/get-property-name.ts(37,5): error TS2322: Type 'null' is not assignable to type 'string'.
+src/get-static-value.ts(8,18): error TS2304: Cannot find name 'self'.
+src/get-static-value.ts(9,11): error TS2304: Cannot find name 'self'.
+src/get-static-value.ts(10,18): error TS2304: Cannot find name 'window'.
+src/get-static-value.ts(11,11): error TS2304: Cannot find name 'window'.
 src/get-static-value.ts(80,9): error TS2304: Cannot find name 'isPrototypeOf'.
 src/get-static-value.ts(82,33): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Math'.
   No index signature with a parameter of type 'string' was found on type 'Math'.
@@ -213,10 +213,4 @@ src/token-predicate.ts(135,53): error TS2345: Argument of type '(token: string) 
 src/token-predicate.ts(136,51): error TS2345: Argument of type '(token: string) => string' is not assignable to parameter of type 'string'.
 src/token-predicate.ts(137,51): error TS2345: Argument of type '(token: string) => string' is not assignable to parameter of type 'string'.
 src/token-predicate.ts(138,46): error TS2345: Argument of type '(token: string) => string' is not assignable to parameter of type 'string'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

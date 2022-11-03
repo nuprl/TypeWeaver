@@ -3,6 +3,7 @@ lib/attributes.ts(99,11): error TS2554: Expected 1 arguments, but got 2.
 lib/attributes.ts(116,73): error TS2554: Expected 1 arguments, but got 2.
 lib/attributes.ts(118,3): error TS2322: Type 'string' is not assignable to type 'void'.
 lib/serialize.ts(4,8): error TS1192: Module '"lib/attributes"' has no default export.
+lib/serialize.ts(27,17): error TS2304: Cannot find name 'Attr'.
 lib/serialize.ts(60,43): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
 lib/serialize.ts(82,3): error TS2322: Type 'string' is not assignable to type 'boolean'.
 lib/serialize.ts(87,3): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
@@ -17,10 +18,4 @@ lib/serialize.ts(272,5): error TS2322: Type 'string' is not assignable to type '
 lib/serialize.ts(295,3): error TS2322: Type 'string' is not assignable to type 'void'.
 lib/serialize.ts(305,38): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
 lib/serialize.ts(358,17): error TS7006: Parameter 'root' implicitly has an 'any' type.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

@@ -3,6 +3,9 @@ example/circular.ts(6,13): error TS2554: Expected 4 arguments, but got 1.
 example/fn.ts(4,37): error TS2322: Type '(n: number) => string' is not assignable to type 'number'.
 example/fn.ts(4,60): error TS2322: Type 'number' is not assignable to type 'string'.
 example/fn.ts(5,13): error TS2554: Expected 4 arguments, but got 1.
+example/inspect.ts(6,25): error TS2584: Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'.
+example/inspect.ts(7,3): error TS2812: Property 'setAttribute' does not exist on type 'HTMLDivElement'. Try changing the 'lib' compiler option to include 'dom'.
+example/inspect.ts(8,3): error TS2812: Property 'innerHTML' does not exist on type 'HTMLDivElement'. Try changing the 'lib' compiler option to include 'dom'.
 example/inspect.ts(10,13): error TS2554: Expected 4 arguments, but got 1.
 index.ts(1,5): error TS2322: Type 'false | Map<any, any>' is not assignable to type 'boolean'.
   Type 'Map<any, any>' is not assignable to type 'boolean'.
@@ -24,9 +27,8 @@ index.ts(8,5): error TS2322: Type 'false | ((callbackfn: (value: any, value2: an
   Type '(callbackfn: (value: any, value2: any, set: Set<any>) => void, thisArg?: any) => void' is not assignable to type 'boolean'.
 index.ts(9,5): error TS2322: Type 'false | WeakMap<object, any>' is not assignable to type 'boolean'.
   Type 'WeakMap<object, any>' is not assignable to type 'boolean'.
-index.ts(13,34): error TS2552: Cannot find name 'WeakRef'. Did you mean 'isWeakRef'?
-index.ts(13,60): error TS2552: Cannot find name 'WeakRef'. Did you mean 'isWeakRef'?
-index.ts(14,38): error TS2552: Cannot find name 'WeakRef'. Did you mean 'isWeakRef'?
+index.ts(13,5): error TS2322: Type 'false | WeakRef<any>' is not assignable to type 'boolean'.
+  Type 'WeakRef<any>' is not assignable to type 'boolean'.
 index.ts(15,31): error TS2322: Type '() => boolean' is not assignable to type 'boolean'.
 index.ts(16,30): error TS2322: Type '() => string' is not assignable to type 'string'.
 index.ts(17,32): error TS2322: Type '() => string' is not assignable to type 'string'.
@@ -89,6 +91,8 @@ index.ts(329,17): error TS2339: Property 'call' does not exist on type 'true'.
 index.ts(331,21): error TS2339: Property 'call' does not exist on type 'boolean'.
 index.ts(372,17): error TS2339: Property 'call' does not exist on type 'true'.
 index.ts(374,21): error TS2339: Property 'call' does not exist on type 'boolean'.
+index.ts(401,16): error TS2693: 'HTMLElement' only refers to a type, but is being used as a value here.
+index.ts(401,60): error TS2693: 'HTMLElement' only refers to a type, but is being used as a value here.
 index.ts(414,63): error TS2345: Argument of type 'string' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
 index.ts(435,27): error TS7006: Parameter 'type' implicitly has an 'any' type.
 index.ts(439,23): error TS7006: Parameter 'type' implicitly has an 'any' type.
@@ -117,10 +121,4 @@ test-core-js.ts(8,13): error TS2554: Expected 4 arguments, but got 1.
 test-core-js.ts(13,13): error TS2554: Expected 4 arguments, but got 1.
 test-core-js.ts(18,13): error TS2554: Expected 4 arguments, but got 1.
 test-core-js.ts(23,13): error TS2554: Expected 4 arguments, but got 1.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 
