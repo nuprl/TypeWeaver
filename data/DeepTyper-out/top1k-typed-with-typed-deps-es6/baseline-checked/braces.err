@@ -78,10 +78,8 @@ lib/expand.ts(11,21): error TS2769: No overload matches this call.
     Argument of type 'string' is not assignable to parameter of type 'ConcatArray<never>'.
   Overload 2 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
     Argument of type 'string' is not assignable to parameter of type 'ConcatArray<never>'.
-lib/expand.ts(18,20): error TS2494: Using a string in a 'for...of' statement is only supported in ECMAScript 5 and higher.
 lib/expand.ts(21,21): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/expand.ts(24,23): error TS2494: Using a string in a 'for...of' statement is only supported in ECMAScript 5 and higher.
 lib/expand.ts(26,42): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/expand.ts(33,7): error TS2322: Type '(ast: any, options?: {}) => any' is not assignable to type 'void'.
