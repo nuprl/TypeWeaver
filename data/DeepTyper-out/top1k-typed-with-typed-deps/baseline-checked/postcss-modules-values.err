@@ -6,7 +6,7 @@ src/index.ts(32,24): error TS7053: Element implicitly has an 'any' type because 
 src/index.ts(43,47): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
 src/index.ts(44,21): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-src/index.ts(62,17): error TS2461: Type 'RegExpMatchArray | null' is not an array type.
+src/index.ts(62,17): error TS2488: Type 'RegExpMatchArray | null' must have a '[Symbol.iterator]()' method that returns an iterator.
 src/index.ts(75,17): error TS2322: Type 'boolean' is not assignable to type 'RegExp'.
 src/index.ts(82,13): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
 src/index.ts(101,22): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.

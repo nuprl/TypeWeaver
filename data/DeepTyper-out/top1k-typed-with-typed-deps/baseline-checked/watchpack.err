@@ -47,8 +47,6 @@ lib/DirectoryWatcher.ts(466,14): error TS7006: Parameter 'err' implicitly has an
 lib/DirectoryWatcher.ts(482,21): error TS7006: Parameter 'reason' implicitly has an 'any' type.
 lib/DirectoryWatcher.ts(505,52): error TS7006: Parameter 'type' implicitly has an 'any' type.
 lib/DirectoryWatcher.ts(531,9): error TS7006: Parameter 'initial' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(605,26): error TS2802: Type 'Set<any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
-lib/DirectoryWatcher.ts(627,28): error TS2802: Type 'Set<any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 lib/DirectoryWatcher.ts(632,14): error TS2339: Property 'code' does not exist on type 'string'.
 lib/DirectoryWatcher.ts(633,14): error TS2339: Property 'code' does not exist on type 'string'.
 lib/DirectoryWatcher.ts(634,14): error TS2339: Property 'code' does not exist on type 'string'.
@@ -81,9 +79,6 @@ lib/getWatcherManager.ts(29,15): error TS7006: Parameter 'startTime' implicitly 
 lib/getWatcherManager.ts(35,17): error TS7006: Parameter 'directory' implicitly has an 'any' type.
 lib/getWatcherManager.ts(35,28): error TS7006: Parameter 'startTime' implicitly has an 'any' type.
 lib/reducePlan.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
-lib/reducePlan.ts(29,13): error TS2802: Type 'string' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
-lib/reducePlan.ts(104,22): error TS2802: Type 'Set<any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
-lib/reducePlan.ts(118,22): error TS2802: Type 'Set<any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 lib/watchEventSource.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
 lib/watchEventSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 lib/watchEventSource.ts(9,9): error TS2451: Cannot redeclare block-scoped variable 'EventEmitter'.
@@ -146,7 +141,6 @@ lib/watchEventSource.ts(250,4): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/watchEventSource.ts(255,4): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/watchEventSource.ts(284,28): error TS2802: Type 'Set<any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 lib/watchEventSource.ts(299,23): error TS2554: Expected 3 arguments, but got 0.
 lib/watchEventSource.ts(319,16): error TS2349: This expression is not callable.
   Type 'Promise<void>' has no call signatures.
@@ -216,18 +210,15 @@ lib/watchpack.ts(244,6): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/watchpack.ts(249,6): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/watchpack.ts(255,26): error TS2495: Type 'boolean' is not an array type or a string type.
+lib/watchpack.ts(255,26): error TS2488: Type 'boolean' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/watchpack.ts(259,18): error TS2339: Property 'delete' does not exist on type 'boolean'.
-lib/watchpack.ts(265,26): error TS2495: Type 'boolean' is not an array type or a string type.
 lib/watchpack.ts(269,23): error TS2339: Property 'delete' does not exist on type 'boolean'.
 lib/watchpack.ts(278,61): error TS7005: Variable 'startTime' implicitly has an 'any' type.
 lib/watchpack.ts(280,19): error TS2339: Property 'set' does not exist on type 'boolean'.
 lib/watchpack.ts(284,66): error TS7005: Variable 'startTime' implicitly has an 'any' type.
 lib/watchpack.ts(286,24): error TS2339: Property 'set' does not exist on type 'boolean'.
-lib/watchpack.ts(316,19): error TS2802: Type 'Set<any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 lib/watchpack.ts(329,25): error TS7006: Parameter 'fileTimestamps' implicitly has an 'any' type.
 lib/watchpack.ts(329,41): error TS7006: Parameter 'directoryTimestamps' implicitly has an 'any' type.
-lib/watchpack.ts(334,19): error TS2802: Type 'Set<any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 lib/watchpack.ts(351,12): error TS7006: Parameter 'item' implicitly has an 'any' type.
 lib/watchpack.ts(351,18): error TS7006: Parameter 'mtime' implicitly has an 'any' type.
 lib/watchpack.ts(351,25): error TS7006: Parameter 'file' implicitly has an 'any' type.

@@ -1,4 +1,4 @@
-index.ts(3,87): error TS1055: Type 'any' is not a valid async function return type in ES5/ES3 because it does not refer to a Promise-compatible constructor value.
+index.ts(3,87): error TS1064: The return type of an async function or method must be the global Promise<T> type. Did you mean to write 'Promise<any>'?
 index.ts(9,28): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'typeof import("node:fs/promises")'.
   No index signature with a parameter of type 'string' was found on type 'typeof import("node:fs/promises")'.
 index.ts(12,7): error TS2571: Object is of type 'unknown'.

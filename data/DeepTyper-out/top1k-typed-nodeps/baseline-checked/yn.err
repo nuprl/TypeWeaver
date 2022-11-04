@@ -2,20 +2,21 @@ index.ts(3,28): error TS7006: Parameter 'value' implicitly has an 'any' type.
 index.ts(5,11): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
 index.ts(5,11): error TS7031: Binding element 'default_' implicitly has an 'any' type.
 lenient.ts(4,29): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(iterable?: Iterable<readonly [unknown, unknown]> | null | undefined): Map<unknown, unknown>', gave the following error.
-    Argument of type '(string | number)[][]' is not assignable to parameter of type 'Iterable<readonly [unknown, unknown]>'.
+  Overload 1 of 4, '(iterable?: Iterable<readonly [number, number]> | null | undefined): Map<number, number>', gave the following error.
+    Argument of type '([number, number] | [string, number])[]' is not assignable to parameter of type 'Iterable<readonly [number, number]>'.
       The types returned by '[Symbol.iterator]().next(...)' are incompatible between these types.
-        Type 'IteratorResult<(string | number)[], any>' is not assignable to type 'IteratorResult<readonly [unknown, unknown], any>'.
-          Type 'IteratorYieldResult<(string | number)[]>' is not assignable to type 'IteratorResult<readonly [unknown, unknown], any>'.
-            Type 'IteratorYieldResult<(string | number)[]>' is not assignable to type 'IteratorYieldResult<readonly [unknown, unknown]>'.
-              Type '(string | number)[]' is not assignable to type 'readonly [unknown, unknown]'.
-                Target requires 2 element(s) but source may have fewer.
+        Type 'IteratorResult<[number, number] | [string, number], any>' is not assignable to type 'IteratorResult<readonly [number, number], any>'.
+          Type 'IteratorYieldResult<[number, number] | [string, number]>' is not assignable to type 'IteratorResult<readonly [number, number], any>'.
+            Type 'IteratorYieldResult<[number, number] | [string, number]>' is not assignable to type 'IteratorYieldResult<readonly [number, number]>'.
+              Type '[number, number] | [string, number]' is not assignable to type 'readonly [number, number]'.
+                Type '[string, number]' is not assignable to type 'readonly [number, number]'.
+                  Type at position 0 in source is not compatible with type at position 0 in target.
+                    Type 'string' is not assignable to type 'number'.
 lenient.ts(17,29): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(iterable?: Iterable<readonly [unknown, unknown]> | null | undefined): Map<unknown, unknown>', gave the following error.
-    Argument of type '(string | number)[][]' is not assignable to parameter of type 'Iterable<readonly [unknown, unknown]>'.
+  Overload 1 of 4, '(iterable?: Iterable<readonly [number, number]> | null | undefined): Map<number, number>', gave the following error.
+    Argument of type '([number, number] | [string, number])[]' is not assignable to parameter of type 'Iterable<readonly [number, number]>'.
 lenient.ts(50,29): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(iterable?: Iterable<readonly [unknown, unknown]> | null | undefined): Map<unknown, unknown>', gave the following error.
-    Argument of type '(string | number)[][]' is not assignable to parameter of type 'Iterable<readonly [unknown, unknown]>'.
-lenient.ts(81,8): error TS2802: Type 'string' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+  Overload 1 of 4, '(iterable?: Iterable<readonly [number, number]> | null | undefined): Map<number, number>', gave the following error.
+    Argument of type '([number, number] | [string, number])[]' is not assignable to parameter of type 'Iterable<readonly [number, number]>'.
 lenient.ts(104,2): error TS2322: Type 'number' is not assignable to type 'boolean'.
 

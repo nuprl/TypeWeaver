@@ -1,12 +1,7 @@
 index.ts(2,14): error TS7006: Parameter 'reason' implicitly has an 'any' type.
 index.ts(20,12): error TS7006: Parameter 'userFunction' implicitly has an 'any' type.
 index.ts(21,11): error TS7019: Rest parameter 'arguments_' implicitly has an 'any[]' type.
-index.ts(27,2): error TS18028: Private identifiers are only available when targeting ECMAScript 2015 and higher.
-index.ts(28,2): error TS18028: Private identifiers are only available when targeting ECMAScript 2015 and higher.
-index.ts(29,2): error TS18028: Private identifiers are only available when targeting ECMAScript 2015 and higher.
-index.ts(30,2): error TS18028: Private identifiers are only available when targeting ECMAScript 2015 and higher.
 index.ts(31,2): error TS7008: Member '#reject' implicitly has an 'any' type.
-index.ts(31,2): error TS18028: Private identifiers are only available when targeting ECMAScript 2015 and higher.
 index.ts(33,14): error TS7006: Parameter 'executor' implicitly has an 'any' type.
 index.ts(34,31): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'resolve' and 'resolve' are incompatible.
@@ -28,6 +23,5 @@ index.ts(81,10): error TS7006: Parameter 'onFinally' implicitly has an 'any' typ
 index.ts(85,9): error TS7006: Parameter 'reason' implicitly has an 'any' type.
 index.ts(95,6): error TS2349: This expression is not callable.
   Type 'never' has no call signatures.
-index.ts(112,2): error TS18028: Private identifiers are only available when targeting ECMAScript 2015 and higher.
 index.ts(112,12): error TS7006: Parameter 'state' implicitly has an 'any' type.
 

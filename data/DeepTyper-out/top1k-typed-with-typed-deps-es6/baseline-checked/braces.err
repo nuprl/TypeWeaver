@@ -43,7 +43,6 @@ examples/option-transform.ts(14,20): error TS7006: Parameter 'index' implicitly 
 index.ts(22,22): error TS7006: Parameter 'input' implicitly has an 'any' type.
 index.ts(38,26): error TS2339: Property 'expand' does not exist on type '{}'.
 index.ts(38,53): error TS2339: Property 'nodupes' does not exist on type '{}'.
-index.ts(39,18): error TS2802: Type 'Set<any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 index.ts(58,17): error TS7006: Parameter 'input' implicitly has an 'any' type.
 index.ts(74,21): error TS7006: Parameter 'input' implicitly has an 'any' type.
 index.ts(96,19): error TS7006: Parameter 'input' implicitly has an 'any' type.
@@ -54,7 +53,6 @@ index.ts(125,21): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 index.ts(128,15): error TS2339: Property 'noempty' does not exist on type '{}'.
 index.ts(133,15): error TS2339: Property 'nodupes' does not exist on type '{}'.
-index.ts(134,18): error TS2802: Type 'Set<unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 index.ts(156,18): error TS7006: Parameter 'input' implicitly has an 'any' type.
 index.ts(161,17): error TS2339: Property 'expand' does not exist on type '{}'.
 lib/compile.ts(4,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/braces/lib/utils"' has no default export.

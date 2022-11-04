@@ -34,15 +34,12 @@ tools/get-keys-from-ts.ts(455,54): error TS7031: Binding element 'excluded' impl
 tools/get-keys-from-ts.ts(483,9): error TS2554: Expected 3 arguments, but got 2.
 tools/get-keys-from-ts.ts(485,9): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
   No index signature with a parameter of type 'string' was found on type '{}'.
-tools/get-keys-from-ts.ts(485,38): error TS2802: Type 'Set<string>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 tools/get-keys-from-ts.ts(485,54): error TS2345: Argument of type '{}' is not assignable to parameter of type 'Node'.
   Type '{}' is missing the following properties from type 'Node': baseURI, childNodes, firstChild, isConnected, and 46 more.
 tools/get-keys-from-ts.ts(485,61): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
 tools/get-keys-from-ts.ts(485,65): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
   No index signature with a parameter of type 'string' was found on type '{}'.
 tools/get-keys-from-ts.ts(488,49): error TS2345: Argument of type '{}' is not assignable to parameter of type 'string'.
-tools/get-keys-from-ts.ts(495,20): error TS2802: Type 'Set<any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
-tools/get-keys-from-ts.ts(503,20): error TS2802: Type 'Set<any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
-tools/get-keys-from-ts.ts(536,63): error TS1055: Type 'any' is not a valid async function return type in ES5/ES3 because it does not refer to a Promise-compatible constructor value.
+tools/get-keys-from-ts.ts(536,63): error TS1064: The return type of an async function or method must be the global Promise<T> type. Did you mean to write 'Promise<any>'?
 tools/get-keys-from-ts.ts(537,11): error TS2322: Type 'Buffer' is not assignable to type 'string'.
 

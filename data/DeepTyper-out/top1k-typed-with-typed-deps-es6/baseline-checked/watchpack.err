@@ -199,13 +199,11 @@ lib/DirectoryWatcher.ts(599,11): error TS2339: Property 'initialScanRemoved' doe
 lib/DirectoryWatcher.ts(600,11): error TS2339: Property 'initialScanFinished' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(602,49): error TS2339: Property 'watchers' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(603,47): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(604,26): error TS2802: Type 'Set<any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 lib/DirectoryWatcher.ts(609,41): error TS2339: Property 'initialScanFinished' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(618,15): error TS2339: Property 'scanAgain' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(619,12): error TS2339: Property 'scanAgain' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(620,24): error TS2339: Property 'scanAgainInitial' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(622,12): error TS2339: Property 'scanning' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(626,28): error TS2802: Type 'Set<any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 lib/DirectoryWatcher.ts(627,25): error TS2345: Argument of type '(err2: string, stats: any) => void' is not assignable to parameter of type '(err: ErrnoException | null, stats: Stats) => void'.
   Types of parameters 'err2' and 'err' are incompatible.
     Type 'ErrnoException | null' is not assignable to type 'string'.
@@ -268,9 +266,6 @@ lib/getWatcherManager.ts(29,12): error TS7006: Parameter 'p' implicitly has an '
 lib/getWatcherManager.ts(29,15): error TS7006: Parameter 'startTime' implicitly has an 'any' type.
 lib/getWatcherManager.ts(35,17): error TS7006: Parameter 'directory' implicitly has an 'any' type.
 lib/getWatcherManager.ts(35,28): error TS7006: Parameter 'startTime' implicitly has an 'any' type.
-lib/reducePlan.ts(29,13): error TS2802: Type 'string' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
-lib/reducePlan.ts(104,22): error TS2802: Type 'Set<any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
-lib/reducePlan.ts(118,22): error TS2802: Type 'Set<any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 lib/watchEventSource.ts(17,3): error TS2532: Object is possibly 'undefined'.
 lib/watchEventSource.ts(38,14): error TS7006: Parameter 'filePath' implicitly has an 'any' type.
 lib/watchEventSource.ts(39,8): error TS2339: Property 'filePath' does not exist on type 'DirectWatcher'.
@@ -328,7 +323,6 @@ lib/watchEventSource.ts(250,4): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/watchEventSource.ts(255,4): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/watchEventSource.ts(284,28): error TS2802: Type 'Set<string>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 lib/watchEventSource.ts(319,16): error TS2349: This expression is not callable.
   Type 'Promise<void>' has no call signatures.
 lib/watchEventSource.ts(329,3): error TS2349: This expression is not callable.
@@ -419,9 +413,8 @@ lib/watchpack.ts(244,6): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/watchpack.ts(249,6): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/watchpack.ts(255,26): error TS2495: Type 'boolean' is not an array type or a string type.
+lib/watchpack.ts(255,26): error TS2488: Type 'boolean' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/watchpack.ts(259,18): error TS2339: Property 'delete' does not exist on type 'boolean'.
-lib/watchpack.ts(265,26): error TS2495: Type 'boolean' is not an array type or a string type.
 lib/watchpack.ts(269,23): error TS2339: Property 'delete' does not exist on type 'boolean'.
 lib/watchpack.ts(278,31): error TS2339: Property 'watcherManager' does not exist on type 'Watchpack'.
 lib/watchpack.ts(278,61): error TS7005: Variable 'startTime' implicitly has an 'any' type.
@@ -443,12 +436,10 @@ lib/watchpack.ts(308,12): error TS2339: Property 'aggregateTimer' does not exist
 lib/watchpack.ts(308,46): error TS2339: Property 'aggregateTimer' does not exist on type 'Watchpack'.
 lib/watchpack.ts(313,25): error TS2339: Property 'fileWatchers' does not exist on type 'Watchpack'.
 lib/watchpack.ts(314,25): error TS2339: Property 'directoryWatchers' does not exist on type 'Watchpack'.
-lib/watchpack.ts(316,19): error TS2802: Type 'Set<any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 lib/watchpack.ts(329,25): error TS7006: Parameter 'fileTimestamps' implicitly has an 'any' type.
 lib/watchpack.ts(329,41): error TS7006: Parameter 'directoryTimestamps' implicitly has an 'any' type.
 lib/watchpack.ts(331,25): error TS2339: Property 'fileWatchers' does not exist on type 'Watchpack'.
 lib/watchpack.ts(332,25): error TS2339: Property 'directoryWatchers' does not exist on type 'Watchpack'.
-lib/watchpack.ts(334,19): error TS2802: Type 'Set<any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 lib/watchpack.ts(340,12): error TS2339: Property 'aggregateTimer' does not exist on type 'Watchpack'.
 lib/watchpack.ts(341,22): error TS2339: Property 'aggregateTimer' does not exist on type 'Watchpack'.
 lib/watchpack.ts(342,9): error TS2339: Property 'aggregateTimer' does not exist on type 'Watchpack'.

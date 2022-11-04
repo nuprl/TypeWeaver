@@ -10,6 +10,6 @@ bench/load.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'findup
 bench/load.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'escalade'.
 bench/load.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'sync'.
 src/async.ts(8,44): error TS7006: Parameter 'callback' implicitly has an 'any' type.
-src/async.ts(8,55): error TS1055: Type 'any' is not a valid async function return type in ES5/ES3 because it does not refer to a Promise-compatible constructor value.
+src/async.ts(8,55): error TS1064: The return type of an async function or method must be the global Promise<T> type. Did you mean to write 'Promise<any>'?
 src/sync.ts(4,38): error TS7006: Parameter 'callback' implicitly has an 'any' type.
 

@@ -75,7 +75,6 @@ index.ts(162,8): error TS2339: Property 'cache' does not exist on type 'QuickLRU
 index.ts(163,8): error TS2339: Property 'oldCache' does not exist on type 'QuickLRU'.
 index.ts(164,8): error TS2551: Property '_size' does not exist on type 'QuickLRU'. Did you mean 'size'?
 index.ts(167,9): error TS7006: Parameter 'newSize' implicitly has an 'any' type.
-index.ts(172,28): error TS2802: Type 'Generator<any, void, unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 index.ts(175,9): error TS2339: Property 'cache' does not exist on type 'QuickLRU'.
 index.ts(176,9): error TS2339: Property 'oldCache' does not exist on type 'QuickLRU'.
 index.ts(177,9): error TS2551: Property '_size' does not exist on type 'QuickLRU'. Did you mean 'size'?
@@ -83,8 +82,6 @@ index.ts(183,9): error TS2339: Property 'oldCache' does not exist on type 'Quick
 index.ts(184,9): error TS2339: Property 'cache' does not exist on type 'QuickLRU'.
 index.ts(185,9): error TS2551: Property '_size' does not exist on type 'QuickLRU'. Did you mean 'size'?
 index.ts(188,8): error TS2339: Property 'maxSize' does not exist on type 'QuickLRU'.
-index.ts(192,23): error TS2802: Type 'this' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
-index.ts(198,27): error TS2802: Type 'this' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 index.ts(203,4): error TS2416: Property '[Symbol.iterator]' in type 'QuickLRU' is not assignable to the same property in base type 'Map<any, any>'.
   Type '() => Generator<any[], void, unknown>' is not assignable to type '() => IterableIterator<[any, any]>'.
     Call signature return types 'Generator<any[], void, unknown>' and 'IterableIterator<[any, any]>' are incompatible.
@@ -100,7 +97,6 @@ index.ts(214,14): error TS2339: Property 'cache' does not exist on type 'QuickLR
 index.ts(224,31): error TS2339: Property 'cache' does not exist on type 'QuickLRU'.
 index.ts(234,20): error TS2339: Property 'oldCache' does not exist on type 'QuickLRU'.
 index.ts(238,14): error TS2339: Property 'cache' does not exist on type 'QuickLRU'.
-index.ts(248,30): error TS2802: Type 'Generator<any, void, unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 index.ts(254,13): error TS2551: Property '_size' does not exist on type 'QuickLRU'. Did you mean 'size'?
 index.ts(255,16): error TS2339: Property 'oldCache' does not exist on type 'QuickLRU'.
 index.ts(259,26): error TS2339: Property 'oldCache' does not exist on type 'QuickLRU'.
@@ -111,6 +107,4 @@ index.ts(268,2): error TS2416: Property 'entries' in type 'QuickLRU' is not assi
   Type '() => Generator<any[], void, unknown>' is not assignable to type '() => IterableIterator<[any, any]>'.
     Type 'Generator<any[], void, unknown>' is not assignable to type 'IterableIterator<[any, any]>'.
 index.ts(272,10): error TS7006: Parameter 'callbackFunction' implicitly has an 'any' type.
-index.ts(273,30): error TS2802: Type 'Generator<any[], void, unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
-index.ts(279,29): error TS2802: Type 'Generator<any[], void, unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 

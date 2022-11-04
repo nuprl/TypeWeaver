@@ -1,5 +1,5 @@
 index.ts(5,21): error TS7006: Parameter 'buffer' implicitly has an 'any' type.
 index.ts(5,30): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
 index.ts(5,43): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
-index.ts(16,69): error TS1055: Type 'any' is not a valid async function return type in ES5/ES3 because it does not refer to a Promise-compatible constructor value.
+index.ts(16,69): error TS1064: The return type of an async function or method must be the global Promise<T> type. Did you mean to write 'Promise<any>'?
 
