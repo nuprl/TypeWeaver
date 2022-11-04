@@ -1,48 +1,8 @@
 # top1k-untyped-nodeps
 
-This dataset contains JavaScript packages that are untyped and have no
-dependencies.
-
-`top1k-untyped-nodeps.csv` contains statistics about the number of dependencies
-and lines of JavaScript code for each package.
-
+These notes are old and mostly outdated.
 
 # DeepTyper
-
-## Type inference
-
-Command:
-
-    python ../tools/runner.py \
-        --engine DeepTyper \
-        --directory . \
-        --dataset top1k-untyped-nodeps \
-        --infer > notes/DeepTyper/top1k-untyped-nodeps/infer.out
-
-Summary:
-
-    Number of successes: 255
-    Number of fails: 8
-    Number of skips: 0
-    Time for type inference: 0:18:14
-
-## Type weaving
-
-Command:
-
-    python ../tools/runner.py \
-        --engine DeepTyper \
-        --workers 16 \
-        --directory . \
-        --dataset top1k-untyped-nodeps \
-        --weave baseline > notes/DeepTyper/top1k-untyped-nodeps/weave.out
-
-Summary:
-
-    Number of successes: 254
-    Number of fails: 1
-    Number of skips: 0
-    Time for type weaving: 0:00:11
 
 ## Type checking
 
@@ -109,41 +69,6 @@ A list of TypeScript diagnostic messages can be found here:
 
 
 # LambdaNet
-
-## Type inference
-
-Command:
-
-    python ../tools/runner.py \
-        --engine LambdaNet \
-        --directory . \
-        --dataset top1k-untyped-nodeps \
-        --infer > notes/LambdaNet/top1k-untyped-nodeps/infer.out
-
-Summary:
-
-    Number of successes: 86
-    Number of fails: 16
-    Number of skips: 0
-    Time for type inference: 0:05:00
-
-## Type weaving
-
-Command:
-
-    python ../tools/runner.py \
-        --engine LambdaNet \
-        --workers 16 \
-        --directory . \
-        --dataset top1k-untyped-nodeps \
-        --weave baseline > notes/LambdaNet/top1k-untyped-nodeps/weave.out
-
-Summary:
-
-    Number of successes: 227
-    Number of fails: 0
-    Number of skips: 0
-    Time for type weaving: 0:01:28
 
 ## Type checking
 
