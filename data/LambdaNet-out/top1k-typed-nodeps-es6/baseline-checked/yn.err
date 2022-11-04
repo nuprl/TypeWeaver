@@ -6,35 +6,31 @@ index.ts(18,3): error TS2322: Type 'boolean' is not assignable to type 'String'.
 index.ts(21,37): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(22,3): error TS2322: Type 'boolean' is not assignable to type 'String'.
-index.ts(26,3): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(26,3): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(26,26): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLInputElement'.
   Type 'String' is missing the following properties from type 'HTMLInputElement': accept, align, alt, autocomplete, and 332 more.
 lenient.ts(4,15): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lenient.ts(4,29): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(iterable?: Iterable<readonly [unknown, unknown]> | null | undefined): Map<unknown, unknown>', gave the following error.
-    Argument of type '(string | number)[][]' is not assignable to parameter of type 'Iterable<readonly [unknown, unknown]>'.
+  Overload 1 of 4, '(iterable?: Iterable<readonly [number, number]> | null | undefined): Map<number, number>', gave the following error.
+    Argument of type '([number, number] | [string, number])[]' is not assignable to parameter of type 'Iterable<readonly [number, number]>'.
       The types returned by '[Symbol.iterator]().next(...)' are incompatible between these types.
-        Type 'IteratorResult<(string | number)[], any>' is not assignable to type 'IteratorResult<readonly [unknown, unknown], any>'.
-          Type 'IteratorYieldResult<(string | number)[]>' is not assignable to type 'IteratorResult<readonly [unknown, unknown], any>'.
-            Type 'IteratorYieldResult<(string | number)[]>' is not assignable to type 'IteratorYieldResult<readonly [unknown, unknown]>'.
-              Type '(string | number)[]' is not assignable to type 'readonly [unknown, unknown]'.
-                Target requires 2 element(s) but source may have fewer.
+        Type 'IteratorResult<[number, number] | [string, number], any>' is not assignable to type 'IteratorResult<readonly [number, number], any>'.
+          Type 'IteratorYieldResult<[number, number] | [string, number]>' is not assignable to type 'IteratorResult<readonly [number, number], any>'.
+            Type 'IteratorYieldResult<[number, number] | [string, number]>' is not assignable to type 'IteratorYieldResult<readonly [number, number]>'.
+              Type '[number, number] | [string, number]' is not assignable to type 'readonly [number, number]'.
+                Type '[string, number]' is not assignable to type 'readonly [number, number]'.
+                  Type at position 0 in source is not compatible with type at position 0 in target.
+                    Type 'string' is not assignable to type 'number'.
 lenient.ts(17,15): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lenient.ts(17,29): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(iterable?: Iterable<readonly [unknown, unknown]> | null | undefined): Map<unknown, unknown>', gave the following error.
-    Argument of type '(string | number)[][]' is not assignable to parameter of type 'Iterable<readonly [unknown, unknown]>'.
+  Overload 1 of 4, '(iterable?: Iterable<readonly [number, number]> | null | undefined): Map<number, number>', gave the following error.
+    Argument of type '([number, number] | [string, number])[]' is not assignable to parameter of type 'Iterable<readonly [number, number]>'.
 lenient.ts(29,15): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lenient.ts(41,15): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lenient.ts(50,15): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lenient.ts(50,29): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(iterable?: Iterable<readonly [unknown, unknown]> | null | undefined): Map<unknown, unknown>', gave the following error.
-    Argument of type '(string | number)[][]' is not assignable to parameter of type 'Iterable<readonly [unknown, unknown]>'.
+  Overload 1 of 4, '(iterable?: Iterable<readonly [number, number]> | null | undefined): Map<number, number>', gave the following error.
+    Argument of type '([number, number] | [string, number])[]' is not assignable to parameter of type 'Iterable<readonly [number, number]>'.
 lenient.ts(60,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lenient.ts(80,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

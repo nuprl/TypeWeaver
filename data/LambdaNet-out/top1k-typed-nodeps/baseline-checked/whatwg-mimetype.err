@@ -3,7 +3,6 @@ lib/mime-type-parameters.ts(4,3): error TS2451: Cannot redeclare block-scoped va
 lib/mime-type-parameters.ts(5,3): error TS2451: Cannot redeclare block-scoped variable 'soleyContainsHTTPQuotedStringTokenCodePoints'.
 lib/mime-type-parameters.ts(9,15): error TS7006: Parameter 'map' implicitly has an 'any' type.
 lib/mime-type-parameters.ts(10,10): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
-lib/mime-type-parameters.ts(13,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 lib/mime-type-parameters.ts(14,17): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
 lib/mime-type-parameters.ts(17,7): error TS7006: Parameter 'name' implicitly has an 'any' type.
 lib/mime-type-parameters.ts(19,17): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
@@ -33,16 +32,10 @@ lib/mime-type.ts(20,10): error TS2551: Property '_parameters' does not exist on 
 lib/mime-type.ts(20,28): error TS2351: This expression is not constructable.
   Type 'String' has no construct signatures.
 lib/mime-type.ts(23,16): error TS7006: Parameter 'string' implicitly has an 'any' type.
-lib/mime-type.ts(31,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
-lib/mime-type.ts(35,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 lib/mime-type.ts(36,17): error TS2551: Property '_type' does not exist on type 'MIMEType'. Did you mean 'type'?
-lib/mime-type.ts(39,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 lib/mime-type.ts(49,10): error TS2551: Property '_type' does not exist on type 'MIMEType'. Did you mean 'type'?
-lib/mime-type.ts(52,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 lib/mime-type.ts(53,17): error TS2551: Property '_subtype' does not exist on type 'MIMEType'. Did you mean 'subtype'?
-lib/mime-type.ts(56,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 lib/mime-type.ts(66,10): error TS2551: Property '_subtype' does not exist on type 'MIMEType'. Did you mean 'subtype'?
-lib/mime-type.ts(69,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 lib/mime-type.ts(70,17): error TS2551: Property '_parameters' does not exist on type 'MIMEType'. Did you mean 'parameters'?
 lib/mime-type.ts(76,12): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
@@ -101,11 +94,5 @@ scripts/get-latest-platform-tests.ts(27,42): error TS2345: Argument of type 'Str
 scripts/get-latest-platform-tests.ts(28,9): error TS2339: Property 'body' does not exist on type 'HTMLElement'.
 scripts/get-latest-platform-tests.ts(28,22): error TS2339: Property 'createWriteStream' does not exist on type 'String'.
 scripts/get-latest-platform-tests.ts(33,19): error TS2339: Property 'stack' does not exist on type 'Object'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18095,18): error TS2451: Cannot redeclare block-scoped variable 'fetch'.
 

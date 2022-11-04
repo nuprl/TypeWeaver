@@ -1,5 +1,5 @@
 build.ts(2,20): error TS2307: Cannot find module 'terser' or its corresponding type declarations.
-build.ts(9,7): error TS2740: Type 'Buffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 36 more.
+build.ts(9,7): error TS2740: Type 'Buffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 37 more.
 build.ts(13,87): error TS2554: Expected 0 arguments, but got 1.
 build.ts(18,44): error TS2339: Property 'version' does not exist on type 'Object'.
 build.ts(22,58): error TS2339: Property 'code' does not exist on type 'Object'.
@@ -16,8 +16,8 @@ lexer.ts(46,52): error TS2345: Argument of type 'Number' is not assignable to pa
 lexer.ts(46,79): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(46,110): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(47,5): error TS2571: Object is of type 'unknown'.
-lexer.ts(50,41): error TS2461: Type 'HTMLElement' is not an array type.
-lexer.ts(50,140): error TS2461: Type 'Error' is not an array type.
+lexer.ts(50,41): error TS2488: Type 'HTMLElement' must have a '[Symbol.iterator]()' method that returns an iterator.
+lexer.ts(50,140): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 lexer.ts(55,32): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 lexer.ts(56,7): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
   Property '0' does not exist on type 'Object'.
@@ -27,7 +27,7 @@ lexer.ts(58,41): error TS2345: Argument of type 'Object' is not assignable to pa
 lexer.ts(69,13): error TS2322: Type 'undefined' is not assignable to type 'Object'.
 lexer.ts(73,11): error TS2322: Type 'undefined' is not assignable to type 'Object'.
 lexer.ts(85,45): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-lexer.ts(86,3): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+lexer.ts(86,3): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lexer.ts(95,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lexer.ts(96,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(97,30): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
@@ -37,7 +37,7 @@ lexer.ts(104,28): error TS2345: Argument of type 'Number' is not assignable to p
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lexer.ts(112,42): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lexer.ts(118,31): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lexer.ts(119,46): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(123,59): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lexer.ts(123,111): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -537,7 +537,7 @@ lexer.ts(941,11): error TS2367: This condition will always return 'false' since 
 lexer.ts(941,29): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 lexer.ts(943,39): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(945,13): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lexer.ts(947,18): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lexer.ts(947,18): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lexer.ts(948,25): error TS2339: Property 'add' does not exist on type 'Error'.
 lexer.ts(948,49): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -747,7 +747,7 @@ src/lexer.ts(22,35): error TS2322: Type 'Set<unknown>' is not assignable to type
 src/lexer.ts(22,65): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
 src/lexer.ts(24,15): error TS2339: Property 'rre' does not exist on type 'HTMLElement'.
 src/lexer.ts(25,11): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/lexer.ts(25,56): error TS2339: Property 'res' does not exist on type 'HTMLElement'.
 src/lexer.ts(25,68): error TS2339: Property 'ree' does not exist on type 'HTMLElement'.
 src/lexer.ts(27,17): error TS2339: Property 'add' does not exist on type 'Error'.
@@ -762,8 +762,8 @@ src/lexer.ts(32,52): error TS2339: Property 'es' does not exist on type 'HTMLEle
 src/lexer.ts(32,63): error TS2339: Property 'ee' does not exist on type 'HTMLElement'.
 src/lexer.ts(33,49): error TS2339: Property 'has' does not exist on type 'Error'.
 src/lexer.ts(34,7): error TS2304: Cannot find name 'add'.
-src/lexer.ts(37,25): error TS2461: Type 'Error' is not an array type.
-src/lexer.ts(37,50): error TS2461: Type 'Error' is not an array type.
+src/lexer.ts(37,25): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
+src/lexer.ts(37,50): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 src/lexer.ts(40,32): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 src/lexer.ts(41,7): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
   Property '0' does not exist on type 'Object'.
@@ -790,7 +790,7 @@ src/lexer.ts(90,3): error TS2322: Type 'Promise<void>' is not assignable to type
   Types of property 'valueOf' are incompatible.
     Type '() => Object' is not assignable to type '() => boolean'.
 src/lexer.ts(90,10): error TS2740: Type 'Promise<void>' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-src/lexer.ts(91,11): error TS2740: Type 'Module' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+src/lexer.ts(91,11): error TS2740: Type 'Module' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/lexer.ts(92,111): error TS2769: No overload matches this call.
   Overload 1 of 2, '(data: string): string', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -799,10 +799,4 @@ src/lexer.ts(92,111): error TS2769: No overload matches this call.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 src/lexer.ts(96,5): error TS2740: Type 'Exports' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

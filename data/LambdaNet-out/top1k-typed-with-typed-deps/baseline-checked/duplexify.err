@@ -4,7 +4,7 @@ example.ts(8,7): error TS2339: Property 'on' does not exist on type 'String'.
 example.ts(9,9): error TS2339: Property 'setReadable' does not exist on type 'HTMLElement'.
 example.ts(20,5): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
 example.ts(21,5): error TS2339: Property 'pipe' does not exist on type 'HTMLElement'.
-index.ts(6,5): error TS2740: Type 'Buffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 36 more.
+index.ts(6,5): error TS2740: Type 'Buffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 37 more.
 index.ts(11,12): error TS2339: Property '_corked' does not exist on type 'HTMLElement'.
 index.ts(11,26): error TS2551: Property 'once' does not exist on type 'HTMLElement'. Did you mean 'nonce'?
 index.ts(15,58): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -66,10 +66,4 @@ index.ts(222,16): error TS2339: Property '_writableState' does not exist on type
 index.ts(222,59): error TS2339: Property '_writableState' does not exist on type 'HTMLElement'.
 index.ts(223,12): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 index.ts(235,17): error TS2339: Property 'Writable' does not exist on type 'String'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

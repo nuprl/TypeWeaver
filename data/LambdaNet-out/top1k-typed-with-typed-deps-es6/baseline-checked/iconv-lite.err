@@ -417,7 +417,7 @@ encodings/utf16.ts(166,18): error TS2314: Generic type 'Array<T>' requires 1 typ
 encodings/utf16.ts(176,47): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 encodings/utf16.ts(177,47): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 encodings/utf16.ts(180,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-encodings/utf16.ts(196,5): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+encodings/utf16.ts(196,5): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 encodings/utf32.ts(9,61): error TS2304: Cannot find name 'Void'.
 encodings/utf32.ts(10,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 encodings/utf32.ts(11,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
@@ -892,7 +892,7 @@ lib/index.ts(22,31): error TS2339: Property 'write' does not exist on type 'HTML
 lib/index.ts(23,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/index.ts(23,32): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
 lib/index.ts(25,5): error TS2322: Type 'String | Buffer' is not assignable to type 'String'.
-  Type 'Buffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 36 more.
+  Type 'Buffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 37 more.
 lib/index.ts(28,7): error TS2339: Property 'decode' does not exist on type 'HTMLElement'.
 lib/index.ts(30,20): error TS2339: Property 'skipDecodeWarning' does not exist on type 'HTMLElement'.
 lib/index.ts(32,19): error TS2339: Property 'skipDecodeWarning' does not exist on type 'HTMLElement'.
@@ -973,10 +973,4 @@ lib/streams.ts(64,24): error TS2683: 'this' implicitly has type 'any' because it
 lib/streams.ts(75,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/streams.ts(86,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/streams.ts(98,51): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

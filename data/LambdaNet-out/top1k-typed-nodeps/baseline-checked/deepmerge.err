@@ -6,7 +6,7 @@ index.ts(13,52): error TS2314: Generic type 'Array<T>' requires 1 type argument(
 index.ts(13,77): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(14,16): error TS2339: Property 'concat' does not exist on type 'Object'.
 index.ts(15,40): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'String'.
-  Type 'Element' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Element' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(20,15): error TS2339: Property 'customMerge' does not exist on type 'Object'.
 index.ts(23,36): error TS2339: Property 'customMerge' does not exist on type 'Object'.
 index.ts(27,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -50,7 +50,7 @@ index.ts(88,48): error TS2345: Argument of type 'Object' is not assignable to pa
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(90,18): error TS2339: Property 'arrayMerge' does not exist on type 'Object'.
 index.ts(92,3): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(92,38): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(96,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -60,10 +60,4 @@ index.ts(102,26): error TS2345: Argument of type 'Object' is not assignable to p
 rollup.config.ts(1,21): error TS2307: Cannot find module 'rollup-plugin-node-resolve' or its corresponding type declarations.
 rollup.config.ts(2,22): error TS2307: Cannot find module 'rollup-plugin-commonjs' or its corresponding type declarations.
 rollup.config.ts(3,17): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

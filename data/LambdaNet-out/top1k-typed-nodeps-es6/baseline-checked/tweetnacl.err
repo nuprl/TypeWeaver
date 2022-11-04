@@ -2,7 +2,7 @@ nacl-fast.min.ts(1,2): error TS1345: An expression of type 'void' cannot be test
 nacl-fast.min.ts(1,68): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 nacl-fast.min.ts(1,144): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 nacl-fast.min.ts(1,150): error TS2538: Type 'Number' cannot be used as an index type.
-nacl-fast.min.ts(1,219): error TS2740: Type 'Uint8Array' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 36 more.
+nacl-fast.min.ts(1,219): error TS2740: Type 'Uint8Array' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 37 more.
 nacl-fast.min.ts(1,277): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
   Property '0' does not exist on type 'Object'.
 nacl-fast.min.ts(1,557): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -506,7 +506,7 @@ nacl-fast.min.ts(1,7056): error TS2538: Type 'Number' cannot be used as an index
 nacl-fast.min.ts(1,7061): error TS2538: Type 'Number' cannot be used as an index type.
 nacl-fast.min.ts(1,7083): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 nacl-fast.min.ts(1,7101): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 nacl-fast.min.ts(1,7107): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
 nacl-fast.min.ts(1,7114): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
@@ -557,7 +557,7 @@ nacl-fast.min.ts(1,7799): error TS7053: Element implicitly has an 'any' type bec
   No index signature with a parameter of type 'number' was found on type 'Object'.
 nacl-fast.min.ts(1,7807): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
 nacl-fast.min.ts(1,7818): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 nacl-fast.min.ts(1,7922): error TS2322: Type 'Uint8Array' is not assignable to type 'String'.
 nacl-fast.min.ts(1,7955): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -1771,7 +1771,7 @@ nacl-fast.min.ts(1,16309): error TS2538: Type 'Number' cannot be used as an inde
 nacl-fast.min.ts(1,16314): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 nacl-fast.min.ts(1,16322): error TS2538: Type 'Number' cannot be used as an index type.
 nacl-fast.min.ts(1,16379): error TS2322: Type 'number' is not assignable to type 'Boolean'.
-nacl-fast.min.ts(1,16451): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+nacl-fast.min.ts(1,16451): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 nacl-fast.min.ts(1,16464): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Number'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 nacl-fast.min.ts(1,16508): error TS2322: Type 'String' is not assignable to type 'Boolean'.
@@ -2123,7 +2123,7 @@ nacl-fast.min.ts(1,27294): error TS7053: Element implicitly has an 'any' type be
 nacl-fast.min.ts(1,27296): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 nacl-fast.min.ts(1,27307): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 nacl-fast.min.ts(1,27334): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 nacl-fast.min.ts(1,27371): error TS2304: Cannot find name 'Void'.
 nacl-fast.min.ts(1,27410): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
   Property '0' does not exist on type 'Object'.
@@ -6428,7 +6428,7 @@ nacl.min.ts(1,3868): error TS2538: Type 'Number' cannot be used as an index type
 nacl.min.ts(1,3878): error TS2538: Type 'Number' cannot be used as an index type.
 nacl.min.ts(1,3885): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 nacl.min.ts(1,3887): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-nacl.min.ts(1,3898): error TS2740: Type 'Uint32Array' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 36 more.
+nacl.min.ts(1,3898): error TS2740: Type 'Uint32Array' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 37 more.
 nacl.min.ts(1,4250): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 nacl.min.ts(1,4256): error TS2538: Type 'Number' cannot be used as an index type.
 nacl.min.ts(1,4261): error TS2538: Type 'Number' cannot be used as an index type.
@@ -8704,10 +8704,4 @@ nacl.ts(1171,35): error TS2538: Type 'Number' cannot be used as an index type.
 nacl.ts(1171,42): error TS2538: Type 'Number' cannot be used as an index type.
 nacl.ts(1178,77): error TS2339: Property 'nacl' does not exist on type 'Window & typeof globalThis'.
 nacl.ts(1178,89): error TS2339: Property 'nacl' does not exist on type 'Window & typeof globalThis'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

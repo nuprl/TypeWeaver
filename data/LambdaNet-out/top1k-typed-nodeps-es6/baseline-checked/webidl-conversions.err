@@ -25,7 +25,7 @@ lib/index.ts(45,10): error TS2365: Operator '<' cannot be applied to types 'Stri
 lib/index.ts(51,37): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/index.ts(51,41): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/index.ts(52,24): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/index.ts(53,12): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.
 lib/index.ts(62,55): error TS7031: Binding element 'unsigned' implicitly has an 'any' type.
 lib/index.ts(62,68): error TS2304: Cannot find name 'Void'.
@@ -117,7 +117,7 @@ lib/index.ts(400,31): error TS2345: Argument of type 'ArrayBufferLike' is not as
   Type 'ArrayBuffer' is not assignable to type 'String'.
 lib/index.ts(415,16): error TS2339: Property 'allowShared' does not exist on type 'Object'.
 lib/index.ts(415,51): error TS2345: Argument of type 'ArrayBufferLike' is not assignable to parameter of type 'String'.
-  Type 'ArrayBuffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'ArrayBuffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/index.ts(419,29): error TS2345: Argument of type 'ArrayBufferLike' is not assignable to parameter of type 'String'.
   Type 'ArrayBuffer' is not assignable to type 'String'.
 lib/index.ts(427,18): error TS2339: Property 'allowShared' does not exist on type 'Object'.
@@ -128,7 +128,7 @@ lib/index.ts(431,31): error TS2345: Argument of type 'ArrayBufferLike' is not as
 lib/index.ts(437,16): error TS2339: Property 'allowShared' does not exist on type 'Object'.
 lib/index.ts(437,55): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/index.ts(440,15): error TS2339: Property 'allowShared' does not exist on type 'Object'.
 lib/index.ts(440,51): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -136,10 +136,4 @@ lib/index.ts(440,85): error TS2345: Argument of type 'Object' is not assignable 
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/index.ts(443,29): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

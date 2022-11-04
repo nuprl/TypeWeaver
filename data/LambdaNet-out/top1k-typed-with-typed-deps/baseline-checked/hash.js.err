@@ -398,7 +398,7 @@ lib/hash/sha/512.ts(238,49): error TS2363: The right-hand side of an arithmetic 
 lib/hash/sha/512.ts(240,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/hash/sha/512.ts(245,7): error TS2322: Type 'Number' is not assignable to type 'String'.
 lib/hash/sha/512.ts(245,33): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/hash/sha/512.ts(246,7): error TS2322: Type 'Number' is not assignable to type 'String'.
 lib/hash/sha/512.ts(246,37): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
   Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
@@ -571,7 +571,7 @@ lib/hash/utils.ts(77,15): error TS2362: The left-hand side of an arithmetic oper
 lib/hash/utils.ts(78,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/utils.ts(82,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/hash/utils.ts(86,9): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/hash/utils.ts(87,7): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/hash/utils.ts(87,7): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/hash/utils.ts(87,17): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
   Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lib/hash/utils.ts(88,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
@@ -706,10 +706,4 @@ lib/hash/utils.ts(275,32): error TS2363: The right-hand side of an arithmetic op
 lib/hash/utils.ts(275,41): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/utils.ts(275,48): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/utils.ts(276,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

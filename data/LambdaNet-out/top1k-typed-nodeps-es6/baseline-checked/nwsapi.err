@@ -356,7 +356,7 @@ build/packer/base2.ts(967,14): error TS2339: Property 'forEach' does not exist o
 build/packer/base2.ts(969,30): error TS2339: Property 'length' does not exist on type 'Object'.
 build/packer/base2.ts(971,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 build/packer/base2.ts(975,21): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 build/packer/base2.ts(978,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build/packer/base2.ts(979,3): error TS2554: Expected 4 arguments, but got 3.
 build/packer/base2.ts(979,16): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
@@ -522,12 +522,9 @@ build/packer/base2.ts(1423,56): error TS7053: Element implicitly has an 'any' ty
 build/packer/base2.ts(1423,74): error TS2339: Property 'Milliseconds' does not exist on type 'Object'.
 build/packer/base2.ts(1424,9): error TS2322: Type 'Date' is not assignable to type 'HTMLInputElement'.
 build/packer/base2.ts(1424,43): error TS2769: No overload matches this call.
-  Overload 1 of 5, '(value: string | number | Date): Date', gave the following error.
+  Overload 1 of 4, '(value: string | number | Date): Date', gave the following error.
     Argument of type 'HTMLElement' is not assignable to parameter of type 'string | number | Date'.
-  Overload 2 of 5, '(vd: VarDate): Date', gave the following error.
-    Argument of type 'HTMLElement' is not assignable to parameter of type 'VarDate'.
-      Property 'VarDate_typekey' is missing in type 'HTMLElement' but required in type 'VarDate'.
-  Overload 3 of 5, '(value: string | number): Date', gave the following error.
+  Overload 2 of 4, '(value: string | number): Date', gave the following error.
     Argument of type 'HTMLElement' is not assignable to parameter of type 'string | number'.
 build/packer/base2.ts(1425,26): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 build/packer/base2.ts(1425,48): error TS2339: Property 'UTC' does not exist on type 'Object'.
@@ -906,7 +903,7 @@ src/modules/nwsapi-jquery.ts(56,39): error TS2769: No overload matches this call
 src/modules/nwsapi-jquery.ts(56,58): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
   Property '3' does not exist on type 'Object'.
 src/modules/nwsapi-jquery.ts(74,6): error TS2345: Argument of type 'typeof globalThis' is not assignable to parameter of type 'String'.
-  Type 'typeof globalThis' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'typeof globalThis' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 src/modules/nwsapi-jquery.ts(77,1): error TS2304: Cannot find name 'NW'.
 src/modules/nwsapi-jquery.ts(82,28): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 src/modules/nwsapi-jquery.ts(85,30): error TS2304: Cannot find name 'NW'.
@@ -934,7 +931,7 @@ src/modules/nwsapi-traversal.ts(32,18): error TS2349: This expression is not cal
   Type 'Object' has no call signatures.
 src/modules/nwsapi-traversal.ts(36,5): error TS2322: Type 'null' is not assignable to type 'Object'.
 src/modules/nwsapi-traversal.ts(46,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/modules/nwsapi-traversal.ts(46,49): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
   Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 src/modules/nwsapi-traversal.ts(55,5): error TS2322: Type 'Object' is not assignable to type 'String'.
@@ -1013,7 +1010,7 @@ src/nwsapi.ts(230,25): error TS2339: Property 'ownerDocument' does not exist on 
 src/nwsapi.ts(233,20): error TS2339: Property 'documentElement' does not exist on type 'Object'.
 src/nwsapi.ts(236,23): error TS2538: Type 'String' cannot be used as an index type.
 src/nwsapi.ts(236,55): error TS2538: Type 'String' cannot be used as an index type.
-src/nwsapi.ts(242,7): error TS2740: Type 'Document' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+src/nwsapi.ts(242,7): error TS2740: Type 'Document' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 src/nwsapi.ts(246,20): error TS2339: Property 'documentElement' does not exist on type 'String'.
 src/nwsapi.ts(248,9): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 src/nwsapi.ts(249,15): error TS2339: Property 'compatMode' does not exist on type 'String'.
@@ -1105,7 +1102,7 @@ src/nwsapi.ts(426,32): error TS2339: Property 'className' does not exist on type
 src/nwsapi.ts(427,35): error TS2538: Type 'String' cannot be used as an index type.
 src/nwsapi.ts(428,29): error TS2339: Property 'nextElementSibling' does not exist on type 'Object'.
 src/nwsapi.ts(439,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/nwsapi.ts(440,7): error TS2740: Type 'RegExp' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+src/nwsapi.ts(440,7): error TS2740: Type 'RegExp' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/nwsapi.ts(441,45): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/nwsapi.ts(442,18): error TS2339: Property 'test' does not exist on type 'String'.
 src/nwsapi.ts(448,3): error TS2322: Type '(element: Element, dir: Number) => number | Number' is not assignable to type 'Element'.
@@ -1212,7 +1209,7 @@ src/nwsapi.ts(763,27): error TS2339: Property 'test' does not exist on type 'Num
 src/nwsapi.ts(764,27): error TS2339: Property 'test' does not exist on type 'Number'.
 src/nwsapi.ts(775,53): error TS2538: Type 'String' cannot be used as an index type.
 src/nwsapi.ts(775,90): error TS2538: Type 'String' cannot be used as an index type.
-src/nwsapi.ts(786,21): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+src/nwsapi.ts(786,21): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 src/nwsapi.ts(792,39): error TS2339: Property 'combinator' does not exist on type 'Object'.
 src/nwsapi.ts(801,22): error TS2339: Property 'apimethods' does not exist on type 'Object'.
 src/nwsapi.ts(807,13): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
@@ -1739,10 +1736,4 @@ src/nwsapi.ts(1784,55): error TS2454: Variable 'symbol' is used before being ass
 src/nwsapi.ts(1785,11): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 src/nwsapi.ts(1795,19): error TS2538: Type 'String' cannot be used as an index type.
 src/nwsapi.ts(1795,39): error TS2538: Type 'String' cannot be used as an index type.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

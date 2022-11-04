@@ -2,7 +2,7 @@ lib/attributes.ts(8,7): error TS2538: Type 'Number' cannot be used as an index t
 lib/attributes.ts(12,83): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/attributes.ts(13,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/attributes.ts(13,36): error TS2538: Type 'String' cannot be used as an index type.
-lib/attributes.ts(48,22): error TS2495: Type 'NamedNodeMap' is not an array type or a string type.
+lib/attributes.ts(48,22): error TS2488: Type 'NamedNodeMap' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/attributes.ts(51,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 lib/attributes.ts(52,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 lib/attributes.ts(56,10): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
@@ -82,7 +82,7 @@ lib/serialize.ts(230,13): error TS2538: Type 'Number' cannot be used as an index
 lib/serialize.ts(235,9): error TS2322: Type 'Number | null' is not assignable to type 'String'.
   Type 'null' is not assignable to type 'String'.
 lib/serialize.ts(236,11): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/serialize.ts(241,7): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/serialize.ts(241,7): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/serialize.ts(245,7): error TS2322: Type 'Number' is not assignable to type 'String'.
 lib/serialize.ts(246,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
 lib/serialize.ts(260,23): error TS2339: Property 'HTML' does not exist on type 'Object'.
@@ -93,8 +93,8 @@ lib/serialize.ts(276,5): error TS2365: Operator '+=' cannot be applied to types 
 lib/serialize.ts(277,12): error TS2339: Property 'content' does not exist on type 'HTMLElement'.
 lib/serialize.ts(279,7): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-lib/serialize.ts(284,25): error TS2495: Type 'NodeListOf<ChildNode>' is not an array type or a string type.
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+lib/serialize.ts(284,25): error TS2488: Type 'NodeListOf<ChildNode>' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/serialize.ts(285,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
 lib/serialize.ts(288,9): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -122,10 +122,4 @@ lib/serialize.ts(344,9): error TS2345: Argument of type 'Object' is not assignab
 lib/serialize.ts(349,21): error TS2339: Property 'ATTRIBUTE_NODE' does not exist on type 'Object'.
 lib/serialize.ts(351,21): error TS2339: Property 'CDATA_SECTION_NODE' does not exist on type 'Object'.
 lib/serialize.ts(361,33): error TS2345: Argument of type 'null' is not assignable to parameter of type 'String'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

@@ -137,10 +137,10 @@ example/enroll/server.ts(7,8): error TS2339: Property 'use' does not exist on ty
 example/enroll/server.ts(9,29): error TS2345: Argument of type 'string | 8080' is not assignable to parameter of type 'string'.
   Type 'number' is not assignable to type 'string'.
 example/enroll/server.ts(10,8): error TS2339: Property 'listen' does not exist on type 'HTMLElement'.
-main.ts(1,5): error TS2740: Type 'typeof globalThis' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+main.ts(1,5): error TS2740: Type 'typeof globalThis' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 main.ts(9,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 main.ts(9,64): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 main.ts(13,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 main.ts(13,65): error TS2345: Argument of type '{ (id?: number | undefined): void; (intervalId: string | number | Timeout | undefined): void; }' is not assignable to parameter of type 'String'.
 main.ts(18,13): error TS2339: Property 'close' does not exist on type 'Function'.
@@ -166,10 +166,4 @@ main.ts(62,33): error TS2532: Object is possibly 'undefined'.
 main.ts(64,14): error TS2322: Type '{ (handle: number): void; (immediateId: Immediate | undefined): void; } | undefined' is not assignable to type 'Number'.
   Type 'undefined' is not assignable to type 'Number'.
 main.ts(66,35): error TS2532: Object is possibly 'undefined'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

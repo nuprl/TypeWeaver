@@ -12,15 +12,9 @@ polyfill.ts(9,9): error TS2322: Type '(value: Number) => Boolean' is not assigna
   Types of property 'valueOf' are incompatible.
     Type '() => Object' is not assignable to type '() => boolean'.
 shim.ts(8,44): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-shim.ts(9,6): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+shim.ts(9,6): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 shim.ts(11,3): error TS2322: Type '() => Boolean' is not assignable to type '() => boolean'.
   Type 'Boolean' is not assignable to type 'boolean'.
     'boolean' is a primitive, but 'Boolean' is a wrapper object. Prefer using 'boolean' when possible.
 shim.ts(12,11): error TS2367: This condition will always return 'true' since the types '(number: unknown) => boolean' and 'String' have no overlap.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

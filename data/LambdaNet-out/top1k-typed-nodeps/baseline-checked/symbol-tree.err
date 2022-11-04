@@ -73,7 +73,7 @@ lib/SymbolTree.ts(607,45): error TS2339: Property 'DISCONNECTED' does not exist 
 lib/SymbolTree.ts(615,31): error TS2322: Type 'String' is not assignable to type 'Number'.
 lib/SymbolTree.ts(616,31): error TS2322: Type 'String' is not assignable to type 'Number'.
 lib/SymbolTree.ts(626,23): error TS2322: Type 'Number | -1' is not assignable to type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/SymbolTree.ts(626,88): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/SymbolTree.ts(627,89): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/SymbolTree.ts(629,24): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
@@ -116,11 +116,9 @@ lib/SymbolTreeNode.ts(13,22): error TS2339: Property 'childrenVersion' does not 
 lib/SymbolTreeNode.ts(15,22): error TS2339: Property 'childIndexCachedUpTo' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTreeNode.ts(19,22): error TS2339: Property 'cachedIndex' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTreeNode.ts(20,22): error TS2339: Property 'cachedIndexVersion' does not exist on type 'SymbolTreeNode'.
-lib/SymbolTreeNode.ts(23,13): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 lib/SymbolTreeNode.ts(24,37): error TS2339: Property 'parent' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTreeNode.ts(24,52): error TS2339: Property 'previousSibling' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTreeNode.ts(24,76): error TS2339: Property 'nextSibling' does not exist on type 'SymbolTreeNode'.
-lib/SymbolTreeNode.ts(27,13): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 lib/SymbolTreeNode.ts(28,37): error TS2339: Property 'firstChild' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTreeNode.ts(34,22): error TS2339: Property 'childrenVersion' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTreeNode.ts(34,46): error TS2339: Property 'childrenVersion' does not exist on type 'SymbolTreeNode'.
@@ -165,10 +163,4 @@ lib/TreeIterator.ts(61,14): error TS2339: Property 'NEXT' does not exist on type
 lib/TreeIterator.ts(62,14): error TS2339: Property 'PARENT' does not exist on type 'typeof TreeIterator'.
 lib/TreeIterator.ts(63,14): error TS2339: Property 'PRECEDING' does not exist on type 'typeof TreeIterator'.
 lib/TreeIterator.ts(64,14): error TS2339: Property 'FOLLOWING' does not exist on type 'typeof TreeIterator'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

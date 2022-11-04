@@ -125,7 +125,7 @@ lib/dashdash.ts(64,47): error TS2304: Cannot find name 'Void'.
 lib/dashdash.ts(67,13): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/dashdash.ts(76,9): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
 lib/dashdash.ts(102,12): error TS2551: Property 'string' does not exist on type 'String'. Did you mean 'toString'?
-lib/dashdash.ts(103,5): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/dashdash.ts(103,5): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/dashdash.ts(107,12): error TS2551: Property 'string' does not exist on type 'String'. Did you mean 'toString'?
 lib/dashdash.ts(109,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -143,13 +143,10 @@ lib/dashdash.ts(154,9): error TS2322: Type 'Date' is not assignable to type 'HTM
 lib/dashdash.ts(156,68): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 lib/dashdash.ts(159,9): error TS2322: Type 'Date' is not assignable to type 'HTMLDivElement'.
 lib/dashdash.ts(159,25): error TS2769: No overload matches this call.
-  Overload 1 of 5, '(value: string | number | Date): Date', gave the following error.
+  Overload 1 of 4, '(value: string | number | Date): Date', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'string | number | Date'.
-      Type 'Number' is missing the following properties from type 'Date': toDateString, toTimeString, toLocaleDateString, toLocaleTimeString, and 38 more.
-  Overload 2 of 5, '(vd: VarDate): Date', gave the following error.
-    Argument of type 'Number' is not assignable to parameter of type 'VarDate'.
-      Property 'VarDate_typekey' is missing in type 'Number' but required in type 'VarDate'.
-  Overload 3 of 5, '(value: string | number): Date', gave the following error.
+      Type 'Number' is missing the following properties from type 'Date': toDateString, toTimeString, toLocaleDateString, toLocaleTimeString, and 37 more.
+  Overload 2 of 4, '(value: string | number): Date', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'string | number'.
 lib/dashdash.ts(258,39): error TS2304: Cannot find name 'Void'.
 lib/dashdash.ts(259,12): error TS2339: Property 'object' does not exist on type 'String'.
@@ -512,10 +509,4 @@ lib/dashdash.ts(1090,54): error TS2339: Property 'helpArg' does not exist on typ
 lib/dashdash.ts(1091,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/dashdash.ts(1092,50): error TS2304: Cannot find name 'Void'.
 lib/dashdash.ts(1094,26): error TS2339: Property 'takesArg' does not exist on type 'Object'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

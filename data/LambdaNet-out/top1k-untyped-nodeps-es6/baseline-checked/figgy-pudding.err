@@ -9,15 +9,12 @@ index.ts(9,44): error TS2339: Property '__specs' does not exist on type 'FiggyPu
 index.ts(11,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(11,44): error TS2339: Property 'aliases' does not exist on type 'HTMLElement'.
 index.ts(13,20): error TS2339: Property 'aliases' does not exist on type 'HTMLElement'.
-index.ts(13,34): error TS2802: Type 'Set<unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 index.ts(14,16): error TS2339: Property '__specs' does not exist on type 'FiggyPudding'.
 index.ts(20,10): error TS2339: Property '__opts' does not exist on type 'FiggyPudding'.
 index.ts(21,10): error TS2339: Property '__providers' does not exist on type 'FiggyPudding'.
 index.ts(24,10): error TS2339: Property '__isFiggyPudding' does not exist on type 'FiggyPudding'.
 index.ts(26,8): error TS7006: Parameter 'key' implicitly has an 'any' type.
-index.ts(29,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 index.ts(30,12): error TS7006: Parameter 'fn' implicitly has an 'any' type.
-index.ts(31,30): error TS2802: Type 'Generator<any[], void, unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 index.ts(31,35): error TS2554: Expected 1 arguments, but got 0.
 index.ts(38,11): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(42,14): error TS7006: Parameter '_matcher' implicitly has an 'any' type.
@@ -28,11 +25,8 @@ index.ts(49,26): error TS2339: Property '__providers' does not exist on type 'Fi
 index.ts(50,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(52,37): error TS2339: Property 'has' does not exist on type 'Error'.
 index.ts(53,18): error TS2339: Property 'add' does not exist on type 'Error'.
-index.ts(61,30): error TS2802: Type 'Generator<any[], void, unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 index.ts(61,35): error TS2554: Expected 1 arguments, but got 0.
-index.ts(66,23): error TS2802: Type 'Generator<any[], void, unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 index.ts(66,28): error TS2554: Expected 1 arguments, but got 0.
-index.ts(71,27): error TS2802: Type 'Generator<any[], void, unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 index.ts(71,32): error TS2554: Expected 1 arguments, but got 0.
 index.ts(75,11): error TS7019: Rest parameter 'moreConfig' implicitly has an 'any[]' type.
 index.ts(77,12): error TS2339: Property '__specs' does not exist on type 'FiggyPudding'.
@@ -49,7 +43,7 @@ index.ts(100,55): error TS2339: Property '__opts' does not exist on type 'FiggyP
 index.ts(103,18): error TS2740: Type '{}' is missing the following properties from type 'FiggyPudding': get, forEach, toJSON, entries, and 5 more.
 index.ts(105,23): error TS2339: Property '__providers' does not exist on type 'FiggyPudding'.
 index.ts(106,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(107,37): error TS2339: Property 'aliases' does not exist on type 'FiggyPudding'.
 index.ts(107,53): error TS2339: Property 'aliases' does not exist on type 'FiggyPudding'.
 index.ts(108,32): error TS2339: Property 'aliases' does not exist on type 'FiggyPudding'.
@@ -82,10 +76,4 @@ index.ts(189,32): error TS2314: Generic type 'Array<T>' requires 1 type argument
 index.ts(190,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(195,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(196,54): error TS2538: Type 'String' cannot be used as an index type.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

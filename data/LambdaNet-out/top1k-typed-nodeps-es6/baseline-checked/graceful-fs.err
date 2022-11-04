@@ -42,7 +42,7 @@ graceful-fs.ts(92,16): error TS2345: Argument of type 'typeof globalThis' is not
 graceful-fs.ts(92,27): error TS2538: Type 'String' cannot be used as an index type.
 graceful-fs.ts(95,1): error TS2528: A module cannot have multiple default exports.
 graceful-fs.ts(95,28): error TS2345: Argument of type 'typeof import("fs")' is not assignable to parameter of type 'String'.
-  Type 'typeof import("fs")' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'typeof import("fs")' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 graceful-fs.ts(96,54): error TS2339: Property '__patched' does not exist on type 'typeof import("fs")'.
 graceful-fs.ts(97,3): error TS1258: A default export must be at the top level of a file or module declaration.
 graceful-fs.ts(97,3): error TS2528: A module cannot have multiple default exports.
@@ -50,15 +50,15 @@ graceful-fs.ts(98,6): error TS2339: Property '__patched' does not exist on type 
 graceful-fs.ts(101,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 graceful-fs.ts(103,13): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 graceful-fs.ts(104,6): error TS2339: Property 'gracefulify' does not exist on type 'Object'.
 graceful-fs.ts(106,6): error TS2339: Property 'createReadStream' does not exist on type 'Object'.
 graceful-fs.ts(107,6): error TS2339: Property 'createWriteStream' does not exist on type 'Object'.
 graceful-fs.ts(108,32): error TS2339: Property 'readFile' does not exist on type 'Object'.
 graceful-fs.ts(109,6): error TS2339: Property 'readFile' does not exist on type 'Object'.
-graceful-fs.ts(112,7): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+graceful-fs.ts(112,7): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 graceful-fs.ts(112,21): error TS2322: Type 'null' is not assignable to type 'Function'.
-graceful-fs.ts(114,5): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+graceful-fs.ts(114,5): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 graceful-fs.ts(114,12): error TS2554: Expected 4 arguments, but got 3.
 graceful-fs.ts(117,14): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
@@ -117,8 +117,8 @@ graceful-fs.ts(239,36): error TS2339: Property 'ReadStream' does not exist on ty
 graceful-fs.ts(245,37): error TS2339: Property 'WriteStream' does not exist on type 'Object'.
 graceful-fs.ts(256,7): error TS2630: Cannot assign to 'ReadStream' because it is a function.
 graceful-fs.ts(266,7): error TS2630: Cannot assign to 'WriteStream' because it is a function.
-graceful-fs.ts(273,7): error TS2740: Type '{ (path: String, options: Object): any; prototype: any; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
-graceful-fs.ts(284,7): error TS2740: Type '{ (path: String, options: Object): any; prototype: any; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+graceful-fs.ts(273,7): error TS2740: Type '{ (path: String, options: Object): any; prototype: any; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+graceful-fs.ts(284,7): error TS2740: Type '{ (path: String, options: Object): any; prototype: any; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 graceful-fs.ts(296,56): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 graceful-fs.ts(297,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 graceful-fs.ts(298,34): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
@@ -407,10 +407,4 @@ polyfills.ts(318,18): error TS2314: Generic type 'Array<T>' requires 1 type argu
 polyfills.ts(344,12): error TS2339: Property 'code' does not exist on type 'Object'.
 polyfills.ts(349,14): error TS2339: Property 'code' does not exist on type 'Object'.
 polyfills.ts(349,38): error TS2339: Property 'code' does not exist on type 'Object'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

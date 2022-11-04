@@ -420,7 +420,7 @@ index.ts(25,53): error TS2339: Property 'codes' does not exist on type 'Object'.
 index.ts(26,9): error TS2322: Type 'string' is not assignable to type 'Number'.
 index.ts(26,31): error TS2339: Property 'close' does not exist on type 'Object'.
 index.ts(26,55): error TS2339: Property 'codes' does not exist on type 'Object'.
-index.ts(27,9): error TS2740: Type 'RegExp' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(27,9): error TS2740: Type 'RegExp' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(27,31): error TS2339: Property 'regex' does not exist on type 'Object'.
 index.ts(27,69): error TS2339: Property 'codes' does not exist on type 'Object'.
 index.ts(28,11): error TS2339: Property 'wrap' does not exist on type 'Object'.
@@ -436,7 +436,6 @@ index.ts(44,9): error TS2367: This condition will always return 'false' since th
 index.ts(45,16): error TS2339: Property 'enabled' does not exist on type 'HTMLElement'.
 index.ts(46,16): error TS2339: Property 'visible' does not exist on type 'HTMLElement'.
 index.ts(48,9): error TS2322: Type 'boolean' is not assignable to type 'Number'.
-index.ts(51,19): error TS2802: Type 'Set<any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 index.ts(53,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(53,39): error TS2551: Property 'styles' does not exist on type 'HTMLElement'. Did you mean 'style'?
 index.ts(57,50): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
@@ -484,12 +483,6 @@ index.ts(177,10): error TS2339: Property 'stripColor' does not exist on type 'HT
 index.ts(177,30): error TS2551: Property 'unstyle' does not exist on type 'HTMLElement'. Did you mean 'style'?
 index.ts(178,10): error TS2339: Property 'symbols' does not exist on type 'HTMLElement'.
 index.ts(179,10): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-symbols.ts(36,7): error TS2740: Type 'Object & { check: string; cross: string; ellipsisLarge: string; ellipsis: string; info: string; questionSmall: string; pointer: string; pointerSmall: string; radioOff: string; radioOn: string; warning: string; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-symbols.ts(50,7): error TS2740: Type 'Object & { ballotCross: string; check: string; cross: string; ellipsisLarge: string; ellipsis: string; info: string; questionFull: string; questionSmall: string; pointer: string; pointerSmall: string; radioOff: string; radioOn: string; warning: string; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+symbols.ts(36,7): error TS2740: Type 'Object & { check: string; cross: string; ellipsisLarge: string; ellipsis: string; info: string; questionSmall: string; pointer: string; pointerSmall: string; radioOff: string; radioOn: string; warning: string; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+symbols.ts(50,7): error TS2740: Type 'Object & { ballotCross: string; check: string; cross: string; ellipsisLarge: string; ellipsis: string; info: string; questionFull: string; questionSmall: string; pointer: string; pointerSmall: string; radioOff: string; radioOn: string; warning: string; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 

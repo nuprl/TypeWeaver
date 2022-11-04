@@ -59,7 +59,7 @@ src/core.ts(72,1): error TS2322: Type '<TResult1 = any, TResult2 = never>(onFulf
   Types of parameters 'onFulfilled' and 'onfulfilled' are incompatible.
     Type '((value: any) => TResult1 | PromiseLike<TResult1>) | null | undefined' is not assignable to type 'Number'.
       Type 'undefined' is not assignable to type 'Number'.
-src/core.ts(76,7): error TS2740: Type 'Promise<unknown>' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+src/core.ts(76,7): error TS2740: Type 'Promise<unknown>' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/core.ts(77,10): error TS2345: Argument of type 'Promise<any>' is not assignable to parameter of type 'HTMLElement'.
   Type 'Promise<any>' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 src/core.ts(77,16): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
@@ -103,7 +103,7 @@ src/core.ts(123,43): error TS2339: Property '_value' does not exist on type 'HTM
 src/core.ts(125,23): error TS2339: Property 'promise' does not exist on type 'HTMLElement'.
 src/core.ts(127,24): error TS2339: Property 'promise' does not exist on type 'HTMLElement'.
 src/core.ts(127,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/core.ts(131,51): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 src/core.ts(136,7): error TS2345: Argument of type 'TypeError' is not assignable to parameter of type 'Number'.
   Type 'TypeError' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
@@ -162,7 +162,7 @@ src/es6-extensions.ts(19,7): error TS2740: Type 'Promise<unknown>' is missing th
 src/es6-extensions.ts(19,44): error TS2339: Property '_noop' does not exist on type 'PromiseConstructor'.
 src/es6-extensions.ts(20,5): error TS2339: Property '_state' does not exist on type 'HTMLElement'.
 src/es6-extensions.ts(21,5): error TS2339: Property '_value' does not exist on type 'HTMLElement'.
-src/es6-extensions.ts(22,3): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+src/es6-extensions.ts(22,3): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 src/es6-extensions.ts(24,1): error TS2322: Type '<T>(value: any) => any' is not assignable to type '{ (): Promise<void>; <T>(value: T | PromiseLike<T>): Promise<T>; }'.
 src/es6-extensions.ts(24,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/es6-extensions.ts(61,1): error TS2322: Type '(arr: any) => Promise<unknown>' is not assignable to type '{ <T>(values: Iterable<T | PromiseLike<T>>): Promise<Awaited<T>[]>; <T extends [] | readonly unknown[]>(values: T): Promise<{ -readonly [P in keyof T]: Awaited<T[P]>; }>; }'.
@@ -313,10 +313,4 @@ src/synchronous.ts(58,21): error TS2339: Property 'isRejected' does not exist on
 src/synchronous.ts(59,21): error TS2339: Property 'getValue' does not exist on type 'Promise<any>'.
 src/synchronous.ts(60,21): error TS2339: Property 'getReason' does not exist on type 'Promise<any>'.
 src/synchronous.ts(61,21): error TS2339: Property 'getState' does not exist on type 'Promise<any>'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

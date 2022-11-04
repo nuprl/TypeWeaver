@@ -126,7 +126,7 @@ src/md5-browser.ts(67,3): error TS7053: Element implicitly has an 'any' type bec
   No index signature with a parameter of type 'number' was found on type 'Object'.
 src/md5-browser.ts(67,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/md5-browser.ts(67,21): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/md5-browser.ts(74,25): error TS2339: Property 'length' does not exist on type 'Object'.
 src/md5-browser.ts(80,5): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 src/md5-browser.ts(80,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
@@ -424,7 +424,7 @@ src/md5-browser.ts(210,25): error TS2363: The right-hand side of an arithmetic o
 src/md5-browser.ts(214,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/md5-browser.ts(214,17): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 src/md5-browser.ts(214,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/md5.ts(5,5): error TS2740: Type 'Buffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 36 more.
+src/md5.ts(5,5): error TS2740: Type 'Buffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 37 more.
 src/md5.ts(7,5): error TS2322: Type 'Buffer' is not assignable to type 'String'.
 src/md5.ts(10,3): error TS2322: Type 'Buffer' is not assignable to type 'String'.
 src/md5.ts(10,42): error TS2345: Argument of type 'String' is not assignable to parameter of type 'BinaryLike'.
@@ -473,7 +473,7 @@ src/parse.ts(35,14): error TS2362: The left-hand side of an arithmetic operation
 src/parse.ts(36,3): error TS7053: Element implicitly has an 'any' type because expression of type '15' can't be used to index type 'Object'.
   Property '15' does not exist on type 'Object'.
 src/parse.ts(36,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/rng-browser.ts(7,7): error TS2740: Type 'Uint8Array' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 36 more.
+src/rng-browser.ts(7,7): error TS2740: Type 'Uint8Array' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 37 more.
 src/rng-browser.ts(13,5): error TS2322: Type 'false | (<T extends ArrayBufferView | null>(array: T) => T)' is not assignable to type 'Function'.
   Type 'boolean' is not assignable to type 'Function'.
 src/rng.ts(3,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -655,7 +655,7 @@ src/stringify.ts(36,15): error TS7053: Element implicitly has an 'any' type beca
 src/stringify.ts(36,19): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
 src/stringify.ts(40,33): error TS2322: Type 'number' is not assignable to type 'String'.
 src/uuid-bin.ts(8,19): error TS2304: Cannot find name 'Void'.
-src/uuid-bin.ts(21,7): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+src/uuid-bin.ts(21,7): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 src/uuid-bin.ts(28,30): error TS2339: Property 'shift' does not exist on type 'String'.
 src/uuid-bin.ts(31,8): error TS2678: Type 'string' is not comparable to type 'Number'.
 src/uuid-bin.ts(32,17): error TS2554: Expected 3 arguments, but got 0.
@@ -780,10 +780,4 @@ src/validate.ts(3,19): error TS7006: Parameter 'uuid' implicitly has an 'any' ty
 src/validate.ts(4,3): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 src/version.ts(3,18): error TS7006: Parameter 'uuid' implicitly has an 'any' type.
 wdio.conf.ts(16,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

@@ -99,7 +99,7 @@ examples/match.ts(22,18): error TS2339: Property 'posix' does not exist on type 
 examples/match.ts(25,15): error TS2339: Property 'add' does not exist on type 'Error'.
 examples/match.ts(25,27): error TS2339: Property 'onMatch' does not exist on type 'Object'.
 examples/match.ts(25,45): error TS2339: Property 'onMatch' does not exist on type 'Object'.
-examples/match.ts(28,14): error TS2461: Type 'Error' is not an array type.
+examples/match.ts(28,14): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 examples/match.ts(31,7): error TS2451: Cannot redeclare block-scoped variable 'fixtures'.
 examples/match.ts(31,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/match.ts(33,18): error TS2339: Property 'posix' does not exist on type 'String'.
@@ -855,11 +855,5 @@ lib/utils.ts(50,11): error TS2339: Property 'prefix' does not exist on type 'Obj
 lib/utils.ts(56,35): error TS2339: Property 'contains' does not exist on type 'Object'.
 lib/utils.ts(57,34): error TS2339: Property 'contains' does not exist on type 'Object'.
 lib/utils.ts(60,13): error TS2339: Property 'negated' does not exist on type 'Object'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17716,13): error TS2451: Cannot redeclare block-scoped variable 'parent'.
 

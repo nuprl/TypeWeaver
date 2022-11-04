@@ -23,7 +23,7 @@ index.ts(160,17): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(181,13): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(182,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(185,7): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(191,9): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
@@ -38,7 +38,7 @@ index.ts(216,19): error TS2345: Argument of type 'Function' is not assignable to
   Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 index.ts(246,69): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(271,30): error TS2554: Expected 2 arguments, but got 1.
-index.ts(273,7): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+index.ts(273,7): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(276,49): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
 index.ts(276,60): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -206,7 +206,7 @@ index.ts(817,15): error TS2339: Property 'not' does not exist on type 'HTMLEleme
 index.ts(825,15): error TS2339: Property 'neg' does not exist on type 'HTMLElement'.
 index.ts(825,35): error TS2339: Property 'negate' does not exist on type 'HTMLElement'.
 index.ts(833,15): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-index.ts(835,5): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(835,5): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(835,14): error TS2554: Expected 2 arguments, but got 1.
 index.ts(839,26): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(840,26): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
@@ -244,7 +244,7 @@ index.ts(882,15): error TS2339: Property 'sub' does not exist on type 'HTMLEleme
 index.ts(882,35): error TS2339: Property 'subtract' does not exist on type 'HTMLElement'.
 index.ts(890,15): error TS2339: Property 'multiply' does not exist on type 'HTMLElement'.
 index.ts(891,12): error TS2339: Property 'isZero' does not exist on type 'HTMLElement'.
-index.ts(892,5): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+index.ts(892,5): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(894,5): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 index.ts(894,18): error TS2554: Expected 2 arguments, but got 1.
 index.ts(898,23): error TS7053: Element implicitly has an 'any' type because expression of type '"mul"' can't be used to index type 'Object'.
@@ -678,10 +678,4 @@ index.ts(1461,5): error TS7053: Element implicitly has an 'any' type because exp
 index.ts(1462,5): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
   Property '3' does not exist on type 'Object'.
 index.ts(1463,5): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Boolean'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

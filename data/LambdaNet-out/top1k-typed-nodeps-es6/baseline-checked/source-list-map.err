@@ -290,7 +290,7 @@ lib/fromStringWithSourceMap.ts(93,33): error TS2339: Property 'rest' does not ex
 lib/fromStringWithSourceMap.ts(94,12): error TS2339: Property 'rest' does not exist on type 'Object'.
 lib/fromStringWithSourceMap.ts(94,46): error TS2339: Property 'rest' does not exist on type 'Object'.
 lib/fromStringWithSourceMap.ts(98,14): error TS2345: Argument of type 'CodeNode' is not assignable to parameter of type 'String'.
-  Type 'CodeNode' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'CodeNode' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/fromStringWithSourceMap.ts(98,38): error TS2538: Type 'Number' cannot be used as an index type.
 lib/fromStringWithSourceMap.ts(98,89): error TS2538: Type 'Number' cannot be used as an index type.
 lib/helpers.ts(7,14): error TS2322: Type '(str: String) => Number' is not assignable to type 'String'.
@@ -300,10 +300,4 @@ lib/helpers.ts(17,14): error TS2322: Type '(str: String) => Number' is not assig
 lib/helpers.ts(22,23): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/index.ts(1,29): error TS2749: 'SourceListMap' refers to a value, but is being used as a type here. Did you mean 'typeof SourceListMap'?
 lib/index.ts(3,30): error TS2749: 'SingleLineNode' refers to a value, but is being used as a type here. Did you mean 'typeof SingleLineNode'?
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

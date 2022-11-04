@@ -314,7 +314,7 @@ General_Category/Letter.ts(147,5): error TS2339: Property 'addRange' does not ex
 General_Category/Letter.ts(148,5): error TS2339: Property 'addRange' does not exist on type 'HTMLElement'.
 General_Category/Letter.ts(149,5): error TS2339: Property 'addRange' does not exist on type 'HTMLElement'.
 General_Category/Letter.ts(150,5): error TS2339: Property 'addRange' does not exist on type 'HTMLElement'.
-General_Category/Letter.ts(151,14): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+General_Category/Letter.ts(151,14): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 General_Category/Letter_Number.ts(3,5): error TS2339: Property 'addRange' does not exist on type 'Object'.
 General_Category/Letter_Number.ts(4,14): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -957,7 +957,7 @@ Script_Extensions/Anatolian_Hieroglyphs.ts(4,14): error TS2322: Type 'Object' is
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 Script_Extensions/Arabic.ts(23,5): error TS2339: Property 'addRange' does not exist on type 'Object'.
 Script_Extensions/Arabic.ts(24,14): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 Script_Extensions/Armenian.ts(3,5): error TS2339: Property 'addRange' does not exist on type 'Object'.
 Script_Extensions/Armenian.ts(4,14): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -1458,11 +1458,10 @@ build.ts(110,13): error TS2314: Generic type 'Array<T>' requires 1 type argument
 build.ts(110,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'RegenerateArgValueOrArray'.
 build.ts(112,19): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
 build.ts(115,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-build.ts(120,7): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
-build.ts(135,24): error TS2802: Type 'String' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+build.ts(120,7): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 build.ts(139,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build.ts(140,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-build.ts(141,26): error TS2802: Type 'String' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+build.ts(142,60): error TS2532: Object is possibly 'undefined'.
 build.ts(148,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build.ts(150,19): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
 build.ts(161,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string | ArrayBufferView'.
@@ -1473,10 +1472,4 @@ build.ts(168,23): error TS2314: Generic type 'Array<T>' requires 1 type argument
 build.ts(168,95): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 build.ts(175,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string | ArrayBufferView'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

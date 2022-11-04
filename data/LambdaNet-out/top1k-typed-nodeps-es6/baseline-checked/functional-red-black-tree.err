@@ -144,7 +144,7 @@ rbtree.ts(282,7): error TS2339: Property 'forEach' does not exist on type 'Objec
 rbtree.ts(282,80): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 rbtree.ts(283,12): error TS2339: Property 'root' does not exist on type 'Object'.
 rbtree.ts(284,5): error TS2322: Type 'undefined' is not assignable to type 'String'.
-rbtree.ts(288,7): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+rbtree.ts(288,7): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 rbtree.ts(288,26): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 rbtree.ts(288,38): error TS2339: Property 'root' does not exist on type 'Object'.
 rbtree.ts(292,35): error TS2339: Property '_compare' does not exist on type 'Object'.
@@ -153,7 +153,7 @@ rbtree.ts(292,57): error TS2339: Property 'root' does not exist on type 'Object'
 rbtree.ts(296,15): error TS2339: Property '_compare' does not exist on type 'Object'.
 rbtree.ts(297,9): error TS2322: Type 'undefined' is not assignable to type 'String'.
 rbtree.ts(299,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 rbtree.ts(299,35): error TS2339: Property '_compare' does not exist on type 'Object'.
 rbtree.ts(299,45): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 rbtree.ts(299,57): error TS2339: Property 'root' does not exist on type 'Object'.
@@ -283,7 +283,7 @@ rbtree.ts(598,14): error TS2339: Property '_color' does not exist on type 'Objec
 rbtree.ts(600,13): error TS2339: Property '_color' does not exist on type 'Object'.
 rbtree.ts(601,13): error TS2339: Property 'right' does not exist on type 'Object'.
 rbtree.ts(601,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 rbtree.ts(605,13): error TS2339: Property 'right' does not exist on type 'Object'.
 rbtree.ts(605,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 rbtree.ts(611,11): error TS2339: Property 'right' does not exist on type 'Object'.
@@ -445,10 +445,4 @@ rbtree.ts(994,41): error TS2314: Generic type 'Promise<T>' requires 1 type argum
 rbtree.ts(995,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 rbtree.ts(995,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
   Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

@@ -28,7 +28,7 @@ browser/type-check.ts(54,50): error TS2365: Operator '<' cannot be applied to ty
 browser/type-check.ts(54,63): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/type-check.ts(55,20): error TS2538: Type 'Number' cannot be used as an index type.
 browser/type-check.ts(56,36): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 browser/type-check.ts(59,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/type-check.ts(67,10): error TS2405: The left-hand side of a 'for...in' statement must be of type 'string' or 'any'.
 browser/type-check.ts(68,17): error TS2538: Type 'Function' cannot be used as an index type.
@@ -58,7 +58,7 @@ browser/type-check.ts(129,3): error TS1184: Modifiers cannot appear here.
 browser/type-check.ts(131,17): error TS2339: Property 'customTypes' does not exist on type 'Object'.
 browser/type-check.ts(132,15): error TS2339: Property 'customTypes' does not exist on type 'Object'.
 browser/type-check.ts(134,26): error TS2345: Argument of type 'HTMLInputElement' is not assignable to parameter of type 'String'.
-  Type 'HTMLInputElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'HTMLInputElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 browser/type-check.ts(136,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/type-check.ts(141,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(143,25): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
@@ -90,7 +90,7 @@ browser/type-check.ts(241,13): error TS7053: Element implicitly has an 'any' typ
   Property '0' does not exist on type 'Object'.
 browser/type-check.ts(243,27): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 browser/type-check.ts(245,27): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 browser/type-check.ts(247,28): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
@@ -187,7 +187,7 @@ browser/type-check.ts(451,45): error TS2314: Generic type 'Array<T>' requires 1 
 browser/type-check.ts(452,58): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(453,36): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 browser/type-check.ts(453,49): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-browser/type-check.ts(461,3): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+browser/type-check.ts(461,3): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 browser/type-check.ts(461,12): error TS2554: Expected 2 arguments, but got 1.
 browser/type-check.ts(461,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(461,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -1000,10 +1000,4 @@ lib/parse-type.ts(190,7): error TS2322: Type 'unknown' is not assignable to type
 lib/parse-type.ts(191,25): error TS2339: Property 'message' does not exist on type 'Function'.
 lib/parse-type.ts(195,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse-type.ts(197,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

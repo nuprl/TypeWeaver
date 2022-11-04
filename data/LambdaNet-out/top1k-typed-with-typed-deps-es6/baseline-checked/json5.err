@@ -3,7 +3,7 @@ build/package.ts(7,22): error TS2339: Property 'stringify' does not exist on typ
 build/package.ts(9,66): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string | ArrayBufferView'.
   Type 'String' is missing the following properties from type 'BigUint64Array': BYTES_PER_ELEMENT, buffer, byteLength, byteOffset, and 20 more.
 build/unicode.ts(10,7): error TS2739: Type 'regenerate' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-build/unicode.ts(14,7): error TS2740: Type 'regenerate' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+build/unicode.ts(14,7): error TS2740: Type 'regenerate' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 build/unicode.ts(25,7): error TS2322: Type 'regenerate' is not assignable to type 'String'.
 build/unicode.ts(26,10): error TS2345: Argument of type 'String' is not assignable to parameter of type 'RegenerateArgValueOrArray'.
   Type 'String' is missing the following properties from type 'readonly RegenerateArgValueOrArray[]': join, every, some, forEach, and 11 more.
@@ -80,7 +80,7 @@ lib/parse.ts(78,22): error TS2314: Generic type 'Array<T>' requires 1 type argum
 lib/parse.ts(78,40): error TS2538: Type 'String' cannot be used as an index type.
 lib/parse.ts(85,19): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 lib/parse.ts(87,9): error TS2322: Type 'string' is not assignable to type 'Number'.
-lib/parse.ts(92,11): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/parse.ts(92,11): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/parse.ts(95,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/parse.ts(98,9): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/parse.ts(100,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -302,7 +302,7 @@ lib/parse.ts(945,23): error TS2339: Property 'value' does not exist on type 'Obj
 lib/parse.ts(961,23): error TS2339: Property 'value' does not exist on type 'Object'.
 lib/parse.ts(972,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse.ts(1000,18): error TS2304: Cannot find name 'Void'.
-lib/parse.ts(1025,9): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+lib/parse.ts(1025,9): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/parse.ts(1028,5): error TS2322: Type 'HTMLElement' is not assignable to type 'String'.
 lib/parse.ts(1028,64): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 lib/parse.ts(1031,25): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
@@ -323,7 +323,7 @@ lib/parse.ts(1084,9): error TS2339: Property 'lineNumber' does not exist on type
 lib/parse.ts(1085,9): error TS2339: Property 'columnNumber' does not exist on type 'HTMLElement'.
 lib/register.ts(5,1): error TS2322: Type '(module: String, filename: String) => void' is not assignable to type '(m: Module, filename: string) => any'.
   Types of parameters 'module' and 'm' are incompatible.
-    Type 'Module' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+    Type 'Module' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/register.ts(6,45): error TS2769: No overload matches this call.
   Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null | undefined; flag?: string | undefined; } | null | undefined): Buffer', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
@@ -408,10 +408,4 @@ rollup.config.ts(2,22): error TS2307: Cannot find module 'rollup-plugin-commonjs
 rollup.config.ts(3,19): error TS2307: Cannot find module 'rollup-plugin-buble' or its corresponding type declarations.
 rollup.config.ts(4,24): error TS2307: Cannot find module 'rollup-plugin-terser' or its corresponding type declarations.
 rollup.config.ts(5,17): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

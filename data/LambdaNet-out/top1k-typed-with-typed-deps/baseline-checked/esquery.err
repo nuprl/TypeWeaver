@@ -333,9 +333,9 @@ parser.ts(308,62): error TS2339: Property 'startRule' does not exist on type 'Ob
 parser.ts(312,30): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(316,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 parser.ts(316,34): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 parser.ts(319,63): error TS2304: Cannot find name 'Void'.
 parser.ts(320,7): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -381,7 +381,7 @@ parser.ts(434,45): error TS2538: Type 'String' cannot be used as an index type.
 parser.ts(437,30): error TS2339: Property 'nextPos' does not exist on type 'Object'.
 parser.ts(439,23): error TS2339: Property 'result' does not exist on type 'Object'.
 parser.ts(444,11): error TS2367: This condition will always return 'true' since the types 'Boolean' and 'Number' have no overlap.
-parser.ts(445,9): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+parser.ts(445,9): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 parser.ts(446,13): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 parser.ts(448,15): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 parser.ts(451,13): error TS2739: Type 'Boolean' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
@@ -400,7 +400,7 @@ parser.ts(492,28): error TS2345: Argument of type 'Number' is not assignable to 
 parser.ts(494,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 parser.ts(496,9): error TS2322: Type 'Number' is not assignable to type 'String'.
 parser.ts(497,47): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 parser.ts(499,14): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 parser.ts(501,30): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -1290,10 +1290,4 @@ rollup.config.ts(7,19): error TS2307: Cannot find module 'rollup-plugin-babel' o
 rollup.config.ts(8,25): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 rollup.config.ts(23,86): error TS2304: Cannot find name 'Void'.
 rollup.config.ts(49,21): error TS2339: Property 'external' does not exist on type '{ input: string; output: { format: string; sourcemap: boolean; file: string; name: string; globals: { estraverse: string; }; }; plugins: any[]; }'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

@@ -34,7 +34,7 @@ esrecurse.ts(103,28): error TS2538: Type 'String' cannot be used as an index typ
 esrecurse.ts(104,28): error TS2538: Type 'String' cannot be used as an index type.
 esrecurse.ts(113,30): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 esrecurse.ts(113,42): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 esrecurse.ts(114,11): error TS2339: Property 'visit' does not exist on type 'HTMLElement'.
 gulpfile.babel.ts(23,18): error TS2307: Cannot find module 'gulp' or its corresponding type declarations.
 gulpfile.babel.ts(24,19): error TS2307: Cannot find module 'gulp-mocha' or its corresponding type declarations.
@@ -46,10 +46,4 @@ gulpfile.babel.ts(29,20): error TS2307: Cannot find module 'gulp-filter' or its 
 gulpfile.babel.ts(30,24): error TS2307: Cannot find module 'gulp-tag-version' or its corresponding type declarations.
 gulpfile.babel.ts(33,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 gulpfile.babel.ts(59,18): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

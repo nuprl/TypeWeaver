@@ -1,9 +1,9 @@
-index.ts(2,5): error TS2740: Type 'typeof URL' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+index.ts(2,5): error TS2740: Type 'typeof URL' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(10,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(13,17): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(14,10): error TS2339: Property '_redirectable' does not exist on type 'Object'.
 index.ts(18,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(21,3): error TS2345: Argument of type 'TypeErrorConstructor' is not assignable to parameter of type 'Number'.
   Type 'TypeErrorConstructor' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 index.ts(24,32): error TS2554: Expected 3 arguments, but got 2.
@@ -120,7 +120,7 @@ index.ts(399,27): error TS2345: Argument of type 'RegExp' is not assignable to p
   Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 index.ts(403,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(403,56): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
-index.ts(406,7): error TS2740: Type 'UrlWithStringQuery' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+index.ts(406,7): error TS2740: Type 'UrlWithStringQuery' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(407,66): error TS2339: Property 'host' does not exist on type 'String'.
 index.ts(408,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
@@ -139,7 +139,7 @@ index.ts(414,31): error TS2345: Argument of type 'String' is not assignable to p
 index.ts(417,28): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
 index.ts(422,9): error TS2554: Expected 0 arguments, but got 2.
-index.ts(424,7): error TS2740: Type 'UrlWithParsedQuery & UrlWithStringQuery & Url' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+index.ts(424,7): error TS2740: Type 'UrlWithParsedQuery & UrlWithStringQuery & Url' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(424,44): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(429,24): error TS2339: Property 'protocol' does not exist on type 'String'.
@@ -149,7 +149,7 @@ index.ts(431,23): error TS2339: Property 'host' does not exist on type 'String'.
 index.ts(432,36): error TS2339: Property 'host' does not exist on type 'String'.
 index.ts(433,27): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 index.ts(437,18): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(439,25): error TS2339: Property 'headers' does not exist on type 'Object'.
 index.ts(445,16): error TS2454: Variable 'requestHeaders' is used before being assigned.
 index.ts(462,28): error TS2351: This expression is not constructable.
@@ -231,10 +231,4 @@ index.ts(593,32): error TS2304: Cannot find name 'HTMLProps'.
 index.ts(593,44): error TS2304: Cannot find name 'Void'.
 index.ts(595,35): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(601,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

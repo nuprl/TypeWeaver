@@ -56,7 +56,7 @@ lib/colors.ts(86,50): error TS2314: Generic type 'Promise<T>' requires 1 type ar
 lib/colors.ts(87,38): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[]'.
 lib/colors.ts(89,11): error TS2551: Property '_styles' does not exist on type 'HTMLElement'. Did you mean 'style'?
 lib/colors.ts(92,11): error TS2339: Property '__proto__' does not exist on type 'HTMLElement'.
-lib/colors.ts(93,3): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+lib/colors.ts(93,3): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/colors.ts(96,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/colors.ts(98,14): error TS2339: Property 'grey' does not exist on type 'Object'.
@@ -142,7 +142,7 @@ lib/custom/zalgo.ts(69,14): error TS7053: Element implicitly has an 'any' type b
   Property 'size' does not exist on type 'Object'.
 lib/custom/zalgo.ts(69,48): error TS7053: Element implicitly has an 'any' type because expression of type '"size"' can't be used to index type 'Object'.
   Property 'size' does not exist on type 'Object'.
-lib/custom/zalgo.ts(70,5): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+lib/custom/zalgo.ts(70,5): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 lib/custom/zalgo.ts(71,10): error TS2405: The left-hand side of a 'for...in' statement must be of type 'string' or 'any'.
 lib/custom/zalgo.ts(72,18): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
   Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
@@ -186,7 +186,7 @@ lib/extendStringPrototype.ts(70,64): error TS2339: Property 'magenta' does not e
 lib/extendStringPrototype.ts(74,26): error TS2538: Type 'String' cannot be used as an index type.
 lib/extendStringPrototype.ts(75,39): error TS2538: Type 'String' cannot be used as an index type.
 lib/extendStringPrototype.ts(77,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/extendStringPrototype.ts(81,17): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/extendStringPrototype.ts(81,17): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/extendStringPrototype.ts(81,38): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/extendStringPrototype.ts(82,39): error TS2538: Type 'String' cannot be used as an index type.
 lib/extendStringPrototype.ts(83,34): error TS2538: Type 'String' cannot be used as an index type.
@@ -254,14 +254,8 @@ lib/system/supports-colors.ts(143,37): error TS2345: Argument of type 'String' i
 lib/system/supports-colors.ts(144,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
   Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lib/system/supports-colors.ts(149,27): error TS2345: Argument of type 'WriteStream & { fd: 1; }' is not assignable to parameter of type 'String'.
-  Type 'WriteStream & { fd: 1; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'WriteStream & { fd: 1; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/system/supports-colors.ts(150,27): error TS2345: Argument of type 'WriteStream & { fd: 2; }' is not assignable to parameter of type 'String'.
-  Type 'WriteStream & { fd: 2; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'WriteStream & { fd: 2; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 safe.ts(9,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

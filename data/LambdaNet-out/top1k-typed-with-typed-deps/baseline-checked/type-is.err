@@ -9,7 +9,7 @@ index.ts(59,28): error TS2365: Operator '+' cannot be applied to types 'Number' 
 index.ts(68,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(69,33): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(70,19): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'String'.
-  Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(93,14): error TS2339: Property 'headers' does not exist on type 'HTMLElement'.
 index.ts(94,16): error TS2339: Property 'headers' does not exist on type 'HTMLElement'.
 index.ts(123,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -44,11 +44,5 @@ index.ts(223,35): error TS7053: Element implicitly has an 'any' type because exp
 index.ts(243,8): error TS2339: Property 'parameters' does not exist on type 'String'.
 index.ts(257,44): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(263,26): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 

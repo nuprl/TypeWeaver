@@ -109,7 +109,7 @@ lib/asn1/base/node.ts(76,12): error TS2538: Type 'String' cannot be used as an i
 lib/asn1/base/node.ts(76,26): error TS2538: Type 'String' cannot be used as an index type.
 lib/asn1/base/node.ts(78,56): error TS2339: Property 'parent' does not exist on type 'Object'.
 lib/asn1/base/node.ts(79,7): error TS2339: Property '_baseState' does not exist on type 'HTMLElement'.
-lib/asn1/base/node.ts(80,3): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+lib/asn1/base/node.ts(80,3): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/asn1/base/node.ts(83,41): error TS2304: Cannot find name 'Void'.
 lib/asn1/base/node.ts(86,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/base/node.ts(86,10): error TS2538: Type 'String' cannot be used as an index type.
@@ -424,7 +424,7 @@ lib/asn1/constants/der.ts(10,13): error TS2362: The left-hand side of an arithme
 lib/asn1/constants/der.ts(12,31): error TS2538: Type 'Number' cannot be used as an index type.
 lib/asn1/constants/der.ts(13,9): error TS2538: Type 'String' cannot be used as an index type.
 lib/asn1/constants/der.ts(26,14): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/asn1/constants/der.ts(60,14): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/asn1/constants/index.ts(6,11): error TS2339: Property '_reverse' does not exist on type 'RegExp'.
@@ -511,7 +511,7 @@ lib/asn1/decoders/der.ts(122,16): error TS2339: Property 'isError' does not exis
 lib/asn1/decoders/der.ts(130,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/asn1/decoders/der.ts(131,35): error TS2339: Property 'readUInt8' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(132,16): error TS2339: Property 'isError' does not exist on type 'Object'.
-lib/asn1/decoders/der.ts(133,7): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/asn1/decoders/der.ts(133,7): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/asn1/decoders/der.ts(134,14): error TS2322: Type '{ unused: Number; data: any; }' is not assignable to type 'String'.
   Object literal may only specify known properties, and 'unused' does not exist in type 'String'.
 lib/asn1/decoders/der.ts(134,43): error TS2339: Property 'raw' does not exist on type 'Object'.
@@ -574,7 +574,7 @@ lib/asn1/decoders/der.ts(249,12): error TS2367: This condition will always retur
 lib/asn1/decoders/der.ts(252,75): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/asn1/decoders/der.ts(252,85): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/decoders/der.ts(254,30): error TS2339: Property 'raw' does not exist on type 'Object'.
-lib/asn1/decoders/der.ts(255,7): error TS2740: Type 'BN' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+lib/asn1/decoders/der.ts(255,7): error TS2740: Type 'BN' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/asn1/decoders/der.ts(255,32): error TS2769: No overload matches this call.
   Overload 1 of 2, '(number: string | number | number[] | Uint8Array | Buffer | BN, base?: number | "hex" | undefined, endian?: Endianness | undefined): BN', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'string | number | number[] | Uint8Array | Buffer | BN'.
@@ -683,13 +683,10 @@ lib/asn1/encoders/der.ts(137,33): error TS2362: The left-hand side of an arithme
 lib/asn1/encoders/der.ts(144,7): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
 lib/asn1/encoders/der.ts(152,9): error TS2740: Type 'Date' is missing the following properties from type 'HTMLInputElement': accept, align, alt, autocomplete, and 333 more.
 lib/asn1/encoders/der.ts(152,43): error TS2769: No overload matches this call.
-  Overload 1 of 5, '(value: string | number | Date): Date', gave the following error.
+  Overload 1 of 4, '(value: string | number | Date): Date', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | number | Date'.
-      Type 'String' is missing the following properties from type 'Date': toDateString, toTimeString, toLocaleDateString, toLocaleTimeString, and 38 more.
-  Overload 2 of 5, '(vd: VarDate): Date', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'VarDate'.
-      Property 'VarDate_typekey' is missing in type 'String' but required in type 'VarDate'.
-  Overload 3 of 5, '(value: string | number): Date', gave the following error.
+      Type 'String' is missing the following properties from type 'Date': toDateString, toTimeString, toLocaleDateString, toLocaleTimeString, and 37 more.
+  Overload 2 of 4, '(value: string | number): Date', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | number'.
 lib/asn1/encoders/der.ts(154,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/asn1/encoders/der.ts(156,16): error TS2339: Property 'getUTCFullYear' does not exist on type 'HTMLInputElement'.
@@ -713,7 +710,7 @@ lib/asn1/encoders/der.ts(193,11): error TS7053: Element implicitly has an 'any' 
 lib/asn1/encoders/der.ts(198,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/encoders/der.ts(198,33): error TS2339: Property 'toArray' does not exist on type 'String'.
 lib/asn1/encoders/der.ts(199,14): error TS2339: Property 'sign' does not exist on type 'String'.
-lib/asn1/encoders/der.ts(202,5): error TS2740: Type 'Buffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 36 more.
+lib/asn1/encoders/der.ts(202,5): error TS2740: Type 'Buffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 37 more.
 lib/asn1/encoders/der.ts(208,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/encoders/der.ts(210,38): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -1112,10 +1109,4 @@ rfc/5280/index.ts(859,3): error TS2683: 'this' implicitly has type 'any' because
 rfc/5280/index.ts(861,9): error TS2339: Property 'InvalidityDate' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(865,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(867,9): error TS2339: Property 'CertificateIssuer' does not exist on type 'HTMLElement'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

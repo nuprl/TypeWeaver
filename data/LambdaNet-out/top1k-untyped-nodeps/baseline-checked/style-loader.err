@@ -28,7 +28,7 @@ src/index.ts(82,10): error TS2678: Type 'string' is not comparable to type 'Numb
 src/index.ts(83,10): error TS2678: Type 'string' is not comparable to type 'Number'.
 src/index.ts(86,36): error TS2339: Property 'hot' does not exist on type 'Function'.
 src/index.ts(87,37): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 src/index.ts(93,41): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
 src/index.ts(94,44): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 src/index.ts(96,40): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
@@ -197,7 +197,7 @@ src/runtime/singletonStyleDomAPI.ts(81,19): error TS2339: Property 'singleton' d
 src/runtime/singletonStyleDomAPI.ts(83,20): error TS2339: Property 'singleton' does not exist on type 'Object'.
 src/runtime/singletonStyleDomAPI.ts(83,40): error TS2339: Property 'insertStyleElement' does not exist on type 'Function'.
 src/runtime/singletonStyleDomAPI.ts(87,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/runtime/singletonStyleDomAPI.ts(90,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 src/runtime/styleDomAPI.ts(2,10): error TS2393: Duplicate function implementation.
 src/runtime/styleDomAPI.ts(2,74): error TS2304: Cannot find name 'Void'.
@@ -295,10 +295,4 @@ src/utils.ts(369,15): error TS2339: Property 'attributes' does not exist on type
 src/utils.ts(371,13): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
 src/utils.ts(378,13): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
 src/utils.ts(383,7): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

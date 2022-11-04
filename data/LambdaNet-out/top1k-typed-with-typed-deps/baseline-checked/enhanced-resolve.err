@@ -176,7 +176,7 @@ lib/CachedInputFileSystem.ts(303,35): error TS2339: Property '_currentLevel' doe
 lib/CachedInputFileSystem.ts(303,61): error TS2339: Property '_levels' does not exist on type 'CacheBackend'.
 lib/CachedInputFileSystem.ts(304,30): error TS2339: Property '_levels' does not exist on type 'CacheBackend'.
 lib/CachedInputFileSystem.ts(305,8): error TS2339: Property '_currentLevel' does not exist on type 'CacheBackend'.
-lib/CachedInputFileSystem.ts(306,20): error TS2495: Type 'Object' is not an array type or a string type.
+lib/CachedInputFileSystem.ts(306,20): error TS2488: Type 'Object' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/CachedInputFileSystem.ts(307,9): error TS2339: Property '_data' does not exist on type 'CacheBackend'.
 lib/CachedInputFileSystem.ts(309,9): error TS2339: Property 'clear' does not exist on type 'Object'.
 lib/CachedInputFileSystem.ts(310,12): error TS2339: Property '_data' does not exist on type 'CacheBackend'.
@@ -351,7 +351,7 @@ lib/DescriptionFileUtils.ts(79,23): error TS2339: Property 'fileDependencies' do
 lib/DescriptionFileUtils.ts(87,16): error TS2554: Expected 2 arguments, but got 1.
 lib/DescriptionFileUtils.ts(90,15): error TS2554: Expected 2 arguments, but got 1.
 lib/DescriptionFileUtils.ts(93,20): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/DescriptionFileUtils.ts(97,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/DescriptionFileUtils.ts(97,51): error TS2304: Cannot find name 'Void'.
 lib/DescriptionFileUtils.ts(99,26): error TS2339: Property 'log' does not exist on type 'Object'.
@@ -360,7 +360,7 @@ lib/DescriptionFileUtils.ts(120,12): error TS2322: Type 'String' is not assignab
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'string' is not assignable to type 'boolean'.
 lib/DescriptionFileUtils.ts(120,32): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'String'.
-  Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/DescriptionFileUtils.ts(138,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/DescriptionFileUtils.ts(139,16): error TS2322: Type 'undefined' is not assignable to type 'Object'.
 lib/DescriptionFileUtils.ts(144,5): error TS2322: Type 'null' is not assignable to type 'Object'.
@@ -731,7 +731,7 @@ lib/ResolverFactory.ts(37,22): error TS2314: Generic type 'Array<T>' requires 1 
 lib/ResolverFactory.ts(38,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ResolverFactory.ts(39,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ResolverFactory.ts(123,66): error TS2339: Property 'pnp' does not exist on type 'Object'.
-lib/ResolverFactory.ts(137,2): error TS2740: Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+lib/ResolverFactory.ts(137,2): error TS2740: Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 lib/ResolverFactory.ts(140,70): error TS2538: Type 'String' cannot be used as an index type.
 lib/ResolverFactory.ts(142,20): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
@@ -740,7 +740,7 @@ lib/ResolverFactory.ts(144,10): error TS2339: Property 'name' does not exist on 
 lib/ResolverFactory.ts(157,8): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
 lib/ResolverFactory.ts(157,47): error TS2339: Property 'mainFields' does not exist on type 'Object'.
 lib/ResolverFactory.ts(158,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ResolverFactory.ts(160,21): error TS2495: Type 'Error' is not an array type or a string type.
+lib/ResolverFactory.ts(160,21): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/ResolverFactory.ts(180,33): error TS2339: Property 'alias' does not exist on type 'Object'.
 lib/ResolverFactory.ts(181,36): error TS2339: Property 'fallback' does not exist on type 'Object'.
 lib/ResolverFactory.ts(182,32): error TS2339: Property 'aliasFields' does not exist on type 'Object'.
@@ -874,7 +874,7 @@ lib/ResolverFactory.ts(667,29): error TS2769: No overload matches this call.
     Argument of type 'Object' is not assignable to parameter of type 'readonly any[]'.
       The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
         Type 'Object' is missing the following properties from type 'readonly any[]': length, concat, join, slice, and 18 more.
-lib/ResolverFactory.ts(669,21): error TS2495: Type 'Error' is not an array type or a string type.
+lib/ResolverFactory.ts(669,21): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/ResolverFactory.ts(671,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/RestrictionsPlugin.ts(11,7): error TS2451: Cannot redeclare block-scoped variable 'slashCode'.
 lib/RestrictionsPlugin.ts(14,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -1111,14 +1111,14 @@ lib/index.ts(31,84): error TS2749: 'Resolver' refers to a value, but is being us
 lib/index.ts(31,113): error TS2304: Cannot find name 'Void'.
 lib/index.ts(35,3): error TS2740: Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 lib/index.ts(37,3): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/index.ts(45,21): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/index.ts(51,71): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/index.ts(55,3): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/index.ts(65,18): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
 lib/index.ts(68,4): error TS2322: Type 'String' is not assignable to type 'Function'.
-lib/index.ts(69,4): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+lib/index.ts(69,4): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/index.ts(70,4): error TS2322: Type 'String' is not assignable to type 'Function'.
 lib/index.ts(72,4): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
@@ -1133,11 +1133,6 @@ lib/index.ts(107,31): error TS2345: Argument of type 'Object' is not assignable 
     Type 'Object' is not assignable to type 'PropertyDescriptorMap'.
       The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
         Index signature for type 'string' is missing in type 'Object'.
-lib/index.ts(112,6): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
-lib/index.ts(116,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
-lib/index.ts(122,6): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
-lib/index.ts(125,6): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
-lib/index.ts(128,6): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 lib/util/entrypoints.ts(83,7): error TS2451: Cannot redeclare block-scoped variable 'slashCode'.
 lib/util/entrypoints.ts(84,7): error TS2451: Cannot redeclare block-scoped variable 'dotCode'.
 lib/util/entrypoints.ts(93,4): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
@@ -1194,7 +1189,6 @@ lib/util/entrypoints.ts(380,36): error TS2345: Argument of type 'Function' is no
     Type 'Object' is not assignable to type 'boolean'.
 lib/util/entrypoints.ts(384,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/util/entrypoints.ts(389,37): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Boolean'.
-lib/util/entrypoints.ts(403,29): error TS2802: Type 'String' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 lib/util/entrypoints.ts(430,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 lib/util/entrypoints.ts(441,76): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/util/entrypoints.ts(441,82): error TS2749: 'Resolver' refers to a value, but is being used as a type here. Did you mean 'typeof Resolver'?
@@ -1317,7 +1311,7 @@ tooling/format-file-header.ts(87,10): error TS7006: Parameter 'content' implicit
 tooling/format-file-header.ts(93,21): error TS7006: Parameter 'item' implicitly has an 'any' type.
 tooling/format-file-header.ts(102,10): error TS7006: Parameter 'content' implicitly has an 'any' type.
 tooling/format-file-header.ts(108,21): error TS7006: Parameter 'item' implicitly has an 'any' type.
-tooling/format-file-header.ts(115,24): error TS2495: Type 'Error' is not an array type or a string type.
+tooling/format-file-header.ts(115,24): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 tooling/format-file-header.ts(116,27): error TS2339: Property 'readFileSync' does not exist on type 'String'.
 tooling/format-file-header.ts(117,12): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 tooling/format-file-header.ts(117,37): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -1335,7 +1329,7 @@ tooling/format-file-header.ts(145,16): error TS2339: Property 'repeat' does not 
 tooling/format-file-header.ts(146,4): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 tooling/format-file-header.ts(148,15): error TS2339: Property 'update' does not exist on type 'Object'.
 tooling/format-file-header.ts(149,35): error TS2339: Property 'update' does not exist on type 'Object'.
-tooling/format-file-header.ts(149,45): error TS2461: Type 'Object' is not an array type.
+tooling/format-file-header.ts(149,45): error TS2488: Type 'Object' must have a '[Symbol.iterator]()' method that returns an iterator.
 tooling/format-file-header.ts(150,19): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
   Property '0' does not exist on type 'Object'.
 tooling/format-file-header.ts(152,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
@@ -1348,10 +1342,4 @@ tooling/format-file-header.ts(158,43): error TS2339: Property 'title' does not e
 tooling/format-file-header.ts(164,10): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
   Property '0' does not exist on type 'Object'.
 tooling/format-file-header.ts(172,7): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

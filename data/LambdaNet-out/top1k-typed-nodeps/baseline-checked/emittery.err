@@ -47,7 +47,6 @@ index.ts(102,6): error TS2322: Type '(value: unknown) => void' is not assignable
 index.ts(110,18): error TS7005: Variable 'queue' implicitly has an 'any[]' type.
 index.ts(114,16): error TS7006: Parameter 'value' implicitly has an 'any' type.
 index.ts(115,4): error TS2322: Type 'undefined' is not assignable to type 'any[]'.
-index.ts(130,11): error TS2522: The 'arguments' object cannot be referenced in an async function or method in ES3 and ES5. Consider using a standard function or method.
 index.ts(141,37): error TS7006: Parameter 'methodNames' implicitly has an 'any' type.
 index.ts(163,21): error TS7006: Parameter 'eventName' implicitly has an 'any' type.
 index.ts(165,24): error TS7006: Parameter 'emitter' implicitly has an 'any' type.
@@ -61,8 +60,6 @@ index.ts(195,12): error TS2683: 'this' implicitly has type 'any' because it does
 index.ts(203,33): error TS7006: Parameter 'methodName' implicitly has an 'any' type.
 index.ts(203,57): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 index.ts(204,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(218,13): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
-index.ts(229,13): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 index.ts(240,8): error TS2339: Property 'debug' does not exist on type 'Emittery'.
 index.ts(240,24): error TS2339: Property 'debug' does not exist on type '{}'.
 index.ts(242,12): error TS2339: Property 'debug' does not exist on type 'Emittery'.
@@ -102,10 +99,4 @@ index.ts(476,9): error TS2554: Expected 2 arguments, but got 1.
 index.ts(499,14): error TS7006: Parameter 'target' implicitly has an 'any' type.
 index.ts(499,22): error TS7006: Parameter 'methodNames' implicitly has an 'any' type.
 index.ts(513,12): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Emittery'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

@@ -381,12 +381,12 @@ lib/reducePlan.ts(100,22): error TS2363: The right-hand side of an arithmetic op
 lib/reducePlan.ts(101,20): error TS2339: Property 'parent' does not exist on type 'Object'.
 lib/reducePlan.ts(103,9): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
 lib/reducePlan.ts(103,41): error TS2339: Property 'children' does not exist on type 'Object'.
-lib/reducePlan.ts(104,22): error TS2495: Type 'Error' is not an array type or a string type.
+lib/reducePlan.ts(104,22): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/reducePlan.ts(108,46): error TS2339: Property 'add' does not exist on type 'Error'.
 lib/reducePlan.ts(113,17): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/reducePlan.ts(116,14): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/reducePlan.ts(117,9): error TS2739: Type 'Set<any>' is missing the following properties from type 'Error': name, message
-lib/reducePlan.ts(118,22): error TS2495: Type 'Error' is not an array type or a string type.
+lib/reducePlan.ts(118,22): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/reducePlan.ts(131,12): error TS2339: Property 'add' does not exist on type 'Error'.
 lib/watchEventSource.ts(14,7): error TS2739: Type 'Boolean' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lib/watchEventSource.ts(17,3): error TS2532: Object is possibly 'undefined'.
@@ -465,7 +465,7 @@ lib/watchEventSource.ts(261,14): error TS2314: Generic type 'Array<T>' requires 
 lib/watchEventSource.ts(261,38): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/watchEventSource.ts(274,10): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
 lib/watchEventSource.ts(275,18): error TS2339: Property 'size' does not exist on type 'Error'.
-lib/watchEventSource.ts(284,28): error TS2495: Type 'Error' is not an array type or a string type.
+lib/watchEventSource.ts(284,28): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/watchEventSource.ts(299,17): error TS2304: Cannot find name 'Watchpack'.
 lib/watchEventSource.ts(306,6): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lib/watchEventSource.ts(313,39): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
@@ -556,9 +556,9 @@ lib/watchpack.ts(196,29): error TS2314: Generic type 'Map<K, V>' requires 2 type
 lib/watchpack.ts(197,34): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/watchpack.ts(198,9): error TS2740: Type 'Set<unknown>' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lib/watchpack.ts(199,12): error TS2339: Property 'watcherOptions' does not exist on type 'Watchpack'.
-lib/watchpack.ts(201,23): error TS2495: Type 'Function' is not an array type or a string type.
+lib/watchpack.ts(201,23): error TS2488: Type 'Function' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/watchpack.ts(214,21): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-lib/watchpack.ts(236,23): error TS2495: Type 'Function' is not an array type or a string type.
+lib/watchpack.ts(236,23): error TS2488: Type 'Function' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/watchpack.ts(243,19): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 lib/watchpack.ts(278,20): error TS2304: Cannot find name 'Watcher'.
 lib/watchpack.ts(278,35): error TS2339: Property 'watcherManager' does not exist on type 'Watchpack'.
@@ -579,7 +579,7 @@ lib/watchpack.ts(308,46): error TS2339: Property 'aggregateTimer' does not exist
 lib/watchpack.ts(312,9): error TS2322: Type 'Set<unknown>' is not assignable to type 'HTMLElement'.
 lib/watchpack.ts(313,25): error TS2339: Property 'fileWatchers' does not exist on type 'Watchpack'.
 lib/watchpack.ts(314,25): error TS2339: Property 'directoryWatchers' does not exist on type 'Watchpack'.
-lib/watchpack.ts(316,19): error TS2495: Type 'HTMLElement' is not an array type or a string type.
+lib/watchpack.ts(316,19): error TS2488: Type 'HTMLElement' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/watchpack.ts(318,43): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
   No index signature with a parameter of type 'string' was found on type 'Object'.
 lib/watchpack.ts(318,55): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
@@ -590,7 +590,7 @@ lib/watchpack.ts(329,41): error TS7006: Parameter 'directoryTimestamps' implicit
 lib/watchpack.ts(330,9): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
 lib/watchpack.ts(331,25): error TS2339: Property 'fileWatchers' does not exist on type 'Watchpack'.
 lib/watchpack.ts(332,25): error TS2339: Property 'directoryWatchers' does not exist on type 'Watchpack'.
-lib/watchpack.ts(334,19): error TS2495: Type 'Error' is not an array type or a string type.
+lib/watchpack.ts(334,19): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/watchpack.ts(340,12): error TS2339: Property 'aggregateTimer' does not exist on type 'Watchpack'.
 lib/watchpack.ts(341,22): error TS2339: Property 'aggregateTimer' does not exist on type 'Watchpack'.
 lib/watchpack.ts(342,9): error TS2339: Property 'aggregateTimer' does not exist on type 'Watchpack'.
@@ -637,9 +637,9 @@ playground/watch-folder.ts(22,22): error TS2345: Argument of type 'String' is no
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 playground/watch-folder.ts(22,45): error TS2538: Type 'String' cannot be used as an index type.
 playground/watch-folder.ts(32,24): error TS2345: Argument of type 'never[]' is not assignable to parameter of type 'String'.
-  Type 'never[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+  Type 'never[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 playground/watch-folder.ts(33,27): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'String'.
-  Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+  Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 playground/watch-folder.ts(34,12): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 playground/watch-folder.ts(35,12): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -650,10 +650,4 @@ playground/watch-folder.ts(37,12): error TS2345: Argument of type 'String' is no
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 playground/watch-folder.ts(39,12): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

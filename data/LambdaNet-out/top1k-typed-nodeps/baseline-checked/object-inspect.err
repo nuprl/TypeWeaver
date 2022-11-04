@@ -25,9 +25,12 @@ index.ts(11,5): error TS2322: Type 'false | WeakSet<object>' is not assignable t
   Type 'boolean' is not assignable to type 'Number'.
 index.ts(12,5): error TS2322: Type '((value: object) => boolean) | null' is not assignable to type 'Function'.
   Type 'null' is not assignable to type 'Function'.
-index.ts(13,34): error TS2552: Cannot find name 'WeakRef'. Did you mean 'isWeakRef'?
-index.ts(13,60): error TS2552: Cannot find name 'WeakRef'. Did you mean 'isWeakRef'?
-index.ts(14,43): error TS2552: Cannot find name 'WeakRef'. Did you mean 'isWeakRef'?
+index.ts(13,5): error TS2322: Type 'false | WeakRef<any>' is not assignable to type 'Boolean'.
+  Type 'WeakRef<any>' is not assignable to type 'Boolean'.
+    The types returned by 'valueOf()' are incompatible between these types.
+      Type 'Object' is not assignable to type 'boolean'.
+index.ts(14,5): error TS2322: Type '(() => any) | null' is not assignable to type 'Function'.
+  Type 'null' is not assignable to type 'Function'.
 index.ts(15,5): error TS2322: Type '() => boolean' is not assignable to type 'Number'.
 index.ts(22,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(23,5): error TS2322: Type '(string: string) => boolean' is not assignable to type 'String'.
@@ -49,12 +52,12 @@ index.ts(69,43): error TS2339: Property 'custom' does not exist on type 'Functio
 index.ts(70,5): error TS2322: Type 'Function | null' is not assignable to type 'Function'.
   Type 'null' is not assignable to type 'Function'.
 index.ts(70,40): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(72,87): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(73,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 index.ts(75,13): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'String'.
-  Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(75,42): error TS2339: Property 'quoteStyle' does not exist on type 'HTMLElement'.
 index.ts(75,74): error TS2339: Property 'quoteStyle' does not exist on type 'HTMLElement'.
 index.ts(79,13): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'String'.
@@ -79,7 +82,7 @@ index.ts(129,40): error TS2339: Property 'depth' does not exist on type 'HTMLEle
 index.ts(129,73): error TS2339: Property 'depth' does not exist on type 'HTMLElement'.
 index.ts(132,24): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(135,9): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(139,30): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
@@ -226,11 +229,5 @@ test-core-js.ts(23,1): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 test-core-js.ts(24,7): error TS2339: Property 'equal' does not exist on type 'Object'.
 test-core-js.ts(25,7): error TS2339: Property 'end' does not exist on type 'Object'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 ../../../../node_modules/@types/node/ts4.8/buffer.d.ts(98,14): error TS2661: Cannot export 'Buffer'. Only local declarations can be exported from a module.
 

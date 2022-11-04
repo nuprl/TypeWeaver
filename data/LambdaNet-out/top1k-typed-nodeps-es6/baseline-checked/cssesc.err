@@ -5,7 +5,7 @@ coverage/prettify.ts(1,8): error TS2339: Property 'PR_SHOULD_USE_CONTINUATION' d
 coverage/prettify.ts(1,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 coverage/prettify.ts(1,119): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 coverage/prettify.ts(1,293): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-coverage/prettify.ts(1,406): error TS2740: Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+coverage/prettify.ts(1,406): error TS2740: Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 coverage/prettify.ts(1,679): error TS2322: Type 'any[]' is not assignable to type 'String'.
 coverage/prettify.ts(1,848): error TS2322: Type 'String' is not assignable to type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
@@ -38,7 +38,7 @@ coverage/prettify.ts(1,3504): error TS2367: This condition will always return 'f
 coverage/prettify.ts(1,3514): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 coverage/prettify.ts(1,3524): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 coverage/prettify.ts(1,3534): error TS2322: Type 'string' is not assignable to type 'Number'.
-coverage/prettify.ts(1,3545): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+coverage/prettify.ts(1,3545): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 coverage/prettify.ts(1,3594): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 coverage/prettify.ts(1,3760): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 coverage/prettify.ts(1,3777): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -199,7 +199,7 @@ coverage/prettify.ts(1,9545): error TS2339: Property 'cStyleComments' does not e
 coverage/prettify.ts(1,9642): error TS2339: Property 'regexLiterals' does not exist on type 'Object'.
 coverage/prettify.ts(1,9836): error TS2339: Property 'types' does not exist on type 'Object'.
 coverage/prettify.ts(1,9882): error TS2339: Property 'keywords' does not exist on type 'Object'.
-coverage/prettify.ts(1,10347): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+coverage/prettify.ts(1,10347): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 coverage/prettify.ts(1,10509): error TS2304: Cannot find name 'Void'.
 coverage/prettify.ts(1,10583): error TS2740: Type 'Document' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, draggable, and 121 more.
 coverage/prettify.ts(1,10634): error TS2339: Property 'currentStyle' does not exist on type 'HTMLElement'.
@@ -497,10 +497,4 @@ src/cssesc.ts(106,10): error TS2365: Operator '+' cannot be applied to types 'St
 src/cssesc.ts(112,8): error TS2339: Property 'options' does not exist on type 'Function'.
 src/cssesc.ts(119,8): error TS2339: Property 'version' does not exist on type 'Function'.
 src/data.ts(6,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

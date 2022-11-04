@@ -143,7 +143,7 @@ lib/validate.ts(243,14): error TS7053: Element implicitly has an 'any' type beca
 lib/validate.ts(247,36): error TS2339: Property '$schema' does not exist on type 'String'.
 lib/validate.ts(248,50): error TS2339: Property '$schema' does not exist on type 'String'.
 lib/validate.ts(254,32): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'String'.
-  Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/validate.ts(256,40): error TS2339: Property '$schema' does not exist on type 'Object'.
 lib/validate.ts(257,31): error TS2339: Property '$schema' does not exist on type 'Object'.
 lib/validate.ts(261,9): error TS2339: Property 'mustBeValid' does not exist on type 'HTMLElement'.
@@ -151,10 +151,4 @@ lib/validate.ts(265,13): error TS2339: Property 'valid' does not exist on type '
 lib/validate.ts(266,30): error TS2339: Property 'errors' does not exist on type 'Object'.
 lib/validate.ts(266,96): error TS2339: Property 'property' does not exist on type 'Object'.
 lib/validate.ts(266,120): error TS2339: Property 'message' does not exist on type 'Object'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

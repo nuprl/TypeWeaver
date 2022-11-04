@@ -915,13 +915,13 @@ acorn-loose/node_modules/acorn/src/lval.ts(319,10): error TS2339: Property 'chec
 acorn-loose/node_modules/acorn/src/node.ts(5,15): error TS7006: Parameter 'parser' implicitly has an 'any' type.
 acorn-loose/node_modules/acorn/src/node.ts(5,23): error TS7006: Parameter 'pos' implicitly has an 'any' type.
 acorn-loose/node_modules/acorn/src/node.ts(5,28): error TS7006: Parameter 'loc' implicitly has an 'any' type.
-acorn-loose/node_modules/acorn/src/node.ts(6,10): error TS2339: Property 'type' does not exist on type 'Node'.
-acorn-loose/node_modules/acorn/src/node.ts(7,10): error TS2339: Property 'start' does not exist on type 'Node'.
-acorn-loose/node_modules/acorn/src/node.ts(8,10): error TS2339: Property 'end' does not exist on type 'Node'.
-acorn-loose/node_modules/acorn/src/node.ts(10,12): error TS2339: Property 'loc' does not exist on type 'Node'.
+acorn-loose/node_modules/acorn/src/node.ts(6,10): error TS2812: Property 'type' does not exist on type 'Node'. Try changing the 'lib' compiler option to include 'dom'.
+acorn-loose/node_modules/acorn/src/node.ts(7,10): error TS2812: Property 'start' does not exist on type 'Node'. Try changing the 'lib' compiler option to include 'dom'.
+acorn-loose/node_modules/acorn/src/node.ts(8,10): error TS2812: Property 'end' does not exist on type 'Node'. Try changing the 'lib' compiler option to include 'dom'.
+acorn-loose/node_modules/acorn/src/node.ts(10,12): error TS2812: Property 'loc' does not exist on type 'Node'. Try changing the 'lib' compiler option to include 'dom'.
 acorn-loose/node_modules/acorn/src/node.ts(10,18): error TS2554: Expected 3 arguments, but got 2.
-acorn-loose/node_modules/acorn/src/node.ts(12,12): error TS2339: Property 'sourceFile' does not exist on type 'Node'.
-acorn-loose/node_modules/acorn/src/node.ts(14,12): error TS2339: Property 'range' does not exist on type 'Node'.
+acorn-loose/node_modules/acorn/src/node.ts(12,12): error TS2812: Property 'sourceFile' does not exist on type 'Node'. Try changing the 'lib' compiler option to include 'dom'.
+acorn-loose/node_modules/acorn/src/node.ts(14,12): error TS2812: Property 'range' does not exist on type 'Node'. Try changing the 'lib' compiler option to include 'dom'.
 acorn-loose/node_modules/acorn/src/node.ts(22,4): error TS2339: Property 'startNode' does not exist on type 'Parser'.
 acorn-loose/node_modules/acorn/src/node.ts(23,30): error TS2339: Property 'start' does not exist on type 'Parser'.
 acorn-loose/node_modules/acorn/src/node.ts(23,42): error TS2339: Property 'startLoc' does not exist on type 'Parser'.
@@ -1430,31 +1430,22 @@ acorn-loose/node_modules/acorn/src/state.ts(95,21): error TS2339: Property 'opti
 acorn-loose/node_modules/acorn/src/state.ts(95,45): error TS2339: Property 'startNode' does not exist on type 'Parser'.
 acorn-loose/node_modules/acorn/src/state.ts(96,10): error TS2339: Property 'nextToken' does not exist on type 'Parser'.
 acorn-loose/node_modules/acorn/src/state.ts(97,17): error TS2339: Property 'parseTopLevel' does not exist on type 'Parser'.
-acorn-loose/node_modules/acorn/src/state.ts(100,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 acorn-loose/node_modules/acorn/src/state.ts(100,35): error TS2339: Property 'currentVarScope' does not exist on type 'Parser'.
-acorn-loose/node_modules/acorn/src/state.ts(102,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 acorn-loose/node_modules/acorn/src/state.ts(102,36): error TS2339: Property 'currentVarScope' does not exist on type 'Parser'.
 acorn-loose/node_modules/acorn/src/state.ts(102,92): error TS2339: Property 'currentVarScope' does not exist on type 'Parser'.
-acorn-loose/node_modules/acorn/src/state.ts(104,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 acorn-loose/node_modules/acorn/src/state.ts(104,32): error TS2339: Property 'currentVarScope' does not exist on type 'Parser'.
 acorn-loose/node_modules/acorn/src/state.ts(104,84): error TS2339: Property 'currentVarScope' does not exist on type 'Parser'.
-acorn-loose/node_modules/acorn/src/state.ts(106,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 acorn-loose/node_modules/acorn/src/state.ts(107,23): error TS2339: Property 'scopeStack' does not exist on type 'Parser'.
 acorn-loose/node_modules/acorn/src/state.ts(108,24): error TS2339: Property 'scopeStack' does not exist on type 'Parser'.
 acorn-loose/node_modules/acorn/src/state.ts(112,18): error TS2339: Property 'inModule' does not exist on type 'Parser'.
 acorn-loose/node_modules/acorn/src/state.ts(112,35): error TS2339: Property 'options' does not exist on type 'Parser'.
 acorn-loose/node_modules/acorn/src/state.ts(112,70): error TS2339: Property 'options' does not exist on type 'Parser'.
-acorn-loose/node_modules/acorn/src/state.ts(115,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 acorn-loose/node_modules/acorn/src/state.ts(116,44): error TS2339: Property 'currentThisScope' does not exist on type 'Parser'.
 acorn-loose/node_modules/acorn/src/state.ts(117,66): error TS2339: Property 'options' does not exist on type 'Parser'.
-acorn-loose/node_modules/acorn/src/state.ts(120,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 acorn-loose/node_modules/acorn/src/state.ts(120,41): error TS2339: Property 'currentThisScope' does not exist on type 'Parser'.
-acorn-loose/node_modules/acorn/src/state.ts(122,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 acorn-loose/node_modules/acorn/src/state.ts(122,43): error TS2339: Property 'treatFunctionsAsVarInScope' does not exist on type 'Parser'.
 acorn-loose/node_modules/acorn/src/state.ts(122,75): error TS2339: Property 'currentScope' does not exist on type 'Parser'.
-acorn-loose/node_modules/acorn/src/state.ts(124,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 acorn-loose/node_modules/acorn/src/state.ts(125,44): error TS2339: Property 'currentThisScope' does not exist on type 'Parser'.
-acorn-loose/node_modules/acorn/src/state.ts(129,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 acorn-loose/node_modules/acorn/src/state.ts(130,18): error TS2339: Property 'currentVarScope' does not exist on type 'Parser'.
 acorn-loose/node_modules/acorn/src/state.ts(133,17): error TS7019: Rest parameter 'plugins' implicitly has an 'any[]' type.
 acorn-loose/node_modules/acorn/src/state.ts(139,16): error TS7006: Parameter 'input' implicitly has an 'any' type.
@@ -3908,7 +3899,7 @@ acorn/src/expression.ts(721,60): error TS2339: Property 'start' does not exist o
 acorn/src/expression.ts(726,4): error TS2339: Property 'parseObj' does not exist on type 'Parser'.
 acorn/src/expression.ts(727,13): error TS2304: Cannot find name 'Scope'.
 acorn/src/expression.ts(727,26): error TS2339: Property 'startNode' does not exist on type 'Parser'.
-acorn/src/expression.ts(727,62): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+acorn/src/expression.ts(727,62): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 acorn/src/expression.ts(729,8): error TS2339: Property 'next' does not exist on type 'Parser'.
 acorn/src/expression.ts(730,16): error TS2339: Property 'eat' does not exist on type 'Parser'.
 acorn/src/expression.ts(730,23): error TS2339: Property 'braceR' does not exist on type 'Object'.
@@ -4443,13 +4434,13 @@ acorn/src/lval.ts(319,10): error TS2339: Property 'checkLValPattern' does not ex
 acorn/src/node.ts(5,15): error TS7006: Parameter 'parser' implicitly has an 'any' type.
 acorn/src/node.ts(5,23): error TS7006: Parameter 'pos' implicitly has an 'any' type.
 acorn/src/node.ts(5,28): error TS7006: Parameter 'loc' implicitly has an 'any' type.
-acorn/src/node.ts(6,10): error TS2339: Property 'type' does not exist on type 'Node'.
-acorn/src/node.ts(7,10): error TS2339: Property 'start' does not exist on type 'Node'.
-acorn/src/node.ts(8,10): error TS2339: Property 'end' does not exist on type 'Node'.
-acorn/src/node.ts(10,12): error TS2339: Property 'loc' does not exist on type 'Node'.
+acorn/src/node.ts(6,10): error TS2812: Property 'type' does not exist on type 'Node'. Try changing the 'lib' compiler option to include 'dom'.
+acorn/src/node.ts(7,10): error TS2812: Property 'start' does not exist on type 'Node'. Try changing the 'lib' compiler option to include 'dom'.
+acorn/src/node.ts(8,10): error TS2812: Property 'end' does not exist on type 'Node'. Try changing the 'lib' compiler option to include 'dom'.
+acorn/src/node.ts(10,12): error TS2812: Property 'loc' does not exist on type 'Node'. Try changing the 'lib' compiler option to include 'dom'.
 acorn/src/node.ts(10,18): error TS2554: Expected 3 arguments, but got 2.
-acorn/src/node.ts(12,12): error TS2339: Property 'sourceFile' does not exist on type 'Node'.
-acorn/src/node.ts(14,12): error TS2339: Property 'range' does not exist on type 'Node'.
+acorn/src/node.ts(12,12): error TS2812: Property 'sourceFile' does not exist on type 'Node'. Try changing the 'lib' compiler option to include 'dom'.
+acorn/src/node.ts(14,12): error TS2812: Property 'range' does not exist on type 'Node'. Try changing the 'lib' compiler option to include 'dom'.
 acorn/src/node.ts(20,11): error TS2304: Cannot find name 'LooseParser'.
 acorn/src/node.ts(32,29): error TS2304: Cannot find name 'TokenType'.
 acorn/src/node.ts(32,81): error TS2304: Cannot find name 'RegExpValidationState'.
@@ -5080,18 +5071,14 @@ acorn/src/state.ts(95,32): error TS2339: Property 'options' does not exist on ty
 acorn/src/state.ts(95,56): error TS2339: Property 'startNode' does not exist on type 'Parser'.
 acorn/src/state.ts(96,10): error TS2339: Property 'nextToken' does not exist on type 'Parser'.
 acorn/src/state.ts(97,17): error TS2339: Property 'parseTopLevel' does not exist on type 'Parser'.
-acorn/src/state.ts(100,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 acorn/src/state.ts(100,35): error TS2339: Property 'currentVarScope' does not exist on type 'Parser'.
 acorn/src/state.ts(100,61): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-acorn/src/state.ts(102,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 acorn/src/state.ts(102,36): error TS2339: Property 'currentVarScope' does not exist on type 'Parser'.
 acorn/src/state.ts(102,62): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 acorn/src/state.ts(102,92): error TS2339: Property 'currentVarScope' does not exist on type 'Parser'.
-acorn/src/state.ts(104,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 acorn/src/state.ts(104,32): error TS2339: Property 'currentVarScope' does not exist on type 'Parser'.
 acorn/src/state.ts(104,58): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 acorn/src/state.ts(104,84): error TS2339: Property 'currentVarScope' does not exist on type 'Parser'.
-acorn/src/state.ts(106,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 acorn/src/state.ts(107,23): error TS2339: Property 'scopeStack' does not exist on type 'Parser'.
 acorn/src/state.ts(108,18): error TS2304: Cannot find name 'Scope'.
 acorn/src/state.ts(108,31): error TS2339: Property 'scopeStack' does not exist on type 'Parser'.
@@ -5101,21 +5088,16 @@ acorn/src/state.ts(110,63): error TS2363: The right-hand side of an arithmetic o
 acorn/src/state.ts(112,18): error TS2339: Property 'inModule' does not exist on type 'Parser'.
 acorn/src/state.ts(112,35): error TS2339: Property 'options' does not exist on type 'Parser'.
 acorn/src/state.ts(112,70): error TS2339: Property 'options' does not exist on type 'Parser'.
-acorn/src/state.ts(115,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 acorn/src/state.ts(116,44): error TS2339: Property 'currentThisScope' does not exist on type 'Parser'.
 acorn/src/state.ts(117,21): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 acorn/src/state.ts(117,66): error TS2339: Property 'options' does not exist on type 'Parser'.
-acorn/src/state.ts(120,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 acorn/src/state.ts(120,41): error TS2339: Property 'currentThisScope' does not exist on type 'Parser'.
 acorn/src/state.ts(120,68): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-acorn/src/state.ts(122,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 acorn/src/state.ts(122,43): error TS2339: Property 'treatFunctionsAsVarInScope' does not exist on type 'Parser'.
 acorn/src/state.ts(122,75): error TS2339: Property 'currentScope' does not exist on type 'Parser'.
-acorn/src/state.ts(124,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 acorn/src/state.ts(125,44): error TS2339: Property 'currentThisScope' does not exist on type 'Parser'.
 acorn/src/state.ts(126,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 acorn/src/state.ts(126,39): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-acorn/src/state.ts(129,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 acorn/src/state.ts(130,18): error TS2339: Property 'currentVarScope' does not exist on type 'Parser'.
 acorn/src/state.ts(130,44): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 acorn/src/state.ts(133,17): error TS7019: Rest parameter 'plugins' implicitly has an 'any[]' type.
@@ -5346,7 +5328,7 @@ acorn/src/statement.ts(232,19): error TS2339: Property 'parseForIn' does not exi
 acorn/src/statement.ts(234,28): error TS2339: Property 'unexpected' does not exist on type 'Parser'.
 acorn/src/statement.ts(235,17): error TS2339: Property 'parseFor' does not exist on type 'Parser'.
 acorn/src/statement.ts(237,37): error TS2339: Property 'isContextual' does not exist on type 'Parser'.
-acorn/src/statement.ts(238,7): error TS2740: Type 'DestructuringErrors' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+acorn/src/statement.ts(238,7): error TS2740: Type 'DestructuringErrors' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 acorn/src/statement.ts(239,27): error TS2339: Property 'parseExpression' does not exist on type 'Parser'.
 acorn/src/statement.ts(240,12): error TS2339: Property 'type' does not exist on type 'Parser'.
 acorn/src/statement.ts(240,24): error TS2339: Property '_in' does not exist on type 'Object'.
@@ -6678,7 +6660,7 @@ acorn/src/tokenize.ts(588,15): error TS2339: Property 'input' does not exist on 
 acorn/src/tokenize.ts(588,44): error TS2339: Property 'pos' does not exist on type 'Parser'.
 acorn/src/tokenize.ts(589,15): error TS2339: Property 'finishToken' does not exist on type 'Parser'.
 acorn/src/tokenize.ts(589,30): error TS2551: Property 'string' does not exist on type 'Object'. Did you mean 'toString'?
-acorn/src/tokenize.ts(594,7): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+acorn/src/tokenize.ts(594,7): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 acorn/src/tokenize.ts(596,4): error TS2339: Property 'tryReadTemplateToken' does not exist on type 'Parser'.
 acorn/src/tokenize.ts(597,8): error TS2339: Property 'inTemplateElement' does not exist on type 'Parser'.
 acorn/src/tokenize.ts(599,10): error TS2339: Property 'readTmplToken' does not exist on type 'Parser'.
@@ -6874,7 +6856,7 @@ acorn/src/whitespace.ts(8,59): error TS2367: This condition will always return '
 acorn/src/whitespace.ts(11,37): error TS2304: Cannot find name 'RegExpValidationState'.
 acorn/src/whitespace.ts(12,31): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 acorn/src/whitespace.ts(14,19): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 acorn/src/whitespace.ts(15,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 acorn/src/whitespace.ts(15,60): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 acorn/src/whitespace.ts(15,76): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
@@ -6928,10 +6910,4 @@ bin/run_test262.ts(7,26): error TS2769: No overload matches this call.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
 bin/run_test262.ts(13,24): error TS7031: Binding element 'sourceType' implicitly has an 'any' type.
 bin/run_test262.ts(16,18): error TS2304: Cannot find name 'Parser'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

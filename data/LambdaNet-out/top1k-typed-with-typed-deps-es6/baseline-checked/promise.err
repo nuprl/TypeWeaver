@@ -54,7 +54,7 @@ src/core.ts(76,21): error TS7009: 'new' expression, whose target lacks a constru
 src/core.ts(76,33): error TS2345: Argument of type '() => Void' is not assignable to parameter of type 'String'.
 src/core.ts(77,16): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 src/core.ts(77,28): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/core.ts(81,75): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 src/core.ts(82,14): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
@@ -146,7 +146,7 @@ src/es6-extensions.ts(19,24): error TS7009: 'new' expression, whose target lacks
 src/es6-extensions.ts(19,36): error TS2345: Argument of type '() => Void' is not assignable to parameter of type 'String'.
 src/es6-extensions.ts(20,5): error TS2339: Property '_state' does not exist on type 'HTMLElement'.
 src/es6-extensions.ts(21,5): error TS2339: Property '_value' does not exist on type 'HTMLElement'.
-src/es6-extensions.ts(22,3): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+src/es6-extensions.ts(22,3): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 src/es6-extensions.ts(24,9): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
 src/es6-extensions.ts(24,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/es6-extensions.ts(38,16): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
@@ -262,10 +262,4 @@ src/rejection-tracking.ts(109,46): error TS2314: Generic type 'Array<T>' require
 src/rejection-tracking.ts(111,29): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 src/synchronous.ts(6,9): error TS2339: Property 'enableSynchronous' does not exist on type 'typeof Promise'.
 src/synchronous.ts(55,9): error TS2339: Property 'disableSynchronous' does not exist on type 'typeof Promise'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

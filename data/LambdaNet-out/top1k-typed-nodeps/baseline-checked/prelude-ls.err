@@ -87,7 +87,7 @@ browser/prelude-browser-min.ts(10,1360): error TS2314: Generic type 'Array<T>' r
 browser/prelude-browser-min.ts(10,1406): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(10,1434): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 browser/prelude-browser-min.ts(10,1440): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser-min.ts(10,1482): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+browser/prelude-browser-min.ts(10,1482): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 browser/prelude-browser-min.ts(10,1484): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser-min.ts(10,1534): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(10,1554): error TS2339: Property 'slice' does not exist on type 'Object'.
@@ -135,7 +135,7 @@ browser/prelude-browser-min.ts(10,2857): error TS2554: Expected 2 arguments, but
 browser/prelude-browser-min.ts(10,2882): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(10,2933): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser-min.ts(10,2977): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser-min.ts(10,3008): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+browser/prelude-browser-min.ts(10,3008): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 browser/prelude-browser-min.ts(10,3041): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
   Property '0' does not exist on type 'Object'.
 browser/prelude-browser-min.ts(10,3049): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
@@ -2414,10 +2414,4 @@ lib/index.ts(168,37): error TS2314: Generic type 'Promise<T>' requires 1 type ar
 lib/index.ts(170,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/index.ts(171,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/index.ts(171,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

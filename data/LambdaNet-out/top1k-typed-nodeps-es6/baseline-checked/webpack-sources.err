@@ -218,8 +218,10 @@ lib/OriginalSource.ts(59,20): error TS2339: Property '_name' does not exist on t
 lib/OriginalSource.ts(59,32): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(60,9): error TS2322: Type 'boolean' is not assignable to type 'Source'.
 lib/OriginalSource.ts(63,58): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
-lib/OriginalSource.ts(67,25): error TS2802: Type 'String' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+lib/OriginalSource.ts(72,13): error TS2322: Type 'string | undefined' is not assignable to type 'String'.
+  Type 'undefined' is not assignable to type 'String'.
 lib/OriginalSource.ts(76,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/OriginalSource.ts(79,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/OriginalSource.ts(86,32): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(91,55): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(92,12): error TS2339: Property 'generatedLine' does not exist on type 'Object'.
@@ -749,7 +751,7 @@ lib/helpers/streamChunksOfCombinedSourceMap.ts(17,21): error TS2304: Cannot find
 lib/helpers/streamChunksOfCombinedSourceMap.ts(24,21): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/helpers/streamChunksOfCombinedSourceMap.ts(25,19): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/helpers/streamChunksOfCombinedSourceMap.ts(26,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/helpers/streamChunksOfCombinedSourceMap.ts(27,8): error TS2740: Type 'never[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(27,8): error TS2740: Type 'never[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(28,8): error TS2740: Type 'never[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(30,8): error TS2322: Type 'never[]' is not assignable to type 'String'.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(31,8): error TS2322: Type 'never[]' is not assignable to type 'Function'.
@@ -855,7 +857,7 @@ lib/helpers/streamChunksOfSourceMap.ts(127,5): error TS2349: This expression is 
   Type 'Object' has no call signatures.
 lib/helpers/streamChunksOfSourceMap.ts(137,4): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
 lib/helpers/streamChunksOfSourceMap.ts(142,37): error TS2365: Operator '<' cannot be applied to types 'Boolean' and 'Number'.
-lib/helpers/streamChunksOfSourceMap.ts(148,4): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/helpers/streamChunksOfSourceMap.ts(148,4): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/helpers/streamChunksOfSourceMap.ts(161,13): error TS2304: Cannot find name 'SourceMapSource'.
 lib/helpers/streamChunksOfSourceMap.ts(166,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/helpers/streamChunksOfSourceMap.ts(188,17): error TS2304: Cannot find name 'OriginalSource'.
@@ -891,10 +893,4 @@ lib/helpers/streamChunksOfSourceMap.ts(372,13): error TS2304: Cannot find name '
 lib/helpers/streamChunksOfSourceMap.ts(376,15): error TS2304: Cannot find name 'CachedSource'.
 lib/index.ts(8,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 lib/index.ts(12,5): error TS2322: Type 'undefined' is not assignable to type 'Function'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

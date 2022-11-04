@@ -13,7 +13,7 @@ example/eventsource-polyfill.ts(49,52): error TS2339: Property '__esModule' does
 example/eventsource-polyfill.ts(50,60): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
 example/eventsource-polyfill.ts(51,42): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 example/eventsource-polyfill.ts(52,34): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 example/eventsource-polyfill.ts(57,132): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 example/eventsource-polyfill.ts(63,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 example/eventsource-polyfill.ts(74,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
@@ -61,7 +61,7 @@ example/eventsource-polyfill.ts(186,12): error TS2314: Generic type 'Array<T>' r
 example/eventsource-polyfill.ts(188,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 example/eventsource-polyfill.ts(191,29): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(206,24): error TS2304: Cannot find name 'Void'.
-example/eventsource-polyfill.ts(210,9): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+example/eventsource-polyfill.ts(210,9): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 example/eventsource-polyfill.ts(210,38): error TS2345: Argument of type '() => Void' is not assignable to parameter of type 'Number'.
 example/eventsource-polyfill.ts(217,18): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 example/eventsource-polyfill.ts(230,9): error TS2339: Property 'nextTick' does not exist on type 'Object'.
@@ -1202,7 +1202,7 @@ example/eventsource-polyfill.ts(3382,20): error TS7053: Element implicitly has a
 example/eventsource-polyfill.ts(3391,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 example/eventsource-polyfill.ts(3393,17): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 example/eventsource-polyfill.ts(3395,19): error TS2339: Property '_events' does not exist on type 'Element'.
 example/eventsource-polyfill.ts(3397,21): error TS2339: Property '_events' does not exist on type 'Element'.
 example/eventsource-polyfill.ts(3398,12): error TS2339: Property '_eventsCount' does not exist on type 'Element'.
@@ -1428,7 +1428,6 @@ example/eventsource-polyfill.ts(3979,16): error TS2339: Property '_destroyed' do
 example/eventsource-polyfill.ts(3980,12): error TS2339: Property 'emit' does not exist on type 'Object'.
 example/eventsource-polyfill.ts(3986,15): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 example/eventsource-polyfill.ts(3986,30): error TS2339: Property 'body' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(3987,12): error TS1250: Function declarations are not allowed inside blocks in strict mode when targeting 'ES3' or 'ES5'.
 example/eventsource-polyfill.ts(3987,21): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(3989,14): error TS2339: Property '_destroyed' does not exist on type 'Object'.
 example/eventsource-polyfill.ts(3991,16): error TS2339: Property 'done' does not exist on type 'Object'.
@@ -1663,7 +1662,7 @@ example/eventsource-polyfill.ts(4428,19): error TS2339: Property 'decoder' does 
 example/eventsource-polyfill.ts(4429,25): error TS2339: Property 'decoder' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(4430,21): error TS2339: Property 'objectMode' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(4436,13): error TS2339: Property 'reading' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(4440,3): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+example/eventsource-polyfill.ts(4440,3): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 example/eventsource-polyfill.ts(4443,87): error TS2304: Cannot find name 'Void'.
 example/eventsource-polyfill.ts(4444,13): error TS2339: Property 'flowing' does not exist on type 'Object'.
 example/eventsource-polyfill.ts(4444,30): error TS2339: Property 'length' does not exist on type 'Object'.
@@ -1843,7 +1842,7 @@ example/eventsource-polyfill.ts(4779,44): error TS2339: Property 'pipes' does no
 example/eventsource-polyfill.ts(4779,68): error TS2339: Property 'pipesCount' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(4779,100): error TS2339: Property 'pipes' does not exist on type 'HTMLElement'.
 example/eventsource-polyfill.ts(4779,107): error TS2345: Argument of type 'HTMLInputElement' is not assignable to parameter of type 'String'.
-  Type 'HTMLInputElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'HTMLInputElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 example/eventsource-polyfill.ts(4780,9): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 example/eventsource-polyfill.ts(4780,50): error TS2339: Property '_readableState' does not exist on type 'HTMLElement'.
@@ -2789,7 +2788,7 @@ example/eventsource-polyfill.ts(7003,9): error TS2339: Property 'byteLength' doe
 example/eventsource-polyfill.ts(7004,9): error TS2339: Property 'toByteArray' does not exist on type 'Object'.
 example/eventsource-polyfill.ts(7005,9): error TS2339: Property 'fromByteArray' does not exist on type 'Object'.
 example/eventsource-polyfill.ts(7009,5): error TS2322: Type 'ArrayConstructor | Uint8ArrayConstructor' is not assignable to type 'String'.
-  Type 'ArrayConstructor' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'ArrayConstructor' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 example/eventsource-polyfill.ts(7013,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
   No index signature with a parameter of type 'number' was found on type 'Object'.
 example/eventsource-polyfill.ts(7014,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
@@ -2810,7 +2809,7 @@ example/eventsource-polyfill.ts(7046,51): error TS2363: The right-hand side of a
 example/eventsource-polyfill.ts(7050,12): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 example/eventsource-polyfill.ts(7050,51): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 example/eventsource-polyfill.ts(7055,30): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'String'.
-  Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 example/eventsource-polyfill.ts(7056,26): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
   Property '0' does not exist on type 'Object'.
 example/eventsource-polyfill.ts(7057,33): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
@@ -3121,7 +3120,7 @@ example/eventsource-polyfill.ts(7678,8): error TS2356: An arithmetic operand mus
 example/eventsource-polyfill.ts(7682,6): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 example/eventsource-polyfill.ts(7683,6): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 example/eventsource-polyfill.ts(7701,20): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'String'.
-  Type 'Element' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Element' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 example/eventsource-polyfill.ts(7702,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 example/eventsource-polyfill.ts(7720,20): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'String'.
@@ -3624,7 +3623,7 @@ example/eventsource-polyfill.ts(9245,33): error TS2339: Property 'inspect' does 
 example/eventsource-polyfill.ts(9248,29): error TS2339: Property 'inspect' does not exist on type 'Object'.
 example/eventsource-polyfill.ts(9256,48): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-example/eventsource-polyfill.ts(9262,7): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+example/eventsource-polyfill.ts(9262,7): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 example/eventsource-polyfill.ts(9263,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 example/eventsource-polyfill.ts(9265,11): error TS2339: Property 'showHidden' does not exist on type 'String'.
 example/eventsource-polyfill.ts(9266,5): error TS2322: Type 'string[]' is not assignable to type 'String'.
@@ -4000,10 +3999,4 @@ lib/eventsource.ts(490,5): error TS7053: Element implicitly has an 'any' type be
   No index signature with a parameter of type 'string' was found on type 'Object'.
 lib/eventsource.ts(490,17): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
   No index signature with a parameter of type 'string' was found on type 'Object'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

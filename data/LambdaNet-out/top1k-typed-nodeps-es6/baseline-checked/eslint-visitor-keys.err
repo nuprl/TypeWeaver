@@ -91,12 +91,8 @@ tools/get-keys-from-ts.ts(455,54): error TS7031: Binding element 'excluded' impl
 tools/get-keys-from-ts.ts(469,13): error TS7006: Parameter 'prop' implicitly has an 'any' type.
 tools/get-keys-from-ts.ts(483,9): error TS2554: Expected 3 arguments, but got 2.
 tools/get-keys-from-ts.ts(485,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-tools/get-keys-from-ts.ts(485,38): error TS2802: Type 'Set<unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
-tools/get-keys-from-ts.ts(485,61): error TS2472: Spread operator in 'new' expressions is only available when targeting ECMAScript 5 and higher.
 tools/get-keys-from-ts.ts(485,61): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
 tools/get-keys-from-ts.ts(485,65): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-tools/get-keys-from-ts.ts(495,20): error TS2802: Type 'Set<unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
-tools/get-keys-from-ts.ts(503,20): error TS2802: Type 'Set<unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 tools/get-keys-from-ts.ts(536,76): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 tools/get-keys-from-ts.ts(537,41): error TS2769: No overload matches this call.
   Overload 1 of 3, '(path: PathLike | FileHandle, options?: ({ encoding?: null | undefined; flag?: OpenMode | undefined; } & Abortable) | null | undefined): Promise<...>', gave the following error.
@@ -104,10 +100,4 @@ tools/get-keys-from-ts.ts(537,41): error TS2769: No overload matches this call.
   Overload 2 of 3, '(path: PathLike | FileHandle, options?: BufferEncoding | (ObjectEncodingOptions & Abortable & { flag?: OpenMode | undefined; }) | null | undefined): Promise<...>', gave the following error.
     Argument of type 'HTMLElement' is not assignable to parameter of type 'PathLike | FileHandle'.
 tools/get-keys-from-ts.ts(539,32): error TS2559: Type 'HTMLElement' has no properties in common with type '{ supplementaryDeclarations?: { allTsInterfaceDeclarations: never[]; exportedTsInterfaceDeclarations: never[]; tsTypeDeclarations: never[]; } | undefined; }'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

@@ -15,7 +15,7 @@ clone.ts(62,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(
 clone.ts(73,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 clone.ts(73,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 clone.ts(89,36): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 clone.ts(90,19): error TS2351: This expression is not constructable.
   Type 'Number' has no construct signatures.
 clone.ts(94,33): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -33,7 +33,7 @@ clone.ts(113,21): error TS2345: Argument of type 'Object' is not assignable to p
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'Uint8Array': BYTES_PER_ELEMENT, buffer, byteLength, byteOffset, and 27 more.
 clone.ts(116,36): error TS2345: Argument of type 'ErrorConstructor' is not assignable to parameter of type 'String'.
-  Type 'ErrorConstructor' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'ErrorConstructor' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 clone.ts(141,44): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 clone.ts(142,48): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 clone.ts(143,15): error TS2339: Property 'set' does not exist on type 'Object'.
@@ -81,10 +81,4 @@ clone.ts(247,35): error TS2367: This condition will always return 'false' since 
 clone.ts(253,10): error TS2339: Property 'global' does not exist on type 'HTMLElement'.
 clone.ts(254,10): error TS2339: Property 'ignoreCase' does not exist on type 'HTMLElement'.
 clone.ts(255,10): error TS2339: Property 'multiline' does not exist on type 'HTMLElement'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

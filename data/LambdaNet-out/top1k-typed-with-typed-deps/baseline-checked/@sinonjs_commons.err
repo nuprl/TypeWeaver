@@ -25,7 +25,7 @@ lib/called-in-order.test.ts(44,5): error TS2582: Cannot find name 'describe'. Do
 lib/called-in-order.test.ts(45,9): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
 lib/called-in-order.test.ts(46,13): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
 lib/called-in-order.test.ts(48,35): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'String'.
-  Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+  Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 lib/called-in-order.test.ts(49,37): error TS2339: Property 'someFunction' does not exist on type 'HTMLInputElement'.
 lib/called-in-order.test.ts(50,37): error TS2339: Property 'otherFunction' does not exist on type 'HTMLInputElement'.
 lib/called-in-order.test.ts(54,35): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'String'.
@@ -75,16 +75,16 @@ lib/called-in-order.ts(23,51): error TS2365: Operator '+' cannot be applied to t
 lib/called-in-order.ts(27,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 lib/called-in-order.ts(27,21): error TS2339: Property 'id' does not exist on type 'Object'.
 lib/called-in-order.ts(49,10): error TS2300: Duplicate identifier 'calledInOrder'.
-lib/called-in-order.ts(50,9): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/called-in-order.ts(50,9): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/called-in-order.ts(52,9): error TS2322: Type 'IArguments | String' is not assignable to type 'String'.
-  Type 'IArguments' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 41 more.
+  Type 'IArguments' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
 lib/class-name.test.ts(4,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/class-name.test.ts(5,5): error TS2300: Duplicate identifier 'className'.
 lib/class-name.test.ts(7,1): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
 lib/class-name.test.ts(8,5): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
 lib/class-name.test.ts(13,32): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 lib/class-name.test.ts(13,59): error TS2304: Cannot find name 'Void'.
-lib/class-name.test.ts(14,13): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/class-name.test.ts(14,13): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/class-name.test.ts(18,5): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
 lib/class-name.test.ts(19,13): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 lib/class-name.test.ts(23,5): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
@@ -188,8 +188,8 @@ lib/global.test.ts(6,1): error TS2582: Cannot find name 'describe'. Do you need 
 lib/global.test.ts(7,5): error TS2304: Cannot find name 'before'.
 lib/global.test.ts(9,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/global.test.ts(13,5): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-lib/global.ts(13,5): error TS2740: Type 'typeof globalThis' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 41 more.
-lib/global.ts(16,5): error TS2740: Type 'Window & typeof globalThis' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 41 more.
+lib/global.ts(13,5): error TS2740: Type 'typeof globalThis' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+lib/global.ts(16,5): error TS2740: Type 'Window & typeof globalThis' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
 lib/global.ts(19,5): error TS2322: Type 'Window & typeof globalThis' is not assignable to type 'String'.
 lib/index.test.ts(3,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/index.test.ts(6,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -264,10 +264,4 @@ lib/value-to-string.test.ts(7,5): error TS2582: Cannot find name 'it'. Do you ne
 lib/value-to-string.test.ts(13,5): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
 lib/value-to-string.test.ts(17,5): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
 lib/value-to-string.ts(9,10): error TS2300: Duplicate identifier 'valueToString'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

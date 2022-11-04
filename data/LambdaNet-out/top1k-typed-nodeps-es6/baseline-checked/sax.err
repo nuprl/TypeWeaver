@@ -52,7 +52,7 @@ examples/get-products.ts(35,12): error TS2339: Property 'onopentag' does not exi
 examples/get-products.ts(36,15): error TS2339: Property 'name' does not exist on type 'Object'.
 examples/get-products.ts(37,15): error TS2339: Property 'name' does not exist on type 'Object'.
 examples/get-products.ts(38,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 examples/get-products.ts(40,11): error TS2339: Property 'parent' does not exist on type 'Object'.
 examples/get-products.ts(41,11): error TS2339: Property 'children' does not exist on type 'Object'.
 examples/get-products.ts(42,11): error TS2339: Property 'parent' does not exist on type 'Object'.
@@ -498,7 +498,7 @@ lib/sax.ts(967,9): error TS2683: 'this' implicitly has type 'any' because it doe
 lib/sax.ts(968,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/sax.ts(970,16): error TS2339: Property 'closed' does not exist on type 'HTMLElement'.
 lib/sax.ts(975,18): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'String'.
-  Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/sax.ts(983,25): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/sax.ts(983,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 lib/sax.ts(984,14): error TS2339: Property 'c' does not exist on type 'HTMLElement'.
@@ -855,10 +855,4 @@ lib/sax.ts(1547,15): error TS2365: Operator '+' cannot be applied to types 'Numb
 lib/sax.ts(1562,9): error TS2322: Type 'Function' is not assignable to type '(...codePoints: number[]) => string'.
   Type 'Function' provides no match for the signature '(...codePoints: number[]): string'.
 lib/sax.ts(1566,42): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

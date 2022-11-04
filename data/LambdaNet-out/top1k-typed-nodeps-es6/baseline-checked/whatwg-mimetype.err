@@ -1,6 +1,5 @@
 lib/mime-type-parameters.ts(10,15): error TS7006: Parameter 'map' implicitly has an 'any' type.
 lib/mime-type-parameters.ts(11,10): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
-lib/mime-type-parameters.ts(14,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 lib/mime-type-parameters.ts(15,17): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
 lib/mime-type-parameters.ts(18,7): error TS7006: Parameter 'name' implicitly has an 'any' type.
 lib/mime-type-parameters.ts(20,17): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
@@ -26,16 +25,10 @@ lib/mime-type.ts(15,10): error TS2551: Property '_type' does not exist on type '
 lib/mime-type.ts(16,10): error TS2551: Property '_subtype' does not exist on type 'MIMEType'. Did you mean 'subtype'?
 lib/mime-type.ts(17,10): error TS2551: Property '_parameters' does not exist on type 'MIMEType'. Did you mean 'parameters'?
 lib/mime-type.ts(20,16): error TS7006: Parameter 'string' implicitly has an 'any' type.
-lib/mime-type.ts(28,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
-lib/mime-type.ts(32,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 lib/mime-type.ts(33,17): error TS2551: Property '_type' does not exist on type 'MIMEType'. Did you mean 'type'?
-lib/mime-type.ts(36,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 lib/mime-type.ts(46,10): error TS2551: Property '_type' does not exist on type 'MIMEType'. Did you mean 'type'?
-lib/mime-type.ts(49,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 lib/mime-type.ts(50,17): error TS2551: Property '_subtype' does not exist on type 'MIMEType'. Did you mean 'subtype'?
-lib/mime-type.ts(53,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 lib/mime-type.ts(63,10): error TS2551: Property '_subtype' does not exist on type 'MIMEType'. Did you mean 'subtype'?
-lib/mime-type.ts(66,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 lib/mime-type.ts(67,17): error TS2551: Property '_parameters' does not exist on type 'MIMEType'. Did you mean 'parameters'?
 lib/mime-type.ts(77,18): error TS2551: Property '_type' does not exist on type 'MIMEType'. Did you mean 'type'?
 lib/mime-type.ts(79,22): error TS2551: Property '_subtype' does not exist on type 'MIMEType'. Did you mean 'subtype'?
@@ -82,10 +75,4 @@ scripts/get-latest-platform-tests.ts(27,16): error TS2304: Cannot find name 'MIM
 scripts/get-latest-platform-tests.ts(28,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
   Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
 scripts/get-latest-platform-tests.ts(33,19): error TS2339: Property 'stack' does not exist on type 'Object'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

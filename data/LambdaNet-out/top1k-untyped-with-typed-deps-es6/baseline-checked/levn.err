@@ -10,14 +10,11 @@ lib/cast.ts(121,39): error TS7053: Element implicitly has an 'any' type because 
   Property '1' does not exist on type 'Object'.
 lib/cast.ts(123,26): error TS2339: Property 'explicit' does not exist on type 'Object'.
 lib/cast.ts(130,27): error TS2769: No overload matches this call.
-  Overload 1 of 5, '(value: string | number | Date): Date', gave the following error.
+  Overload 1 of 4, '(value: string | number | Date): Date', gave the following error.
     Argument of type 'number | Number' is not assignable to parameter of type 'string | number | Date'.
       Type 'Number' is not assignable to type 'string | number | Date'.
-        Type 'Number' is missing the following properties from type 'Date': toDateString, toTimeString, toLocaleDateString, toLocaleTimeString, and 38 more.
-  Overload 2 of 5, '(vd: VarDate): Date', gave the following error.
-    Argument of type 'number | Number' is not assignable to parameter of type 'VarDate'.
-      Type 'number' is not assignable to type 'VarDate'.
-  Overload 3 of 5, '(value: string | number): Date', gave the following error.
+        Type 'Number' is missing the following properties from type 'Date': toDateString, toTimeString, toLocaleDateString, toLocaleTimeString, and 37 more.
+  Overload 2 of 4, '(value: string | number): Date', gave the following error.
     Argument of type 'number | Number' is not assignable to parameter of type 'string | number'.
       Type 'Number' is not assignable to type 'string | number'.
 lib/cast.ts(136,11): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
@@ -118,12 +115,12 @@ lib/parse-string.ts(68,13): error TS7053: Element implicitly has an 'any' type b
   Property '0' does not exist on type 'Object'.
 lib/parse-string.ts(70,27): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/parse-string.ts(72,27): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/parse-string.ts(74,36): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
 lib/parse-string.ts(76,35): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/parse-string.ts(79,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse-string.ts(79,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse-string.ts(80,73): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -153,10 +150,4 @@ lib/parse-string.ts(106,40): error TS2769: No overload matches this call.
       Property '[Symbol.split]' is missing in type 'Number' but required in type '{ [Symbol.split](string: string, limit?: number | undefined): string[]; }'.
   Overload 2 of 2, '(separator: string | RegExp, limit?: number | undefined): string[]', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'string | RegExp'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

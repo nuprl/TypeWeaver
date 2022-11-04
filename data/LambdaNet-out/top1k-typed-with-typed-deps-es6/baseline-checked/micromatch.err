@@ -99,8 +99,8 @@ index.ts(57,29): error TS2339: Property 'output' does not exist on type 'HTMLEle
 index.ts(58,14): error TS2339: Property 'add' does not exist on type 'Error'.
 index.ts(58,26): error TS2339: Property 'output' does not exist on type 'HTMLElement'.
 index.ts(63,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(63,59): error TS2461: Type 'Error' is not an array type.
-index.ts(63,72): error TS2461: Type 'Error' is not an array type.
+index.ts(63,59): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
+index.ts(63,72): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 index.ts(64,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(67,17): error TS2339: Property 'failglob' does not exist on type 'Object'.
 index.ts(71,17): error TS2339: Property 'nonull' does not exist on type 'Object'.
@@ -126,7 +126,7 @@ index.ts(155,22): error TS2339: Property 'output' does not exist on type 'String
 index.ts(158,7): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
 index.ts(161,18): error TS2339: Property 'has' does not exist on type 'Error'.
 index.ts(162,14): error TS2339: Property 'add' does not exist on type 'Error'.
-index.ts(165,14): error TS2461: Type 'Error' is not an array type.
+index.ts(165,14): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 index.ts(188,12): error TS2339: Property 'contains' does not exist on type 'Function'.
 index.ts(188,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(194,53): error TS2339: Property 'contains' does not exist on type 'Function'.
@@ -181,10 +181,4 @@ index.ts(446,12): error TS2339: Property 'braces' does not exist on type 'Functi
 index.ts(448,27): error TS2339: Property 'nobrace' does not exist on type 'Object'.
 index.ts(458,12): error TS2339: Property 'braceExpand' does not exist on type 'Function'.
 index.ts(460,21): error TS2339: Property 'braces' does not exist on type 'Function'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

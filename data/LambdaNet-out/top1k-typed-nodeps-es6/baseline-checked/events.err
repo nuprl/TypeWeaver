@@ -40,13 +40,13 @@ events.ts(133,13): error TS2314: Generic type 'Promise<T>' requires 1 type argum
 events.ts(143,9): error TS2339: Property 'context' does not exist on type 'Error'.
 events.ts(147,32): error TS2538: Type 'String' cannot be used as an index type.
 events.ts(156,49): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 events.ts(158,20): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
   No index signature with a parameter of type 'number' was found on type 'Object'.
 events.ts(167,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 events.ts(169,17): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 events.ts(171,19): error TS2339: Property '_events' does not exist on type 'Element'.
 events.ts(173,21): error TS2339: Property '_events' does not exist on type 'Element'.
 events.ts(174,12): error TS2339: Property '_eventsCount' does not exist on type 'Element'.
@@ -153,10 +153,4 @@ events.ts(490,37): error TS2769: No overload matches this call.
   Overload 2 of 2, '(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions | undefined): void', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

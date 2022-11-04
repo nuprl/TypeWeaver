@@ -75,7 +75,7 @@ src/common.ts(130,36): error TS2339: Property 'namespaces' does not exist on typ
 src/common.ts(131,6): error TS2739: Type 'Boolean' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 src/common.ts(142,26): error TS2339: Property 'init' does not exist on type '{ (namespace: String): String; debug: ...; default: ...; coerce: (val: Object) => any; disable: () => String; enable: (namespaces: String) => Void; enabled: (name: String) => Boolean; ... 5 more ...; selectColor: (namespace: String) => String; }'.
 src/common.ts(143,16): error TS2339: Property 'init' does not exist on type '{ (namespace: String): String; debug: ...; default: ...; coerce: (val: Object) => any; disable: () => String; enable: (namespaces: String) => Void; enabled: (name: String) => Boolean; ... 5 more ...; selectColor: (namespace: String) => String; }'.
-src/common.ts(146,3): error TS2740: Type '{ (...args: any[]): Void; namespace: String; useColors: any; color: String; extend: (namespace: String, delimiter: String) => HTMLElement; destroy: () => Void; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+src/common.ts(146,3): error TS2740: Type '{ (...args: any[]): Void; namespace: String; useColors: any; color: String; extend: (namespace: String, delimiter: String) => HTMLElement; destroy: () => Void; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 src/common.ts(150,40): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 src/common.ts(151,12): error TS2339: Property 'log' does not exist on type 'Object'.
 src/common.ts(151,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
@@ -129,10 +129,4 @@ src/node.ts(232,31): error TS2304: Cannot find name 'Void'.
 src/node.ts(233,8): error TS2339: Property 'inspectOpts' does not exist on type 'Object'.
 src/node.ts(235,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/node.ts(237,9): error TS2339: Property 'inspectOpts' does not exist on type 'Object'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

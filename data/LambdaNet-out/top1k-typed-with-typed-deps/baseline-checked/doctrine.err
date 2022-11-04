@@ -142,7 +142,7 @@ lib/doctrine.ts(402,13): error TS2322: Type 'Number' is not assignable to type '
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'number' is not assignable to type 'boolean'.
 lib/doctrine.ts(402,49): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/doctrine.ts(405,63): error TS2304: Cannot find name 'Void'.
 lib/doctrine.ts(406,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/doctrine.ts(407,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
@@ -249,7 +249,7 @@ lib/typed.ts(96,38): error TS2345: Argument of type 'Number' is not assignable t
 lib/typed.ts(99,49): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/typed.ts(101,18): error TS2339: Property 'range' does not exist on type 'Object'.
 lib/typed.ts(103,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/typed.ts(108,9): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/typed.ts(115,16): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/typed.ts(116,32): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -362,7 +362,7 @@ lib/typed.ts(482,25): error TS2339: Property 'code' does not exist on type 'HTML
 lib/typed.ts(483,17): error TS2322: Type 'String' is not assignable to type 'Number'.
 lib/typed.ts(492,21): error TS2339: Property 'assert' does not exist on type 'HTMLElement'.
 lib/typed.ts(492,39): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/typed.ts(493,13): error TS2322: Type 'String' is not assignable to type 'Number'.
 lib/typed.ts(498,53): error TS2304: Cannot find name 'Void'.
 lib/typed.ts(499,17): error TS2339: Property 'assert' does not exist on type 'HTMLElement'.
@@ -702,10 +702,4 @@ lib/utility.ts(22,20): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
 lib/utility.ts(27,43): error TS2304: Cannot find name 'Void'.
 lib/utility.ts(28,15): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

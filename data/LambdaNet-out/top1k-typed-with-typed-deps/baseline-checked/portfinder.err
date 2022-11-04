@@ -95,7 +95,7 @@ lib/portfinder.ts(248,5): error TS2322: Type 'Object' is not assignable to type 
 lib/portfinder.ts(252,7): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/portfinder.ts(253,10): error TS2339: Property 'timesSeries' does not exist on type 'String'.
 lib/portfinder.ts(255,15): error TS2339: Property 'port' does not exist on type 'Object'.
-lib/portfinder.ts(262,9): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/portfinder.ts(262,9): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/portfinder.ts(278,5): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/portfinder.ts(282,11): error TS2339: Property 'mod' does not exist on type 'Object'.
@@ -141,10 +141,4 @@ lib/portfinder.ts(488,16): error TS2314: Generic type 'Array<T>' requires 1 type
 lib/portfinder.ts(490,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/portfinder.ts(490,29): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 lib/portfinder.ts(493,25): error TS2339: Property 'address' does not exist on type 'Element'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

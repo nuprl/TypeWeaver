@@ -137,7 +137,7 @@ src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(87,9): error TS7053: Eleme
 src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(97,9): error TS2739: Type 'Set<any>' is missing the following properties from type 'Error': name, message
 src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(99,22): error TS2304: Cannot find name 'State'.
 src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(99,32): error TS7053: Element implicitly has an 'any' type because expression of type 'State' can't be used to index type 'Object'.
-src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(102,18): error TS2461: Type 'Error' is not an array type.
+src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(102,18): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(115,18): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(117,53): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(122,9): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
@@ -152,8 +152,8 @@ src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(161,22): error TS2314: Gen
 src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(161,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(174,12): error TS2339: Property 'size' does not exist on type 'Object'.
 src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(174,24): error TS2339: Property 'size' does not exist on type 'Object'.
-src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(178,13): error TS2461: Type 'Object' is not an array type.
-src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(178,42): error TS2461: Type 'Object' is not an array type.
+src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(178,13): error TS2488: Type 'Object' must have a '[Symbol.iterator]()' method that returns an iterator.
+src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(178,42): error TS2488: Type 'Object' must have a '[Symbol.iterator]()' method that returns an iterator.
 src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(190,77): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(192,22): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(203,29): error TS2538: Type 'String' cannot be used as an index type.
@@ -198,9 +198,10 @@ src/interpreter/finite-automaton/dfa/dfa.ts(114,21): error TS2314: Generic type 
 src/interpreter/finite-automaton/dfa/dfa.ts(116,16): error TS2538: Type 'String' cannot be used as an index type.
 src/interpreter/finite-automaton/dfa/dfa.ts(119,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/interpreter/finite-automaton/dfa/dfa.ts(125,45): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Function'.
-src/interpreter/finite-automaton/dfa/dfa.ts(130,42): error TS2802: Type 'String' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
-src/interpreter/finite-automaton/dfa/dfa.ts(131,18): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Function'.
-src/interpreter/finite-automaton/dfa/dfa.ts(134,30): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Function'.
+src/interpreter/finite-automaton/dfa/dfa.ts(131,18): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Function'.
+  No index signature with a parameter of type 'string' was found on type 'Function'.
+src/interpreter/finite-automaton/dfa/dfa.ts(134,30): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Function'.
+  No index signature with a parameter of type 'string' was found on type 'Function'.
 src/interpreter/finite-automaton/dfa/dfa.ts(138,37): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 src/interpreter/finite-automaton/dfa/dfa.ts(139,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/interpreter/finite-automaton/dfa/dfa.ts(144,20): error TS2538: Type 'String' cannot be used as an index type.
@@ -302,10 +303,10 @@ src/interpreter/finite-automaton/nfa/nfa-from-regexp.ts(81,20): error TS2339: Pr
 src/interpreter/finite-automaton/nfa/nfa-state.ts(9,10): error TS2614: Module '"../special-symbols"' has no exported member 'EPSILON'. Did you mean to use 'import EPSILON from "../special-symbols"' instead?
 src/interpreter/finite-automaton/nfa/nfa-state.ts(28,11): error TS7006: Parameter 'string' implicitly has an 'any' type.
 src/interpreter/finite-automaton/nfa/nfa-state.ts(39,16): error TS2339: Property 'accepting' does not exist on type 'NFAState'.
-src/interpreter/finite-automaton/nfa/nfa-state.ts(45,31): error TS2495: Type 'HTMLElement' is not an array type or a string type.
+src/interpreter/finite-automaton/nfa/nfa-state.ts(45,31): error TS2488: Type 'HTMLElement' must have a '[Symbol.iterator]()' method that returns an iterator.
 src/interpreter/finite-automaton/nfa/nfa-state.ts(55,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/interpreter/finite-automaton/nfa/nfa-state.ts(57,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/interpreter/finite-automaton/nfa/nfa-state.ts(66,29): error TS2495: Type 'HTMLElement' is not an array type or a string type.
+src/interpreter/finite-automaton/nfa/nfa-state.ts(66,29): error TS2488: Type 'HTMLElement' must have a '[Symbol.iterator]()' method that returns an iterator.
 src/interpreter/finite-automaton/nfa/nfa-state.ts(80,15): error TS2551: Property '_epsilonClosure' does not exist on type 'NFAState'. Did you mean 'getEpsilonClosure'?
 src/interpreter/finite-automaton/nfa/nfa-state.ts(81,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/interpreter/finite-automaton/nfa/nfa-state.ts(82,13): error TS2322: Type 'Set<unknown>' is not assignable to type 'HTMLElement'.
@@ -431,7 +432,7 @@ src/optimizer/transforms/char-class-classranges-merge-transform.ts(131,21): erro
 src/optimizer/transforms/char-class-classranges-merge-transform.ts(131,51): error TS2339: Property 'kind' does not exist on type 'Object'.
 src/optimizer/transforms/char-class-classranges-merge-transform.ts(140,49): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/optimizer/transforms/char-class-classranges-merge-transform.ts(142,42): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/optimizer/transforms/char-class-classranges-merge-transform.ts(156,18): error TS2339: Property 'type' does not exist on type 'Object'.
 src/optimizer/transforms/char-class-classranges-merge-transform.ts(158,29): error TS2339: Property 'from' does not exist on type 'Object'.
 src/optimizer/transforms/char-class-classranges-merge-transform.ts(159,29): error TS2339: Property 'to' does not exist on type 'Object'.
@@ -897,7 +898,7 @@ src/parser/generated/regexp-tree.ts(159,38): error TS2322: Type 'Object' is not 
 src/parser/generated/regexp-tree.ts(160,39): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 src/parser/generated/regexp-tree.ts(160,92): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 src/parser/generated/regexp-tree.ts(161,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/parser/generated/regexp-tree.ts(161,38): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -1148,7 +1149,7 @@ src/parser/generated/regexp-tree.ts(763,15): error TS2531: Object is possibly 'n
 src/parser/generated/regexp-tree.ts(763,41): error TS2345: Argument of type 'any' is not assignable to parameter of type 'never'.
 src/parser/generated/regexp-tree.ts(766,38): error TS2345: Argument of type 'any' is not assignable to parameter of type 'never'.
 src/parser/generated/regexp-tree.ts(780,17): error TS2531: Object is possibly 'null'.
-src/parser/generated/regexp-tree.ts(784,28): error TS2461: Type 'never[] | null' is not an array type.
+src/parser/generated/regexp-tree.ts(784,28): error TS2488: Type 'never[] | null' must have a '[Symbol.iterator]()' method that returns an iterator.
 src/parser/generated/regexp-tree.ts(786,28): error TS2339: Property 'semanticValue' does not exist on type '{ symbol: any; }'.
 src/parser/generated/regexp-tree.ts(789,30): error TS2339: Property 'loc' does not exist on type '{ symbol: any; }'.
 src/parser/generated/regexp-tree.ts(809,23): error TS2339: Property 'hasMoreTokens' does not exist on type 'Object'.
@@ -1215,7 +1216,6 @@ src/parser/generated/regexp-tree.ts(1008,39): error TS2345: Argument of type 'Nu
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 src/parser/generated/regexp-tree.ts(1061,5): error TS2454: Variable 'codePoint' is used before being assigned.
 src/parser/generated/regexp-tree.ts(1076,9): error TS2739: Type 'Set<unknown>' is missing the following properties from type 'Error': name, message
-src/parser/generated/regexp-tree.ts(1078,22): error TS2802: Type 'String' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 src/parser/generated/regexp-tree.ts(1079,14): error TS2339: Property 'has' does not exist on type 'Error'.
 src/parser/generated/regexp-tree.ts(1082,10): error TS2339: Property 'add' does not exist on type 'Error'.
 src/parser/generated/regexp-tree.ts(1118,9): error TS2322: Type 'boolean' is not assignable to type 'Number'.
@@ -1258,7 +1258,7 @@ src/parser/generated/regexp-tree.ts(1250,23): error TS7053: Element implicitly h
   Property '0' does not exist on type 'Object'.
 src/parser/generated/regexp-tree.ts(1250,46): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/parser/generated/regexp-tree.ts(1250,46): error TS2454: Variable 'loc' is used before being assigned.
 src/parser/generated/regexp-tree.ts(1251,25): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
   Property '0' does not exist on type 'Object'.
@@ -1597,10 +1597,4 @@ src/utils/clone.ts(25,5): error TS7053: Element implicitly has an 'any' type bec
   No index signature with a parameter of type 'string' was found on type 'Object'.
 src/utils/clone.ts(25,20): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
   No index signature with a parameter of type 'string' was found on type 'Object'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

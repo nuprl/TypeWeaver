@@ -12,10 +12,12 @@ bench/index.ts(26,9): error TS2322: Type 'bigint' is not assignable to type 'Num
 bench/index.ts(27,28): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bench/index.ts(27,34): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bench/index.ts(34,10): error TS2322: Type 'bigint' is not assignable to type 'Number'.
+bench/index.ts(35,26): error TS1323: Dynamic imports are only supported when the '--module' flag is set to 'es2020', 'es2022', 'esnext', 'commonjs', 'amd', 'system', 'umd', 'node16', or 'nodenext'.
 bench/index.ts(35,33): error TS2307: Cannot find module '../dist/lexer.asm.js' or its corresponding type declarations.
 bench/index.ts(36,52): error TS2365: Operator '-' cannot be applied to types 'bigint' and 'Number'.
 bench/index.ts(36,78): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bench/index.ts(46,10): error TS2322: Type 'bigint' is not assignable to type 'Number'.
+bench/index.ts(47,32): error TS1323: Dynamic imports are only supported when the '--module' flag is set to 'es2020', 'es2022', 'esnext', 'commonjs', 'amd', 'system', 'umd', 'node16', or 'nodenext'.
 bench/index.ts(47,39): error TS2307: Cannot find module '../dist/lexer.js' or its corresponding type declarations.
 bench/index.ts(49,52): error TS2365: Operator '-' cannot be applied to types 'bigint' and 'Number'.
 bench/index.ts(49,78): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -64,7 +66,7 @@ lexer.ts(35,12): error TS2339: Property 's' does not exist on type 'Object'.
 lexer.ts(38,8): error TS2339: Property 'n' does not exist on type 'Object'.
 lexer.ts(42,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lexer.ts(44,3): error TS2322: Type 'null' is not assignable to type 'Object'.
-lexer.ts(59,3): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+lexer.ts(59,3): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lexer.ts(65,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(66,28): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -160,7 +162,7 @@ lexer.ts(288,32): error TS2345: Argument of type 'Number' is not assignable to p
 lexer.ts(289,13): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 lexer.ts(289,31): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 lexer.ts(290,28): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lexer.ts(293,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(299,38): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lexer.ts(303,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
@@ -6089,10 +6091,4 @@ src/lexer.asm.ts(212,72): error TS2345: Argument of type 'Number' is not assigna
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 src/lexer.asm.ts(212,104): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/lexer.asm.ts(212,140): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

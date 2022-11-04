@@ -40,7 +40,6 @@ index.ts(27,35): error TS2339: Property 'create' does not exist on type 'Functio
 index.ts(35,31): error TS2339: Property 'create' does not exist on type 'Function'.
 index.ts(38,26): error TS2339: Property 'expand' does not exist on type 'Object'.
 index.ts(38,53): error TS2339: Property 'nodupes' does not exist on type 'Object'.
-index.ts(39,18): error TS2802: Type 'Set<unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 index.ts(58,8): error TS2339: Property 'parse' does not exist on type 'Function'.
 index.ts(74,8): error TS2339: Property 'stringify' does not exist on type 'Function'.
 index.ts(76,29): error TS2339: Property 'parse' does not exist on type 'Function'.
@@ -51,7 +50,6 @@ index.ts(122,20): error TS2339: Property 'parse' does not exist on type 'Functio
 index.ts(125,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(128,15): error TS2339: Property 'noempty' does not exist on type 'Object'.
 index.ts(133,15): error TS2339: Property 'nodupes' does not exist on type 'Object'.
-index.ts(134,18): error TS2802: Type 'Set<unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 index.ts(156,8): error TS2339: Property 'create' does not exist on type 'Function'.
 index.ts(156,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(161,17): error TS2339: Property 'expand' does not exist on type 'Object'.
@@ -82,7 +80,7 @@ lib/compile.ts(37,14): error TS2339: Property 'nodes' does not exist on type 'Ob
 lib/compile.ts(37,28): error TS2339: Property 'ranges' does not exist on type 'Object'.
 lib/compile.ts(38,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/compile.ts(38,43): error TS2339: Property 'nodes' does not exist on type 'Object'.
-lib/compile.ts(39,11): error TS2740: Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+lib/compile.ts(39,11): error TS2740: Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 lib/compile.ts(39,32): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
 lib/compile.ts(46,14): error TS2339: Property 'nodes' does not exist on type 'Object'.
 lib/compile.ts(47,30): error TS2339: Property 'nodes' does not exist on type 'Object'.
@@ -97,7 +95,7 @@ lib/expand.ts(34,36): error TS2339: Property 'rangeLimit' does not exist on type
 lib/expand.ts(34,75): error TS2339: Property 'rangeLimit' does not exist on type 'Object'.
 lib/expand.ts(37,10): error TS2339: Property 'queue' does not exist on type 'Object'.
 lib/expand.ts(39,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/expand.ts(40,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/expand.ts(40,27): error TS2339: Property 'queue' does not exist on type 'Object'.
 lib/expand.ts(42,14): error TS2339: Property 'type' does not exist on type 'String'.
@@ -159,7 +157,7 @@ lib/parse.ts(37,84): error TS2339: Property 'maxLength' does not exist on type '
 lib/parse.ts(43,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse.ts(44,7): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-lib/parse.ts(51,7): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/parse.ts(51,7): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/parse.ts(57,41): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/parse.ts(59,14): error TS2339: Property 'type' does not exist on type 'Object'.
 lib/parse.ts(59,38): error TS2339: Property 'type' does not exist on type 'Object'.
@@ -275,10 +273,4 @@ lib/utils.ts(93,35): error TS2339: Property 'type' does not exist on type 'Objec
 lib/utils.ts(101,35): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 lib/utils.ts(102,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/utils.ts(103,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

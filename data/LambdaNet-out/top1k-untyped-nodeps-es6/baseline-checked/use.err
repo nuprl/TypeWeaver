@@ -82,7 +82,7 @@ index.ts(16,59): error TS2339: Property 'prop' does not exist on type 'Object'.
 index.ts(17,26): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(18,12): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(51,10): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(67,10): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
@@ -106,7 +106,7 @@ index.ts(84,14): error TS2356: An arithmetic operand must be of type 'any', 'num
 index.ts(85,11): error TS2339: Property 'use' does not exist on type 'Object'.
 index.ts(95,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(99,17): error TS2345: Argument of type 'string | any[]' is not assignable to parameter of type 'String'.
-  Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+  Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 index.ts(100,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(110,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(111,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -120,10 +120,4 @@ index.ts(138,14): error TS2683: 'this' implicitly has type 'any' because it does
 index.ts(138,44): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(149,57): error TS2304: Cannot find name 'Void'.
 index.ts(150,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

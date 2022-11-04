@@ -163,7 +163,7 @@ bench/index.ts(135,14): error TS2314: Generic type 'Array<T>' requires 1 type ar
 bench/index.ts(144,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bench/index.ts(146,7): error TS2451: Cannot redeclare block-scoped variable 'EE'.
 bench/index.ts(149,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-bench/index.ts(151,7): error TS2740: Type 'Pipe' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+bench/index.ts(151,7): error TS2740: Type 'Pipe' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 bench/index.ts(153,11): error TS2339: Property 'pipe' does not exist on type 'Pipe'.
 bench/index.ts(154,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 bench/index.ts(162,7): error TS2739: Type 'FastSrc' is missing the following properties from type 'PushThrough': on, once, emit, write, end
@@ -325,11 +325,8 @@ index.ts(113,10): error TS2339: Property 'writable' does not exist on type 'Mini
 index.ts(114,10): error TS2339: Property 'readable' does not exist on type 'Minipass'.
 index.ts(115,10): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(116,10): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(119,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 index.ts(119,37): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(121,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 index.ts(121,33): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(122,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 index.ts(123,14): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(126,14): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(126,40): error TS2538: Type 'Number' cannot be used as an index type.
@@ -347,14 +344,10 @@ index.ts(133,39): error TS7006: Parameter 'chunk' implicitly has an 'any' type.
 index.ts(133,53): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(136,10): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(139,16): error TS7006: Parameter 'enc' implicitly has an 'any' type.
-index.ts(143,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 index.ts(143,35): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(144,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 index.ts(144,30): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(144,49): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(146,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 index.ts(146,34): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(147,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 index.ts(147,28): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(147,42): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(149,10): error TS7006: Parameter 'chunk' implicitly has an 'any' type.
@@ -429,11 +422,8 @@ index.ts(318,12): error TS2555: Expected at least 2 arguments, but got 1.
 index.ts(322,17): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(326,10): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(327,10): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(330,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 index.ts(331,17): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(334,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 index.ts(335,17): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(338,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 index.ts(339,17): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(342,3): error TS2464: A computed property name must be of type 'string', 'number', 'symbol', or 'any'.
 index.ts(342,17): error TS7006: Parameter 'chunk' implicitly has an 'any' type.
@@ -485,7 +475,6 @@ index.ts(420,39): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(421,16): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(422,40): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(424,28): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(429,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 index.ts(430,17): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(433,3): error TS2464: A computed property name must be of type 'string', 'number', 'symbol', or 'any'.
 index.ts(434,15): error TS2538: Type 'Number' cannot be used as an index type.
@@ -585,10 +574,4 @@ index.ts(637,12): error TS2555: Expected at least 2 arguments, but got 1.
 index.ts(642,20): error TS7006: Parameter 's' implicitly has an 'any' type.
 index.ts(643,58): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 index.ts(644,20): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

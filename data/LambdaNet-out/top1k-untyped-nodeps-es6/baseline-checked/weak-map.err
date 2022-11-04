@@ -24,7 +24,7 @@ weak-map.ts(159,30): error TS2351: This expression is not constructable.
   Type 'Error' has no construct signatures.
 weak-map.ts(166,9): error TS1258: A default export must be at the top level of a file or module declaration.
 weak-map.ts(172,7): error TS2322: Type '(v: PropertyKey) => boolean' is not assignable to type 'Number'.
-weak-map.ts(221,9): error TS2740: Type 'Uint8Array' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 36 more.
+weak-map.ts(221,9): error TS2740: Type 'Uint8Array' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 37 more.
 weak-map.ts(221,38): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'Object' is not assignable to parameter of type 'ArrayBufferLike'.
@@ -47,7 +47,7 @@ weak-map.ts(342,7): error TS2349: This expression is not callable.
 weak-map.ts(370,5): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 weak-map.ts(372,25): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 weak-map.ts(377,5): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 weak-map.ts(378,55): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -59,7 +59,7 @@ weak-map.ts(386,25): error TS2345: Argument of type 'Function' is not assignable
 weak-map.ts(393,10): error TS2339: Property 'prototype' does not exist on type 'Object'.
 weak-map.ts(398,39): error TS2304: Cannot find name 'Void'.
 weak-map.ts(411,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-weak-map.ts(417,9): error TS2740: Type 'never[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+weak-map.ts(417,9): error TS2740: Type 'never[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 weak-map.ts(418,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 weak-map.ts(419,22): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 weak-map.ts(425,16): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
@@ -113,10 +113,4 @@ weak-map.ts(654,17): error TS2367: This condition will always return 'false' sin
 weak-map.ts(663,7): error TS1258: A default export must be at the top level of a file or module declaration.
 weak-map.ts(680,7): error TS2322: Type 'undefined' is not assignable to type 'ProxyConstructor'.
 weak-map.ts(683,5): error TS1258: A default export must be at the top level of a file or module declaration.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

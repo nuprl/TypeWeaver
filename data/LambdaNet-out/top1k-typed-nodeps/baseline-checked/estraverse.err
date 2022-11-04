@@ -10,7 +10,7 @@ estraverse.ts(69,17): error TS2362: The left-hand side of an arithmetic operatio
 estraverse.ts(69,24): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 estraverse.ts(232,5): error TS2739: Type '{}' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 estraverse.ts(233,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-estraverse.ts(234,5): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+estraverse.ts(234,5): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 estraverse.ts(242,54): error TS2304: Cannot find name 'Void'.
 estraverse.ts(243,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 estraverse.ts(244,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
@@ -137,7 +137,7 @@ estraverse.ts(651,73): error TS2322: Type 'String' is not assignable to type 'st
 estraverse.ts(651,78): error TS2322: Type 'Number' is not assignable to type 'string'.
 estraverse.ts(651,101): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 estraverse.ts(651,115): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'String'.
-  Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+  Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 estraverse.ts(652,53): error TS2538: Type 'Number' cannot be used as an index type.
 estraverse.ts(653,39): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 estraverse.ts(653,61): error TS2538: Type 'Number' cannot be used as an index type.
@@ -184,7 +184,7 @@ estraverse.ts(721,46): error TS2345: Argument of type 'Object' is not assignable
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 estraverse.ts(726,18): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 estraverse.ts(732,33): error TS2339: Property 'extendedRange' does not exist on type 'HTMLElement'.
 estraverse.ts(732,57): error TS2339: Property 'range' does not exist on type 'Object'.
 estraverse.ts(736,33): error TS2339: Property 'extendedRange' does not exist on type 'HTMLElement'.
@@ -214,24 +214,18 @@ estraverse.ts(795,13): error TS2339: Property 'traverse' does not exist on type 
 estraverse.ts(796,5): error TS2322: Type '(root: String, visitor: String) => String' is not assignable to type '{ (searchValue: string | RegExp, replaceValue: string): string; (searchValue: string | RegExp, replacer: (substring: string, ...args: any[]) => string): string; (searchValue: { ...; }, replaceValue: string): string; (searchValue: { ...; }, replacer: (substring: string, ...args: any[]) => string): string; }'.
   Types of parameters 'root' and 'searchValue' are incompatible.
     Type 'string | RegExp' is not assignable to type 'String'.
-      Type 'RegExp' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+      Type 'RegExp' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 estraverse.ts(797,13): error TS2339: Property 'attachComments' does not exist on type 'String'.
 estraverse.ts(798,13): error TS2339: Property 'VisitorKeys' does not exist on type 'String'.
 estraverse.ts(799,13): error TS2339: Property 'VisitorOption' does not exist on type 'String'.
 estraverse.ts(800,13): error TS2339: Property 'Controller' does not exist on type 'String'.
 estraverse.ts(801,13): error TS2339: Property 'cloneEnvironment' does not exist on type 'String'.
 estraverse.ts(801,59): error TS2345: Argument of type '{}' is not assignable to parameter of type 'String'.
-  Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 gulpfile.ts(27,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 gulpfile.ts(33,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 gulpfile.ts(34,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 gulpfile.ts(35,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 gulpfile.ts(51,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 gulpfile.ts(59,19): error TS2339: Property 'commit' does not exist on type 'String'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

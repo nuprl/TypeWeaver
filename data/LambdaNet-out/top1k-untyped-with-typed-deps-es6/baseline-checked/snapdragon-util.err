@@ -17,7 +17,7 @@ index.ts(95,16): error TS2322: Type '(value: Number) => (node: Object) => void' 
       Type 'string' is not assignable to type 'Number'.
 index.ts(97,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(97,18): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(118,7): error TS2339: Property 'toNoop' does not exist on type 'HTMLElement'.
 index.ts(120,10): error TS2339: Property 'nodes' does not exist on type 'HTMLElement'.
 index.ts(122,17): error TS2339: Property 'nodes' does not exist on type 'HTMLElement'.
@@ -28,7 +28,7 @@ index.ts(147,30): error TS2314: Generic type 'Array<T>' requires 1 type argument
 index.ts(148,10): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Number'.
   Type 'Boolean' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 index.ts(148,21): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(149,3): error TS2554: Expected 3 arguments, but got 2.
 index.ts(151,29): error TS2339: Property 'mapVisit' does not exist on type 'HTMLElement'.
 index.ts(174,7): error TS2339: Property 'mapVisit' does not exist on type 'HTMLElement'.
@@ -43,7 +43,7 @@ index.ts(214,3): error TS2554: Expected 3 arguments, but got 2.
 index.ts(215,10): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Number'.
 index.ts(215,21): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(219,5): error TS2322: Type 'string' is not assignable to type 'Function'.
 index.ts(223,26): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
@@ -143,7 +143,7 @@ index.ts(811,7): error TS2339: Property 'addType' does not exist on type 'HTMLEl
 index.ts(812,16): error TS2339: Property 'isNode' does not exist on type 'HTMLElement'.
 index.ts(813,10): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Number'.
 index.ts(813,19): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'String'.
-  Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(815,27): error TS2339: Property 'parent' does not exist on type 'Object'.
 index.ts(816,12): error TS2339: Property 'parent' does not exist on type 'Object'.
 index.ts(817,12): error TS2339: Property 'type' does not exist on type 'Object'.
@@ -210,10 +210,4 @@ index.ts(1114,60): error TS2304: Cannot find name 'Void'.
 index.ts(1115,42): error TS2339: Property 'isNode' does not exist on type 'Object'.
 index.ts(1115,57): error TS2339: Property 'isNode' does not exist on type 'Object'.
 index.ts(1115,72): error TS2339: Property 'isNode' does not exist on type 'HTMLElement'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

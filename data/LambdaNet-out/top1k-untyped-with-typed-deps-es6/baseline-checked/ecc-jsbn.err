@@ -7,7 +7,7 @@ index.ts(21,34): error TS2339: Property 'getCurve' does not exist on type 'HTMLE
 index.ts(27,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(27,22): error TS2339: Property 'decodePointHex' does not exist on type 'Function'.
 index.ts(27,50): error TS2554: Expected 0 arguments, but got 1.
-index.ts(30,7): error TS2740: Type 'BigInteger' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(30,7): error TS2740: Type 'BigInteger' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(30,42): error TS2554: Expected 0 arguments, but got 1.
 index.ts(33,24): error TS2339: Property 'subtract' does not exist on type 'HTMLElement'.
 index.ts(34,9): error TS2740: Type 'BigInteger' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
@@ -451,10 +451,4 @@ lib/sec.ts(163,7): error TS2322: Type 'BigInteger' is not assignable to type 'Fu
 lib/sec.ts(165,25): error TS2339: Property 'decodePointHex' does not exist on type 'HTMLElement'.
 lib/sec.ts(170,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 lib/sec.ts(170,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

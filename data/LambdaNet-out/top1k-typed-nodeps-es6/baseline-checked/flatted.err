@@ -160,7 +160,7 @@ esm/index.ts(93,39): error TS2314: Generic type 'Array<T>' requires 1 type argum
 esm/index.ts(94,41): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(1,6): error TS2339: Property 'Flatted' does not exist on type 'Window & typeof globalThis'.
 index.ts(7,12): error TS2630: Cannot assign to '_typeof' because it is a function.
-index.ts(18,27): error TS2740: Type 'StringConstructor' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+index.ts(18,27): error TS2740: Type 'StringConstructor' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(22,7): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 index.ts(30,29): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 index.ts(30,41): error TS2349: This expression is not callable.
@@ -270,10 +270,4 @@ min.ts(2,1622): error TS2345: Argument of type '{}' is not assignable to paramet
 rollup/babel.config.ts(1,19): error TS2307: Cannot find module 'rollup-plugin-babel' or its corresponding type declarations.
 rollup/es.config.ts(1,22): error TS2307: Cannot find module 'rollup-plugin-terser' or its corresponding type declarations.
 rollup/esm.config.ts(1,22): error TS2307: Cannot find module 'rollup-plugin-terser' or its corresponding type declarations.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

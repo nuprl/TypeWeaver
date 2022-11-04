@@ -254,7 +254,7 @@ lib/language.ts(178,15): error TS2339: Property 'q' does not exist on type 'Obje
 lib/mediaType.ts(31,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mediaType.ts(32,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mediaType.ts(35,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/mediaType.ts(54,7): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
   Type 'null' is not assignable to type 'Object'.
 lib/mediaType.ts(54,50): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -311,7 +311,7 @@ lib/mediaType.ts(162,56): error TS2314: Generic type 'Array<T>' requires 1 type 
 lib/mediaType.ts(162,64): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mediaType.ts(164,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mediaType.ts(164,36): error TS2345: Argument of type 'Number | "*/*"' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/mediaType.ts(174,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mediaType.ts(175,5): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -342,10 +342,4 @@ lib/mediaType.ts(254,16): error TS2314: Generic type 'Array<T>' requires 1 type 
 lib/mediaType.ts(257,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/mediaType.ts(276,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mediaType.ts(279,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

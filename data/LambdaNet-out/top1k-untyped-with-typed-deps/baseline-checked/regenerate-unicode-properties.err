@@ -841,11 +841,10 @@ build.ts(97,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(
 build.ts(109,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build.ts(111,5): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
 build.ts(114,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-build.ts(119,7): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
-build.ts(134,24): error TS2802: Type 'String' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+build.ts(119,7): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 build.ts(138,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build.ts(139,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-build.ts(140,26): error TS2802: Type 'String' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+build.ts(141,60): error TS2532: Object is possibly 'undefined'.
 build.ts(147,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build.ts(149,5): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
 build.ts(160,4): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
@@ -855,10 +854,4 @@ build.ts(166,23): error TS2314: Generic type 'Array<T>' requires 1 type argument
 build.ts(166,95): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 build.ts(173,4): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

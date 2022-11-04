@@ -14,7 +14,8 @@ index.ts(30,32): error TS2339: Property 'mapped' does not exist on type 'Object'
 index.ts(44,41): error TS7031: Binding element 'useSTD3ASCIIRules' implicitly has an 'any' type.
 index.ts(44,60): error TS7031: Binding element 'processingOption' implicitly has an 'any' type.
 index.ts(44,81): error TS2304: Cannot find name 'Void'.
-index.ts(48,20): error TS2802: Type 'String' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+index.ts(49,42): error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'Function'.
+  Type 'undefined' is not assignable to type 'Function'.
 index.ts(52,27): error TS2339: Property 'disallowed' does not exist on type 'Object'.
 index.ts(56,27): error TS2339: Property 'ignored' does not exist on type 'Object'.
 index.ts(58,27): error TS2339: Property 'mapped' does not exist on type 'Object'.
@@ -31,7 +32,6 @@ index.ts(100,33): error TS2345: Argument of type 'number | undefined' is not ass
 index.ts(101,75): error TS2339: Property 'valid' does not exist on type 'Object'.
 index.ts(103,36): error TS2339: Property 'valid' does not exist on type 'Object'.
 index.ts(103,71): error TS2339: Property 'deviation' does not exist on type 'Object'.
-index.ts(111,27): error TS2802: Type 'IterableIterator<[number, string]>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 index.ts(161,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(176,11): error TS2339: Property 'processingOption' does not exist on type 'Object'.
 index.ts(179,48): error TS2345: Argument of type 'Object' is not assignable to parameter of type '{ useSTD3ASCIIRules: any; processingOption: any; }'.
@@ -70,7 +70,6 @@ scripts/generateMappingTable.ts(39,24): error TS2314: Generic type 'Array<T>' re
 scripts/generateMappingTable.ts(45,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 scripts/generateRegexes.ts(29,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/generateRegexes.ts(29,28): error TS7019: Rest parameter 'regs' implicitly has an 'any[]' type.
-scripts/generateRegexes.ts(31,26): error TS2802: Type 'IterableIterator<[number, any]>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 scripts/generateRegexes.ts(44,37): error TS2339: Property 'Mark' does not exist on type 'Object'.
 scripts/generateRegexes.ts(50,43): error TS2339: Property 'CombiningClassVirama' does not exist on type 'Object'.
 scripts/generateRegexes.ts(54,36): error TS2339: Property 'JT' does not exist on type 'Object'.
@@ -134,26 +133,19 @@ scripts/generateUnicodeCodePoints.ts(26,32): error TS7053: Element implicitly ha
   Property '0' does not exist on type 'Object'.
 scripts/generateUnicodeCodePoints.ts(26,89): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-scripts/generateUnicodeCodePoints.ts(28,19): error TS2802: Type 'String' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 scripts/generateUnicodeCodePoints.ts(29,14): error TS2538: Type 'String' cannot be used as an index type.
 scripts/generateUnicodeCodePoints.ts(30,28): error TS2339: Property 'size' does not exist on type 'Error'.
 scripts/generateUnicodeCodePoints.ts(30,59): error TS2339: Property 'has' does not exist on type 'Error'.
 scripts/generateUnicodeCodePoints.ts(31,13): error TS2538: Type 'String' cannot be used as an index type.
 scripts/generateUnicodeCodePoints.ts(36,9): error TS2538: Type 'String' cannot be used as an index type.
-scripts/generateUnicodeCodePoints.ts(43,46): error TS2740: Type 'Generator<string, any, undefined>' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+scripts/generateUnicodeCodePoints.ts(43,46): error TS2740: Type 'Generator<string, any, undefined>' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 scripts/generateUnicodeCodePoints.ts(44,33): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 scripts/generateUnicodeCodePoints.ts(45,11): error TS2322: Type 'Number' is not assignable to type 'string'.
 scripts/getLatestTests.ts(15,19): error TS2307: Cannot find module 'minipass-fetch' or its corresponding type declarations.
 scripts/getLatestTests.ts(16,32): error TS2732: Cannot find module '../package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 scripts/getLatestTests.ts(20,24): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-scripts/getLatestTests.ts(23,13): error TS2740: Type 'WriteStream' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+scripts/getLatestTests.ts(23,13): error TS2740: Type 'WriteStream' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 scripts/getLatestTests.ts(25,38): error TS2339: Property 'body' does not exist on type 'Element'.
 scripts/getLatestTests.ts(28,13): error TS2322: Type 'WriteStream' is not assignable to type 'String'.
 scripts/getLatestTests.ts(30,38): error TS2339: Property 'body' does not exist on type 'Element'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

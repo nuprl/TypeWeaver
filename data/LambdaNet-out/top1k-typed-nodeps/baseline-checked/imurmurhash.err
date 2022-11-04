@@ -73,7 +73,7 @@ imurmurhash.ts(23,11): error TS2339: Property 'reset' does not exist on type 'Ob
 imurmurhash.ts(25,15): error TS2339: Property 'hash' does not exist on type 'Object'.
 imurmurhash.ts(28,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 imurmurhash.ts(29,13): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 imurmurhash.ts(46,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 imurmurhash.ts(46,53): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 imurmurhash.ts(47,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -134,10 +134,4 @@ imurmurhash.ts(117,16): error TS2362: The left-hand side of an arithmetic operat
 imurmurhash.ts(131,13): error TS2554: Expected 2 arguments, but got 0.
 imurmurhash.ts(131,13): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 imurmurhash.ts(136,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

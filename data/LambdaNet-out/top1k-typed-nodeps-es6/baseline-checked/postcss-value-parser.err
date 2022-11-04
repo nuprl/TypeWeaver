@@ -7,7 +7,7 @@ lib/index.ts(17,43): error TS2314: Generic type 'Array<T>' requires 1 type argum
 lib/index.ts(17,58): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse.ts(16,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse.ts(17,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/parse.ts(28,39): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/parse.ts(30,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -155,7 +155,7 @@ lib/stringify.ts(17,48): error TS2339: Property 'after' does not exist on type '
 lib/stringify.ts(18,33): error TS2339: Property 'nodes' does not exist on type 'Object'.
 lib/stringify.ts(19,26): error TS2339: Property 'nodes' does not exist on type 'Object'.
 lib/stringify.ts(19,33): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/stringify.ts(26,13): error TS2339: Property 'before' does not exist on type 'Object'.
 lib/stringify.ts(28,13): error TS2339: Property 'after' does not exist on type 'Object'.
 lib/stringify.ts(29,13): error TS2339: Property 'unclosed' does not exist on type 'Object'.
@@ -200,10 +200,4 @@ lib/walk.ts(11,7): error TS2367: This condition will always return 'true' since 
 lib/walk.ts(12,12): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
 lib/walk.ts(13,26): error TS2339: Property 'nodes' does not exist on type 'HTMLElement'.
 lib/walk.ts(15,17): error TS2339: Property 'nodes' does not exist on type 'HTMLElement'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

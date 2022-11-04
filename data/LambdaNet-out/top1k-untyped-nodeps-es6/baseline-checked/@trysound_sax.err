@@ -248,7 +248,7 @@ lib/sax.ts(547,11): error TS2339: Property 'column' does not exist on type 'Erro
 lib/sax.ts(547,27): error TS2339: Property 'column' does not exist on type 'Object'.
 lib/sax.ts(548,12): error TS2339: Property 'error' does not exist on type 'Object'.
 lib/sax.ts(550,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/sax.ts(554,16): error TS2339: Property 'sawRoot' does not exist on type 'String'.
 lib/sax.ts(554,35): error TS2339: Property 'closedRoot' does not exist on type 'String'.
 lib/sax.ts(555,17): error TS2339: Property 'state' does not exist on type 'String'.
@@ -457,7 +457,7 @@ lib/sax.ts(864,13): error TS2683: 'this' implicitly has type 'any' because it do
 lib/sax.ts(866,16): error TS2339: Property 'closed' does not exist on type 'HTMLElement'.
 lib/sax.ts(868,9): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 lib/sax.ts(871,18): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'String'.
-  Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/sax.ts(879,25): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/sax.ts(879,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 lib/sax.ts(880,14): error TS2339: Property 'c' does not exist on type 'HTMLElement'.
@@ -812,10 +812,4 @@ lib/sax.ts(1408,16): error TS2339: Property 'position' does not exist on type 'H
 lib/sax.ts(1408,35): error TS2339: Property 'bufferCheckPosition' does not exist on type 'HTMLElement'.
 lib/sax.ts(1411,5): error TS2322: Type 'HTMLElement' is not assignable to type 'String'.
 lib/sax.ts(1413,42): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

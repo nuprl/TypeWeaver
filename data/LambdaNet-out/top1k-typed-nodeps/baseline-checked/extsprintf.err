@@ -55,7 +55,7 @@ lib/extsprintf.ts(171,13): error TS2339: Property 'equal' does not exist on type
 lib/extsprintf.ts(172,13): error TS2339: Property 'equal' does not exist on type 'String'.
 lib/extsprintf.ts(178,22): error TS2304: Cannot find name 'Void'.
 lib/extsprintf.ts(179,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/extsprintf.ts(185,6): error TS2740: Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+lib/extsprintf.ts(185,6): error TS2740: Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 lib/extsprintf.ts(186,17): error TS2339: Property 'write' does not exist on type 'String'.
 lib/extsprintf.ts(186,39): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/extsprintf.ts(186,45): error TS2345: Argument of type 'String' is not assignable to parameter of type '[ofmt: String]'.
@@ -69,11 +69,5 @@ lib/extsprintf.ts(217,9): error TS2550: Property 'cause' does not exist on type 
 lib/extsprintf.ts(217,29): error TS2550: Property 'cause' does not exist on type 'Error'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2022' or later.
 lib/extsprintf.ts(218,24): error TS2550: Property 'cause' does not exist on type 'Error'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2022' or later.
 lib/extsprintf.ts(220,4): error TS2322: Type 'string' is not assignable to type 'Number'.
-lib/extsprintf.ts(224,2): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
+lib/extsprintf.ts(224,2): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 

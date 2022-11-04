@@ -4,7 +4,7 @@ src/find-variable.ts(9,75): error TS2314: Generic type 'Array<T>' requires 1 typ
 src/find-variable.ts(16,27): error TS2339: Property 'name' does not exist on type 'String'.
 src/find-variable.ts(17,35): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/find-variable.ts(21,40): error TS2339: Property 'set' does not exist on type 'Object'.
 src/find-variable.ts(25,23): error TS2339: Property 'upper' does not exist on type 'Object'.
 src/get-function-head-location.ts(9,69): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -124,7 +124,6 @@ src/get-static-value.ts(390,27): error TS7006: Parameter 'initialScope' implicit
 src/get-static-value.ts(398,19): error TS7006: Parameter 'node' implicitly has an 'any' type.
 src/get-static-value.ts(398,25): error TS7006: Parameter 'initialScope' implicitly has an 'any' type.
 src/get-static-value.ts(404,29): error TS2339: Property 'has' does not exist on type 'Error'.
-src/get-static-value.ts(405,42): error TS2472: Spread operator in 'new' expressions is only available when targeting ECMAScript 5 and higher.
 src/get-static-value.ts(412,22): error TS7006: Parameter 'node' implicitly has an 'any' type.
 src/get-static-value.ts(412,28): error TS7006: Parameter 'initialScope' implicitly has an 'any' type.
 src/get-static-value.ts(428,17): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
@@ -221,7 +220,7 @@ src/is-parenthesized.ts(103,5): error TS2322: Type 'Object' is not assignable to
 src/is-parenthesized.ts(103,22): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 src/is-parenthesized.ts(111,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/is-parenthesized.ts(114,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/pattern-matcher.ts(9,7): error TS2739: Type 'WeakMap<object, any>' is missing the following properties from type 'ImageData': colorSpace, data, height, width
 src/pattern-matcher.ts(19,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -236,7 +235,6 @@ src/pattern-matcher.ts(52,48): error TS7053: Element implicitly has an 'any' typ
   Property '0' does not exist on type 'Object'.
 src/pattern-matcher.ts(55,21): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
 src/pattern-matcher.ts(56,34): error TS2538: Type 'String' cannot be used as an index type.
-src/pattern-matcher.ts(63,19): error TS2802: Type 'Generator<Object, void, unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 src/pattern-matcher.ts(64,44): error TS2339: Property 'index' does not exist on type 'Object'.
 src/pattern-matcher.ts(65,54): error TS2769: No overload matches this call.
   The last overload gave the following error.
@@ -248,7 +246,13 @@ src/pattern-matcher.ts(66,31): error TS7053: Element implicitly has an 'any' typ
   Property '0' does not exist on type 'Object'.
 src/pattern-matcher.ts(80,49): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/pattern-matcher.ts(81,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/pattern-matcher.ts(84,25): error TS2802: Type 'Generator<Object, void, unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
+src/pattern-matcher.ts(85,44): error TS2339: Property 'index' does not exist on type 'Object'.
+src/pattern-matcher.ts(86,39): error TS2488: Type 'Object' must have a '[Symbol.iterator]()' method that returns an iterator.
+src/pattern-matcher.ts(86,52): error TS2339: Property 'index' does not exist on type 'Object'.
+src/pattern-matcher.ts(86,65): error TS2339: Property 'input' does not exist on type 'Object'.
+src/pattern-matcher.ts(87,23): error TS2339: Property 'index' does not exist on type 'Object'.
+src/pattern-matcher.ts(87,31): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
+  Property '0' does not exist on type 'Object'.
 src/pattern-matcher.ts(103,17): error TS7006: Parameter 'pattern' implicitly has an 'any' type.
 src/pattern-matcher.ts(111,18): error TS2339: Property 'set' does not exist on type 'ImageData'.
 src/pattern-matcher.ts(122,14): error TS7006: Parameter 'str' implicitly has an 'any' type.
@@ -288,7 +292,6 @@ src/reference-tracker.ts(100,25): error TS2314: Generic type 'Array<T>' requires
 src/reference-tracker.ts(101,29): error TS2304: Cannot find name 'PatternMatcher'.
 src/reference-tracker.ts(101,51): error TS2339: Property 'globalScope' does not exist on type 'ReferenceTracker'.
 src/reference-tracker.ts(121,27): error TS7006: Parameter 'traceMap' implicitly has an 'any' type.
-src/reference-tracker.ts(122,32): error TS2802: Type 'Generator<any, void, any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 src/reference-tracker.ts(124,33): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 src/reference-tracker.ts(128,51): error TS2538: Type 'String' cannot be used as an index type.
@@ -412,10 +415,4 @@ src/token-predicate.ts(135,58): error TS2345: Argument of type '(token: String) 
 src/token-predicate.ts(136,54): error TS2345: Argument of type '(token: String) => Boolean' is not assignable to parameter of type 'String'.
 src/token-predicate.ts(137,56): error TS2345: Argument of type '(token: String) => Boolean' is not assignable to parameter of type 'String'.
 src/token-predicate.ts(138,51): error TS2345: Argument of type '(token: Object) => Number' is not assignable to parameter of type 'String'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

@@ -20,9 +20,6 @@ index.ts(51,34): error TS7006: Parameter 'caller' implicitly has an 'any' type.
 index.ts(54,20): error TS2339: Property 'message' does not exist on type 'Object'.
 index.ts(56,10): error TS2339: Property 'code' does not exist on type 'JSONParseError'.
 index.ts(57,10): error TS2339: Property 'systemError' does not exist on type 'JSONParseError'.
-index.ts(60,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
-index.ts(61,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
-index.ts(62,7): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 index.ts(65,7): error TS2322: Type 'typeof kIndent' is not assignable to type 'String'.
 index.ts(66,7): error TS2322: Type 'typeof kNewline' is not assignable to type 'String'.
 index.ts(88,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -33,10 +30,4 @@ index.ts(115,11): error TS2339: Property 'JSONParseError' does not exist on type
 index.ts(117,11): error TS2339: Property 'noExceptions' does not exist on type 'Function'.
 index.ts(119,38): error TS2345: Argument of type 'String' is not assignable to parameter of type '(this: any, key: string, value: any) => any'.
   Type 'String' provides no match for the signature '(this: any, key: string, value: any): any'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

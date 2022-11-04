@@ -422,7 +422,7 @@
 .internal/baseSet.ts(30,36): error TS2538: Type 'Number' cannot be used as an index type.
 .internal/baseSet.ts(34,39): error TS2538: Type 'String' cannot be used as an index type.
 .internal/baseSet.ts(37,9): error TS2322: Type 'String | never[] | {}' is not assignable to type 'String'.
-  Type 'never[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+  Type 'never[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 .internal/baseSet.ts(39,14): error TS2554: Expected 2 arguments, but got 1.
 .internal/baseSet.ts(39,27): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 .internal/baseSet.ts(42,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
@@ -817,7 +817,7 @@
 .internal/stringSize.ts(12,38): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 .internal/stringToArray.ts(12,41): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 .internal/stringToPath.ts(3,7): error TS2322: Type 'number' is not assignable to type 'String'.
-.internal/stringToPath.ts(5,7): error TS2740: Type 'RegExp' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+.internal/stringToPath.ts(5,7): error TS2740: Type 'RegExp' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 .internal/stringToPath.ts(27,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 .internal/stringToPath.ts(28,7): error TS2367: This condition will always return 'false' since the types 'number' and 'String' have no overlap.
 .internal/stringToPath.ts(31,18): error TS2769: No overload matches this call.
@@ -861,7 +861,7 @@
     Argument of type 'Number' is not assignable to parameter of type '{ [Symbol.match](string: string): RegExpMatchArray | null; }'.
   Overload 2 of 2, '(regexp: string | RegExp): RegExpMatchArray | null', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'string | RegExp'.
-add.ts(16,7): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+add.ts(16,7): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 add.ts(16,77): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 add.ts(16,94): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 after.ts(23,19): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
@@ -1157,7 +1157,7 @@ hasPathIn.ts(46,50): error TS2345: Argument of type 'String' is not assignable t
 hasPathIn.ts(46,50): error TS2454: Variable 'key' is used before being assigned.
 head.ts(18,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 head.ts(18,30): error TS2304: Cannot find name 'Stack'.
-inRange.ts(44,3): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+inRange.ts(44,3): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 indexOf.ts(25,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 indexOf.ts(30,57): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 indexOf.ts(32,22): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
@@ -1248,7 +1248,7 @@ keyBy.ts(27,17): error TS2345: Argument of type 'String' is not assignable to pa
   Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 keys.ts(32,22): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 keys.ts(33,7): error TS2554: Expected 2 arguments, but got 1.
 keysIn.ts(23,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 keysIn.ts(23,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -1554,7 +1554,7 @@ toArray.ts(47,34): error TS2538: Type 'String' cannot be used as an index type.
 toArray.ts(49,30): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 toFinite.ts(32,20): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 toFinite.ts(35,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 toFinite.ts(35,19): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 toInteger.ts(29,35): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
@@ -1728,10 +1728,4 @@ zipWith.ts(20,18): error TS7019: Rest parameter 'arrays' implicitly has an 'any[
 zipWith.ts(22,46): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 zipWith.ts(23,3): error TS2322: Type 'undefined' is not assignable to type 'String'.
 zipWith.ts(24,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

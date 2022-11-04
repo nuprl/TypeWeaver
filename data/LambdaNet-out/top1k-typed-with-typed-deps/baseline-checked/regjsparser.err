@@ -60,7 +60,7 @@ parser.ts(275,12): error TS2339: Property 'raw' does not exist on type 'Object'.
 parser.ts(275,37): error TS2339: Property 'range' does not exist on type 'Object'.
 parser.ts(275,52): error TS2339: Property 'range' does not exist on type 'Object'.
 parser.ts(276,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 parser.ts(279,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 parser.ts(280,12): error TS2339: Property 'range' does not exist on type 'Object'.
 parser.ts(284,61): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -159,12 +159,12 @@ parser.ts(598,20): error TS2339: Property 'body' does not exist on type 'Object'
 parser.ts(601,41): error TS2339: Property 'range' does not exist on type 'Object'.
 parser.ts(608,11): error TS2322: Type 'null' is not assignable to type 'String'.
 parser.ts(610,17): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 parser.ts(618,7): error TS2322: Type 'String' is not assignable to type 'Boolean'.
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'string' is not assignable to type 'boolean'.
 parser.ts(618,32): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 parser.ts(624,9): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(627,64): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
   Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
@@ -215,7 +215,7 @@ parser.ts(761,46): error TS2345: Argument of type 'number' is not assignable to 
 parser.ts(763,11): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(770,25): error TS2339: Property 'lookbehind' does not exist on type 'Object'.
 parser.ts(770,40): error TS2322: Type 'Boolean' is not assignable to type 'String'.
-parser.ts(770,40): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+parser.ts(770,40): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 parser.ts(770,57): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
 parser.ts(773,25): error TS2339: Property 'namedGroups' does not exist on type 'Object'.
 parser.ts(774,13): error TS2322: Type 'Object' is not assignable to type 'String'.
@@ -477,10 +477,4 @@ tools/generate-identifier-regex.ts(21,24): error TS2314: Generic type 'Array<T>'
 tools/generate-identifier-regex.ts(25,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 tools/generate-identifier-regex.ts(40,10): error TS2339: Property 'NonAsciiIdentifierStart' does not exist on type 'HTMLElement'.
 tools/generate-identifier-regex.ts(45,10): error TS2339: Property 'NonAsciiIdentifierPartOnly' does not exist on type 'HTMLElement'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

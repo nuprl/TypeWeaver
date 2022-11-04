@@ -140,7 +140,7 @@ lib/asn1/base/node.ts(78,32): error TS2351: This expression is not constructable
   Type 'Function' has no construct signatures.
 lib/asn1/base/node.ts(78,56): error TS2339: Property 'parent' does not exist on type 'Object'.
 lib/asn1/base/node.ts(79,7): error TS2339: Property '_baseState' does not exist on type 'HTMLElement'.
-lib/asn1/base/node.ts(80,3): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+lib/asn1/base/node.ts(80,3): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/asn1/base/node.ts(83,16): error TS2339: Property '_wrap' does not exist on type 'Node'.
 lib/asn1/base/node.ts(83,41): error TS2304: Cannot find name 'Void'.
 lib/asn1/base/node.ts(84,35): error TS2339: Property '_baseState' does not exist on type 'Node'.
@@ -660,7 +660,7 @@ lib/asn1/decoders/der.ts(123,16): error TS2339: Property 'isError' does not exis
 lib/asn1/decoders/der.ts(131,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/asn1/decoders/der.ts(132,35): error TS2339: Property 'readUInt8' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(133,16): error TS2339: Property 'isError' does not exist on type 'Object'.
-lib/asn1/decoders/der.ts(134,7): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/asn1/decoders/der.ts(134,7): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/asn1/decoders/der.ts(135,14): error TS2322: Type '{ unused: Number; data: any; }' is not assignable to type 'String'.
   Object literal may only specify known properties, and 'unused' does not exist in type 'String'.
 lib/asn1/decoders/der.ts(135,43): error TS2339: Property 'raw' does not exist on type 'Object'.
@@ -838,13 +838,10 @@ lib/asn1/encoders/der.ts(137,33): error TS2362: The left-hand side of an arithme
 lib/asn1/encoders/der.ts(144,7): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
 lib/asn1/encoders/der.ts(152,9): error TS2740: Type 'Date' is missing the following properties from type 'HTMLInputElement': accept, align, alt, autocomplete, and 333 more.
 lib/asn1/encoders/der.ts(152,43): error TS2769: No overload matches this call.
-  Overload 1 of 5, '(value: string | number | Date): Date', gave the following error.
+  Overload 1 of 4, '(value: string | number | Date): Date', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | number | Date'.
-      Type 'String' is missing the following properties from type 'Date': toDateString, toTimeString, toLocaleDateString, toLocaleTimeString, and 38 more.
-  Overload 2 of 5, '(vd: VarDate): Date', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'VarDate'.
-      Property 'VarDate_typekey' is missing in type 'String' but required in type 'VarDate'.
-  Overload 3 of 5, '(value: string | number): Date', gave the following error.
+      Type 'String' is missing the following properties from type 'Date': toDateString, toTimeString, toLocaleDateString, toLocaleTimeString, and 37 more.
+  Overload 2 of 4, '(value: string | number): Date', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | number'.
 lib/asn1/encoders/der.ts(154,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/asn1/encoders/der.ts(156,16): error TS2339: Property 'getUTCFullYear' does not exist on type 'HTMLInputElement'.
@@ -1424,12 +1421,6 @@ rfc/5280/index.ts(867,9): error TS2339: Property 'CertificateIssuer' does not ex
 ../../../../node_modules/@types/elliptic/index.d.ts(348,14): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 ../../../../node_modules/@types/etag/index.d.ts(9,40): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 ../../../../node_modules/@types/from2/index.d.ts(32,27): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 ../../../../node_modules/@types/kind-of/index.d.ts(14,33): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 ../../../../node_modules/@types/node/ts4.8/buffer.d.ts(84,106): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 ../../../../node_modules/@types/node/ts4.8/buffer.d.ts(87,29): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?

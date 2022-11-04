@@ -20,7 +20,7 @@ lib/cookie.ts(150,35): error TS2345: Argument of type 'Number' is not assignable
 lib/cookie.ts(154,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(155,17): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/cookie.ts(164,5): error TS2322: Type 'null' is not assignable to type 'Object'.
-lib/cookie.ts(172,11): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/cookie.ts(172,11): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/cookie.ts(174,7): error TS2322: Type 'null' is not assignable to type 'Object'.
 lib/cookie.ts(186,36): error TS2538: Type 'String' cannot be used as an index type.
 lib/cookie.ts(187,3): error TS2322: Type 'Number | null' is not assignable to type 'Number'.
@@ -41,7 +41,7 @@ lib/cookie.ts(232,18): error TS7053: Element implicitly has an 'any' type becaus
 lib/cookie.ts(233,18): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
   Property '2' does not exist on type 'Object'.
 lib/cookie.ts(247,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/cookie.ts(260,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/cookie.ts(274,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -93,7 +93,7 @@ lib/cookie.ts(532,7): error TS2322: Type 'null' is not assignable to type 'Strin
 lib/cookie.ts(534,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/cookie.ts(535,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lib/cookie.ts(547,17): error TS2740: Type 'HTMLDivElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+lib/cookie.ts(547,17): error TS2740: Type 'HTMLDivElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/cookie.ts(553,15): error TS2339: Property 'expires' does not exist on type 'Cookie'.
 lib/cookie.ts(563,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
@@ -261,30 +261,22 @@ lib/cookie.ts(1030,17): error TS2339: Property 'expires' does not exist on type 
 lib/cookie.ts(1035,14): error TS7006: Parameter 'now' implicitly has an 'any' type.
 lib/cookie.ts(1037,9): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 lib/cookie.ts(1038,23): error TS2769: No overload matches this call.
-  Overload 1 of 5, '(value: string | number | Date): Date', gave the following error.
+  Overload 1 of 4, '(value: string | number | Date): Date', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'string | number | Date'.
-      Type 'Number' is missing the following properties from type 'Date': toDateString, toTimeString, toLocaleDateString, toLocaleTimeString, and 38 more.
-  Overload 2 of 5, '(vd: VarDate): Date', gave the following error.
-    Argument of type 'Number' is not assignable to parameter of type 'VarDate'.
-      Property 'VarDate_typekey' is missing in type 'Number' but required in type 'VarDate'.
-  Overload 3 of 5, '(value: string | number): Date', gave the following error.
+      Type 'Number' is missing the following properties from type 'Date': toDateString, toTimeString, toLocaleDateString, toLocaleTimeString, and 37 more.
+  Overload 2 of 4, '(value: string | number): Date', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'string | number'.
 lib/cookie.ts(1039,16): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 lib/cookie.ts(1040,23): error TS2769: No overload matches this call.
-  Overload 1 of 5, '(value: string | number | Date): Date', gave the following error.
+  Overload 1 of 4, '(value: string | number | Date): Date', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'string | number | Date'.
-  Overload 2 of 5, '(vd: VarDate): Date', gave the following error.
-    Argument of type 'Number' is not assignable to parameter of type 'VarDate'.
-  Overload 3 of 5, '(value: string | number): Date', gave the following error.
+  Overload 2 of 4, '(value: string | number): Date', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'string | number'.
 lib/cookie.ts(1042,23): error TS2769: No overload matches this call.
-  Overload 1 of 5, '(value: string | number | Date): Date', gave the following error.
+  Overload 1 of 4, '(value: string | number | Date): Date', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | number | Date'.
-      Type 'String' is missing the following properties from type 'Date': toDateString, toTimeString, toLocaleDateString, toLocaleTimeString, and 38 more.
-  Overload 2 of 5, '(vd: VarDate): Date', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'VarDate'.
-      Property 'VarDate_typekey' is missing in type 'String' but required in type 'VarDate'.
-  Overload 3 of 5, '(value: string | number): Date', gave the following error.
+      Type 'String' is missing the following properties from type 'Date': toDateString, toTimeString, toLocaleDateString, toLocaleTimeString, and 37 more.
+  Overload 2 of 4, '(value: string | number): Date', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | number'.
 lib/cookie.ts(1048,17): error TS2339: Property 'maxAge' does not exist on type 'Cookie'.
 lib/cookie.ts(1048,40): error TS2339: Property 'expires' does not exist on type 'Cookie'.
@@ -587,16 +579,10 @@ lib/utilHelper.ts(30,14): error TS2322: Type '(options?: Object) => Boolean' is 
 lib/utilHelper.ts(32,13): error TS2339: Property 'lookupCustomInspectSymbol' does not exist on type 'Object'.
 lib/validators.ts(35,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/validators.ts(40,33): error TS2345: Argument of type 'DateConstructor' is not assignable to parameter of type 'String'.
-  Type 'DateConstructor' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'DateConstructor' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/validators.ts(40,57): error TS2339: Property 'getTime' does not exist on type 'Object'.
 lib/validators.ts(56,28): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 lib/validators.ts(67,66): error TS2304: Cannot find name 'Void'.
 lib/validators.ts(70,5): error TS2322: Type 'null' is not assignable to type 'Function'.
 lib/validators.ts(83,15): error TS7019: Rest parameter 'params' implicitly has an 'any[]' type.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

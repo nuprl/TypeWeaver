@@ -31,7 +31,7 @@ lib/copy/copy-sync.ts(50,20): error TS2339: Property 'isCharacterDevice' does no
 lib/copy/copy-sync.ts(51,20): error TS2339: Property 'isBlockDevice' does not exist on type 'Function'.
 lib/copy/copy-sync.ts(51,51): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 lib/copy/copy-sync.ts(52,20): error TS2339: Property 'isSymbolicLink' does not exist on type 'Function'.
-lib/copy/copy-sync.ts(52,38): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/copy/copy-sync.ts(52,38): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/copy/copy-sync.ts(52,52): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Boolean'.
 lib/copy/copy-sync.ts(53,20): error TS2339: Property 'isSocket' does not exist on type 'Function'.
 lib/copy/copy-sync.ts(54,20): error TS2339: Property 'isFIFO' does not exist on type 'Function'.
@@ -278,7 +278,7 @@ lib/ensure/link.ts(42,5): error TS2739: Type 'Stats & BigIntStats' is missing th
 lib/ensure/link.ts(42,28): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-lib/ensure/link.ts(46,11): error TS2740: Type 'Stats & BigIntStats' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/ensure/link.ts(46,11): error TS2740: Type 'Stats & BigIntStats' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/ensure/link.ts(46,42): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathLike'.
@@ -448,14 +448,14 @@ lib/move/move.ts(21,38): error TS2345: Argument of type 'Object' is not assignab
 lib/move/move.ts(23,13): error TS2339: Property 'srcStat' does not exist on type 'Object'.
 lib/move/move.ts(23,22): error TS2339: Property 'isChangingCase' does not exist on type 'Object'.
 lib/move/move.ts(26,58): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/move/move.ts(27,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/move/move.ts(29,36): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 lib/move/move.ts(36,9): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/move/move.ts(36,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/move/move.ts(37,9): error TS2740: Type 'ParsedPath' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/move/move.ts(37,9): error TS2740: Type 'ParsedPath' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/move/move.ts(37,41): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 lib/move/move.ts(38,21): error TS2339: Property 'root' does not exist on type 'String'.
 lib/move/move.ts(41,106): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -532,7 +532,7 @@ lib/remove/rimraf.ts(86,26): error TS2345: Argument of type 'Object' is not assi
     Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/remove/rimraf.ts(90,20): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/remove/rimraf.ts(93,13): error TS2339: Property 'unlink' does not exist on type 'Object'.
 lib/remove/rimraf.ts(95,16): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/remove/rimraf.ts(98,16): error TS2339: Property 'code' does not exist on type 'Object'.
@@ -550,7 +550,7 @@ lib/remove/rimraf.ts(121,15): error TS2339: Property 'stat' does not exist on ty
 lib/remove/rimraf.ts(121,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/remove/rimraf.ts(123,18): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/remove/rimraf.ts(125,17): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/remove/rimraf.ts(127,19): error TS2339: Property 'unlink' does not exist on type 'Object'.
 lib/remove/rimraf.ts(134,68): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/remove/rimraf.ts(135,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -689,10 +689,4 @@ lib/util/utimes.ts(19,18): error TS2345: Argument of type 'Number' is not assign
 lib/util/utimes.ts(20,3): error TS2322: Type 'void' is not assignable to type 'Number'.
 lib/util/utimes.ts(20,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

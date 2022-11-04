@@ -244,7 +244,7 @@ bigfraction.ts(388,19): error TS7053: Element implicitly has an 'any' type becau
   Property 'd' does not exist on type 'Object'.
 bigfraction.ts(388,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(390,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 bigfraction.ts(390,26): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
   Property 's' does not exist on type 'Object'.
 bigfraction.ts(390,35): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
@@ -788,7 +788,7 @@ fraction.min.ts(11,92): error TS2363: The right-hand side of an arithmetic opera
 fraction.min.ts(11,96): error TS2339: Property 'd' does not exist on type 'Error'.
 fraction.min.ts(11,98): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(11,100): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.min.ts(11,102): error TS2740: Type 'Error' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+fraction.min.ts(11,102): error TS2740: Type 'Error' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 fraction.min.ts(11,182): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(11,187): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(11,192): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
@@ -808,7 +808,7 @@ fraction.min.ts(11,378): error TS2363: The right-hand side of an arithmetic oper
 fraction.min.ts(11,386): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
 fraction.min.ts(11,429): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 fraction.min.ts(11,438): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 fraction.min.ts(11,446): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fraction.min.ts(11,470): error TS2339: Property 'd' does not exist on type 'Object'.
 fraction.min.ts(11,474): error TS2339: Property 'n' does not exist on type 'Object'.
@@ -1417,10 +1417,4 @@ fraction.ts(878,39): error TS2304: Cannot find name 'define'.
 fraction.ts(879,5): error TS2304: Cannot find name 'define'.
 fraction.ts(888,5): error TS7053: Element implicitly has an 'any' type because expression of type '"Fraction"' can't be used to index type 'Object'.
   Property 'Fraction' does not exist on type 'Object'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

@@ -6,7 +6,7 @@ examples/bench.ts(21,9): error TS2362: The left-hand side of an arithmetic opera
 examples/bench.ts(23,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/bench.ts(23,17): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/bench.ts(25,16): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 examples/bench.ts(28,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 examples/bench.ts(30,10): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 examples/bench.ts(32,55): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -44,7 +44,6 @@ index.ts(34,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(
 index.ts(40,38): error TS2339: Property 'basename' does not exist on type 'Object'.
 index.ts(44,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(49,67): error TS2339: Property 'basename' does not exist on type 'Object'.
-index.ts(54,14): error TS1056: Accessors are only available when targeting ECMAScript 5 and higher.
 index.ts(72,30): error TS2339: Property 'highWaterMark' does not exist on type '{}'.
 index.ts(75,13): error TS2339: Property 'root' does not exist on type 'Object'.
 index.ts(75,19): error TS2339: Property 'type' does not exist on type 'Object'.
@@ -95,10 +94,4 @@ index.ts(260,18): error TS2314: Generic type 'Array<T>' requires 1 type argument
 index.ts(268,10): error TS2339: Property 'promise' does not exist on type 'Function'.
 index.ts(269,10): error TS2339: Property 'ReaddirpStream' does not exist on type 'Function'.
 index.ts(270,10): error TS2339: Property 'default' does not exist on type 'Function'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

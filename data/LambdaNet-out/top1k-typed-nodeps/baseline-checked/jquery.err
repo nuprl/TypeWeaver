@@ -179,7 +179,7 @@ build/tasks/build.ts(66,29): error TS2339: Property 'option' does not exist on t
 build/tasks/build.ts(67,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build/tasks/build.ts(67,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 build/tasks/build.ts(68,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-build/tasks/build.ts(69,10): error TS2740: Type 'never[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+build/tasks/build.ts(69,10): error TS2740: Type 'never[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 build/tasks/build.ts(70,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build/tasks/build.ts(71,32): error TS2339: Property 'config' does not exist on type 'HTMLElement'.
 build/tasks/build.ts(75,42): error TS2339: Property 'slim' does not exist on type 'Object'.
@@ -189,8 +189,8 @@ build/tasks/build.ts(78,11): error TS7053: Element implicitly has an 'any' type 
   Property '*' does not exist on type 'Object'.
 build/tasks/build.ts(80,15): error TS2339: Property 'slim' does not exist on type 'Object'.
 build/tasks/build.ts(81,18): error TS2339: Property 'slim' does not exist on type 'Object'.
-build/tasks/build.ts(82,25): error TS2802: Type 'String' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
-build/tasks/build.ts(83,6): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+build/tasks/build.ts(83,6): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
 build/tasks/build.ts(94,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build/tasks/build.ts(100,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 build/tasks/build.ts(102,12): error TS2339: Property 'readdirSync' does not exist on type 'String'.
@@ -228,7 +228,6 @@ build/tasks/build.ts(240,10): error TS2339: Property 'verbose' does not exist on
 build/tasks/build.ts(249,32): error TS2339: Property 'join' does not exist on type 'String'.
 build/tasks/build.ts(258,11): error TS2339: Property 'config' does not exist on type 'HTMLElement'.
 build/tasks/build.ts(259,11): error TS2339: Property 'verbose' does not exist on type 'HTMLElement'.
-build/tasks/build.ts(262,27): error TS2802: Type 'String' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 build/tasks/build.ts(272,37): error TS2339: Property 'input' does not exist on type 'Object'.
 build/tasks/build.ts(278,37): error TS2339: Property 'input' does not exist on type 'Object'.
 build/tasks/build.ts(279,38): error TS2339: Property 'input' does not exist on type 'Object'.
@@ -331,7 +330,7 @@ build/tasks/testswarm.ts(51,20): error TS2339: Property 'runMax' does not exist 
 build/tasks/testswarm.ts(54,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build/tasks/testswarm.ts(56,12): error TS2339: Property 'log' does not exist on type 'Object'.
 src/ajax.ts(34,2): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-src/ajax.ts(41,2): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+src/ajax.ts(41,2): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/ajax.ts(49,14): error TS2339: Property 'href' does not exist on type 'HTMLElement'.
 src/ajax.ts(58,4): error TS2322: Type 'String' is not assignable to type 'Function'.
 src/ajax.ts(62,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -469,7 +468,7 @@ src/ajax.ts(537,60): error TS2339: Property 'type' does not exist on type 'Objec
 src/ajax.ts(540,5): error TS2339: Property 'dataTypes' does not exist on type 'Object'.
 src/ajax.ts(540,21): error TS2339: Property 'dataType' does not exist on type 'Object'.
 src/ajax.ts(543,10): error TS2339: Property 'crossDomain' does not exist on type 'Object'.
-src/ajax.ts(544,4): error TS2740: Type 'HTMLAnchorElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 41 more.
+src/ajax.ts(544,4): error TS2740: Type 'HTMLAnchorElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
 src/ajax.ts(550,15): error TS2339: Property 'href' does not exist on type 'String'.
 src/ajax.ts(550,24): error TS2339: Property 'url' does not exist on type 'Object'.
 src/ajax.ts(554,15): error TS2339: Property 'href' does not exist on type 'String'.
@@ -977,7 +976,7 @@ src/core.ts(218,3): error TS2322: Type 'false | Function' is not assignable to t
   Type 'boolean' is not assignable to type 'String'.
 src/core.ts(234,46): error TS2339: Property 'nonce' does not exist on type 'Object'.
 src/core.ts(234,55): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 src/core.ts(237,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/core.ts(242,24): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/core.ts(248,10): error TS2405: The left-hand side of a 'for...in' statement must be of type 'string' or 'any'.
@@ -1403,7 +1402,7 @@ src/data.ts(52,3): error TS2322: Type 'string | null' is not assignable to type 
   Type 'null' is not assignable to type 'String'.
 src/data.ts(52,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/data.ts(56,5): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+src/data.ts(56,5): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/data.ts(56,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 src/data.ts(62,4): error TS2322: Type 'undefined' is not assignable to type 'String'.
 src/data.ts(68,8): error TS2339: Property 'extend' does not exist on type 'Function'.
@@ -2691,7 +2690,7 @@ src/queue/delay.ts(14,25): error TS2769: No overload matches this call.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
   Overload 2 of 2, '(timeoutId: string | number | Timeout | undefined): void', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'string | number | Timeout | undefined'.
-src/selector.ts(19,5): error TS2740: Type 'Document' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+src/selector.ts(19,5): error TS2740: Type 'Document' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 src/selector.ts(20,65): error TS2339: Property 'msMatchesSelector' does not exist on type 'HTMLElement'.
 src/selector.ts(34,27): error TS2339: Property 'expando' does not exist on type 'Function'.
 src/selector.ts(38,2): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -2777,7 +2776,7 @@ src/selector.ts(282,6): error TS2349: This expression is not callable.
 src/selector.ts(284,11): error TS2454: Variable 'nid' is used before being assigned.
 src/selector.ts(284,11): error TS2367: This condition will always return 'false' since the types 'Number' and 'String' have no overlap.
 src/selector.ts(293,50): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'String'.
-  Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 src/selector.ts(303,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/selector.ts(309,38): error TS2339: Property 'cacheLength' does not exist on type 'Object'.
 src/selector.ts(312,11): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '(key: String, value: String) => Boolean'.
@@ -2805,7 +2804,7 @@ src/selector.ts(386,11): error TS2339: Property 'isDisabled' does not exist on t
 src/selector.ts(390,16): error TS2339: Property 'disabled' does not exist on type 'Object'.
 src/selector.ts(396,16): error TS2339: Property 'disabled' does not exist on type 'Object'.
 src/selector.ts(409,2): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/selector.ts(411,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/selector.ts(413,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/selector.ts(417,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -2830,7 +2829,7 @@ src/selector.ts(477,4): error TS7053: Element implicitly has an 'any' type becau
 src/selector.ts(483,4): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 src/selector.ts(487,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/selector.ts(490,15): error TS2339: Property 'expr' does not exist on type 'Function'.
 src/selector.ts(501,24): error TS2339: Property 'getElementById' does not exist on type 'Object'.
 src/selector.ts(502,32): error TS2339: Property 'getElementById' does not exist on type 'Object'.
@@ -3442,12 +3441,6 @@ src/wrap.ts(67,32): error TS2683: 'this' implicitly has type 'any' because it do
 src/wrapper.ts(24,27): error TS2339: Property 'document' does not exist on type 'String'.
 src/wrapper.ts(27,13): error TS2339: Property 'document' does not exist on type 'HTMLElement'.
 src/wrapper.ts(37,6): error TS2345: Argument of type 'typeof globalThis' is not assignable to parameter of type 'String'.
-  Type 'typeof globalThis' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'typeof globalThis' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 src/wrapper.ts(44,8): error TS2304: Cannot find name 'jQuery'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

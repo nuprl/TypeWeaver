@@ -51,7 +51,7 @@ index.ts(144,34): error TS7053: Element implicitly has an 'any' type because exp
   Property '4' does not exist on type 'Object'.
 index.ts(145,32): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
   Property '1' does not exist on type 'Object'.
-index.ts(146,7): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(146,7): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(146,36): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
   Property '2' does not exist on type 'Object'.
 index.ts(147,7): error TS2322: Type 'Number' is not assignable to type 'String'.
@@ -148,11 +148,5 @@ index.ts(240,31): error TS2345: Argument of type 'Number' is not assignable to p
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(241,2): error TS2322: Type 'string | String' is not assignable to type 'Number'.
   Type 'string' is not assignable to type 'Number'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17694,15): error TS2451: Cannot redeclare block-scoped variable 'name'.
 

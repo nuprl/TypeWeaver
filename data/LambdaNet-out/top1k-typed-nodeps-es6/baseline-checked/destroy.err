@@ -2,7 +2,7 @@ index.ts(37,22): error TS2345: Argument of type 'Function' is not assignable to 
   Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 index.ts(38,23): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
 index.ts(40,23): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(41,25): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
 index.ts(42,12): error TS2339: Property 'destroy' does not exist on type 'Function'.
 index.ts(45,22): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
@@ -52,10 +52,4 @@ index.ts(197,3): error TS2683: 'this' implicitly has type 'any' because it does 
 index.ts(205,26): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(206,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(208,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

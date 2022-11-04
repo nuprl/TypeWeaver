@@ -43,7 +43,7 @@ src/index.ts(100,10): error TS7009: 'new' expression, whose target lacks a const
 src/index.ts(109,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 src/index.ts(111,21): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 src/index.ts(111,33): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 src/index.ts(114,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/index.ts(115,25): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 src/index.ts(121,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
@@ -286,10 +286,4 @@ src/index.ts(630,44): error TS2339: Property '_chunkSize' does not exist on type
 src/index.ts(631,14): error TS2339: Property 'callback' does not exist on type 'Object'.
 src/index.ts(632,14): error TS2339: Property 'buffer' does not exist on type 'Object'.
 src/index.ts(633,7): error TS2322: Type 'undefined' is not assignable to type 'Boolean'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

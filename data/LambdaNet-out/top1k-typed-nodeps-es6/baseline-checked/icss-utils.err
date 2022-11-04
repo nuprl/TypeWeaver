@@ -23,7 +23,7 @@ src/extractICSS.ts(10,5): error TS7053: Element implicitly has an 'any' type bec
 src/extractICSS.ts(10,26): error TS2339: Property 'prop' does not exist on type 'Object'.
 src/extractICSS.ts(10,39): error TS2339: Property 'value' does not exist on type 'Object'.
 src/extractICSS.ts(21,76): error TS2322: Type 'string' is not assignable to type 'Number'.
-src/extractICSS.ts(23,9): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+src/extractICSS.ts(23,9): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/extractICSS.ts(25,52): error TS2304: Cannot find name 'Void'.
 src/extractICSS.ts(27,17): error TS2538: Type 'String' cannot be used as an index type.
 src/extractICSS.ts(28,19): error TS2538: Type 'String' cannot be used as an index type.
@@ -66,10 +66,4 @@ src/replaceValueSymbols.ts(7,46): error TS7053: Element implicitly has an 'any' 
 src/replaceValueSymbols.ts(11,32): error TS2339: Property 'index' does not exist on type 'Object'.
 src/replaceValueSymbols.ts(15,35): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
   Property '0' does not exist on type 'Object'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

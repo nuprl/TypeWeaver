@@ -8,7 +8,7 @@ ember-cli-build.ts(79,21): error TS2314: Generic type 'Array<T>' requires 1 type
 ember-cli-build.ts(100,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 ember-cli-build.ts(101,5): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-ember-cli-build.ts(114,5): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+ember-cli-build.ts(114,5): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/rsvp.ts(22,8): error TS2339: Property 'async' does not exist on type 'Object'.
 lib/rsvp.ts(23,8): error TS2339: Property 'after' does not exist on type 'Object'.
 lib/rsvp.ts(23,43): error TS2769: No overload matches this call.
@@ -25,10 +25,8 @@ lib/rsvp.ts(24,13): error TS2314: Generic type 'Array<T>' requires 1 type argume
 lib/rsvp.ts(26,67): error TS2339: Property 'async' does not exist on type 'Object'.
 lib/rsvp.ts(28,16): error TS2304: Cannot find name 'Void'.
 lib/rsvp.ts(29,10): error TS2339: Property 'on' does not exist on type 'Object'.
-lib/rsvp.ts(29,16): error TS2802: Type 'IArguments' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 lib/rsvp.ts(32,17): error TS2304: Cannot find name 'Void'.
 lib/rsvp.ts(33,10): error TS2339: Property 'off' does not exist on type 'Object'.
-lib/rsvp.ts(33,17): error TS2802: Type 'IArguments' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 lib/rsvp.ts(37,52): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
 lib/rsvp.ts(38,34): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
 lib/rsvp.ts(39,27): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
@@ -66,7 +64,7 @@ lib/rsvp/-internal.ts(85,36): error TS2345: Argument of type 'Object' is not ass
     Type 'Object' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lib/rsvp/-internal.ts(87,22): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/rsvp/-internal.ts(91,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/rsvp/-internal.ts(91,58): error TS2304: Cannot find name 'Void'.
 lib/rsvp/-internal.ts(99,23): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Function'.
@@ -144,6 +142,7 @@ lib/rsvp/asap.ts(14,7): error TS2322: Type '(Window & typeof globalThis) | undef
   Type 'undefined' is not assignable to type 'Object'.
 lib/rsvp/asap.ts(16,56): error TS2339: Property 'MutationObserver' does not exist on type 'Object'.
 lib/rsvp/asap.ts(16,90): error TS2339: Property 'WebKitMutationObserver' does not exist on type 'Object'.
+lib/rsvp/asap.ts(22,10): error TS2304: Cannot find name 'importScripts'.
 lib/rsvp/asap.ts(44,17): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/rsvp/asap.ts(44,27): error TS2351: This expression is not constructable.
   Type 'Boolean' has no construct signatures.
@@ -162,8 +161,7 @@ lib/rsvp/asap.ts(71,5): error TS7053: Element implicitly has an 'any' type becau
   No index signature with a parameter of type 'number' was found on type 'Object'.
 lib/rsvp/asap.ts(72,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
   No index signature with a parameter of type 'number' was found on type 'Object'.
-lib/rsvp/asap.ts(81,23): error TS2339: Property 'runOnLoop' does not exist on type 'Enumerator<any>'.
-lib/rsvp/asap.ts(81,42): error TS2339: Property 'runOnContext' does not exist on type 'Enumerator<any>'.
+lib/rsvp/asap.ts(80,18): error TS2304: Cannot find name 'Enumerator'.
 lib/rsvp/asap.ts(82,5): error TS2322: Type 'Function' is not assignable to type 'Boolean'.
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'Object' is not assignable to type 'boolean'.
@@ -172,11 +170,11 @@ lib/rsvp/asap.ts(97,3): error TS2322: Type 'Boolean' is not assignable to type '
 lib/rsvp/config.ts(9,50): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 lib/rsvp/config.ts(11,12): error TS2538: Type 'String' cannot be used as an index type.
 lib/rsvp/config.ts(13,19): error TS2538: Type 'String' cannot be used as an index type.
+lib/rsvp/defer.ts(37,47): error TS2304: Cannot find name 'Enumerator'.
 lib/rsvp/defer.ts(40,12): error TS2339: Property 'promise' does not exist on type 'Object'.
+lib/rsvp/defer.ts(40,44): error TS2304: Cannot find name 'Enumerator'.
 lib/rsvp/defer.ts(41,14): error TS2339: Property 'resolve' does not exist on type 'Object'.
 lib/rsvp/defer.ts(42,14): error TS2339: Property 'reject' does not exist on type 'Object'.
-lib/rsvp/defer.ts(45,3): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'Enumerator<any>': atEnd, item, moveFirst, moveNext
 lib/rsvp/enumerator.ts(18,15): error TS7006: Parameter 'Constructor' implicitly has an 'any' type.
 lib/rsvp/enumerator.ts(18,28): error TS7006: Parameter 'input' implicitly has an 'any' type.
 lib/rsvp/enumerator.ts(18,35): error TS7006: Parameter 'abortOnReject' implicitly has an 'any' type.
@@ -187,7 +185,6 @@ lib/rsvp/enumerator.ts(21,10): error TS2339: Property '_abortOnReject' does not 
 lib/rsvp/enumerator.ts(22,10): error TS2339: Property '_isUsingOwnPromise' does not exist on type 'Enumerator'.
 lib/rsvp/enumerator.ts(23,10): error TS2339: Property '_isUsingOwnResolve' does not exist on type 'Enumerator'.
 lib/rsvp/enumerator.ts(25,16): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
-lib/rsvp/enumerator.ts(25,19): error TS2802: Type 'IArguments' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher.
 lib/rsvp/enumerator.ts(28,9): error TS7006: Parameter 'Constructor' implicitly has an 'any' type.
 lib/rsvp/enumerator.ts(28,22): error TS7006: Parameter 'input' implicitly has an 'any' type.
 lib/rsvp/enumerator.ts(30,10): error TS2339: Property 'length' does not exist on type 'Enumerator'.
@@ -201,7 +198,7 @@ lib/rsvp/enumerator.ts(48,14): error TS2339: Property '_remaining' does not exis
 lib/rsvp/enumerator.ts(49,35): error TS2339: Property '_result' does not exist on type 'Enumerator'.
 lib/rsvp/enumerator.ts(50,20): error TS2339: Property 'promise' does not exist on type 'Enumerator'.
 lib/rsvp/enumerator.ts(50,29): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/rsvp/enumerator.ts(51,12): error TS2339: Property '_result' does not exist on type 'Enumerator'.
 lib/rsvp/enumerator.ts(55,24): error TS7006: Parameter 'entry' implicitly has an 'any' type.
 lib/rsvp/enumerator.ts(55,31): error TS7006: Parameter 'i' implicitly has an 'any' type.
@@ -252,7 +249,7 @@ lib/rsvp/enumerator.ts(131,19): error TS2538: Type 'String' cannot be used as an
 lib/rsvp/events.ts(3,34): error TS2339: Property '_promiseCallbacks' does not exist on type 'Object'.
 lib/rsvp/events.ts(6,5): error TS2739: Type '{}' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lib/rsvp/events.ts(6,24): error TS2339: Property '_promiseCallbacks' does not exist on type 'Object'.
-lib/rsvp/events.ts(9,3): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+lib/rsvp/events.ts(9,3): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/rsvp/events.ts(65,9): error TS7006: Parameter 'object' implicitly has an 'any' type.
 lib/rsvp/events.ts(90,6): error TS7006: Parameter 'eventName' implicitly has an 'any' type.
 lib/rsvp/events.ts(90,17): error TS7006: Parameter 'callback' implicitly has an 'any' type.
@@ -479,10 +476,4 @@ lib/rsvp/then.ts(35,3): error TS2322: Type 'Object' is not assignable to type 'S
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 server/index.ts(1,32): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 server/index.ts(3,9): error TS2339: Property 'redirect' does not exist on type 'Object'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

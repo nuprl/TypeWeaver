@@ -32,7 +32,7 @@ src/index.ts(127,44): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
 src/index.ts(130,24): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
 src/index.ts(137,48): error TS2345: Argument of type '{}' is not assignable to parameter of type 'String'.
-  Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/index.ts(140,45): error TS2339: Property 'nodes' does not exist on type 'Error'.
 src/index.ts(140,57): error TS7006: Parameter 'importPath' implicitly has an 'any' type.
 src/index.ts(144,26): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
@@ -54,7 +54,7 @@ src/topologicalSort.ts(18,13): error TS2538: Type 'Object' cannot be used as an 
 src/topologicalSort.ts(19,5): error TS2322: Type 'undefined' is not assignable to type 'String'.
 src/topologicalSort.ts(22,13): error TS2538: Type 'Object' cannot be used as an index type.
 src/topologicalSort.ts(24,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/topologicalSort.ts(24,26): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
@@ -63,16 +63,10 @@ src/topologicalSort.ts(30,9): error TS2538: Type 'Object' cannot be used as an i
 src/topologicalSort.ts(32,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/topologicalSort.ts(32,33): error TS2538: Type 'Object' cannot be used as an index type.
 src/topologicalSort.ts(36,11): error TS2739: Type 'String' is missing the following properties from type 'Error': name, message
-src/topologicalSort.ts(39,7): error TS2740: Type 'Error' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+src/topologicalSort.ts(39,7): error TS2740: Type 'Error' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/topologicalSort.ts(43,9): error TS2538: Type 'Object' cannot be used as an index type.
 src/topologicalSort.ts(48,58): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/topologicalSort.ts(49,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/topologicalSort.ts(50,9): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 src/topologicalSort.ts(52,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

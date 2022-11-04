@@ -225,7 +225,7 @@ benchmarks/run/init.ts(8,16): error TS2307: Cannot find module 'contra/emitter' 
 benchmarks/run/init.ts(9,16): error TS2307: Cannot find module 'event-emitter' or its corresponding type declarations.
 benchmarks/run/init.ts(10,16): error TS2307: Cannot find module 'fastemitter' or its corresponding type declarations.
 benchmarks/run/init.ts(11,20): error TS2306: File 'index.ts' is not a module.
-benchmarks/run/init.ts(22,3): error TS2740: Type 'EventEmitter' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+benchmarks/run/init.ts(22,3): error TS2740: Type 'EventEmitter' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 benchmarks/run/init.ts(37,48): error TS2304: Cannot find name 'Void'.
 benchmarks/run/init.ts(38,17): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
 benchmarks/run/init.ts(39,41): error TS2304: Cannot find name 'Void'.
@@ -346,7 +346,7 @@ index.ts(67,46): error TS2339: Property '_events' does not exist on type 'Object
 index.ts(68,16): error TS2339: Property '_events' does not exist on type 'Object'.
 index.ts(68,40): error TS2339: Property '_events' does not exist on type 'Object'.
 index.ts(70,3): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(80,52): error TS2304: Cannot find name 'Void'.
 index.ts(81,17): error TS2339: Property '_eventsCount' does not exist on type 'Object'.
 index.ts(81,45): error TS2339: Property '_events' does not exist on type 'Object'.
@@ -435,13 +435,7 @@ index.ts(287,37): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(305,20): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 index.ts(306,22): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(306,45): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(308,20): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 index.ts(335,3): error TS1258: A default export must be at the top level of a file or module declaration.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 

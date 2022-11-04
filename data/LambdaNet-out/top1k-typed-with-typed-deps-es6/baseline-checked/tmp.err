@@ -32,7 +32,7 @@ docs/scripts/prettify/prettify.ts(2,389): error TS2367: This condition will alwa
 docs/scripts/prettify/prettify.ts(2,398): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 docs/scripts/prettify/prettify.ts(2,407): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 docs/scripts/prettify/prettify.ts(2,415): error TS2322: Type 'string' is not assignable to type 'Number'.
-docs/scripts/prettify/prettify.ts(2,424): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+docs/scripts/prettify/prettify.ts(2,424): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 docs/scripts/prettify/prettify.ts(2,477): error TS2339: Property 'substring' does not exist on type 'Function'.
 docs/scripts/prettify/prettify.ts(2,591): error TS2403: Subsequent variable declarations must have the same type.  Variable 'a' must be of type 'Function', but here has type 'any[]'.
 docs/scripts/prettify/prettify.ts(3,89): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -188,7 +188,7 @@ docs/scripts/prettify/prettify.ts(11,502): error TS2339: Property 'keywords' doe
 docs/scripts/prettify/prettify.ts(12,441): error TS2304: Cannot find name 'Void'.
 docs/scripts/prettify/prettify.ts(12,474): error TS2304: Cannot find name 'Void'.
 docs/scripts/prettify/prettify.ts(12,557): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'String'.
-  Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+  Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 docs/scripts/prettify/prettify.ts(13,52): error TS2322: Type 'ChildNode | null' is not assignable to type 'HTMLElement'.
   Type 'null' is not assignable to type 'HTMLElement'.
 docs/scripts/prettify/prettify.ts(13,69): error TS2322: Type 'ChildNode | null' is not assignable to type 'HTMLElement'.
@@ -249,7 +249,7 @@ docs/scripts/prettify/prettify.ts(15,579): error TS2304: Cannot find name 'Void'
 docs/scripts/prettify/prettify.ts(15,591): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 docs/scripts/prettify/prettify.ts(16,3): error TS2339: Property 'g' does not exist on type 'Object'.
 docs/scripts/prettify/prettify.ts(16,13): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 docs/scripts/prettify/prettify.ts(16,27): error TS2339: Property 'h' does not exist on type 'Object'.
 docs/scripts/prettify/prettify.ts(16,42): error TS2339: Property 'a' does not exist on type 'String'.
 docs/scripts/prettify/prettify.ts(16,46): error TS2339: Property 'a' does not exist on type 'Object'.
@@ -328,7 +328,7 @@ docs/scripts/prettify/prettify.ts(18,104): error TS2314: Generic type 'Array<T>'
 docs/scripts/prettify/prettify.ts(18,372): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 docs/scripts/prettify/prettify.ts(19,4): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 docs/scripts/prettify/prettify.ts(19,282): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-docs/scripts/prettify/prettify.ts(19,369): error TS2740: Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 35 more.
+docs/scripts/prettify/prettify.ts(19,369): error TS2740: Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 docs/scripts/prettify/prettify.ts(20,4): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 docs/scripts/prettify/prettify.ts(20,186): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 docs/scripts/prettify/prettify.ts(20,410): error TS2345: Argument of type '{ keywords: any[]; hashComments: boolean; cStyleComments: boolean; multiLineStrings: boolean; regexLiterals: boolean; }' is not assignable to parameter of type 'String'.
@@ -523,7 +523,7 @@ lib/tmp.ts(269,36): error TS2345: Argument of type 'unknown' is not assignable t
 lib/tmp.ts(272,21): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
   Property '1' does not exist on type 'Object'.
 lib/tmp.ts(276,22): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Object'.
-lib/tmp.ts(298,9): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 42 more.
+lib/tmp.ts(298,9): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/tmp.ts(298,38): error TS2554: Expected 4 arguments, but got 3.
 lib/tmp.ts(299,9): error TS2322: Type 'Function' is not assignable to type 'String'.
 lib/tmp.ts(299,76): error TS2322: Type 'String' is not assignable to type 'string'.
@@ -653,10 +653,4 @@ lib/tmp.ts(656,21): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'Signals'.
 lib/tmp.ts(753,12): error TS2554: Expected 1 arguments, but got 0.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(11,25): error TS2304: Cannot find name 'AggregateErrorConstructor'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(126,42): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(127,47): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(128,50): error TS2304: Cannot find name 'AggregateError'.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(418,37): error TS2550: Property 'any' does not exist on type 'PromiseConstructor'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
-../../../../node_modules/@types/get-intrinsic/internal/intrinsics.d.ts(514,62): error TS2550: Property 'replaceAll' does not exist on type 'String'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2021' or later.
 
