@@ -184,9 +184,10 @@ class TypeInference:
         self.type_log.clear()
         lines = p.read_text().splitlines()
         lines = [_templatize_function(line) for line in lines]
-        return self._infill(
-            "\n".join(lines), infill_marker="???"
-        )
+        template = "\n".join(lines)
+        if "???" not in template:
+            return template
+        return self._infill(template, infill_marker="???")
 
 def _parse_args():
     parser = argparse.ArgumentParser(
