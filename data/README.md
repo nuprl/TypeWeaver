@@ -173,8 +173,17 @@ If the names are different, then the package _may_ be a monorepo.
 
 ### Deleting test files and directories
 
-Directories named `test`, `tests`, or `__tests__` were deleted.
-Files named `test.js` were also deleted.
+Directories named `test`, `tests`, `__tests__`, or `spec` were deleted.
+Files named `test.js` or `tests.js` were also deleted.
+
+Files matching the following were deleted:
+
+  * `*test262*.js`
+  * `test-*.js`
+  * `*-test.js`
+  * `*.test-d.ts`
+  * `*.test.js`
+  * `*.spec.js`
 
 ### Manual reclassification
 
