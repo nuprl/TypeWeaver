@@ -1,0 +1,69 @@
+lib/base64-vlq.ts(45,12): error TS2345: Argument of type '(ch: number, index: number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+  Types of parameters 'ch' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'number'.
+lib/base64-vlq.ts(46,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
+  No index signature with a parameter of type 'number' was found on type '{}'.
+lib/base64-vlq.ts(47,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
+  No index signature with a parameter of type 'number' was found on type '{}'.
+lib/base64-vlq.ts(54,8): error TS2339: Property 'encode' does not exist on type '{}'.
+lib/base64-vlq.ts(56,12): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
+  No index signature with a parameter of type 'number' was found on type '{}'.
+lib/base64-vlq.ts(64,8): error TS2339: Property 'decode' does not exist on type '{}'.
+lib/base64-vlq.ts(66,12): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
+  No index signature with a parameter of type 'number' was found on type '{}'.
+lib/base64-vlq.ts(139,23): error TS2339: Property 'encode' does not exist on type '{}'.
+lib/base64-vlq.ts(151,21): error TS2339: Property 'length' does not exist on type 'number'.
+lib/base64-vlq.ts(160,20): error TS2339: Property 'decode' does not exist on type '{}'.
+lib/base64-vlq.ts(160,32): error TS2339: Property 'charAt' does not exist on type 'number'.
+lib/base64-vlq.ts(167,13): error TS2339: Property 'value' does not exist on type 'number'.
+lib/base64-vlq.ts(168,13): error TS2339: Property 'rest' does not exist on type 'number'.
+lib/base64-vlq.ts(168,25): error TS2339: Property 'slice' does not exist on type 'number'.
+lib/fromStringWithSourceMap.ts(7,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
+lib/fromStringWithSourceMap.ts(8,24): error TS2307: Cannot find module './SourceNode' or its corresponding type declarations.
+lib/fromStringWithSourceMap.ts(9,22): error TS2307: Cannot find module './CodeNode' or its corresponding type declarations.
+lib/fromStringWithSourceMap.ts(10,27): error TS2307: Cannot find module './SourceListMap' or its corresponding type declarations.
+lib/fromStringWithSourceMap.ts(12,64): error TS2304: Cannot find name 'SourceMap'.
+lib/fromStringWithSourceMap.ts(12,81): error TS2304: Cannot find name 'SourceMap'.
+lib/fromStringWithSourceMap.ts(17,8): error TS7034: Variable 'nodes' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/fromStringWithSourceMap.ts(18,6): error TS7034: Variable 'currentNode' implicitly has type 'any' in some locations where its type cannot be determined.
+lib/fromStringWithSourceMap.ts(21,6): error TS7034: Variable 'currentSourceNodeLine' implicitly has type 'any' in some locations where its type cannot be determined.
+lib/fromStringWithSourceMap.ts(22,34): error TS2304: Cannot find name 'Code'.
+lib/fromStringWithSourceMap.ts(23,6): error TS7005: Variable 'currentNode' implicitly has an 'any' type.
+lib/fromStringWithSourceMap.ts(23,21): error TS7005: Variable 'currentNode' implicitly has an 'any' type.
+lib/fromStringWithSourceMap.ts(24,4): error TS7005: Variable 'currentNode' implicitly has an 'any' type.
+lib/fromStringWithSourceMap.ts(25,13): error TS7005: Variable 'currentNode' implicitly has an 'any' type.
+lib/fromStringWithSourceMap.ts(25,28): error TS7005: Variable 'currentNode' implicitly has an 'any' type.
+lib/fromStringWithSourceMap.ts(26,4): error TS7005: Variable 'currentNode' implicitly has an 'any' type.
+lib/fromStringWithSourceMap.ts(27,4): error TS7005: Variable 'currentSourceNodeLine' implicitly has an 'any' type.
+lib/fromStringWithSourceMap.ts(33,36): error TS2304: Cannot find name 'SourceCode'.
+lib/fromStringWithSourceMap.ts(33,57): error TS2304: Cannot find name 'Source'.
+lib/fromStringWithSourceMap.ts(33,82): error TS2304: Cannot find name 'OriginalSource'.
+lib/fromStringWithSourceMap.ts(33,113): error TS2552: Cannot find name 'LinePosition'. Did you mean 'InsertPosition'?
+lib/fromStringWithSourceMap.ts(34,6): error TS7005: Variable 'currentNode' implicitly has an 'any' type.
+lib/fromStringWithSourceMap.ts(34,21): error TS7005: Variable 'currentNode' implicitly has an 'any' type.
+lib/fromStringWithSourceMap.ts(35,4): error TS7005: Variable 'currentNode' implicitly has an 'any' type.
+lib/fromStringWithSourceMap.ts(36,4): error TS7005: Variable 'currentSourceNodeLine' implicitly has an 'any' type.
+lib/fromStringWithSourceMap.ts(38,4): error TS7005: Variable 'currentNode' implicitly has an 'any' type.
+lib/fromStringWithSourceMap.ts(39,4): error TS7005: Variable 'currentSourceNodeLine' implicitly has an 'any' type.
+lib/fromStringWithSourceMap.ts(52,3): error TS2322: Type '{ value: number; rest: string; }' is not assignable to type 'string'.
+lib/fromStringWithSourceMap.ts(54,17): error TS2339: Property 'rest' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(55,46): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
+lib/fromStringWithSourceMap.ts(67,27): error TS7005: Variable 'nodes' implicitly has an 'any[]' type.
+lib/fromStringWithSourceMap.ts(69,14): error TS2339: Property 'rest' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(69,30): error TS2339: Property 'rest' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(70,29): error TS2339: Property 'rest' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(72,15): error TS2339: Property 'rest' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(74,14): error TS2339: Property 'rest' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(75,12): error TS2339: Property 'rest' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(75,27): error TS2339: Property 'rest' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(79,28): error TS2339: Property 'rest' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(80,29): error TS2339: Property 'value' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(84,14): error TS2339: Property 'rest' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(84,30): error TS2339: Property 'rest' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(85,29): error TS2339: Property 'rest' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(86,27): error TS2339: Property 'value' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(92,14): error TS2339: Property 'rest' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(93,25): error TS2339: Property 'rest' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(94,12): error TS2339: Property 'rest' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(94,46): error TS2339: Property 'rest' does not exist on type 'string'.
+

@@ -1,0 +1,29 @@
+index.ts(4,15): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+index.ts(7,20): error TS2552: Cannot find name 'unction'. Did you mean 'Function'?
+index.ts(7,36): error TS2304: Cannot find name 'ny'.
+index.ts(12,15): error TS2345: Argument of type '(result: Promise<any>) => Promise<any>' is not assignable to parameter of type '(value: unknown) => any'.
+  Types of parameters 'result' and 'value' are incompatible.
+    Type 'unknown' is not assignable to type 'Promise<any>'.
+index.ts(15,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+index.ts(18,26): error TS2304: Cannot find name 'DelayedTask'.
+index.ts(55,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(60,24): error TS2552: Cannot find name 'unction'. Did you mean 'Function'?
+index.ts(70,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(77,5): error TS2322: Type 'Function' is not assignable to type 'number'.
+index.ts(98,74): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(99,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(100,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(101,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(102,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(107,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(108,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(109,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(109,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(110,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(111,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+perf.ts(5,7): error TS7034: Variable 'promises' implicitly has type 'any[]' in some locations where its type cannot be determined.
+perf.ts(13,18): error TS7005: Variable 'promises' implicitly has an 'any[]' type.
+perf.ts(16,46): error TS7006: Parameter 'fn' implicitly has an 'any' type.
+perf.ts(22,18): error TS7005: Variable 'promises' implicitly has an 'any[]' type.
+perf.ts(25,51): error TS7006: Parameter 'fn' implicitly has an 'any' type.
+

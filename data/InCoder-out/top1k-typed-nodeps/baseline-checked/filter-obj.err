@@ -1,0 +1,13 @@
+benchmark.ts(1,27): error TS2307: Cannot find module 'filter-obj' or its corresponding type declarations.
+benchmark.ts(31,1): error TS2554: Expected 3 arguments, but got 2.
+index.ts(15,8): error TS2532: Object is possibly 'undefined'.
+index.ts(16,19): error TS7053: Element implicitly has an 'any' type because expression of type 'string | symbol' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+index.ts(18,41): error TS2345: Argument of type 'PropertyDescriptor | undefined' is not assignable to parameter of type 'PropertyDescriptor & ThisType<any>'.
+  Type 'undefined' is not assignable to type 'PropertyDescriptor & ThisType<any>'.
+    Type 'undefined' is not assignable to type 'PropertyDescriptor'.
+index.ts(30,30): error TS7006: Parameter 'key' implicitly has an 'any' type.
+index.ts(33,30): error TS7006: Parameter 'key' implicitly has an 'any' type.
+index.ts(33,35): error TS7006: Parameter 'value' implicitly has an 'any' type.
+index.ts(33,42): error TS7006: Parameter 'object' implicitly has an 'any' type.
+

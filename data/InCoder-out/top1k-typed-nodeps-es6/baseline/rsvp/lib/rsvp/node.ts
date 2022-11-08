@@ -1,0 +1,239 @@
+import Promise from './promise';
+import {
+  noop,
+  resolve,
+  reject,
+} from './-internal';
+
+function makeObject(_: Object,  argumentNames: Array<string>) {
+  let obj = {};
+
+  for (let i = 0; i < argumentNames.length; i++) {
+    let name = argumentNames[i];
+    obj[name] = _[i + 1];
+  }
+
+  return obj;
+}
+
+function arrayResult(_: number) {
+  let length = _.length;
+  let args = new Array(length - 1);
+
+  for (let i = 1; i < length; i++) {
+    args[i - 1] = _[i];
+  }
+
+  return args;
+}
+
+function wrapThenable(then: Thenable<any>,  promise: Promise<any>) {
+  return {
+    then(onFulFillment, onRejection) {
+      return then.call(promise, onFulFillment, onRejection);
+    }
+  };
+}
+
+/**
+  `denodeify` takes a 'node-style' function and returns a function that
+  will return an `Promise`. You can use `denodeify` in Node.js or the
+  browser when you'd prefer to use promises over using callbacks. For example,
+  `denodeify` transforms the following:
+
+  ```javascript
+  let fs = require('fs');
+
+  fs.readFile('myfile.txt', function(err: any,  data: any){
+    if (err) return handleError(err);
+    handleData(data);
+  });
+  ```
+
+  into:
+
+  ```javascript
+  let fs = require('fs');
+  let readFile = denodeify(fs.readFile);
+
+  readFile('myfile.txt').then(handleData, handleError);
+  ```
+
+  If the node function has multiple success parameters, then `denodeify`
+  just returns the first one:
+
+  ```javascript
+  let request = denodeify(require('request'));
+
+  request('http://example.com').then(function(res: esponse) {
+    // ...
+  });
+  ```
+
+  However, if you need all success parameters, setting `denodeify`'s
+  second parameter to `true` causes it to return all success parameters
+  as an array:
+
+  ```javascript
+  let request = denodeify(require('request'), true);
+
+  request('http://example.com').then(function(result: any) {
+    // result[0] -> res
+    // result[1] -> body
+  });
+  ```
+
+  Or if you pass it an array with names it returns the parameters as a hash:
+
+  ```javascript
+  let request = denodeify(require('request'), ['res', 'body']);
+
+  request('http://example.com').then(function(result: any) {
+    // result.res
+    // result.body
+  });
+  ```
+
+  Sometimes you need to retain the `this`:
+
+  ```javascript
+  let app = require('express')();
+  let render = denodeify(app.render.bind(app));
+  ```
+
+  The denodified function inherits from the original function. It works in all
+  environments, except IE 10 and below. Consequently all properties of the original
+  function are available to you. However, any properties you change on the
+  denodeified function won't be changed on the original function. Example:
+
+  ```javascript
+  let request = denodeify(require('request')),
+      cookieJar = request.jar(); // <- Inheritance is used here
+
+  request('http://example.com', {jar: cookieJar}).then(function(res: Response) {
+    // cookieJar.cookies holds now the cookies returned by example.com
+  });
+  ```
+
+  Using `denodeify` makes it easier to compose asynchronous operations instead
+  of using callbacks. For example, instead of:
+
+  ```javascript
+  let fs = require('fs');
+
+  fs.readFile('myfile.txt', function(err: ny,  data: ny){
+    if (err) { ... } // Handle error
+    fs.writeFile('myfile2.txt', data, function(err: rror){
+      if (err) { ... } // Handle error
+      console.log('done')
+    });
+  });
+  ```
+
+  you can chain the operations together using `then` from the returned promise:
+
+  ```javascript
+  let fs = require('fs');
+  let readFile = denodeify(fs.readFile);
+  let writeFile = denodeify(fs.writeFile);
+
+  readFile('myfile.txt').then(function(data: any){
+    return writeFile('myfile2.txt', data);
+  }).then(function(){
+    console.log('done')
+  }).catch(function(error: Error){
+    // Handle error
+  });
+  ```
+
+  @method denodeify
+  @public
+  @static
+  @for rsvp
+  @param {Function} nodeFunc a 'node-style' function that takes a callback as
+  its last argument. The callback expects an error to be passed as its first
+  argument (if an error occurred, otherwise null), and the value from the
+  operation as its second argument ('function(err: Error,  value: any){ }').
+  @param {Boolean|Array} [options] An optional paramter that if set
+  to `true` causes the promise to fulfill with the callback's success arguments
+  as an array. This is useful if the node function has multiple success
+  paramters. If you set this paramter to an array with names, the promise will
+  fulfill with a hash with these names as keys and the success parameters as
+  values.
+  @return {Function} a function that wraps `nodeFunc` to return a `Promise`
+*/
+export default function denodeify(nodeFunc: Function,  options: Object) {
+  let fn = function() {
+    let l = arguments.length;
+    let args = new Array(l + 1);
+    let promiseInput = false;
+
+    for (let i = 0; i < l; ++i) {
+      let arg = arguments[i];
+      let then;
+
+      // TODO: this code really needs to be cleaned up
+      if (!promiseInput) {
+        if (arg !== null && typeof arg === 'object') {
+          if (arg.constructor === Promise) {
+            promiseInput = true;
+          } else {
+            try {
+              promiseInput = arg.then;
+            } catch(error) {
+              let p = new Promise(noop);
+              reject(p, error);
+              return p;
+            }
+          }
+        } else {
+          promiseInput = false;
+        }
+        if (promiseInput && promiseInput !== true) {
+          arg = wrapThenable(promiseInput, arg);
+        }
+      }
+      args[i] = arg;
+    }
+
+    let promise = new Promise(noop);
+
+    args[l] = function(err: Error,  val: Object) {
+      if (err) {
+        reject(promise, err);
+      } else if (options === undefined) {
+        resolve(promise, val);
+      } else if (options === true) {
+        resolve(promise, arrayResult(arguments));
+      } else if (Array.isArray(options)) {
+        resolve(promise, makeObject(arguments, options));
+      } else {
+        resolve(promise, val);
+      }
+    };
+
+    if (promiseInput) {
+      return handlePromiseInput(promise, args, nodeFunc, this);
+    } else {
+      return handleValueInput(promise, args, nodeFunc, this);
+    }
+  };
+
+  fn.__proto__ = nodeFunc;
+
+  return fn;
+}
+
+function handleValueInput(promise: Promise,  args: any[],  nodeFunc: Function,  self: any) {
+  try {
+    nodeFunc.apply(self, args);
+  } catch (error) {
+    reject(promise, error);
+  }
+  return promise;
+}
+
+function handlePromiseInput(promise: Promise<any>,  args: any[],  nodeFunc: Function,  self: any){
+  return Promise.all(args)
+    .then(args => handleValueInput(promise, args, nodeFunc, self));
+}

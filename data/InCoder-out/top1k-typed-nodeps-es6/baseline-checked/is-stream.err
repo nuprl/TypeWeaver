@@ -1,0 +1,13 @@
+index.ts(1,34): error TS2833: Cannot find namespace 'odeJS'. Did you mean 'NodeJS'?
+index.ts(9,13): error TS2339: Property 'writable' does not exist on type 'ReadableStream'.
+index.ts(10,20): error TS2339: Property '_write' does not exist on type 'ReadableStream'.
+index.ts(11,20): error TS2339: Property '_writableState' does not exist on type 'ReadableStream'.
+index.ts(17,20): error TS2551: Property '_read' does not exist on type 'ReadableStream'. Did you mean 'read'?
+index.ts(18,20): error TS2339: Property '_readableState' does not exist on type 'ReadableStream'.
+index.ts(22,26): error TS2345: Argument of type 'WritableStream<any>' is not assignable to parameter of type 'ReadableStream'.
+  Type 'WritableStream<any>' is missing the following properties from type 'ReadableStream': readable, read, setEncoding, pause, and 22 more.
+index.ts(23,23): error TS2345: Argument of type 'WritableStream<any>' is not assignable to parameter of type 'ReadableStream'.
+index.ts(27,24): error TS2345: Argument of type 'ReadableStream' is not assignable to parameter of type 'WritableStream<any>'.
+  Type 'ReadableStream' is missing the following properties from type 'WritableStream<any>': locked, abort, close, getWriter
+index.ts(28,20): error TS2339: Property '_transform' does not exist on type 'ReadableStream'.
+

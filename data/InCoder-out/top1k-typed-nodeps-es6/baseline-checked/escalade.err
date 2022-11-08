@@ -1,0 +1,29 @@
+bench/index.ts(3,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+bench/index.ts(4,18): error TS2307: Cannot find module 'escalade/sync' or its corresponding type declarations.
+bench/index.ts(5,22): error TS2307: Cannot find module 'escalade' or its corresponding type declarations.
+bench/index.ts(6,20): error TS2307: Cannot find module 'find-up' or its corresponding type declarations.
+bench/index.ts(11,16): error TS7006: Parameter 'name' implicitly has an 'any' type.
+bench/index.ts(11,25): error TS7006: Parameter 'dir' implicitly has an 'any' type.
+bench/index.ts(11,30): error TS7006: Parameter 'files' implicitly has an 'any' type.
+bench/index.ts(14,13): error TS7006: Parameter 'x' implicitly has an 'any' type.
+bench/index.ts(15,14): error TS7006: Parameter 'x' implicitly has an 'any' type.
+bench/index.ts(16,18): error TS7006: Parameter 'x' implicitly has an 'any' type.
+bench/index.ts(17,19): error TS7006: Parameter 'x' implicitly has an 'any' type.
+bench/index.ts(20,19): error TS2304: Cannot find name 'ring'.
+bench/index.ts(28,25): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ 'find-up': (x: any) => any; escalade: (x: any) => any; 'find-up.sync': (x: any) => any; 'escalade/sync': (x: any) => any; }'.
+  No index signature with a parameter of type 'string' was found on type '{ 'find-up': (x: any) => any; escalade: (x: any) => any; 'find-up.sync': (x: any) => any; 'escalade/sync': (x: any) => any; }'.
+bench/index.ts(35,48): error TS2571: Object is of type 'unknown'.
+bench/index.ts(39,40): error TS7006: Parameter 'e' implicitly has an 'any' type.
+bench/index.ts(46,5): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ 'find-up': (x: any) => any; escalade: (x: any) => any; 'find-up.sync': (x: any) => any; 'escalade/sync': (x: any) => any; }'.
+  No index signature with a parameter of type 'string' was found on type '{ 'find-up': (x: any) => any; escalade: (x: any) => any; 'find-up.sync': (x: any) => any; 'escalade/sync': (x: any) => any; }'.
+bench/index.ts(50,11): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ 'find-up': (x: any) => any; escalade: (x: any) => any; 'find-up.sync': (x: any) => any; 'escalade/sync': (x: any) => any; }'.
+  No index signature with a parameter of type 'string' was found on type '{ 'find-up': (x: any) => any; escalade: (x: any) => any; 'find-up.sync': (x: any) => any; 'escalade/sync': (x: any) => any; }'.
+bench/index.ts(63,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
+bench/index.ts(64,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
+bench/index.ts(65,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
+bench/load.ts(2,20): error TS2307: Cannot find module 'find-up' or its corresponding type declarations.
+bench/load.ts(6,22): error TS2307: Cannot find module 'escalade' or its corresponding type declarations.
+bench/load.ts(10,18): error TS2307: Cannot find module 'escalade/sync' or its corresponding type declarations.
+src/async.ts(9,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+src/sync.ts(5,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+

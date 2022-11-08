@@ -1,0 +1,13 @@
+index.ts(1,5): error TS7034: Variable 'r' implicitly has type 'any' in some locations where its type cannot be determined.
+index.ts(4,8): error TS7005: Variable 'r' implicitly has an 'any' type.
+index.ts(5,9): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+index.ts(5,18): error TS2345: Argument of type 'null' is not assignable to parameter of type 'number'.
+index.ts(7,10): error TS7005: Variable 'r' implicitly has an 'any' type.
+index.ts(11,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(38,19): error TS2551: Property 'msCrypto' does not exist on type 'Window & typeof globalThis'. Did you mean 'Crypto'?
+index.ts(38,36): error TS2551: Property 'msCrypto' does not exist on type 'Window & typeof globalThis'. Did you mean 'Crypto'?
+index.ts(42,12): error TS2551: Property 'msCrypto' does not exist on type 'Window & typeof globalThis'. Did you mean 'Crypto'?
+index.ts(56,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'any'.
+index.ts(57,23): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
+index.ts(61,21): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
+

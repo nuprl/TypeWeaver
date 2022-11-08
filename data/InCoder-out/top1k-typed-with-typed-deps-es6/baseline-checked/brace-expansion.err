@@ -1,0 +1,27 @@
+index.ts(13,19): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+index.ts(14,16): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+index.ts(15,11): error TS2339: Property 'charCodeAt' does not exist on type 'number'.
+index.ts(22,14): error TS2339: Property 'split' does not exist on type 'string | string[]'.
+  Property 'split' does not exist on type 'string[]'.
+index.ts(33,14): error TS2339: Property 'split' does not exist on type 'string | string[]'.
+  Property 'split' does not exist on type 'string[]'.
+index.ts(50,9): error TS7034: Variable 'parts' implicitly has type 'any[]' in some locations where its type cannot be determined.
+index.ts(51,32): error TS2345: Argument of type 'string | number' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
+index.ts(54,16): error TS2339: Property 'split' does not exist on type 'string | number'.
+  Property 'split' does not exist on type 'number'.
+index.ts(66,3): error TS7005: Variable 'parts' implicitly has an 'any[]' type.
+index.ts(66,20): error TS7005: Variable 'parts' implicitly has an 'any[]' type.
+index.ts(68,10): error TS7005: Variable 'parts' implicitly has an 'any[]' type.
+index.ts(102,24): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'string'.
+index.ts(125,10): error TS7023: 'expand' implicitly has return type 'any' because it does not have a return type annotation and is referenced directly or indirectly in one of its return expressions.
+index.ts(129,32): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+  Type 'string[]' is not assignable to type 'string'.
+index.ts(134,9): error TS7022: 'post' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
+index.ts(152,16): error TS2554: Expected 2 arguments, but got 1.
+index.ts(157,9): error TS7034: Variable 'n' implicitly has type 'any' in some locations where its type cannot be determined.
+index.ts(167,28): error TS7005: Variable 'n' implicitly has an 'any' type.
+index.ts(175,9): error TS7034: Variable 'N' implicitly has type 'any[]' in some locations where its type cannot be determined.
+index.ts(219,9): error TS7005: Variable 'N' implicitly has an 'any[]' type.
+index.ts(219,22): error TS7005: Variable 'N' implicitly has an 'any[]' type.
+

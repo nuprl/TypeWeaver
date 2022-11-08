@@ -1,0 +1,27 @@
+cache.ts(5,39): error TS2304: Cannot find name 'Path'.
+cache.ts(8,24): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+cache.ts(24,15): error TS2571: Object is of type 'unknown'.
+cache.ts(57,45): error TS2339: Property 'changed' does not exist on type '{ key: File; changed: boolean | undefined; meta: any; } | { key: File; notFound: boolean; err: unknown; }'.
+  Property 'changed' does not exist on type '{ key: File; notFound: boolean; err: unknown; }'.
+cache.ts(79,61): error TS2304: Cannot find name 'Entry'.
+cache.ts(81,35): error TS2345: Argument of type 'any' is not assignable to parameter of type 'never'.
+cache.ts(85,36): error TS2345: Argument of type 'any' is not assignable to parameter of type 'never'.
+cache.ts(88,36): error TS2345: Argument of type 'any' is not assignable to parameter of type 'never'.
+cache.ts(110,74): error TS2503: Cannot find namespace 'fs'.
+cache.ts(127,41): error TS2538: Type 'File' cannot be used as an index type.
+cache.ts(156,41): error TS2538: Type 'File' cannot be used as an index type.
+cache.ts(179,36): error TS2304: Cannot find name 'Entry'.
+cache.ts(182,33): error TS2304: Cannot find name 'Entry'.
+cache.ts(197,34): error TS2345: Argument of type '(file: File) => { key: File; changed: boolean | undefined; meta: any; } | { key: File; notFound: boolean; err: unknown; }' is not assignable to parameter of type '(value: string, index: number, array: string[]) => { key: File; changed: boolean | undefined; meta: any; } | { key: File; notFound: boolean; err: unknown; }'.
+  Types of parameters 'file' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'File'.
+cache.ts(212,41): error TS2304: Cannot find name 'EntryName'.
+cache.ts(213,16): error TS7053: Element implicitly has an 'any' type because expression of type 'EntryName' can't be used to index type '{}'.
+cache.ts(233,59): error TS2304: Cannot find name 'CacheEntry'.
+cache.ts(242,63): error TS2304: Cannot find name 'CacheEntry'.
+cache.ts(271,28): error TS7053: Element implicitly has an 'any' type because expression of type 'string | symbol' can't be used to index type '{}'.
+  No index signature with a parameter of type 'string' was found on type '{}'.
+cache.ts(281,17): error TS2571: Object is of type 'unknown'.
+perf.ts(12,30): error TS2554: Expected 2 arguments, but got 1.
+perf.ts(17,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'File'.
+

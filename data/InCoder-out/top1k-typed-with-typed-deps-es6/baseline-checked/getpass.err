@@ -1,0 +1,26 @@
+lib/index.ts(54,8): error TS2339: Property 'write' does not exist on type 'WritableStream<any>'.
+lib/index.ts(55,8): error TS2339: Property 'resume' does not exist on type 'ReadableStream<any>'.
+lib/index.ts(56,8): error TS2339: Property 'setRawMode' does not exist on type 'ReadableStream<any>'.
+lib/index.ts(57,8): error TS2339: Property 'resume' does not exist on type 'ReadableStream<any>'.
+lib/index.ts(58,8): error TS2339: Property 'setEncoding' does not exist on type 'ReadableStream<any>'.
+lib/index.ts(61,8): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
+lib/index.ts(89,9): error TS2339: Property 'write' does not exist on type 'WritableStream<any>'.
+lib/index.ts(90,9): error TS2339: Property 'setRawMode' does not exist on type 'ReadableStream<any>'.
+lib/index.ts(91,9): error TS2339: Property 'pause' does not exist on type 'ReadableStream<any>'.
+lib/index.ts(92,9): error TS2339: Property 'removeListener' does not exist on type 'ReadableStream<any>'.
+lib/index.ts(93,29): error TS2367: This condition will always return 'true' since the types 'WritableStream<any>' and 'ReadableStream<any>' have no overlap.
+lib/index.ts(94,10): error TS2339: Property 'end' does not exist on type 'WritableStream<any>'.
+lib/index.ts(95,22): error TS2345: Argument of type 'WritableStream<any>' is not assignable to parameter of type 'number'.
+lib/index.ts(98,10): error TS2339: Property 'end' does not exist on type 'ReadableStream<any>'.
+lib/index.ts(99,22): error TS2345: Argument of type 'ReadableStream<any>' is not assignable to parameter of type 'number'.
+lib/index.ts(106,32): error TS2345: Argument of type '(err: Error, rttyfd: number) => void' is not assignable to parameter of type '(err: ErrnoException | null, fd: number) => void'.
+  Types of parameters 'err' and 'err' are incompatible.
+    Type 'ErrnoException | null' is not assignable to type 'Error'.
+      Type 'null' is not assignable to type 'Error'.
+lib/index.ts(107,20): error TS2339: Property 'code' does not exist on type 'Error'.
+lib/index.ts(107,45): error TS2339: Property 'code' does not exist on type 'Error'.
+lib/index.ts(114,33): error TS2345: Argument of type '(err3: Error, wttyfd: number) => void' is not assignable to parameter of type '(err: ErrnoException | null, fd: number) => void'.
+  Types of parameters 'err3' and 'err' are incompatible.
+    Type 'ErrnoException | null' is not assignable to type 'Error'.
+      Type 'null' is not assignable to type 'Error'.
+

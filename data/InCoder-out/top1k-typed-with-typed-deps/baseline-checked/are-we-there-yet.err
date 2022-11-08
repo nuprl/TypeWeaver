@@ -1,0 +1,31 @@
+lib/tracker-group.ts(7,53): error TS8020: JSDoc types can only be used inside documentation comments.
+lib/tracker-group.ts(9,8): error TS2339: Property 'parentGroup' does not exist on type 'NodeModule'.
+lib/tracker-group.ts(10,8): error TS2339: Property 'trackers' does not exist on type 'NodeModule'.
+lib/tracker-group.ts(11,8): error TS2339: Property 'completion' does not exist on type 'NodeModule'.
+lib/tracker-group.ts(12,8): error TS2339: Property 'weight' does not exist on type 'NodeModule'.
+lib/tracker-group.ts(13,8): error TS2339: Property 'totalWeight' does not exist on type 'NodeModule'.
+lib/tracker-group.ts(14,8): error TS2339: Property 'finished' does not exist on type 'NodeModule'.
+lib/tracker-group.ts(15,8): error TS2339: Property 'bubbleChange' does not exist on type 'NodeModule'.
+lib/tracker-group.ts(19,38): error TS2749: 'TrackerGroup' refers to a value, but is being used as a type here. Did you mean 'typeof TrackerGroup'?
+lib/tracker-group.ts(39,50): error TS2304: Cannot find name 'Unit'.
+lib/tracker-group.ts(78,68): error TS2304: Cannot find name 'Float'.
+lib/tracker-group.ts(79,23): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/tracker-group.ts(79,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/tracker-group.ts(82,65): error TS2304: Cannot find name 'Todo'.
+lib/tracker-group.ts(86,67): error TS2304: Cannot find name 'Todo'.
+lib/tracker-group.ts(108,44): error TS2749: 'Tracker' refers to a value, but is being used as a type here. Did you mean 'typeof Tracker'?
+lib/tracker-group.ts(110,25): error TS2339: Property 'debug' does not exist on type '{}'.
+lib/tracker-stream.ts(7,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'TrackerStream' must be of type 'any', but here has type '(name: String, size: Number, options: Object) => void'.
+lib/tracker-stream.ts(9,8): error TS2339: Property 'tracker' does not exist on type 'NodeModule'.
+lib/tracker-stream.ts(10,8): error TS2339: Property 'name' does not exist on type 'NodeModule'.
+lib/tracker-stream.ts(11,18): error TS2339: Property 'tracker' does not exist on type 'NodeModule'.
+lib/tracker-stream.ts(12,8): error TS2339: Property 'tracker' does not exist on type 'NodeModule'.
+lib/tracker-stream.ts(16,41): error TS2749: 'TrackerStream' refers to a value, but is being used as a type here. Did you mean 'typeof TrackerStream'?
+lib/tracker.ts(5,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Tracker' must be of type 'any', but here has type '(name: String, todo: Todo) => void'.
+lib/tracker.ts(5,63): error TS2304: Cannot find name 'Todo'.
+lib/tracker.ts(7,8): error TS2339: Property 'workDone' does not exist on type 'NodeModule'.
+lib/tracker.ts(8,8): error TS2339: Property 'workTodo' does not exist on type 'NodeModule'.
+lib/tracker.ts(16,45): error TS2304: Cannot find name 'Work'.
+lib/tracker.ts(21,50): error TS2304: Cannot find name 'Work'.
+

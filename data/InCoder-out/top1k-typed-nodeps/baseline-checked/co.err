@@ -1,0 +1,38 @@
+index.ts(30,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(30,35): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(44,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(51,46): error TS2339: Property 'apply' does not exist on type 'never'.
+index.ts(54,5): error TS2554: Expected 1 arguments, but got 0.
+index.ts(62,31): error TS2552: Cannot find name 'IPromise'. Did you mean 'Promise'?
+index.ts(69,12): error TS2345: Argument of type 'IteratorResult<unknown, any>' is not assignable to parameter of type 'Promise<any>'.
+  Type 'IteratorYieldResult<unknown>' is missing the following properties from type 'Promise<any>': then, catch, finally, [Symbol.toStringTag]
+index.ts(86,12): error TS2345: Argument of type 'IteratorResult<unknown, any>' is not assignable to parameter of type 'Promise<any>'.
+  Type 'IteratorYieldResult<unknown>' is not assignable to type 'Promise<any>'.
+index.ts(99,15): error TS2339: Property 'done' does not exist on type 'Promise<any>'.
+index.ts(99,40): error TS2339: Property 'value' does not exist on type 'Promise<any>'.
+index.ts(100,43): error TS2339: Property 'value' does not exist on type 'Promise<any>'.
+index.ts(103,65): error TS2339: Property 'value' does not exist on type 'Promise<any>'.
+index.ts(119,68): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(120,60): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(121,54): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(122,50): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(135,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(139,33): error TS2740: Type 'any[]' is missing the following properties from type 'Response': headers, ok, redirected, status, and 11 more.
+index.ts(154,30): error TS2314: Generic type 'ArrayLike<T>' requires 1 type argument(s).
+index.ts(155,41): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(168,21): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+index.ts(170,7): error TS7034: Variable 'promises' implicitly has type 'any[]' in some locations where its type cannot be determined.
+index.ts(173,34): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(173,40): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+index.ts(175,25): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
+  No index signature with a parameter of type 'string' was found on type 'Object'.
+index.ts(177,22): error TS7005: Variable 'promises' implicitly has an 'any[]' type.
+index.ts(198,25): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(211,35): error TS2339: Property 'next' does not exist on type 'Object'.
+index.ts(211,68): error TS2339: Property 'throw' does not exist on type 'Object'.
+index.ts(225,87): error TS2339: Property 'displayName' does not exist on type 'Function'.
+index.ts(237,24): error TS8020: JSDoc types can only be used inside documentation comments.
+index.ts(238,20): error TS2531: Object is possibly 'null'.
+

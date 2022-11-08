@@ -1,0 +1,555 @@
+lib/OriginalSource.ts(14,14): error TS7006: Parameter 'value' implicitly has an 'any' type.
+lib/OriginalSource.ts(14,21): error TS7006: Parameter 'name' implicitly has an 'any' type.
+lib/OriginalSource.ts(17,8): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(18,8): error TS2339: Property '_valueAsBuffer' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(19,8): error TS2339: Property '_name' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(23,15): error TS2339: Property '_name' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(27,12): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(28,9): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(28,23): error TS2339: Property '_valueAsBuffer' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(30,15): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(34,12): error TS2339: Property '_valueAsBuffer' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(35,9): error TS2339: Property '_valueAsBuffer' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(35,43): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(37,15): error TS2339: Property '_valueAsBuffer' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(40,2): error TS2416: Property 'map' in type 'OriginalSource' is not assignable to the same property in base type 'Source'.
+  Type '(options: any) => { version: number; file: string; mappings: string; sources: any[]; sourcesContent: any[] | undefined; names: any[]; } | null' is not assignable to type '(options: any) => null'.
+    Type '{ version: number; file: string; mappings: string; sources: any[]; sourcesContent: any[] | undefined; names: any[]; } | null' is not assignable to type 'null'.
+      Type '{ version: number; file: string; mappings: string; sources: any[]; sourcesContent: any[] | undefined; names: any[]; }' is not assignable to type 'null'.
+lib/OriginalSource.ts(40,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/OriginalSource.ts(44,2): error TS2416: Property 'sourceAndMap' in type 'OriginalSource' is not assignable to the same property in base type 'Source'.
+  Type '(options: any) => { source: any; map: { version: number; file: string; mappings: string; sources: any[]; sourcesContent: any[] | undefined; names: any[]; } | null; }' is not assignable to type '(options: any) => { source: void; map: null; }'.
+    Call signature return types '{ source: any; map: { version: number; file: string; mappings: string; sources: any[]; sourcesContent: any[] | undefined; names: any[]; } | null; }' and '{ source: void; map: null; }' are incompatible.
+      The types of 'map' are incompatible between these types.
+        Type '{ version: number; file: string; mappings: string; sources: any[]; sourcesContent: any[] | undefined; names: any[]; } | null' is not assignable to type 'null'.
+          Type '{ version: number; file: string; mappings: string; sources: any[]; sourcesContent: any[] | undefined; names: any[]; }' is not assignable to type 'null'.
+lib/OriginalSource.ts(44,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/OriginalSource.ts(55,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/OriginalSource.ts(55,24): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
+lib/OriginalSource.ts(55,33): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
+lib/OriginalSource.ts(55,43): error TS7006: Parameter 'onName' implicitly has an 'any' type.
+lib/OriginalSource.ts(56,12): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(57,9): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(57,23): error TS2339: Property '_valueAsBuffer' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(59,20): error TS2339: Property '_name' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(59,32): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(63,50): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(86,32): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(91,47): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(94,31): error TS2532: Object is possibly 'undefined'.
+lib/OriginalSource.ts(97,32): error TS2532: Object is possibly 'undefined'.
+lib/OriginalSource.ts(105,40): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(115,34): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(120,34): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(125,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
+lib/OriginalSource.ts(126,12): error TS2339: Property '_valueAsBuffer' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(127,9): error TS2339: Property '_valueAsBuffer' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(127,43): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(130,20): error TS2339: Property '_valueAsBuffer' does not exist on type 'OriginalSource'.
+lib/OriginalSource.ts(131,20): error TS2339: Property '_name' does not exist on type 'OriginalSource'.
+lib/PrefixSource.ts(15,14): error TS7006: Parameter 'prefix' implicitly has an 'any' type.
+lib/PrefixSource.ts(15,22): error TS7006: Parameter 'source' implicitly has an 'any' type.
+lib/PrefixSource.ts(17,8): error TS2551: Property '_source' does not exist on type 'PrefixSource'. Did you mean 'source'?
+lib/PrefixSource.ts(21,8): error TS2339: Property '_prefix' does not exist on type 'PrefixSource'.
+lib/PrefixSource.ts(25,15): error TS2339: Property '_prefix' does not exist on type 'PrefixSource'.
+lib/PrefixSource.ts(29,15): error TS2551: Property '_source' does not exist on type 'PrefixSource'. Did you mean 'source'?
+lib/PrefixSource.ts(33,21): error TS2551: Property '_source' does not exist on type 'PrefixSource'. Did you mean 'source'?
+lib/PrefixSource.ts(34,23): error TS2339: Property '_prefix' does not exist on type 'PrefixSource'.
+lib/PrefixSource.ts(40,2): error TS2416: Property 'map' in type 'PrefixSource' is not assignable to the same property in base type 'Source'.
+  Type '(options: any) => { version: number; file: string; mappings: string; sources: any[]; sourcesContent: any[] | undefined; names: any[]; } | null' is not assignable to type '(options: any) => null'.
+    Type '{ version: number; file: string; mappings: string; sources: any[]; sourcesContent: any[] | undefined; names: any[]; } | null' is not assignable to type 'null'.
+      Type '{ version: number; file: string; mappings: string; sources: any[]; sourcesContent: any[] | undefined; names: any[]; }' is not assignable to type 'null'.
+lib/PrefixSource.ts(40,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/PrefixSource.ts(44,2): error TS2416: Property 'sourceAndMap' in type 'PrefixSource' is not assignable to the same property in base type 'Source'.
+  Type '(options: any) => { source: any; map: { version: number; file: string; mappings: string; sources: any[]; sourcesContent: any[] | undefined; names: any[]; } | null; }' is not assignable to type '(options: any) => { source: void; map: null; }'.
+    Call signature return types '{ source: any; map: { version: number; file: string; mappings: string; sources: any[]; sourcesContent: any[] | undefined; names: any[]; } | null; }' and '{ source: void; map: null; }' are incompatible.
+      The types of 'map' are incompatible between these types.
+        Type '{ version: number; file: string; mappings: string; sources: any[]; sourcesContent: any[] | undefined; names: any[]; } | null' is not assignable to type 'null'.
+          Type '{ version: number; file: string; mappings: string; sources: any[]; sourcesContent: any[] | undefined; names: any[]; }' is not assignable to type 'null'.
+lib/PrefixSource.ts(44,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/PrefixSource.ts(48,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/PrefixSource.ts(48,24): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
+lib/PrefixSource.ts(48,33): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
+lib/PrefixSource.ts(48,43): error TS7006: Parameter 'onName' implicitly has an 'any' type.
+lib/PrefixSource.ts(49,23): error TS2339: Property '_prefix' does not exist on type 'PrefixSource'.
+lib/PrefixSource.ts(53,9): error TS2551: Property '_source' does not exist on type 'PrefixSource'. Did you mean 'source'?
+lib/PrefixSource.ts(56,5): error TS7006: Parameter 'chunk' implicitly has an 'any' type.
+lib/PrefixSource.ts(57,5): error TS7006: Parameter 'generatedLine' implicitly has an 'any' type.
+lib/PrefixSource.ts(58,5): error TS7006: Parameter 'generatedColumn' implicitly has an 'any' type.
+lib/PrefixSource.ts(59,5): error TS7006: Parameter 'sourceIndex' implicitly has an 'any' type.
+lib/PrefixSource.ts(60,5): error TS7006: Parameter 'originalLine' implicitly has an 'any' type.
+lib/PrefixSource.ts(61,5): error TS7006: Parameter 'originalColumn' implicitly has an 'any' type.
+lib/PrefixSource.ts(62,5): error TS7006: Parameter 'nameIndex' implicitly has an 'any' type.
+lib/PrefixSource.ts(107,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
+lib/PrefixSource.ts(109,8): error TS2551: Property '_source' does not exist on type 'PrefixSource'. Did you mean 'source'?
+lib/PrefixSource.ts(110,20): error TS2339: Property '_prefix' does not exist on type 'PrefixSource'.
+lib/RawSource.ts(12,14): error TS7006: Parameter 'value' implicitly has an 'any' type.
+lib/RawSource.ts(18,8): error TS2339: Property '_valueIsBuffer' does not exist on type 'RawSource'.
+lib/RawSource.ts(19,8): error TS2339: Property '_value' does not exist on type 'RawSource'.
+lib/RawSource.ts(20,8): error TS2339: Property '_valueAsBuffer' does not exist on type 'RawSource'.
+lib/RawSource.ts(21,8): error TS2339: Property '_valueAsString' does not exist on type 'RawSource'.
+lib/RawSource.ts(25,15): error TS2339: Property '_valueIsBuffer' does not exist on type 'RawSource'.
+lib/RawSource.ts(29,12): error TS2339: Property '_value' does not exist on type 'RawSource'.
+lib/RawSource.ts(30,9): error TS2339: Property '_value' does not exist on type 'RawSource'.
+lib/RawSource.ts(30,23): error TS2339: Property '_valueAsBuffer' does not exist on type 'RawSource'.
+lib/RawSource.ts(32,15): error TS2339: Property '_value' does not exist on type 'RawSource'.
+lib/RawSource.ts(36,12): error TS2339: Property '_valueAsBuffer' does not exist on type 'RawSource'.
+lib/RawSource.ts(37,9): error TS2339: Property '_valueAsBuffer' does not exist on type 'RawSource'.
+lib/RawSource.ts(37,43): error TS2339: Property '_value' does not exist on type 'RawSource'.
+lib/RawSource.ts(39,15): error TS2339: Property '_valueAsBuffer' does not exist on type 'RawSource'.
+lib/RawSource.ts(42,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/RawSource.ts(53,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/RawSource.ts(53,24): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
+lib/RawSource.ts(53,33): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
+lib/RawSource.ts(53,43): error TS7006: Parameter 'onName' implicitly has an 'any' type.
+lib/RawSource.ts(54,12): error TS2339: Property '_value' does not exist on type 'RawSource'.
+lib/RawSource.ts(55,9): error TS2339: Property '_value' does not exist on type 'RawSource'.
+lib/RawSource.ts(55,35): error TS2339: Property '_valueAsBuffer' does not exist on type 'RawSource'.
+lib/RawSource.ts(57,12): error TS2339: Property '_valueAsString' does not exist on type 'RawSource'.
+lib/RawSource.ts(58,9): error TS2339: Property '_valueAsString' does not exist on type 'RawSource'.
+lib/RawSource.ts(59,17): error TS2339: Property '_value' does not exist on type 'RawSource'.
+lib/RawSource.ts(60,13): error TS2339: Property '_value' does not exist on type 'RawSource'.
+lib/RawSource.ts(61,13): error TS2339: Property '_value' does not exist on type 'RawSource'.
+lib/RawSource.ts(64,9): error TS2339: Property '_valueAsString' does not exist on type 'RawSource'.
+lib/RawSource.ts(72,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
+lib/RawSource.ts(73,12): error TS2339: Property '_valueAsBuffer' does not exist on type 'RawSource'.
+lib/RawSource.ts(74,9): error TS2339: Property '_valueAsBuffer' does not exist on type 'RawSource'.
+lib/RawSource.ts(74,43): error TS2339: Property '_value' does not exist on type 'RawSource'.
+lib/RawSource.ts(77,20): error TS2339: Property '_valueAsBuffer' does not exist on type 'RawSource'.
+lib/ReplaceSource.ts(23,14): error TS7006: Parameter 'start' implicitly has an 'any' type.
+lib/ReplaceSource.ts(23,21): error TS7006: Parameter 'end' implicitly has an 'any' type.
+lib/ReplaceSource.ts(23,26): error TS7006: Parameter 'content' implicitly has an 'any' type.
+lib/ReplaceSource.ts(23,35): error TS7006: Parameter 'name' implicitly has an 'any' type.
+lib/ReplaceSource.ts(24,8): error TS2339: Property 'start' does not exist on type 'Replacement'.
+lib/ReplaceSource.ts(25,8): error TS2339: Property 'end' does not exist on type 'Replacement'.
+lib/ReplaceSource.ts(26,8): error TS2339: Property 'content' does not exist on type 'Replacement'.
+lib/ReplaceSource.ts(27,8): error TS2339: Property 'name' does not exist on type 'Replacement'.
+lib/ReplaceSource.ts(29,9): error TS2339: Property 'index' does not exist on type 'Replacement'.
+lib/ReplaceSource.ts(35,14): error TS7006: Parameter 'source' implicitly has an 'any' type.
+lib/ReplaceSource.ts(35,22): error TS7006: Parameter 'name' implicitly has an 'any' type.
+lib/ReplaceSource.ts(37,8): error TS2551: Property '_source' does not exist on type 'ReplaceSource'. Did you mean 'source'?
+lib/ReplaceSource.ts(38,8): error TS2339: Property '_name' does not exist on type 'ReplaceSource'.
+lib/ReplaceSource.ts(40,8): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
+lib/ReplaceSource.ts(41,8): error TS2339: Property '_isSorted' does not exist on type 'ReplaceSource'.
+lib/ReplaceSource.ts(45,15): error TS2339: Property '_name' does not exist on type 'ReplaceSource'.
+lib/ReplaceSource.ts(50,15): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
+lib/ReplaceSource.ts(53,10): error TS7006: Parameter 'start' implicitly has an 'any' type.
+lib/ReplaceSource.ts(53,17): error TS7006: Parameter 'end' implicitly has an 'any' type.
+lib/ReplaceSource.ts(53,22): error TS7006: Parameter 'newValue' implicitly has an 'any' type.
+lib/ReplaceSource.ts(53,32): error TS7006: Parameter 'name' implicitly has an 'any' type.
+lib/ReplaceSource.ts(58,8): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
+lib/ReplaceSource.ts(59,8): error TS2339: Property '_isSorted' does not exist on type 'ReplaceSource'.
+lib/ReplaceSource.ts(62,9): error TS7006: Parameter 'pos' implicitly has an 'any' type.
+lib/ReplaceSource.ts(62,14): error TS7006: Parameter 'newValue' implicitly has an 'any' type.
+lib/ReplaceSource.ts(62,24): error TS7006: Parameter 'name' implicitly has an 'any' type.
+lib/ReplaceSource.ts(70,8): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
+lib/ReplaceSource.ts(71,8): error TS2339: Property '_isSorted' does not exist on type 'ReplaceSource'.
+lib/ReplaceSource.ts(75,12): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
+lib/ReplaceSource.ts(76,16): error TS2551: Property '_source' does not exist on type 'ReplaceSource'. Did you mean 'source'?
+lib/ReplaceSource.ts(78,22): error TS2551: Property '_source' does not exist on type 'ReplaceSource'. Did you mean 'source'?
+lib/ReplaceSource.ts(83,34): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
+lib/ReplaceSource.ts(103,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/ReplaceSource.ts(104,12): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
+lib/ReplaceSource.ts(105,16): error TS2551: Property '_source' does not exist on type 'ReplaceSource'. Did you mean 'source'?
+lib/ReplaceSource.ts(110,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/ReplaceSource.ts(111,12): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
+lib/ReplaceSource.ts(112,16): error TS2551: Property '_source' does not exist on type 'ReplaceSource'. Did you mean 'source'?
+lib/ReplaceSource.ts(118,15): error TS2551: Property '_source' does not exist on type 'ReplaceSource'. Did you mean 'source'?
+lib/ReplaceSource.ts(122,12): error TS2339: Property '_isSorted' does not exist on type 'ReplaceSource'.
+lib/ReplaceSource.ts(124,9): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
+lib/ReplaceSource.ts(124,41): error TS2304: Cannot find name 'Diff'.
+lib/ReplaceSource.ts(124,51): error TS2304: Cannot find name 'Diff'.
+lib/ReplaceSource.ts(132,9): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
+lib/ReplaceSource.ts(132,32): error TS7006: Parameter 'repl' implicitly has an 'any' type.
+lib/ReplaceSource.ts(132,38): error TS7006: Parameter 'i' implicitly has an 'any' type.
+lib/ReplaceSource.ts(133,9): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
+lib/ReplaceSource.ts(133,41): error TS2304: Cannot find name 'Diff'.
+lib/ReplaceSource.ts(133,51): error TS2304: Cannot find name 'Diff'.
+lib/ReplaceSource.ts(141,8): error TS2339: Property '_isSorted' does not exist on type 'ReplaceSource'.
+lib/ReplaceSource.ts(144,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/ReplaceSource.ts(144,24): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
+lib/ReplaceSource.ts(144,33): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
+lib/ReplaceSource.ts(144,43): error TS7006: Parameter 'onName' implicitly has an 'any' type.
+lib/ReplaceSource.ts(146,22): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
+lib/ReplaceSource.ts(155,9): error TS7034: Variable 'sourceContents' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/ReplaceSource.ts(157,9): error TS7034: Variable 'nameIndexMapping' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/ReplaceSource.ts(158,33): error TS7006: Parameter 'sourceIndex' implicitly has an 'any' type.
+lib/ReplaceSource.ts(158,46): error TS7006: Parameter 'line' implicitly has an 'any' type.
+lib/ReplaceSource.ts(158,52): error TS7006: Parameter 'column' implicitly has an 'any' type.
+lib/ReplaceSource.ts(158,60): error TS7006: Parameter 'expectedChunk' implicitly has an 'any' type.
+lib/ReplaceSource.ts(161,8): error TS7005: Variable 'sourceContents' implicitly has an 'any[]' type.
+lib/ReplaceSource.ts(176,9): error TS2551: Property '_source' does not exist on type 'ReplaceSource'. Did you mean 'source'?
+lib/ReplaceSource.ts(179,5): error TS7006: Parameter 'chunk' implicitly has an 'any' type.
+lib/ReplaceSource.ts(180,5): error TS7006: Parameter 'generatedLine' implicitly has an 'any' type.
+lib/ReplaceSource.ts(181,5): error TS7006: Parameter 'generatedColumn' implicitly has an 'any' type.
+lib/ReplaceSource.ts(182,5): error TS7006: Parameter 'sourceIndex' implicitly has an 'any' type.
+lib/ReplaceSource.ts(183,5): error TS7006: Parameter 'originalLine' implicitly has an 'any' type.
+lib/ReplaceSource.ts(184,5): error TS7006: Parameter 'originalColumn' implicitly has an 'any' type.
+lib/ReplaceSource.ts(185,5): error TS7006: Parameter 'nameIndex' implicitly has an 'any' type.
+lib/ReplaceSource.ts(254,12): error TS7005: Variable 'nameIndexMapping' implicitly has an 'any[]' type.
+lib/ReplaceSource.ts(389,28): error TS7005: Variable 'nameIndexMapping' implicitly has an 'any[]' type.
+lib/ReplaceSource.ts(394,5): error TS7006: Parameter 'sourceIndex' implicitly has an 'any' type.
+lib/ReplaceSource.ts(394,18): error TS7006: Parameter 'source' implicitly has an 'any' type.
+lib/ReplaceSource.ts(394,26): error TS7006: Parameter 'sourceContent' implicitly has an 'any' type.
+lib/ReplaceSource.ts(400,5): error TS7006: Parameter 'nameIndex' implicitly has an 'any' type.
+lib/ReplaceSource.ts(400,16): error TS7006: Parameter 'name' implicitly has an 'any' type.
+lib/ReplaceSource.ts(456,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
+lib/ReplaceSource.ts(459,8): error TS2551: Property '_source' does not exist on type 'ReplaceSource'. Did you mean 'source'?
+lib/ReplaceSource.ts(460,20): error TS2339: Property '_name' does not exist on type 'ReplaceSource'.
+lib/ReplaceSource.ts(461,27): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
+lib/SizeOnlySource.ts(10,14): error TS7006: Parameter 'size' implicitly has an 'any' type.
+lib/SizeOnlySource.ts(12,8): error TS2551: Property '_size' does not exist on type 'SizeOnlySource'. Did you mean 'size'?
+lib/SizeOnlySource.ts(22,15): error TS2551: Property '_size' does not exist on type 'SizeOnlySource'. Did you mean 'size'?
+lib/SizeOnlySource.ts(29,2): error TS2416: Property 'buffer' in type 'SizeOnlySource' is not assignable to the same property in base type 'Source'.
+  Type '() => void' is not assignable to type '() => Buffer'.
+    Type 'void' is not assignable to type 'Buffer'.
+lib/SizeOnlySource.ts(33,2): error TS2416: Property 'map' in type 'SizeOnlySource' is not assignable to the same property in base type 'Source'.
+  Type '(options: any) => void' is not assignable to type '(options: any) => null'.
+    Type 'void' is not assignable to type 'null'.
+lib/SizeOnlySource.ts(33,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/Source.ts(15,22): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(arrayBuffer: WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>, byteOffset?: number | undefined, length?: number | undefined): Buffer', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type 'WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>'.
+  Overload 2 of 4, '(str: WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }, encoding?: BufferEncoding | undefined): Buffer', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type 'WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }'.
+lib/Source.ts(22,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/Source.ts(26,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/Source.ts(33,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
+lib/SourceMapSource.ts(14,3): error TS7006: Parameter 'value' implicitly has an 'any' type.
+lib/SourceMapSource.ts(15,3): error TS7006: Parameter 'name' implicitly has an 'any' type.
+lib/SourceMapSource.ts(16,3): error TS7006: Parameter 'sourceMap' implicitly has an 'any' type.
+lib/SourceMapSource.ts(17,3): error TS7006: Parameter 'originalSource' implicitly has an 'any' type.
+lib/SourceMapSource.ts(18,3): error TS7006: Parameter 'innerSourceMap' implicitly has an 'any' type.
+lib/SourceMapSource.ts(19,3): error TS7006: Parameter 'removeOriginalSource' implicitly has an 'any' type.
+lib/SourceMapSource.ts(23,8): error TS2339: Property '_valueAsString' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(24,8): error TS2339: Property '_valueAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(26,8): error TS2339: Property '_name' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(28,8): error TS2339: Property '_hasSourceMap' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(31,8): error TS2339: Property '_sourceMapAsObject' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(33,8): error TS2339: Property '_sourceMapAsString' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(34,8): error TS2339: Property '_sourceMapAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(36,8): error TS2339: Property '_hasOriginalSource' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(38,8): error TS2339: Property '_originalSourceAsString' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(41,8): error TS2339: Property '_originalSourceAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(45,8): error TS2339: Property '_hasInnerSourceMap' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(48,8): error TS2551: Property '_innerSourceMapAsObject' does not exist on type 'SourceMapSource'. Did you mean '_ensureSourceMapObject'?
+lib/SourceMapSource.ts(52,8): error TS2551: Property '_innerSourceMapAsString' does not exist on type 'SourceMapSource'. Did you mean '_ensureSourceMapString'?
+lib/SourceMapSource.ts(55,8): error TS2551: Property '_innerSourceMapAsBuffer' does not exist on type 'SourceMapSource'. Did you mean '_ensureSourceMapBuffer'?
+lib/SourceMapSource.ts(59,8): error TS2339: Property '_removeOriginalSource' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(63,12): error TS2339: Property '_valueAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(64,9): error TS2339: Property '_valueAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(64,43): error TS2339: Property '_valueAsString' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(69,12): error TS2339: Property '_valueAsString' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(70,9): error TS2339: Property '_valueAsString' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(70,31): error TS2339: Property '_valueAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(75,12): error TS2339: Property '_originalSourceAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(75,58): error TS2339: Property '_hasOriginalSource' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(76,9): error TS2339: Property '_originalSourceAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(77,10): error TS2339: Property '_originalSourceAsString' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(84,12): error TS2339: Property '_originalSourceAsString' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(84,58): error TS2339: Property '_hasOriginalSource' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(85,9): error TS2339: Property '_originalSourceAsString' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(85,40): error TS2339: Property '_originalSourceAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(92,12): error TS2551: Property '_innerSourceMapAsObject' does not exist on type 'SourceMapSource'. Did you mean '_ensureSourceMapObject'?
+lib/SourceMapSource.ts(92,58): error TS2339: Property '_hasInnerSourceMap' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(94,9): error TS2551: Property '_innerSourceMapAsObject' does not exist on type 'SourceMapSource'. Did you mean '_ensureSourceMapObject'?
+lib/SourceMapSource.ts(94,51): error TS2551: Property '_innerSourceMapAsString' does not exist on type 'SourceMapSource'. Did you mean '_ensureSourceMapString'?
+lib/SourceMapSource.ts(99,12): error TS2551: Property '_innerSourceMapAsBuffer' does not exist on type 'SourceMapSource'. Did you mean '_ensureSourceMapBuffer'?
+lib/SourceMapSource.ts(99,58): error TS2339: Property '_hasInnerSourceMap' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(101,9): error TS2551: Property '_innerSourceMapAsBuffer' does not exist on type 'SourceMapSource'. Did you mean '_ensureSourceMapBuffer'?
+lib/SourceMapSource.ts(102,10): error TS2551: Property '_innerSourceMapAsString' does not exist on type 'SourceMapSource'. Did you mean '_ensureSourceMapString'?
+lib/SourceMapSource.ts(109,12): error TS2551: Property '_innerSourceMapAsString' does not exist on type 'SourceMapSource'. Did you mean '_ensureSourceMapString'?
+lib/SourceMapSource.ts(109,58): error TS2339: Property '_hasInnerSourceMap' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(110,13): error TS2551: Property '_innerSourceMapAsBuffer' does not exist on type 'SourceMapSource'. Did you mean '_ensureSourceMapBuffer'?
+lib/SourceMapSource.ts(111,10): error TS2551: Property '_innerSourceMapAsString' does not exist on type 'SourceMapSource'. Did you mean '_ensureSourceMapString'?
+lib/SourceMapSource.ts(111,41): error TS2551: Property '_innerSourceMapAsBuffer' does not exist on type 'SourceMapSource'. Did you mean '_ensureSourceMapBuffer'?
+lib/SourceMapSource.ts(115,10): error TS2551: Property '_innerSourceMapAsString' does not exist on type 'SourceMapSource'. Did you mean '_ensureSourceMapString'?
+lib/SourceMapSource.ts(116,11): error TS2551: Property '_innerSourceMapAsObject' does not exist on type 'SourceMapSource'. Did you mean '_ensureSourceMapObject'?
+lib/SourceMapSource.ts(123,12): error TS2339: Property '_sourceMapAsObject' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(125,9): error TS2339: Property '_sourceMapAsObject' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(125,46): error TS2339: Property '_sourceMapAsString' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(130,12): error TS2339: Property '_sourceMapAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(132,9): error TS2339: Property '_sourceMapAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(132,47): error TS2339: Property '_sourceMapAsString' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(137,12): error TS2339: Property '_sourceMapAsString' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(138,13): error TS2339: Property '_sourceMapAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(139,10): error TS2339: Property '_sourceMapAsString' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(139,36): error TS2339: Property '_sourceMapAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(141,10): error TS2339: Property '_sourceMapAsString' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(141,51): error TS2339: Property '_sourceMapAsObject' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(152,9): error TS2339: Property '_valueAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(153,9): error TS2339: Property '_name' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(154,9): error TS2339: Property '_sourceMapAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(155,9): error TS2339: Property '_originalSourceAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(156,9): error TS2551: Property '_innerSourceMapAsBuffer' does not exist on type 'SourceMapSource'. Did you mean '_ensureSourceMapBuffer'?
+lib/SourceMapSource.ts(157,9): error TS2339: Property '_removeOriginalSource' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(163,15): error TS2339: Property '_valueAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(168,15): error TS2339: Property '_valueAsString' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(171,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/SourceMapSource.ts(172,13): error TS2339: Property '_hasInnerSourceMap' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(174,16): error TS2339: Property '_sourceMapAsObject' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(179,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/SourceMapSource.ts(180,13): error TS2339: Property '_hasInnerSourceMap' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(184,18): error TS2339: Property '_valueAsString' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(185,15): error TS2339: Property '_sourceMapAsObject' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(191,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/SourceMapSource.ts(191,24): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
+lib/SourceMapSource.ts(191,33): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
+lib/SourceMapSource.ts(191,43): error TS7006: Parameter 'onName' implicitly has an 'any' type.
+lib/SourceMapSource.ts(195,12): error TS2339: Property '_hasInnerSourceMap' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(198,10): error TS2339: Property '_valueAsString' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(199,10): error TS2339: Property '_sourceMapAsObject' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(200,10): error TS2339: Property '_name' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(201,10): error TS2339: Property '_originalSourceAsString' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(202,10): error TS2551: Property '_innerSourceMapAsObject' does not exist on type 'SourceMapSource'. Did you mean '_ensureSourceMapObject'?
+lib/SourceMapSource.ts(203,10): error TS2339: Property '_removeOriginalSource' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(212,10): error TS2339: Property '_valueAsString' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(213,10): error TS2339: Property '_sourceMapAsObject' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(223,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
+lib/SourceMapSource.ts(231,20): error TS2339: Property '_valueAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(233,20): error TS2339: Property '_sourceMapAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(235,12): error TS2339: Property '_hasOriginalSource' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(236,21): error TS2339: Property '_originalSourceAsBuffer' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(239,12): error TS2339: Property '_hasInnerSourceMap' does not exist on type 'SourceMapSource'.
+lib/SourceMapSource.ts(240,21): error TS2551: Property '_innerSourceMapAsBuffer' does not exist on type 'SourceMapSource'. Did you mean '_ensureSourceMapBuffer'?
+lib/SourceMapSource.ts(243,20): error TS2339: Property '_removeOriginalSource' does not exist on type 'SourceMapSource'.
+lib/helpers/__mocks__/createMappingsSerializer.ts(3,34): error TS2304: Cannot find name 'jest'.
+lib/helpers/__mocks__/createMappingsSerializer.ts(7,16): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/helpers/__mocks__/createMappingsSerializer.ts(12,3): error TS7006: Parameter 'generatedLine' implicitly has an 'any' type.
+lib/helpers/__mocks__/createMappingsSerializer.ts(13,3): error TS7006: Parameter 'generatedColumn' implicitly has an 'any' type.
+lib/helpers/__mocks__/createMappingsSerializer.ts(14,3): error TS7006: Parameter 'sourceIndex' implicitly has an 'any' type.
+lib/helpers/__mocks__/createMappingsSerializer.ts(15,3): error TS7006: Parameter 'originalLine' implicitly has an 'any' type.
+lib/helpers/__mocks__/createMappingsSerializer.ts(16,3): error TS7006: Parameter 'originalColumn' implicitly has an 'any' type.
+lib/helpers/__mocks__/createMappingsSerializer.ts(17,3): error TS7006: Parameter 'nameIndex' implicitly has an 'any' type.
+lib/helpers/createMappingsSerializer.ts(14,34): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/helpers/createMappingsSerializer.ts(32,3): error TS7006: Parameter 'generatedLine' implicitly has an 'any' type.
+lib/helpers/createMappingsSerializer.ts(33,3): error TS7006: Parameter 'generatedColumn' implicitly has an 'any' type.
+lib/helpers/createMappingsSerializer.ts(34,3): error TS7006: Parameter 'sourceIndex' implicitly has an 'any' type.
+lib/helpers/createMappingsSerializer.ts(35,3): error TS7006: Parameter 'originalLine' implicitly has an 'any' type.
+lib/helpers/createMappingsSerializer.ts(36,3): error TS7006: Parameter 'originalColumn' implicitly has an 'any' type.
+lib/helpers/createMappingsSerializer.ts(37,3): error TS7006: Parameter 'nameIndex' implicitly has an 'any' type.
+lib/helpers/createMappingsSerializer.ts(59,7): error TS7034: Variable 'str' implicitly has type 'any' in some locations where its type cannot be determined.
+lib/helpers/createMappingsSerializer.ts(72,22): error TS7006: Parameter 'value' implicitly has an 'any' type.
+lib/helpers/createMappingsSerializer.ts(81,6): error TS7005: Variable 'str' implicitly has an 'any' type.
+lib/helpers/createMappingsSerializer.ts(84,6): error TS7005: Variable 'str' implicitly has an 'any' type.
+lib/helpers/createMappingsSerializer.ts(126,3): error TS7006: Parameter 'generatedLine' implicitly has an 'any' type.
+lib/helpers/createMappingsSerializer.ts(127,3): error TS7006: Parameter '_generatedColumn' implicitly has an 'any' type.
+lib/helpers/createMappingsSerializer.ts(128,3): error TS7006: Parameter 'sourceIndex' implicitly has an 'any' type.
+lib/helpers/createMappingsSerializer.ts(129,3): error TS7006: Parameter 'originalLine' implicitly has an 'any' type.
+lib/helpers/createMappingsSerializer.ts(130,3): error TS7006: Parameter '_originalColumn' implicitly has an 'any' type.
+lib/helpers/createMappingsSerializer.ts(131,3): error TS7006: Parameter '_nameIndex' implicitly has an 'any' type.
+lib/helpers/createMappingsSerializer.ts(141,7): error TS7034: Variable 'str' implicitly has type 'any' in some locations where its type cannot be determined.
+lib/helpers/createMappingsSerializer.ts(142,22): error TS7006: Parameter 'value' implicitly has an 'any' type.
+lib/helpers/createMappingsSerializer.ts(151,6): error TS7005: Variable 'str' implicitly has an 'any' type.
+lib/helpers/createMappingsSerializer.ts(154,6): error TS7005: Variable 'str' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(10,33): error TS7006: Parameter 'inputSource' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(10,46): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(13,6): error TS7034: Variable 'sources' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/helpers/getFromStreamChunks.ts(14,6): error TS7034: Variable 'sourcesContent' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/helpers/getFromStreamChunks.ts(15,6): error TS7034: Variable 'names' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/helpers/getFromStreamChunks.ts(20,4): error TS7006: Parameter 'chunk' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(21,4): error TS7006: Parameter 'generatedLine' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(22,4): error TS7006: Parameter 'generatedColumn' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(23,4): error TS7006: Parameter 'sourceIndex' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(24,4): error TS7006: Parameter 'originalLine' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(25,4): error TS7006: Parameter 'originalColumn' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(26,4): error TS7006: Parameter 'nameIndex' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(38,4): error TS7006: Parameter 'sourceIndex' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(38,17): error TS7006: Parameter 'source' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(38,25): error TS7006: Parameter 'sourceContent' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(50,4): error TS7006: Parameter 'nameIndex' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(50,15): error TS7006: Parameter 'name' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(65,7): error TS7005: Variable 'sources' implicitly has an 'any[]' type.
+lib/helpers/getFromStreamChunks.ts(67,36): error TS7005: Variable 'sourcesContent' implicitly has an 'any[]' type.
+lib/helpers/getFromStreamChunks.ts(68,7): error TS7005: Variable 'names' implicitly has an 'any[]' type.
+lib/helpers/getFromStreamChunks.ts(74,24): error TS7006: Parameter 'source' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(74,32): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(76,6): error TS7034: Variable 'sources' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/helpers/getFromStreamChunks.ts(77,6): error TS7034: Variable 'sourcesContent' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/helpers/getFromStreamChunks.ts(78,6): error TS7034: Variable 'names' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/helpers/getFromStreamChunks.ts(83,4): error TS7006: Parameter 'chunk' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(84,4): error TS7006: Parameter 'generatedLine' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(85,4): error TS7006: Parameter 'generatedColumn' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(86,4): error TS7006: Parameter 'sourceIndex' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(87,4): error TS7006: Parameter 'originalLine' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(88,4): error TS7006: Parameter 'originalColumn' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(89,4): error TS7006: Parameter 'nameIndex' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(100,4): error TS7006: Parameter 'sourceIndex' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(100,17): error TS7006: Parameter 'source' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(100,25): error TS7006: Parameter 'sourceContent' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(112,4): error TS7006: Parameter 'nameIndex' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(112,15): error TS7006: Parameter 'name' implicitly has an 'any' type.
+lib/helpers/getFromStreamChunks.ts(124,5): error TS7005: Variable 'sources' implicitly has an 'any[]' type.
+lib/helpers/getFromStreamChunks.ts(125,49): error TS7005: Variable 'sourcesContent' implicitly has an 'any[]' type.
+lib/helpers/getFromStreamChunks.ts(126,5): error TS7005: Variable 'names' implicitly has an 'any[]' type.
+lib/helpers/getGeneratedSourceInfo.ts(10,32): error TS7006: Parameter 'source' implicitly has an 'any' type.
+lib/helpers/getName.ts(8,18): error TS7006: Parameter 'sourceMap' implicitly has an 'any' type.
+lib/helpers/getName.ts(8,29): error TS7006: Parameter 'index' implicitly has an 'any' type.
+lib/helpers/getSource.ts(8,20): error TS7006: Parameter 'sourceMap' implicitly has an 'any' type.
+lib/helpers/getSource.ts(8,31): error TS7006: Parameter 'index' implicitly has an 'any' type.
+lib/helpers/readMappings.ts(33,23): error TS7006: Parameter 'mappings' implicitly has an 'any' type.
+lib/helpers/readMappings.ts(33,33): error TS7006: Parameter 'onMapping' implicitly has an 'any' type.
+lib/helpers/splitIntoLines.ts(1,24): error TS7006: Parameter 'str' implicitly has an 'any' type.
+lib/helpers/splitIntoPotentialTokens.ts(9,34): error TS7006: Parameter 'str' implicitly has an 'any' type.
+lib/helpers/streamAndGetSourceAndMap.ts(12,2): error TS7006: Parameter 'inputSource' implicitly has an 'any' type.
+lib/helpers/streamAndGetSourceAndMap.ts(13,2): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/helpers/streamAndGetSourceAndMap.ts(14,2): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
+lib/helpers/streamAndGetSourceAndMap.ts(15,2): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
+lib/helpers/streamAndGetSourceAndMap.ts(16,2): error TS7006: Parameter 'onName' implicitly has an 'any' type.
+lib/helpers/streamAndGetSourceAndMap.ts(20,6): error TS7034: Variable 'sources' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/helpers/streamAndGetSourceAndMap.ts(21,6): error TS7034: Variable 'sourcesContent' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/helpers/streamAndGetSourceAndMap.ts(22,6): error TS7034: Variable 'names' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/helpers/streamAndGetSourceAndMap.ts(31,4): error TS7006: Parameter 'chunk' implicitly has an 'any' type.
+lib/helpers/streamAndGetSourceAndMap.ts(32,4): error TS7006: Parameter 'generatedLine' implicitly has an 'any' type.
+lib/helpers/streamAndGetSourceAndMap.ts(33,4): error TS7006: Parameter 'generatedColumn' implicitly has an 'any' type.
+lib/helpers/streamAndGetSourceAndMap.ts(34,4): error TS7006: Parameter 'sourceIndex' implicitly has an 'any' type.
+lib/helpers/streamAndGetSourceAndMap.ts(35,4): error TS7006: Parameter 'originalLine' implicitly has an 'any' type.
+lib/helpers/streamAndGetSourceAndMap.ts(36,4): error TS7006: Parameter 'originalColumn' implicitly has an 'any' type.
+lib/helpers/streamAndGetSourceAndMap.ts(37,4): error TS7006: Parameter 'nameIndex' implicitly has an 'any' type.
+lib/helpers/streamAndGetSourceAndMap.ts(58,4): error TS7006: Parameter 'sourceIndex' implicitly has an 'any' type.
+lib/helpers/streamAndGetSourceAndMap.ts(58,17): error TS7006: Parameter 'source' implicitly has an 'any' type.
+lib/helpers/streamAndGetSourceAndMap.ts(58,25): error TS7006: Parameter 'sourceContent' implicitly has an 'any' type.
+lib/helpers/streamAndGetSourceAndMap.ts(71,4): error TS7006: Parameter 'nameIndex' implicitly has an 'any' type.
+lib/helpers/streamAndGetSourceAndMap.ts(71,15): error TS7006: Parameter 'name' implicitly has an 'any' type.
+lib/helpers/streamAndGetSourceAndMap.ts(93,7): error TS7005: Variable 'sources' implicitly has an 'any[]' type.
+lib/helpers/streamAndGetSourceAndMap.ts(95,36): error TS7005: Variable 'sourcesContent' implicitly has an 'any[]' type.
+lib/helpers/streamAndGetSourceAndMap.ts(96,7): error TS7005: Variable 'names' implicitly has an 'any[]' type.
+lib/helpers/streamChunks.ts(11,17): error TS7006: Parameter 'source' implicitly has an 'any' type.
+lib/helpers/streamChunks.ts(11,25): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/helpers/streamChunks.ts(11,34): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
+lib/helpers/streamChunks.ts(11,43): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
+lib/helpers/streamChunks.ts(11,53): error TS7006: Parameter 'onName' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(12,2): error TS7006: Parameter 'source' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(13,2): error TS7006: Parameter 'sourceMap' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(14,2): error TS7006: Parameter 'innerSourceName' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(15,2): error TS7006: Parameter 'innerSource' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(16,2): error TS7006: Parameter 'innerSourceMap' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(17,2): error TS7006: Parameter 'removeInnerSource' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(18,2): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(19,2): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(20,2): error TS7006: Parameter 'onName' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(21,2): error TS7006: Parameter 'finalSource' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(22,2): error TS7006: Parameter 'columns' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(26,8): error TS7034: Variable 'sourceIndexMapping' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(27,8): error TS7034: Variable 'nameIndexMapping' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(28,8): error TS7034: Variable 'nameIndexValueMapping' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(30,8): error TS7034: Variable 'innerSourceIndexMapping' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(31,8): error TS7034: Variable 'innerSourceIndexValueMapping' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(32,8): error TS7034: Variable 'innerSourceContents' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(33,8): error TS7034: Variable 'innerSourceContentLines' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(34,8): error TS7034: Variable 'innerNameIndexMapping' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(35,8): error TS7034: Variable 'innerNameIndexValueMapping' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(36,8): error TS7034: Variable 'innerSourceMapLineData' implicitly has type 'any[]' in some locations where its type cannot be determined.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(37,28): error TS7006: Parameter 'line' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(37,34): error TS7006: Parameter 'column' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(39,28): error TS7005: Variable 'innerSourceMapLineData' implicitly has an 'any[]' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(57,4): error TS7006: Parameter 'chunk' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(58,4): error TS7006: Parameter 'generatedLine' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(59,4): error TS7006: Parameter 'generatedColumn' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(60,4): error TS7006: Parameter 'sourceIndex' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(61,4): error TS7006: Parameter 'originalLine' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(62,4): error TS7006: Parameter 'originalColumn' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(63,4): error TS7006: Parameter 'nameIndex' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(70,39): error TS7005: Variable 'innerSourceMapLineData' implicitly has an 'any[]' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(87,12): error TS7005: Variable 'innerSourceContentLines' implicitly has an 'any[]' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(90,32): error TS7005: Variable 'innerSourceContents' implicitly has an 'any[]' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(116,11): error TS7005: Variable 'innerSourceIndexMapping' implicitly has an 'any[]' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(121,12): error TS7005: Variable 'innerSourceIndexValueMapping' implicitly has an 'any[]' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(138,12): error TS7005: Variable 'innerNameIndexMapping' implicitly has an 'any[]' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(143,13): error TS7005: Variable 'innerNameIndexValueMapping' implicitly has an 'any[]' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(162,9): error TS7005: Variable 'innerSourceContentLines' implicitly has an 'any[]' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(164,32): error TS7005: Variable 'innerSourceContents' implicitly has an 'any[]' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(171,22): error TS7005: Variable 'nameIndexValueMapping' implicitly has an 'any[]' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(182,14): error TS7005: Variable 'nameIndexMapping' implicitly has an 'any[]' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(185,24): error TS7005: Variable 'nameIndexValueMapping' implicitly has an 'any[]' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(219,10): error TS7005: Variable 'sourceIndexMapping' implicitly has an 'any[]' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(233,8): error TS7005: Variable 'sourceIndexMapping' implicitly has an 'any[]' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(241,23): error TS7005: Variable 'nameIndexMapping' implicitly has an 'any[]' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(243,20): error TS7005: Variable 'nameIndexValueMapping' implicitly has an 'any[]' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(264,4): error TS7006: Parameter 'i' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(264,7): error TS7006: Parameter 'source' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(264,15): error TS7006: Parameter 'sourceContent' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(274,7): error TS7006: Parameter 'chunk' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(275,7): error TS7006: Parameter 'generatedLine' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(276,7): error TS7006: Parameter 'generatedColumn' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(277,7): error TS7006: Parameter 'sourceIndex' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(278,7): error TS7006: Parameter 'originalLine' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(279,7): error TS7006: Parameter 'originalColumn' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(280,7): error TS7006: Parameter 'nameIndex' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(288,20): error TS7005: Variable 'innerSourceMapLineData' implicitly has an 'any[]' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(298,7): error TS7006: Parameter 'i' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(298,10): error TS7006: Parameter 'source' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(298,18): error TS7006: Parameter 'sourceContent' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(304,7): error TS7006: Parameter 'i' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(304,10): error TS7006: Parameter 'name' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(320,4): error TS7006: Parameter 'i' implicitly has an 'any' type.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(320,7): error TS7006: Parameter 'name' implicitly has an 'any' type.
+lib/helpers/streamChunksOfRawSource.ts(11,34): error TS7006: Parameter 'source' implicitly has an 'any' type.
+lib/helpers/streamChunksOfRawSource.ts(11,42): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
+lib/helpers/streamChunksOfRawSource.ts(11,51): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
+lib/helpers/streamChunksOfRawSource.ts(11,61): error TS7006: Parameter 'onName' implicitly has an 'any' type.
+lib/helpers/streamChunksOfRawSource.ts(30,17): error TS7006: Parameter 'source' implicitly has an 'any' type.
+lib/helpers/streamChunksOfRawSource.ts(30,25): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
+lib/helpers/streamChunksOfRawSource.ts(30,34): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
+lib/helpers/streamChunksOfRawSource.ts(30,44): error TS7006: Parameter 'onName' implicitly has an 'any' type.
+lib/helpers/streamChunksOfRawSource.ts(30,52): error TS7006: Parameter 'finalSource' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(14,2): error TS7006: Parameter 'source' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(15,2): error TS7006: Parameter 'sourceMap' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(16,2): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(17,2): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(18,2): error TS7006: Parameter 'onName' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(56,3): error TS7006: Parameter 'generatedLine' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(57,3): error TS7006: Parameter 'generatedColumn' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(58,3): error TS7006: Parameter 'sourceIndex' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(59,3): error TS7006: Parameter 'originalLine' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(60,3): error TS7006: Parameter 'originalColumn' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(61,3): error TS7006: Parameter 'nameIndex' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(160,2): error TS7006: Parameter 'source' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(161,2): error TS7006: Parameter 'sourceMap' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(162,2): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(163,2): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(164,2): error TS7006: Parameter '_onName' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(185,3): error TS7006: Parameter 'generatedLine' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(186,3): error TS7006: Parameter '_generatedColumn' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(187,3): error TS7006: Parameter 'sourceIndex' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(188,3): error TS7006: Parameter 'originalLine' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(189,3): error TS7006: Parameter 'originalColumn' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(190,3): error TS7006: Parameter '_nameIndex' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(252,2): error TS7006: Parameter 'source' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(253,2): error TS7006: Parameter 'sourceMap' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(254,2): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(255,2): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(256,2): error TS7006: Parameter 'onName' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(279,3): error TS7006: Parameter 'generatedLine' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(280,3): error TS7006: Parameter 'generatedColumn' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(281,3): error TS7006: Parameter 'sourceIndex' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(282,3): error TS7006: Parameter 'originalLine' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(283,3): error TS7006: Parameter 'originalColumn' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(284,3): error TS7006: Parameter 'nameIndex' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(287,21): error TS2532: Object is possibly 'undefined'.
+lib/helpers/streamChunksOfSourceMap.ts(288,55): error TS2532: Object is possibly 'undefined'.
+lib/helpers/streamChunksOfSourceMap.ts(313,2): error TS7006: Parameter 'source' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(314,2): error TS7006: Parameter 'sourceMap' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(315,2): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(316,2): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(317,2): error TS7006: Parameter '_onName' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(337,44): error TS2532: Object is possibly 'undefined'.
+lib/helpers/streamChunksOfSourceMap.ts(342,3): error TS7006: Parameter 'generatedLine' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(343,3): error TS7006: Parameter '_generatedColumn' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(344,3): error TS7006: Parameter 'sourceIndex' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(345,3): error TS7006: Parameter 'originalLine' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(346,3): error TS7006: Parameter 'originalColumn' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(347,3): error TS7006: Parameter '_nameIndex' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(352,21): error TS2532: Object is possibly 'undefined'.
+lib/helpers/streamChunksOfSourceMap.ts(371,2): error TS7006: Parameter 'source' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(372,2): error TS7006: Parameter 'sourceMap' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(373,2): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(374,2): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(375,2): error TS7006: Parameter 'onName' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(376,2): error TS7006: Parameter 'finalSource' implicitly has an 'any' type.
+lib/helpers/streamChunksOfSourceMap.ts(377,2): error TS7006: Parameter 'columns' implicitly has an 'any' type.
+lib/index.ts(6,23): error TS7006: Parameter 'name' implicitly has an 'any' type.
+lib/index.ts(6,29): error TS7006: Parameter 'fn' implicitly has an 'any' type.
+lib/index.ts(7,6): error TS7034: Variable 'value' implicitly has type 'any' in some locations where its type cannot be determined.
+lib/index.ts(14,11): error TS7005: Variable 'value' implicitly has an 'any' type.
+

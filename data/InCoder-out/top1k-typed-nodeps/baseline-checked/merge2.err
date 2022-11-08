@@ -1,0 +1,17 @@
+index.ts(16,9): error TS7034: Variable 'streamsQueue' implicitly has type 'any[]' in some locations where its type cannot be determined.
+index.ts(42,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(51,19): error TS7005: Variable 'streamsQueue' implicitly has an 'any[]' type.
+index.ts(83,18): error TS2339: Property '_readableState' does not exist on type 'ReadableStream'.
+index.ts(117,47): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
+index.ts(122,27): error TS2345: Argument of type 'any[]' is not assignable to parameter of type '[]'.
+  Target allows only 0 element(s) but source may have more.
+index.ts(128,33): error TS2749: 'Stream' refers to a value, but is being used as a type here. Did you mean 'typeof Stream'?
+index.ts(128,53): error TS2304: Cannot find name 'StreamOptions'.
+index.ts(131,18): error TS2339: Property '_readableState' does not exist on type 'never'.
+index.ts(131,44): error TS2339: Property 'pipe' does not exist on type 'never'.
+index.ts(132,25): error TS2339: Property 'pipe' does not exist on type 'never'.
+index.ts(134,18): error TS2339: Property '_readableState' does not exist on type 'Stream[]'.
+index.ts(134,45): error TS2339: Property 'pause' does not exist on type 'Stream[]'.
+index.ts(134,63): error TS2339: Property 'pipe' does not exist on type 'Stream[]'.
+index.ts(137,13): error TS2339: Property 'pause' does not exist on type 'Stream[]'.
+
