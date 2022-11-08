@@ -68,9 +68,10 @@ class InCoder:
         output_dir = Path(self.out_directory, self.short_name(package)).resolve()
 
         # Delete the old output files
-        output_files = [f.resolve()
-                        for f in output_dir.rglob("*")
-                        if f.is_file() and (f.suffix == ".ts" or f.suffix == ".err")]
+        # Don't glob all *.ts, might get *.d.ts by accident
+        ts_output_files = [f.with_suffix(".ts") for f in input_files if f.with_suffix(".ts").exists()]
+        err_output_files = [f.with_suffix(".err") for f in input_files if f.with_suffix(".err").exists()]
+        output_files = ts_output_files + err_output_files
         for f in output_files:
             f.unlink()
 
@@ -82,8 +83,9 @@ class InCoder:
             time.sleep(self.SLEEP_TIME)
 
         # Get the output files, .ts and .err (but they are in the input directory)
-        ts_files = [f.resolve() for f in package.rglob("*.ts") if f.is_file()]
-        err_files = [f.resolve() for f in package.rglob("*.err") if f.is_file()]
+        # Don't glob all *.ts, might get *.d.ts by accident
+        ts_files = [f.with_suffix(".ts") for f in input_files if f.with_suffix(".ts").exists()]
+        err_files = [f.with_suffix(".err") for f in input_files if f.with_suffix(".err").exists()]
 
         # Move files to their output directory
         for file in (ts_files + err_files):
