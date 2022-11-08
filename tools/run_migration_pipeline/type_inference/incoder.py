@@ -5,20 +5,20 @@ import subprocess, time
 import util
 from util import Result, ResultStatus
 
-class Incoder:
-    path = Path(util.tools_root, "..", "Incoder", "py", "main.py").resolve()
+class InCoder:
+    path = Path(util.tools_root, "..", "InCoder", "py", "main.py").resolve()
 
     SLEEP_TIME = 5
 
     def __init__(self, args):
         if not self.path.exists():
-            print(f"error: could not find Incoder: {self.path}")
+            print(f"error: could not find InCoder: {self.path}")
             exit(1)
 
         self.directory = Path(args.directory).resolve()
         self.dataset = Path(args.dataset)
         self.in_directory = Path(self.directory, "original", self.dataset).resolve()
-        self.out_directory = Path(self.directory, "Incoder-out", self.dataset, args.infer_out).resolve()
+        self.out_directory = Path(self.directory, "InCoder-out", self.dataset, args.infer_out).resolve()
 
     def short_name(self, name):
         """
@@ -114,7 +114,7 @@ class Incoder:
         packages_to_run = set(packages).difference(to_skip)
         packages_list = sorted([str(p) for p in packages_to_run])
 
-        # Only start Incoder if there are packages to run
+        # Only start InCoder if there are packages to run
         p = None
         if packages_list:
             args = ["python", self.path.name, "--write-done-file", "--directories", *packages_list]
@@ -133,7 +133,7 @@ class Incoder:
                 num_fail += 1
 
         if p:
-            # If we reach this point, either Incoder has finished processing everything,
+            # If we reach this point, either InCoder has finished processing everything,
             # or there was nothing left to process, so we can kill it
             p.terminate()
 
@@ -152,7 +152,7 @@ class Incoder:
                            for p in self.in_directory.iterdir()
                            if len(list(p.rglob("*.js")))])
 
-        print(f"Inferring types with Incoder: {self.path}")
+        print(f"Inferring types with InCoder: {self.path}")
         print(f"Input directory: {self.in_directory}")
         print(f"Output directory: {self.out_directory}")
         print(f"Found {len(packages)} packages")

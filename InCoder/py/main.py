@@ -130,7 +130,7 @@ class TypeInference:
         self, prompt: str, retries: int
     ):
         """
-        Given an Incoder-style prompt for infilling, tries to fill <|mask:0|> with a valid
+        Given an InCoder-style prompt for infilling, tries to fill <|mask:0|> with a valid
         TypeScript type. To determine that it is valid, we use an external program. If we fail
         to generate a valid type after retries attempts, we return any.
         """
@@ -191,7 +191,7 @@ class TypeInference:
 
 def _parse_args():
     parser = argparse.ArgumentParser(
-        description="Runs Incoder to infer types for JavaScript",
+        description="Runs InCoder to infer types for JavaScript",
         epilog="One of --files or --directories must be provided")
 
     parser.add_argument(

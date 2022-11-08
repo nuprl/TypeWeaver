@@ -1,4 +1,4 @@
-# Incoder
+# InCoder
 
 The notebook `py/playground.ipynb` shows an example of loading the model and
 running inference. Note that `importlib` is used to reload the `TypeInference`

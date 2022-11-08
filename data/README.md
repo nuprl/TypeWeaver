@@ -9,7 +9,7 @@ This directory is organized as follows:
   * `from_tarballs/`: dataset extracted from tarballs; used to derive `original/`
 
   * `DeepTyper-out/`: output from running DeepTyper
-  * `Incoder-out/`: output from running Incoder
+  * `InCoder-out/`: output from running InCoder
   * `LambdaNet-out/`: output from running LambdaNet
 
 ## Datasets
