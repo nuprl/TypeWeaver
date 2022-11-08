@@ -18,6 +18,8 @@ A collection of scripts and tools.
 * `run_migration_pipeline/main.py`: runs the evaluation pipeline (inference,
   type weaving, and type checking) on a dataset
 
+* `summarize_results.py`: generates CSV files summarizing the results
+
 * `transform_require_to_import.py`: transforms a JavaScript dataset from
   CommonJS modules to ECMAScript 6 modules
 
