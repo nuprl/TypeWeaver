@@ -152,6 +152,7 @@ class TypeInference:
                 check=False,
             )
             if validate_process.returncode != 0:
+                filled_type = "any"
                 continue
             filled_type = validate_process.stdout.strip()
             break

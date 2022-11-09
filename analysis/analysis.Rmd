@@ -1,0 +1,45 @@
+---
+title: "Analysis Notebook"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+```
+
+## Percentage of packages that type check
+
+Load the CSV that lists every package for all datasets, and whether it type checked under DeepTyper, LambdaNet, and InCoder.
+
+```{r}
+summary_tbl <- read_csv("../data/notes/typecheck_summary.csv", col_types = "cciii") %>%
+  rename(dataset = 1, package = 2, dt = 3, ln = 4, ic = 5)
+```
+
+Filter out NAs and for each system and dataset, compute the number of packages that type check, the total number of packages, and the percentage of package that type check.
+
+```{r}
+dt_pct <- summary_tbl %>%
+  group_by(dataset) %>%
+  filter(!is.na(dt)) %>%
+  summarize(typechecks.dt = sum(dt), n.dt = n(), pct.dt = typechecks.dt / n.dt * 100)
+
+ln_pct <- summary_tbl %>%
+  group_by(dataset) %>%
+  filter(!is.na(ln)) %>%
+  summarize(typechecks.ln = sum(ln), n.ln = n(), pct.ln = typechecks.ln / n.ln * 100)
+
+ic_pct <- summary_tbl %>%
+  group_by(dataset) %>%
+  filter(!is.na(ic)) %>%
+  summarize(typechecks.ic = sum(ic), n.ic = n(), pct.ic = typechecks.ic / n.ic * 100)
+```
+
+Summarize everything in a single table.
+
+```{r}
+typechecks_pct <- dt_pct %>%
+  inner_join(ln_pct, by = "dataset") %>%
+  inner_join(ic_pct, by = "dataset")
+typechecks_pct
+```
