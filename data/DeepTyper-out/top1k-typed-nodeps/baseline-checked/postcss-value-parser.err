@@ -1,34 +1,10 @@
 lib/index.ts(3,5): error TS2300: Duplicate identifier 'stringify'.
-lib/index.ts(6,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/index.ts(7,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/index.ts(8,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/index.ts(10,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/index.ts(10,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/parse.ts(3,5): error TS2322: Type 'number' is not assignable to type 'boolean'.
 lib/parse.ts(13,5): error TS2322: Type 'RegExp' is not assignable to type 'string'.
 lib/parse.ts(75,16): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
 lib/parse.ts(77,15): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
-lib/parse.ts(95,17): error TS2339: Property 'unclosed' does not exist on type '{ type: string; sourceIndex: number; quote: string; }'.
-lib/parse.ts(98,13): error TS2339: Property 'value' does not exist on type '{ type: string; sourceIndex: number; quote: string; }'.
-lib/parse.ts(99,13): error TS2339: Property 'sourceEndIndex' does not exist on type '{ type: string; sourceIndex: number; quote: string; }'.
-lib/parse.ts(99,36): error TS2339: Property 'unclosed' does not exist on type '{ type: string; sourceIndex: number; quote: string; }'.
-lib/parse.ts(115,15): error TS2339: Property 'unclosed' does not exist on type '{ type: string; sourceIndex: number; sourceEndIndex: number; }'.
-lib/parse.ts(120,13): error TS2339: Property 'value' does not exist on type '{ type: string; sourceIndex: number; sourceEndIndex: number; }'.
 lib/parse.ts(177,29): error TS2367: This condition will always return 'true' since the types 'number' and 'boolean' have no overlap.
-lib/parse.ts(191,19): error TS2339: Property 'unclosed' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
-lib/parse.ts(202,19): error TS2339: Property 'nodes' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
-lib/parse.ts(211,19): error TS2339: Property 'nodes' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
-lib/parse.ts(213,21): error TS2339: Property 'unclosed' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
-lib/parse.ts(214,19): error TS2339: Property 'after' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
-lib/parse.ts(215,19): error TS2339: Property 'nodes' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
-lib/parse.ts(222,19): error TS2339: Property 'after' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
-lib/parse.ts(223,19): error TS2339: Property 'sourceEndIndex' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
-lib/parse.ts(226,17): error TS2339: Property 'after' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
-lib/parse.ts(227,17): error TS2339: Property 'nodes' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
-lib/parse.ts(230,15): error TS2339: Property 'sourceEndIndex' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
-lib/parse.ts(230,38): error TS2339: Property 'unclosed' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
-lib/parse.ts(235,15): error TS2339: Property 'after' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
-lib/parse.ts(236,15): error TS2339: Property 'sourceEndIndex' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
-lib/parse.ts(239,24): error TS2339: Property 'nodes' does not exist on type '{ type: string; sourceIndex: number; value: string; before: any; }'.
 lib/parse.ts(271,11): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
 lib/parse.ts(294,24): error TS2339: Property 'test' does not exist on type 'string'.
 lib/stringify.ts(15,5): error TS2322: Type 'string' is not assignable to type 'boolean'.

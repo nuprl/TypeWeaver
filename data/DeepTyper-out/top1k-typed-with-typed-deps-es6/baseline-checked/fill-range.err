@@ -48,13 +48,10 @@ index.ts(47,7): error TS2367: This condition will always return 'false' since th
 index.ts(53,26): error TS2322: Type '(input: string, maxLength: number) => string' is not assignable to type 'string'.
 index.ts(63,7): error TS2322: Type '(parts: any, options: any) => any' is not assignable to type 'void'.
 index.ts(105,7): error TS2322: Type '(start: number, end: number, options: any) => string' is not assignable to type 'boolean'.
-index.ts(114,26): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 index.ts(115,68): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
-index.ts(118,7): error TS2322: Type '(start: number, end: number, options: any) => never[]' is not assignable to type 'void'.
-index.ts(123,7): error TS2322: Type '(step: number, options: any) => never[]' is not assignable to type 'void'.
+index.ts(118,7): error TS2322: Type '(start: number, end: number, options: any) => any[]' is not assignable to type 'void'.
+index.ts(123,7): error TS2322: Type '(step: number, options: any) => any[]' is not assignable to type 'void'.
 index.ts(130,7): error TS2322: Type '(start: any, end: any, step?: number, options?: {}) => any' is not assignable to type 'boolean'.
-index.ts(130,31): error TS7006: Parameter 'start' implicitly has an 'any' type.
-index.ts(130,38): error TS7006: Parameter 'end' implicitly has an 'any' type.
 index.ts(135,17): error TS2339: Property 'strictRanges' does not exist on type '{}'.
 index.ts(151,7): error TS2322: Type 'boolean' is not assignable to type 'number'.
 index.ts(151,46): error TS2349: This expression is not callable.
@@ -78,8 +75,6 @@ index.ts(175,9): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 index.ts(176,9): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
-index.ts(182,27): error TS7006: Parameter 'start' implicitly has an 'any' type.
-index.ts(182,34): error TS7006: Parameter 'end' implicitly has an 'any' type.
 index.ts(183,9): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
 index.ts(183,51): error TS2349: This expression is not callable.
@@ -94,9 +89,6 @@ index.ts(209,15): error TS2339: Property 'toRegex' does not exist on type '{}'.
 index.ts(210,12): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
 index.ts(216,7): error TS2322: Type '(start: any, end: any, step: any, options?: {}) => any' is not assignable to type 'any[]'.
-index.ts(216,22): error TS7006: Parameter 'start' implicitly has an 'any' type.
-index.ts(216,29): error TS7006: Parameter 'end' implicitly has an 'any' type.
-index.ts(216,34): error TS7006: Parameter 'step' implicitly has an 'any' type.
 index.ts(217,22): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
 index.ts(221,8): error TS2349: This expression is not callable.

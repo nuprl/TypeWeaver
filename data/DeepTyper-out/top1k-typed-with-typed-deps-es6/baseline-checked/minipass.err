@@ -1,50 +1,28 @@
 bench/impls/baseline.ts(4,10): error TS2339: Property 'pipeDests' does not exist on type 'BaselineNoOpStream'.
 bench/impls/baseline.ts(8,10): error TS2339: Property 'pipeDests' does not exist on type 'BaselineNoOpStream'.
-bench/impls/baseline.ts(11,9): error TS7006: Parameter 'd' implicitly has an 'any' type.
 bench/impls/baseline.ts(12,10): error TS2339: Property 'pipeDests' does not exist on type 'BaselineNoOpStream'.
-bench/impls/core-extend-transform.ts(4,16): error TS7006: Parameter 'opts' implicitly has an 'any' type.
-bench/impls/core-extend-transform.ts(7,15): error TS7006: Parameter 'data' implicitly has an 'any' type.
-bench/impls/core-extend-transform.ts(7,21): error TS7006: Parameter 'enc' implicitly has an 'any' type.
-bench/impls/core-extend-transform.ts(7,26): error TS7006: Parameter 'done' implicitly has an 'any' type.
-bench/impls/extend-minipass-current.ts(4,16): error TS7006: Parameter 'opts' implicitly has an 'any' type.
-bench/impls/extend-minipass-current.ts(7,10): error TS7006: Parameter 'data' implicitly has an 'any' type.
-bench/impls/extend-minipass-current.ts(7,16): error TS7006: Parameter 'encoding' implicitly has an 'any' type.
 bench/impls/extend-minipass-current.ts(8,18): error TS2554: Expected 3 arguments, but got 2.
 bench/impls/extend-minipass.ts(1,22): error TS2307: Cannot find module 'minipass' or its corresponding type declarations.
-bench/impls/extend-minipass.ts(4,16): error TS7006: Parameter 'opts' implicitly has an 'any' type.
-bench/impls/extend-minipass.ts(7,10): error TS7006: Parameter 'data' implicitly has an 'any' type.
-bench/impls/extend-minipass.ts(7,16): error TS7006: Parameter 'encoding' implicitly has an 'any' type.
-bench/impls/extend-through2.ts(3,26): error TS7006: Parameter 'opts' implicitly has an 'any' type.
 bench/impls/extend-through2.ts(6,3): error TS2304: Cannot find name 's'.
 bench/impls/extend-through2.ts(8,5): error TS2304: Cannot find name 's'.
 bench/impls/extend-through2.ts(10,10): error TS2304: Cannot find name 's'.
-bench/impls/extend-through2.ts(13,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 bench/impls/minipass-current-async.ts(5,13): error TS2339: Property 'async' does not exist on type '{}'.
-bench/impls/push-through.ts(4,16): error TS7006: Parameter 'opt' implicitly has an 'any' type.
 bench/impls/push-through.ts(5,10): error TS2339: Property 'dests' does not exist on type 'PushThrough'.
 bench/impls/push-through.ts(6,10): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
 bench/impls/push-through.ts(7,10): error TS2339: Property 'buffer' does not exist on type 'PushThrough'.
 bench/impls/push-through.ts(8,10): error TS2339: Property 'ended' does not exist on type 'PushThrough'.
 bench/impls/push-through.ts(9,10): error TS2339: Property 'ondrain' does not exist on type 'PushThrough'.
 bench/impls/push-through.ts(10,10): error TS2339: Property 'onfinish' does not exist on type 'PushThrough'.
-bench/impls/push-through.ts(13,7): error TS7006: Parameter 'ev' implicitly has an 'any' type.
-bench/impls/push-through.ts(13,11): error TS7006: Parameter 'fn' implicitly has an 'any' type.
 bench/impls/push-through.ts(17,14): error TS2339: Property 'onfinish' does not exist on type 'PushThrough'.
 bench/impls/push-through.ts(20,14): error TS2339: Property 'ondrain' does not exist on type 'PushThrough'.
-bench/impls/push-through.ts(27,9): error TS7006: Parameter 'ev' implicitly has an 'any' type.
-bench/impls/push-through.ts(27,13): error TS7006: Parameter 'fn' implicitly has an 'any' type.
 bench/impls/push-through.ts(28,21): error TS2322: Type '() => void' is not assignable to type 'void'.
-bench/impls/push-through.ts(30,7): error TS7053: Element implicitly has an 'any' type because expression of type '`on${any}`' can't be used to index type 'PushThrough'.
-bench/impls/push-through.ts(30,25): error TS7053: Element implicitly has an 'any' type because expression of type '`on${any}`' can't be used to index type 'PushThrough'.
 bench/impls/push-through.ts(30,65): error TS2367: This condition will always return 'true' since the types 'boolean' and 'void' have no overlap.
-bench/impls/push-through.ts(35,9): error TS7006: Parameter 'ev' implicitly has an 'any' type.
 bench/impls/push-through.ts(38,14): error TS2339: Property 'onfinish' does not exist on type 'PushThrough'.
 bench/impls/push-through.ts(38,44): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 bench/impls/push-through.ts(41,14): error TS2339: Property 'ondrain' does not exist on type 'PushThrough'.
 bench/impls/push-through.ts(41,43): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-bench/impls/push-through.ts(48,9): error TS7006: Parameter 'dest' implicitly has an 'any' type.
 bench/impls/push-through.ts(49,10): error TS2339: Property 'dests' does not exist on type 'PushThrough'.
 bench/impls/push-through.ts(55,10): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
 bench/impls/push-through.ts(56,14): error TS2339: Property 'buffer' does not exist on type 'PushThrough'.
@@ -58,7 +36,6 @@ bench/impls/push-through.ts(67,14): error TS2339: Property 'ended' does not exis
 bench/impls/push-through.ts(67,28): error TS2339: Property 'buffer' does not exist on type 'PushThrough'.
 bench/impls/push-through.ts(68,28): error TS2339: Property 'dests' does not exist on type 'PushThrough'.
 bench/impls/push-through.ts(76,10): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
-bench/impls/push-through.ts(79,10): error TS7006: Parameter 'chunk' implicitly has an 'any' type.
 bench/impls/push-through.ts(80,14): error TS2339: Property 'ended' does not exist on type 'PushThrough'.
 bench/impls/push-through.ts(83,15): error TS2339: Property 'dests' does not exist on type 'PushThrough'.
 bench/impls/push-through.ts(83,36): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
@@ -68,69 +45,38 @@ bench/impls/push-through.ts(89,12): error TS2551: Property 'paused' does not exi
 bench/impls/push-through.ts(89,26): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
 bench/impls/push-through.ts(91,18): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?
 bench/impls/push-through.ts(95,10): error TS2339: Property 'ended' does not exist on type 'PushThrough'.
-bench/impls/through2.ts(3,26): error TS7006: Parameter 'opts' implicitly has an 'any' type.
 bench/impls/through2.ts(6,3): error TS2304: Cannot find name 's'.
 bench/impls/through2.ts(8,5): error TS2304: Cannot find name 's'.
 bench/impls/through2.ts(10,10): error TS2304: Cannot find name 's'.
 bench/index.ts(17,26): error TS2307: Cannot find module '@npmcli/promise-spawn' or its corresponding type declarations.
 bench/index.ts(19,29): error TS2322: Type '() => Promise<void>' is not assignable to type 'Promise<void>'.
-bench/index.ts(30,9): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-bench/index.ts(32,9): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-bench/index.ts(41,9): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-bench/index.ts(43,9): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-bench/index.ts(52,9): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
-bench/index.ts(54,9): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
 bench/index.ts(70,25): error TS2345: Argument of type '(res: void, rej: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'res' and 'resolve' are incompatible.
     Type '(value: unknown) => void' is not assignable to type 'void'.
 bench/index.ts(72,45): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 bench/index.ts(73,27): error TS2322: Type '() => void' is not assignable to type 'void'.
-bench/index.ts(75,11): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
 bench/index.ts(77,11): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 bench/index.ts(86,15): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 bench/index.ts(94,13): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-bench/index.ts(100,28): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
 bench/index.ts(103,31): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(value: any, replacer?: ((this: any, key: string, value: any) => any) | undefined, space?: string | number | undefined): string', gave the following error.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
     Argument of type 'number' is not assignable to parameter of type '(this: any, key: string, value: any) => any'.
-  Overload 2 of 2, '(value: any, replacer?: (string | number)[] | null | undefined, space?: string | number | undefined): string', gave the following error.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
     Argument of type 'number' is not assignable to parameter of type '(string | number)[]'.
 bench/index.ts(106,39): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(value: any, replacer?: ((this: any, key: string, value: any) => any) | undefined, space?: string | number | undefined): string', gave the following error.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
     Argument of type 'number' is not assignable to parameter of type '(this: any, key: string, value: any) => any'.
-  Overload 2 of 2, '(value: any, replacer?: (string | number)[] | null | undefined, space?: string | number | undefined): string', gave the following error.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
     Argument of type 'number' is not assignable to parameter of type '(string | number)[]'.
 bench/index.ts(107,60): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(value: any, replacer?: ((this: any, key: string, value: any) => any) | undefined, space?: string | number | undefined): string', gave the following error.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
     Argument of type 'number' is not assignable to parameter of type '(this: any, key: string, value: any) => any'.
-  Overload 2 of 2, '(value: any, replacer?: (string | number)[] | null | undefined, space?: string | number | undefined): string', gave the following error.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
     Argument of type 'number' is not assignable to parameter of type '(string | number)[]'.
-bench/index.ts(115,48): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(o: { [s: string]: unknown; } | ArrayLike<unknown>): [string, unknown][]', gave the following error.
-    Argument of type 'unknown' is not assignable to parameter of type '{ [s: string]: unknown; } | ArrayLike<unknown>'.
-  Overload 2 of 2, '(o: {}): [string, any][]', gave the following error.
-    Argument of type 'unknown' is not assignable to parameter of type '{}'.
-bench/index.ts(116,50): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(o: { [s: string]: unknown; } | ArrayLike<unknown>): [string, unknown][]', gave the following error.
-    Argument of type 'unknown' is not assignable to parameter of type '{ [s: string]: unknown; } | ArrayLike<unknown>'.
-  Overload 2 of 2, '(o: {}): [string, any][]', gave the following error.
-    Argument of type 'unknown' is not assignable to parameter of type '{}'.
-bench/index.ts(117,53): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(o: { [s: string]: unknown; } | ArrayLike<unknown>): [string, unknown][]', gave the following error.
-    Argument of type 'unknown' is not assignable to parameter of type '{ [s: string]: unknown; } | ArrayLike<unknown>'.
-  Overload 2 of 2, '(o: {}): [string, any][]', gave the following error.
-    Argument of type 'unknown' is not assignable to parameter of type '{}'.
-bench/index.ts(118,33): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'number'.
 bench/index.ts(148,7): error TS2322: Type '(impl: any, len: number, cse: number, opt: any) => { src: any; start: number; dest: any; dest2: any; }' is not assignable to type 'void'.
 bench/index.ts(161,10): error TS2678: Type 'string' is not comparable to type 'number'.
 bench/index.ts(163,27): error TS2554: Expected 0 arguments, but got 1.
@@ -143,13 +89,11 @@ bench/index.ts(175,27): error TS2554: Expected 0 arguments, but got 1.
 bench/index.ts(177,10): error TS2678: Type 'string' is not comparable to type 'number'.
 bench/index.ts(179,27): error TS2554: Expected 0 arguments, but got 1.
 bench/index.ts(180,28): error TS2554: Expected 0 arguments, but got 1.
-bench/index.ts(193,16): error TS7006: Parameter 'options' implicitly has an 'any' type.
 bench/index.ts(195,10): error TS2339: Property 'chunk' does not exist on type 'Src'.
 bench/index.ts(198,10): error TS2339: Property 'n' does not exist on type 'Src'.
 bench/index.ts(199,10): error TS2339: Property 'flowing' does not exist on type 'Src'.
 bench/index.ts(200,10): error TS2339: Property 'readable' does not exist on type 'Src'.
 bench/index.ts(201,10): error TS2339: Property 'writable' does not exist on type 'Src'.
-bench/index.ts(203,9): error TS7006: Parameter 'dest' implicitly has an 'any' type.
 bench/index.ts(204,33): error TS2339: Property 'resume' does not exist on type 'Src'.
 bench/index.ts(207,10): error TS2339: Property 'resume' does not exist on type 'Src'.
 bench/index.ts(211,10): error TS2339: Property 'flowing' does not exist on type 'Src'.
@@ -163,24 +107,22 @@ bench/index.ts(224,14): error TS2339: Property 'flowing' does not exist on type 
 bench/index.ts(224,30): error TS2339: Property 'n' does not exist on type 'FastSrc'.
 bench/index.ts(231,14): error TS2339: Property 'flowing' does not exist on type 'SlowSrc'.
 bench/index.ts(234,10): error TS2339: Property 'flowing' does not exist on type 'SlowSrc'.
-bench/index.ts(235,11): error TS2322: Type '() => Promise<void> | undefined' is not assignable to type 'void'.
+bench/index.ts(235,11): error TS2322: Type '() => Promise<void>' is not assignable to type 'void'.
 bench/index.ts(236,17): error TS2339: Property 'flowing' does not exist on type 'SlowSrc'.
 bench/index.ts(239,16): error TS2339: Property 'flowing' does not exist on type 'SlowSrc'.
 bench/index.ts(239,32): error TS2339: Property 'n' does not exist on type 'SlowSrc'.
 bench/index.ts(240,32): error TS2339: Property 'chunk' does not exist on type 'SlowSrc'.
 bench/index.ts(241,14): error TS2339: Property 'n' does not exist on type 'SlowSrc'.
-bench/index.ts(242,39): error TS2345: Argument of type 'void' is not assignable to parameter of type '((value: void) => void | PromiseLike<void>) | null | undefined'.
+bench/index.ts(242,39): error TS2345: Argument of type 'void' is not assignable to parameter of type '(value: void) => void | PromiseLike<void>'.
 bench/index.ts(244,16): error TS2339: Property 'flowing' does not exist on type 'SlowSrc'.
 bench/index.ts(244,32): error TS2339: Property 'n' does not exist on type 'SlowSrc'.
-bench/index.ts(249,28): error TS2345: Argument of type 'void' is not assignable to parameter of type '((value: void) => void | PromiseLike<void>) | null | undefined'.
+bench/index.ts(249,28): error TS2345: Argument of type 'void' is not assignable to parameter of type '(value: void) => void | PromiseLike<void>'.
 bench/index.ts(256,10): error TS2339: Property 'writable' does not exist on type 'Dest'.
 bench/index.ts(257,10): error TS2339: Property 'readable' does not exist on type 'Dest'.
 bench/index.ts(258,10): error TS2339: Property 'ended' does not exist on type 'Dest'.
 bench/index.ts(259,10): error TS2339: Property 'buffering' does not exist on type 'Dest'.
-bench/index.ts(263,10): error TS7006: Parameter 'c' implicitly has an 'any' type.
 bench/index.ts(264,14): error TS2339: Property 'ended' does not exist on type 'FastDest'.
 bench/index.ts(270,10): error TS2339: Property 'ended' does not exist on type 'FastDest'.
-bench/index.ts(275,10): error TS7006: Parameter 'c' implicitly has an 'any' type.
 bench/index.ts(276,14): error TS2339: Property 'ended' does not exist on type 'SlowDest'.
 bench/index.ts(279,10): error TS2339: Property 'buffering' does not exist on type 'SlowDest'.
 bench/index.ts(281,12): error TS2339: Property 'buffering' does not exist on type 'SlowDest'.
@@ -188,12 +130,8 @@ bench/index.ts(287,10): error TS2339: Property 'ended' does not exist on type 'S
 bench/index.ts(288,14): error TS2339: Property 'buffering' does not exist on type 'SlowDest'.
 bench/index.ts(297,1): error TS2349: This expression is not callable.
   Type 'Promise<void>' has no call signatures.
-index.ts(37,32): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-index.ts(51,7): error TS2322: Type '(b: any) => any' is not assignable to type 'number'.
+index.ts(51,7): error TS2322: Type '(b: any) => boolean' is not assignable to type 'number'.
 index.ts(57,7): error TS2322: Type '(b: any) => boolean' is not assignable to type 'number'.
-index.ts(60,16): error TS7006: Parameter 'src' implicitly has an 'any' type.
-index.ts(60,21): error TS7006: Parameter 'dest' implicitly has an 'any' type.
-index.ts(60,27): error TS7006: Parameter 'opts' implicitly has an 'any' type.
 index.ts(61,10): error TS2339: Property 'src' does not exist on type 'Pipe'.
 index.ts(62,10): error TS2339: Property 'dest' does not exist on type 'Pipe'.
 index.ts(63,10): error TS2339: Property 'opts' does not exist on type 'Pipe'.
@@ -204,221 +142,57 @@ index.ts(68,44): error TS2339: Property 'ondrain' does not exist on type 'Pipe'.
 index.ts(74,14): error TS2339: Property 'opts' does not exist on type 'Pipe'.
 index.ts(75,12): error TS2339: Property 'dest' does not exist on type 'Pipe'.
 index.ts(81,10): error TS2339: Property 'src' does not exist on type 'PipeProxyErrors'.
-index.ts(84,16): error TS7006: Parameter 'src' implicitly has an 'any' type.
-index.ts(84,21): error TS7006: Parameter 'dest' implicitly has an 'any' type.
-index.ts(84,27): error TS7006: Parameter 'opts' implicitly has an 'any' type.
 index.ts(86,5): error TS2322: Type '(er: any) => any' is not assignable to type '() => void'.
-index.ts(92,16): error TS7006: Parameter 'options' implicitly has an 'any' type.
-index.ts(94,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(96,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(97,10): error TS2551: Property 'pipes' does not exist on type 'Minipass'. Did you mean 'pipe'?
 index.ts(98,10): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
-index.ts(99,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(100,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(101,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(103,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(104,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(105,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(106,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(107,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(107,21): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(107,45): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(108,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(109,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(110,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(111,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(112,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(113,10): error TS2339: Property 'writable' does not exist on type 'Minipass'.
 index.ts(114,10): error TS2339: Property 'readable' does not exist on type 'Minipass'.
-index.ts(115,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(116,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(119,32): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(121,28): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(123,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(126,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(126,35): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(127,10): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(127,27): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(127,53): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(130,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(131,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(132,16): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
 index.ts(133,14): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
 index.ts(133,28): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
-index.ts(133,55): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(136,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(139,16): error TS7006: Parameter 'enc' implicitly has an 'any' type.
-index.ts(143,30): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(144,25): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(144,44): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(146,29): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(147,23): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(147,37): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(149,10): error TS7006: Parameter 'chunk' implicitly has an 'any' type.
-index.ts(149,17): error TS7006: Parameter 'encoding' implicitly has an 'any' type.
-index.ts(149,27): error TS7006: Parameter 'cb' implicitly has an 'any' type.
-index.ts(150,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(153,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(167,21): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(173,10): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(174,11): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 index.ts(176,16): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
-index.ts(185,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(187,27): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(188,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(193,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(195,11): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(196,14): error TS2555: Expected at least 2 arguments, but got 1.
-index.ts(207,11): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(208,14): error TS2555: Expected at least 2 arguments, but got 1.
-index.ts(218,24): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(218,43): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(222,35): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(223,15): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(226,25): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(227,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(232,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(234,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(235,12): error TS2555: Expected at least 2 arguments, but got 1.
-index.ts(243,9): error TS7006: Parameter 'n' implicitly has an 'any' type.
-index.ts(244,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(247,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(247,52): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(248,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(252,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(255,14): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
-index.ts(255,36): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(257,14): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
 index.ts(257,29): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
 index.ts(259,14): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
 index.ts(259,43): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
-index.ts(259,51): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(262,22): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(262,49): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
-index.ts(263,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(267,11): error TS7006: Parameter 'n' implicitly has an 'any' type.
-index.ts(267,14): error TS7006: Parameter 'chunk' implicitly has an 'any' type.
-index.ts(269,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(271,12): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
-index.ts(273,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(278,15): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
-index.ts(278,33): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(279,12): error TS2555: Expected at least 2 arguments, but got 1.
-index.ts(284,8): error TS7006: Parameter 'chunk' implicitly has an 'any' type.
-index.ts(284,15): error TS7006: Parameter 'encoding' implicitly has an 'any' type.
-index.ts(284,25): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 index.ts(290,12): error TS2554: Expected 3 arguments, but got 2.
-index.ts(293,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(294,10): error TS2339: Property 'writable' does not exist on type 'Minipass'.
-index.ts(300,26): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(301,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(307,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(310,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(311,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(312,10): error TS2555: Expected at least 2 arguments, but got 1.
 index.ts(313,14): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
-index.ts(314,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(315,14): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(316,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(318,12): error TS2555: Expected at least 2 arguments, but got 1.
-index.ts(322,12): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(326,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(327,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(331,12): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(335,12): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(339,12): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(342,17): error TS7006: Parameter 'chunk' implicitly has an 'any' type.
-index.ts(343,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(344,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(346,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(347,10): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
 index.ts(351,14): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
-index.ts(352,11): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(353,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(355,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(355,36): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
 index.ts(357,17): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
-index.ts(360,12): error TS7006: Parameter 'noDrain' implicitly has an 'any' type.
-index.ts(361,18): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(361,35): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(363,27): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
-index.ts(363,45): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(364,12): error TS2555: Expected at least 2 arguments, but got 1.
-index.ts(367,17): error TS7006: Parameter 'chunk' implicitly has an 'any' type.
-index.ts(371,9): error TS7006: Parameter 'dest' implicitly has an 'any' type.
-index.ts(371,15): error TS7006: Parameter 'opts' implicitly has an 'any' type.
-index.ts(372,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(375,24): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(388,12): error TS2551: Property 'pipes' does not exist on type 'Minipass'. Did you mean 'pipe'?
-index.ts(390,11): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(391,21): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(393,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(399,11): error TS7006: Parameter 'dest' implicitly has an 'any' type.
 index.ts(400,25): error TS2551: Property 'pipes' does not exist on type 'Minipass'. Did you mean 'pipe'?
 index.ts(402,12): error TS2551: Property 'pipes' does not exist on type 'Minipass'. Did you mean 'pipe'?
 index.ts(402,30): error TS2551: Property 'pipes' does not exist on type 'Minipass'. Did you mean 'pipe'?
-index.ts(407,16): error TS7006: Parameter 'ev' implicitly has an 'any' type.
-index.ts(407,20): error TS7006: Parameter 'fn' implicitly has an 'any' type.
-index.ts(411,7): error TS7006: Parameter 'ev' implicitly has an 'any' type.
-index.ts(411,11): error TS7006: Parameter 'fn' implicitly has an 'any' type.
 index.ts(413,32): error TS2551: Property 'pipes' does not exist on type 'Minipass'. Did you mean 'pipe'?
-index.ts(414,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(415,35): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(417,30): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(420,34): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(421,11): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(422,35): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(424,23): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(430,12): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(434,10): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(435,10): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(436,10): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(437,14): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
-index.ts(438,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(439,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(440,12): error TS2555: Expected at least 2 arguments, but got 1.
 index.ts(441,12): error TS2555: Expected at least 2 arguments, but got 1.
 index.ts(442,12): error TS2555: Expected at least 2 arguments, but got 1.
-index.ts(443,11): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(444,14): error TS2555: Expected at least 2 arguments, but got 1.
-index.ts(445,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(449,9): error TS7006: Parameter 'ev' implicitly has an 'any' type.
-index.ts(449,13): error TS7006: Parameter 'data' implicitly has an 'any' type.
-index.ts(449,19): error TS7019: Rest parameter 'extra' implicitly has an 'any[]' type.
-index.ts(451,65): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(455,11): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(455,37): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(456,11): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(458,14): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(460,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(462,12): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(462,34): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(468,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(470,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(474,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(484,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(488,15): error TS7006: Parameter 'data' implicitly has an 'any' type.
 index.ts(489,26): error TS2551: Property 'pipes' does not exist on type 'Minipass'. Did you mean 'pipe'?
-index.ts(494,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(499,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(502,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(503,10): error TS2339: Property 'readable' does not exist on type 'Minipass'.
-index.ts(504,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(505,19): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(507,7): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(511,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(512,25): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(514,30): error TS2551: Property 'pipes' does not exist on type 'Minipass'. Did you mean 'pipe'?
 index.ts(521,26): error TS2551: Property 'pipes' does not exist on type 'Minipass'. Did you mean 'pipe'?
-index.ts(532,10): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(533,11): error TS2339: Property 'dataLength' does not exist on type 'any[]'.
-index.ts(539,12): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(540,13): error TS2339: Property 'dataLength' does not exist on type 'any[]'.
-index.ts(547,12): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(550,11): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(552,15): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(557,24): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'resolve' and 'resolve' are incompatible.
     Type '(value: unknown) => void' is not assignable to type 'void'.
@@ -430,30 +204,21 @@ index.ts(560,28): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 index.ts(566,11): error TS2322: Type '() => Promise<unknown>' is not assignable to type 'Promise<void>'.
 index.ts(567,29): error TS2554: Expected 1 arguments, but got 0.
-index.ts(571,11): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
-index.ts(575,11): error TS2322: Type 'null' is not assignable to type 'void'.
 index.ts(578,36): error TS2345: Argument of type 'void' is not assignable to parameter of type '(...args: any[]) => void'.
 index.ts(579,9): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 index.ts(583,36): error TS2345: Argument of type 'void' is not assignable to parameter of type '(...args: any[]) => void'.
-index.ts(585,41): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(587,27): error TS2322: Type '() => void' is not assignable to type 'void'.
 index.ts(593,26): error TS2345: Argument of type '(res: void, rej: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'res' and 'resolve' are incompatible.
     Type '(value: unknown) => void' is not assignable to type 'void'.
 index.ts(598,26): error TS2345: Argument of type 'void' is not assignable to parameter of type '(...args: any[]) => void'.
 index.ts(609,31): error TS2554: Expected 1 arguments, but got 0.
-index.ts(616,12): error TS7006: Parameter 'er' implicitly has an 'any' type.
-index.ts(617,9): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(621,14): error TS2555: Expected at least 2 arguments, but got 1.
-index.ts(625,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(628,10): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
-index.ts(629,5): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(631,21): error TS2339: Property 'close' does not exist on type 'Minipass'.
-index.ts(631,46): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Minipass'.
 index.ts(632,12): error TS2339: Property 'close' does not exist on type 'Minipass'.
 index.ts(637,12): error TS2555: Expected at least 2 arguments, but got 1.
-index.ts(642,20): error TS7006: Parameter 's' implicitly has an 'any' type.
 index.ts(645,18): error TS2339: Property 'pipe' does not exist on type 'EventEmitter'.
 index.ts(646,19): error TS2339: Property 'write' does not exist on type 'EventEmitter'.
 index.ts(646,52): error TS2339: Property 'end' does not exist on type 'EventEmitter'.

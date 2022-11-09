@@ -13,8 +13,6 @@ bench/dryrun.ts(2,19): error TS2307: Cannot find module 'chalk' or its correspon
 bench/dryrun.ts(3,20): error TS2306: File 'index.ts' is not a module.
 examples/alias.ts(1,20): error TS2306: File 'index.ts' is not a module.
 examples/chained.ts(4,20): error TS2306: File 'index.ts' is not a module.
-examples/chained.ts(5,19): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
-examples/chained.ts(6,14): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 examples/colors.ts(2,20): error TS2306: File 'index.ts' is not a module.
 examples/nested.ts(3,20): error TS2306: File 'index.ts' is not a module.
 examples/nesting-bug.ts(3,55): error TS2307: Cannot find module './' or its corresponding type declarations.
@@ -28,9 +26,7 @@ examples/screenshot-table.ts(4,20): error TS2306: File 'index.ts' is not a modul
 examples/screenshot.ts(3,20): error TS2306: File 'index.ts' is not a module.
 examples/screenshot.ts(4,23): error TS2307: Cannot find module 'justified' or its corresponding type declarations.
 examples/styles.ts(3,15): error TS2306: File 'index.ts' is not a module.
-examples/styles.ts(4,11): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 examples/theme-custom-fn.ts(1,20): error TS2306: File 'index.ts' is not a module.
-examples/theme-custom-fn.ts(9,6): error TS7006: Parameter 'message' implicitly has an 'any' type.
 examples/theme.ts(1,20): error TS2306: File 'index.ts' is not a module.
 examples/theme2.ts(1,20): error TS2306: File 'index.ts' is not a module.
 examples/unstyle.ts(1,20): error TS2306: File 'index.ts' is not a module.
@@ -44,7 +40,6 @@ index.ts(51,7): error TS2322: Type 'string[]' is not assignable to type 'string'
 index.ts(53,27): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
 index.ts(57,24): error TS2322: Type '(name: string, codes: string[], type: any) => void' is not assignable to type 'void'.
-index.ts(57,56): error TS7006: Parameter 'type' implicitly has an 'any' type.
 index.ts(77,3): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 index.ts(78,3): error TS2349: This expression is not callable.

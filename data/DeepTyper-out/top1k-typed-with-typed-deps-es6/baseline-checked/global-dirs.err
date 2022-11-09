@@ -1,13 +1,4 @@
 index.ts(15,33): error TS2322: Type '() => string' is not assignable to type 'string'.
-index.ts(18,41): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(callbackfn: (previousValue: string, currentValue: string, currentIndex: number, array: string[]) => string, initialValue: string): string', gave the following error.
-    Argument of type '(prefix: string, name: string) => string | undefined' is not assignable to parameter of type '(previousValue: string, currentValue: string, currentIndex: number, array: string[]) => string'.
-      Type 'string | undefined' is not assignable to type 'string'.
-        Type 'undefined' is not assignable to type 'string'.
-  Overload 2 of 3, '(callbackfn: (previousValue: string, currentValue: string, currentIndex: number, array: string[]) => string, initialValue: string): string', gave the following error.
-    Argument of type '(prefix: string, name: string) => string | undefined' is not assignable to parameter of type '(previousValue: string, currentValue: string, currentIndex: number, array: string[]) => string'.
-      Type 'string | undefined' is not assignable to type 'string'.
-        Type 'undefined' is not assignable to type 'string'.
 index.ts(52,25): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
 

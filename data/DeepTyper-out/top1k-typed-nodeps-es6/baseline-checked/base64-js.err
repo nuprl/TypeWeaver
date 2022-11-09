@@ -3,7 +3,6 @@ base64js.min.ts(1,93): error TS2349: This expression is not callable.
 base64js.min.ts(1,124): error TS2304: Cannot find name 'define'.
 base64js.min.ts(1,132): error TS2304: Cannot find name 'define'.
 base64js.min.ts(1,143): error TS2304: Cannot find name 'define'.
-base64js.min.ts(1,253): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 base64js.min.ts(1,288): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
 base64js.min.ts(1,295): error TS2345: Argument of type '() => any' is not assignable to parameter of type 'string'.
@@ -11,42 +10,12 @@ base64js.min.ts(1,500): error TS2554: Expected 1 arguments, but got 2.
 base64js.min.ts(1,690): error TS2554: Expected 2 arguments, but got 1.
 base64js.min.ts(1,805): error TS2554: Expected 2 arguments, but got 1.
 base64js.min.ts(1,1083): error TS2322: Type 'number[]' is not assignable to type 'number'.
-base64js.min.ts(1,1216): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-base64js.min.ts(1,1223): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
-base64js.min.ts(1,1281): error TS7005: Variable 'l' implicitly has an 'any[]' type.
-base64js.min.ts(1,1304): error TS7005: Variable 'l' implicitly has an 'any[]' type.
-base64js.min.ts(1,1329): error TS7005: Variable 'l' implicitly has an 'any[]' type.
-base64js.min.ts(1,1353): error TS7005: Variable 'l' implicitly has an 'any[]' type.
 base64js.min.ts(1,1420): error TS2322: Type 'any[] | Uint8Array' is not assignable to type 'number'.
   Type 'any[]' is not assignable to type 'number'.
-base64js.min.ts(1,1437): error TS7005: Variable 'l' implicitly has an 'any[]' type.
-base64js.min.ts(1,1459): error TS7005: Variable 'l' implicitly has an 'any[]' type.
-base64js.min.ts(1,1507): error TS7005: Variable 'l' implicitly has an 'any[]' type.
-base64js.min.ts(1,1530): error TS7005: Variable 'l' implicitly has an 'any[]' type.
-base64js.min.ts(1,1554): error TS7005: Variable 'l' implicitly has an 'any[]' type.
-base64js.min.ts(1,1644): error TS7005: Variable 'k' implicitly has an 'any[]' type.
-base64js.min.ts(1,1656): error TS7005: Variable 'k' implicitly has an 'any[]' type.
-base64js.min.ts(1,1668): error TS7005: Variable 'k' implicitly has an 'any[]' type.
-base64js.min.ts(1,1679): error TS7005: Variable 'k' implicitly has an 'any[]' type.
 base64js.min.ts(1,1953): error TS2322: Type 'string' is not assignable to type 'number'.
-base64js.min.ts(1,1983): error TS7005: Variable 'k' implicitly has an 'any[]' type.
-base64js.min.ts(1,1991): error TS7005: Variable 'k' implicitly has an 'any[]' type.
-base64js.min.ts(1,2045): error TS7005: Variable 'k' implicitly has an 'any[]' type.
-base64js.min.ts(1,2054): error TS7005: Variable 'k' implicitly has an 'any[]' type.
-base64js.min.ts(1,2065): error TS7005: Variable 'k' implicitly has an 'any[]' type.
-base64js.min.ts(1,2215): error TS7034: Variable 'k' implicitly has type 'any[]' in some locations where its type cannot be determined.
-base64js.min.ts(1,2220): error TS7034: Variable 'l' implicitly has type 'any[]' in some locations where its type cannot be determined.
 bench/basic.ts(2,17): error TS2306: File 'index.ts' is not a module.
 bench/bench.ts(1,20): error TS2306: File 'index.ts' is not a module.
 bench/bench.ts(2,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
 index.ts(38,3): error TS2322: Type 'number[]' is not assignable to type 'number'.
-index.ts(111,9): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-index.ts(112,9): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-index.ts(113,8): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 index.ts(116,3): error TS2322: Type 'string' is not assignable to type 'number'.
 

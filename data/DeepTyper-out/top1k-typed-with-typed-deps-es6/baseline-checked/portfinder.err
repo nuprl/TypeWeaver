@@ -4,9 +4,6 @@ lib/portfinder.ts(94,3): error TS1184: Modifiers cannot appear here.
 lib/portfinder.ts(107,37): error TS2322: Type '(port: any) => void' is not assignable to type 'void'.
 lib/portfinder.ts(108,3): error TS1184: Modifiers cannot appear here.
 lib/portfinder.ts(123,30): error TS2322: Type '(options: any, callback: any) => void' is not assignable to type 'void'.
-lib/portfinder.ts(150,30): error TS7034: Variable 'currentHost' implicitly has type 'any' in some locations where its type cannot be determined.
-lib/portfinder.ts(173,30): error TS7005: Variable 'currentHost' implicitly has an 'any' type.
-lib/portfinder.ts(182,56): error TS7005: Variable 'currentHost' implicitly has an 'any' type.
 lib/portfinder.ts(184,18): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/portfinder.ts(210,14): error TS2349: This expression is not callable.
@@ -32,11 +29,5 @@ lib/portfinder.ts(311,9): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/portfinder.ts(366,14): error TS2322: Type '(port: any) => any' is not assignable to type 'string'.
 lib/portfinder.ts(376,14): error TS2322: Type '(socketPath: any) => string' is not assignable to type 'void'.
-lib/portfinder.ts(380,24): error TS2531: Object is possibly 'null'.
-lib/portfinder.ts(381,14): error TS2531: Object is possibly 'null'.
 lib/portfinder.ts(466,14): error TS2322: Type 'string[]' is not assignable to type 'void'.
-lib/portfinder.ts(481,9): error TS2571: Object is of type 'unknown'.
-lib/portfinder.ts(493,27): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-lib/portfinder.ts(501,16): error TS2345: Argument of type 'null' is not assignable to parameter of type 'string'.
 

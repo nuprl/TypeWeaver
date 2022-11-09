@@ -1,24 +1,11 @@
+index.ts(5,5): error TS2322: Type '(args: any) => any' is not assignable to type 'T[]'.
 index.ts(5,14): error TS2304: Cannot find name 'T'.
-index.ts(5,20): error TS2322: Type '(args: any) => any[]' is not assignable to type 'T[]'.
 index.ts(10,5): error TS2322: Type '(opts: any) => any' is not assignable to type 'void'.
 index.ts(12,26): error TS2349: This expression is not callable.
   Type 'T[]' has no call signatures.
-index.ts(13,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(14,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(14,26): error TS2345: Argument of type 'null' is not assignable to parameter of type 'Writable | undefined'.
-index.ts(15,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(21,26): error TS2349: This expression is not callable.
   Type 'T[]' has no call signatures.
 index.ts(30,25): error TS2322: Type '() => void' is not assignable to type 'void'.
-index.ts(39,5): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(streams: Stream[], callback?: Callback | undefined): Stream', gave the following error.
-    Argument of type '(err: Error) => any' is not assignable to parameter of type 'Callback'.
-      Types of parameters 'err' and 'err' are incompatible.
-        Type 'Error | undefined' is not assignable to type 'Error'.
-          Type 'undefined' is not assignable to type 'Error'.
-  Overload 2 of 2, '(...streams: (Stream | Callback)[]): Stream', gave the following error.
-    Argument of type 'any[]' is not assignable to parameter of type 'Stream | Callback'.
-      Type 'any[]' is missing the following properties from type 'ReadableStream': readable, read, setEncoding, pause, and 21 more.
 index.ts(50,32): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 index.ts(58,16): error TS2349: This expression is not callable.

@@ -2,17 +2,9 @@ index.ts(16,5): error TS2322: Type 'RegExp' is not assignable to type 'string'.
 index.ts(17,5): error TS2322: Type 'RegExp' is not assignable to type 'string'.
 index.ts(18,5): error TS2322: Type 'RegExp' is not assignable to type 'string'.
 index.ts(19,5): error TS2322: Type 'RegExp' is not assignable to type 'string'.
-index.ts(92,30): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(113,21): error TS2322: Type 'boolean' is not assignable to type 'any[]'.
 index.ts(145,33): error TS2339: Property 'test' does not exist on type 'string'.
 index.ts(150,27): error TS2339: Property 'test' does not exist on type 'string'.
 index.ts(155,28): error TS2339: Property 'test' does not exist on type 'string'.
-index.ts(197,35): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(value: any, replacer?: ((this: any, key: string, value: any) => any) | undefined, space?: string | number | undefined): string', gave the following error.
-    Argument of type '((key: string, value: any) => any) | null' is not assignable to parameter of type '((this: any, key: string, value: any) => any) | undefined'.
-      Type 'null' is not assignable to type '((this: any, key: string, value: any) => any) | undefined'.
-  Overload 2 of 2, '(value: any, replacer?: (string | number)[] | null | undefined, space?: string | number | undefined): string', gave the following error.
-    Argument of type '((key: string, value: any) => any) | null' is not assignable to parameter of type '(string | number)[] | null | undefined'.
-      Type '(key: string, value: any) => any' is not assignable to type '(string | number)[]'.
 index.ts(233,36): error TS2554: Expected 2 arguments, but got 1.
 

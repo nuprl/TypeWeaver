@@ -1,30 +1,16 @@
 .eslintrc.ts(5,22): error TS2451: Cannot redeclare block-scoped variable 'readdir'.
 lib/index.ts(25,7): error TS2451: Cannot redeclare block-scoped variable 'readdir'.
 lib/index.ts(36,38): error TS2322: Type '(path: any) => Promise<boolean>' is not assignable to type 'Promise<boolean>'.
-lib/index.ts(41,12): error TS2571: Object is of type 'unknown'.
-lib/index.ts(50,12): error TS2571: Object is of type 'unknown'.
-lib/index.ts(54,33): error TS2322: Type '(source: any, destination: any, options?: {}, root?: boolean, symlinks?: never[]) => Promise<void>' is not assignable to type 'Promise<void>'.
-lib/index.ts(54,40): error TS7006: Parameter 'source' implicitly has an 'any' type.
-lib/index.ts(54,48): error TS7006: Parameter 'destination' implicitly has an 'any' type.
+lib/index.ts(54,33): error TS2322: Type '(source: any, destination: any, options?: {}, root?: boolean, symlinks?: any[]) => Promise<void>' is not assignable to type 'Promise<void>'.
 lib/index.ts(64,16): error TS2339: Property 'overwrite' does not exist on type '{}'.
 lib/index.ts(64,35): error TS2349: This expression is not callable.
   Type 'Promise<boolean>' has no call signatures.
-lib/index.ts(73,9): error TS2571: Object is of type 'unknown'.
-lib/index.ts(73,35): error TS2571: Object is of type 'unknown'.
 lib/index.ts(78,11): error TS2349: This expression is not callable.
   Type 'Promise<void>' has no call signatures.
-lib/index.ts(81,25): error TS2322: Type 'any' is not assignable to type 'never'.
-lib/index.ts(81,33): error TS2322: Type 'any' is not assignable to type 'never'.
 lib/index.ts(103,24): error TS2339: Property 'isDirectory' does not exist on type 'string'.
-lib/index.ts(119,28): error TS2322: Type '(source: any, destination: any, options?: {}, root?: boolean, symlinks?: never[]) => void' is not assignable to type 'void'.
-lib/index.ts(119,29): error TS7006: Parameter 'source' implicitly has an 'any' type.
-lib/index.ts(119,37): error TS7006: Parameter 'destination' implicitly has an 'any' type.
+lib/index.ts(119,28): error TS2322: Type '(source: any, destination: any, options?: {}, root?: boolean, symlinks?: any[]) => void' is not assignable to type 'void'.
 lib/index.ts(129,16): error TS2339: Property 'overwrite' does not exist on type '{}'.
-lib/index.ts(138,9): error TS2571: Object is of type 'unknown'.
-lib/index.ts(138,35): error TS2571: Object is of type 'unknown'.
 lib/index.ts(143,11): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/index.ts(146,25): error TS2322: Type 'any' is not assignable to type 'never'.
-lib/index.ts(146,33): error TS2322: Type 'any' is not assignable to type 'never'.
 lib/index.ts(168,24): error TS2339: Property 'isDirectory' does not exist on type 'string'.
 

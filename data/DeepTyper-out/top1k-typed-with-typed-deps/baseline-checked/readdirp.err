@@ -3,8 +3,6 @@ examples/bench.ts(14,7): error TS2451: Cannot redeclare block-scoped variable 'r
 examples/bench.ts(14,29): error TS2322: Type '(directory: string) => Promise<void>' is not assignable to type 'Promise<void>'.
 examples/bench.ts(35,1): error TS2349: This expression is not callable.
   Type 'Promise<void>' has no call signatures.
-examples/grep.ts(11,29): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-examples/grep.ts(30,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 examples/list.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'read'.
 examples/list.ts(7,29): error TS2322: Type '(directory: string) => Promise<void>' is not assignable to type 'Promise<void>'.
 examples/list.ts(25,1): error TS2349: This expression is not callable.
@@ -14,26 +12,15 @@ index.ts(25,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
 index.ts(26,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
 index.ts(27,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
 index.ts(72,30): error TS2339: Property 'highWaterMark' does not exist on type '{}'.
-index.ts(103,15): error TS7006: Parameter 'batch' implicitly has an 'any' type.
 index.ts(116,19): error TS2322: Type 'void | "file" | "directory"' is not assignable to type 'boolean'.
   Type 'void' is not assignable to type 'boolean'.
 index.ts(117,17): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
 index.ts(126,25): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
-index.ts(150,21): error TS7006: Parameter 'path' implicitly has an 'any' type.
-index.ts(150,27): error TS7006: Parameter 'depth' implicitly has an 'any' type.
-index.ts(157,14): error TS2454: Variable 'files' is used before being assigned.
-index.ts(160,22): error TS7006: Parameter 'dirent' implicitly has an 'any' type.
-index.ts(160,30): error TS7006: Parameter 'path' implicitly has an 'any' type.
-index.ts(173,12): error TS7006: Parameter 'err' implicitly has an 'any' type.
-index.ts(181,23): error TS7006: Parameter 'entry' implicitly has an 'any' type.
-index.ts(219,18): error TS7006: Parameter 'entry' implicitly has an 'any' type.
-index.ts(242,24): error TS7006: Parameter 'root' implicitly has an 'any' type.
 index.ts(243,22): error TS2339: Property 'entryType' does not exist on type '{}'.
 index.ts(243,43): error TS2339: Property 'type' does not exist on type '{}'.
 index.ts(245,21): error TS2339: Property 'type' does not exist on type '{}'.
 index.ts(254,11): error TS2339: Property 'root' does not exist on type '{}'.
 index.ts(258,39): error TS2322: Type '(root: any, options?: {}) => Promise<unknown>' is not assignable to type 'Promise<any>'.
-index.ts(258,40): error TS7006: Parameter 'root' implicitly has an 'any' type.
 index.ts(259,22): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'resolve' and 'resolve' are incompatible.
     Type '(value: unknown) => void' is not assignable to type 'void'.

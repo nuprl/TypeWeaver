@@ -3,9 +3,6 @@ punycode.ts(18,7): error TS2322: Type 'RegExp' is not assignable to type 'string
 punycode.ts(19,7): error TS2322: Type 'RegExp' is not assignable to type 'string'.
 punycode.ts(30,23): error TS2322: Type '(x: number) => number' is not assignable to type 'number'.
 punycode.ts(31,36): error TS2322: Type '(...codes: number[]) => string' is not assignable to type 'string'.
-punycode.ts(41,16): error TS7006: Parameter 'type' implicitly has an 'any' type.
-punycode.ts(72,20): error TS7006: Parameter 'string' implicitly has an 'any' type.
-punycode.ts(101,21): error TS7006: Parameter 'string' implicitly has an 'any' type.
 punycode.ts(122,2): error TS2322: Type 'any[]' is not assignable to type 'string'.
 punycode.ts(133,28): error TS2322: Type '(array: any) => string' is not assignable to type 'string'.
 punycode.ts(144,30): error TS2322: Type '(codePoint: number) => number' is not assignable to type 'number'.
@@ -51,11 +48,9 @@ punycode.ts(362,12): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 punycode.ts(386,27): error TS2322: Type '(input: string) => string' is not assignable to type 'string'.
 punycode.ts(387,26): error TS2345: Argument of type '(string: any) => any' is not assignable to parameter of type 'string'.
-punycode.ts(387,35): error TS7006: Parameter 'string' implicitly has an 'any' type.
 punycode.ts(388,24): error TS2339: Property 'test' does not exist on type 'string'.
 punycode.ts(405,25): error TS2322: Type '(input: string) => string' is not assignable to type 'string'.
 punycode.ts(406,26): error TS2345: Argument of type '(string: any) => any' is not assignable to parameter of type 'string'.
-punycode.ts(406,35): error TS7006: Parameter 'string' implicitly has an 'any' type.
 punycode.ts(407,24): error TS2339: Property 'test' does not exist on type 'string'.
 scripts/prepublish.ts(7,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
 

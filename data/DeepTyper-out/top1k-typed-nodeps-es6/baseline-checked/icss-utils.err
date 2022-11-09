@@ -1,25 +1,10 @@
-src/createICSSRules.ts(1,29): error TS7006: Parameter 'imports' implicitly has an 'any' type.
-src/createICSSRules.ts(1,38): error TS7006: Parameter 'postcss' implicitly has an 'any' type.
-src/createICSSRules.ts(34,29): error TS7006: Parameter 'exports' implicitly has an 'any' type.
-src/createICSSRules.ts(34,38): error TS7006: Parameter 'postcss' implicitly has an 'any' type.
 src/createICSSRules.ts(62,7): error TS2322: Type '(imports: any, exports: any, postcss: any, mode: any) => any[]' is not assignable to type 'void'.
 src/extractICSS.ts(4,7): error TS2322: Type '(rule: Rule) => {}' is not assignable to type 'void'.
 src/extractICSS.ts(4,37): error TS2304: Cannot find name 'Rule'.
-src/extractICSS.ts(10,5): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-src/extractICSS.ts(21,27): error TS7006: Parameter 'css' implicitly has an 'any' type.
-src/extractICSS.ts(27,5): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-src/extractICSS.ts(28,7): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 src/extractICSS.ts(29,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 src/extractICSS.ts(38,32): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-src/extractICSS.ts(47,15): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'RegExpExecArray'.
-  Type 'null' is not assignable to type 'RegExpExecArray'.
-src/extractICSS.ts(61,15): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'RegExpExecArray'.
-  Type 'null' is not assignable to type 'RegExpExecArray'.
 src/replaceSymbols.ts(3,30): error TS2322: Type '(css: any, replacements: any) => void' is not assignable to type 'void'.
 src/replaceSymbols.ts(6,20): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
@@ -28,5 +13,4 @@ src/replaceSymbols.ts(8,23): error TS2349: This expression is not callable.
 src/replaceSymbols.ts(13,21): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
 src/replaceValueSymbols.ts(3,37): error TS2322: Type '(value: string, replacements: RegExp) => string' is not assignable to type 'string'.
-src/replaceValueSymbols.ts(7,33): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'RegExp'.
 

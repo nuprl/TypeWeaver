@@ -4,7 +4,7 @@ implementation.ts(9,22): error TS2322: Type '() => string' is not assignable to 
 implementation.ts(11,30): error TS2322: Type '(v: PropertyKey) => boolean' is not assignable to type 'boolean'.
 implementation.ts(12,46): error TS2339: Property 'call' does not exist on type 'boolean'.
 implementation.ts(13,42): error TS2339: Property 'call' does not exist on type 'boolean'.
-implementation.ts(23,6): error TS2322: Type '(o: any) => any' is not assignable to type 'boolean'.
+implementation.ts(23,44): error TS2322: Type '(o: any) => boolean' is not assignable to type 'boolean'.
 implementation.ts(56,39): error TS2339: Property 'call' does not exist on type 'boolean'.
 implementation.ts(58,7): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
@@ -20,7 +20,7 @@ implementation.ts(104,53): error TS2339: Property 'call' does not exist on type 
 implementation.ts(111,35): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
 implementation.ts(114,69): error TS2339: Property 'call' does not exist on type 'boolean'.
-index.ts(3,20): error TS2322: Type '(start?: number | undefined, end?: number | undefined) => any[]' is not assignable to type 'any[]'.
+index.ts(3,20): error TS2322: Type '(start?: number, end?: number) => any[]' is not assignable to type 'any[]'.
 index.ts(6,26): error TS2322: Type '{ (o: object): string[]; (o: {}): string[]; }' is not assignable to type 'string[]'.
 index.ts(7,73): error TS2349: This expression is not callable.
   Type 'string[]' has no call signatures.
@@ -30,7 +30,6 @@ index.ts(19,13): error TS2349: This expression is not callable.
 index.ts(19,28): error TS2339: Property 'call' does not exist on type 'any[]'.
 index.ts(21,12): error TS2349: This expression is not callable.
   Type 'string[]' has no call signatures.
-index.ts(27,2): error TS2322: Type '{ (o: object): string[]; (o: {}): string[]; }' is not assignable to type 'string'.
 isArguments.ts(3,21): error TS2322: Type '() => string' is not assignable to type 'string'.
 isArguments.ts(6,23): error TS2339: Property 'call' does not exist on type 'string'.
 isArguments.ts(14,13): error TS2339: Property 'call' does not exist on type 'string'.

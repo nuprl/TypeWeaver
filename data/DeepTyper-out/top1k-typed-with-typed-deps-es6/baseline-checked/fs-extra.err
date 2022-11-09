@@ -5,8 +5,6 @@ lib/copy/copy-sync.ts(75,36): error TS2339: Property 'mode' does not exist on ty
 lib/copy/copy-sync.ts(87,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/copy/copy-sync.ts(91,28): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/copy/copy-sync.ts(91,28): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-lib/copy/copy-sync.ts(144,11): error TS2571: Object is of type 'unknown'.
-lib/copy/copy-sync.ts(144,36): error TS2571: Object is of type 'unknown'.
 lib/copy/copy.ts(5,10): error TS2614: Module '"../mkdirs"' has no exported member 'mkdirs'. Did you mean to use 'import mkdirs from "../mkdirs"' instead?
 lib/copy/copy.ts(6,10): error TS2614: Module '"../path-exists"' has no exported member 'pathExists'. Did you mean to use 'import pathExists from "../path-exists"' instead?
 lib/copy/copy.ts(7,10): error TS2614: Module '"../util/utimes"' has no exported member 'utimesMillis'. Did you mean to use 'import utimesMillis from "../util/utimes"' instead?
@@ -16,7 +14,6 @@ lib/empty/index.ts(4,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inferen
 lib/empty/index.ts(17,3): error TS2322: Type 'any[]' is not assignable to type 'void'.
 lib/empty/index.ts(25,18): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/ensure/file.ts(59,16): error TS2571: Object is of type 'unknown'.
 lib/ensure/file.ts(59,45): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/ensure/index.ts(3,10): error TS2614: Module '"./file"' has no exported member 'createFile'. Did you mean to use 'import createFile from "./file"' instead?
@@ -27,36 +24,22 @@ lib/ensure/index.ts(5,10): error TS2614: Module '"./symlink"' has no exported me
 lib/ensure/index.ts(5,25): error TS2614: Module '"./symlink"' has no exported member 'createSymlinkSync'. Did you mean to use 'import createSymlinkSync from "./symlink"' instead?
 lib/ensure/link.ts(7,10): error TS2614: Module '"../path-exists"' has no exported member 'pathExists'. Did you mean to use 'import pathExists from "../path-exists"' instead?
 lib/ensure/link.ts(8,10): error TS2614: Module '"../util/stat"' has no exported member 'areIdentical'. Did you mean to use 'import areIdentical from "../util/stat"' instead?
-lib/ensure/link.ts(18,21): error TS2345: Argument of type '(_: string, dstStat: string) => void' is not assignable to parameter of type '(err: ErrnoException | null, stats: Stats) => void'.
+lib/ensure/link.ts(18,21): error TS2345: Argument of type '(_: string, dstStat: string) => void' is not assignable to parameter of type '(err: ErrnoException, stats: Stats) => void'.
   Types of parameters '_' and 'err' are incompatible.
-    Type 'ErrnoException | null' is not assignable to type 'string'.
-      Type 'null' is not assignable to type 'string'.
-lib/ensure/link.ts(19,23): error TS2345: Argument of type '(err: any, srcStat: string) => any' is not assignable to parameter of type '(err: ErrnoException | null, stats: Stats) => void'.
+    Type 'ErrnoException' is not assignable to type 'string'.
+lib/ensure/link.ts(19,23): error TS2345: Argument of type '(err: any, srcStat: string) => any' is not assignable to parameter of type '(err: ErrnoException, stats: Stats) => void'.
   Types of parameters 'srcStat' and 'stats' are incompatible.
     Type 'Stats' is not assignable to type 'string'.
-lib/ensure/link.ts(49,5): error TS2571: Object is of type 'unknown'.
-lib/ensure/link.ts(49,19): error TS2571: Object is of type 'unknown'.
 lib/ensure/link.ts(56,9): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/ensure/symlink-paths.ts(5,10): error TS2614: Module '"../path-exists"' has no exported member 'pathExists'. Did you mean to use 'import pathExists from "../path-exists"' instead?
 lib/ensure/symlink-paths.ts(31,5): error TS2322: Type 'void' is not assignable to type 'string'.
-lib/ensure/symlink-type.ts(5,40): error TS7006: Parameter 'type' implicitly has an 'any' type.
-lib/ensure/symlink-type.ts(5,62): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-lib/ensure/symlink-type.ts(16,44): error TS7006: Parameter 'type' implicitly has an 'any' type.
 lib/ensure/symlink.ts(5,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/fs-extra/lib/fs/index"' has no default export.
 lib/ensure/symlink.ts(18,10): error TS2614: Module '"../path-exists"' has no exported member 'pathExists'. Did you mean to use 'import pathExists from "../path-exists"' instead?
 lib/ensure/symlink.ts(19,10): error TS2614: Module '"../util/stat"' has no exported member 'areIdentical'. Did you mean to use 'import areIdentical from "../util/stat"' instead?
-lib/ensure/symlink.ts(21,56): error TS7006: Parameter 'type' implicitly has an 'any' type.
-lib/ensure/symlink.ts(38,54): error TS7006: Parameter 'type' implicitly has an 'any' type.
-lib/ensure/symlink.ts(42,50): error TS7006: Parameter 'type' implicitly has an 'any' type.
-lib/ensure/symlink.ts(57,57): error TS7006: Parameter 'type' implicitly has an 'any' type.
-lib/fs/index.ts(49,17): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'typeof import("/mnt/data/mhyee/not-type-inference/data/node_modules/@types/graceful-fs/index")'.
-  No index signature with a parameter of type 'string' was found on type 'typeof import("/mnt/data/mhyee/not-type-inference/data/node_modules/@types/graceful-fs/index")'.
 lib/fs/index.ts(56,14): error TS2300: Duplicate identifier 'method'.
 lib/fs/index.ts(57,3): error TS1184: Modifiers cannot appear here.
 lib/fs/index.ts(57,16): error TS2300: Duplicate identifier 'method'.
-lib/fs/index.ts(57,32): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'typeof import("/mnt/data/mhyee/not-type-inference/data/node_modules/@types/graceful-fs/index")'.
-  No index signature with a parameter of type 'string' was found on type 'typeof import("/mnt/data/mhyee/not-type-inference/data/node_modules/@types/graceful-fs/index")'.
 lib/fs/index.ts(66,22): error TS2345: Argument of type '(resolve: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'resolve' and 'resolve' are incompatible.
     Type '(value: unknown) => void' is not assignable to type 'void'.
@@ -69,9 +52,6 @@ lib/fs/index.ts(79,23): error TS2349: This expression is not callable.
 lib/fs/index.ts(80,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/fs/index.ts(90,14): error TS2322: Type '(fd: any, buffer: any, ...args: any[]) => void | Promise<unknown>' is not assignable to type 'void'.
-lib/fs/index.ts(90,38): error TS7006: Parameter 'fd' implicitly has an 'any' type.
-lib/fs/index.ts(90,42): error TS7006: Parameter 'buffer' implicitly has an 'any' type.
-lib/fs/index.ts(90,50): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 lib/fs/index.ts(92,33): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
 lib/fs/index.ts(95,22): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'resolve' and 'resolve' are incompatible.
@@ -83,9 +63,6 @@ lib/fs/index.ts(98,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/fs/index.ts(108,3): error TS1184: Modifiers cannot appear here.
 lib/fs/index.ts(108,16): error TS2322: Type '(fd: any, buffers: any, ...args: any[]) => void | Promise<unknown>' is not assignable to type 'void'.
-lib/fs/index.ts(108,41): error TS7006: Parameter 'fd' implicitly has an 'any' type.
-lib/fs/index.ts(108,45): error TS7006: Parameter 'buffers' implicitly has an 'any' type.
-lib/fs/index.ts(108,54): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 lib/fs/index.ts(110,37): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
 lib/fs/index.ts(113,24): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'resolve' and 'resolve' are incompatible.
@@ -107,8 +84,6 @@ lib/json/index.ts(13,10): error TS2551: Property 'readJSON' does not exist on ty
 lib/json/index.ts(14,10): error TS2551: Property 'readJSONSync' does not exist on type '{ readJson: { (file: Path, options: JFReadOptions, callback: ReadCallback): void; (file: Path, callback: ReadCallback): void; (file: Path, options?: JFReadOptions): Promise<...>; }; readJsonSync: (file: Path, options?: JFReadOptions) => any; writeJson: { ...; }; writeJsonSync: (file: Path, obj: any, options?: JFWrit...'. Did you mean 'readJsonSync'?
 lib/json/output-json-sync.ts(4,10): error TS2614: Module '"../output-file"' has no exported member 'outputFileSync'. Did you mean to use 'import outputFileSync from "../output-file"' instead?
 lib/json/output-json.ts(4,10): error TS2614: Module '"../output-file"' has no exported member 'outputFile'. Did you mean to use 'import outputFile from "../output-file"' instead?
-lib/json/output-json.ts(6,28): error TS7006: Parameter 'file' implicitly has an 'any' type.
-lib/json/output-json.ts(6,34): error TS7006: Parameter 'data' implicitly has an 'any' type.
 lib/mkdirs/index.ts(4,24): error TS2345: Argument of type 'Promise<void>' is not assignable to parameter of type '(...args: any[]) => any'.
   Type 'Promise<void>' provides no match for the signature '(...args: any[]): any'.
 lib/mkdirs/make-dir.ts(2,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/fs-extra/lib/fs/index"' has no default export.
@@ -129,7 +104,6 @@ lib/mkdirs/utils.ts(17,13): error TS2339: Property 'code' does not exist on type
 lib/move/move-sync.ts(5,10): error TS2614: Module '"../copy"' has no exported member 'copySync'. Did you mean to use 'import copySync from "../copy"' instead?
 lib/move/move-sync.ts(6,10): error TS2614: Module '"../remove"' has no exported member 'removeSync'. Did you mean to use 'import removeSync from "../remove"' instead?
 lib/move/move-sync.ts(7,10): error TS2614: Module '"../mkdirs"' has no exported member 'mkdirpSync'. Did you mean to use 'import mkdirpSync from "../mkdirs"' instead?
-lib/move/move-sync.ts(40,9): error TS2571: Object is of type 'unknown'.
 lib/move/move.ts(5,10): error TS2614: Module '"../copy"' has no exported member 'copy'. Did you mean to use 'import copy from "../copy"' instead?
 lib/move/move.ts(6,10): error TS2614: Module '"../remove"' has no exported member 'remove'. Did you mean to use 'import remove from "../remove"' instead?
 lib/move/move.ts(7,10): error TS2614: Module '"../mkdirs"' has no exported member 'mkdirp'. Did you mean to use 'import mkdirp from "../mkdirs"' instead?
@@ -137,8 +111,6 @@ lib/move/move.ts(8,10): error TS2614: Module '"../path-exists"' has no exported 
 lib/output-file/index.ts(7,10): error TS2614: Module '"../path-exists"' has no exported member 'pathExists'. Did you mean to use 'import pathExists from "../path-exists"' instead?
 lib/output-file/index.ts(18,49): error TS2345: Argument of type 'string' is not assignable to parameter of type 'WriteFileOptions'.
 lib/output-file/index.ts(23,32): error TS2345: Argument of type 'string' is not assignable to parameter of type 'WriteFileOptions'.
-lib/output-file/index.ts(28,26): error TS7006: Parameter 'file' implicitly has an 'any' type.
-lib/output-file/index.ts(28,32): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 lib/output-file/index.ts(31,35): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
 lib/output-file/index.ts(33,9): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
@@ -146,27 +118,6 @@ lib/output-file/index.ts(34,26): error TS2556: A spread argument must either hav
 lib/path-exists/index.ts(3,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/fs-extra/lib/fs/index"' has no default export.
 lib/remove/index.ts(10,3): error TS2554: Expected 3 arguments, but got 2.
 lib/remove/index.ts(16,10): error TS2554: Expected 2 arguments, but got 1.
-lib/remove/rimraf.ts(19,32): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'typeof import("/mnt/data/mhyee/not-type-inference/data/node_modules/@types/graceful-fs/index")'.
-  No index signature with a parameter of type 'string' was found on type 'typeof import("/mnt/data/mhyee/not-type-inference/data/node_modules/@types/graceful-fs/index")'.
-lib/remove/rimraf.ts(21,32): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'typeof import("/mnt/data/mhyee/not-type-inference/data/node_modules/@types/graceful-fs/index")'.
-  No index signature with a parameter of type 'string' was found on type 'typeof import("/mnt/data/mhyee/not-type-inference/data/node_modules/@types/graceful-fs/index")'.
-lib/remove/rimraf.ts(143,9): error TS2571: Object is of type 'unknown'.
-lib/remove/rimraf.ts(153,9): error TS2571: Object is of type 'unknown'.
-lib/remove/rimraf.ts(230,9): error TS2571: Object is of type 'unknown'.
-lib/remove/rimraf.ts(235,9): error TS2571: Object is of type 'unknown'.
-lib/remove/rimraf.ts(243,29): error TS2345: Argument of type 'null' is not assignable to parameter of type 'boolean'.
-lib/remove/rimraf.ts(248,9): error TS2571: Object is of type 'unknown'.
-lib/remove/rimraf.ts(250,16): error TS2571: Object is of type 'unknown'.
-lib/remove/rimraf.ts(251,82): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'boolean'.
-lib/remove/rimraf.ts(252,16): error TS2571: Object is of type 'unknown'.
-lib/remove/rimraf.ts(255,27): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'boolean'.
-lib/remove/rimraf.ts(266,9): error TS2571: Object is of type 'unknown'.
-lib/remove/rimraf.ts(268,16): error TS2571: Object is of type 'unknown'.
-lib/remove/rimraf.ts(268,43): error TS2571: Object is of type 'unknown'.
-lib/remove/rimraf.ts(268,67): error TS2571: Object is of type 'unknown'.
-lib/remove/rimraf.ts(270,16): error TS2571: Object is of type 'unknown'.
 lib/util/stat.ts(3,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/fs-extra/lib/fs/index"' has no default export.
-lib/util/stat.ts(29,9): error TS2571: Object is of type 'unknown'.
 lib/util/stat.ts(36,47): error TS2345: Argument of type '(err: any, stats: any) => any' is not assignable to parameter of type '(err: ErrnoException) => void'.
-lib/util/stat.ts(122,9): error TS2571: Object is of type 'unknown'.
 

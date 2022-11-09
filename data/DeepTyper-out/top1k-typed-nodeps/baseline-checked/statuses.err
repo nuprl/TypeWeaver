@@ -5,9 +5,6 @@ index.ts(34,8): error TS2339: Property 'redirect' does not exist on type 'string
 index.ts(45,8): error TS2339: Property 'empty' does not exist on type 'string'.
 index.ts(52,8): error TS2339: Property 'retry' does not exist on type 'string'.
 index.ts(66,67): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
-index.ts(67,33): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-index.ts(71,5): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 index.ts(74,3): error TS2322: Type '{}' is not assignable to type 'boolean'.
 index.ts(83,3): error TS2322: Type 'boolean[]' is not assignable to type 'boolean'.
 index.ts(84,5): error TS2322: Type 'number' is not assignable to type 'boolean'.
@@ -17,25 +14,15 @@ index.ts(109,52): error TS2339: Property 'message' does not exist on type 'strin
 index.ts(113,17): error TS2339: Property 'message' does not exist on type 'string'.
 index.ts(142,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 scripts/build.ts(7,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'codes' must be of type 'any[]', but here has type '{}'.
-scripts/fetch-apache.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL | undefined): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
-scripts/fetch-apache.ts(15,22): error TS2531: Object is possibly 'null'.
-scripts/fetch-apache.ts(21,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-scripts/fetch-iana.ts(9,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL | undefined): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
-scripts/fetch-iana.ts(33,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-scripts/fetch-nginx.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL | undefined): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
-scripts/fetch-nginx.ts(15,22): error TS2531: Object is possibly 'null'.
-scripts/fetch-nginx.ts(21,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-scripts/fetch-node.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL | undefined): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
-scripts/fetch-node.ts(15,22): error TS2531: Object is possibly 'null'.
-scripts/fetch-node.ts(21,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-scripts/lib/write.ts(14,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-scripts/lib/write.ts(14,27): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[val: any, index: number, array: any]'.
+scripts/fetch-apache.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
+scripts/fetch-iana.ts(9,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
+scripts/fetch-nginx.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
+scripts/fetch-node.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
 scripts/lib/write.ts(23,7): error TS2322: Type 'string' is not assignable to type 'number'.
   Type 'string' is not assignable to type 'number'.
 scripts/lib/write.ts(26,3): error TS2322: Type 'string' is not assignable to type 'void'.
 scripts/version-history.ts(7,5): error TS2322: Type 'RegExp' is not assignable to type 'string'.
 scripts/version-history.ts(13,23): error TS2339: Property 'test' does not exist on type 'string'.
-scripts/version-history.ts(55,19): error TS7006: Parameter 'number' implicitly has an 'any' type.
 scripts/version-history.ts(58,14): error TS2339: Property 'length' does not exist on type 'number'.
 scripts/version-history.ts(59,5): error TS2322: Type 'string' is not assignable to type 'number'.
 

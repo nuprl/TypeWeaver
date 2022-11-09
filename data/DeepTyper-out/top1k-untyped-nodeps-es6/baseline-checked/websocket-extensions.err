@@ -1,46 +1,25 @@
 lib/parser.ts(15,27): error TS2351: This expression is not constructable.
   Type 'void' has no construct signatures.
-lib/parser.ts(21,9): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'string[]'.
-  Type 'null' is not assignable to type 'string[]'.
-lib/parser.ts(41,11): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-lib/parser.ts(41,34): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-lib/parser.ts(42,11): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-lib/parser.ts(44,11): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-lib/parser.ts(46,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/parser.ts(56,23): error TS2322: Type '(key: any, value: any) => void' is not assignable to type 'void'.
 lib/parser.ts(58,42): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/parser.ts(70,29): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/parser.ts(76,20): error TS2322: Type '() => void' is not assignable to type 'void'.
-lib/parser.ts(77,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/parser.ts(78,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/parser.ts(81,8): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/parser.ts(89,8): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/parser.ts(95,8): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/parser.ts(99,8): error TS2339: Property 'prototype' does not exist on type 'void'.
-lib/pipeline/cell.ts(7,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/pipeline/cell.ts(8,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/pipeline/cell.ts(10,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/pipeline/cell.ts(11,19): error TS2351: This expression is not constructable.
   Type 'void' has no construct signatures.
-lib/pipeline/cell.ts(11,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/pipeline/cell.ts(12,19): error TS2351: This expression is not constructable.
   Type 'void' has no construct signatures.
-lib/pipeline/cell.ts(12,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/pipeline/cell.ts(30,38): error TS2351: This expression is not constructable.
   Type 'void' has no construct signatures.
-lib/pipeline/cell.ts(37,28): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/pipeline/cell.ts(39,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/pipeline/functor.ts(5,21): error TS2322: Type '(session: any, method: string) => void' is not assignable to type 'void'.
-lib/pipeline/functor.ts(6,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/pipeline/functor.ts(7,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/pipeline/functor.ts(8,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/pipeline/functor.ts(8,23): error TS2351: This expression is not constructable.
   Type 'void' has no construct signatures.
 lib/pipeline/functor.ts(8,42): error TS2339: Property 'QUEUE_SIZE' does not exist on type 'void'.
-lib/pipeline/functor.ts(9,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/pipeline/functor.ts(10,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/pipeline/functor.ts(13,9): error TS2339: Property 'QUEUE_SIZE' does not exist on type 'void'.
 lib/pipeline/functor.ts(15,9): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/pipeline/functor.ts(30,23): error TS2322: Type '(err: Error, msg: any) => void' is not assignable to type 'void'.
@@ -50,9 +29,7 @@ lib/pipeline/functor.ts(48,5): error TS2349: This expression is not callable.
 lib/pipeline/functor.ts(52,9): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/pipeline/functor.ts(57,9): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/pipeline/index.ts(6,22): error TS2322: Type '(sessions: any) => void' is not assignable to type 'void'.
-lib/pipeline/index.ts(7,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/pipeline/index.ts(7,50): error TS2304: Cannot find name 'Session'.
-lib/pipeline/index.ts(8,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/pipeline/index.ts(11,10): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/pipeline/index.ts(16,10): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/pipeline/index.ts(21,10): error TS2339: Property 'prototype' does not exist on type 'void'.
@@ -64,8 +41,6 @@ lib/pipeline/index.ts(41,7): error TS2349: This expression is not callable.
 lib/pipeline/index.ts(44,3): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/pipeline/pledge.ts(5,20): error TS2322: Type '() => void' is not assignable to type 'void'.
-lib/pipeline/pledge.ts(6,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/pipeline/pledge.ts(7,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/pipeline/pledge.ts(7,25): error TS2351: This expression is not constructable.
   Type 'void' has no construct signatures.
 lib/pipeline/pledge.ts(7,43): error TS2339: Property 'QUEUE_SIZE' does not exist on type 'void'.
@@ -76,144 +51,16 @@ lib/pipeline/pledge.ts(13,26): error TS2351: This expression is not constructabl
 lib/pipeline/pledge.ts(26,8): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/pipeline/pledge.ts(31,8): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/pipeline/ring_buffer.ts(3,24): error TS2322: Type '(bufferSize: number) => void' is not assignable to type 'void'.
-lib/pipeline/ring_buffer.ts(4,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/pipeline/ring_buffer.ts(5,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/pipeline/ring_buffer.ts(8,12): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/pipeline/ring_buffer.ts(17,12): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/pipeline/ring_buffer.ts(43,12): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/pipeline/ring_buffer.ts(48,12): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/websocket_extensions.ts(6,24): error TS2322: Type '() => void' is not assignable to type 'void'.
-lib/websocket_extensions.ts(7,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket_extensions.ts(7,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket_extensions.ts(7,29): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket_extensions.ts(9,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket_extensions.ts(10,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket_extensions.ts(11,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket_extensions.ts(12,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/websocket_extensions.ts(15,12): error TS2339: Property 'MESSAGE_OPCODES' does not exist on type 'void'.
-lib/websocket_extensions.ts(35,9): error TS7034: Variable 'offer' implicitly has type 'any[]' in some locations where its type cannot be determined.
-lib/websocket_extensions.ts(44,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-lib/websocket_extensions.ts(51,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket_extensions.ts(57,31): error TS7005: Variable 'offer' implicitly has an 'any[]' type.
-lib/websocket_extensions.ts(62,9): error TS7034: Variable 'sessions' implicitly has type 'any[]' in some locations where its type cannot be determined.
-lib/websocket_extensions.ts(65,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket_extensions.ts(72,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket_extensions.ts(83,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket_extensions.ts(87,22): error TS7005: Variable 'sessions' implicitly has an 'any[]' type.
 lib/websocket_extensions.ts(88,26): error TS2351: This expression is not constructable.
   Type 'void' has no construct signatures.
-lib/websocket_extensions.ts(88,35): error TS7005: Variable 'sessions' implicitly has an 'any[]' type.
-lib/websocket_extensions.ts(93,9): error TS7034: Variable 'response' implicitly has type 'any[]' in some locations where its type cannot be determined.
-lib/websocket_extensions.ts(98,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket_extensions.ts(103,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/websocket_extensions.ts(109,26): error TS2351: This expression is not constructable.
   Type 'void' has no construct signatures.
-lib/websocket_extensions.ts(111,34): error TS7005: Variable 'response' implicitly has an 'any[]' type.
 lib/websocket_extensions.ts(118,20): error TS2339: Property 'MESSAGE_OPCODES' does not exist on type 'void'.
 lib/websocket_extensions.ts(160,14): error TS2339: Property 'prototype' does not exist on type 'void'.
-spec/parser_spec.ts(4,38): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(4,38): error TS2410: The 'with' statement is not supported. All symbols in a 'with' block will have type 'any'.
-spec/parser_spec.ts(4,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-spec/parser_spec.ts(5,40): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(10,47): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(14,48): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(18,48): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(22,56): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(27,57): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(32,54): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(37,38): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(42,49): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(47,46): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(52,47): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(57,48): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(62,55): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(71,81): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(76,82): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(81,67): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(88,44): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(89,48): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(93,42): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(97,53): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(101,50): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(105,51): error TS1101: 'with' statements are not allowed in strict mode.
-spec/parser_spec.ts(109,52): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(3,5): error TS2304: Cannot find name 'FakeClock'.
-spec/websocket_extensions_spec.ts(5,42): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(5,42): error TS2410: The 'with' statement is not supported. All symbols in a 'with' block will have type 'any'.
-spec/websocket_extensions_spec.ts(5,47): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-spec/websocket_extensions_spec.ts(6,23): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(13,32): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(14,59): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(18,59): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(23,60): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(28,60): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(33,60): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(39,44): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(40,25): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(61,44): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(62,72): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(67,64): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(72,113): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(78,72): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(82,64): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(87,78): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(92,75): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(97,82): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(103,39): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(104,27): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(110,66): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(114,72): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(118,93): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(122,72): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(126,81): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(130,63): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(135,69): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(140,68): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(145,54): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(151,77): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(157,76): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(163,53): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(164,27): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(180,97): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(189,71): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(199,80): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(209,53): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(210,27): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(226,47): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(229,58): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(230,31): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(274,85): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(278,74): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(282,73): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(286,95): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(292,70): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(298,52): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(306,54): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(315,49): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(318,29): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(335,97): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(346,87): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(362,82): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(383,78): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(397,89): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(406,91): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(415,71): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(425,80): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(436,44): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(437,25): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(457,47): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(458,81): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(463,87): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(468,66): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(473,72): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(479,115): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(485,97): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(490,99): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(495,75): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(499,78): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(503,66): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(507,77): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(511,79): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(515,67): error TS1101: 'with' statements are not allowed in strict mode.
-spec/websocket_extensions_spec.ts(519,136): error TS1101: 'with' statements are not allowed in strict mode.
 

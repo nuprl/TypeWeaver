@@ -11,8 +11,6 @@ bench/colors.ts(74,4): error TS2339: Property 'add' does not exist on type 'void
 examples/alias.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
 examples/chained.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'util'.
 examples/chained.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
-examples/chained.ts(5,19): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
-examples/chained.ts(6,14): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 examples/colors.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
 examples/colors.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'cyan'.
 examples/nested.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
@@ -26,9 +24,7 @@ examples/screenshot-table.ts(4,7): error TS2451: Cannot redeclare block-scoped v
 examples/screenshot.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
 examples/styles.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'util'.
 examples/styles.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'c'.
-examples/styles.ts(4,11): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 examples/theme-custom-fn.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
-examples/theme-custom-fn.ts(9,6): error TS7006: Parameter 'message' implicitly has an 'any' type.
 examples/theme.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
 examples/theme.ts(15,33): error TS2451: Cannot redeclare block-scoped variable 'red'.
 examples/theme.ts(15,38): error TS2451: Cannot redeclare block-scoped variable 'bold'.
@@ -44,7 +40,6 @@ index.ts(51,7): error TS2322: Type 'string[]' is not assignable to type 'string'
 index.ts(53,27): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
 index.ts(57,24): error TS2322: Type '(name: string, codes: string[], type: any) => void' is not assignable to type 'void'.
-index.ts(57,56): error TS7006: Parameter 'type' implicitly has an 'any' type.
 index.ts(77,3): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 index.ts(78,3): error TS2349: This expression is not callable.

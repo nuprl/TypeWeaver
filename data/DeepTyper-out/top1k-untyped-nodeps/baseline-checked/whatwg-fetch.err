@@ -1,12 +1,5 @@
-fetch.ts(42,7): error TS2322: Type '(arg: any) => arg is ArrayBufferView' is not assignable to type 'number'.
-fetch.ts(85,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+fetch.ts(42,7): error TS2322: Type '(obj: any) => boolean' is not assignable to type 'number'.
 fetch.ts(88,13): error TS2339: Property 'forEach' does not exist on type '{}'.
-fetch.ts(89,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(90,8): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(93,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(94,8): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(97,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(98,8): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(169,34): error TS2304: Cannot find name 'EwsXmlReader'.
 fetch.ts(170,22): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: {} | PromiseLike<{}>) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'resolve' and 'resolve' are incompatible.
@@ -15,96 +8,42 @@ fetch.ts(172,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 fetch.ts(175,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-fetch.ts(215,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(217,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(244,85): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
-fetch.ts(262,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(279,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(301,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(319,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(324,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(328,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(339,52): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
-fetch.ts(340,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(348,15): error TS2339: Property 'bodyUsed' does not exist on type '{}'.
-fetch.ts(351,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(351,22): error TS2339: Property 'url' does not exist on type '{}'.
-fetch.ts(352,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(352,30): error TS2339: Property 'credentials' does not exist on type '{}'.
-fetch.ts(354,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(354,22): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+fetch.ts(354,22): error TS2350: Only a void function can be called with the 'new' keyword.
 fetch.ts(354,40): error TS2339: Property 'headers' does not exist on type '{}'.
-fetch.ts(356,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(356,25): error TS2339: Property 'method' does not exist on type '{}'.
-fetch.ts(357,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(357,23): error TS2339: Property 'mode' does not exist on type '{}'.
-fetch.ts(358,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(358,25): error TS2339: Property 'signal' does not exist on type '{}'.
 fetch.ts(359,24): error TS2339: Property '_bodyInit' does not exist on type '{}'.
 fetch.ts(360,20): error TS2339: Property '_bodyInit' does not exist on type '{}'.
 fetch.ts(361,13): error TS2339: Property 'bodyUsed' does not exist on type '{}'.
-fetch.ts(364,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(367,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(367,45): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(368,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(369,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(369,20): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-fetch.ts(371,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(371,51): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(372,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(372,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(373,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(373,35): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(379,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(381,8): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(381,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(384,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(386,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(386,32): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+fetch.ts(369,20): error TS2350: Only a void function can be called with the 'new' keyword.
 fetch.ts(389,11): error TS2322: Type 'RegExp' is not assignable to type 'string'.
 fetch.ts(390,25): error TS2339: Property 'test' does not exist on type 'string'.
-fetch.ts(390,30): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(392,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(392,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(395,13): error TS2322: Type 'RegExp' is not assignable to type 'string'.
-fetch.ts(396,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fetch.ts(396,36): error TS2339: Property 'test' does not exist on type 'string'.
-fetch.ts(396,41): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(403,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-fetch.ts(414,28): error TS2532: Object is possibly 'undefined'.
+fetch.ts(403,10): error TS2350: Only a void function can be called with the 'new' keyword.
 fetch.ts(419,3): error TS2322: Type 'FormData' is not assignable to type 'string'.
+fetch.ts(423,22): error TS2350: Only a void function can be called with the 'new' keyword.
 fetch.ts(423,22): error TS2554: Expected 1 arguments, but got 0.
-fetch.ts(423,22): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-fetch.ts(437,25): error TS2532: Object is possibly 'undefined'.
-fetch.ts(449,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(456,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(457,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(458,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(458,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(458,35): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(459,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(460,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(460,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-fetch.ts(461,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(462,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(468,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-fetch.ts(471,14): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-fetch.ts(477,28): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-fetch.ts(477,41): error TS2345: Argument of type 'null' is not assignable to parameter of type 'string'.
+fetch.ts(460,18): error TS2350: Only a void function can be called with the 'new' keyword.
+fetch.ts(468,10): error TS2350: Only a void function can be called with the 'new' keyword.
+fetch.ts(471,14): error TS2350: Only a void function can be called with the 'new' keyword.
+fetch.ts(477,28): error TS2350: Only a void function can be called with the 'new' keyword.
 fetch.ts(478,12): error TS2540: Cannot assign to 'type' because it is a read-only property.
-fetch.ts(489,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-fetch.ts(489,23): error TS2345: Argument of type 'null' is not assignable to parameter of type 'string'.
-fetch.ts(497,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(498,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fetch.ts(500,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+fetch.ts(489,10): error TS2350: Only a void function can be called with the 'new' keyword.
 fetch.ts(507,22): error TS2345: Argument of type '(resolve: any, reject: void) => any' is not assignable to parameter of type '(resolve: (value: Response | PromiseLike<Response>) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'reject' and 'reject' are incompatible.
     Type '(reason?: any) => void' is not assignable to type 'void'.
-fetch.ts(508,28): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+fetch.ts(508,28): error TS2350: Only a void function can be called with the 'new' keyword.
 fetch.ts(511,14): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-fetch.ts(529,17): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+fetch.ts(529,17): error TS2350: Only a void function can be called with the 'new' keyword.
 fetch.ts(535,9): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 fetch.ts(541,9): error TS2349: This expression is not callable.
@@ -113,7 +52,6 @@ fetch.ts(547,9): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 fetch.ts(555,9): error TS2322: Type 'string' is not assignable to type 'boolean'.
 fetch.ts(559,30): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string | URL'.
-fetch.ts(573,9): error TS2531: Object is possibly 'null'.
 fetch.ts(600,29): error TS2339: Property '_bodyInit' does not exist on type 'Request'.
 fetch.ts(600,72): error TS2339: Property '_bodyInit' does not exist on type 'Request'.
 

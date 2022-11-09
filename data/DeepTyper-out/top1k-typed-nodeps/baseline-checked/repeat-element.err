@@ -1,10 +1,8 @@
 benchmark/check.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
-benchmark/code/array-from.ts(4,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 benchmark/code/array-from.ts(8,3): error TS2322: Type 'string[]' is not assignable to type 'string'.
-benchmark/code/array-map-call.ts(4,35): error TS2365: Operator '+' cannot be applied to types 'never[]' and 'any[]'.
-benchmark/code/array-map-valueOf.ts(4,3): error TS2322: Type 'string[]' is not assignable to type 'string'.
+benchmark/code/array-map-call.ts(4,35): error TS2365: Operator '+' cannot be applied to types 'undefined[]' and 'any[]'.
 benchmark/code/for-length.ts(5,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
-benchmark/code/for-length.ts(6,18): error TS2322: Type 'never[]' is not assignable to type 'boolean'.
+benchmark/code/for-length.ts(6,18): error TS2322: Type 'undefined[]' is not assignable to type 'boolean'.
 benchmark/code/for-length.ts(16,3): error TS2322: Type 'string[]' is not assignable to type 'boolean'.
 benchmark/code/for-new-array-1.ts(3,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
 benchmark/code/for-new-array-1.ts(10,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
@@ -22,5 +20,4 @@ benchmark/code/while-new-array-2.ts(3,10): error TS2451: Cannot redeclare block-
 benchmark/code/while-new-array-2.ts(11,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
 benchmark/code/while-stack.ts(14,3): error TS2322: Type 'any[]' is not assignable to type 'boolean'.
 benchmark/code/while-unshift.ts(10,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
-index.ts(11,7): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
 

@@ -1,19 +1,12 @@
-hasSymbols.ts(25,2): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type '{}'.
 hasSymbols.ts(26,7): error TS2405: The left-hand side of a 'for...in' statement must be of type 'string' or 'any'.
 hasSymbols.ts(32,6): error TS2322: Type 'symbol[]' is not assignable to type 'string[]'.
   Type 'symbol' is not assignable to type 'string'.
 hasSymbols.ts(33,27): error TS2367: This condition will always return 'true' since the types 'string' and 'symbol' have no overlap.
-hasSymbols.ts(38,7): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'PropertyDescriptor'.
-  Type 'undefined' is not assignable to type 'PropertyDescriptor'.
 implementation.ts(26,20): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
 polyfill.ts(5,44): error TS2322: Type '() => boolean' is not assignable to type 'boolean'.
-polyfill.ts(17,3): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 polyfill.ts(27,43): error TS2322: Type '() => boolean' is not assignable to type 'boolean'.
 polyfill.ts(35,6): error TS2322: Type '{ 1: number; }' is not assignable to type 'boolean'.
-polyfill.ts(39,10): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Boolean'.
-  Property '1' does not exist on type 'Boolean'.
 polyfill.ts(48,6): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
 polyfill.ts(51,6): error TS2349: This expression is not callable.

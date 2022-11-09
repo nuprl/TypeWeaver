@@ -1,27 +1,10 @@
-benchmark/index.ts(16,39): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-benchmark/index.ts(19,18): error TS2322: Type 'undefined' is not assignable to type 'string'.
-benchmark/parse-top.ts(7,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'top' must be of type 'Window | null', but here has type 'any'.
-benchmark/parse-top.ts(13,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-benchmark/parse-top.ts(17,13): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(o: {}): string[]', gave the following error.
-    Argument of type 'Window | null' is not assignable to parameter of type '{}'.
-      Type 'null' is not assignable to type '{}'.
-  Overload 2 of 2, '(o: object): string[]', gave the following error.
-    Argument of type 'Window | null' is not assignable to parameter of type 'object'.
-      Type 'null' is not assignable to type 'object'.
-benchmark/parse-top.ts(21,52): error TS2531: Object is possibly 'null'.
-benchmark/parse-top.ts(21,56): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
+benchmark/parse-top.ts(7,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'top' must be of type 'Window', but here has type 'any'.
 benchmark/parse-top.ts(39,10): error TS2393: Duplicate function implementation.
 benchmark/parse-top.ts(46,3): error TS2322: Type 'string' is not assignable to type 'void'.
-benchmark/parse.ts(12,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/parse.ts(66,10): error TS2393: Duplicate function implementation.
 index.ts(23,26): error TS2322: Type '() => string' is not assignable to type 'string'.
 index.ts(33,5): error TS2322: Type 'RegExp' is not assignable to type 'string'.
 index.ts(53,12): error TS2304: Cannot find name 'CalendarModalOptions'.
-index.ts(78,23): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-index.ts(86,7): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 index.ts(119,27): error TS2339: Property 'test' does not exist on type 'string'.
 index.ts(123,23): error TS2349: This expression is not callable.
   Type 'never' has no call signatures.
@@ -39,7 +22,6 @@ scripts/update-benchmark.ts(41,9): error TS2339: Property 'forEach' does not exi
 scripts/update-benchmark.ts(54,50): error TS2339: Property 'rootDomain' does not exist on type 'string'.
 scripts/version-history.ts(7,5): error TS2322: Type 'RegExp' is not assignable to type 'string'.
 scripts/version-history.ts(13,23): error TS2339: Property 'test' does not exist on type 'string'.
-scripts/version-history.ts(55,19): error TS7006: Parameter 'number' implicitly has an 'any' type.
 scripts/version-history.ts(58,14): error TS2339: Property 'length' does not exist on type 'number'.
 scripts/version-history.ts(59,5): error TS2322: Type 'string' is not assignable to type 'number'.
 

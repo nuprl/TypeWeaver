@@ -1,14 +1,8 @@
 benchmark/code/repeating.ts(3,23): error TS2307: Cannot find module 'repeating' or its corresponding type declarations.
-benchmark/code/repeating.ts(5,38): error TS7006: Parameter 'num' implicitly has an 'any' type.
-benchmark/code/while-array-3.ts(3,38): error TS7006: Parameter 'num' implicitly has an 'any' type.
 benchmark/code/while-array-3.ts(4,31): error TS2339: Property 'join' does not exist on type 'string'.
 benchmark/helper.ts(5,20): error TS2307: Cannot find module 'repeat-string' or its corresponding type declarations.
 benchmark/helper.ts(6,22): error TS2307: Cannot find module 'isobject' or its corresponding type declarations.
 benchmark/helper.ts(7,18): error TS2307: Cannot find module 'text-table' or its corresponding type declarations.
-benchmark/helper.ts(31,22): error TS2322: Type 'undefined' is not assignable to type 'string'.
-benchmark/helper.ts(32,25): error TS2532: Object is possibly 'undefined'.
-benchmark/helper.ts(33,7): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'RegExpExecArray'.
-  Type 'null' is not assignable to type 'RegExpExecArray'.
 benchmark/helper.ts(36,12): error TS2304: Cannot find name 'Token'.
 benchmark/helper.ts(39,3): error TS2322: Type 'void' is not assignable to type 'string'.
 benchmark/helper.ts(49,5): error TS2542: Index signature in type 'String' only permits reading.
@@ -19,8 +13,6 @@ benchmark/helper.ts(66,3): error TS2322: Type 'any[]' is not assignable to type 
 benchmark/helper.ts(66,15): error TS2339: Property 'name' does not exist on type 'string'.
 benchmark/helper.ts(66,42): error TS2554: Expected 2 arguments, but got 3.
 benchmark/helper.ts(66,66): error TS2339: Property 'val' does not exist on type 'string'.
-benchmark/helper.ts(71,7): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'RegExpExecArray'.
-  Type 'null' is not assignable to type 'RegExpExecArray'.
 benchmark/helper.ts(90,27): error TS2339: Property 'num' does not exist on type 'string'.
 benchmark/helper.ts(90,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 benchmark/index.ts(4,18): error TS2307: Cannot find module 'ansi-cyan' or its corresponding type declarations.

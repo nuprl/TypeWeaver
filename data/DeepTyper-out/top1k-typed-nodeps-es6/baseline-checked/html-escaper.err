@@ -1,22 +1,14 @@
 cjs/index.ts(27,7): error TS2322: Type 'RegExp' is not assignable to type 'string'.
 cjs/index.ts(28,7): error TS2322: Type 'RegExp' is not assignable to type 'string'.
+cjs/index.ts(46,7): error TS2322: Type '(es: any) => any' is not assignable to type 'string'.
 cjs/index.ts(46,7): error TS2451: Cannot redeclare block-scoped variable 'escape'.
-cjs/index.ts(46,24): error TS2322: Type '(es: any) => string' is not assignable to type 'string'.
-cjs/index.ts(46,54): error TS2345: Argument of type 'string' is not assignable to parameter of type '{ [Symbol.replace](string: string, replacer: (substring: string, ...args: any[]) => string): string; }'.
 cjs/index.ts(73,7): error TS2451: Cannot redeclare block-scoped variable 'unescape'.
-cjs/index.ts(73,53): error TS2345: Argument of type 'string' is not assignable to parameter of type '{ [Symbol.replace](string: string, replacer: (substring: string, ...args: any[]) => string): string; }'.
 esm/index.ts(26,7): error TS2322: Type 'RegExp' is not assignable to type 'string'.
 esm/index.ts(27,7): error TS2322: Type 'RegExp' is not assignable to type 'string'.
-esm/index.ts(45,31): error TS2322: Type '(es: any) => string' is not assignable to type 'string'.
-esm/index.ts(45,61): error TS2345: Argument of type 'string' is not assignable to parameter of type '{ [Symbol.replace](string: string, replacer: (substring: string, ...args: any[]) => string): string; }'.
-esm/index.ts(71,60): error TS2345: Argument of type 'string' is not assignable to parameter of type '{ [Symbol.replace](string: string, replacer: (substring: string, ...args: any[]) => string): string; }'.
+esm/index.ts(45,14): error TS2322: Type '(es: any) => any' is not assignable to type 'string'.
 index.ts(29,9): error TS2322: Type 'RegExp' is not assignable to type 'string'.
 index.ts(30,9): error TS2322: Type 'RegExp' is not assignable to type 'string'.
-index.ts(48,26): error TS2322: Type '(es: any) => string' is not assignable to type 'string'.
-index.ts(48,56): error TS2345: Argument of type 'string' is not assignable to parameter of type '{ [Symbol.replace](string: string, replacer: (substring: string, ...args: any[]) => string): string; }'.
-index.ts(74,55): error TS2345: Argument of type 'string' is not assignable to parameter of type '{ [Symbol.replace](string: string, replacer: (substring: string, ...args: any[]) => string): string; }'.
-min.ts(1,204): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ "&": string; "<": string; ">": string; "'": string; '"': string; }'.
-min.ts(1,345): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ "&amp;": string; "&#38;": string; "&lt;": string; "&#60;": string; "&gt;": string; "&#62;": string; "&apos;": string; "&#39;": string; "&quot;": string; "&#34;": string; }'.
+index.ts(48,9): error TS2322: Type '(es: any) => any' is not assignable to type 'string'.
 ../../../../../tools/node_modules/typescript/lib/lib.es5.d.ts(90,18): error TS2451: Cannot redeclare block-scoped variable 'escape'.
 ../../../../../tools/node_modules/typescript/lib/lib.es5.d.ts(97,18): error TS2451: Cannot redeclare block-scoped variable 'unescape'.
 

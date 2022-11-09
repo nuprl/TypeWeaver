@@ -1,6 +1,4 @@
 benchmark.ts(2,5): error TS2322: Type 'string' is not assignable to type 'RegExp'.
-minimatch.ts(1,25): error TS7006: Parameter 'p' implicitly has an 'any' type.
-minimatch.ts(1,28): error TS7006: Parameter 'pattern' implicitly has an 'any' type.
 minimatch.ts(5,16): error TS2339: Property 'nocomment' does not exist on type '{}'.
 minimatch.ts(12,16): error TS2528: A module cannot have multiple default exports.
 minimatch.ts(13,16): error TS2528: A module cannot have multiple default exports.
@@ -8,29 +6,12 @@ minimatch.ts(32,7): error TS2322: Type 'string' is not assignable to type 'RegEx
 minimatch.ts(40,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
 minimatch.ts(44,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
 minimatch.ts(47,7): error TS2322: Type '(s: string) => {}' is not assignable to type 'string[]'.
-minimatch.ts(48,3): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 minimatch.ts(53,28): error TS2349: This expression is not callable.
   Type 'string[]' has no call signatures.
 minimatch.ts(56,36): error TS2349: This expression is not callable.
   Type 'string[]' has no call signatures.
 minimatch.ts(59,7): error TS2322: Type 'RegExp' is not assignable to type 'string'.
-minimatch.ts(61,21): error TS7006: Parameter 'pattern' implicitly has an 'any' type.
-minimatch.ts(64,19): error TS7006: Parameter 'a' implicitly has an 'any' type.
-minimatch.ts(66,41): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-minimatch.ts(67,41): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-minimatch.ts(67,48): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-minimatch.ts(80,18): error TS7006: Parameter 'pattern' implicitly has an 'any' type.
-minimatch.ts(80,27): error TS7006: Parameter 'options' implicitly has an 'any' type.
-minimatch.ts(110,27): error TS7006: Parameter 'pattern' implicitly has an 'any' type.
 minimatch.ts(115,15): error TS2339: Property 'nobrace' does not exist on type '{}'.
-minimatch.ts(150,20): error TS7006: Parameter 'list' implicitly has an 'any' type.
-minimatch.ts(150,26): error TS7006: Parameter 'pattern' implicitly has an 'any' type.
-minimatch.ts(164,16): error TS7006: Parameter 'pattern' implicitly has an 'any' type.
-minimatch.ts(164,25): error TS7006: Parameter 'options' implicitly has an 'any' type.
 minimatch.ts(169,10): error TS2339: Property 'options' does not exist on type 'Minimatch'.
 minimatch.ts(170,10): error TS2339: Property 'set' does not exist on type 'Minimatch'.
 minimatch.ts(171,10): error TS2339: Property 'pattern' does not exist on type 'Minimatch'.
@@ -53,7 +34,6 @@ minimatch.ts(211,21): error TS2339: Property 'pattern' does not exist on type 'M
 minimatch.ts(218,16): error TS2339: Property 'globParts' does not exist on type 'Minimatch'.
 minimatch.ts(220,16): error TS2554: Expected 0 arguments, but got 2.
 minimatch.ts(220,21): error TS2339: Property 'pattern' does not exist on type 'Minimatch'.
-minimatch.ts(223,40): error TS7006: Parameter 'set' implicitly has an 'any' type.
 minimatch.ts(223,50): error TS2339: Property 'map' does not exist on type 'string'.
 minimatch.ts(225,16): error TS2554: Expected 0 arguments, but got 2.
 minimatch.ts(225,21): error TS2339: Property 'pattern' does not exist on type 'Minimatch'.
@@ -65,9 +45,6 @@ minimatch.ts(236,14): error TS2339: Property 'options' does not exist on type 'M
 minimatch.ts(238,34): error TS2339: Property 'pattern' does not exist on type 'Minimatch'.
 minimatch.ts(247,28): error TS2339: Property 'pattern' does not exist on type 'Minimatch'.
 minimatch.ts(248,10): error TS2339: Property 'negate' does not exist on type 'Minimatch'.
-minimatch.ts(256,13): error TS7006: Parameter 'file' implicitly has an 'any' type.
-minimatch.ts(256,19): error TS7006: Parameter 'pattern' implicitly has an 'any' type.
-minimatch.ts(256,28): error TS7006: Parameter 'partial' implicitly has an 'any' type.
 minimatch.ts(257,29): error TS2339: Property 'options' does not exist on type 'Minimatch'.
 minimatch.ts(259,16): error TS2554: Expected 0 arguments, but got 2.
 minimatch.ts(262,16): error TS2554: Expected 0 arguments, but got 3.
@@ -86,8 +63,6 @@ minimatch.ts(367,20): error TS2554: Expected 0 arguments, but got 4.
 minimatch.ts(370,20): error TS2554: Expected 0 arguments, but got 4.
 minimatch.ts(411,29): error TS2339: Property 'pattern' does not exist on type 'Minimatch'.
 minimatch.ts(411,43): error TS2339: Property 'options' does not exist on type 'Minimatch'.
-minimatch.ts(414,10): error TS7006: Parameter 'pattern' implicitly has an 'any' type.
-minimatch.ts(414,19): error TS7006: Parameter 'isSub' implicitly has an 'any' type.
 minimatch.ts(417,31): error TS2339: Property 'options' does not exist on type 'Minimatch'.
 minimatch.ts(428,9): error TS2322: Type 'string' is not assignable to type 'RegExp'.
 minimatch.ts(453,16): error TS2678: Type 'string' is not comparable to type 'number'.
@@ -102,9 +77,7 @@ minimatch.ts(481,11): error TS2322: Type 'string' is not assignable to type 'Reg
 minimatch.ts(507,22): error TS2554: Expected 0 arguments, but got 5.
 minimatch.ts(512,24): error TS2554: Expected 0 arguments, but got 1.
 minimatch.ts(521,22): error TS2554: Expected 0 arguments, but got 2.
-minimatch.ts(521,48): error TS2454: Variable 'stateChar' is used before being assigned.
 minimatch.ts(532,13): error TS2322: Type 'string' is not assignable to type 'RegExp'.
-minimatch.ts(536,16): error TS2454: Variable 'stateChar' is used before being assigned.
 minimatch.ts(537,13): error TS2322: Type 'string' is not assignable to type 'RegExp'.
 minimatch.ts(544,25): error TS2339: Property 'length' does not exist on type 'RegExp'.
 minimatch.ts(549,11): error TS2322: Type 'string' is not assignable to type 'RegExp'.
@@ -151,7 +124,6 @@ minimatch.ts(786,12): error TS2339: Property 'regexp' does not exist on type 'Mi
 minimatch.ts(787,19): error TS2339: Property 'regexp' does not exist on type 'Minimatch'.
 minimatch.ts(789,31): error TS2339: Property 'options' does not exist on type 'Minimatch'.
 minimatch.ts(806,13): error TS2339: Property '_src' does not exist on type 'never'.
-minimatch.ts(807,17): error TS7006: Parameter 'set' implicitly has an 'any' type.
 minimatch.ts(808,51): error TS2367: This condition will always return 'false' since the types 'string' and 'symbol' have no overlap.
 minimatch.ts(814,13): error TS2367: This condition will always return 'true' since the types 'string' and 'symbol' have no overlap.
 minimatch.ts(830,44): error TS2367: This condition will always return 'true' since the types 'string' and 'symbol' have no overlap.
@@ -159,7 +131,6 @@ minimatch.ts(838,14): error TS2339: Property 'negate' does not exist on type 'Mi
 minimatch.ts(841,12): error TS2339: Property 'regexp' does not exist on type 'Minimatch'.
 minimatch.ts(843,12): error TS2339: Property 'regexp' does not exist on type 'Minimatch'.
 minimatch.ts(845,17): error TS2339: Property 'regexp' does not exist on type 'Minimatch'.
-minimatch.ts(848,10): error TS7006: Parameter 'f' implicitly has an 'any' type.
 minimatch.ts(848,28): error TS2339: Property 'partial' does not exist on type 'Minimatch'.
 minimatch.ts(849,16): error TS2554: Expected 0 arguments, but got 3.
 minimatch.ts(849,33): error TS2339: Property 'pattern' does not exist on type 'Minimatch'.
@@ -173,5 +144,4 @@ minimatch.ts(874,16): error TS2554: Expected 0 arguments, but got 3.
 minimatch.ts(874,21): error TS2339: Property 'pattern' does not exist on type 'Minimatch'.
 minimatch.ts(892,22): error TS2339: Property 'negate' does not exist on type 'Minimatch'.
 minimatch.ts(899,17): error TS2339: Property 'negate' does not exist on type 'Minimatch'.
-minimatch.ts(902,20): error TS7006: Parameter 'def' implicitly has an 'any' type.
 

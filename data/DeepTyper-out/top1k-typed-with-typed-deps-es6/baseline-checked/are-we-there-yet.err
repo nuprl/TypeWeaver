@@ -1,18 +1,9 @@
 lib/tracker-base.ts(6,25): error TS2322: Type '(name: any) => void' is not assignable to type 'void'.
-lib/tracker-base.ts(7,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-base.ts(8,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-base.ts(9,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/tracker-base.ts(7,3): error TS2684: The 'this' context of type 'typeof EventEmitter' is not assignable to method's 'this' of type 'Function'.
+  Types of property 'once' are incompatible.
+    Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
 lib/tracker-group.ts(7,26): error TS2322: Type '(name: any) => void' is not assignable to type 'void'.
 lib/tracker-group.ts(8,15): error TS2339: Property 'call' does not exist on type 'void'.
-lib/tracker-group.ts(8,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-group.ts(9,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-group.ts(10,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-group.ts(11,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-group.ts(12,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-group.ts(13,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-group.ts(14,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-group.ts(15,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-group.ts(15,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/tracker-group.ts(21,10): error TS2322: Type '(name: any, completed: any, tracker: any) => void' is not assignable to type 'void'.
 lib/tracker-group.ts(30,14): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/tracker-group.ts(40,14): error TS2339: Property 'prototype' does not exist on type 'void'.
@@ -35,24 +26,14 @@ lib/tracker-group.ts(105,14): error TS2339: Property 'prototype' does not exist 
 lib/tracker-group.ts(107,7): error TS2322: Type 'string' is not assignable to type 'number'.
 lib/tracker-group.ts(110,28): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 lib/tracker-stream.ts(7,27): error TS2322: Type '(name: any, size: number, options: any) => void' is not assignable to type 'void'.
-lib/tracker-stream.ts(8,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-stream.ts(9,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/tracker-stream.ts(9,22): error TS2351: This expression is not constructable.
   Type 'void' has no construct signatures.
-lib/tracker-stream.ts(10,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-stream.ts(11,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-stream.ts(11,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-stream.ts(12,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-stream.ts(12,44): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/tracker-stream.ts(18,10): error TS2322: Type '(name: any, completion: any, tracker: any) => void' is not assignable to type 'void'.
 lib/tracker-stream.ts(23,15): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/tracker-stream.ts(29,15): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/tracker-stream.ts(34,24): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/tracker.ts(5,21): error TS2322: Type '(name: string, todo: any) => void' is not assignable to type 'void'.
 lib/tracker.ts(6,15): error TS2339: Property 'call' does not exist on type 'void'.
-lib/tracker.ts(6,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker.ts(7,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker.ts(8,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/tracker.ts(13,9): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/tracker.ts(17,9): error TS2339: Property 'prototype' does not exist on type 'void'.
 lib/tracker.ts(22,9): error TS2339: Property 'prototype' does not exist on type 'void'.

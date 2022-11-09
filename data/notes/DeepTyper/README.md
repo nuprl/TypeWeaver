@@ -21,58 +21,58 @@
 
 ```
 Dataset: top1k-typed-nodeps
-Number of successes: 256
-Number of fails: 31
-Time for type inference: 2:50:57
+Number of successes: 257
+Number of fails: 30
+Time for type inference: 2:48:00
 ```
 
 ```
 Dataset: top1k-typed-nodeps-es6
-Number of successes: 256
-Number of fails: 31
-Time for type inference: 2:52:15
+Number of successes: 257
+Number of fails: 30
+Time for type inference: 2:52:06
 ```
 
 ```
 Dataset: top1k-typed-with-typed-deps
 Number of successes: 69
 Number of fails: 16
-Time for type inference: 0:48:00
+Time for type inference: 0:47:08
 ```
 
 ```
 Dataset: top1k-typed-with-typed-deps-es6
 Number of successes: 69
 Number of fails: 16
-Time for type inference: 0:48:21
+Time for type inference: 0:47:17
 ```
 
 ```
 Dataset: top1k-untyped-nodeps
 Number of successes: 96
 Number of fails: 6
-Time for type inference: 0:16:52
+Time for type inference: 0:16:15
 ```
 
 ```
 Dataset: top1k-untyped-nodeps-es6
 Number of successes: 96
 Number of fails: 6
-Time for type inference: 0:16:25
+Time for type inference: 0:16:10
 ```
 
 ```
 Dataset: top1k-untyped-with-typed-deps
 Number of successes: 39
 Number of fails: 1
-Time for type inference: 0:32:08
+Time for type inference: 0:32:18
 ```
 
 ```
 Dataset: top1k-untyped-with-typed-deps-es6
 Number of successes: 39
 Number of fails: 1
-Time for type inference: 0:32:01
+Time for type inference: 0:32:06
 ```
 
 ## Type weaving
@@ -90,51 +90,51 @@ Time for type inference: 0:32:01
 
 ```
 Dataset: top1k-typed-nodeps
-Number of successes: 256
+Number of successes: 257
 Number of fails: 0
 Time for type weaving: 0:00:47
 ```
 
 ```
 Dataset: top1k-typed-nodeps-es6
-Number of successes: 256
+Number of successes: 257
 Number of fails: 0
-Time for type weaving: 0:00:46
+Time for type weaving: 0:00:47
 ```
 
 ```
 Dataset: top1k-typed-with-typed-deps
 Number of successes: 69
 Number of fails: 0
-Time for type weaving: 0:00:47
+Time for type weaving: 0:00:44
 ```
 
 ```
 Dataset: top1k-typed-with-typed-deps-es6
 Number of successes: 69
 Number of fails: 0
-Time for type weaving: 0:00:46
+Time for type weaving: 0:00:44
 ```
 
 ```
 Dataset: top1k-untyped-nodeps
 Number of successes: 95
 Number of fails: 1
-Time for type weaving: 0:00:11
+Time for type weaving: 0:00:09
 ```
 
 ```
 Dataset: top1k-untyped-nodeps-es6
 Number of successes: 95
 Number of fails: 1
-Time for type weaving: 0:00:11
+Time for type weaving: 0:00:09
 ```
 
 ```
 Dataset: top1k-untyped-with-typed-deps
 Number of successes: 39
 Number of fails: 0
-Time for type weaving: 0:00:14
+Time for type weaving: 0:00:15
 ```
 
 ```
@@ -159,56 +159,56 @@ Time for type weaving: 0:00:14
 
 ```
 Dataset: top1k-typed-nodeps
-Number of successes: 44
-Number of fails: 212
-Time for type checking: 0:02:18
+Number of successes: 65
+Number of fails: 192
+Time for type checking: 0:02:21
 ```
 
 ```
 Dataset: top1k-typed-nodeps-es6
-Number of successes: 34
-Number of fails: 222
-Time for type checking: 0:02:18
+Number of successes: 52
+Number of fails: 205
+Time for type checking: 0:02:21
 ```
 
 ```
 Dataset: top1k-typed-with-typed-deps
-Number of successes: 5
-Number of fails: 64
-Time for type checking: 0:00:40
+Number of successes: 8
+Number of fails: 61
+Time for type checking: 0:00:42
 ```
 
 ```
 Dataset: top1k-typed-with-typed-deps-es6
-Number of successes: 2
-Number of fails: 67
+Number of successes: 5
+Number of fails: 64
 Time for type checking: 0:00:41
 ```
 
 ```
 Dataset: top1k-untyped-nodeps
-Number of successes: 23
-Number of fails: 72
-Time for type checking: 0:00:53
+Number of successes: 33
+Number of fails: 62
+Time for type checking: 0:00:54
 ```
 
 ```
 Dataset: top1k-untyped-nodeps-es6
-Number of successes: 16
-Number of fails: 79
-Time for type checking: 0:00:53
+Number of successes: 29
+Number of fails: 66
+Time for type checking: 0:00:54
 ```
 
 ```
 Dataset: top1k-untyped-with-typed-deps
-Number of successes: 10
-Number of fails: 29
+Number of successes: 11
+Number of fails: 28
 Time for type checking: 0:00:22
 ```
 
 ```
 Dataset: top1k-untyped-with-typed-deps-es6
-Number of successes: 4
-Number of fails: 35
+Number of successes: 5
+Number of fails: 34
 Time for type checking: 0:00:22
 ```

@@ -10,12 +10,8 @@ bin.ts(45,5): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 bin.ts(66,3): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
-rimraf.ts(31,32): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'typeof import("fs")'.
-  No index signature with a parameter of type 'string' was found on type 'typeof import("fs")'.
-rimraf.ts(33,32): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'typeof import("fs")'.
-  No index signature with a parameter of type 'string' was found on type 'typeof import("fs")'.
 rimraf.ts(66,9): error TS2322: Type '(er: any) => void' is not assignable to type 'boolean'.
-rimraf.ts(81,13): error TS2322: Type '(er: any) => NodeJS.Timeout | undefined' is not assignable to type 'boolean'.
+rimraf.ts(81,13): error TS2322: Type '(er: any) => NodeJS.Timeout' is not assignable to type 'boolean'.
 rimraf.ts(87,37): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 rimraf.ts(92,37): error TS2349: This expression is not callable.
@@ -39,8 +35,6 @@ rimraf.ts(163,27): error TS2322: Type '(p: any, options: any, er: any, cb: any) 
 rimraf.ts(176,11): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 rimraf.ts(183,31): error TS2322: Type '(p: any, options: any, er: any) => void' is not assignable to type 'void'.
-rimraf.ts(190,9): error TS2571: Object is of type 'unknown'.
-rimraf.ts(200,9): error TS2571: Object is of type 'unknown'.
 rimraf.ts(207,5): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 rimraf.ts(212,21): error TS2322: Type '(p: string, options: any, originalEr: any, cb: any) => void' is not assignable to type 'void'.
@@ -48,27 +42,17 @@ rimraf.ts(222,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 rimraf.ts(230,22): error TS2322: Type '(p: any, options: any, cb: any) => void' is not assignable to type 'void'.
 rimraf.ts(258,7): error TS2322: Type '(p: any, options: any) => any' is not assignable to type 'void'.
-rimraf.ts(290,11): error TS2571: Object is of type 'unknown'.
-rimraf.ts(294,11): error TS2571: Object is of type 'unknown'.
 rimraf.ts(295,9): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 rimraf.ts(301,9): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-rimraf.ts(305,11): error TS2571: Object is of type 'unknown'.
-rimraf.ts(307,11): error TS2571: Object is of type 'unknown'.
 rimraf.ts(308,28): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 rimraf.ts(308,62): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-rimraf.ts(309,11): error TS2571: Object is of type 'unknown'.
 rimraf.ts(312,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 rimraf.ts(317,25): error TS2322: Type '(p: string, options: any, originalEr: boolean) => void' is not assignable to type 'void'.
-rimraf.ts(324,9): error TS2571: Object is of type 'unknown'.
-rimraf.ts(326,9): error TS2571: Object is of type 'unknown'.
-rimraf.ts(328,9): error TS2571: Object is of type 'unknown'.
-rimraf.ts(328,36): error TS2571: Object is of type 'unknown'.
-rimraf.ts(328,60): error TS2571: Object is of type 'unknown'.
 rimraf.ts(329,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 rimraf.ts(333,7): error TS2322: Type '(p: string, options: any) => any' is not assignable to type 'void'.

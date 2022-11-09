@@ -1,6 +1,6 @@
 index.ts(36,10): error TS2451: Cannot redeclare block-scoped variable 'name'.
 index.ts(41,31): error TS2339: Property 'bind' does not exist on type 'void'.
-index.ts(43,5): error TS2322: Type '{ wrap: (value: number) => number; limit: (value: number) => number; validate: (value: any) => any; test: (value: any) => boolean; toString: any; name: any; }' is not assignable to type 'Function'.
+index.ts(43,5): error TS2322: Type '{ wrap: any; limit: any; validate: (value: any) => any; test: (value: any) => boolean; toString: any; name: any; }' is not assignable to type 'Function'.
   Object literal may only specify known properties, and 'wrap' does not exist in type 'Function'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17694,15): error TS2451: Cannot redeclare block-scoped variable 'name'.
 

@@ -2,9 +2,8 @@ example/cmp.ts(3,5): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
 example/cmp.ts(7,5): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
-index.ts(1,24): error TS2322: Type '(start?: number | undefined, end?: number | undefined) => any[]' is not assignable to type 'string[]'.
-index.ts(2,5): error TS2322: Type '{ (o: object): string[]; (o: {}): string[]; } | ((obj: any) => any[])' is not assignable to type 'boolean'.
-  Type '{ (o: object): string[]; (o: {}): string[]; }' is not assignable to type 'boolean'.
+index.ts(1,24): error TS2322: Type '(start?: number, end?: number) => any[]' is not assignable to type 'string[]'.
+index.ts(2,5): error TS2322: Type '(obj: any) => any[]' is not assignable to type 'boolean'.
 index.ts(11,26): error TS2322: Type '(actual: any, expected: any) => boolean' is not assignable to type 'boolean'.
 index.ts(59,31): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(74,16): error TS2339: Property 'call' does not exist on type 'string[]'.

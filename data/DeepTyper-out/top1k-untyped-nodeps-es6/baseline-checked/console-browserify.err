@@ -1,16 +1,4 @@
-index.ts(7,20): error TS2322: Type '(start?: number | undefined, end?: number | undefined) => any[]' is not assignable to type 'any[]'.
+index.ts(7,20): error TS2322: Type '(start?: number, end?: number) => any[]' is not assignable to type 'any[]'.
 index.ts(16,5): error TS2740: Type '{}' is missing the following properties from type 'Console': assert, clear, count, countReset, and 19 more.
-index.ts(36,10): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Console'.
-index.ts(37,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Console'.
-index.ts(46,32): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[message?: any, ...optionalParams: any[]]'.
-index.ts(50,32): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[message?: any, ...optionalParams: any[]]'.
-index.ts(54,33): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[message?: any, ...optionalParams: any[]]'.
-index.ts(58,5): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-index.ts(62,21): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-index.ts(67,12): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-index.ts(75,43): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[format?: any, ...param: any[]]'.
 index.ts(85,32): error TS2339: Property 'call' does not exist on type 'any[]'.
 

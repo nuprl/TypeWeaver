@@ -1,16 +1,12 @@
 benchmark/code/node-path.ts(2,6): error TS2540: Cannot assign to 'sep' because it is a read-only property.
-benchmark/code/node-path.ts(4,38): error TS7006: Parameter 'stripTrailing' implicitly has an 'any' type.
 benchmark/code/node-path.ts(5,3): error TS2322: Type 'string' is not assignable to type 'boolean'.
 benchmark/code/node-path.ts(5,23): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
 benchmark/code/node-path.ts(7,5): error TS2322: Type 'boolean' is not assignable to type 'string'.
 benchmark/code/node-path.ts(9,13): error TS2339: Property 'replace' does not exist on type 'boolean'.
-benchmark/code/regex.ts(1,37): error TS7006: Parameter 'stripTrailing' implicitly has an 'any' type.
-benchmark/code/slice-trailing.ts(1,37): error TS7006: Parameter 'stripTrailing' implicitly has an 'any' type.
 benchmark/code/v2.ts(8,37): error TS2307: Cannot find module 'remove-trailing-separator' or its corresponding type declarations.
 benchmark/code/v2.ts(15,7): error TS2367: This condition will always return 'true' since the types 'string' and 'boolean' have no overlap.
 benchmark/code/while.ts(18,11): error TS2367: This condition will always return 'true' since the types 'string' and 'boolean' have no overlap.
 benchmark/index.ts(4,19): error TS2307: Cannot find module 'benchmarked' or its corresponding type declarations.
-index.ts(8,40): error TS7006: Parameter 'stripTrailing' implicitly has an 'any' type.
 index.ts(15,26): error TS2339: Property 'length' does not exist on type 'never'.
 index.ts(24,44): error TS2339: Property 'slice' does not exist on type 'never'.
 index.ts(25,19): error TS2339: Property 'slice' does not exist on type 'never'.

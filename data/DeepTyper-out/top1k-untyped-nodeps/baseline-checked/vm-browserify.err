@@ -2,35 +2,22 @@ example/run/bundle.ts(1,192): error TS2554: Expected 1 arguments, but got 2.
 example/run/bundle.ts(1,257): error TS2339: Property 'code' does not exist on type 'Error'.
 example/run/bundle.ts(1,381): error TS2554: Expected 2 arguments, but got 1.
 example/run/bundle.ts(1,496): error TS2554: Expected 2 arguments, but got 1.
-example/run/bundle.ts(1,539): error TS7006: Parameter 'require' implicitly has an 'any' type.
-example/run/bundle.ts(1,547): error TS7006: Parameter 'module' implicitly has an 'any' type.
 example/run/bundle.ts(2,5): error TS2322: Type '(xs: any, item: any) => any' is not assignable to type 'number'.
 example/run/bundle.ts(18,5): error TS2322: Type '(xs: any, fn: any) => any' is not assignable to type 'void'.
 example/run/bundle.ts(25,24): error TS2322: Type '(obj: any, name: string, value: any) => void' is not assignable to type 'void'.
 example/run/bundle.ts(57,52): error TS2749: 'Context' refers to a value, but is being used as a type here. Did you mean 'typeof Context'?
 example/run/bundle.ts(63,31): error TS2540: Cannot assign to 'style' because it is a read-only property.
-example/run/bundle.ts(68,9): error TS2322: Type 'Window | null' is not assignable to type 'Window'.
-  Type 'null' is not assignable to type 'Window'.
 example/run/bundle.ts(69,26): error TS2339: Property 'eval' does not exist on type 'Window'.
 example/run/bundle.ts(69,50): error TS2339: Property 'execScript' does not exist on type 'Window'.
 example/run/bundle.ts(74,21): error TS2339: Property 'eval' does not exist on type 'Window'.
 example/run/bundle.ts(77,5): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-example/run/bundle.ts(78,13): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-example/run/bundle.ts(78,20): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 example/run/bundle.ts(80,5): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-example/run/bundle.ts(81,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-example/run/bundle.ts(82,17): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-example/run/bundle.ts(82,24): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 example/run/bundle.ts(90,5): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 example/run/bundle.ts(94,31): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
-example/run/bundle.ts(95,13): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
 example/run/bundle.ts(99,5): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 example/run/bundle.ts(101,13): error TS2349: This expression is not callable.
@@ -40,40 +27,24 @@ example/run/bundle.ts(119,9): error TS2349: This expression is not callable.
 example/run/bundle.ts(127,1): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 example/run/bundle.ts(142,67): error TS2749: 'Context' refers to a value, but is being used as a type here. Did you mean 'typeof Context'?
-example/run/bundle.ts(143,21): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 example/run/bundle.ts(145,9): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-example/run/bundle.ts(152,19): error TS7006: Parameter 'require' implicitly has an 'any' type.
-example/run/bundle.ts(152,27): error TS7006: Parameter 'module' implicitly has an 'any' type.
-example/run/bundle.ts(157,5): error TS2531: Object is possibly 'null'.
-example/run/entry.ts(5,5): error TS2531: Object is possibly 'null'.
 index.ts(1,5): error TS2322: Type '(xs: any, item: any) => any' is not assignable to type 'number'.
 index.ts(17,5): error TS2322: Type '(xs: any, fn: any) => any' is not assignable to type 'void'.
 index.ts(24,24): error TS2322: Type '(obj: any, name: string, value: any) => void' is not assignable to type 'void'.
 index.ts(56,52): error TS2749: 'Context' refers to a value, but is being used as a type here. Did you mean 'typeof Context'?
 index.ts(62,31): error TS2540: Cannot assign to 'style' because it is a read-only property.
-index.ts(67,9): error TS2322: Type 'Window | null' is not assignable to type 'Window'.
-  Type 'null' is not assignable to type 'Window'.
 index.ts(68,26): error TS2339: Property 'eval' does not exist on type 'Window'.
 index.ts(68,50): error TS2339: Property 'execScript' does not exist on type 'Window'.
 index.ts(73,21): error TS2339: Property 'eval' does not exist on type 'Window'.
 index.ts(76,5): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-index.ts(77,13): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-index.ts(77,20): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 index.ts(79,5): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-index.ts(80,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-index.ts(81,17): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-index.ts(81,24): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 index.ts(89,5): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 index.ts(93,31): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
-index.ts(94,13): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
 index.ts(98,5): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 index.ts(100,13): error TS2349: This expression is not callable.
@@ -83,7 +54,6 @@ index.ts(118,9): error TS2349: This expression is not callable.
 index.ts(126,1): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 index.ts(141,67): error TS2749: 'Context' refers to a value, but is being used as a type here. Did you mean 'typeof Context'?
-index.ts(142,21): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 index.ts(144,9): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 

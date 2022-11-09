@@ -1,7 +1,6 @@
 bin/cmd.ts(27,5): error TS2451: Cannot redeclare block-scoped variable 'print'.
 bin/cmd.ts(44,5): error TS2630: Cannot assign to 'print' because it is a function.
 bin/cmd.ts(51,10): error TS2339: Property 'mode' does not exist on type '{}'.
-bin/cmd.ts(62,24): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
 index.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'optsArg'.
 index.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'pathArg'.
 index.ts(4,8): error TS2451: Cannot redeclare block-scoped variable 'mkdirpNative'.
@@ -12,19 +11,10 @@ index.ts(6,8): error TS2451: Cannot redeclare block-scoped variable 'useNative'.
 index.ts(6,19): error TS2451: Cannot redeclare block-scoped variable 'useNativeSync'.
 lib/find-made.ts(1,8): error TS2451: Cannot redeclare block-scoped variable 'dirname'.
 lib/find-made.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'findMade'.
-lib/find-made.ts(3,24): error TS7006: Parameter 'opts' implicitly has an 'any' type.
-lib/find-made.ts(3,30): error TS7006: Parameter 'parent' implicitly has an 'any' type.
 lib/find-made.ts(16,7): error TS2451: Cannot redeclare block-scoped variable 'findMadeSync'.
-lib/find-made.ts(16,28): error TS7006: Parameter 'opts' implicitly has an 'any' type.
-lib/find-made.ts(16,34): error TS7006: Parameter 'parent' implicitly has an 'any' type.
-lib/find-made.ts(23,12): error TS2571: Object is of type 'unknown'.
 lib/mkdirp-manual.ts(1,8): error TS2451: Cannot redeclare block-scoped variable 'dirname'.
 lib/mkdirp-manual.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'mkdirpManual'.
 lib/mkdirp-manual.ts(30,7): error TS2451: Cannot redeclare block-scoped variable 'mkdirpManualSync'.
-lib/mkdirp-manual.ts(40,11): error TS2571: Object is of type 'unknown'.
-lib/mkdirp-manual.ts(51,9): error TS2571: Object is of type 'unknown'.
-lib/mkdirp-manual.ts(53,9): error TS2571: Object is of type 'unknown'.
-lib/mkdirp-manual.ts(53,33): error TS2571: Object is of type 'unknown'.
 lib/mkdirp-native.ts(1,8): error TS2451: Cannot redeclare block-scoped variable 'dirname'.
 lib/mkdirp-native.ts(2,8): error TS2451: Cannot redeclare block-scoped variable 'findMade'.
 lib/mkdirp-native.ts(2,18): error TS2451: Cannot redeclare block-scoped variable 'findMadeSync'.
@@ -32,7 +22,6 @@ lib/mkdirp-native.ts(3,8): error TS2451: Cannot redeclare block-scoped variable 
 lib/mkdirp-native.ts(3,22): error TS2451: Cannot redeclare block-scoped variable 'mkdirpManualSync'.
 lib/mkdirp-native.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'mkdirpNative'.
 lib/mkdirp-native.ts(21,7): error TS2451: Cannot redeclare block-scoped variable 'mkdirpNativeSync'.
-lib/mkdirp-native.ts(32,9): error TS2571: Object is of type 'unknown'.
 lib/opts-arg.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
 lib/opts-arg.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'optsArg'.
 lib/path-arg.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'pathArg'.

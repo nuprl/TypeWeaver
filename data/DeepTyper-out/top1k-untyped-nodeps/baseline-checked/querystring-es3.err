@@ -1,6 +1,6 @@
 decode.ts(72,16): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
-decode.ts(82,24): error TS2322: Type '(arg: any) => arg is any[]' is not assignable to type 'boolean'.
+decode.ts(82,24): error TS2322: Type '(xs: any) => boolean' is not assignable to type 'boolean'.
 encode.ts(24,5): error TS2322: Type '(v: any) => string | number' is not assignable to type 'string'.
 encode.ts(48,16): error TS2349: This expression is not callable.
   Type 'string[]' has no call signatures.
@@ -18,8 +18,8 @@ encode.ts(62,29): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
 encode.ts(63,29): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
-encode.ts(66,24): error TS2322: Type '(arg: any) => arg is any[]' is not assignable to type 'boolean'.
+encode.ts(66,24): error TS2322: Type '(xs: any) => boolean' is not assignable to type 'boolean'.
 encode.ts(74,14): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
-encode.ts(79,28): error TS2322: Type '{ (o: object): string[]; (o: {}): string[]; }' is not assignable to type 'string[]'.
+encode.ts(79,28): error TS2322: Type '(obj: any) => any[]' is not assignable to type 'string[]'.
 

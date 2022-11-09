@@ -8,48 +8,26 @@ watchman/integration/capabilities.ts(47,16): error TS2304: Cannot find name 'res
 watchman/integration/capabilities.ts(49,3): error TS2304: Cannot find name 'resp'.
 watchman/integration/capabilities.ts(52,45): error TS2304: Cannot find name 'resp'.
 watchman/integration/case.ts(10,22): error TS2307: Cannot find module 'fb-watchman' or its corresponding type declarations.
-watchman/integration/case.ts(18,34): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(path: PathLike, options?: EncodingOption): string', gave the following error.
-    Argument of type 'string | undefined' is not assignable to parameter of type 'PathLike'.
-      Type 'undefined' is not assignable to type 'PathLike'.
-  Overload 2 of 3, '(path: PathLike, options?: EncodingOption): string | Buffer', gave the following error.
-    Argument of type 'string | undefined' is not assignable to parameter of type 'PathLike'.
 watchman/integration/case.ts(22,17): error TS2345: Argument of type '(err_mk_dir_foo: string) => void' is not assignable to parameter of type 'NoParamCallback'.
   Types of parameters 'err_mk_dir_foo' and 'err' are incompatible.
-    Type 'ErrnoException | null' is not assignable to type 'string'.
-      Type 'null' is not assignable to type 'string'.
+    Type 'ErrnoException' is not assignable to type 'string'.
 watchman/integration/case.ts(27,19): error TS2345: Argument of type '(err_mk_dir_bar: string) => void' is not assignable to parameter of type 'NoParamCallback'.
   Types of parameters 'err_mk_dir_bar' and 'err' are incompatible.
-    Type 'ErrnoException | null' is not assignable to type 'string'.
-      Type 'null' is not assignable to type 'string'.
+    Type 'ErrnoException' is not assignable to type 'string'.
 watchman/integration/node_basic.ts(10,22): error TS2307: Cannot find module 'fb-watchman' or its corresponding type declarations.
 watchman/integration/node_basic.ts(13,5): error TS2322: Type 'Timeout' is not assignable to type 'number'.
 watchman/node/bser/index.ts(13,19): error TS2307: Cannot find module 'node-int64' or its corresponding type declarations.
-watchman/node/bser/index.ts(27,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-watchman/node/bser/index.ts(28,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-watchman/node/bser/index.ts(29,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 watchman/node/bser/index.ts(128,7): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
-watchman/node/bser/index.ts(222,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-watchman/node/bser/index.ts(223,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+watchman/node/bser/index.ts(222,3): error TS2684: The 'this' context of type 'typeof EventEmitter' is not assignable to method's 'this' of type 'Function'.
 watchman/node/bser/index.ts(223,14): error TS2554: Expected 1 arguments, but got 0.
-watchman/node/bser/index.ts(223,14): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-watchman/node/bser/index.ts(224,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 watchman/node/bser/index.ts(249,13): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
-watchman/node/bser/index.ts(371,5): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-watchman/node/bser/index.ts(389,7): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-watchman/node/bser/index.ts(441,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-watchman/node/bser/index.ts(559,13): error TS2571: Object is of type 'unknown'.
 watchman/node/bser/index.ts(572,18): error TS2554: Expected 1 arguments, but got 0.
-watchman/node/bser/index.ts(572,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 watchman/node/example.ts(8,22): error TS2307: Cannot find module 'fb-watchman' or its corresponding type declarations.
 watchman/node/index.ts(14,18): error TS2307: Cannot find module 'bser' or its corresponding type declarations.
 watchman/node/index.ts(26,13): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
-watchman/node/index.ts(26,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-watchman/node/index.ts(27,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-watchman/node/index.ts(29,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-watchman/node/index.ts(31,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-watchman/node/index.ts(33,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+watchman/node/index.ts(27,3): error TS2684: The 'this' context of type 'typeof EventEmitter' is not assignable to method's 'this' of type 'Function'.
+  Types of property 'once' are incompatible.
+    Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
 watchman/node/index.ts(75,13): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
 watchman/node/index.ts(100,17): error TS2339: Property 'watchmanResponse' does not exist on type 'Error'.
 watchman/node/index.ts(254,3): error TS2322: Type 'string[]' is not assignable to type 'string'.

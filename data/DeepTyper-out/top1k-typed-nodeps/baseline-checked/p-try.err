@@ -1,5 +1,3 @@
-index.ts(1,36): error TS7006: Parameter 'function_' implicitly has an 'any' type.
-index.ts(1,47): error TS7019: Rest parameter 'arguments_' implicitly has an 'any[]' type.
 index.ts(2,21): error TS2345: Argument of type '(resolve: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'resolve' and 'resolve' are incompatible.
     Type '(value: unknown) => void' is not assignable to type 'void'.

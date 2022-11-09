@@ -1,60 +1,16 @@
 bench.ts(11,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
 bench.ts(56,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-bench.ts(75,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/abort.ts(25,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/abort.ts(27,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/readable_asynckit.ts(13,20): error TS2339: Property 'super_' does not exist on type '() => void'.
-lib/readable_asynckit.ts(13,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(16,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(19,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(20,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(21,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(32,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(37,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(39,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(41,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(59,40): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(64,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(69,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(71,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(77,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_parallel.ts(16,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_parallel.ts(18,12): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/readable_parallel.ts(18,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/readable_parallel.ts(22,20): error TS2339: Property 'super_' does not exist on type '(list: any, iterator: any, callback: any) => any'.
-lib/readable_parallel.ts(22,32): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_parallel.ts(24,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_serial.ts(16,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_serial.ts(18,12): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/readable_serial.ts(18,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/readable_serial.ts(22,18): error TS2339: Property 'super_' does not exist on type '(list: any, iterator: any, callback: any) => any'.
-lib/readable_serial.ts(22,30): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_serial.ts(24,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/readable_serial_ordered.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-untyped-nodeps-es6/baseline/asynckit/serialOrdered"' has no default export.
-lib/readable_serial_ordered.ts(22,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_serial_ordered.ts(24,12): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/readable_serial_ordered.ts(24,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/readable_serial_ordered.ts(28,25): error TS2339: Property 'super_' does not exist on type '(list: any, iterator: any, sortMethod: any, callback: any) => any'.
-lib/readable_serial_ordered.ts(28,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_serial_ordered.ts(30,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/state.ts(30,5): error TS2531: Object is possibly 'null'.
-lib/streamify.ts(18,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/streamify.ts(54,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/streamify.ts(76,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/streamify.ts(104,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/streamify.ts(106,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/streamify.ts(107,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/streamify.ts(108,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/streamify.ts(115,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/streamify.ts(136,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/terminator.ts(15,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/terminator.ts(21,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/terminator.ts(21,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/terminator.ts(24,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/terminator.ts(27,19): error TS2345: Argument of type 'null' is not assignable to parameter of type 'Error'.
-lib/terminator.ts(27,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 parallel.ts(18,20): error TS2554: Expected 2 arguments, but got 1.
-parallel.ts(41,10): error TS2322: Type '() => void' is not assignable to type 'void'.
 serial.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-untyped-nodeps-es6/baseline/asynckit/serialOrdered"' has no default export.
-serialOrdered.ts(45,10): error TS2322: Type '() => void' is not assignable to type 'void'.
 serialOrdered.ts(61,3): error TS2322: Type 'number' is not assignable to type 'boolean'.
   Type 'number' is not assignable to type 'boolean'.
 serialOrdered.ts(73,3): error TS2322: Type 'number' is not assignable to type 'boolean'.

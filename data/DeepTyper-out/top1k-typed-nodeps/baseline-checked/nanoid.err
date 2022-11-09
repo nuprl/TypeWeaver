@@ -1,14 +1,9 @@
 async/index.browser.ts(1,12): error TS2322: Type '(bytes: number) => Promise<Uint8Array>' is not assignable to type 'number'.
 async/index.browser.ts(3,12): error TS2322: Type '(alphabet: any, defaultSize?: number) => (size?: number) => Promise<string>' is not assignable to type 'number'.
-async/index.browser.ts(3,38): error TS7006: Parameter 'alphabet' implicitly has an 'any' type.
 async/index.browser.ts(42,12): error TS2322: Type '(size?: number) => Promise<string>' is not assignable to type 'number'.
 async/index.native.ts(1,37): error TS2307: Cannot find module 'expo-random' or its corresponding type declarations.
 async/index.native.ts(7,12): error TS2322: Type '(alphabet: any, defaultSize?: number) => (size: number) => any' is not assignable to type 'number'.
-async/index.native.ts(7,38): error TS7006: Parameter 'alphabet' implicitly has an 'any' type.
-async/index.native.ts(27,20): error TS7006: Parameter 'id' implicitly has an 'any' type.
 async/index.native.ts(42,12): error TS2322: Type '(size?: number) => any' is not assignable to type 'number'.
-async/index.native.ts(52,13): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'RegExp'.
-  No index signature with a parameter of type 'number' was found on type 'RegExp'.
 async/index.ts(8,15): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'resolve' and 'resolve' are incompatible.
     Type '(value: unknown) => void' is not assignable to type 'void'.
@@ -17,11 +12,7 @@ async/index.ts(15,9): error TS2349: This expression is not callable.
 async/index.ts(17,9): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 async/index.ts(22,12): error TS2322: Type '(alphabet: any, defaultSize?: number) => (size: number) => any' is not assignable to type 'number'.
-async/index.ts(22,38): error TS7006: Parameter 'alphabet' implicitly has an 'any' type.
-async/index.ts(42,20): error TS7006: Parameter 'id' implicitly has an 'any' type.
 async/index.ts(58,12): error TS2322: Type '(size?: number) => any' is not assignable to type 'number'.
-async/index.ts(68,13): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'RegExp'.
-  No index signature with a parameter of type 'number' was found on type 'RegExp'.
 bin/nanoid.ts(51,27): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 bin/nanoid.ts(54,9): error TS2349: This expression is not callable.
@@ -32,12 +23,7 @@ index.browser.ts(14,47): error TS2339: Property 'length' does not exist on type 
 index.browser.ts(30,63): error TS2339: Property 'length' does not exist on type 'number'.
 index.browser.ts(35,27): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
-index.browser.ts(40,15): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-index.browser.ts(40,24): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 index.browser.ts(47,12): error TS2322: Type '(alphabet: any, size?: number) => any' is not assignable to type 'number'.
-index.browser.ts(47,38): error TS7006: Parameter 'alphabet' implicitly has an 'any' type.
 index.browser.ts(48,3): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 index.browser.ts(50,29): error TS2322: Type '(size?: number) => number' is not assignable to type 'number'.
@@ -50,35 +36,21 @@ index.browser.ts(70,6): error TS2769: No overload matches this call.
     Argument of type 'string' is not assignable to parameter of type 'number'.
   Overload 2 of 3, '(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number, initialValue: number): number', gave the following error.
     Argument of type 'string' is not assignable to parameter of type 'number'.
-index.ts(13,16): error TS7034: Variable 'poolOffset' implicitly has type 'any' in some locations where its type cannot be determined.
 index.ts(15,5): error TS2322: Type '(bytes: any) => void' is not assignable to type 'number'.
-index.ts(20,14): error TS7005: Variable 'poolOffset' implicitly has an 'any' type.
-index.ts(24,3): error TS7005: Variable 'poolOffset' implicitly has an 'any' type.
 index.ts(27,12): error TS2322: Type '(bytes: number) => any' is not assignable to type 'number'.
 index.ts(29,3): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
-index.ts(30,24): error TS7005: Variable 'poolOffset' implicitly has an 'any' type.
-index.ts(30,44): error TS7005: Variable 'poolOffset' implicitly has an 'any' type.
 index.ts(33,12): error TS2322: Type '(alphabet: number, defaultSize: number, getRandom: number) => (size?: number) => string' is not assignable to type 'number'.
 index.ts(38,55): error TS2339: Property 'length' does not exist on type 'number'.
 index.ts(51,70): error TS2339: Property 'length' does not exist on type 'number'.
 index.ts(56,27): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
-index.ts(61,15): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-index.ts(61,24): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 index.ts(68,12): error TS2322: Type '(alphabet: any, size?: number) => any' is not assignable to type 'number'.
-index.ts(68,38): error TS7006: Parameter 'alphabet' implicitly has an 'any' type.
 index.ts(69,3): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 index.ts(71,12): error TS2322: Type '(size?: number) => string' is not assignable to type 'number'.
 index.ts(73,3): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
-index.ts(76,16): error TS7005: Variable 'poolOffset' implicitly has an 'any' type.
-index.ts(76,39): error TS7005: Variable 'poolOffset' implicitly has an 'any' type.
-index.ts(82,11): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'RegExp'.
-  No index signature with a parameter of type 'number' was found on type 'RegExp'.
 nanoid.ts(1,12): error TS2322: Type '(t?: number) => number' is not assignable to type 'string'.
 nanoid.ts(1,84): error TS2769: No overload matches this call.
   Overload 1 of 3, '(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: Uint8Array) => number, initialValue: number): number', gave the following error.
@@ -96,7 +68,6 @@ nanoid.ts(1,137): error TS2365: Operator '<' cannot be applied to types 'string'
 nanoid.ts(1,143): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 nanoid.ts(1,176): error TS2365: Operator '>' cannot be applied to types 'string' and 'number'.
 non-secure/index.ts(10,12): error TS2322: Type '(alphabet: any, defaultSize?: number) => (size?: number) => string' is not assignable to type 'string'.
-non-secure/index.ts(10,38): error TS7006: Parameter 'alphabet' implicitly has an 'any' type.
 non-secure/index.ts(23,12): error TS2322: Type '(size?: number) => string' is not assignable to type 'number'.
 url-alphabet/index.ts(4,14): error TS2322: Type 'string' is not assignable to type 'RegExp'.
 

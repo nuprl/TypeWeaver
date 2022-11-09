@@ -28,12 +28,6 @@ examples/normal-usage.ts(73,32): error TS2339: Property 'error' does not exist o
 examples/normal-usage.ts(76,33): error TS2339: Property 'warn' does not exist on type '"this is a warning"'.
 examples/normal-usage.ts(79,32): error TS2339: Property 'input' does not exist on type '"this is an input"'.
 examples/safe-string.ts(1,8): error TS1192: Module '"safe"' has no default export.
-lib/colors.ts(87,38): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[]'.
-lib/colors.ts(102,5): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-lib/colors.ts(131,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/colors.ts(177,5): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 lib/custom/american.ts(2,41): error TS2339: Property 'yellow' does not exist on type '"LIBERTY LIBERTY LIBERTY"'.
 lib/custom/american.ts(3,41): error TS2339: Property 'america' does not exist on type '"LIBERTY LIBERTY LIBERTY"'.
 lib/custom/american.ts(4,41): error TS2339: Property 'yellow' does not exist on type '"LIBERTY LIBERTY LIBERTY"'.
@@ -47,47 +41,32 @@ lib/extendStringPrototype.ts(7,27): error TS2322: Type '(color: any, func: any) 
 lib/extendStringPrototype.ts(8,22): error TS2339: Property '__defineGetter__' does not exist on type 'String'.
 lib/extendStringPrototype.ts(11,3): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/extendStringPrototype.ts(12,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/extendStringPrototype.ts(15,3): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/extendStringPrototype.ts(16,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/extendStringPrototype.ts(19,3): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/extendStringPrototype.ts(20,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/extendStringPrototype.ts(23,3): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/extendStringPrototype.ts(24,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/extendStringPrototype.ts(27,3): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/extendStringPrototype.ts(28,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/extendStringPrototype.ts(31,3): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/extendStringPrototype.ts(32,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/extendStringPrototype.ts(35,3): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/extendStringPrototype.ts(36,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/extendStringPrototype.ts(39,3): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/extendStringPrototype.ts(40,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/extendStringPrototype.ts(48,5): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/extendStringPrototype.ts(49,29): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/extendStringPrototype.ts(70,30): error TS2339: Property 'red' does not exist on type '"warn: "'.
 lib/extendStringPrototype.ts(70,64): error TS2339: Property 'magenta' does not exist on type 'string'.
 lib/extendStringPrototype.ts(76,11): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/extendStringPrototype.ts(77,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/extendStringPrototype.ts(81,35): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/extendStringPrototype.ts(87,11): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/index.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
 lib/index.ts(23,73): error TS2339: Property 'zalgo' does not exist on type '"testing testing testing testing testing testing testing"'.
-lib/styles.ts(92,20): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-lib/system/has-flag.ts(27,36): error TS7006: Parameter 'argv' implicitly has an 'any' type.
 lib/system/has-flag.ts(34,25): error TS2367: This condition will always return 'false' since the types 'boolean' and 'number' have no overlap.
 lib/system/has-flag.ts(34,55): error TS2365: Operator '<' cannot be applied to types 'number' and 'boolean'.
-lib/system/supports-colors.ts(33,5): error TS2322: Type 'undefined' is not assignable to type 'boolean'.
 lib/system/supports-colors.ts(34,5): error TS2554: Expected 2 arguments, but got 1.
 lib/system/supports-colors.ts(34,28): error TS2554: Expected 2 arguments, but got 1.
 lib/system/supports-colors.ts(34,52): error TS2554: Expected 2 arguments, but got 1.

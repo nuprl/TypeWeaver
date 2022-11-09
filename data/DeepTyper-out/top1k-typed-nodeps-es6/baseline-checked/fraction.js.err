@@ -5,18 +5,6 @@ bigfraction.ts(49,9): error TS2322: Type 'bigint' is not assignable to type 'num
 bigfraction.ts(50,9): error TS2322: Type 'bigint' is not assignable to type 'number'.
 bigfraction.ts(51,9): error TS2322: Type 'bigint' is not assignable to type 'number'.
 bigfraction.ts(68,7): error TS2322: Type 'bigint' is not assignable to type 'number'.
-bigfraction.ts(106,9): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
-bigfraction.ts(106,23): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
-bigfraction.ts(113,9): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
-bigfraction.ts(113,23): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
-bigfraction.ts(115,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
-bigfraction.ts(115,23): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
 bigfraction.ts(120,23): error TS2322: Type '(p1: any, p2: any) => void' is not assignable to type 'void'.
 bigfraction.ts(127,7): error TS2322: Type 'bigint' is not assignable to type 'number'.
 bigfraction.ts(128,7): error TS2322: Type 'bigint' is not assignable to type 'number'.
@@ -36,13 +24,8 @@ bigfraction.ts(254,15): error TS2365: Operator '**' cannot be applied to types '
 bigfraction.ts(261,15): error TS2365: Operator '**' cannot be applied to types 'number' and 'bigint'.
 bigfraction.ts(336,5): error TS2322: Type 'bigint' is not assignable to type 'number'.
 bigfraction.ts(348,9): error TS2322: Type 'bigint' is not assignable to type 'number'.
-bigfraction.ts(356,33): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 bigfraction.ts(382,5): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-bigfraction.ts(384,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-bigfraction.ts(386,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-bigfraction.ts(387,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-bigfraction.ts(388,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 bigfraction.ts(431,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 bigfraction.ts(445,7): error TS2349: This expression is not callable.
@@ -76,7 +59,6 @@ bigfraction.ts(718,7): error TS2349: This expression is not callable.
 bigfraction.ts(886,14): error TS2304: Cannot find name 'define'.
 bigfraction.ts(886,39): error TS2304: Cannot find name 'define'.
 bigfraction.ts(887,5): error TS2304: Cannot find name 'define'.
-bigfraction.ts(896,10): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
 bigfraction.ts(899,4): error TS2345: Argument of type 'typeof globalThis' is not assignable to parameter of type 'string'.
 examples/angles.ts(11,22): error TS2306: File 'fraction.min.ts' is not a module.
 examples/angles.ts(19,11): error TS2339: Property 'd' does not exist on type 'number'.
@@ -90,42 +72,6 @@ examples/egyptian.ts(20,12): error TS2367: This condition will always return 'tr
 examples/egyptian.ts(23,31): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 examples/hesse-convergence.ts(9,22): error TS2306: File 'fraction.min.ts' is not a module.
 examples/integrate.ts(12,22): error TS2306: File 'fraction.min.ts' is not a module.
-examples/integrate.ts(29,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-examples/integrate.ts(30,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-examples/integrate.ts(30,57): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-examples/integrate.ts(32,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-examples/integrate.ts(39,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-examples/integrate.ts(41,20): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-examples/integrate.ts(44,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-examples/integrate.ts(44,26): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-examples/integrate.ts(45,17): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-examples/integrate.ts(46,30): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-examples/integrate.ts(46,49): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-examples/integrate.ts(48,30): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-examples/integrate.ts(52,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-examples/integrate.ts(52,26): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-examples/integrate.ts(54,17): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-examples/integrate.ts(55,31): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-examples/integrate.ts(55,50): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-examples/integrate.ts(57,30): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 examples/rational-pow.ts(13,20): error TS2552: Cannot find name 'Fraction'. Did you mean 'toFraction'?
 examples/rational-pow.ts(14,21): error TS2304: Cannot find name 'Fraction'.
 examples/rational-pow.ts(17,25): error TS2339: Property 'sub' does not exist on type 'number'.
@@ -136,7 +82,6 @@ examples/rational-pow.ts(19,21): error TS2339: Property 'n' does not exist on ty
 examples/rational-pow.ts(19,29): error TS2339: Property 'd' does not exist on type 'number'.
 examples/rational-pow.ts(19,38): error TS2339: Property 'd' does not exist on type 'number'.
 examples/rational-pow.ts(20,7): error TS2322: Type 'number' is not assignable to type 'string'.
-examples/rational-pow.ts(24,3): error TS2322: Type 'null' is not assignable to type 'string'.
 examples/tape-measure.ts(15,16): error TS2304: Cannot find name 'Fraction'.
 examples/tape-measure.ts(15,41): error TS2304: Cannot find name 'Fraction'.
 examples/toFraction.ts(31,19): error TS2339: Property 'n' does not exist on type 'string'.
@@ -148,118 +93,26 @@ fraction.min.ts(8,279): error TS2339: Property 'n' does not exist on type 'never
 fraction.min.ts(8,285): error TS2339: Property 'd' does not exist on type 'never'.
 fraction.min.ts(8,302): error TS2339: Property 's' does not exist on type 'never'.
 fraction.min.ts(9,193): error TS2339: Property 'match' does not exist on type 'never'.
-fraction.min.ts(9,252): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(9,274): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 fraction.min.ts(9,289): error TS2339: Property 'length' does not exist on type 'number'.
-fraction.min.ts(9,306): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(9,330): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(9,344): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(9,356): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(9,367): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 fraction.min.ts(9,393): error TS2339: Property 'length' does not exist on type 'number'.
-fraction.min.ts(9,407): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(9,421): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(9,435): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(9,449): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(9,460): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(9,482): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(10,1): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(10,13): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(10,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(10,39): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(10,50): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(10,74): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(10,106): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(10,120): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(10,132): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(10,144): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(10,166): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(10,180): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(10,193): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(10,205): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.min.ts(10,219): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 fraction.min.ts(10,240): error TS2339: Property 'length' does not exist on type 'number'.
 fraction.min.ts(10,448): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-fraction.min.ts(11,190): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
-fraction.min.ts(11,196): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
-fraction.min.ts(11,230): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
-fraction.min.ts(11,236): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
-fraction.min.ts(11,248): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
-fraction.min.ts(11,254): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
 fraction.min.ts(11,265): error TS2322: Type '{}' is not assignable to type 'number'.
-fraction.min.ts(11,440): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fraction.min.ts(11,471): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fraction.min.ts(11,482): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fraction.min.ts(11,495): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+fraction.min.ts(13,130): error TS2350: Only a void function can be called with the 'new' keyword.
 fraction.min.ts(13,130): error TS2554: Expected 2 arguments, but got 1.
-fraction.min.ts(13,130): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+fraction.min.ts(14,15): error TS2350: Only a void function can be called with the 'new' keyword.
 fraction.min.ts(14,15): error TS2554: Expected 2 arguments, but got 1.
-fraction.min.ts(14,15): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+fraction.min.ts(14,145): error TS2350: Only a void function can be called with the 'new' keyword.
 fraction.min.ts(14,145): error TS2554: Expected 2 arguments, but got 1.
-fraction.min.ts(14,145): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+fraction.min.ts(14,276): error TS2350: Only a void function can be called with the 'new' keyword.
 fraction.min.ts(14,276): error TS2554: Expected 2 arguments, but got 1.
-fraction.min.ts(14,276): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 fraction.min.ts(15,86): error TS2407: The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'number'.
-fraction.min.ts(15,122): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'string' was found on type 'Number'.
-fraction.min.ts(15,139): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'string' was found on type 'Number'.
-fraction.min.ts(15,148): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'string' was found on type 'Number'.
-fraction.min.ts(15,187): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-fraction.min.ts(15,189): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'string' was found on type 'Number'.
 fraction.min.ts(15,204): error TS2407: The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'number'.
-fraction.min.ts(15,218): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'string' was found on type 'Number'.
-fraction.min.ts(15,235): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'string' was found on type 'Number'.
-fraction.min.ts(15,244): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'string' was found on type 'Number'.
-fraction.min.ts(15,283): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-fraction.min.ts(15,285): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'string' was found on type 'Number'.
 fraction.min.ts(15,504): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(15,510): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(16,137): error TS2339: Property 'inverse' does not exist on type 'number'.
 fraction.min.ts(16,162): error TS2339: Property 'sub' does not exist on type 'number'.
 fraction.min.ts(16,196): error TS2339: Property 'mul' does not exist on type 'number'.
-fraction.min.ts(17,187): error TS7034: Variable 'b' implicitly has type 'any[]' in some locations where its type cannot be determined.
-fraction.min.ts(17,221): error TS7005: Variable 'b' implicitly has an 'any[]' type.
 fraction.min.ts(18,120): error TS2322: Type 'string' is not assignable to type 'number'.
   Type 'string' is not assignable to type 'number'.
 fraction.min.ts(18,160): error TS2322: Type 'string' is not assignable to type 'number'.
@@ -269,87 +122,13 @@ fraction.min.ts(18,330): error TS2304: Cannot find name 'define'.
 fraction.min.ts(18,338): error TS2304: Cannot find name 'define'.
 fraction.min.ts(18,349): error TS2304: Cannot find name 'define'.
 fraction.ts(58,28): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-fraction.ts(95,9): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
-fraction.ts(95,23): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
-fraction.ts(102,9): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
-fraction.ts(102,23): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
-fraction.ts(104,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
-fraction.ts(104,23): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
 fraction.ts(109,21): error TS2322: Type '(p1: any, p2: any) => void' is not assignable to type 'void'.
-fraction.ts(213,13): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'number'.
-  Type 'null' is not assignable to type 'number'.
-fraction.ts(218,17): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(221,24): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
+fraction.ts(213,13): error TS2322: Type 'RegExpMatchArray' is not assignable to type 'number'.
 fraction.ts(225,19): error TS2339: Property 'length' does not exist on type 'number'.
-fraction.ts(226,26): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(227,24): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(227,44): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(229,19): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(230,28): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 fraction.ts(235,31): error TS2339: Property 'length' does not exist on type 'number'.
-fraction.ts(235,41): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(235,61): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(235,81): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(235,101): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(236,28): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(237,34): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(242,19): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(242,35): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(242,55): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(242,71): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(243,28): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(244,34): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(248,24): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(248,44): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(249,26): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(250,26): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(252,24): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(252,44): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(253,26): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(254,26): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-fraction.ts(255,26): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 fraction.ts(259,19): error TS2339: Property 'length' does not exist on type 'number'.
-fraction.ts(342,33): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 fraction.ts(368,5): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-fraction.ts(370,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fraction.ts(372,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fraction.ts(373,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fraction.ts(374,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fraction.ts(417,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 fraction.ts(431,7): error TS2349: This expression is not callable.
@@ -358,20 +137,20 @@ fraction.ts(445,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 fraction.ts(459,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
+fraction.ts(483,16): error TS2350: Only a void function can be called with the 'new' keyword.
 fraction.ts(483,16): error TS2554: Expected 2 arguments, but got 1.
-fraction.ts(483,16): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 fraction.ts(490,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 fraction.ts(522,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 fraction.ts(536,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
+fraction.ts(556,16): error TS2350: Only a void function can be called with the 'new' keyword.
 fraction.ts(556,16): error TS2554: Expected 2 arguments, but got 1.
-fraction.ts(556,16): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+fraction.ts(571,16): error TS2350: Only a void function can be called with the 'new' keyword.
 fraction.ts(571,16): error TS2554: Expected 2 arguments, but got 1.
-fraction.ts(571,16): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+fraction.ts(586,16): error TS2350: Only a void function can be called with the 'new' keyword.
 fraction.ts(586,16): error TS2554: Expected 2 arguments, but got 1.
-fraction.ts(586,16): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 fraction.ts(608,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 fraction.ts(647,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
@@ -382,12 +161,6 @@ fraction.ts(684,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 fraction.ts(686,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(686,24): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(704,15): error TS7053: Element implicitly has an 'any' type because expression of type '"inverse"' can't be used to index type 'Number'.
-  Property 'inverse' does not exist on type 'Number'.
-fraction.ts(707,13): error TS7053: Element implicitly has an 'any' type because expression of type '"sub"' can't be used to index type 'Number'.
-  Property 'sub' does not exist on type 'Number'.
-fraction.ts(708,18): error TS7053: Element implicitly has an 'any' type because expression of type '"mul"' can't be used to index type 'Number'.
-  Property 'mul' does not exist on type 'Number'.
 fraction.ts(721,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 fraction.ts(878,14): error TS2304: Cannot find name 'define'.

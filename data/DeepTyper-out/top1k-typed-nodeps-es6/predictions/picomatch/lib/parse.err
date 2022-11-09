@@ -35,37 +35,37 @@ Traceback (most recent call last):
 ValueError: Value::Create:: The number of sequences must be > 0
 
 [CALL STACK]
-[0x7fe796720a29]                                                       + 0x7c5a29
-[0x7fe7968e1289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
-[0x7fe85ed14741]                                                       + 0x2d7741
-[0x7fe8636279e3]    _PyCFunction_FastCallDict                          + 0x163
-[0x7fe8636ad084]                                                       + 0x153084
-[0x7fe8636b250d]    _PyEval_EvalFrameDefault                           + 0x4d6d
-[0x7fe8636acb9a]                                                       + 0x152b9a
-[0x7fe8636ad1b2]    PyEval_EvalCodeEx                                  + 0x42
-[0x7fe8635fff1e]                                                       + 0xa5f1e
-[0x7fe8635d0f2b]    PyObject_Call                                      + 0x4b
-[0x7fe8636b2770]    _PyEval_EvalFrameDefault                           + 0x4fd0
-[0x7fe8636acb9a]                                                       + 0x152b9a
-[0x7fe8636acf94]                                                       + 0x152f94
-[0x7fe8636b250d]    _PyEval_EvalFrameDefault                           + 0x4d6d
-[0x7fe8636acb9a]                                                       + 0x152b9a
-[0x7fe8636acf94]                                                       + 0x152f94
-[0x7fe8636b250d]    _PyEval_EvalFrameDefault                           + 0x4d6d
-[0x7fe8636ac193]                                                       + 0x152193
-[0x7fe8636ad15c]                                                       + 0x15315c
-[0x7fe8636b250d]    _PyEval_EvalFrameDefault                           + 0x4d6d
-[0x7fe8636acb9a]                                                       + 0x152b9a
-[0x7fe8636acf94]                                                       + 0x152f94
-[0x7fe8636b250d]    _PyEval_EvalFrameDefault                           + 0x4d6d
-[0x7fe8636acb9a]                                                       + 0x152b9a
-[0x7fe8636ad1b2]    PyEval_EvalCodeEx                                  + 0x42
-[0x7fe8636ad1df]    PyEval_EvalCode                                    + 0x1f
-[0x7fe8636e23d5]    PyRun_FileExFlags                                  + 0xb5
-[0x7fe8636e256f]    PyRun_SimpleFileExFlags                            + 0xff
-[0x7fe8636fc8e8]    Py_Main                                            + 0xff8
-[0x555e6ab9b2b8]    main                                               + 0x178
-[0x7fe86336b083]    __libc_start_main                                  + 0xf3
-[0x555e6ab9b36e]    _start                                             + 0x2e
+[0x7f6c29b18a29]                                                       + 0x7c5a29
+[0x7f6c29cd9289]    CNTK::Value::  Create  (CNTK::NDShape const&,  std::vector<std::shared_ptr<CNTK::NDArrayView>,std::allocator<std::shared_ptr<CNTK::NDArrayView>>> const&,  std::vector<bool,std::allocator<bool>> const&,  CNTK::DeviceDescriptor const&,  bool,  bool) + 0x1449
+[0x7f6cf210c741]                                                       + 0x2d7741
+[0x7f6cf6a1f9e3]    _PyCFunction_FastCallDict                          + 0x163
+[0x7f6cf6aa5084]                                                       + 0x153084
+[0x7f6cf6aaa50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f6cf6aa4b9a]                                                       + 0x152b9a
+[0x7f6cf6aa51b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f6cf69f7f1e]                                                       + 0xa5f1e
+[0x7f6cf69c8f2b]    PyObject_Call                                      + 0x4b
+[0x7f6cf6aaa770]    _PyEval_EvalFrameDefault                           + 0x4fd0
+[0x7f6cf6aa4b9a]                                                       + 0x152b9a
+[0x7f6cf6aa4f94]                                                       + 0x152f94
+[0x7f6cf6aaa50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f6cf6aa4b9a]                                                       + 0x152b9a
+[0x7f6cf6aa4f94]                                                       + 0x152f94
+[0x7f6cf6aaa50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f6cf6aa4193]                                                       + 0x152193
+[0x7f6cf6aa515c]                                                       + 0x15315c
+[0x7f6cf6aaa50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f6cf6aa4b9a]                                                       + 0x152b9a
+[0x7f6cf6aa4f94]                                                       + 0x152f94
+[0x7f6cf6aaa50d]    _PyEval_EvalFrameDefault                           + 0x4d6d
+[0x7f6cf6aa4b9a]                                                       + 0x152b9a
+[0x7f6cf6aa51b2]    PyEval_EvalCodeEx                                  + 0x42
+[0x7f6cf6aa51df]    PyEval_EvalCode                                    + 0x1f
+[0x7f6cf6ada3d5]    PyRun_FileExFlags                                  + 0xb5
+[0x7f6cf6ada56f]    PyRun_SimpleFileExFlags                            + 0xff
+[0x7f6cf6af48e8]    Py_Main                                            + 0xff8
+[0x5577ca4132b8]    main                                               + 0x178
+[0x7f6cf6763083]    __libc_start_main                                  + 0xf3
+[0x5577ca41336e]    _start                                             + 0x2e
 
 

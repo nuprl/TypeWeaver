@@ -1,5 +1,3 @@
-lib/CachedSource.ts(41,14): error TS7006: Parameter 'source' implicitly has an 'any' type.
-lib/CachedSource.ts(41,22): error TS7006: Parameter 'cachedData' implicitly has an 'any' type.
 lib/CachedSource.ts(43,8): error TS2551: Property '_source' does not exist on type 'CachedSource'. Did you mean 'source'?
 lib/CachedSource.ts(44,8): error TS2339: Property '_cachedSourceType' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(45,8): error TS2339: Property '_cachedSource' does not exist on type 'CachedSource'.
@@ -22,7 +20,6 @@ lib/CachedSource.ts(94,48): error TS2551: Property '_source' does not exist on t
 lib/CachedSource.ts(94,63): error TS2551: Property '_source' does not exist on type 'CachedSource'. Did you mean 'source'?
 lib/CachedSource.ts(95,15): error TS2551: Property '_source' does not exist on type 'CachedSource'. Did you mean 'source'?
 lib/CachedSource.ts(101,16): error TS2339: Property '_cachedSource' does not exist on type 'CachedSource'.
-lib/CachedSource.ts(104,24): error TS7006: Parameter 'cacheEntry' implicitly has an 'any' type.
 lib/CachedSource.ts(113,12): error TS2339: Property '_cachedSource' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(113,53): error TS2339: Property '_cachedSource' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(114,12): error TS2339: Property '_cachedBuffer' does not exist on type 'CachedSource'.
@@ -49,14 +46,9 @@ lib/CachedSource.ts(142,17): error TS2339: Property '_cachedSize' does not exist
 lib/CachedSource.ts(142,36): error TS2339: Property '_cachedBuffer' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(146,17): error TS2339: Property '_cachedSize' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(148,16): error TS2339: Property '_cachedSize' does not exist on type 'CachedSource'.
-lib/CachedSource.ts(151,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/CachedSource.ts(153,32): error TS2339: Property '_cachedMaps' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(172,9): error TS2339: Property '_cachedSource' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(174,8): error TS2339: Property '_cachedMaps' does not exist on type 'CachedSource'.
-lib/CachedSource.ts(181,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/CachedSource.ts(181,24): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
-lib/CachedSource.ts(181,33): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
-lib/CachedSource.ts(181,43): error TS7006: Parameter 'onName' implicitly has an 'any' type.
 lib/CachedSource.ts(184,9): error TS2339: Property '_cachedMaps' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(185,10): error TS2339: Property '_cachedBuffer' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(185,46): error TS2339: Property '_cachedSource' does not exist on type 'CachedSource'.
@@ -66,28 +58,21 @@ lib/CachedSource.ts(208,35): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/CachedSource.ts(215,8): error TS2339: Property '_cachedSource' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(216,8): error TS2339: Property '_cachedMaps' does not exist on type 'CachedSource'.
-lib/CachedSource.ts(223,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/CachedSource.ts(225,32): error TS2339: Property '_cachedMaps' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(230,8): error TS2339: Property '_cachedMaps' does not exist on type 'CachedSource'.
-lib/CachedSource.ts(237,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
 lib/CachedSource.ts(238,12): error TS2339: Property '_cachedHashUpdate' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(239,28): error TS2339: Property '_cachedHashUpdate' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(270,8): error TS2339: Property '_cachedHashUpdate' does not exist on type 'CachedSource'.
-lib/CompatSource.ts(10,14): error TS7006: Parameter 'sourceLike' implicitly has an 'any' type.
-lib/CompatSource.ts(16,14): error TS7006: Parameter 'sourceLike' implicitly has an 'any' type.
 lib/CompatSource.ts(18,8): error TS2339: Property '_sourceLike' does not exist on type 'CompatSource'.
 lib/CompatSource.ts(22,15): error TS2339: Property '_sourceLike' does not exist on type 'CompatSource'.
 lib/CompatSource.ts(26,19): error TS2339: Property '_sourceLike' does not exist on type 'CompatSource'.
 lib/CompatSource.ts(27,16): error TS2339: Property '_sourceLike' does not exist on type 'CompatSource'.
 lib/CompatSource.ts(33,19): error TS2339: Property '_sourceLike' does not exist on type 'CompatSource'.
 lib/CompatSource.ts(34,16): error TS2339: Property '_sourceLike' does not exist on type 'CompatSource'.
-lib/CompatSource.ts(39,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/CompatSource.ts(40,19): error TS2339: Property '_sourceLike' does not exist on type 'CompatSource'.
 lib/CompatSource.ts(41,16): error TS2339: Property '_sourceLike' does not exist on type 'CompatSource'.
-lib/CompatSource.ts(46,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/CompatSource.ts(47,19): error TS2339: Property '_sourceLike' does not exist on type 'CompatSource'.
 lib/CompatSource.ts(48,16): error TS2339: Property '_sourceLike' does not exist on type 'CompatSource'.
-lib/CompatSource.ts(53,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
 lib/CompatSource.ts(54,19): error TS2339: Property '_sourceLike' does not exist on type 'CompatSource'.
 lib/CompatSource.ts(55,16): error TS2339: Property '_sourceLike' does not exist on type 'CompatSource'.
 lib/CompatSource.ts(57,19): error TS2339: Property '_sourceLike' does not exist on type 'CompatSource'.
@@ -98,12 +83,10 @@ lib/ConcatSource.ts(25,10): error TS2339: Property '_children' does not exist on
 lib/ConcatSource.ts(28,8): error TS2339: Property '_isOptimized' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(32,13): error TS2339: Property '_isOptimized' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(33,15): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
-lib/ConcatSource.ts(36,6): error TS7006: Parameter 'item' implicitly has an 'any' type.
 lib/ConcatSource.ts(38,29): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(39,10): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(42,9): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(44,8): error TS2339: Property '_isOptimized' does not exist on type 'ConcatSource'.
-lib/ConcatSource.ts(47,23): error TS7006: Parameter 'items' implicitly has an 'any' type.
 lib/ConcatSource.ts(49,9): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(54,13): error TS2339: Property '_isOptimized' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(56,28): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
@@ -111,14 +94,8 @@ lib/ConcatSource.ts(73,13): error TS2339: Property '_isOptimized' does not exist
 lib/ConcatSource.ts(75,28): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(82,13): error TS2339: Property '_isOptimized' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(84,28): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
-lib/ConcatSource.ts(90,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/ConcatSource.ts(94,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/ConcatSource.ts(95,10): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/ConcatSource.ts(98,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/ConcatSource.ts(98,24): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
-lib/ConcatSource.ts(98,33): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
-lib/ConcatSource.ts(98,43): error TS7006: Parameter 'onName' implicitly has an 'any' type.
 lib/ConcatSource.ts(99,13): error TS2339: Property '_isOptimized' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(100,12): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(101,16): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
@@ -127,11 +104,9 @@ lib/ConcatSource.ts(128,7): error TS2367: This condition will always return 'fal
 lib/ConcatSource.ts(132,11): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
 lib/ConcatSource.ts(153,6): error TS2322: Type 'string | 0' is not assignable to type 'number'.
   Type 'string' is not assignable to type 'number'.
-lib/ConcatSource.ts(232,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
 lib/ConcatSource.ts(233,13): error TS2339: Property '_isOptimized' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(235,27): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(244,9): error TS2322: Type '(string: any) => void' is not assignable to type 'string'.
-lib/ConcatSource.ts(244,41): error TS7006: Parameter 'string' implicitly has an 'any' type.
 lib/ConcatSource.ts(272,33): error TS2322: Type '() => void' is not assignable to type 'void'.
 lib/ConcatSource.ts(285,28): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(294,6): error TS2349: This expression is not callable.
@@ -144,8 +119,6 @@ lib/ConcatSource.ts(312,4): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/ConcatSource.ts(314,8): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(315,8): error TS2339: Property '_isOptimized' does not exist on type 'ConcatSource'.
-lib/OriginalSource.ts(14,14): error TS7006: Parameter 'value' implicitly has an 'any' type.
-lib/OriginalSource.ts(14,21): error TS7006: Parameter 'name' implicitly has an 'any' type.
 lib/OriginalSource.ts(17,8): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(18,8): error TS2339: Property '_valueAsBuffer' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(19,8): error TS2339: Property '_name' does not exist on type 'OriginalSource'.
@@ -158,14 +131,8 @@ lib/OriginalSource.ts(34,12): error TS2339: Property '_valueAsBuffer' does not e
 lib/OriginalSource.ts(35,9): error TS2339: Property '_valueAsBuffer' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(35,43): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(37,15): error TS2339: Property '_valueAsBuffer' does not exist on type 'OriginalSource'.
-lib/OriginalSource.ts(40,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/OriginalSource.ts(44,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/OriginalSource.ts(45,10): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/OriginalSource.ts(55,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/OriginalSource.ts(55,24): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
-lib/OriginalSource.ts(55,33): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
-lib/OriginalSource.ts(55,43): error TS7006: Parameter 'onName' implicitly has an 'any' type.
 lib/OriginalSource.ts(56,12): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(57,9): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(57,23): error TS2339: Property '_valueAsBuffer' does not exist on type 'OriginalSource'.
@@ -179,35 +146,24 @@ lib/OriginalSource.ts(91,52): error TS2339: Property '_value' does not exist on 
 lib/OriginalSource.ts(105,45): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(115,34): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(120,34): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
-lib/OriginalSource.ts(125,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
 lib/OriginalSource.ts(126,12): error TS2339: Property '_valueAsBuffer' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(127,9): error TS2339: Property '_valueAsBuffer' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(127,43): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(130,20): error TS2339: Property '_valueAsBuffer' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(131,20): error TS2339: Property '_name' does not exist on type 'OriginalSource'.
 lib/PrefixSource.ts(12,7): error TS2322: Type 'RegExp' is not assignable to type 'string'.
-lib/PrefixSource.ts(15,14): error TS7006: Parameter 'prefix' implicitly has an 'any' type.
-lib/PrefixSource.ts(15,22): error TS7006: Parameter 'source' implicitly has an 'any' type.
 lib/PrefixSource.ts(17,8): error TS2551: Property '_source' does not exist on type 'PrefixSource'. Did you mean 'source'?
 lib/PrefixSource.ts(21,8): error TS2339: Property '_prefix' does not exist on type 'PrefixSource'.
 lib/PrefixSource.ts(25,15): error TS2339: Property '_prefix' does not exist on type 'PrefixSource'.
 lib/PrefixSource.ts(29,15): error TS2551: Property '_source' does not exist on type 'PrefixSource'. Did you mean 'source'?
 lib/PrefixSource.ts(33,29): error TS2551: Property '_source' does not exist on type 'PrefixSource'. Did you mean 'source'?
 lib/PrefixSource.ts(34,31): error TS2339: Property '_prefix' does not exist on type 'PrefixSource'.
-lib/PrefixSource.ts(40,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/PrefixSource.ts(44,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/PrefixSource.ts(45,10): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/PrefixSource.ts(48,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/PrefixSource.ts(48,24): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
-lib/PrefixSource.ts(48,33): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
-lib/PrefixSource.ts(48,43): error TS7006: Parameter 'onName' implicitly has an 'any' type.
 lib/PrefixSource.ts(49,31): error TS2339: Property '_prefix' does not exist on type 'PrefixSource'.
 lib/PrefixSource.ts(53,9): error TS2551: Property '_source' does not exist on type 'PrefixSource'. Did you mean 'source'?
-lib/PrefixSource.ts(107,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
 lib/PrefixSource.ts(109,8): error TS2551: Property '_source' does not exist on type 'PrefixSource'. Did you mean 'source'?
 lib/PrefixSource.ts(110,20): error TS2339: Property '_prefix' does not exist on type 'PrefixSource'.
-lib/RawSource.ts(12,14): error TS7006: Parameter 'value' implicitly has an 'any' type.
 lib/RawSource.ts(18,8): error TS2339: Property '_valueIsBuffer' does not exist on type 'RawSource'.
 lib/RawSource.ts(19,8): error TS2339: Property '_value' does not exist on type 'RawSource'.
 lib/RawSource.ts(20,8): error TS2339: Property '_valueAsBuffer' does not exist on type 'RawSource'.
@@ -221,11 +177,6 @@ lib/RawSource.ts(36,12): error TS2339: Property '_valueAsBuffer' does not exist 
 lib/RawSource.ts(37,9): error TS2339: Property '_valueAsBuffer' does not exist on type 'RawSource'.
 lib/RawSource.ts(37,43): error TS2339: Property '_value' does not exist on type 'RawSource'.
 lib/RawSource.ts(39,15): error TS2339: Property '_valueAsBuffer' does not exist on type 'RawSource'.
-lib/RawSource.ts(42,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/RawSource.ts(53,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/RawSource.ts(53,24): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
-lib/RawSource.ts(53,33): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
-lib/RawSource.ts(53,43): error TS7006: Parameter 'onName' implicitly has an 'any' type.
 lib/RawSource.ts(54,12): error TS2339: Property '_value' does not exist on type 'RawSource'.
 lib/RawSource.ts(55,9): error TS2339: Property '_value' does not exist on type 'RawSource'.
 lib/RawSource.ts(55,35): error TS2339: Property '_valueAsBuffer' does not exist on type 'RawSource'.
@@ -236,47 +187,31 @@ lib/RawSource.ts(60,13): error TS2339: Property '_value' does not exist on type 
 lib/RawSource.ts(61,13): error TS2339: Property '_value' does not exist on type 'RawSource'.
 lib/RawSource.ts(64,9): error TS2339: Property '_valueAsString' does not exist on type 'RawSource'.
 lib/RawSource.ts(68,4): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
-lib/RawSource.ts(72,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
 lib/RawSource.ts(73,12): error TS2339: Property '_valueAsBuffer' does not exist on type 'RawSource'.
 lib/RawSource.ts(74,9): error TS2339: Property '_valueAsBuffer' does not exist on type 'RawSource'.
 lib/RawSource.ts(74,43): error TS2339: Property '_value' does not exist on type 'RawSource'.
 lib/RawSource.ts(77,20): error TS2339: Property '_valueAsBuffer' does not exist on type 'RawSource'.
-lib/ReplaceSource.ts(23,14): error TS7006: Parameter 'start' implicitly has an 'any' type.
-lib/ReplaceSource.ts(23,21): error TS7006: Parameter 'end' implicitly has an 'any' type.
-lib/ReplaceSource.ts(23,26): error TS7006: Parameter 'content' implicitly has an 'any' type.
-lib/ReplaceSource.ts(23,35): error TS7006: Parameter 'name' implicitly has an 'any' type.
 lib/ReplaceSource.ts(24,8): error TS2339: Property 'start' does not exist on type 'Replacement'.
 lib/ReplaceSource.ts(25,8): error TS2339: Property 'end' does not exist on type 'Replacement'.
 lib/ReplaceSource.ts(26,8): error TS2339: Property 'content' does not exist on type 'Replacement'.
 lib/ReplaceSource.ts(27,8): error TS2339: Property 'name' does not exist on type 'Replacement'.
 lib/ReplaceSource.ts(29,9): error TS2339: Property 'index' does not exist on type 'Replacement'.
-lib/ReplaceSource.ts(35,14): error TS7006: Parameter 'source' implicitly has an 'any' type.
-lib/ReplaceSource.ts(35,22): error TS7006: Parameter 'name' implicitly has an 'any' type.
 lib/ReplaceSource.ts(37,8): error TS2551: Property '_source' does not exist on type 'ReplaceSource'. Did you mean 'source'?
 lib/ReplaceSource.ts(38,8): error TS2339: Property '_name' does not exist on type 'ReplaceSource'.
 lib/ReplaceSource.ts(40,8): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
 lib/ReplaceSource.ts(41,8): error TS2339: Property '_isSorted' does not exist on type 'ReplaceSource'.
 lib/ReplaceSource.ts(45,15): error TS2339: Property '_name' does not exist on type 'ReplaceSource'.
 lib/ReplaceSource.ts(50,15): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
-lib/ReplaceSource.ts(53,10): error TS7006: Parameter 'start' implicitly has an 'any' type.
-lib/ReplaceSource.ts(53,17): error TS7006: Parameter 'end' implicitly has an 'any' type.
-lib/ReplaceSource.ts(53,22): error TS7006: Parameter 'newValue' implicitly has an 'any' type.
-lib/ReplaceSource.ts(53,32): error TS7006: Parameter 'name' implicitly has an 'any' type.
 lib/ReplaceSource.ts(58,8): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
 lib/ReplaceSource.ts(59,8): error TS2339: Property '_isSorted' does not exist on type 'ReplaceSource'.
-lib/ReplaceSource.ts(62,9): error TS7006: Parameter 'pos' implicitly has an 'any' type.
-lib/ReplaceSource.ts(62,14): error TS7006: Parameter 'newValue' implicitly has an 'any' type.
-lib/ReplaceSource.ts(62,24): error TS7006: Parameter 'name' implicitly has an 'any' type.
 lib/ReplaceSource.ts(70,8): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
 lib/ReplaceSource.ts(71,8): error TS2339: Property '_isSorted' does not exist on type 'ReplaceSource'.
 lib/ReplaceSource.ts(75,12): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
 lib/ReplaceSource.ts(76,16): error TS2551: Property '_source' does not exist on type 'ReplaceSource'. Did you mean 'source'?
 lib/ReplaceSource.ts(78,27): error TS2551: Property '_source' does not exist on type 'ReplaceSource'. Did you mean 'source'?
 lib/ReplaceSource.ts(83,34): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
-lib/ReplaceSource.ts(103,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/ReplaceSource.ts(104,12): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
 lib/ReplaceSource.ts(105,16): error TS2551: Property '_source' does not exist on type 'ReplaceSource'. Did you mean 'source'?
-lib/ReplaceSource.ts(110,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/ReplaceSource.ts(111,12): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
 lib/ReplaceSource.ts(112,16): error TS2551: Property '_source' does not exist on type 'ReplaceSource'. Did you mean 'source'?
 lib/ReplaceSource.ts(114,10): error TS2349: This expression is not callable.
@@ -287,14 +222,8 @@ lib/ReplaceSource.ts(124,9): error TS2551: Property '_replacements' does not exi
 lib/ReplaceSource.ts(132,9): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
 lib/ReplaceSource.ts(133,9): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
 lib/ReplaceSource.ts(141,8): error TS2339: Property '_isSorted' does not exist on type 'ReplaceSource'.
-lib/ReplaceSource.ts(144,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/ReplaceSource.ts(144,24): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
-lib/ReplaceSource.ts(144,33): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
-lib/ReplaceSource.ts(144,43): error TS7006: Parameter 'onName' implicitly has an 'any' type.
 lib/ReplaceSource.ts(146,30): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
 lib/ReplaceSource.ts(151,14): error TS2339: Property 'length' does not exist on type 'number'.
-lib/ReplaceSource.ts(151,34): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 lib/ReplaceSource.ts(158,9): error TS2322: Type '(sourceIndex: number, line: number, column: number, expectedChunk: number) => boolean' is not assignable to type 'number'.
 lib/ReplaceSource.ts(171,17): error TS2339: Property 'slice' does not exist on type 'number'.
 lib/ReplaceSource.ts(171,54): error TS2339: Property 'length' does not exist on type 'number'.
@@ -303,43 +232,20 @@ lib/ReplaceSource.ts(214,7): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 lib/ReplaceSource.ts(260,9): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
-lib/ReplaceSource.ts(272,33): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-lib/ReplaceSource.ts(320,19): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 lib/ReplaceSource.ts(326,18): error TS2339: Property 'length' does not exist on type 'number'.
-lib/ReplaceSource.ts(327,22): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 lib/ReplaceSource.ts(335,13): error TS2322: Type 'string' is not assignable to type 'number'.
 lib/ReplaceSource.ts(355,9): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 lib/ReplaceSource.ts(380,12): error TS2322: Type 'string' is not assignable to type 'number'.
 lib/ReplaceSource.ts(413,20): error TS2339: Property 'length' does not exist on type 'number'.
-lib/ReplaceSource.ts(414,16): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-lib/ReplaceSource.ts(456,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
 lib/ReplaceSource.ts(459,8): error TS2551: Property '_source' does not exist on type 'ReplaceSource'. Did you mean 'source'?
 lib/ReplaceSource.ts(460,20): error TS2339: Property '_name' does not exist on type 'ReplaceSource'.
 lib/ReplaceSource.ts(461,27): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
-lib/SizeOnlySource.ts(10,14): error TS7006: Parameter 'size' implicitly has an 'any' type.
 lib/SizeOnlySource.ts(12,8): error TS2551: Property '_size' does not exist on type 'SizeOnlySource'. Did you mean 'size'?
 lib/SizeOnlySource.ts(22,15): error TS2551: Property '_size' does not exist on type 'SizeOnlySource'. Did you mean 'size'?
 lib/SizeOnlySource.ts(29,2): error TS2416: Property 'buffer' in type 'SizeOnlySource' is not assignable to the same property in base type 'Source'.
   Type '() => void' is not assignable to type '() => Buffer'.
     Type 'void' is not assignable to type 'Buffer'.
-lib/SizeOnlySource.ts(33,2): error TS2416: Property 'map' in type 'SizeOnlySource' is not assignable to the same property in base type 'Source'.
-  Type '(options: any) => void' is not assignable to type '(options: any) => null'.
-    Type 'void' is not assignable to type 'null'.
-lib/SizeOnlySource.ts(33,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/Source.ts(22,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/Source.ts(26,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/Source.ts(33,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
-lib/SourceMapSource.ts(14,3): error TS7006: Parameter 'value' implicitly has an 'any' type.
-lib/SourceMapSource.ts(15,3): error TS7006: Parameter 'name' implicitly has an 'any' type.
-lib/SourceMapSource.ts(16,3): error TS7006: Parameter 'sourceMap' implicitly has an 'any' type.
-lib/SourceMapSource.ts(17,3): error TS7006: Parameter 'originalSource' implicitly has an 'any' type.
-lib/SourceMapSource.ts(18,3): error TS7006: Parameter 'innerSourceMap' implicitly has an 'any' type.
-lib/SourceMapSource.ts(19,3): error TS7006: Parameter 'removeOriginalSource' implicitly has an 'any' type.
 lib/SourceMapSource.ts(23,8): error TS2339: Property '_valueAsString' does not exist on type 'SourceMapSource'.
 lib/SourceMapSource.ts(24,8): error TS2339: Property '_valueAsBuffer' does not exist on type 'SourceMapSource'.
 lib/SourceMapSource.ts(26,8): error TS2339: Property '_name' does not exist on type 'SourceMapSource'.
@@ -404,19 +310,13 @@ lib/SourceMapSource.ts(156,9): error TS2551: Property '_innerSourceMapAsBuffer' 
 lib/SourceMapSource.ts(157,9): error TS2339: Property '_removeOriginalSource' does not exist on type 'SourceMapSource'.
 lib/SourceMapSource.ts(163,15): error TS2339: Property '_valueAsBuffer' does not exist on type 'SourceMapSource'.
 lib/SourceMapSource.ts(168,15): error TS2339: Property '_valueAsString' does not exist on type 'SourceMapSource'.
-lib/SourceMapSource.ts(171,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/SourceMapSource.ts(172,13): error TS2339: Property '_hasInnerSourceMap' does not exist on type 'SourceMapSource'.
 lib/SourceMapSource.ts(174,16): error TS2339: Property '_sourceMapAsObject' does not exist on type 'SourceMapSource'.
-lib/SourceMapSource.ts(179,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/SourceMapSource.ts(180,13): error TS2339: Property '_hasInnerSourceMap' does not exist on type 'SourceMapSource'.
 lib/SourceMapSource.ts(184,18): error TS2339: Property '_valueAsString' does not exist on type 'SourceMapSource'.
 lib/SourceMapSource.ts(185,15): error TS2339: Property '_sourceMapAsObject' does not exist on type 'SourceMapSource'.
 lib/SourceMapSource.ts(188,10): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-lib/SourceMapSource.ts(191,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/SourceMapSource.ts(191,24): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
-lib/SourceMapSource.ts(191,33): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
-lib/SourceMapSource.ts(191,43): error TS7006: Parameter 'onName' implicitly has an 'any' type.
 lib/SourceMapSource.ts(195,12): error TS2339: Property '_hasInnerSourceMap' does not exist on type 'SourceMapSource'.
 lib/SourceMapSource.ts(198,10): error TS2339: Property '_valueAsString' does not exist on type 'SourceMapSource'.
 lib/SourceMapSource.ts(199,10): error TS2339: Property '_sourceMapAsObject' does not exist on type 'SourceMapSource'.
@@ -427,7 +327,6 @@ lib/SourceMapSource.ts(203,10): error TS2339: Property '_removeOriginalSource' d
 lib/SourceMapSource.ts(212,10): error TS2339: Property '_valueAsString' does not exist on type 'SourceMapSource'.
 lib/SourceMapSource.ts(213,10): error TS2339: Property '_sourceMapAsObject' does not exist on type 'SourceMapSource'.
 lib/SourceMapSource.ts(217,5): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
-lib/SourceMapSource.ts(223,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
 lib/SourceMapSource.ts(231,20): error TS2339: Property '_valueAsBuffer' does not exist on type 'SourceMapSource'.
 lib/SourceMapSource.ts(233,20): error TS2339: Property '_sourceMapAsBuffer' does not exist on type 'SourceMapSource'.
 lib/SourceMapSource.ts(235,12): error TS2339: Property '_hasOriginalSource' does not exist on type 'SourceMapSource'.
@@ -490,7 +389,7 @@ lib/helpers/createMappingsSerializer.ts(198,5): error TS2349: This expression is
   Type 'void' has no call signatures.
 lib/helpers/createMappingsSerializer.ts(198,16): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/helpers/createMappingsSerializer.ts(199,5): error TS2322: Type 'string' is not assignable to type 'number'.
-lib/helpers/getFromStreamChunks.ts(10,14): error TS2322: Type '(inputSource: string, options: any) => { source: any; map: { version: number; file: string; mappings: string; sources: any[]; sourcesContent: any[] | undefined; names: any[]; } | null; }' is not assignable to type 'void'.
+lib/helpers/getFromStreamChunks.ts(10,14): error TS2322: Type '(inputSource: string, options: any) => { source: any; map: { version: number; file: string; mappings: string; sources: any[]; sourcesContent: any[]; names: any[]; }; }' is not assignable to type 'void'.
 lib/helpers/getFromStreamChunks.ts(16,26): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
 lib/helpers/getFromStreamChunks.ts(17,33): error TS2339: Property 'streamChunks' does not exist on type 'string'.
@@ -498,7 +397,7 @@ lib/helpers/getFromStreamChunks.ts(79,26): error TS2349: This expression is not 
   Type 'Boolean' has no call signatures.
 lib/helpers/getGeneratedSourceInfo.ts(10,7): error TS2322: Type '(source: string) => { generatedLine?: undefined; generatedColumn?: undefined; source?: undefined; } | { generatedLine: number; generatedColumn: number; source: string; }' is not assignable to type 'number'.
 lib/helpers/getName.ts(8,7): error TS2322: Type '(sourceMap: any, index: number) => any' is not assignable to type 'string'.
-lib/helpers/getSource.ts(8,7): error TS2322: Type '(sourceMap: any, index: number) => string | null' is not assignable to type 'string'.
+lib/helpers/getSource.ts(8,27): error TS2322: Type '(sourceMap: any, index: number) => string' is not assignable to type 'string'.
 lib/helpers/readMappings.ts(8,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
 lib/helpers/readMappings.ts(20,31): error TS2339: Property 'length' does not exist on type 'RegExp'.
 lib/helpers/readMappings.ts(21,22): error TS2339: Property 'charCodeAt' does not exist on type 'RegExp'.
@@ -515,7 +414,7 @@ lib/helpers/readMappings.ts(96,3): error TS2349: This expression is not callable
   Type 'Number' has no call signatures.
 lib/helpers/readMappings.ts(105,3): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
-lib/helpers/streamAndGetSourceAndMap.ts(11,7): error TS2322: Type '(inputSource: any, options: any, onChunk: any, onSource: any, onName: any) => { result: { generatedLine: any; generatedColumn: any; source: any; }; source: any; map: { version: number; file: string; mappings: string; sources: any[]; sourcesContent: any[] | undefined; names: any[]; } | null; }' is not assignable to type 'void'.
+lib/helpers/streamAndGetSourceAndMap.ts(11,7): error TS2322: Type '(inputSource: any, options: any, onChunk: any, onSource: any, onName: any) => { result: { generatedLine: any; generatedColumn: any; source: any; }; source: any; map: { version: number; file: string; mappings: string; sources: any[]; sourcesContent: any[]; names: any[]; }; }' is not assignable to type 'void'.
 lib/helpers/streamAndGetSourceAndMap.ts(23,26): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
 lib/helpers/streamChunks.ts(23,5): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
@@ -524,8 +423,6 @@ lib/helpers/streamChunksOfCombinedSourceMap.ts(37,35): error TS2322: Type '(line
 lib/helpers/streamChunksOfCombinedSourceMap.ts(68,25): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(98,51): error TS2339: Property 'length' does not exist on type 'number'.
-lib/helpers/streamChunksOfCombinedSourceMap.ts(99,13): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(126,9): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(149,11): error TS2349: This expression is not callable.
@@ -636,7 +533,6 @@ lib/helpers/streamChunksOfSourceMap.ts(366,2): error TS2349: This expression is 
 lib/helpers/streamChunksOfSourceMap.ts(397,6): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 lib/index.ts(6,28): error TS2322: Type '(name: string, fn: Function) => void' is not assignable to type 'void'.
-lib/index.ts(12,5): error TS2322: Type 'undefined' is not assignable to type 'Function'.
 lib/index.ts(20,1): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/index.ts(22,1): error TS2349: This expression is not callable.

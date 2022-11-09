@@ -3,8 +3,6 @@ example.ts(7,13): error TS2554: Expected 3 arguments, but got 1.
 example.ts(10,13): error TS2554: Expected 3 arguments, but got 2.
 example.ts(13,21): error TS2322: Type '(value: any, state: any) => boolean' is not assignable to type 'boolean'.
 example.ts(16,13): error TS2554: Expected 3 arguments, but got 2.
-index.ts(3,17): error TS7006: Parameter 'input' implicitly has an 'any' type.
-index.ts(3,38): error TS7006: Parameter 'fn' implicitly has an 'any' type.
 index.ts(11,35): error TS2339: Property 'separator' does not exist on type '{}'.
 index.ts(24,29): error TS2339: Property 'quotes' does not exist on type '{}'.
 index.ts(25,30): error TS2339: Property 'brackets' does not exist on type '{}'.
@@ -44,10 +42,8 @@ index.ts(81,9): error TS2349: This expression is not callable.
 index.ts(86,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 index.ts(91,17): error TS2339: Property 'brackets' does not exist on type '{}'.
-index.ts(93,12): error TS2339: Property 'stash' does not exist on type '{ type: string; nodes: never[]; }'.
 index.ts(93,20): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
-index.ts(94,12): error TS2339: Property 'parent' does not exist on type '{ type: string; nodes: never[]; }'.
 index.ts(101,17): error TS2339: Property 'brackets' does not exist on type '{}'.
 index.ts(103,9): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
@@ -60,6 +56,5 @@ index.ts(117,9): error TS2349: This expression is not callable.
 index.ts(125,5): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 index.ts(131,17): error TS2339: Property 'strict' does not exist on type '{}'.
-index.ts(146,39): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
 index.ts(147,3): error TS2322: Type '{}' is not assignable to type 'boolean'.
 

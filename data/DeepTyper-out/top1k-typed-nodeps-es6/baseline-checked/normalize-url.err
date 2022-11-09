@@ -1,13 +1,7 @@
 index.ts(2,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
 index.ts(3,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
 index.ts(5,32): error TS2322: Type '(name: string, filters: any[]) => boolean' is not assignable to type 'boolean'.
-index.ts(7,32): error TS7006: Parameter 'urlString' implicitly has an 'any' type.
-index.ts(7,44): error TS7031: Binding element 'stripHash' implicitly has an 'any' type.
-index.ts(8,8): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'RegExpExecArray'.
-  Type 'null' is not assignable to type 'RegExpExecArray'.
-index.ts(14,7): error TS2339: Property 'type' does not exist on type '{ [key: string]: string; } | undefined'.
-index.ts(14,13): error TS2339: Property 'data' does not exist on type '{ [key: string]: string; } | undefined'.
-index.ts(14,19): error TS2339: Property 'hash' does not exist on type '{ [key: string]: string; } | undefined'.
+index.ts(15,8): error TS2322: Type 'string[]' is not assignable to type 'string'.
 index.ts(20,13): error TS2339: Property 'pop' does not exist on type 'string'.
 index.ts(25,38): error TS2339: Property 'shift' does not exist on type 'string'.
 index.ts(27,4): error TS2339: Property 'map' does not exist on type 'string'.

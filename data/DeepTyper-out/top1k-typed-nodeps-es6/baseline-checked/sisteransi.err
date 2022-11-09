@@ -2,9 +2,4 @@ example.ts(3,10): error TS2614: Module '"./src"' has no exported member 'beep'. 
 example.ts(3,16): error TS2614: Module '"./src"' has no exported member 'erase'. Did you mean to use 'import erase from "./src"' instead?
 example.ts(3,23): error TS2614: Module '"./src"' has no exported member 'cursor'. Did you mean to use 'import cursor from "./src"' instead?
 src/index.ts(5,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
-src/index.ts(8,6): error TS7006: Parameter 'x' implicitly has an 'any' type.
-src/index.ts(8,9): error TS7006: Parameter 'y' implicitly has an 'any' type.
-src/index.ts(12,8): error TS7006: Parameter 'x' implicitly has an 'any' type.
-src/index.ts(12,11): error TS7006: Parameter 'y' implicitly has an 'any' type.
-src/index.ts(48,9): error TS7006: Parameter 'count' implicitly has an 'any' type.
 

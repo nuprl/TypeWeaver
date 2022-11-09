@@ -7,39 +7,16 @@ index.ts(67,3): error TS2322: Type '[string, string, number]' is not assignable 
 index.ts(68,3): error TS2322: Type '[number, string, undefined, number, number]' is not assignable to type 'string'.
 index.ts(69,3): error TS2322: Type '[RegExp, string, undefined, number]' is not assignable to type 'string'.
 index.ts(70,3): error TS2322: Type '[number, string, undefined, number, number]' is not assignable to type 'string'.
+index.ts(111,24): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(111,24): error TS2554: Expected 3 arguments, but got 2.
-index.ts(111,24): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+index.ts(113,24): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(113,24): error TS2554: Expected 3 arguments, but got 2.
-index.ts(113,24): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-index.ts(114,32): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-index.ts(118,7): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 index.ts(121,26): error TS2339: Property 'slashes' does not exist on type '{}'.
 index.ts(122,24): error TS2339: Property 'slashes' does not exist on type '{}'.
-index.ts(168,7): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'RegExpExecArray'.
-  Type 'null' is not assignable to type 'RegExpExecArray'.
 index.ts(206,3): error TS2322: Type '{ protocol: any; slashes: boolean; slashesCount: number; rest: any; }' is not assignable to type 'void'.
-index.ts(265,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(266,12): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-index.ts(272,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(299,25): error TS2339: Property 'protocol' does not exist on type 'void'.
-index.ts(299,48): error TS2339: Property 'slashes' does not exist on type 'void'.
-index.ts(300,27): error TS2339: Property 'slashes' does not exist on type 'void'.
-index.ts(301,28): error TS2339: Property 'protocol' does not exist on type 'void'.
-index.ts(302,23): error TS2339: Property 'rest' does not exist on type 'void'.
-index.ts(309,15): error TS2339: Property 'protocol' does not exist on type 'void'.
-index.ts(310,17): error TS2339: Property 'slashesCount' does not exist on type 'void'.
-index.ts(311,17): error TS2339: Property 'slashes' does not exist on type 'void'.
-index.ts(312,18): error TS2339: Property 'protocol' does not exist on type 'void'.
-index.ts(313,19): error TS2339: Property 'slashesCount' does not exist on type 'void'.
+index.ts(266,12): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(316,5): error TS2322: Type '(string | RegExp)[]' is not assignable to type 'string'.
-index.ts(323,17): error TS2349: This expression is not callable.
-  Type 'never' has no call signatures.
-index.ts(346,31): error TS2339: Property 'exec' does not exist on type 'never'.
-index.ts(447,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(558,66): error TS2322: Type '(obj: object, prefix?: string | boolean | undefined) => string' is not assignable to type 'string'.
-index.ts(561,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(558,66): error TS2322: Type '(obj: object, prefix?: string | boolean) => string' is not assignable to type 'string'.
 index.ts(602,43): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
 

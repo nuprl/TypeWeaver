@@ -1,16 +1,6 @@
 index.ts(3,7): error TS2322: Type '(offset?: number) => (code: number) => string' is not assignable to type 'number'.
 index.ts(5,7): error TS2322: Type '(offset?: number) => (code: number) => string' is not assignable to type 'number'.
 index.ts(7,7): error TS2322: Type '(offset?: number) => (red: number, green: number, blue: number) => string' is not assignable to type 'number'.
-index.ts(73,51): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(o: { [s: string]: unknown; } | ArrayLike<unknown>): [string, unknown][]', gave the following error.
-    Argument of type 'unknown' is not assignable to parameter of type '{ [s: string]: unknown; } | ArrayLike<unknown>'.
-  Overload 2 of 2, '(o: {}): [string, any][]', gave the following error.
-    Argument of type 'unknown' is not assignable to parameter of type '{}'.
-index.ts(75,21): error TS2571: Object is of type 'unknown'.
-index.ts(76,22): error TS2571: Object is of type 'unknown'.
-index.ts(79,4): error TS2571: Object is of type 'unknown'.
-index.ts(81,14): error TS2571: Object is of type 'unknown'.
-index.ts(81,24): error TS2571: Object is of type 'unknown'.
 index.ts(98,22): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 index.ts(99,25): error TS2349: This expression is not callable.
@@ -23,8 +13,6 @@ index.ts(102,27): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 index.ts(103,27): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
-index.ts(132,11): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'RegExpExecArray'.
-  Type 'null' is not assignable to type 'RegExpExecArray'.
 index.ts(217,7): error TS2322: Type 'void' is not assignable to type 'number'.
 screenshot.ts(25,21): error TS2339: Property 'black' does not exist on type 'number'.
 screenshot.ts(34,47): error TS2339: Property 'reset' does not exist on type 'number'.

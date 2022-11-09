@@ -1,34 +1,5 @@
 lib/retry.ts(1,5): error TS2300: Duplicate identifier 'RetryOperation'.
-lib/retry.ts(5,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/retry.ts(14,22): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
-    Argument of type 'any[]' is not assignable to parameter of type 'ConcatArray<never>'.
-      The types returned by 'slice(...)' are incompatible between these types.
-        Type 'any[]' is not assignable to type 'never[]'.
-          Type 'any' is not assignable to type 'never'.
-  Overload 2 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
-    Argument of type 'any[]' is not assignable to parameter of type 'ConcatArray<never>'.
-lib/retry.ts(91,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/retry_operation.ts(1,10): error TS2300: Duplicate identifier 'RetryOperation'.
-lib/retry_operation.ts(7,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(8,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(9,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(10,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(11,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(12,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(13,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(14,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(15,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(16,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(17,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(18,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(20,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(21,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(21,28): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/retry_operation.ts(71,13): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
 lib/retry_operation.ts(107,13): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
-lib/retry_operation.ts(151,26): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-lib/retry_operation.ts(153,5): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 

@@ -7,23 +7,9 @@ bench/index.ts(34,28): error TS2349: This expression is not callable.
 bench/index.ts(35,31): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 examples/micromatch.braces.ts(3,10): error TS2614: Module '".."' has no exported member 'braces'. Did you mean to use 'import braces from ".."' instead?
-examples/option-expandRange.ts(6,15): error TS7006: Parameter 'a' implicitly has an 'any' type.
-examples/option-expandRange.ts(6,18): error TS7006: Parameter 'b' implicitly has an 'any' type.
 examples/option-onIgnore.ts(5,24): error TS2322: Type '({ glob, regex, input, output }: { glob: any; regex: any; input: any; output: any; }) => void' is not assignable to type 'void'.
-examples/option-onIgnore.ts(5,27): error TS7031: Binding element 'glob' implicitly has an 'any' type.
-examples/option-onIgnore.ts(5,33): error TS7031: Binding element 'regex' implicitly has an 'any' type.
-examples/option-onIgnore.ts(5,40): error TS7031: Binding element 'input' implicitly has an 'any' type.
-examples/option-onIgnore.ts(5,47): error TS7031: Binding element 'output' implicitly has an 'any' type.
 examples/option-onMatch.ts(5,23): error TS2322: Type '({ glob, regex, input, output }: { glob: any; regex: any; input: any; output: any; }) => void' is not assignable to type 'void'.
-examples/option-onMatch.ts(5,26): error TS7031: Binding element 'glob' implicitly has an 'any' type.
-examples/option-onMatch.ts(5,32): error TS7031: Binding element 'regex' implicitly has an 'any' type.
-examples/option-onMatch.ts(5,39): error TS7031: Binding element 'input' implicitly has an 'any' type.
-examples/option-onMatch.ts(5,46): error TS7031: Binding element 'output' implicitly has an 'any' type.
 examples/option-onResult.ts(5,24): error TS2322: Type '({ glob, regex, input, output }: { glob: any; regex: any; input: any; output: any; }) => void' is not assignable to type 'void'.
-examples/option-onResult.ts(5,27): error TS7031: Binding element 'glob' implicitly has an 'any' type.
-examples/option-onResult.ts(5,33): error TS7031: Binding element 'regex' implicitly has an 'any' type.
-examples/option-onResult.ts(5,40): error TS7031: Binding element 'input' implicitly has an 'any' type.
-examples/option-onResult.ts(5,47): error TS7031: Binding element 'output' implicitly has an 'any' type.
 index.ts(6,19): error TS2307: Cannot find module 'picomatch/lib/utils' or its corresponding type declarations.
 index.ts(7,32): error TS2322: Type '(val: string) => boolean' is not assignable to type 'boolean'.
 index.ts(44,28): error TS2322: Type 'MatcherWithState' is not assignable to type 'boolean'.
@@ -36,23 +22,18 @@ index.ts(51,65): error TS2339: Property 'isMatch' does not exist on type 'boolea
 index.ts(55,26): error TS2339: Property 'output' does not exist on type 'boolean'.
 index.ts(57,29): error TS2339: Property 'output' does not exist on type 'boolean'.
 index.ts(58,26): error TS2339: Property 'output' does not exist on type 'boolean'.
-index.ts(148,19): error TS7006: Parameter 'list' implicitly has an 'any' type.
-index.ts(148,25): error TS7006: Parameter 'patterns' implicitly has an 'any' type.
 index.ts(154,17): error TS2339: Property 'onResult' does not exist on type '{}'.
 index.ts(154,35): error TS2339: Property 'onResult' does not exist on type '{}'.
 index.ts(198,9): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
 index.ts(198,31): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
-index.ts(236,25): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
 index.ts(263,28): error TS2322: Type 'Matcher' is not assignable to type 'boolean'.
 index.ts(264,35): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
 index.ts(299,28): error TS2322: Type 'Matcher' is not assignable to type 'boolean'.
 index.ts(300,37): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
-index.ts(387,22): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 index.ts(387,51): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
-index.ts(403,20): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 index.ts(403,47): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
 

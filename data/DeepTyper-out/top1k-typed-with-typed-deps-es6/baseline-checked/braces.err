@@ -36,56 +36,32 @@ examples/expand.ts(3,19): error TS2306: File 'examples/parse.ts' is not a module
 examples/expand.ts(4,68): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
 examples/expand.ts(22,32): error TS2304: Cannot find name 'expand'.
-examples/option-transform.ts(5,13): error TS7006: Parameter 'code' implicitly has an 'any' type.
-examples/option-transform.ts(5,19): error TS7006: Parameter 'index' implicitly has an 'any' type.
-examples/option-transform.ts(14,13): error TS7006: Parameter 'value' implicitly has an 'any' type.
-examples/option-transform.ts(14,20): error TS7006: Parameter 'index' implicitly has an 'any' type.
-index.ts(22,22): error TS7006: Parameter 'input' implicitly has an 'any' type.
 index.ts(38,26): error TS2339: Property 'expand' does not exist on type '{}'.
 index.ts(38,53): error TS2339: Property 'nodupes' does not exist on type '{}'.
-index.ts(58,17): error TS7006: Parameter 'input' implicitly has an 'any' type.
-index.ts(74,21): error TS7006: Parameter 'input' implicitly has an 'any' type.
-index.ts(96,19): error TS7006: Parameter 'input' implicitly has an 'any' type.
 index.ts(100,10): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
-index.ts(120,18): error TS7006: Parameter 'input' implicitly has an 'any' type.
 index.ts(125,21): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 index.ts(128,15): error TS2339: Property 'noempty' does not exist on type '{}'.
 index.ts(133,15): error TS2339: Property 'nodupes' does not exist on type '{}'.
-index.ts(156,18): error TS7006: Parameter 'input' implicitly has an 'any' type.
 index.ts(161,17): error TS2339: Property 'expand' does not exist on type '{}'.
 lib/compile.ts(4,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/braces/lib/utils"' has no default export.
 lib/compile.ts(6,7): error TS2322: Type '(ast: any, options?: {}) => any' is not assignable to type 'boolean'.
-lib/compile.ts(6,27): error TS7006: Parameter 'ast' implicitly has an 'any' type.
-lib/compile.ts(7,20): error TS7006: Parameter 'node' implicitly has an 'any' type.
 lib/compile.ts(9,65): error TS2339: Property 'escapeInvalid' does not exist on type '{}'.
 lib/compile.ts(11,34): error TS2339: Property 'escapeInvalid' does not exist on type '{}'.
 lib/compile.ts(39,29): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
 lib/expand.ts(5,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/braces/lib/utils"' has no default export.
 lib/expand.ts(7,7): error TS2322: Type '(queue?: string, stash?: string, enclose?: boolean) => any' is not assignable to type 'void'.
-lib/expand.ts(10,3): error TS2322: Type 'never[]' is not assignable to type 'string'.
-lib/expand.ts(10,21): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
-    Argument of type 'string' is not assignable to parameter of type 'ConcatArray<never>'.
-  Overload 2 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
-    Argument of type 'string' is not assignable to parameter of type 'ConcatArray<never>'.
-lib/expand.ts(11,3): error TS2322: Type 'never[]' is not assignable to type 'string'.
-lib/expand.ts(11,21): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
-    Argument of type 'string' is not assignable to parameter of type 'ConcatArray<never>'.
-  Overload 2 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
-    Argument of type 'string' is not assignable to parameter of type 'ConcatArray<never>'.
+lib/expand.ts(10,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
+lib/expand.ts(11,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
 lib/expand.ts(21,21): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/expand.ts(26,42): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/expand.ts(33,7): error TS2322: Type '(ast: any, options?: {}) => any' is not assignable to type 'void'.
-lib/expand.ts(33,23): error TS7006: Parameter 'ast' implicitly has an 'any' type.
 lib/expand.ts(34,37): error TS2339: Property 'rangeLimit' does not exist on type '{}'.
 lib/expand.ts(34,76): error TS2339: Property 'rangeLimit' does not exist on type '{}'.
 lib/expand.ts(36,7): error TS2322: Type '(node: any, parent?: {}) => any' is not assignable to type 'void'.
-lib/expand.ts(36,21): error TS7006: Parameter 'node' implicitly has an 'any' type.
 lib/expand.ts(40,25): error TS2339: Property 'queue' does not exist on type '{}'.
 lib/expand.ts(48,14): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
@@ -118,7 +94,6 @@ lib/parse.ts(21,3): error TS2614: Module '"./constants"' has no exported member 
 lib/parse.ts(22,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_SINGLE_QUOTE'. Did you mean to use 'import CHAR_SINGLE_QUOTE from "./constants"' instead?
 lib/parse.ts(23,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_NO_BREAK_SPACE'. Did you mean to use 'import CHAR_NO_BREAK_SPACE from "./constants"' instead?
 lib/parse.ts(24,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_ZERO_WIDTH_NOBREAK_SPACE'. Did you mean to use 'import CHAR_ZERO_WIDTH_NOBREAK_SPACE from "./constants"' instead?
-lib/parse.ts(31,21): error TS7006: Parameter 'input' implicitly has an 'any' type.
 lib/parse.ts(57,9): error TS2322: Type '() => string' is not assignable to type 'void'.
 lib/parse.ts(58,9): error TS2322: Type '(node: any) => any' is not assignable to type 'number'.
 lib/parse.ts(75,3): error TS2349: This expression is not callable.
@@ -173,9 +148,7 @@ lib/parse.ts(304,5): error TS2349: This expression is not callable.
 lib/parse.ts(329,3): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 lib/stringify.ts(3,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/DeepTyper-out/top1k-typed-with-typed-deps-es6/baseline/braces/lib/utils"' has no default export.
-lib/stringify.ts(5,17): error TS7006: Parameter 'ast' implicitly has an 'any' type.
 lib/stringify.ts(6,7): error TS2322: Type '(node: any, parent?: {}) => any' is not assignable to type 'string'.
-lib/stringify.ts(6,28): error TS7006: Parameter 'node' implicitly has an 'any' type.
 lib/stringify.ts(7,41): error TS2339: Property 'escapeInvalid' does not exist on type '{}'.
 lib/stringify.ts(8,65): error TS2339: Property 'escapeInvalid' does not exist on type '{}'.
 lib/stringify.ts(24,19): error TS2349: This expression is not callable.
@@ -185,22 +158,15 @@ lib/stringify.ts(30,10): error TS2349: This expression is not callable.
 lib/utils.ts(3,35): error TS2322: Type '(num: number) => boolean' is not assignable to type 'boolean'.
 lib/utils.ts(7,38): error TS2339: Property 'trim' does not exist on type 'never'.
 lib/utils.ts(17,14): error TS2322: Type '(node: any, type: any) => any' is not assignable to type 'boolean'.
-lib/utils.ts(17,42): error TS7006: Parameter 'type' implicitly has an 'any' type.
-lib/utils.ts(23,38): error TS2322: Type '(min: any, max: any, step: number | undefined, limit: any) => boolean' is not assignable to type 'boolean'.
-lib/utils.ts(23,39): error TS7006: Parameter 'min' implicitly has an 'any' type.
-lib/utils.ts(23,44): error TS7006: Parameter 'max' implicitly has an 'any' type.
-lib/utils.ts(23,59): error TS7006: Parameter 'limit' implicitly has an 'any' type.
+lib/utils.ts(23,38): error TS2322: Type '(min: any, max: any, step: number, limit: any) => boolean' is not assignable to type 'boolean'.
 lib/utils.ts(25,8): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
 lib/utils.ts(25,27): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
-lib/utils.ts(33,14): error TS2322: Type '(block: any, n: number | undefined, type: any) => void' is not assignable to type 'boolean'.
-lib/utils.ts(33,37): error TS7006: Parameter 'block' implicitly has an 'any' type.
-lib/utils.ts(33,51): error TS7006: Parameter 'type' implicitly has an 'any' type.
+lib/utils.ts(33,14): error TS2322: Type '(block: any, n: number, type: any) => void' is not assignable to type 'boolean'.
 lib/utils.ts(49,38): error TS2322: Type '(node: any) => boolean' is not assignable to type 'boolean'.
 lib/utils.ts(62,40): error TS2322: Type '(block: any) => boolean' is not assignable to type 'boolean'.
 lib/utils.ts(80,39): error TS2322: Type '(node: any) => boolean' is not assignable to type 'boolean'.
-lib/utils.ts(101,30): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 lib/utils.ts(103,9): error TS2322: Type '(arr: any) => any[]' is not assignable to type 'void'.
 lib/utils.ts(106,28): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.

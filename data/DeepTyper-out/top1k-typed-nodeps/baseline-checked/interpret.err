@@ -1,8 +1,5 @@
-cjs-stub.ts(1,1): error TS2322: Type 'null' is not assignable to type '((m: Module, filename: string) => any) | undefined'.
 index.ts(6,3): error TS2322: Type 'boolean' is not assignable to type 'string'.
 index.ts(9,3): error TS2322: Type 'boolean' is not assignable to type 'string'.
 index.ts(71,3): error TS2322: Type '{ '.babel.js': { module: string; register: (hook: any, config: any) => void; }; '.babel.jsx': { module: string; register: (hook: any, config: any) => void; }; '.babel.ts': { module: string; register: (hook: any, config: any) => void; }[]; ... 30 more ...; '.yml': string; }' is not assignable to type 'string[]'.
   Object literal may only specify known properties, and ''.babel.js'' does not exist in type 'string[]'.
-index.ts(539,30): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-mjs-stub.ts(1,1): error TS2322: Type 'null' is not assignable to type '((m: Module, filename: string) => any) | undefined'.
 

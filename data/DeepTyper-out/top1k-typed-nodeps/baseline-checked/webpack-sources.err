@@ -2,42 +2,17 @@ lib/CachedSource.ts(7,7): error TS2451: Cannot redeclare block-scoped variable '
 lib/CachedSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunksOfSourceMap'.
 lib/CachedSource.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunksOfRawSource'.
 lib/CachedSource.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'streamAndGetSourceAndMap'.
-lib/CachedSource.ts(41,14): error TS7006: Parameter 'source' implicitly has an 'any' type.
-lib/CachedSource.ts(41,22): error TS7006: Parameter 'cachedData' implicitly has an 'any' type.
-lib/CachedSource.ts(104,24): error TS7006: Parameter 'cacheEntry' implicitly has an 'any' type.
-lib/CachedSource.ts(151,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/CachedSource.ts(181,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/CachedSource.ts(181,24): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
-lib/CachedSource.ts(181,33): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
-lib/CachedSource.ts(181,43): error TS7006: Parameter 'onName' implicitly has an 'any' type.
-lib/CachedSource.ts(223,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/CachedSource.ts(237,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
 lib/CompatSource.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
-lib/CompatSource.ts(10,14): error TS7006: Parameter 'sourceLike' implicitly has an 'any' type.
-lib/CompatSource.ts(16,14): error TS7006: Parameter 'sourceLike' implicitly has an 'any' type.
-lib/CompatSource.ts(39,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/CompatSource.ts(46,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/CompatSource.ts(53,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
 lib/ConcatSource.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
 lib/ConcatSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'RawSource'.
 lib/ConcatSource.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunks'.
 lib/ConcatSource.ts(10,9): error TS2451: Cannot redeclare block-scoped variable 'getMap'.
 lib/ConcatSource.ts(10,17): error TS2451: Cannot redeclare block-scoped variable 'getSourceAndMap'.
-lib/ConcatSource.ts(36,6): error TS7006: Parameter 'item' implicitly has an 'any' type.
-lib/ConcatSource.ts(47,23): error TS7006: Parameter 'items' implicitly has an 'any' type.
-lib/ConcatSource.ts(90,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/ConcatSource.ts(94,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/ConcatSource.ts(98,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/ConcatSource.ts(98,24): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
-lib/ConcatSource.ts(98,33): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
-lib/ConcatSource.ts(98,43): error TS7006: Parameter 'onName' implicitly has an 'any' type.
 lib/ConcatSource.ts(128,7): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
 lib/ConcatSource.ts(132,11): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
 lib/ConcatSource.ts(153,6): error TS2322: Type 'string | 0' is not assignable to type 'number'.
   Type 'string' is not assignable to type 'number'.
-lib/ConcatSource.ts(232,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
 lib/ConcatSource.ts(244,9): error TS2322: Type '(string: any) => void' is not assignable to type 'string'.
-lib/ConcatSource.ts(244,41): error TS7006: Parameter 'string' implicitly has an 'any' type.
 lib/ConcatSource.ts(272,33): error TS2322: Type '() => void' is not assignable to type 'void'.
 lib/ConcatSource.ts(294,6): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
@@ -53,111 +28,38 @@ lib/OriginalSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variable
 lib/OriginalSource.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'getGeneratedSourceInfo'.
 lib/OriginalSource.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
 lib/OriginalSource.ts(11,7): error TS2451: Cannot redeclare block-scoped variable 'splitIntoPotentialTokens'.
-lib/OriginalSource.ts(14,14): error TS7006: Parameter 'value' implicitly has an 'any' type.
-lib/OriginalSource.ts(14,21): error TS7006: Parameter 'name' implicitly has an 'any' type.
-lib/OriginalSource.ts(40,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/OriginalSource.ts(44,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/OriginalSource.ts(55,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/OriginalSource.ts(55,24): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
-lib/OriginalSource.ts(55,33): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
-lib/OriginalSource.ts(55,43): error TS7006: Parameter 'onName' implicitly has an 'any' type.
-lib/OriginalSource.ts(125,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
 lib/PrefixSource.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
 lib/PrefixSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'RawSource'.
 lib/PrefixSource.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunks'.
 lib/PrefixSource.ts(10,9): error TS2451: Cannot redeclare block-scoped variable 'getMap'.
 lib/PrefixSource.ts(10,17): error TS2451: Cannot redeclare block-scoped variable 'getSourceAndMap'.
-lib/PrefixSource.ts(15,14): error TS7006: Parameter 'prefix' implicitly has an 'any' type.
-lib/PrefixSource.ts(15,22): error TS7006: Parameter 'source' implicitly has an 'any' type.
-lib/PrefixSource.ts(40,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/PrefixSource.ts(44,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/PrefixSource.ts(48,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/PrefixSource.ts(48,24): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
-lib/PrefixSource.ts(48,33): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
-lib/PrefixSource.ts(48,43): error TS7006: Parameter 'onName' implicitly has an 'any' type.
-lib/PrefixSource.ts(107,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
 lib/RawSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunksOfRawSource'.
 lib/RawSource.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
 lib/RawSource.ts(11,7): error TS2451: Cannot redeclare block-scoped variable 'RawSource'.
-lib/RawSource.ts(12,14): error TS7006: Parameter 'value' implicitly has an 'any' type.
-lib/RawSource.ts(42,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/RawSource.ts(53,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/RawSource.ts(53,24): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
-lib/RawSource.ts(53,33): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
-lib/RawSource.ts(53,43): error TS7006: Parameter 'onName' implicitly has an 'any' type.
-lib/RawSource.ts(72,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
 lib/ReplaceSource.ts(7,9): error TS2451: Cannot redeclare block-scoped variable 'getMap'.
 lib/ReplaceSource.ts(7,17): error TS2451: Cannot redeclare block-scoped variable 'getSourceAndMap'.
 lib/ReplaceSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunks'.
 lib/ReplaceSource.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
 lib/ReplaceSource.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'splitIntoLines'.
-lib/ReplaceSource.ts(23,14): error TS7006: Parameter 'start' implicitly has an 'any' type.
-lib/ReplaceSource.ts(23,21): error TS7006: Parameter 'end' implicitly has an 'any' type.
-lib/ReplaceSource.ts(23,26): error TS7006: Parameter 'content' implicitly has an 'any' type.
-lib/ReplaceSource.ts(23,35): error TS7006: Parameter 'name' implicitly has an 'any' type.
 lib/ReplaceSource.ts(24,8): error TS2339: Property 'start' does not exist on type 'Replacement'.
 lib/ReplaceSource.ts(25,8): error TS2339: Property 'end' does not exist on type 'Replacement'.
 lib/ReplaceSource.ts(26,8): error TS2339: Property 'content' does not exist on type 'Replacement'.
 lib/ReplaceSource.ts(27,8): error TS2339: Property 'name' does not exist on type 'Replacement'.
 lib/ReplaceSource.ts(29,9): error TS2339: Property 'index' does not exist on type 'Replacement'.
-lib/ReplaceSource.ts(35,14): error TS7006: Parameter 'source' implicitly has an 'any' type.
-lib/ReplaceSource.ts(35,22): error TS7006: Parameter 'name' implicitly has an 'any' type.
-lib/ReplaceSource.ts(53,10): error TS7006: Parameter 'start' implicitly has an 'any' type.
-lib/ReplaceSource.ts(53,17): error TS7006: Parameter 'end' implicitly has an 'any' type.
-lib/ReplaceSource.ts(53,22): error TS7006: Parameter 'newValue' implicitly has an 'any' type.
-lib/ReplaceSource.ts(53,32): error TS7006: Parameter 'name' implicitly has an 'any' type.
-lib/ReplaceSource.ts(62,9): error TS7006: Parameter 'pos' implicitly has an 'any' type.
-lib/ReplaceSource.ts(62,14): error TS7006: Parameter 'newValue' implicitly has an 'any' type.
-lib/ReplaceSource.ts(62,24): error TS7006: Parameter 'name' implicitly has an 'any' type.
-lib/ReplaceSource.ts(103,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/ReplaceSource.ts(110,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/ReplaceSource.ts(144,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/ReplaceSource.ts(144,24): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
-lib/ReplaceSource.ts(144,33): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
-lib/ReplaceSource.ts(144,43): error TS7006: Parameter 'onName' implicitly has an 'any' type.
 lib/ReplaceSource.ts(151,14): error TS2339: Property 'length' does not exist on type 'number'.
-lib/ReplaceSource.ts(151,34): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 lib/ReplaceSource.ts(171,17): error TS2339: Property 'slice' does not exist on type 'number'.
 lib/ReplaceSource.ts(171,54): error TS2339: Property 'length' does not exist on type 'number'.
-lib/ReplaceSource.ts(272,33): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-lib/ReplaceSource.ts(320,19): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 lib/ReplaceSource.ts(326,18): error TS2339: Property 'length' does not exist on type 'number'.
-lib/ReplaceSource.ts(327,22): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 lib/ReplaceSource.ts(335,13): error TS2322: Type 'string' is not assignable to type 'number'.
 lib/ReplaceSource.ts(380,12): error TS2322: Type 'string' is not assignable to type 'number'.
 lib/ReplaceSource.ts(413,20): error TS2339: Property 'length' does not exist on type 'number'.
-lib/ReplaceSource.ts(414,16): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
-lib/ReplaceSource.ts(456,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
 lib/SizeOnlySource.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
-lib/SizeOnlySource.ts(10,14): error TS7006: Parameter 'size' implicitly has an 'any' type.
-lib/SizeOnlySource.ts(33,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/Source.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
-lib/Source.ts(22,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/Source.ts(26,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/Source.ts(33,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
 lib/SourceMapSource.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
 lib/SourceMapSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunksOfSourceMap'.
 lib/SourceMapSource.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunksOfCombinedSourceMap'.
 lib/SourceMapSource.ts(10,9): error TS2451: Cannot redeclare block-scoped variable 'getMap'.
 lib/SourceMapSource.ts(10,17): error TS2451: Cannot redeclare block-scoped variable 'getSourceAndMap'.
-lib/SourceMapSource.ts(14,3): error TS7006: Parameter 'value' implicitly has an 'any' type.
-lib/SourceMapSource.ts(15,3): error TS7006: Parameter 'name' implicitly has an 'any' type.
-lib/SourceMapSource.ts(16,3): error TS7006: Parameter 'sourceMap' implicitly has an 'any' type.
-lib/SourceMapSource.ts(17,3): error TS7006: Parameter 'originalSource' implicitly has an 'any' type.
-lib/SourceMapSource.ts(18,3): error TS7006: Parameter 'innerSourceMap' implicitly has an 'any' type.
-lib/SourceMapSource.ts(19,3): error TS7006: Parameter 'removeOriginalSource' implicitly has an 'any' type.
-lib/SourceMapSource.ts(171,6): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/SourceMapSource.ts(179,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/SourceMapSource.ts(191,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/SourceMapSource.ts(191,24): error TS7006: Parameter 'onChunk' implicitly has an 'any' type.
-lib/SourceMapSource.ts(191,33): error TS7006: Parameter 'onSource' implicitly has an 'any' type.
-lib/SourceMapSource.ts(191,43): error TS7006: Parameter 'onName' implicitly has an 'any' type.
-lib/SourceMapSource.ts(223,13): error TS7006: Parameter 'hash' implicitly has an 'any' type.
 lib/helpers/__mocks__/createMappingsSerializer.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'createMappingsSerializer'.
 lib/helpers/__mocks__/createMappingsSerializer.ts(3,39): error TS2304: Cannot find name 'jest'.
 lib/helpers/__mocks__/createMappingsSerializer.ts(20,4): error TS2365: Operator '>=' cannot be applied to types 'string' and 'number'.
@@ -222,8 +124,8 @@ lib/helpers/getFromStreamChunks.ts(17,33): error TS2339: Property 'streamChunks'
 lib/helpers/getGeneratedSourceInfo.ts(10,7): error TS2322: Type '(source: string) => { generatedLine?: undefined; generatedColumn?: undefined; source?: undefined; } | { generatedLine: number; generatedColumn: number; source: string; }' is not assignable to type 'number'.
 lib/helpers/getGeneratedSourceInfo.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'getGeneratedSourceInfo'.
 lib/helpers/getName.ts(8,7): error TS2322: Type '(sourceMap: any, index: number) => any' is not assignable to type 'string'.
-lib/helpers/getSource.ts(8,7): error TS2322: Type '(sourceMap: any, index: number) => string | null' is not assignable to type 'string'.
 lib/helpers/getSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'getSource'.
+lib/helpers/getSource.ts(8,27): error TS2322: Type '(sourceMap: any, index: number) => string' is not assignable to type 'string'.
 lib/helpers/readMappings.ts(8,7): error TS2322: Type 'string' is not assignable to type 'RegExp'.
 lib/helpers/readMappings.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'ALPHABET'.
 lib/helpers/readMappings.ts(11,7): error TS2451: Cannot redeclare block-scoped variable 'CONTINUATION_BIT'.
@@ -242,7 +144,7 @@ lib/helpers/readMappings.ts(96,3): error TS2349: This expression is not callable
 lib/helpers/readMappings.ts(105,3): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 lib/helpers/splitIntoLines.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'splitIntoLines'.
-lib/helpers/splitIntoPotentialTokens.ts(9,7): error TS2322: Type '(str: string) => any[] | null' is not assignable to type 'string'.
+lib/helpers/splitIntoPotentialTokens.ts(9,7): error TS2322: Type '(str: string) => any[]' is not assignable to type 'string'.
 lib/helpers/splitIntoPotentialTokens.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'splitIntoPotentialTokens'.
 lib/helpers/streamAndGetSourceAndMap.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'createMappingsSerializer'.
 lib/helpers/streamAndGetSourceAndMap.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'streamChunks'.
@@ -256,8 +158,6 @@ lib/helpers/streamChunksOfCombinedSourceMap.ts(37,35): error TS2322: Type '(line
 lib/helpers/streamChunksOfCombinedSourceMap.ts(68,25): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(98,51): error TS2339: Property 'length' does not exist on type 'number'.
-lib/helpers/streamChunksOfCombinedSourceMap.ts(99,13): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(282,14): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(288,48): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/helpers/streamChunksOfRawSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'getGeneratedSourceInfo'.
@@ -321,7 +221,6 @@ lib/helpers/streamChunksOfSourceMap.ts(363,4): error TS2322: Type 'string' is no
 lib/helpers/streamChunksOfSourceMap.ts(397,6): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 lib/index.ts(6,28): error TS2322: Type '(name: string, fn: Function) => void' is not assignable to type 'void'.
-lib/index.ts(12,5): error TS2322: Type 'undefined' is not assignable to type 'Function'.
 lib/index.ts(20,1): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 lib/index.ts(22,1): error TS2349: This expression is not callable.

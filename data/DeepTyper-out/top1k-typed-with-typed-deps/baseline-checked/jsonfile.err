@@ -1,30 +1,18 @@
 index.ts(8,9): error TS2451: Cannot redeclare block-scoped variable 'stringify'.
 index.ts(8,20): error TS2451: Cannot redeclare block-scoped variable 'stripBom'.
-index.ts(10,27): error TS7006: Parameter 'file' implicitly has an 'any' type.
 index.ts(15,27): error TS2339: Property 'fs' does not exist on type '{}'.
 index.ts(17,62): error TS2339: Property 'throws' does not exist on type '{}'.
 index.ts(25,46): error TS2339: Property 'reviver' does not exist on type '{}'.
-index.ts(28,7): error TS2571: Object is of type 'unknown'.
-index.ts(28,33): error TS2571: Object is of type 'unknown'.
-index.ts(40,24): error TS7006: Parameter 'file' implicitly has an 'any' type.
 index.ts(45,27): error TS2339: Property 'fs' does not exist on type '{}'.
 index.ts(47,62): error TS2339: Property 'throws' does not exist on type '{}'.
 index.ts(52,40): error TS2339: Property 'reviver' does not exist on type '{}'.
-index.ts(55,7): error TS2571: Object is of type 'unknown'.
-index.ts(55,33): error TS2571: Object is of type 'unknown'.
-index.ts(63,28): error TS7006: Parameter 'file' implicitly has an 'any' type.
-index.ts(63,34): error TS7006: Parameter 'obj' implicitly has an 'any' type.
 index.ts(64,27): error TS2339: Property 'fs' does not exist on type '{}'.
-index.ts(66,38): error TS2345: Argument of type '{}' is not assignable to parameter of type '{ EOL?: string | undefined; finalEOL?: boolean | undefined; replacer?: null | undefined; spaces: any; }'.
-  Property 'spaces' is missing in type '{}' but required in type '{ EOL?: string | undefined; finalEOL?: boolean | undefined; replacer?: null | undefined; spaces: any; }'.
-index.ts(73,25): error TS7006: Parameter 'file' implicitly has an 'any' type.
-index.ts(73,31): error TS7006: Parameter 'obj' implicitly has an 'any' type.
+index.ts(66,38): error TS2345: Argument of type '{}' is not assignable to parameter of type '{ EOL?: string; finalEOL?: boolean; replacer?: any; spaces: any; }'.
+  Property 'spaces' is missing in type '{}' but required in type '{ EOL?: string; finalEOL?: boolean; replacer?: any; spaces: any; }'.
 index.ts(74,27): error TS2339: Property 'fs' does not exist on type '{}'.
-index.ts(76,38): error TS2345: Argument of type '{}' is not assignable to parameter of type '{ EOL?: string | undefined; finalEOL?: boolean | undefined; replacer?: null | undefined; spaces: any; }'.
-  Property 'spaces' is missing in type '{}' but required in type '{ EOL?: string | undefined; finalEOL?: boolean | undefined; replacer?: null | undefined; spaces: any; }'.
+index.ts(76,38): error TS2345: Argument of type '{}' is not assignable to parameter of type '{ EOL?: string; finalEOL?: boolean; replacer?: any; spaces: any; }'.
+  Property 'spaces' is missing in type '{}' but required in type '{ EOL?: string; finalEOL?: boolean; replacer?: any; spaces: any; }'.
 utils.ts(1,10): error TS2451: Cannot redeclare block-scoped variable 'stringify'.
-utils.ts(1,21): error TS7006: Parameter 'obj' implicitly has an 'any' type.
 utils.ts(1,74): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
-utils.ts(1,74): error TS7031: Binding element 'spaces' implicitly has an 'any' type.
 utils.ts(8,10): error TS2451: Cannot redeclare block-scoped variable 'stripBom'.
 

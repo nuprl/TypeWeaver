@@ -1,28 +1,11 @@
-karma.conf.ts(1,26): error TS7006: Parameter 'config' implicitly has an 'any' type.
 src/browser.ts(119,73): error TS2339: Property 'type' does not exist on type 'Process'.
 src/browser.ts(119,111): error TS2339: Property '__nwjs' does not exist on type 'Process'.
 src/browser.ts(130,138): error TS2551: Property 'WebkitAppearance' does not exist on type 'CSSStyleDeclaration'. Did you mean 'webkitAppearance'?
 src/browser.ts(132,71): error TS2339: Property 'firebug' does not exist on type 'Console'.
 src/browser.ts(132,98): error TS2339: Property 'exception' does not exist on type 'Console'.
-src/browser.ts(147,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/browser.ts(148,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/browser.ts(149,4): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/browser.ts(151,4): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/browser.ts(152,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/browser.ts(154,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/browser.ts(158,32): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/browser.ts(244,26): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 src/browser.ts(248,3): error TS2322: Type 'Storage' is not assignable to type 'boolean'.
-src/browser.ts(267,43): error TS2571: Object is of type 'unknown'.
-src/common.ts(18,3): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ (namespace: any): any; debug: ...; default: ...; coerce: (val: any) => any; disable: () => void; enable: (namespaces: any) => void; enabled: (name: any) => boolean; humanize: any; destroy: () => void; names: any[]; skips: any[]; formatters: {}; selectColor: (namespace: any) => any; }'.
-  No index signature with a parameter of type 'string' was found on type '{ (namespace: any): any; debug: ...; default: ...; coerce: (val: any) => any; disable: () => void; enable: (namespaces: any) => void; enabled: (name: any) => boolean; humanize: any; destroy: () => void; names: any[]; skips: any[]; formatters: {}; selectColor: (namespace: any) => any; }'.
-src/common.ts(25,2): error TS7008: Member 'names' implicitly has an 'any[]' type.
-src/common.ts(26,2): error TS7008: Member 'skips' implicitly has an 'any[]' type.
-src/common.ts(41,23): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
 src/common.ts(49,22): error TS2339: Property 'colors' does not exist on type '{ (namespace: any): any; debug: ...; default: ...; coerce: (val: any) => any; disable: () => void; enable: (namespaces: any) => void; enabled: (name: any) => boolean; humanize: any; destroy: () => void; names: any[]; skips: any[]; formatters: {}; selectColor: (namespace: any) => any; }'.
 src/common.ts(49,58): error TS2339: Property 'colors' does not exist on type '{ (namespace: any): any; debug: ...; default: ...; coerce: (val: any) => any; disable: () => void; enable: (namespaces: any) => void; enabled: (name: any) => boolean; humanize: any; destroy: () => void; names: any[]; skips: any[]; formatters: {}; selectColor: (namespace: any) => any; }'.
-src/common.ts(60,23): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
-src/common.ts(66,18): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 src/common.ts(68,15): error TS2339: Property 'enabled' does not exist on type '{ (...args: any[]): void; namespace: any; useColors: any; color: any; extend: (namespace: any, delimiter: string) => any; destroy: () => void; }'.
 src/common.ts(110,16): error TS2551: Property 'formatArgs' does not exist on type '{ (namespace: any): any; debug: ...; default: ...; coerce: (val: any) => any; disable: () => void; enable: (namespaces: any) => void; enabled: (name: any) => boolean; humanize: any; destroy: () => void; names: any[]; skips: any[]; formatters: {}; selectColor: (namespace: any) => any; }'. Did you mean 'formatters'?
 src/common.ts(112,47): error TS2339: Property 'log' does not exist on type '{ (namespace: any): any; debug: ...; default: ...; coerce: (val: any) => any; disable: () => void; enable: (namespaces: any) => void; enabled: (name: any) => boolean; humanize: any; destroy: () => void; names: any[]; skips: any[]; formatters: {}; selectColor: (namespace: any) => any; }'.
@@ -31,9 +14,6 @@ src/common.ts(129,41): error TS2339: Property 'namespaces' does not exist on typ
 src/common.ts(130,36): error TS2339: Property 'namespaces' does not exist on type '{ (namespace: any): any; debug: ...; default: ...; coerce: (val: any) => any; disable: () => void; enable: (namespaces: any) => void; enabled: (name: any) => boolean; humanize: any; destroy: () => void; names: any[]; skips: any[]; formatters: {}; selectColor: (namespace: any) => any; }'.
 src/common.ts(142,26): error TS2339: Property 'init' does not exist on type '{ (namespace: any): any; debug: ...; default: ...; coerce: (val: any) => any; disable: () => void; enable: (namespaces: any) => void; enabled: (name: any) => boolean; humanize: any; destroy: () => void; names: any[]; skips: any[]; formatters: {}; selectColor: (namespace: any) => any; }'.
 src/common.ts(143,16): error TS2339: Property 'init' does not exist on type '{ (namespace: any): any; debug: ...; default: ...; coerce: (val: any) => any; disable: () => void; enable: (namespaces: any) => void; enabled: (name: any) => boolean; humanize: any; destroy: () => void; names: any[]; skips: any[]; formatters: {}; selectColor: (namespace: any) => any; }'.
-src/common.ts(149,18): error TS7006: Parameter 'namespace' implicitly has an 'any' type.
-src/common.ts(150,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/common.ts(151,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 src/common.ts(163,15): error TS2339: Property 'save' does not exist on type '{ (namespace: any): any; debug: ...; default: ...; coerce: (val: any) => any; disable: () => void; enable: (namespaces: any) => void; enabled: (name: any) => boolean; humanize: any; destroy: () => void; names: any[]; skips: any[]; formatters: {}; selectColor: (namespace: any) => any; }'.
 src/common.ts(164,15): error TS2339: Property 'namespaces' does not exist on type '{ (namespace: any): any; debug: ...; default: ...; coerce: (val: any) => any; disable: () => void; enable: (namespaces: any) => void; enabled: (name: any) => boolean; humanize: any; destroy: () => void; names: any[]; skips: any[]; formatters: {}; selectColor: (namespace: any) => any; }'.
 src/common.ts(269,33): error TS2339: Property 'load' does not exist on type '{ (namespace: any): any; debug: ...; default: ...; coerce: (val: any) => any; disable: () => void; enable: (namespaces: any) => void; enabled: (name: any) => boolean; humanize: any; destroy: () => void; names: any[]; skips: any[]; formatters: {}; selectColor: (namespace: any) => any; }'.
@@ -43,9 +23,5 @@ src/index.ts(6,78): error TS2339: Property 'browser' does not exist on type 'Pro
 src/index.ts(6,106): error TS2339: Property '__nwjs' does not exist on type 'Process'.
 src/index.ts(7,5): error TS1258: A default export must be at the top level of a file or module declaration.
 src/index.ts(9,5): error TS1258: A default export must be at the top level of a file or module declaration.
-src/node.ts(169,39): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/node.ts(172,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 src/node.ts(173,43): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
-src/node.ts(177,56): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/node.ts(194,14): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 

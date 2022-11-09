@@ -1,115 +1,33 @@
 clone.ts(9,10): error TS2300: Duplicate identifier 'clone'.
-clone.ts(19,38): error TS2345: Argument of type 'PropertyDescriptor | undefined' is not assignable to parameter of type 'PropertyDescriptor & ThisType<any>'.
-  Type 'undefined' is not assignable to type 'PropertyDescriptor & ThisType<any>'.
-    Type 'undefined' is not assignable to type 'PropertyDescriptor'.
 graceful-fs.ts(3,5): error TS2300: Duplicate identifier 'legacy'.
 graceful-fs.ts(4,5): error TS2300: Duplicate identifier 'clone'.
-graceful-fs.ts(45,20): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'typeof globalThis'.
-graceful-fs.ts(61,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 graceful-fs.ts(72,35): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
-graceful-fs.ts(92,6): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'typeof globalThis'.
 graceful-fs.ts(102,10): error TS2393: Duplicate function implementation.
 graceful-fs.ts(115,12): error TS2554: Expected 4 arguments, but got 3.
-graceful-fs.ts(123,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 graceful-fs.ts(135,12): error TS2554: Expected 5 arguments, but got 4.
-graceful-fs.ts(143,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 graceful-fs.ts(156,12): error TS2554: Expected 5 arguments, but got 4.
-graceful-fs.ts(164,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 graceful-fs.ts(178,12): error TS2554: Expected 5 arguments, but got 4.
-graceful-fs.ts(186,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 graceful-fs.ts(194,7): error TS2322: Type 'RegExp' is not assignable to type 'string'.
 graceful-fs.ts(199,46): error TS2339: Property 'test' does not exist on type 'string'.
 graceful-fs.ts(211,12): error TS2554: Expected 4 arguments, but got 3.
-graceful-fs.ts(228,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 graceful-fs.ts(236,5): error TS2630: Cannot assign to 'ReadStream' because it is a function.
 graceful-fs.ts(237,5): error TS2630: Cannot assign to 'WriteStream' because it is a function.
 graceful-fs.ts(257,7): error TS2630: Cannot assign to 'ReadStream' because it is a function.
 graceful-fs.ts(267,7): error TS2630: Cannot assign to 'WriteStream' because it is a function.
-graceful-fs.ts(298,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-graceful-fs.ts(299,34): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-graceful-fs.ts(299,52): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-graceful-fs.ts(301,68): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[path: string, options: any]'.
 graceful-fs.ts(305,15): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
-graceful-fs.ts(305,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-graceful-fs.ts(321,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-graceful-fs.ts(322,35): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-graceful-fs.ts(322,53): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-graceful-fs.ts(324,70): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[path: string, options: any]'.
 graceful-fs.ts(328,15): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
-graceful-fs.ts(328,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 graceful-fs.ts(354,12): error TS2554: Expected 5 arguments, but got 4.
-graceful-fs.ts(362,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 graceful-fs.ts(399,16): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(timeoutId: string | number | Timeout | undefined): void', gave the following error.
-    Argument of type 'void' is not assignable to parameter of type 'string | number | Timeout | undefined'.
-  Overload 2 of 2, '(id?: number | undefined): void', gave the following error.
-    Argument of type 'void' is not assignable to parameter of type 'number | undefined'.
+  Overload 1 of 2, '(timeoutId: string | number | Timeout): void', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type 'string | number | Timeout'.
+  Overload 2 of 2, '(id?: number): void', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type 'number'.
 graceful-fs.ts(446,5): error TS2322: Type 'Timeout' is not assignable to type 'void'.
 legacy-streams.ts(5,10): error TS2300: Duplicate identifier 'legacy'.
-legacy-streams.ts(12,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(12,47): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-legacy-streams.ts(14,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+legacy-streams.ts(12,47): error TS2350: Only a void function can be called with the 'new' keyword.
 legacy-streams.ts(16,15): error TS2526: A 'this' type is available only in a non-static member of a class or interface.
-legacy-streams.ts(16,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(18,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(19,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(20,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(21,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(23,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(24,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(25,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(33,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(36,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(36,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(36,41): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(38,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(39,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(42,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(43,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(44,38): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(48,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(48,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(52,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(52,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(55,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(62,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(62,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(62,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(76,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(76,48): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-legacy-streams.ts(78,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(80,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(81,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(82,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(84,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(85,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(86,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(87,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(95,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(98,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(99,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(102,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(106,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(106,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(109,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(110,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(112,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(113,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(114,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(114,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(114,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(114,48): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(114,60): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(115,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+legacy-streams.ts(76,48): error TS2350: Only a void function can be called with the 'new' keyword.
 polyfills.ts(29,10): error TS2393: Duplicate function implementation.
-polyfills.ts(99,24): error TS7006: Parameter 'from' implicitly has an 'any' type.
-polyfills.ts(102,52): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-polyfills.ts(116,13): error TS2322: Type 'undefined' is not assignable to type 'boolean'.
 polyfills.ts(138,21): error TS2339: Property 'apply' does not exist on type 'never'.
-polyfills.ts(138,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-polyfills.ts(156,13): error TS2571: Object is of type 'unknown'.
-polyfills.ts(254,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-polyfills.ts(276,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 polyfills.ts(283,5): error TS2322: Type '(target: any, uid: any, gid: number) => any' is not assignable to type 'string'.
-polyfills.ts(306,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 

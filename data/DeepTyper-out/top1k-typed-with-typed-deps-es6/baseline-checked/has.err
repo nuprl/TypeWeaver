@@ -1,9 +1,0 @@
-src/index.ts(5,26): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(func: (this: (v: PropertyKey) => boolean, ...args: unknown[]) => boolean, thisArg: (v: PropertyKey) => boolean): (...args: readonly unknown[]) => boolean', gave the following error.
-    Argument of type '<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, ...args: A) => R' is not assignable to parameter of type '(this: (v: PropertyKey) => boolean, ...args: unknown[]) => boolean'.
-      Types of parameters 'v' and 'args' are incompatible.
-        Type 'unknown' is not assignable to type 'PropertyKey'.
-  Overload 2 of 2, '(func: new (...args: unknown[]) => unknown, thisArg: unknown): new (...args: readonly unknown[]) => unknown', gave the following error.
-    Argument of type '<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, ...args: A) => R' is not assignable to parameter of type 'new (...args: unknown[]) => unknown'.
-      Type '<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, ...args: A) => R' provides no match for the signature 'new (...args: unknown[]): unknown'.
-

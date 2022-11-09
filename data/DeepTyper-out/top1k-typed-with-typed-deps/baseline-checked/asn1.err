@@ -2,10 +2,6 @@ lib/ber/index.ts(6,5): error TS2300: Duplicate identifier 'Reader'.
 lib/ber/index.ts(7,5): error TS2300: Duplicate identifier 'Writer'.
 lib/ber/reader.ts(12,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'newInvalidAsn1Error' must be of type 'number', but here has type 'any'.
 lib/ber/reader.ts(18,10): error TS2300: Duplicate identifier 'Reader'.
-lib/ber/reader.ts(22,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/reader.ts(23,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/reader.ts(26,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/reader.ts(27,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/ber/reader.ts(100,13): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 lib/ber/reader.ts(103,13): error TS2349: This expression is not callable.
@@ -19,18 +15,8 @@ lib/ber/reader.ts(230,11): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 lib/ber/reader.ts(238,11): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
-lib/ber/writer.ts(21,16): error TS7006: Parameter 'from' implicitly has an 'any' type.
-lib/ber/writer.ts(29,12): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-lib/ber/writer.ts(32,9): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'Object'.
-  Type 'undefined' is not assignable to type 'Object'.
 lib/ber/writer.ts(36,3): error TS2322: Type 'string' is not assignable to type 'void'.
 lib/ber/writer.ts(43,10): error TS2300: Duplicate identifier 'Writer'.
-lib/ber/writer.ts(46,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/writer.ts(47,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/writer.ts(47,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/writer.ts(48,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/writer.ts(49,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/writer.ts(53,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/ber/writer.ts(59,13): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 lib/ber/writer.ts(89,11): error TS2349: This expression is not callable.

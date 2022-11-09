@@ -2,185 +2,62 @@ lib/asn1.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'asn1'.
 lib/asn1/api.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'encoders'.
 lib/asn1/api.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'decoders'.
 lib/asn1/api.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'inherits'.
-lib/asn1/api.ts(10,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/asn1/api.ts(14,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/api.ts(15,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/api.ts(17,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/api.ts(18,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/asn1/api.ts(10,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/asn1/api.ts(24,36): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
-lib/asn1/api.ts(25,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/api.ts(32,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/asn1/api.ts(32,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/asn1/api.ts(55,89): error TS2304: Cannot find name 'TelemetryReporter'.
 lib/asn1/base/buffer.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'inherits'.
 lib/asn1/base/buffer.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'Reporter'.
 lib/asn1/base/buffer.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'Buffer'.
-lib/asn1/base/buffer.ts(8,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(10,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(14,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(15,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(16,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(90,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(91,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(94,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(96,8): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(100,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(101,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(103,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(104,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(106,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(107,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/base/node.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'Reporter'.
 lib/asn1/base/node.ts(32,10): error TS2300: Duplicate identifier 'Node'.
-lib/asn1/base/node.ts(34,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/node.ts(61,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/base/node.ts(72,16): error TS2339: Property 'clone' does not exist on type 'Node'.
-lib/asn1/base/node.ts(73,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(78,24): error TS2351: This expression is not constructable.
-  Type 'Function' has no construct signatures.
 lib/asn1/base/node.ts(83,16): error TS2339: Property '_wrap' does not exist on type 'Node'.
-lib/asn1/base/node.ts(84,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(86,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/base/node.ts(94,16): error TS2339: Property '_init' does not exist on type 'Node'.
-lib/asn1/base/node.ts(95,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(102,40): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/base/node.ts(107,16): error TS2339: Property '_useArgs' does not exist on type 'Node'.
-lib/asn1/base/node.ts(108,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(112,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/node.ts(115,29): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/node.ts(124,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/base/node.ts(136,13): error TS2367: This condition will always return 'false' since the types 'string' and 'number' have no overlap.
 lib/asn1/base/node.ts(136,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/base/node.ts(137,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/asn1/base/node.ts(139,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-lib/asn1/base/node.ts(151,3): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Node'.
-lib/asn1/base/node.ts(152,29): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(162,3): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Node'.
-lib/asn1/base/node.ts(163,29): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(169,10): error TS2339: Property '_useArgs' does not exist on type 'Node'.
 lib/asn1/base/node.ts(175,16): error TS2339: Property 'use' does not exist on type 'Node'.
-lib/asn1/base/node.ts(177,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(185,16): error TS2339: Property 'optional' does not exist on type 'Node'.
-lib/asn1/base/node.ts(186,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(190,3): error TS2322: Type 'Node' is not assignable to type 'boolean'.
 lib/asn1/base/node.ts(193,16): error TS2339: Property 'def' does not exist on type 'Node'.
-lib/asn1/base/node.ts(194,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(203,16): error TS2339: Property 'explicit' does not exist on type 'Node'.
-lib/asn1/base/node.ts(204,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(209,3): error TS2322: Type 'Node' is not assignable to type 'boolean'.
 lib/asn1/base/node.ts(212,16): error TS2339: Property 'implicit' does not exist on type 'Node'.
-lib/asn1/base/node.ts(213,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(221,16): error TS2339: Property 'obj' does not exist on type 'Node'.
-lib/asn1/base/node.ts(222,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(228,10): error TS2339: Property '_useArgs' does not exist on type 'Node'.
 lib/asn1/base/node.ts(233,16): error TS2339: Property 'key' does not exist on type 'Node'.
-lib/asn1/base/node.ts(234,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(239,3): error TS2322: Type 'Node' is not assignable to type 'string'.
 lib/asn1/base/node.ts(242,16): error TS2339: Property 'any' does not exist on type 'Node'.
-lib/asn1/base/node.ts(243,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(250,16): error TS2339: Property 'choice' does not exist on type 'Node'.
-lib/asn1/base/node.ts(251,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(255,8): error TS2339: Property '_useArgs' does not exist on type 'Node'.
-lib/asn1/base/node.ts(263,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(268,3): error TS2322: Type 'Node' is not assignable to type 'boolean'.
 lib/asn1/base/node.ts(275,16): error TS2339: Property '_decode' does not exist on type 'Node'.
-lib/asn1/base/node.ts(276,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(304,16): error TS2339: Property '_decodeGeneric' does not exist on type 'Node'.
-lib/asn1/base/node.ts(306,16): error TS2339: Property '_decodeChoice' does not exist on type 'Node'.
-lib/asn1/base/node.ts(313,22): error TS2339: Property '_peekTag' does not exist on type 'Node'.
-lib/asn1/base/node.ts(328,38): error TS2339: Property '_decodeTag' does not exist on type 'Node'.
-lib/asn1/base/node.ts(341,30): error TS2339: Property '_decodeTag' does not exist on type 'Node'.
-lib/asn1/base/node.ts(365,21): error TS2339: Property '_decodeGeneric' does not exist on type 'Node'.
-lib/asn1/base/node.ts(367,21): error TS2339: Property '_decodeChoice' does not exist on type 'Node'.
-lib/asn1/base/node.ts(385,21): error TS2339: Property '_getUse' does not exist on type 'Node'.
 lib/asn1/base/node.ts(403,16): error TS2339: Property '_decodeGeneric' does not exist on type 'Node'.
-lib/asn1/base/node.ts(404,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(409,17): error TS2339: Property '_decodeList' does not exist on type 'Node'.
-lib/asn1/base/node.ts(411,17): error TS2339: Property '_decodeStr' does not exist on type 'Node'.
-lib/asn1/base/node.ts(413,17): error TS2339: Property '_decodeObjid' does not exist on type 'Node'.
-lib/asn1/base/node.ts(415,17): error TS2339: Property '_decodeObjid' does not exist on type 'Node'.
-lib/asn1/base/node.ts(417,17): error TS2339: Property '_decodeTime' does not exist on type 'Node'.
-lib/asn1/base/node.ts(419,17): error TS2339: Property '_decodeNull' does not exist on type 'Node'.
-lib/asn1/base/node.ts(421,17): error TS2339: Property '_decodeBool' does not exist on type 'Node'.
-lib/asn1/base/node.ts(423,17): error TS2339: Property '_decodeStr' does not exist on type 'Node'.
-lib/asn1/base/node.ts(425,17): error TS2339: Property '_decodeInt' does not exist on type 'Node'.
-lib/asn1/base/node.ts(428,17): error TS2339: Property '_getUse' does not exist on type 'Node'.
 lib/asn1/base/node.ts(435,16): error TS2339: Property '_getUse' does not exist on type 'Node'.
-lib/asn1/base/node.ts(437,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(439,27): error TS2339: Property '_use' does not exist on type 'Node'.
 lib/asn1/base/node.ts(449,16): error TS2339: Property '_decodeChoice' does not exist on type 'Node'.
-lib/asn1/base/node.ts(450,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(481,16): error TS2339: Property '_createEncoderBuffer' does not exist on type 'Node'.
-lib/asn1/base/node.ts(482,39): error TS2339: Property 'reporter' does not exist on type 'Node'.
 lib/asn1/base/node.ts(485,16): error TS2339: Property '_encode' does not exist on type 'Node'.
-lib/asn1/base/node.ts(486,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(490,28): error TS2339: Property '_encodeValue' does not exist on type 'Node'.
-lib/asn1/base/node.ts(494,12): error TS2339: Property '_skipDefault' does not exist on type 'Node'.
 lib/asn1/base/node.ts(500,16): error TS2339: Property '_encodeValue' does not exist on type 'Node'.
-lib/asn1/base/node.ts(501,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(510,8): error TS2339: Property 'reporter' does not exist on type 'Node'.
-lib/asn1/base/node.ts(525,19): error TS2339: Property '_createEncoderBuffer' does not exist on type 'Node'.
-lib/asn1/base/node.ts(527,19): error TS2339: Property '_encodeChoice' does not exist on type 'Node'.
-lib/asn1/base/node.ts(529,20): error TS2339: Property '_getUse' does not exist on type 'Node'.
-lib/asn1/base/node.ts(550,20): error TS2339: Property '_createEncoderBuffer' does not exist on type 'Node'.
-lib/asn1/base/node.ts(560,31): error TS2339: Property 'clone' does not exist on type 'Node'.
-lib/asn1/base/node.ts(562,22): error TS2339: Property '_createEncoderBuffer' does not exist on type 'Node'.
-lib/asn1/base/node.ts(563,28): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/node.ts(565,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/node.ts(568,21): error TS2339: Property '_getUse' does not exist on type 'Node'.
-lib/asn1/base/node.ts(570,22): error TS2339: Property '_encodePrimitive' does not exist on type 'Node'.
-lib/asn1/base/node.ts(585,23): error TS2339: Property '_encodeComposite' does not exist on type 'Node'.
-lib/asn1/base/node.ts(591,19): error TS2339: Property '_encodeComposite' does not exist on type 'Node'.
 lib/asn1/base/node.ts(596,16): error TS2339: Property '_encodeChoice' does not exist on type 'Node'.
-lib/asn1/base/node.ts(597,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(609,16): error TS2339: Property '_encodePrimitive' does not exist on type 'Node'.
-lib/asn1/base/node.ts(610,27): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(613,17): error TS2339: Property '_encodeStr' does not exist on type 'Node'.
-lib/asn1/base/node.ts(615,17): error TS2339: Property '_encodeObjid' does not exist on type 'Node'.
-lib/asn1/base/node.ts(617,17): error TS2339: Property '_encodeObjid' does not exist on type 'Node'.
-lib/asn1/base/node.ts(619,17): error TS2339: Property '_encodeTime' does not exist on type 'Node'.
-lib/asn1/base/node.ts(621,17): error TS2339: Property '_encodeNull' does not exist on type 'Node'.
-lib/asn1/base/node.ts(623,17): error TS2339: Property '_encodeInt' does not exist on type 'Node'.
-lib/asn1/base/node.ts(625,17): error TS2339: Property '_encodeBool' does not exist on type 'Node'.
-lib/asn1/base/node.ts(627,17): error TS2339: Property '_encodeStr' does not exist on type 'Node'.
 lib/asn1/base/node.ts(632,16): error TS2339: Property '_isNumstr' does not exist on type 'Node'.
 lib/asn1/base/node.ts(636,16): error TS2339: Property '_isPrintstr' does not exist on type 'Node'.
 lib/asn1/base/reporter.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'inherits'.
 lib/asn1/base/reporter.ts(5,10): error TS2451: Cannot redeclare block-scoped variable 'Reporter'.
-lib/asn1/base/reporter.ts(6,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/reporter.ts(78,11): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 lib/asn1/base/reporter.ts(80,38): error TS2554: Expected 2 arguments, but got 3.
-lib/asn1/base/reporter.ts(104,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/reporter.ts(105,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/reporter.ts(119,20): error TS2571: Object is of type 'unknown'.
 lib/asn1/constants/der.ts(9,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/asn1/constants/der.ts(9,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/constants/der.ts(10,7): error TS2322: Type 'number' is not assignable to type 'string'.
 lib/asn1/constants/der.ts(10,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/asn1/constants/der.ts(13,5): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
 lib/asn1/constants/der.ts(16,3): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 lib/asn1/constants/index.ts(11,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/asn1/constants/index.ts(11,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/constants/index.ts(12,7): error TS2322: Type 'number' is not assignable to type 'string'.
 lib/asn1/constants/index.ts(12,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/asn1/constants/index.ts(15,5): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
 lib/asn1/constants/index.ts(18,3): error TS2322: Type '{}' is not assignable to type 'any[]'.
 lib/asn1/decoders/der.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'inherits'.
 lib/asn1/decoders/der.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Node'.
 lib/asn1/decoders/der.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'der'.
 lib/asn1/decoders/der.ts(12,10): error TS2451: Cannot redeclare block-scoped variable 'DERDecoder'.
-lib/asn1/decoders/der.ts(13,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/decoders/der.ts(14,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/decoders/der.ts(15,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/decoders/der.ts(18,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/decoders/der.ts(18,15): error TS2554: Expected 1 arguments, but got 0.
-lib/asn1/decoders/der.ts(18,15): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/asn1/decoders/der.ts(19,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/decoders/der.ts(33,10): error TS2393: Duplicate function implementation.
-lib/asn1/decoders/der.ts(34,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/decoders/der.ts(34,19): error TS2554: Expected 1 arguments, but got 3.
 lib/asn1/decoders/der.ts(38,55): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
-lib/asn1/decoders/der.ts(38,73): error TS7006: Parameter 'any' implicitly has an 'any' type.
-lib/asn1/decoders/der.ts(53,74): error TS7006: Parameter 'any' implicitly has an 'any' type.
 lib/asn1/decoders/der.ts(130,59): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 lib/asn1/decoders/der.ts(171,63): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 lib/asn1/decoders/der.ts(207,61): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
@@ -188,23 +65,13 @@ lib/asn1/decoders/index.ts(3,7): error TS2451: Cannot redeclare block-scoped var
 lib/asn1/decoders/pem.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'inherits'.
 lib/asn1/decoders/pem.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'Buffer'.
 lib/asn1/decoders/pem.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'DERDecoder'.
-lib/asn1/decoders/pem.ts(9,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/decoders/pem.ts(10,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/encoders/der.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'inherits'.
 lib/asn1/encoders/der.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'Buffer'.
 lib/asn1/encoders/der.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'Node'.
 lib/asn1/encoders/der.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'der'.
 lib/asn1/encoders/der.ts(10,10): error TS2451: Cannot redeclare block-scoped variable 'DEREncoder'.
-lib/asn1/encoders/der.ts(11,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/encoders/der.ts(12,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/encoders/der.ts(13,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/encoders/der.ts(16,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/encoders/der.ts(16,15): error TS2554: Expected 1 arguments, but got 0.
-lib/asn1/encoders/der.ts(16,15): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/asn1/encoders/der.ts(17,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/encoders/der.ts(27,10): error TS2393: Duplicate function implementation.
-lib/asn1/encoders/der.ts(28,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/encoders/der.ts(28,19): error TS2554: Expected 1 arguments, but got 3.
 lib/asn1/encoders/der.ts(145,5): error TS2322: Type 'string' is not assignable to type 'number'.
 lib/asn1/encoders/der.ts(198,31): error TS2339: Property 'toArray' does not exist on type 'never'.
 lib/asn1/encoders/der.ts(199,14): error TS2339: Property 'sign' does not exist on type 'never'.
@@ -215,265 +82,11 @@ lib/asn1/encoders/der.ts(212,13): error TS2339: Property 'length' does not exist
 lib/asn1/encoders/index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'encoders'.
 lib/asn1/encoders/pem.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'inherits'.
 lib/asn1/encoders/pem.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'DEREncoder'.
-lib/asn1/encoders/pem.ts(8,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/encoders/pem.ts(9,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'asn1'.
 rfc/2560/index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'rfc5280'.
-rfc/2560/index.ts(7,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(8,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(9,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(15,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(16,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(17,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(18,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(19,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(26,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(27,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(28,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(29,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(34,7): error TS2451: Cannot redeclare block-scoped variable 'Request'.
-rfc/2560/index.ts(35,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(36,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(37,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(44,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(45,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(46,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(47,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(50,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(57,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(69,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(70,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(71,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(72,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(73,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(79,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(80,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(81,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(82,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(83,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(84,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(91,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(92,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(93,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(99,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(104,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(105,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(106,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(107,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(108,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(109,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(115,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(116,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(117,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(118,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(124,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(125,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(126,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(132,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(133,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(134,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(135,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(136,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(142,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'asn1'.
 rfc/5280/index.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'rfc5280'.
-rfc/5280/index.ts(43,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(44,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(45,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(46,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(55,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(56,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(57,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(67,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(68,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(69,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(70,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(87,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(88,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(89,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(90,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(91,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(92,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(93,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(94,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(95,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(96,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(97,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(104,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(116,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(117,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(118,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(127,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(128,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(129,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(138,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(139,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(140,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(158,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(159,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(160,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(161,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(162,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(163,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(164,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(165,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(171,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(172,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(173,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(174,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(183,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(184,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(185,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(186,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(189,64): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(198,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(199,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(215,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(216,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(217,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(218,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(219,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(220,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(221,32): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(222,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(223,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(230,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(238,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(239,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(240,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(249,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(250,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(251,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(258,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(266,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(274,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(275,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(276,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(285,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(286,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(287,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(294,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(300,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(311,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(312,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(313,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(314,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(315,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(316,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(326,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(327,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(328,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(329,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(337,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(344,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(354,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(355,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(356,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(358,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(375,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(376,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(377,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(379,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(380,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(382,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(383,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(384,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(386,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(387,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(397,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(398,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(399,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(410,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(411,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(412,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(419,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(425,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(431,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(439,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(440,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(441,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(448,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(454,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(464,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(465,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(466,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(467,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(468,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(477,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(484,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(493,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(503,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(504,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(505,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(514,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(522,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(523,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(524,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(531,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(547,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(553,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(562,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(563,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(564,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(571,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(576,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(584,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(585,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(586,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(593,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(601,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(606,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(607,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(608,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(615,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(621,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(628,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(636,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(637,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(638,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(647,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(648,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(649,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(656,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(665,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(666,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(667,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(668,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(675,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(683,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(684,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(685,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(692,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(698,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(704,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(710,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(719,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(720,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(722,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(723,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(732,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(733,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(734,30): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(750,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(756,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(762,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(770,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(778,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(779,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(780,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(789,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(799,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(804,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(817,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(818,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(820,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(821,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(822,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(823,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(824,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(842,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(859,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(865,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 ../../../../node_modules/@types/assert-plus/index.d.ts(14,32): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 ../../../../node_modules/@types/assert-plus/index.d.ts(38,36): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 ../../../../node_modules/@types/assert-plus/index.d.ts(62,40): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?

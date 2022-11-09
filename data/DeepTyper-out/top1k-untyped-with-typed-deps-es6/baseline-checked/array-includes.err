@@ -2,14 +2,10 @@ implementation.ts(3,33): error TS2307: Cannot find module 'es-abstract/2021/ToIn
 implementation.ts(4,22): error TS2307: Cannot find module 'es-abstract/2021/ToLength' or its corresponding type declarations.
 implementation.ts(5,22): error TS2307: Cannot find module 'es-abstract/2021/ToObject' or its corresponding type declarations.
 implementation.ts(6,27): error TS2307: Cannot find module 'es-abstract/2021/SameValueZero' or its corresponding type declarations.
-implementation.ts(19,6): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
-implementation.ts(20,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-implementation.ts(20,31): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[searchElement: any, fromIndex?: number | undefined]'.
-implementation.ts(23,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(4,36): error TS2307: Cannot find module 'es-abstract/2021/RequireObjectCoercible' or its corresponding type declarations.
 index.ts(9,36): error TS2345: Argument of type 'boolean' is not assignable to parameter of type '(this: unknown, ...args: readonly unknown[]) => unknown'.
 index.ts(15,35): error TS2322: Type '(array: any, searchElement: any) => boolean' is not assignable to type 'boolean'.
 index.ts(20,8): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'object'.
-polyfill.ts(10,10): error TS2322: Type '(searchElement: any, fromIndex?: number | undefined) => boolean' is not assignable to type 'boolean'.
+polyfill.ts(10,10): error TS2322: Type '(searchElement: any, fromIndex?: number) => boolean' is not assignable to type 'boolean'.
 polyfill.ts(12,9): error TS2322: Type '(searchElement: any) => boolean' is not assignable to type 'boolean'.
 

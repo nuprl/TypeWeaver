@@ -1,18 +1,12 @@
 benchmark/check.ts(5,18): error TS2307: Cannot find module 'ansi-bold' or its corresponding type declarations.
 benchmark/code/concat-apply.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
-benchmark/code/concat-apply.ts(6,37): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'ConcatArray<never>[]'.
 benchmark/code/for-concat.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
 benchmark/code/for-each.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
 benchmark/code/for.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
 benchmark/code/reduce.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
-benchmark/code/while-concat-push.ts(4,40): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'ConcatArray<never>[]'.
-  Type 'IArguments' is missing the following properties from type 'ConcatArray<never>[]': pop, push, concat, join, and 27 more.
 benchmark/code/while-concat.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
 benchmark/code/while-for-unique.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
 benchmark/code/while-push-apply.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
-benchmark/code/while-seen.ts(4,41): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'ConcatArray<never>[]'.
-benchmark/code/while-seen.ts(11,11): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-benchmark/code/while-seen.ts(14,14): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
 benchmark/code/while-while-unique.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
 benchmark/index.ts(3,19): error TS2307: Cannot find module 'benchmarked' or its corresponding type declarations.
 index.ts(28,3): error TS2322: Type 'any[]' is not assignable to type 'void'.

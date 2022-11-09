@@ -1,4 +1,4 @@
-index.ts(7,7): error TS2322: Type '(process: any) => any' is not assignable to type 'boolean'.
+index.ts(7,28): error TS2322: Type '(process: any) => boolean' is not assignable to type 'boolean'.
 index.ts(21,6): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
 index.ts(56,10): error TS2349: This expression is not callable.
@@ -9,11 +9,7 @@ index.ts(74,9): error TS2349: This expression is not callable.
 index.ts(82,31): error TS2322: Type '() => void' is not assignable to type 'void'.
 index.ts(83,21): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
-index.ts(90,37): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 index.ts(99,29): error TS2322: Type '(event: any, code: any, signal: any) => void' is not assignable to type 'void'.
-index.ts(111,5): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 index.ts(113,12): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
 index.ts(122,9): error TS2349: This expression is not callable.
@@ -24,8 +20,6 @@ index.ts(125,9): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 index.ts(145,20): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
-index.ts(158,25): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 index.ts(171,42): error TS2322: Type '(code: any) => void' is not assignable to type 'void'.
 index.ts(173,10): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
@@ -36,12 +30,10 @@ index.ts(179,5): error TS2349: This expression is not callable.
 index.ts(185,7): error TS2322: Type '(ev: any, arg: any) => any' is not assignable to type 'boolean'.
 index.ts(186,26): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
-index.ts(191,48): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(193,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 index.ts(195,7): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-index.ts(199,40): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 signals.ts(30,3): error TS2304: Cannot find name 'push'.
 signals.ts(46,3): error TS2304: Cannot find name 'push'.
 ../../../../node_modules/@types/node/ts4.8/globals.d.ts(27,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'process' must be of type 'any', but here has type 'Process'.

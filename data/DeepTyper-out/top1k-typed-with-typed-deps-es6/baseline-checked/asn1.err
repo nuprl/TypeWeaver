@@ -1,12 +1,4 @@
-lib/ber/index.ts(22,25): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ EOC: number; Boolean: number; Integer: number; BitString: number; OctetString: number; Null: number; OID: number; ObjectDescriptor: number; External: number; Real: number; Enumeration: number; PDV: number; ... 18 more ...; Context: number; }'.
-  No index signature with a parameter of type 'string' was found on type '{ EOC: number; Boolean: number; Integer: number; BitString: number; OctetString: number; Null: number; OID: number; ObjectDescriptor: number; External: number; Real: number; Enumeration: number; PDV: number; ... 18 more ...; Context: number; }'.
-lib/ber/index.ts(26,25): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ newInvalidAsn1Error: (msg: string) => Error; }'.
-  No index signature with a parameter of type 'string' was found on type '{ newInvalidAsn1Error: (msg: string) => Error; }'.
 lib/ber/reader.ts(12,5): error TS2322: Type '(msg: string) => Error' is not assignable to type 'number'.
-lib/ber/reader.ts(22,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/reader.ts(23,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/reader.ts(26,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/reader.ts(27,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/ber/reader.ts(100,13): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 lib/ber/reader.ts(103,13): error TS2349: This expression is not callable.
@@ -21,17 +13,7 @@ lib/ber/reader.ts(230,11): error TS2349: This expression is not callable.
 lib/ber/reader.ts(238,11): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 lib/ber/writer.ts(12,5): error TS2322: Type '(msg: string) => Error' is not assignable to type 'number'.
-lib/ber/writer.ts(22,16): error TS7006: Parameter 'from' implicitly has an 'any' type.
-lib/ber/writer.ts(30,12): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-lib/ber/writer.ts(33,9): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'Object'.
-  Type 'undefined' is not assignable to type 'Object'.
 lib/ber/writer.ts(37,3): error TS2322: Type 'string' is not assignable to type 'void'.
-lib/ber/writer.ts(47,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/writer.ts(48,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/writer.ts(48,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/writer.ts(49,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/writer.ts(50,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/writer.ts(54,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/ber/writer.ts(60,13): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
 lib/ber/writer.ts(90,11): error TS2349: This expression is not callable.

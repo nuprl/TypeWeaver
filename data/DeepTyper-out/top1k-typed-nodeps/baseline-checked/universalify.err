@@ -1,14 +1,8 @@
-index.ts(4,42): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
-index.ts(5,63): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(7,26): error TS2345: Argument of type '(resolve: void, reject: void) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
   Types of parameters 'resolve' and 'resolve' are incompatible.
     Type '(value: unknown) => void' is not assignable to type 'void'.
-index.ts(9,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(11,51): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 index.ts(11,65): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
-index.ts(19,42): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
-index.ts(21,51): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(22,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 
