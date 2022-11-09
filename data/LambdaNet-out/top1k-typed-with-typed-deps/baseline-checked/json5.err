@@ -30,11 +30,11 @@ lib/cli.ts(32,13): error TS2322: Type 'string' is not assignable to type 'Number
 lib/cli.ts(34,33): error TS2339: Property 'space' does not exist on type 'Object'.
 lib/cli.ts(39,27): error TS2339: Property 'parse' does not exist on type 'Object'.
 lib/cli.ts(40,23): error TS2339: Property 'validate' does not exist on type 'Object'.
-lib/cli.ts(41,38): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(value: any, replacer?: ((this: any, key: string, value: any) => any) | undefined, space?: string | number | undefined): string', gave the following error.
-    Argument of type 'null' is not assignable to parameter of type '((this: any, key: string, value: any) => any) | undefined'.
-  Overload 2 of 2, '(value: any, replacer?: (string | number)[] | null | undefined, space?: string | number | undefined): string', gave the following error.
-    Argument of type 'Number' is not assignable to parameter of type 'string | number | undefined'.
+lib/cli.ts(41,66): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
+    Argument of type 'Number' is not assignable to parameter of type 'string | number'.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
+    Argument of type 'Number' is not assignable to parameter of type 'string | number'.
 lib/cli.ts(48,26): error TS2339: Property 'convert' does not exist on type 'Object'.
 lib/cli.ts(48,57): error TS2339: Property 'outFile' does not exist on type 'Object'.
 lib/cli.ts(49,57): error TS2339: Property 'parse' does not exist on type 'String'.
@@ -48,16 +48,9 @@ lib/cli.ts(59,38): error TS2339: Property 'createWriteStream' does not exist on 
 lib/cli.ts(59,61): error TS2339: Property 'outFile' does not exist on type 'Object'.
 lib/cli.ts(61,21): error TS2739: Type 'WriteStream & { fd: 1; }' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lib/cli.ts(64,29): error TS2339: Property 'write' does not exist on type 'Number'.
-lib/cli.ts(67,27): error TS2571: Object is of type 'unknown'.
 lib/cli.ts(80,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cli.ts(82,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cli.ts(108,13): error TS2322: Type 'boolean' is not assignable to type 'Number'.
-lib/cli.ts(123,9): error TS2454: Variable 'convert' is used before being assigned.
-lib/cli.ts(124,9): error TS2454: Variable 'space' is used before being assigned.
-lib/cli.ts(125,9): error TS2454: Variable 'validate' is used before being assigned.
-lib/cli.ts(126,9): error TS2454: Variable 'outFile' is used before being assigned.
-lib/cli.ts(127,9): error TS2454: Variable 'version' is used before being assigned.
-lib/cli.ts(128,9): error TS2454: Variable 'help' is used before being assigned.
 lib/cli.ts(133,22): error TS2304: Cannot find name 'Void'.
 lib/cli.ts(134,21): error TS2339: Property 'version' does not exist on type 'String'.
 lib/cli.ts(137,20): error TS2304: Cannot find name 'Void'.
@@ -66,20 +59,12 @@ lib/index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'JSON5'.
 lib/parse.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'util'.
 lib/parse.ts(3,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse.ts(5,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/parse.ts(20,5): error TS2322: Type 'undefined' is not assignable to type 'Object'.
-lib/parse.ts(21,5): error TS2322: Type 'undefined' is not assignable to type 'String'.
-lib/parse.ts(22,5): error TS2322: Type 'undefined' is not assignable to type 'Function'.
 lib/parse.ts(32,21): error TS2538: Type 'String' cannot be used as an index type.
 lib/parse.ts(33,20): error TS2339: Property 'type' does not exist on type 'Object'.
 lib/parse.ts(43,34): error TS2538: Type 'String' cannot be used as an index type.
-lib/parse.ts(48,24): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-lib/parse.ts(50,17): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 lib/parse.ts(71,9): error TS2740: Type 'Number' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/parse.ts(78,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse.ts(78,40): error TS2538: Type 'String' cannot be used as an index type.
-lib/parse.ts(85,19): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 lib/parse.ts(87,9): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/parse.ts(92,11): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/parse.ts(95,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -116,7 +101,6 @@ lib/parse.ts(210,20): error TS2554: Expected 2 arguments, but got 1.
 lib/parse.ts(218,14): error TS2678: Type 'string' is not comparable to type 'Function'.
 lib/parse.ts(219,14): error TS2678: Type 'string' is not comparable to type 'Function'.
 lib/parse.ts(222,14): error TS2678: Type 'string' is not comparable to type 'Function'.
-lib/parse.ts(225,37): error TS2345: Argument of type 'null' is not assignable to parameter of type 'String'.
 lib/parse.ts(227,14): error TS2678: Type 'string' is not comparable to type 'Function'.
 lib/parse.ts(230,40): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
 lib/parse.ts(232,14): error TS2678: Type 'string' is not comparable to type 'Function'.
@@ -328,15 +312,15 @@ lib/parse.ts(1028,64): error TS2345: Argument of type 'Number' is not assignable
 lib/parse.ts(1031,25): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/parse.ts(1046,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/parse.ts(1047,5): error TS2322: Type 'HTMLElement' is not assignable to type 'String'.
-lib/parse.ts(1050,37): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/parse.ts(1050,37): error TS2304: Cannot find name 'Void'.
 lib/parse.ts(1070,22): error TS2538: Type 'String' cannot be used as an index type.
 lib/parse.ts(1071,29): error TS2538: Type 'String' cannot be used as an index type.
 lib/parse.ts(1083,11): error TS2740: Type 'SyntaxError & Error' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lib/parse.ts(1083,46): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string | undefined): SyntaxError', gave the following error.
+  Overload 1 of 2, '(message?: string): SyntaxError', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+  Overload 2 of 2, '(message?: string): Error', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/parse.ts(1084,9): error TS2339: Property 'lineNumber' does not exist on type 'HTMLElement'.
@@ -350,15 +334,12 @@ lib/register.ts(5,1): error TS2322: Type '(module: String, filename: String) => 
 lib/register.ts(6,32): error TS2339: Property 'readFileSync' does not exist on type 'String'.
 lib/register.ts(8,16): error TS2339: Property 'exports' does not exist on type 'String'.
 lib/register.ts(8,32): error TS2339: Property 'parse' does not exist on type 'Object'.
-lib/register.ts(10,9): error TS2571: Object is of type 'unknown'.
-lib/register.ts(10,41): error TS2571: Object is of type 'unknown'.
 lib/stringify.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'util'.
 lib/stringify.ts(4,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/stringify.ts(6,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/stringify.ts(16,26): error TS2339: Property 'space' does not exist on type 'Object'.
 lib/stringify.ts(17,26): error TS2339: Property 'quote' does not exist on type 'Object'.
 lib/stringify.ts(18,29): error TS2339: Property 'replacer' does not exist on type 'Object'.
-lib/stringify.ts(38,17): error TS2454: Variable 'item' is used before being assigned.
 lib/stringify.ts(46,16): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 lib/stringify.ts(47,9): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/stringify.ts(53,42): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
@@ -375,7 +356,6 @@ lib/stringify.ts(80,27): error TS2339: Property 'valueOf' does not exist on type
 lib/stringify.ts(85,14): error TS2678: Type 'boolean' is not comparable to type 'String'.
 lib/stringify.ts(86,14): error TS2678: Type 'boolean' is not comparable to type 'String'.
 lib/stringify.ts(90,39): error TS2554: Expected 1 arguments, but got 2.
-lib/stringify.ts(101,9): error TS2322: Type 'undefined' is not assignable to type 'String'.
 lib/stringify.ts(104,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/stringify.ts(132,24): error TS2538: Type 'String' cannot be used as an index type.
 lib/stringify.ts(133,17): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
@@ -383,16 +363,17 @@ lib/stringify.ts(137,26): error TS2339: Property 'isDigit' does not exist on typ
 lib/stringify.ts(143,30): error TS2538: Type 'String' cannot be used as an index type.
 lib/stringify.ts(144,41): error TS2538: Type 'String' cannot be used as an index type.
 lib/stringify.ts(154,13): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
-lib/stringify.ts(157,15): error TS2322: Type 'String' is not assignable to type 'Number'.
+lib/stringify.ts(157,15): error TS2322: Type 'string | String' is not assignable to type 'Number'.
+  Type 'string' is not assignable to type 'Number'.
 lib/stringify.ts(157,71): error TS2345: Argument of type '(a: String, b: Number) => String | Number' is not assignable to parameter of type '(previousValue: string, currentValue: string, currentIndex: number, array: string[]) => string'.
   Types of parameters 'b' and 'currentValue' are incompatible.
     Type 'string' is not assignable to type 'Number'.
 lib/stringify.ts(157,105): error TS2538: Type 'String' cannot be used as an index type.
 lib/stringify.ts(157,117): error TS2538: Type 'Number' cannot be used as an index type.
 lib/stringify.ts(159,46): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(pattern: string | RegExp, flags?: string | undefined): RegExp', gave the following error.
+  Overload 1 of 3, '(pattern: string | RegExp, flags?: string): RegExp', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'string | RegExp'.
-  Overload 2 of 3, '(pattern: string, flags?: string | undefined): RegExp', gave the following error.
+  Overload 2 of 3, '(pattern: string, flags?: string): RegExp', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'string'.
 lib/stringify.ts(159,76): error TS2538: Type 'Number' cannot be used as an index type.
 lib/stringify.ts(161,16): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.
@@ -406,26 +387,17 @@ lib/stringify.ts(204,9): error TS2322: Type 'Number' is not assignable to type '
 lib/stringify.ts(208,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/stringify.ts(210,37): error TS2554: Expected 1 arguments, but got 2.
 lib/stringify.ts(213,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/stringify.ts(213,55): error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'number'.
-  Type 'undefined' is not assignable to type 'number'.
 lib/stringify.ts(214,19): error TS2339: Property 'isIdStartChar' does not exist on type 'String'.
 lib/stringify.ts(215,37): error TS2554: Expected 1 arguments, but got 2.
 lib/stringify.ts(219,23): error TS2339: Property 'isIdContinueChar' does not exist on type 'String'.
-lib/stringify.ts(219,61): error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'number'.
-  Type 'undefined' is not assignable to type 'number'.
 lib/stringify.ts(220,41): error TS2554: Expected 1 arguments, but got 2.
 lib/stringify.ts(234,13): error TS2322: Type 'String' is not assignable to type 'Number'.
 lib/stringify.ts(235,18): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 lib/stringify.ts(237,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/stringify.ts(258,9): error TS2322: Type 'Number' is not assignable to type 'String'.
-lib/util.ts(4,23): error TS7006: Parameter 'c' implicitly has an 'any' type.
 lib/util.ts(5,49): error TS2339: Property 'Space_Separator' does not exist on type 'String'.
-lib/util.ts(8,20): error TS7006: Parameter 'c' implicitly has an 'any' type.
 lib/util.ts(13,17): error TS2339: Property 'ID_Start' does not exist on type 'String'.
-lib/util.ts(17,23): error TS7006: Parameter 'c' implicitly has an 'any' type.
 lib/util.ts(24,17): error TS2339: Property 'ID_Continue' does not exist on type 'String'.
-lib/util.ts(28,14): error TS7006: Parameter 'c' implicitly has an 'any' type.
-lib/util.ts(32,17): error TS7006: Parameter 'c' implicitly has an 'any' type.
 rollup.config.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'pkg'.
 rollup.config.ts(12,23): error TS2339: Property 'browser' does not exist on type 'String'.
 rollup.config.ts(26,23): error TS2339: Property 'browser' does not exist on type 'String'.

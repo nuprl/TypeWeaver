@@ -1,5 +1,5 @@
 //.CommonJS
-var CSSOM: Element = {
+var CSSOM: String = {
 	CSSStyleDeclaration: require("./CSSStyleDeclaration").CSSStyleDeclaration,
 	CSSRule: require("./CSSRule").CSSRule
 };
@@ -33,7 +33,7 @@ Object.defineProperty(CSSOM.CSSStyleRule.prototype, "cssText", {
 		return text;
 	},
 	set: function(cssText: String) {
-		var rule: Object = CSSOM.CSSStyleRule.parse(cssText);
+		var rule: HTMLElement = CSSOM.CSSStyleRule.parse(cssText);
 		this.style = rule.style;
 		this.selectorText = rule.selectorText;
 	}
@@ -58,7 +58,7 @@ CSSOM.CSSStyleRule.parse = function(ruleText: String) {
 		"value": true
 	};
 
-	var styleRule: Object = new CSSOM.CSSStyleRule();
+	var styleRule: HTMLElement = new CSSOM.CSSStyleRule();
 	var name: String, priority: String="";
 
 	for (var character; (character = ruleText.charAt(i)); i++) {

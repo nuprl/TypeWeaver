@@ -24,7 +24,7 @@ export function isEqualDeclarations(a: TRBL, b: Object): Boolean {
     return cursor1 === null && cursor2 === null;
 }
 
-export function compareDeclarations(declarations1: Function, declarations2: TRBL): TRBL {
+export function compareDeclarations(declarations1: TRBL, declarations2: TRBL): TRBL {
     const result: TRBL = {
         eq: [],
         ne1: [],
@@ -55,7 +55,7 @@ export function compareDeclarations(declarations1: Function, declarations2: TRBL
     }
 
     for (let cursor = declarations2.head; cursor; cursor = cursor.next)  {
-        const data: HTMLElement = cursor.data;
+        const data: TRBL = cursor.data;
 
         if (declarations2hash[data.id]) {
             // when declarations1 has an overriding declaration, this is not a difference
@@ -98,7 +98,7 @@ export function addSelectors(dest: TRBL, source: Array): TRBL {
 }
 
 // check if simpleselectors has no equal specificity and element selector
-export function hasSimilarSelectors(selectors1: Object, selectors2: Object): Boolean {
+export function hasSimilarSelectors(selectors1: TRBL, selectors2: Object): Boolean {
     let cursor1: Object = selectors1.head;
 
     while (cursor1 !== null) {

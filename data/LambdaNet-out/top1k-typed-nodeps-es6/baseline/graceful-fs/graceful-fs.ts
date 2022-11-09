@@ -67,7 +67,7 @@ if (!fs[gracefulQueue]) {
     return close
   })(fs.close)
 
-  fs.closeSync = (function (fs$closeSync: Array) {
+  fs.closeSync = (function (fs$closeSync: Function) {
     function closeSync (fd: Function): Void {
       // This function uses the graceful-fs shared queue
       fs$closeSync.apply(fs, arguments)
@@ -166,7 +166,7 @@ function patch (fs: Object): Array {
     }
   }
 
-  var fs$copyFile: Object = fs.copyFile
+  var fs$copyFile: Array = fs.copyFile
   if (fs$copyFile)
     fs.copyFile = copyFile
   function copyFile (src: String, dest: Number, flags: Number, cb: Number): String {
@@ -336,7 +336,7 @@ function patch (fs: Object): Array {
     })
   }
 
-  function createReadStream (path: String, options: Function): Boolean {
+  function createReadStream (path: String, options: Function): Number {
     return new fs.ReadStream(path, options)
   }
 

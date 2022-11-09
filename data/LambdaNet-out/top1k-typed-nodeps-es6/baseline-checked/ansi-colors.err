@@ -154,8 +154,6 @@ bench/dryrun.ts(42,1261): error TS2339: Property 'red' does not exist on type 'H
 bench/dryrun.ts(42,1285): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
 examples/alias.ts(1,20): error TS2306: File 'index.ts' is not a module.
 examples/chained.ts(4,20): error TS2306: File 'index.ts' is not a module.
-examples/chained.ts(5,19): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
-examples/chained.ts(6,14): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 examples/colors.ts(2,20): error TS2306: File 'index.ts' is not a module.
 examples/colors.ts(6,26): error TS2339: Property 'underline' does not exist on type 'Function'.
 examples/nested.ts(3,20): error TS2306: File 'index.ts' is not a module.
@@ -173,9 +171,7 @@ examples/screenshot-table.ts(30,7): error TS2356: An arithmetic operand must be 
 examples/screenshot.ts(3,20): error TS2306: File 'index.ts' is not a module.
 examples/screenshot.ts(4,23): error TS2307: Cannot find module 'justified' or its corresponding type declarations.
 examples/styles.ts(3,15): error TS2306: File 'index.ts' is not a module.
-examples/styles.ts(4,11): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 examples/theme-custom-fn.ts(1,20): error TS2306: File 'index.ts' is not a module.
-examples/theme-custom-fn.ts(9,6): error TS7006: Parameter 'message' implicitly has an 'any' type.
 examples/theme.ts(1,20): error TS2306: File 'index.ts' is not a module.
 examples/theme2.ts(1,20): error TS2306: File 'index.ts' is not a module.
 examples/unstyle.ts(1,20): error TS2306: File 'index.ts' is not a module.
@@ -212,8 +208,6 @@ index.ts(59,30): error TS2339: Property 'keys' does not exist on type 'HTMLEleme
 index.ts(59,52): error TS2339: Property 'keys' does not exist on type 'HTMLElement'.
 index.ts(62,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 index.ts(66,16): error TS2339: Property 'alias' does not exist on type 'HTMLElement'.
-index.ts(69,13): error TS7023: 'color' implicitly has return type 'any' because it does not have a return type annotation and is referenced directly or indirectly in one of its return expressions.
-index.ts(69,21): error TS7006: Parameter 'input' implicitly has an 'any' type.
 index.ts(69,49): error TS2339: Property 'stack' does not exist on type '(input: any) => any'.
 index.ts(71,15): error TS2339: Property 'stack' does not exist on type '(input: any) => any'.
 index.ts(124,10): error TS2339: Property 'ansiRegex' does not exist on type 'HTMLElement'.
@@ -222,23 +216,17 @@ index.ts(125,28): error TS2339: Property 'hasAnsi' does not exist on type 'HTMLE
 index.ts(126,12): error TS2339: Property 'ansiRegex' does not exist on type 'HTMLElement'.
 index.ts(127,60): error TS2339: Property 'ansiRegex' does not exist on type 'HTMLElement'.
 index.ts(130,10): error TS2339: Property 'alias' does not exist on type 'HTMLElement'.
-index.ts(131,52): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'HTMLElement'.
-  No index signature with a parameter of type 'string' was found on type 'HTMLElement'.
 index.ts(137,13): error TS2339: Property 'stack' does not exist on type 'Function'.
 index.ts(139,14): error TS2551: Property 'styles' does not exist on type 'HTMLElement'. Did you mean 'style'?
 index.ts(140,10): error TS2339: Property 'stack' does not exist on type 'Function'.
 index.ts(143,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 index.ts(147,16): error TS2339: Property 'alias' does not exist on type 'HTMLElement'.
-index.ts(150,13): error TS7023: 'color' implicitly has return type 'any' because it does not have a return type annotation and is referenced directly or indirectly in one of its return expressions.
-index.ts(150,21): error TS7006: Parameter 'input' implicitly has an 'any' type.
 index.ts(150,49): error TS2339: Property 'stack' does not exist on type '(input: any) => any'.
 index.ts(152,15): error TS2339: Property 'stack' does not exist on type '(input: any) => any'.
 index.ts(152,57): error TS2339: Property 'stack' does not exist on type 'Function'.
 index.ts(152,69): error TS2339: Property 'stack' does not exist on type 'Function'.
 index.ts(158,10): error TS2339: Property 'theme' does not exist on type 'HTMLElement'.
 index.ts(161,14): error TS2339: Property 'alias' does not exist on type 'HTMLElement'.
-index.ts(161,26): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 index.ts(166,10): error TS2339: Property 'alias' does not exist on type 'HTMLElement'.
 index.ts(168,14): error TS2339: Property 'ansiRegex' does not exist on type 'HTMLElement'.
 index.ts(169,33): error TS2339: Property 'ansiRegex' does not exist on type 'HTMLElement'.

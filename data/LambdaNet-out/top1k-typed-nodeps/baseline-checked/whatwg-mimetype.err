@@ -1,21 +1,13 @@
 lib/mime-type-parameters.ts(3,3): error TS2451: Cannot redeclare block-scoped variable 'asciiLowercase'.
 lib/mime-type-parameters.ts(4,3): error TS2451: Cannot redeclare block-scoped variable 'solelyContainsHTTPTokenCodePoints'.
 lib/mime-type-parameters.ts(5,3): error TS2451: Cannot redeclare block-scoped variable 'soleyContainsHTTPQuotedStringTokenCodePoints'.
-lib/mime-type-parameters.ts(9,15): error TS7006: Parameter 'map' implicitly has an 'any' type.
 lib/mime-type-parameters.ts(10,10): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
 lib/mime-type-parameters.ts(14,17): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
-lib/mime-type-parameters.ts(17,7): error TS7006: Parameter 'name' implicitly has an 'any' type.
 lib/mime-type-parameters.ts(19,17): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
-lib/mime-type-parameters.ts(22,7): error TS7006: Parameter 'name' implicitly has an 'any' type.
 lib/mime-type-parameters.ts(24,17): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
-lib/mime-type-parameters.ts(27,7): error TS7006: Parameter 'name' implicitly has an 'any' type.
-lib/mime-type-parameters.ts(27,13): error TS7006: Parameter 'value' implicitly has an 'any' type.
 lib/mime-type-parameters.ts(39,17): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
 lib/mime-type-parameters.ts(43,10): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
-lib/mime-type-parameters.ts(46,10): error TS7006: Parameter 'name' implicitly has an 'any' type.
 lib/mime-type-parameters.ts(48,17): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
-lib/mime-type-parameters.ts(51,11): error TS7006: Parameter 'callbackFn' implicitly has an 'any' type.
-lib/mime-type-parameters.ts(51,23): error TS7006: Parameter 'thisArg' implicitly has an 'any' type.
 lib/mime-type-parameters.ts(52,10): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
 lib/mime-type-parameters.ts(56,17): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
 lib/mime-type-parameters.ts(60,17): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
@@ -23,7 +15,6 @@ lib/mime-type-parameters.ts(64,17): error TS2339: Property '_map' does not exist
 lib/mime-type-parameters.ts(68,17): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
 lib/mime-type.ts(6,3): error TS2451: Cannot redeclare block-scoped variable 'asciiLowercase'.
 lib/mime-type.ts(7,3): error TS2451: Cannot redeclare block-scoped variable 'solelyContainsHTTPTokenCodePoints'.
-lib/mime-type.ts(11,15): error TS7006: Parameter 'string' implicitly has an 'any' type.
 lib/mime-type.ts(13,20): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
 lib/mime-type.ts(18,10): error TS2551: Property '_type' does not exist on type 'MIMEType'. Did you mean 'type'?
@@ -31,7 +22,6 @@ lib/mime-type.ts(19,10): error TS2551: Property '_subtype' does not exist on typ
 lib/mime-type.ts(20,10): error TS2551: Property '_parameters' does not exist on type 'MIMEType'. Did you mean 'parameters'?
 lib/mime-type.ts(20,28): error TS2351: This expression is not constructable.
   Type 'String' has no construct signatures.
-lib/mime-type.ts(23,16): error TS7006: Parameter 'string' implicitly has an 'any' type.
 lib/mime-type.ts(36,17): error TS2551: Property '_type' does not exist on type 'MIMEType'. Did you mean 'type'?
 lib/mime-type.ts(49,10): error TS2551: Property '_type' does not exist on type 'MIMEType'. Did you mean 'type'?
 lib/mime-type.ts(53,17): error TS2551: Property '_subtype' does not exist on type 'MIMEType'. Did you mean 'subtype'?
@@ -61,7 +51,6 @@ lib/parser.ts(53,7): error TS2356: An arithmetic operand must be of type 'any', 
 lib/parser.ts(56,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/parser.ts(62,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/parser.ts(72,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/parser.ts(75,9): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/parser.ts(80,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/parser.ts(86,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/parser.ts(99,19): error TS2339: Property 'parameters' does not exist on type 'Object'.

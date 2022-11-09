@@ -2,8 +2,6 @@ browser/type-check.ts(7,1): error TS2739: Type 'Function' is missing the followi
 browser/type-check.ts(7,55): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(7,119): error TS2538: Type 'String' cannot be used as an index type.
 browser/type-check.ts(7,129): error TS2538: Type 'String' cannot be used as an index type.
-browser/type-check.ts(7,137): error TS2322: Type 'false | NodeRequire' is not assignable to type 'Function'.
-  Type 'boolean' is not assignable to type 'Function'.
 browser/type-check.ts(7,225): error TS2554: Expected 1 arguments, but got 2.
 browser/type-check.ts(7,290): error TS2339: Property 'code' does not exist on type 'Error'.
 browser/type-check.ts(7,332): error TS2538: Type 'String' cannot be used as an index type.
@@ -40,7 +38,6 @@ browser/type-check.ts(74,38): error TS2345: Argument of type 'Function' is not a
 browser/type-check.ts(77,21): error TS2538: Type 'String' cannot be used as an index type.
 browser/type-check.ts(78,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/type-check.ts(81,17): error TS2339: Property 'subset' does not exist on type 'Object'.
-browser/type-check.ts(83,77): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 browser/type-check.ts(87,18): error TS2339: Property 'structure' does not exist on type 'Function'.
 browser/type-check.ts(98,20): error TS2339: Property 'type' does not exist on type 'Object'.
 browser/type-check.ts(98,46): error TS2339: Property 'structure' does not exist on type 'Object'.
@@ -59,7 +56,6 @@ browser/type-check.ts(130,17): error TS2339: Property 'customTypes' does not exi
 browser/type-check.ts(131,15): error TS2339: Property 'customTypes' does not exist on type 'Object'.
 browser/type-check.ts(133,26): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'String'.
   Type 'Element' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-browser/type-check.ts(135,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/type-check.ts(140,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(142,25): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 browser/type-check.ts(150,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -67,7 +63,6 @@ browser/type-check.ts(158,30): error TS2314: Generic type 'Array<T>' requires 1 
 browser/type-check.ts(161,9): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 browser/type-check.ts(166,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(169,9): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
-browser/type-check.ts(172,7): error TS2322: Type 'null' is not assignable to type 'String'.
 browser/type-check.ts(177,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 browser/type-check.ts(182,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 browser/type-check.ts(189,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -76,18 +71,12 @@ browser/type-check.ts(197,30): error TS2345: Argument of type 'string' is not as
 browser/type-check.ts(202,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 browser/type-check.ts(211,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 browser/type-check.ts(214,34): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
-browser/type-check.ts(218,42): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-browser/type-check.ts(218,59): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 browser/type-check.ts(219,14): error TS2538: Type 'String' cannot be used as an index type.
 browser/type-check.ts(220,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 browser/type-check.ts(225,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 browser/type-check.ts(232,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(235,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 browser/type-check.ts(239,51): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-browser/type-check.ts(240,13): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 browser/type-check.ts(242,27): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
@@ -108,11 +97,9 @@ browser/type-check.ts(307,35): error TS2345: Argument of type 'string' is not as
 browser/type-check.ts(313,3): error TS2739: Type 'RegExp' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 browser/type-check.ts(314,10): error TS2339: Property 'exports' does not exist on type 'Function'.
 browser/type-check.ts(314,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(326,7): error TS2322: Type 'unknown' is not assignable to type 'Function'.
 browser/type-check.ts(327,25): error TS2339: Property 'message' does not exist on type 'Function'.
 browser/type-check.ts(330,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(332,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-browser/type-check.ts(335,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/type-check.ts(339,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(340,1): error TS2740: Type 'Boolean' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 browser/type-check.ts(340,9): error TS2554: Expected 2 arguments, but got 1.
@@ -138,8 +125,6 @@ browser/type-check.ts(386,8): error TS2339: Property 'exports' does not exist on
 browser/type-check.ts(394,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(396,37): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 browser/type-check.ts(398,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(399,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser/type-check.ts(399,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/type-check.ts(409,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(409,109): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(409,274): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -233,12 +218,6 @@ browser/type-check.ts(552,10): error TS2554: Expected 2 arguments, but got 1.
 browser/type-check.ts(552,41): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(555,11): error TS2554: Expected 2 arguments, but got 1.
 browser/type-check.ts(556,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(560,17): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-browser/type-check.ts(561,9): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-browser/type-check.ts(566,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'ConcatArray<never>[]'.
-  Type 'String' is missing the following properties from type 'ConcatArray<never>[]': pop, push, join, reverse, and 21 more.
 browser/type-check.ts(568,13): error TS2554: Expected 2 arguments, but got 1.
 browser/type-check.ts(571,61): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(572,18): error TS2322: Type 'number' is not assignable to type 'Function'.
@@ -402,19 +381,18 @@ browser/type-check.ts(914,34): error TS2365: Operator '<' cannot be applied to t
 browser/type-check.ts(914,47): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/type-check.ts(925,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(925,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(925,98): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(925,142): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(925,171): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(925,96): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(925,140): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(925,169): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(927,16): error TS2322: Type 'number' is not assignable to type 'Function'.
 browser/type-check.ts(927,40): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 browser/type-check.ts(927,52): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/type-check.ts(928,25): error TS2538: Type 'Number' cannot be used as an index type.
-browser/type-check.ts(931,3): error TS2322: Type 'undefined' is not assignable to type 'Number'.
-browser/type-check.ts(932,35): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
+browser/type-check.ts(932,35): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
 browser/type-check.ts(932,48): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/type-check.ts(934,41): error TS2739: Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 browser/type-check.ts(936,34): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-browser/type-check.ts(939,37): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
+browser/type-check.ts(939,37): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
 browser/type-check.ts(939,50): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/type-check.ts(948,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(948,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -424,7 +402,6 @@ browser/type-check.ts(950,16): error TS2322: Type 'number' is not assignable to 
 browser/type-check.ts(950,40): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 browser/type-check.ts(950,52): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/type-check.ts(951,25): error TS2538: Type 'Number' cannot be used as an index type.
-browser/type-check.ts(954,3): error TS2322: Type 'undefined' is not assignable to type 'Number'.
 browser/type-check.ts(955,35): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 browser/type-check.ts(955,48): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/type-check.ts(957,41): error TS2322: Type 'Function' is not assignable to type 'Number'.
@@ -462,12 +439,9 @@ browser/type-check.ts(1022,8): error TS2339: Property 'exports' does not exist o
 browser/type-check.ts(1094,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(1096,37): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 browser/type-check.ts(1098,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(1099,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser/type-check.ts(1099,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/type-check.ts(1107,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(1109,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/type-check.ts(1113,18): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-browser/type-check.ts(1116,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/type-check.ts(1117,41): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/type-check.ts(1126,86): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(1126,98): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -477,12 +451,13 @@ browser/type-check.ts(1126,176): error TS2314: Generic type 'Array<T>' requires 
 browser/type-check.ts(1126,189): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(1126,200): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(1126,238): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(1126,278): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(1126,291): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(1126,305): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(1126,339): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(1126,355): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(1126,446): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(1126,264): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(1126,277): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(1126,290): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(1126,304): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(1126,338): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(1126,354): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(1126,445): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(1127,1): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
 browser/type-check.ts(1127,7): error TS2554: Expected 2 arguments, but got 1.
 browser/type-check.ts(1130,1): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
@@ -511,7 +486,6 @@ browser/type-check.ts(1168,19): error TS2345: Argument of type 'Number' is not a
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 browser/type-check.ts(1170,1): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
 browser/type-check.ts(1172,1): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
-browser/type-check.ts(1173,1): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
 browser/type-check.ts(1176,9): error TS2554: Expected 2 arguments, but got 1.
 browser/type-check.ts(1177,21): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -536,8 +510,6 @@ browser/type-check.ts(1208,8): error TS2339: Property 'exports' does not exist o
 browser/type-check.ts(1242,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(1244,37): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 browser/type-check.ts(1246,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(1247,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser/type-check.ts(1247,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/type-check.ts(1257,95): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(1257,160): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(1257,229): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -547,11 +519,6 @@ browser/type-check.ts(1267,28): error TS2314: Generic type 'Array<T>' requires 1
 browser/type-check.ts(1273,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(1275,38): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 browser/type-check.ts(1275,51): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-browser/type-check.ts(1277,5): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-browser/type-check.ts(1277,16): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-browser/type-check.ts(1277,24): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 browser/type-check.ts(1282,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(1284,20): error TS2538: Type 'String' cannot be used as an index type.
 browser/type-check.ts(1289,14): error TS2554: Expected 2 arguments, but got 1.
@@ -590,8 +557,6 @@ browser/type-check.ts(1381,8): error TS2339: Property 'exports' does not exist o
 browser/type-check.ts(1397,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(1399,37): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 browser/type-check.ts(1401,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(1402,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser/type-check.ts(1402,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/type-check.ts(1413,9): error TS2554: Expected 2 arguments, but got 1.
 browser/type-check.ts(1413,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(1416,1): error TS2322: Type 'Boolean' is not assignable to type 'String'.
@@ -623,8 +588,6 @@ browser/type-check.ts(1475,8): error TS2339: Property 'exports' does not exist o
 browser/type-check.ts(1490,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(1492,37): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 browser/type-check.ts(1494,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(1495,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser/type-check.ts(1495,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/type-check.ts(1514,1): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 browser/type-check.ts(1514,10): error TS2554: Expected 2 arguments, but got 1.
 browser/type-check.ts(1517,1): error TS2322: Type 'Boolean' is not assignable to type 'String'.
@@ -902,10 +865,7 @@ browser/type-check.ts(1668,8): error TS2339: Property 'exports' does not exist o
 browser/type-check.ts(1669,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(1671,37): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 browser/type-check.ts(1673,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(1674,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser/type-check.ts(1674,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/type-check.ts(1692,10): error TS2339: Property 'exports' does not exist on type 'Function'.
-browser/type-check.ts(1698,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/check.ts(4,44): error TS2339: Property 'any' does not exist on type 'Object'.
 lib/check.ts(4,60): error TS2339: Property 'all' does not exist on type 'Object'.
 lib/check.ts(4,80): error TS2339: Property 'isItNaN' does not exist on type 'Object'.
@@ -931,7 +891,6 @@ lib/check.ts(67,38): error TS2345: Argument of type 'Function' is not assignable
 lib/check.ts(70,21): error TS2538: Type 'String' cannot be used as an index type.
 lib/check.ts(71,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/check.ts(74,17): error TS2339: Property 'subset' does not exist on type 'Object'.
-lib/check.ts(76,77): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 lib/check.ts(80,18): error TS2339: Property 'structure' does not exist on type 'Function'.
 lib/check.ts(91,20): error TS2339: Property 'type' does not exist on type 'Object'.
 lib/check.ts(91,46): error TS2339: Property 'structure' does not exist on type 'Object'.
@@ -954,7 +913,6 @@ lib/parse-type.ts(21,30): error TS2314: Generic type 'Array<T>' requires 1 type 
 lib/parse-type.ts(24,9): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 lib/parse-type.ts(29,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse-type.ts(32,9): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
-lib/parse-type.ts(35,7): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/parse-type.ts(40,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 lib/parse-type.ts(45,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 lib/parse-type.ts(52,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -963,18 +921,12 @@ lib/parse-type.ts(60,30): error TS2345: Argument of type 'string' is not assigna
 lib/parse-type.ts(65,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 lib/parse-type.ts(74,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 lib/parse-type.ts(77,34): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
-lib/parse-type.ts(81,42): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/parse-type.ts(81,59): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/parse-type.ts(82,14): error TS2538: Type 'String' cannot be used as an index type.
 lib/parse-type.ts(83,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 lib/parse-type.ts(88,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 lib/parse-type.ts(95,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse-type.ts(98,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 lib/parse-type.ts(102,51): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/parse-type.ts(103,13): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 lib/parse-type.ts(105,27): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/parse-type.ts(107,27): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
@@ -993,7 +945,6 @@ lib/parse-type.ts(168,20): error TS2538: Type 'String' cannot be used as an inde
 lib/parse-type.ts(170,35): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 lib/parse-type.ts(176,3): error TS2322: Type 'RegExp' is not assignable to type 'Number'.
 lib/parse-type.ts(177,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/parse-type.ts(189,7): error TS2322: Type 'unknown' is not assignable to type 'Function'.
 lib/parse-type.ts(190,25): error TS2339: Property 'message' does not exist on type 'Function'.
 lib/parse-type.ts(193,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse-type.ts(195,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.

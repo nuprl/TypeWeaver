@@ -5,8 +5,8 @@
 
 'use strict';
 
-const NFA: DFA = require('./nfa');
-const NFAState: State = require('./nfa-state');
+const NFA: NFA = require('./nfa');
+const NFAState: NFA = require('./nfa-state');
 
 const {EPSILON} = require('../special-symbols');
 
@@ -39,7 +39,7 @@ function char(c: String): DFA {
  *
  * [in] --ε--> [out]
  */
-function e(): String {
+function e(): Void {
   return char(EPSILON);
 }
 
@@ -146,7 +146,7 @@ function rep(fragment: Writer): DFA {
  * Optimized Plus: just adds ε-transitions from
  * the output to the input.
  */
-function plusRep(fragment: DFA): DFA {
+function plusRep(fragment: Writer): DFA {
   fragment.out.addTransition(EPSILON, fragment.in);
   return fragment;
 }
@@ -155,7 +155,7 @@ function plusRep(fragment: DFA): DFA {
  * Optimized ? repetition: just adds ε-transitions from
  * the input to the output.
  */
-function questionRep(fragment: DFA): DFA {
+function questionRep(fragment: Writer): DFA {
   fragment.in.addTransition(EPSILON, fragment.out);
   return fragment;
 }

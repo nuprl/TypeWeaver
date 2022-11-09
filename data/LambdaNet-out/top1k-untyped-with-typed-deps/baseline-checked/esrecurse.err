@@ -2,17 +2,12 @@ esrecurse.ts(33,56): error TS2339: Property 'type' does not exist on type 'Objec
 esrecurse.ts(37,41): error TS2339: Property 'Syntax' does not exist on type 'HTMLElement'.
 esrecurse.ts(37,92): error TS2339: Property 'Syntax' does not exist on type 'HTMLElement'.
 esrecurse.ts(40,57): error TS2304: Cannot find name 'Void'.
-esrecurse.ts(43,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-esrecurse.ts(43,38): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-esrecurse.ts(44,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 esrecurse.ts(44,43): error TS2339: Property 'childVisitorKeys' does not exist on type 'Object'.
 esrecurse.ts(45,44): error TS2339: Property 'VisitorKeys' does not exist on type 'HTMLElement'.
 esrecurse.ts(45,65): error TS2339: Property 'childVisitorKeys' does not exist on type 'Object'.
 esrecurse.ts(46,26): error TS2339: Property 'VisitorKeys' does not exist on type 'HTMLElement'.
 esrecurse.ts(47,21): error TS2339: Property 'fallback' does not exist on type 'Object'.
-esrecurse.ts(48,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 esrecurse.ts(49,35): error TS2339: Property 'fallback' does not exist on type 'Object'.
-esrecurse.ts(50,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 esrecurse.ts(50,39): error TS2339: Property 'fallback' does not exist on type 'Object'.
 esrecurse.ts(59,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 esrecurse.ts(59,101): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -21,7 +16,6 @@ esrecurse.ts(65,40): error TS2339: Property 'Syntax' does not exist on type 'HTM
 esrecurse.ts(67,44): error TS2538: Type 'String' cannot be used as an index type.
 esrecurse.ts(76,43): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 esrecurse.ts(76,53): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-esrecurse.ts(77,21): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 esrecurse.ts(80,33): error TS2322: Type 'number' is not assignable to type 'Function'.
 esrecurse.ts(80,52): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 esrecurse.ts(80,62): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -32,7 +26,7 @@ esrecurse.ts(102,21): error TS2339: Property 'type' does not exist on type 'Obje
 esrecurse.ts(102,40): error TS2339: Property 'Syntax' does not exist on type 'HTMLElement'.
 esrecurse.ts(103,28): error TS2538: Type 'String' cannot be used as an index type.
 esrecurse.ts(104,28): error TS2538: Type 'String' cannot be used as an index type.
-esrecurse.ts(113,30): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+esrecurse.ts(113,30): error TS2350: Only a void function can be called with the 'new' keyword.
 esrecurse.ts(113,42): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
   Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 esrecurse.ts(114,11): error TS2339: Property 'visit' does not exist on type 'HTMLElement'.

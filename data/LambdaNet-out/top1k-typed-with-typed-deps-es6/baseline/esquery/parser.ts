@@ -185,7 +185,7 @@
           },
         peg$c24: String = "*",
         peg$c25: Function = peg$literalExpectation("*", false),
-        peg$c26: Function = function(a: Array) { return { type: 'wildcard', value: a }; },
+        peg$c26: Function = function(a: String) { return { type: 'wildcard', value: a }; },
         peg$c27: String = "#",
         peg$c28: Function = peg$literalExpectation("#", false),
         peg$c29: Function = function(i: String) { return { type: 'identifier', value: i }; },
@@ -238,7 +238,7 @@
         peg$c66: RegExp = /^[^ )]/,
         peg$c67: Function = peg$classExpectation([" ", ")"], true, false),
         peg$c68: String = ")",
-        peg$c69: Object = peg$literalExpectation(")", false),
+        peg$c69: Function = peg$literalExpectation(")", false),
         peg$c70: Function = function(t: Array) { return { type: 'type', value: t.join('') }; },
         peg$c71: RegExp = /^[imsu]/,
         peg$c72: Function = peg$classExpectation(["i", "m", "s", "u"], false, false),
@@ -253,7 +253,7 @@
           return { type: 'field', name: is.reduce(function(memo: Number, p: Promise){ return memo + p[0] + p[1]; }, i)};
         },
         peg$c79: String = ":not(",
-        peg$c80: Object = peg$literalExpectation(":not(", false),
+        peg$c80: Function = peg$literalExpectation(":not(", false),
         peg$c81: Function = function(ss: Array) { return { type: 'not', selectors: ss }; },
         peg$c82: String = ":matches(",
         peg$c83: Function = peg$literalExpectation(":matches(", false),
@@ -418,7 +418,7 @@
       return new peg$SyntaxError(message, null, null, location);
     }
 
-    function peg$buildStructuredError(expected: String, found: String, location: Number): String {
+    function peg$buildStructuredError(expected: String, found: Function, location: Number): String {
       return new peg$SyntaxError(
         peg$SyntaxError.buildMessage(expected, found),
         expected,
@@ -512,7 +512,7 @@
       return s0;
     }
 
-    function peg$parseidentifierName(): Boolean {
+    function peg$parseidentifierName(): Number {
       var s0: Number, s1: Array, s2: String;
 
       var key: String    = peg$currPos * 30 + 2,
@@ -1729,7 +1729,7 @@
       return s0;
     }
 
-    function peg$parsepath(): Boolean {
+    function peg$parsepath(): Number {
       var s0: Number, s1: Number;
 
       var key: String    = peg$currPos * 30 + 17,
@@ -2244,7 +2244,7 @@
       return s0;
     }
 
-    function peg$parsefirstChild(): Boolean {
+    function peg$parsefirstChild(): Number {
       var s0: Number, s1: String;
 
       var key: String    = peg$currPos * 30 + 25,

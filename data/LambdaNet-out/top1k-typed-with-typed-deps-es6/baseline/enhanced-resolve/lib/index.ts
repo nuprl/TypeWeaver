@@ -48,7 +48,7 @@ const syncResolver: Resolver = ResolverFactory.createResolver({
 	useSyncFileSystemCalls: true,
 	fileSystem: nodeFileSystem
 });
-function resolveSync(context: String, path: String, request: CachedInputFileSystem): Promise {
+function resolveSync(context: String, path: String, request: Object): Promise {
 	if (typeof context === "string") {
 		request = path;
 		path = context;
@@ -85,7 +85,7 @@ function createSync(options: Object): Function {
 		...options
 	};
 	const resolver: Resolver = ResolverFactory.createResolver(options);
-	return function (context: Number, path: String, request: CachedInputFileSystem) {
+	return function (context: Number, path: String, request: ResultPlugin) {
 		if (typeof context === "string") {
 			request = path;
 			path = context;

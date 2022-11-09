@@ -9,16 +9,11 @@ lib/asn1/api.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'enco
 lib/asn1/api.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'decoders'.
 lib/asn1/api.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'inherits'.
 lib/asn1/api.ts(9,5): error TS2339: Property 'define' does not exist on type 'RegExp'.
-lib/asn1/api.ts(10,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/asn1/api.ts(10,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/asn1/api.ts(13,48): error TS2304: Cannot find name 'Void'.
-lib/asn1/api.ts(14,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/api.ts(15,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/api.ts(17,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/api.ts(18,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/api.ts(24,39): error TS2304: Cannot find name 'Void'.
-lib/asn1/api.ts(25,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/api.ts(28,87): error TS2304: Cannot find name 'Void'.
-lib/asn1/api.ts(32,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/asn1/api.ts(32,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/asn1/api.ts(39,19): error TS2538: Type 'String' cannot be used as an index type.
 lib/asn1/api.ts(39,53): error TS2538: Type 'String' cannot be used as an index type.
 lib/asn1/api.ts(40,24): error TS2538: Type 'String' cannot be used as an index type.
@@ -30,12 +25,7 @@ lib/asn1/base/buffer.ts(4,7): error TS2451: Cannot redeclare block-scoped variab
 lib/asn1/base/buffer.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'Buffer'.
 lib/asn1/base/buffer.ts(7,58): error TS2304: Cannot find name 'Void'.
 lib/asn1/base/buffer.ts(8,12): error TS2339: Property 'call' does not exist on type 'Object'.
-lib/asn1/base/buffer.ts(8,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/base/buffer.ts(9,15): error TS2339: Property 'isBuffer' does not exist on type 'HTMLElement'.
-lib/asn1/base/buffer.ts(10,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(14,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(15,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(16,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/base/buffer.ts(21,15): error TS2339: Property 'isDecoderBuffer' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(22,23): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 lib/asn1/base/buffer.ts(28,12): error TS2339: Property 'isBuffer' does not exist on type 'HTMLElement'.
@@ -71,23 +61,13 @@ lib/asn1/base/buffer.ts(84,15): error TS2339: Property 'prototype' does not exis
 lib/asn1/base/buffer.ts(84,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/base/buffer.ts(85,38): error TS2339: Property 'offset' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(88,58): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/asn1/base/buffer.ts(90,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(91,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/base/buffer.ts(91,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/base/buffer.ts(92,26): error TS2339: Property 'isEncoderBuffer' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(93,20): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
-lib/asn1/base/buffer.ts(94,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(96,8): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/base/buffer.ts(99,23): error TS2339: Property 'error' does not exist on type 'Object'.
-lib/asn1/base/buffer.ts(100,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(101,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(103,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(104,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/base/buffer.ts(104,26): error TS2339: Property 'byteLength' does not exist on type 'HTMLElement'.
 lib/asn1/base/buffer.ts(105,21): error TS2339: Property 'isBuffer' does not exist on type 'HTMLElement'.
-lib/asn1/base/buffer.ts(106,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/buffer.ts(107,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/base/buffer.ts(109,21): error TS2339: Property 'error' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(114,15): error TS2339: Property 'isEncoderBuffer' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(114,64): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -107,8 +87,7 @@ lib/asn1/base/node.ts(9,13): error TS2314: Generic type 'Array<T>' requires 1 ty
 lib/asn1/base/node.ts(17,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/base/node.ts(23,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/base/node.ts(32,10): error TS2300: Duplicate identifier 'Node'.
-lib/asn1/base/node.ts(32,59): error TS2304: Cannot find name 'Void'.
-lib/asn1/base/node.ts(34,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/asn1/base/node.ts(32,61): error TS2304: Cannot find name 'Void'.
 lib/asn1/base/node.ts(36,9): error TS2339: Property 'name' does not exist on type 'Object'.
 lib/asn1/base/node.ts(37,9): error TS2339: Property 'enc' does not exist on type 'Object'.
 lib/asn1/base/node.ts(39,9): error TS2339: Property 'parent' does not exist on type 'Object'.
@@ -123,51 +102,37 @@ lib/asn1/base/node.ts(49,9): error TS2339: Property 'obj' does not exist on type
 lib/asn1/base/node.ts(50,9): error TS2339: Property 'use' does not exist on type 'Object'.
 lib/asn1/base/node.ts(51,9): error TS2339: Property 'useDecoder' does not exist on type 'Object'.
 lib/asn1/base/node.ts(52,9): error TS2339: Property 'key' does not exist on type 'Object'.
-lib/asn1/base/node.ts(53,3): error TS7053: Element implicitly has an 'any' type because expression of type '"default"' can't be used to index type 'Object'.
-  Property 'default' does not exist on type 'Object'.
 lib/asn1/base/node.ts(54,9): error TS2339: Property 'explicit' does not exist on type 'Object'.
 lib/asn1/base/node.ts(55,9): error TS2339: Property 'implicit' does not exist on type 'Object'.
 lib/asn1/base/node.ts(56,9): error TS2339: Property 'contains' does not exist on type 'Object'.
 lib/asn1/base/node.ts(59,14): error TS2339: Property 'parent' does not exist on type 'Object'.
 lib/asn1/base/node.ts(60,11): error TS2339: Property 'children' does not exist on type 'Object'.
-lib/asn1/base/node.ts(61,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/base/node.ts(66,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/base/node.ts(72,16): error TS2339: Property 'clone' does not exist on type 'Node'.
-lib/asn1/base/node.ts(73,30): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(76,12): error TS2538: Type 'String' cannot be used as an index type.
 lib/asn1/base/node.ts(76,26): error TS2538: Type 'String' cannot be used as an index type.
-lib/asn1/base/node.ts(78,32): error TS2351: This expression is not constructable.
-  Type 'Function' has no construct signatures.
 lib/asn1/base/node.ts(78,56): error TS2339: Property 'parent' does not exist on type 'Object'.
 lib/asn1/base/node.ts(79,7): error TS2339: Property '_baseState' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(80,3): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/asn1/base/node.ts(83,16): error TS2339: Property '_wrap' does not exist on type 'Node'.
 lib/asn1/base/node.ts(83,41): error TS2304: Cannot find name 'Void'.
-lib/asn1/base/node.ts(84,35): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(86,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/base/node.ts(86,10): error TS2538: Type 'String' cannot be used as an index type.
 lib/asn1/base/node.ts(86,47): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/asn1/base/node.ts(88,22): error TS2339: Property 'push' does not exist on type 'HTMLCollection'.
 lib/asn1/base/node.ts(89,20): error TS2538: Type 'String' cannot be used as an index type.
 lib/asn1/base/node.ts(94,16): error TS2339: Property '_init' does not exist on type 'Node'.
 lib/asn1/base/node.ts(94,55): error TS2304: Cannot find name 'Void'.
-lib/asn1/base/node.ts(95,35): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(97,16): error TS2551: Property 'parent' does not exist on type 'HTMLElement'. Did you mean 'part'?
 lib/asn1/base/node.ts(101,9): error TS2540: Cannot assign to 'children' because it is a read-only property.
 lib/asn1/base/node.ts(101,35): error TS2339: Property 'filter' does not exist on type 'HTMLCollection'.
 lib/asn1/base/node.ts(102,18): error TS2339: Property '_baseState' does not exist on type 'Object'.
-lib/asn1/base/node.ts(102,40): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/base/node.ts(104,10): error TS2339: Property 'equal' does not exist on type 'Function'.
 lib/asn1/base/node.ts(107,16): error TS2339: Property '_useArgs' does not exist on type 'Node'.
 lib/asn1/base/node.ts(107,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/base/node.ts(107,58): error TS2304: Cannot find name 'Void'.
-lib/asn1/base/node.ts(108,35): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(111,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/asn1/base/node.ts(112,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/node.ts(115,29): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/base/node.ts(120,11): error TS2540: Cannot assign to 'children' because it is a read-only property.
 lib/asn1/base/node.ts(124,13): error TS2339: Property '_baseState' does not exist on type 'Object'.
-lib/asn1/base/node.ts(124,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/base/node.ts(128,18): error TS2339: Property 'args' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(129,11): error TS2339: Property 'args' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(130,11): error TS2339: Property 'reverseArgs' does not exist on type 'HTMLElement'.
@@ -178,77 +143,52 @@ lib/asn1/base/node.ts(138,35): error TS2538: Type 'String' cannot be used as an 
 lib/asn1/base/node.ts(139,13): error TS2538: Type 'String' cannot be used as an index type.
 lib/asn1/base/node.ts(151,18): error TS2538: Type 'String' cannot be used as an index type.
 lib/asn1/base/node.ts(151,51): error TS2304: Cannot find name 'Void'.
-lib/asn1/base/node.ts(152,34): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(153,72): error TS2339: Property 'enc' does not exist on type 'Function'.
 lib/asn1/base/node.ts(162,18): error TS2538: Type 'Number' cannot be used as an index type.
-lib/asn1/base/node.ts(163,32): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(164,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/base/node.ts(166,18): error TS2339: Property 'tag' does not exist on type 'Object'.
 lib/asn1/base/node.ts(167,11): error TS2339: Property 'tag' does not exist on type 'Object'.
-lib/asn1/base/node.ts(169,10): error TS2339: Property '_useArgs' does not exist on type 'Node'.
 lib/asn1/base/node.ts(175,16): error TS2339: Property 'use' does not exist on type 'Node'.
-lib/asn1/base/node.ts(177,35): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(179,16): error TS2339: Property 'use' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(180,9): error TS2339: Property 'use' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(185,16): error TS2339: Property 'optional' does not exist on type 'Node'.
-lib/asn1/base/node.ts(186,32): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(188,9): error TS2339: Property 'optional' does not exist on type 'Function'.
 lib/asn1/base/node.ts(193,16): error TS2339: Property 'def' does not exist on type 'Node'.
-lib/asn1/base/node.ts(194,30): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(196,10): error TS7053: Element implicitly has an 'any' type because expression of type '"default"' can't be used to index type 'Object'.
-  Property 'default' does not exist on type 'Object'.
-lib/asn1/base/node.ts(197,3): error TS7053: Element implicitly has an 'any' type because expression of type '"default"' can't be used to index type 'Object'.
-  Property 'default' does not exist on type 'Object'.
 lib/asn1/base/node.ts(198,9): error TS2339: Property 'optional' does not exist on type 'Object'.
 lib/asn1/base/node.ts(203,16): error TS2339: Property 'explicit' does not exist on type 'Node'.
-lib/asn1/base/node.ts(204,35): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(206,16): error TS2339: Property 'explicit' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(206,43): error TS2339: Property 'implicit' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(207,9): error TS2339: Property 'explicit' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(212,16): error TS2339: Property 'implicit' does not exist on type 'Node'.
-lib/asn1/base/node.ts(213,35): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(215,16): error TS2339: Property 'explicit' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(215,43): error TS2339: Property 'implicit' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(216,9): error TS2339: Property 'implicit' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(221,16): error TS2339: Property 'obj' does not exist on type 'Node'.
-lib/asn1/base/node.ts(222,30): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(223,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/base/node.ts(225,9): error TS2339: Property 'obj' does not exist on type 'Object'.
-lib/asn1/base/node.ts(228,10): error TS2339: Property '_useArgs' does not exist on type 'Node'.
 lib/asn1/base/node.ts(233,16): error TS2339: Property 'key' does not exist on type 'Node'.
-lib/asn1/base/node.ts(234,35): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(236,16): error TS2339: Property 'key' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(237,9): error TS2339: Property 'key' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(242,16): error TS2339: Property 'any' does not exist on type 'Node'.
 lib/asn1/base/node.ts(243,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/asn1/base/node.ts(243,29): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(250,16): error TS2339: Property 'choice' does not exist on type 'Node'.
-lib/asn1/base/node.ts(251,35): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(253,16): error TS2339: Property 'choice' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(254,9): error TS2339: Property 'choice' does not exist on type 'HTMLElement'.
-lib/asn1/base/node.ts(255,8): error TS2339: Property '_useArgs' does not exist on type 'Node'.
 lib/asn1/base/node.ts(256,16): error TS2538: Type 'String' cannot be used as an index type.
-lib/asn1/base/node.ts(262,1): error TS2322: Type '(item: Number) => Object' is not assignable to type '(other: Node | null) => boolean'.
+lib/asn1/base/node.ts(262,1): error TS2322: Type '(item: Number) => Object' is not assignable to type '(other: Node) => boolean'.
   Types of parameters 'item' and 'other' are incompatible.
-    Type 'Node | null' is not assignable to type 'Number'.
-      Type 'null' is not assignable to type 'Number'.
-lib/asn1/base/node.ts(263,35): error TS2339: Property '_baseState' does not exist on type 'Node'.
+    Type 'Node' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lib/asn1/base/node.ts(265,16): error TS2339: Property 'use' does not exist on type 'HTMLElement'.
-lib/asn1/base/node.ts(266,3): error TS2322: Type 'Number' is not assignable to type '(other: Node | null) => boolean'.
-  Type 'Number' provides no match for the signature '(other: Node | null): boolean'.
+lib/asn1/base/node.ts(266,3): error TS2322: Type 'Number' is not assignable to type '(other: Node) => boolean'.
+  Type 'Number' provides no match for the signature '(other: Node): boolean'.
 lib/asn1/base/node.ts(275,16): error TS2339: Property '_decode' does not exist on type 'Node'.
-lib/asn1/base/node.ts(276,30): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(279,13): error TS2339: Property 'parent' does not exist on type 'Object'.
 lib/asn1/base/node.ts(280,18): error TS2339: Property 'wrapResult' does not exist on type 'Function'.
 lib/asn1/base/node.ts(280,35): error TS2339: Property 'children' does not exist on type 'Object'.
-lib/asn1/base/node.ts(282,24): error TS7053: Element implicitly has an 'any' type because expression of type '"default"' can't be used to index type 'Object'.
-  Property 'default' does not exist on type 'Object'.
-lib/asn1/base/node.ts(285,7): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/asn1/base/node.ts(286,13): error TS2339: Property 'key' does not exist on type 'Object'.
 lib/asn1/base/node.ts(287,21): error TS2339: Property 'enterKey' does not exist on type 'Function'.
 lib/asn1/base/node.ts(287,36): error TS2339: Property 'key' does not exist on type 'Object'.
 lib/asn1/base/node.ts(290,13): error TS2339: Property 'optional' does not exist on type 'Object'.
-lib/asn1/base/node.ts(291,9): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/asn1/base/node.ts(292,15): error TS2339: Property 'explicit' does not exist on type 'Object'.
 lib/asn1/base/node.ts(293,19): error TS2339: Property 'explicit' does not exist on type 'Object'.
 lib/asn1/base/node.ts(294,20): error TS2339: Property 'implicit' does not exist on type 'Object'.
@@ -258,17 +198,13 @@ lib/asn1/base/node.ts(297,19): error TS2339: Property 'tag' does not exist on ty
 lib/asn1/base/node.ts(299,32): error TS2339: Property 'any' does not exist on type 'Object'.
 lib/asn1/base/node.ts(301,34): error TS2339: Property 'save' does not exist on type 'Function'.
 lib/asn1/base/node.ts(303,19): error TS2339: Property 'choice' does not exist on type 'Object'.
-lib/asn1/base/node.ts(304,16): error TS2339: Property '_decodeGeneric' does not exist on type 'Node'.
 lib/asn1/base/node.ts(304,37): error TS2339: Property 'tag' does not exist on type 'Object'.
-lib/asn1/base/node.ts(306,16): error TS2339: Property '_decodeChoice' does not exist on type 'Node'.
 lib/asn1/base/node.ts(311,13): error TS2339: Property 'restore' does not exist on type 'Function'.
-lib/asn1/base/node.ts(313,22): error TS2339: Property '_peekTag' does not exist on type 'Node'.
 lib/asn1/base/node.ts(313,49): error TS2339: Property 'any' does not exist on type 'Object'.
 lib/asn1/base/node.ts(315,17): error TS2339: Property 'isError' does not exist on type 'Function'.
 lib/asn1/base/node.ts(322,13): error TS2339: Property 'obj' does not exist on type 'Object'.
 lib/asn1/base/node.ts(323,21): error TS2339: Property 'enterObject' does not exist on type 'Function'.
 lib/asn1/base/node.ts(327,15): error TS2339: Property 'explicit' does not exist on type 'Object'.
-lib/asn1/base/node.ts(328,37): error TS2339: Property '_decodeTag' does not exist on type 'Node'.
 lib/asn1/base/node.ts(328,61): error TS2339: Property 'explicit' does not exist on type 'Object'.
 lib/asn1/base/node.ts(329,17): error TS2339: Property 'isError' does not exist on type 'Function'.
 lib/asn1/base/node.ts(330,9): error TS2322: Type 'String' is not assignable to type 'Boolean'.
@@ -280,7 +216,6 @@ lib/asn1/base/node.ts(337,15): error TS2339: Property 'use' does not exist on ty
 lib/asn1/base/node.ts(337,37): error TS2339: Property 'choice' does not exist on type 'Object'.
 lib/asn1/base/node.ts(339,17): error TS2339: Property 'any' does not exist on type 'Object'.
 lib/asn1/base/node.ts(340,22): error TS2339: Property 'save' does not exist on type 'Function'.
-lib/asn1/base/node.ts(341,33): error TS2339: Property '_decodeTag' does not exist on type 'Node'.
 lib/asn1/base/node.ts(343,15): error TS2339: Property 'implicit' does not exist on type 'Object'.
 lib/asn1/base/node.ts(343,41): error TS2339: Property 'implicit' does not exist on type 'Object'.
 lib/asn1/base/node.ts(343,58): error TS2339: Property 'tag' does not exist on type 'Object'.
@@ -289,7 +224,6 @@ lib/asn1/base/node.ts(346,17): error TS2339: Property 'isError' does not exist o
 lib/asn1/base/node.ts(347,9): error TS2322: Type 'String' is not assignable to type 'Boolean'.
 lib/asn1/base/node.ts(349,17): error TS2339: Property 'any' does not exist on type 'Object'.
 lib/asn1/base/node.ts(350,24): error TS2339: Property 'raw' does not exist on type 'Function'.
-lib/asn1/base/node.ts(350,28): error TS2454: Variable 'save' is used before being assigned.
 lib/asn1/base/node.ts(352,9): error TS2322: Type 'String' is not assignable to type 'Function'.
 lib/asn1/base/node.ts(355,28): error TS2339: Property 'track' does not exist on type 'Object'.
 lib/asn1/base/node.ts(355,43): error TS2339: Property 'tag' does not exist on type 'Object'.
@@ -302,9 +236,7 @@ lib/asn1/base/node.ts(359,27): error TS2339: Property 'path' does not exist on t
 lib/asn1/base/node.ts(359,41): error TS2339: Property 'offset' does not exist on type 'Function'.
 lib/asn1/base/node.ts(362,15): error TS2339: Property 'any' does not exist on type 'Object'.
 lib/asn1/base/node.ts(364,22): error TS2339: Property 'choice' does not exist on type 'Object'.
-lib/asn1/base/node.ts(365,21): error TS2339: Property '_decodeGeneric' does not exist on type 'Node'.
 lib/asn1/base/node.ts(365,42): error TS2339: Property 'tag' does not exist on type 'Object'.
-lib/asn1/base/node.ts(367,21): error TS2339: Property '_decodeChoice' does not exist on type 'Node'.
 lib/asn1/base/node.ts(370,15): error TS2339: Property 'isError' does not exist on type 'Function'.
 lib/asn1/base/node.ts(371,7): error TS2322: Type 'String' is not assignable to type 'Boolean'.
 lib/asn1/base/node.ts(374,16): error TS2339: Property 'any' does not exist on type 'Object'.
@@ -318,58 +250,42 @@ lib/asn1/base/node.ts(383,34): error TS2339: Property 'tag' does not exist on ty
 lib/asn1/base/node.ts(383,60): error TS2339: Property 'tag' does not exist on type 'Object'.
 lib/asn1/base/node.ts(384,32): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
-lib/asn1/base/node.ts(385,21): error TS2339: Property '_getUse' does not exist on type 'Node'.
 lib/asn1/base/node.ts(385,35): error TS2339: Property 'contains' does not exist on type 'Object'.
 lib/asn1/base/node.ts(385,51): error TS2339: Property '_reporterState' does not exist on type 'Function'.
 lib/asn1/base/node.ts(391,13): error TS2339: Property 'obj' does not exist on type 'Object'.
 lib/asn1/base/node.ts(392,20): error TS2339: Property 'leaveObject' does not exist on type 'Function'.
-lib/asn1/base/node.ts(392,32): error TS2454: Variable 'prevObj' is used before being assigned.
 lib/asn1/base/node.ts(395,13): error TS2339: Property 'key' does not exist on type 'Object'.
 lib/asn1/base/node.ts(396,11): error TS2339: Property 'leaveKey' does not exist on type 'Function'.
 lib/asn1/base/node.ts(396,35): error TS2339: Property 'key' does not exist on type 'Object'.
 lib/asn1/base/node.ts(398,11): error TS2339: Property 'exitKey' does not exist on type 'Function'.
 lib/asn1/base/node.ts(400,3): error TS2322: Type 'String' is not assignable to type 'Boolean'.
 lib/asn1/base/node.ts(403,16): error TS2339: Property '_decodeGeneric' does not exist on type 'Node'.
-lib/asn1/base/node.ts(404,35): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(406,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/asn1/base/node.ts(406,24): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/asn1/base/node.ts(407,5): error TS2322: Type 'null' is not assignable to type 'Object'.
 lib/asn1/base/node.ts(408,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/asn1/base/node.ts(408,26): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/asn1/base/node.ts(409,17): error TS2339: Property '_decodeList' does not exist on type 'Node'.
 lib/asn1/base/node.ts(409,47): error TS2339: Property 'args' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(410,24): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
-lib/asn1/base/node.ts(411,17): error TS2339: Property '_decodeStr' does not exist on type 'Node'.
 lib/asn1/base/node.ts(412,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/asn1/base/node.ts(412,37): error TS2339: Property 'args' does not exist on type 'HTMLElement'.
-lib/asn1/base/node.ts(413,17): error TS2339: Property '_decodeObjid' does not exist on type 'Node'.
 lib/asn1/base/node.ts(413,43): error TS2339: Property 'args' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(413,58): error TS2339: Property 'args' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(414,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/asn1/base/node.ts(415,17): error TS2339: Property '_decodeObjid' does not exist on type 'Node'.
 lib/asn1/base/node.ts(416,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/asn1/base/node.ts(416,33): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/asn1/base/node.ts(417,17): error TS2339: Property '_decodeTime' does not exist on type 'Node'.
 lib/asn1/base/node.ts(418,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/asn1/base/node.ts(419,17): error TS2339: Property '_decodeNull' does not exist on type 'Node'.
 lib/asn1/base/node.ts(420,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/asn1/base/node.ts(421,17): error TS2339: Property '_decodeBool' does not exist on type 'Node'.
 lib/asn1/base/node.ts(422,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/asn1/base/node.ts(423,17): error TS2339: Property '_decodeStr' does not exist on type 'Node'.
 lib/asn1/base/node.ts(424,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/asn1/base/node.ts(424,29): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/asn1/base/node.ts(425,17): error TS2339: Property '_decodeInt' does not exist on type 'Node'.
 lib/asn1/base/node.ts(425,41): error TS2339: Property 'args' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(425,55): error TS2339: Property 'args' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(427,13): error TS2339: Property 'use' does not exist on type 'HTMLElement'.
-lib/asn1/base/node.ts(428,17): error TS2339: Property '_getUse' does not exist on type 'Node'.
 lib/asn1/base/node.ts(428,31): error TS2339: Property 'use' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(428,42): error TS2339: Property '_reporterState' does not exist on type 'Object'.
 lib/asn1/base/node.ts(431,18): error TS2339: Property 'error' does not exist on type 'Object'.
 lib/asn1/base/node.ts(435,16): error TS2339: Property '_getUse' does not exist on type 'Node'.
-lib/asn1/base/node.ts(437,35): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(439,9): error TS2339: Property 'useDecoder' does not exist on type 'HTMLElement'.
-lib/asn1/base/node.ts(439,27): error TS2339: Property '_use' does not exist on type 'Node'.
 lib/asn1/base/node.ts(440,16): error TS2339: Property 'useDecoder' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(441,9): error TS2339: Property 'useDecoder' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(441,28): error TS2339: Property 'useDecoder' does not exist on type 'HTMLElement'.
@@ -381,8 +297,6 @@ lib/asn1/base/node.ts(444,11): error TS2339: Property 'useDecoder' does not exis
 lib/asn1/base/node.ts(444,50): error TS2339: Property 'implicit' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(446,16): error TS2339: Property 'useDecoder' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(449,16): error TS2339: Property '_decodeChoice' does not exist on type 'Node'.
-lib/asn1/base/node.ts(450,35): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(451,7): error TS2322: Type 'null' is not assignable to type 'Object'.
 lib/asn1/base/node.ts(454,21): error TS2339: Property 'choice' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(455,33): error TS2339: Property 'save' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(456,33): error TS2339: Property 'choice' does not exist on type 'HTMLElement'.
@@ -393,40 +307,17 @@ lib/asn1/base/node.ts(472,18): error TS2339: Property 'error' does not exist on 
 lib/asn1/base/node.ts(481,16): error TS2339: Property '_createEncoderBuffer' does not exist on type 'Node'.
 lib/asn1/base/node.ts(482,14): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
-lib/asn1/base/node.ts(482,39): error TS2339: Property 'reporter' does not exist on type 'Node'.
 lib/asn1/base/node.ts(485,16): error TS2339: Property '_encode' does not exist on type 'Node'.
-lib/asn1/base/node.ts(486,30): error TS2339: Property '_baseState' does not exist on type 'Node'.
-lib/asn1/base/node.ts(487,7): error TS7053: Element implicitly has an 'any' type because expression of type '"default"' can't be used to index type 'Object'.
-  Property 'default' does not exist on type 'Object'.
-lib/asn1/base/node.ts(487,36): error TS7053: Element implicitly has an 'any' type because expression of type '"default"' can't be used to index type 'Object'.
-  Property 'default' does not exist on type 'Object'.
-lib/asn1/base/node.ts(488,5): error TS2322: Type 'undefined' is not assignable to type 'String'.
-lib/asn1/base/node.ts(490,31): error TS2339: Property '_encodeValue' does not exist on type 'Node'.
-lib/asn1/base/node.ts(492,5): error TS2322: Type 'undefined' is not assignable to type 'String'.
-lib/asn1/base/node.ts(494,12): error TS2339: Property '_skipDefault' does not exist on type 'Node'.
-lib/asn1/base/node.ts(495,5): error TS2322: Type 'undefined' is not assignable to type 'String'.
 lib/asn1/base/node.ts(500,16): error TS2339: Property '_encodeValue' does not exist on type 'Node'.
 lib/asn1/base/node.ts(500,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/asn1/base/node.ts(501,30): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(504,13): error TS2339: Property 'parent' does not exist on type 'Object'.
 lib/asn1/base/node.ts(505,18): error TS2339: Property 'children' does not exist on type 'Object'.
 lib/asn1/base/node.ts(505,60): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
-lib/asn1/base/node.ts(507,7): error TS2322: Type 'null' is not assignable to type 'String'.
-lib/asn1/base/node.ts(510,8): error TS2339: Property 'reporter' does not exist on type 'Node'.
 lib/asn1/base/node.ts(513,13): error TS2339: Property 'optional' does not exist on type 'Object'.
-lib/asn1/base/node.ts(514,9): error TS7053: Element implicitly has an 'any' type because expression of type '"default"' can't be used to index type 'Object'.
-  Property 'default' does not exist on type 'Object'.
-lib/asn1/base/node.ts(515,14): error TS7053: Element implicitly has an 'any' type because expression of type '"default"' can't be used to index type 'Object'.
-  Property 'default' does not exist on type 'Object'.
-lib/asn1/base/node.ts(517,7): error TS2322: Type 'undefined' is not assignable to type 'Object'.
-lib/asn1/base/node.ts(521,7): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/asn1/base/node.ts(523,13): error TS2339: Property 'any' does not exist on type 'Object'.
-lib/asn1/base/node.ts(525,19): error TS2339: Property '_createEncoderBuffer' does not exist on type 'Node'.
 lib/asn1/base/node.ts(526,20): error TS2339: Property 'choice' does not exist on type 'Object'.
-lib/asn1/base/node.ts(527,19): error TS2339: Property '_encodeChoice' does not exist on type 'Node'.
 lib/asn1/base/node.ts(528,20): error TS2339: Property 'contains' does not exist on type 'Object'.
-lib/asn1/base/node.ts(529,20): error TS2339: Property '_getUse' does not exist on type 'Node'.
 lib/asn1/base/node.ts(529,34): error TS2339: Property 'contains' does not exist on type 'Object'.
 lib/asn1/base/node.ts(531,20): error TS2339: Property 'children' does not exist on type 'Object'.
 lib/asn1/base/node.ts(532,21): error TS2339: Property 'children' does not exist on type 'Object'.
@@ -441,7 +332,6 @@ lib/asn1/base/node.ts(543,18): error TS2314: Generic type 'Array<T>' requires 1 
 lib/asn1/base/node.ts(543,32): error TS2339: Property '_encode' does not exist on type 'Element'.
 lib/asn1/base/node.ts(543,51): error TS2339: Property '_baseState' does not exist on type 'Element'.
 lib/asn1/base/node.ts(544,16): error TS2339: Property 'leaveKey' does not exist on type 'Object'.
-lib/asn1/base/node.ts(550,20): error TS2339: Property '_createEncoderBuffer' does not exist on type 'Node'.
 lib/asn1/base/node.ts(552,15): error TS2339: Property 'tag' does not exist on type 'Object'.
 lib/asn1/base/node.ts(552,40): error TS2339: Property 'tag' does not exist on type 'Object'.
 lib/asn1/base/node.ts(554,19): error TS2339: Property 'args' does not exist on type 'Object'.
@@ -449,16 +339,10 @@ lib/asn1/base/node.ts(554,33): error TS2339: Property 'args' does not exist on t
 lib/asn1/base/node.ts(555,25): error TS2339: Property 'error' does not exist on type 'Object'.
 lib/asn1/base/node.ts(555,62): error TS2339: Property 'tag' does not exist on type 'Object'.
 lib/asn1/base/node.ts(558,25): error TS2339: Property 'error' does not exist on type 'Object'.
-lib/asn1/base/node.ts(560,33): error TS2339: Property 'clone' does not exist on type 'Node'.
 lib/asn1/base/node.ts(561,13): error TS2339: Property '_baseState' does not exist on type 'Error'.
-lib/asn1/base/node.ts(562,22): error TS2339: Property '_createEncoderBuffer' does not exist on type 'Node'.
-lib/asn1/base/node.ts(563,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/node.ts(565,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/base/node.ts(565,35): error TS2339: Property 'args' does not exist on type 'Function'.
 lib/asn1/base/node.ts(567,22): error TS2339: Property 'use' does not exist on type 'Object'.
-lib/asn1/base/node.ts(568,21): error TS2339: Property '_getUse' does not exist on type 'Node'.
 lib/asn1/base/node.ts(568,35): error TS2339: Property 'use' does not exist on type 'Object'.
-lib/asn1/base/node.ts(570,22): error TS2339: Property '_encodePrimitive' does not exist on type 'Node'.
 lib/asn1/base/node.ts(570,45): error TS2339: Property 'tag' does not exist on type 'Object'.
 lib/asn1/base/node.ts(576,14): error TS2339: Property 'any' does not exist on type 'Object'.
 lib/asn1/base/node.ts(576,27): error TS2339: Property 'choice' does not exist on type 'Object'.
@@ -469,12 +353,9 @@ lib/asn1/base/node.ts(578,31): error TS2339: Property 'implicit' does not exist 
 lib/asn1/base/node.ts(581,17): error TS2339: Property 'use' does not exist on type 'Object'.
 lib/asn1/base/node.ts(582,18): error TS2339: Property 'error' does not exist on type 'Object'.
 lib/asn1/base/node.ts(584,17): error TS2339: Property 'use' does not exist on type 'Object'.
-lib/asn1/base/node.ts(585,23): error TS2339: Property '_encodeComposite' does not exist on type 'Node'.
 lib/asn1/base/node.ts(590,13): error TS2339: Property 'explicit' does not exist on type 'Object'.
-lib/asn1/base/node.ts(591,19): error TS2339: Property '_encodeComposite' does not exist on type 'Node'.
 lib/asn1/base/node.ts(591,42): error TS2339: Property 'explicit' does not exist on type 'Object'.
 lib/asn1/base/node.ts(596,16): error TS2339: Property '_encodeChoice' does not exist on type 'Node'.
-lib/asn1/base/node.ts(597,35): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(599,35): error TS2339: Property 'choice' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(599,47): error TS2339: Property 'type' does not exist on type 'Object'.
 lib/asn1/base/node.ts(603,12): error TS2339: Property 'type' does not exist on type 'Object'.
@@ -482,30 +363,21 @@ lib/asn1/base/node.ts(604,46): error TS2339: Property 'choice' does not exist on
 lib/asn1/base/node.ts(606,15): error TS2339: Property '_encode' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(606,28): error TS2339: Property 'value' does not exist on type 'Object'.
 lib/asn1/base/node.ts(609,16): error TS2339: Property '_encodePrimitive' does not exist on type 'Node'.
-lib/asn1/base/node.ts(610,35): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(612,19): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
-lib/asn1/base/node.ts(613,17): error TS2339: Property '_encodeStr' does not exist on type 'Node'.
 lib/asn1/base/node.ts(614,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/asn1/base/node.ts(614,37): error TS2339: Property 'args' does not exist on type 'HTMLElement'.
-lib/asn1/base/node.ts(615,17): error TS2339: Property '_encodeObjid' does not exist on type 'Node'.
 lib/asn1/base/node.ts(615,42): error TS2339: Property 'reverseArgs' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(615,64): error TS2339: Property 'args' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(616,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/asn1/base/node.ts(617,17): error TS2339: Property '_encodeObjid' does not exist on type 'Node'.
 lib/asn1/base/node.ts(618,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/asn1/base/node.ts(618,33): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/asn1/base/node.ts(619,17): error TS2339: Property '_encodeTime' does not exist on type 'Node'.
 lib/asn1/base/node.ts(620,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/asn1/base/node.ts(621,17): error TS2339: Property '_encodeNull' does not exist on type 'Node'.
 lib/asn1/base/node.ts(622,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/asn1/base/node.ts(622,29): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/asn1/base/node.ts(623,17): error TS2339: Property '_encodeInt' does not exist on type 'Node'.
 lib/asn1/base/node.ts(623,40): error TS2339: Property 'args' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(623,54): error TS2339: Property 'reverseArgs' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(624,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/asn1/base/node.ts(625,17): error TS2339: Property '_encodeBool' does not exist on type 'Node'.
 lib/asn1/base/node.ts(626,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/asn1/base/node.ts(627,17): error TS2339: Property '_encodeStr' does not exist on type 'Node'.
 lib/asn1/base/node.ts(632,16): error TS2339: Property '_isNumstr' does not exist on type 'Node'.
 lib/asn1/base/node.ts(633,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
@@ -515,7 +387,6 @@ lib/asn1/base/node.ts(637,44): error TS2345: Argument of type 'String' is not as
 lib/asn1/base/reporter.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'inherits'.
 lib/asn1/base/reporter.ts(5,10): error TS2451: Cannot redeclare block-scoped variable 'Reporter'.
 lib/asn1/base/reporter.ts(5,37): error TS2304: Cannot find name 'Void'.
-lib/asn1/base/reporter.ts(6,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/base/reporter.ts(15,10): error TS2339: Property 'prototype' does not exist on type 'Object'.
 lib/asn1/base/reporter.ts(19,10): error TS2339: Property 'prototype' does not exist on type 'Object'.
 lib/asn1/base/reporter.ts(22,23): error TS2339: Property 'obj' does not exist on type 'Function'.
@@ -545,7 +416,7 @@ lib/asn1/base/reporter.ts(62,10): error TS2339: Property 'prototype' does not ex
 lib/asn1/base/reporter.ts(65,34): error TS2339: Property 'obj' does not exist on type 'Object'.
 lib/asn1/base/reporter.ts(66,9): error TS2339: Property 'obj' does not exist on type 'Object'.
 lib/asn1/base/reporter.ts(70,10): error TS2339: Property 'prototype' does not exist on type 'Object'.
-lib/asn1/base/reporter.ts(78,11): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/asn1/base/reporter.ts(78,11): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/asn1/base/reporter.ts(78,35): error TS2339: Property 'path' does not exist on type 'Object'.
 lib/asn1/base/reporter.ts(78,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/base/reporter.ts(80,22): error TS2339: Property 'message' does not exist on type 'Object'.
@@ -558,9 +429,6 @@ lib/asn1/base/reporter.ts(92,61): error TS2314: Generic type 'Array<T>' requires
 lib/asn1/base/reporter.ts(94,14): error TS2339: Property 'options' does not exist on type 'Object'.
 lib/asn1/base/reporter.ts(99,19): error TS2339: Property 'errors' does not exist on type 'Object'.
 lib/asn1/base/reporter.ts(103,52): error TS2304: Cannot find name 'Void'.
-lib/asn1/base/reporter.ts(104,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/reporter.ts(105,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/base/reporter.ts(119,20): error TS2571: Object is of type 'unknown'.
 lib/asn1/constants/der.ts(7,28): error TS2345: Argument of type '(key: Number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
   Types of parameters 'key' and 'value' are incompatible.
     Type 'string' is not assignable to type 'Number'.
@@ -584,14 +452,9 @@ lib/asn1/decoders/der.ts(10,7): error TS2451: Cannot redeclare block-scoped vari
 lib/asn1/decoders/der.ts(10,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/decoders/der.ts(12,10): error TS2451: Cannot redeclare block-scoped variable 'DERDecoder'.
 lib/asn1/decoders/der.ts(12,38): error TS2304: Cannot find name 'Void'.
-lib/asn1/decoders/der.ts(13,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/decoders/der.ts(14,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/decoders/der.ts(14,22): error TS2339: Property 'name' does not exist on type 'Object'.
-lib/asn1/decoders/der.ts(15,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/decoders/der.ts(18,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/asn1/decoders/der.ts(18,15): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/asn1/decoders/der.ts(18,15): error TS2554: Expected 1 arguments, but got 0.
-lib/asn1/decoders/der.ts(18,15): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/asn1/decoders/der.ts(19,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/decoders/der.ts(19,26): error TS2339: Property 'body' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(23,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/decoders/der.ts(24,22): error TS2339: Property 'isDecoderBuffer' does not exist on type 'Object'.
@@ -599,8 +462,6 @@ lib/asn1/decoders/der.ts(25,16): error TS2351: This expression is not constructa
   Type 'Object' has no construct signatures.
 lib/asn1/decoders/der.ts(33,10): error TS2393: Duplicate function implementation.
 lib/asn1/decoders/der.ts(33,35): error TS2304: Cannot find name 'Void'.
-lib/asn1/decoders/der.ts(34,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/decoders/der.ts(34,19): error TS2554: Expected 1 arguments, but got 3.
 lib/asn1/decoders/der.ts(39,14): error TS2339: Property 'isEmpty' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(42,32): error TS2339: Property 'save' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(43,21): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
@@ -639,7 +500,7 @@ lib/asn1/decoders/der.ts(85,16): error TS2339: Property 'offset' does not exist 
 lib/asn1/decoders/der.ts(85,31): error TS2339: Property 'offset' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(86,10): error TS2339: Property 'restore' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(87,17): error TS2339: Property 'skip' does not exist on type 'Object'.
-lib/asn1/decoders/der.ts(90,88): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
+lib/asn1/decoders/der.ts(90,88): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/decoders/der.ts(92,38): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/asn1/decoders/der.ts(93,16): error TS2339: Property 'isError' does not exist on type 'Object'.
@@ -692,8 +553,6 @@ lib/asn1/decoders/der.ts(179,14): error TS2362: The left-hand side of an arithme
 lib/asn1/decoders/der.ts(180,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/decoders/der.ts(185,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/decoders/der.ts(197,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/asn1/decoders/der.ts(197,22): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-lib/asn1/decoders/der.ts(199,13): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 lib/asn1/decoders/der.ts(208,30): error TS2339: Property 'raw' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(216,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/asn1/decoders/der.ts(217,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -716,7 +575,6 @@ lib/asn1/decoders/der.ts(238,3): error TS2322: Type 'number' is not assignable t
 lib/asn1/decoders/der.ts(238,19): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/asn1/decoders/der.ts(238,25): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/asn1/decoders/der.ts(242,3): error TS2322: Type 'null' is not assignable to type 'Object'.
 lib/asn1/decoders/der.ts(246,31): error TS2339: Property 'readUInt8' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(247,14): error TS2339: Property 'isError' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(250,12): error TS2367: This condition will always return 'true' since the types 'Boolean' and 'number' have no overlap.
@@ -744,7 +602,6 @@ lib/asn1/decoders/der.ts(298,5): error TS2322: Type '{ cls: String; primitive: N
   Object literal may only specify known properties, and 'cls' does not exist in type 'Number'.
 lib/asn1/decoders/der.ts(306,25): error TS2339: Property 'readUInt8' does not exist on type 'HTMLElement'.
 lib/asn1/decoders/der.ts(307,11): error TS2339: Property 'isError' does not exist on type 'HTMLElement'.
-lib/asn1/decoders/der.ts(312,5): error TS2322: Type 'null' is not assignable to type 'Number'.
 lib/asn1/decoders/der.ts(315,8): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/decoders/der.ts(321,23): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/decoders/der.ts(323,16): error TS2339: Property 'error' does not exist on type 'HTMLElement'.
@@ -760,17 +617,9 @@ lib/asn1/decoders/pem.ts(3,7): error TS2451: Cannot redeclare block-scoped varia
 lib/asn1/decoders/pem.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'Buffer'.
 lib/asn1/decoders/pem.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'DERDecoder'.
 lib/asn1/decoders/pem.ts(8,38): error TS2304: Cannot find name 'Void'.
-lib/asn1/decoders/pem.ts(9,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/decoders/pem.ts(10,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/decoders/pem.ts(15,79): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/decoders/pem.ts(16,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/decoders/pem.ts(18,33): error TS2339: Property 'label' does not exist on type 'Object'.
-lib/asn1/decoders/pem.ts(28,9): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-lib/asn1/decoders/pem.ts(32,11): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/asn1/decoders/pem.ts(36,11): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/asn1/decoders/pem.ts(45,38): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/asn1/decoders/pem.ts(49,37): error TS2339: Property 'from' does not exist on type 'HTMLElement'.
 lib/asn1/encoders/der.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'inherits'.
@@ -779,38 +628,22 @@ lib/asn1/encoders/der.ts(5,7): error TS2451: Cannot redeclare block-scoped varia
 lib/asn1/encoders/der.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'der'.
 lib/asn1/encoders/der.ts(10,10): error TS2451: Cannot redeclare block-scoped variable 'DEREncoder'.
 lib/asn1/encoders/der.ts(10,38): error TS2304: Cannot find name 'Void'.
-lib/asn1/encoders/der.ts(11,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/encoders/der.ts(12,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/encoders/der.ts(12,22): error TS2339: Property 'name' does not exist on type 'Object'.
-lib/asn1/encoders/der.ts(13,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/encoders/der.ts(16,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/asn1/encoders/der.ts(16,15): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/asn1/encoders/der.ts(16,15): error TS2554: Expected 1 arguments, but got 0.
-lib/asn1/encoders/der.ts(16,15): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/asn1/encoders/der.ts(17,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/encoders/der.ts(17,26): error TS2339: Property 'body' does not exist on type 'Object'.
 lib/asn1/encoders/der.ts(27,10): error TS2393: Duplicate function implementation.
 lib/asn1/encoders/der.ts(27,35): error TS2304: Cannot find name 'Void'.
-lib/asn1/encoders/der.ts(28,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/encoders/der.ts(28,19): error TS2554: Expected 1 arguments, but got 3.
 lib/asn1/encoders/der.ts(35,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/encoders/der.ts(36,9): error TS2740: Type 'Number' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/asn1/encoders/der.ts(36,42): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
   Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lib/asn1/encoders/der.ts(40,35): error TS2339: Property 'alloc' does not exist on type 'HTMLElement'.
-lib/asn1/encoders/der.ts(41,5): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/asn1/encoders/der.ts(42,5): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/asn1/encoders/der.ts(50,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/encoders/der.ts(52,33): error TS2339: Property 'alloc' does not exist on type 'HTMLElement'.
 lib/asn1/encoders/der.ts(52,39): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
-lib/asn1/encoders/der.ts(53,3): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/asn1/encoders/der.ts(54,3): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/asn1/encoders/der.ts(54,22): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/encoders/der.ts(56,16): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
-lib/asn1/encoders/der.ts(57,5): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 lib/asn1/encoders/der.ts(63,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/asn1/encoders/der.ts(64,44): error TS2339: Property 'unused' does not exist on type 'String'.
 lib/asn1/encoders/der.ts(64,60): error TS2339: Property 'data' does not exist on type 'String'.
@@ -823,8 +656,6 @@ lib/asn1/encoders/der.ts(87,26): error TS2345: Argument of type 'Number' is not 
 lib/asn1/encoders/der.ts(89,14): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/asn1/encoders/der.ts(97,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/encoders/der.ts(97,102): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/asn1/encoders/der.ts(103,10): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 lib/asn1/encoders/der.ts(127,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/encoders/der.ts(127,33): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/encoders/der.ts(128,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -858,10 +689,7 @@ lib/asn1/encoders/der.ts(168,16): error TS2339: Property 'getUTCDate' does not e
 lib/asn1/encoders/der.ts(169,16): error TS2339: Property 'getUTCHours' does not exist on type 'HTMLInputElement'.
 lib/asn1/encoders/der.ts(170,16): error TS2339: Property 'getUTCMinutes' does not exist on type 'HTMLInputElement'.
 lib/asn1/encoders/der.ts(171,16): error TS2339: Property 'getUTCSeconds' does not exist on type 'HTMLInputElement'.
-lib/asn1/encoders/der.ts(178,26): error TS2454: Variable 'str' is used before being assigned.
 lib/asn1/encoders/der.ts(181,56): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/asn1/encoders/der.ts(193,11): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 lib/asn1/encoders/der.ts(197,42): error TS2339: Property 'isBuffer' does not exist on type 'HTMLElement'.
 lib/asn1/encoders/der.ts(198,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/encoders/der.ts(198,33): error TS2339: Property 'toArray' does not exist on type 'String'.
@@ -871,8 +699,6 @@ lib/asn1/encoders/der.ts(205,14): error TS2339: Property 'isBuffer' does not exi
 lib/asn1/encoders/der.ts(208,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/encoders/der.ts(210,32): error TS2339: Property 'alloc' does not exist on type 'HTMLElement'.
 lib/asn1/encoders/der.ts(211,9): error TS2339: Property 'copy' does not exist on type 'String'.
-lib/asn1/encoders/der.ts(213,7): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 lib/asn1/encoders/der.ts(217,7): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
 lib/asn1/encoders/der.ts(220,7): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
 lib/asn1/encoders/der.ts(224,21): error TS2365: Operator '>=' cannot be applied to types 'String' and 'number'.
@@ -884,12 +710,8 @@ lib/asn1/encoders/der.ts(230,5): error TS2362: The left-hand side of an arithmet
 lib/asn1/encoders/der.ts(236,43): error TS2339: Property 'from' does not exist on type 'HTMLElement'.
 lib/asn1/encoders/der.ts(246,17): error TS2339: Property '_getEncoder' does not exist on type 'Function'.
 lib/asn1/encoders/der.ts(249,67): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/asn1/encoders/der.ts(252,7): error TS7053: Element implicitly has an 'any' type because expression of type '"default"' can't be used to index type 'Object'.
-  Property 'default' does not exist on type 'Object'.
 lib/asn1/encoders/der.ts(256,13): error TS2339: Property 'defaultBuffer' does not exist on type 'Object'.
 lib/asn1/encoders/der.ts(257,11): error TS2339: Property 'defaultBuffer' does not exist on type 'Object'.
-lib/asn1/encoders/der.ts(257,45): error TS7053: Element implicitly has an 'any' type because expression of type '"default"' can't be used to index type 'Object'.
-  Property 'default' does not exist on type 'Object'.
 lib/asn1/encoders/der.ts(259,29): error TS2339: Property 'defaultBuffer' does not exist on type 'Object'.
 lib/asn1/encoders/der.ts(262,30): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/encoders/der.ts(263,14): error TS2538: Type 'Number' cannot be used as an index type.
@@ -911,8 +733,6 @@ lib/asn1/encoders/index.ts(6,10): error TS2339: Property 'pem' does not exist on
 lib/asn1/encoders/pem.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'inherits'.
 lib/asn1/encoders/pem.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'DEREncoder'.
 lib/asn1/encoders/pem.ts(7,38): error TS2304: Cannot find name 'Void'.
-lib/asn1/encoders/pem.ts(8,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/asn1/encoders/pem.ts(9,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/asn1/encoders/pem.ts(15,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/encoders/pem.ts(18,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/encoders/pem.ts(18,48): error TS2339: Property 'label' does not exist on type 'Object'.
@@ -921,468 +741,216 @@ rfc/2560/index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'as
 rfc/2560/index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'rfc5280'.
 rfc/2560/index.ts(6,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/2560/index.ts(6,33): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(7,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(8,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(9,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(14,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/2560/index.ts(14,32): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(15,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(16,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(16,59): error TS2339: Property 'Version' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(17,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(17,66): error TS2339: Property 'GeneralName' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(18,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(19,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(20,22): error TS2339: Property 'Extension' does not exist on type 'HTMLElement'.
 rfc/2560/index.ts(25,32): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(26,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(27,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(27,48): error TS2339: Property 'AlgorithmIdentifier' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(28,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(29,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(29,60): error TS2339: Property 'Certificate' does not exist on type 'HTMLElement'.
 rfc/2560/index.ts(34,7): error TS2451: Cannot redeclare block-scoped variable 'Request'.
 rfc/2560/index.ts(34,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/2560/index.ts(34,29): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(35,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(36,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(37,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(38,15): error TS2339: Property 'Extension' does not exist on type 'HTMLElement'.
 rfc/2560/index.ts(43,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/2560/index.ts(43,34): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(44,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(45,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(46,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(47,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(50,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(56,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/2560/index.ts(56,36): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(57,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(68,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/2560/index.ts(68,39): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(69,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(70,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(71,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(71,48): error TS2339: Property 'AlgorithmIdentifier' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(72,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(73,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(73,60): error TS2339: Property 'Certificate' does not exist on type 'HTMLElement'.
 rfc/2560/index.ts(78,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/2560/index.ts(78,34): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(79,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(80,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(80,59): error TS2339: Property 'Version' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(81,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(82,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(83,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(84,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(85,22): error TS2339: Property 'Extension' does not exist on type 'HTMLElement'.
 rfc/2560/index.ts(90,34): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(91,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(92,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(92,42): error TS2339: Property 'Name' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(93,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(98,30): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(99,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(103,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/2560/index.ts(103,36): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(104,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(105,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(106,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(107,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(108,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(109,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(109,71): error TS2339: Property 'Extension' does not exist on type 'HTMLElement'.
 rfc/2560/index.ts(114,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/2560/index.ts(114,32): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(115,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(116,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(117,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(118,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(123,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/2560/index.ts(123,33): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(124,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(125,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(126,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(126,69): error TS2339: Property 'ReasonCode' does not exist on type 'HTMLElement'.
 rfc/2560/index.ts(131,29): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(132,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(133,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(133,43): error TS2339: Property 'AlgorithmIdentifier' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(134,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(135,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/2560/index.ts(136,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/2560/index.ts(136,42): error TS2339: Property 'CertificateSerialNumber' does not exist on type 'HTMLElement'.
 rfc/2560/index.ts(141,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/2560/index.ts(141,27): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/2560/index.ts(142,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'asn1'.
 rfc/5280/index.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'rfc5280'.
 rfc/5280/index.ts(42,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/5280/index.ts(42,37): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(43,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(44,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(45,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(46,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(49,9): error TS2339: Property 'CertificateList' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(54,42): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(55,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(56,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(57,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(60,9): error TS2339: Property 'AlgorithmIdentifier' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(66,34): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(67,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(68,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(69,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(70,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(73,9): error TS2339: Property 'Certificate' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(86,37): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(87,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(88,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(89,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(90,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(91,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(92,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(93,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(94,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(95,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(96,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(97,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+rfc/5280/index.ts(86,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+rfc/5280/index.ts(86,36): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(100,9): error TS2339: Property 'TBSCertificate' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(103,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/5280/index.ts(103,29): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(104,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(110,9): error TS2339: Property 'Version' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(115,31): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(116,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(117,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(118,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(121,9): error TS2339: Property 'Validity' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(126,27): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(127,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(128,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(129,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(132,9): error TS2339: Property 'Time' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(137,45): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(138,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(139,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(140,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(143,9): error TS2339: Property 'SubjectPublicKeyInfo' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(157,34): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(158,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(159,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(160,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(161,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(162,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(163,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(164,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(165,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(168,9): error TS2339: Property 'TBSCertList' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(170,41): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(171,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(172,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(173,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(174,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(182,32): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(183,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(184,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(185,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(186,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(187,27): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 rfc/5280/index.ts(187,46): error TS2339: Property 'extnID' does not exist on type 'Object'.
 rfc/5280/index.ts(189,31): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(189,64): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(193,9): error TS2339: Property 'Extension' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(197,27): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(198,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(199,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(202,9): error TS2339: Property 'Name' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(214,34): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(215,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(216,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(217,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(218,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(219,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(220,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(221,32): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(222,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(223,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(226,9): error TS2339: Property 'GeneralName' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(229,35): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(230,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(232,9): error TS2339: Property 'GeneralNames' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(237,34): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(238,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(239,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(240,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(243,9): error TS2339: Property 'AnotherName' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(248,35): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(249,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(250,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(251,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(254,9): error TS2339: Property 'EDIPartyName' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(257,34): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(258,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(260,9): error TS2339: Property 'RDNSequence' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(264,48): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(266,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(268,9): error TS2339: Property 'RelativeDistinguishedName' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(273,44): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(274,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(275,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(276,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(279,9): error TS2339: Property 'AttributeTypeAndValue' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(284,32): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(285,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(286,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(287,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(290,9): error TS2551: Property 'Attribute' does not exist on type 'HTMLElement'. Did you mean 'attributes'?
 rfc/5280/index.ts(293,36): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(294,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(296,9): error TS2339: Property 'AttributeType' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(299,37): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(300,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(302,9): error TS2339: Property 'AttributeValue' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(310,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/5280/index.ts(310,37): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(311,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(312,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(313,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(314,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(315,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(316,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(319,9): error TS2339: Property 'DirectoryString' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(325,45): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(326,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(327,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(328,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(329,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(333,9): error TS2339: Property 'AuthorityKeyIdentifier' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(336,36): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(337,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(339,9): error TS2339: Property 'KeyIdentifier' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(342,46): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(344,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(346,9): error TS2339: Property 'CertificateSerialNumber' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(353,32): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(354,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(355,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(356,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(358,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(361,9): error TS2339: Property 'ORAddress' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(373,50): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(375,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(376,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(377,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(379,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(380,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(382,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(383,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(384,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(386,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(387,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(391,9): error TS2339: Property 'BuiltInStandardAttributes' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(396,34): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(397,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(398,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(399,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(402,9): error TS2339: Property 'CountryName' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(408,47): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(410,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(411,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(412,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(415,9): error TS2339: Property 'AdministrationDomainName' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(418,37): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(419,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(421,9): error TS2339: Property 'NetworkAddress' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(424,34): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(425,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(427,9): error TS2339: Property 'X121Address' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(430,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/5280/index.ts(430,40): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(431,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(433,9): error TS2339: Property 'TerminalIdentifier' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(438,40): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(439,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(440,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(441,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(444,9): error TS2339: Property 'PrivateDomainName' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(447,39): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(448,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(450,9): error TS2339: Property 'OrganizationName' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(453,44): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(454,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(456,9): error TS2339: Property 'NumericUserIdentifier' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(463,35): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(464,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(465,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(466,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(467,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(468,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(471,9): error TS2339: Property 'PersonalName' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(475,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/5280/index.ts(475,45): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(477,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(479,9): error TS2339: Property 'OrganizationalUnitNames' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(483,45): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(484,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(486,9): error TS2339: Property 'OrganizationalUnitName' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(491,55): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(493,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(495,9): error TS2339: Property 'BuiltInDomainDefinedAttributes' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(501,54): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(503,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(504,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(505,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(508,9): error TS2339: Property 'BuiltInDomainDefinedAttribute' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(513,42): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(514,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(516,9): error TS2339: Property 'ExtensionAttributes' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(521,41): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(522,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(523,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(524,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(527,9): error TS2339: Property 'ExtensionAttribute' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(530,43): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(531,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(533,9): error TS2339: Property 'SubjectKeyIdentifier' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(546,31): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(547,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(549,9): error TS2339: Property 'KeyUsage' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(552,42): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(553,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(555,9): error TS2339: Property 'CertificatePolicies' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(561,40): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(562,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(563,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(564,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(567,9): error TS2339: Property 'PolicyInformation' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(570,35): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(571,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(573,9): error TS2339: Property 'CertPolicyId' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(575,39): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(576,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(578,9): error TS2339: Property 'PolicyQualifiers' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(583,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/5280/index.ts(583,41): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(584,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(585,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(586,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(589,9): error TS2339: Property 'PolicyQualifierInfo' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(592,40): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(593,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(595,9): error TS2339: Property 'PolicyQualifierId' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(600,37): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(601,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(603,9): error TS2339: Property 'PolicyMappings' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(605,36): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(606,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(607,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(608,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(611,9): error TS2339: Property 'PolicyMapping' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(614,45): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(615,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(617,9): error TS2339: Property 'SubjectAlternativeName' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(620,44): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(621,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(623,9): error TS2339: Property 'IssuerAlternativeName' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(626,49): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(628,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(630,9): error TS2339: Property 'SubjectDirectoryAttributes' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(635,39): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(636,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(637,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(638,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(641,9): error TS2339: Property 'BasicConstraints' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(646,38): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(647,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(648,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(649,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(652,9): error TS2339: Property 'NameConstraints' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(655,38): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(656,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(658,9): error TS2339: Property 'GeneralSubtrees' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(664,37): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(665,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(666,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(667,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(668,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(671,9): error TS2339: Property 'GeneralSubtree' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(674,35): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(675,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(677,9): error TS2339: Property 'BaseDistance' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(682,40): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(683,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(684,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(685,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(688,9): error TS2339: Property 'PolicyConstraints' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(691,32): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(692,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(694,9): error TS2339: Property 'SkipCerts' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(697,39): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(698,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(700,9): error TS2339: Property 'ExtendedKeyUsage' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(703,35): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(704,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(706,9): error TS2339: Property 'KeyPurposeId' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(709,44): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(710,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(712,9): error TS2339: Property 'CRLDistributionPoints' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(718,40): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(719,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(720,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(722,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(723,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(726,9): error TS2339: Property 'DistributionPoint' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(731,44): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(732,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(733,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(734,30): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(737,9): error TS2339: Property 'DistributionPointName' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(749,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/5280/index.ts(749,33): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(750,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(752,9): error TS2339: Property 'ReasonFlags' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(755,39): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(756,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(758,9): error TS2339: Property 'InhibitAnyPolicy' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(761,34): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(762,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(764,9): error TS2339: Property 'FreshestCRL' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(768,48): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(770,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(772,9): error TS2339: Property 'AuthorityInfoAccessSyntax' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(777,40): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(778,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(779,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(780,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(783,9): error TS2339: Property 'AccessDescription' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(787,47): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(789,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(791,9): error TS2339: Property 'SubjectInformationAccess' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(798,32): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(799,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(801,9): error TS2339: Property 'CRLNumber' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(803,40): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(804,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(806,9): error TS2339: Property 'DeltaCRLIndicator' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(815,47): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(817,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(818,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(820,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(821,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(822,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(823,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-rfc/5280/index.ts(824,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(827,9): error TS2339: Property 'IssuingDistributionPoint' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(841,33): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(842,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(855,9): error TS2339: Property 'ReasonCode' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(858,37): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(859,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(861,9): error TS2339: Property 'InvalidityDate' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(864,40): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(865,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 rfc/5280/index.ts(867,9): error TS2339: Property 'CertificateIssuer' does not exist on type 'HTMLElement'.
 ../../../../node_modules/@types/assert-plus/index.d.ts(14,32): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 ../../../../node_modules/@types/assert-plus/index.d.ts(38,36): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?

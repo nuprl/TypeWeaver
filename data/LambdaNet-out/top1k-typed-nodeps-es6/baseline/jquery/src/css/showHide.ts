@@ -82,7 +82,7 @@ jQuery.fn.extend( {
 	hide: function() {
 		return showHide( this );
 	},
-	toggle: function( state: String ) {
+	toggle: function( state: Function ) {
 		if ( typeof state === "boolean" ) {
 			return state ? this.show() : this.hide();
 		}

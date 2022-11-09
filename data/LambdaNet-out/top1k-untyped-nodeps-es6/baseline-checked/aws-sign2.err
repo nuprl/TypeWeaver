@@ -23,13 +23,13 @@ index.ts(173,15): error TS2314: Generic type 'Array<T>' requires 1 type argument
 index.ts(177,31): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(199,7): error TS2740: Type 'UrlWithParsedQuery & UrlWithStringQuery & Url' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(199,27): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(urlString: string, parseQueryString: true, slashesDenoteHost?: boolean | undefined): UrlWithParsedQuery', gave the following error.
+  Overload 1 of 4, '(urlString: string, parseQueryString: true, slashesDenoteHost?: boolean): UrlWithParsedQuery', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 4, '(urlString: string, parseQueryString: false | undefined, slashesDenoteHost?: boolean | undefined): UrlWithStringQuery', gave the following error.
+  Overload 2 of 4, '(urlString: string, parseQueryString: false, slashesDenoteHost?: boolean): UrlWithStringQuery', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 3 of 4, '(urlString: string, parseQueryString: boolean, slashesDenoteHost?: boolean | undefined): Url', gave the following error.
+  Overload 3 of 4, '(urlString: string, parseQueryString: boolean, slashesDenoteHost?: boolean): Url', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(200,26): error TS2339: Property 'pathname' does not exist on type 'String'.

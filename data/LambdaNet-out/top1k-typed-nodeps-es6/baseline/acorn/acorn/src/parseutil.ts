@@ -122,7 +122,7 @@ export class DestructuringErrors {
   }
 }
 
-pp.checkPatternErrors = function(refDestructuringErrors: String, isAssign: Boolean) {
+pp.checkPatternErrors = function(refDestructuringErrors: DestructuringErrors, isAssign: Boolean) {
   if (!refDestructuringErrors) return
   if (refDestructuringErrors.trailingComma > -1)
     this.raiseRecoverable(refDestructuringErrors.trailingComma, "Comma is not permitted after the rest element")

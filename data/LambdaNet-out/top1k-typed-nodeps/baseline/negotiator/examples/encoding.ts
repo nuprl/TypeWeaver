@@ -25,7 +25,7 @@
     })();
     console.log(availableEncodings);
     server = http.createServer(function(req: Object, res: Array) {
-      var encoding: String, negotiator: HTMLElement;
+      var encoding: String, negotiator: Object;
       negotiator = new Negotiator(req);
       console.log("Accept-Encoding: " + req.headers['accept-encoding']);
       console.log("Preferred: " + (negotiator.encodings()));

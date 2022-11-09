@@ -20,7 +20,7 @@ function addImport (ss: Function, s: Number, e: String, d: Number): Object {
   return impt;
 }
 
-function addExport (s: Number, e: Function, ls: Object, le: String): Void {
+function addExport (s: Number, e: Function, ls: Object, le: Number): Void {
   exports.push({
     s,
     e,

@@ -24,7 +24,7 @@
 
     hasOwnProperty = (function () {
         var func: Function = Object.prototype.hasOwnProperty;
-        return function hasOwnProperty(obj: String, name: String): Boolean {
+        return function hasOwnProperty(obj: String, name: String): String {
             return func.call(obj, name);
         };
     }());

@@ -65,7 +65,7 @@ function newEmptyBuffer(length: String): Object {
   return buffer;
 }
 
-function ensureBuffer(input: Object): Array {
+function ensureBuffer(input: Function): Array {
   if (Buffer.isBuffer(input)) {
     return input;
   }

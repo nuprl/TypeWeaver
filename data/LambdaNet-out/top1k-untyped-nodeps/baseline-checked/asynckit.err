@@ -16,15 +16,12 @@ bench.ts(57,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(
 bench.ts(59,12): error TS2339: Property 'ifError' does not exist on type 'String'.
 bench.ts(60,12): error TS2339: Property 'equal' does not exist on type 'String'.
 bench.ts(69,25): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
-bench.ts(73,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/abort.ts(9,10): error TS2300: Duplicate identifier 'abort'.
 lib/abort.ts(9,32): error TS2304: Cannot find name 'Void'.
 lib/abort.ts(11,21): error TS2339: Property 'jobs' does not exist on type 'Object'.
 lib/abort.ts(14,9): error TS2339: Property 'jobs' does not exist on type 'Object'.
 lib/abort.ts(23,30): error TS2304: Cannot find name 'Void'.
-lib/abort.ts(25,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/abort.ts(25,24): error TS2538: Type 'String' cannot be used as an index type.
-lib/abort.ts(27,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/abort.ts(27,15): error TS2538: Type 'String' cannot be used as an index type.
 lib/async.ts(1,5): error TS2300: Duplicate identifier 'defer'.
 lib/async.ts(13,10): error TS2300: Duplicate identifier 'async'.
@@ -32,25 +29,19 @@ lib/async.ts(20,64): error TS2304: Cannot find name 'Void'.
 lib/async.ts(28,43): error TS2304: Cannot find name 'Void'.
 lib/defer.ts(8,10): error TS2300: Duplicate identifier 'defer'.
 lib/defer.ts(8,29): error TS2304: Cannot find name 'Void'.
-lib/defer.ts(10,7): error TS2322: Type '((callback: Function, ...args: any[]) => void) | null' is not assignable to type 'Function'.
-  Type 'null' is not assignable to type 'Function'.
 lib/defer.ts(24,16): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(callback: () => void, ms?: number | undefined): Timeout', gave the following error.
+  Overload 1 of 3, '(callback: () => void, ms?: number): Timeout', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type '() => void'.
       Type 'Number' provides no match for the signature '(): void'.
-  Overload 2 of 3, '(callback: (args: void) => void, ms?: number | undefined): Timeout', gave the following error.
+  Overload 2 of 3, '(callback: (args: void) => void, ms?: number): Timeout', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type '(args: void) => void'.
       Type 'Number' provides no match for the signature '(args: void): void'.
-  Overload 3 of 3, '(handler: TimerHandler, timeout?: number | undefined, ...arguments: any[]): number', gave the following error.
+  Overload 3 of 3, '(handler: TimerHandler, timeout?: number, ...arguments: any[]): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'TimerHandler'.
       Type 'Number' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/iterate.ts(2,5): error TS2300: Duplicate identifier 'abort'.
 lib/iterate.ts(16,10): error TS2300: Duplicate identifier 'iterate'.
 lib/iterate.ts(16,86): error TS2304: Cannot find name 'Void'.
-lib/iterate.ts(19,21): error TS7053: Element implicitly has an 'any' type because expression of type '"keyedList"' can't be used to index type 'Object'.
-  Property 'keyedList' does not exist on type 'Object'.
-lib/iterate.ts(19,42): error TS7053: Element implicitly has an 'any' type because expression of type '"keyedList"' can't be used to index type 'Object'.
-  Property 'keyedList' does not exist on type 'Object'.
 lib/iterate.ts(19,67): error TS2339: Property 'index' does not exist on type 'Object'.
 lib/iterate.ts(19,82): error TS2339: Property 'index' does not exist on type 'Object'.
 lib/iterate.ts(21,9): error TS2339: Property 'jobs' does not exist on type 'Object'.
@@ -66,94 +57,50 @@ lib/iterate.ts(61,16): error TS2314: Generic type 'Array<T>' requires 1 type arg
 lib/readable_asynckit.ts(12,10): error TS2300: Duplicate identifier 'ReadableAsyncKit'.
 lib/readable_asynckit.ts(12,30): error TS2304: Cannot find name 'Void'.
 lib/readable_asynckit.ts(14,20): error TS2339: Property 'super_' does not exist on type 'String'.
-lib/readable_asynckit.ts(14,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(17,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(20,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(21,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(22,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/readable_asynckit.ts(31,21): error TS2304: Cannot find name 'Void'.
-lib/readable_asynckit.ts(33,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(38,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(40,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(42,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/readable_asynckit.ts(51,20): error TS2304: Cannot find name 'Void'.
 lib/readable_asynckit.ts(56,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/readable_asynckit.ts(60,36): error TS2339: Property 'callback' does not exist on type 'String'.
-lib/readable_asynckit.ts(60,50): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/readable_asynckit.ts(65,23): error TS2339: Property 'iterator' does not exist on type 'String'.
-lib/readable_asynckit.ts(65,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(70,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_asynckit.ts(72,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/readable_asynckit.ts(72,32): error TS2339: Property 'apply' does not exist on type 'Object'.
-lib/readable_asynckit.ts(78,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/readable_asynckit.ts(88,19): error TS2304: Cannot find name 'Void'.
 lib/readable_parallel.ts(1,5): error TS2300: Duplicate identifier 'parallel'.
 lib/readable_parallel.ts(14,10): error TS2300: Duplicate identifier 'ReadableParallel'.
-lib/readable_parallel.ts(14,80): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-lib/readable_parallel.ts(16,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_parallel.ts(22,32): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_parallel.ts(24,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/readable_serial.ts(1,5): error TS2300: Duplicate identifier 'serial'.
 lib/readable_serial.ts(14,10): error TS2300: Duplicate identifier 'ReadableSerial'.
-lib/readable_serial.ts(14,78): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-lib/readable_serial.ts(16,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/readable_serial.ts(16,25): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 lib/readable_serial.ts(18,16): error TS2351: This expression is not constructable.
   Type 'String' has no construct signatures.
 lib/readable_serial.ts(22,18): error TS2339: Property 'super_' does not exist on type 'String'.
-lib/readable_serial.ts(22,30): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_serial.ts(24,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/readable_serial_ordered.ts(1,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/readable_serial_ordered.ts(6,43): error TS2339: Property 'ascending' does not exist on type 'Function'.
 lib/readable_serial_ordered.ts(7,43): error TS2339: Property 'descending' does not exist on type 'Function'.
 lib/readable_serial_ordered.ts(18,10): error TS2300: Duplicate identifier 'ReadableSerialOrdered'.
-lib/readable_serial_ordered.ts(18,103): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-lib/readable_serial_ordered.ts(20,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/readable_serial_ordered.ts(20,25): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 lib/readable_serial_ordered.ts(22,16): error TS2351: This expression is not constructable.
   Type 'String' has no construct signatures.
 lib/readable_serial_ordered.ts(26,25): error TS2339: Property 'super_' does not exist on type 'String'.
-lib/readable_serial_ordered.ts(26,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/readable_serial_ordered.ts(28,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/state.ts(13,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/state.ts(30,15): error TS2339: Property 'keyedList' does not exist on type 'Object'.
 lib/state.ts(30,69): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/state.ts(30,79): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/streamify.ts(18,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/streamify.ts(18,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/streamify.ts(23,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/streamify.ts(23,68): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 lib/streamify.ts(54,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/streamify.ts(54,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/streamify.ts(58,49): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 lib/streamify.ts(76,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/streamify.ts(76,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/streamify.ts(81,11): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
 lib/streamify.ts(102,71): error TS2304: Cannot find name 'Void'.
-lib/streamify.ts(104,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/streamify.ts(106,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/streamify.ts(107,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/streamify.ts(108,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/streamify.ts(110,38): error TS2339: Property 'value' does not exist on type 'Object'.
-lib/streamify.ts(115,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/streamify.ts(119,36): error TS2339: Property 'value' does not exist on type 'Object'.
 lib/streamify.ts(130,71): error TS2304: Cannot find name 'Void'.
-lib/streamify.ts(136,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/terminator.ts(1,5): error TS2300: Duplicate identifier 'abort'.
 lib/terminator.ts(14,10): error TS2300: Duplicate identifier 'terminator'.
 lib/terminator.ts(14,40): error TS2304: Cannot find name 'Void'.
-lib/terminator.ts(16,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/terminator.ts(22,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/terminator.ts(22,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/terminator.ts(25,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/terminator.ts(28,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 parallel.ts(1,5): error TS2300: Duplicate identifier 'iterate'.
 parallel.ts(3,5): error TS2300: Duplicate identifier 'terminator'.
 parallel.ts(17,10): error TS2300: Duplicate identifier 'parallel'.
 parallel.ts(17,72): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 parallel.ts(21,16): error TS2339: Property 'index' does not exist on type 'Object'.
-parallel.ts(21,25): error TS7053: Element implicitly has an 'any' type because expression of type '"keyedList"' can't be used to index type 'Object'.
-  Property 'keyedList' does not exist on type 'Object'.
 parallel.ts(23,68): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 parallel.ts(32,29): error TS2339: Property 'jobs' does not exist on type 'Object'.
 parallel.ts(34,30): error TS2339: Property 'results' does not exist on type 'Object'.
@@ -168,8 +115,6 @@ serialOrdered.ts(21,97): error TS2314: Generic type 'Promise<T>' requires 1 type
 serialOrdered.ts(25,93): error TS2304: Cannot find name 'Void'.
 serialOrdered.ts(33,11): error TS2339: Property 'index' does not exist on type 'Object'.
 serialOrdered.ts(36,15): error TS2339: Property 'index' does not exist on type 'Object'.
-serialOrdered.ts(36,24): error TS7053: Element implicitly has an 'any' type because expression of type '"keyedList"' can't be used to index type 'Object'.
-  Property 'keyedList' does not exist on type 'Object'.
 serialOrdered.ts(43,26): error TS2339: Property 'results' does not exist on type 'Object'.
 serialOrdered.ts(74,15): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 serialOrdered.ts(74,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.

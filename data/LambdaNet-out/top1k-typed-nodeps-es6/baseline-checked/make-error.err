@@ -1,98 +1,15 @@
-index.spec.ts(7,23): error TS2306: File 'index.ts' is not a module.
-index.spec.ts(13,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.spec.ts(13,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.spec.ts(13,75): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-index.spec.ts(14,56): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.spec.ts(19,59): error TS2304: Cannot find name 'Void'.
-index.spec.ts(20,3): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
-index.spec.ts(21,3): error TS2322: Type 'string[]' is not assignable to type 'String'.
-index.spec.ts(25,12): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-index.spec.ts(29,3): error TS2552: Cannot find name 'expect'. Did you mean 'expected'?
-index.spec.ts(41,40): error TS2304: Cannot find name 'Void'.
-index.spec.ts(42,15): error TS2339: Property 'super' does not exist on type '(message: String) => Void'.
-index.spec.ts(42,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.spec.ts(46,5): error TS2304: Cannot find name 'expect'.
-index.spec.ts(50,40): error TS2304: Cannot find name 'Void'.
-index.spec.ts(51,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.spec.ts(57,21): error TS2304: Cannot find name 'Void'.
-index.spec.ts(58,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.spec.ts(60,28): error TS2339: Property 'prototype' does not exist on type 'Object'.
-index.spec.ts(61,25): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-index.spec.ts(66,40): error TS2304: Cannot find name 'Void'.
-index.spec.ts(67,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.spec.ts(86,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.spec.ts(94,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.spec.ts(96,1): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-index.spec.ts(97,3): error TS2304: Cannot find name 'expect'.
-index.spec.ts(100,3): error TS2304: Cannot find name 'expect'.
-index.spec.ts(106,37): error TS2538: Type 'String' cannot be used as an index type.
-index.spec.ts(107,14): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-index.spec.ts(107,25): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-index.spec.ts(108,5): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-index.spec.ts(113,27): error TS2351: This expression is not constructable.
-  Type 'Object' has no construct signatures.
-index.spec.ts(114,11): error TS2322: Type 'string | undefined' is not assignable to type 'String'.
-  Type 'undefined' is not assignable to type 'String'.
-index.spec.ts(116,7): error TS2304: Cannot find name 'expect'.
-index.spec.ts(117,7): error TS2304: Cannot find name 'expect'.
-index.spec.ts(118,7): error TS2304: Cannot find name 'expect'.
-index.spec.ts(120,7): error TS2304: Cannot find name 'expect'.
-index.spec.ts(120,16): error TS2339: Property 'name' does not exist on type 'Object'.
-index.spec.ts(121,7): error TS2304: Cannot find name 'expect'.
-index.spec.ts(121,16): error TS2339: Property 'message' does not exist on type 'Object'.
-index.spec.ts(122,7): error TS2304: Cannot find name 'expect'.
-index.spec.ts(122,23): error TS2339: Property 'stack' does not exist on type 'Object'.
-index.spec.ts(123,23): error TS2339: Property 'stack' does not exist on type 'Object'.
-index.spec.ts(126,5): error TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-index.spec.ts(128,44): error TS2538: Type 'String' cannot be used as an index type.
-index.spec.ts(139,11): error TS2322: Type 'undefined' is not assignable to type 'Function'.
-index.spec.ts(142,21): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-index.spec.ts(142,26): error TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-index.spec.ts(149,31): error TS2351: This expression is not constructable.
-  Type 'Object' has no construct signatures.
-index.spec.ts(150,15): error TS2322: Type 'string | undefined' is not assignable to type 'String'.
-  Type 'undefined' is not assignable to type 'String'.
-index.spec.ts(152,11): error TS2304: Cannot find name 'expect'.
-index.spec.ts(153,11): error TS2304: Cannot find name 'expect'.
-index.spec.ts(154,11): error TS2304: Cannot find name 'expect'.
-index.spec.ts(155,11): error TS2304: Cannot find name 'expect'.
-index.spec.ts(157,11): error TS2304: Cannot find name 'expect'.
-index.spec.ts(157,20): error TS2339: Property 'name' does not exist on type 'Object'.
-index.spec.ts(158,11): error TS2304: Cannot find name 'expect'.
-index.spec.ts(158,20): error TS2339: Property 'message' does not exist on type 'Object'.
-index.spec.ts(159,11): error TS2304: Cannot find name 'expect'.
-index.spec.ts(159,27): error TS2339: Property 'stack' does not exist on type 'Object'.
-index.spec.ts(160,27): error TS2339: Property 'stack' does not exist on type 'Object'.
-index.ts(7,5): error TS2322: Type '((target: Function, argumentsList: ArrayLike<any>, newTarget?: Function | undefined) => any) | undefined' is not assignable to type 'Function'.
-  Type 'undefined' is not assignable to type 'Function'.
 index.ts(14,66): error TS2304: Cannot find name 'Void'.
-index.ts(20,13): error TS2322: Type 'string | undefined' is not assignable to type 'String'.
-  Type 'undefined' is not assignable to type 'String'.
 index.ts(31,46): error TS2304: Cannot find name 'Void'.
 index.ts(44,38): error TS2304: Cannot find name 'Void'.
-index.ts(46,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(53,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(54,40): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(55,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(62,3): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-index.ts(62,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(62,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(77,5): error TS2322: Type '((fn: String, name: String) => any) | undefined' is not assignable to type 'Function'.
-  Type 'undefined' is not assignable to type 'Function'.
-index.ts(78,55): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(86,21): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
   Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-index.ts(108,49): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(111,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(117,7): error TS2322: Type 'undefined' is not assignable to type 'String'.
-index.ts(127,15): error TS2339: Property 'super_' does not exist on type 'Function'.
-index.ts(127,24): error TS7053: Element implicitly has an 'any' type because expression of type '"super"' can't be used to index type 'Function'.
-  Property 'super' does not exist on type 'Function'.
-index.ts(131,7): error TS2322: Type '{ configurable: true; value: Function; writable: true; }' is not assignable to type 'Function'.
+index.ts(127,15): error TS2339: Property 'super_' does not exist on type 'Object'.
+index.ts(131,7): error TS2322: Type '{ configurable: true; value: Object; writable: true; }' is not assignable to type 'Function'.
   Object literal may only specify known properties, and 'configurable' does not exist in type 'Function'.
-index.ts(139,7): error TS2454: Variable 'name' is used before being assigned.
 index.ts(140,16): error TS2339: Property 'name' does not exist on type 'Object'.
+index.ts(146,15): error TS2339: Property 'prototype' does not exist on type 'Object'.
 index.ts(146,59): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'PropertyDescriptorMap & ThisType<any>'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is not assignable to type 'PropertyDescriptorMap'.

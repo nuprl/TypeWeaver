@@ -29,11 +29,7 @@ examples/expand.ts(3,19): error TS2306: File 'examples/parse.ts' is not a module
 examples/expand.ts(4,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/expand.ts(22,32): error TS2304: Cannot find name 'expand'.
 examples/option-transform.ts(4,30): error TS2339: Property 'expand' does not exist on type 'Function'.
-examples/option-transform.ts(5,13): error TS7006: Parameter 'code' implicitly has an 'any' type.
-examples/option-transform.ts(5,19): error TS7006: Parameter 'index' implicitly has an 'any' type.
 examples/option-transform.ts(13,32): error TS2339: Property 'expand' does not exist on type 'Function'.
-examples/option-transform.ts(14,13): error TS7006: Parameter 'value' implicitly has an 'any' type.
-examples/option-transform.ts(14,20): error TS7006: Parameter 'index' implicitly has an 'any' type.
 index.ts(22,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(23,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(27,35): error TS2339: Property 'create' does not exist on type 'Function'.
@@ -181,6 +177,7 @@ lib/parse.ts(184,23): error TS2339: Property 'keepQuotes' does not exist on type
 lib/parse.ts(184,44): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
 lib/parse.ts(188,9): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
 lib/parse.ts(200,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/parse.ts(202,11): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 lib/parse.ts(202,33): error TS2339: Property 'value' does not exist on type 'Object'.
 lib/parse.ts(202,47): error TS2339: Property 'value' does not exist on type 'Object'.
 lib/parse.ts(202,80): error TS2339: Property 'dollar' does not exist on type 'String'.
@@ -270,7 +267,6 @@ lib/utils.ts(92,12): error TS2339: Property 'type' does not exist on type 'Objec
 lib/utils.ts(92,43): error TS2339: Property 'value' does not exist on type 'Object'.
 lib/utils.ts(93,12): error TS2339: Property 'type' does not exist on type 'Object'.
 lib/utils.ts(93,35): error TS2339: Property 'type' does not exist on type 'Object'.
-lib/utils.ts(101,35): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 lib/utils.ts(102,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/utils.ts(103,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 

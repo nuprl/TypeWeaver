@@ -27,8 +27,6 @@ bench/index.ts(96,31): error TS2339: Property 'makeRe' does not exist on type 'F
 bench/index.ts(101,31): error TS2339: Property 'makeRe' does not exist on type 'Function'.
 examples/micromatch.braces.ts(3,10): error TS2614: Module '".."' has no exported member 'braces'. Did you mean to use 'import braces from ".."' instead?
 examples/option-expandRange.ts(5,39): error TS2339: Property 'makeRe' does not exist on type 'Function'.
-examples/option-expandRange.ts(6,15): error TS7006: Parameter 'a' implicitly has an 'any' type.
-examples/option-expandRange.ts(6,18): error TS7006: Parameter 'b' implicitly has an 'any' type.
 examples/option-expandRange.ts(14,19): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
 examples/option-expandRange.ts(15,19): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
 examples/option-expandRange.ts(16,19): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
@@ -42,10 +40,6 @@ examples/option-ignore.ts(7,13): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 examples/option-ignore.ts(8,13): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-examples/option-onIgnore.ts(5,31): error TS7031: Binding element 'glob' implicitly has an 'any' type.
-examples/option-onIgnore.ts(5,37): error TS7031: Binding element 'regex' implicitly has an 'any' type.
-examples/option-onIgnore.ts(5,44): error TS7031: Binding element 'input' implicitly has an 'any' type.
-examples/option-onIgnore.ts(5,51): error TS7031: Binding element 'output' implicitly has an 'any' type.
 examples/option-onIgnore.ts(10,36): error TS2339: Property 'matcher' does not exist on type 'Function'.
 examples/option-onIgnore.ts(11,1): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
@@ -53,10 +47,6 @@ examples/option-onIgnore.ts(12,1): error TS2349: This expression is not callable
   Type 'Object' has no call signatures.
 examples/option-onIgnore.ts(13,1): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-examples/option-onMatch.ts(5,30): error TS7031: Binding element 'glob' implicitly has an 'any' type.
-examples/option-onMatch.ts(5,36): error TS7031: Binding element 'regex' implicitly has an 'any' type.
-examples/option-onMatch.ts(5,43): error TS7031: Binding element 'input' implicitly has an 'any' type.
-examples/option-onMatch.ts(5,50): error TS7031: Binding element 'output' implicitly has an 'any' type.
 examples/option-onMatch.ts(12,36): error TS2339: Property 'matcher' does not exist on type 'Function'.
 examples/option-onMatch.ts(13,1): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
@@ -64,10 +54,6 @@ examples/option-onMatch.ts(14,1): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 examples/option-onMatch.ts(15,1): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-examples/option-onResult.ts(5,31): error TS7031: Binding element 'glob' implicitly has an 'any' type.
-examples/option-onResult.ts(5,37): error TS7031: Binding element 'regex' implicitly has an 'any' type.
-examples/option-onResult.ts(5,44): error TS7031: Binding element 'input' implicitly has an 'any' type.
-examples/option-onResult.ts(5,51): error TS7031: Binding element 'output' implicitly has an 'any' type.
 examples/option-onResult.ts(9,36): error TS2339: Property 'matcher' does not exist on type 'Function'.
 examples/option-onResult.ts(10,1): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
@@ -133,29 +119,12 @@ index.ts(194,53): error TS2339: Property 'contains' does not exist on type 'Func
 index.ts(207,21): error TS2339: Property 'isMatch' does not exist on type 'Function'.
 index.ts(230,12): error TS2339: Property 'matchKeys' does not exist on type 'Function'.
 index.ts(234,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(236,25): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-index.ts(236,36): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(259,12): error TS2339: Property 'some' does not exist on type 'Function'.
 index.ts(259,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(260,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(260,32): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
-    Argument of type 'Object' is not assignable to parameter of type 'ConcatArray<never>'.
-      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-        Type 'Object' is missing the following properties from type 'ConcatArray<never>': length, join, slice
-  Overload 2 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
-    Argument of type 'Object' is not assignable to parameter of type 'ConcatArray<never>'.
-      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(295,12): error TS2339: Property 'every' does not exist on type 'Function'.
 index.ts(295,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(296,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(296,32): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
-    Argument of type 'Object' is not assignable to parameter of type 'ConcatArray<never>'.
-      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Overload 2 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
-    Argument of type 'Object' is not assignable to parameter of type 'ConcatArray<never>'.
-      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(334,12): error TS2551: Property 'all' does not exist on type 'Function'. Did you mean 'call'?
 index.ts(334,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(339,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -164,19 +133,11 @@ index.ts(363,7): error TS2740: Type 'RegExp' is missing the following properties
 index.ts(364,29): error TS2339: Property 'exec' does not exist on type 'HTMLElement'.
 index.ts(367,27): error TS2339: Property 'map' does not exist on type 'string'.
 index.ts(387,12): error TS2339: Property 'makeRe' does not exist on type 'Function'.
-index.ts(387,22): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 index.ts(387,51): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
 index.ts(403,12): error TS2339: Property 'scan' does not exist on type 'Function'.
-index.ts(403,20): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 index.ts(403,47): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
 index.ts(419,12): error TS2339: Property 'parse' does not exist on type 'Function'.
 index.ts(420,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(421,33): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'ConcatArray<never>'.
-      Property 'join' is missing in type 'String' but required in type 'ConcatArray<never>'.
-  Overload 2 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'ConcatArray<never>'.
 index.ts(446,12): error TS2339: Property 'braces' does not exist on type 'Function'.
 index.ts(448,27): error TS2339: Property 'nobrace' does not exist on type 'Object'.
 index.ts(458,12): error TS2339: Property 'braceExpand' does not exist on type 'Function'.

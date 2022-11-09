@@ -423,7 +423,7 @@
             var args: Array = Array.prototype.slice.call(arguments, 1),
                 msg: String = errorText.replace(
                     /%(\d)/g,
-                    function (whole: String, index: Number) {
+                    function (whole: Function, index: Number) {
                         utility.assert(index < args.length, 'Message reference must be in range');
                         return args[index];
                     }
@@ -774,7 +774,7 @@
         };
 
         function parseTag(options: Object): Object {
-            var title: String, parser: HTMLElement, tag: Number;
+            var title: String, parser: HTMLElement, tag: Function;
 
             // skip to tag
             if (!skipToTag()) {

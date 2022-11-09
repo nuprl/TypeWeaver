@@ -13,7 +13,7 @@ const handlers: Object = {
     'outline': outline
 };
 
-export default function compressValue(node: Object): Promise {
+export default function compressValue(node: Object): Void {
     if (!this.declaration) {
         return;
     }

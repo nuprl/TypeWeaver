@@ -1,4 +1,4 @@
-browser.ts(5,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+browser.ts(5,10): error TS2350: Only a void function can be called with the 'new' keyword.
 browser.ts(39,9): error TS2339: Property 'p224' does not exist on type 'Object'.
 browser.ts(39,24): error TS2339: Property 'secp224r1' does not exist on type 'Object'.
 browser.ts(40,9): error TS2339: Property 'p256' does not exist on type 'Object'.
@@ -12,31 +12,24 @@ browser.ts(42,24): error TS2339: Property 'secp384r1' does not exist on type 'Ob
 browser.ts(43,9): error TS2339: Property 'p521' does not exist on type 'Object'.
 browser.ts(43,24): error TS2339: Property 'secp521r1' does not exist on type 'Object'.
 browser.ts(45,32): error TS2304: Cannot find name 'Void'.
-browser.ts(46,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser.ts(46,28): error TS2538: Type 'String' cannot be used as an index type.
-browser.ts(47,8): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser.ts(48,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser.ts(52,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser.ts(52,32): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser.ts(53,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser.ts(61,49): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser.ts(64,31): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'BufferEncoding | undefined'.
+browser.ts(62,3): error TS2322: Type 'Number | "utf8"' is not assignable to type 'Number'.
+  Type 'string' is not assignable to type 'Number'.
+browser.ts(64,31): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'BufferEncoding'.
 browser.ts(67,30): error TS2339: Property 'mul' does not exist on type 'Object'.
 browser.ts(72,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser.ts(80,10): error TS2554: Expected 3 arguments, but got 2.
 browser.ts(84,10): error TS2554: Expected 3 arguments, but got 2.
 browser.ts(87,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser.ts(90,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'BufferEncoding | undefined'.
-browser.ts(99,5): error TS2740: Type 'Buffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 37 more.
-browser.ts(99,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+browser.ts(88,3): error TS2322: Type 'Number | "utf8"' is not assignable to type 'Number'.
+  Type 'string' is not assignable to type 'Number'.
+browser.ts(90,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'BufferEncoding'.
+browser.ts(96,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser.ts(97,3): error TS2322: Type 'Number | "utf8"' is not assignable to type 'Number'.
+  Type 'string' is not assignable to type 'Number'.
+browser.ts(99,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'BufferEncoding'.
 browser.ts(102,7): error TS2740: Type 'BN' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-browser.ts(102,30): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(number: string | number | number[] | Uint8Array | Buffer | BN, base?: number | "hex" | undefined, endian?: Endianness | undefined): BN', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string | number | number[] | Uint8Array | Buffer | BN'.
-      Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-  Overload 2 of 2, '(number: string | number | number[] | Uint8Array | Buffer | BN, endian?: Endianness | undefined): BN', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string | number | number[] | Uint8Array | Buffer | BN'.
 browser.ts(103,26): error TS2554: Expected 0 arguments, but got 1.
 browser.ts(109,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser.ts(113,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

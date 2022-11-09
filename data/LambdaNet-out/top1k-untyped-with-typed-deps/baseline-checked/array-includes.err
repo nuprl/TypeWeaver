@@ -4,7 +4,7 @@ implementation.ts(28,55): error TS2365: Operator '+' cannot be applied to types 
 implementation.ts(33,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 index.ts(16,52): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(16,84): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-polyfill.ts(10,3): error TS2322: Type '(searchElement: any, fromIndex?: number | undefined) => boolean' is not assignable to type 'Number'.
+polyfill.ts(10,3): error TS2322: Type '(searchElement: any, fromIndex?: number) => boolean' is not assignable to type 'Number'.
 polyfill.ts(12,2): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-shim.ts(11,36): error TS2367: This condition will always return 'true' since the types '(searchElement: any, fromIndex?: number | undefined) => boolean' and 'Boolean' have no overlap.
+shim.ts(11,36): error TS2367: This condition will always return 'true' since the types '(searchElement: any, fromIndex?: number) => boolean' and 'Boolean' have no overlap.
 

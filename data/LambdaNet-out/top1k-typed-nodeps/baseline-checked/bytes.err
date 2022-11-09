@@ -1,5 +1,5 @@
 index.ts(54,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(86,5): error TS2322: Type 'null' is not assignable to type 'String'.
+index.ts(56,18): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 index.ts(89,30): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(90,57): error TS2339: Property 'thousandsSeparator' does not exist on type 'Object'.
@@ -8,16 +8,12 @@ index.ts(92,51): error TS2339: Property 'decimalPlaces' does not exist on type '
 index.ts(92,90): error TS2339: Property 'decimalPlaces' does not exist on type 'Object'.
 index.ts(93,59): error TS2339: Property 'fixedDecimals' does not exist on type 'Object'.
 index.ts(94,42): error TS2339: Property 'unit' does not exist on type 'Object'.
-index.ts(96,17): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 index.ts(97,20): error TS2339: Property 'pb' does not exist on type 'Object'.
 index.ts(99,27): error TS2339: Property 'tb' does not exist on type 'Object'.
 index.ts(101,27): error TS2339: Property 'gb' does not exist on type 'Object'.
 index.ts(103,27): error TS2339: Property 'mb' does not exist on type 'Object'.
 index.ts(105,27): error TS2339: Property 'kb' does not exist on type 'Object'.
 index.ts(112,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(112,29): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 index.ts(113,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(122,44): error TS2769: No overload matches this call.
@@ -25,16 +21,8 @@ index.ts(122,44): error TS2769: No overload matches this call.
     Argument of type 'Boolean' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
       Type 'Boolean' provides no match for the signature '(substring: string, ...args: any[]): string'.
 index.ts(127,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
-index.ts(147,5): error TS2322: Type 'null' is not assignable to type 'Number'.
-index.ts(151,7): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-index.ts(161,29): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-index.ts(162,12): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
-  Property '4' does not exist on type 'Object'.
 index.ts(165,13): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-index.ts(166,5): error TS2322: Type 'null' is not assignable to type 'Number'.
 index.ts(169,25): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(169,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 

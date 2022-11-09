@@ -30,7 +30,7 @@ export default (options: Object = {}, connect: Function = tls.connect) => new Pr
 		callback();
 	};
 
-	const socketPromise: Promise = (async () => {
+	const socketPromise: Object = (async () => {
 		try {
 			socket = await connect(options, callback);
 

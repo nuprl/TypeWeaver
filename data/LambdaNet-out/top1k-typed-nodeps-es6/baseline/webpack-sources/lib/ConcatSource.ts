@@ -271,11 +271,11 @@ class ConcatSource extends Source {
 		};
 		const mergeRawSources: Function = () => {
 			if (Array.isArray(currentRawSources)) {
-				const rawSource: RawSource = new RawSource(currentRawSources.join(""));
+				const rawSource: OriginalSource = new RawSource(currentRawSources.join(""));
 				stringsAsRawSources.add(rawSource);
 				newChildren.push(rawSource);
 			} else if (typeof currentRawSources === "string") {
-				const rawSource: RawSource = new RawSource(currentRawSources);
+				const rawSource: OriginalSource = new RawSource(currentRawSources);
 				stringsAsRawSources.add(rawSource);
 				newChildren.push(rawSource);
 			} else {

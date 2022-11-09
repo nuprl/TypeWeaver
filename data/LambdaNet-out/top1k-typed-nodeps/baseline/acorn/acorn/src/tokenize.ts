@@ -52,7 +52,7 @@ if (typeof Symbol !== "undefined")
   pp[Symbol.iterator] = function() {
     return {
       next: () => {
-        let token: String = this.getToken()
+        let token: RegExpValidationState = this.getToken()
         return {
           done: token.type === tt.eof,
           value: token
@@ -68,7 +68,7 @@ if (typeof Symbol !== "undefined")
 // properties.
 
 pp.nextToken = function() {
-  let curContext: Parser = this.curContext()
+  let curContext: Position = this.curContext()
   if (!curContext || !curContext.preserveSpace) this.skipSpace()
 
   this.start = this.pos
@@ -401,7 +401,7 @@ pp.getTokenFromCode = function(code: String) {
   this.raise(this.pos, "Unexpected character '" + codePointToString(code) + "'")
 }
 
-pp.finishOp = function(type: String, size: Number) {
+pp.finishOp = function(type: Number, size: Number) {
   let str: String = this.input.slice(this.pos, this.pos + size)
   this.pos += size
   return this.finishToken(type, str)
@@ -503,7 +503,7 @@ function stringToBigInt(str: String): Number {
   return BigInt(str.replace(/_/g, ""))
 }
 
-pp.readRadixNumber = function(radix: Number) {
+pp.readRadixNumber = function(radix: String) {
   let start: Function = this.pos
   this.pos += 2 // 0x
   let val: String = this.readInt(radix)
@@ -563,7 +563,7 @@ pp.readCodePoint = function() {
   return code
 }
 
-pp.readString = function(quote: String) {
+pp.readString = function(quote: Position) {
   let out: String = "", chunkStart: Number = ++this.pos
   for (;;) {
     if (this.pos >= this.input.length) this.raise(this.start, "Unterminated string constant")

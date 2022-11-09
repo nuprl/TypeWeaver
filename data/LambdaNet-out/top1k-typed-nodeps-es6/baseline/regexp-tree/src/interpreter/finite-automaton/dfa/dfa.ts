@@ -83,7 +83,7 @@ class DFA {
 
     // Calculate from NFA transition table.
     const nfaTable: Function = this._nfa.getTransitionTable();
-    const nfaStates: Function = Object.keys(nfaTable);
+    const nfaStates: Array = Object.keys(nfaTable);
 
     this._acceptingStateNumbers = new Set();
 

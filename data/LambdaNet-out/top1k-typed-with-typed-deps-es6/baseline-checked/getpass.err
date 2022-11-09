@@ -18,25 +18,23 @@ lib/index.ts(89,9): error TS2339: Property 'write' does not exist on type 'HTMLE
 lib/index.ts(90,9): error TS2339: Property 'setRawMode' does not exist on type 'HTMLElement'.
 lib/index.ts(91,9): error TS2339: Property 'pause' does not exist on type 'HTMLElement'.
 lib/index.ts(92,9): error TS2339: Property 'removeListener' does not exist on type 'HTMLElement'.
-lib/index.ts(93,29): error TS2367: This condition will always return 'true' since the types 'Number' and 'String' have no overlap.
 lib/index.ts(94,10): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
 lib/index.ts(95,22): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/index.ts(98,10): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
-lib/index.ts(99,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
+lib/index.ts(99,22): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/index.ts(105,33): error TS2304: Cannot find name 'Void'.
-lib/index.ts(106,32): error TS2345: Argument of type '(err: Object, rttyfd: String) => void' is not assignable to parameter of type '(err: ErrnoException | null, fd: number) => void'.
-  Types of parameters 'err' and 'err' are incompatible.
-    Type 'ErrnoException | null' is not assignable to type 'Object'.
-      Type 'null' is not assignable to type 'Object'.
+lib/index.ts(106,32): error TS2345: Argument of type '(err: Object, rttyfd: String) => void' is not assignable to parameter of type '(err: ErrnoException, fd: number) => void'.
+  Types of parameters 'rttyfd' and 'fd' are incompatible.
+    Type 'number' is not assignable to type 'String'.
 lib/index.ts(107,20): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/index.ts(107,45): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/index.ts(113,7): error TS2740: Type 'ReadStream' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/index.ts(113,45): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
-lib/index.ts(114,33): error TS2345: Argument of type '(err3: Function, wttyfd: String) => void' is not assignable to parameter of type '(err: ErrnoException | null, fd: number) => void'.
+lib/index.ts(114,33): error TS2345: Argument of type '(err3: Function, wttyfd: any) => void' is not assignable to parameter of type '(err: ErrnoException, fd: number) => void'.
   Types of parameters 'err3' and 'err' are incompatible.
-    Type 'ErrnoException | null' is not assignable to type 'Function'.
-      Type 'null' is not assignable to type 'Function'.
+    Type 'ErrnoException' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+lib/index.ts(114,67): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/index.ts(115,8): error TS2740: Type 'WriteStream' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-lib/index.ts(115,47): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
 

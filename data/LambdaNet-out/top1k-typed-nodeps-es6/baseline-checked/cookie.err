@@ -1,6 +1,4 @@
 benchmark/index.ts(16,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/index.ts(16,41): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-benchmark/index.ts(19,18): error TS2322: Type 'undefined' is not assignable to type 'String'.
 benchmark/index.ts(20,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 benchmark/index.ts(23,47): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -15,7 +13,6 @@ benchmark/index.ts(31,8): error TS2339: Property 'on' does not exist on type 'Ob
 benchmark/parse-top.ts(5,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
 benchmark/parse-top.ts(7,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
 benchmark/parse-top.ts(8,17): error TS2732: Cannot find module './parse-top.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
-benchmark/parse-top.ts(14,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/parse-top.ts(19,9): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/parse-top.ts(26,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/parse-top.ts(26,53): error TS2304: Cannot find name 'Void'.
@@ -28,7 +25,6 @@ benchmark/parse-top.ts(38,7): error TS2339: Property 'run' does not exist on typ
 benchmark/parse-top.ts(43,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'String'.
 benchmark/parse.ts(5,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
 benchmark/parse.ts(7,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
-benchmark/parse.ts(13,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/parse.ts(17,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/parse.ts(23,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/parse.ts(29,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
@@ -105,16 +101,14 @@ scripts/update-benchmark.ts(7,22): error TS2307: Cannot find module 'top-sites' 
 scripts/update-benchmark.ts(16,73): error TS2538: Type 'String' cannot be used as an index type.
 scripts/update-benchmark.ts(19,20): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
 scripts/update-benchmark.ts(22,50): error TS2304: Cannot find name 'Void'.
-scripts/update-benchmark.ts(23,7): error TS2322: Type 'string | null' is not assignable to type 'String'.
-  Type 'null' is not assignable to type 'String'.
 scripts/update-benchmark.ts(23,36): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(urlString: string, parseQueryString: true, slashesDenoteHost?: boolean | undefined): UrlWithParsedQuery', gave the following error.
+  Overload 1 of 4, '(urlString: string, parseQueryString: true, slashesDenoteHost?: boolean): UrlWithParsedQuery', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 4, '(urlString: string, parseQueryString: false | undefined, slashesDenoteHost?: boolean | undefined): UrlWithStringQuery', gave the following error.
+  Overload 2 of 4, '(urlString: string, parseQueryString: false, slashesDenoteHost?: boolean): UrlWithStringQuery', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 3 of 4, '(urlString: string, parseQueryString: boolean, slashesDenoteHost?: boolean | undefined): Url', gave the following error.
+  Overload 3 of 4, '(urlString: string, parseQueryString: boolean, slashesDenoteHost?: boolean): Url', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 scripts/update-benchmark.ts(26,9): error TS2339: Property 'get' does not exist on type 'Object'.
@@ -129,23 +123,20 @@ scripts/update-benchmark.ts(37,60): error TS2304: Cannot find name 'Void'.
 scripts/update-benchmark.ts(42,16): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 scripts/update-benchmark.ts(42,55): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/update-benchmark.ts(44,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 scripts/update-benchmark.ts(44,18): error TS2339: Property 'rootDomain' does not exist on type 'Object'.
 scripts/update-benchmark.ts(46,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 scripts/update-benchmark.ts(53,62): error TS2304: Cannot find name 'Void'.
 scripts/update-benchmark.ts(54,50): error TS2339: Property 'rootDomain' does not exist on type 'HTMLElement'.
 scripts/update-benchmark.ts(57,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/update-benchmark.ts(57,31): error TS2339: Property 'headers' does not exist on type 'Object'.
-scripts/version-history.ts(8,5): error TS2322: Type 'string | undefined' is not assignable to type 'String'.
-  Type 'undefined' is not assignable to type 'String'.
 scripts/version-history.ts(11,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/version-history.ts(11,47): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null | undefined; flag?: string | undefined; } | null | undefined): Buffer', gave the following error.
+  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
       Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-  Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string | undefined; } | BufferEncoding): string', gave the following error.
+  Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string; } | BufferEncoding): string', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-  Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string | undefined; }) | null | undefined): string | Buffer', gave the following error.
+  Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string; })): string | Buffer', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
 scripts/version-history.ts(24,7): error TS2740: Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 scripts/version-history.ts(26,27): error TS2339: Property 'test' does not exist on type 'HTMLElement'.

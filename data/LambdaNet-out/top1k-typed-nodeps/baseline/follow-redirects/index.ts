@@ -313,7 +313,7 @@ RedirectableRequest.prototype._performRequest = function () {
         }
         // Write the next buffer if there are still left
         else if (i < buffers.length) {
-          var buffer: HTMLElement = buffers[i++];
+          var buffer: Element = buffers[i++];
           /* istanbul ignore else */
           if (!request.finished) {
             request.write(buffer.data, buffer.encoding, writeNext);

@@ -128,8 +128,8 @@ jQuery.fn.extend( {
 			} );
 		}
 
-		return access( this, function( value: Number ) {
-			var data: Array;
+		return access( this, function( value: String ) {
+			var data: String;
 
 			// The calling jQuery object (element matches) is not empty
 			// (and therefore has an element appears at this[ 0 ]) and the

@@ -2,7 +2,7 @@
 
 import { findVariable } from "./find-variable"
 
-const globalObject: Function =
+const globalObject: Array =
     typeof globalThis !== "undefined"
         ? globalThis
         : typeof self !== "undefined"

@@ -3,7 +3,7 @@ import isAutoPx from "./isAutoPx.js";
 import rcssNum from "../var/rcssNum.js";
 
 function adjustCSS( elem: Object, prop: String, valueParts: Object, tween: Object ): Array {
-	var adjusted: Number, scale: Number,
+	var adjusted: String, scale: Number,
 		maxIterations: Number = 20,
 		currentValue: Function = tween ?
 			function() {

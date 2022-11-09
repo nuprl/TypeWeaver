@@ -18,7 +18,7 @@ import Int64 from 'node-int64';
 var isBigEndian: Boolean = os.endianness() == 'BE';
 
 // Find the next power-of-2 >= size
-function nextPow2(size: String): Number {
+function nextPow2(size: Number): Number {
   return Math.pow(2, Math.ceil(Math.log(size) / Math.LN2));
 }
 
@@ -140,7 +140,7 @@ Accumulator.prototype.peekDouble = function() {
 }
 
 Accumulator.prototype.readDouble = function() {
-  var dval: Array = this.peekDouble();
+  var dval: String = this.peekDouble();
   this.readOffset += 8;
   return dval;
 }

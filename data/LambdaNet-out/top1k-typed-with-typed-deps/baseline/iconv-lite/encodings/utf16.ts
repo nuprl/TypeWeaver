@@ -74,7 +74,7 @@ Utf16BEDecoder.prototype.end = function() {
 // Encoder uses UTF-16LE and prepends BOM (which can be overridden with addBOM: false).
 
 exports.utf16 = Utf16Codec;
-function Utf16Codec(codecOptions: Function, iconv: Object): Void {
+function Utf16Codec(codecOptions: Function, iconv: Function): Void {
     this.iconv = iconv;
 }
 

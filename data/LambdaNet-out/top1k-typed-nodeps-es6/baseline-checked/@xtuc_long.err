@@ -1,24 +1,17 @@
-index.ts(22,5): error TS2322: Type 'null' is not assignable to type 'Object'.
 index.ts(41,62): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
-index.ts(47,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(47,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(53,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(53,15): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(59,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(96,18): error TS7053: Element implicitly has an 'any' type because expression of type '"__isLong__"' can't be used to index type 'Object'.
-  Property '__isLong__' does not exist on type 'Object'.
 index.ts(106,30): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(107,23): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(141,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(142,9): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 index.ts(143,30): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(147,20): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'Function'.
-  Type 'Number' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+index.ts(147,30): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
 index.ts(149,18): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(152,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(153,9): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 index.ts(154,29): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(158,20): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'Function'.
+index.ts(158,47): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
 index.ts(160,17): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(181,13): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -28,17 +21,18 @@ index.ts(185,7): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(191,9): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 index.ts(195,41): error TS2339: Property 'neg' does not exist on type 'String'.
-index.ts(196,19): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 index.ts(196,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(196,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(196,50): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(196,58): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(216,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-index.ts(216,19): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
-  Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+index.ts(216,10): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(216,38): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'number' is not assignable to type 'boolean'.
 index.ts(246,69): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(271,30): error TS2554: Expected 2 arguments, but got 1.
-index.ts(273,7): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(273,7): error TS2322: Type 'Object' is not assignable to type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(276,49): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
 index.ts(276,60): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -67,9 +61,7 @@ index.ts(360,30): error TS2362: The left-hand side of an arithmetic operation mu
 index.ts(367,5): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(367,26): error TS2554: Expected 2 arguments, but got 1.
-index.ts(373,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-index.ts(373,22): error TS2554: Expected 2 arguments, but got 1.
+index.ts(373,20): error TS2554: Expected 2 arguments, but got 1.
 index.ts(397,5): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(397,19): error TS2554: Expected 2 arguments, but got 1.
@@ -78,140 +70,89 @@ index.ts(409,5): error TS2322: Type 'Object' is not assignable to type 'String'.
 index.ts(421,5): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(421,23): error TS2554: Expected 2 arguments, but got 1.
-index.ts(433,34): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
-index.ts(445,43): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
-index.ts(457,34): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
+index.ts(433,66): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
+index.ts(445,75): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
+index.ts(457,53): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
 index.ts(476,15): error TS2339: Property 'toInt' does not exist on type 'HTMLElement'.
-index.ts(477,15): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(477,31): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
-index.ts(477,48): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(485,15): error TS2339: Property 'toNumber' does not exist on type 'HTMLElement'.
-index.ts(486,12): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
 index.ts(487,5): error TS2322: Type 'number' is not assignable to type 'String'.
-index.ts(487,19): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(487,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(487,57): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(488,3): error TS2322: Type 'number' is not assignable to type 'String'.
-index.ts(488,15): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(488,22): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(488,45): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(499,1): error TS2322: Type '(this: typeof Long, radix: String) => String' is not assignable to type '() => string'.
+index.ts(500,3): error TS2322: Type 'String | 10' is not assignable to type 'String'.
+  Type 'number' is not assignable to type 'String'.
 index.ts(501,7): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
 index.ts(501,20): error TS2365: Operator '<' cannot be applied to types 'number' and 'String'.
-index.ts(503,12): error TS2339: Property 'isZero' does not exist on type 'HTMLElement'.
-index.ts(505,12): error TS2339: Property 'isNegative' does not exist on type 'HTMLElement'.
-index.ts(506,14): error TS2339: Property 'eq' does not exist on type 'HTMLElement'.
 index.ts(509,31): error TS2554: Expected 2 arguments, but got 1.
-index.ts(510,33): error TS2339: Property 'div' does not exist on type 'HTMLElement'.
 index.ts(511,33): error TS2339: Property 'mul' does not exist on type 'HTMLElement'.
 index.ts(512,27): error TS2554: Expected 0 arguments, but got 1.
 index.ts(512,41): error TS2339: Property 'toInt' does not exist on type 'HTMLElement'.
-index.ts(514,25): error TS2339: Property 'neg' does not exist on type 'HTMLElement'.
-index.ts(519,65): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(520,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(523,35): error TS2339: Property 'div' does not exist on type 'HTMLElement'.
+index.ts(524,28): error TS2339: Property 'sub' does not exist on type 'HTMLElement'.
 index.ts(524,39): error TS2339: Property 'mul' does not exist on type 'HTMLElement'.
 index.ts(525,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
+index.ts(527,13): error TS2339: Property 'isZero' does not exist on type 'HTMLElement'.
 index.ts(528,14): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 index.ts(542,15): error TS2339: Property 'getHighBits' does not exist on type 'HTMLElement'.
-index.ts(543,15): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(551,15): error TS2339: Property 'getHighBitsUnsigned' does not exist on type 'HTMLElement'.
 index.ts(552,3): error TS2322: Type 'number' is not assignable to type 'Boolean'.
-index.ts(552,15): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(560,15): error TS2339: Property 'getLowBits' does not exist on type 'HTMLElement'.
-index.ts(561,15): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(569,15): error TS2339: Property 'getLowBitsUnsigned' does not exist on type 'HTMLElement'.
 index.ts(570,3): error TS2322: Type 'number' is not assignable to type 'Boolean'.
-index.ts(570,15): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(578,15): error TS2339: Property 'getNumBitsAbs' does not exist on type 'HTMLElement'.
-index.ts(579,12): error TS2339: Property 'isNegative' does not exist on type 'HTMLElement'.
-index.ts(580,17): error TS2339: Property 'eq' does not exist on type 'HTMLElement'.
-index.ts(580,43): error TS2339: Property 'neg' does not exist on type 'HTMLElement'.
-index.ts(581,26): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
-index.ts(581,43): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
-index.ts(581,55): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(583,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(585,15): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
+index.ts(585,3): error TS2322: Type 'number' is not assignable to type 'Boolean'.
 index.ts(593,15): error TS2339: Property 'isZero' does not exist on type 'HTMLElement'.
-index.ts(594,15): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
-index.ts(594,34): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(601,15): error TS2339: Property 'eqz' does not exist on type 'HTMLElement'.
 index.ts(601,35): error TS2339: Property 'isZero' does not exist on type 'HTMLElement'.
 index.ts(608,15): error TS2339: Property 'isNegative' does not exist on type 'HTMLElement'.
-index.ts(609,16): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(609,33): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(617,15): error TS2339: Property 'isPositive' does not exist on type 'HTMLElement'.
-index.ts(618,15): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(618,32): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(626,15): error TS2339: Property 'isOdd' does not exist on type 'HTMLElement'.
-index.ts(627,16): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(635,15): error TS2339: Property 'isEven' does not exist on type 'HTMLElement'.
-index.ts(636,16): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(645,15): error TS2339: Property 'equals' does not exist on type 'HTMLElement'.
 index.ts(647,13): error TS2554: Expected 2 arguments, but got 1.
-index.ts(648,12): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
 index.ts(648,31): error TS2339: Property 'unsigned' does not exist on type 'Object'.
-index.ts(648,49): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(648,78): error TS2339: Property 'high' does not exist on type 'Object'.
-index.ts(650,15): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(650,30): error TS2339: Property 'high' does not exist on type 'Object'.
-index.ts(650,43): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(650,57): error TS2339: Property 'low' does not exist on type 'Object'.
 index.ts(659,15): error TS2339: Property 'eq' does not exist on type 'HTMLElement'.
 index.ts(659,34): error TS2339: Property 'equals' does not exist on type 'HTMLElement'.
 index.ts(667,15): error TS2339: Property 'notEquals' does not exist on type 'HTMLElement'.
-index.ts(668,16): error TS2339: Property 'eq' does not exist on type 'HTMLElement'.
 index.ts(677,15): error TS2339: Property 'neq' does not exist on type 'HTMLElement'.
 index.ts(677,35): error TS2339: Property 'notEquals' does not exist on type 'HTMLElement'.
 index.ts(685,15): error TS2339: Property 'ne' does not exist on type 'HTMLElement'.
 index.ts(685,34): error TS2339: Property 'notEquals' does not exist on type 'HTMLElement'.
 index.ts(693,15): error TS2339: Property 'lessThan' does not exist on type 'HTMLElement'.
-index.ts(694,15): error TS2339: Property 'comp' does not exist on type 'HTMLElement'.
 index.ts(703,15): error TS2339: Property 'lt' does not exist on type 'HTMLElement'.
 index.ts(703,34): error TS2339: Property 'lessThan' does not exist on type 'HTMLElement'.
 index.ts(711,15): error TS2339: Property 'lessThanOrEqual' does not exist on type 'HTMLElement'.
-index.ts(712,15): error TS2339: Property 'comp' does not exist on type 'HTMLElement'.
 index.ts(721,15): error TS2339: Property 'lte' does not exist on type 'HTMLElement'.
 index.ts(721,35): error TS2339: Property 'lessThanOrEqual' does not exist on type 'HTMLElement'.
 index.ts(729,15): error TS2339: Property 'le' does not exist on type 'HTMLElement'.
 index.ts(729,34): error TS2339: Property 'lessThanOrEqual' does not exist on type 'HTMLElement'.
 index.ts(737,15): error TS2339: Property 'greaterThan' does not exist on type 'HTMLElement'.
-index.ts(738,15): error TS2339: Property 'comp' does not exist on type 'HTMLElement'.
 index.ts(747,15): error TS2339: Property 'gt' does not exist on type 'HTMLElement'.
 index.ts(747,34): error TS2339: Property 'greaterThan' does not exist on type 'HTMLElement'.
 index.ts(755,15): error TS2339: Property 'greaterThanOrEqual' does not exist on type 'HTMLElement'.
-index.ts(756,15): error TS2339: Property 'comp' does not exist on type 'HTMLElement'.
 index.ts(765,15): error TS2339: Property 'gte' does not exist on type 'HTMLElement'.
 index.ts(765,35): error TS2339: Property 'greaterThanOrEqual' does not exist on type 'HTMLElement'.
 index.ts(773,15): error TS2339: Property 'ge' does not exist on type 'HTMLElement'.
 index.ts(773,34): error TS2339: Property 'greaterThanOrEqual' does not exist on type 'HTMLElement'.
 index.ts(782,15): error TS2339: Property 'compare' does not exist on type 'HTMLElement'.
 index.ts(784,13): error TS2554: Expected 2 arguments, but got 1.
-index.ts(785,12): error TS2339: Property 'eq' does not exist on type 'HTMLElement'.
-index.ts(787,31): error TS2339: Property 'isNegative' does not exist on type 'HTMLElement'.
 index.ts(788,31): error TS2339: Property 'isNegative' does not exist on type 'Object'.
-index.ts(794,13): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(795,17): error TS2339: Property 'sub' does not exist on type 'HTMLElement'.
 index.ts(797,17): error TS2339: Property 'high' does not exist on type 'Object'.
-index.ts(797,37): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(797,59): error TS2339: Property 'high' does not exist on type 'Object'.
-index.ts(797,73): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(797,88): error TS2339: Property 'low' does not exist on type 'Object'.
-index.ts(797,107): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(807,15): error TS2339: Property 'comp' does not exist on type 'HTMLElement'.
 index.ts(807,36): error TS2339: Property 'compare' does not exist on type 'HTMLElement'.
 index.ts(814,15): error TS2339: Property 'negate' does not exist on type 'HTMLElement'.
-index.ts(815,13): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(815,30): error TS2339: Property 'eq' does not exist on type 'HTMLElement'.
-index.ts(817,15): error TS2339: Property 'not' does not exist on type 'HTMLElement'.
 index.ts(825,15): error TS2339: Property 'neg' does not exist on type 'HTMLElement'.
 index.ts(825,35): error TS2339: Property 'negate' does not exist on type 'HTMLElement'.
 index.ts(833,15): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 index.ts(835,5): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(835,14): error TS2554: Expected 2 arguments, but got 1.
-index.ts(839,26): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
-index.ts(840,26): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
-index.ts(841,26): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
-index.ts(842,26): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(844,28): error TS2339: Property 'high' does not exist on type 'String'.
 index.ts(845,28): error TS2339: Property 'high' does not exist on type 'String'.
 index.ts(846,28): error TS2339: Property 'low' does not exist on type 'String'.
@@ -230,63 +171,31 @@ index.ts(857,10): error TS2362: The left-hand side of an arithmetic operation mu
 index.ts(858,3): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(859,10): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 index.ts(860,3): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(861,19): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 index.ts(861,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(861,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(861,39): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(861,52): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(861,62): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
 index.ts(870,15): error TS2339: Property 'subtract' does not exist on type 'HTMLElement'.
 index.ts(872,18): error TS2554: Expected 2 arguments, but got 1.
-index.ts(873,15): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 index.ts(873,30): error TS2339: Property 'neg' does not exist on type 'Object'.
 index.ts(882,15): error TS2339: Property 'sub' does not exist on type 'HTMLElement'.
 index.ts(882,35): error TS2339: Property 'subtract' does not exist on type 'HTMLElement'.
 index.ts(890,15): error TS2339: Property 'multiply' does not exist on type 'HTMLElement'.
-index.ts(891,12): error TS2339: Property 'isZero' does not exist on type 'HTMLElement'.
-index.ts(892,5): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(890,65): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(894,5): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 index.ts(894,18): error TS2554: Expected 2 arguments, but got 1.
-index.ts(898,23): error TS7053: Element implicitly has an 'any' type because expression of type '"mul"' can't be used to index type 'Object'.
-  Property 'mul' does not exist on type 'Object'.
-index.ts(898,40): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
-index.ts(899,12): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(900,18): error TS2339: Property 'low' does not exist on type 'String'.
 index.ts(901,18): error TS2339: Property 'high' does not exist on type 'String'.
-index.ts(902,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
-  Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
-index.ts(902,26): error TS7053: Element implicitly has an 'any' type because expression of type '"get_high"' can't be used to index type 'Object'.
-  Property 'get_high' does not exist on type 'Object'.
-index.ts(902,51): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
+index.ts(902,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 index.ts(905,18): error TS2339: Property 'isZero' does not exist on type 'String'.
-index.ts(906,5): error TS2322: Type 'Object' is not assignable to type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-index.ts(906,17): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(907,12): error TS2339: Property 'eq' does not exist on type 'HTMLElement'.
-index.ts(908,5): error TS2322: Type 'Function | String' is not assignable to type 'String'.
-  Type 'Function' is not assignable to type 'String'.
 index.ts(908,23): error TS2339: Property 'isOdd' does not exist on type 'String'.
 index.ts(909,18): error TS2339: Property 'eq' does not exist on type 'String'.
-index.ts(910,5): error TS2322: Type 'Function | String' is not assignable to type 'String'.
-  Type 'Function' is not assignable to type 'String'.
-index.ts(910,17): error TS2339: Property 'isOdd' does not exist on type 'HTMLElement'.
-index.ts(912,12): error TS2339: Property 'isNegative' does not exist on type 'HTMLElement'.
 index.ts(913,20): error TS2339: Property 'isNegative' does not exist on type 'String'.
-index.ts(914,19): error TS2339: Property 'neg' does not exist on type 'HTMLElement'.
 index.ts(914,40): error TS2339: Property 'neg' does not exist on type 'String'.
-index.ts(916,19): error TS2339: Property 'neg' does not exist on type 'HTMLElement'.
 index.ts(917,25): error TS2339: Property 'isNegative' does not exist on type 'String'.
-index.ts(918,17): error TS2339: Property 'mul' does not exist on type 'HTMLElement'.
 index.ts(918,32): error TS2339: Property 'neg' does not exist on type 'String'.
-index.ts(921,12): error TS2339: Property 'lt' does not exist on type 'HTMLElement'.
 index.ts(921,41): error TS2339: Property 'lt' does not exist on type 'String'.
-index.ts(922,28): error TS2339: Property 'toNumber' does not exist on type 'HTMLElement'.
 index.ts(922,52): error TS2339: Property 'toNumber' does not exist on type 'String'.
-index.ts(922,69): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(927,26): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
-index.ts(928,26): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
-index.ts(929,26): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
-index.ts(930,26): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(932,32): error TS2339: Property 'high' does not exist on type 'String'.
 index.ts(933,32): error TS2339: Property 'high' does not exist on type 'String'.
 index.ts(934,32): error TS2339: Property 'low' does not exist on type 'String'.
@@ -337,12 +246,10 @@ index.ts(956,40): error TS2363: The right-hand side of an arithmetic operation m
 index.ts(956,46): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(956,52): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(957,3): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(958,19): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 index.ts(958,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(958,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(958,39): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(958,52): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(958,62): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
 index.ts(967,15): error TS2339: Property 'mul' does not exist on type 'HTMLElement'.
 index.ts(967,35): error TS2339: Property 'multiply' does not exist on type 'HTMLElement'.
 index.ts(976,15): error TS2339: Property 'divide' does not exist on type 'HTMLElement'.
@@ -350,53 +257,29 @@ index.ts(976,63): error TS2314: Generic type 'Array<T>' requires 1 type argument
 index.ts(978,5): error TS2740: Type 'Boolean' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 index.ts(978,15): error TS2554: Expected 2 arguments, but got 1.
 index.ts(979,15): error TS2339: Property 'isZero' does not exist on type 'HTMLElement'.
-index.ts(987,15): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(988,12): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(989,15): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(989,37): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
-index.ts(993,29): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(993,40): error TS7053: Element implicitly has an 'any' type because expression of type '"div_u"' can't be used to index type 'Object'.
-  Property 'div_u' does not exist on type 'Object'.
-index.ts(993,56): error TS7053: Element implicitly has an 'any' type because expression of type '"div_s"' can't be used to index type 'Object'.
-  Property 'div_s' does not exist on type 'Object'.
-index.ts(994,12): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
-index.ts(995,12): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(996,15): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(997,15): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
-index.ts(999,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
-index.ts(999,26): error TS7053: Element implicitly has an 'any' type because expression of type '"get_high"' can't be used to index type 'Object'.
-  Property 'get_high' does not exist on type 'Object'.
-index.ts(999,51): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(1002,12): error TS2339: Property 'isZero' does not exist on type 'HTMLElement'.
-index.ts(1003,17): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(1005,13): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(1008,14): error TS2339: Property 'eq' does not exist on type 'HTMLElement'.
+index.ts(999,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 index.ts(1009,19): error TS2339: Property 'eq' does not exist on type 'HTMLElement'.
 index.ts(1009,38): error TS2339: Property 'eq' does not exist on type 'HTMLElement'.
 index.ts(1011,24): error TS2339: Property 'eq' does not exist on type 'HTMLElement'.
-index.ts(1015,42): error TS2339: Property 'shr' does not exist on type 'HTMLElement'.
 index.ts(1016,27): error TS2339: Property 'div' does not exist on type 'HTMLElement'.
 index.ts(1017,20): error TS2339: Property 'eq' does not exist on type 'Number'.
 index.ts(1018,26): error TS2339: Property 'isNegative' does not exist on type 'HTMLElement'.
-index.ts(1020,22): error TS2339: Property 'sub' does not exist on type 'HTMLElement'.
 index.ts(1020,34): error TS2339: Property 'mul' does not exist on type 'HTMLElement'.
 index.ts(1021,24): error TS2339: Property 'add' does not exist on type 'Number'.
 index.ts(1021,32): error TS2339: Property 'div' does not exist on type 'HTMLElement'.
 index.ts(1025,24): error TS2339: Property 'eq' does not exist on type 'HTMLElement'.
-index.ts(1026,19): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(1027,14): error TS2339: Property 'isNegative' does not exist on type 'HTMLElement'.
 index.ts(1028,19): error TS2339: Property 'isNegative' does not exist on type 'HTMLElement'.
-index.ts(1029,21): error TS2339: Property 'neg' does not exist on type 'HTMLElement'.
 index.ts(1029,39): error TS2339: Property 'neg' does not exist on type 'HTMLElement'.
-index.ts(1030,19): error TS2339: Property 'neg' does not exist on type 'HTMLElement'.
 index.ts(1031,24): error TS2339: Property 'isNegative' does not exist on type 'HTMLElement'.
-index.ts(1032,19): error TS2339: Property 'div' does not exist on type 'HTMLElement'.
 index.ts(1032,31): error TS2339: Property 'neg' does not exist on type 'HTMLElement'.
 index.ts(1037,18): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
 index.ts(1038,25): error TS2339: Property 'toUnsigned' does not exist on type 'HTMLElement'.
 index.ts(1039,17): error TS2339: Property 'gt' does not exist on type 'HTMLElement'.
 index.ts(1041,17): error TS2339: Property 'gt' does not exist on type 'HTMLElement'.
-index.ts(1041,25): error TS2339: Property 'shru' does not exist on type 'HTMLElement'.
 index.ts(1052,14): error TS2339: Property 'gte' does not exist on type 'HTMLElement'.
 index.ts(1055,41): error TS2339: Property 'toNumber' does not exist on type 'HTMLElement'.
 index.ts(1055,62): error TS2339: Property 'toNumber' does not exist on type 'HTMLElement'.
@@ -409,217 +292,112 @@ index.ts(1066,22): error TS2339: Property 'isNegative' does not exist on type 'S
 index.ts(1066,48): error TS2339: Property 'gt' does not exist on type 'String'.
 index.ts(1067,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1067,17): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1068,43): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
 index.ts(1077,15): error TS2339: Property 'add' does not exist on type 'Object'.
 index.ts(1078,15): error TS2339: Property 'sub' does not exist on type 'HTMLElement'.
 index.ts(1089,15): error TS2339: Property 'div' does not exist on type 'HTMLElement'.
 index.ts(1089,35): error TS2339: Property 'divide' does not exist on type 'HTMLElement'.
 index.ts(1097,15): error TS2339: Property 'modulo' does not exist on type 'HTMLElement'.
 index.ts(1099,15): error TS2554: Expected 2 arguments, but got 1.
-index.ts(1103,29): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(1103,40): error TS7053: Element implicitly has an 'any' type because expression of type '"rem_u"' can't be used to index type 'Object'.
-  Property 'rem_u' does not exist on type 'Object'.
-index.ts(1103,56): error TS7053: Element implicitly has an 'any' type because expression of type '"rem_s"' can't be used to index type 'Object'.
-  Property 'rem_s' does not exist on type 'Object'.
-index.ts(1104,12): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
-index.ts(1105,12): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1106,15): error TS2339: Property 'low' does not exist on type 'Object'.
 index.ts(1107,15): error TS2339: Property 'high' does not exist on type 'Object'.
-index.ts(1109,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
-index.ts(1109,26): error TS7053: Element implicitly has an 'any' type because expression of type '"get_high"' can't be used to index type 'Object'.
-  Property 'get_high' does not exist on type 'Object'.
-index.ts(1109,51): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(1112,15): error TS2339: Property 'sub' does not exist on type 'HTMLElement'.
-index.ts(1112,24): error TS2339: Property 'div' does not exist on type 'HTMLElement'.
+index.ts(1109,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 index.ts(1121,15): error TS2339: Property 'mod' does not exist on type 'HTMLElement'.
 index.ts(1121,35): error TS2339: Property 'modulo' does not exist on type 'HTMLElement'.
 index.ts(1129,15): error TS2339: Property 'rem' does not exist on type 'HTMLElement'.
 index.ts(1129,35): error TS2339: Property 'modulo' does not exist on type 'HTMLElement'.
 index.ts(1136,15): error TS2339: Property 'not' does not exist on type 'HTMLElement'.
-index.ts(1137,19): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
-index.ts(1137,25): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
-index.ts(1137,36): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
-index.ts(1137,47): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
 index.ts(1145,15): error TS2339: Property 'countLeadingZeros' does not exist on type 'HTMLElement'.
-index.ts(1146,15): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
-index.ts(1146,38): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
-index.ts(1146,62): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1155,15): error TS2339: Property 'clz' does not exist on type 'HTMLElement'.
 index.ts(1155,35): error TS2339: Property 'countLeadingZeros' does not exist on type 'HTMLElement'.
 index.ts(1162,15): error TS2339: Property 'countTrailingZeros' does not exist on type 'HTMLElement'.
-index.ts(1163,15): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
-index.ts(1163,32): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1163,39): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-index.ts(1163,50): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1172,15): error TS2339: Property 'ctz' does not exist on type 'HTMLElement'.
 index.ts(1172,35): error TS2339: Property 'countTrailingZeros' does not exist on type 'HTMLElement'.
 index.ts(1180,15): error TS2339: Property 'and' does not exist on type 'HTMLElement'.
 index.ts(1182,13): error TS2554: Expected 2 arguments, but got 1.
-index.ts(1183,19): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
-index.ts(1183,24): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1183,36): error TS2339: Property 'low' does not exist on type 'Object'.
-index.ts(1183,46): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1183,59): error TS2339: Property 'high' does not exist on type 'Object'.
-index.ts(1183,70): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
 index.ts(1192,15): error TS2339: Property 'or' does not exist on type 'HTMLElement'.
 index.ts(1194,13): error TS2554: Expected 2 arguments, but got 1.
-index.ts(1195,19): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
-index.ts(1195,24): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1195,36): error TS2339: Property 'low' does not exist on type 'Object'.
-index.ts(1195,46): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1195,59): error TS2339: Property 'high' does not exist on type 'Object'.
-index.ts(1195,70): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
 index.ts(1204,15): error TS2339: Property 'xor' does not exist on type 'HTMLElement'.
 index.ts(1206,13): error TS2554: Expected 2 arguments, but got 1.
-index.ts(1207,19): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
-index.ts(1207,24): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1207,36): error TS2339: Property 'low' does not exist on type 'Object'.
-index.ts(1207,46): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1207,59): error TS2339: Property 'high' does not exist on type 'Object'.
-index.ts(1207,70): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
 index.ts(1216,15): error TS2339: Property 'shiftLeft' does not exist on type 'HTMLElement'.
 index.ts(1216,64): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(1218,23): error TS2339: Property 'toInt' does not exist on type 'Number'.
 index.ts(1219,8): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1222,21): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
-index.ts(1222,26): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1222,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1222,48): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1222,56): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1222,73): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1222,87): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1222,103): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(1224,21): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
-index.ts(1224,29): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1224,37): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1224,57): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
 index.ts(1233,15): error TS2339: Property 'shl' does not exist on type 'HTMLElement'.
 index.ts(1233,35): error TS2339: Property 'shiftLeft' does not exist on type 'HTMLElement'.
 index.ts(1241,15): error TS2339: Property 'shiftRight' does not exist on type 'HTMLElement'.
 index.ts(1243,23): error TS2339: Property 'toInt' does not exist on type 'Number'.
 index.ts(1244,8): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1245,5): error TS2322: Type 'HTMLElement' is not assignable to type 'String'.
-index.ts(1247,21): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
-index.ts(1247,27): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1247,35): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1247,52): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1247,66): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1247,82): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1247,90): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1247,104): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(1249,21): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
-index.ts(1249,26): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1249,35): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1249,55): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
-index.ts(1249,80): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
 index.ts(1258,15): error TS2339: Property 'shr' does not exist on type 'HTMLElement'.
 index.ts(1258,35): error TS2339: Property 'shiftRight' does not exist on type 'HTMLElement'.
 index.ts(1266,15): error TS2339: Property 'shiftRightUnsigned' does not exist on type 'HTMLElement'.
-index.ts(1266,82): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(1266,82): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(1267,42): error TS2339: Property 'toInt' does not exist on type 'Number'.
 index.ts(1268,8): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1269,37): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
-index.ts(1269,43): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1269,51): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1269,68): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1269,82): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1269,98): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1269,107): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1269,121): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(1270,44): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
-index.ts(1270,58): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(1271,19): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
-index.ts(1271,24): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1271,34): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1271,57): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
 index.ts(1280,15): error TS2339: Property 'shru' does not exist on type 'HTMLElement'.
 index.ts(1280,36): error TS2339: Property 'shiftRightUnsigned' does not exist on type 'HTMLElement'.
 index.ts(1288,15): error TS2339: Property 'shr_u' does not exist on type 'HTMLElement'.
 index.ts(1288,37): error TS2339: Property 'shiftRightUnsigned' does not exist on type 'HTMLElement'.
 index.ts(1296,15): error TS2339: Property 'rotateLeft' does not exist on type 'HTMLElement'.
-index.ts(1296,66): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(1298,42): error TS2339: Property 'toInt' does not exist on type 'Number'.
 index.ts(1299,8): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1300,44): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
-index.ts(1300,55): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
-index.ts(1300,65): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
 index.ts(1302,15): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1303,21): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
-index.ts(1303,28): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1303,35): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1303,52): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1303,61): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1303,73): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1303,81): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1303,98): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1303,106): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1303,116): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
 index.ts(1305,3): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1306,13): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1307,19): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
-index.ts(1307,26): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1307,34): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1307,51): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1307,59): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1307,71): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1307,78): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1307,95): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1307,104): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1307,114): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
 index.ts(1315,15): error TS2339: Property 'rotl' does not exist on type 'HTMLElement'.
 index.ts(1315,36): error TS2339: Property 'rotateLeft' does not exist on type 'HTMLElement'.
 index.ts(1323,15): error TS2339: Property 'rotateRight' does not exist on type 'HTMLElement'.
 index.ts(1325,42): error TS2339: Property 'toInt' does not exist on type 'Number'.
 index.ts(1326,8): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1326,30): error TS2322: Type 'HTMLElement' is not assignable to type 'String'.
-index.ts(1327,44): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
-index.ts(1327,55): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
-index.ts(1327,65): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
 index.ts(1329,15): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1330,21): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
-index.ts(1330,28): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1330,36): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1330,47): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1330,55): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1330,73): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1330,80): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1330,91): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1330,100): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1330,116): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
 index.ts(1332,3): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1333,13): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1334,19): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
-index.ts(1334,26): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1334,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1334,44): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1334,53): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1334,71): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1334,79): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1334,90): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1334,98): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1334,114): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
 index.ts(1342,15): error TS2339: Property 'rotr' does not exist on type 'HTMLElement'.
 index.ts(1342,36): error TS2339: Property 'rotateRight' does not exist on type 'HTMLElement'.
 index.ts(1349,15): error TS2339: Property 'toSigned' does not exist on type 'HTMLElement'.
 index.ts(1349,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(1350,13): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(1352,24): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
-index.ts(1352,34): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1352,40): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
 index.ts(1360,15): error TS2339: Property 'toUnsigned' does not exist on type 'HTMLElement'.
 index.ts(1360,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(1361,12): error TS2339: Property 'unsigned' does not exist on type 'HTMLElement'.
-index.ts(1363,24): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
-index.ts(1363,34): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(1363,40): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
 index.ts(1372,15): error TS2339: Property 'toBytes' does not exist on type 'HTMLElement'.
 index.ts(1372,56): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-index.ts(1373,20): error TS2339: Property 'toBytesLE' does not exist on type 'HTMLElement'.
-index.ts(1373,39): error TS2339: Property 'toBytesBE' does not exist on type 'HTMLElement'.
 index.ts(1381,15): error TS2339: Property 'toBytesLE' does not exist on type 'HTMLElement'.
 index.ts(1381,49): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(1382,25): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
-index.ts(1383,23): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1385,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1386,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1387,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -630,8 +408,6 @@ index.ts(1391,5): error TS2362: The left-hand side of an arithmetic operation mu
 index.ts(1392,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1401,15): error TS2339: Property 'toBytesBE' does not exist on type 'HTMLElement'.
 index.ts(1401,49): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(1402,25): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
-index.ts(1403,23): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(1405,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1406,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1407,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -642,40 +418,8 @@ index.ts(1411,5): error TS2362: The left-hand side of an arithmetic operation mu
 index.ts(1412,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1424,3): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-index.ts(1434,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-index.ts(1435,5): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(1436,5): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-index.ts(1437,5): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-index.ts(1438,5): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-index.ts(1439,5): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
-  Property '4' does not exist on type 'Object'.
-index.ts(1440,5): error TS7053: Element implicitly has an 'any' type because expression of type '5' can't be used to index type 'Object'.
-  Property '5' does not exist on type 'Object'.
-index.ts(1441,5): error TS7053: Element implicitly has an 'any' type because expression of type '6' can't be used to index type 'Object'.
-  Property '6' does not exist on type 'Object'.
-index.ts(1442,5): error TS7053: Element implicitly has an 'any' type because expression of type '7' can't be used to index type 'Object'.
-  Property '7' does not exist on type 'Object'.
+index.ts(1434,10): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(1443,5): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Boolean'.
-index.ts(1454,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-index.ts(1455,5): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
-  Property '4' does not exist on type 'Object'.
-index.ts(1456,5): error TS7053: Element implicitly has an 'any' type because expression of type '5' can't be used to index type 'Object'.
-  Property '5' does not exist on type 'Object'.
-index.ts(1457,5): error TS7053: Element implicitly has an 'any' type because expression of type '6' can't be used to index type 'Object'.
-  Property '6' does not exist on type 'Object'.
-index.ts(1458,5): error TS7053: Element implicitly has an 'any' type because expression of type '7' can't be used to index type 'Object'.
-  Property '7' does not exist on type 'Object'.
-index.ts(1459,5): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(1460,5): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-index.ts(1461,5): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-index.ts(1462,5): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
+index.ts(1454,10): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(1463,5): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Boolean'.
 

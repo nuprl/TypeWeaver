@@ -1,12 +1,12 @@
 //.CommonJS
-var CSSOM: Element = {};
+var CSSOM: HTMLElement = {};
 ///CommonJS
 
 
 /**
  * @param {string} token
  */
-CSSOM.parse = function parse(token: String): String {
+CSSOM.parse = function parse(token: String): Object {
 
 	var i: Number = 0;
 
@@ -51,7 +51,7 @@ CSSOM.parse = function parse(token: String): String {
 	var hasAncestors: Boolean = false;
 	var prevScope: String;
 
-	var name: String, priority: String="", styleRule: Object, mediaRule: Object, supportsRule: HTMLElement, importRule: Element, fontFaceRule: Object, keyframesRule: Object, documentRule: Object, hostRule: HTMLElement;
+	var name: String, priority: String="", styleRule: HTMLElement, mediaRule: HTMLElement, supportsRule: HTMLElement, importRule: HTMLElement, fontFaceRule: HTMLElement, keyframesRule: HTMLElement, documentRule: Element, hostRule: HTMLElement;
 
 	var atKeyframesRegExp: RegExp = /@(-(?:\w+-)+)?keyframes/g;
 

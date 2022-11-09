@@ -184,7 +184,7 @@ function iteratePitchingLoaders(options: Object, loaderContext: HTMLElement, cal
 			loaderContext.cacheable(false);
 			return callback(err);
 		}
-		var fn: Number = currentLoaderObject.pitch;
+		var fn: Boolean = currentLoaderObject.pitch;
 		currentLoaderObject.pitchExecuted = true;
 		if(!fn) return iteratePitchingLoaders(options, loaderContext, callback);
 

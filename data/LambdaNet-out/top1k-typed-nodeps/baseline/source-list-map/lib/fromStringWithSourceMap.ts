@@ -4,12 +4,12 @@
 */
 "use strict";
 
-const base64VLQ: String = require("./base64-vlq");
+const base64VLQ: Function = require("./base64-vlq");
 const SourceNode: String = require("./SourceNode");
 const CodeNode: String = require("./CodeNode");
 const SourceListMap: SourceListMap = require("./SourceListMap");
 
-module.exports = function fromStringWithSourceMap(code: String, map: Object): String {
+module.exports = function fromStringWithSourceMap(code: String, map: Object): SourceNode {
 	const sources: Object = map.sources;
 	const sourcesContent: Object = map.sourcesContent;
 	const mappings: Array = map.mappings.split(";");

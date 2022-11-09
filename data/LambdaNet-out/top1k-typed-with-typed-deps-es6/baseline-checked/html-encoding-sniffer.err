@@ -1,32 +1,13 @@
 lib/html-encoding-sniffer.ts(5,44): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
 lib/html-encoding-sniffer.ts(6,48): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'Uint8Array'.
   Type 'HTMLElement' is missing the following properties from type 'Uint8Array': BYTES_PER_ELEMENT, buffer, byteLength, byteOffset, and 27 more.
-lib/html-encoding-sniffer.ts(9,5): error TS2322: Type 'string | null' is not assignable to type 'BOMEncoding | null'.
-  Type 'string' is not assignable to type 'BOMEncoding | null'.
-lib/html-encoding-sniffer.ts(17,5): error TS2322: Type 'string' is not assignable to type 'BOMEncoding | null'.
+lib/html-encoding-sniffer.ts(9,5): error TS2322: Type 'string' is not assignable to type 'BOMEncoding'.
+lib/html-encoding-sniffer.ts(17,5): error TS2322: Type 'string' is not assignable to type 'BOMEncoding'.
 lib/html-encoding-sniffer.ts(24,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/html-encoding-sniffer.ts(25,41): error TS2339: Property 'byteLength' does not exist on type 'Object'.
-lib/html-encoding-sniffer.ts(27,21): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 lib/html-encoding-sniffer.ts(28,9): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lib/html-encoding-sniffer.ts(30,26): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
-lib/html-encoding-sniffer.ts(31,26): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
-lib/html-encoding-sniffer.ts(32,26): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
-lib/html-encoding-sniffer.ts(33,26): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
-lib/html-encoding-sniffer.ts(34,26): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 lib/html-encoding-sniffer.ts(36,26): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 lib/html-encoding-sniffer.ts(36,41): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-lib/html-encoding-sniffer.ts(39,15): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
-lib/html-encoding-sniffer.ts(40,35): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
-lib/html-encoding-sniffer.ts(41,35): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 lib/html-encoding-sniffer.ts(43,15): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 lib/html-encoding-sniffer.ts(43,29): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 lib/html-encoding-sniffer.ts(43,49): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
@@ -40,8 +21,6 @@ lib/html-encoding-sniffer.ts(51,28): error TS2345: Argument of type 'String' is 
   Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lib/html-encoding-sniffer.ts(51,35): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 lib/html-encoding-sniffer.ts(54,15): error TS2739: Type 'Set<unknown>' is missing the following properties from type 'Error': name, message
-lib/html-encoding-sniffer.ts(56,13): error TS2322: Type 'null' is not assignable to type 'Boolean'.
-lib/html-encoding-sniffer.ts(57,13): error TS2322: Type 'null' is not assignable to type 'Number'.
 lib/html-encoding-sniffer.ts(62,23): error TS2339: Property 'attr' does not exist on type 'Object'.
 lib/html-encoding-sniffer.ts(62,46): error TS2339: Property 'has' does not exist on type 'Error'.
 lib/html-encoding-sniffer.ts(62,58): error TS2339: Property 'attr' does not exist on type 'Object'.
@@ -52,8 +31,7 @@ lib/html-encoding-sniffer.ts(65,35): error TS2339: Property 'attr' does not exis
 lib/html-encoding-sniffer.ts(66,32): error TS2339: Property 'attr' does not exist on type 'Object'.
 lib/html-encoding-sniffer.ts(67,66): error TS2339: Property 'attr' does not exist on type 'Object'.
 lib/html-encoding-sniffer.ts(71,32): error TS2339: Property 'attr' does not exist on type 'Object'.
-lib/html-encoding-sniffer.ts(72,15): error TS2322: Type 'string | null' is not assignable to type 'Number'.
-  Type 'null' is not assignable to type 'Number'.
+lib/html-encoding-sniffer.ts(72,15): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/html-encoding-sniffer.ts(72,60): error TS2339: Property 'attr' does not exist on type 'Object'.
 lib/html-encoding-sniffer.ts(76,23): error TS2339: Property 'i' does not exist on type 'Object'.
 lib/html-encoding-sniffer.ts(77,26): error TS2339: Property 'attr' does not exist on type 'Object'.
@@ -62,14 +40,10 @@ lib/html-encoding-sniffer.ts(89,39): error TS2367: This condition will always re
 lib/html-encoding-sniffer.ts(90,11): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/html-encoding-sniffer.ts(92,13): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/html-encoding-sniffer.ts(93,11): error TS2322: Type 'string' is not assignable to type 'Number'.
-lib/html-encoding-sniffer.ts(100,15): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 lib/html-encoding-sniffer.ts(102,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 lib/html-encoding-sniffer.ts(102,38): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 lib/html-encoding-sniffer.ts(109,23): error TS2339: Property 'i' does not exist on type 'Object'.
 lib/html-encoding-sniffer.ts(110,26): error TS2339: Property 'attr' does not exist on type 'Object'.
-lib/html-encoding-sniffer.ts(114,15): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 lib/html-encoding-sniffer.ts(116,15): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 lib/html-encoding-sniffer.ts(128,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/html-encoding-sniffer.ts(129,32): error TS2538: Type 'Number' cannot be used as an index type.

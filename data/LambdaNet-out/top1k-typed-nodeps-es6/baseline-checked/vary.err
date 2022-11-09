@@ -15,8 +15,6 @@ benchmark/append.ts(62,7): error TS2339: Property 'on' does not exist on type 'H
 benchmark/append.ts(62,46): error TS2304: Cannot find name 'Void'.
 benchmark/append.ts(66,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 benchmark/index.ts(16,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/index.ts(16,41): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-benchmark/index.ts(19,18): error TS2322: Type 'undefined' is not assignable to type 'String'.
 benchmark/index.ts(20,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 benchmark/index.ts(23,47): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.

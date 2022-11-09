@@ -60,7 +60,7 @@ pp.checkPropClash = function(prop: Parser, propHash: Object, refDestructuringErr
   name = "$" + name
   let other: Object = propHash[name]
   if (other) {
-    let redefinition: Position
+    let redefinition: Boolean
     if (kind === "init") {
       redefinition = this.strict && other.init || other.get || other.set
     } else {
@@ -97,7 +97,7 @@ pp.parseExpression = function(forInit: Array, refDestructuringErrors: String) {
   let startPos: Number = this.start, startLoc: Function = this.startLoc
   let expr: RegExpValidationState = this.parseMaybeAssign(forInit, refDestructuringErrors)
   if (this.type === tt.comma) {
-    let node: TokenType = this.startNodeAt(startPos, startLoc)
+    let node: Node = this.startNodeAt(startPos, startLoc)
     node.expressions = [expr]
     while (this.eat(tt.comma)) node.expressions.push(this.parseMaybeAssign(forInit, refDestructuringErrors))
     return this.finishNode(node, "SequenceExpression")
@@ -108,7 +108,7 @@ pp.parseExpression = function(forInit: Array, refDestructuringErrors: String) {
 // Parse an assignment expression. This includes applications of
 // operators like `+=`.
 
-pp.parseMaybeAssign = function(forInit: Number, refDestructuringErrors: RegExpValidationState, afterLeftParse: Function) {
+pp.parseMaybeAssign = function(forInit: Number, refDestructuringErrors: DestructuringErrors, afterLeftParse: Function) {
   if (this.isContextual("yield")) {
     if (this.inGenerator) return this.parseYield(forInit)
     // The tokenizer will assume an expression is allowed after
@@ -135,7 +135,7 @@ pp.parseMaybeAssign = function(forInit: Number, refDestructuringErrors: RegExpVa
   let left: Number = this.parseMaybeConditional(forInit, refDestructuringErrors)
   if (afterLeftParse) left = afterLeftParse.call(this, left, startPos, startLoc)
   if (this.type.isAssign) {
-    let node: HTMLElement = this.startNodeAt(startPos, startLoc)
+    let node: Position = this.startNodeAt(startPos, startLoc)
     node.operator = this.value
     if (this.type === tt.eq)
       left = this.toAssignable(left, false, refDestructuringErrors)
@@ -168,7 +168,7 @@ pp.parseMaybeConditional = function(forInit: String, refDestructuringErrors: Str
   let expr: Number = this.parseExprOps(forInit, refDestructuringErrors)
   if (this.checkExpressionErrors(refDestructuringErrors)) return expr
   if (this.eat(tt.question)) {
-    let node: TokenType = this.startNodeAt(startPos, startLoc)
+    let node: Node = this.startNodeAt(startPos, startLoc)
     node.test = expr
     node.consequent = this.parseMaybeAssign()
     this.expect(tt.colon)
@@ -208,7 +208,7 @@ pp.parseExprOp = function(left: String, leftStartPos: Boolean, leftStartLoc: Num
       this.next()
       let startPos: Number = this.start, startLoc: Function = this.startLoc
       let right: RegExpValidationState = this.parseExprOp(this.parseMaybeUnary(null, false, false, forInit), startPos, startLoc, prec, forInit)
-      let node: TokenType = this.buildBinary(leftStartPos, leftStartLoc, left, right, op, logical || coalesce)
+      let node: Node = this.buildBinary(leftStartPos, leftStartLoc, left, right, op, logical || coalesce)
       if ((logical && this.type === tt.coalesce) || (coalesce && (this.type === tt.logicalOR || this.type === tt.logicalAND))) {
         this.raiseRecoverable(this.start, "Logical expressions and coalesce expressions cannot be mixed. Wrap either by parentheses")
       }
@@ -220,7 +220,7 @@ pp.parseExprOp = function(left: String, leftStartPos: Boolean, leftStartLoc: Num
 
 pp.buildBinary = function(startPos: Number, startLoc: Number, left: Number, right: Object, op: Number, logical: Boolean) {
   if (right.type === "PrivateIdentifier") this.raise(right.start, "Private identifier can only be left side of binary expression")
-  let node: HTMLElement = this.startNodeAt(startPos, startLoc)
+  let node: Position = this.startNodeAt(startPos, startLoc)
   node.left = left
   node.operator = op
   node.right = right
@@ -235,7 +235,7 @@ pp.parseMaybeUnary = function(refDestructuringErrors: String, sawUnary: Boolean,
     expr = this.parseAwait(forInit)
     sawUnary = true
   } else if (this.type.prefix) {
-    let node: Scope = this.startNode(), update: Boolean = this.type === tt.incDec
+    let node: Node = this.startNode(), update: Boolean = this.type === tt.incDec
     node.operator = this.value
     node.prefix = true
     this.next()
@@ -258,7 +258,7 @@ pp.parseMaybeUnary = function(refDestructuringErrors: String, sawUnary: Boolean,
     expr = this.parseExprSubscripts(refDestructuringErrors, forInit)
     if (this.checkExpressionErrors(refDestructuringErrors)) return expr
     while (this.type.postfix && !this.canInsertSemicolon()) {
-      let node: Scope = this.startNodeAt(startPos, startLoc)
+      let node: Node = this.startNodeAt(startPos, startLoc)
       node.operator = this.value
       node.prefix = false
       node.argument = expr
@@ -278,7 +278,7 @@ pp.parseMaybeUnary = function(refDestructuringErrors: String, sawUnary: Boolean,
   }
 }
 
-function isPrivateFieldAccess(node: Scope): Boolean {
+function isPrivateFieldAccess(node: Node): Boolean {
   return (
     node.type === "MemberExpression" && node.property.type === "PrivateIdentifier" ||
     node.type === "ChainExpression" && isPrivateFieldAccess(node.expression)
@@ -313,7 +313,7 @@ pp.parseSubscripts = function(base: Object, startPos: Number, startLoc: Number, 
     if (element.optional) optionalChained = true
     if (element === base || element.type === "ArrowFunctionExpression") {
       if (optionalChained) {
-        const chainNode: TokenType = this.startNodeAt(startPos, startLoc)
+        const chainNode: Node = this.startNodeAt(startPos, startLoc)
         chainNode.expression = element
         element = this.finishNode(chainNode, "ChainExpression")
       }
@@ -331,7 +331,7 @@ pp.parseSubscript = function(base: Object, startPos: Number, startLoc: String, n
 
   let computed: Boolean = this.eat(tt.bracketL)
   if (computed || (optional && this.type !== tt.parenL && this.type !== tt.backQuote) || this.eat(tt.dot)) {
-    let node: Scope = this.startNodeAt(startPos, startLoc)
+    let node: Node = this.startNodeAt(startPos, startLoc)
     node.object = base
     if (computed) {
       node.property = this.parseExpression()
@@ -366,7 +366,7 @@ pp.parseSubscript = function(base: Object, startPos: Number, startLoc: String, n
     this.yieldPos = oldYieldPos || this.yieldPos
     this.awaitPos = oldAwaitPos || this.awaitPos
     this.awaitIdentPos = oldAwaitIdentPos || this.awaitIdentPos
-    let node: TokenType = this.startNodeAt(startPos, startLoc)
+    let node: Node = this.startNodeAt(startPos, startLoc)
     node.callee = base
     node.arguments = exprList
     if (optionalSupported) {
@@ -377,7 +377,7 @@ pp.parseSubscript = function(base: Object, startPos: Number, startLoc: String, n
     if (optional || optionalChained) {
       this.raise(this.start, "Optional chaining cannot appear in the tag of tagged template expressions")
     }
-    let node: TokenType = this.startNodeAt(startPos, startLoc)
+    let node: Node = this.startNodeAt(startPos, startLoc)
     node.tag = base
     node.quasi = this.parseTemplate({isTagged: true})
     base = this.finishNode(node, "TaggedTemplateExpression")
@@ -395,7 +395,7 @@ pp.parseExprAtom = function(refDestructuringErrors: String, forInit: String) {
   // tokenizer got confused, and we force it to read a regexp instead.
   if (this.type === tt.slash) this.readRegexp()
 
-  let node: TokenType, canBeArrow: Boolean = this.potentialArrowAt === this.start
+  let node: Node, canBeArrow: Boolean = this.potentialArrowAt === this.start
   switch (this.type) {
   case tt._super:
     if (!this.allowSuper)
@@ -502,7 +502,7 @@ pp.parseExprAtom = function(refDestructuringErrors: String, forInit: String) {
 }
 
 pp.parseExprImport = function() {
-  const node: TokenType = this.startNode()
+  const node: Node = this.startNode()
 
   // Consume `import` as an identifier for `import.meta`.
   // Because `this.parseIdent(true)` doesn't check escape sequences, it needs the check of `this.containsEsc`.
@@ -520,7 +520,7 @@ pp.parseExprImport = function() {
   }
 }
 
-pp.parseDynamicImport = function(node: TokenType) {
+pp.parseDynamicImport = function(node: Node) {
   this.next() // skip `(`
 
   // Parse node.source.
@@ -539,7 +539,7 @@ pp.parseDynamicImport = function(node: TokenType) {
   return this.finishNode(node, "ImportExpression")
 }
 
-pp.parseImportMeta = function(node: Scope) {
+pp.parseImportMeta = function(node: Node) {
   this.next() // skip `.`
 
   const containsEsc: Number = this.containsEsc
@@ -556,7 +556,7 @@ pp.parseImportMeta = function(node: Scope) {
 }
 
 pp.parseLiteral = function(value: String) {
-  let node: Scope = this.startNode()
+  let node: Node = this.startNode()
   node.value = value
   node.raw = this.input.slice(this.start, this.end)
   if (node.raw.charCodeAt(node.raw.length - 1) === 110) node.bigint = node.raw.slice(0, -1).replace(/_/g, "")
@@ -651,7 +651,7 @@ const empty: Array = []
 
 pp.parseNew = function() {
   if (this.containsEsc) this.raiseRecoverable(this.start, "Escape sequence in keyword new")
-  let node: TokContext = this.startNode()
+  let node: Node = this.startNode()
   let meta: RegExpValidationState = this.parseIdent(true)
   if (this.options.ecmaVersion >= 6 && this.eat(tt.dot)) {
     node.meta = meta
@@ -715,7 +715,7 @@ pp.parseTemplate = function({isTagged = false} = {}) {
   return this.finishNode(node, "TemplateLiteral")
 }
 
-pp.isAsyncProp = function(prop: Parser) {
+pp.isAsyncProp = function(prop: Position) {
   return !prop.computed && prop.key.type === "Identifier" && prop.key.name === "async" &&
     (this.type === tt.name || this.type === tt.num || this.type === tt.string || this.type === tt.bracketL || this.type.keyword || (this.options.ecmaVersion >= 9 && this.type === tt.star)) &&
     !lineBreak.test(this.input.slice(this.lastTokEnd, this.start))
@@ -724,7 +724,7 @@ pp.isAsyncProp = function(prop: Parser) {
 // Parse an object literal or binding pattern.
 
 pp.parseObj = function(isPattern: Boolean, refDestructuringErrors: String) {
-  let node: Scope = this.startNode(), first: Boolean = true, propHash: String = {}
+  let node: Node = this.startNode(), first: Boolean = true, propHash: String = {}
   node.properties = []
   this.next()
   while (!this.eat(tt.braceR)) {
@@ -741,7 +741,7 @@ pp.parseObj = function(isPattern: Boolean, refDestructuringErrors: String) {
 }
 
 pp.parseProperty = function(isPattern: Boolean, refDestructuringErrors: String) {
-  let prop: Parser = this.startNode(), isGenerator: Boolean, isAsync: Boolean, startPos: Number, startLoc: Function
+  let prop: Position = this.startNode(), isGenerator: Boolean, isAsync: Boolean, startPos: Number, startLoc: Function
   if (this.options.ecmaVersion >= 9 && this.eat(tt.ellipsis)) {
     if (isPattern) {
       prop.argument = this.parseIdent(false)
@@ -848,7 +848,7 @@ pp.parsePropertyName = function(prop: Parser) {
 
 // Initialize empty function node.
 
-pp.initFunction = function(node: Scope) {
+pp.initFunction = function(node: Node) {
   node.id = null
   if (this.options.ecmaVersion >= 6) node.generator = node.expression = false
   if (this.options.ecmaVersion >= 8) node.async = false
@@ -857,7 +857,7 @@ pp.initFunction = function(node: Scope) {
 // Parse object or class method.
 
 pp.parseMethod = function(isGenerator: Boolean, isAsync: Boolean, allowDirectSuper: Boolean) {
-  let node: TokenType = this.startNode(), oldYieldPos: Function = this.yieldPos, oldAwaitPos: Function = this.awaitPos, oldAwaitIdentPos: Function = this.awaitIdentPos
+  let node: Node = this.startNode(), oldYieldPos: Function = this.yieldPos, oldAwaitPos: Function = this.awaitPos, oldAwaitIdentPos: Function = this.awaitIdentPos
 
   this.initFunction(node)
   if (this.options.ecmaVersion >= 6)
@@ -883,7 +883,7 @@ pp.parseMethod = function(isGenerator: Boolean, isAsync: Boolean, allowDirectSup
 
 // Parse arrow function expression with given parameters.
 
-pp.parseArrowExpression = function(node: Scope, params: Array, isAsync: Boolean, forInit: Number) {
+pp.parseArrowExpression = function(node: Node, params: Array, isAsync: Boolean, forInit: Number) {
   let oldYieldPos: Function = this.yieldPos, oldAwaitPos: Function = this.awaitPos, oldAwaitIdentPos: Function = this.awaitIdentPos
 
   this.enterScope(functionFlags(isAsync, false) | SCOPE_ARROW)
@@ -905,7 +905,7 @@ pp.parseArrowExpression = function(node: Scope, params: Array, isAsync: Boolean,
 
 // Parse function body and check parameters.
 
-pp.parseFunctionBody = function(node: Scope, isArrowFunction: Boolean, isMethod: Boolean, forInit: Number) {
+pp.parseFunctionBody = function(node: Node, isArrowFunction: Boolean, isMethod: Boolean, forInit: Number) {
   let isExpression: Boolean = isArrowFunction && this.type !== tt.braceL
   let oldStrict: String = this.strict, useStrict: Boolean = false
 
@@ -951,7 +951,7 @@ pp.isSimpleParamList = function(params: Array) {
 // Checks function params for various disallowed patterns such as using "eval"
 // or "arguments" and duplicate parameters.
 
-pp.checkParams = function(node: Scope, allowDuplicates: Boolean) {
+pp.checkParams = function(node: Node, allowDuplicates: Boolean) {
   let nameHash: String = Object.create(null)
   for (let param of node.params)
     this.checkLValInnerPattern(param, BIND_VAR, allowDuplicates ? null : nameHash)
@@ -1012,7 +1012,7 @@ pp.checkUnreserved = function({start, end, name}) {
 // identifiers.
 
 pp.parseIdent = function(liberal: Boolean, isBinding: Number) {
-  let node: TokenType = this.startNode()
+  let node: Node = this.startNode()
   if (this.type === tt.name) {
     node.name = this.value
   } else if (this.type.keyword) {
@@ -1040,7 +1040,7 @@ pp.parseIdent = function(liberal: Boolean, isBinding: Number) {
 }
 
 pp.parsePrivateIdent = function() {
-  const node: TokenType = this.startNode()
+  const node: Node = this.startNode()
   if (this.type === tt.privateId) {
     node.name = this.value
   } else {
@@ -1064,7 +1064,7 @@ pp.parsePrivateIdent = function() {
 pp.parseYield = function(forInit: Array) {
   if (!this.yieldPos) this.yieldPos = this.start
 
-  let node: TokContext = this.startNode()
+  let node: Node = this.startNode()
   this.next()
   if (this.type === tt.semi || this.canInsertSemicolon() || (this.type !== tt.star && !this.type.startsExpr)) {
     node.delegate = false
@@ -1079,7 +1079,7 @@ pp.parseYield = function(forInit: Array) {
 pp.parseAwait = function(forInit: Function) {
   if (!this.awaitPos) this.awaitPos = this.start
 
-  let node: TokenType = this.startNode()
+  let node: Node = this.startNode()
   this.next()
   node.argument = this.parseMaybeUnary(null, true, false, forInit)
   return this.finishNode(node, "AwaitExpression")

@@ -1,51 +1,28 @@
 index.ts(4,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(4,22): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+index.ts(4,22): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(5,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(7,59): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(8,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(9,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(12,15): error TS2345: Argument of type '(result: Function) => String' is not assignable to parameter of type '(value: unknown) => String | PromiseLike<String>'.
-  Types of parameters 'result' and 'value' are incompatible.
-    Type 'unknown' is not assignable to type 'Function'.
 index.ts(14,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(15,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+index.ts(15,18): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(15,39): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-index.ts(16,13): error TS2345: Argument of type '(d: Object) => any' is not assignable to parameter of type '(value: unknown) => any'.
-  Types of parameters 'd' and 'value' are incompatible.
-    Type 'unknown' is not assignable to type 'Object'.
 index.ts(18,35): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(20,32): error TS2339: Property 'fn' does not exist on type 'Object'.
 index.ts(20,43): error TS2339: Property 'self' does not exist on type 'Object'.
 index.ts(20,51): error TS2339: Property 'args' does not exist on type 'Object'.
-index.ts(25,16): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Object'.
 index.ts(30,5): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(32,37): error TS2304: Cannot find name 'Void'.
 index.ts(36,23): error TS2304: Cannot find name 'Void'.
 index.ts(39,12): error TS2339: Property 'resolve' does not exist on type 'String'.
 index.ts(41,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(49,40): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(53,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
-index.ts(55,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(59,40): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(68,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
-index.ts(70,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(90,5): error TS2322: Type 'Function' is not assignable to type 'String'.
 index.ts(92,5): error TS2322: Type 'Function' is not assignable to type 'String'.
 index.ts(98,67): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(98,75): error TS2304: Cannot find name 'Void'.
-index.ts(99,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(100,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(101,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(102,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(106,19): error TS2304: Cannot find name 'Void'.
-index.ts(107,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(108,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(109,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(109,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(110,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(111,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(125,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(127,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 perf.ts(5,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

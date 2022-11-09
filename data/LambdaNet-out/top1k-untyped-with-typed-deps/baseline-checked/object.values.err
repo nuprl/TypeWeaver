@@ -1,7 +1,5 @@
 implementation.ts(9,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 implementation.ts(11,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-implementation.ts(14,16): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 polyfill.ts(6,2): error TS2322: Type 'String | { <T>(o: { [s: string]: T; } | ArrayLike<T>): T[]; (o: {}): any[]; }' is not assignable to type 'String'.
   Type '{ <T>(o: { [s: string]: T; } | ArrayLike<T>): T[]; (o: {}): any[]; }' is not assignable to type 'String'.
 shim.ts(10,11): error TS2367: This condition will always return 'true' since the types '{ <T>(o: { [s: string]: T; } | ArrayLike<T>): T[]; (o: {}): any[]; }' and 'String' have no overlap.

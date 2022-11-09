@@ -7,24 +7,14 @@ index.ts(65,21): error TS2345: Argument of type 'Number' is not assignable to pa
 index.ts(74,29): error TS2339: Property 'has' does not exist on type 'Error'.
 index.ts(74,42): error TS2339: Property 'status' does not exist on type 'Object'.
 index.ts(83,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(86,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(92,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(93,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(95,27): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 index.ts(96,20): error TS2367: This condition will always return 'false' since the types 'String' and 'boolean' have no overlap.
-index.ts(106,9): error TS7006: Parameter 'req' implicitly has an 'any' type.
-index.ts(107,9): error TS7006: Parameter 'res' implicitly has an 'any' type.
 index.ts(109,13): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
-index.ts(109,13): error TS7031: Binding element 'shared' implicitly has an 'any' type.
 index.ts(110,13): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
-index.ts(110,13): error TS7031: Binding element 'cacheHeuristic' implicitly has an 'any' type.
 index.ts(111,13): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
-index.ts(111,13): error TS7031: Binding element 'immutableMinTimeToLive' implicitly has an 'any' type.
 index.ts(112,13): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
-index.ts(112,13): error TS7031: Binding element 'ignoreCargoCult' implicitly has an 'any' type.
 index.ts(113,13): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
-index.ts(113,13): error TS7031: Binding element '_fromObject' implicitly has an 'any' type.
 index.ts(126,14): error TS2339: Property '_responseTime' does not exist on type 'CachePolicy'.
 index.ts(127,14): error TS2339: Property '_isShared' does not exist on type 'CachePolicy'.
 index.ts(128,14): error TS2339: Property '_cacheHeuristic' does not exist on type 'CachePolicy'.
@@ -72,27 +62,7 @@ index.ts(214,19): error TS2339: Property '_isShared' does not exist on type 'Cac
 index.ts(214,37): error TS2339: Property '_rescc' does not exist on type 'CachePolicy'.
 index.ts(215,18): error TS2339: Property '_rescc' does not exist on type 'CachePolicy'.
 index.ts(216,18): error TS2339: Property '_resHeaders' does not exist on type 'CachePolicy'.
-index.ts(220,30): error TS7006: Parameter 'req' implicitly has an 'any' type.
-index.ts(226,34): error TS7006: Parameter 'req' implicitly has an 'any' type.
-index.ts(233,13): error TS7053: Element implicitly has an 'any' type because expression of type '"no-cache"' can't be used to index type 'Object'.
-  Property 'no-cache' does not exist on type 'Object'.
-index.ts(237,13): error TS7053: Element implicitly has an 'any' type because expression of type '"max-age"' can't be used to index type 'Object'.
-  Property 'max-age' does not exist on type 'Object'.
-index.ts(237,50): error TS7053: Element implicitly has an 'any' type because expression of type '"max-age"' can't be used to index type 'Object'.
-  Property 'max-age' does not exist on type 'Object'.
-index.ts(242,13): error TS7053: Element implicitly has an 'any' type because expression of type '"min-fresh"' can't be used to index type 'Object'.
-  Property 'min-fresh' does not exist on type 'Object'.
-index.ts(243,40): error TS7053: Element implicitly has an 'any' type because expression of type '"min-fresh"' can't be used to index type 'Object'.
-  Property 'min-fresh' does not exist on type 'Object'.
-index.ts(252,17): error TS7053: Element implicitly has an 'any' type because expression of type '"max-stale"' can't be used to index type 'Object'.
-  Property 'max-stale' does not exist on type 'Object'.
 index.ts(253,23): error TS2339: Property '_rescc' does not exist on type 'CachePolicy'.
-index.ts(254,27): error TS7053: Element implicitly has an 'any' type because expression of type '"max-stale"' can't be used to index type 'Object'.
-  Property 'max-stale' does not exist on type 'Object'.
-index.ts(255,21): error TS7053: Element implicitly has an 'any' type because expression of type '"max-stale"' can't be used to index type 'Object'.
-  Property 'max-stale' does not exist on type 'Object'.
-index.ts(264,21): error TS7006: Parameter 'req' implicitly has an 'any' type.
-index.ts(264,26): error TS7006: Parameter 'allowHeadMethod' implicitly has an 'any' type.
 index.ts(267,20): error TS2339: Property '_url' does not exist on type 'CachePolicy'.
 index.ts(267,33): error TS2339: Property '_url' does not exist on type 'CachePolicy'.
 index.ts(268,18): error TS2339: Property '_host' does not exist on type 'CachePolicy'.
@@ -100,20 +70,12 @@ index.ts(271,22): error TS2339: Property '_method' does not exist on type 'Cache
 index.ts(281,18): error TS2339: Property '_rescc' does not exist on type 'CachePolicy'.
 index.ts(282,18): error TS2339: Property '_rescc' does not exist on type 'CachePolicy'.
 index.ts(283,18): error TS2339: Property '_rescc' does not exist on type 'CachePolicy'.
-index.ts(287,18): error TS7006: Parameter 'req' implicitly has an 'any' type.
 index.ts(288,19): error TS2339: Property '_resHeaders' does not exist on type 'CachePolicy'.
 index.ts(293,18): error TS2339: Property '_resHeaders' does not exist on type 'CachePolicy'.
 index.ts(297,29): error TS2339: Property '_resHeaders' does not exist on type 'CachePolicy'.
 index.ts(302,44): error TS2339: Property '_reqHeaders' does not exist on type 'CachePolicy'.
-index.ts(307,33): error TS7006: Parameter 'inHeaders' implicitly has an 'any' type.
-index.ts(310,17): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-index.ts(311,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-index.ts(317,24): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
 index.ts(320,21): error TS2339: Property 'warning' does not exist on type '{}'.
 index.ts(321,38): error TS2339: Property 'warning' does not exist on type '{}'.
-index.ts(321,64): error TS7006: Parameter 'warning' implicitly has an 'any' type.
 index.ts(325,32): error TS2339: Property 'warning' does not exist on type '{}'.
 index.ts(327,25): error TS2339: Property 'warning' does not exist on type '{}'.
 index.ts(334,63): error TS2339: Property '_resHeaders' does not exist on type 'CachePolicy'.
@@ -152,10 +114,8 @@ index.ts(452,41): error TS2365: Operator '+' cannot be applied to types 'number'
 index.ts(452,67): error TS2339: Property '_rescc' does not exist on type 'CachePolicy'.
 index.ts(461,52): error TS2339: Property '_rescc' does not exist on type 'CachePolicy'.
 index.ts(465,52): error TS2339: Property '_rescc' does not exist on type 'CachePolicy'.
-index.ts(468,23): error TS7006: Parameter 'obj' implicitly has an 'any' type.
 index.ts(469,47): error TS2345: Argument of type '{ _fromObject: any; }' is not assignable to parameter of type '{ shared: any; cacheHeuristic: any; immutableMinTimeToLive: any; ignoreCargoCult: any; _fromObject: any; }'.
   Type '{ _fromObject: any; }' is missing the following properties from type '{ shared: any; cacheHeuristic: any; immutableMinTimeToLive: any; ignoreCargoCult: any; _fromObject: any; }': shared, cacheHeuristic, immutableMinTimeToLive, ignoreCargoCult
-index.ts(472,17): error TS7006: Parameter 'obj' implicitly has an 'any' type.
 index.ts(473,18): error TS2339: Property '_responseTime' does not exist on type 'CachePolicy'.
 index.ts(476,14): error TS2339: Property '_responseTime' does not exist on type 'CachePolicy'.
 index.ts(477,14): error TS2339: Property '_isShared' does not exist on type 'CachePolicy'.
@@ -183,49 +143,13 @@ index.ts(504,21): error TS2339: Property '_host' does not exist on type 'CachePo
 index.ts(505,21): error TS2339: Property '_noAuthorization' does not exist on type 'CachePolicy'.
 index.ts(506,24): error TS2339: Property '_reqHeaders' does not exist on type 'CachePolicy'.
 index.ts(507,25): error TS2339: Property '_reqcc' does not exist on type 'CachePolicy'.
-index.ts(518,25): error TS7006: Parameter 'incomingReq' implicitly has an 'any' type.
-index.ts(523,16): error TS7053: Element implicitly has an 'any' type because expression of type '"if-range"' can't be used to index type '{}'.
-  Property 'if-range' does not exist on type '{}'.
-index.ts(528,20): error TS7053: Element implicitly has an 'any' type because expression of type '"if-none-match"' can't be used to index type '{}'.
-  Property 'if-none-match' does not exist on type '{}'.
-index.ts(529,20): error TS7053: Element implicitly has an 'any' type because expression of type '"if-modified-since"' can't be used to index type '{}'.
-  Property 'if-modified-since' does not exist on type '{}'.
 index.ts(534,18): error TS2339: Property '_resHeaders' does not exist on type 'CachePolicy'.
-index.ts(535,13): error TS7053: Element implicitly has an 'any' type because expression of type '"if-none-match"' can't be used to index type '{}'.
-  Property 'if-none-match' does not exist on type '{}'.
-index.ts(535,40): error TS7053: Element implicitly has an 'any' type because expression of type '"if-none-match"' can't be used to index type '{}'.
-  Property 'if-none-match' does not exist on type '{}'.
-index.ts(536,22): error TS7053: Element implicitly has an 'any' type because expression of type '"if-none-match"' can't be used to index type '{}'.
-  Property 'if-none-match' does not exist on type '{}'.
 index.ts(536,56): error TS2339: Property '_resHeaders' does not exist on type 'CachePolicy'.
 index.ts(537,24): error TS2339: Property '_resHeaders' does not exist on type 'CachePolicy'.
-index.ts(542,13): error TS7053: Element implicitly has an 'any' type because expression of type '"accept-ranges"' can't be used to index type '{}'.
-  Property 'accept-ranges' does not exist on type '{}'.
-index.ts(543,13): error TS7053: Element implicitly has an 'any' type because expression of type '"if-match"' can't be used to index type '{}'.
-  Property 'if-match' does not exist on type '{}'.
-index.ts(544,13): error TS7053: Element implicitly has an 'any' type because expression of type '"if-unmodified-since"' can't be used to index type '{}'.
-  Property 'if-unmodified-since' does not exist on type '{}'.
 index.ts(545,19): error TS2339: Property '_method' does not exist on type 'CachePolicy'.
 index.ts(545,35): error TS2339: Property '_method' does not exist on type 'CachePolicy'.
-index.ts(550,20): error TS7053: Element implicitly has an 'any' type because expression of type '"if-modified-since"' can't be used to index type '{}'.
-  Property 'if-modified-since' does not exist on type '{}'.
-index.ts(552,17): error TS7053: Element implicitly has an 'any' type because expression of type '"if-none-match"' can't be used to index type '{}'.
-  Property 'if-none-match' does not exist on type '{}'.
-index.ts(553,31): error TS7053: Element implicitly has an 'any' type because expression of type '"if-none-match"' can't be used to index type '{}'.
-  Property 'if-none-match' does not exist on type '{}'.
-index.ts(555,29): error TS7006: Parameter 'etag' implicitly has an 'any' type.
-index.ts(559,28): error TS7053: Element implicitly has an 'any' type because expression of type '"if-none-match"' can't be used to index type '{}'.
-  Property 'if-none-match' does not exist on type '{}'.
-index.ts(561,21): error TS7053: Element implicitly has an 'any' type because expression of type '"if-none-match"' can't be used to index type '{}'.
-  Property 'if-none-match' does not exist on type '{}'.
 index.ts(565,18): error TS2339: Property '_resHeaders' does not exist on type 'CachePolicy'.
-index.ts(566,14): error TS7053: Element implicitly has an 'any' type because expression of type '"if-modified-since"' can't be used to index type '{}'.
-  Property 'if-modified-since' does not exist on type '{}'.
-index.ts(568,13): error TS7053: Element implicitly has an 'any' type because expression of type '"if-modified-since"' can't be used to index type '{}'.
-  Property 'if-modified-since' does not exist on type '{}'.
 index.ts(568,49): error TS2339: Property '_resHeaders' does not exist on type 'CachePolicy'.
-index.ts(583,23): error TS7006: Parameter 'request' implicitly has an 'any' type.
-index.ts(583,32): error TS7006: Parameter 'response' implicitly has an 'any' type.
 index.ts(609,22): error TS2339: Property '_resHeaders' does not exist on type 'CachePolicy'.
 index.ts(610,22): error TS2339: Property '_resHeaders' does not exist on type 'CachePolicy'.
 index.ts(612,25): error TS2339: Property '_resHeaders' does not exist on type 'CachePolicy'.
@@ -237,10 +161,6 @@ index.ts(630,23): error TS2339: Property '_resHeaders' does not exist on type 'C
 index.ts(640,29): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
 index.ts(652,30): error TS2339: Property '_resHeaders' does not exist on type 'CachePolicy'.
-index.ts(653,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-index.ts(654,43): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 index.ts(656,28): error TS2339: Property '_resHeaders' does not exist on type 'CachePolicy'.
 index.ts(660,26): error TS2339: Property '_status' does not exist on type 'CachePolicy'.
 index.ts(661,26): error TS2339: Property '_method' does not exist on type 'CachePolicy'.

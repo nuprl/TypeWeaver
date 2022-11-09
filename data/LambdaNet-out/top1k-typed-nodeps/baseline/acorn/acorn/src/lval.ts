@@ -104,14 +104,14 @@ pp.toAssignableList = function(exprList: Array, isBinding: Boolean) {
 // Parses spread element.
 
 pp.parseSpread = function(refDestructuringErrors: String) {
-  let node: TokenType = this.startNode()
+  let node: Node = this.startNode()
   this.next()
   node.argument = this.parseMaybeAssign(false, refDestructuringErrors)
   return this.finishNode(node, "SpreadElement")
 }
 
 pp.parseRestBinding = function() {
-  let node: TokenType = this.startNode()
+  let node: Node = this.startNode()
   this.next()
 
   // RestElement inside of a function parameter must be an identifier
@@ -129,7 +129,7 @@ pp.parseBindingAtom = function() {
   if (this.options.ecmaVersion >= 6) {
     switch (this.type) {
     case tt.bracketL:
-      let node: TokenType = this.startNode()
+      let node: Node = this.startNode()
       this.next()
       node.elements = this.parseBindingList(tt.bracketR, true, true)
       return this.finishNode(node, "ArrayPattern")

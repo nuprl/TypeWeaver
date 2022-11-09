@@ -171,7 +171,7 @@ jQuery.each( { scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function( 
 	var top: Boolean = "pageYOffset" === prop;
 
 	jQuery.fn[ method ] = function( val: String ) {
-		return access( this, function( elem: Object, method: String, val: Number ) {
+		return access( this, function( elem: Object, method: String, val: String ) {
 
 			// Coalesce documents and windows
 			var win: Object;

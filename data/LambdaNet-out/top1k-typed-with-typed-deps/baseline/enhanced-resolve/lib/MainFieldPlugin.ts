@@ -12,7 +12,7 @@ const DescriptionFileUtils: String = require("./DescriptionFileUtils");
 /** @typedef {import("./Resolver").ResolveStepHook} ResolveStepHook */
 /** @typedef {{name: string|Array<string>, forceRelative: boolean}} MainFieldOptions */
 
-const alreadyTriedMainField: Number = Symbol("alreadyTriedMainField");
+const alreadyTriedMainField: String = Symbol("alreadyTriedMainField");
 
 module.exports = class MainFieldPlugin {
 	/**

@@ -1,4 +1,4 @@
-function RetryOperation(timeouts: Function, options: Object): Void {
+function RetryOperation(timeouts: Object, options: Object): Void {
   // Compatibility for the old (timeouts, retryForever) signature
   if (typeof options === 'boolean') {
     options = { forever: options };

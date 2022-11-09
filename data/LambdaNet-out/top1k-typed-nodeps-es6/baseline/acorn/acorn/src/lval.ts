@@ -8,7 +8,7 @@ const pp: Parser = Parser.prototype
 // Convert existing expression atom to assignable pattern
 // if possible.
 
-pp.toAssignable = function(node: Parser, isBinding: Boolean, refDestructuringErrors: String) {
+pp.toAssignable = function(node: Parser, isBinding: Boolean, refDestructuringErrors: DestructuringErrors) {
   if (this.options.ecmaVersion >= 6 && node) {
     switch (node.type) {
     case "Identifier":
@@ -90,7 +90,7 @@ pp.toAssignable = function(node: Parser, isBinding: Boolean, refDestructuringErr
 pp.toAssignableList = function(exprList: Array, isBinding: Boolean) {
   let end: Number = exprList.length
   for (let i = 0; i < end; i++) {
-    let elt: RegExpValidationState = exprList[i]
+    let elt: String = exprList[i]
     if (elt) this.toAssignable(elt, isBinding)
   }
   if (end) {
@@ -104,14 +104,14 @@ pp.toAssignableList = function(exprList: Array, isBinding: Boolean) {
 // Parses spread element.
 
 pp.parseSpread = function(refDestructuringErrors: String) {
-  let node: TokenType = this.startNode()
+  let node: Node = this.startNode()
   this.next()
   node.argument = this.parseMaybeAssign(false, refDestructuringErrors)
   return this.finishNode(node, "SpreadElement")
 }
 
 pp.parseRestBinding = function() {
-  let node: TokenType = this.startNode()
+  let node: Node = this.startNode()
   this.next()
 
   // RestElement inside of a function parameter must be an identifier
@@ -129,7 +129,7 @@ pp.parseBindingAtom = function() {
   if (this.options.ecmaVersion >= 6) {
     switch (this.type) {
     case tt.bracketL:
-      let node: TokenType = this.startNode()
+      let node: Node = this.startNode()
       this.next()
       node.elements = this.parseBindingList(tt.bracketR, true, true)
       return this.finishNode(node, "ArrayPattern")
@@ -300,7 +300,7 @@ pp.checkLValPattern = function(expr: Parser, bindingType: String = BIND_NONE, ch
   }
 }
 
-pp.checkLValInnerPattern = function(expr: Parser, bindingType: String = BIND_NONE, checkClashes: Number) {
+pp.checkLValInnerPattern = function(expr: Parser, bindingType: String = BIND_NONE, checkClashes: String) {
   switch (expr.type) {
   case "Property":
     // AssignmentProperty has type === "Property"

@@ -6,7 +6,7 @@ var mod_assert: HTMLElement = require('assert-plus');
 var mod_util: String = require('util');
 
 var mod_extsprintf: String = require('extsprintf');
-var mod_verror: Array = require('verror');
+var mod_verror: String = require('verror');
 var mod_jsonschema: Array = require('json-schema');
 
 /*
@@ -49,7 +49,7 @@ exports.hrtimeMillisec = hrtimeMillisec;
  * scalars (strings, numbers, booleans) and arbitrarily deep arrays and objects
  * containing these.  This does *not* handle instances of other classes.
  */
-function deepCopy(obj: Object): Object
+function deepCopy(obj: Object): Array
 {
 	var ret: Array, key: Number;
 	var marker: String = '__deepCopy';
@@ -250,7 +250,7 @@ var RFC1123_MONTHS: Array = [
 var RFC1123_DAYS: Array = [
     'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-function rfc1123(date: HTMLElement): Array {
+function rfc1123(date: HTMLElement): String {
 	return (mod_extsprintf.sprintf('%s, %02d %s %04d %02d:%02d:%02d GMT',
 	    RFC1123_DAYS[date.getUTCDay()], date.getUTCDate(),
 	    RFC1123_MONTHS[date.getUTCMonth()], date.getUTCFullYear(),

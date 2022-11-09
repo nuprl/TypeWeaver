@@ -17,7 +17,7 @@ var dashdash: Object = require('../lib/dashdash');
  * or a date (another parsable by `new Date()`).
  */
 var durationRe: RegExp = /^([1-9]\d*)([smhd])$/;
-function parseTimeAgo(option: Function, optstr: String, arg: String): Object {
+function parseTimeAgo(option: Function, optstr: Function, arg: String): Object {
     var t: HTMLDivElement;
     var match: Promise = durationRe.exec(arg);
     if (match) {

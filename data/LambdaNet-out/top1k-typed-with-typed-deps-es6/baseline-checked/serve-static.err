@@ -14,13 +14,9 @@ index.ts(81,11): error TS2339: Property 'statusCode' does not exist on type 'Obj
 index.ts(82,11): error TS2339: Property 'setHeader' does not exist on type 'Object'.
 index.ts(83,11): error TS2339: Property 'setHeader' does not exist on type 'Object'.
 index.ts(84,11): error TS2339: Property 'end' does not exist on type 'Object'.
-index.ts(89,9): error TS2322: Type 'Url | undefined' is not assignable to type 'String'.
-  Type 'undefined' is not assignable to type 'String'.
+index.ts(89,9): error TS2740: Type 'Url' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(89,49): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'IncomingMessage'.
   Type 'HTMLElement' is missing the following properties from type 'IncomingMessage': aborted, httpVersion, httpVersionMajor, httpVersionMinor, and 49 more.
-index.ts(90,9): error TS2322: Type 'string | null' is not assignable to type 'String'.
-  Type 'null' is not assignable to type 'String'.
-index.ts(90,24): error TS2532: Object is possibly 'undefined'.
 index.ts(90,33): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'IncomingMessage'.
 index.ts(93,37): error TS2339: Property 'pathname' does not exist on type 'String'.
 index.ts(98,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -30,19 +26,14 @@ index.ts(110,45): error TS2304: Cannot find name 'Void'.
 index.ts(117,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(117,53): error TS2304: Cannot find name 'Void'.
 index.ts(174,32): error TS2304: Cannot find name 'Void'.
-index.ts(175,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(185,48): error TS2304: Cannot find name 'Void'.
-index.ts(186,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(187,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(192,9): error TS2322: Type 'Url | undefined' is not assignable to type 'Function'.
-  Type 'undefined' is not assignable to type 'Function'.
-index.ts(192,51): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(192,9): error TS2740: Type 'Url' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 index.ts(195,17): error TS2339: Property 'path' does not exist on type 'Function'.
 index.ts(196,17): error TS2339: Property 'pathname' does not exist on type 'Function'.
 index.ts(196,63): error TS2339: Property 'pathname' does not exist on type 'Function'.
 index.ts(199,9): error TS2322: Type 'string' is not assignable to type 'Function'.
 index.ts(199,46): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(urlObject: URL, options?: URLFormatOptions | undefined): string', gave the following error.
+  Overload 1 of 2, '(urlObject: URL, options?: URLFormatOptions): string', gave the following error.
     Argument of type 'Function' is not assignable to parameter of type 'URL'.
       Type 'Function' is missing the following properties from type 'URL': hash, host, hostname, href, and 9 more.
   Overload 2 of 2, '(urlObject: string | UrlObject): string', gave the following error.
@@ -59,16 +50,14 @@ index.ts(207,9): error TS2339: Property 'setHeader' does not exist on type 'HTML
 index.ts(208,9): error TS2339: Property 'setHeader' does not exist on type 'HTMLElement'.
 index.ts(209,9): error TS2339: Property 'setHeader' does not exist on type 'HTMLElement'.
 index.ts(210,9): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
-scripts/version-history.ts(8,5): error TS2322: Type 'string | undefined' is not assignable to type 'String'.
-  Type 'undefined' is not assignable to type 'String'.
 scripts/version-history.ts(11,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/version-history.ts(11,47): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null | undefined; flag?: string | undefined; } | null | undefined): Buffer', gave the following error.
+  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
       Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-  Overload 2 of 3, '(path: PathOrFileDescriptor, options: BufferEncoding | { encoding: BufferEncoding; flag?: string | undefined; }): string', gave the following error.
+  Overload 2 of 3, '(path: PathOrFileDescriptor, options: BufferEncoding | { encoding: BufferEncoding; flag?: string; }): string', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-  Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string | undefined; }) | null | undefined): string | Buffer', gave the following error.
+  Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string; })): string | Buffer', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
 scripts/version-history.ts(24,7): error TS2740: Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 scripts/version-history.ts(26,27): error TS2339: Property 'test' does not exist on type 'HTMLElement'.

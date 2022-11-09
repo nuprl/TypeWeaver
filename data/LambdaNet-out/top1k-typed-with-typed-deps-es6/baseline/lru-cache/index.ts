@@ -11,7 +11,7 @@ const hasAbortController: Boolean = typeof AbortController === 'function'
 // this doesn't have nearly all the checks and whatnot that
 // actual AbortController/Signal has, but it's enough for
 // our purposes, and if used properly, behaves the same.
-const AC: LRUCache = hasAbortController
+const AC: Object = hasAbortController
   ? AbortController
   : class AbortController {
       constructor() {
@@ -651,14 +651,14 @@ class LRUCache {
 
   pop() {
     if (this.size) {
-      const val: LRUCache = this.valList[this.head]
+      const val: String = this.valList[this.head]
       this.evict(true)
       return val
     }
   }
 
   evict(free) {
-    const head: LRUCache = this.head
+    const head: String = this.head
     const k: String = this.keyList[head]
     const v: LRUCache = this.valList[head]
     if (this.isBackgroundFetch(v)) {
@@ -722,7 +722,7 @@ class LRUCache {
       }
       return v
     }
-    const eb: Function = (er: Function) => {
+    const eb: Function = (er: String) => {
       if (this.valList[index] === p) {
         const del: Boolean =
           !options.noDeleteOnFetchRejection ||

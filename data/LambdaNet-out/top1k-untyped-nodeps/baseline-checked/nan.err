@@ -2,7 +2,7 @@ examples/async_pi_estimate/addon.ts(10,5): error TS2322: Type 'string | 10000000
   Type 'string' is not assignable to type 'Number'.
 examples/async_pi_estimate/addon.ts(12,61): error TS2304: Cannot find name 'Void'.
 examples/async_pi_estimate/addon.ts(15,31): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-examples/async_pi_estimate/addon.ts(20,21): error TS2304: Cannot find name 'Void'.
+examples/async_pi_estimate/addon.ts(20,21): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 examples/async_pi_estimate/addon.ts(24,30): error TS2339: Property 'calculateSync' does not exist on type 'String'.
 examples/async_pi_estimate/addon.ts(25,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
   Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision

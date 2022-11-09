@@ -85,7 +85,7 @@ export function isClosingParenToken(token: String): Boolean {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is an opening square bracket token.
  */
-export function isOpeningBracketToken(token: String): String {
+export function isOpeningBracketToken(token: String): Boolean {
     return isPunctuatorTokenWithValue(token, "[")
 }
 
@@ -126,13 +126,13 @@ export function isCommentToken(token: Object): Number {
 }
 
 export const isNotArrowToken: Function = negate(isArrowToken)
-export const isNotCommaToken: PatternMatcher = negate(isCommaToken)
-export const isNotSemicolonToken: PatternMatcher = negate(isSemicolonToken)
-export const isNotColonToken: PatternMatcher = negate(isColonToken)
+export const isNotCommaToken: Function = negate(isCommaToken)
+export const isNotSemicolonToken: String = negate(isSemicolonToken)
+export const isNotColonToken: Function = negate(isColonToken)
 export const isNotOpeningParenToken: Function = negate(isOpeningParenToken)
 export const isNotClosingParenToken: Function = negate(isClosingParenToken)
-export const isNotOpeningBracketToken: PatternMatcher = negate(isOpeningBracketToken)
-export const isNotClosingBracketToken: PatternMatcher = negate(isClosingBracketToken)
-export const isNotOpeningBraceToken: PatternMatcher = negate(isOpeningBraceToken)
+export const isNotOpeningBracketToken: String = negate(isOpeningBracketToken)
+export const isNotClosingBracketToken: Function = negate(isClosingBracketToken)
+export const isNotOpeningBraceToken: Function = negate(isOpeningBraceToken)
 export const isNotClosingBraceToken: Function = negate(isClosingBraceToken)
 export const isNotCommentToken: Function = negate(isCommentToken)

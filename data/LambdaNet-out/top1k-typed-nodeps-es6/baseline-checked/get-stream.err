@@ -1,7 +1,8 @@
 buffer-stream.ts(7,9): error TS2339: Property 'array' does not exist on type 'Object'.
 buffer-stream.ts(8,7): error TS2339: Property 'encoding' does not exist on type 'Object'.
 buffer-stream.ts(22,8): error TS2739: Type 'Transform' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-buffer-stream.ts(22,48): error TS2322: Type 'Boolean' is not assignable to type 'boolean | undefined'.
+buffer-stream.ts(22,48): error TS2322: Type 'Boolean' is not assignable to type 'boolean'.
+  'boolean' is a primitive, but 'Boolean' is a wrapper object. Prefer using 'boolean' when possible.
 buffer-stream.ts(25,10): error TS2339: Property 'setEncoding' does not exist on type 'Number'.
 buffer-stream.ts(29,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 buffer-stream.ts(31,9): error TS2339: Property 'on' does not exist on type 'Number'.

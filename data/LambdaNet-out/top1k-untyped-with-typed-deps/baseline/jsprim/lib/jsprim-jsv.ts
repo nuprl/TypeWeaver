@@ -9,7 +9,7 @@ module.exports = {
 	validateJsonObjectJSV: validateJsonObjectJSV
 };
 
-function validateJsonObjectJSV(schema: String, input: Element): Error
+function validateJsonObjectJSV(schema: String, input: Element): HTMLElement
 {
 	if (!mod_jsv)
 		mod_jsv = require('JSV');
@@ -42,7 +42,7 @@ function validateJsonObjectJSV(schema: String, input: Element): Error
 	}
 
 	var message: String = reason + ': "' + propname + '"';
-	var rv: HTMLCanvasElement = new Error(message);
+	var rv: HTMLElement = new Error(message);
 	rv.jsv_details = error;
 	return (rv);
 }

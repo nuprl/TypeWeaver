@@ -1,8 +1,4 @@
 docs/scripts/linenumber.ts(7,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-docs/scripts/linenumber.ts(11,19): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-docs/scripts/linenumber.ts(13,17): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 docs/scripts/linenumber.ts(16,32): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 docs/scripts/linenumber.ts(17,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 docs/scripts/prettify/lang-css.ts(1,1): error TS2304: Cannot find name 'PR'.
@@ -11,7 +7,6 @@ docs/scripts/prettify/lang-css.ts(2,184): error TS2304: Cannot find name 'PR'.
 docs/scripts/prettify/lang-css.ts(2,207): error TS2304: Cannot find name 'PR'.
 docs/scripts/prettify/lang-css.ts(2,309): error TS2304: Cannot find name 'PR'.
 docs/scripts/prettify/lang-css.ts(2,332): error TS2304: Cannot find name 'PR'.
-docs/scripts/prettify/prettify.ts(1,5): error TS2322: Type 'null' is not assignable to type 'String'.
 docs/scripts/prettify/prettify.ts(1,27): error TS2339: Property 'PR_SHOULD_USE_CONTINUATION' does not exist on type 'Window & typeof globalThis'.
 docs/scripts/prettify/prettify.ts(2,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 docs/scripts/prettify/prettify.ts(2,93): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
@@ -58,17 +53,9 @@ docs/scripts/prettify/prettify.ts(3,410): error TS2322: Type 'number' is not ass
 docs/scripts/prettify/prettify.ts(3,458): error TS2322: Type 'number' is not assignable to type 'string'.
 docs/scripts/prettify/prettify.ts(3,458): error TS2542: Index signature in type 'String' only permits reading.
 docs/scripts/prettify/prettify.ts(3,472): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-docs/scripts/prettify/prettify.ts(3,533): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string[]'.
-  Type 'Function' is missing the following properties from type 'string[]': pop, push, concat, join, and 28 more.
-docs/scripts/prettify/prettify.ts(4,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-docs/scripts/prettify/prettify.ts(4,81): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 docs/scripts/prettify/prettify.ts(4,163): error TS2339: Property 'source' does not exist on type 'Object'.
-docs/scripts/prettify/prettify.ts(4,293): error TS7034: Variable 'd' implicitly has type 'any[]' in some locations where its type cannot be determined.
 docs/scripts/prettify/prettify.ts(4,367): error TS2322: Type 'number' is not assignable to type 'String'.
 docs/scripts/prettify/prettify.ts(4,387): error TS2365: Operator '<=' cannot be applied to types 'String' and 'number'.
-docs/scripts/prettify/prettify.ts(4,394): error TS7005: Variable 'd' implicitly has an 'any[]' type.
 docs/scripts/prettify/prettify.ts(4,396): error TS2538: Type 'String' cannot be used as an index type.
 docs/scripts/prettify/prettify.ts(5,2): error TS2322: Type 'number' is not assignable to type 'String'.
 docs/scripts/prettify/prettify.ts(5,22): error TS2365: Operator '<=' cannot be applied to types 'String' and 'number'.
@@ -87,31 +74,24 @@ docs/scripts/prettify/prettify.ts(6,234): error TS2304: Cannot find name 'Void'.
 docs/scripts/prettify/prettify.ts(6,337): error TS2345: Argument of type 'ChildNode' is not assignable to parameter of type 'HTMLElement'.
   Type 'ChildNode' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 223 more.
 docs/scripts/prettify/prettify.ts(6,340): error TS2322: Type 'string' is not assignable to type 'ChildNode'.
-docs/scripts/prettify/prettify.ts(6,356): error TS2367: This condition will always return 'false' since the types 'string' and 'ChildNode | null' have no overlap.
-docs/scripts/prettify/prettify.ts(6,366): error TS2367: This condition will always return 'false' since the types 'string' and 'ChildNode | null' have no overlap.
+docs/scripts/prettify/prettify.ts(6,356): error TS2367: This condition will always return 'false' since the types 'string' and 'ChildNode' have no overlap.
+docs/scripts/prettify/prettify.ts(6,366): error TS2367: This condition will always return 'false' since the types 'string' and 'ChildNode' have no overlap.
 docs/scripts/prettify/prettify.ts(6,387): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 docs/scripts/prettify/prettify.ts(6,393): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 docs/scripts/prettify/prettify.ts(6,399): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-docs/scripts/prettify/prettify.ts(6,431): error TS2322: Type 'string | null' is not assignable to type 'ChildNode | null'.
-  Type 'string' is not assignable to type 'ChildNode'.
-docs/scripts/prettify/prettify.ts(6,445): error TS2531: Object is possibly 'null'.
+docs/scripts/prettify/prettify.ts(6,431): error TS2322: Type 'string' is not assignable to type 'ChildNode'.
 docs/scripts/prettify/prettify.ts(6,447): error TS2339: Property 'length' does not exist on type 'ChildNode'.
-docs/scripts/prettify/prettify.ts(6,460): error TS2531: Object is possibly 'null'.
 docs/scripts/prettify/prettify.ts(6,462): error TS2339: Property 'replace' does not exist on type 'ChildNode'.
-docs/scripts/prettify/prettify.ts(6,485): error TS2531: Object is possibly 'null'.
 docs/scripts/prettify/prettify.ts(6,487): error TS2339: Property 'replace' does not exist on type 'ChildNode'.
 docs/scripts/prettify/prettify.ts(6,523): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-docs/scripts/prettify/prettify.ts(6,534): error TS2531: Object is possibly 'null'.
 docs/scripts/prettify/prettify.ts(6,536): error TS2339: Property 'length' does not exist on type 'ChildNode'.
 docs/scripts/prettify/prettify.ts(7,3): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 docs/scripts/prettify/prettify.ts(7,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 docs/scripts/prettify/prettify.ts(7,83): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 docs/scripts/prettify/prettify.ts(7,118): error TS2339: Property 'currentStyle' does not exist on type 'HTMLElement'.
 docs/scripts/prettify/prettify.ts(7,135): error TS2339: Property 'currentStyle' does not exist on type 'HTMLElement'.
-docs/scripts/prettify/prettify.ts(7,187): error TS2531: Object is possibly 'null'.
 docs/scripts/prettify/prettify.ts(7,227): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-docs/scripts/prettify/prettify.ts(7,278): error TS2454: Variable 'l' is used before being assigned.
 docs/scripts/prettify/prettify.ts(7,378): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 docs/scripts/prettify/prettify.ts(7,399): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 docs/scripts/prettify/prettify.ts(7,407): error TS2304: Cannot find name 'Void'.
@@ -124,39 +104,16 @@ docs/scripts/prettify/prettify.ts(7,515): error TS2304: Cannot find name 'Void'.
 docs/scripts/prettify/prettify.ts(7,532): error TS2339: Property 'd' does not exist on type 'Object'.
 docs/scripts/prettify/prettify.ts(7,554): error TS2339: Property 'a' does not exist on type 'Object'.
 docs/scripts/prettify/prettify.ts(7,629): error TS2538: Type 'String' cannot be used as an index type.
-docs/scripts/prettify/prettify.ts(7,632): error TS2322: Type 'undefined' is not assignable to type 'Object'.
 docs/scripts/prettify/prettify.ts(8,10): error TS2322: Type 'boolean' is not assignable to type 'String'.
-docs/scripts/prettify/prettify.ts(8,34): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-docs/scripts/prettify/prettify.ts(8,54): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-docs/scripts/prettify/prettify.ts(8,64): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-docs/scripts/prettify/prettify.ts(8,72): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 docs/scripts/prettify/prettify.ts(8,86): error TS2322: Type 'number' is not assignable to type 'String'.
 docs/scripts/prettify/prettify.ts(8,90): error TS2365: Operator '<' cannot be applied to types 'String' and 'Number'.
 docs/scripts/prettify/prettify.ts(8,96): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-docs/scripts/prettify/prettify.ts(8,108): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-docs/scripts/prettify/prettify.ts(8,118): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-docs/scripts/prettify/prettify.ts(8,127): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 docs/scripts/prettify/prettify.ts(8,155): error TS2322: Type 'boolean' is not assignable to type 'String'.
-docs/scripts/prettify/prettify.ts(8,211): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 docs/scripts/prettify/prettify.ts(8,228): error TS2322: Type 'boolean' is not assignable to type 'String'.
 docs/scripts/prettify/prettify.ts(8,247): error TS2538: Type 'String' cannot be used as an index type.
-docs/scripts/prettify/prettify.ts(8,277): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 docs/scripts/prettify/prettify.ts(8,306): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 docs/scripts/prettify/prettify.ts(8,319): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-docs/scripts/prettify/prettify.ts(8,330): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-docs/scripts/prettify/prettify.ts(8,348): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 docs/scripts/prettify/prettify.ts(8,362): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 docs/scripts/prettify/prettify.ts(8,411): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -164,12 +121,6 @@ docs/scripts/prettify/prettify.ts(8,429): error TS2345: Argument of type 'String
 docs/scripts/prettify/prettify.ts(8,459): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 docs/scripts/prettify/prettify.ts(8,488): error TS2339: Property 'e' does not exist on type 'Object'.
-docs/scripts/prettify/prettify.ts(9,64): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-docs/scripts/prettify/prettify.ts(9,101): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-docs/scripts/prettify/prettify.ts(9,120): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 docs/scripts/prettify/prettify.ts(9,149): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 docs/scripts/prettify/prettify.ts(9,166): error TS2538: Type 'String' cannot be used as an index type.
 docs/scripts/prettify/prettify.ts(9,189): error TS2740: Type 'Number' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
@@ -189,12 +140,9 @@ docs/scripts/prettify/prettify.ts(12,441): error TS2304: Cannot find name 'Void'
 docs/scripts/prettify/prettify.ts(12,474): error TS2304: Cannot find name 'Void'.
 docs/scripts/prettify/prettify.ts(12,557): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'String'.
   Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-docs/scripts/prettify/prettify.ts(13,52): error TS2322: Type 'ChildNode | null' is not assignable to type 'HTMLElement'.
-  Type 'null' is not assignable to type 'HTMLElement'.
-docs/scripts/prettify/prettify.ts(13,69): error TS2322: Type 'ChildNode | null' is not assignable to type 'HTMLElement'.
-  Type 'null' is not assignable to type 'HTMLElement'.
-docs/scripts/prettify/prettify.ts(13,120): error TS2322: Type 'string | null' is not assignable to type 'Function'.
-  Type 'null' is not assignable to type 'Function'.
+docs/scripts/prettify/prettify.ts(13,52): error TS2322: Type 'ChildNode' is not assignable to type 'HTMLElement'.
+docs/scripts/prettify/prettify.ts(13,69): error TS2322: Type 'ChildNode' is not assignable to type 'HTMLElement'.
+docs/scripts/prettify/prettify.ts(13,120): error TS2322: Type 'string' is not assignable to type 'Function'.
 docs/scripts/prettify/prettify.ts(13,156): error TS2339: Property 'match' does not exist on type 'Function'.
 docs/scripts/prettify/prettify.ts(13,187): error TS2339: Property 'substring' does not exist on type 'Function'.
 docs/scripts/prettify/prettify.ts(13,201): error TS2339: Property 'index' does not exist on type 'Object'.
@@ -202,12 +150,8 @@ docs/scripts/prettify/prettify.ts(13,208): error TS2322: Type 'String' is not as
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 docs/scripts/prettify/prettify.ts(13,227): error TS2339: Property 'substring' does not exist on type 'Function'.
 docs/scripts/prettify/prettify.ts(13,239): error TS2339: Property 'index' does not exist on type 'Object'.
-docs/scripts/prettify/prettify.ts(13,245): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-docs/scripts/prettify/prettify.ts(13,260): error TS2531: Object is possibly 'null'.
 docs/scripts/prettify/prettify.ts(13,288): error TS2339: Property 'createTextNode' does not exist on type 'HTMLElement'.
 docs/scripts/prettify/prettify.ts(13,323): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'String'.
-docs/scripts/prettify/prettify.ts(13,329): error TS2531: Object is possibly 'null'.
 docs/scripts/prettify/prettify.ts(13,383): error TS2304: Cannot find name 'Void'.
 docs/scripts/prettify/prettify.ts(13,447): error TS2339: Property 'cloneNode' does not exist on type 'Object'.
 docs/scripts/prettify/prettify.ts(13,477): error TS2339: Property 'parentNode' does not exist on type 'Object'.
@@ -227,9 +171,7 @@ docs/scripts/prettify/prettify.ts(14,126): error TS2345: Argument of type 'Strin
 docs/scripts/prettify/prettify.ts(14,189): error TS2740: Type 'Document' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, draggable, and 121 more.
 docs/scripts/prettify/prettify.ts(14,237): error TS2339: Property 'currentStyle' does not exist on type 'HTMLElement'.
 docs/scripts/prettify/prettify.ts(14,254): error TS2339: Property 'currentStyle' does not exist on type 'HTMLElement'.
-docs/scripts/prettify/prettify.ts(14,278): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
 docs/scripts/prettify/prettify.ts(14,308): error TS2339: Property 'defaultView' does not exist on type 'HTMLElement'.
-docs/scripts/prettify/prettify.ts(14,390): error TS2454: Variable 'l' is used before being assigned.
 docs/scripts/prettify/prettify.ts(14,403): error TS2339: Property 'substring' does not exist on type 'HTMLElement'.
 docs/scripts/prettify/prettify.ts(14,426): error TS2339: Property 'createElement' does not exist on type 'HTMLElement'.
 docs/scripts/prettify/prettify.ts(14,534): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -268,36 +210,20 @@ docs/scripts/prettify/prettify.ts(16,257): error TS2339: Property 'length' does 
 docs/scripts/prettify/prettify.ts(16,264): error TS2403: Subsequent variable declarations must have the same type.  Variable 'a' must be of type 'Object', but here has type 'Number'.
 docs/scripts/prettify/prettify.ts(16,278): error TS2538: Type 'Number' cannot be used as an index type.
 docs/scripts/prettify/prettify.ts(16,324): error TS2538: Type 'Number' cannot be used as an index type.
-docs/scripts/prettify/prettify.ts(16,329): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 docs/scripts/prettify/prettify.ts(16,331): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-docs/scripts/prettify/prettify.ts(16,337): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 docs/scripts/prettify/prettify.ts(16,339): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-docs/scripts/prettify/prettify.ts(16,344): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 docs/scripts/prettify/prettify.ts(16,346): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-docs/scripts/prettify/prettify.ts(16,351): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 docs/scripts/prettify/prettify.ts(16,353): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-docs/scripts/prettify/prettify.ts(16,358): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 docs/scripts/prettify/prettify.ts(16,360): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 docs/scripts/prettify/prettify.ts(16,366): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 docs/scripts/prettify/prettify.ts(16,403): error TS2538: Type 'Number' cannot be used as an index type.
-docs/scripts/prettify/prettify.ts(16,408): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 docs/scripts/prettify/prettify.ts(16,410): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 docs/scripts/prettify/prettify.ts(16,417): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-docs/scripts/prettify/prettify.ts(16,429): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-docs/scripts/prettify/prettify.ts(16,446): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 docs/scripts/prettify/prettify.ts(16,448): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-docs/scripts/prettify/prettify.ts(16,455): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 docs/scripts/prettify/prettify.ts(16,457): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 docs/scripts/prettify/prettify.ts(16,474): error TS2339: Property 'length' does not exist on type 'Object'.
 docs/scripts/prettify/prettify.ts(16,483): error TS2365: Operator '<' cannot be applied to types 'String' and 'Number'.
 docs/scripts/prettify/prettify.ts(16,505): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
-docs/scripts/prettify/prettify.ts(16,523): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 docs/scripts/prettify/prettify.ts(16,525): error TS2365: Operator '+' cannot be applied to types 'Object' and 'number'.
 docs/scripts/prettify/prettify.ts(16,533): error TS2403: Subsequent variable declarations must have the same type.  Variable 'b' must be of type 'any', but here has type 'Number'.
 docs/scripts/prettify/prettify.ts(16,552): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
@@ -307,10 +233,8 @@ docs/scripts/prettify/prettify.ts(16,582): error TS2314: Generic type 'Array<T>'
 docs/scripts/prettify/prettify.ts(16,622): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
 docs/scripts/prettify/prettify.ts(17,7): error TS2322: Type 'Document' is not assignable to type 'HTMLElement'.
 docs/scripts/prettify/prettify.ts(17,55): error TS2339: Property 'createElement' does not exist on type 'HTMLElement'.
-docs/scripts/prettify/prettify.ts(17,89): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 docs/scripts/prettify/prettify.ts(17,91): error TS2365: Operator '+' cannot be applied to types 'Object' and 'number'.
-docs/scripts/prettify/prettify.ts(17,100): error TS2322: Type 'ParentNode | null' is not assignable to type 'HTMLElement'.
-  Type 'null' is not assignable to type 'HTMLElement'.
+docs/scripts/prettify/prettify.ts(17,100): error TS2740: Type 'ParentNode' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 218 more.
 docs/scripts/prettify/prettify.ts(17,165): error TS2365: Operator '<' cannot be applied to types 'String' and 'Number'.
 docs/scripts/prettify/prettify.ts(17,173): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
 docs/scripts/prettify/prettify.ts(17,182): error TS2339: Property 'createTextNode' does not exist on type 'HTMLElement'.
@@ -320,8 +244,6 @@ docs/scripts/prettify/prettify.ts(17,252): error TS2365: Operator '>=' cannot be
 docs/scripts/prettify/prettify.ts(17,259): error TS2365: Operator '+=' cannot be applied to types 'String' and 'number'.
 docs/scripts/prettify/prettify.ts(17,265): error TS2365: Operator '>=' cannot be applied to types 'String' and 'Number'.
 docs/scripts/prettify/prettify.ts(17,272): error TS2365: Operator '+=' cannot be applied to types 'Object' and 'number'.
-docs/scripts/prettify/prettify.ts(17,323): error TS2571: Object is of type 'unknown'.
-docs/scripts/prettify/prettify.ts(17,331): error TS2571: Object is of type 'unknown'.
 docs/scripts/prettify/prettify.ts(17,350): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 docs/scripts/prettify/prettify.ts(17,406): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 docs/scripts/prettify/prettify.ts(18,104): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -378,24 +300,14 @@ docs/scripts/prettify/prettify.ts(25,426): error TS2339: Property 'now' does not
 docs/scripts/prettify/prettify.ts(25,459): error TS2339: Property 'now' does not exist on type 'Boolean'.
 docs/scripts/prettify/prettify.ts(25,467): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 docs/scripts/prettify/prettify.ts(25,479): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-docs/scripts/prettify/prettify.ts(25,485): error TS7005: Variable 'h' implicitly has an 'any[]' type.
 docs/scripts/prettify/prettify.ts(25,487): error TS2538: Type 'Number' cannot be used as an index type.
 docs/scripts/prettify/prettify.ts(25,551): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 docs/scripts/prettify/prettify.ts(25,581): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-docs/scripts/prettify/prettify.ts(26,86): error TS2403: Subsequent variable declarations must have the same type.  Variable 'o' must be of type 'undefined', but here has type 'Object'.
+docs/scripts/prettify/prettify.ts(26,86): error TS2403: Subsequent variable declarations must have the same type.  Variable 'o' must be of type 'any', but here has type 'Object'.
 docs/scripts/prettify/prettify.ts(26,96): error TS2367: This condition will always return 'false' since the types 'Function' and 'number' have no overlap.
 docs/scripts/prettify/prettify.ts(26,108): error TS2367: This condition will always return 'false' since the types 'Function' and 'number' have no overlap.
-docs/scripts/prettify/prettify.ts(26,143): error TS2322: Type 'undefined' is not assignable to type 'Object'.
 docs/scripts/prettify/prettify.ts(26,173): error TS2339: Property 'tagName' does not exist on type 'Object'.
-docs/scripts/prettify/prettify.ts(26,187): error TS2454: Variable 'f' is used before being assigned.
 docs/scripts/prettify/prettify.ts(26,189): error TS2339: Property 'className' does not exist on type 'Object'.
-docs/scripts/prettify/prettify.ts(26,251): error TS2339: Property 'parentNode' does not exist on type 'never'.
-docs/scripts/prettify/prettify.ts(26,268): error TS2339: Property 'tagName' does not exist on type 'never'.
-docs/scripts/prettify/prettify.ts(26,287): error TS2339: Property 'tagName' does not exist on type 'never'.
-docs/scripts/prettify/prettify.ts(26,307): error TS2339: Property 'tagName' does not exist on type 'never'.
-docs/scripts/prettify/prettify.ts(26,327): error TS2339: Property 'className' does not exist on type 'never'.
-docs/scripts/prettify/prettify.ts(26,340): error TS2339: Property 'className' does not exist on type 'never'.
-docs/scripts/prettify/prettify.ts(27,137): error TS7034: Variable 'h' implicitly has type 'any[]' in some locations where its type cannot be determined.
 docs/scripts/prettify/prettify.ts(27,215): error TS2322: Type 'String' is not assignable to type 'Function'.
 docs/scripts/prettify/prettify.ts(27,215): error TS2403: Subsequent variable declarations must have the same type.  Variable 'e' must be of type 'HTMLCollectionOf<Element>[]', but here has type 'Function'.
 docs/scripts/prettify/prettify.ts(27,229): error TS2322: Type 'DateConstructor' is not assignable to type 'Boolean'.
@@ -419,20 +331,14 @@ lib/tmp.ts(36,23): error TS2339: Property 'ENOENT' does not exist on type 'Objec
 lib/tmp.ts(36,36): error TS2339: Property 'os' does not exist on type 'Object'.
 lib/tmp.ts(44,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/tmp.ts(47,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/tmp.ts(48,3): error TS2322: Type '(path: string, options?: Options | undefined) => void' is not assignable to type 'Number'.
+lib/tmp.ts(48,3): error TS2322: Type '(path: string, options?: Options) => void' is not assignable to type 'String'.
 lib/tmp.ts(59,56): error TS2304: Cannot find name 'Void'.
-lib/tmp.ts(62,25): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/tmp.ts(63,20): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/tmp.ts(71,28): error TS2339: Property 'tries' does not exist on type 'HTMLElement'.
 lib/tmp.ts(72,31): error TS2304: Cannot find name 'Void'.
 lib/tmp.ts(77,15): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
 lib/tmp.ts(81,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/tmp.ts(101,40): error TS2304: Cannot find name 'Void'.
 lib/tmp.ts(103,20): error TS2554: Expected 2 arguments, but got 1.
-lib/tmp.ts(104,25): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 lib/tmp.ts(108,28): error TS2339: Property 'tries' does not exist on type 'HTMLElement'.
 lib/tmp.ts(112,19): error TS2769: No overload matches this call.
   The last overload gave the following error.
@@ -440,16 +346,11 @@ lib/tmp.ts(112,19): error TS2769: No overload matches this call.
       Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
 lib/tmp.ts(116,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/tmp.ts(127,53): error TS2304: Cannot find name 'Void'.
-lib/tmp.ts(130,20): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/tmp.ts(131,20): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/tmp.ts(134,72): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/tmp.ts(139,13): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
 lib/tmp.ts(139,38): error TS2339: Property 'mode' does not exist on type 'Object'.
-lib/tmp.ts(139,107): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 lib/tmp.ts(143,16): error TS2339: Property 'discardDescriptor' does not exist on type 'Object'.
-lib/tmp.ts(144,9): error TS2322: Type 'void' is not assignable to type 'Number'.
+lib/tmp.ts(144,9): error TS2322: Type 'void' is not assignable to type 'String'.
 lib/tmp.ts(144,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/tmp.ts(144,68): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -460,8 +361,6 @@ lib/tmp.ts(151,83): error TS2339: Property 'detachDescriptor' does not exist on 
 lib/tmp.ts(152,64): error TS2345: Argument of type 'Number | -1' is not assignable to parameter of type 'String'.
   Type 'Number' is not assignable to type 'String'.
 lib/tmp.ts(167,20): error TS2554: Expected 2 arguments, but got 1.
-lib/tmp.ts(168,20): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 lib/tmp.ts(170,51): error TS2339: Property 'discardDescriptor' does not exist on type 'Object'.
 lib/tmp.ts(170,77): error TS2339: Property 'detachDescriptor' does not exist on type 'Object'.
 lib/tmp.ts(172,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
@@ -469,60 +368,36 @@ lib/tmp.ts(172,57): error TS2339: Property 'mode' does not exist on type 'Object
 lib/tmp.ts(174,12): error TS2339: Property 'discardDescriptor' does not exist on type 'Object'.
 lib/tmp.ts(175,18): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/tmp.ts(176,5): error TS2322: Type 'undefined' is not assignable to type 'Number'.
 lib/tmp.ts(182,57): error TS2345: Argument of type 'Number | -1' is not assignable to parameter of type 'String'.
   Type 'Number' is not assignable to type 'String'.
 lib/tmp.ts(192,52): error TS2304: Cannot find name 'Void'.
 lib/tmp.ts(195,11): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/tmp.ts(195,17): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/tmp.ts(196,20): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/tmp.ts(199,72): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/tmp.ts(204,14): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(path: PathLike, options: MakeDirectoryOptions & { recursive: true; }, callback: (err: ErrnoException | null, path?: string | undefined) => void): void', gave the following error.
+  Overload 1 of 4, '(path: PathLike, options: MakeDirectoryOptions & { recursive: true; }, callback: (err: ErrnoException, path?: string) => void): void', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-  Overload 2 of 4, '(path: PathLike, options: Mode | (MakeDirectoryOptions & { recursive?: false | undefined; }) | null | undefined, callback: NoParamCallback): void', gave the following error.
+  Overload 2 of 4, '(path: PathLike, options: Mode | (MakeDirectoryOptions & { recursive?: false; }), callback: NoParamCallback): void', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-  Overload 3 of 4, '(path: PathLike, options: Mode | MakeDirectoryOptions | null | undefined, callback: (err: ErrnoException | null, path?: string | undefined) => void): void', gave the following error.
+  Overload 3 of 4, '(path: PathLike, options: Mode | MakeDirectoryOptions, callback: (err: ErrnoException, path?: string) => void): void', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathLike'.
 lib/tmp.ts(204,80): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/tmp.ts(208,63): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
 lib/tmp.ts(222,20): error TS2554: Expected 2 arguments, but got 1.
 lib/tmp.ts(223,11): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/tmp.ts(223,17): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 lib/tmp.ts(226,16): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(path: PathLike, options: MakeDirectoryOptions & { recursive: true; }): string | undefined', gave the following error.
+  Overload 1 of 3, '(path: PathLike, options: MakeDirectoryOptions & { recursive: true; }): string', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-  Overload 2 of 3, '(path: PathLike, options?: Mode | (MakeDirectoryOptions & { recursive?: false | undefined; }) | null | undefined): void', gave the following error.
+  Overload 2 of 3, '(path: PathLike, options?: Mode | (MakeDirectoryOptions & { recursive?: false; })): void', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-  Overload 3 of 3, '(path: PathLike, options?: Mode | MakeDirectoryOptions | null | undefined): string | undefined', gave the following error.
+  Overload 3 of 3, '(path: PathLike, options?: Mode | MakeDirectoryOptions): string', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathLike'.
 lib/tmp.ts(230,62): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
 lib/tmp.ts(241,60): error TS2304: Cannot find name 'Void'.
-lib/tmp.ts(250,12): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/tmp.ts(251,14): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/tmp.ts(252,17): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/tmp.ts(252,28): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'NoParamCallback'.
-lib/tmp.ts(254,18): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/tmp.ts(254,29): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'NoParamCallback'.
-  Type 'Function' provides no match for the signature '(err: ErrnoException | null): void'.
+  Type 'Function' provides no match for the signature '(err: ErrnoException): void'.
 lib/tmp.ts(263,43): error TS2304: Cannot find name 'Void'.
 lib/tmp.ts(264,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/tmp.ts(266,14): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/tmp.ts(266,38): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/tmp.ts(269,19): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Object'.
-lib/tmp.ts(269,36): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Object'.
-lib/tmp.ts(272,21): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/tmp.ts(276,22): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Object'.
 lib/tmp.ts(298,9): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/tmp.ts(298,38): error TS2554: Expected 4 arguments, but got 3.
 lib/tmp.ts(299,9): error TS2322: Type 'Function' is not assignable to type 'String'.
@@ -542,24 +417,17 @@ lib/tmp.ts(322,85): error TS2345: Argument of type 'String' is not assignable to
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'string' is not assignable to type 'boolean'.
 lib/tmp.ts(323,13): error TS2339: Property 'keep' does not exist on type 'HTMLElement'.
-lib/tmp.ts(345,51): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-lib/tmp.ts(350,13): error TS2739: Type 'Boolean' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-lib/tmp.ts(356,55): error TS2367: This condition will always return 'false' since the types 'Function' and 'Number' have no overlap.
+lib/tmp.ts(350,13): error TS2322: Type 'Boolean | ((next: Object) => Boolean)' is not assignable to type 'Number'.
+  Type 'Boolean' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+lib/tmp.ts(356,55): error TS2367: This condition will always return 'false' since the types 'Function' and 'String' have no overlap.
 lib/tmp.ts(370,31): error TS2304: Cannot find name 'Void'.
 lib/tmp.ts(395,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/tmp.ts(396,5): error TS2322: Type 'null' is not assignable to type 'Object'.
 lib/tmp.ts(400,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
 lib/tmp.ts(402,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
 lib/tmp.ts(405,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'String'.
-lib/tmp.ts(406,29): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 lib/tmp.ts(444,64): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/tmp.ts(451,20): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-lib/tmp.ts(458,5): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-lib/tmp.ts(458,26): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 lib/tmp.ts(473,31): error TS2339: Property 'tmpdir' does not exist on type 'HTMLElement'.
 lib/tmp.ts(476,26): error TS2339: Property 'name' does not exist on type 'HTMLElement'.
 lib/tmp.ts(477,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -584,8 +452,11 @@ lib/tmp.ts(505,11): error TS2339: Property 'tmpdir' does not exist on type 'HTML
 lib/tmp.ts(507,34): error TS2339: Property 'tmpdir' does not exist on type 'HTMLElement'.
 lib/tmp.ts(510,29): error TS2339: Property 'name' does not exist on type 'HTMLElement'.
 lib/tmp.ts(511,31): error TS2339: Property 'name' does not exist on type 'HTMLElement'.
+lib/tmp.ts(511,45): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+lib/tmp.ts(514,43): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 lib/tmp.ts(516,29): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
 lib/tmp.ts(517,31): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
+lib/tmp.ts(517,53): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 lib/tmp.ts(518,18): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
 lib/tmp.ts(519,59): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
 lib/tmp.ts(522,29): error TS2339: Property 'tries' does not exist on type 'HTMLElement'.
@@ -603,13 +474,13 @@ lib/tmp.ts(529,11): error TS2339: Property 'discardDescriptor' does not exist on
 lib/tmp.ts(529,41): error TS2339: Property 'discardDescriptor' does not exist on type 'HTMLElement'.
 lib/tmp.ts(530,11): error TS2339: Property 'unsafeCleanup' does not exist on type 'HTMLElement'.
 lib/tmp.ts(530,37): error TS2339: Property 'unsafeCleanup' does not exist on type 'HTMLElement'.
-lib/tmp.ts(533,64): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/tmp.ts(533,64): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
+lib/tmp.ts(533,98): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 lib/tmp.ts(534,11): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
 lib/tmp.ts(534,43): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
-lib/tmp.ts(534,81): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/tmp.ts(534,81): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 lib/tmp.ts(534,110): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
+lib/tmp.ts(534,120): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 lib/tmp.ts(536,11): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
 lib/tmp.ts(536,39): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
 lib/tmp.ts(536,98): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
@@ -617,8 +488,6 @@ lib/tmp.ts(539,11): error TS2339: Property 'name' does not exist on type 'HTMLEl
 lib/tmp.ts(539,39): error TS2339: Property 'name' does not exist on type 'HTMLElement'.
 lib/tmp.ts(539,67): error TS2339: Property 'name' does not exist on type 'HTMLElement'.
 lib/tmp.ts(540,11): error TS2540: Cannot assign to 'prefix' because it is a read-only property.
-lib/tmp.ts(540,33): error TS2345: Argument of type 'string | null' is not assignable to parameter of type 'String'.
-  Type 'null' is not assignable to type 'String'.
 lib/tmp.ts(541,11): error TS2339: Property 'postfix' does not exist on type 'HTMLElement'.
 lib/tmp.ts(541,42): error TS2339: Property 'postfix' does not exist on type 'HTMLElement'.
 lib/tmp.ts(541,66): error TS2339: Property 'postfix' does not exist on type 'HTMLElement'.
@@ -643,7 +512,8 @@ lib/tmp.ts(584,51): error TS2345: Argument of type 'String' is not assignable to
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/tmp.ts(588,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/tmp.ts(629,49): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/tmp.ts(599,34): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Boolean'.
+lib/tmp.ts(608,34): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Boolean'.
 lib/tmp.ts(630,27): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/tmp.ts(630,49): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/tmp.ts(630,72): error TS2339: Property 'errno' does not exist on type 'Object'.

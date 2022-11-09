@@ -55,8 +55,6 @@ examples/match.ts(26,27): error TS2339: Property 'onMatch' does not exist on typ
 examples/match.ts(26,45): error TS2339: Property 'onMatch' does not exist on type 'Object'.
 examples/match.ts(29,14): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 examples/match.ts(32,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/option-expandRange.ts(6,15): error TS7006: Parameter 'a' implicitly has an 'any' type.
-examples/option-expandRange.ts(6,18): error TS7006: Parameter 'b' implicitly has an 'any' type.
 examples/option-expandRange.ts(14,19): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
 examples/option-expandRange.ts(15,19): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
 examples/option-expandRange.ts(16,19): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
@@ -69,30 +67,18 @@ examples/option-ignore.ts(7,13): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 examples/option-ignore.ts(8,13): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-examples/option-onIgnore.ts(5,31): error TS7031: Binding element 'glob' implicitly has an 'any' type.
-examples/option-onIgnore.ts(5,37): error TS7031: Binding element 'regex' implicitly has an 'any' type.
-examples/option-onIgnore.ts(5,44): error TS7031: Binding element 'input' implicitly has an 'any' type.
-examples/option-onIgnore.ts(5,51): error TS7031: Binding element 'output' implicitly has an 'any' type.
 examples/option-onIgnore.ts(11,1): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 examples/option-onIgnore.ts(12,1): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 examples/option-onIgnore.ts(13,1): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-examples/option-onMatch.ts(5,30): error TS7031: Binding element 'glob' implicitly has an 'any' type.
-examples/option-onMatch.ts(5,36): error TS7031: Binding element 'regex' implicitly has an 'any' type.
-examples/option-onMatch.ts(5,43): error TS7031: Binding element 'input' implicitly has an 'any' type.
-examples/option-onMatch.ts(5,50): error TS7031: Binding element 'output' implicitly has an 'any' type.
 examples/option-onMatch.ts(13,1): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 examples/option-onMatch.ts(14,1): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 examples/option-onMatch.ts(15,1): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-examples/option-onResult.ts(5,31): error TS7031: Binding element 'glob' implicitly has an 'any' type.
-examples/option-onResult.ts(5,37): error TS7031: Binding element 'regex' implicitly has an 'any' type.
-examples/option-onResult.ts(5,44): error TS7031: Binding element 'input' implicitly has an 'any' type.
-examples/option-onResult.ts(5,51): error TS7031: Binding element 'output' implicitly has an 'any' type.
 examples/option-onResult.ts(10,1): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 examples/option-onResult.ts(11,1): error TS2349: This expression is not callable.
@@ -102,24 +88,19 @@ examples/option-onResult.ts(12,1): error TS2349: This expression is not callable
 examples/regex-quantifier.ts(9,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/windows.ts(25,6): error TS2540: Cannot assign to 'sep' because it is a read-only property.
 examples/windows.ts(35,6): error TS2540: Cannot assign to 'sep' because it is a read-only property.
-lib/constants.ts(162,16): error TS7006: Parameter 'chars' implicitly has an 'any' type.
-lib/constants.ts(176,13): error TS7006: Parameter 'win32' implicitly has an 'any' type.
 lib/parse.ts(4,8): error TS1192: Module '"lib/utils"' has no default export.
 lib/parse.ts(22,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse.ts(23,22): error TS2339: Property 'expandRange' does not exist on type 'Object'.
 lib/parse.ts(24,20): error TS2339: Property 'expandRange' does not exist on type 'Object'.
 lib/parse.ts(32,16): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(pattern: string | RegExp, flags?: string | undefined): RegExp', gave the following error.
+  Overload 1 of 3, '(pattern: string | RegExp, flags?: string): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
   Overload 2 of 3, '(pattern: string | RegExp): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
-  Overload 3 of 3, '(pattern: string, flags?: string | undefined): RegExp', gave the following error.
+  Overload 3 of 3, '(pattern: string, flags?: string): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/parse.ts(34,21): error TS7006: Parameter 'v' implicitly has an 'any' type.
 lib/parse.ts(55,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/parse.ts(60,11): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ '***': string; '**/**': string; '**/**/**': string; }'.
-  No index signature with a parameter of type 'string' was found on type '{ '***': string; '**/**': string; '**/**/**': string; }'.
 lib/parse.ts(62,9): error TS2740: Type '{ constructor: Function; toString(): string; toLocaleString(): string; valueOf(): Object; hasOwnProperty(v: PropertyKey): boolean; isPrototypeOf(v: Object): boolean; propertyIsEnumerable(v: PropertyKey): boolean; abbrev(): { ...; }; }' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lib/parse.ts(63,35): error TS2339: Property 'maxLength' does not exist on type 'HTMLElement'.
 lib/parse.ts(63,86): error TS2339: Property 'maxLength' does not exist on type 'HTMLElement'.
@@ -240,7 +221,7 @@ lib/parse.ts(285,11): error TS2367: This condition will always return 'false' si
 lib/parse.ts(295,11): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/parse.ts(299,11): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/parse.ts(309,16): error TS2339: Property 'unescape' does not exist on type 'HTMLElement'.
-lib/parse.ts(318,29): error TS2367: This condition will always return 'false' since the types '(other: Node | null) => boolean' and 'boolean' have no overlap.
+lib/parse.ts(318,29): error TS2367: This condition will always return 'false' since the types '(other: Node) => boolean' and 'boolean' have no overlap.
 lib/parse.ts(319,13): error TS2339: Property 'output' does not exist on type 'Object'.
 lib/parse.ts(323,11): error TS2339: Property 'output' does not exist on type 'Object'.
 lib/parse.ts(343,28): error TS2349: This expression is not callable.
@@ -265,7 +246,6 @@ lib/parse.ts(396,38): error TS2339: Property 'value' does not exist on type 'Obj
 lib/parse.ts(397,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse.ts(397,38): error TS2339: Property 'value' does not exist on type 'Object'.
 lib/parse.ts(397,50): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lib/parse.ts(398,35): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 lib/parse.ts(400,20): error TS2339: Property 'value' does not exist on type 'Object'.
 lib/parse.ts(400,28): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 lib/parse.ts(401,21): error TS2339: Property 'backtrack' does not exist on type 'Object'.
@@ -393,13 +373,7 @@ lib/parse.ts(770,38): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 lib/parse.ts(770,56): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-lib/parse.ts(788,13): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-lib/parse.ts(790,18): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 lib/parse.ts(791,15): error TS2339: Property 'index' does not exist on type 'Object'.
-lib/parse.ts(791,24): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 lib/parse.ts(802,23): error TS2339: Property 'type' does not exist on type 'Object'.
 lib/parse.ts(802,51): error TS2339: Property 'star' does not exist on type 'Object'.
 lib/parse.ts(803,12): error TS2339: Property 'type' does not exist on type 'Object'.
@@ -531,7 +505,6 @@ lib/parse.ts(1004,27): error TS2314: Generic type 'Array<T>' requires 1 type arg
 lib/parse.ts(1005,9): error TS2740: Type '{ constructor: Function; toString(): string; toLocaleString(): string; valueOf(): Object; hasOwnProperty(v: PropertyKey): boolean; isPrototypeOf(v: Object): boolean; propertyIsEnumerable(v: PropertyKey): boolean; abbrev(): { ...; }; }' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lib/parse.ts(1006,35): error TS2339: Property 'maxLength' does not exist on type 'HTMLElement'.
 lib/parse.ts(1006,86): error TS2339: Property 'maxLength' does not exist on type 'HTMLElement'.
-lib/parse.ts(1012,11): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ '***': string; '**/**': string; '**/**/**': string; }'.
 lib/parse.ts(1017,5): error TS2339: Property 'DOT_LITERAL' does not exist on type 'Object'.
 lib/parse.ts(1018,5): error TS2339: Property 'SLASH_LITERAL' does not exist on type 'Object'.
 lib/parse.ts(1019,5): error TS2339: Property 'ONE_CHAR' does not exist on type 'Object'.
@@ -546,16 +519,10 @@ lib/parse.ts(1029,33): error TS2339: Property 'dot' does not exist on type 'HTML
 lib/parse.ts(1030,32): error TS2339: Property 'capture' does not exist on type 'HTMLElement'.
 lib/parse.ts(1032,27): error TS2339: Property 'bash' does not exist on type 'HTMLElement'.
 lib/parse.ts(1034,12): error TS2339: Property 'capture' does not exist on type 'HTMLElement'.
-lib/parse.ts(1039,14): error TS2339: Property 'noglobstar' does not exist on type 'String'.
-lib/parse.ts(1040,52): error TS2339: Property 'dot' does not exist on type 'String'.
-lib/parse.ts(1070,15): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
+lib/parse.ts(1039,14): error TS2339: Property 'noglobstar' does not exist on type 'HTMLElement'.
+lib/parse.ts(1040,52): error TS2339: Property 'dot' does not exist on type 'HTMLElement'.
 lib/parse.ts(1070,53): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/parse.ts(1073,39): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/parse.ts(1076,39): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 lib/parse.ts(1084,22): error TS2339: Property 'strictSlashes' does not exist on type 'HTMLElement'.
 lib/parse.ts(1085,5): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/picomatch.ts(6,8): error TS1192: Module '"lib/utils"' has no default export.
@@ -605,8 +572,6 @@ lib/picomatch.ts(246,7): error TS2367: This condition will always return 'false'
 lib/picomatch.ts(247,18): error TS2339: Property 'output' does not exist on type 'Object'.
 lib/picomatch.ts(250,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-lib/picomatch.ts(251,27): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
-lib/picomatch.ts(252,26): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
 lib/picomatch.ts(254,46): error TS2339: Property 'output' does not exist on type 'Object'.
 lib/picomatch.ts(255,22): error TS2339: Property 'negated' does not exist on type 'Object'.
 lib/picomatch.ts(259,35): error TS2339: Property 'toRegex' does not exist on type 'Function'.
@@ -668,7 +633,6 @@ lib/scan.ts(131,15): error TS2367: This condition will always return 'false' sin
 lib/scan.ts(139,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/scan.ts(143,29): error TS2339: Property 'isBrace' does not exist on type 'Object'.
 lib/scan.ts(150,11): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
-lib/scan.ts(163,11): error TS2454: Variable 'prev' is used before being assigned.
 lib/scan.ts(163,43): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/scan.ts(164,9): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/scan.ts(168,19): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
@@ -678,7 +642,6 @@ lib/scan.ts(181,27): error TS2339: Property 'isExtglob' does not exist on type '
 lib/scan.ts(187,13): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
 lib/scan.ts(190,35): error TS2339: Property 'backslashes' does not exist on type 'Object'.
 lib/scan.ts(196,30): error TS2339: Property 'isGlob' does not exist on type 'Object'.
-lib/scan.ts(208,11): error TS2454: Variable 'prev' is used before being assigned.
 lib/scan.ts(208,54): error TS2339: Property 'isGlobstar' does not exist on type 'Object'.
 lib/scan.ts(209,22): error TS2339: Property 'isGlob' does not exist on type 'Object'.
 lib/scan.ts(212,11): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
@@ -710,16 +673,13 @@ lib/scan.ts(306,22): error TS2345: Argument of type 'Number' is not assignable t
 lib/scan.ts(320,12): error TS2339: Property 'unescape' does not exist on type 'Object'.
 lib/scan.ts(343,12): error TS2339: Property 'tokens' does not exist on type 'Object'.
 lib/scan.ts(344,11): error TS2339: Property 'maxDepth' does not exist on type 'Object'.
-lib/scan.ts(345,26): error TS2454: Variable 'code' is used before being assigned.
 lib/scan.ts(348,11): error TS2339: Property 'tokens' does not exist on type 'Object'.
 lib/scan.ts(351,12): error TS2339: Property 'parts' does not exist on type 'Object'.
 lib/scan.ts(351,35): error TS2339: Property 'tokens' does not exist on type 'Object'.
-lib/scan.ts(355,25): error TS2454: Variable 'prevIndex' is used before being assigned.
 lib/scan.ts(355,37): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/scan.ts(358,16): error TS2339: Property 'tokens' does not exist on type 'Object'.
 lib/scan.ts(366,15): error TS2339: Property 'maxDepth' does not exist on type 'Object'.
 lib/scan.ts(371,7): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-lib/scan.ts(374,9): error TS2454: Variable 'prevIndex' is used before being assigned.
 lib/scan.ts(374,22): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/scan.ts(375,41): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/scan.ts(378,16): error TS2339: Property 'tokens' does not exist on type 'Object'.

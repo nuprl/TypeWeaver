@@ -28,7 +28,7 @@ import map from './map.js'
  * // => 'no match'
  */
 function cond(pairs: Array): Function {
-  const length: Number = pairs == null ? 0 : pairs.length
+  const length: Boolean = pairs == null ? 0 : pairs.length
 
   pairs = !length ? [] : map(pairs, (pair: Promise) => {
     if (typeof pair[1] !== 'function') {

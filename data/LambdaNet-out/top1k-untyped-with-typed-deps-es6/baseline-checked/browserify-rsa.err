@@ -17,10 +17,10 @@ index.ts(15,77): error TS2339: Property 'prime2' does not exist on type 'HTMLEle
 index.ts(21,26): error TS2339: Property 'modulus' does not exist on type 'HTMLElement'.
 index.ts(22,7): error TS2322: Type 'BN' is not assignable to type 'HTMLElement'.
 index.ts(22,37): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(number: string | number | number[] | Uint8Array | Buffer | BN, base?: number | "hex" | undefined, endian?: Endianness | undefined): BN', gave the following error.
+  Overload 1 of 2, '(number: string | number | number[] | Uint8Array | Buffer | BN, base?: number | "hex", endian?: Endianness): BN', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | number | number[] | Uint8Array | Buffer | BN'.
       Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-  Overload 2 of 2, '(number: string | number | number[] | Uint8Array | Buffer | BN, endian?: Endianness | undefined): BN', gave the following error.
+  Overload 2 of 2, '(number: string | number | number[] | Uint8Array | Buffer | BN, endian?: Endianness): BN', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | number | number[] | Uint8Array | Buffer | BN'.
 index.ts(22,53): error TS2339: Property 'blinder' does not exist on type 'Object'.
 index.ts(22,72): error TS2339: Property 'modulus' does not exist on type 'HTMLElement'.

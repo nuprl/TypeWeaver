@@ -465,7 +465,7 @@ proto.find = function(key: String) {
 
 //Removes item with key from tree
 proto.remove = function(key: String) {
-  var iter: HTMLElement = this.find(key)
+  var iter: Object = this.find(key)
   if(iter) {
     return iter.remove()
   }
@@ -991,6 +991,6 @@ function defaultCompare(a: Number, b: Number): Number {
 }
 
 //Build a tree
-function createRBTree(compare: String): Promise {
+function createRBTree(compare: String): Object {
   return new RedBlackTree(compare || defaultCompare, null)
 }

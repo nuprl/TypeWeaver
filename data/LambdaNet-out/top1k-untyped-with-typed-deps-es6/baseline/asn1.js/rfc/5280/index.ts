@@ -83,7 +83,7 @@ rfc5280.Certificate = Certificate;
 //      issuerUniqueID  [1]  IMPLICIT UniqueIdentifier OPTIONAL,
 //      subjectUniqueID [2]  IMPLICIT UniqueIdentifier OPTIONAL,
 //      extensions      [3]  Extensions OPTIONAL
-const TBSCertificate: Array = asn1.define('TBSCertificate', function() {
+const TBSCertificate: String = asn1.define('TBSCertificate', function() {
   this.seq().obj(
     this.key('version').def('v1').explicit(0).use(Version),
     this.key('serialNumber').int(),
@@ -154,7 +154,7 @@ rfc5280.SubjectPublicKeyInfo = SubjectPublicKeyInfo;
 //           crlEntryExtensions      Extensions OPTIONAL
 //      }  OPTIONAL,
 //      crlExtensions           [0] Extensions OPTIONAL }
-const TBSCertList: String = asn1.define('TBSCertList', function() {
+const TBSCertList: Array = asn1.define('TBSCertList', function() {
   this.seq().obj(
     this.key('version').optional().int(),
     this.key('signature').use(AlgorithmIdentifier),
@@ -580,7 +580,7 @@ rfc5280.PolicyQualifiers = PolicyQualifiers;
 // PolicyQualifierInfo ::= SEQUENCE {
 //      policyQualifierId  PolicyQualifierId,
 //      qualifier          ANY DEFINED BY policyQualifierId }
-const PolicyQualifierInfo: String = asn1.define('PolicyQualifierInfo', function() {
+const PolicyQualifierInfo: Array = asn1.define('PolicyQualifierInfo', function() {
   this.seq().obj(
     this.key('policyQualifierId').use(PolicyQualifierId),
     this.key('qualifier').any()
@@ -812,7 +812,7 @@ rfc5280.DeltaCRLIndicator = DeltaCRLIndicator;
 //         onlySomeReasons            [3] ReasonFlags OPTIONAL,
 //         indirectCRL                [4] BOOLEAN DEFAULT FALSE,
 //         onlyContainsAttributeCerts [5] BOOLEAN DEFAULT FALSE }
-const IssuingDistributionPoint: Number = asn1.define('IssuingDistributionPoint',
+const IssuingDistributionPoint: String = asn1.define('IssuingDistributionPoint',
   function() {
     this.seq().obj(
       this.key('distributionPoint').explicit(0).optional()

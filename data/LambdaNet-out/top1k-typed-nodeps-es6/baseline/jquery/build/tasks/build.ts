@@ -94,7 +94,7 @@ export default function( grunt: HTMLElement ) {
 			const excludeList: Function = ( list: Array, prepend: String ) => {
 				if ( list ) {
 					prepend = prepend ? `${ prepend }/` : "";
-					list.forEach( function( module: String ) {
+					list.forEach( function( module: Number ) {
 
 						// Exclude var modules as well
 						if ( module === "var" ) {

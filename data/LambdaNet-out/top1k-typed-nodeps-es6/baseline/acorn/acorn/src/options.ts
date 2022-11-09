@@ -126,7 +126,7 @@ export function getOptions(opts: Object): Parser {
 
   if (isArray(options.onToken)) {
     let tokens: Array = options.onToken
-    options.onToken = (token: TokContext) => tokens.push(token)
+    options.onToken = (token: Node) => tokens.push(token)
   }
   if (isArray(options.onComment))
     options.onComment = pushComment(options, options.onComment)

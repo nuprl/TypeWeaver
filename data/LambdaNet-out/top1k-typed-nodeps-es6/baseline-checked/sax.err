@@ -2,21 +2,14 @@
 .github/workflows/package-json-repo.ts(4,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 .github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'String'.
-.github/workflows/package-json-repo.ts(12,9): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-.github/workflows/package-json-repo.ts(13,26): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-.github/workflows/package-json-repo.ts(14,26): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(value: any, replacer?: ((this: any, key: string, value: any) => any) | undefined, space?: string | number | undefined): string', gave the following error.
-    Argument of type 'null' is not assignable to parameter of type '((this: any, key: string, value: any) => any) | undefined'.
-  Overload 2 of 2, '(value: any, replacer?: (string | number)[] | null | undefined, space?: string | number | undefined): string', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string | number | undefined'.
+.github/workflows/package-json-repo.ts(14,51): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
+    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
+      Type 'String' is not assignable to type 'string | number'.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
+    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
 .github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
 examples/example.ts(4,17): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/sax/lib/sax.ts' is not a module.
-examples/example.ts(9,35): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-examples/example.ts(9,53): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-examples/example.ts(13,3): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 examples/example.ts(15,7): error TS2339: Property 'onend' does not exist on type 'Object'.
 examples/example.ts(15,15): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
@@ -31,20 +24,16 @@ examples/get-products.ts(4,17): error TS2306: File '/mnt/data/mhyee/not-type-inf
 examples/get-products.ts(12,13): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
   Type 'String' is not assignable to type 'Buffer'.
 examples/get-products.ts(13,21): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(requestListener?: RequestListener<typeof IncomingMessage, typeof ServerResponse> | undefined): Server<typeof IncomingMessage, typeof ServerResponse>', gave the following error.
+  Overload 1 of 2, '(requestListener?: RequestListener<typeof IncomingMessage, typeof ServerResponse>): Server<typeof IncomingMessage, typeof ServerResponse>', gave the following error.
     Argument of type '(req: Function, res: any) => void' is not assignable to parameter of type 'RequestListener<typeof IncomingMessage, typeof ServerResponse>'.
       Types of parameters 'req' and 'req' are incompatible.
         Type 'IncomingMessage' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
-  Overload 2 of 2, '(options: ServerOptions<typeof IncomingMessage, typeof ServerResponse>, requestListener?: RequestListener<typeof IncomingMessage, typeof ServerResponse> | undefined): Server<...>', gave the following error.
+  Overload 2 of 2, '(options: ServerOptions<typeof IncomingMessage, typeof ServerResponse>, requestListener?: RequestListener<typeof IncomingMessage, typeof ServerResponse>): Server<...>', gave the following error.
     Type '(req: Function, res: any) => void' has no properties in common with type 'ServerOptions<typeof IncomingMessage, typeof ServerResponse>'.
 examples/get-products.ts(13,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/get-products.ts(15,37): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 examples/get-products.ts(18,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/get-products.ts(19,9): error TS2322: Type 'null' is not assignable to type 'String'.
-examples/get-products.ts(20,9): error TS2322: Type 'null' is not assignable to type 'Object'.
 examples/get-products.ts(22,12): error TS2339: Property 'onclosetag' does not exist on type 'HTMLElement'.
-examples/get-products.ts(25,9): error TS2322: Type 'null' is not assignable to type 'Object'.
-examples/get-products.ts(25,22): error TS2322: Type 'null' is not assignable to type 'String'.
 examples/get-products.ts(28,36): error TS2339: Property 'parent' does not exist on type 'Object'.
 examples/get-products.ts(29,41): error TS2339: Property 'parent' does not exist on type 'Object'.
 examples/get-products.ts(30,27): error TS2339: Property 'parent' does not exist on type 'Object'.
@@ -66,39 +55,30 @@ examples/pretty-print.ts(1,17): error TS2306: File '/mnt/data/mhyee/not-type-inf
 examples/pretty-print.ts(9,9): error TS2339: Property 'tabstop' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(10,9): error TS2339: Property 'level' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(11,9): error TS2339: Property 'indent' does not exist on type 'HTMLElement'.
-examples/pretty-print.ts(13,21): error TS2339: Property 'level' does not exist on type 'HTMLElement'.
-examples/pretty-print.ts(14,23): error TS2339: Property 'tabstop' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(19,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-examples/pretty-print.ts(20,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-examples/pretty-print.ts(21,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 examples/pretty-print.ts(22,19): error TS2339: Property 'name' does not exist on type 'Object'.
 examples/pretty-print.ts(23,21): error TS2339: Property 'attributes' does not exist on type 'Object'.
 examples/pretty-print.ts(24,39): error TS2339: Property 'attributes' does not exist on type 'Object'.
 examples/pretty-print.ts(29,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(30,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(31,33): error TS2304: Cannot find name 'Void'.
-examples/pretty-print.ts(32,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 examples/pretty-print.ts(36,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-examples/pretty-print.ts(37,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-examples/pretty-print.ts(38,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 examples/pretty-print.ts(42,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-examples/pretty-print.ts(43,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 examples/pretty-print.ts(47,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
-examples/pretty-print.ts(48,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 examples/pretty-print.ts(52,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(62,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/pretty-print.ts(62,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
   Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
 examples/pretty-print.ts(64,29): error TS2304: Cannot find name 'Void'.
 examples/pretty-print.ts(65,29): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(buffer: string | Uint8Array, cb?: ((err?: Error | undefined) => void) | undefined): boolean', gave the following error.
+  Overload 1 of 2, '(buffer: string | Uint8Array, cb?: (err?: Error) => void): boolean', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | Uint8Array'.
       Type 'String' is missing the following properties from type 'Uint8Array': BYTES_PER_ELEMENT, buffer, byteLength, byteOffset, and 20 more.
-  Overload 2 of 2, '(str: string | Uint8Array, encoding?: BufferEncoding | undefined, cb?: ((err?: Error | undefined) => void) | undefined): boolean', gave the following error.
+  Overload 2 of 2, '(str: string | Uint8Array, encoding?: BufferEncoding, cb?: (err?: Error) => void): boolean', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | Uint8Array'.
 lib/sax.ts(2,7): error TS2339: Property 'parser' does not exist on type 'HTMLElement'.
 lib/sax.ts(2,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/sax.ts(2,63): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/sax.ts(2,63): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sax.ts(2,85): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 lib/sax.ts(3,7): error TS2339: Property 'SAXParser' does not exist on type 'HTMLElement'.
 lib/sax.ts(4,7): error TS2339: Property 'SAXStream' does not exist on type 'HTMLElement'.
@@ -106,10 +86,7 @@ lib/sax.ts(5,7): error TS2339: Property 'createStream' does not exist on type 'H
 lib/sax.ts(16,7): error TS2339: Property 'MAX_BUFFER_LENGTH' does not exist on type 'HTMLElement'.
 lib/sax.ts(18,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/sax.ts(24,7): error TS2339: Property 'EVENTS' does not exist on type 'HTMLElement'.
-lib/sax.ts(45,53): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-lib/sax.ts(46,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/sax.ts(47,14): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/sax.ts(50,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/sax.ts(47,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sax.ts(52,12): error TS2339: Property 'q' does not exist on type 'HTMLElement'.
 lib/sax.ts(52,23): error TS2339: Property 'c' does not exist on type 'HTMLElement'.
 lib/sax.ts(53,12): error TS2339: Property 'bufferCheckPosition' does not exist on type 'HTMLElement'.
@@ -149,12 +126,11 @@ lib/sax.ts(77,46): error TS2339: Property 'column' does not exist on type 'HTMLE
 lib/sax.ts(79,5): error TS2554: Expected 3 arguments, but got 2.
 lib/sax.ts(83,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/sax.ts(84,22): error TS2304: Cannot find name 'Void'.
-lib/sax.ts(86,26): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/sax.ts(86,26): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sax.ts(92,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/sax.ts(93,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/sax.ts(99,48): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(100,43): error TS2339: Property 'MAX_BUFFER_LENGTH' does not exist on type 'HTMLElement'.
-lib/sax.ts(103,25): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 lib/sax.ts(111,23): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
@@ -169,7 +145,6 @@ lib/sax.ts(131,45): error TS2363: The right-hand side of an arithmetic operation
 lib/sax.ts(132,12): error TS2339: Property 'bufferCheckPosition' does not exist on type 'Object'.
 lib/sax.ts(132,45): error TS2339: Property 'position' does not exist on type 'Object'.
 lib/sax.ts(135,43): error TS2304: Cannot find name 'Void'.
-lib/sax.ts(137,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 lib/sax.ts(141,48): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(143,16): error TS2339: Property 'cdata' does not exist on type 'HTMLElement'.
 lib/sax.ts(144,42): error TS2339: Property 'cdata' does not exist on type 'HTMLElement'.
@@ -179,25 +154,15 @@ lib/sax.ts(148,43): error TS2339: Property 'script' does not exist on type 'HTML
 lib/sax.ts(149,14): error TS2339: Property 'script' does not exist on type 'HTMLElement'.
 lib/sax.ts(168,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/sax.ts(168,32): error TS2339: Property 'EVENTS' does not exist on type 'HTMLElement'.
-lib/sax.ts(173,12): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/sax.ts(176,53): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-lib/sax.ts(177,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/sax.ts(178,14): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/sax.ts(173,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/sax.ts(178,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sax.ts(181,12): error TS2339: Property 'apply' does not exist on type 'Object'.
-lib/sax.ts(181,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/sax.ts(183,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/sax.ts(183,20): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/sax.ts(183,20): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sax.ts(183,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
   Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-lib/sax.ts(184,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/sax.ts(185,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/sax.ts(187,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/sax.ts(189,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/sax.ts(190,10): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
-lib/sax.ts(193,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/sax.ts(194,10): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 lib/sax.ts(198,10): error TS2339: Property '_parser' does not exist on type 'HTMLElement'.
-lib/sax.ts(201,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/sax.ts(206,21): error TS2339: Property '_parser' does not exist on type 'HTMLElement'.
 lib/sax.ts(210,16): error TS2339: Property 'removeAllListeners' does not exist on type 'HTMLElement'.
 lib/sax.ts(211,16): error TS2339: Property '_parser' does not exist on type 'HTMLElement'.
@@ -209,8 +174,6 @@ lib/sax.ts(244,46): error TS2314: Generic type 'Array<T>' requires 1 type argume
 lib/sax.ts(254,13): error TS2339: Property '_parser' does not exist on type 'HTMLElement'.
 lib/sax.ts(255,10): error TS2339: Property '_parser' does not exist on type 'HTMLElement'.
 lib/sax.ts(256,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/sax.ts(256,87): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'unknown[]'.
-  Type 'IArguments' is missing the following properties from type 'unknown[]': pop, push, concat, join, and 27 more.
 lib/sax.ts(258,12): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 lib/sax.ts(262,19): error TS2339: Property 'prototype' does not exist on type 'Object'.
 lib/sax.ts(287,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
@@ -324,10 +287,6 @@ lib/sax.ts(687,16): error TS2339: Property 'opt' does not exist on type 'HTMLEle
 lib/sax.ts(688,11): error TS2339: Property 'ns' does not exist on type 'Object'.
 lib/sax.ts(688,23): error TS2339: Property 'ns' does not exist on type 'HTMLElement'.
 lib/sax.ts(690,12): error TS2339: Property 'attribList' does not exist on type 'HTMLElement'.
-lib/sax.ts(697,26): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/sax.ts(698,25): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/sax.ts(709,42): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(710,17): error TS2339: Property 'strict' does not exist on type 'HTMLElement'.
 lib/sax.ts(711,14): error TS2339: Property 'attribName' does not exist on type 'HTMLElement'.
@@ -390,10 +349,6 @@ lib/sax.ts(780,25): error TS2339: Property 'ns' does not exist on type 'HTMLElem
 lib/sax.ts(783,22): error TS2339: Property 'ns' does not exist on type 'HTMLElement'.
 lib/sax.ts(791,34): error TS2339: Property 'attribList' does not exist on type 'HTMLElement'.
 lib/sax.ts(792,33): error TS2339: Property 'attribList' does not exist on type 'HTMLElement'.
-lib/sax.ts(793,28): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/sax.ts(794,29): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/sax.ts(795,13): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/sax.ts(795,46): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
@@ -432,7 +387,6 @@ lib/sax.ts(856,14): error TS2339: Property 'script' does not exist on type 'HTML
 lib/sax.ts(861,28): error TS2339: Property 'tags' does not exist on type 'HTMLElement'.
 lib/sax.ts(862,9): error TS2322: Type 'string' is not assignable to type 'Function'.
 lib/sax.ts(863,17): error TS2339: Property 'strict' does not exist on type 'HTMLElement'.
-lib/sax.ts(864,17): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Function'.
 lib/sax.ts(864,32): error TS2339: Property 'looseCase' does not exist on type 'HTMLElement'.
 lib/sax.ts(866,9): error TS2739: Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lib/sax.ts(867,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -449,8 +403,6 @@ lib/sax.ts(887,50): error TS2339: Property 'tags' does not exist on type 'HTMLEl
 lib/sax.ts(888,14): error TS2540: Cannot assign to 'tagName' because it is a read-only property.
 lib/sax.ts(888,31): error TS2339: Property 'tag' does not exist on type 'HTMLElement'.
 lib/sax.ts(892,25): error TS2339: Property 'ns' does not exist on type 'HTMLElement'.
-lib/sax.ts(893,9): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 lib/sax.ts(893,20): error TS2339: Property 'ns' does not exist on type 'HTMLElement'.
 lib/sax.ts(896,40): error TS2339: Property 'tags' does not exist on type 'HTMLElement'.
 lib/sax.ts(896,52): error TS2339: Property 'tags' does not exist on type 'HTMLElement'.
@@ -477,11 +429,9 @@ lib/sax.ts(931,24): error TS2345: Argument of type 'String' is not assignable to
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/sax.ts(936,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/sax.ts(936,15): error TS2454: Variable 'num' is used before being assigned.
 lib/sax.ts(938,27): error TS2339: Property 'entity' does not exist on type 'HTMLElement'.
 lib/sax.ts(941,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/sax.ts(941,33): error TS2454: Variable 'num' is used before being assigned.
 lib/sax.ts(944,62): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(946,14): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
 lib/sax.ts(946,24): error TS2339: Property 'OPEN_WAKA' does not exist on type 'String'.
@@ -493,9 +443,6 @@ lib/sax.ts(953,14): error TS2339: Property 'state' does not exist on type 'HTMLE
 lib/sax.ts(953,24): error TS2339: Property 'TEXT' does not exist on type 'String'.
 lib/sax.ts(959,9): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
 lib/sax.ts(960,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
-lib/sax.ts(966,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/sax.ts(967,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/sax.ts(968,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/sax.ts(970,16): error TS2339: Property 'closed' does not exist on type 'HTMLElement'.
 lib/sax.ts(975,18): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'String'.
   Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
@@ -824,18 +771,14 @@ lib/sax.ts(1473,20): error TS2339: Property 'ATTRIB_VALUE_ENTITY_Q' does not exi
 lib/sax.ts(1474,31): error TS2339: Property 'ATTRIB_VALUE_QUOTED' does not exist on type 'String'.
 lib/sax.ts(1478,20): error TS2339: Property 'ATTRIB_VALUE_ENTITY_U' does not exist on type 'String'.
 lib/sax.ts(1479,31): error TS2339: Property 'ATTRIB_VALUE_UNQUOTED' does not exist on type 'String'.
-lib/sax.ts(1485,13): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'HTMLElement'.
 lib/sax.ts(1486,20): error TS2339: Property 'entity' does not exist on type 'HTMLElement'.
 lib/sax.ts(1487,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1487,28): error TS2454: Variable 'returnState' is used before being assigned.
 lib/sax.ts(1488,30): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 lib/sax.ts(1488,37): error TS2339: Property 'entity' does not exist on type 'HTMLElement'.
 lib/sax.ts(1489,20): error TS2339: Property 'entity' does not exist on type 'HTMLElement'.
-lib/sax.ts(1492,13): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'HTMLElement'.
 lib/sax.ts(1492,44): error TS2339: Property 'entity' does not exist on type 'HTMLElement'.
 lib/sax.ts(1493,20): error TS2339: Property 'entity' does not exist on type 'HTMLElement'.
 lib/sax.ts(1494,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
-lib/sax.ts(1494,28): error TS2454: Variable 'returnState' is used before being assigned.
 lib/sax.ts(1500,35): error TS2554: Expected 0-1 arguments, but got 2.
 lib/sax.ts(1500,62): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
 lib/sax.ts(1505,16): error TS2339: Property 'position' does not exist on type 'HTMLElement'.
@@ -854,5 +797,4 @@ lib/sax.ts(1544,29): error TS2362: The left-hand side of an arithmetic operation
 lib/sax.ts(1547,15): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/sax.ts(1562,9): error TS2322: Type 'Function' is not assignable to type '(...codePoints: number[]) => string'.
   Type 'Function' provides no match for the signature '(...codePoints: number[]): string'.
-lib/sax.ts(1566,42): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 

@@ -1014,7 +1014,7 @@
       }
     }
 
-    function parseRegExpUnicodeEscapeSequence(): Boolean {
+    function parseRegExpUnicodeEscapeSequence(): String {
       var res: Object;
       if (res = matchReg(/^u([0-9a-fA-F]{4})/)) {
         // UnicodeEscapeSequence
@@ -1291,7 +1291,7 @@
       return parseHelperClassRanges(atom);
     }
 
-    function parseNonemptyClassRangesNoDash(): Boolean {
+    function parseNonemptyClassRangesNoDash(): String {
       // NonemptyClassRangesNoDash ::
       //      ClassAtom
       //      ClassAtomNoDash NonemptyClassRangesNoDash
@@ -1469,7 +1469,7 @@
       return start;
     }
 
-    function parseClassCharacter(): String {
+    function parseClassCharacter(): Array {
       // ClassCharacter ::
       //      [lookahead ∉ ClassReservedDouble] SourceCharacter but not ClassSyntaxCharacter
       //      \ CharacterEscape[+U]

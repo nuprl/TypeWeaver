@@ -11,7 +11,7 @@ function baseZipObject(props: Array, values: Array, assignFunc: Function): Array
   let index: Number = -1
   const length: Number = props.length
   const valsLength: Number = values.length
-  const result: Array = {}
+  const result: Hash = {}
 
   while (++index < length) {
     const value: String = index < valsLength ? values[index] : undefined

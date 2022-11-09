@@ -332,7 +332,7 @@
    *
    */
   P.cubeRoot = P.cbrt = function () {
-    var e: Number, m: Boolean, n: String, r: Object, rep: Number, s: Number, sd: Number, t: Object, t3: Object, t3plusx: Object,
+    var e: Number, m: Boolean, n: String, r: Object, rep: Number, s: Number, sd: Number, t: Object, t3: Object, t3plusx: HTMLElement,
       x: String = this,
       Ctor: Object = x.constructor;
 
@@ -1262,7 +1262,7 @@
    *
    */
   P.minus = P.sub = function (y: Object) {
-    var d: Array, e: Number, i: Number, j: Number, k: Number, len: Number, pr: Number, rm: Number, xd: Array, xe: Number, xLTy: Function, yd: Array,
+    var d: Array, e: Number, i: Number, j: Number, k: Number, len: Number, pr: Number, rm: Number, xd: Array, xe: Number, xLTy: Object, yd: Array,
       x: Object = this,
       Ctor: Object = x.constructor;
 
@@ -1947,7 +1947,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toBinary = function (sd: Function, rm: Function) {
+  P.toBinary = function (sd: Function, rm: Array) {
     return toStringBinary(this, 2, sd, rm);
   };
 
@@ -2058,7 +2058,7 @@
    *
    */
   P.toFraction = function (maxD: Array) {
-    var d: Object, d0: Object, d1: String, d2: Object, e: Number, k: Number, n: String, n0: Object, n1: Object, pr: Number, q: HTMLElement, r: Array,
+    var d: Object, d0: Object, d1: String, d2: Object, e: Number, k: Number, n: Function, n0: Object, n1: Object, pr: Number, q: HTMLElement, r: Array,
       x: Object = this,
       xd: Array = x.d,
       Ctor: Object = x.constructor;
@@ -2217,7 +2217,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toOctal = function (sd: Function, rm: Function) {
+  P.toOctal = function (sd: Function, rm: Array) {
     return toStringBinary(this, 8, sd, rm);
   };
 
@@ -2267,7 +2267,7 @@
    */
   P.toPower = P.pow = function (y: Object) {
     var e: Number, k: Number, pr: Number, r: Object, rm: Number, s: Number,
-      x: String = this,
+      x: Array = this,
       Ctor: Object = x.constructor,
       yn: Number = +(y = new Ctor(y));
 
@@ -2521,7 +2521,7 @@
     var i: Number, k: Number, ws: String,
       indexOfLastWord: Number = d.length - 1,
       str: String = '',
-      w: Number = d[0];
+      w: String = d[0];
 
     if (indexOfLastWord > 0) {
       str += w;

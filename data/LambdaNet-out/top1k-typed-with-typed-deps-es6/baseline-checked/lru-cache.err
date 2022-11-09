@@ -2,42 +2,32 @@
 .github/workflows/package-json-repo.ts(4,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 .github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'String'.
-.github/workflows/package-json-repo.ts(12,9): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-.github/workflows/package-json-repo.ts(13,17): error TS2304: Cannot find name 'LRUCache'.
-.github/workflows/package-json-repo.ts(13,28): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
+.github/workflows/package-json-repo.ts(14,51): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
+    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
+      Type 'String' is not assignable to type 'string | number'.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
+    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
 .github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
 index.ts(1,7): error TS2322: Type 'DateConstructor | Performance' is not assignable to type 'Number'.
   Type 'DateConstructor' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-index.ts(14,7): error TS2740: Type 'typeof AbortController' is missing the following properties from type 'LRUCache': getRemainingTTL, initializeTTLTracking, updateItemAge, setItemTTL, and 39 more.
 index.ts(18,14): error TS2339: Property 'signal' does not exist on type 'AbortController'.
 index.ts(18,27): error TS2351: This expression is not constructable.
   Type 'String' has no construct signatures.
 index.ts(21,14): error TS2339: Property 'signal' does not exist on type 'AbortController'.
-index.ts(27,45): error TS2576: Property 'AbortSignal' does not exist on type 'LRUCache'. Did you mean to access the static member 'LRUCache.AbortSignal' instead?
-index.ts(31,8): error TS2576: Property 'AbortController' does not exist on type 'LRUCache'. Did you mean to access the static member 'LRUCache.AbortController' instead?
+index.ts(27,45): error TS2339: Property 'AbortSignal' does not exist on type 'Object'.
+index.ts(31,8): error TS2339: Property 'AbortController' does not exist on type 'Object'.
 index.ts(34,14): error TS2339: Property 'aborted' does not exist on type 'AbortSignal'.
 index.ts(35,14): error TS2339: Property '_listeners' does not exist on type 'AbortSignal'.
-index.ts(37,21): error TS7006: Parameter 'type' implicitly has an 'any' type.
 index.ts(39,16): error TS2339: Property 'aborted' does not exist on type 'AbortSignal'.
 index.ts(41,24): error TS2554: Expected 0 arguments, but got 1.
 index.ts(42,16): error TS2339: Property '_listeners' does not exist on type 'AbortSignal'.
-index.ts(42,35): error TS7006: Parameter 'f' implicitly has an 'any' type.
-index.ts(46,24): error TS7006: Parameter 'ev' implicitly has an 'any' type.
-index.ts(46,28): error TS7006: Parameter 'fn' implicitly has an 'any' type.
 index.ts(48,16): error TS2339: Property '_listeners' does not exist on type 'AbortSignal'.
-index.ts(51,27): error TS7006: Parameter 'ev' implicitly has an 'any' type.
-index.ts(51,31): error TS7006: Parameter 'fn' implicitly has an 'any' type.
 index.ts(53,16): error TS2339: Property '_listeners' does not exist on type 'AbortSignal'.
 index.ts(53,34): error TS2339: Property '_listeners' does not exist on type 'AbortSignal'.
-index.ts(53,52): error TS7006: Parameter 'f' implicitly has an 'any' type.
 index.ts(58,7): error TS2739: Type 'Set<unknown>' is missing the following properties from type 'Error': name, message
-index.ts(69,13): error TS2339: Property 'get' does not exist on type 'PropertyDescriptor | undefined'.
 index.ts(69,64): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-index.ts(77,13): error TS2339: Property 'get' does not exist on type 'PropertyDescriptor | undefined'.
 index.ts(77,64): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-index.ts(82,32): error TS7019: Rest parameter 'a' implicitly has an 'any[]' type.
 index.ts(86,27): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
 index.ts(90,56): error TS2339: Property 'has' does not exist on type 'Error'.
 index.ts(93,10): error TS2339: Property 'add' does not exist on type 'Error'.
@@ -45,13 +35,10 @@ index.ts(98,65): error TS2345: Argument of type 'Number' is not assignable to pa
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(98,89): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-index.ts(122,15): error TS7006: Parameter 'size' implicitly has an 'any' type.
-index.ts(129,15): error TS7006: Parameter 'max' implicitly has an 'any' type.
 index.ts(134,10): error TS2339: Property 'heap' does not exist on type 'Stack'.
 index.ts(134,21): error TS2351: This expression is not constructable.
   Type 'HTMLElement' has no construct signatures.
 index.ts(135,10): error TS2339: Property 'length' does not exist on type 'Stack'.
-index.ts(137,8): error TS7006: Parameter 'n' implicitly has an 'any' type.
 index.ts(138,10): error TS2339: Property 'heap' does not exist on type 'Stack'.
 index.ts(138,20): error TS2339: Property 'length' does not exist on type 'Stack'.
 index.ts(141,17): error TS2339: Property 'heap' does not exist on type 'Stack'.
@@ -132,7 +119,6 @@ index.ts(278,15): error TS2339: Property 'ttlAutopurge' does not exist on type '
 index.ts(278,37): error TS2339: Property 'max' does not exist on type 'LRUCache'.
 index.ts(278,50): error TS2339: Property 'maxSize' does not exist on type 'LRUCache'.
 index.ts(281,16): error TS2339: Property 'add' does not exist on type 'Error'.
-index.ts(300,19): error TS7006: Parameter 'key' implicitly has an 'any' type.
 index.ts(305,10): error TS2339: Property 'ttls' does not exist on type 'LRUCache'.
 index.ts(305,36): error TS2339: Property 'max' does not exist on type 'LRUCache'.
 index.ts(306,10): error TS2339: Property 'starts' does not exist on type 'LRUCache'.
@@ -160,17 +146,10 @@ index.ts(352,19): error TS2339: Property 'ttls' does not exist on type 'LRUCache
 index.ts(352,45): error TS2339: Property 'starts' does not exist on type 'LRUCache'.
 index.ts(354,16): error TS2339: Property 'starts' does not exist on type 'LRUCache'.
 index.ts(355,18): error TS2339: Property 'ttls' does not exist on type 'LRUCache'.
-index.ts(356,13): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(361,14): error TS2339: Property 'ttls' does not exist on type 'LRUCache'.
 index.ts(362,14): error TS2339: Property 'starts' does not exist on type 'LRUCache'.
-index.ts(363,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(363,40): error TS2339: Property 'starts' does not exist on type 'LRUCache'.
 index.ts(364,16): error TS2339: Property 'ttls' does not exist on type 'LRUCache'.
-index.ts(368,17): error TS7006: Parameter 'index' implicitly has an 'any' type.
-index.ts(369,14): error TS7006: Parameter 'index' implicitly has an 'any' type.
-index.ts(369,21): error TS7006: Parameter 'ttl' implicitly has an 'any' type.
-index.ts(369,26): error TS7006: Parameter 'start' implicitly has an 'any' type.
-index.ts(370,11): error TS7006: Parameter 'index' implicitly has an 'any' type.
 index.ts(375,10): error TS2339: Property 'calculatedSize' does not exist on type 'LRUCache'.
 index.ts(376,10): error TS2339: Property 'sizes' does not exist on type 'LRUCache'.
 index.ts(376,37): error TS2339: Property 'max' does not exist on type 'LRUCache'.
@@ -184,13 +163,6 @@ index.ts(403,51): error TS2339: Property 'sizes' does not exist on type 'LRUCach
 index.ts(404,19): error TS2339: Property 'calculatedSize' does not exist on type 'LRUCache'.
 index.ts(407,12): error TS2339: Property 'calculatedSize' does not exist on type 'LRUCache'.
 index.ts(407,35): error TS2339: Property 'sizes' does not exist on type 'LRUCache'.
-index.ts(410,18): error TS7006: Parameter 'index' implicitly has an 'any' type.
-index.ts(411,15): error TS7006: Parameter 'index' implicitly has an 'any' type.
-index.ts(411,22): error TS7006: Parameter 'size' implicitly has an 'any' type.
-index.ts(412,15): error TS7006: Parameter 'k' implicitly has an 'any' type.
-index.ts(412,18): error TS7006: Parameter 'v' implicitly has an 'any' type.
-index.ts(412,21): error TS7006: Parameter 'size' implicitly has an 'any' type.
-index.ts(412,27): error TS7006: Parameter 'sizeCalculation' implicitly has an 'any' type.
 index.ts(420,32): error TS2339: Property 'allowStale' does not exist on type 'LRUCache'.
 index.ts(421,14): error TS2339: Property 'size' does not exist on type 'LRUCache'.
 index.ts(422,25): error TS2339: Property 'tail' does not exist on type 'LRUCache'.
@@ -201,7 +173,6 @@ index.ts(439,14): error TS2339: Property 'size' does not exist on type 'LRUCache
 index.ts(440,25): error TS2339: Property 'head' does not exist on type 'LRUCache'.
 index.ts(447,24): error TS2339: Property 'tail' does not exist on type 'LRUCache'.
 index.ts(450,20): error TS2339: Property 'next' does not exist on type 'LRUCache'.
-index.ts(456,16): error TS7006: Parameter 'index' implicitly has an 'any' type.
 index.ts(457,17): error TS2339: Property 'keyMap' does not exist on type 'LRUCache'.
 index.ts(457,33): error TS2339: Property 'keyList' does not exist on type 'LRUCache'.
 index.ts(462,19): error TS2339: Property 'keyList' does not exist on type 'LRUCache'.
@@ -212,14 +183,11 @@ index.ts(473,18): error TS2339: Property 'keyList' does not exist on type 'LRUCa
 index.ts(478,18): error TS2339: Property 'keyList' does not exist on type 'LRUCache'.
 index.ts(484,18): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
 index.ts(489,18): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
-index.ts(497,8): error TS7006: Parameter 'fn' implicitly has an 'any' type.
 index.ts(499,19): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
 index.ts(499,36): error TS2339: Property 'keyList' does not exist on type 'LRUCache'.
 index.ts(500,30): error TS2339: Property 'keyList' does not exist on type 'LRUCache'.
-index.ts(505,11): error TS7006: Parameter 'fn' implicitly has an 'any' type.
 index.ts(507,27): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
 index.ts(507,44): error TS2339: Property 'keyList' does not exist on type 'LRUCache'.
-index.ts(511,12): error TS7006: Parameter 'fn' implicitly has an 'any' type.
 index.ts(513,27): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
 index.ts(513,44): error TS2339: Property 'keyList' does not exist on type 'LRUCache'.
 index.ts(526,26): error TS2339: Property 'keyList' does not exist on type 'LRUCache'.
@@ -239,14 +207,8 @@ index.ts(547,47): error TS2363: The right-hand side of an arithmetic operation m
 index.ts(549,16): error TS2339: Property 'sizes' does not exist on type 'LRUCache'.
 index.ts(550,15): error TS2339: Property 'size' does not exist on type 'LRUCache'.
 index.ts(550,27): error TS2339: Property 'sizes' does not exist on type 'LRUCache'.
-index.ts(557,8): error TS7006: Parameter 'arr' implicitly has an 'any' type.
 index.ts(565,28): error TS2339: Property 'now' does not exist on type 'Number'.
 index.ts(565,36): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(571,11): error TS7006: Parameter 'v' implicitly has an 'any' type.
-index.ts(571,14): error TS7006: Parameter 'k' implicitly has an 'any' type.
-index.ts(571,17): error TS7006: Parameter 'reason' implicitly has an 'any' type.
-index.ts(574,5): error TS7006: Parameter 'k' implicitly has an 'any' type.
-index.ts(575,5): error TS7006: Parameter 'v' implicitly has an 'any' type.
 index.ts(577,18): error TS2339: Property 'ttl' does not exist on type 'LRUCache'.
 index.ts(578,7): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
 index.ts(579,29): error TS2339: Property 'noDisposeOnSet' does not exist on type 'LRUCache'.
@@ -285,10 +247,9 @@ index.ts(645,14): error TS2339: Property 'free' does not exist on type 'LRUCache
 index.ts(646,19): error TS2339: Property 'free' does not exist on type 'LRUCache'.
 index.ts(649,17): error TS2339: Property 'initialFill' does not exist on type 'LRUCache'.
 index.ts(653,14): error TS2339: Property 'size' does not exist on type 'LRUCache'.
-index.ts(654,34): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
-index.ts(654,47): error TS2339: Property 'head' does not exist on type 'LRUCache'.
-index.ts(660,9): error TS7006: Parameter 'free' implicitly has an 'any' type.
-index.ts(661,33): error TS2339: Property 'head' does not exist on type 'LRUCache'.
+index.ts(654,32): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
+index.ts(654,45): error TS2339: Property 'head' does not exist on type 'LRUCache'.
+index.ts(661,31): error TS2339: Property 'head' does not exist on type 'LRUCache'.
 index.ts(662,28): error TS2339: Property 'keyList' does not exist on type 'LRUCache'.
 index.ts(663,30): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
 index.ts(665,9): error TS2339: Property '__abortController' does not exist on type 'LRUCache'.
@@ -301,20 +262,14 @@ index.ts(679,10): error TS2339: Property 'head' does not exist on type 'LRUCache
 index.ts(679,22): error TS2339: Property 'next' does not exist on type 'LRUCache'.
 index.ts(680,10): error TS2339: Property 'keyMap' does not exist on type 'LRUCache'.
 index.ts(681,10): error TS2339: Property 'size' does not exist on type 'LRUCache'.
-index.ts(685,7): error TS7006: Parameter 'k' implicitly has an 'any' type.
 index.ts(685,34): error TS2339: Property 'updateAgeOnHas' does not exist on type 'LRUCache'.
 index.ts(686,24): error TS2339: Property 'keyMap' does not exist on type 'LRUCache'.
-index.ts(699,8): error TS7006: Parameter 'k' implicitly has an 'any' type.
 index.ts(699,31): error TS2339: Property 'allowStale' does not exist on type 'LRUCache'.
 index.ts(700,24): error TS2339: Property 'keyMap' does not exist on type 'LRUCache'.
 index.ts(702,22): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
-index.ts(708,19): error TS7006: Parameter 'k' implicitly has an 'any' type.
-index.ts(708,22): error TS7006: Parameter 'index' implicitly has an 'any' type.
-index.ts(708,29): error TS7006: Parameter 'options' implicitly has an 'any' type.
-index.ts(708,38): error TS7006: Parameter 'context' implicitly has an 'any' type.
 index.ts(709,62): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
 index.ts(713,30): error TS2351: This expression is not constructable.
-  Type 'LRUCache' has no construct signatures.
+  Type 'Object' has no construct signatures.
 index.ts(715,18): error TS2339: Property 'signal' does not exist on type 'LRUCache'.
 index.ts(719,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(720,15): error TS2339: Property 'signal' does not exist on type 'LRUCache'.
@@ -336,8 +291,6 @@ index.ts(746,7): error TS2339: Property '__returned' does not exist on type 'LRU
 index.ts(748,32): error TS2339: Property 'options' does not exist on type 'Object'.
 index.ts(749,20): error TS2339: Property 'keyMap' does not exist on type 'LRUCache'.
 index.ts(751,12): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
-index.ts(756,21): error TS7006: Parameter 'p' implicitly has an 'any' type.
-index.ts(772,5): error TS7006: Parameter 'k' implicitly has an 'any' type.
 index.ts(775,25): error TS2339: Property 'allowStale' does not exist on type 'LRUCache'.
 index.ts(776,29): error TS2339: Property 'updateAgeOnGet' does not exist on type 'LRUCache'.
 index.ts(777,33): error TS2339: Property 'noDeleteOnStaleGet' does not exist on type 'LRUCache'.
@@ -358,17 +311,13 @@ index.ts(837,13): error TS2339: Property '__staleWhileFetching' does not exist o
   Property '__staleWhileFetching' does not exist on type 'String'.
 index.ts(838,14): error TS2339: Property '__returned' does not exist on type 'String | LRUCache'.
   Property '__returned' does not exist on type 'String'.
-index.ts(843,5): error TS7006: Parameter 'k' implicitly has an 'any' type.
 index.ts(845,25): error TS2339: Property 'allowStale' does not exist on type 'LRUCache'.
 index.ts(846,29): error TS2339: Property 'updateAgeOnGet' does not exist on type 'LRUCache'.
 index.ts(847,33): error TS2339: Property 'noDeleteOnStaleGet' does not exist on type 'LRUCache'.
 index.ts(850,24): error TS2339: Property 'keyMap' does not exist on type 'LRUCache'.
 index.ts(852,26): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
-index.ts(880,11): error TS7006: Parameter 'p' implicitly has an 'any' type.
-index.ts(880,14): error TS7006: Parameter 'n' implicitly has an 'any' type.
 index.ts(881,10): error TS2339: Property 'prev' does not exist on type 'LRUCache'.
 index.ts(882,10): error TS2339: Property 'next' does not exist on type 'LRUCache'.
-index.ts(885,14): error TS7006: Parameter 'index' implicitly has an 'any' type.
 index.ts(894,24): error TS2339: Property 'tail' does not exist on type 'LRUCache'.
 index.ts(895,26): error TS2339: Property 'head' does not exist on type 'LRUCache'.
 index.ts(896,14): error TS2339: Property 'head' does not exist on type 'LRUCache'.
@@ -377,7 +326,6 @@ index.ts(898,27): error TS2339: Property 'prev' does not exist on type 'LRUCache
 index.ts(898,45): error TS2339: Property 'next' does not exist on type 'LRUCache'.
 index.ts(900,25): error TS2339: Property 'tail' does not exist on type 'LRUCache'.
 index.ts(901,12): error TS2339: Property 'tail' does not exist on type 'LRUCache'.
-index.ts(910,10): error TS7006: Parameter 'k' implicitly has an 'any' type.
 index.ts(912,14): error TS2339: Property 'size' does not exist on type 'LRUCache'.
 index.ts(913,34): error TS2339: Property 'keyMap' does not exist on type 'LRUCache'.
 index.ts(916,18): error TS2339: Property 'size' does not exist on type 'LRUCache'.
@@ -430,21 +378,4 @@ index.ts(984,19): error TS2551: Property 'disposed' does not exist on type 'LRUC
 index.ts(985,14): error TS2339: Property 'disposeAfter' does not exist on type 'LRUCache'.
 index.ts(985,35): error TS2551: Property 'disposed' does not exist on type 'LRUCache'. Did you mean 'dispose'?
 index.ts(997,17): error TS2339: Property 'size' does not exist on type 'LRUCache'.
-scripts/max-size-test.ts(20,44): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-scripts/max-size-test.ts(20,54): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-scripts/max-size-test.ts(24,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/max-size-test.ts(25,21): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-scripts/max-size-test.ts(26,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-scripts/max-size-test.ts(27,47): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-scripts/max-size-test.ts(30,54): error TS2304: Cannot find name 'LRUCache'.
-scripts/max-size-test.ts(34,3): error TS2722: Cannot invoke an object which is possibly 'undefined'.
-scripts/max-size-test.ts(37,14): error TS2339: Property 'writeSnapshot' does not exist on type 'String'.
-scripts/max-size-test.ts(38,17): error TS2367: This condition will always return 'false' since the types 'HTMLElement' and 'number' have no overlap.
-scripts/max-size-test.ts(41,16): error TS2367: This condition will always return 'false' since the types 'HTMLElement' and 'number' have no overlap.
-scripts/max-size-test.ts(46,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/max-size-test.ts(46,51): error TS2304: Cannot find name 'LRUCache'.
-scripts/max-size-test.ts(49,14): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-scripts/max-size-test.ts(56,19): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-scripts/max-size-test.ts(61,50): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 

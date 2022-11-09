@@ -57,7 +57,7 @@ colors.stripColors = colors.strip = function(str: String) {
 };
 
 // eslint-disable-next-line no-unused-vars
-var stylize: Number = colors.stylize = function stylize(str: String, style: String): String {
+var stylize: Boolean = colors.stylize = function stylize(str: String, style: String): String {
   if (!colors.enabled) {
     return str+'';
   }

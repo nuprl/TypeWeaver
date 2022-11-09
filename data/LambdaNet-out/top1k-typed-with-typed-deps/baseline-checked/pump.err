@@ -13,29 +13,4 @@ index.ts(60,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(
 index.ts(67,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(67,55): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(68,9): error TS2322: Type 'boolean' is not assignable to type 'Number'.
-test-browser.ts(4,9): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-test-browser.ts(4,28): error TS2339: Property 'Readable' does not exist on type 'String'.
-test-browser.ts(5,29): error TS2339: Property 'Writable' does not exist on type 'String'.
-test-browser.ts(8,13): error TS2348: Value of type 'BufferConstructor' is not callable. Did you mean to include 'new'?
-test-browser.ts(11,4): error TS2339: Property '_write' does not exist on type 'Object'.
-test-browser.ts(18,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-test-browser.ts(21,33): error TS2554: Expected 0 arguments, but got 1.
-test-browser.ts(35,18): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(timeoutId: string | number | Timeout | undefined): void', gave the following error.
-    Argument of type 'Number' is not assignable to parameter of type 'string | number | Timeout | undefined'.
-  Overload 2 of 2, '(id?: number | undefined): void', gave the following error.
-    Argument of type 'Number' is not assignable to parameter of type 'number'.
-      'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-test-browser.ts(39,4): error TS2339: Property 'on' does not exist on type 'Object'.
-test-browser.ts(63,5): error TS2739: Type 'Timeout' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-test-node.ts(7,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-test-node.ts(10,33): error TS2554: Expected 0 arguments, but got 1.
-test-node.ts(24,18): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(timeoutId: string | number | Timeout | undefined): void', gave the following error.
-    Argument of type 'Number' is not assignable to parameter of type 'string | number | Timeout | undefined'.
-  Overload 2 of 2, '(id?: number | undefined): void', gave the following error.
-    Argument of type 'Number' is not assignable to parameter of type 'number'.
-      'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-test-node.ts(28,4): error TS2339: Property 'on' does not exist on type 'Object'.
-test-node.ts(51,5): error TS2322: Type 'Timeout' is not assignable to type 'Number'.
 

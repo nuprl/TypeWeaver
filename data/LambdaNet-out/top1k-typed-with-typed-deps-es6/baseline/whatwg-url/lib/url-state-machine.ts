@@ -486,7 +486,7 @@ function isNormalizedWindowsDriveLetter(string: String): Boolean {
   return /^[A-Za-z]:$/u.test(string);
 }
 
-function URLStateMachine(input: Element, base: String, encodingOverride: Number, url: String, stateOverride: String): Void {
+function URLStateMachine(input: Element, base: String, encodingOverride: Number, url: String, stateOverride: Object): Void {
   this.pointer = 0;
   this.input = input;
   this.base = base || null;
@@ -535,7 +535,7 @@ function URLStateMachine(input: Element, base: String, encodingOverride: Number,
     const cStr: String = isNaN(c) ? undefined : String.fromCodePoint(c);
 
     // exec state machine
-    const ret: Number = this[`parse ${this.state}`](c, cStr);
+    const ret: Boolean = this[`parse ${this.state}`](c, cStr);
     if (!ret) {
       break; // terminate algorithm
     } else if (ret === failure) {

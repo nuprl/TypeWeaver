@@ -385,7 +385,7 @@ export default class CachedInputFileSystem {
 		);
 		const lstat: Function = this._lstatBackend.provide;
 		this.lstat = /** @type {FileSystem["lstat"]} */ (lstat);
-		const lstatSync: String = this._lstatBackend.provideSync;
+		const lstatSync: Function = this._lstatBackend.provideSync;
 		this.lstatSync = /** @type {SyncFileSystem["lstatSync"]} */ (lstatSync);
 
 		this._statBackend = createBackend(
@@ -396,7 +396,7 @@ export default class CachedInputFileSystem {
 		);
 		const stat: Array = this._statBackend.provide;
 		this.stat = /** @type {FileSystem["stat"]} */ (stat);
-		const statSync: Number = this._statBackend.provideSync;
+		const statSync: Function = this._statBackend.provideSync;
 		this.statSync = /** @type {SyncFileSystem["statSync"]} */ (statSync);
 
 		this._readdirBackend = createBackend(
@@ -407,7 +407,7 @@ export default class CachedInputFileSystem {
 		);
 		const readdir: Array = this._readdirBackend.provide;
 		this.readdir = /** @type {FileSystem["readdir"]} */ (readdir);
-		const readdirSync: Number = this._readdirBackend.provideSync;
+		const readdirSync: Function = this._readdirBackend.provideSync;
 		this.readdirSync = /** @type {SyncFileSystem["readdirSync"]} */ (readdirSync);
 
 		this._readFileBackend = createBackend(
@@ -462,7 +462,7 @@ export default class CachedInputFileSystem {
 		);
 		const readlink: Array = this._readlinkBackend.provide;
 		this.readlink = /** @type {FileSystem["readlink"]} */ (readlink);
-		const readlinkSync: Number = this._readlinkBackend.provideSync;
+		const readlinkSync: Function = this._readlinkBackend.provideSync;
 		this.readlinkSync = /** @type {SyncFileSystem["readlinkSync"]} */ (readlinkSync);
 	}
 

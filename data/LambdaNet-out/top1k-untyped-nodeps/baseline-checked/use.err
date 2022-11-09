@@ -1,49 +1,27 @@
 examples/app.ts(5,37): error TS2304: Cannot find name 'Void'.
-examples/app.ts(6,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-examples/app.ts(10,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 examples/app.ts(14,19): error TS2304: Cannot find name 'Void'.
-examples/app.ts(15,11): error TS2554: Expected 2 arguments, but got 1.
-examples/app.ts(15,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-examples/app.ts(16,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-examples/app.ts(17,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 examples/app.ts(19,6): error TS2339: Property 'inherits' does not exist on type 'String'.
 examples/app.ts(22,31): error TS2538: Type 'String' cannot be used as an index type.
-examples/app.ts(22,39): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+examples/app.ts(22,39): error TS2350: Only a void function can be called with the 'new' keyword.
 examples/app.ts(28,10): error TS2393: Duplicate function implementation.
 examples/app.ts(28,17): error TS2304: Cannot find name 'Void'.
-examples/app.ts(29,11): error TS2554: Expected 2 arguments, but got 1.
-examples/app.ts(29,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-examples/app.ts(30,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-examples/app.ts(31,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 examples/app.ts(33,6): error TS2339: Property 'inherits' does not exist on type 'String'.
 examples/app.ts(36,45): error TS2538: Type 'String' cannot be used as an index type.
-examples/app.ts(36,53): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+examples/app.ts(36,53): error TS2350: Only a void function can be called with the 'new' keyword.
 examples/app.ts(42,24): error TS2304: Cannot find name 'Void'.
-examples/app.ts(43,11): error TS2554: Expected 2 arguments, but got 1.
-examples/app.ts(43,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-examples/app.ts(44,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-examples/app.ts(45,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 examples/app.ts(47,6): error TS2339: Property 'inherits' does not exist on type 'String'.
 examples/app.ts(50,33): error TS2538: Type 'String' cannot be used as an index type.
-examples/app.ts(50,41): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+examples/app.ts(50,41): error TS2350: Only a void function can be called with the 'new' keyword.
 examples/app.ts(56,18): error TS2304: Cannot find name 'Void'.
-examples/app.ts(57,11): error TS2554: Expected 2 arguments, but got 1.
-examples/app.ts(57,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-examples/app.ts(58,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-examples/app.ts(59,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 examples/app.ts(61,6): error TS2339: Property 'inherits' does not exist on type 'String'.
 examples/app.ts(64,35): error TS2538: Type 'String' cannot be used as an index type.
-examples/app.ts(64,43): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+examples/app.ts(64,43): error TS2350: Only a void function can be called with the 'new' keyword.
 examples/app.ts(70,19): error TS2304: Cannot find name 'Void'.
-examples/app.ts(71,11): error TS2554: Expected 2 arguments, but got 1.
-examples/app.ts(71,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-examples/app.ts(72,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 examples/app.ts(74,6): error TS2339: Property 'inherits' does not exist on type 'String'.
 examples/app.ts(76,52): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/app.ts(77,8): error TS2538: Type 'String' cannot be used as an index type.
-examples/app.ts(83,26): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+examples/app.ts(83,26): error TS2350: Only a void function can be called with the 'new' keyword.
 examples/app.ts(84,7): error TS2339: Property 'use' does not exist on type 'HTMLElement'.
-examples/app.ts(84,37): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 examples/app.ts(85,12): error TS2339: Property 'isItem' does not exist on type 'Object'.
 examples/app.ts(89,30): error TS2339: Property 'app' does not exist on type 'HTMLElement'.
 examples/app.ts(90,35): error TS2339: Property 'collection' does not exist on type 'HTMLElement'.
@@ -52,15 +30,13 @@ examples/app.ts(91,30): error TS2339: Property 'item' does not exist on type 'HT
 examples/layered.ts(2,5): error TS2300: Duplicate identifier 'define'.
 examples/layered.ts(5,10): error TS2393: Duplicate function implementation.
 examples/layered.ts(5,29): error TS2304: Cannot find name 'Void'.
-examples/layered.ts(6,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-examples/layered.ts(7,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-examples/layered.ts(11,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-examples/layered.ts(14,22): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+examples/layered.ts(11,10): error TS2350: Only a void function can be called with the 'new' keyword.
+examples/layered.ts(14,22): error TS2350: Only a void function can be called with the 'new' keyword.
 examples/layered.ts(15,19): error TS2339: Property 'create' does not exist on type 'HTMLElement'.
 examples/layered.ts(16,19): error TS2339: Property 'create' does not exist on type 'Object'.
 examples/layered.ts(17,19): error TS2339: Property 'create' does not exist on type 'Object'.
-examples/layered.ts(18,19): error TS2339: Property 'create' does not exist on type 'Object'.
-examples/layered.ts(19,19): error TS2339: Property 'create' does not exist on type 'Object'.
+examples/layered.ts(18,24): error TS2339: Property 'create' does not exist on type 'Object'.
+examples/layered.ts(19,19): error TS2339: Property 'create' does not exist on type 'HTMLElement'.
 examples/layered.ts(21,3): error TS2540: Cannot assign to 'children' because it is a read-only property.
 examples/layered.ts(22,3): error TS2339: Property 'use' does not exist on type 'HTMLElement'.
 examples/layered.ts(23,15): error TS2339: Property 'name' does not exist on type 'Object'.
@@ -71,7 +47,7 @@ examples/layered.ts(30,3): error TS2339: Property 'run' does not exist on type '
 examples/layered.ts(31,3): error TS2339: Property 'run' does not exist on type 'Object'.
 examples/layered.ts(32,3): error TS2339: Property 'run' does not exist on type 'Object'.
 examples/layered.ts(33,3): error TS2339: Property 'run' does not exist on type 'Object'.
-examples/layered.ts(34,3): error TS2339: Property 'run' does not exist on type 'Object'.
+examples/layered.ts(34,3): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 examples/layered.ts(35,3): error TS2339: Property 'run' does not exist on type 'Object'.
 gulpfile.ts(8,6): error TS2339: Property 'task' does not exist on type 'String'.
 gulpfile.ts(9,15): error TS2339: Property 'src' does not exist on type 'String'.
@@ -109,7 +85,6 @@ index.ts(72,14): error TS2345: Argument of type 'Object' is not assignable to pa
 index.ts(75,14): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(75,27): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(76,11): error TS2339: Property 'use' does not exist on type 'Object'.
-index.ts(79,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(80,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(80,27): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(84,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -118,16 +93,11 @@ index.ts(95,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(
 index.ts(99,17): error TS2345: Argument of type 'string | any[]' is not assignable to parameter of type 'String'.
   Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 index.ts(100,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(110,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(111,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(111,27): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(113,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(113,48): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(116,21): error TS2339: Property 'hook' does not exist on type 'Object'.
 index.ts(117,12): error TS2339: Property 'hook' does not exist on type 'Object'.
-index.ts(138,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(138,44): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(149,10): error TS2300: Duplicate identifier 'define'.
 index.ts(149,57): error TS2304: Cannot find name 'Void'.
 index.ts(150,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.

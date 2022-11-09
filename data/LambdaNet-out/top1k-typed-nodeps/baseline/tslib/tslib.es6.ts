@@ -176,7 +176,7 @@ export function __spreadArray(to: Array, from: Array, pack: String): Object {
     return to.concat(ar || Array.prototype.slice.call(from));
 }
 
-export function __await(v: String): String {
+export function __await(v: String): Void {
     return this instanceof __await ? (this.v = v, this) : new __await(v);
 }
 
@@ -203,7 +203,7 @@ export function __asyncValues(o: Object): Promise {
     var m: Function = o[Symbol.asyncIterator], i: Object;
     return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
     function verb(n: String): Void { i[n] = o[n] && function (v: Object) { return new Promise(function (resolve: String, reject: String) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
-    function settle(resolve: Function, reject: String, d: Boolean, v: Array): Void { Promise.resolve(v).then(function(v: String) { resolve({ value: v, done: d }); }, reject); }
+    function settle(resolve: Function, reject: String, d: Boolean, v: Function): Void { Promise.resolve(v).then(function(v: String) { resolve({ value: v, done: d }); }, reject); }
 }
 
 export function __makeTemplateObject(cooked: Object, raw: String): Object {

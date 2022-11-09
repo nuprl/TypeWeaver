@@ -197,17 +197,17 @@ class Watcher extends EventEmitter {
 }
 
 const createDirectWatcher: Function = (filePath: String) => {
-	const existing: String = directWatchers.get(filePath);
+	const existing: RecursiveWatcher = directWatchers.get(filePath);
 	if (existing !== undefined) return existing;
-	const w: Watchpack = new DirectWatcher(filePath);
+	const w: WatcherManager = new DirectWatcher(filePath);
 	directWatchers.set(filePath, w);
 	return w;
 };
 
 const createRecursiveWatcher: Function = (rootPath: String) => {
-	const existing: String = recursiveWatchers.get(rootPath);
+	const existing: RecursiveWatcher = recursiveWatchers.get(rootPath);
 	if (existing !== undefined) return existing;
-	const w: Watchpack = new RecursiveWatcher(rootPath);
+	const w: WatcherManager = new RecursiveWatcher(rootPath);
 	recursiveWatchers.set(rootPath, w);
 	return w;
 };
@@ -215,7 +215,7 @@ const createRecursiveWatcher: Function = (rootPath: String) => {
 const execute: Function = () => {
 	/** @type {Map<string, Watcher[] | Watcher>} */
 	const map: Map = new Map();
-	const addWatcher: Function = (watcher: Watcher, filePath: String) => {
+	const addWatcher: Function = (watcher: DirectoryWatcher, filePath: String) => {
 		const entry: Array = map.get(filePath);
 		if (entry === undefined) {
 			map.set(filePath, watcher);
@@ -234,7 +234,7 @@ const execute: Function = () => {
 	if (!SUPPORTS_RECURSIVE_WATCHING || watcherLimit - watcherCount >= map.size) {
 		// Create watchers for all entries in the map
 		for (const [filePath, entry] of map) {
-			const w: DirectWatcher = createDirectWatcher(filePath);
+			const w: RecursiveWatcher = createDirectWatcher(filePath);
 			if (Array.isArray(entry)) {
 				for (const item of entry) w.add(item);
 			} else {
@@ -264,7 +264,7 @@ const execute: Function = () => {
 	for (const [filePath, entry] of plan) {
 		if (entry.size === 1) {
 			for (const [watcher, filePath] of entry) {
-				const w: DirectWatcher = createDirectWatcher(filePath);
+				const w: RecursiveWatcher = createDirectWatcher(filePath);
 				const old: RecursiveWatcher = underlyingWatcher.get(watcher);
 				if (old === w) continue;
 				w.add(watcher);
@@ -282,7 +282,7 @@ const execute: Function = () => {
 				}
 			} else {
 				for (const filePath of filePaths) {
-					const w: DirectWatcher = createDirectWatcher(filePath);
+					const w: RecursiveWatcher = createDirectWatcher(filePath);
 					for (const watcher of entry.keys()) {
 						const old: RecursiveWatcher = underlyingWatcher.get(watcher);
 						if (old === w) continue;
@@ -296,9 +296,9 @@ const execute: Function = () => {
 };
 
 exports.watch = (filePath: String) => {
-	const watcher: Watchpack = new Watcher();
+	const watcher: DirectoryWatcher = new Watcher();
 	// Find an existing watcher
-	const directWatcher: DirectWatcher = directWatchers.get(filePath);
+	const directWatcher: RecursiveWatcher = directWatchers.get(filePath);
 	if (directWatcher !== undefined) {
 		directWatcher.add(watcher);
 		return watcher;

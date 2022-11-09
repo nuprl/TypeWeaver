@@ -2,7 +2,6 @@ index.ts(4,21): error TS2307: Cannot find module './lib/regexes.js' or its corre
 index.ts(5,26): error TS2732: Cannot find module './lib/mappingTable.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 index.ts(9,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(12,38): error TS7031: Binding element 'useSTD3ASCIIRules' implicitly has an 'any' type.
 index.ts(12,60): error TS2304: Cannot find name 'Void'.
 index.ts(25,41): error TS2339: Property 'disallowed_STD3_valid' does not exist on type 'Object'.
 index.ts(25,95): error TS2339: Property 'disallowed_STD3_mapped' does not exist on type 'Object'.
@@ -11,24 +10,15 @@ index.ts(27,47): error TS2339: Property 'disallowed_STD3_valid' does not exist o
 index.ts(28,32): error TS2339: Property 'valid' does not exist on type 'Object'.
 index.ts(29,47): error TS2339: Property 'disallowed_STD3_mapped' does not exist on type 'Object'.
 index.ts(30,32): error TS2339: Property 'mapped' does not exist on type 'Object'.
-index.ts(44,41): error TS7031: Binding element 'useSTD3ASCIIRules' implicitly has an 'any' type.
-index.ts(44,60): error TS7031: Binding element 'processingOption' implicitly has an 'any' type.
 index.ts(44,81): error TS2304: Cannot find name 'Void'.
-index.ts(49,42): error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'Function'.
-  Type 'undefined' is not assignable to type 'Function'.
+index.ts(49,42): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 index.ts(52,27): error TS2339: Property 'disallowed' does not exist on type 'Object'.
 index.ts(56,27): error TS2339: Property 'ignored' does not exist on type 'Object'.
 index.ts(58,27): error TS2339: Property 'mapped' does not exist on type 'Object'.
 index.ts(61,27): error TS2339: Property 'deviation' does not exist on type 'Object'.
 index.ts(68,27): error TS2339: Property 'valid' does not exist on type 'Object'.
-index.ts(80,41): error TS7031: Binding element 'checkHyphens' implicitly has an 'any' type.
-index.ts(80,55): error TS7031: Binding element 'checkBidi' implicitly has an 'any' type.
-index.ts(80,66): error TS7031: Binding element 'checkJoiners' implicitly has an 'any' type.
-index.ts(80,80): error TS7031: Binding element 'processingOption' implicitly has an 'any' type.
-index.ts(80,98): error TS7031: Binding element 'useSTD3ASCIIRules' implicitly has an 'any' type.
 index.ts(80,120): error TS2304: Cannot find name 'Void'.
-index.ts(100,33): error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'Function'.
-  Type 'undefined' is not assignable to type 'Function'.
+index.ts(100,33): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 index.ts(101,75): error TS2339: Property 'valid' does not exist on type 'Object'.
 index.ts(103,36): error TS2339: Property 'valid' does not exist on type 'Object'.
 index.ts(103,71): error TS2339: Property 'deviation' does not exist on type 'Object'.
@@ -39,12 +29,11 @@ index.ts(179,48): error TS2345: Argument of type 'Object' is not assignable to p
     Type 'Object' is missing the following properties from type '{ useSTD3ASCIIRules: any; processingOption: any; }': useSTD3ASCIIRules, processingOption
 index.ts(185,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(207,23): error TS2304: Cannot find name 'Void'.
-index.ts(207,51): error TS2345: Argument of type '{ processingOption: String; checkBidi: any; constructor: Function; toString(): string; toLocaleString(): string; valueOf(): Object; hasOwnProperty(v: PropertyKey): boolean; isPrototypeOf(v: Object): boolean; propertyIsEnumerable(v: PropertyKey): boolean; abbrev(): { ...; }; }' is not assignable to parameter of type '{ checkHyphens: any; checkBidi: any; checkJoiners: any; processingOption: any; useSTD3ASCIIRules: any; }'.
-  Type '{ processingOption: String; checkBidi: any; constructor: Function; toString(): string; toLocaleString(): string; valueOf(): Object; hasOwnProperty(v: PropertyKey): boolean; isPrototypeOf(v: Object): boolean; propertyIsEnumerable(v: PropertyKey): boolean; abbrev(): { ...; }; }' is missing the following properties from type '{ checkHyphens: any; checkBidi: any; checkJoiners: any; processingOption: any; useSTD3ASCIIRules: any; }': checkHyphens, checkJoiners, useSTD3ASCIIRules
+index.ts(207,51): error TS2345: Argument of type '{ processingOption: String; checkBidi: Boolean; constructor: Function; toString(): string; toLocaleString(): string; valueOf(): Object; hasOwnProperty(v: PropertyKey): boolean; isPrototypeOf(v: Object): boolean; propertyIsEnumerable(v: PropertyKey): boolean; abbrev(): { ...; }; }' is not assignable to parameter of type '{ checkHyphens: any; checkBidi: any; checkJoiners: any; processingOption: any; useSTD3ASCIIRules: any; }'.
+  Type '{ processingOption: String; checkBidi: Boolean; constructor: Function; toString(): string; toLocaleString(): string; valueOf(): Object; hasOwnProperty(v: PropertyKey): boolean; isPrototypeOf(v: Object): boolean; propertyIsEnumerable(v: PropertyKey): boolean; abbrev(): { ...; }; }' is missing the following properties from type '{ checkHyphens: any; checkBidi: any; checkJoiners: any; processingOption: any; useSTD3ASCIIRules: any; }': checkHyphens, checkJoiners, useSTD3ASCIIRules
 index.ts(210,26): error TS2339: Property 'checkBidi' does not exist on type 'Object'.
 index.ts(230,10): error TS2304: Cannot find name 'Void'.
 index.ts(242,23): error TS2551: Property 'string' does not exist on type 'Object'. Did you mean 'toString'?
-index.ts(243,23): error TS7006: Parameter 'l' implicitly has an 'any' type.
 index.ts(248,16): error TS2339: Property 'error' does not exist on type 'Object'.
 index.ts(257,14): error TS2339: Property 'error' does not exist on type 'Object'.
 index.ts(262,16): error TS2339: Property 'error' does not exist on type 'Object'.
@@ -58,18 +47,10 @@ scripts/generateMappingTable.ts(9,24): error TS2314: Generic type 'Map<K, V>' re
 scripts/generateMappingTable.ts(11,39): error TS2339: Property 'text' does not exist on type 'Element'.
 scripts/generateMappingTable.ts(13,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/generateMappingTable.ts(17,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/generateMappingTable.ts(26,36): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-scripts/generateMappingTable.ts(27,34): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-scripts/generateMappingTable.ts(27,46): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-scripts/generateMappingTable.ts(30,16): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 scripts/generateMappingTable.ts(32,37): error TS2339: Property 'valid' does not exist on type 'Object'.
 scripts/generateMappingTable.ts(39,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/generateMappingTable.ts(45,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 scripts/generateRegexes.ts(29,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/generateRegexes.ts(29,28): error TS7019: Rest parameter 'regs' implicitly has an 'any[]' type.
 scripts/generateRegexes.ts(44,37): error TS2339: Property 'Mark' does not exist on type 'Object'.
 scripts/generateRegexes.ts(50,43): error TS2339: Property 'CombiningClassVirama' does not exist on type 'Object'.
 scripts/generateRegexes.ts(54,36): error TS2339: Property 'JT' does not exist on type 'Object'.
@@ -112,25 +93,19 @@ scripts/generateRegexes.ts(107,13): error TS2339: Property 'NSM' does not exist 
 scripts/generateRegexes.ts(112,33): error TS2339: Property 'L' does not exist on type 'Object'.
 scripts/generateRegexes.ts(112,42): error TS2339: Property 'EN' does not exist on type 'Object'.
 scripts/generateRegexes.ts(112,63): error TS2339: Property 'NSM' does not exist on type 'Object'.
-scripts/generateRegexes.ts(118,30): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 scripts/generateRegexes.ts(124,4): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
 scripts/generateRegexes.ts(124,23): error TS2339: Property 'resolve' does not exist on type 'String'.
 scripts/generateUnicodeCodePoints.ts(9,3): error TS1108: A 'return' statement can only be used within a function body.
 scripts/generateUnicodeCodePoints.ts(13,7): error TS2739: Type 'Set<string>' is missing the following properties from type 'Error': name, message
 scripts/generateUnicodeCodePoints.ts(15,40): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null | undefined; flag?: string | undefined; } | null | undefined): Buffer', gave the following error.
+  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
       Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-  Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string | undefined; } | BufferEncoding): string', gave the following error.
+  Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string; } | BufferEncoding): string', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-  Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string | undefined; }) | null | undefined): string | Buffer', gave the following error.
+  Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string; })): string | Buffer', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
 scripts/generateUnicodeCodePoints.ts(16,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/generateUnicodeCodePoints.ts(25,28): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-scripts/generateUnicodeCodePoints.ts(26,32): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 scripts/generateUnicodeCodePoints.ts(26,89): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 scripts/generateUnicodeCodePoints.ts(29,14): error TS2538: Type 'String' cannot be used as an index type.

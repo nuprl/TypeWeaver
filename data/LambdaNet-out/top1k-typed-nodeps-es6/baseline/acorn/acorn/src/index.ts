@@ -90,7 +90,7 @@ export function parse(input: Parser, options: Object): RegExpValidationState {
 // offset in a string. Useful for parsing mixed-language formats
 // that embed JavaScript expressions.
 
-export function parseExpressionAt(input: Parser, pos: Function, options: Object): Promise {
+export function parseExpressionAt(input: Parser, pos: Function, options: Object): RegExpValidationState {
   return Parser.parseExpressionAt(input, pos, options)
 }
 

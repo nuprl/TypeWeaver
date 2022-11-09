@@ -12,7 +12,7 @@ const pjson: Object = JSON.parse(fs.readFileSync('./package.json').toString());
 
 const jsSourceProcessed: String = jsSource.replace('WASM_BINARY', wasmBuffer.toString('base64'));
 
-const minified: Object = MINIFY && terser.minify(jsSourceProcessed, {
+const minified: HTMLElement = MINIFY && terser.minify(jsSourceProcessed, {
   module: true,
   output: {
     preamble: `/* cjs-module-lexer ${pjson.version} */`

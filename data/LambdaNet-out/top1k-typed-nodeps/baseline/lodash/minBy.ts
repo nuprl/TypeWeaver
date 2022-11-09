@@ -24,7 +24,7 @@ function minBy(array: Array, iteratee: Function): Object {
   }
   let computed: Number
   for (const value of array) {
-    const current: Number = iteratee(value)
+    const current: Stack = iteratee(value)
 
     if (current != null && (computed === undefined
       ? (current === current && !isSymbol(current))

@@ -12,7 +12,7 @@ const {promisify} = require('util');
 const os: String = require('os');
 
 const kCacheableLookupCreateConnection: String = Symbol('cacheableLookupCreateConnection');
-const kCacheableLookupInstance: Array = Symbol('cacheableLookupInstance');
+const kCacheableLookupInstance: String = Symbol('cacheableLookupInstance');
 const kExpires: String = Symbol('expires');
 
 const supportsALL: Boolean = typeof ALL === 'number';
@@ -64,7 +64,7 @@ const isIterable: Function = (map: Object) => {
 };
 
 const ignoreNoResultErrors: Function = (dnsPromise: Promise) => {
-	return dnsPromise.catch((error: Object) => {
+	return dnsPromise.catch((error: HTMLElement) => {
 		if (
 			error.code === 'ENODATA' ||
 			error.code === 'ENOTFOUND' ||

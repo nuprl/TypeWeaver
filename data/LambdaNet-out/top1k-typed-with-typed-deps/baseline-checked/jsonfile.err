@@ -4,15 +4,10 @@ index.ts(10,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(
 index.ts(10,63): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 index.ts(15,31): error TS2339: Property 'fs' does not exist on type 'Object'.
 index.ts(17,62): error TS2339: Property 'throws' does not exist on type 'Object'.
-index.ts(19,41): error TS2339: Property 'fromCallback' does not exist on type 'String'.
-index.ts(19,57): error TS2339: Property 'readFile' does not exist on type 'Boolean'.
-index.ts(21,19): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-index.ts(25,22): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
+index.ts(19,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(19,40): error TS2339: Property 'fromCallback' does not exist on type 'String'.
+index.ts(19,56): error TS2339: Property 'readFile' does not exist on type 'Boolean'.
 index.ts(25,46): error TS2339: Property 'reviver' does not exist on type 'Object'.
-index.ts(28,7): error TS2571: Object is of type 'unknown'.
-index.ts(28,33): error TS2571: Object is of type 'unknown'.
 index.ts(38,39): error TS2339: Property 'fromPromise' does not exist on type 'String'.
 index.ts(40,61): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(45,31): error TS2339: Property 'fs' does not exist on type 'Object'.
@@ -21,8 +16,6 @@ index.ts(50,30): error TS2339: Property 'readFileSync' does not exist on type 'B
 index.ts(52,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(52,40): error TS2339: Property 'reviver' does not exist on type 'Object'.
-index.ts(55,7): error TS2571: Object is of type 'unknown'.
-index.ts(55,33): error TS2571: Object is of type 'unknown'.
 index.ts(63,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(63,64): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 index.ts(63,75): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
@@ -37,7 +30,6 @@ index.ts(76,33): error TS2345: Argument of type 'String' is not assignable to pa
 index.ts(78,13): error TS2339: Property 'writeFileSync' does not exist on type 'Boolean'.
 utils.ts(1,10): error TS2451: Cannot redeclare block-scoped variable 'stringify'.
 utils.ts(1,84): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
-utils.ts(1,84): error TS7031: Binding element 'spaces' implicitly has an 'any' type.
 utils.ts(1,100): error TS2304: Cannot find name 'Void'.
 utils.ts(8,10): error TS2451: Cannot redeclare block-scoped variable 'stripBom'.
 

@@ -21,7 +21,7 @@ import last from './last.js'
  * // => [1.2, 3.4]
  */
 function xorBy(...arrays): String {
-  let iteratee: Function = last(arrays)
+  let iteratee: String = last(arrays)
   if (isArrayLikeObject(iteratee)) {
     iteratee = undefined
   }

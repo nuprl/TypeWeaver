@@ -1,8 +1,6 @@
 dist/object-assign-auto.min.ts(1,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 dist/object-assign-auto.min.ts(1,100): error TS2538: Type 'String' cannot be used as an index type.
 dist/object-assign-auto.min.ts(1,110): error TS2538: Type 'String' cannot be used as an index type.
-dist/object-assign-auto.min.ts(1,118): error TS2322: Type 'false | NodeRequire' is not assignable to type 'Function'.
-  Type 'boolean' is not assignable to type 'Function'.
 dist/object-assign-auto.min.ts(1,206): error TS2554: Expected 1 arguments, but got 2.
 dist/object-assign-auto.min.ts(1,272): error TS2339: Property 'code' does not exist on type 'Error'.
 dist/object-assign-auto.min.ts(1,316): error TS2538: Type 'String' cannot be used as an index type.
@@ -14,8 +12,6 @@ dist/object-assign-auto.min.ts(1,406): error TS2554: Expected 2 arguments, but g
 dist/object-assign-auto.min.ts(1,420): error TS2339: Property 'exports' does not exist on type 'Object'.
 dist/object-assign-auto.min.ts(1,446): error TS2538: Type 'String' cannot be used as an index type.
 dist/object-assign-auto.min.ts(1,522): error TS2554: Expected 2 arguments, but got 1.
-dist/object-assign-auto.min.ts(1,1003): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'Object'.
-  Type 'undefined' is not assignable to type 'Object'.
 dist/object-assign-auto.min.ts(1,1047): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 dist/object-assign-auto.min.ts(1,1064): error TS2339: Property 'enumerable' does not exist on type 'Object'.
 dist/object-assign-auto.min.ts(1,1079): error TS2538: Type 'String' cannot be used as an index type.
@@ -25,8 +21,6 @@ dist/object-assign-auto.min.ts(1,1225): error TS2339: Property 'exports' does no
 dist/object-assign-auto.ts(1,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 dist/object-assign-auto.ts(1,102): error TS2538: Type 'String' cannot be used as an index type.
 dist/object-assign-auto.ts(1,112): error TS2538: Type 'String' cannot be used as an index type.
-dist/object-assign-auto.ts(1,120): error TS2322: Type 'false | NodeRequire' is not assignable to type 'Function'.
-  Type 'boolean' is not assignable to type 'Function'.
 dist/object-assign-auto.ts(1,274): error TS2339: Property 'code' does not exist on type 'Error'.
 dist/object-assign-auto.ts(1,318): error TS2538: Type 'String' cannot be used as an index type.
 dist/object-assign-auto.ts(1,336): error TS2538: Type 'String' cannot be used as an index type.
@@ -36,12 +30,9 @@ dist/object-assign-auto.ts(1,392): error TS2538: Type 'String' cannot be used as
 dist/object-assign-auto.ts(1,408): error TS2554: Expected 2 arguments, but got 1.
 dist/object-assign-auto.ts(1,422): error TS2339: Property 'exports' does not exist on type 'Object'.
 dist/object-assign-auto.ts(1,448): error TS2538: Type 'String' cannot be used as an index type.
-dist/object-assign-auto.ts(1,463): error TS2322: Type 'false | NodeRequire' is not assignable to type 'Function'.
-  Type 'boolean' is not assignable to type 'Function'.
 dist/object-assign-auto.ts(1,538): error TS2554: Expected 2 arguments, but got 1.
 dist/object-assign-auto.ts(26,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-dist/object-assign-auto.ts(29,13): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'String'.
-  Type 'undefined' is not assignable to type 'String'.
+dist/object-assign-auto.ts(29,13): error TS2322: Type 'PropertyDescriptor' is not assignable to type 'String'.
 dist/object-assign-auto.ts(29,72): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 dist/object-assign-auto.ts(30,40): error TS2339: Property 'enumerable' does not exist on type 'String'.
 dist/object-assign-auto.ts(31,14): error TS2538: Type 'String' cannot be used as an index type.
@@ -52,13 +43,10 @@ dist/object-assign.min.ts(1,2): error TS1345: An expression of type 'void' canno
 dist/object-assign.min.ts(1,126): error TS2304: Cannot find name 'define'.
 dist/object-assign.min.ts(1,134): error TS2304: Cannot find name 'define'.
 dist/object-assign.min.ts(1,145): error TS2304: Cannot find name 'define'.
-dist/object-assign.min.ts(1,277): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 dist/object-assign.min.ts(1,284): error TS2339: Property 'ObjectAssign' does not exist on type 'Object'.
 dist/object-assign.min.ts(1,355): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 dist/object-assign.min.ts(1,419): error TS2538: Type 'String' cannot be used as an index type.
 dist/object-assign.min.ts(1,429): error TS2538: Type 'String' cannot be used as an index type.
-dist/object-assign.min.ts(1,437): error TS2322: Type 'false | NodeRequire' is not assignable to type 'Function'.
-  Type 'boolean' is not assignable to type 'Function'.
 dist/object-assign.min.ts(1,525): error TS2554: Expected 1 arguments, but got 2.
 dist/object-assign.min.ts(1,591): error TS2339: Property 'code' does not exist on type 'Error'.
 dist/object-assign.min.ts(1,635): error TS2538: Type 'String' cannot be used as an index type.
@@ -70,8 +58,6 @@ dist/object-assign.min.ts(1,725): error TS2554: Expected 2 arguments, but got 1.
 dist/object-assign.min.ts(1,739): error TS2339: Property 'exports' does not exist on type 'Object'.
 dist/object-assign.min.ts(1,765): error TS2538: Type 'String' cannot be used as an index type.
 dist/object-assign.min.ts(1,841): error TS2554: Expected 2 arguments, but got 1.
-dist/object-assign.min.ts(1,1220): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'Object'.
-  Type 'undefined' is not assignable to type 'Object'.
 dist/object-assign.min.ts(1,1264): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 dist/object-assign.min.ts(1,1281): error TS2339: Property 'enumerable' does not exist on type 'Object'.
 dist/object-assign.min.ts(1,1296): error TS2538: Type 'String' cannot be used as an index type.
@@ -83,12 +69,9 @@ dist/object-assign.ts(3,17): error TS2304: Cannot find name 'define'.
 dist/object-assign.ts(3,38): error TS2304: Cannot find name 'define'.
 dist/object-assign.ts(3,50): error TS2304: Cannot find name 'define'.
 dist/object-assign.ts(3,75): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-dist/object-assign.ts(3,217): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 dist/object-assign.ts(3,351): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 dist/object-assign.ts(3,417): error TS2538: Type 'String' cannot be used as an index type.
 dist/object-assign.ts(3,427): error TS2538: Type 'String' cannot be used as an index type.
-dist/object-assign.ts(3,435): error TS2322: Type 'false | NodeRequire' is not assignable to type 'Function'.
-  Type 'boolean' is not assignable to type 'Function'.
 dist/object-assign.ts(3,589): error TS2339: Property 'code' does not exist on type 'Error'.
 dist/object-assign.ts(3,633): error TS2538: Type 'String' cannot be used as an index type.
 dist/object-assign.ts(3,651): error TS2538: Type 'String' cannot be used as an index type.
@@ -98,12 +81,9 @@ dist/object-assign.ts(3,707): error TS2538: Type 'String' cannot be used as an i
 dist/object-assign.ts(3,723): error TS2554: Expected 2 arguments, but got 1.
 dist/object-assign.ts(3,737): error TS2339: Property 'exports' does not exist on type 'Object'.
 dist/object-assign.ts(3,763): error TS2538: Type 'String' cannot be used as an index type.
-dist/object-assign.ts(3,778): error TS2322: Type 'false | NodeRequire' is not assignable to type 'Function'.
-  Type 'boolean' is not assignable to type 'Function'.
 dist/object-assign.ts(3,853): error TS2554: Expected 2 arguments, but got 1.
 dist/object-assign.ts(23,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-dist/object-assign.ts(26,13): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'String'.
-  Type 'undefined' is not assignable to type 'String'.
+dist/object-assign.ts(26,13): error TS2322: Type 'PropertyDescriptor' is not assignable to type 'String'.
 dist/object-assign.ts(26,72): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 dist/object-assign.ts(27,40): error TS2339: Property 'enumerable' does not exist on type 'String'.
 dist/object-assign.ts(28,14): error TS2538: Type 'String' cannot be used as an index type.
@@ -111,8 +91,7 @@ dist/object-assign.ts(28,36): error TS2538: Type 'String' cannot be used as an i
 dist/object-assign.ts(35,24): error TS2304: Cannot find name 'Void'.
 dist/object-assign.ts(46,3): error TS1258: A default export must be at the top level of a file or module declaration.
 index.ts(20,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(23,11): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'String'.
-  Type 'undefined' is not assignable to type 'String'.
+index.ts(23,11): error TS2740: Type 'PropertyDescriptor' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(23,70): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 index.ts(24,38): error TS2339: Property 'enumerable' does not exist on type 'String'.
 index.ts(25,12): error TS2538: Type 'String' cannot be used as an index type.

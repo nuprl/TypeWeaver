@@ -1,7 +1,4 @@
-lib/LoaderLoadingError.ts(4,14): error TS7006: Parameter 'message' implicitly has an 'any' type.
-lib/LoaderRunner.ts(7,5): error TS2740: Type 'typeof readFile' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-lib/LoaderRunner.ts(10,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/LoaderRunner.ts(11,33): error TS2554: Expected 0 arguments, but got 1.
+lib/LoaderRunner.ts(11,33): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/LoaderRunner.ts(26,13): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(26,55): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
@@ -51,20 +48,14 @@ lib/LoaderRunner.ts(93,43): error TS2339: Property 'options' does not exist on t
 lib/LoaderRunner.ts(97,6): error TS2339: Property 'request' does not exist on type 'String'.
 lib/LoaderRunner.ts(104,91): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(109,10): error TS2339: Property 'async' does not exist on type 'Object'.
-lib/LoaderRunner.ts(111,22): error TS2322: Type 'undefined' is not assignable to type 'Boolean'.
 lib/LoaderRunner.ts(117,6): error TS2322: Type '() => void' is not assignable to type 'Boolean'.
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'Object' is not assignable to type 'boolean'.
 lib/LoaderRunner.ts(117,39): error TS2339: Property 'callback' does not exist on type 'Object'.
 lib/LoaderRunner.ts(132,15): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(132,55): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/LoaderRunner.ts(151,32): error TS2531: Object is possibly 'null'.
-lib/LoaderRunner.ts(151,34): error TS2339: Property 'stack' does not exist on type 'object'.
-lib/LoaderRunner.ts(151,55): error TS2531: Object is possibly 'null'.
-lib/LoaderRunner.ts(151,57): error TS2339: Property 'stack' does not exist on type 'object'.
 lib/LoaderRunner.ts(162,28): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(162,52): error TS2304: Cannot find name 'Void'.
-lib/LoaderRunner.ts(169,99): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 lib/LoaderRunner.ts(171,19): error TS2339: Property 'loaderIndex' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(171,48): error TS2339: Property 'loaders' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(174,55): error TS2339: Property 'loaders' does not exist on type 'HTMLElement'.
@@ -86,13 +77,11 @@ lib/LoaderRunner.ts(217,44): error TS2339: Property 'loaders' does not exist on 
 lib/LoaderRunner.ts(219,43): error TS2339: Property 'resourcePath' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(221,11): error TS2339: Property 'processResource' does not exist on type 'Object'.
 lib/LoaderRunner.ts(224,12): error TS2339: Property 'resourceBuffer' does not exist on type 'Object'.
-lib/LoaderRunner.ts(224,29): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 lib/LoaderRunner.ts(225,49): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-lib/LoaderRunner.ts(228,49): error TS2322: Type 'null' is not assignable to type 'string'.
-lib/LoaderRunner.ts(232,111): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
+lib/LoaderRunner.ts(228,48): error TS2345: Argument of type 'null[]' is not assignable to parameter of type 'String'.
+  Type 'null[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 lib/LoaderRunner.ts(233,19): error TS2339: Property 'loaderIndex' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(236,55): error TS2339: Property 'loaders' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(236,77): error TS2339: Property 'loaderIndex' does not exist on type 'HTMLElement'.
@@ -103,7 +92,6 @@ lib/LoaderRunner.ts(245,22): error TS2339: Property 'normalExecuted' does not ex
 lib/LoaderRunner.ts(250,40): error TS2339: Property 'raw' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(252,17): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'Function'.
   Type 'Number' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-lib/LoaderRunner.ts(255,7): error TS2740: Type 'any[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 lib/LoaderRunner.ts(260,44): error TS2322: Type '(resource: String) => String' is not assignable to type 'String'.
 lib/LoaderRunner.ts(261,54): error TS2339: Property 'path' does not exist on type 'Object'.
 lib/LoaderRunner.ts(265,14): error TS2322: Type '(options: Object, callback: Function) => Void' is not assignable to type 'String'.
@@ -119,8 +107,6 @@ lib/LoaderRunner.ts(276,68): error TS2345: Argument of type 'Number' is not assi
 lib/LoaderRunner.ts(277,65): error TS2339: Property 'path' does not exist on type 'Object'.
 lib/LoaderRunner.ts(278,66): error TS2339: Property 'query' does not exist on type 'Object'.
 lib/LoaderRunner.ts(279,71): error TS2339: Property 'fragment' does not exist on type 'Object'.
-lib/LoaderRunner.ts(280,6): error TS2322: Type 'String | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 lib/LoaderRunner.ts(284,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(285,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(286,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -145,7 +131,7 @@ lib/LoaderRunner.ts(310,87): error TS2304: Cannot find name 'Void'.
 lib/LoaderRunner.ts(313,16): error TS2339: Property 'getDependencies' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(313,62): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(316,16): error TS2339: Property 'getContextDependencies' does not exist on type 'HTMLElement'.
-lib/LoaderRunner.ts(316,76): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/LoaderRunner.ts(316,76): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(319,16): error TS2339: Property 'getMissingDependencies' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(319,76): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(322,16): error TS2339: Property 'clearDependencies' does not exist on type 'HTMLElement'.
@@ -187,14 +173,12 @@ lib/LoaderRunner.ts(380,86): error TS2339: Property 'query' does not exist on ty
 lib/LoaderRunner.ts(386,25): error TS2339: Property 'loaders' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(386,47): error TS2339: Property 'loaderIndex' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(410,35): error TS2339: Property 'resourceBuffer' does not exist on type 'Object'.
-lib/loadLoader.ts(4,74): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 lib/loadLoader.ts(5,12): error TS2339: Property 'type' does not exist on type 'Element'.
 lib/loadLoader.ts(8,32): error TS2339: Property 'pathToFileURL' does not exist on type 'String'.
 lib/loadLoader.ts(8,53): error TS2339: Property 'path' does not exist on type 'Element'.
 lib/loadLoader.ts(9,23): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/loadLoader.ts(11,26): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
   Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-lib/loadLoader.ts(13,4): error TS2322: Type 'undefined' is not assignable to type 'String'.
 lib/loadLoader.ts(19,40): error TS2339: Property 'path' does not exist on type 'Element'.
 lib/loadLoader.ts(23,31): error TS2339: Property 'code' does not exist on type 'Error'.
 lib/loadLoader.ts(27,6): error TS2740: Type 'Immediate' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.

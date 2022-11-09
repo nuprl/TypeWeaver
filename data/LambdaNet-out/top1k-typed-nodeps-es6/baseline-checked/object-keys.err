@@ -1,18 +1,16 @@
 implementation.ts(14,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-implementation.ts(56,10): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 implementation.ts(80,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 implementation.ts(80,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 implementation.ts(85,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-implementation.ts(122,16): error TS2454: Variable 'keysShim' is used before being assigned.
 index.ts(9,10): error TS2339: Property 'shim' does not exist on type 'String'.
 index.ts(13,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(15,5): error TS2554: Expected 0 arguments, but got 2.
 index.ts(17,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(25,3): error TS2322: Type 'String' is not assignable to type '{ (o: object): string[]; (o: {}): string[]; }'.
   Type 'String' provides no match for the signature '(o: object): string[]'.
-index.ts(27,2): error TS2322: Type '{ (o: object): string[]; (o: {}): string[]; }' is not assignable to type 'Boolean'.
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'Object' is not assignable to type 'boolean'.
+index.ts(27,2): error TS2322: Type 'String | { (o: object): string[]; (o: {}): string[]; }' is not assignable to type 'Boolean'.
+  Type 'String' is not assignable to type 'Boolean'.
+    The types returned by 'valueOf()' are incompatible between these types.
+      Type 'string' is not assignable to type 'boolean'.
 isArguments.ts(5,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 

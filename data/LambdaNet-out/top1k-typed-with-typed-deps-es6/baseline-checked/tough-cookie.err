@@ -8,38 +8,18 @@ lib/cookie.ts(84,9): error TS2322: Type 'string' is not assignable to type 'Numb
 lib/cookie.ts(85,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/cookie.ts(85,29): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/cookie.ts(85,50): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/cookie.ts(88,5): error TS2322: Type 'null' is not assignable to type 'Number'.
 lib/cookie.ts(118,7): error TS2740: Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lib/cookie.ts(133,40): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/cookie.ts(138,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/cookie.ts(143,5): error TS2322: Type 'null' is not assignable to type 'Number'.
-lib/cookie.ts(147,5): error TS2322: Type 'null' is not assignable to type 'Number'.
 lib/cookie.ts(150,35): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/cookie.ts(154,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(155,17): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/cookie.ts(164,5): error TS2322: Type 'null' is not assignable to type 'Object'.
 lib/cookie.ts(172,11): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-lib/cookie.ts(174,7): error TS2322: Type 'null' is not assignable to type 'Object'.
 lib/cookie.ts(186,36): error TS2538: Type 'String' cannot be used as an index type.
-lib/cookie.ts(187,3): error TS2322: Type 'Number | null' is not assignable to type 'Number'.
-  Type 'null' is not assignable to type 'Number'.
-lib/cookie.ts(195,5): error TS2322: Type 'undefined' is not assignable to type 'HTMLDivElement'.
 lib/cookie.ts(202,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/cookie.ts(204,5): error TS2322: Type 'undefined' is not assignable to type 'HTMLDivElement'.
-lib/cookie.ts(207,7): error TS2322: Type 'null' is not assignable to type 'Number'.
-lib/cookie.ts(208,7): error TS2322: Type 'null' is not assignable to type 'Number'.
 lib/cookie.ts(209,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/cookie.ts(210,7): error TS2322: Type 'null' is not assignable to type 'String'.
-lib/cookie.ts(211,7): error TS2322: Type 'null' is not assignable to type 'Function'.
-lib/cookie.ts(212,7): error TS2322: Type 'null' is not assignable to type 'Number'.
-lib/cookie.ts(231,16): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/cookie.ts(232,18): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/cookie.ts(233,18): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 lib/cookie.ts(247,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/cookie.ts(260,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -50,7 +30,6 @@ lib/cookie.ts(282,11): error TS2365: Operator '+=' cannot be applied to types 'N
 lib/cookie.ts(284,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/cookie.ts(308,5): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
 lib/cookie.ts(309,5): error TS2365: Operator '>' cannot be applied to types 'String' and 'number'.
-lib/cookie.ts(315,5): error TS2322: Type 'undefined' is not assignable to type 'HTMLDivElement'.
 lib/cookie.ts(318,3): error TS2740: Type 'Date' is missing the following properties from type 'HTMLDivElement': align, addEventListener, removeEventListener, accessKey, and 278 more.
 lib/cookie.ts(318,28): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -61,7 +40,6 @@ lib/cookie.ts(338,43): error TS2345: Argument of type 'String' is not assignable
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/cookie.ts(339,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/cookie.ts(348,5): error TS2322: Type 'null' is not assignable to type 'Boolean'.
 lib/cookie.ts(350,7): error TS2367: This condition will always return 'true' since the types 'Number' and 'boolean' have no overlap.
 lib/cookie.ts(371,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
@@ -89,7 +67,6 @@ lib/cookie.ts(491,69): error TS2345: Argument of type 'Number' is not assignable
 lib/cookie.ts(492,59): error TS2339: Property 'loose' does not exist on type 'Object'.
 lib/cookie.ts(504,38): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/cookie.ts(520,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/cookie.ts(532,7): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/cookie.ts(534,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/cookie.ts(535,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
@@ -120,10 +97,7 @@ lib/cookie.ts(671,14): error TS2339: Property 'path' does not exist on type 'Coo
 lib/cookie.ts(677,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(679,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/cookie.ts(681,5): error TS2322: Type 'unknown' is not assignable to type 'Object'.
 lib/cookie.ts(686,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/cookie.ts(688,5): error TS2322: Type 'null' is not assignable to type 'Object'.
-lib/cookie.ts(695,7): error TS2322: Type 'null' is not assignable to type 'Object'.
 lib/cookie.ts(702,9): error TS2322: Type 'Cookie' is not assignable to type 'Object'.
   The types returned by 'toString()' are incompatible between these types.
     Type 'String' is not assignable to type 'string'.
@@ -165,10 +139,10 @@ lib/cookie.ts(772,27): error TS2345: Argument of type 'Number' is not assignable
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/cookie.ts(779,41): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(791,19): error TS2769: No overload matches this call.
-  Overload 1 of 6, '(address: string, parser?: false | undefined): URLParse<string>', gave the following error.
+  Overload 1 of 6, '(address: string, parser?: false): URLParse<string>', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 6, '(address: string, location?: string | object | undefined, parser?: false | undefined): URLParse<string>', gave the following error.
+  Overload 2 of 6, '(address: string, location?: string | object, parser?: false): URLParse<string>', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/cookie.ts(815,42): error TS2349: This expression is not callable.
@@ -186,23 +160,6 @@ lib/cookie.ts(838,36): error TS2339: Property 'lastAccessed' does not exist on t
 lib/cookie.ts(839,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/cookie.ts(839,23): error TS2339: Property 'lastAccessed' does not exist on type 'Cookie'.
 lib/cookie.ts(847,31): error TS2339: Property 'serializableProperties' does not exist on type 'typeof Cookie'.
-lib/cookie.ts(848,11): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Cookie'.
-lib/cookie.ts(848,26): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-lib/cookie.ts(857,13): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Cookie'.
-lib/cookie.ts(858,11): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-lib/cookie.ts(860,11): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-lib/cookie.ts(861,13): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Cookie'.
-lib/cookie.ts(863,17): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Cookie'.
-lib/cookie.ts(866,13): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Cookie'.
-lib/cookie.ts(868,11): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-lib/cookie.ts(869,13): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Cookie'.
-lib/cookie.ts(869,39): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Cookie'.
-lib/cookie.ts(870,17): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Cookie'.
-lib/cookie.ts(871,17): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Cookie'.
-lib/cookie.ts(874,13): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Cookie'.
-lib/cookie.ts(874,28): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-lib/cookie.ts(875,11): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-lib/cookie.ts(875,23): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Cookie'.
 lib/cookie.ts(888,34): error TS2339: Property 'value' does not exist on type 'Cookie'.
 lib/cookie.ts(892,12): error TS2339: Property 'expires' does not exist on type 'Cookie'.
 lib/cookie.ts(893,14): error TS2339: Property 'expires' does not exist on type 'Cookie'.
@@ -211,10 +168,8 @@ lib/cookie.ts(898,14): error TS2339: Property 'maxAge' does not exist on type 'C
 lib/cookie.ts(898,37): error TS2339: Property 'maxAge' does not exist on type 'Cookie'.
 lib/cookie.ts(901,14): error TS2339: Property 'path' does not exist on type 'Cookie'.
 lib/cookie.ts(901,52): error TS2339: Property 'path' does not exist on type 'Cookie'.
-lib/cookie.ts(919,14): error TS7006: Parameter 'exp' implicitly has an 'any' type.
 lib/cookie.ts(921,12): error TS2339: Property 'expires' does not exist on type 'Cookie'.
 lib/cookie.ts(923,12): error TS2339: Property 'expires' does not exist on type 'Cookie'.
-lib/cookie.ts(927,13): error TS7006: Parameter 'age' implicitly has an 'any' type.
 lib/cookie.ts(929,12): error TS2339: Property 'maxAge' does not exist on type 'Cookie'.
 lib/cookie.ts(931,12): error TS2339: Property 'maxAge' does not exist on type 'Cookie'.
 lib/cookie.ts(936,28): error TS2339: Property 'value' does not exist on type 'Cookie'.
@@ -241,16 +196,15 @@ lib/cookie.ts(976,61): error TS2339: Property 'sameSite' does not exist on type 
 lib/cookie.ts(977,53): error TS2339: Property 'sameSite' does not exist on type 'Cookie'.
 lib/cookie.ts(979,14): error TS2339: Property 'extensions' does not exist on type 'Cookie'.
 lib/cookie.ts(980,12): error TS2339: Property 'extensions' does not exist on type 'Cookie'.
-lib/cookie.ts(992,7): error TS7006: Parameter 'now' implicitly has an 'any' type.
 lib/cookie.ts(998,14): error TS2339: Property 'maxAge' does not exist on type 'Cookie'.
 lib/cookie.ts(999,19): error TS2339: Property 'maxAge' does not exist on type 'Cookie'.
 lib/cookie.ts(999,42): error TS2339: Property 'maxAge' does not exist on type 'Cookie'.
 lib/cookie.ts(1002,32): error TS2339: Property 'expires' does not exist on type 'Cookie'.
 lib/cookie.ts(1003,9): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
-lib/cookie.ts(1005,9): error TS2322: Type 'HTMLDivElement' is not assignable to type 'String'.
+lib/cookie.ts(1005,9): error TS2322: Type 'number | HTMLDivElement' is not assignable to type 'String'.
+  Type 'number' is not assignable to type 'String'.
 lib/cookie.ts(1008,11): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 lib/cookie.ts(1012,22): error TS2339: Property 'getTime' does not exist on type 'String'.
-lib/cookie.ts(1020,14): error TS7006: Parameter 'now' implicitly has an 'any' type.
 lib/cookie.ts(1021,14): error TS2339: Property 'maxAge' does not exist on type 'Cookie'.
 lib/cookie.ts(1022,51): error TS2339: Property 'creation' does not exist on type 'Cookie'.
 lib/cookie.ts(1023,32): error TS2339: Property 'maxAge' does not exist on type 'Cookie'.
@@ -258,7 +212,6 @@ lib/cookie.ts(1023,63): error TS2339: Property 'maxAge' does not exist on type '
 lib/cookie.ts(1024,25): error TS2339: Property 'getTime' does not exist on type 'HTMLElement'.
 lib/cookie.ts(1027,14): error TS2339: Property 'expires' does not exist on type 'Cookie'.
 lib/cookie.ts(1030,17): error TS2339: Property 'expires' does not exist on type 'Cookie'.
-lib/cookie.ts(1035,14): error TS7006: Parameter 'now' implicitly has an 'any' type.
 lib/cookie.ts(1037,9): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 lib/cookie.ts(1038,23): error TS2769: No overload matches this call.
   Overload 1 of 4, '(value: string | number | Date): Date', gave the following error.
@@ -292,7 +245,6 @@ lib/cookie.ts(1084,31): error TS2339: Property 'STRICT' does not exist on type '
 lib/cookie.ts(1085,31): error TS2339: Property 'SILENT' does not exist on type 'Object'.
 lib/cookie.ts(1086,31): error TS2339: Property 'DISABLED' does not exist on type 'Object'.
 lib/cookie.ts(1091,29): error TS2339: Property 'SILENT' does not exist on type 'Object'.
-lib/cookie.ts(1095,15): error TS7006: Parameter 'store' implicitly has an 'any' type.
 lib/cookie.ts(1100,10): error TS2339: Property 'rejectPublicSuffixes' does not exist on type 'CookieJar'.
 lib/cookie.ts(1101,10): error TS2339: Property 'enableLooseMode' does not exist on type 'CookieJar'.
 lib/cookie.ts(1101,38): error TS2339: Property 'looseMode' does not exist on type '{ rejectPublicSuffixes: boolean; }'.
@@ -310,13 +262,8 @@ lib/cookie.ts(1112,10): error TS2339: Property 'getSetCookieStringsSync' does no
 lib/cookie.ts(1113,10): error TS2339: Property 'removeAllCookiesSync' does not exist on type 'CookieJar'.
 lib/cookie.ts(1114,10): error TS2339: Property 'setCookieSync' does not exist on type 'CookieJar'.
 lib/cookie.ts(1115,10): error TS2339: Property 'serializeSync' does not exist on type 'CookieJar'.
-lib/cookie.ts(1118,13): error TS7006: Parameter 'cookie' implicitly has an 'any' type.
-lib/cookie.ts(1118,21): error TS7006: Parameter 'url' implicitly has an 'any' type.
-lib/cookie.ts(1118,26): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/cookie.ts(1118,35): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/cookie.ts(1144,50): error TS2339: Property 'hostname' does not exist on type 'HTMLElement'.
 lib/cookie.ts(1145,49): error TS2339: Property 'enableLooseMode' does not exist on type 'CookieJar'.
-lib/cookie.ts(1147,9): error TS2322: Type 'null' is not assignable to type 'Number'.
 lib/cookie.ts(1151,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/cookie.ts(1157,23): error TS2339: Property 'parse' does not exist on type 'typeof Cookie'.
@@ -332,16 +279,12 @@ lib/cookie.ts(1248,12): error TS2339: Property 'prefixSecurity' does not exist o
 lib/cookie.ts(1248,50): error TS2339: Property 'DISABLED' does not exist on type 'Object'.
 lib/cookie.ts(1267,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/cookie.ts(1267,25): error TS2454: Variable 'errorMsg' is used before being assigned.
 lib/cookie.ts(1272,31): error TS2339: Property 'store' does not exist on type 'CookieJar'.
 lib/cookie.ts(1280,58): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(1285,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(1296,49): error TS2339: Property 'httpOnly' does not exist on type 'Cookie'.
 lib/cookie.ts(1301,37): error TS2339: Property 'creation' does not exist on type 'Cookie'.
 lib/cookie.ts(1302,42): error TS2339: Property 'creationIndex' does not exist on type 'Cookie'.
-lib/cookie.ts(1316,14): error TS7006: Parameter 'url' implicitly has an 'any' type.
-lib/cookie.ts(1316,19): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/cookie.ts(1316,28): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/cookie.ts(1326,50): error TS2339: Property 'hostname' does not exist on type 'HTMLElement'.
 lib/cookie.ts(1327,34): error TS2339: Property 'pathname' does not exist on type 'HTMLElement'.
 lib/cookie.ts(1332,15): error TS2339: Property 'protocol' does not exist on type 'HTMLElement'.
@@ -360,6 +303,7 @@ lib/cookie.ts(1381,13): error TS2339: Property 'secure' does not exist on type '
 lib/cookie.ts(1387,13): error TS2339: Property 'httpOnly' does not exist on type 'Cookie'.
 lib/cookie.ts(1393,44): error TS2339: Property 'sameSiteLevel' does not exist on type 'typeof Cookie'.
 lib/cookie.ts(1393,60): error TS2339: Property 'sameSite' does not exist on type 'Cookie'.
+lib/cookie.ts(1394,13): error TS2365: Operator '>' cannot be applied to types 'String' and 'Number'.
 lib/cookie.ts(1402,28): error TS2554: Expected 1 arguments, but got 0.
 lib/cookie.ts(1403,30): error TS2551: Property 'domain' does not exist on type 'Cookie'. Did you mean 'cdomain'?
 lib/cookie.ts(1403,40): error TS2339: Property 'path' does not exist on type 'Cookie'.
@@ -367,16 +311,9 @@ lib/cookie.ts(1403,48): error TS2339: Property 'key' does not exist on type 'Coo
 lib/cookie.ts(1413,12): error TS2339: Property 'allowSpecialUseDomain' does not exist on type 'CookieJar'.
 lib/cookie.ts(1414,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(1427,15): error TS2740: Type 'Date' is missing the following properties from type 'HTMLInputElement': accept, align, alt, autocomplete, and 333 more.
-lib/cookie.ts(1438,19): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
-lib/cookie.ts(1441,61): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/cookie.ts(1455,33): error TS2345: Argument of type 'any[]' is not assignable to parameter of type '[url: any, options: any, cb: any]'.
-  Target requires 3 element(s) but source may have fewer.
-lib/cookie.ts(1458,23): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
-lib/cookie.ts(1461,61): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/cookie.ts(1474,33): error TS2345: Argument of type 'any[]' is not assignable to parameter of type '[url: any, options: any, cb: any]'.
-lib/cookie.ts(1477,13): error TS7006: Parameter 'cb' implicitly has an 'any' type.
+lib/cookie.ts(1441,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/cookie.ts(1461,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(1479,29): error TS2339: Property 'store' does not exist on type 'CookieJar'.
-lib/cookie.ts(1481,7): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/cookie.ts(1495,36): error TS2339: Property 'rejectPublicSuffixes' does not exist on type 'CookieJar'.
 lib/cookie.ts(1496,31): error TS2339: Property 'enableLooseMode' does not exist on type 'CookieJar'.
 lib/cookie.ts(1497,37): error TS2339: Property 'allowSpecialUseDomain' does not exist on type 'CookieJar'.
@@ -390,19 +327,13 @@ lib/cookie.ts(1524,9): error TS2322: Type 'Object' is not assignable to type 'Co
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/cookie.ts(1527,23): error TS2339: Property 'creationIndex' does not exist on type 'Cookie'.
 lib/cookie.ts(1537,17): error TS2339: Property 'serializeSync' does not exist on type 'CookieJar'.
-lib/cookie.ts(1541,18): error TS7006: Parameter 'serialized' implicitly has an 'any' type.
-lib/cookie.ts(1541,30): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/cookie.ts(1542,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(1559,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'Cookie': inspect, toJSON, clone, validate, and 9 more.
 lib/cookie.ts(1568,12): error TS2339: Property 'store' does not exist on type 'CookieJar'.
-lib/cookie.ts(1574,9): error TS7006: Parameter 'newStore' implicitly has an 'any' type.
-lib/cookie.ts(1574,19): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/cookie.ts(1580,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/cookie.ts(1588,13): error TS7006: Parameter 'newStore' implicitly has an 'any' type.
 lib/cookie.ts(1590,19): error TS2551: Property '_cloneSync' does not exist on type 'CookieJar'. Did you mean 'cloneSync'?
 lib/cookie.ts(1597,17): error TS2551: Property '_cloneSync' does not exist on type 'CookieJar'. Did you mean 'cloneSync'?
-lib/cookie.ts(1600,20): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/cookie.ts(1602,31): error TS2339: Property 'store' does not exist on type 'CookieJar'.
 lib/cookie.ts(1614,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(1624,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -411,13 +342,8 @@ lib/cookie.ts(1631,9): error TS2356: An arithmetic operand must be of type 'any'
 lib/cookie.ts(1640,18): error TS2551: Property 'domain' does not exist on type 'Cookie'. Did you mean 'cdomain'?
 lib/cookie.ts(1641,18): error TS2339: Property 'path' does not exist on type 'Cookie'.
 lib/cookie.ts(1642,18): error TS2339: Property 'key' does not exist on type 'Cookie'.
-lib/cookie.ts(1649,22): error TS7006: Parameter 'strOrObj' implicitly has an 'any' type.
-lib/cookie.ts(1649,32): error TS7006: Parameter 'store' implicitly has an 'any' type.
-lib/cookie.ts(1649,39): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/cookie.ts(1669,7): error TS2345: Argument of type '{ rejectPublicSuffixes: any; looseMode: any; allowSpecialUseDomain: any; prefixSecurity: any; }' is not assignable to parameter of type '{ rejectPublicSuffixes: boolean; }'.
   Object literal may only specify known properties, and 'looseMode' does not exist in type '{ rejectPublicSuffixes: boolean; }'.
-lib/cookie.ts(1681,26): error TS7006: Parameter 'strOrObj' implicitly has an 'any' type.
-lib/cookie.ts(1681,36): error TS7006: Parameter 'store' implicitly has an 'any' type.
 lib/cookie.ts(1685,40): error TS2339: Property 'rejectPublicSuffixes' does not exist on type 'Object'.
 lib/cookie.ts(1686,7): error TS2345: Argument of type '{ rejectPublicSuffixes: any; looseMode: any; }' is not assignable to parameter of type '{ rejectPublicSuffixes: boolean; }'.
   Object literal may only specify known properties, and 'looseMode' does not exist in type '{ rejectPublicSuffixes: boolean; }'.
@@ -425,12 +351,7 @@ lib/cookie.ts(1686,29): error TS2339: Property 'enableLooseMode' does not exist 
 lib/cookie.ts(1700,11): error TS2339: Property 'fromJSON' does not exist on type 'typeof CookieJar'.
 lib/cookie.ts(1712,23): error TS2538: Type 'String' cannot be used as an index type.
 lib/cookie.ts(1712,64): error TS2538: Type 'String' cannot be used as an index type.
-lib/cookie.ts(1718,19): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
-lib/cookie.ts(1719,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/cookie.ts(1726,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/cookie.ts(1726,10): error TS2538: Type 'String' cannot be used as an index type.
-lib/cookie.ts(1731,9): error TS2454: Variable 'syncErr' is used before being assigned.
-lib/cookie.ts(1734,12): error TS2454: Variable 'syncResult' is used before being assigned.
 lib/memstore.ts(33,23): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/tough-cookie/lib/store.ts' is not a module.
 lib/memstore.ts(34,10): error TS2459: Module '"./permuteDomain"' declares 'permuteDomain' locally, but it is not exported.
 lib/memstore.ts(35,27): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/tough-cookie/lib/pathMatch.ts' is not a module.
@@ -443,57 +364,29 @@ lib/memstore.ts(50,37): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
 lib/memstore.ts(51,27): error TS2339: Property 'inspect' does not exist on type 'Object'.
 lib/memstore.ts(51,40): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
-lib/memstore.ts(54,14): error TS7006: Parameter 'domain' implicitly has an 'any' type.
-lib/memstore.ts(54,22): error TS7006: Parameter 'path' implicitly has an 'any' type.
-lib/memstore.ts(54,28): error TS7006: Parameter 'key' implicitly has an 'any' type.
-lib/memstore.ts(54,33): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/memstore.ts(55,15): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(58,15): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(61,26): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
-lib/memstore.ts(63,15): error TS7006: Parameter 'domain' implicitly has an 'any' type.
-lib/memstore.ts(63,23): error TS7006: Parameter 'path' implicitly has an 'any' type.
-lib/memstore.ts(63,29): error TS7006: Parameter 'allowSpecialUseDomain' implicitly has an 'any' type.
-lib/memstore.ts(63,52): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/memstore.ts(64,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/memstore.ts(76,63): error TS2304: Cannot find name 'Void'.
-lib/memstore.ts(78,39): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Function'.
-  No index signature with a parameter of type 'string' was found on type 'Function'.
-lib/memstore.ts(80,26): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Function'.
-  No index signature with a parameter of type 'string' was found on type 'Function'.
 lib/memstore.ts(85,63): error TS2304: Cannot find name 'Void'.
 lib/memstore.ts(90,53): error TS2538: Type 'String' cannot be used as an index type.
-lib/memstore.ts(92,28): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Function'.
-  No index signature with a parameter of type 'string' was found on type 'Function'.
 lib/memstore.ts(99,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/memstore.ts(100,30): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(102,39): error TS2538: Type 'String' cannot be used as an index type.
-lib/memstore.ts(112,13): error TS7006: Parameter 'cookie' implicitly has an 'any' type.
-lib/memstore.ts(112,21): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/memstore.ts(113,15): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(114,12): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(116,15): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(117,12): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(119,10): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
-lib/memstore.ts(122,16): error TS7006: Parameter 'oldCookie' implicitly has an 'any' type.
-lib/memstore.ts(122,27): error TS7006: Parameter 'newCookie' implicitly has an 'any' type.
-lib/memstore.ts(122,38): error TS7006: Parameter 'cb' implicitly has an 'any' type.
-lib/memstore.ts(128,16): error TS7006: Parameter 'domain' implicitly has an 'any' type.
-lib/memstore.ts(128,24): error TS7006: Parameter 'path' implicitly has an 'any' type.
-lib/memstore.ts(128,30): error TS7006: Parameter 'key' implicitly has an 'any' type.
-lib/memstore.ts(128,35): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/memstore.ts(130,12): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(131,12): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(132,12): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(134,19): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
-lib/memstore.ts(138,17): error TS7006: Parameter 'domain' implicitly has an 'any' type.
-lib/memstore.ts(138,25): error TS7006: Parameter 'path' implicitly has an 'any' type.
-lib/memstore.ts(138,31): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/memstore.ts(139,14): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(141,21): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(143,21): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
-lib/memstore.ts(148,20): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/memstore.ts(149,10): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
-lib/memstore.ts(152,17): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/memstore.ts(153,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/memstore.ts(154,30): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(156,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -538,37 +431,13 @@ lib/pubsuffix-psl.ts(43,34): error TS2314: Generic type 'Array<T>' requires 1 ty
 lib/pubsuffix-psl.ts(46,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/pubsuffix-psl.ts(48,52): error TS2339: Property 'allowSpecialUseDomain' does not exist on type 'Object'.
 lib/pubsuffix-psl.ts(49,42): error TS2339: Property 'ignoreError' does not exist on type 'Object'.
-lib/pubsuffix-psl.ts(70,3): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/pubsuffix-psl.ts(70,18): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(domain: null | undefined): null', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'null | undefined'.
-  Overload 2 of 2, '(domain: string): string | null', gave the following error.
+  Overload 1 of 2, '(domain: null): null', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'null'.
+  Overload 2 of 2, '(domain: string): string', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/store.ts(36,10): error TS2339: Property 'synchronous' does not exist on type 'Store'.
-lib/store.ts(39,14): error TS7006: Parameter 'domain' implicitly has an 'any' type.
-lib/store.ts(39,22): error TS7006: Parameter 'path' implicitly has an 'any' type.
-lib/store.ts(39,28): error TS7006: Parameter 'key' implicitly has an 'any' type.
-lib/store.ts(39,33): error TS7006: Parameter 'cb' implicitly has an 'any' type.
-lib/store.ts(43,15): error TS7006: Parameter 'domain' implicitly has an 'any' type.
-lib/store.ts(43,23): error TS7006: Parameter 'path' implicitly has an 'any' type.
-lib/store.ts(43,29): error TS7006: Parameter 'allowSpecialUseDomain' implicitly has an 'any' type.
-lib/store.ts(43,52): error TS7006: Parameter 'cb' implicitly has an 'any' type.
-lib/store.ts(47,13): error TS7006: Parameter 'cookie' implicitly has an 'any' type.
-lib/store.ts(47,21): error TS7006: Parameter 'cb' implicitly has an 'any' type.
-lib/store.ts(51,16): error TS7006: Parameter 'oldCookie' implicitly has an 'any' type.
-lib/store.ts(51,27): error TS7006: Parameter 'newCookie' implicitly has an 'any' type.
-lib/store.ts(51,38): error TS7006: Parameter 'cb' implicitly has an 'any' type.
-lib/store.ts(57,16): error TS7006: Parameter 'domain' implicitly has an 'any' type.
-lib/store.ts(57,24): error TS7006: Parameter 'path' implicitly has an 'any' type.
-lib/store.ts(57,30): error TS7006: Parameter 'key' implicitly has an 'any' type.
-lib/store.ts(57,35): error TS7006: Parameter 'cb' implicitly has an 'any' type.
-lib/store.ts(61,17): error TS7006: Parameter 'domain' implicitly has an 'any' type.
-lib/store.ts(61,25): error TS7006: Parameter 'path' implicitly has an 'any' type.
-lib/store.ts(61,31): error TS7006: Parameter 'cb' implicitly has an 'any' type.
-lib/store.ts(65,20): error TS7006: Parameter 'cb' implicitly has an 'any' type.
-lib/store.ts(69,17): error TS7006: Parameter 'cb' implicitly has an 'any' type.
-lib/utilHelper.ts(6,5): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/utilHelper.ts(11,39): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/utilHelper.ts(17,42): error TS2339: Property 'requireUtil' does not exist on type 'Object'.
 lib/utilHelper.ts(19,22): error TS2339: Property 'inspect' does not exist on type 'Boolean'.
@@ -583,6 +452,4 @@ lib/validators.ts(40,33): error TS2345: Argument of type 'DateConstructor' is no
 lib/validators.ts(40,57): error TS2339: Property 'getTime' does not exist on type 'Object'.
 lib/validators.ts(56,28): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 lib/validators.ts(67,66): error TS2304: Cannot find name 'Void'.
-lib/validators.ts(70,5): error TS2322: Type 'null' is not assignable to type 'Function'.
-lib/validators.ts(83,15): error TS7019: Rest parameter 'params' implicitly has an 'any[]' type.
 

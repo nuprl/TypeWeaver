@@ -19,10 +19,10 @@ clone.ts(94,33): error TS2362: The left-hand side of an arithmetic operation mus
 clone.ts(95,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 clone.ts(96,30): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 clone.ts(102,41): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(pattern: string | RegExp, flags?: string | undefined): RegExp', gave the following error.
+  Overload 1 of 3, '(pattern: string | RegExp, flags?: string): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 3, '(pattern: string, flags?: string | undefined): RegExp', gave the following error.
+  Overload 2 of 3, '(pattern: string, flags?: string): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 clone.ts(103,35): error TS2339: Property 'lastIndex' does not exist on type 'Object'.
@@ -37,22 +37,14 @@ clone.ts(143,15): error TS2339: Property 'set' does not exist on type 'Object'.
 clone.ts(146,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 clone.ts(148,48): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 clone.ts(149,15): error TS2339: Property 'add' does not exist on type 'Object'.
-clone.ts(154,11): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'String'.
-  Type 'undefined' is not assignable to type 'String'.
-clone.ts(156,9): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
+clone.ts(154,11): error TS2740: Type 'PropertyDescriptor' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 clone.ts(156,38): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-clone.ts(160,13): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'Object'.
-  Type 'undefined' is not assignable to type 'Object'.
 clone.ts(161,25): error TS2339: Property 'set' does not exist on type 'Object'.
-clone.ts(165,9): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 clone.ts(165,38): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 clone.ts(180,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 clone.ts(181,16): error TS2403: Subsequent variable declarations must have the same type.  Variable 'i' must be of type 'string', but here has type 'number'.
 clone.ts(181,43): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-clone.ts(185,13): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'Element'.
-  Type 'undefined' is not assignable to type 'Element'.
+clone.ts(185,13): error TS2740: Type 'PropertyDescriptor' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
 clone.ts(185,75): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 clone.ts(186,39): error TS2339: Property 'enumerable' does not exist on type 'Element'.
 clone.ts(189,15): error TS2538: Type 'String' cannot be used as an index type.
@@ -61,8 +53,7 @@ clone.ts(190,38): error TS2345: Argument of type 'String' is not assignable to p
 clone.ts(195,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 clone.ts(196,16): error TS2403: Subsequent variable declarations must have the same type.  Variable 'i' must be of type 'string', but here has type 'number'.
 clone.ts(196,52): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-clone.ts(198,13): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'Element'.
-  Type 'undefined' is not assignable to type 'Element'.
+clone.ts(198,13): error TS2322: Type 'PropertyDescriptor' is not assignable to type 'Element'.
 clone.ts(198,75): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 clone.ts(199,38): error TS2339: Property 'enumerable' does not exist on type 'Element'.
 clone.ts(202,15): error TS2538: Type 'String' cannot be used as an index type.
@@ -71,7 +62,6 @@ clone.ts(203,38): error TS2345: Argument of type 'String' is not assignable to p
 clone.ts(220,65): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 clone.ts(226,14): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
-clone.ts(232,3): error TS2322: Type 'string' is not assignable to type 'Boolean'.
 clone.ts(237,35): error TS2367: This condition will always return 'false' since the types 'Boolean' and 'string' have no overlap.
 clone.ts(242,35): error TS2367: This condition will always return 'false' since the types 'Boolean' and 'string' have no overlap.
 clone.ts(247,35): error TS2367: This condition will always return 'false' since the types 'Boolean' and 'string' have no overlap.

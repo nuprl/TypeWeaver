@@ -63,7 +63,7 @@ const rimraf: Function = (p: String, options: Object, cb: Function) => {
   let errState: String = null
   let n: Number = 0
 
-  const next: Function = (er: Number) => {
+  const next: Function = (er: String) => {
     errState = errState || er
     if (--n === 0)
       cb(errState)
@@ -209,7 +209,7 @@ const fixWinEPERMSync: Function = (p: String, options: Object, er: String) => {
     options.unlinkSync(p)
 }
 
-const rmdir: Function = (p: String, options: Array, originalEr: Array, cb: Function) => {
+const rmdir: Function = (p: String, options: Array, originalEr: Number, cb: Function) => {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
@@ -314,7 +314,7 @@ const rimrafSync: Function = (p: String, options: Object) => {
   }
 }
 
-const rmdirSync: Function = (p: Array, options: Object, originalEr: Function) => {
+const rmdirSync: Function = (p: Array, options: Object, originalEr: Number) => {
   assert(p)
   assert(options)
 

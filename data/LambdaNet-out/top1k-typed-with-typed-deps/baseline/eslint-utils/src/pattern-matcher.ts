@@ -121,7 +121,7 @@ export class PatternMatcher {
      */
     *execAll(str) {
         const { pattern, escaped } = internal.get(this)
-        let match: Object = null
+        let match: PatternMatcher = null
         let lastIndex: Number = 0
 
         pattern.lastIndex = 0

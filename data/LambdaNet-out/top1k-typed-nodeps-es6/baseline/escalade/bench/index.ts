@@ -52,7 +52,7 @@ async function runner(target: Array, expects: Array): Promise {
 		}
 	});
 
-	return new Promise((res: Function, rej: Function) => {
+	return new Promise((res: Function, rej: String) => {
 		bench.on('complete', res);
 		bench.on('error', rej);
 		bench.run();

@@ -5,7 +5,7 @@ import * as acorn from "acorn"
 let inputFilePaths: Array = [], forceFileName: Boolean = false, fileMode: Boolean = false, silent: Boolean = false, compact: Boolean = false, tokenize: Boolean = false
 const options: Object = {}
 
-function help(status: String): Void {
+function help(status: Position): Void {
   const print: Function = (status === 0) ? console.log : console.error
   print("usage: " + basename(process.argv[1]) + " [--ecma3|--ecma5|--ecma6|--ecma7|--ecma8|--ecma9|...|--ecma2015|--ecma2016|--ecma2017|--ecma2018|...]")
   print("        [--tokenize] [--locations] [--allow-hash-bang] [--allow-await-outside-function] [--compact] [--silent] [--module] [--help] [--] [<infile>...]")
@@ -45,7 +45,7 @@ function run(codeList: Array): Void {
         result = acorn.parse(code, options)
         options.program = result
       } else {
-        let tokenizer: Position = acorn.tokenizer(code, options), token: RegExpValidationState
+        let tokenizer: Token = acorn.tokenizer(code, options), token: Parser
         do {
           token = tokenizer.getToken()
           result.push(token)

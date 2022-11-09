@@ -1189,7 +1189,7 @@ require=(function(){function r(e: Object,n: Object,t: Array): Function{function 
   round = Math.round;
   ceiling = Math.ceil;
   floor = Math.floor;
-  isItNaN = function(x: Number){
+  isItNaN = function(x: String){
     return x !== x;
   };
   even = function(x: String){

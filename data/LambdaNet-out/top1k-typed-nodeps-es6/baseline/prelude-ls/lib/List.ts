@@ -155,7 +155,7 @@ unfoldr = curry$(function(f: Function, b: String){
   }
   return result;
 });
-concat = function(xss: String){
+concat = function(xss: Number){
   return [].concat.apply([], xss);
 };
 concatMap = curry$(function(f: Function, xs: Function){
@@ -272,7 +272,7 @@ groupBy = curry$(function(f: Function, xs: Array){
   return results;
 });
 andList = function(xs: Array){
-  var i$: Number, len$: Function, x: Number;
+  var i$: Number, len$: Function, x: String;
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
     x = xs[i$];
     if (!x) {

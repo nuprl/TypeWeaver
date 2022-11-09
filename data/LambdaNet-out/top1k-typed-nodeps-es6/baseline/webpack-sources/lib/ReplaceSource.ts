@@ -129,7 +129,7 @@ class ReplaceSource extends Source {
 				return 0;
 			});
 		} else {
-			this._replacements.forEach((repl: Function, i: String) => (repl.index = i));
+			this._replacements.forEach((repl: String, i: String) => (repl.index = i));
 			this._replacements.sort(function (a: Object, b: Object) {
 				const diff1: Number = a.start - b.start;
 				if (diff1 !== 0) return diff1;
@@ -177,7 +177,7 @@ class ReplaceSource extends Source {
 			Object.assign({}, options, { finalSource: false }),
 			(
 				chunk: Array,
-				generatedLine: Number,
+				generatedLine: String,
 				generatedColumn: Number,
 				sourceIndex: Number,
 				originalLine: OriginalSource,

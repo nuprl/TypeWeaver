@@ -24,11 +24,11 @@ const deepcopy: String = require('deep-copy');
 console.timeEnd('deep-copy');
 
 console.time('klona/full');
-const full: String = require('klona/full');
+const full: Array = require('klona/full');
 console.timeEnd('klona/full');
 
 console.time('klona');
-const klona: String = require('klona');
+const klona: Array = require('klona');
 console.timeEnd('klona');
 
 console.time('klona/lite');
@@ -63,7 +63,7 @@ function runner(name: String, contenders: Object): Void {
 
 	const INPUT: String = require(fixture);
 	console.log('\nBenchmark :: %s', name);
-	const bench: Array = new Suite().on('cycle', (e: HTMLElement) => {
+	const bench: Array = new Suite().on('cycle', (e: Test) => {
 		console.log('  ' + e.target);
 	});
 

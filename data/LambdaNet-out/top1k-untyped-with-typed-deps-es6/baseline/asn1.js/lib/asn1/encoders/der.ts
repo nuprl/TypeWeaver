@@ -268,7 +268,7 @@ DERNode.prototype._skipDefault = function skipDefault(dataBuffer: Array, reporte
 
 // Utility methods
 
-function encodeTag(tag: Number, primitive: Boolean, cls: Number, reporter: Object): Number {
+function encodeTag(tag: Number, primitive: Boolean, cls: String, reporter: Object): Number {
   let res: Number;
 
   if (tag === 'seqof')

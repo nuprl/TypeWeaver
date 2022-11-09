@@ -2,7 +2,7 @@
 
 const assertDeepStrictEqual: Function = require('assert').deepStrictEqual;
 const tests: Array = require('../spec/tests');
-const Benchmark: Array = require('benchmark');
+const Benchmark: String = require('benchmark');
 const suite: HTMLElement = new Benchmark.Suite;
 
 
@@ -18,7 +18,7 @@ const equalPackages: Object = {
   'deep-eql': true,
   'ramda.equals': require('ramda').equals,
   'util.isDeepStrictEqual': require('util').isDeepStrictEqual,
-  'assert.deepStrictEqual': (a: Array, b: String) => {
+  'assert.deepStrictEqual': (a: Function, b: String) => {
     try { assertDeepStrictEqual(a, b); return true; }
     catch(e) { return false; }
   }

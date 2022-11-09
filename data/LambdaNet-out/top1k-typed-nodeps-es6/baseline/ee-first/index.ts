@@ -65,7 +65,7 @@ function first (stuff: Array, done: Function): Function {
     }
   }
 
-  function thunk (fn: Array): Void {
+  function thunk (fn: Function): Void {
     done = fn
   }
 

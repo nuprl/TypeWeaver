@@ -92,7 +92,7 @@ export class Parser {
   }
 
   parse() {
-    let node: TokenType = this.options.program || this.startNode()
+    let node: Node = this.options.program || this.startNode()
     this.nextToken()
     return this.parseTopLevel(node)
   }
@@ -105,7 +105,7 @@ export class Parser {
 
   get canAwait() {
     for (let i = this.scopeStack.length - 1; i >= 0; i--) {
-      let scope: Scope = this.scopeStack[i]
+      let scope: Node = this.scopeStack[i]
       if (scope.inClassFieldInit || scope.flags & SCOPE_CLASS_STATIC_BLOCK) return false
       if (scope.flags & SCOPE_FUNCTION) return (scope.flags & SCOPE_ASYNC) > 0
     }

@@ -1,0 +1,162 @@
+lib/parser.ts(7,69): error TS2339: Property 'source' does not exist on type 'Object'.
+lib/parser.ts(8,5): error TS2740: Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+lib/parser.ts(8,50): error TS2339: Property 'source' does not exist on type 'Object'.
+lib/parser.ts(8,76): error TS2339: Property 'source' does not exist on type 'Object'.
+lib/parser.ts(15,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/parser.ts(15,29): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+lib/parser.ts(18,19): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
+lib/parser.ts(21,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/parser.ts(21,38): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(matcher: { [Symbol.match](string: string): RegExpMatchArray; }): RegExpMatchArray', gave the following error.
+    Argument of type 'Object' is not assignable to parameter of type '{ [Symbol.match](string: string): RegExpMatchArray; }'.
+      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+        Property '[Symbol.match]' is missing in type 'Object' but required in type '{ [Symbol.match](string: string): RegExpMatchArray; }'.
+  Overload 2 of 2, '(regexp: string | RegExp): RegExpMatchArray', gave the following error.
+    Argument of type 'Object' is not assignable to parameter of type 'string | RegExp'.
+      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/parser.ts(24,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/parser.ts(24,56): error TS2339: Property 'source' does not exist on type 'Object'.
+lib/parser.ts(29,40): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(matcher: { [Symbol.match](string: string): RegExpMatchArray; }): RegExpMatchArray', gave the following error.
+    Argument of type 'Object' is not assignable to parameter of type '{ [Symbol.match](string: string): RegExpMatchArray; }'.
+      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Overload 2 of 2, '(regexp: string | RegExp): RegExpMatchArray', gave the following error.
+    Argument of type 'Object' is not assignable to parameter of type 'string | RegExp'.
+      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/parser.ts(38,25): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'string'.
+lib/parser.ts(38,32): error TS2322: Type 'number' is not assignable to type 'Boolean'.
+lib/parser.ts(38,50): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'string'.
+lib/parser.ts(41,17): error TS2538: Type 'String' cannot be used as an index type.
+lib/parser.ts(41,40): error TS2538: Type 'String' cannot be used as an index type.
+lib/parser.ts(42,17): error TS2538: Type 'String' cannot be used as an index type.
+lib/parser.ts(44,17): error TS2538: Type 'String' cannot be used as an index type.
+lib/parser.ts(54,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/parser.ts(56,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/parser.ts(58,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/parser.ts(83,18): error TS2538: Type 'String' cannot be used as an index type.
+lib/parser.ts(85,16): error TS2538: Type 'String' cannot be used as an index type.
+lib/parser.ts(90,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/parser.ts(96,23): error TS2538: Type 'String' cannot be used as an index type.
+lib/pipeline/cell.ts(6,38): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/pipeline/cell.ts(11,19): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+lib/pipeline/cell.ts(12,19): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+lib/pipeline/cell.ts(16,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/pipeline/cell.ts(18,16): error TS2339: Property '_stopped' does not exist on type 'Object'.
+lib/pipeline/cell.ts(18,34): error TS2339: Property 'pending' does not exist on type 'Object'.
+lib/pipeline/cell.ts(30,38): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+lib/pipeline/cell.ts(35,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/pipeline/cell.ts(36,64): error TS2314: Generic type 'Record' requires 2 type argument(s).
+lib/pipeline/cell.ts(44,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/pipeline/cell.ts(45,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/pipeline/functor.ts(5,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/pipeline/functor.ts(8,23): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+lib/pipeline/functor.ts(8,42): error TS2339: Property 'QUEUE_SIZE' does not exist on type 'Function'.
+lib/pipeline/functor.ts(13,9): error TS2339: Property 'QUEUE_SIZE' does not exist on type 'Function'.
+lib/pipeline/functor.ts(24,14): error TS2339: Property 'error' does not exist on type 'Object'.
+lib/pipeline/functor.ts(25,12): error TS2339: Property 'done' does not exist on type 'Object'.
+lib/pipeline/functor.ts(31,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/pipeline/functor.ts(31,20): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/pipeline/functor.ts(34,12): error TS2339: Property '_stop' does not exist on type 'HTMLElement'.
+lib/pipeline/functor.ts(35,14): error TS2339: Property 'error' does not exist on type 'Object'.
+lib/pipeline/functor.ts(36,14): error TS2339: Property 'message' does not exist on type 'Object'.
+lib/pipeline/functor.ts(38,14): error TS2339: Property 'message' does not exist on type 'Object'.
+lib/pipeline/functor.ts(41,12): error TS2339: Property 'done' does not exist on type 'Object'.
+lib/pipeline/functor.ts(42,10): error TS2339: Property '_flushQueue' does not exist on type 'HTMLElement'.
+lib/pipeline/functor.ts(58,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/pipeline/functor.ts(58,43): error TS2314: Generic type 'Record' requires 2 type argument(s).
+lib/pipeline/index.ts(6,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/pipeline/index.ts(7,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/pipeline/index.ts(7,70): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+lib/pipeline/index.ts(16,81): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/pipeline/index.ts(24,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/pipeline/index.ts(24,70): error TS2339: Property 'close' does not exist on type 'String'.
+lib/pipeline/index.ts(26,12): error TS2551: Property 'all' does not exist on type 'Function'. Did you mean 'call'?
+lib/pipeline/index.ts(30,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/pipeline/index.ts(34,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/pipeline/index.ts(39,68): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/pipeline/index.ts(40,21): error TS2339: Property '_stopped' does not exist on type 'HTMLElement'.
+lib/pipeline/index.ts(41,12): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
+lib/pipeline/pledge.ts(7,25): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+lib/pipeline/pledge.ts(7,43): error TS2339: Property 'QUEUE_SIZE' does not exist on type 'Function'.
+lib/pipeline/pledge.ts(10,8): error TS2339: Property 'QUEUE_SIZE' does not exist on type 'Function'.
+lib/pipeline/pledge.ts(12,8): error TS2551: Property 'all' does not exist on type 'Function'. Did you mean 'call'?
+lib/pipeline/pledge.ts(12,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/pipeline/pledge.ts(13,30): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+lib/pipeline/pledge.ts(17,29): error TS2339: Property 'done' does not exist on type 'Element'.
+lib/pipeline/pledge.ts(19,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/pipeline/pledge.ts(20,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/pipeline/pledge.ts(21,31): error TS2339: Property 'done' does not exist on type 'Element'.
+lib/pipeline/pledge.ts(33,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/websocket_extensions.ts(15,12): error TS2339: Property 'MESSAGE_OPCODES' does not exist on type 'Function'.
+lib/websocket_extensions.ts(19,20): error TS2339: Property 'name' does not exist on type 'Object'.
+lib/websocket_extensions.ts(20,13): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/websocket_extensions.ts(22,20): error TS2339: Property 'rsv1' does not exist on type 'Object'.
+lib/websocket_extensions.ts(23,20): error TS2339: Property 'rsv2' does not exist on type 'Object'.
+lib/websocket_extensions.ts(24,20): error TS2339: Property 'rsv3' does not exist on type 'Object'.
+lib/websocket_extensions.ts(26,41): error TS2339: Property 'name' does not exist on type 'Object'.
+lib/websocket_extensions.ts(27,60): error TS2339: Property 'name' does not exist on type 'Object'.
+lib/websocket_extensions.ts(29,22): error TS2339: Property 'name' does not exist on type 'Object'.
+lib/websocket_extensions.ts(34,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/websocket_extensions.ts(35,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/websocket_extensions.ts(39,33): error TS2339: Property 'createClientSession' does not exist on type 'Object'.
+lib/websocket_extensions.ts(42,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/websocket_extensions.ts(44,17): error TS2339: Property 'name' does not exist on type 'Object'.
+lib/websocket_extensions.ts(46,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/websocket_extensions.ts(46,35): error TS2339: Property 'generateOffer' does not exist on type 'String'.
+lib/websocket_extensions.ts(50,27): error TS2339: Property 'serializeParams' does not exist on type 'Object'.
+lib/websocket_extensions.ts(50,47): error TS2339: Property 'name' does not exist on type 'Object'.
+lib/websocket_extensions.ts(61,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/websocket_extensions.ts(61,35): error TS2339: Property 'parseHeader' does not exist on type 'Object'.
+lib/websocket_extensions.ts(62,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/websocket_extensions.ts(65,40): error TS2538: Type 'String' cannot be used as an index type.
+lib/websocket_extensions.ts(79,19): error TS2339: Property 'activate' does not exist on type 'String'.
+lib/websocket_extensions.ts(81,32): error TS2339: Property 'serializeParams' does not exist on type 'Object'.
+lib/websocket_extensions.ts(88,26): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+lib/websocket_extensions.ts(92,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/websocket_extensions.ts(93,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/websocket_extensions.ts(94,40): error TS2339: Property 'parseHeader' does not exist on type 'Object'.
+lib/websocket_extensions.ts(97,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/websocket_extensions.ts(97,33): error TS2339: Property 'byName' does not exist on type 'HTMLElement'.
+lib/websocket_extensions.ts(97,44): error TS2339: Property 'name' does not exist on type 'Object'.
+lib/websocket_extensions.ts(100,33): error TS2339: Property 'createServerSession' does not exist on type 'Object'.
+lib/websocket_extensions.ts(105,28): error TS2339: Property 'serializeParams' does not exist on type 'Object'.
+lib/websocket_extensions.ts(105,48): error TS2339: Property 'name' does not exist on type 'Object'.
+lib/websocket_extensions.ts(105,62): error TS2339: Property 'generateResponse' does not exist on type 'String'.
+lib/websocket_extensions.ts(109,26): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+lib/websocket_extensions.ts(118,20): error TS2339: Property 'MESSAGE_OPCODES' does not exist on type 'Function'.
+lib/websocket_extensions.ts(118,50): error TS2339: Property 'opcode' does not exist on type 'HTMLDivElement'.
+lib/websocket_extensions.ts(121,17): error TS2339: Property 'rsv1' does not exist on type 'Object'.
+lib/websocket_extensions.ts(121,32): error TS2339: Property 'rsv1' does not exist on type 'Object'.
+lib/websocket_extensions.ts(121,44): error TS2339: Property 'rsv1' does not exist on type 'HTMLElement'.
+lib/websocket_extensions.ts(122,17): error TS2339: Property 'rsv2' does not exist on type 'Object'.
+lib/websocket_extensions.ts(122,32): error TS2339: Property 'rsv2' does not exist on type 'Object'.
+lib/websocket_extensions.ts(122,44): error TS2339: Property 'rsv2' does not exist on type 'HTMLElement'.
+lib/websocket_extensions.ts(123,17): error TS2339: Property 'rsv3' does not exist on type 'Object'.
+lib/websocket_extensions.ts(123,32): error TS2339: Property 'rsv3' does not exist on type 'Object'.
+lib/websocket_extensions.ts(123,44): error TS2339: Property 'rsv3' does not exist on type 'HTMLElement'.
+lib/websocket_extensions.ts(127,21): error TS2339: Property 'rsv1' does not exist on type 'Object'.
+lib/websocket_extensions.ts(127,36): error TS2339: Property 'rsv1' does not exist on type 'HTMLDivElement'.
+lib/websocket_extensions.ts(128,21): error TS2339: Property 'rsv2' does not exist on type 'Object'.
+lib/websocket_extensions.ts(128,36): error TS2339: Property 'rsv2' does not exist on type 'HTMLDivElement'.
+lib/websocket_extensions.ts(129,21): error TS2339: Property 'rsv3' does not exist on type 'Object'.
+lib/websocket_extensions.ts(129,36): error TS2339: Property 'rsv3' does not exist on type 'HTMLDivElement'.
+lib/websocket_extensions.ts(146,37): error TS2339: Property 'rsv1' does not exist on type 'Object'.
+lib/websocket_extensions.ts(146,49): error TS2339: Property 'name' does not exist on type 'Object'.
+lib/websocket_extensions.ts(147,37): error TS2339: Property 'rsv2' does not exist on type 'Object'.
+lib/websocket_extensions.ts(147,49): error TS2339: Property 'name' does not exist on type 'Object'.
+lib/websocket_extensions.ts(148,37): error TS2339: Property 'rsv3' does not exist on type 'Object'.
+lib/websocket_extensions.ts(148,49): error TS2339: Property 'name' does not exist on type 'Object'.
+lib/websocket_extensions.ts(152,27): error TS2339: Property 'rsv1' does not exist on type 'HTMLElement'.
+lib/websocket_extensions.ts(153,27): error TS2339: Property 'rsv2' does not exist on type 'HTMLElement'.
+lib/websocket_extensions.ts(154,27): error TS2339: Property 'rsv3' does not exist on type 'HTMLElement'.
+

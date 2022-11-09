@@ -17,8 +17,6 @@ src/patchFs.ts(8,13): error TS2538: Type 'String' cannot be used as an index typ
 src/patchFs.ts(8,23): error TS2538: Type 'String' cannot be used as an index type.
 src/patchFs.ts(9,12): error TS2538: Type 'String' cannot be used as an index type.
 src/patchFs.ts(12,67): error TS2538: Type 'String' cannot be used as an index type.
-src/patchFs.ts(16,19): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-src/patchFs.ts(17,25): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 src/patchFs.ts(23,19): error TS2339: Property 'StatWatcher' does not exist on type 'Object'.
 src/patchFs.ts(24,34): error TS2339: Property 'FSWatcher' does not exist on type 'Object'.
 src/patchFs.ts(26,19): error TS2339: Property 'FSWatcher' does not exist on type 'Object'.
@@ -28,12 +26,7 @@ src/patchFs.ts(30,33): error TS2339: Property 'ReadStream' does not exist on typ
 src/patchFs.ts(32,19): error TS2339: Property 'WriteStream' does not exist on type 'Object'.
 src/patchFs.ts(33,34): error TS2339: Property 'WriteStream' does not exist on type 'Object'.
 src/patchFs.ts(38,19): error TS2339: Property '_toUnixTimestamp' does not exist on type 'Object'.
-src/patchFs.ts(44,19): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-src/patchFs.ts(48,19): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 src/patchFs.ts(52,33): error TS2304: Cannot find name 'Void'.
-src/patchFs.ts(53,35): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-src/patchFs.ts(53,42): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 src/patchRequire.ts(11,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/patchRequire.ts(37,124): error TS2304: Cannot find name 'Void'.
 src/patchRequire.ts(44,33): error TS2339: Property 'readFileSync' does not exist on type 'Object'.
@@ -52,7 +45,7 @@ src/patchRequire.ts(86,51): error TS2345: Argument of type 'String' is not assig
 src/patchRequire.ts(87,35): error TS2339: Property 'set' does not exist on type 'Object'.
 src/patchRequire.ts(88,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-src/patchRequire.ts(90,5): error TS7005: Variable 'cache' implicitly has an 'any' type.
+src/patchRequire.ts(96,47): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 src/patchRequire.ts(97,20): error TS2339: Property 'realpathSync' does not exist on type 'Object'.
 src/patchRequire.ts(103,49): error TS2538: Type 'String' cannot be used as an index type.
 src/patchRequire.ts(107,47): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -60,12 +53,8 @@ src/patchRequire.ts(107,47): error TS2345: Argument of type 'String' is not assi
 src/patchRequire.ts(108,58): error TS2339: Property '_makeLong' does not exist on type 'PlatformPath'.
 src/patchRequire.ts(116,36): error TS2538: Type 'String' cannot be used as an index type.
 src/patchRequire.ts(116,62): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
-src/patchRequire.ts(118,13): error TS2571: Object is of type 'unknown'.
-src/patchRequire.ts(119,13): error TS2571: Object is of type 'unknown'.
-src/patchRequire.ts(119,62): error TS2571: Object is of type 'unknown'.
 src/patchRequire.ts(127,15): error TS2322: Type 'String' is not assignable to type 'Number'.
-src/patchRequire.ts(129,13): error TS2322: Type 'string | false' is not assignable to type 'Boolean'.
-  Type 'string' is not assignable to type 'Boolean'.
+src/patchRequire.ts(129,13): error TS2322: Type 'string' is not assignable to type 'Boolean'.
 src/patchRequire.ts(129,45): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 src/patchRequire.ts(136,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -80,8 +69,6 @@ src/patchRequire.ts(163,16): error TS2339: Property '_compile' does not exist on
 src/patchRequire.ts(167,12): error TS2339: Property '_extensions' does not exist on type 'HTMLElement'.
 src/patchRequire.ts(168,35): error TS2339: Property 'readFileSync' does not exist on type 'Object'.
 src/patchRequire.ts(170,13): error TS1258: A default export must be at the top level of a file or module declaration.
-src/patchRequire.ts(172,13): error TS2571: Object is of type 'unknown'.
-src/patchRequire.ts(172,45): error TS2571: Object is of type 'unknown'.
 src/patchRequire.ts(178,12): error TS2339: Property '_findPath' does not exist on type 'HTMLElement'.
 src/patchRequire.ts(178,57): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/patchRequire.ts(179,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -94,29 +81,20 @@ src/patchRequire.ts(203,17): error TS2322: Type 'String' is not assignable to ty
 src/patchRequire.ts(207,25): error TS2322: Type 'string' is not assignable to type 'Number'.
 src/patchRequire.ts(207,49): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/patchRequire.ts(209,25): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
-src/patchRequire.ts(212,25): error TS2454: Variable 'exts' is used before being assigned.
 src/patchRequire.ts(213,25): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 src/patchRequire.ts(213,51): error TS2339: Property '_extensions' does not exist on type 'HTMLElement'.
 src/patchRequire.ts(214,21): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
-src/patchRequire.ts(217,22): error TS2454: Variable 'filename' is used before being assigned.
-src/patchRequire.ts(219,25): error TS2454: Variable 'exts' is used before being assigned.
 src/patchRequire.ts(220,25): error TS2322: Type 'string[]' is not assignable to type 'String'.
 src/patchRequire.ts(220,51): error TS2339: Property '_extensions' does not exist on type 'HTMLElement'.
 src/patchRequire.ts(221,21): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
-src/patchRequire.ts(225,18): error TS2454: Variable 'filename' is used before being assigned.
-src/patchRequire.ts(226,21): error TS2454: Variable 'exts' is used before being assigned.
 src/patchRequire.ts(227,21): error TS2322: Type 'string[]' is not assignable to type 'String'.
 src/patchRequire.ts(227,47): error TS2339: Property '_extensions' does not exist on type 'HTMLElement'.
 src/patchRequire.ts(228,17): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
-src/patchRequire.ts(231,18): error TS2454: Variable 'filename' is used before being assigned.
-src/patchRequire.ts(233,21): error TS2454: Variable 'exts' is used before being assigned.
 src/patchRequire.ts(234,21): error TS2322: Type 'string[]' is not assignable to type 'String'.
 src/patchRequire.ts(234,47): error TS2339: Property '_extensions' does not exist on type 'HTMLElement'.
 src/patchRequire.ts(235,17): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
 src/patchRequire.ts(235,55): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/patchRequire.ts(238,17): error TS2454: Variable 'filename' is used before being assigned.
 src/patchRequire.ts(251,24): error TS2339: Property '_pathCache' does not exist on type 'HTMLElement'.
 src/util/lists.ts(2,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/util/lists.ts(11,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

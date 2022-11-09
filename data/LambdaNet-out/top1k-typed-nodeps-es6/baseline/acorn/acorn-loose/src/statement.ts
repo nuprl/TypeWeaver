@@ -5,7 +5,7 @@ import {getLineInfo, tokTypes as tt} from "acorn"
 const lp: Parser = LooseParser.prototype
 
 lp.parseTopLevel = function() {
-  let node: Scope = this.startNodeAt(this.options.locations ? [0, getLineInfo(this.input, 0)] : 0)
+  let node: Node = this.startNodeAt(this.options.locations ? [0, getLineInfo(this.input, 0)] : 0)
   node.body = []
   while (this.tok.type !== tt.eof) node.body.push(this.parseStatement())
   this.toks.adaptDirectivePrologue(node.body)
@@ -15,7 +15,7 @@ lp.parseTopLevel = function() {
 }
 
 lp.parseStatement = function() {
-  let starttype: String = this.tok.type, node: TokContext = this.startNode(), kind: String
+  let starttype: String = this.tok.type, node: DestructuringErrors = this.startNode(), kind: String
 
   if (this.toks.isLet()) {
     starttype = tt._var
@@ -214,7 +214,7 @@ lp.parseStatement = function() {
 }
 
 lp.parseBlock = function() {
-  let node: TokenType = this.startNode()
+  let node: Node = this.startNode()
   this.pushCx()
   this.expect(tt.braceL)
   let blockIndent: Function = this.curIndent, line: String = this.curLineStart
@@ -226,7 +226,7 @@ lp.parseBlock = function() {
   return this.finishNode(node, "BlockStatement")
 }
 
-lp.parseFor = function(node: TokContext, init: Boolean) {
+lp.parseFor = function(node: Node, init: Boolean) {
   node.init = init
   node.test = node.update = null
   if (this.eat(tt.semi) && this.tok.type !== tt.semi) node.test = this.parseExpression()
@@ -237,7 +237,7 @@ lp.parseFor = function(node: TokContext, init: Boolean) {
   return this.finishNode(node, "ForStatement")
 }
 
-lp.parseForIn = function(node: String, init: Number) {
+lp.parseForIn = function(node: DestructuringErrors, init: Number) {
   let type: String = this.tok.type === tt._in ? "ForInStatement" : "ForOfStatement"
   this.next()
   node.left = init
@@ -248,12 +248,12 @@ lp.parseForIn = function(node: String, init: Number) {
   return this.finishNode(node, type)
 }
 
-lp.parseVar = function(node: Scope, noIn: Boolean, kind: String) {
+lp.parseVar = function(node: Node, noIn: Boolean, kind: String) {
   node.kind = kind
   this.next()
   node.declarations = []
   do {
-    let decl: Parser = this.startNode()
+    let decl: RegExpValidationState = this.startNode()
     decl.id = this.options.ecmaVersion >= 6 ? this.toAssignable(this.parseExprAtom(), true) : this.parseIdent()
     decl.init = this.eat(tt.eq) ? this.parseMaybeAssign(noIn) : null
     node.declarations.push(this.finishNode(decl, "VariableDeclarator"))
@@ -268,7 +268,7 @@ lp.parseVar = function(node: Scope, noIn: Boolean, kind: String) {
 }
 
 lp.parseClass = function(isStatement: Boolean) {
-  let node: Scope = this.startNode()
+  let node: Node = this.startNode()
   this.next()
   if (this.tok.type === tt.name) node.id = this.parseIdent()
   else if (isStatement === true) node.id = this.dummyIdent()
@@ -302,7 +302,7 @@ lp.parseClassElement = function() {
   const {ecmaVersion, locations} = this.options
   const indent: Number = this.curIndent
   const line: String = this.curLineStart
-  const node: Parser = this.startNode()
+  const node: Position = this.startNode()
   let keyName: String = ""
   let isGenerator: Boolean = false
   let isAsync: Boolean = false
@@ -384,7 +384,7 @@ lp.parseClassElement = function() {
         node.value = null
       } else {
         const oldInAsync: Boolean = this.inAsync
-        const oldInGenerator: Position = this.inGenerator
+        const oldInGenerator: String = this.inGenerator
         this.inAsync = false
         this.inGenerator = false
         node.value = this.parseMaybeAssign()
@@ -401,7 +401,7 @@ lp.parseClassElement = function() {
   return node
 }
 
-lp.parseClassStaticBlock = function(node: Scope) {
+lp.parseClassStaticBlock = function(node: Node) {
   let blockIndent: Function = this.curIndent, line: String = this.curLineStart
   node.body = []
   this.pushCx()
@@ -417,7 +417,7 @@ lp.isClassElementNameStart = function() {
   return this.toks.isClassElementNameStart()
 }
 
-lp.parseClassElementName = function(element: Element) {
+lp.parseClassElementName = function(element: Parser) {
   if (this.toks.type === tt.privateId) {
     element.computed = false
     element.key = this.parsePrivateIdent()
@@ -426,8 +426,8 @@ lp.parseClassElementName = function(element: Element) {
   }
 }
 
-lp.parseFunction = function(node: Scope, isStatement: Boolean, isAsync: Boolean) {
-  let oldInAsync: Boolean = this.inAsync, oldInGenerator: Position = this.inGenerator, oldInFunction: Boolean = this.inFunction
+lp.parseFunction = function(node: Node, isStatement: Boolean, isAsync: Boolean) {
+  let oldInAsync: Boolean = this.inAsync, oldInGenerator: String = this.inGenerator, oldInFunction: Boolean = this.inFunction
   this.initFunction(node)
   if (this.options.ecmaVersion >= 6) {
     node.generator = this.eat(tt.star)
@@ -450,7 +450,7 @@ lp.parseFunction = function(node: Scope, isStatement: Boolean, isAsync: Boolean)
 }
 
 lp.parseExport = function() {
-  let node: TokContext = this.startNode()
+  let node: DestructuringErrors = this.startNode()
   this.next()
   if (this.eat(tt.star)) {
     if (this.options.ecmaVersion >= 11) {
@@ -468,7 +468,7 @@ lp.parseExport = function() {
     // export default (function foo() {}) // This is FunctionExpression.
     let isAsync: Boolean
     if (this.tok.type === tt._function || (isAsync = this.toks.isAsyncFunction())) {
-      let fNode: TokenType = this.startNode()
+      let fNode: Node = this.startNode()
       this.next()
       if (isAsync) this.next()
       node.declaration = this.parseFunction(fNode, "nullableID", isAsync)
@@ -494,7 +494,7 @@ lp.parseExport = function() {
 }
 
 lp.parseImport = function() {
-  let node: Scope = this.startNode()
+  let node: Node = this.startNode()
   this.next()
   if (this.tok.type === tt.string) {
     node.specifiers = []
@@ -528,7 +528,7 @@ lp.parseImportSpecifiers = function() {
     this.eat(tt.braceL)
     if (this.curLineStart > continuedLine) continuedLine = this.curLineStart
     while (!this.closes(tt.braceR, indent + (this.curLineStart <= continuedLine ? 1 : 0), line)) {
-      let elt: Parser = this.startNode()
+      let elt: Position = this.startNode()
       if (this.eat(tt.star)) {
         elt.local = this.eatContextual("as") ? this.parseModuleExportName() : this.dummyIdent()
         this.finishNode(elt, "ImportNamespaceSpecifier")
@@ -556,7 +556,7 @@ lp.parseExportSpecifierList = function() {
   if (this.curLineStart > continuedLine) continuedLine = this.curLineStart
   while (!this.closes(tt.braceR, indent + (this.curLineStart <= continuedLine ? 1 : 0), line)) {
     if (this.isContextual("from")) break
-    let elt: Parser = this.startNode()
+    let elt: Position = this.startNode()
     elt.local = this.parseModuleExportName()
     if (isDummy(elt.local)) break
     elt.exported = this.eatContextual("as") ? this.parseModuleExportName() : elt.local

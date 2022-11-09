@@ -1,26 +1,10 @@
 mute.ts(1,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 mute.ts(7,37): error TS2304: Cannot find name 'Void'.
-mute.ts(8,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-mute.ts(10,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-mute.ts(10,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-mute.ts(11,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-mute.ts(12,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-mute.ts(12,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-mute.ts(13,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-mute.ts(18,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+mute.ts(9,3): error TS2322: Type 'String | {}' is not assignable to type 'String'.
+  Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 mute.ts(18,23): error TS2339: Property 'prompt' does not exist on type 'String'.
-mute.ts(19,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 mute.ts(44,34): error TS2304: Cannot find name 'Void'.
-mute.ts(45,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-mute.ts(56,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-mute.ts(56,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-mute.ts(57,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-mute.ts(57,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 mute.ts(63,36): error TS2304: Cannot find name 'Void'.
-mute.ts(64,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-mute.ts(129,7): error TS2322: Type 'null' is not assignable to type 'String'.
-mute.ts(137,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-mute.ts(138,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 mute.ts(139,14): error TS2538: Type 'String' cannot be used as an index type.
 mute.ts(139,21): error TS2538: Type 'String' cannot be used as an index type.
 mute.ts(140,14): error TS2538: Type 'String' cannot be used as an index type.

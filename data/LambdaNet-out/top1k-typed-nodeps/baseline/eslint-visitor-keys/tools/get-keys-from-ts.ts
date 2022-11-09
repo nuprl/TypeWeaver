@@ -89,7 +89,7 @@ function isPropertyExcluded(property: String, excludedProperties: String): Boole
  * @param {KeysStrict} initialNodes Initial node list to sort
  * @returns {KeysStrict} The keys
  */
-function alphabetizeKeyInterfaces(initialNodes: Array): Object {
+function alphabetizeKeyInterfaces(initialNodes: Array): Promise {
 
     /**
      * Alphabetize
@@ -187,7 +187,7 @@ function traverseExtends(declNode: Object, handler: Function): Array {
  * @returns {any[]} The return values of the callback
  */
 function traverseProperties(tsDeclarationNode: Object, handler: Function): Array {
-    const tsPropertySignatures: Boolean = tsDeclarationNode.body.body;
+    const tsPropertySignatures: Array = tsDeclarationNode.body.body;
 
     const ret: Array = [];
 

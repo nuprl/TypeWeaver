@@ -3,7 +3,7 @@
  * https://github.com/NV/CSSOM
  ********************************************************************/
 'use strict';
-var CSSOM: Array = require('cssom');
+var CSSOM: String = require('cssom');
 var allProperties: Array = require('./allProperties');
 var allExtraProperties: Array = require('./allExtraProperties');
 var implementedProperties: Map = require('./implementedProperties');

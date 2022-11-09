@@ -3,7 +3,7 @@
 // These use the global symbol registry so that multiple copies of this
 // library can work together in case they are not deduped.
 const GENSYNC_START: String = Symbol.for("gensync:v1:start");
-const GENSYNC_SUSPEND: Array = Symbol.for("gensync:v1:suspend");
+const GENSYNC_SUSPEND: Function = Symbol.for("gensync:v1:suspend");
 
 const GENSYNC_EXPECTED_START: String = "GENSYNC_EXPECTED_START";
 const GENSYNC_EXPECTED_SUSPEND: String = "GENSYNC_EXPECTED_SUSPEND";
@@ -13,7 +13,7 @@ const GENSYNC_ERRBACK_NO_CALLBACK: String = "GENSYNC_ERRBACK_NO_CALLBACK";
 
 module.exports = Object.assign(
   function gensync(optsOrFn: String): Object {
-    let genFn: Array = optsOrFn;
+    let genFn: Function = optsOrFn;
     if (typeof optsOrFn !== "function") {
       genFn = newGenerator(optsOrFn);
     } else {

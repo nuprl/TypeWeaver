@@ -13,8 +13,6 @@ benchmark/etag.ts(43,46): error TS2304: Cannot find name 'Void'.
 benchmark/etag.ts(47,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 benchmark/index.ts(14,15): error TS2339: Property 'readdirSync' does not exist on type 'String'.
 benchmark/index.ts(16,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/index.ts(16,41): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-benchmark/index.ts(19,18): error TS2322: Type 'undefined' is not assignable to type 'String'.
 benchmark/index.ts(20,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 benchmark/index.ts(23,31): error TS2339: Property 'join' does not exist on type 'String'.
@@ -33,12 +31,6 @@ benchmark/modified.ts(37,7): error TS2339: Property 'on' does not exist on type 
 benchmark/modified.ts(37,46): error TS2304: Cannot find name 'Void'.
 benchmark/modified.ts(41,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 index.ts(33,49): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-index.ts(35,31): error TS7053: Element implicitly has an 'any' type because expression of type '"if-modified-since"' can't be used to index type 'Object'.
-  Property 'if-modified-since' does not exist on type 'Object'.
-index.ts(36,27): error TS7053: Element implicitly has an 'any' type because expression of type '"if-none-match"' can't be used to index type 'Object'.
-  Property 'if-none-match' does not exist on type 'Object'.
-index.ts(46,30): error TS7053: Element implicitly has an 'any' type because expression of type '"cache-control"' can't be used to index type 'Object'.
-  Property 'cache-control' does not exist on type 'Object'.
 index.ts(47,58): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(60,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

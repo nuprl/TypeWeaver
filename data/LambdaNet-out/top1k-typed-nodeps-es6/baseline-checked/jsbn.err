@@ -4,29 +4,21 @@ example.ts(5,17): error TS2339: Property 'bitLength' does not exist on type 'HTM
 index.ts(13,7): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 index.ts(13,23): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(16,57): error TS2304: Cannot find name 'Void'.
-index.ts(18,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(19,51): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(20,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(24,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(25,12): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(25,12): error TS2554: Expected 3 arguments, but got 1.
-index.ts(25,12): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 index.ts(37,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(38,23): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(38,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(38,32): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(38,41): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(39,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(40,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(40,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(40,16): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(42,5): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(48,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(49,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(50,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(51,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(51,28): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(52,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(52,28): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(53,23): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(53,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -42,17 +34,13 @@ index.ts(55,25): error TS2362: The left-hand side of an arithmetic operation mus
 index.ts(55,37): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(55,42): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(55,47): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(56,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(56,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(56,16): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(58,5): error TS2322: Type 'Number' is not assignable to type 'String'.
 index.ts(63,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(64,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(65,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(66,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(66,28): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(67,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(67,28): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(68,23): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(68,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -66,8 +54,6 @@ index.ts(70,12): error TS2362: The left-hand side of an arithmetic operation mus
 index.ts(70,24): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(70,35): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(70,40): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(71,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(71,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(71,16): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(73,5): error TS2322: Type 'Number' is not assignable to type 'String'.
@@ -80,138 +66,69 @@ index.ts(94,37): error TS2363: The right-hand side of an arithmetic operation mu
 index.ts(95,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(95,41): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(102,27): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(102,31): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(102,37): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(104,28): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(104,32): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(104,38): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(106,28): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(106,32): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(106,38): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(109,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-index.ts(112,21): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(112,29): error TS2339: Property 'charCodeAt' does not exist on type 'Function'.
 index.ts(117,34): error TS2304: Cannot find name 'Void'.
-index.ts(118,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(118,43): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
-index.ts(118,50): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(119,7): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(119,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(120,7): error TS2339: Property 's' does not exist on type 'Object'.
-index.ts(120,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(124,35): error TS2304: Cannot find name 'Void'.
-index.ts(125,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(126,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(127,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(128,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(128,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(129,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(135,7): error TS2339: Property 'fromInt' does not exist on type 'Object'.
 index.ts(136,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(140,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(140,48): error TS2304: Cannot find name 'Void'.
-index.ts(173,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(176,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(177,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(181,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(182,55): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-index.ts(188,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(188,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(189,16): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
-index.ts(189,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(190,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(190,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(190,30): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(190,42): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(190,52): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(190,66): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(191,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(191,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(191,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(191,32): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(191,42): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(192,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(192,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(192,34): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(192,39): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(193,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.
-index.ts(194,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(194,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(194,32): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(197,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(198,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(198,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(198,47): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(198,57): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(198,70): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(200,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(201,29): error TS2339: Property 'subTo' does not exist on type 'String'.
-index.ts(201,35): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(201,41): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(205,24): error TS2304: Cannot find name 'Void'.
-index.ts(206,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(206,30): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(207,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(207,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(207,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(207,51): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(212,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(212,34): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(214,9): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 index.ts(215,14): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 index.ts(216,14): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 index.ts(217,14): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 index.ts(218,14): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
-index.ts(219,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(220,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(224,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(225,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(225,33): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(225,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(225,48): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(226,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(227,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(227,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(227,36): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(227,42): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(233,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(233,21): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(233,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(233,46): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(233,50): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(234,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(234,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(234,23): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(234,30): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-index.ts(234,35): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(234,45): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(236,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(236,21): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(236,28): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(236,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(236,39): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(238,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(239,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(243,16): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
 index.ts(252,21): error TS2339: Property 'subTo' does not exist on type 'String'.
-index.ts(252,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(258,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(258,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(258,41): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(263,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(263,32): error TS2339: Property 's' does not exist on type 'Object'.
-index.ts(265,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(266,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(266,15): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(267,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(268,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(268,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(268,36): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(268,43): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(276,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -224,62 +141,36 @@ index.ts(288,14): error TS2362: The left-hand side of an arithmetic operation mu
 index.ts(290,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 index.ts(292,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(294,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-index.ts(301,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(303,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(301,22): error TS2322: Type 'number' is not assignable to type 'Boolean'.
 index.ts(303,7): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
-index.ts(303,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(303,38): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(303,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(303,58): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(303,67): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(308,48): error TS2304: Cannot find name 'Void'.
-index.ts(310,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(310,36): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(310,39): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(310,41): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
-index.ts(310,50): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(310,55): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(311,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(311,31): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(311,36): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(312,7): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(312,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(313,7): error TS2339: Property 's' does not exist on type 'Object'.
-index.ts(313,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(317,48): error TS2304: Cannot find name 'Void'.
-index.ts(318,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(318,35): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(318,38): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(318,40): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(318,44): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(318,49): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(318,54): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(319,7): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(319,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(319,29): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(320,7): error TS2339: Property 's' does not exist on type 'Object'.
-index.ts(320,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(324,47): error TS2304: Cannot find name 'Void'.
 index.ts(325,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(325,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(326,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(326,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(327,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(328,33): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(328,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(329,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(329,30): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(329,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(331,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(331,36): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(332,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(332,9): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
-index.ts(332,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(332,29): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(332,35): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(332,42): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(333,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(333,17): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(333,22): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(333,29): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -288,106 +179,59 @@ index.ts(335,32): error TS2356: An arithmetic operand must be of type 'any', 'nu
 index.ts(335,37): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(336,7): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(337,7): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(337,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(338,7): error TS2339: Property 's' does not exist on type 'Object'.
-index.ts(338,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(339,7): error TS2339: Property 'clamp' does not exist on type 'Object'.
 index.ts(343,47): error TS2304: Cannot find name 'Void'.
 index.ts(344,7): error TS2339: Property 's' does not exist on type 'Object'.
-index.ts(344,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(345,33): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(345,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(346,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(347,9): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(350,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(350,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(351,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(351,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(352,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(353,5): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(353,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(353,17): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(353,24): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(354,18): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-index.ts(354,30): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(355,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(355,13): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(355,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(355,35): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(355,42): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(356,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(356,13): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(356,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(356,30): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(358,17): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
-index.ts(358,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(358,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(358,40): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(358,49): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(358,56): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(359,7): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(359,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(359,20): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(360,7): error TS2339: Property 'clamp' does not exist on type 'Object'.
 index.ts(364,44): error TS2304: Cannot find name 'Void'.
 index.ts(367,30): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(367,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(369,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-index.ts(369,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(369,17): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(369,24): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(370,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(370,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(370,16): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(370,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(371,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(371,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(373,11): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(373,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(374,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(374,14): error TS2339: Property 's' does not exist on type 'Object'.
-index.ts(375,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(376,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(376,19): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(377,9): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(377,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(377,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(377,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(378,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(378,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(380,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(382,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(383,20): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(384,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(384,16): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(385,9): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(385,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(385,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(385,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(386,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(386,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(388,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(388,14): error TS2339: Property 's' does not exist on type 'Object'.
 index.ts(390,7): error TS2339: Property 's' does not exist on type 'Object'.
-index.ts(391,17): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(391,19): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(391,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(392,21): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(392,23): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(393,7): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(394,7): error TS2339: Property 'clamp' does not exist on type 'Object'.
-index.ts(399,54): error TS2304: Cannot find name 'Void'.
-index.ts(400,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(401,21): error TS2339: Property 'abs' does not exist on type 'HTMLElement'.
+index.ts(399,49): error TS2304: Cannot find name 'Void'.
+index.ts(401,21): error TS2339: Property 'abs' does not exist on type 'Object'.
 index.ts(402,23): error TS2339: Property 't' does not exist on type 'HTMLElement'.
 index.ts(403,7): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(403,17): error TS2339: Property 't' does not exist on type 'Object'.
@@ -395,18 +239,15 @@ index.ts(404,14): error TS2356: An arithmetic operand must be of type 'any', 'nu
 index.ts(404,24): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(405,23): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(405,28): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(405,31): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(405,39): error TS2339: Property 't' does not exist on type 'HTMLElement'.
 index.ts(405,46): error TS2339: Property 'am' does not exist on type 'HTMLElement'.
 index.ts(405,54): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(405,69): error TS2339: Property 't' does not exist on type 'HTMLElement'.
 index.ts(406,7): error TS2339: Property 's' does not exist on type 'Object'.
 index.ts(407,7): error TS2339: Property 'clamp' does not exist on type 'Object'.
-index.ts(408,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(408,21): error TS2339: Property 's' does not exist on type 'HTMLElement'.
+index.ts(408,21): error TS2339: Property 's' does not exist on type 'Object'.
 index.ts(408,40): error TS2339: Property 'subTo' does not exist on type 'String'.
 index.ts(412,36): error TS2304: Cannot find name 'Void'.
-index.ts(413,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(414,24): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(414,34): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(415,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -416,7 +257,6 @@ index.ts(416,32): error TS2356: An arithmetic operand must be of type 'any', 'nu
 index.ts(417,25): error TS2339: Property 'am' does not exist on type 'Object'.
 index.ts(417,33): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(417,44): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(419,10): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(419,18): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(419,26): error TS2339: Property 'am' does not exist on type 'Object'.
 index.ts(419,29): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
@@ -425,14 +265,10 @@ index.ts(419,53): error TS2363: The right-hand side of an arithmetic operation m
 index.ts(419,65): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(419,69): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(420,11): error TS2339: Property 'DV' does not exist on type 'Object'.
-index.ts(422,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(422,17): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(422,25): error TS2339: Property 'DV' does not exist on type 'Object'.
-index.ts(423,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(423,17): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(426,11): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(426,18): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(426,22): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(426,34): error TS2339: Property 'am' does not exist on type 'Object'.
 index.ts(426,42): error TS2538: Type 'Number' cannot be used as an index type.
@@ -442,62 +278,38 @@ index.ts(428,7): error TS2339: Property 'clamp' does not exist on type 'Object'.
 index.ts(433,65): error TS2304: Cannot find name 'Void'.
 index.ts(434,24): error TS2339: Property 'abs' does not exist on type 'HTMLElement'.
 index.ts(435,12): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(436,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(437,12): error TS2339: Property 't' does not exist on type 'HTMLElement'.
 index.ts(437,19): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(438,24): error TS2339: Property 'fromInt' does not exist on type 'String'.
-index.ts(439,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(444,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(445,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(445,21): error TS2339: Property 's' does not exist on type 'HTMLElement'.
-index.ts(446,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(446,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(446,39): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(446,45): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(448,10): error TS2339: Property 'lShiftTo' does not exist on type 'Object'.
 index.ts(449,10): error TS2339: Property 'lShiftTo' does not exist on type 'HTMLElement'.
 index.ts(451,10): error TS2339: Property 'copyTo' does not exist on type 'Object'.
 index.ts(452,10): error TS2339: Property 'copyTo' does not exist on type 'HTMLElement'.
 index.ts(454,24): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(455,22): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(455,24): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(457,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(457,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(457,54): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(457,56): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(457,67): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(458,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(458,32): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(459,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(459,37): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(460,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(461,23): error TS2339: Property 't' does not exist on type 'Function'.
 index.ts(462,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(462,23): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(464,7): error TS2339: Property 'dlShiftTo' does not exist on type 'Object'.
 index.ts(465,11): error TS2339: Property 'compareTo' does not exist on type 'Function'.
-index.ts(466,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Function'.
-  No index signature with a parameter of type 'number' was found on type 'Function'.
 index.ts(466,11): error TS2339: Property 't' does not exist on type 'Function'.
 index.ts(467,9): error TS2339: Property 'subTo' does not exist on type 'Function'.
 index.ts(469,20): error TS2339: Property 'dlShiftTo' does not exist on type 'String'.
 index.ts(470,7): error TS2339: Property 'subTo' does not exist on type 'String'.
 index.ts(471,14): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(471,22): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(471,26): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(472,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(475,9): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Function'.
-  No index signature with a parameter of type 'number' was found on type 'Function'.
 index.ts(475,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(475,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(475,47): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(475,52): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(475,58): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Function'.
-  No index signature with a parameter of type 'number' was found on type 'Function'.
 index.ts(475,60): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(475,74): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(476,14): error TS2538: Type 'Number' cannot be used as an index type.
@@ -515,29 +327,19 @@ index.ts(489,20): error TS2339: Property 'rShiftTo' does not exist on type 'Func
 index.ts(490,9): error TS2365: Operator '<' cannot be applied to types 'Function' and 'number'.
 index.ts(490,33): error TS2339: Property 'subTo' does not exist on type 'String'.
 index.ts(494,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(496,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(497,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(497,25): error TS2339: Property 'compareTo' does not exist on type 'Object'.
 index.ts(498,5): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(502,32): error TS2304: Cannot find name 'Void'.
-index.ts(503,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(506,11): error TS2339: Property 's' does not exist on type 'String'.
 index.ts(506,22): error TS2339: Property 'compareTo' does not exist on type 'String'.
-index.ts(506,32): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(506,55): error TS2339: Property 'mod' does not exist on type 'String'.
-index.ts(506,59): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(512,32): error TS2304: Cannot find name 'Void'.
 index.ts(513,7): error TS2339: Property 'divRemTo' does not exist on type 'String'.
-index.ts(513,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(515,55): error TS2304: Cannot find name 'Void'.
 index.ts(516,7): error TS2339: Property 'multiplyTo' does not exist on type 'String'.
-index.ts(517,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(519,42): error TS2304: Cannot find name 'Void'.
 index.ts(520,7): error TS2339: Property 'squareTo' does not exist on type 'String'.
-index.ts(521,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(541,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(542,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(543,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(544,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(545,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -552,81 +354,41 @@ index.ts(547,36): error TS2363: The right-hand side of an arithmetic operation m
 index.ts(550,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(550,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(550,25): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(550,30): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(550,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(552,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(552,30): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(556,35): error TS2304: Cannot find name 'Void'.
-index.ts(557,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(558,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(558,17): error TS2339: Property 'invDigit' does not exist on type 'Object'.
-index.ts(559,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(559,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(560,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(560,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(561,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(561,24): error TS2339: Property 'DB' does not exist on type 'Object'.
-index.ts(562,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(562,22): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(568,7): error TS2339: Property 'abs' does not exist on type 'Function'.
-index.ts(568,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(569,7): error TS2339: Property 'divRemTo' does not exist on type 'Function'.
-index.ts(569,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(569,7): error TS2339: Property 'divRemTo' does not exist on type 'Object'.
 index.ts(570,11): error TS2339: Property 's' does not exist on type 'Function'.
-index.ts(570,22): error TS2339: Property 'compareTo' does not exist on type 'Function'.
-index.ts(570,54): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(571,5): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(570,22): error TS2339: Property 'compareTo' does not exist on type 'Object'.
+index.ts(571,5): error TS2322: Type 'Object' is not assignable to type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(577,7): error TS2339: Property 'copyTo' does not exist on type 'String'.
-index.ts(578,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(583,35): error TS2304: Cannot find name 'Void'.
 index.ts(585,9): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(585,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(587,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(587,11): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(588,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(590,23): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(592,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(592,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(593,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(593,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(593,30): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
-index.ts(593,44): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(593,56): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(594,11): error TS2339: Property 'DM' does not exist on type 'Object'.
-index.ts(596,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(597,9): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(597,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(597,41): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(599,16): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(599,24): error TS2339: Property 'DV' does not exist on type 'Object'.
 index.ts(600,11): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(600,19): error TS2339: Property 'DV' does not exist on type 'Object'.
-index.ts(601,9): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(601,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(604,7): error TS2339: Property 'clamp' does not exist on type 'Object'.
 index.ts(605,7): error TS2339: Property 'drShiftTo' does not exist on type 'Object'.
-index.ts(605,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(606,11): error TS2339: Property 'compareTo' does not exist on type 'Object'.
-index.ts(606,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(606,37): error TS2339: Property 'subTo' does not exist on type 'Object'.
-index.ts(606,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(610,45): error TS2304: Cannot find name 'Void'.
 index.ts(611,7): error TS2339: Property 'squareTo' does not exist on type 'String'.
-index.ts(612,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(616,58): error TS2304: Cannot find name 'Void'.
 index.ts(617,7): error TS2339: Property 'multiplyTo' does not exist on type 'String'.
-index.ts(618,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(629,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(629,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(629,40): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(633,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(637,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(637,20): error TS2339: Property 'convert' does not exist on type 'HTMLElement'.
-index.ts(637,28): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(638,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(640,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(641,9): error TS2339: Property 'sqrTo' does not exist on type 'HTMLElement'.
@@ -637,165 +399,78 @@ index.ts(649,14): error TS2339: Property 'revert' does not exist on type 'HTMLEl
 index.ts(653,47): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(655,9): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
 index.ts(655,22): error TS2339: Property 'isEven' does not exist on type 'String'.
-index.ts(655,36): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-index.ts(656,14): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-index.ts(657,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(655,36): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(656,14): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(687,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 index.ts(688,24): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-index.ts(702,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(708,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(709,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(709,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(709,41): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(710,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(711,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(711,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(712,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(714,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(714,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(714,56): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(714,67): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(719,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(719,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(719,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(724,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(724,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(724,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(729,35): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(729,55): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-index.ts(734,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(735,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(735,30): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(735,45): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(742,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(743,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(744,30): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(745,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-index.ts(749,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(750,14): error TS2339: Property 'signum' does not exist on type 'Function'.
 index.ts(751,18): error TS2339: Property 'intValue' does not exist on type 'Object'.
 index.ts(752,9): error TS2339: Property 'divRemTo' does not exist on type 'Function'.
 index.ts(754,14): error TS2339: Property 'intValue' does not exist on type 'Object'.
 index.ts(758,48): error TS2304: Cannot find name 'Void'.
-index.ts(759,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(761,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(762,30): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(767,11): error TS2322: Type 'Number' is not assignable to type 'String'.
 index.ts(767,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
   Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 index.ts(768,11): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
-index.ts(769,35): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(772,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(772,11): error TS2365: Operator '+' cannot be applied to types 'number' and 'String'.
 index.ts(772,15): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(773,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(774,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(775,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(781,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(781,31): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-index.ts(782,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(784,29): error TS2339: Property 'subTo' does not exist on type 'String'.
-index.ts(784,35): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(784,41): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(788,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(788,59): error TS2304: Cannot find name 'Void'.
-index.ts(791,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(793,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(794,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(794,27): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(796,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(796,41): error TS2339: Property 'shiftLeft' does not exist on type 'String'.
 index.ts(796,51): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(796,66): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(797,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(797,28): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(798,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(799,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(800,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(801,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(801,39): error TS2339: Property 'shiftLeft' does not exist on type 'String'.
 index.ts(801,49): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(801,57): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(806,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(807,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(808,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(810,32): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(812,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(818,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(820,5): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(820,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(821,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(821,33): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(821,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(824,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(825,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(825,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(825,36): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(825,42): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(825,49): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(825,58): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(825,70): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(826,9): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(826,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(826,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(826,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(826,34): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(826,44): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(829,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(829,21): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(829,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(829,50): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(830,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(830,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(830,23): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(830,30): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-index.ts(830,35): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(832,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(832,21): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(832,28): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(834,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(835,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(838,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(838,30): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(839,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(839,43): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(839,56): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(840,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(840,35): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(840,37): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(847,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(850,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(850,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(853,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(853,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(857,62): error TS2304: Cannot find name 'Void'.
 index.ts(860,30): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(860,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(861,26): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(861,31): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(861,39): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(861,44): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(861,50): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(862,11): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(862,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(863,13): error TS2339: Property 's' does not exist on type 'Object'.
-index.ts(863,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(864,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(864,33): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(864,38): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(864,46): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(864,51): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(865,9): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(865,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(867,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(867,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(868,25): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(868,30): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(868,35): error TS2538: Type 'Number' cannot be used as an index type.
@@ -803,33 +478,17 @@ index.ts(868,48): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(869,9): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(869,15): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(871,7): error TS2339: Property 's' does not exist on type 'Object'.
-index.ts(871,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(871,24): error TS2339: Property 's' does not exist on type 'Object'.
 index.ts(872,7): error TS2339: Property 'clamp' does not exist on type 'Object'.
 index.ts(877,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(877,16): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(881,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(887,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(887,16): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(891,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(897,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(897,16): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(901,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(907,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(911,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(918,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(918,38): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
-index.ts(918,45): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(918,56): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(919,7): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(919,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(920,7): error TS2339: Property 's' does not exist on type 'Object'.
-index.ts(920,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(927,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(928,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(935,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(936,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(944,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(945,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(946,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
@@ -844,249 +503,135 @@ index.ts(957,7): error TS2362: The left-hand side of an arithmetic operation mus
 index.ts(958,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 index.ts(960,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(960,25): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(966,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(967,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(967,32): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
-index.ts(967,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(967,51): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(968,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(968,28): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(968,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(976,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(976,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(977,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(985,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(985,28): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(986,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(986,38): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.
-index.ts(986,48): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(986,58): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(992,32): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(992,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(993,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(993,29): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(994,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(994,18): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(994,29): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(994,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(998,49): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(999,36): error TS2339: Property 'shiftLeft' does not exist on type 'String'.
-index.ts(1000,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1006,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(1005,33): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(1010,35): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-index.ts(1011,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1015,34): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-index.ts(1016,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1020,44): error TS2304: Cannot find name 'Void'.
 index.ts(1023,30): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(1023,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1025,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1025,17): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(1025,24): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(1026,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(1026,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1026,16): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1026,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1027,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1027,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1029,11): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(1029,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1030,14): error TS2339: Property 's' does not exist on type 'Object'.
-index.ts(1031,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1032,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1032,19): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(1033,9): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(1033,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1033,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1033,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1034,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1034,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1036,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1038,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1039,20): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(1040,16): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(1041,9): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(1041,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1041,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1041,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1042,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1042,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1044,14): error TS2339: Property 's' does not exist on type 'Object'.
 index.ts(1046,7): error TS2339: Property 's' does not exist on type 'Object'.
-index.ts(1047,16): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(1047,18): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1048,22): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(1048,24): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1048,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1049,7): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(1050,7): error TS2339: Property 'clamp' does not exist on type 'Object'.
-index.ts(1056,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1063,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1070,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1077,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1084,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1091,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(1054,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(1096,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(1099,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1104,37): error TS2304: Cannot find name 'Void'.
-index.ts(1105,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1105,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1105,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1105,31): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1105,38): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1105,50): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1106,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1107,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1111,49): error TS2304: Cannot find name 'Void'.
-index.ts(1113,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1113,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1113,30): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1114,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1114,10): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(1115,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1115,17): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(1115,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1116,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1116,12): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(1116,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1117,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1117,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1117,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1117,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1118,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1118,14): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(1123,23): error TS2304: Cannot find name 'Void'.
 index.ts(1127,53): error TS2304: Cannot find name 'Void'.
 index.ts(1128,7): error TS2339: Property 'multiplyTo' does not exist on type 'String'.
 index.ts(1130,42): error TS2304: Cannot find name 'Void'.
 index.ts(1131,7): error TS2339: Property 'squareTo' does not exist on type 'String'.
-index.ts(1141,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1141,24): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+index.ts(1140,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(1141,24): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(1146,65): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-index.ts(1147,30): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1147,41): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(1147,44): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(1148,7): error TS2339: Property 's' does not exist on type 'Object'.
 index.ts(1149,7): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(1150,19): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(1150,23): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1152,10): error TS2322: Type 'number' is not assignable to type 'String'.
 index.ts(1152,16): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(1152,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1152,28): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
 index.ts(1152,37): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1153,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-index.ts(1153,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1153,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1153,36): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(1153,49): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1154,10): error TS2322: Type 'number' is not assignable to type 'String'.
 index.ts(1154,25): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(1154,28): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(1154,32): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
 index.ts(1154,41): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1154,44): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1154,57): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(1154,70): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1154,74): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1155,7): error TS2339: Property 'clamp' does not exist on type 'Object'.
-index.ts(1160,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(1160,64): error TS2304: Cannot find name 'Void'.
+index.ts(1160,65): error TS2304: Cannot find name 'Void'.
 index.ts(1161,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1162,28): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(1162,24): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(1162,39): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(1162,43): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(1163,7): error TS2339: Property 's' does not exist on type 'Object'.
 index.ts(1164,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(1164,24): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(1165,23): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1165,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1165,45): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(1165,50): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1166,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1166,22): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1166,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1166,35): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1166,39): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1166,44): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(1166,57): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1166,70): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(1167,7): error TS2339: Property 'clamp' does not exist on type 'Object'.
+index.ts(1168,7): error TS2339: Property 'drShiftTo' does not exist on type 'Object'.
 index.ts(1172,32): error TS2304: Cannot find name 'Void'.
-index.ts(1174,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1175,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1176,20): error TS2339: Property 'dlShiftTo' does not exist on type 'String'.
 index.ts(1176,36): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(1176,39): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1177,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1177,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1178,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1182,11): error TS2339: Property 's' does not exist on type 'String'.
 index.ts(1182,22): error TS2339: Property 't' does not exist on type 'String'.
-index.ts(1182,30): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1182,49): error TS2339: Property 'mod' does not exist on type 'String'.
-index.ts(1182,53): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1183,16): error TS2339: Property 'compareTo' does not exist on type 'String'.
-index.ts(1183,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1186,9): error TS2339: Property 'copyTo' does not exist on type 'String'.
-index.ts(1187,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1197,43): error TS2304: Cannot find name 'Void'.
 index.ts(1198,7): error TS2339: Property 'drShiftTo' does not exist on type 'HTMLElement'.
-index.ts(1198,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1198,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1199,11): error TS2339: Property 't' does not exist on type 'HTMLElement'.
-index.ts(1199,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1200,9): error TS2339: Property 't' does not exist on type 'HTMLElement'.
-index.ts(1200,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1201,9): error TS2339: Property 'clamp' does not exist on type 'HTMLElement'.
-index.ts(1203,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1203,29): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1203,38): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1203,52): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1204,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1204,28): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1204,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1204,51): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1205,14): error TS2339: Property 'compareTo' does not exist on type 'HTMLElement'.
-index.ts(1205,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1205,40): error TS2339: Property 'dAddOffset' does not exist on type 'HTMLElement'.
-index.ts(1205,54): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1206,7): error TS2339: Property 'subTo' does not exist on type 'HTMLElement'.
-index.ts(1206,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1207,14): error TS2339: Property 'compareTo' does not exist on type 'HTMLElement'.
-index.ts(1207,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1207,40): error TS2339: Property 'subTo' does not exist on type 'HTMLElement'.
-index.ts(1207,46): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1211,48): error TS2304: Cannot find name 'Void'.
 index.ts(1212,7): error TS2339: Property 'squareTo' does not exist on type 'String'.
-index.ts(1213,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1217,61): error TS2304: Cannot find name 'Void'.
 index.ts(1218,7): error TS2339: Property 'multiplyTo' does not exist on type 'String'.
-index.ts(1219,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1229,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(1232,23): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-index.ts(1240,20): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+index.ts(1240,20): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(1241,16): error TS2339: Property 'isEven' does not exist on type 'String'.
-index.ts(1241,30): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-index.ts(1242,14): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+index.ts(1241,30): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(1242,14): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(1247,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1248,26): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1249,5): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 index.ts(1249,14): error TS2339: Property 'convert' does not exist on type 'HTMLElement'.
-index.ts(1249,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1252,9): error TS2339: Property 'sqrTo' does not exist on type 'HTMLElement'.
-index.ts(1252,15): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 index.ts(1254,11): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(1255,11): error TS2339: Property 'mulTo' does not exist on type 'HTMLElement'.
-index.ts(1255,21): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(1255,23): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1255,33): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(1256,9): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
@@ -1099,14 +644,12 @@ index.ts(1269,47): error TS2362: The left-hand side of an arithmetic operation m
 index.ts(1269,52): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1270,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1270,27): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1270,38): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1270,52): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1274,15): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1275,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1276,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1278,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1278,17): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1279,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1280,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1284,11): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(1288,13): error TS2339: Property 'sqrTo' does not exist on type 'HTMLElement'.
@@ -1114,7 +657,7 @@ index.ts(1289,13): error TS2339: Property 'sqrTo' does not exist on type 'HTMLEl
 index.ts(1290,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1292,22): error TS2339: Property 'sqrTo' does not exist on type 'HTMLElement'.
 index.ts(1294,11): error TS2322: Type 'String' is not assignable to type 'Function'.
-index.ts(1296,11): error TS2322: Type 'Function' is not assignable to type 'String'.
+index.ts(1296,11): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(1298,11): error TS2339: Property 'mulTo' does not exist on type 'HTMLElement'.
 index.ts(1298,23): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(1301,38): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -1122,12 +665,8 @@ index.ts(1302,11): error TS2339: Property 'sqrTo' does not exist on type 'HTMLEl
 index.ts(1303,9): error TS2322: Type 'String' is not assignable to type 'Function'.
 index.ts(1305,9): error TS2322: Type 'Function' is not assignable to type 'String'.
 index.ts(1306,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1307,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1308,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1312,14): error TS2339: Property 'revert' does not exist on type 'HTMLElement'.
-index.ts(1317,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1317,34): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1317,50): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1318,23): error TS2339: Property 's' does not exist on type 'HTMLElement'.
 index.ts(1318,33): error TS2339: Property 'negate' does not exist on type 'HTMLElement'.
 index.ts(1318,46): error TS2339: Property 'clone' does not exist on type 'HTMLElement'.
@@ -1147,23 +686,15 @@ index.ts(1337,11): error TS2339: Property 'rShiftTo' does not exist on type 'Str
 index.ts(1339,11): error TS2339: Property 'subTo' does not exist on type 'String'.
 index.ts(1340,11): error TS2339: Property 'rShiftTo' does not exist on type 'String'.
 index.ts(1343,18): error TS2339: Property 'lShiftTo' does not exist on type 'String'.
-index.ts(1350,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1350,31): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1351,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1351,32): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1352,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1353,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1353,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1354,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1354,55): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1354,59): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1354,63): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1354,74): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1360,25): error TS2339: Property 'isEven' does not exist on type 'Object'.
-index.ts(1361,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1361,36): error TS2339: Property 'signum' does not exist on type 'Object'.
 index.ts(1362,28): error TS2339: Property 'clone' does not exist on type 'Object'.
-index.ts(1363,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1364,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 index.ts(1365,23): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 index.ts(1366,23): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
@@ -1175,7 +706,6 @@ index.ts(1370,11): error TS2339: Property 'rShiftTo' does not exist on type 'HTM
 index.ts(1372,18): error TS2339: Property 'isEven' does not exist on type 'Object'.
 index.ts(1372,33): error TS2339: Property 'isEven' does not exist on type 'Object'.
 index.ts(1373,15): error TS2339: Property 'addTo' does not exist on type 'Object'.
-index.ts(1373,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1374,15): error TS2339: Property 'subTo' does not exist on type 'Object'.
 index.ts(1376,13): error TS2339: Property 'rShiftTo' does not exist on type 'Object'.
 index.ts(1377,23): error TS2339: Property 'isEven' does not exist on type 'Object'.
@@ -1186,7 +716,6 @@ index.ts(1381,11): error TS2339: Property 'rShiftTo' does not exist on type 'HTM
 index.ts(1383,18): error TS2339: Property 'isEven' does not exist on type 'Object'.
 index.ts(1383,33): error TS2339: Property 'isEven' does not exist on type 'HTMLElement'.
 index.ts(1384,15): error TS2339: Property 'addTo' does not exist on type 'Object'.
-index.ts(1384,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1385,15): error TS2339: Property 'subTo' does not exist on type 'HTMLElement'.
 index.ts(1387,13): error TS2339: Property 'rShiftTo' does not exist on type 'Object'.
 index.ts(1388,23): error TS2339: Property 'isEven' does not exist on type 'HTMLElement'.
@@ -1207,80 +736,54 @@ index.ts(1403,27): error TS2339: Property 'addTo' does not exist on type 'HTMLEl
 index.ts(1405,11): error TS2339: Property 'signum' does not exist on type 'HTMLElement'.
 index.ts(1405,34): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 index.ts(1409,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(1584,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1585,11): error TS2339: Property 't' does not exist on type 'Object'.
-index.ts(1585,21): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
+index.ts(1585,11): error TS2339: Property 't' does not exist on type 'Function'.
 index.ts(1586,43): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1587,13): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(1590,11): error TS2339: Property 'isEven' does not exist on type 'Object'.
+index.ts(1590,11): error TS2339: Property 'isEven' does not exist on type 'Function'.
 index.ts(1594,21): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 index.ts(1595,38): error TS2365: Operator '<' cannot be applied to types 'String' and 'Number'.
 index.ts(1595,49): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1595,64): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1596,13): error TS2339: Property 'modInt' does not exist on type 'Object'.
+index.ts(1596,13): error TS2339: Property 'modInt' does not exist on type 'Function'.
 index.ts(1597,25): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1597,39): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1599,14): error TS2339: Property 'millerRabin' does not exist on type 'Object'.
-index.ts(1604,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(1599,14): error TS2339: Property 'millerRabin' does not exist on type 'Function'.
 index.ts(1605,24): error TS2339: Property 'getLowestSetBit' does not exist on type 'HTMLElement'.
 index.ts(1607,24): error TS2339: Property 'shiftRight' does not exist on type 'HTMLElement'.
 index.ts(1608,10): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 index.ts(1613,9): error TS2339: Property 'fromInt' does not exist on type 'HTMLElement'.
 index.ts(1614,30): error TS2339: Property 'modPow' does not exist on type 'HTMLElement'.
-index.ts(1614,40): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1615,13): error TS2339: Property 'compareTo' does not exist on type 'HTMLElement'.
 index.ts(1615,49): error TS2339: Property 'compareTo' does not exist on type 'HTMLElement'.
 index.ts(1617,16): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1617,29): error TS2339: Property 'compareTo' does not exist on type 'HTMLElement'.
 index.ts(1618,17): error TS2339: Property 'modPowInt' does not exist on type 'HTMLElement'.
-index.ts(1618,30): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1619,17): error TS2339: Property 'compareTo' does not exist on type 'HTMLElement'.
 index.ts(1621,15): error TS2339: Property 'compareTo' does not exist on type 'HTMLElement'.
 index.ts(1703,37): error TS2304: Cannot find name 'Void'.
-index.ts(1704,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(1704,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1704,29): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1705,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(1705,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1705,30): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1706,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(1706,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1706,30): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1707,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(1707,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1707,30): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1708,32): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1708,44): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1712,29): error TS2304: Cannot find name 'Void'.
-index.ts(1717,7): error TS2454: Variable 'rng_pool' is used before being assigned.
 index.ts(1725,39): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'ArrayBufferView'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'ArrayBufferView': buffer, byteLength, byteOffset
 index.ts(1726,31): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1726,34): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(1726,43): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1726,60): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(1732,39): error TS2339: Property 'random' does not exist on type 'Crypto'.
 index.ts(1733,37): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1734,11): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(1734,20): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1734,47): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-index.ts(1737,23): error TS2454: Variable 'rng_psize' is used before being assigned.
-index.ts(1740,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(1740,16): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1740,30): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1741,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(1741,16): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1741,30): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1749,28): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
@@ -1294,47 +797,17 @@ index.ts(1763,38): error TS2304: Cannot find name 'Void'.
 index.ts(1765,34): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1768,28): error TS2304: Cannot find name 'Void'.
 index.ts(1774,23): error TS2304: Cannot find name 'Void'.
-index.ts(1775,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1776,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1777,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1781,35): error TS2304: Cannot find name 'Void'.
 index.ts(1783,28): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1783,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1783,38): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(1785,28): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1786,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1786,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1786,23): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(1786,32): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1787,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1787,18): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(1788,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1788,14): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(1788,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1788,26): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(1789,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(1789,14): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(1791,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1792,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1797,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1797,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1798,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1798,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1798,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1798,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1799,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1799,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1800,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1800,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1800,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1800,29): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1801,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1801,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1802,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1802,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1802,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(1809,29): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-index.ts(1810,12): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+index.ts(1810,12): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(1818,5): error TS1258: A default export must be at the top level of a file or module declaration.
-index.ts(1824,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 

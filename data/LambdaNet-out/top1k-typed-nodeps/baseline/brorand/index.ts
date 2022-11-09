@@ -38,7 +38,7 @@ if (typeof self === 'object') {
   } else if (self.msCrypto && self.msCrypto.getRandomValues) {
     // IE
     Rand.prototype._rand = function _rand(n: String): Object {
-      var arr: String = new Uint8Array(n);
+      var arr: Object = new Uint8Array(n);
       self.msCrypto.getRandomValues(arr);
       return arr;
     };

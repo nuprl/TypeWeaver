@@ -1,11 +1,11 @@
 callBound.ts(8,82): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 callBound.ts(9,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 callBound.ts(9,38): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(name: keyof Intrinsics, allowMissing?: false | undefined): string | number | Object | Function | String | Number | Boolean | ... 464 more ... | ((value: object) => WeakSet<...>)', gave the following error.
+  Overload 1 of 3, '(name: keyof Intrinsics, allowMissing?: false): string | number | Object | Function | String | Number | Boolean | RegExp | ... 463 more ... | ((value: object) => WeakSet<...>)', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'keyof Intrinsics'.
-  Overload 2 of 3, '(name: keyof Intrinsics, allowMissing?: boolean | undefined): string | number | Object | Function | String | Number | Boolean | ... 465 more ... | undefined', gave the following error.
+  Overload 2 of 3, '(name: keyof Intrinsics, allowMissing?: boolean): string | number | Object | Function | String | Number | Boolean | ... 464 more ... | ((value: object) => WeakSet<...>)', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'keyof Intrinsics'.
-  Overload 3 of 3, '(name: string, allowMissing?: boolean | undefined): unknown', gave the following error.
+  Overload 3 of 3, '(name: string, allowMissing?: boolean): unknown', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(6,5): error TS2322: Type '(this: Function, thisArg: any, argArray?: any) => any' is not assignable to type 'String'.
@@ -17,11 +17,6 @@ index.ts(8,82): error TS2769: No overload matches this call.
   Overload 2 of 2, '(func: new (...args: unknown[]) => unknown, thisArg: unknown): new (...args: readonly unknown[]) => unknown', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'new (...args: unknown[]) => unknown'.
       Type 'String' provides no match for the signature 'new (...args: unknown[]): unknown'.
-index.ts(10,5): error TS2322: Type '((o: any, p: PropertyKey) => PropertyDescriptor | undefined) | undefined' is not assignable to type 'Function'.
-  Type 'undefined' is not assignable to type 'Function'.
-index.ts(11,5): error TS2322: Type '(<T>(o: T, p: PropertyKey, attributes: PropertyDescriptor & ThisType<any>) => T) | undefined' is not assignable to type 'Function'.
-  Type 'undefined' is not assignable to type 'Function'.
-index.ts(19,3): error TS2322: Type 'null' is not assignable to type 'Function'.
 index.ts(23,52): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(23,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(24,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

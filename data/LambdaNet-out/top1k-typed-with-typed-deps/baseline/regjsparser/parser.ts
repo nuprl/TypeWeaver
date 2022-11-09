@@ -231,7 +231,7 @@
     return function fromCodePoint(): String {
       var MAX_SIZE: Number = 0x4000;
       var codeUnits: Array = [];
-      var highSurrogate: Number;
+      var highSurrogate: String;
       var lowSurrogate: String;
       var index: Number = -1;
       var length: Number = arguments.length;

@@ -13,52 +13,23 @@ src/index.ts(55,20): error TS2339: Property 'createImportedName' does not exist 
 src/index.ts(57,60): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/index.ts(58,17): error TS2339: Property 'createImportedName' does not exist on type 'Object'.
 src/index.ts(59,46): error TS2339: Property 'failOnWrongOrder' does not exist on type 'Object'.
-src/index.ts(71,14): error TS7006: Parameter 'root' implicitly has an 'any' type.
-src/index.ts(71,20): error TS7006: Parameter 'postcss' implicitly has an 'any' type.
-src/index.ts(73,27): error TS7006: Parameter 'rule' implicitly has an 'any' type.
 src/index.ts(80,44): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
-src/index.ts(82,15): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-src/index.ts(86,41): error TS7006: Parameter 'declaration' implicitly has an 'any' type.
-src/index.ts(104,54): error TS7006: Parameter 's' implicitly has an 'any' type.
 src/index.ts(120,44): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
-src/index.ts(122,15): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-src/index.ts(123,15): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-src/index.ts(123,37): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-src/index.ts(125,54): error TS7006: Parameter 's' implicitly has an 'any' type.
-src/index.ts(126,22): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-src/index.ts(127,19): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
 src/index.ts(127,44): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
-src/index.ts(130,24): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
 src/index.ts(137,48): error TS2345: Argument of type '{}' is not assignable to parameter of type 'String'.
   Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/index.ts(140,45): error TS2339: Property 'nodes' does not exist on type 'Error'.
-src/index.ts(140,57): error TS7006: Parameter 'importPath' implicitly has an 'any' type.
-src/index.ts(144,26): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
 src/index.ts(148,30): error TS2339: Property 'nodes' does not exist on type 'Error'.
-src/index.ts(149,25): error TS7006: Parameter 'importPath' implicitly has an 'any' type.
-src/index.ts(159,15): error TS7034: Variable 'lastImportRule' implicitly has type 'any' in some locations where its type cannot be determined.
-src/index.ts(161,33): error TS7006: Parameter 'path' implicitly has an 'any' type.
-src/index.ts(162,37): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-src/index.ts(163,24): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-src/index.ts(171,19): error TS7005: Variable 'lastImportRule' implicitly has an 'any' type.
-src/index.ts(172,34): error TS7005: Variable 'lastImportRule' implicitly has an 'any' type.
 src/topologicalSort.ts(7,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/topologicalSort.ts(7,32): error TS2538: Type 'Function' cannot be used as an index type.
+src/topologicalSort.ts(7,32): error TS2538: Type 'Object' cannot be used as an index type.
 src/topologicalSort.ts(9,36): error TS2538: Type 'Object' cannot be used as an index type.
 src/topologicalSort.ts(12,6): error TS2339: Property 'nodes' does not exist on type 'Error'.
 src/topologicalSort.ts(17,72): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/topologicalSort.ts(17,96): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 src/topologicalSort.ts(18,13): error TS2538: Type 'Object' cannot be used as an index type.
-src/topologicalSort.ts(19,5): error TS2322: Type 'undefined' is not assignable to type 'String'.
 src/topologicalSort.ts(22,13): error TS2538: Type 'Object' cannot be used as an index type.
 src/topologicalSort.ts(24,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-src/topologicalSort.ts(24,26): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-src/topologicalSort.ts(27,5): error TS2322: Type 'undefined' is not assignable to type 'String'.
 src/topologicalSort.ts(30,9): error TS2538: Type 'Object' cannot be used as an index type.
 src/topologicalSort.ts(32,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/topologicalSort.ts(32,33): error TS2538: Type 'Object' cannot be used as an index type.

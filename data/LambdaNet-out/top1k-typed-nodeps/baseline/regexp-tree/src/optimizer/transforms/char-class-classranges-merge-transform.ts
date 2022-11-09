@@ -246,7 +246,7 @@ function fitsInMetaD(expression: Object): Boolean {
  * @param {boolean} hasIUFlags
  * @returns {boolean}
  */
-function fitsInMetaW(expression: Object, hasIUFlags: Number): Boolean {
+function fitsInMetaW(expression: Object, hasIUFlags: Boolean): Boolean {
   return (
     fitsInMetaD(expression) ||
     (expression.codePoint >= 0x41 && expression.codePoint <= 0x5a) || // A-Z
@@ -262,7 +262,7 @@ function fitsInMetaW(expression: Object, hasIUFlags: Number): Boolean {
  * @param {Object} classRange - Char or ClassRange node
  * @returns {boolean}
  */
-function combinesWithPrecedingClassRange(expression: Object, classRange: Object): Boolean {
+function combinesWithPrecedingClassRange(expression: Object, classRange: NFAState): Boolean {
   if (classRange && classRange.type === 'ClassRange') {
     if (fitsInClassRange(expression, classRange)) {
       // [a-gc] -> [a-g]
@@ -301,7 +301,7 @@ function combinesWithPrecedingClassRange(expression: Object, classRange: Object)
  * @param {Object} classRange - Char or ClassRange node
  * @returns {boolean}
  */
-function combinesWithFollowingClassRange(expression: Object, classRange: TrailSurrogateRange): Boolean {
+function combinesWithFollowingClassRange(expression: Object, classRange: LeadSurrogateRange): Boolean {
   if (classRange && classRange.type === 'ClassRange') {
     // Considering the elements were ordered alphabetically,
     // there is only one case to handle
@@ -324,7 +324,7 @@ function combinesWithFollowingClassRange(expression: Object, classRange: TrailSu
  * @param {Object} classRange - ClassRange node
  * @returns {boolean}
  */
-function fitsInClassRange(expression: Object, classRange: TrailSurrogateRange): Boolean {
+function fitsInClassRange(expression: Object, classRange: NFAState): Boolean {
   if (expression.type === 'Char' && isNaN(expression.codePoint)) {
     return false;
   }

@@ -2,7 +2,7 @@ import {types as tt} from "./tokentype.js"
 import {Parser} from "./state.js"
 import {lineBreak, skipWhiteSpace} from "./whitespace.js"
 
-const pp: LooseParser = Parser.prototype
+const pp: Parser = Parser.prototype
 
 // ## Parser utilities
 
@@ -36,7 +36,7 @@ pp.strictDirective = function(start: Number) {
 // Predicate that tests whether the next token is of the given
 // type, and if yes, consumes it as a side effect.
 
-pp.eat = function(type: String) {
+pp.eat = function(type: Node) {
   if (this.type === type) {
     this.next()
     return true
@@ -88,7 +88,7 @@ pp.semicolon = function() {
   if (!this.eat(tt.semi) && !this.insertSemicolon()) this.unexpected()
 }
 
-pp.afterTrailingComma = function(tokType: String, notNext: Object) {
+pp.afterTrailingComma = function(tokType: Number, notNext: Object) {
   if (this.type === tokType) {
     if (this.options.onTrailingComma)
       this.options.onTrailingComma(this.lastTokStart, this.lastTokStartLoc)
@@ -122,7 +122,7 @@ export class DestructuringErrors {
   }
 }
 
-pp.checkPatternErrors = function(refDestructuringErrors: String, isAssign: Boolean) {
+pp.checkPatternErrors = function(refDestructuringErrors: DestructuringErrors, isAssign: Boolean) {
   if (!refDestructuringErrors) return
   if (refDestructuringErrors.trailingComma > -1)
     this.raiseRecoverable(refDestructuringErrors.trailingComma, "Comma is not permitted after the rest element")

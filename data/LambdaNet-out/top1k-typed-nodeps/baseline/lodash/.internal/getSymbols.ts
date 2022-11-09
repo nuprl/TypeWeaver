@@ -1,5 +1,5 @@
 /** Built-in value references. */
-const propertyIsEnumerable: Function = Object.prototype.propertyIsEnumerable
+const propertyIsEnumerable: String = Object.prototype.propertyIsEnumerable
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 const nativeGetSymbols: Function = Object.getOwnPropertySymbols

@@ -100,7 +100,7 @@ function lolcation(loc: Object): Object {
   else if (typeof self !== 'undefined') globalVar = self;
   else globalVar = {};
 
-  var location: Boolean = globalVar.location || {};
+  var location: Number = globalVar.location || {};
   loc = loc || location;
 
   var finaldestination: Object = {}

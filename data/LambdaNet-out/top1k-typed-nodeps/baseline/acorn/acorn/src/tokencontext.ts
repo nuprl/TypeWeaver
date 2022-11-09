@@ -39,7 +39,7 @@ pp.curContext = function() {
   return this.context[this.context.length - 1]
 }
 
-pp.braceIsBlock = function(prevType: String) {
+pp.braceIsBlock = function(prevType: Number) {
   let parent: String = this.curContext()
   if (parent === types.f_expr || parent === types.f_stat)
     return true
@@ -69,8 +69,8 @@ pp.inGeneratorContext = function() {
   return false
 }
 
-pp.updateContext = function(prevType: String) {
-  let update: Function, type: DestructuringErrors = this.type
+pp.updateContext = function(prevType: Node) {
+  let update: Function, type: Position = this.type
   if (type.keyword && prevType === tt.dot)
     this.exprAllowed = false
   else if (update = type.updateContext)
@@ -81,7 +81,7 @@ pp.updateContext = function(prevType: String) {
 
 // Used to handle egde cases when token context could not be inferred correctly during tokenization phase
 
-pp.overrideContext = function(tokenCtx: String) {
+pp.overrideContext = function(tokenCtx: Node) {
   if (this.curContext() !== tokenCtx) {
     this.context[this.context.length - 1] = tokenCtx
   }
@@ -101,7 +101,7 @@ tt.parenR.updateContext = tt.braceR.updateContext = function() {
   this.exprAllowed = !out.isExpr
 }
 
-tt.braceL.updateContext = function(prevType: String) {
+tt.braceL.updateContext = function(prevType: Number) {
   this.context.push(this.braceIsBlock(prevType) ? types.b_stat : types.b_expr)
   this.exprAllowed = true
 }
@@ -111,7 +111,7 @@ tt.dollarBraceL.updateContext = function() {
   this.exprAllowed = true
 }
 
-tt.parenL.updateContext = function(prevType: String) {
+tt.parenL.updateContext = function(prevType: Node) {
   let statementParens: Boolean = prevType === tt._if || prevType === tt._for || prevType === tt._with || prevType === tt._while
   this.context.push(statementParens ? types.p_stat : types.p_expr)
   this.exprAllowed = true
@@ -121,7 +121,7 @@ tt.incDec.updateContext = function() {
   // tokExprAllowed stays unchanged
 }
 
-tt._function.updateContext = tt._class.updateContext = function(prevType: String) {
+tt._function.updateContext = tt._class.updateContext = function(prevType: Node) {
   if (prevType.beforeExpr && prevType !== tt._else &&
       !(prevType === tt.semi && this.curContext() !== types.p_stat) &&
       !(prevType === tt._return && lineBreak.test(this.input.slice(this.lastTokEnd, this.start))) &&
@@ -140,7 +140,7 @@ tt.backQuote.updateContext = function() {
   this.exprAllowed = false
 }
 
-tt.star.updateContext = function(prevType: String) {
+tt.star.updateContext = function(prevType: TokenType) {
   if (prevType === tt._function) {
     let index: Number = this.context.length - 1
     if (this.context[index] === types.f_expr)
@@ -151,7 +151,7 @@ tt.star.updateContext = function(prevType: String) {
   this.exprAllowed = true
 }
 
-tt.name.updateContext = function(prevType: String) {
+tt.name.updateContext = function(prevType: TokenType) {
   let allowed: Boolean = false
   if (this.options.ecmaVersion >= 6 && prevType !== tt.dot) {
     if (this.value === "of" && !this.exprAllowed ||

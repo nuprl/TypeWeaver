@@ -1,17 +1,13 @@
 stringify.ts(5,30): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(value: any, replacer?: ((this: any, key: string, value: any) => any) | undefined, space?: string | number | undefined): string', gave the following error.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
     Argument of type 'Function' is not assignable to parameter of type '(this: any, key: string, value: any) => any'.
       Type 'Function' provides no match for the signature '(this: any, key: string, value: any): any'.
-  Overload 2 of 2, '(value: any, replacer?: (string | number)[] | null | undefined, space?: string | number | undefined): string', gave the following error.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
     Argument of type 'Function' is not assignable to parameter of type '(string | number)[]'.
       Type 'Function' is missing the following properties from type '(string | number)[]': pop, push, concat, join, and 28 more.
 stringify.ts(5,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
   Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 stringify.ts(9,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 stringify.ts(9,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-stringify.ts(18,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 stringify.ts(19,31): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-stringify.ts(19,57): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-stringify.ts(21,61): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-stringify.ts(25,53): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 

@@ -8,7 +8,7 @@ function getClass( elem: HTMLElement ): Boolean {
 	return elem.getAttribute && elem.getAttribute( "class" ) || "";
 }
 
-function classesToArray( value: Array ): Array {
+function classesToArray( value: String ): Array {
 	if ( Array.isArray( value ) ) {
 		return value;
 	}

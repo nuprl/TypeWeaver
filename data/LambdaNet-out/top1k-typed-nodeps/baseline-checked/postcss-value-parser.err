@@ -1,8 +1,5 @@
 lib/index.ts(3,5): error TS2300: Duplicate identifier 'stringify'.
-lib/index.ts(6,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/index.ts(7,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/index.ts(8,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/index.ts(10,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/index.ts(10,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/parse.ts(15,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse.ts(16,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse.ts(28,39): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
@@ -17,7 +14,6 @@ lib/parse.ts(51,31): error TS2339: Property 'type' does not exist on type 'Objec
 lib/parse.ts(52,14): error TS2339: Property 'after' does not exist on type 'Object'.
 lib/parse.ts(53,14): error TS2339: Property 'sourceEndIndex' does not exist on type 'Object'.
 lib/parse.ts(58,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lib/parse.ts(59,13): error TS2454: Variable 'parent' is used before being assigned.
 lib/parse.ts(60,31): error TS2339: Property 'type' does not exist on type 'Object'.
 lib/parse.ts(60,61): error TS2339: Property 'value' does not exist on type 'Object'.
 lib/parse.ts(79,9): error TS2322: Type '{ type: string; sourceIndex: Number; quote: String; }' is not assignable to type 'String'.
@@ -54,7 +50,6 @@ lib/parse.ts(120,42): error TS2345: Argument of type 'Number' is not assignable 
 lib/parse.ts(123,13): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/parse.ts(124,31): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/parse.ts(129,7): error TS2454: Variable 'parent' is used before being assigned.
 lib/parse.ts(130,14): error TS2339: Property 'type' does not exist on type 'Object'.
 lib/parse.ts(131,14): error TS2339: Property 'value' does not exist on type 'Object'.
 lib/parse.ts(133,21): error TS2538: Type 'Number' cannot be used as an index type.
@@ -121,9 +116,7 @@ lib/parse.ts(239,24): error TS2339: Property 'nodes' does not exist on type 'Str
 lib/parse.ts(246,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/parse.ts(247,31): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/parse.ts(249,7): error TS2454: Variable 'parent' is used before being assigned.
 lib/parse.ts(249,14): error TS2339: Property 'after' does not exist on type 'Object'.
-lib/parse.ts(250,7): error TS2454: Variable 'parent' is used before being assigned.
 lib/parse.ts(250,14): error TS2339: Property 'sourceEndIndex' does not exist on type 'Object'.
 lib/parse.ts(252,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/parse.ts(256,23): error TS2339: Property 'nodes' does not exist on type 'Object'.
@@ -131,12 +124,9 @@ lib/parse.ts(263,11): error TS2365: Operator '+=' cannot be applied to types 'Nu
 lib/parse.ts(265,9): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/parse.ts(266,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/parse.ts(278,13): error TS2454: Variable 'parent' is used before being assigned.
 lib/parse.ts(279,20): error TS2339: Property 'type' does not exist on type 'Object'.
 lib/parse.ts(280,20): error TS2339: Property 'value' does not exist on type 'Object'.
-lib/parse.ts(282,13): error TS2454: Variable 'parent' is used before being assigned.
 lib/parse.ts(282,20): error TS2339: Property 'type' does not exist on type 'Object'.
-lib/parse.ts(283,13): error TS2454: Variable 'parent' is used before being assigned.
 lib/parse.ts(283,20): error TS2339: Property 'value' does not exist on type 'Object'.
 lib/parse.ts(287,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -191,7 +181,6 @@ lib/walk.ts(1,39): error TS2314: Generic type 'Array<T>' requires 1 type argumen
 lib/walk.ts(1,78): error TS2304: Cannot find name 'Void'.
 lib/walk.ts(4,35): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
 lib/walk.ts(4,44): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lib/walk.ts(11,7): error TS2454: Variable 'result' is used before being assigned.
 lib/walk.ts(11,7): error TS2367: This condition will always return 'true' since the types 'String' and 'boolean' have no overlap.
 lib/walk.ts(12,12): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
 lib/walk.ts(13,26): error TS2339: Property 'nodes' does not exist on type 'HTMLElement'.

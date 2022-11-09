@@ -181,7 +181,7 @@ function buildValues(diff: Array, components: Array, newString: Array, oldString
       oldPos: Number = 0;
 
   for (; componentPos < componentLen; componentPos++) {
-    let component: HTMLInputElement = components[componentPos];
+    let component: HTMLElement = components[componentPos];
     if (!component.removed) {
       if (!component.added && useLongestToken) {
         let value: Array = newString.slice(newPos, newPos + component.count);

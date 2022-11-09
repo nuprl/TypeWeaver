@@ -3,7 +3,7 @@
 var fnToStr: Function = Function.prototype.toString;
 var reflectApply: Function = typeof Reflect === 'object' && Reflect !== null && Reflect.apply;
 var badArrayLike: Number;
-var isCallableMarker: Function;
+var isCallableMarker: Object;
 if (typeof reflectApply === 'function' && typeof Object.defineProperty === 'function') {
 	try {
 		badArrayLike = Object.defineProperty({}, 'length', {
@@ -61,7 +61,7 @@ if (typeof document === 'object') {
 			// in IE 6-8, typeof document.all is "object" and it's truthy
 			if ((isIE68 || !value) && (typeof value === 'undefined' || typeof value === 'object')) {
 				try {
-					var str: Number = toStr.call(value);
+					var str: String = toStr.call(value);
 					// IE 6-8 uses `objectClass`
 					return (str === ddaClass || str === objectClass) && value('') == null; // eslint-disable-line eqeqeq
 				} catch (e) { /**/ }

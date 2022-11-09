@@ -1,6 +1,6 @@
 const {dirname} = require('path')
 
-const mkdirpManual: Function = (path: String, opts: HTMLElement, made: String) => {
+const mkdirpManual: Function = (path: String, opts: HTMLElement, made: Number) => {
   opts.recursive = false
   const parent: String = dirname(path)
   if (parent === path) {
@@ -12,7 +12,7 @@ const mkdirpManual: Function = (path: String, opts: HTMLElement, made: String) =
     })
   }
 
-  return opts.mkdirAsync(path, opts).then(() => made || path, (er: HTMLElement) => {
+  return opts.mkdirAsync(path, opts).then(() => made || path, (er: Object) => {
     if (er.code === 'ENOENT')
       return mkdirpManual(parent, opts)
         .then((made: String) => mkdirpManual(path, opts, made))

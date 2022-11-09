@@ -2,20 +2,34 @@
 .github/workflows/package-json-repo.ts(4,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 .github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'String'.
-.github/workflows/package-json-repo.ts(12,9): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-.github/workflows/package-json-repo.ts(13,26): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-.github/workflows/package-json-repo.ts(14,26): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(value: any, replacer?: ((this: any, key: string, value: any) => any) | undefined, space?: string | number | undefined): string', gave the following error.
-    Argument of type 'null' is not assignable to parameter of type '((this: any, key: string, value: any) => any) | undefined'.
-  Overload 2 of 2, '(value: any, replacer?: (string | number)[] | null | undefined, space?: string | number | undefined): string', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string | number | undefined'.
+.github/workflows/package-json-repo.ts(14,51): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
+    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
+      Type 'String' is not assignable to type 'string | number'.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
+    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
 .github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
 bin.ts(2,20): error TS2307: Cannot find module './' or its corresponding type declarations.
 bin.ts(5,82): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 bin.ts(19,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+bin.ts(19,50): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(predicate: (value: string, index: number, array: string[]) => value is string, thisArg?: any): string[]', gave the following error.
+    Argument of type '(arg: Number) => boolean' is not assignable to parameter of type '(value: string, index: number, array: string[]) => value is string'.
+      Types of parameters 'arg' and 'value' are incompatible.
+        Type 'string' is not assignable to type 'Number'.
+  Overload 2 of 2, '(predicate: (value: string, index: number, array: string[]) => unknown, thisArg?: any): string[]', gave the following error.
+    Argument of type '(arg: Number) => boolean' is not assignable to parameter of type '(value: string, index: number, array: string[]) => unknown'.
+      Types of parameters 'arg' and 'value' are incompatible.
+        Type 'string' is not assignable to type 'Number'.
+bin.ts(22,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+bin.ts(24,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+bin.ts(24,35): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+bin.ts(26,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+bin.ts(26,32): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+bin.ts(28,16): error TS2339: Property 'match' does not exist on type 'Number'.
+bin.ts(30,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+bin.ts(32,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 bin.ts(45,8): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 bin.ts(52,3): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
@@ -41,7 +55,6 @@ bin.ts(62,3): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 bin.ts(63,3): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-rimraf.ts(4,5): error TS2322: Type 'undefined' is not assignable to type 'Function'.
 rimraf.ts(22,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rimraf.ts(31,13): error TS2538: Type 'Number' cannot be used as an index type.
 rimraf.ts(31,26): error TS2538: Type 'Number' cannot be used as an index type.
@@ -61,7 +74,6 @@ rimraf.ts(44,11): error TS2339: Property 'disableGlob' does not exist on type 'O
 rimraf.ts(44,33): error TS2339: Property 'disableGlob' does not exist on type 'Object'.
 rimraf.ts(45,11): error TS2339: Property 'glob' does not exist on type 'Object'.
 rimraf.ts(45,26): error TS2339: Property 'glob' does not exist on type 'Object'.
-rimraf.ts(63,7): error TS2322: Type 'null' is not assignable to type 'String'.
 rimraf.ts(68,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 rimraf.ts(72,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rimraf.ts(83,19): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
@@ -74,7 +86,6 @@ rimraf.ts(91,18): error TS2339: Property 'code' does not exist on type 'HTMLElem
 rimraf.ts(91,57): error TS2339: Property 'emfileWait' does not exist on type 'Object'.
 rimraf.ts(92,62): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 rimraf.ts(96,18): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
-rimraf.ts(96,37): error TS2322: Type 'null' is not assignable to type 'HTMLElement'.
 rimraf.ts(106,15): error TS2339: Property 'disableGlob' does not exist on type 'Object'.
 rimraf.ts(106,36): error TS2339: Property 'hasMagic' does not exist on type 'Function'.
 rimraf.ts(109,11): error TS2339: Property 'lstat' does not exist on type 'Object'.
@@ -93,13 +104,10 @@ rimraf.ts(172,44): error TS2314: Generic type 'Array<T>' requires 1 type argumen
 rimraf.ts(174,18): error TS2339: Property 'code' does not exist on type 'Object'.
 rimraf.ts(178,19): error TS2339: Property 'unlink' does not exist on type 'Object'.
 rimraf.ts(188,13): error TS2339: Property 'chmodSync' does not exist on type 'Object'.
-rimraf.ts(190,9): error TS2571: Object is of type 'unknown'.
 rimraf.ts(196,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rimraf.ts(198,21): error TS2339: Property 'statSync' does not exist on type 'Object'.
-rimraf.ts(200,9): error TS2571: Object is of type 'unknown'.
 rimraf.ts(209,13): error TS2339: Property 'unlinkSync' does not exist on type 'Object'.
 rimraf.ts(212,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-rimraf.ts(212,65): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rimraf.ts(221,19): error TS2339: Property 'code' does not exist on type 'Object'.
 rimraf.ts(221,46): error TS2339: Property 'code' does not exist on type 'Object'.
 rimraf.ts(221,70): error TS2339: Property 'code' does not exist on type 'Object'.
@@ -119,19 +127,9 @@ rimraf.ts(276,22): error TS2339: Property 'sync' does not exist on type 'Functio
 rimraf.ts(276,38): error TS2339: Property 'glob' does not exist on type 'Object'.
 rimraf.ts(286,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rimraf.ts(288,20): error TS2339: Property 'lstatSync' does not exist on type 'Object'.
-rimraf.ts(290,11): error TS2571: Object is of type 'unknown'.
-rimraf.ts(294,11): error TS2571: Object is of type 'unknown'.
 rimraf.ts(303,17): error TS2339: Property 'unlinkSync' does not exist on type 'Object'.
-rimraf.ts(305,11): error TS2571: Object is of type 'unknown'.
-rimraf.ts(307,11): error TS2571: Object is of type 'unknown'.
-rimraf.ts(309,11): error TS2571: Object is of type 'unknown'.
 rimraf.ts(317,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rimraf.ts(322,13): error TS2339: Property 'rmdirSync' does not exist on type 'Object'.
-rimraf.ts(324,9): error TS2571: Object is of type 'unknown'.
-rimraf.ts(326,9): error TS2571: Object is of type 'unknown'.
-rimraf.ts(328,9): error TS2571: Object is of type 'unknown'.
-rimraf.ts(328,36): error TS2571: Object is of type 'unknown'.
-rimraf.ts(328,60): error TS2571: Object is of type 'unknown'.
 rimraf.ts(336,11): error TS2339: Property 'readdirSync' does not exist on type 'Object'.
 rimraf.ts(336,70): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.

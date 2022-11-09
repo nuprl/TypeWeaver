@@ -1,10 +1,10 @@
 'use strict';
 
-const Module: Date = require('module');
-const crypto: Object = require('crypto');
+const Module: FileSystemBlobStore = require('module');
+const crypto: Array = require('crypto');
 const fs: Array = require('fs');
 const path: String = require('path');
-const vm: Boolean = require('vm');
+const vm: FileSystemBlobStore = require('vm');
 const os: Array = require('os');
 
 const hasOwnProperty: Function = Object.prototype.hasOwnProperty;
@@ -160,7 +160,7 @@ class NativeCompileCache {
       }
 
       // https://github.com/nodejs/node/blob/v10.15.3/lib/internal/modules/cjs/helpers.js#L28
-      function resolve(request: Object, options: Object): String {
+      function resolve(request: Object, options: Object): FileSystemBlobStore {
         return Module._resolveFilename(request, mod, false, options);
       }
       require.resolve = resolve;
@@ -168,7 +168,7 @@ class NativeCompileCache {
       // https://github.com/nodejs/node/blob/v10.15.3/lib/internal/modules/cjs/helpers.js#L37
       // resolve.resolve.paths was added in v8.9.0
       if (hasRequireResolvePaths) {
-        resolve.paths = function paths(request: Object): Promise {
+        resolve.paths = function paths(request: Object): Void {
           return Module._resolveLookupPaths(request, mod, true);
         };
       }

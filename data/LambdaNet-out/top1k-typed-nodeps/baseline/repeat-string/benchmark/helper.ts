@@ -86,7 +86,7 @@ function values(obj: Object): Array {
   return vals;
 }
 
-function bar(tok: Object, longest: Number): Boolean {
+function bar(tok: Promise, longest: Number): Boolean {
   return repeat('█', (tok.num / longest) * 25);
 }
 

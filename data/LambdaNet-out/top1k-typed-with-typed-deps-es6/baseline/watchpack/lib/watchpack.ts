@@ -74,7 +74,7 @@ class WatchpackFileWatcher {
 					watchpack._onRemove(file, file, type);
 			}
 		});
-		watcher.on("change", (mtime: String, type: Number) => {
+		watcher.on("change", (mtime: Number, type: Number) => {
 			for (const file of this.files) {
 				watchpack._onChange(file, mtime, file, type);
 			}
@@ -164,7 +164,7 @@ class Watchpack extends EventEmitter {
 	}
 
 	watch(arg1, arg2, arg3) {
-		let files: Function, directories: Array, missing: Array, startTime: String;
+		let files: Function, directories: Array, missing: Array, startTime: Number;
 		if (!arg2) {
 			({
 				files = EMPTY_ARRAY,
@@ -180,7 +180,7 @@ class Watchpack extends EventEmitter {
 		}
 		this.paused = false;
 		const fileWatchers: Map = this.fileWatchers;
-		const directoryWatchers: Map = this.directoryWatchers;
+		const directoryWatchers: Object = this.directoryWatchers;
 		const ignored: Function = this.watcherOptions.ignored;
 		const filter: Function = (path: String) => !ignored(path);
 		const addToMap: Function = (map: Map, key: String, item: String) => {

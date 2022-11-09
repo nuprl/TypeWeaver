@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function repeat(ele: Function, num: Number): Array {
+module.exports = function repeat(ele: Array, num: Number): Array {
   var res: Array = [];
 
   while (num--) {

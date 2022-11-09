@@ -20,9 +20,9 @@ var CSSOM: Object = {
  * @nosideeffects
  * @return {CSSOM.CSSStyleSheet}
  */
-CSSOM.clone = function clone(stylesheet: HTMLElement): String {
+CSSOM.clone = function clone(stylesheet: HTMLElement): Element {
 
-	var cloned: String = new CSSOM.CSSStyleSheet();
+	var cloned: HTMLElement = new CSSOM.CSSStyleSheet();
 
 	var rules: Array = stylesheet.cssRules;
 	if (!rules) {
@@ -31,11 +31,11 @@ CSSOM.clone = function clone(stylesheet: HTMLElement): String {
 
 	for (var i = 0, rulesLength = rules.length; i < rulesLength; i++) {
 		var rule: HTMLElement = rules[i];
-		var ruleClone: HTMLDivElement = cloned.cssRules[i] = new rule.constructor();
+		var ruleClone: HTMLElement = cloned.cssRules[i] = new rule.constructor();
 
 		var style: Object = rule.style;
 		if (style) {
-			var styleClone: Object = ruleClone.style = new CSSOM.CSSStyleDeclaration();
+			var styleClone: Array = ruleClone.style = new CSSOM.CSSStyleDeclaration();
 			for (var j = 0, styleLength = style.length; j < styleLength; j++) {
 				var name: String = styleClone[j] = style[j];
 				styleClone[name] = style[name];

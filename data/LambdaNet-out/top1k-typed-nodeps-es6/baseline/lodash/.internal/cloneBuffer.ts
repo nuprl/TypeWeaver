@@ -20,7 +20,7 @@ const Buffer: Element = moduleExports ? root.Buffer : undefined, allocUnsafe: Fu
  * @param {boolean} [isDeep] Specify a deep clone.
  * @returns {Buffer} Returns the cloned buffer.
  */
-function cloneBuffer(buffer: Object, isDeep: Boolean): Hash {
+function cloneBuffer(buffer: Object, isDeep: Boolean): Stack {
   if (isDeep) {
     return buffer.slice()
   }

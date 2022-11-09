@@ -19,6 +19,6 @@ import createRound from './.internal/createRound.js'
  * ceil(6040, -2)
  * // => 6100
  */
-const ceil: Hash = createRound('ceil')
+const ceil: Object = createRound('ceil')
 
 export default ceil

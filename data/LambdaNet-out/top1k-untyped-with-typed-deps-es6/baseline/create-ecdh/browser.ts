@@ -93,7 +93,7 @@ ECDH.prototype.setPublicKey = function (pub: Array, enc: Number) {
   return this
 }
 
-ECDH.prototype.setPrivateKey = function (priv: String, enc: Number) {
+ECDH.prototype.setPrivateKey = function (priv: Array, enc: Number) {
   enc = enc || 'utf8'
   if (!Buffer.isBuffer(priv)) {
     priv = new Buffer(priv, enc)

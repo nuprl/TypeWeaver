@@ -1,6 +1,6 @@
 'use strict';
 
-export default function repeat(ele: Function, num: Number): String {
+export default function repeat(ele: String, num: Number): String {
   var res: Array = [ele];
   var max: Number = num;
 

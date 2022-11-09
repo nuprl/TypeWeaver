@@ -36,7 +36,7 @@ export default class ModulesInHierarchicalDirectoriesPlugin {
 				(request: Object, resolveContext: Object, callback: Function) => {
 					const fs: Function = resolver.fileSystem;
 					const addrs: Array = getPaths(request.path)
-						.paths.map((p: String) => {
+						.paths.map((p: Resolver) => {
 							return this.directories.map((d: String) => resolver.join(p, d));
 						})
 						.reduce((array: Array, p: Function) => {

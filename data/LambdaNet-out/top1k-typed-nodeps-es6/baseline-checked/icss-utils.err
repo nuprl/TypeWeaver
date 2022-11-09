@@ -19,7 +19,6 @@ src/createICSSRules.ts(62,45): error TS2314: Generic type 'Array<T>' requires 1 
 src/extractICSS.ts(7,8): error TS2339: Property 'walkDecls' does not exist on type 'Object'.
 src/extractICSS.ts(8,33): error TS2339: Property 'raws' does not exist on type 'Object'.
 src/extractICSS.ts(8,52): error TS2339: Property 'raws' does not exist on type 'Object'.
-src/extractICSS.ts(10,5): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 src/extractICSS.ts(10,26): error TS2339: Property 'prop' does not exist on type 'Object'.
 src/extractICSS.ts(10,39): error TS2339: Property 'value' does not exist on type 'Object'.
 src/extractICSS.ts(21,76): error TS2322: Type 'string' is not assignable to type 'Number'.
@@ -56,14 +55,7 @@ src/replaceSymbols.ts(12,21): error TS2339: Property 'type' does not exist on ty
 src/replaceSymbols.ts(12,47): error TS2339: Property 'params' does not exist on type 'Object'.
 src/replaceSymbols.ts(13,12): error TS2339: Property 'params' does not exist on type 'Object'.
 src/replaceSymbols.ts(13,46): error TS2339: Property 'params' does not exist on type 'Object'.
-src/replaceValueSymbols.ts(6,11): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 src/replaceValueSymbols.ts(6,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/replaceValueSymbols.ts(7,33): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-src/replaceValueSymbols.ts(7,46): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 src/replaceValueSymbols.ts(11,32): error TS2339: Property 'index' does not exist on type 'Object'.
-src/replaceValueSymbols.ts(15,35): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 

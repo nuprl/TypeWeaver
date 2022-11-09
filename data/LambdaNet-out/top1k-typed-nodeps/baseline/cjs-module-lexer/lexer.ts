@@ -854,7 +854,7 @@ function readExportsOrModuleDotExports (ch: String): Boolean {
   }
 }
 
-function tryParseModuleExportsDotAssign (): Void {
+function tryParseModuleExportsDotAssign (): Promise {
   pos += 6;
   const revertPos: Number = pos - 1;
   let ch: String = commentWhitespace();

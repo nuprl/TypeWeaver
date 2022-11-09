@@ -13,14 +13,6 @@ index.ts(69,9): error TS2339: Property 'color' does not exist on type 'Object'.
 index.ts(69,29): error TS2339: Property 'color' does not exist on type 'Object'.
 index.ts(70,9): error TS2339: Property 'bgColor' does not exist on type 'Object'.
 index.ts(70,33): error TS2339: Property 'bgColor' does not exist on type 'Object'.
-index.ts(74,4): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-index.ts(75,21): error TS2571: Object is of type 'unknown'.
-index.ts(76,22): error TS2571: Object is of type 'unknown'.
-index.ts(79,23): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-index.ts(81,14): error TS2571: Object is of type 'unknown'.
-index.ts(81,24): error TS2571: Object is of type 'unknown'.
 index.ts(95,9): error TS2339: Property 'color' does not exist on type 'Object'.
 index.ts(96,9): error TS2339: Property 'bgColor' does not exist on type 'Object'.
 index.ts(98,9): error TS2339: Property 'color' does not exist on type 'Object'.
@@ -33,8 +25,9 @@ index.ts(120,26): error TS2362: The left-hand side of an arithmetic operation mu
 index.ts(124,25): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(125,24): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(126,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(132,11): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Boolean'.
-  Type 'null' is not assignable to type 'Boolean'.
+index.ts(132,11): error TS2322: Type 'RegExpExecArray' is not assignable to type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'Object' is not assignable to type 'boolean'.
 index.ts(132,73): error TS2554: Expected 0 arguments, but got 1.
 index.ts(137,9): error TS2488: Type 'Boolean' must have a '[Symbol.iterator]()' method that returns an iterator.
 index.ts(140,64): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.

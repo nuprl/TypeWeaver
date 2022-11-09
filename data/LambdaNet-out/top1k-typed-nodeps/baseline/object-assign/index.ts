@@ -47,7 +47,7 @@ function shouldUseNative(): Promise {
 
 		// https://bugs.chromium.org/p/v8/issues/detail?id=3056
 		var test3: Object = {};
-		'abcdefghijklmnopqrst'.split('').forEach(function (letter: Array) {
+		'abcdefghijklmnopqrst'.split('').forEach(function (letter: String) {
 			test3[letter] = letter;
 		});
 		if (Object.keys(Object.assign({}, test3)).join('') !==

@@ -1,12 +1,7 @@
 index.ts(21,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(34,26): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(41,19): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
+index.ts(34,26): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(46,40): error TS2304: Cannot find name 'Void'.
 index.ts(47,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(49,20): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-index.ts(54,16): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(66,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(67,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(68,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -19,15 +14,7 @@ index.ts(74,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(
 index.ts(75,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(82,20): error TS2339: Property 'ignoreFunction' does not exist on type 'Object'.
 index.ts(92,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(92,32): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(92,37): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(93,13): error TS2322: Type 'string' is not assignable to type 'Number'.
-  Type 'string' is not assignable to type 'Number'.
-index.ts(95,13): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-index.ts(124,13): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-index.ts(128,13): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-index.ts(132,13): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-index.ts(136,13): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 index.ts(145,38): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(146,68): error TS2339: Property 'name' does not exist on type 'HTMLElement'.
@@ -43,24 +30,16 @@ index.ts(165,31): error TS2314: Generic type 'Array<T>' requires 1 type argument
 index.ts(173,35): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(181,17): error TS2339: Property 'ignoreFunction' does not exist on type 'Object'.
-index.ts(182,9): error TS2322: Type 'undefined' is not assignable to type 'String'.
 index.ts(194,17): error TS2339: Property 'isJSON' does not exist on type 'Object'.
 index.ts(194,36): error TS2339: Property 'space' does not exist on type 'Object'.
-index.ts(197,35): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(value: any, replacer?: ((this: any, key: string, value: any) => any) | undefined, space?: string | number | undefined): string', gave the following error.
-    Argument of type '((key: String, value: String) => String) | null' is not assignable to parameter of type '((this: any, key: string, value: any) => any) | undefined'.
-      Type 'null' is not assignable to type '((this: any, key: string, value: any) => any) | undefined'.
-  Overload 2 of 2, '(value: any, replacer?: (string | number)[] | null | undefined, space?: string | number | undefined): string', gave the following error.
-    Argument of type '((key: String, value: String) => String) | null' is not assignable to parameter of type '(string | number)[] | null | undefined'.
-      Type '(key: String, value: String) => String' is not assignable to type '(string | number)[]'.
 index.ts(197,43): error TS2339: Property 'isJSON' does not exist on type 'Object'.
 index.ts(197,77): error TS2339: Property 'space' does not exist on type 'Object'.
 index.ts(209,17): error TS2339: Property 'unsafe' does not exist on type 'Object'.
 index.ts(210,48): error TS2769: No overload matches this call.
   The last overload gave the following error.
-    Argument of type '(unsafeChar: String) => String' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
-      Type 'String' is not assignable to type 'string'.
-        'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+    Argument of type '(unsafeChar: Number) => String' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
+      Types of parameters 'unsafeChar' and 'substring' are incompatible.
+        Type 'string' is not assignable to type 'Number'.
 index.ts(220,24): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'Object' is not assignable to parameter of type 'string | RegExp'.

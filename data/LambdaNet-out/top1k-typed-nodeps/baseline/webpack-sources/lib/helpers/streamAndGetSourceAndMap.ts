@@ -23,7 +23,7 @@ const streamAndGetSourceAndMap: Function = (
 	const addMapping: Function = createMappingsSerializer(
 		Object.assign({}, options, { columns: true })
 	);
-	const finalSource: Source = !!(options && options.finalSource);
+	const finalSource: ReplaceSource = !!(options && options.finalSource);
 	const { generatedLine, generatedColumn, source } = streamChunks(
 		inputSource,
 		options,

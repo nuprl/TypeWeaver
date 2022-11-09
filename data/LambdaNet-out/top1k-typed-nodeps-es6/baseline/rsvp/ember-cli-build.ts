@@ -24,7 +24,7 @@ export default function (app: String) {
     destDir: 'test'
   });
 
-  const mocha: String = funnel('node_modules/mocha', {
+  const mocha: Function = funnel('node_modules/mocha', {
     files: ['mocha.css','mocha.js'],
     destDir: 'test'
   });

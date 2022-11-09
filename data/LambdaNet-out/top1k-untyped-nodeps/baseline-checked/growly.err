@@ -7,22 +7,13 @@ example/simple.ts(3,8): error TS2339: Property 'notify' does not exist on type '
 lib/gntp.ts(2,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'String'.
 lib/gntp.ts(15,10): error TS2300: Duplicate identifier 'GNTP'.
 lib/gntp.ts(15,44): error TS2304: Cannot find name 'Void'.
-lib/gntp.ts(17,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/gntp.ts(18,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/gntp.ts(18,22): error TS2339: Property 'host' does not exist on type 'Object'.
-lib/gntp.ts(19,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/gntp.ts(19,22): error TS2339: Property 'port' does not exist on type 'Object'.
-lib/gntp.ts(20,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/gntp.ts(21,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/gntp.ts(22,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/gntp.ts(23,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/gntp.ts(47,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/gntp.ts(48,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/gntp.ts(49,39): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 lib/gntp.ts(53,12): error TS2339: Property 'state' does not exist on type 'Object'.
-lib/gntp.ts(53,20): error TS2531: Object is possibly 'null'.
 lib/gntp.ts(54,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/gntp.ts(56,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 lib/gntp.ts(70,9): error TS2740: Type 'IArguments' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
 lib/gntp.ts(72,14): error TS2339: Property 'send' does not exist on type 'HTMLElement'.
 lib/gntp.ts(86,29): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
@@ -52,14 +43,11 @@ lib/gntp.ts(174,18): error TS2339: Property 'state' does not exist on type 'Stri
 lib/gntp.ts(174,44): error TS2339: Property 'state' does not exist on type 'String'.
 lib/gntp.ts(175,20): error TS2339: Property 'end' does not exist on type 'HTMLInputElement'.
 lib/gntp.ts(180,12): error TS2339: Property 'on' does not exist on type 'HTMLInputElement'.
-lib/gntp.ts(182,48): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
 lib/gntp.ts(183,22): error TS2339: Property 'attempts' does not exist on type 'HTMLElement'.
 lib/gntp.ts(183,39): error TS2339: Property 'maxAttempts' does not exist on type 'HTMLElement'.
 lib/gntp.ts(184,22): error TS2339: Property 'retry' does not exist on type 'HTMLElement'.
 lib/gntp.ts(187,53): error TS2339: Property 'host' does not exist on type 'HTMLElement'.
 lib/gntp.ts(187,64): error TS2339: Property 'port' does not exist on type 'HTMLElement'.
-lib/gntp.ts(187,75): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-lib/gntp.ts(187,95): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
 lib/gntp.ts(194,12): error TS2339: Property 'on' does not exist on type 'HTMLInputElement'.
 lib/gntp.ts(195,87): error TS2339: Property 'host' does not exist on type 'HTMLElement'.
 lib/gntp.ts(195,98): error TS2339: Property 'port' does not exist on type 'HTMLElement'.
@@ -67,13 +55,6 @@ lib/gntp.ts(196,16): error TS2339: Property 'destroy' does not exist on type 'HT
 lib/growly.ts(1,5): error TS2300: Duplicate identifier 'GNTP'.
 lib/growly.ts(1,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/growly.ts(9,20): error TS2304: Cannot find name 'Void'.
-lib/growly.ts(10,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/growly.ts(11,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/growly.ts(12,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/growly.ts(13,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/growly.ts(14,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/growly.ts(15,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/growly.ts(16,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/growly.ts(30,22): error TS2339: Property 'label' does not exist on type 'Object'.
 lib/growly.ts(75,64): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/growly.ts(75,86): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -115,7 +96,5 @@ lib/growly.ts(177,10): error TS2339: Property 'add' does not exist on type 'HTML
 lib/growly.ts(178,10): error TS2339: Property 'newline' does not exist on type 'HTMLElement'.
 lib/growly.ts(180,10): error TS2339: Property 'send' does not exist on type 'HTMLElement'.
 lib/growly.ts(183,37): error TS2339: Property 'state' does not exist on type 'Object'.
-lib/growly.ts(184,33): error TS7053: Element implicitly has an 'any' type because expression of type '"Notification-Callback-Result"' can't be used to index type 'Object'.
-  Property 'Notification-Callback-Result' does not exist on type 'Object'.
-lib/growly.ts(193,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/growly.ts(193,18): error TS2350: Only a void function can be called with the 'new' keyword.
 

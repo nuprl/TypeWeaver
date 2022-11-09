@@ -4,22 +4,13 @@ example.ts(8,6): error TS2339: Property 'onExit' does not exist on type 'Functio
 index.ts(1,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(4,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(22,11): error TS2367: This condition will always return 'false' since the types 'Number' and 'String' have no overlap.
-index.ts(23,9): error TS2322: Type 'undefined' is not assignable to type 'String'.
-index.ts(32,3): error TS2322: Type 'undefined' is not assignable to type 'String'.
-index.ts(34,3): error TS2322: Type 'undefined' is not assignable to type 'String'.
-index.ts(49,5): error TS2322: Type 'Function' is not assignable to type '(code?: number | undefined) => never'.
-  Type 'Function' provides no match for the signature '(code?: number | undefined): never'.
-index.ts(50,5): error TS2322: Type 'null' is not assignable to type 'Function'.
-index.ts(63,3): error TS2322: Type '(code: Number) => any' is not assignable to type '(code?: number | undefined) => never'.
-  Types of parameters 'code' and 'code' are incompatible.
-    Type 'number | undefined' is not assignable to type 'Number'.
-      Type 'undefined' is not assignable to type 'Number'.
+index.ts(49,5): error TS2322: Type 'Function' is not assignable to type '(code?: number) => never'.
+  Type 'Function' provides no match for the signature '(code?: number): never'.
+index.ts(63,3): error TS2322: Type '(code: Number) => any' is not assignable to type '(code?: number) => never'.
+  Type 'any' is not assignable to type 'never'.
 index.ts(84,7): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(89,13): error TS2367: This condition will always return 'true' since the types 'Number' and 'String' have no overlap.
 index.ts(94,13): error TS2367: This condition will always return 'true' since the types 'Number' and 'String' have no overlap.
 index.ts(106,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 process-exit-during-final-exit-subprocess.ts(4,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-test-natural-exit-subprocess-error-exit-from-captures-on-exit.ts(3,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-test-natural-exit-subprocess-error.ts(3,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-test-natural-exit-subprocess.ts(3,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 

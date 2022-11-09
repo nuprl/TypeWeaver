@@ -32,7 +32,7 @@
 const punycode: Number = require("punycode/");
 const urlParse: String = require("url-parse");
 const pubsuffix: Array = require("./pubsuffix-psl");
-const Store: Function = require("./store").Store;
+const Store: Store = require("./store").Store;
 const MemoryCookieStore: MemoryCookieStore = require("./memstore").MemoryCookieStore;
 const pathMatch: Function = require("./pathMatch").pathMatch;
 const validators: Cookie = require("./validators.js");
@@ -415,7 +415,7 @@ function defaultPath(path: Number): String {
     return path;
   }
 
-  const rightSlash: Boolean = path.lastIndexOf("/");
+  const rightSlash: Number = path.lastIndexOf("/");
   if (rightSlash === 0) {
     return "/";
   }
@@ -699,7 +699,7 @@ function fromJSON(str: Array): Object {
     obj = str;
   }
 
-  const c: Store = new Cookie();
+  const c: Object = new Cookie();
   for (let i = 0; i < Cookie.serializableProperties.length; i++) {
     const prop: String = Cookie.serializableProperties[i];
     if (obj[prop] === undefined || obj[prop] === cookieDefaults[prop]) {
@@ -1272,7 +1272,7 @@ class CookieJar {
     const store: Store = this.store;
 
     if (!store.updateCookie) {
-      store.updateCookie = function(oldCookie: Cookie, newCookie: Cookie, cb: String) {
+      store.updateCookie = function(oldCookie: Cookie, newCookie: Cookie, cb: Function) {
         this.putCookie(newCookie, cb);
       };
     }
@@ -1438,7 +1438,7 @@ class CookieJar {
   getCookieString(...args) {
     const cb: Function = args.pop();
     validators.validate(validators.isFunction(cb), cb);
-    const next: Function = function(err: Function, cookies: Array) {
+    const next: Function = function(err: Cookie, cookies: Array) {
       if (err) {
         cb(err);
       } else {
@@ -1458,7 +1458,7 @@ class CookieJar {
   getSetCookieStrings(...args) {
     const cb: Function = args.pop();
     validators.validate(validators.isFunction(cb), cb);
-    const next: Function = function(err: Function, cookies: Array) {
+    const next: Function = function(err: Cookie, cookies: Array) {
       if (err) {
         cb(err);
       } else {
@@ -1514,7 +1514,7 @@ class CookieJar {
       );
     }
 
-    this.store.getAllCookies((err: String, cookies: Array) => {
+    this.store.getAllCookies((err: Cookie, cookies: Array) => {
       if (err) {
         return cb(err);
       }

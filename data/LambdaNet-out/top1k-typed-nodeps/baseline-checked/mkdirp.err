@@ -2,15 +2,12 @@
 .github/workflows/package-json-repo.ts(4,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 .github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'String'.
-.github/workflows/package-json-repo.ts(12,9): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-.github/workflows/package-json-repo.ts(13,26): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-.github/workflows/package-json-repo.ts(14,26): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(value: any, replacer?: ((this: any, key: string, value: any) => any) | undefined, space?: string | number | undefined): string', gave the following error.
-    Argument of type 'null' is not assignable to parameter of type '((this: any, key: string, value: any) => any) | undefined'.
-  Overload 2 of 2, '(value: any, replacer?: (string | number)[] | null | undefined, space?: string | number | undefined): string', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string | number | undefined'.
+.github/workflows/package-json-repo.ts(14,51): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
+    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
+      Type 'String' is not assignable to type 'string | number'.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
+    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
 .github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
 bin/cmd.ts(25,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bin/cmd.ts(27,5): error TS2451: Cannot redeclare block-scoped variable 'print'.
@@ -20,7 +17,6 @@ bin/cmd.ts(47,15): error TS2345: Argument of type 'Number' is not assignable to 
 bin/cmd.ts(51,10): error TS2339: Property 'mode' does not exist on type 'Object'.
 bin/cmd.ts(57,40): error TS2339: Property 'manual' does not exist on type 'Function'.
 bin/cmd.ts(62,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-bin/cmd.ts(62,26): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
 bin/cmd.ts(64,22): error TS2339: Property 'message' does not exist on type 'HTMLElement'.
 bin/cmd.ts(65,12): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
 bin/cmd.ts(66,37): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
@@ -43,33 +39,26 @@ index.ts(29,8): error TS2339: Property 'manualSync' does not exist on type 'Func
 index.ts(29,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/find-made.ts(1,8): error TS2451: Cannot redeclare block-scoped variable 'dirname'.
 lib/find-made.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'findMade'.
-lib/find-made.ts(3,59): error TS2322: Type 'undefined' is not assignable to type 'String'.
 lib/find-made.ts(8,15): error TS2339: Property 'statAsync' does not exist on type 'Object'.
 lib/find-made.ts(9,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/find-made.ts(10,24): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/find-made.ts(16,7): error TS2451: Cannot redeclare block-scoped variable 'findMadeSync'.
-lib/find-made.ts(16,68): error TS2322: Type 'undefined' is not assignable to type 'String'.
 lib/find-made.ts(21,17): error TS2339: Property 'statSync' does not exist on type 'HTMLElement'.
-lib/find-made.ts(23,12): error TS2571: Object is of type 'unknown'.
 lib/mkdirp-manual.ts(1,8): error TS2451: Cannot redeclare block-scoped variable 'dirname'.
 lib/mkdirp-manual.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'mkdirpManual'.
 lib/mkdirp-manual.ts(4,8): error TS2339: Property 'recursive' does not exist on type 'HTMLElement'.
 lib/mkdirp-manual.ts(7,17): error TS2339: Property 'mkdirAsync' does not exist on type 'HTMLElement'.
 lib/mkdirp-manual.ts(10,14): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/mkdirp-manual.ts(15,15): error TS2339: Property 'mkdirAsync' does not exist on type 'HTMLElement'.
-lib/mkdirp-manual.ts(16,12): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
-lib/mkdirp-manual.ts(19,12): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
-lib/mkdirp-manual.ts(19,36): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
+lib/mkdirp-manual.ts(16,12): error TS2339: Property 'code' does not exist on type 'Object'.
+lib/mkdirp-manual.ts(19,12): error TS2339: Property 'code' does not exist on type 'Object'.
+lib/mkdirp-manual.ts(19,36): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/mkdirp-manual.ts(21,17): error TS2339: Property 'statAsync' does not exist on type 'HTMLElement'.
 lib/mkdirp-manual.ts(21,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mkdirp-manual.ts(30,7): error TS2451: Cannot redeclare block-scoped variable 'mkdirpManualSync'.
 lib/mkdirp-manual.ts(32,8): error TS2339: Property 'recursive' does not exist on type 'HTMLElement'.
 lib/mkdirp-manual.ts(36,19): error TS2339: Property 'mkdirSync' does not exist on type 'HTMLElement'.
-lib/mkdirp-manual.ts(40,11): error TS2571: Object is of type 'unknown'.
 lib/mkdirp-manual.ts(48,10): error TS2339: Property 'mkdirSync' does not exist on type 'HTMLElement'.
-lib/mkdirp-manual.ts(51,9): error TS2571: Object is of type 'unknown'.
-lib/mkdirp-manual.ts(53,9): error TS2571: Object is of type 'unknown'.
-lib/mkdirp-manual.ts(53,33): error TS2571: Object is of type 'unknown'.
 lib/mkdirp-manual.ts(56,17): error TS2339: Property 'statSync' does not exist on type 'HTMLElement'.
 lib/mkdirp-native.ts(1,8): error TS2451: Cannot redeclare block-scoped variable 'dirname'.
 lib/mkdirp-native.ts(2,8): error TS2451: Cannot redeclare block-scoped variable 'findMade'.
@@ -85,8 +74,8 @@ lib/mkdirp-native.ts(14,14): error TS2339: Property 'code' does not exist on typ
 lib/mkdirp-native.ts(21,7): error TS2451: Cannot redeclare block-scoped variable 'mkdirpNativeSync'.
 lib/mkdirp-native.ts(22,8): error TS2339: Property 'recursive' does not exist on type 'HTMLElement'.
 lib/mkdirp-native.ts(25,17): error TS2339: Property 'mkdirSync' does not exist on type 'HTMLElement'.
+lib/mkdirp-native.ts(27,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mkdirp-native.ts(29,10): error TS2339: Property 'mkdirSync' does not exist on type 'HTMLElement'.
-lib/mkdirp-native.ts(32,9): error TS2571: Object is of type 'unknown'.
 lib/opts-arg.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
 lib/opts-arg.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'optsArg'.
 lib/opts-arg.ts(15,8): error TS2339: Property 'mkdir' does not exist on type 'Object'.
@@ -116,15 +105,9 @@ lib/path-arg.ts(4,17): error TS2345: Argument of type 'String' is not assignable
 lib/path-arg.ts(16,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/use-native.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
 lib/use-native.ts(5,7): error TS2322: Type 'boolean' is not assignable to type 'Number'.
-lib/use-native.ts(5,28): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/use-native.ts(5,48): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/use-native.ts(5,70): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/use-native.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'useNative'.
-lib/use-native.ts(7,84): error TS2339: Property 'mkdir' does not exist on type 'HTMLElement'.
-lib/use-native.ts(7,97): error TS2339: Property 'mkdir' does not exist on type 'Function'.
+lib/use-native.ts(7,79): error TS2339: Property 'mkdir' does not exist on type 'Object'.
+lib/use-native.ts(7,92): error TS2339: Property 'mkdir' does not exist on type 'Function'.
 lib/use-native.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'useNativeSync'.
 lib/use-native.ts(8,88): error TS2339: Property 'mkdirSync' does not exist on type 'HTMLElement'.
 lib/use-native.ts(8,105): error TS2339: Property 'mkdirSync' does not exist on type 'Function'.

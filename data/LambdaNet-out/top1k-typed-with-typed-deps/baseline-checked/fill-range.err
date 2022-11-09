@@ -1,14 +1,14 @@
 bench/index.ts(4,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bench/index.ts(14,39): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
-bench/index.ts(20,31): error TS2339: Property 'add' does not exist on type 'Object'.
-bench/index.ts(21,9): error TS2339: Property 'on' does not exist on type 'Object'.
+bench/index.ts(20,31): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+bench/index.ts(21,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 bench/index.ts(23,12): error TS2339: Property 'run' does not exist on type 'Object'.
 bench/index.ts(23,36): error TS2339: Property 'run' does not exist on type 'Object'.
 bench/index.ts(23,46): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-bench/index.ts(24,11): error TS2339: Property 'add' does not exist on type 'Object'.
+bench/index.ts(24,11): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 bench/index.ts(28,40): error TS2339: Property 'name' does not exist on type 'Object'.
-bench/index.ts(30,9): error TS2339: Property 'add' does not exist on type 'Object'.
+bench/index.ts(30,9): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 bench/index.ts(31,35): error TS2740: Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 bench/index.ts(34,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bench/index.ts(46,6): error TS2339: Property 'add' does not exist on type 'Function'.
@@ -61,7 +61,6 @@ index.ts(98,43): error TS2345: Argument of type 'String' is not assignable to pa
 index.ts(101,42): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
 index.ts(105,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(105,64): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-index.ts(114,31): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 index.ts(115,60): error TS2339: Property 'inspect' does not exist on type 'String'.
 index.ts(119,15): error TS2339: Property 'strictRanges' does not exist on type 'Object'.
 index.ts(124,15): error TS2339: Property 'strictRanges' does not exist on type 'Object'.
@@ -71,8 +70,6 @@ index.ts(147,28): error TS2345: Argument of type 'Number' is not assignable to p
 index.ts(151,7): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 index.ts(152,34): error TS2339: Property 'transform' does not exist on type 'Object'.
 index.ts(154,15): error TS2339: Property 'toRegex' does not exist on type 'Object'.
-index.ts(159,41): error TS7053: Element implicitly has an 'any' type because expression of type '"negatives" | "positives"' can't be used to index type 'Object'.
-  Property 'negatives' does not exist on type 'Object'.
 index.ts(159,98): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(160,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

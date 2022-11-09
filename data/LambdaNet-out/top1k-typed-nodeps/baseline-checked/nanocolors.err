@@ -22,9 +22,7 @@ index.browser.ts(25,12): error TS2322: Type 'Function' is not assignable to type
 index.browser.ts(26,12): error TS2322: Type 'Function' is not assignable to type 'String'.
 index.browser.ts(27,12): error TS2322: Type 'Function' is not assignable to type 'String'.
 index.browser.ts(28,12): error TS2322: Type 'Function' is not assignable to type 'String'.
-index.ts(8,5): error TS2322: Type 'string | boolean | undefined' is not assignable to type 'Boolean'.
-  Type 'undefined' is not assignable to type 'Boolean'.
-index.ts(17,12): error TS2322: Type 'boolean' is not assignable to type 'Function'.
+index.ts(17,12): error TS2740: Type 'Boolean' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 index.ts(28,16): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 index.ts(32,9): error TS2365: Operator '+' cannot be applied to types 'String' and 'string | String'.
 index.ts(33,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.

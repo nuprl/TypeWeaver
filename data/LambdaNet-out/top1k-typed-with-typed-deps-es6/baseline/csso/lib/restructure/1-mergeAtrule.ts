@@ -69,7 +69,7 @@ function isMediaRule(node: Object): Boolean {
     return node.type === 'Atrule' && node.name === 'media';
 }
 
-function processAtrule(node: Object, item: Object, list: Map): Void {
+function processAtrule(node: Object, item: TRBL, list: Map): Void {
     if (!isMediaRule(node)) {
         return;
     }

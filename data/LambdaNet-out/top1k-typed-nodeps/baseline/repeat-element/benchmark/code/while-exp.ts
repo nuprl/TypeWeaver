@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function repeat(ele: Function, num: String): String {
+module.exports = function repeat(ele: String, num: String): String {
   var res: Array = [ele];
 
   while (res.length < num) {

@@ -331,7 +331,7 @@ class Resolver {
 					missingDependencies: resolveContext.missingDependencies,
 					stack: resolveContext.stack
 				},
-				(err: Function, result: Number) => {
+				(err: Resolver, result: Number) => {
 					if (err) return callback(err);
 
 					if (yieldCalled || (result && yield_)) return finishYield(result);
@@ -355,7 +355,7 @@ class Resolver {
 					missingDependencies: resolveContext.missingDependencies,
 					stack: resolveContext.stack
 				},
-				(err: Function, result: Number) => {
+				(err: Resolver, result: Number) => {
 					if (err) return callback(err);
 
 					if (yieldCalled || (result && yield_)) return finishYield(result);
@@ -377,7 +377,7 @@ class Resolver {
 							yield: yield_,
 							stack: resolveContext.stack
 						},
-						(err: Function, result: Boolean) => {
+						(err: Resolver, result: Boolean) => {
 							if (err) return callback(err);
 
 							// In a case that there is a race condition and yield will be called

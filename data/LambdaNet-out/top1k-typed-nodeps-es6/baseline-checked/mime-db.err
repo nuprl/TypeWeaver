@@ -2,7 +2,6 @@ scripts/build.ts(20,1): error TS2554: Expected 3 arguments, but got 2.
 scripts/build.ts(23,18): error TS2732: Cannot find module '../src/custom-suffix.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 scripts/build.ts(25,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/build.ts(28,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/build.ts(33,26): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 scripts/build.ts(34,11): error TS2339: Property 'compressible' does not exist on type 'HTMLElement'.
 scripts/build.ts(34,41): error TS2339: Property 'compressible' does not exist on type 'HTMLElement'.
 scripts/build.ts(34,58): error TS2339: Property 'compressible' does not exist on type 'HTMLElement'.
@@ -28,21 +27,12 @@ scripts/build.ts(105,34): error TS2538: Type 'String' cannot be used as an index
 scripts/build.ts(106,9): error TS2538: Type 'String' cannot be used as an index type.
 scripts/fetch-apache.ts(14,21): error TS2307: Cannot find module 'raw-body' or its corresponding type declarations.
 scripts/fetch-apache.ts(36,60): error TS2304: Cannot find name 'Void'.
-scripts/fetch-apache.ts(40,7): error TS2322: Type 'null' is not assignable to type 'Object'.
 scripts/fetch-apache.ts(42,20): error TS2339: Property 'index' does not exist on type 'RegExp'.
-scripts/fetch-apache.ts(44,11): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 scripts/fetch-apache.ts(44,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 scripts/fetch-apache.ts(45,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/fetch-apache.ts(45,23): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 scripts/fetch-apache.ts(52,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/fetch-apache.ts(52,30): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 scripts/fetch-apache.ts(55,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/fetch-apache.ts(55,23): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-scripts/fetch-apache.ts(55,38): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 scripts/fetch-apache.ts(67,60): error TS2304: Cannot find name 'Void'.
 scripts/fetch-apache.ts(68,12): error TS2339: Property 'extensions' does not exist on type 'Object'.
 scripts/fetch-apache.ts(69,9): error TS2339: Property 'extensions' does not exist on type 'Object'.
@@ -52,10 +42,10 @@ scripts/fetch-apache.ts(80,53): error TS2314: Generic type 'Array<T>' requires 1
 scripts/fetch-apache.ts(80,61): error TS2304: Cannot find name 'Void'.
 scripts/fetch-apache.ts(96,49): error TS2304: Cannot find name 'Void'.
 scripts/fetch-apache.ts(97,13): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(options: string | URL | RequestOptions, callback?: ((res: IncomingMessage) => void) | undefined): ClientRequest', gave the following error.
+  Overload 1 of 2, '(options: string | URL | RequestOptions, callback?: (res: IncomingMessage) => void): ClientRequest', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | URL | RequestOptions'.
       Type 'String' is missing the following properties from type 'URL': hash, host, hostname, href, and 8 more.
-  Overload 2 of 2, '(url: string | URL, options: RequestOptions, callback?: ((res: IncomingMessage) => void) | undefined): ClientRequest', gave the following error.
+  Overload 2 of 2, '(url: string | URL, options: RequestOptions, callback?: (res: IncomingMessage) => void): ClientRequest', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | URL'.
       Type 'String' is not assignable to type 'URL'.
 scripts/fetch-apache.ts(97,53): error TS2304: Cannot find name 'Void'.
@@ -67,10 +57,8 @@ scripts/fetch-iana.ts(16,20): error TS2307: Cannot find module 'cogent' or its c
 scripts/fetch-iana.ts(17,20): error TS2307: Cannot find module 'csv-parse' or its corresponding type declarations.
 scripts/fetch-iana.ts(18,21): error TS2307: Cannot find module 'stream-to-array' or its corresponding type declarations.
 scripts/fetch-iana.ts(41,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/fetch-iana.ts(41,21): error TS7057: 'yield' expression implicitly results in an 'any' type because its containing generator lacks a return-type annotation.
 scripts/fetch-iana.ts(48,5): error TS2554: Expected 2 arguments, but got 1.
 scripts/fetch-iana.ts(57,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/fetch-iana.ts(59,18): error TS7057: 'yield' expression implicitly results in an 'any' type because its containing generator lacks a return-type annotation.
 scripts/fetch-iana.ts(68,13): error TS2339: Property 'extensions' does not exist on type 'Object'.
 scripts/fetch-iana.ts(69,12): error TS2538: Type 'String' cannot be used as an index type.
 scripts/fetch-iana.ts(69,25): error TS2538: Type 'String' cannot be used as an index type.
@@ -109,7 +97,6 @@ scripts/fetch-iana.ts(135,38): error TS2339: Property 'template' does not exist 
 scripts/fetch-iana.ts(139,13): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 scripts/fetch-iana.ts(140,48): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 scripts/fetch-iana.ts(140,86): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
-scripts/fetch-iana.ts(143,9): error TS2322: Type 'undefined' is not assignable to type 'String'.
 scripts/fetch-iana.ts(143,30): error TS2322: Type 'String' is not assignable to type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 scripts/fetch-iana.ts(143,46): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'Function'.
@@ -125,14 +112,9 @@ scripts/fetch-iana.ts(162,15): error TS2339: Property 'extensions' does not exis
 scripts/fetch-iana.ts(162,43): error TS2339: Property 'extensions' does not exist on type 'Object'.
 scripts/fetch-iana.ts(162,64): error TS2339: Property 'mime' does not exist on type 'HTMLElement'.
 scripts/fetch-iana.ts(163,14): error TS2339: Property 'extensions' does not exist on type 'HTMLElement'.
-scripts/fetch-iana.ts(172,7): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 scripts/fetch-iana.ts(172,50): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-scripts/fetch-iana.ts(175,7): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-scripts/fetch-iana.ts(180,7): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'String'.
-  Type 'null' is not assignable to type 'String'.
+scripts/fetch-iana.ts(180,7): error TS2740: Type 'RegExpExecArray' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 scripts/fetch-iana.ts(180,46): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 scripts/fetch-iana.ts(181,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -140,25 +122,16 @@ scripts/fetch-iana.ts(181,54): error TS2345: Argument of type 'String' is not as
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 scripts/fetch-iana.ts(183,58): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-scripts/fetch-iana.ts(184,5): error TS2322: Type 'undefined' is not assignable to type 'Number'.
-scripts/fetch-iana.ts(188,5): error TS2322: Type 'undefined' is not assignable to type 'Number'.
-scripts/fetch-iana.ts(195,5): error TS2322: Type 'undefined' is not assignable to type 'Number'.
 scripts/fetch-iana.ts(203,3): error TS2322: Type 'string' is not assignable to type 'Number'.
 scripts/fetch-iana.ts(207,52): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-scripts/fetch-iana.ts(208,5): error TS2322: Type 'undefined' is not assignable to type 'String'.
-scripts/fetch-iana.ts(211,7): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 scripts/fetch-iana.ts(211,51): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-scripts/fetch-iana.ts(214,7): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 scripts/fetch-iana.ts(219,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/fetch-iana.ts(219,45): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 scripts/fetch-iana.ts(219,82): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-scripts/fetch-iana.ts(222,5): error TS2322: Type 'undefined' is not assignable to type 'String'.
 scripts/fetch-iana.ts(225,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/fetch-iana.ts(236,49): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/fetch-iana.ts(237,110): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string | number | boolean'.
@@ -171,31 +144,18 @@ scripts/fetch-iana.ts(245,19): error TS2314: Generic type 'Array<T>' requires 1 
 scripts/fetch-iana.ts(248,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/fetch-iana.ts(251,14): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
 scripts/fetch-iana.ts(252,16): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
-scripts/fetch-iana.ts(256,11): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 scripts/fetch-iana.ts(256,26): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
-scripts/fetch-iana.ts(261,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 scripts/fetch-iana.ts(261,22): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
 scripts/fetch-iana.ts(265,10): error TS2339: Property 'mime' does not exist on type 'HTMLElement'.
 scripts/fetch-iana.ts(265,23): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
 scripts/fetch-iana.ts(265,54): error TS2339: Property 'name' does not exist on type 'HTMLElement'.
-scripts/fetch-iana.ts(268,9): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 scripts/fetch-iana.ts(268,59): error TS2339: Property 'name' does not exist on type 'HTMLElement'.
 scripts/fetch-iana.ts(269,10): error TS2339: Property 'name' does not exist on type 'HTMLElement'.
-scripts/fetch-iana.ts(269,17): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 scripts/fetch-iana.ts(270,10): error TS2339: Property 'notes' does not exist on type 'HTMLElement'.
-scripts/fetch-iana.ts(270,18): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-scripts/fetch-iana.ts(270,34): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
 scripts/fetch-iana.ts(273,26): error TS2339: Property 'reference' does not exist on type 'HTMLElement'.
 scripts/fetch-iana.ts(281,45): error TS2322: Type 'Generator<string, any, undefined>' is not assignable to type 'String'.
-scripts/fetch-iana.ts(282,7): error TS2322: Type 'undefined' is not assignable to type 'String'.
 scripts/fetch-iana.ts(283,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/fetch-iana.ts(286,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/fetch-iana.ts(290,9): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 scripts/fetch-iana.ts(290,50): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 scripts/fetch-iana.ts(292,60): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -204,10 +164,6 @@ scripts/fetch-iana.ts(297,30): error TS2345: Argument of type 'String' is not as
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 scripts/fetch-iana.ts(301,52): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
   Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
-scripts/fetch-iana.ts(302,25): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-scripts/fetch-iana.ts(302,49): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 scripts/fetch-iana.ts(302,124): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 scripts/fetch-iana.ts(303,52): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
@@ -224,45 +180,27 @@ scripts/fetch-iana.ts(328,10): error TS2365: Operator '+' cannot be applied to t
 scripts/fetch-iana.ts(331,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/fetch-iana.ts(331,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/fetch-iana.ts(331,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/fetch-iana.ts(338,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 scripts/fetch-iana.ts(338,19): error TS2538: Type 'Number' cannot be used as an index type.
 scripts/fetch-iana.ts(345,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/fetch-iana.ts(346,7): error TS2322: Type 'null' is not assignable to type 'Object'.
 scripts/fetch-iana.ts(347,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/fetch-iana.ts(349,22): error TS2339: Property 'index' does not exist on type 'RegExp'.
-scripts/fetch-iana.ts(351,11): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 scripts/fetch-iana.ts(351,43): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-scripts/fetch-iana.ts(352,15): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 scripts/fetch-iana.ts(358,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/fetch-iana.ts(359,7): error TS2322: Type 'null' is not assignable to type 'Object'.
 scripts/fetch-iana.ts(360,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/fetch-iana.ts(362,22): error TS2339: Property 'index' does not exist on type 'RegExp'.
-scripts/fetch-iana.ts(364,11): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 scripts/fetch-iana.ts(364,43): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-scripts/fetch-iana.ts(365,15): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 scripts/fetch-iana.ts(371,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/fetch-iana.ts(375,11): error TS2339: Property 'config' does not exist on type 'String'.
 scripts/fetch-iana.ts(387,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/fetch-iana.ts(393,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/fetch-nginx.ts(14,21): error TS2307: Cannot find module 'raw-body' or its corresponding type declarations.
 scripts/fetch-nginx.ts(34,60): error TS2304: Cannot find name 'Void'.
-scripts/fetch-nginx.ts(38,7): error TS2322: Type 'null' is not assignable to type 'Object'.
 scripts/fetch-nginx.ts(40,20): error TS2339: Property 'index' does not exist on type 'RegExp'.
-scripts/fetch-nginx.ts(42,11): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 scripts/fetch-nginx.ts(42,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-scripts/fetch-nginx.ts(43,24): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 scripts/fetch-nginx.ts(46,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/fetch-nginx.ts(46,30): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 scripts/fetch-nginx.ts(49,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/fetch-nginx.ts(49,28): error TS2538: Type 'String' cannot be used as an index type.
 scripts/fetch-nginx.ts(49,43): error TS2538: Type 'String' cannot be used as an index type.
@@ -275,9 +213,9 @@ scripts/fetch-nginx.ts(74,53): error TS2314: Generic type 'Array<T>' requires 1 
 scripts/fetch-nginx.ts(74,61): error TS2304: Cannot find name 'Void'.
 scripts/fetch-nginx.ts(90,49): error TS2304: Cannot find name 'Void'.
 scripts/fetch-nginx.ts(91,13): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(options: string | URL | RequestOptions, callback?: ((res: IncomingMessage) => void) | undefined): ClientRequest', gave the following error.
+  Overload 1 of 2, '(options: string | URL | RequestOptions, callback?: (res: IncomingMessage) => void): ClientRequest', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | URL | RequestOptions'.
-  Overload 2 of 2, '(url: string | URL, options: RequestOptions, callback?: ((res: IncomingMessage) => void) | undefined): ClientRequest', gave the following error.
+  Overload 2 of 2, '(url: string | URL, options: RequestOptions, callback?: (res: IncomingMessage) => void): ClientRequest', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | URL'.
 scripts/fetch-nginx.ts(91,53): error TS2304: Cannot find name 'Void'.
 scripts/fetch-nginx.ts(92,13): error TS2339: Property 'statusCode' does not exist on type 'Object'.
@@ -287,63 +225,59 @@ scripts/lib/write-db.ts(11,32): error TS2345: Argument of type 'String' is not a
   Type 'String' is not assignable to type 'Buffer'.
 scripts/lib/write-db.ts(12,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/lib/write-db.ts(14,16): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(fd: number, buffer: ArrayBufferView, offset?: number | null | undefined, length?: number | null | undefined, position?: number | null | undefined): number', gave the following error.
+  Overload 1 of 2, '(fd: number, buffer: ArrayBufferView, offset?: number, length?: number, position?: number): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-  Overload 2 of 2, '(fd: number, string: string, position?: number | null | undefined, encoding?: BufferEncoding | null | undefined): number', gave the following error.
+  Overload 2 of 2, '(fd: number, string: string, position?: number, encoding?: BufferEncoding): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 scripts/lib/write-db.ts(17,18): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(fd: number, buffer: ArrayBufferView, offset?: number | null | undefined, length?: number | null | undefined, position?: number | null | undefined): number', gave the following error.
+  Overload 1 of 2, '(fd: number, buffer: ArrayBufferView, offset?: number, length?: number, position?: number): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-  Overload 2 of 2, '(fd: number, string: string, position?: number | null | undefined, encoding?: BufferEncoding | null | undefined): number', gave the following error.
+  Overload 2 of 2, '(fd: number, string: string, position?: number, encoding?: BufferEncoding): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-scripts/lib/write-db.ts(19,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-scripts/lib/write-db.ts(19,43): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[key: String, i: Number, arr: any]'.
 scripts/lib/write-db.ts(20,28): error TS2538: Type 'String' cannot be used as an index type.
 scripts/lib/write-db.ts(21,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/lib/write-db.ts(21,46): error TS2345: Argument of type '(a: any, b: Number) => Boolean' is not assignable to parameter of type '(a: string, b: string) => number'.
   Types of parameters 'b' and 'b' are incompatible.
     Type 'string' is not assignable to type 'Number'.
 scripts/lib/write-db.ts(24,20): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(fd: number, buffer: ArrayBufferView, offset?: number | null | undefined, length?: number | null | undefined, position?: number | null | undefined): number', gave the following error.
+  Overload 1 of 2, '(fd: number, buffer: ArrayBufferView, offset?: number, length?: number, position?: number): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-  Overload 2 of 2, '(fd: number, string: string, position?: number | null | undefined, encoding?: BufferEncoding | null | undefined): number', gave the following error.
+  Overload 2 of 2, '(fd: number, string: string, position?: number, encoding?: BufferEncoding): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 scripts/lib/write-db.ts(28,18): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(fd: number, buffer: ArrayBufferView, offset?: number | null | undefined, length?: number | null | undefined, position?: number | null | undefined): number', gave the following error.
+  Overload 1 of 2, '(fd: number, buffer: ArrayBufferView, offset?: number, length?: number, position?: number): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-  Overload 2 of 2, '(fd: number, string: string, position?: number | null | undefined, encoding?: BufferEncoding | null | undefined): number', gave the following error.
+  Overload 2 of 2, '(fd: number, string: string, position?: number, encoding?: BufferEncoding): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-scripts/lib/write-db.ts(30,39): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-scripts/lib/write-db.ts(30,45): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[key: String, i: Number, arr: any]'.
 scripts/lib/write-db.ts(31,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/lib/write-db.ts(31,29): error TS2538: Type 'String' cannot be used as an index type.
 scripts/lib/write-db.ts(38,22): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(fd: number, buffer: ArrayBufferView, offset?: number | null | undefined, length?: number | null | undefined, position?: number | null | undefined): number', gave the following error.
+  Overload 1 of 2, '(fd: number, buffer: ArrayBufferView, offset?: number, length?: number, position?: number): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-  Overload 2 of 2, '(fd: number, string: string, position?: number | null | undefined, encoding?: BufferEncoding | null | undefined): number', gave the following error.
+  Overload 2 of 2, '(fd: number, string: string, position?: number, encoding?: BufferEncoding): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 scripts/lib/write-db.ts(42,18): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(fd: number, buffer: ArrayBufferView, offset?: number | null | undefined, length?: number | null | undefined, position?: number | null | undefined): number', gave the following error.
+  Overload 1 of 2, '(fd: number, buffer: ArrayBufferView, offset?: number, length?: number, position?: number): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-  Overload 2 of 2, '(fd: number, string: string, position?: number | null | undefined, encoding?: BufferEncoding | null | undefined): number', gave the following error.
+  Overload 2 of 2, '(fd: number, string: string, position?: number, encoding?: BufferEncoding): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 scripts/lib/write-db.ts(45,16): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(fd: number, buffer: ArrayBufferView, offset?: number | null | undefined, length?: number | null | undefined, position?: number | null | undefined): number', gave the following error.
+  Overload 1 of 2, '(fd: number, buffer: ArrayBufferView, offset?: number, length?: number, position?: number): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-  Overload 2 of 2, '(fd: number, string: string, position?: number | null | undefined, encoding?: BufferEncoding | null | undefined): number', gave the following error.
+  Overload 2 of 2, '(fd: number, string: string, position?: number, encoding?: BufferEncoding): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 scripts/lib/write-db.ts(47,16): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
@@ -356,16 +290,14 @@ scripts/lib/write-db.ts(60,3): error TS2322: Type 'Number | 1 | -1' is not assig
     The types returned by 'valueOf()' are incompatible between these types.
       Type 'number' is not assignable to type 'boolean'.
 scripts/lib/write-db.ts(60,36): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-scripts/version-history.ts(8,5): error TS2322: Type 'string | undefined' is not assignable to type 'String'.
-  Type 'undefined' is not assignable to type 'String'.
 scripts/version-history.ts(11,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/version-history.ts(11,47): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null | undefined; flag?: string | undefined; } | null | undefined): Buffer', gave the following error.
+  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
       Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-  Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string | undefined; } | BufferEncoding): string', gave the following error.
+  Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string; } | BufferEncoding): string', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-  Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string | undefined; }) | null | undefined): string | Buffer', gave the following error.
+  Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string; })): string | Buffer', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
 scripts/version-history.ts(24,7): error TS2740: Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 scripts/version-history.ts(26,27): error TS2339: Property 'test' does not exist on type 'HTMLElement'.

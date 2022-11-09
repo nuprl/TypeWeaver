@@ -1,6 +1,6 @@
 'use strict';
 
-var traverse: HTMLElement = module.exports = function (schema: String, opts: Function, cb: Object) {
+var traverse: HTMLElement = module.exports = function (schema: String, opts: Object, cb: Object) {
   // Legacy support for v0.3.1 and earlier.
   if (typeof opts == 'function') {
     cb = opts;

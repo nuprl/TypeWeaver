@@ -208,7 +208,7 @@ function needless(props: Object, declaration: Object, fingerprints: String): TRB
 
         for (const entry of table) {
             const ppre: String = getPropertyFingerprint(property.prefix + entry, declaration, fingerprints);
-            const prev: Object = props.hasOwnProperty(ppre) ? props[ppre] : null;
+            const prev: TRBL = props.hasOwnProperty(ppre) ? props[ppre] : null;
 
             if (prev && (!declaration.important || prev.item.data.important)) {
                 return prev;

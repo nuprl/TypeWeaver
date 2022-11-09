@@ -1,13 +1,11 @@
 index.ts(4,69): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(5,3): error TS2322: Type 'String | 20' is not assignable to type 'String'.
+  Type 'number' is not assignable to type 'String'.
 index.ts(7,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(15,23): error TS2571: Object is of type 'unknown'.
-index.ts(18,7): error TS2571: Object is of type 'unknown'.
 index.ts(22,21): error TS2365: Operator '<=' cannot be applied to types 'number' and 'String'.
 index.ts(24,18): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(25,19): error TS2365: Operator '+' cannot be applied to types 'number' and 'String'.
 index.ts(27,9): error TS2365: Operator '+' cannot be applied to types 'number' and 'String'.
-index.ts(28,7): error TS2571: Object is of type 'unknown'.
-index.ts(34,7): error TS2571: Object is of type 'unknown'.
 index.ts(34,52): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 

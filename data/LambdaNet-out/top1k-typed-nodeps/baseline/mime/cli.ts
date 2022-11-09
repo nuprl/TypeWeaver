@@ -3,7 +3,7 @@
 'use strict';
 
 process.title = 'mime';
-let mime: HTMLElement = require('.');
+let mime: Array = require('.');
 let pkg: Object = require('./package.json');
 let args: String = process.argv.splice(2);
 

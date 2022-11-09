@@ -100,7 +100,7 @@ function colorSupport (options: Object, obj: Object): String {
   // TODO: add more term programs
   switch (env.TERM_PROGRAM) {
     case 'iTerm.app':
-      var ver: String = env.TERM_PROGRAM_VERSION || '0.'
+      var ver: Number = env.TERM_PROGRAM_VERSION || '0.'
       if (/^[0-2]\./.test(ver)) {
         return has256(obj)
       } else {

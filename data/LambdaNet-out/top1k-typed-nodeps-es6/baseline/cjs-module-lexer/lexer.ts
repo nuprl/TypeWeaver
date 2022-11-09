@@ -1136,7 +1136,7 @@ function identifier (): Boolean {
   return true;
 }
 
-function codePointLen (ch: String): Number {
+function codePointLen (ch: Number): Number {
   if (ch < 0x10000) return 1;
   return 2;
 }

@@ -54,6 +54,7 @@ index.ts(90,58): error TS2345: Argument of type 'boolean' is not assignable to p
 index.ts(91,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(91,59): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
 index.ts(92,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(96,51): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 index.ts(100,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
   Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(101,14): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
@@ -76,7 +77,6 @@ index.ts(161,37): error TS2345: Argument of type 'String' is not assignable to p
 index.ts(162,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(168,38): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 index.ts(171,14): error TS2339: Property 'isPadded' does not exist on type 'String'.
-index.ts(171,26): error TS2454: Variable 'prev' is used before being assigned.
 index.ts(171,39): error TS2339: Property 'pattern' does not exist on type 'Object'.
 index.ts(171,55): error TS2339: Property 'pattern' does not exist on type 'Object'.
 index.ts(172,16): error TS2339: Property 'count' does not exist on type 'Object'.
@@ -100,8 +100,6 @@ index.ts(196,15): error TS2314: Generic type 'Array<T>' requires 1 type argument
 index.ts(218,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(218,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(219,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(220,54): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(228,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(229,40): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(233,57): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.

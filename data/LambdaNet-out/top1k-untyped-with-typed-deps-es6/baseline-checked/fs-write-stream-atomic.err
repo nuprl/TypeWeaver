@@ -3,28 +3,10 @@ index.ts(11,10): error TS2339: Property 'hash' does not exist on type 'HTMLEleme
 index.ts(13,15): error TS2339: Property 'result' does not exist on type 'HTMLElement'.
 index.ts(18,37): error TS2554: Expected 0 arguments, but got 3.
 index.ts(18,64): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(34,63): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-index.ts(35,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(36,12): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-index.ts(38,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(38,23): error TS2559: Type 'Function' has no properties in common with type 'WritableOptions'.
-index.ts(40,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(36,12): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(40,71): error TS2339: Property 'isWin' does not exist on type 'Function'.
-index.ts(42,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(43,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(45,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(45,43): error TS2339: Property 'chown' does not exist on type 'Function'.
-index.ts(47,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(49,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(49,25): error TS2348: Value of type 'typeof WriteStream' is not callable. Did you mean to include 'new'?
-index.ts(49,40): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(51,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(51,47): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(52,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(52,49): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(53,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(53,49): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(63,46): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[event: string | symbol, ...args: any[]]'.
 index.ts(74,17): error TS2339: Property 'emit' does not exist on type 'Request'.
 index.ts(78,36): error TS2314: Generic type 'Record' requires 2 type argument(s).
 index.ts(85,48): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
@@ -32,18 +14,17 @@ index.ts(85,64): error TS2345: Argument of type '(err: Function) => Void' is not
   Types of parameters 'err' and 'err' are incompatible.
     Type 'Error' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 index.ts(91,30): error TS2304: Cannot find name 'Void'.
-index.ts(92,74): error TS2345: Argument of type '(err: HTMLElement) => Void' is not assignable to parameter of type '(err: Error) => void'.
-  Types of parameters 'err' and 'err' are incompatible.
-    Type 'Error' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-index.ts(95,49): error TS2304: Cannot find name 'Void'.
-index.ts(97,13): error TS2339: Property 'syscall' does not exist on type 'HTMLElement'.
-index.ts(97,28): error TS2339: Property 'syscall' does not exist on type 'HTMLElement'.
-index.ts(98,13): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
-index.ts(98,25): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
-index.ts(100,23): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'String'.
-  Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-index.ts(102,15): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'Function'.
-  Type 'HTMLElement' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+index.ts(95,44): error TS2304: Cannot find name 'Void'.
+index.ts(97,13): error TS2339: Property 'syscall' does not exist on type 'Object'.
+index.ts(97,28): error TS2339: Property 'syscall' does not exist on type 'Object'.
+index.ts(98,13): error TS2339: Property 'code' does not exist on type 'Object'.
+index.ts(98,25): error TS2339: Property 'code' does not exist on type 'Object'.
+index.ts(100,23): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+index.ts(102,15): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 index.ts(106,45): error TS2304: Cannot find name 'Void'.
 index.ts(108,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(109,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

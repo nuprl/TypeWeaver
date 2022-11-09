@@ -5,7 +5,7 @@ import isHiddenWithinTree from "../css/var/isHiddenWithinTree.js";
 var defaultDisplayMap: Object = {};
 
 function getDefaultDisplay( elem: HTMLElement ): String {
-	var temp: Object,
+	var temp: String,
 		doc: HTMLElement = elem.ownerDocument,
 		nodeName: String = elem.nodeName,
 		display: String = defaultDisplayMap[ nodeName ];

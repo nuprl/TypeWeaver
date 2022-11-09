@@ -210,7 +210,7 @@ function drainQueue(): Void {
     var timeout: String = runTimeout(cleanUpNextTick);
     draining = true;
 
-    var len: Number = queue.length;
+    var len: Boolean = queue.length;
     while(len) {
         currentQueue = queue;
         queue = [];
@@ -241,7 +241,7 @@ process.nextTick = function (fun: String) {
 };
 
 // v8 likes predictible objects
-function Item(fun: Function, array: Array): String {
+function Item(fun: Function, array: Array): Void {
     this.fun = fun;
     this.array = array;
 }
@@ -1520,7 +1520,7 @@ Buffer.prototype.readInt8 = function readInt8 (offset: String, noAssert: Boolean
   return ((0xff - this[offset] + 1) * -1)
 }
 
-Buffer.prototype.readInt16LE = function readInt16LE (offset: Number, noAssert: Boolean): Boolean {
+Buffer.prototype.readInt16LE = function readInt16LE (offset: Number, noAssert: Boolean): Number {
   if (!noAssert) checkOffset(offset, 2, this.length)
   var val: Number = this[offset] | (this[offset + 1] << 8)
   return (val & 0x8000) ? val | 0xFFFF0000 : val
@@ -1550,17 +1550,17 @@ Buffer.prototype.readInt32BE = function readInt32BE (offset: Number, noAssert: B
     (this[offset + 3])
 }
 
-Buffer.prototype.readFloatLE = function readFloatLE (offset: String, noAssert: Boolean): Boolean {
+Buffer.prototype.readFloatLE = function readFloatLE (offset: String, noAssert: Boolean): Void {
   if (!noAssert) checkOffset(offset, 4, this.length)
   return ieee754.read(this, offset, true, 23, 4)
 }
 
-Buffer.prototype.readFloatBE = function readFloatBE (offset: String, noAssert: Boolean): Boolean {
+Buffer.prototype.readFloatBE = function readFloatBE (offset: String, noAssert: Boolean): Void {
   if (!noAssert) checkOffset(offset, 4, this.length)
   return ieee754.read(this, offset, false, 23, 4)
 }
 
-Buffer.prototype.readDoubleLE = function readDoubleLE (offset: String, noAssert: Boolean): Boolean {
+Buffer.prototype.readDoubleLE = function readDoubleLE (offset: String, noAssert: Boolean): Void {
   if (!noAssert) checkOffset(offset, 8, this.length)
   return ieee754.read(this, offset, true, 52, 8)
 }
@@ -1631,7 +1631,7 @@ function objectWriteUInt16 (buf: Array, value: Number, offset: Number, littleEnd
   }
 }
 
-Buffer.prototype.writeUInt16LE = function writeUInt16LE (value: Number, offset: Number, noAssert: Boolean): String {
+Buffer.prototype.writeUInt16LE = function writeUInt16LE (value: Number, offset: Number, noAssert: Boolean): Number {
   value = +value
   offset = offset | 0
   if (!noAssert) checkInt(this, value, offset, 2, 0xffff, 0)
@@ -1750,7 +1750,7 @@ Buffer.prototype.writeInt8 = function writeInt8 (value: Number, offset: Number, 
   return offset + 1
 }
 
-Buffer.prototype.writeInt16LE = function writeInt16LE (value: Number, offset: Number, noAssert: Boolean): String {
+Buffer.prototype.writeInt16LE = function writeInt16LE (value: Number, offset: Number, noAssert: Boolean): Number {
   value = +value
   offset = offset | 0
   if (!noAssert) checkInt(this, value, offset, 2, 0x7fff, -0x8000)
@@ -1776,7 +1776,7 @@ Buffer.prototype.writeInt16BE = function writeInt16BE (value: Number, offset: Nu
   return offset + 2
 }
 
-Buffer.prototype.writeInt32LE = function writeInt32LE (value: Number, offset: Number, noAssert: Boolean): Number {
+Buffer.prototype.writeInt32LE = function writeInt32LE (value: Number, offset: Number, noAssert: Boolean): String {
   value = +value
   offset = offset | 0
   if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
@@ -2289,7 +2289,7 @@ function isNull(arg: Number): Boolean {
 }
 exports.isNull = isNull;
 
-function isNullOrUndefined(arg: String): Boolean {
+function isNullOrUndefined(arg: Number): Boolean {
   return arg == null;
 }
 exports.isNullOrUndefined = isNullOrUndefined;
@@ -2506,7 +2506,7 @@ SafeBuffer.allocUnsafeSlow = function (size: String) {
 
 
 
-var punycode: Void = __webpack_require__(25);
+var punycode: Boolean = __webpack_require__(25);
 var util: Void = __webpack_require__(27);
 
 exports.parse = urlParse;
@@ -4716,7 +4716,7 @@ Readable.prototype.pipe = function (dest: HTMLInputElement, pipeOpts: Object) {
   if (state.endEmitted) pna.nextTick(endFn);else src.once('end', endFn);
 
   dest.on('unpipe', onunpipe);
-  function onunpipe(readable: String, unpipeInfo: Object): Void {
+  function onunpipe(readable: String, unpipeInfo: Error): Void {
     debug('onunpipe');
     if (readable === src) {
       if (unpipeInfo && unpipeInfo.hasUnpiped === false) {
@@ -5687,7 +5687,7 @@ function writeOrBuffer(stream: String, state: Object, isBuf: Boolean, chunk: Arr
   return ret;
 }
 
-function doWrite(stream: Number, state: HTMLElement, writev: Boolean, len: Function, chunk: String, encoding: String, cb: String): Void {
+function doWrite(stream: Number, state: HTMLElement, writev: Boolean, len: String, chunk: String, encoding: String, cb: String): Void {
   state.writelen = len;
   state.writecb = cb;
   state.writing = true;
@@ -5762,7 +5762,7 @@ function afterWrite(stream: String, state: Object, finished: Boolean, cb: Functi
 // Must force callback to be called on nextTick, so that we don't
 // emit 'drain' before the write() consumer gets the 'false' return
 // value, and has a chance to attach a 'drain' listener.
-function onwriteDrain(stream: String, state: Object): Void {
+function onwriteDrain(stream: String, state: Array): Void {
   if (state.length === 0 && state.needDrain) {
     state.needDrain = false;
     stream.emit('drain');
@@ -5910,7 +5910,7 @@ function endWritable(stream: String, state: Object, cb: String): Void {
   stream.writable = false;
 }
 
-function onCorkedFinish(corkReq: Function, state: HTMLElement, err: String): Void {
+function onCorkedFinish(corkReq: Function, state: HTMLElement, err: Array): Void {
   var entry: Object = corkReq.entry;
   corkReq.entry = null;
   while (entry) {
@@ -6139,7 +6139,7 @@ function utf8CheckIncomplete(self: HTMLElement, buf: Array, i: String): Number {
 // where all of the continuation bytes for a character exist in the same buffer.
 // It is also done this way as a slight performance increase instead of using a
 // loop.
-function utf8CheckExtraBytes(self: HTMLElement, buf: Array, p: Function): String {
+function utf8CheckExtraBytes(self: HTMLElement, buf: Promise, p: Function): String {
   if ((buf[0] & 0xC0) !== 0x80) {
     self.lastNeed = 0;
     return '\ufffd';
@@ -9121,7 +9121,7 @@ exports.deprecate = function(fn: Function, msg: Array) {
 
 
 var debugs: Object = {};
-var debugEnviron: Number;
+var debugEnviron: String;
 exports.debuglog = function(set: String) {
   if (isUndefined(debugEnviron))
     debugEnviron = process.env.NODE_DEBUG || '';
@@ -9489,7 +9489,7 @@ function isNull(arg: Number): Boolean {
 }
 exports.isNull = isNull;
 
-function isNullOrUndefined(arg: String): Boolean {
+function isNullOrUndefined(arg: Number): Boolean {
   return arg == null;
 }
 exports.isNullOrUndefined = isNullOrUndefined;

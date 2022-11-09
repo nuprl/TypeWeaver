@@ -38,7 +38,7 @@ function createDefaultLogger(level: Number): Function {
     };
 }
 
-function buildCompressOptions(options: Object): Object {
+function buildCompressOptions(options: Object): TRBL {
     options = { ...options };
 
     if (typeof options.logger !== 'function' && options.debug) {
@@ -110,11 +110,11 @@ function minify(context: Number, source: String, options: Object): Object {
     return result;
 }
 
-function minifyStylesheet(source: String, options: Object): String {
+function minifyStylesheet(source: String, options: Object): Promise {
     return minify('stylesheet', source, options);
 }
 
-function minifyBlock(source: String, options: Object): String {
+function minifyBlock(source: String, options: Object): TRBL {
     return minify('declarationList', source, options);
 }
 

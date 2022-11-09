@@ -100,7 +100,7 @@ function createStackString (stack: Array): String {
  * Create deprecate for namespace in caller.
  */
 
-function depd (namespace: String): String {
+function depd (namespace: Number): String {
   if (!namespace) {
     throw new TypeError('argument namespace is required')
   }
@@ -422,7 +422,7 @@ function wrapfunction (fn: Array, message: String): Object {
   site.name = fn.name
 
   // eslint-disable-next-line no-new-func
-  var deprecatedfn: Array = new Function('fn', 'log', 'deprecate', 'message', 'site',
+  var deprecatedfn: String = new Function('fn', 'log', 'deprecate', 'message', 'site',
     '"use strict"\n' +
     'return function (' + args + ') {' +
     'log.call(deprecate, message, site)\n' +

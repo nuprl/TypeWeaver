@@ -92,7 +92,7 @@ function handleClose (writeStream: Record): Function {
     fs.rename(writeStream.__atomicTmp, writeStream.__atomicTarget, iferr(trapWindowsEPERM, end))
   }
 
-  function trapWindowsEPERM (err: HTMLElement): Void {
+  function trapWindowsEPERM (err: Object): Void {
     if (writeStream.__isWin &&
         err.syscall && err.syscall === 'rename' &&
         err.code && err.code === 'EPERM'

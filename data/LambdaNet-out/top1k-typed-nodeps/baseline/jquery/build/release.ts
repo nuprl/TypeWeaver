@@ -16,7 +16,7 @@ module.exports = function( Release: Object ) {
 		...distFiles,
 		"src/core.js"
 	];
-	const cdn: String = require( "./release/cdn" );
+	const cdn: Array = require( "./release/cdn" );
 	const dist: Function = require( "./release/dist" );
 
 	const npmTags: Function = Release.npmTags;

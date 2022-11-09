@@ -49,7 +49,7 @@ const nonASCIIidentifierChars: String = "export default \"" + contData.nonASCII 
 
 const comment: String = "// This file was generated. Do not modify manually!"
 
-function writeGeneratedFile(filename: String, content: String): Void {
+function writeGeneratedFile(filename: String, content: Number): Void {
   fs.writeFileSync(path.resolve("./acorn/src/generated", filename + ".js"), comment + "\n" + content + "\n", "utf8")
 }
 

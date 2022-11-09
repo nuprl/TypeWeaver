@@ -23,7 +23,7 @@ export function structuredPatch(oldFileName: String, newFileName: String, oldStr
   let oldRangeStart: Number = 0, newRangeStart: Number = 0, curRange: Array = [],
       oldLine: Number = 1, newLine: Number = 1;
   for (let i = 0; i < diff.length; i++) {
-    const current: HTMLElement = diff[i],
+    const current: Object = diff[i],
           lines: Array = current.lines || current.value.replace(/\n$/, '').split('\n');
     current.lines = lines;
 

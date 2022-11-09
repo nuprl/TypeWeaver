@@ -2,7 +2,7 @@ const ip: HTMLElement = exports;
 const { Buffer } = require('buffer');
 const os: String = require('os');
 
-ip.toBuffer = function (ip: String, buff: String, offset: Number) {
+ip.toBuffer = function (ip: String, buff: Number, offset: Number) {
   offset = ~~offset;
 
   let result: Object;

@@ -30,7 +30,7 @@ import createAssigner from './.internal/createAssigner.js'
  * merge(object, other)
  * // => { 'a': [{ 'b': 2, 'c': 3 }, { 'd': 4, 'e': 5 }] }
  */
-const merge: Hash = createAssigner((object: Object, source: Number, srcIndex: Number) => {
+const merge: Function = createAssigner((object: Object, source: Number, srcIndex: Number) => {
   baseMerge(object, source, srcIndex)
 })
 

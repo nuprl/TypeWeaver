@@ -2,7 +2,7 @@
 
 module.exports = repeat;
 
-function repeat(ele: Function, num: Number): Array {
+function repeat(ele: String, num: Number): Array {
   if (num === 0) return [];
 
   var res: Array = [ele];

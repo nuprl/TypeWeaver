@@ -1,5 +1,6 @@
 assert.ts(23,94): error TS2304: Cannot find name 'Void'.
-assert.ts(28,9): error TS2322: Type 'Number' is not assignable to type 'string'.
+assert.ts(28,9): error TS2322: Type 'string | Number' is not assignable to type 'string'.
+  Type 'Number' is not assignable to type 'string'.
 assert.ts(37,18): error TS2304: Cannot find name 'Void'.
 assert.ts(74,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 assert.ts(101,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -42,6 +43,5 @@ assert.ts(201,17): error TS2538: Type 'String' cannot be used as an index type.
 assert.ts(204,13): error TS2538: Type 'String' cannot be used as an index type.
 assert.ts(204,25): error TS2538: Type 'String' cannot be used as an index type.
 assert.ts(208,9): error TS2339: Property '_setExports' does not exist on type 'Object'.
-assert.ts(213,28): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'Boolean'.
-  Type 'undefined' is not assignable to type 'Boolean'.
+assert.ts(213,28): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Boolean'.
 

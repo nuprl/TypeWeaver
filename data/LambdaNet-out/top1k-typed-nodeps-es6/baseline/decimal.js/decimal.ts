@@ -653,7 +653,7 @@
       x = taylorSeries(Ctor, 2, x, x, true);
 
       // Reverse argument reduction
-      var sinh2_x: Function,
+      var sinh2_x: Object,
         d5: HTMLElement = new Ctor(5),
         d16: HTMLElement = new Ctor(16),
         d20: String = new Ctor(20);
@@ -724,7 +724,7 @@
    */
   P.inverseCosine = P.acos = function () {
     var halfPi: Object,
-      x: String = this,
+      x: HTMLElement = this,
       Ctor: Object = x.constructor,
       k: String = x.abs().cmp(1),
       pr: Number = Ctor.precision,
@@ -1262,7 +1262,7 @@
    *
    */
   P.minus = P.sub = function (y: Object) {
-    var d: Array, e: Number, i: Number, j: Number, k: Number, len: Number, pr: Number, rm: Number, xd: Array, xe: Number, xLTy: Function, yd: Array,
+    var d: Array, e: Number, i: Number, j: Number, k: Number, len: Number, pr: Number, rm: Number, xd: Array, xe: Number, xLTy: Number, yd: Array,
       x: Object = this,
       Ctor: Object = x.constructor;
 
@@ -1947,7 +1947,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toBinary = function (sd: Function, rm: Array) {
+  P.toBinary = function (sd: String, rm: String) {
     return toStringBinary(this, 2, sd, rm);
   };
 
@@ -2128,7 +2128,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toHexadecimal = P.toHex = function (sd: Function, rm: Array) {
+  P.toHexadecimal = P.toHex = function (sd: Array, rm: Array) {
     return toStringBinary(this, 16, sd, rm);
   };
 
@@ -2217,7 +2217,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toOctal = function (sd: Function, rm: Array) {
+  P.toOctal = function (sd: String, rm: String) {
     return toStringBinary(this, 8, sd, rm);
   };
 
@@ -2521,7 +2521,7 @@
     var i: Number, k: Number, ws: String,
       indexOfLastWord: Number = d.length - 1,
       str: String = '',
-      w: Number = d[0];
+      w: String = d[0];
 
     if (indexOfLastWord > 0) {
       str += w;
@@ -3746,7 +3746,7 @@
 
 
   // Exponent e must be positive and non-zero.
-  function tinyPow(b: String, e: Number): Number {
+  function tinyPow(b: String, e: Number): String {
     var n: Number = b;
     while (--e) n *= b;
     return n;

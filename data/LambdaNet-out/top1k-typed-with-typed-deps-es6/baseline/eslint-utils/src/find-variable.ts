@@ -18,7 +18,7 @@ export function findVariable(initialScope: Function, nameOrNode: String): Array 
     }
 
     while (scope != null) {
-        const variable: PatternMatcher = scope.set.get(name)
+        const variable: String = scope.set.get(name)
         if (variable != null) {
             return variable
         }

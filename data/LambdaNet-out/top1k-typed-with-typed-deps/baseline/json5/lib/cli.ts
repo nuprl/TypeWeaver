@@ -47,7 +47,7 @@ if (argv.version) {
                 // the same name but with a .json extension will be written.
                 if (argv.convert && inFilename && !argv.outFile) {
                     const parsedFilename: Object = path.parse(inFilename)
-                    const outFilename: Number = path.format(
+                    const outFilename: String = path.format(
                         Object.assign(
                             parsedFilename,
                             {base: path.basename(parsedFilename.base, parsedFilename.ext) + '.json'}

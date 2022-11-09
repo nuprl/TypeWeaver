@@ -3,6 +3,10 @@ bin.ts(3,30): error TS2349: This expression is not callable.
 browser.ts(1,53): error TS2345: Argument of type '(options: Object, obj: Boolean) => Boolean' is not assignable to parameter of type 'Boolean'.
   Types of property 'valueOf' are incompatible.
     Type '() => Object' is not assignable to type '() => boolean'.
+browser.ts(4,3): error TS2322: Type 'Boolean | {}' is not assignable to type 'Boolean'.
+  Type '{}' is not assignable to type 'Boolean'.
+    Types of property 'valueOf' are incompatible.
+      Type '() => Object' is not assignable to type '() => boolean'.
 browser.ts(6,7): error TS2339: Property 'level' does not exist on type 'Boolean'.
 browser.ts(7,7): error TS2339: Property 'hasBasic' does not exist on type 'Boolean'.
 browser.ts(8,7): error TS2339: Property 'has256' does not exist on type 'Boolean'.
@@ -86,8 +90,7 @@ index.ts(96,22): error TS2345: Argument of type 'Object' is not assignable to pa
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(101,15): error TS2339: Property 'TERM_PROGRAM' does not exist on type 'HTMLElement'.
 index.ts(103,29): error TS2339: Property 'TERM_PROGRAM_VERSION' does not exist on type 'HTMLElement'.
-index.ts(104,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(104,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 index.ts(105,9): error TS2322: Type 'HTMLElement' is not assignable to type 'String'.
 index.ts(105,23): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?

@@ -1,5 +1,5 @@
 "use strict";
-const DOMException: Array = require("./lib/DOMException.js");
+const DOMException: String = require("./lib/DOMException.js");
 
 // Special install function to make the DOMException inherit from Error.
 // https://heycam.github.io/webidl/#es-DOMException-specialness

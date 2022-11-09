@@ -27,13 +27,9 @@ dist/sprintf.min.ts(2,856): error TS2554: Expected 1 arguments, but got 3.
 dist/sprintf.min.ts(2,858): error TS2339: Property 'keys' does not exist on type 'Object'.
 dist/sprintf.min.ts(2,868): error TS2339: Property 'keys' does not exist on type 'Object'.
 dist/sprintf.min.ts(2,873): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-dist/sprintf.min.ts(2,882): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Function'.
 dist/sprintf.min.ts(2,886): error TS2339: Property 'keys' does not exist on type 'Object'.
 dist/sprintf.min.ts(2,904): error TS2339: Property 'param_no' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,913): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 dist/sprintf.min.ts(2,917): error TS2339: Property 'param_no' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,927): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 dist/sprintf.min.ts(2,929): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 dist/sprintf.min.ts(2,939): error TS2339: Property 'not_type' does not exist on type 'Object'.
 dist/sprintf.min.ts(2,955): error TS2339: Property 'type' does not exist on type 'Object'.
@@ -43,10 +39,10 @@ dist/sprintf.min.ts(2,1025): error TS2339: Property 'numeric_arg' does not exist
 dist/sprintf.min.ts(2,1044): error TS2339: Property 'type' does not exist on type 'Object'.
 dist/sprintf.min.ts(2,1077): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'number'.
 dist/sprintf.min.ts(2,1100): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+  Overload 2 of 2, '(message?: string): Error', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 dist/sprintf.min.ts(2,1144): error TS2554: Expected 1 arguments, but got 2.
@@ -91,7 +87,6 @@ dist/sprintf.min.ts(2,1783): error TS2322: Type 'string' is not assignable to ty
 dist/sprintf.min.ts(2,1801): error TS2339: Property 'precision' does not exist on type 'Object'.
 dist/sprintf.min.ts(2,1813): error TS2339: Property 'substring' does not exist on type 'Function'.
 dist/sprintf.min.ts(2,1827): error TS2339: Property 'precision' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,1854): error TS2322: Type 'string' is not assignable to type 'Function'.
 dist/sprintf.min.ts(2,1920): error TS2339: Property 'precision' does not exist on type 'Object'.
 dist/sprintf.min.ts(2,1932): error TS2339: Property 'substring' does not exist on type 'Function'.
 dist/sprintf.min.ts(2,1946): error TS2339: Property 'precision' does not exist on type 'Object'.
@@ -111,12 +106,10 @@ dist/sprintf.min.ts(2,2193): error TS2339: Property 'type' does not exist on typ
 dist/sprintf.min.ts(2,2199): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Function'.
 dist/sprintf.min.ts(2,2208): error TS2339: Property 'number' does not exist on type 'Object'.
 dist/sprintf.min.ts(2,2222): error TS2339: Property 'type' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2229): error TS2454: Variable 'c' is used before being assigned.
 dist/sprintf.min.ts(2,2235): error TS2339: Property 'sign' does not exist on type 'Object'.
 dist/sprintf.min.ts(2,2240): error TS2322: Type 'string' is not assignable to type 'Number'.
 dist/sprintf.min.ts(2,2246): error TS2322: Type 'string' is not assignable to type 'Number'.
   Type 'string' is not assignable to type 'Number'.
-dist/sprintf.min.ts(2,2248): error TS2454: Variable 'c' is used before being assigned.
 dist/sprintf.min.ts(2,2258): error TS2322: Type 'string' is not assignable to type 'Function'.
 dist/sprintf.min.ts(2,2283): error TS2339: Property 'sign' does not exist on type 'Object'.
 dist/sprintf.min.ts(2,2297): error TS2339: Property 'pad_char' does not exist on type 'Object'.
@@ -136,61 +129,24 @@ dist/sprintf.min.ts(2,2478): error TS2538: Type 'String' cannot be used as an in
 dist/sprintf.min.ts(2,2490): error TS2538: Type 'String' cannot be used as an index type.
 dist/sprintf.min.ts(2,2522): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 dist/sprintf.min.ts(2,2567): error TS2339: Property 'text' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2588): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 dist/sprintf.min.ts(2,2614): error TS2339: Property 'modulo' does not exist on type 'Object'.
 dist/sprintf.min.ts(2,2662): error TS2339: Property 'placeholder' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2744): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 dist/sprintf.min.ts(2,2750): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 dist/sprintf.min.ts(2,2762): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-dist/sprintf.min.ts(2,2781): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 dist/sprintf.min.ts(2,2814): error TS2339: Property 'key' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2908): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2934): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 dist/sprintf.min.ts(2,2964): error TS2339: Property 'key_access' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,2991): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 dist/sprintf.min.ts(2,3017): error TS2339: Property 'index_access' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,3116): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,3122): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 dist/sprintf.min.ts(2,3134): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-dist/sprintf.min.ts(2,3261): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,3275): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,3285): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,3295): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,3309): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
-  Property '4' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,3320): error TS7053: Element implicitly has an 'any' type because expression of type '5' can't be used to index type 'Object'.
-  Property '5' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,3331): error TS7053: Element implicitly has an 'any' type because expression of type '6' can't be used to index type 'Object'.
-  Property '6' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,3346): error TS7053: Element implicitly has an 'any' type because expression of type '7' can't be used to index type 'Object'.
-  Property '7' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,3356): error TS7053: Element implicitly has an 'any' type because expression of type '8' can't be used to index type 'Object'.
-  Property '8' does not exist on type 'Object'.
-dist/sprintf.min.ts(2,3377): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 dist/sprintf.min.ts(2,3399): error TS2538: Type 'String' cannot be used as an index type.
 dist/sprintf.min.ts(2,3454): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-dist/sprintf.min.ts(2,3482): error TS2345: Argument of type 'Function[]' is not assignable to parameter of type '[e: String]'.
-  Target requires 1 element(s) but source may have fewer.
 dist/sprintf.min.ts(2,3493): error TS2769: No overload matches this call.
   Overload 1 of 2, '(...items: ConcatArray<Function>[]): Function[]', gave the following error.
-    Argument of type 'Number' is not assignable to parameter of type 'ConcatArray<Function>'.
+    Argument of type 'Number | undefined[]' is not assignable to parameter of type 'ConcatArray<Function>'.
       Type 'Number' is missing the following properties from type 'ConcatArray<Function>': length, join, slice
   Overload 2 of 2, '(...items: (Function | ConcatArray<Function>)[]): Function[]', gave the following error.
-    Argument of type 'Number' is not assignable to parameter of type 'Function | ConcatArray<Function>'.
-      Type 'Number' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+    Argument of type 'Number | undefined[]' is not assignable to parameter of type 'Function | ConcatArray<Function>'.
+      Type 'Number' is not assignable to type 'Function | ConcatArray<Function>'.
+        Type 'Number' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 dist/sprintf.min.ts(2,3639): error TS2551: Property 'sprintf' does not exist on type 'Window & typeof globalThis'. Did you mean 'print'?
 dist/sprintf.min.ts(2,3656): error TS2339: Property 'vsprintf' does not exist on type 'Window & typeof globalThis'.
 dist/sprintf.min.ts(2,3686): error TS2304: Cannot find name 'define'.
@@ -210,9 +166,15 @@ src/angular-sprintf.ts(6,5): error TS2304: Cannot find name 'angular'.
 src/angular-sprintf.ts(10,24): error TS2552: Cannot find name 'sprintf'. Did you mean 'print'?
 src/angular-sprintf.ts(18,24): error TS2304: Cannot find name 'vsprintf'.
 src/sprintf.ts(3,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
-src/sprintf.ts(29,51): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-src/sprintf.ts(30,36): error TS2345: Argument of type 'String[]' is not assignable to parameter of type '[key: String]'.
-  Target requires 1 element(s) but source may have fewer.
+src/sprintf.ts(29,53): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+src/sprintf.ts(30,49): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(...items: ConcatArray<Function>[]): Function[]', gave the following error.
+    Argument of type 'String | undefined[]' is not assignable to parameter of type 'ConcatArray<Function>'.
+      Property 'join' is missing in type 'String' but required in type 'ConcatArray<Function>'.
+  Overload 2 of 2, '(...items: (Function | ConcatArray<Function>)[]): Function[]', gave the following error.
+    Argument of type 'String | undefined[]' is not assignable to parameter of type 'Function | ConcatArray<Function>'.
+      Type 'String' is not assignable to type 'Function | ConcatArray<Function>'.
+        Type 'String' is not assignable to type 'ConcatArray<Function>'.
 src/sprintf.ts(33,41): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/sprintf.ts(35,38): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/sprintf.ts(41,24): error TS2339: Property 'keys' does not exist on type 'Object'.
@@ -225,13 +187,9 @@ src/sprintf.ts(45,118): error TS2554: Expected 1 arguments, but got 3.
 src/sprintf.ts(45,121): error TS2339: Property 'keys' does not exist on type 'Object'.
 src/sprintf.ts(45,133): error TS2339: Property 'keys' does not exist on type 'Object'.
 src/sprintf.ts(45,138): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/sprintf.ts(47,31): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Function'.
 src/sprintf.ts(47,38): error TS2339: Property 'keys' does not exist on type 'Object'.
 src/sprintf.ts(50,29): error TS2339: Property 'param_no' does not exist on type 'Object'.
-src/sprintf.ts(51,27): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 src/sprintf.ts(51,35): error TS2339: Property 'param_no' does not exist on type 'Object'.
-src/sprintf.ts(54,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 src/sprintf.ts(54,32): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/sprintf.ts(57,24): error TS2339: Property 'not_type' does not exist on type 'Object'.
 src/sprintf.ts(57,41): error TS2339: Property 'type' does not exist on type 'Object'.
@@ -241,10 +199,10 @@ src/sprintf.ts(61,24): error TS2339: Property 'numeric_arg' does not exist on ty
 src/sprintf.ts(61,44): error TS2339: Property 'type' does not exist on type 'Object'.
 src/sprintf.ts(61,87): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'number'.
 src/sprintf.ts(62,41): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+  Overload 2 of 2, '(message?: string): Error', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 src/sprintf.ts(62,92): error TS2554: Expected 1 arguments, but got 2.
@@ -288,7 +246,6 @@ src/sprintf.ts(100,25): error TS2322: Type 'string' is not assignable to type 'F
 src/sprintf.ts(101,35): error TS2339: Property 'precision' does not exist on type 'Object'.
 src/sprintf.ts(101,51): error TS2339: Property 'substring' does not exist on type 'Function'.
 src/sprintf.ts(101,67): error TS2339: Property 'precision' does not exist on type 'Object'.
-src/sprintf.ts(104,25): error TS2322: Type 'string' is not assignable to type 'Function'.
 src/sprintf.ts(105,35): error TS2339: Property 'precision' does not exist on type 'Object'.
 src/sprintf.ts(105,51): error TS2339: Property 'substring' does not exist on type 'Function'.
 src/sprintf.ts(105,67): error TS2339: Property 'precision' does not exist on type 'Object'.
@@ -308,9 +265,7 @@ src/sprintf.ts(121,37): error TS2339: Property 'type' does not exist on type 'Ob
 src/sprintf.ts(122,21): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Function'.
 src/sprintf.ts(125,28): error TS2339: Property 'number' does not exist on type 'Object'.
 src/sprintf.ts(125,43): error TS2339: Property 'type' does not exist on type 'Object'.
-src/sprintf.ts(125,54): error TS2454: Variable 'is_positive' is used before being assigned.
 src/sprintf.ts(125,72): error TS2339: Property 'sign' does not exist on type 'Object'.
-src/sprintf.ts(126,32): error TS2454: Variable 'is_positive' is used before being assigned.
 src/sprintf.ts(127,25): error TS2322: Type 'string' is not assignable to type 'Function'.
 src/sprintf.ts(127,57): error TS2339: Property 'sign' does not exist on type 'Object'.
 src/sprintf.ts(132,40): error TS2339: Property 'pad_char' does not exist on type 'Object'.
@@ -329,53 +284,15 @@ src/sprintf.ts(145,27): error TS2538: Type 'String' cannot be used as an index t
 src/sprintf.ts(146,34): error TS2538: Type 'String' cannot be used as an index type.
 src/sprintf.ts(149,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/sprintf.ts(151,29): error TS2339: Property 'text' does not exist on type 'Object'.
-src/sprintf.ts(152,33): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 src/sprintf.ts(154,34): error TS2339: Property 'modulo' does not exist on type 'Object'.
 src/sprintf.ts(157,34): error TS2339: Property 'placeholder' does not exist on type 'Object'.
-src/sprintf.ts(158,21): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 src/sprintf.ts(159,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/sprintf.ts(160,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/sprintf.ts(160,77): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 src/sprintf.ts(161,43): error TS2339: Property 'key' does not exist on type 'Object'.
-src/sprintf.ts(162,41): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-src/sprintf.ts(163,81): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 src/sprintf.ts(164,51): error TS2339: Property 'key_access' does not exist on type 'Object'.
-src/sprintf.ts(165,49): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 src/sprintf.ts(167,56): error TS2339: Property 'index_access' does not exist on type 'Object'.
-src/sprintf.ts(168,49): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-src/sprintf.ts(178,21): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 src/sprintf.ts(181,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/sprintf.ts(189,38): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-src/sprintf.ts(190,38): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-src/sprintf.ts(191,38): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-src/sprintf.ts(192,38): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-src/sprintf.ts(193,38): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
-  Property '4' does not exist on type 'Object'.
-src/sprintf.ts(194,38): error TS7053: Element implicitly has an 'any' type because expression of type '5' can't be used to index type 'Object'.
-  Property '5' does not exist on type 'Object'.
-src/sprintf.ts(195,38): error TS7053: Element implicitly has an 'any' type because expression of type '6' can't be used to index type 'Object'.
-  Property '6' does not exist on type 'Object'.
-src/sprintf.ts(196,38): error TS7053: Element implicitly has an 'any' type because expression of type '7' can't be used to index type 'Object'.
-  Property '7' does not exist on type 'Object'.
-src/sprintf.ts(197,38): error TS7053: Element implicitly has an 'any' type because expression of type '8' can't be used to index type 'Object'.
-  Property '8' does not exist on type 'Object'.
-src/sprintf.ts(204,35): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 src/sprintf.ts(206,30): error TS2538: Type 'String' cannot be used as an index type.
-src/sprintf.ts(218,16): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-src/sprintf.ts(219,16): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
 src/sprintf.ts(221,20): error TS2304: Cannot find name 'define'.
 src/sprintf.ts(221,45): error TS2304: Cannot find name 'define'.
 src/sprintf.ts(222,13): error TS2304: Cannot find name 'define'.

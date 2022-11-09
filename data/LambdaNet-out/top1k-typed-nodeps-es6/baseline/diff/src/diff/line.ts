@@ -1,7 +1,7 @@
 import Diff from './base';
 import {generateOptions} from '../util/params';
 
-export const lineDiff: Array = new Diff();
+export const lineDiff: HTMLElement = new Diff();
 lineDiff.tokenize = function(value: String) {
   let retLines: Array = [],
       linesAndNewlines: Array = value.split(/(\n|\r\n)/);

@@ -19,7 +19,7 @@ import { EPSILON } from '../special-symbols';
  *
  * [in] --c--> [out]
  */
-function char(c: String): DFA {
+function char(c: String): State {
   const inState: State = new NFAState();
   const outState: State = new NFAState({
     accepting: true,
@@ -64,7 +64,7 @@ function altPair(first: Writer, second: Writer): DFA {
  *
  * Creates a alteration NFA for (at least) two NFA-fragments.
  */
-function alt(first: DFA, ...fragments): DFA {
+function alt(first: State, ...fragments): State {
   for (let fragment of fragments) {
     first = altPair(first, fragment);
   }
@@ -99,7 +99,7 @@ function orPair(first: Writer, second: Writer): DFA {
  *
  * Creates a disjunction NFA for (at least) two NFA-fragments.
  */
-function or(first: DFA, ...fragments): DFA {
+function or(first: State, ...fragments): State {
   for (let fragment of fragments) {
     first = orPair(first, fragment);
   }

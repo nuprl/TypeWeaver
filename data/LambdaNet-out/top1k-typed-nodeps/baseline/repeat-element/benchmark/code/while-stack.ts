@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function repeat(ele: Function, num: Number): String {
+module.exports = function repeat(ele: String, num: Number): String {
   var res: Array = [ele];
   var max: Number = num;
 

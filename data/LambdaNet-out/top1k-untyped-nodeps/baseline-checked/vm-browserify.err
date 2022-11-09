@@ -1,8 +1,6 @@
 example/run/bundle.ts(1,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 example/run/bundle.ts(1,111): error TS2538: Type 'String' cannot be used as an index type.
 example/run/bundle.ts(1,121): error TS2538: Type 'String' cannot be used as an index type.
-example/run/bundle.ts(1,129): error TS2322: Type 'false | NodeRequire' is not assignable to type 'Function'.
-  Type 'boolean' is not assignable to type 'Function'.
 example/run/bundle.ts(1,217): error TS2554: Expected 1 arguments, but got 2.
 example/run/bundle.ts(1,282): error TS2339: Property 'code' does not exist on type 'Error'.
 example/run/bundle.ts(1,324): error TS2538: Type 'String' cannot be used as an index type.
@@ -19,17 +17,12 @@ example/run/bundle.ts(9,44): error TS2314: Generic type 'Array<T>' requires 1 ty
 example/run/bundle.ts(12,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 example/run/bundle.ts(18,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 example/run/bundle.ts(29,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-example/run/bundle.ts(37,25): error TS7006: Parameter 'obj' implicitly has an 'any' type.
-example/run/bundle.ts(37,30): error TS7006: Parameter 'name' implicitly has an 'any' type.
-example/run/bundle.ts(37,36): error TS7006: Parameter 'value' implicitly has an 'any' type.
 example/run/bundle.ts(43,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 example/run/bundle.ts(49,21): error TS2304: Cannot find name 'Void'.
 example/run/bundle.ts(52,30): error TS2339: Property 'Script' does not exist on type 'Object'.
-example/run/bundle.ts(52,75): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 example/run/bundle.ts(53,27): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 example/run/bundle.ts(53,47): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
-example/run/bundle.ts(54,10): error TS2339: Property 'code' does not exist on type 'Object'.
 example/run/bundle.ts(57,8): error TS2339: Property 'prototype' does not exist on type 'Object'.
 example/run/bundle.ts(62,9): error TS2322: Type 'HTMLIFrameElement' is not assignable to type 'Error'.
 example/run/bundle.ts(63,17): error TS2339: Property 'style' does not exist on type 'Error'.
@@ -69,14 +62,12 @@ example/run/bundle.ts(138,9): error TS2339: Property 'createScript' does not exi
 example/run/bundle.ts(139,20): error TS2339: Property 'Script' does not exist on type 'Object'.
 example/run/bundle.ts(142,9): error TS2339: Property 'createContext' does not exist on type 'Object'.
 example/run/bundle.ts(142,32): error TS2339: Property 'createContext' does not exist on type 'Object'.
-example/run/bundle.ts(143,24): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+example/run/bundle.ts(143,24): error TS2350: Only a void function can be called with the 'new' keyword.
 example/run/bundle.ts(146,18): error TS2538: Type 'String' cannot be used as an index type.
 example/run/bundle.ts(146,33): error TS2538: Type 'String' cannot be used as an index type.
 example/run/bundle.ts(153,9): error TS2304: Cannot find name 'Void'.
-example/run/bundle.ts(157,5): error TS2531: Object is possibly 'null'.
 example/run/bundle.ts(157,5): error TS2322: Type 'Number' is not assignable to type 'string'.
 example/run/entry.ts(4,26): error TS2339: Property 'runInNewContext' does not exist on type 'String'.
-example/run/entry.ts(5,5): error TS2531: Object is possibly 'null'.
 example/run/entry.ts(5,5): error TS2322: Type 'Number' is not assignable to type 'string'.
 example/run/server.ts(1,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 example/run/server.ts(3,6): error TS2339: Property 'createServer' does not exist on type 'String'.
@@ -86,12 +77,8 @@ index.ts(8,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s
 index.ts(11,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(17,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(28,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-index.ts(36,25): error TS7006: Parameter 'obj' implicitly has an 'any' type.
-index.ts(36,30): error TS7006: Parameter 'name' implicitly has an 'any' type.
-index.ts(36,36): error TS7006: Parameter 'value' implicitly has an 'any' type.
 index.ts(42,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(48,21): error TS2304: Cannot find name 'Void'.
-index.ts(51,75): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 index.ts(52,27): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 index.ts(52,47): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
@@ -131,7 +118,7 @@ index.ts(128,25): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 index.ts(129,18): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(141,32): error TS2339: Property 'createContext' does not exist on type 'Object'.
-index.ts(142,24): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+index.ts(142,24): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(145,18): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(145,33): error TS2538: Type 'String' cannot be used as an index type.
 

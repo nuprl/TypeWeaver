@@ -1,11 +1,5 @@
 index.ts(28,51): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(30,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(30,49): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(30,55): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[statusCode: Number]'.
-index.ts(35,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(38,42): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(39,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(44,32): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(56,26): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 index.ts(56,50): error TS2304: Cannot find name 'Void'.
 index.ts(76,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -18,15 +12,10 @@ index.ts(94,37): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(105,52): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(111,35): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 index.ts(112,17): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(115,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(119,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(122,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(126,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(126,40): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 scripts/version-history.ts(6,38): error TS2339: Property 'join' does not exist on type 'String'.
-scripts/version-history.ts(8,5): error TS2322: Type 'string | undefined' is not assignable to type 'String'.
-  Type 'undefined' is not assignable to type 'String'.
 scripts/version-history.ts(11,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/version-history.ts(11,34): error TS2339: Property 'readFileSync' does not exist on type 'String'.
 scripts/version-history.ts(24,7): error TS2740: Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.

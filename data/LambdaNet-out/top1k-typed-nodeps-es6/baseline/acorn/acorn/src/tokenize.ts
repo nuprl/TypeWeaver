@@ -68,7 +68,7 @@ if (typeof Symbol !== "undefined")
 // properties.
 
 pp.nextToken = function() {
-  let curContext: Parser = this.curContext()
+  let curContext: Position = this.curContext()
   if (!curContext || !curContext.preserveSpace) this.skipSpace()
 
   this.start = this.pos
@@ -401,14 +401,14 @@ pp.getTokenFromCode = function(code: String) {
   this.raise(this.pos, "Unexpected character '" + codePointToString(code) + "'")
 }
 
-pp.finishOp = function(type: Number, size: Number) {
+pp.finishOp = function(type: Scope, size: Number) {
   let str: String = this.input.slice(this.pos, this.pos + size)
   this.pos += size
   return this.finishToken(type, str)
 }
 
 pp.readRegexp = function() {
-  let escaped: Boolean, inClass: Boolean, start: Function = this.pos
+  let escaped: Boolean, inClass: Boolean, start: Position = this.pos
   for (;;) {
     if (this.pos >= this.input.length) this.raise(start, "Unterminated regular expression")
     let ch: Number = this.input.charAt(this.pos)

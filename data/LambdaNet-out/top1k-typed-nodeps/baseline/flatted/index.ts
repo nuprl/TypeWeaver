@@ -22,7 +22,7 @@ self.Flatted = (function (exports: Object) {
   var ignore: Function = {};
   var object: String = 'object';
 
-  var noop: Number = function noop(_: String, value: String): String {
+  var noop: Function = function noop(_: String, value: String): String {
     return value;
   };
 

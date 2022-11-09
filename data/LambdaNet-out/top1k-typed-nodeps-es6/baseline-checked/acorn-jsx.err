@@ -23,7 +23,6 @@ index.ts(39,14): error TS2339: Property 'jsxTagEnd' does not exist on type 'Obje
 index.ts(41,46): error TS2339: Property 'slash' does not exist on type 'HTMLElement'.
 index.ts(50,17): error TS2339: Property 'set' does not exist on type 'Error'.
 index.ts(58,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(58,46): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 index.ts(77,32): error TS2339: Property 'allowNamespaces' does not exist on type 'Object'.
 index.ts(78,41): error TS2339: Property 'allowNamespacedObjects' does not exist on type 'Object'.
 index.ts(87,43): error TS2339: Property 'tokTypes' does not exist on type 'Object'.
@@ -73,7 +72,6 @@ index.ts(149,25): error TS2339: Property 'input' does not exist on type '(Anonym
 index.ts(149,54): error TS2339: Property 'pos' does not exist on type '(Anonymous class)'.
 index.ts(151,31): error TS2339: Property 'pos' does not exist on type '(Anonymous class)'.
 index.ts(153,20): error TS2339: Property 'pos' does not exist on type '(Anonymous class)'.
-index.ts(159,21): error TS7006: Parameter 'normalizeCRLF' implicitly has an 'any' type.
 index.ts(160,21): error TS2339: Property 'input' does not exist on type '(Anonymous class)'.
 index.ts(160,43): error TS2339: Property 'pos' does not exist on type '(Anonymous class)'.
 index.ts(162,14): error TS2339: Property 'pos' does not exist on type '(Anonymous class)'.
@@ -84,7 +82,6 @@ index.ts(169,16): error TS2339: Property 'options' does not exist on type '(Anon
 index.ts(170,16): error TS2339: Property 'curLine' does not exist on type '(Anonymous class)'.
 index.ts(171,14): error TS2339: Property 'lineStart' does not exist on type '(Anonymous class)'.
 index.ts(171,31): error TS2339: Property 'pos' does not exist on type '(Anonymous class)'.
-index.ts(177,20): error TS7006: Parameter 'quote' implicitly has an 'any' type.
 index.ts(178,41): error TS2339: Property 'pos' does not exist on type '(Anonymous class)'.
 index.ts(180,18): error TS2339: Property 'pos' does not exist on type '(Anonymous class)'.
 index.ts(180,30): error TS2339: Property 'input' does not exist on type '(Anonymous class)'.
@@ -114,8 +111,6 @@ index.ts(206,19): error TS2339: Property 'pos' does not exist on type '(Anonymou
 index.ts(206,30): error TS2339: Property 'input' does not exist on type '(Anonymous class)'.
 index.ts(207,19): error TS2339: Property 'input' does not exist on type '(Anonymous class)'.
 index.ts(207,30): error TS2339: Property 'pos' does not exist on type '(Anonymous class)'.
-index.ts(220,22): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{ quot: string; amp: string; apos: string; lt: string; gt: string; nbsp: string; iexcl: string; cent: string; pound: string; curren: string; yen: string; brvbar: string; sect: string; uml: string; copy: string; ... 237 more ...; diams: string; }'.
-  No index signature with a parameter of type 'string' was found on type '{ quot: string; amp: string; apos: string; lt: string; gt: string; nbsp: string; iexcl: string; cent: string; pound: string; curren: string; yen: string; brvbar: string; sect: string; uml: string; copy: string; ... 237 more ...; diams: string; }'.
 index.ts(227,14): error TS2339: Property 'pos' does not exist on type '(Anonymous class)'.
 index.ts(241,28): error TS2339: Property 'pos' does not exist on type '(Anonymous class)'.
 index.ts(243,19): error TS2339: Property 'input' does not exist on type '(Anonymous class)'.
@@ -188,8 +183,6 @@ index.ts(341,21): error TS2339: Property 'finishNode' does not exist on type '(A
 index.ts(344,25): error TS2339: Property 'eat' does not exist on type '(Anonymous class)'.
 index.ts(344,32): error TS2339: Property 'eq' does not exist on type 'Object'.
 index.ts(345,19): error TS2339: Property 'finishNode' does not exist on type '(Anonymous class)'.
-index.ts(350,31): error TS7006: Parameter 'startPos' implicitly has an 'any' type.
-index.ts(350,41): error TS7006: Parameter 'startLoc' implicitly has an 'any' type.
 index.ts(351,23): error TS2339: Property 'startNodeAt' does not exist on type '(Anonymous class)'.
 index.ts(355,19): error TS2339: Property 'type' does not exist on type '(Anonymous class)'.
 index.ts(355,31): error TS2339: Property 'slash' does not exist on type 'Object'.
@@ -200,14 +193,10 @@ index.ts(357,38): error TS2339: Property 'slash' does not exist on type 'Object'
 index.ts(358,12): error TS2339: Property 'expect' does not exist on type '(Anonymous class)'.
 index.ts(358,23): error TS2339: Property 'jsxTagEnd' does not exist on type 'Function'.
 index.ts(359,19): error TS2339: Property 'finishNode' does not exist on type '(Anonymous class)'.
-index.ts(364,31): error TS7006: Parameter 'startPos' implicitly has an 'any' type.
-index.ts(364,41): error TS7006: Parameter 'startLoc' implicitly has an 'any' type.
 index.ts(365,23): error TS2339: Property 'startNodeAt' does not exist on type '(Anonymous class)'.
 index.ts(368,12): error TS2339: Property 'expect' does not exist on type '(Anonymous class)'.
 index.ts(368,23): error TS2339: Property 'jsxTagEnd' does not exist on type 'Function'.
 index.ts(369,19): error TS2339: Property 'finishNode' does not exist on type '(Anonymous class)'.
-index.ts(375,24): error TS7006: Parameter 'startPos' implicitly has an 'any' type.
-index.ts(375,34): error TS7006: Parameter 'startLoc' implicitly has an 'any' type.
 index.ts(376,23): error TS2339: Property 'startNodeAt' does not exist on type '(Anonymous class)'.
 index.ts(383,24): error TS2339: Property 'type' does not exist on type '(Anonymous class)'.
 index.ts(384,20): error TS2339: Property 'jsxTagStart' does not exist on type 'Function'.
@@ -232,12 +221,10 @@ index.ts(426,41): error TS2339: Property 'value' does not exist on type '(Anonym
 index.ts(434,27): error TS2339: Property 'start' does not exist on type '(Anonymous class)'.
 index.ts(434,50): error TS2339: Property 'startLoc' does not exist on type '(Anonymous class)'.
 index.ts(435,12): error TS2339: Property 'next' does not exist on type '(Anonymous class)'.
-index.ts(439,19): error TS7006: Parameter 'refShortHandDefaultPos' implicitly has an 'any' type.
 index.ts(440,16): error TS2339: Property 'type' does not exist on type '(Anonymous class)'.
 index.ts(440,29): error TS2339: Property 'jsxText' does not exist on type 'Function'.
 index.ts(442,21): error TS2339: Property 'type' does not exist on type '(Anonymous class)'.
 index.ts(442,34): error TS2339: Property 'jsxTagStart' does not exist on type 'Function'.
-index.ts(448,15): error TS7006: Parameter 'code' implicitly has an 'any' type.
 index.ts(449,26): error TS2339: Property 'curContext' does not exist on type '(Anonymous class)'.
 index.ts(454,13): error TS2349: This expression is not callable.
   Type 'Boolean' has no call signatures.
@@ -250,7 +237,6 @@ index.ts(465,73): error TS2339: Property 'pos' does not exist on type '(Anonymou
 index.ts(466,16): error TS2339: Property 'pos' does not exist on type '(Anonymous class)'.
 index.ts(467,21): error TS2339: Property 'finishToken' does not exist on type '(Anonymous class)'.
 index.ts(467,37): error TS2339: Property 'jsxTagStart' does not exist on type 'Function'.
-index.ts(472,19): error TS7006: Parameter 'prevType' implicitly has an 'any' type.
 index.ts(473,16): error TS2339: Property 'type' does not exist on type '(Anonymous class)'.
 index.ts(473,27): error TS2339: Property 'braceL' does not exist on type 'Object'.
 index.ts(474,31): error TS2339: Property 'curContext' does not exist on type '(Anonymous class)'.

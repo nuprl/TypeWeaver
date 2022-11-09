@@ -24,7 +24,7 @@ const braces: Function = (input: Array, options: Object = {}) => {
 
   if (Array.isArray(input)) {
     for (let pattern of input) {
-      let result: Array = braces.create(pattern, options);
+      let result: String = braces.create(pattern, options);
       if (Array.isArray(result)) {
         output.push(...result);
       } else {

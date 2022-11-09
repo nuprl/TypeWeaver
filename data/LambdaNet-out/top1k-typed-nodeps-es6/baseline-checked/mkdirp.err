@@ -2,15 +2,12 @@
 .github/workflows/package-json-repo.ts(4,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 .github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'String'.
-.github/workflows/package-json-repo.ts(12,9): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-.github/workflows/package-json-repo.ts(13,26): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-.github/workflows/package-json-repo.ts(14,26): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(value: any, replacer?: ((this: any, key: string, value: any) => any) | undefined, space?: string | number | undefined): string', gave the following error.
-    Argument of type 'null' is not assignable to parameter of type '((this: any, key: string, value: any) => any) | undefined'.
-  Overload 2 of 2, '(value: any, replacer?: (string | number)[] | null | undefined, space?: string | number | undefined): string', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string | number | undefined'.
+.github/workflows/package-json-repo.ts(14,51): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
+    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
+      Type 'String' is not assignable to type 'string | number'.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
+    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
 .github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
 bin/cmd.ts(24,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bin/cmd.ts(46,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
@@ -36,15 +33,12 @@ index.ts(27,8): error TS2339: Property 'nativeSync' does not exist on type 'Func
 index.ts(27,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(28,8): error TS2339: Property 'manualSync' does not exist on type 'Function'.
 index.ts(28,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/find-made.ts(3,59): error TS2322: Type 'undefined' is not assignable to type 'String'.
 lib/find-made.ts(8,15): error TS2339: Property 'statAsync' does not exist on type 'Object'.
 lib/find-made.ts(9,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/find-made.ts(10,24): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/find-made.ts(11,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/find-made.ts(16,68): error TS2322: Type 'undefined' is not assignable to type 'String'.
 lib/find-made.ts(21,17): error TS2339: Property 'statSync' does not exist on type 'HTMLElement'.
-lib/find-made.ts(23,12): error TS2571: Object is of type 'unknown'.
 lib/find-made.ts(24,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/mkdirp-manual.ts(4,8): error TS2339: Property 'recursive' does not exist on type 'HTMLElement'.
@@ -55,9 +49,9 @@ lib/mkdirp-manual.ts(6,7): error TS2367: This condition will always return 'fals
 lib/mkdirp-manual.ts(7,17): error TS2339: Property 'mkdirAsync' does not exist on type 'HTMLElement'.
 lib/mkdirp-manual.ts(10,14): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/mkdirp-manual.ts(15,15): error TS2339: Property 'mkdirAsync' does not exist on type 'HTMLElement'.
-lib/mkdirp-manual.ts(16,12): error TS2339: Property 'code' does not exist on type 'Object'.
-lib/mkdirp-manual.ts(19,12): error TS2339: Property 'code' does not exist on type 'Object'.
-lib/mkdirp-manual.ts(19,36): error TS2339: Property 'code' does not exist on type 'Object'.
+lib/mkdirp-manual.ts(16,12): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
+lib/mkdirp-manual.ts(19,12): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
+lib/mkdirp-manual.ts(19,36): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
 lib/mkdirp-manual.ts(21,17): error TS2339: Property 'statAsync' does not exist on type 'HTMLElement'.
 lib/mkdirp-manual.ts(21,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mkdirp-manual.ts(31,9): error TS2322: Type 'string' is not assignable to type 'Number'.
@@ -66,11 +60,7 @@ lib/mkdirp-manual.ts(31,34): error TS2345: Argument of type 'String' is not assi
 lib/mkdirp-manual.ts(32,8): error TS2339: Property 'recursive' does not exist on type 'HTMLElement'.
 lib/mkdirp-manual.ts(34,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'String' have no overlap.
 lib/mkdirp-manual.ts(36,19): error TS2339: Property 'mkdirSync' does not exist on type 'HTMLElement'.
-lib/mkdirp-manual.ts(40,11): error TS2571: Object is of type 'unknown'.
 lib/mkdirp-manual.ts(48,10): error TS2339: Property 'mkdirSync' does not exist on type 'HTMLElement'.
-lib/mkdirp-manual.ts(51,9): error TS2571: Object is of type 'unknown'.
-lib/mkdirp-manual.ts(53,9): error TS2571: Object is of type 'unknown'.
-lib/mkdirp-manual.ts(53,33): error TS2571: Object is of type 'unknown'.
 lib/mkdirp-manual.ts(56,17): error TS2339: Property 'statSync' does not exist on type 'HTMLElement'.
 lib/mkdirp-native.ts(2,10): error TS2614: Module '"./find-made.js"' has no exported member 'findMade'. Did you mean to use 'import findMade from "./find-made.js"' instead?
 lib/mkdirp-native.ts(2,20): error TS2614: Module '"./find-made.js"' has no exported member 'findMadeSync'. Did you mean to use 'import findMadeSync from "./find-made.js"' instead?
@@ -93,7 +83,6 @@ lib/mkdirp-native.ts(24,7): error TS2367: This condition will always return 'fal
 lib/mkdirp-native.ts(25,17): error TS2339: Property 'mkdirSync' does not exist on type 'HTMLElement'.
 lib/mkdirp-native.ts(27,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mkdirp-native.ts(29,10): error TS2339: Property 'mkdirSync' does not exist on type 'HTMLElement'.
-lib/mkdirp-native.ts(32,9): error TS2571: Object is of type 'unknown'.
 lib/opts-arg.ts(15,8): error TS2339: Property 'mkdir' does not exist on type 'Object'.
 lib/opts-arg.ts(15,21): error TS2339: Property 'mkdir' does not exist on type 'Object'.
 lib/opts-arg.ts(15,35): error TS2339: Property 'fs' does not exist on type 'Object'.
@@ -119,12 +108,6 @@ lib/path-arg.ts(16,7): error TS2367: This condition will always return 'false' s
 lib/path-arg.ts(18,26): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/use-native.ts(5,7): error TS2322: Type 'boolean' is not assignable to type 'Number'.
-lib/use-native.ts(5,28): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/use-native.ts(5,48): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/use-native.ts(5,70): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/use-native.ts(7,79): error TS2339: Property 'mkdir' does not exist on type 'Object'.
 lib/use-native.ts(8,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/use-native.ts(8,85): error TS2339: Property 'mkdirSync' does not exist on type 'HTMLElement'.

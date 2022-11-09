@@ -19,7 +19,7 @@ for (var i = 0; i < 0x100; i++)
 
 
 // Class DBCSCodec reads and initializes mapping tables.
-function DBCSCodec(codecOptions: Object, iconv: HTMLElement): Void {
+function DBCSCodec(codecOptions: Object, iconv: Object): Void {
     this.encodingName = codecOptions.encodingName;
     if (!codecOptions)
         throw new Error("DBCS codec is called without the data.")

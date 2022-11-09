@@ -2,18 +2,16 @@
 .github/workflows/package-json-repo.ts(4,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 .github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'String'.
-.github/workflows/package-json-repo.ts(12,9): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-.github/workflows/package-json-repo.ts(13,26): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-.github/workflows/package-json-repo.ts(14,26): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(value: any, replacer?: ((this: any, key: string, value: any) => any) | undefined, space?: string | number | undefined): string', gave the following error.
-    Argument of type 'null' is not assignable to parameter of type '((this: any, key: string, value: any) => any) | undefined'.
-  Overload 2 of 2, '(value: any, replacer?: (string | number)[] | null | undefined, space?: string | number | undefined): string', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string | number | undefined'.
+.github/workflows/package-json-repo.ts(14,51): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
+    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
+      Type 'String' is not assignable to type 'string | number'.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
+    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
 .github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
 clone.ts(6,14): error TS2339: Property '__proto__' does not exist on type 'Object'.
 clone.ts(9,10): error TS2300: Duplicate identifier 'clone'.
+clone.ts(11,5): error TS2322: Type 'String' is not assignable to type 'Function'.
 clone.ts(19,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 clone.ts(19,75): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 clone.ts(22,3): error TS2322: Type 'Object' is not assignable to type 'Function'.
@@ -33,10 +31,10 @@ graceful-fs.ts(45,30): error TS2538: Type 'String' cannot be used as an index ty
 graceful-fs.ts(46,16): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
   Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 graceful-fs.ts(52,6): error TS2339: Property 'close' does not exist on type 'String'.
-graceful-fs.ts(61,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 graceful-fs.ts(65,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 graceful-fs.ts(69,9): error TS2339: Property 'close' does not exist on type 'String'.
 graceful-fs.ts(71,6): error TS2339: Property 'closeSync' does not exist on type 'String'.
+graceful-fs.ts(71,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 graceful-fs.ts(72,40): error TS2304: Cannot find name 'Void'.
 graceful-fs.ts(78,38): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 graceful-fs.ts(82,9): error TS2339: Property 'closeSync' does not exist on type 'String'.
@@ -55,34 +53,28 @@ graceful-fs.ts(108,6): error TS2339: Property 'createWriteStream' does not exist
 graceful-fs.ts(109,32): error TS2339: Property 'readFile' does not exist on type 'String'.
 graceful-fs.ts(110,6): error TS2339: Property 'readFile' does not exist on type 'String'.
 graceful-fs.ts(113,7): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-graceful-fs.ts(113,21): error TS2322: Type 'null' is not assignable to type 'Function'.
 graceful-fs.ts(115,5): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 graceful-fs.ts(115,12): error TS2554: Expected 4 arguments, but got 3.
 graceful-fs.ts(118,14): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 graceful-fs.ts(119,25): error TS2339: Property 'code' does not exist on type 'Object'.
 graceful-fs.ts(119,50): error TS2339: Property 'code' does not exist on type 'Object'.
-graceful-fs.ts(123,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 graceful-fs.ts(129,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 graceful-fs.ts(129,32): error TS2339: Property 'writeFile' does not exist on type 'String'.
 graceful-fs.ts(130,6): error TS2339: Property 'writeFile' does not exist on type 'String'.
 graceful-fs.ts(133,7): error TS2322: Type 'Function' is not assignable to type 'String'.
-graceful-fs.ts(133,21): error TS2322: Type 'null' is not assignable to type 'Function'.
 graceful-fs.ts(135,5): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 graceful-fs.ts(135,12): error TS2554: Expected 5 arguments, but got 4.
 graceful-fs.ts(139,25): error TS2339: Property 'code' does not exist on type 'Object'.
 graceful-fs.ts(139,50): error TS2339: Property 'code' does not exist on type 'Object'.
-graceful-fs.ts(143,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 graceful-fs.ts(149,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 graceful-fs.ts(149,33): error TS2339: Property 'appendFile' does not exist on type 'String'.
 graceful-fs.ts(151,8): error TS2339: Property 'appendFile' does not exist on type 'String'.
 graceful-fs.ts(154,7): error TS2322: Type 'Function' is not assignable to type 'String'.
-graceful-fs.ts(154,21): error TS2322: Type 'null' is not assignable to type 'Function'.
 graceful-fs.ts(156,5): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 graceful-fs.ts(156,12): error TS2554: Expected 5 arguments, but got 4.
 graceful-fs.ts(160,25): error TS2339: Property 'code' does not exist on type 'Object'.
 graceful-fs.ts(160,50): error TS2339: Property 'code' does not exist on type 'Object'.
-graceful-fs.ts(164,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 graceful-fs.ts(170,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 graceful-fs.ts(170,31): error TS2339: Property 'copyFile' does not exist on type 'String'.
 graceful-fs.ts(172,8): error TS2339: Property 'copyFile' does not exist on type 'String'.
@@ -90,11 +82,9 @@ graceful-fs.ts(178,5): error TS2322: Type 'Boolean' is not assignable to type 'S
 graceful-fs.ts(178,12): error TS2554: Expected 5 arguments, but got 4.
 graceful-fs.ts(182,25): error TS2339: Property 'code' does not exist on type 'Object'.
 graceful-fs.ts(182,50): error TS2339: Property 'code' does not exist on type 'Object'.
-graceful-fs.ts(186,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 graceful-fs.ts(192,33): error TS2339: Property 'readdir' does not exist on type 'String'.
 graceful-fs.ts(193,6): error TS2339: Property 'readdir' does not exist on type 'String'.
 graceful-fs.ts(195,69): error TS2304: Cannot find name 'Void'.
-graceful-fs.ts(197,21): error TS2322: Type 'null' is not assignable to type 'Function'.
 graceful-fs.ts(202,17): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
@@ -103,7 +93,6 @@ graceful-fs.ts(207,17): error TS2345: Argument of type 'Object' is not assignabl
 graceful-fs.ts(214,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 graceful-fs.ts(215,25): error TS2339: Property 'code' does not exist on type 'Object'.
 graceful-fs.ts(215,50): error TS2339: Property 'code' does not exist on type 'Object'.
-graceful-fs.ts(228,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 graceful-fs.ts(236,5): error TS2630: Cannot assign to 'ReadStream' because it is a function.
 graceful-fs.ts(236,29): error TS2339: Property 'ReadStream' does not exist on type 'Object'.
 graceful-fs.ts(237,5): error TS2630: Cannot assign to 'WriteStream' because it is a function.
@@ -115,12 +104,7 @@ graceful-fs.ts(267,7): error TS2630: Cannot assign to 'WriteStream' because it i
 graceful-fs.ts(274,7): error TS2740: Type '{ (path: String, options: Object): any; prototype: any; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 graceful-fs.ts(285,7): error TS2740: Type '{ (path: String, options: Object): any; prototype: any; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 graceful-fs.ts(297,56): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-graceful-fs.ts(298,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-graceful-fs.ts(299,34): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-graceful-fs.ts(299,52): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-graceful-fs.ts(301,68): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[path: String, options: Object]'.
 graceful-fs.ts(304,32): error TS2304: Cannot find name 'Void'.
-graceful-fs.ts(305,29): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 graceful-fs.ts(306,15): error TS2339: Property 'path' does not exist on type 'HTMLElement'.
 graceful-fs.ts(306,26): error TS2339: Property 'flags' does not exist on type 'HTMLElement'.
 graceful-fs.ts(306,38): error TS2339: Property 'mode' does not exist on type 'HTMLElement'.
@@ -133,12 +117,7 @@ graceful-fs.ts(313,14): error TS2339: Property 'fd' does not exist on type 'HTML
 graceful-fs.ts(314,14): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 graceful-fs.ts(315,14): error TS2339: Property 'read' does not exist on type 'HTMLElement'.
 graceful-fs.ts(320,57): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-graceful-fs.ts(321,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-graceful-fs.ts(322,35): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-graceful-fs.ts(322,53): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-graceful-fs.ts(324,70): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[path: String, options: Object]'.
 graceful-fs.ts(327,33): error TS2304: Cannot find name 'Void'.
-graceful-fs.ts(328,29): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 graceful-fs.ts(329,15): error TS2339: Property 'path' does not exist on type 'HTMLElement'.
 graceful-fs.ts(329,26): error TS2339: Property 'flags' does not exist on type 'HTMLElement'.
 graceful-fs.ts(329,38): error TS2339: Property 'mode' does not exist on type 'HTMLElement'.
@@ -152,17 +131,11 @@ graceful-fs.ts(341,19): error TS2339: Property 'ReadStream' does not exist on ty
 graceful-fs.ts(345,19): error TS2339: Property 'WriteStream' does not exist on type 'String'.
 graceful-fs.ts(348,30): error TS2339: Property 'open' does not exist on type 'String'.
 graceful-fs.ts(349,6): error TS2339: Property 'open' does not exist on type 'String'.
-graceful-fs.ts(352,18): error TS2322: Type 'null' is not assignable to type 'String'.
 graceful-fs.ts(354,5): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 graceful-fs.ts(354,12): error TS2554: Expected 5 arguments, but got 4.
 graceful-fs.ts(358,25): error TS2339: Property 'code' does not exist on type 'Object'.
 graceful-fs.ts(358,50): error TS2339: Property 'code' does not exist on type 'Object'.
-graceful-fs.ts(362,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 graceful-fs.ts(371,34): error TS2304: Cannot find name 'Void'.
-graceful-fs.ts(372,20): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-graceful-fs.ts(372,34): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 graceful-fs.ts(373,6): error TS2538: Type 'String' cannot be used as an index type.
 graceful-fs.ts(383,25): error TS2304: Cannot find name 'Void'.
 graceful-fs.ts(385,26): error TS2538: Type 'String' cannot be used as an index type.
@@ -171,25 +144,14 @@ graceful-fs.ts(389,10): error TS2538: Type 'String' cannot be used as an index t
 graceful-fs.ts(390,10): error TS2538: Type 'String' cannot be used as an index type.
 graceful-fs.ts(397,20): error TS2304: Cannot find name 'Void'.
 graceful-fs.ts(399,16): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(timeoutId: string | number | Timeout | undefined): void', gave the following error.
-    Argument of type 'Number' is not assignable to parameter of type 'string | number | Timeout | undefined'.
-  Overload 2 of 2, '(id?: number | undefined): void', gave the following error.
+  Overload 1 of 2, '(timeoutId: string | number | Timeout): void', gave the following error.
+    Argument of type 'Number' is not assignable to parameter of type 'string | number | Timeout'.
+  Overload 2 of 2, '(id?: number): void', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-graceful-fs.ts(400,3): error TS2322: Type 'undefined' is not assignable to type 'Number'.
 graceful-fs.ts(402,10): error TS2538: Type 'String' cannot be used as an index type.
 graceful-fs.ts(405,25): error TS2538: Type 'String' cannot be used as an index type.
-graceful-fs.ts(406,20): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 graceful-fs.ts(407,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-graceful-fs.ts(407,21): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-graceful-fs.ts(409,21): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-graceful-fs.ts(410,27): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-graceful-fs.ts(411,26): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
-  Property '4' does not exist on type 'Object'.
 graceful-fs.ts(416,23): error TS2339: Property 'name' does not exist on type 'Object'.
 graceful-fs.ts(417,8): error TS2339: Property 'apply' does not exist on type 'Object'.
 graceful-fs.ts(418,27): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -203,79 +165,22 @@ graceful-fs.ts(436,10): error TS2339: Property 'apply' does not exist on type 'O
 graceful-fs.ts(440,10): error TS2538: Type 'String' cannot be used as an index type.
 graceful-fs.ts(446,5): error TS2739: Type 'Timeout' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 legacy-streams.ts(5,10): error TS2300: Duplicate identifier 'legacy'.
-legacy-streams.ts(11,56): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-legacy-streams.ts(12,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(12,47): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-legacy-streams.ts(14,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+legacy-streams.ts(12,47): error TS2350: Only a void function can be called with the 'new' keyword.
 legacy-streams.ts(16,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-legacy-streams.ts(16,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(18,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(19,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(20,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(21,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(23,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(24,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(25,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 legacy-streams.ts(30,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-legacy-streams.ts(33,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 legacy-streams.ts(33,12): error TS2538: Type 'String' cannot be used as an index type.
 legacy-streams.ts(33,27): error TS2538: Type 'String' cannot be used as an index type.
-legacy-streams.ts(36,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(36,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(36,41): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(38,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(39,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(42,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(43,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(44,38): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(48,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(48,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(52,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(52,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(55,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(59,7): error TS2322: Type 'undefined' is not assignable to type 'String'.
 legacy-streams.ts(62,8): error TS2339: Property 'open' does not exist on type 'Number'.
-legacy-streams.ts(62,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(62,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(62,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 legacy-streams.ts(62,76): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-legacy-streams.ts(75,57): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-legacy-streams.ts(76,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(76,48): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-legacy-streams.ts(78,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(80,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(81,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(82,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(84,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(85,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(86,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(87,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+legacy-streams.ts(76,48): error TS2350: Only a void function can be called with the 'new' keyword.
 legacy-streams.ts(92,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-legacy-streams.ts(95,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 legacy-streams.ts(95,12): error TS2538: Type 'String' cannot be used as an index type.
 legacy-streams.ts(95,27): error TS2538: Type 'String' cannot be used as an index type.
-legacy-streams.ts(98,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(99,31): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(102,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(106,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(106,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(109,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(110,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(112,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(113,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 legacy-streams.ts(113,23): error TS2339: Property 'open' does not exist on type 'Number'.
-legacy-streams.ts(114,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(114,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(114,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(114,48): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(114,60): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-legacy-streams.ts(115,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-polyfills.ts(4,5): error TS2322: Type 'null' is not assignable to type 'String'.
 polyfills.ts(6,5): error TS2322: Type 'string' is not assignable to type 'Number'.
 polyfills.ts(8,1): error TS2322: Type '() => String' is not assignable to type '() => string'.
   Type 'String' is not assignable to type 'string'.
     'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-polyfills.ts(21,5): error TS2322: Type 'null' is not assignable to type 'String'.
 polyfills.ts(29,10): error TS2393: Duplicate function implementation.
 polyfills.ts(29,30): error TS2304: Cannot find name 'Void'.
 polyfills.ts(40,11): error TS2339: Property 'lutimes' does not exist on type 'String'.
@@ -336,15 +241,16 @@ polyfills.ts(104,22): error TS2339: Property 'code' does not exist on type 'Obje
 polyfills.ts(104,46): error TS2339: Property 'code' does not exist on type 'Object'.
 polyfills.ts(105,31): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 polyfills.ts(107,18): error TS2339: Property 'stat' does not exist on type 'String'.
+polyfills.ts(107,57): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 polyfills.ts(108,38): error TS2339: Property 'code' does not exist on type 'Object'.
 polyfills.ts(113,16): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(callback: () => void, ms?: number | undefined): Timeout', gave the following error.
+  Overload 1 of 3, '(callback: () => void, ms?: number): Timeout', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-  Overload 2 of 3, '(callback: (args: void) => void, ms?: number | undefined): Timeout', gave the following error.
+  Overload 2 of 3, '(callback: (args: void) => void, ms?: number): Timeout', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-  Overload 3 of 3, '(handler: TimerHandler, timeout?: number | undefined, ...arguments: any[]): number', gave the following error.
+  Overload 3 of 3, '(handler: TimerHandler, timeout?: number, ...arguments: any[]): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 polyfills.ts(115,15): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
@@ -354,13 +260,10 @@ polyfills.ts(127,23): error TS2339: Property 'read' does not exist on type 'Stri
 polyfills.ts(127,48): error TS2339: Property 'read' does not exist on type 'String'.
 polyfills.ts(134,24): error TS2339: Property 'code' does not exist on type 'Object'.
 polyfills.ts(135,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-polyfills.ts(138,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-polyfills.ts(141,69): error TS2454: Variable 'callback' is used before being assigned.
 polyfills.ts(147,9): error TS2339: Property 'read' does not exist on type 'String'.
 polyfills.ts(149,6): error TS2339: Property 'readSync' does not exist on type 'String'.
 polyfills.ts(149,27): error TS2339: Property 'readSync' does not exist on type 'String'.
 polyfills.ts(149,56): error TS2339: Property 'readSync' does not exist on type 'String'.
-polyfills.ts(156,13): error TS2571: Object is of type 'unknown'.
 polyfills.ts(157,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 polyfills.ts(163,10): error TS2339: Property 'readSync' does not exist on type 'String'.
 polyfills.ts(165,38): error TS2304: Cannot find name 'Void'.
@@ -395,17 +298,12 @@ polyfills.ts(244,10): error TS2339: Property 'lutimes' does not exist on type 'S
 polyfills.ts(244,110): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Function'.
 polyfills.ts(245,10): error TS2339: Property 'lutimesSync' does not exist on type 'String'.
 polyfills.ts(251,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-polyfills.ts(253,28): error TS2322: Type 'null' is not assignable to type 'String'.
-polyfills.ts(254,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-polyfills.ts(265,24): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Object'.
+polyfills.ts(252,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 polyfills.ts(273,68): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-polyfills.ts(275,28): error TS2322: Type 'null' is not assignable to type 'String'.
-polyfills.ts(276,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-polyfills.ts(287,24): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Object'.
+polyfills.ts(274,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 polyfills.ts(296,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 polyfills.ts(301,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 polyfills.ts(301,55): error TS2304: Cannot find name 'Void'.
-polyfills.ts(306,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 polyfills.ts(318,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 polyfills.ts(344,12): error TS2339: Property 'code' does not exist on type 'Object'.
 polyfills.ts(349,14): error TS2339: Property 'code' does not exist on type 'Object'.

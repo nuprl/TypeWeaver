@@ -11,17 +11,10 @@ bigfraction.ts(68,18): error TS2345: Argument of type 'Number' is not assignable
 bigfraction.ts(72,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(72,16): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(78,9): error TS2367: This condition will always return 'false' since the types 'Number' and 'String' have no overlap.
-bigfraction.ts(83,5): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
 bigfraction.ts(83,14): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
 bigfraction.ts(85,9): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
-bigfraction.ts(87,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'Boolean'.
-bigfraction.ts(89,5): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 bigfraction.ts(89,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(89,18): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-bigfraction.ts(90,5): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 bigfraction.ts(90,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(90,18): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(100,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -53,21 +46,11 @@ bigfraction.ts(131,15): error TS2363: The right-hand side of an arithmetic opera
 bigfraction.ts(131,35): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(131,39): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(137,9): error TS2322: Type 'bigint' is not assignable to type 'Number'.
-bigfraction.ts(137,20): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Number'.
-  Property 'n' does not exist on type 'Number'.
 bigfraction.ts(138,9): error TS2322: Type 'bigint' is not assignable to type 'Number'.
-bigfraction.ts(138,20): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Number'.
-  Property 'd' does not exist on type 'Number'.
 bigfraction.ts(140,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(140,11): error TS2365: Operator '*=' cannot be applied to types 'Number' and 'bigint'.
-bigfraction.ts(140,22): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Number'.
-  Property 's' does not exist on type 'Number'.
 bigfraction.ts(142,9): error TS2322: Type 'bigint' is not assignable to type 'Number'.
-bigfraction.ts(142,20): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
 bigfraction.ts(144,11): error TS2322: Type 'bigint' is not assignable to type 'Number'.
-bigfraction.ts(144,22): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
 bigfraction.ts(146,9): error TS2322: Type 'bigint' is not assignable to type 'Number'.
 bigfraction.ts(146,20): error TS2345: Argument of type 'Number & BigInt' is not assignable to parameter of type 'string | number | bigint | boolean'.
 bigfraction.ts(150,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -102,26 +85,17 @@ bigfraction.ts(238,24): error TS2538: Type 'Number' cannot be used as an index t
 bigfraction.ts(239,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(242,17): error TS2339: Property 'length' does not exist on type 'Object'.
 bigfraction.ts(242,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-bigfraction.ts(243,20): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 bigfraction.ts(243,26): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-bigfraction.ts(244,18): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 bigfraction.ts(244,24): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 bigfraction.ts(244,50): error TS2538: Type 'Number' cannot be used as an index type.
 bigfraction.ts(246,19): error TS2538: Type 'Number' cannot be used as an index type.
-bigfraction.ts(247,22): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 bigfraction.ts(247,28): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(249,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(252,13): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 bigfraction.ts(252,31): error TS2339: Property 'length' does not exist on type 'Object'.
-bigfraction.ts(252,41): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 bigfraction.ts(252,47): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-bigfraction.ts(252,67): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 bigfraction.ts(252,73): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-bigfraction.ts(252,93): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 bigfraction.ts(252,99): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-bigfraction.ts(252,119): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 bigfraction.ts(252,125): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 bigfraction.ts(253,28): error TS2538: Type 'Number' cannot be used as an index type.
 bigfraction.ts(254,15): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -129,36 +103,25 @@ bigfraction.ts(254,15): error TS2365: Operator '**' cannot be applied to types '
 bigfraction.ts(254,37): error TS2538: Type 'Number' cannot be used as an index type.
 bigfraction.ts(255,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(259,19): error TS2538: Type 'Number' cannot be used as an index type.
-bigfraction.ts(259,35): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 bigfraction.ts(259,41): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 bigfraction.ts(259,67): error TS2538: Type 'Number' cannot be used as an index type.
-bigfraction.ts(259,83): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 bigfraction.ts(259,89): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 bigfraction.ts(260,11): error TS2322: Type 'Number' is not assignable to type 'String'.
-bigfraction.ts(260,22): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 bigfraction.ts(260,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 bigfraction.ts(261,15): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(261,15): error TS2365: Operator '**' cannot be applied to types 'Number' and 'bigint'.
-bigfraction.ts(261,31): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 bigfraction.ts(261,37): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 bigfraction.ts(261,56): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(262,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-bigfraction.ts(265,18): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 bigfraction.ts(265,24): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-bigfraction.ts(265,44): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 bigfraction.ts(265,50): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 bigfraction.ts(266,26): error TS2538: Type 'Number' cannot be used as an index type.
-bigfraction.ts(267,20): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 bigfraction.ts(267,26): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 bigfraction.ts(268,9): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-bigfraction.ts(269,18): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 bigfraction.ts(269,24): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-bigfraction.ts(269,44): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 bigfraction.ts(269,50): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 bigfraction.ts(270,26): error TS2538: Type 'Number' cannot be used as an index type.
-bigfraction.ts(271,20): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 bigfraction.ts(271,26): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-bigfraction.ts(272,20): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 bigfraction.ts(272,26): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 bigfraction.ts(273,9): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 bigfraction.ts(276,17): error TS2339: Property 'length' does not exist on type 'Object'.
@@ -170,14 +133,8 @@ bigfraction.ts(279,21): error TS2363: The right-hand side of an arithmetic opera
 bigfraction.ts(279,25): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(279,29): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(288,9): error TS2367: This condition will always return 'false' since the types 'Number' and 'String' have no overlap.
-bigfraction.ts(292,5): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
 bigfraction.ts(292,14): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
-bigfraction.ts(293,5): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 bigfraction.ts(293,14): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
-bigfraction.ts(294,5): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 bigfraction.ts(294,14): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
 bigfraction.ts(300,12): error TS2365: Operator '>' cannot be applied to types 'Number' and 'String'.
 bigfraction.ts(300,29): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -217,200 +174,65 @@ bigfraction.ts(350,29): error TS2363: The right-hand side of an arithmetic opera
 bigfraction.ts(351,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(351,21): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(351,29): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-bigfraction.ts(356,41): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-bigfraction.ts(359,7): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
-bigfraction.ts(361,7): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
 bigfraction.ts(364,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(364,11): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-bigfraction.ts(366,9): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
 bigfraction.ts(367,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(367,11): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-bigfraction.ts(369,9): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
-bigfraction.ts(380,44): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-bigfraction.ts(384,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-bigfraction.ts(385,15): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-bigfraction.ts(385,23): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-bigfraction.ts(386,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-bigfraction.ts(386,19): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-bigfraction.ts(387,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-bigfraction.ts(387,19): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 bigfraction.ts(387,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-bigfraction.ts(388,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-bigfraction.ts(388,19): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 bigfraction.ts(388,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(390,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-bigfraction.ts(390,26): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-bigfraction.ts(390,35): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-bigfraction.ts(390,43): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 bigfraction.ts(429,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-bigfraction.ts(433,33): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-bigfraction.ts(433,42): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-bigfraction.ts(433,63): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-bigfraction.ts(434,21): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 bigfraction.ts(443,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-bigfraction.ts(447,33): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-bigfraction.ts(447,42): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-bigfraction.ts(447,63): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-bigfraction.ts(448,21): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 bigfraction.ts(457,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-bigfraction.ts(461,21): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-bigfraction.ts(461,42): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-bigfraction.ts(462,21): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 bigfraction.ts(471,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-bigfraction.ts(475,21): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-bigfraction.ts(475,42): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-bigfraction.ts(476,21): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-bigfraction.ts(501,17): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-bigfraction.ts(520,22): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-bigfraction.ts(520,45): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-bigfraction.ts(521,9): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 bigfraction.ts(530,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bigfraction.ts(536,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-bigfraction.ts(536,30): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 bigfraction.ts(536,51): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-bigfraction.ts(536,55): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-bigfraction.ts(536,75): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 bigfraction.ts(544,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-bigfraction.ts(550,11): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 bigfraction.ts(551,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-bigfraction.ts(553,26): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 bigfraction.ts(553,46): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-bigfraction.ts(553,50): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 bigfraction.ts(553,71): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-bigfraction.ts(553,75): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 bigfraction.ts(570,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-bigfraction.ts(576,11): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-bigfraction.ts(578,13): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-bigfraction.ts(579,57): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-bigfraction.ts(579,78): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-bigfraction.ts(581,57): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-bigfraction.ts(581,78): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 bigfraction.ts(603,11): error TS2322: Type 'String' is not assignable to type 'Number'.
-bigfraction.ts(606,9): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-bigfraction.ts(606,16): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-bigfraction.ts(608,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 bigfraction.ts(608,13): error TS2367: This condition will always return 'false' since the types 'number' and 'String' have no overlap.
-bigfraction.ts(608,20): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-bigfraction.ts(609,11): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-bigfraction.ts(609,18): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 bigfraction.ts(611,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(611,9): error TS2365: Operator '*=' cannot be applied to types 'Number' and 'bigint'.
 bigfraction.ts(611,13): error TS2791: Exponentiation cannot be performed on 'bigint' values unless the 'target' option is set to 'es2016' or later.
-bigfraction.ts(611,26): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-bigfraction.ts(616,9): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-bigfraction.ts(616,16): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-bigfraction.ts(618,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 bigfraction.ts(618,13): error TS2367: This condition will always return 'false' since the types 'number' and 'String' have no overlap.
-bigfraction.ts(618,20): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-bigfraction.ts(619,11): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-bigfraction.ts(619,18): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 bigfraction.ts(621,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(621,9): error TS2365: Operator '*=' cannot be applied to types 'Number' and 'bigint'.
 bigfraction.ts(621,13): error TS2791: Exponentiation cannot be performed on 'bigint' values unless the 'target' option is set to 'es2016' or later.
-bigfraction.ts(621,26): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-bigfraction.ts(624,11): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
 bigfraction.ts(635,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-bigfraction.ts(638,38): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-bigfraction.ts(638,49): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-bigfraction.ts(638,58): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 bigfraction.ts(646,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-bigfraction.ts(649,48): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-bigfraction.ts(649,57): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-bigfraction.ts(649,66): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 bigfraction.ts(651,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(651,15): error TS2365: Operator '<' cannot be applied to types 'String' and 'Number'.
 bigfraction.ts(651,29): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(651,30): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
 bigfraction.ts(661,16): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(661,16): error TS2365: Operator '**' cannot be applied to types 'Number' and 'bigint'.
-bigfraction.ts(661,32): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string | number | bigint | boolean'.
+bigfraction.ts(661,32): error TS2345: Argument of type 'Number | 0' is not assignable to parameter of type 'string | number | bigint | boolean'.
+  Type 'Number' is not assignable to type 'string | number | bigint | boolean'.
 bigfraction.ts(663,26): error TS2365: Operator '+' cannot be applied to types 'number' and 'String | Number'.
 bigfraction.ts(663,38): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(664,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(664,10): error TS2365: Operator '>' cannot be applied to types 'number' and 'String'.
 bigfraction.ts(675,16): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(675,16): error TS2365: Operator '**' cannot be applied to types 'Number' and 'bigint'.
-bigfraction.ts(675,32): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string | number | bigint | boolean'.
+bigfraction.ts(675,32): error TS2345: Argument of type 'Number | 0' is not assignable to parameter of type 'string | number | bigint | boolean'.
 bigfraction.ts(677,38): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(678,9): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(678,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(678,10): error TS2365: Operator '>' cannot be applied to types 'number' and 'String'.
 bigfraction.ts(689,16): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(689,16): error TS2365: Operator '**' cannot be applied to types 'Number' and 'bigint'.
-bigfraction.ts(689,32): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string | number | bigint | boolean'.
+bigfraction.ts(689,32): error TS2345: Argument of type 'Number | 0' is not assignable to parameter of type 'string | number | bigint | boolean'.
 bigfraction.ts(706,38): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(707,21): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(707,22): error TS2365: Operator '+' cannot be applied to types 'String | Number' and 'number'.
 bigfraction.ts(707,63): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(707,72): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(716,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-bigfraction.ts(719,18): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-bigfraction.ts(719,55): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-bigfraction.ts(719,66): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 bigfraction.ts(743,57): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 bigfraction.ts(749,39): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
@@ -468,20 +290,12 @@ bigfraction.ts(855,18): error TS2362: The left-hand side of an arithmetic operat
 bigfraction.ts(855,22): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(856,25): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(856,29): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+bigfraction.ts(866,7): error TS2322: Type 'String | 0.001' is not assignable to type 'String'.
+  Type 'number' is not assignable to type 'String'.
 bigfraction.ts(869,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-bigfraction.ts(869,27): error TS7053: Element implicitly has an 'any' type because expression of type '"toContinued"' can't be used to index type 'Object'.
-  Property 'toContinued' does not exist on type 'Object'.
-bigfraction.ts(875,15): error TS7053: Element implicitly has an 'any' type because expression of type '"inverse"' can't be used to index type 'Object'.
-  Property 'inverse' does not exist on type 'Object'.
-bigfraction.ts(878,13): error TS7053: Element implicitly has an 'any' type because expression of type '"sub"' can't be used to index type 'Object'.
-  Property 'sub' does not exist on type 'Object'.
-bigfraction.ts(879,18): error TS7053: Element implicitly has an 'any' type because expression of type '"mul"' can't be used to index type 'Object'.
-  Property 'mul' does not exist on type 'Object'.
 bigfraction.ts(886,14): error TS2304: Cannot find name 'define'.
 bigfraction.ts(886,39): error TS2304: Cannot find name 'define'.
 bigfraction.ts(887,5): error TS2304: Cannot find name 'define'.
-bigfraction.ts(896,5): error TS7053: Element implicitly has an 'any' type because expression of type '"Fraction"' can't be used to index type 'Object'.
-  Property 'Fraction' does not exist on type 'Object'.
 examples/angles.ts(13,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/angles.ts(19,11): error TS2339: Property 'd' does not exist on type 'HTMLElement'.
 examples/angles.ts(19,24): error TS2339: Property 'd' does not exist on type 'HTMLElement'.
@@ -519,8 +333,6 @@ examples/hesse-convergence.ts(34,23): error TS2351: This expression is not const
   Type 'Function' has no construct signatures.
 examples/hesse-convergence.ts(34,43): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
-examples/hesse-convergence.ts(34,59): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 examples/hesse-convergence.ts(37,7): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
 examples/hesse-convergence.ts(38,7): error TS2351: This expression is not constructable.
@@ -529,23 +341,11 @@ examples/hesse-convergence.ts(39,7): error TS2351: This expression is not constr
   Type 'Function' has no construct signatures.
 examples/hesse-convergence.ts(40,7): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
-examples/hesse-convergence.ts(40,24): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 examples/hesse-convergence.ts(45,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/hesse-convergence.ts(48,7): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
-examples/hesse-convergence.ts(48,16): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-examples/hesse-convergence.ts(48,26): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-examples/hesse-convergence.ts(48,36): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 examples/hesse-convergence.ts(49,7): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
-examples/hesse-convergence.ts(49,23): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-examples/hesse-convergence.ts(49,33): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 examples/hesse-convergence.ts(54,22): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 examples/hesse-convergence.ts(54,34): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 examples/hesse-convergence.ts(54,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -567,27 +367,13 @@ examples/hesse-convergence.ts(67,7): error TS2351: This expression is not constr
 examples/hesse-convergence.ts(74,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/hesse-convergence.ts(81,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/hesse-convergence.ts(89,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/hesse-convergence.ts(98,15): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-examples/hesse-convergence.ts(98,39): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-examples/hesse-convergence.ts(99,15): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-examples/hesse-convergence.ts(99,39): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 examples/hesse-convergence.ts(107,8): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/hesse-convergence.ts(111,14): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 examples/integrate.ts(12,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/integrate.ts(21,22): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 examples/integrate.ts(21,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 examples/integrate.ts(23,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/integrate.ts(23,25): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 examples/integrate.ts(24,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/integrate.ts(24,25): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 examples/integrate.ts(26,31): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
 examples/integrate.ts(29,17): error TS2538: Type 'String' cannot be used as an index type.
@@ -598,34 +384,6 @@ examples/integrate.ts(30,61): error TS2538: Type 'String' cannot be used as an i
 examples/integrate.ts(32,17): error TS2538: Type 'String' cannot be used as an index type.
 examples/integrate.ts(32,32): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
-examples/integrate.ts(39,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-examples/integrate.ts(41,20): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-examples/integrate.ts(44,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-examples/integrate.ts(44,26): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-examples/integrate.ts(45,17): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-examples/integrate.ts(46,30): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-examples/integrate.ts(46,49): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-examples/integrate.ts(48,30): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-examples/integrate.ts(52,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-examples/integrate.ts(52,26): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-examples/integrate.ts(54,17): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-examples/integrate.ts(55,31): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-examples/integrate.ts(55,50): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-examples/integrate.ts(57,30): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 examples/integrate.ts(60,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 examples/rational-pow.ts(10,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/rational-pow.ts(13,54): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -643,15 +401,12 @@ examples/rational-pow.ts(19,38): error TS2339: Property 'd' does not exist on ty
 examples/rational-pow.ts(22,5): error TS2740: Type 'String' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 276 more.
 examples/tape-measure.ts(15,16): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
-examples/toFraction.ts(31,10): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 examples/toFraction.ts(31,19): error TS2339: Property 'n' does not exist on type 'HTMLElement'.
 examples/toFraction.ts(31,34): error TS2339: Property 'd' does not exist on type 'HTMLElement'.
 examples/toFraction.ts(31,45): error TS2339: Property 'toFraction' does not exist on type 'HTMLElement'.
 examples/toFraction.ts(33,28): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
 examples/valueOfPi.ts(1,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/valueOfPi.ts(5,52): error TS2322: Type 'null' is not assignable to type 'HTMLElement'.
 examples/valueOfPi.ts(6,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/valueOfPi.ts(6,31): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/valueOfPi.ts(6,46): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -663,7 +418,6 @@ examples/valueOfPi.ts(18,16): error TS2339: Property 'toFraction' does not exist
 examples/valueOfPi.ts(23,16): error TS2339: Property 'toFraction' does not exist on type 'HTMLElement'.
 examples/valueOfPi.ts(26,14): error TS2339: Property 'toFraction' does not exist on type 'HTMLElement'.
 fraction.min.ts(8,55): error TS2304: Cannot find name 'Void'.
-fraction.min.ts(8,250): error TS2322: Type 'String' is not assignable to type 'Number'.
 fraction.min.ts(8,250): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 fraction.min.ts(8,260): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(8,262): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -699,65 +453,46 @@ fraction.min.ts(9,97): error TS2365: Operator '+=' cannot be applied to types 'N
 fraction.min.ts(9,129): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(9,132): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(9,148): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
-fraction.min.ts(9,189): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Number'.
-  Type 'null' is not assignable to type 'Number'.
+fraction.min.ts(9,158): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+fraction.min.ts(9,189): error TS2739: Type 'RegExpMatchArray' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 fraction.min.ts(9,254): error TS2538: Type 'Number' cannot be used as an index type.
 fraction.min.ts(9,263): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(9,276): error TS2538: Type 'Number' cannot be used as an index type.
 fraction.min.ts(9,280): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(9,289): error TS2339: Property 'length' does not exist on type 'Number'.
 fraction.min.ts(9,298): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-fraction.min.ts(9,306): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 fraction.min.ts(9,308): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.min.ts(9,330): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.min.ts(9,332): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 fraction.min.ts(9,346): error TS2538: Type 'Number' cannot be used as an index type.
 fraction.min.ts(9,358): error TS2538: Type 'Number' cannot be used as an index type.
-fraction.min.ts(9,367): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 fraction.min.ts(9,369): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(9,378): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(9,385): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 fraction.min.ts(9,393): error TS2339: Property 'length' does not exist on type 'Number'.
-fraction.min.ts(9,407): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.min.ts(9,409): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-fraction.min.ts(9,421): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.min.ts(9,423): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-fraction.min.ts(9,435): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.min.ts(9,437): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-fraction.min.ts(9,449): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.min.ts(9,451): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 fraction.min.ts(9,462): error TS2538: Type 'Number' cannot be used as an index type.
 fraction.min.ts(9,484): error TS2538: Type 'Number' cannot be used as an index type.
 fraction.min.ts(9,495): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(10,3): error TS2538: Type 'Number' cannot be used as an index type.
-fraction.min.ts(10,13): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.min.ts(10,15): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 fraction.min.ts(10,29): error TS2538: Type 'Number' cannot be used as an index type.
-fraction.min.ts(10,39): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.min.ts(10,41): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-fraction.min.ts(10,50): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.min.ts(10,52): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-fraction.min.ts(10,74): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.min.ts(10,76): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 fraction.min.ts(10,91): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-fraction.min.ts(10,106): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.min.ts(10,108): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-fraction.min.ts(10,120): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.min.ts(10,122): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 fraction.min.ts(10,134): error TS2538: Type 'Number' cannot be used as an index type.
-fraction.min.ts(10,144): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.min.ts(10,146): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 fraction.min.ts(10,154): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-fraction.min.ts(10,166): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.min.ts(10,168): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-fraction.min.ts(10,180): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.min.ts(10,182): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 fraction.min.ts(10,195): error TS2538: Type 'Number' cannot be used as an index type.
-fraction.min.ts(10,205): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.min.ts(10,207): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-fraction.min.ts(10,219): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.min.ts(10,221): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 fraction.min.ts(10,229): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 fraction.min.ts(10,240): error TS2339: Property 'length' does not exist on type 'Number'.
@@ -791,10 +526,6 @@ fraction.min.ts(11,100): error TS2363: The right-hand side of an arithmetic oper
 fraction.min.ts(11,102): error TS2740: Type 'Error' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 fraction.min.ts(11,182): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(11,187): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.min.ts(11,192): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
-fraction.min.ts(11,198): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type '{}'.
-  No index signature with a parameter of type 'number' was found on type '{}'.
 fraction.min.ts(11,234): error TS2538: Type 'Number' cannot be used as an index type.
 fraction.min.ts(11,240): error TS2538: Type 'Number' cannot be used as an index type.
 fraction.min.ts(11,252): error TS2538: Type 'Number' cannot be used as an index type.
@@ -806,18 +537,13 @@ fraction.min.ts(11,358): error TS2363: The right-hand side of an arithmetic oper
 fraction.min.ts(11,375): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(11,378): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(11,386): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
-fraction.min.ts(11,429): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 fraction.min.ts(11,438): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
   Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-fraction.min.ts(11,446): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fraction.min.ts(11,470): error TS2339: Property 'd' does not exist on type 'Object'.
 fraction.min.ts(11,474): error TS2339: Property 'n' does not exist on type 'Object'.
-fraction.min.ts(11,477): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fraction.min.ts(11,486): error TS2339: Property 's' does not exist on type 'Object'.
-fraction.min.ts(11,488): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fraction.min.ts(11,497): error TS2339: Property 'n' does not exist on type 'Object'.
 fraction.min.ts(11,499): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.min.ts(11,501): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 fraction.min.ts(11,510): error TS2339: Property 'd' does not exist on type 'Object'.
 fraction.min.ts(11,512): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(11,530): error TS2339: Property 's' does not exist on type 'Object'.
@@ -841,8 +567,8 @@ fraction.min.ts(12,532): error TS2345: Argument of type 'String' is not assignab
 fraction.min.ts(12,553): error TS2339: Property 's' does not exist on type 'Object'.
 fraction.min.ts(12,564): error TS2339: Property 'd' does not exist on type 'Object'.
 fraction.min.ts(13,10): error TS2339: Property 'n' does not exist on type 'Object'.
+fraction.min.ts(13,136): error TS2350: Only a void function can be called with the 'new' keyword.
 fraction.min.ts(13,136): error TS2554: Expected 2 arguments, but got 1.
-fraction.min.ts(13,136): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 fraction.min.ts(13,198): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 fraction.min.ts(13,210): error TS2339: Property 'n' does not exist on type 'Object'.
 fraction.min.ts(13,265): error TS2339: Property 'd' does not exist on type 'Object'.
@@ -863,20 +589,23 @@ fraction.min.ts(13,477): error TS2362: The left-hand side of an arithmetic opera
 fraction.min.ts(13,481): error TS2339: Property 'n' does not exist on type 'Object'.
 fraction.min.ts(13,491): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(13,495): error TS2339: Property 'd' does not exist on type 'Object'.
-fraction.min.ts(13,546): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+fraction.min.ts(13,546): error TS2345: Argument of type 'Number | 0' is not assignable to parameter of type 'number'.
+  Type 'Number' is not assignable to type 'number'.
+    'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+fraction.min.ts(14,15): error TS2350: Only a void function can be called with the 'new' keyword.
 fraction.min.ts(14,15): error TS2554: Expected 2 arguments, but got 1.
-fraction.min.ts(14,15): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 fraction.min.ts(14,38): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.min.ts(14,106): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+fraction.min.ts(14,106): error TS2345: Argument of type 'Number | 0' is not assignable to parameter of type 'number'.
+  Type 'Number' is not assignable to type 'number'.
+    'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+fraction.min.ts(14,148): error TS2350: Only a void function can be called with the 'new' keyword.
 fraction.min.ts(14,148): error TS2554: Expected 2 arguments, but got 1.
-fraction.min.ts(14,148): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 fraction.min.ts(14,172): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.min.ts(14,240): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+fraction.min.ts(14,240): error TS2345: Argument of type 'Number | 0' is not assignable to parameter of type 'number'.
+  Type 'Number' is not assignable to type 'number'.
+    'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+fraction.min.ts(14,282): error TS2350: Only a void function can be called with the 'new' keyword.
 fraction.min.ts(14,282): error TS2554: Expected 2 arguments, but got 1.
-fraction.min.ts(14,282): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 fraction.min.ts(14,306): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(14,423): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 fraction.min.ts(14,435): error TS2339: Property 'd' does not exist on type 'Object'.
@@ -921,6 +650,8 @@ fraction.min.ts(15,517): error TS2339: Property 's' does not exist on type 'Obje
 fraction.min.ts(15,521): error TS2339: Property 'n' does not exist on type 'Object'.
 fraction.min.ts(15,536): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(15,542): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+fraction.min.ts(16,27): error TS2322: Type 'String | 0.001' is not assignable to type 'String'.
+  Type 'number' is not assignable to type 'String'.
 fraction.min.ts(16,137): error TS2339: Property 'inverse' does not exist on type 'String'.
 fraction.min.ts(16,166): error TS2554: Expected 0 arguments, but got 1.
 fraction.min.ts(16,169): error TS2339: Property 'abs' does not exist on type 'string'.
@@ -1007,15 +738,8 @@ fraction.min.ts(19,3): error TS2339: Property 'Fraction' does not exist on type 
 fraction.ts(58,28): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 fraction.ts(61,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(61,16): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(72,5): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-fraction.ts(76,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'Boolean'.
-fraction.ts(78,5): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 fraction.ts(78,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(78,18): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(79,5): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 fraction.ts(79,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(79,18): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(93,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -1035,17 +759,7 @@ fraction.ts(125,11): error TS2362: The left-hand side of an arithmetic operation
 fraction.ts(125,15): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(127,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(127,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(137,19): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Number'.
-  Property 'n' does not exist on type 'Number'.
-fraction.ts(138,19): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Number'.
-  Property 'd' does not exist on type 'Number'.
 fraction.ts(140,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(140,21): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Number'.
-  Property 's' does not exist on type 'Number'.
-fraction.ts(142,19): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-fraction.ts(144,21): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
 fraction.ts(148,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(148,21): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(158,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -1066,6 +780,7 @@ fraction.ts(205,15): error TS2362: The left-hand side of an arithmetic operation
 fraction.ts(205,19): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(206,30): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+fraction.ts(206,43): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'number'.
 fraction.ts(213,20): error TS2339: Property 'match' does not exist on type 'never'.
 fraction.ts(218,19): error TS2538: Type 'Number' cannot be used as an index type.
 fraction.ts(220,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -1073,57 +788,37 @@ fraction.ts(221,26): error TS2538: Type 'Number' cannot be used as an index type
 fraction.ts(222,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(225,19): error TS2339: Property 'length' does not exist on type 'Number'.
 fraction.ts(225,30): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-fraction.ts(226,26): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 fraction.ts(226,28): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(227,24): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.ts(227,26): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 fraction.ts(227,46): error TS2538: Type 'Number' cannot be used as an index type.
 fraction.ts(229,21): error TS2538: Type 'Number' cannot be used as an index type.
-fraction.ts(230,28): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 fraction.ts(230,30): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(232,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(235,19): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 fraction.ts(235,31): error TS2339: Property 'length' does not exist on type 'Number'.
-fraction.ts(235,41): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.ts(235,43): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-fraction.ts(235,61): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.ts(235,63): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-fraction.ts(235,81): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.ts(235,83): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-fraction.ts(235,101): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.ts(235,103): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 fraction.ts(236,30): error TS2538: Type 'Number' cannot be used as an index type.
 fraction.ts(237,36): error TS2538: Type 'Number' cannot be used as an index type.
 fraction.ts(238,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(242,21): error TS2538: Type 'Number' cannot be used as an index type.
-fraction.ts(242,35): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.ts(242,37): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 fraction.ts(242,57): error TS2538: Type 'Number' cannot be used as an index type.
-fraction.ts(242,71): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.ts(242,73): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-fraction.ts(243,28): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.ts(243,30): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-fraction.ts(244,34): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.ts(244,36): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 fraction.ts(245,17): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-fraction.ts(248,24): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.ts(248,26): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-fraction.ts(248,44): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.ts(248,46): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 fraction.ts(249,28): error TS2538: Type 'Number' cannot be used as an index type.
-fraction.ts(250,26): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.ts(250,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 fraction.ts(251,15): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-fraction.ts(252,24): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.ts(252,26): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-fraction.ts(252,44): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.ts(252,46): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 fraction.ts(253,28): error TS2538: Type 'Number' cannot be used as an index type.
-fraction.ts(254,26): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.ts(254,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-fraction.ts(255,26): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Number'.
 fraction.ts(255,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 fraction.ts(256,15): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 fraction.ts(259,19): error TS2339: Property 'length' does not exist on type 'Number'.
@@ -1134,14 +829,8 @@ fraction.ts(262,23): error TS2362: The left-hand side of an arithmetic operation
 fraction.ts(262,27): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(262,31): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(262,35): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(276,5): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-fraction.ts(277,5): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 fraction.ts(277,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-fraction.ts(278,5): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 fraction.ts(278,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 fraction.ts(284,24): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -1165,196 +854,57 @@ fraction.ts(336,14): error TS2362: The left-hand side of an arithmetic operation
 fraction.ts(336,26): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(337,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(337,26): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(342,41): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-fraction.ts(345,7): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
-fraction.ts(347,7): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
 fraction.ts(350,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(350,11): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(352,9): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
 fraction.ts(353,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(353,11): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(355,9): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
-fraction.ts(366,44): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-fraction.ts(370,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fraction.ts(371,15): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-fraction.ts(371,23): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-fraction.ts(372,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fraction.ts(372,19): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-fraction.ts(373,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fraction.ts(373,19): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 fraction.ts(373,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(374,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-fraction.ts(374,19): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 fraction.ts(374,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(376,7): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-fraction.ts(376,26): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-fraction.ts(376,35): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-fraction.ts(376,43): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 fraction.ts(415,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fraction.ts(419,33): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-fraction.ts(419,42): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-fraction.ts(419,63): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-fraction.ts(420,21): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 fraction.ts(429,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fraction.ts(433,33): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-fraction.ts(433,42): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-fraction.ts(433,63): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-fraction.ts(434,21): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 fraction.ts(443,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fraction.ts(447,21): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-fraction.ts(447,42): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-fraction.ts(448,21): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 fraction.ts(457,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fraction.ts(461,21): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-fraction.ts(461,42): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-fraction.ts(462,21): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
+fraction.ts(483,16): error TS2350: Only a void function can be called with the 'new' keyword.
 fraction.ts(483,16): error TS2554: Expected 2 arguments, but got 1.
-fraction.ts(483,16): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-fraction.ts(491,17): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-fraction.ts(510,22): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-fraction.ts(510,45): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-fraction.ts(511,9): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 fraction.ts(520,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 fraction.ts(526,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(526,30): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 fraction.ts(526,51): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(526,55): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-fraction.ts(526,75): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 fraction.ts(534,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fraction.ts(540,11): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-fraction.ts(543,26): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 fraction.ts(543,46): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(543,50): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 fraction.ts(543,71): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(543,75): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-fraction.ts(553,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+fraction.ts(553,29): error TS2345: Argument of type 'Number | 0' is not assignable to parameter of type 'number'.
+  Type 'Number' is not assignable to type 'number'.
+    'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+fraction.ts(556,16): error TS2350: Only a void function can be called with the 'new' keyword.
 fraction.ts(556,16): error TS2554: Expected 2 arguments, but got 1.
-fraction.ts(556,16): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 fraction.ts(558,36): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(568,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+fraction.ts(568,29): error TS2345: Argument of type 'Number | 0' is not assignable to parameter of type 'number'.
+  Type 'Number' is not assignable to type 'number'.
+    'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+fraction.ts(571,16): error TS2350: Only a void function can be called with the 'new' keyword.
 fraction.ts(571,16): error TS2554: Expected 2 arguments, but got 1.
-fraction.ts(571,16): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 fraction.ts(573,37): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(583,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+fraction.ts(583,29): error TS2345: Argument of type 'Number | 0' is not assignable to parameter of type 'number'.
+  Type 'Number' is not assignable to type 'number'.
+    'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+fraction.ts(586,16): error TS2350: Only a void function can be called with the 'new' keyword.
 fraction.ts(586,16): error TS2554: Expected 2 arguments, but got 1.
-fraction.ts(586,16): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 fraction.ts(588,37): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(606,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fraction.ts(612,11): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-fraction.ts(614,13): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-fraction.ts(615,62): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-fraction.ts(615,91): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-fraction.ts(617,62): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-fraction.ts(617,91): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-fraction.ts(642,9): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-fraction.ts(642,16): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-fraction.ts(644,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-fraction.ts(644,20): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-fraction.ts(645,11): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-fraction.ts(645,18): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 fraction.ts(647,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(647,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-fraction.ts(647,25): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-fraction.ts(652,9): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-fraction.ts(652,16): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-fraction.ts(654,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-fraction.ts(654,20): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-fraction.ts(655,11): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-fraction.ts(655,18): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
 fraction.ts(657,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(657,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-fraction.ts(657,25): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-fraction.ts(660,11): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
 fraction.ts(671,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fraction.ts(674,38): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-fraction.ts(674,49): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-fraction.ts(674,58): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 fraction.ts(682,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fraction.ts(685,48): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-fraction.ts(685,57): error TS7053: Element implicitly has an 'any' type because expression of type '"s"' can't be used to index type 'Object'.
-  Property 's' does not exist on type 'Object'.
-fraction.ts(685,66): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 fraction.ts(686,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(686,24): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+fraction.ts(695,7): error TS2322: Type 'String | 0.001' is not assignable to type 'String'.
+  Type 'number' is not assignable to type 'String'.
 fraction.ts(698,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fraction.ts(698,25): error TS7053: Element implicitly has an 'any' type because expression of type '"toContinued"' can't be used to index type 'Object'.
-  Property 'toContinued' does not exist on type 'Object'.
-fraction.ts(704,15): error TS7053: Element implicitly has an 'any' type because expression of type '"inverse"' can't be used to index type 'Object'.
-  Property 'inverse' does not exist on type 'Object'.
-fraction.ts(707,13): error TS7053: Element implicitly has an 'any' type because expression of type '"sub"' can't be used to index type 'Object'.
-  Property 'sub' does not exist on type 'Object'.
-fraction.ts(708,18): error TS7053: Element implicitly has an 'any' type because expression of type '"mul"' can't be used to index type 'Object'.
-  Property 'mul' does not exist on type 'Object'.
 fraction.ts(719,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-fraction.ts(722,18): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
-fraction.ts(722,55): error TS7053: Element implicitly has an 'any' type because expression of type '"d"' can't be used to index type 'Object'.
-  Property 'd' does not exist on type 'Object'.
-fraction.ts(722,66): error TS7053: Element implicitly has an 'any' type because expression of type '"n"' can't be used to index type 'Object'.
-  Property 'n' does not exist on type 'Object'.
 fraction.ts(750,9): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
 fraction.ts(753,49): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(753,53): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -1415,6 +965,4 @@ fraction.ts(871,11): error TS2362: The left-hand side of an arithmetic operation
 fraction.ts(878,14): error TS2304: Cannot find name 'define'.
 fraction.ts(878,39): error TS2304: Cannot find name 'define'.
 fraction.ts(879,5): error TS2304: Cannot find name 'define'.
-fraction.ts(888,5): error TS7053: Element implicitly has an 'any' type because expression of type '"Fraction"' can't be used to index type 'Object'.
-  Property 'Fraction' does not exist on type 'Object'.
 

@@ -1,98 +1,56 @@
 index.ts(41,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(45,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(87,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+index.ts(87,10): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(99,67): error TS2304: Cannot find name 'Void'.
-index.ts(100,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(100,3): error TS2684: The 'this' context of type 'typeof internal' is not assignable to method's 'this' of type 'Function'.
+  Types of property 'once' are incompatible.
+    Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
 index.ts(102,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-index.ts(104,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(105,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(106,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(108,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(108,29): error TS2339: Property 'acceptRanges' does not exist on type 'HTMLElement'.
 index.ts(109,20): error TS2339: Property 'acceptRanges' does not exist on type 'HTMLElement'.
-index.ts(112,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(112,29): error TS2339: Property 'cacheControl' does not exist on type 'HTMLElement'.
 index.ts(113,20): error TS2339: Property 'cacheControl' does not exist on type 'HTMLElement'.
-index.ts(116,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(116,21): error TS2339: Property 'etag' does not exist on type 'HTMLElement'.
 index.ts(117,20): error TS2339: Property 'etag' does not exist on type 'HTMLElement'.
-index.ts(120,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(120,25): error TS2339: Property 'dotfiles' does not exist on type 'HTMLElement'.
 index.ts(121,12): error TS2339: Property 'dotfiles' does not exist on type 'HTMLElement'.
-index.ts(124,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(124,38): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(124,68): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(128,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(131,45): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(135,12): error TS2339: Property 'dotfiles' does not exist on type 'HTMLElement'.
-index.ts(136,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(139,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(139,27): error TS2339: Property 'extensions' does not exist on type 'HTMLElement'.
 index.ts(140,26): error TS2339: Property 'extensions' does not exist on type 'HTMLElement'.
-index.ts(143,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(143,26): error TS2339: Property 'immutable' does not exist on type 'HTMLElement'.
 index.ts(144,20): error TS2339: Property 'immutable' does not exist on type 'HTMLElement'.
-index.ts(147,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(147,22): error TS2339: Property 'index' does not exist on type 'HTMLElement'.
 index.ts(148,26): error TS2339: Property 'index' does not exist on type 'HTMLElement'.
-index.ts(151,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(151,29): error TS2339: Property 'lastModified' does not exist on type 'HTMLElement'.
 index.ts(152,20): error TS2339: Property 'lastModified' does not exist on type 'HTMLElement'.
-index.ts(155,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(155,23): error TS2339: Property 'maxAge' does not exist on type 'HTMLElement'.
 index.ts(155,38): error TS2339: Property 'maxage' does not exist on type 'HTMLElement'.
-index.ts(156,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(156,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(157,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(158,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(159,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(159,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(160,28): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(160,43): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-index.ts(163,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(163,21): error TS2339: Property 'root' does not exist on type 'HTMLElement'.
 index.ts(164,20): error TS2339: Property 'root' does not exist on type 'HTMLElement'.
-index.ts(167,8): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(167,27): error TS2339: Property 'from' does not exist on type 'HTMLElement'.
-index.ts(168,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(168,20): error TS2339: Property 'from' does not exist on type 'HTMLElement'.
 index.ts(186,39): error TS2339: Property 'function' does not exist on type 'Function'.
-index.ts(187,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(188,3): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-index.ts(188,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(189,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(200,41): error TS2339: Property 'function' does not exist on type 'Function'.
-index.ts(201,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(202,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(203,3): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-index.ts(203,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(204,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(216,40): error TS2339: Property 'function' does not exist on type 'Function'.
 index.ts(217,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(218,3): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-index.ts(219,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(220,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(233,3): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 index.ts(237,39): error TS2339: Property 'function' does not exist on type 'Function'.
 index.ts(240,39): error TS2339: Property 'function' does not exist on type 'Function'.
 index.ts(251,41): error TS2339: Property 'function' does not exist on type 'Function'.
-index.ts(252,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(255,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(255,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(256,28): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(256,43): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(258,3): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-index.ts(258,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(259,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(270,76): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 index.ts(273,47): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
   Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(277,38): error TS2538: Type 'Number' cannot be used as an index type.
@@ -111,8 +69,8 @@ index.ts(293,7): error TS2339: Property 'setHeader' does not exist on type 'HTML
 index.ts(294,7): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
 index.ts(334,27): error TS2339: Property 'headers' does not exist on type 'Object'.
 index.ts(336,28): error TS2339: Property 'getHeader' does not exist on type 'HTMLElement'.
-index.ts(338,14): error TS2367: This condition will always return 'true' since the types 'Number' and 'String' have no overlap.
 index.ts(338,32): error TS2367: This condition will always return 'true' since the types 'Number' and 'string' have no overlap.
+index.ts(338,57): error TS2367: This condition will always return 'true' since the types 'string' and 'Number' have no overlap.
 index.ts(343,51): error TS2339: Property 'headers' does not exist on type 'Object'.
 index.ts(344,14): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -196,18 +154,6 @@ index.ts(676,7): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 index.ts(679,11): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 index.ts(680,11): error TS2339: Property 'setHeader' does not exist on type 'HTMLElement'.
-index.ts(680,65): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-index.ts(683,17): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-index.ts(684,13): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-index.ts(684,29): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-index.ts(690,5): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-index.ts(690,18): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 index.ts(694,8): error TS2339: Property 'start' does not exist on type 'Object'.
 index.ts(695,8): error TS2339: Property 'end' does not exist on type 'Object'.
 index.ts(695,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
@@ -231,7 +177,6 @@ index.ts(726,14): error TS2339: Property 'isDirectory' does not exist on type 'F
 index.ts(726,41): error TS2339: Property 'redirect' does not exist on type 'HTMLElement'.
 index.ts(727,10): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 index.ts(728,10): error TS2339: Property 'send' does not exist on type 'HTMLElement'.
-index.ts(731,34): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 index.ts(732,14): error TS2339: Property '_extensions' does not exist on type 'HTMLElement'.
 index.ts(734,16): error TS2339: Property 'onStatError' does not exist on type 'HTMLElement'.
 index.ts(735,16): error TS2339: Property 'error' does not exist on type 'HTMLElement'.
@@ -329,12 +274,6 @@ index.ts(1052,19): error TS2339: Property '_header' does not exist on type 'Obje
 index.ts(1053,11): error TS2339: Property 'headersSent' does not exist on type 'Object'.
 index.ts(1064,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(1065,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(1065,31): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
-    Argument of type 'Number' is not assignable to parameter of type 'ConcatArray<never>'.
-      Type 'Number' is missing the following properties from type 'ConcatArray<never>': length, join, slice
-  Overload 2 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
-    Argument of type 'Number' is not assignable to parameter of type 'ConcatArray<never>'.
 index.ts(1084,46): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 index.ts(1098,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(1100,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

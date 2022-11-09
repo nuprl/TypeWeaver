@@ -368,7 +368,7 @@ function isConditionalMapping(mapping: Number): Boolean {
  */
 function directMapping(
 	remainingRequest: String,
-	subpathMapping: Function,
+	subpathMapping: String,
 	mappingTarget: Array,
 	conditionNames: Function,
 	assert: String
@@ -630,7 +630,7 @@ function buildExportsFieldPathTree(field: Array): Resolver {
  * @param {ImportsField} field imports field
  * @returns {PathTreeNode} root
  */
-function buildImportsFieldPathTree(field: Object): Resolver {
+function buildImportsFieldPathTree(field: Object): Array {
 	const root: String = createNode();
 
 	const keys: Array = Object.keys(field);

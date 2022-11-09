@@ -133,7 +133,7 @@ function _setExports(ndebug: Boolean): Object {
             return;
         }
         var type: Object = types[k];
-        out[name] = function (arg: String, msg: String) {
+        out[name] = function (arg: Number, msg: String) {
             if (arg === undefined || arg === null) {
                 return;
             }

@@ -1,7 +1,5 @@
 benchmark/index.ts(14,15): error TS2339: Property 'readdirSync' does not exist on type 'String'.
 benchmark/index.ts(16,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/index.ts(16,41): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-benchmark/index.ts(19,18): error TS2322: Type 'undefined' is not assignable to type 'String'.
 benchmark/index.ts(20,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 benchmark/index.ts(23,31): error TS2339: Property 'join' does not exist on type 'String'.
@@ -9,17 +7,8 @@ benchmark/index.ts(25,36): error TS2339: Property 'relative' does not exist on t
 benchmark/index.ts(31,8): error TS2339: Property 'on' does not exist on type 'Object'.
 benchmark/parse-top.ts(5,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/parse-top.ts(6,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/parse-top.ts(7,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'top' must be of type 'Window | null', but here has type 'Object'.
-benchmark/parse-top.ts(13,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-benchmark/parse-top.ts(17,13): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(o: {}): string[]', gave the following error.
-    Argument of type 'Window | null' is not assignable to parameter of type '{}'.
-      Type 'null' is not assignable to type '{}'.
-  Overload 2 of 2, '(o: object): string[]', gave the following error.
-    Argument of type 'Window | null' is not assignable to parameter of type 'object'.
-      Type 'null' is not assignable to type 'object'.
+benchmark/parse-top.ts(7,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'top' must be of type 'Window', but here has type 'Object'.
 benchmark/parse-top.ts(18,9): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-benchmark/parse-top.ts(21,52): error TS2531: Object is possibly 'null'.
 benchmark/parse-top.ts(21,56): error TS2538: Type 'String' cannot be used as an index type.
 benchmark/parse-top.ts(25,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/parse-top.ts(25,53): error TS2304: Cannot find name 'Void'.
@@ -33,7 +22,6 @@ benchmark/parse-top.ts(39,10): error TS2393: Duplicate function implementation.
 benchmark/parse-top.ts(42,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'String'.
 benchmark/parse.ts(5,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/parse.ts(6,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/parse.ts(12,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/parse.ts(16,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/parse.ts(22,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/parse.ts(28,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
@@ -123,7 +111,6 @@ scripts/update-benchmark.ts(37,60): error TS2304: Cannot find name 'Void'.
 scripts/update-benchmark.ts(42,16): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 scripts/update-benchmark.ts(42,55): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/update-benchmark.ts(44,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 scripts/update-benchmark.ts(44,18): error TS2339: Property 'rootDomain' does not exist on type 'Object'.
 scripts/update-benchmark.ts(46,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 scripts/update-benchmark.ts(53,62): error TS2304: Cannot find name 'Void'.
@@ -132,8 +119,6 @@ scripts/update-benchmark.ts(54,50): error TS2339: Property 'rootDomain' does not
 scripts/update-benchmark.ts(57,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/update-benchmark.ts(57,31): error TS2339: Property 'headers' does not exist on type 'Object'.
 scripts/version-history.ts(6,38): error TS2339: Property 'join' does not exist on type 'String'.
-scripts/version-history.ts(8,5): error TS2322: Type 'string | undefined' is not assignable to type 'String'.
-  Type 'undefined' is not assignable to type 'String'.
 scripts/version-history.ts(11,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/version-history.ts(11,34): error TS2339: Property 'readFileSync' does not exist on type 'String'.
 scripts/version-history.ts(24,7): error TS2740: Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.

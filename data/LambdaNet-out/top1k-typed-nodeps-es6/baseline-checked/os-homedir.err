@@ -7,10 +7,11 @@ index.ts(7,65): error TS2339: Property 'USERNAME' does not exist on type 'HTMLEl
 index.ts(10,14): error TS2339: Property 'USERPROFILE' does not exist on type 'HTMLElement'.
 index.ts(10,33): error TS2339: Property 'HOMEDRIVE' does not exist on type 'HTMLElement'.
 index.ts(10,49): error TS2339: Property 'HOMEPATH' does not exist on type 'HTMLElement'.
-index.ts(14,3): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+index.ts(14,3): error TS2322: Type 'string | Number' is not assignable to type 'Boolean'.
+  Type 'string' is not assignable to type 'Boolean'.
+index.ts(18,3): error TS2322: Type 'string | Number' is not assignable to type 'Boolean'.
+  Type 'string' is not assignable to type 'Boolean'.
+index.ts(21,2): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'number' is not assignable to type 'boolean'.
-index.ts(18,3): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
-index.ts(18,19): error TS2722: Cannot invoke an object which is possibly 'undefined'.
-index.ts(21,2): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
 

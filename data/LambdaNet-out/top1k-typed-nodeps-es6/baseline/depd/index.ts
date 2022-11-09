@@ -380,7 +380,7 @@ function formatLocation (callSite: Object): String {
 
 function getStack (): Array {
   var limit: Boolean = Error.stackTraceLimit
-  var obj: HTMLElement = {}
+  var obj: Object = {}
   var prep: Object = Error.prepareStackTrace
 
   Error.prepareStackTrace = prepareObjectStackTrace

@@ -1,6 +1,6 @@
 index.ts(12,7): error TS2322: Type 'typeof PassThrough' is not assignable to type 'Function'.
   Types of property 'once' are incompatible.
-    Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions | undefined): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions | undefined): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
+    Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
 index.ts(18,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(19,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(23,53): error TS2339: Property 'pipe' does not exist on type 'HTMLElement'.
@@ -12,12 +12,10 @@ index.ts(32,13): error TS2339: Property 'objectMode' does not exist on type 'HTM
 index.ts(34,15): error TS2339: Property 'highWaterMark' does not exist on type 'HTMLElement'.
 index.ts(35,13): error TS2339: Property 'highWaterMark' does not exist on type 'HTMLElement'.
 index.ts(37,23): error TS2304: Cannot find name 'ChildProcess'.
-index.ts(44,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(47,28): error TS2304: Cannot find name 'Void'.
 index.ts(53,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(64,23): error TS2304: Cannot find name 'Void'.
 index.ts(65,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(72,39): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 index.ts(73,26): error TS2304: Cannot find name 'Void'.
 index.ts(74,16): error TS2339: Property 'removeListener' does not exist on type 'Function'.
 index.ts(75,16): error TS2339: Property 'removeListener' does not exist on type 'Function'.

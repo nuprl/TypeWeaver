@@ -1,27 +1,13 @@
-run_test262.ts(7,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-run_test262.ts(10,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-run_test262.ts(12,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-run_test262.ts(14,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-run_test262.ts(145,12): error TS2339: Property 'parse' does not exist on type 'Element'.
-run_test262.ts(145,49): error TS2339: Property 'sourceType' does not exist on type 'Object'.
-run_test262.ts(147,26): error TS2339: Property 'dirname' does not exist on type 'String'.
-run_test262.ts(149,13): error TS2339: Property 'attrs' does not exist on type 'HTMLElement'.
-run_test262.ts(150,53): error TS2339: Property 'attrs' does not exist on type 'HTMLElement'.
-run_test262.ts(151,52): error TS2339: Property 'attrs' does not exist on type 'HTMLElement'.
 src/index.ts(1,25): error TS2307: Cannot find module 'acorn' or its corresponding type declarations.
 src/index.ts(15,37): error TS2339: Property 'acorn' does not exist on type 'Object'.
 src/index.ts(16,11): error TS2339: Property 'tokTypes' does not exist on type 'HTMLElement'.
 src/index.ts(16,25): error TS2339: Property 'TokenType' does not exist on type 'HTMLElement'.
 src/index.ts(18,24): error TS2507: Type 'Object' is not a constructor function type.
-src/index.ts(19,17): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 src/index.ts(21,12): error TS2339: Property 'assertToken' does not exist on type '(Anonymous class)'.
-src/index.ts(24,13): error TS7006: Parameter 'i' implicitly has an 'any' type.
 src/index.ts(25,19): error TS2339: Property 'input' does not exist on type '(Anonymous class)'.
-src/index.ts(28,10): error TS7006: Parameter 't' implicitly has an 'any' type.
 src/index.ts(29,16): error TS2339: Property 'type' does not exist on type '(Anonymous class)'.
 src/index.ts(30,14): error TS2339: Property 'unexpected' does not exist on type '(Anonymous class)'.
 src/index.ts(32,12): error TS2339: Property 'next' does not exist on type '(Anonymous class)'.
-src/index.ts(35,15): error TS7006: Parameter 'code' implicitly has an 'any' type.
 src/index.ts(38,31): error TS2339: Property 'pos' does not exist on type '(Anonymous class)'.
 src/index.ts(46,31): error TS2339: Property 'pos' does not exist on type '(Anonymous class)'.
 src/index.ts(49,38): error TS2339: Property 'pos' does not exist on type '(Anonymous class)'.
@@ -29,14 +15,11 @@ src/index.ts(60,16): error TS2339: Property 'type' does not exist on type '(Anon
 src/index.ts(64,12): error TS2339: Property 'pos' does not exist on type '(Anonymous class)'.
 src/index.ts(65,19): error TS2339: Property 'finishToken' does not exist on type '(Anonymous class)'.
 src/index.ts(65,36): error TS2339: Property 'assertToken' does not exist on type '(Anonymous class)'.
-src/index.ts(68,24): error TS7006: Parameter 'node' implicitly has an 'any' type.
 src/index.ts(69,12): error TS2339: Property 'next' does not exist on type '(Anonymous class)'.
 src/index.ts(72,26): error TS2339: Property 'parseMaybeAssign' does not exist on type '(Anonymous class)'.
 src/index.ts(74,16): error TS2551: Property 'eat' does not exist on type '(Anonymous class)'. Did you mean '_eat'?
 src/index.ts(75,26): error TS2339: Property 'parseObj' does not exist on type '(Anonymous class)'.
 src/index.ts(79,19): error TS2339: Property 'finishNode' does not exist on type '(Anonymous class)'.
-src/index.ts(83,17): error TS7006: Parameter 'node' implicitly has an 'any' type.
-src/index.ts(83,23): error TS7006: Parameter 'exports' implicitly has an 'any' type.
 src/index.ts(84,12): error TS2339: Property 'next' does not exist on type '(Anonymous class)'.
 src/index.ts(86,16): error TS2551: Property 'eat' does not exist on type '(Anonymous class)'. Did you mean '_eat'?
 src/index.ts(87,18): error TS2339: Property 'options' does not exist on type '(Anonymous class)'.
@@ -86,7 +69,6 @@ src/index.ts(155,18): error TS2339: Property 'checkUnreserved' does not exist on
 src/index.ts(157,18): error TS2339: Property 'checkLocalExport' does not exist on type '(Anonymous class)'.
 src/index.ts(162,14): error TS2339: Property 'semicolon' does not exist on type '(Anonymous class)'.
 src/index.ts(164,19): error TS2339: Property 'finishNode' does not exist on type '(Anonymous class)'.
-src/index.ts(167,17): error TS7006: Parameter 'node' implicitly has an 'any' type.
 src/index.ts(168,12): error TS2339: Property 'next' does not exist on type '(Anonymous class)'.
 src/index.ts(170,16): error TS2339: Property 'type' does not exist on type '(Anonymous class)'.
 src/index.ts(172,28): error TS2551: Property 'parseExprAtom' does not exist on type '(Anonymous class)'. Did you mean 'parseExport'?

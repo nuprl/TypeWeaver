@@ -8,7 +8,7 @@ let line: Number
 let column: Number
 let token: Object
 let key: String
-let root: Function
+let root: String
 
 module.exports = function parse (text: String, reviver: String): Object {
     source = String(text)
@@ -1047,7 +1047,7 @@ function invalidIdentifier (): String {
     return syntaxError(`JSON5: invalid identifier character at ${line}:${column}`)
 }
 
-function separatorChar (c: String): Promise {
+function separatorChar (c: String): Void {
     console.warn(`JSON5: '${formatChar(c)}' in strings is not valid ECMAScript; consider escaping`)
 }
 

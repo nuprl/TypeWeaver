@@ -18,7 +18,7 @@ var base2: Object = {
   namespace: ""
 };
 
-new (function(_no_shrink_: String) { ///////////////  BEGIN: CLOSURE  ///////////////
+new (function(_no_shrink_: Function) { ///////////////  BEGIN: CLOSURE  ///////////////
 
 // =========================================================================
 // base2/header.js
@@ -688,7 +688,7 @@ var _RG_BACK_REF: RegExp        = /\\(\d+)/g,
     _RG_LOOKUP: RegExp          = /\$(\d+)/,
     _RG_LOOKUP_SIMPLE: RegExp   = /^\$\d+$/;
 
-var RegGrp: HTMLElement = Collection.extend({
+var RegGrp: Object = Collection.extend({
   constructor: function(values: String, ignoreCase: Boolean) {
     this.base(values);
     this.ignoreCase = !!ignoreCase;

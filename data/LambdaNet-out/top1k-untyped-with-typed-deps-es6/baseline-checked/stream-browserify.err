@@ -1,5 +1,7 @@
 index.ts(44,20): error TS2304: Cannot find name 'Void'.
-index.ts(45,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(45,3): error TS2684: The 'this' context of type 'typeof EventEmitter' is not assignable to method's 'this' of type 'Function'.
+  Types of property 'once' are incompatible.
+    Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
 index.ts(49,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(51,35): error TS2304: Cannot find name 'Void'.
 index.ts(52,14): error TS2339: Property 'writable' does not exist on type 'Element'.
@@ -14,7 +16,6 @@ index.ts(85,23): error TS2304: Cannot find name 'Void'.
 index.ts(89,21): error TS2339: Property 'destroy' does not exist on type 'Element'.
 index.ts(89,50): error TS2339: Property 'destroy' does not exist on type 'Element'.
 index.ts(93,35): error TS2304: Cannot find name 'Void'.
-index.ts(95,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(101,8): error TS2339: Property 'on' does not exist on type 'Element'.
 index.ts(104,23): error TS2304: Cannot find name 'Void'.
 index.ts(106,10): error TS2339: Property 'removeListener' does not exist on type 'Element'.

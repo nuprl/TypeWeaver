@@ -1000,7 +1000,7 @@
 		var result: Array = [];
 
 		var parts: HTMLElement = splitAtBMP(data);
-		var loneHighSurrogates: String = parts.loneHighSurrogates;
+		var loneHighSurrogates: Number = parts.loneHighSurrogates;
 		var loneLowSurrogates: Number = parts.loneLowSurrogates;
 		var bmp: String = parts.bmp;
 		var astral: Function = parts.astral;
@@ -1066,7 +1066,7 @@
 
 	var proto: Object = regenerate.prototype;
 	extend(proto, {
-		'add': function(value: Function) {
+		'add': function(value: Array) {
 			var $this: HTMLElement = this;
 			if (value == null) {
 				return $this;

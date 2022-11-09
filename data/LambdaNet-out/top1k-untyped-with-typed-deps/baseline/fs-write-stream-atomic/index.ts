@@ -75,7 +75,7 @@ function handleOpen (writeStream: Request): Function {
   }
 }
 
-function handleClose (writeStream: HTMLDivElement): Function {
+function handleClose (writeStream: Record): Function {
   return function () {
     if (writeStream.__atomicClosed) return
     writeStream.__atomicClosed = true
@@ -109,11 +109,11 @@ function handleClose (writeStream: HTMLDivElement): Function {
     var targetFileHash: Array = crypto.createHash('sha512')
 
     fs.createReadStream(writeStream.__atomicTmp)
-      .on('data', function (data: Object, enc: Function) { tmpFileHash.update(data, enc) })
+      .on('data', function (data: Object, enc: String) { tmpFileHash.update(data, enc) })
       .on('error', fileHashError)
       .on('end', fileHashComplete)
     fs.createReadStream(writeStream.__atomicTarget)
-      .on('data', function (data: Object, enc: Function) { targetFileHash.update(data, enc) })
+      .on('data', function (data: Object, enc: String) { targetFileHash.update(data, enc) })
       .on('error', fileHashError)
       .on('end', fileHashComplete)
 

@@ -16,6 +16,6 @@ import createCaseFirst from './.internal/createCaseFirst.js'
  * upperFirst('FRED')
  * // => 'FRED'
  */
-const upperFirst: ListCache = createCaseFirst('toUpperCase')
+const upperFirst: Hash = createCaseFirst('toUpperCase')
 
 export default upperFirst

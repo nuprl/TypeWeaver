@@ -1,11 +1,8 @@
 benchmark/index.ts(4,42): error TS2339: Property 'Suite' does not exist on type 'String'.
-benchmark/index.ts(18,24): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 benchmark/index.ts(19,7): error TS2367: This condition will always return 'false' since the types 'Function' and 'boolean' have no overlap.
 benchmark/index.ts(21,9): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/index.ts(27,4): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/index.ts(27,60): error TS2339: Property 'target' does not exist on type 'Object'.
-benchmark/index.ts(29,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 example/key_cmp.ts(4,8): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 example/key_cmp.ts(5,14): error TS2339: Property 'key' does not exist on type 'Object'.
 example/key_cmp.ts(5,22): error TS2339: Property 'key' does not exist on type 'Object'.
@@ -22,9 +19,8 @@ index.ts(18,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(
 index.ts(20,26): error TS2339: Property 'toJSON' does not exist on type 'Object'.
 index.ts(20,48): error TS2339: Property 'toJSON' does not exist on type 'Object'.
 index.ts(21,25): error TS2339: Property 'toJSON' does not exist on type 'Object'.
-index.ts(24,33): error TS2322: Type 'undefined' is not assignable to type 'String'.
 index.ts(31,42): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(33,17): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+index.ts(33,17): error TS2365: Operator '+=' cannot be applied to types 'String' and 'string | String'.
 index.ts(33,39): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(46,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(48,38): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.

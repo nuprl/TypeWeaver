@@ -36,7 +36,7 @@ export default class Enumerator {
 
   _enumerate(input) {
     let length: Number  = this.length;
-    let promise: String = this.promise;
+    let promise: Promise = this.promise;
 
     for (let i = 0; promise._state === PENDING && i < length; i++) {
       this._eachEntry(input[i], i, true);
@@ -94,7 +94,7 @@ export default class Enumerator {
   }
 
   _settledAt(state, i, value, firstPass) {
-    let promise: String = this.promise;
+    let promise: Promise = this.promise;
 
     if (promise._state === PENDING) {
       if (this._abortOnReject && state === REJECTED) {

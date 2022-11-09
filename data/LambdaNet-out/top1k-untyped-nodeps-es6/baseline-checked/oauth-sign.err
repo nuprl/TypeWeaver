@@ -15,12 +15,9 @@ index.ts(52,21): error TS2314: Generic type 'Promise<T>' requires 1 type argumen
 index.ts(58,22): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(58,34): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(64,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(84,9): error TS2345: Argument of type '(str: String) => String' is not assignable to parameter of type '(value: Number, index: number, array: Number[]) => String'.
+index.ts(110,9): error TS2345: Argument of type '(str: String) => String' is not assignable to parameter of type '(value: string | Number, index: number, array: (string | Number)[]) => String'.
   Types of parameters 'str' and 'value' are incompatible.
-    Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-index.ts(94,9): error TS2345: Argument of type '(str: String) => String' is not assignable to parameter of type '(value: Number, index: number, array: Number[]) => String'.
-index.ts(110,9): error TS2345: Argument of type '(str: String) => String' is not assignable to parameter of type '(value: Number, index: number, array: Number[]) => String'.
+    Type 'string | Number' is not assignable to type 'String'.
+      Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(115,140): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-index.ts(137,54): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
-  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 

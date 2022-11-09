@@ -15,7 +15,6 @@ index.ts(95,16): error TS2322: Type '(value: Number) => (node: Object) => void' 
   Types of parameters 'value' and 'nodes' are incompatible.
     Type 'string | Node' is not assignable to type 'Number'.
       Type 'string' is not assignable to type 'Number'.
-index.ts(97,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(97,18): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
   Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(118,7): error TS2339: Property 'toNoop' does not exist on type 'HTMLElement'.
@@ -81,8 +80,11 @@ index.ts(409,7): error TS2339: Property 'shiftNode' does not exist on type 'HTML
 index.ts(409,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(410,16): error TS2339: Property 'isNode' does not exist on type 'HTMLElement'.
 index.ts(436,7): error TS2339: Property 'removeNode' does not exist on type 'HTMLElement'.
-index.ts(436,37): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 index.ts(437,16): error TS2339: Property 'isNode' does not exist on type 'HTMLElement'.
+index.ts(438,15): error TS2339: Property 'nodes' does not exist on type 'HTMLElement'.
+index.ts(442,26): error TS2554: Expected 0 arguments, but got 1.
+index.ts(445,28): error TS2339: Property 'nodes' does not exist on type 'HTMLElement'.
+index.ts(447,19): error TS2339: Property 'nodes' does not exist on type 'HTMLElement'.
 index.ts(467,7): error TS2339: Property 'isType' does not exist on type 'HTMLElement'.
 index.ts(467,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(468,14): error TS2339: Property 'isNode' does not exist on type 'HTMLElement'.
@@ -196,7 +198,6 @@ index.ts(1008,7): error TS2339: Property 'lastNode' does not exist on type 'HTML
 index.ts(1008,33): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 index.ts(1009,44): error TS2339: Property 'last' does not exist on type 'HTMLElement'.
 index.ts(1028,7): error TS2339: Property 'arrayify' does not exist on type 'HTMLElement'.
-index.ts(1028,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(1047,7): error TS2339: Property 'stringify' does not exist on type 'HTMLElement'.
 index.ts(1048,16): error TS2339: Property 'arrayify' does not exist on type 'HTMLElement'.
 index.ts(1060,7): error TS2339: Property 'trim' does not exist on type 'HTMLElement'.

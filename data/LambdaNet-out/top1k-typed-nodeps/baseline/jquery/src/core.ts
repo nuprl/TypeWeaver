@@ -101,7 +101,7 @@ jQuery.fn = jQuery.prototype = {
 		} ) );
 	},
 
-	eq: function( i: Number ) {
+	eq: function( i: String ) {
 		var len: Number = this.length,
 			j: Number = +i + ( i < 0 ? len : 0 );
 		return this.pushStack( j >= 0 && j < len ? [ this[ j ] ] : [] );

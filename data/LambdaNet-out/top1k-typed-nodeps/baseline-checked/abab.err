@@ -5,7 +5,6 @@ karma.conf.ts(17,21): error TS2339: Property 'ProvidePlugin' does not exist on t
 lib/atob.ts(7,10): error TS2384: Overload signatures must all be ambient or non-ambient.
 lib/atob.ts(32,54): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/atob.ts(33,5): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/atob.ts(56,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/atob.ts(57,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/atob.ts(57,15): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -22,13 +21,10 @@ lib/atob.ts(82,35): error TS2362: The left-hand side of an arithmetic operation 
 lib/atob.ts(92,7): error TS2451: Cannot redeclare block-scoped variable 'keystr'.
 lib/atob.ts(96,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/atob.ts(98,3): error TS2322: Type 'Number | undefined' is not assignable to type 'Number'.
-  Type 'undefined' is not assignable to type 'Number'.
 lib/btoa.ts(7,10): error TS2384: Overload signatures must all be ambient or non-ambient.
 lib/btoa.ts(17,29): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/btoa.ts(18,22): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/btoa.ts(19,7): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/btoa.ts(23,29): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/btoa.ts(24,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/btoa.ts(25,35): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.

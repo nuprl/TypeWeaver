@@ -1,13 +1,5 @@
-demo/main.ts(5,23): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-demo/main.ts(6,23): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-demo/main.ts(7,21): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 demo/main.ts(8,41): error TS2339: Property 'regjsparser' does not exist on type 'Element'.
 demo/main.ts(9,41): error TS2339: Property 'getElementById' does not exist on type 'Element'.
-demo/main.ts(11,7): error TS2322: Type 'HTMLElement | undefined' is not assignable to type 'HTMLElement'.
-  Type 'undefined' is not assignable to type 'HTMLElement'.
 demo/main.ts(12,9): error TS2740: Type 'Date' is missing the following properties from type 'HTMLDivElement': align, addEventListener, removeEventListener, accessKey, and 278 more.
 demo/main.ts(16,25): error TS2339: Property 'localStorage' does not exist on type 'Element'.
 demo/main.ts(17,24): error TS2339: Property 'getItem' does not exist on type 'HTMLElement'.
@@ -26,7 +18,6 @@ demo/main.ts(44,13): error TS2339: Property 'className' does not exist on type '
 demo/main.ts(44,31): error TS2339: Property 'className' does not exist on type 'Object'.
 demo/main.ts(44,47): error TS2339: Property 'className' does not exist on type 'Object'.
 demo/main.ts(45,11): error TS2339: Property 'value' does not exist on type 'Object'.
-demo/main.ts(45,34): error TS2454: Variable 'regexAst' is used before being assigned.
 demo/main.ts(47,15): error TS2339: Property 'hash' does not exist on type 'HTMLElement'.
 demo/main.ts(48,25): error TS2339: Property 'regexSource' does not exist on type 'HTMLElement'.
 demo/main.ts(48,64): error TS2339: Property 'regexFlags' does not exist on type 'HTMLElement'.
@@ -71,8 +62,6 @@ parser.ts(306,32): error TS2345: Argument of type 'String' is not assignable to 
   Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 parser.ts(306,43): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 parser.ts(306,50): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
-parser.ts(310,27): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 parser.ts(318,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 parser.ts(321,15): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
 parser.ts(321,16): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -112,10 +101,9 @@ parser.ts(474,21): error TS2339: Property 'body' does not exist on type 'Object'
 parser.ts(482,39): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(482,44): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
-parser.ts(483,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.
+parser.ts(483,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number | Number'.
 parser.ts(487,35): error TS2304: Cannot find name 'Void'.
 parser.ts(489,9): error TS2554: Expected 4 arguments, but got 2.
-parser.ts(493,36): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 parser.ts(494,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 parser.ts(500,18): error TS2538: Type 'Number' cannot be used as an index type.
@@ -124,18 +112,14 @@ parser.ts(504,26): error TS2345: Argument of type 'String' is not assignable to 
 parser.ts(508,18): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 parser.ts(512,42): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-parser.ts(513,11): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 parser.ts(513,38): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(matcher: { [Symbol.match](string: string): RegExpMatchArray | null; }): RegExpMatchArray | null', gave the following error.
-    Argument of type 'HTMLElement' is not assignable to parameter of type '{ [Symbol.match](string: string): RegExpMatchArray | null; }'.
-      Property '[Symbol.match]' is missing in type 'HTMLElement' but required in type '{ [Symbol.match](string: string): RegExpMatchArray | null; }'.
-  Overload 2 of 2, '(regexp: string | RegExp): RegExpMatchArray | null', gave the following error.
+  Overload 1 of 2, '(matcher: { [Symbol.match](string: string): RegExpMatchArray; }): RegExpMatchArray', gave the following error.
+    Argument of type 'HTMLElement' is not assignable to parameter of type '{ [Symbol.match](string: string): RegExpMatchArray; }'.
+      Property '[Symbol.match]' is missing in type 'HTMLElement' but required in type '{ [Symbol.match](string: string): RegExpMatchArray; }'.
+  Overload 2 of 2, '(regexp: string | RegExp): RegExpMatchArray', gave the following error.
     Argument of type 'HTMLElement' is not assignable to parameter of type 'string | RegExp'.
 parser.ts(515,13): error TS2339: Property 'range' does not exist on type 'Object'.
 parser.ts(516,13): error TS2339: Property 'range' does not exist on type 'Object'.
-parser.ts(517,14): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 parser.ts(518,13): error TS2339: Property 'range' does not exist on type 'Object'.
 parser.ts(527,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 parser.ts(538,37): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'Function'.
@@ -144,12 +128,9 @@ parser.ts(542,16): error TS2314: Generic type 'Array<T>' requires 1 type argumen
 parser.ts(548,14): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(556,37): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'Function'.
-parser.ts(566,9): error TS2322: Type 'null' is not assignable to type 'Object'.
 parser.ts(569,11): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(584,11): error TS2554: Expected 4 arguments, but got 1.
-parser.ts(590,32): error TS2322: Type 'Object' is not assignable to type 'Function'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(590,32): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 parser.ts(590,47): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
@@ -157,7 +138,6 @@ parser.ts(590,47): error TS2345: Argument of type 'RegExp' is not assignable to 
 parser.ts(593,11): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(598,20): error TS2339: Property 'body' does not exist on type 'Object'.
 parser.ts(601,41): error TS2339: Property 'range' does not exist on type 'Object'.
-parser.ts(608,11): error TS2322: Type 'null' is not assignable to type 'String'.
 parser.ts(610,17): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
   Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 parser.ts(618,7): error TS2322: Type 'String' is not assignable to type 'Boolean'.
@@ -174,33 +154,21 @@ parser.ts(680,39): error TS2345: Argument of type 'number' is not assignable to 
 parser.ts(683,39): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 parser.ts(686,39): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 parser.ts(688,31): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
-parser.ts(689,24): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 parser.ts(690,22): error TS2554: Expected 5 arguments, but got 4.
 parser.ts(690,53): error TS2339: Property 'range' does not exist on type 'Object'.
 parser.ts(690,67): error TS2339: Property 'range' does not exist on type 'Object'.
 parser.ts(692,31): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
-parser.ts(693,24): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 parser.ts(694,22): error TS2554: Expected 5 arguments, but got 4.
 parser.ts(694,59): error TS2339: Property 'range' does not exist on type 'Object'.
 parser.ts(694,73): error TS2339: Property 'range' does not exist on type 'Object'.
 parser.ts(696,31): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
-parser.ts(697,24): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-parser.ts(698,24): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 parser.ts(700,57): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 parser.ts(702,22): error TS2554: Expected 5 arguments, but got 4.
 parser.ts(702,53): error TS2339: Property 'range' does not exist on type 'Object'.
 parser.ts(702,67): error TS2339: Property 'range' does not exist on type 'Object'.
-parser.ts(705,12): error TS2454: Variable 'min' is used before being assigned.
-parser.ts(705,51): error TS2454: Variable 'max' is used before being assigned.
 parser.ts(706,72): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
-parser.ts(709,11): error TS2454: Variable 'quantifier' is used before being assigned.
 parser.ts(711,22): error TS2339: Property 'greedy' does not exist on type 'Object'.
 parser.ts(712,22): error TS2339: Property 'range' does not exist on type 'Object'.
-parser.ts(716,14): error TS2454: Variable 'quantifier' is used before being assigned.
 parser.ts(742,11): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(742,26): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
@@ -214,7 +182,6 @@ parser.ts(761,46): error TS2362: The left-hand side of an arithmetic operation m
 parser.ts(761,46): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 parser.ts(763,11): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(770,25): error TS2339: Property 'lookbehind' does not exist on type 'Object'.
-parser.ts(770,40): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 parser.ts(770,40): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 parser.ts(770,57): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
 parser.ts(773,25): error TS2339: Property 'namedGroups' does not exist on type 'Object'.
@@ -237,7 +204,6 @@ parser.ts(808,9): error TS2322: Type 'Object' is not assignable to type 'String'
 parser.ts(808,35): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 parser.ts(810,11): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(813,9): error TS2554: Expected 4 arguments, but got 1.
-parser.ts(817,24): error TS2454: Variable 'disablingFlags' is used before being assigned.
 parser.ts(819,27): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 parser.ts(821,9): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(826,58): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
@@ -260,36 +226,18 @@ parser.ts(863,30): error TS2345: Argument of type 'boolean' is not assignable to
 parser.ts(887,18): error TS2554: Expected 4 arguments, but got 3.
 parser.ts(889,11): error TS2554: Expected 4 arguments, but got 3.
 parser.ts(890,54): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
-parser.ts(893,49): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-parser.ts(893,62): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 parser.ts(894,54): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 parser.ts(897,49): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 parser.ts(901,18): error TS2554: Expected 4 arguments, but got 3.
 parser.ts(917,26): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
-parser.ts(918,17): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-parser.ts(919,39): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-parser.ts(923,34): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 parser.ts(941,38): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-parser.ts(947,17): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 parser.ts(948,30): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 parser.ts(949,13): error TS2322: Type 'String' is not assignable to type 'Boolean'.
 parser.ts(949,43): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-parser.ts(949,52): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-parser.ts(949,64): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 parser.ts(956,44): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 parser.ts(957,40): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 parser.ts(957,44): error TS2339: Property 'range' does not exist on type 'Object'.
 parser.ts(968,31): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
-parser.ts(969,17): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 parser.ts(971,36): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 parser.ts(973,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
@@ -300,73 +248,38 @@ parser.ts(977,41): error TS2345: Argument of type 'number' is not assignable to 
 parser.ts(977,50): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 parser.ts(983,67): error TS2304: Cannot find name 'Void'.
-parser.ts(985,56): error TS2345: Argument of type 'null' is not assignable to parameter of type 'Number'.
+parser.ts(985,62): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 parser.ts(992,26): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
-parser.ts(993,43): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 parser.ts(994,27): error TS2339: Property 'unicodePropertyEscape' does not exist on type 'Object'.
 parser.ts(994,85): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 parser.ts(996,9): error TS2322: Type 'String' is not assignable to type 'Boolean'.
-parser.ts(998,21): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-parser.ts(999,18): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 parser.ts(1000,23): error TS2339: Property 'range' does not exist on type 'Object'.
 parser.ts(1000,41): error TS2339: Property 'range' does not exist on type 'Object'.
-parser.ts(1001,16): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 parser.ts(1003,27): error TS2339: Property 'unicodeSet' does not exist on type 'Object'.
 parser.ts(1004,9): error TS2322: Type 'String' is not assignable to type 'Boolean'.
-parser.ts(1009,37): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 parser.ts(1010,20): error TS2339: Property 'namedGroups' does not exist on type 'Object'.
 parser.ts(1010,44): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 parser.ts(1011,13): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-parser.ts(1017,50): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 parser.ts(1019,26): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
-parser.ts(1021,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'Object' is not assignable to type 'boolean'.
+parser.ts(1021,9): error TS2322: Type 'Object' is not assignable to type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(1022,42): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-parser.ts(1022,51): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-parser.ts(1022,64): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 parser.ts(1024,51): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
-parser.ts(1026,9): error TS2322: Type 'String' is not assignable to type 'Boolean'.
 parser.ts(1026,56): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-parser.ts(1026,65): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-parser.ts(1026,78): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 parser.ts(1040,26): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
-parser.ts(1043,17): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 parser.ts(1050,16): error TS2554: Expected 4 arguments, but got 3.
-parser.ts(1050,64): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 parser.ts(1051,33): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
-parser.ts(1053,47): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 parser.ts(1053,47): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-parser.ts(1053,74): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 parser.ts(1054,33): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 parser.ts(1056,51): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-parser.ts(1056,60): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-parser.ts(1056,73): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 parser.ts(1058,25): error TS2339: Property 'codePoint' does not exist on type 'Object'.
-parser.ts(1059,43): error TS2345: Argument of type 'null' is not assignable to parameter of type 'Number'.
 parser.ts(1072,9): error TS2554: Expected 1 arguments, but got 0.
 parser.ts(1074,32): error TS2339: Property 'codePoint' does not exist on type 'Object'.
-parser.ts(1075,43): error TS2345: Argument of type 'null' is not assignable to parameter of type 'Number'.
 parser.ts(1077,34): error TS2339: Property 'codePoint' does not exist on type 'Object'.
 parser.ts(1081,19): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 parser.ts(1085,18): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
 parser.ts(1085,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-parser.ts(1088,25): error TS2322: Type 'undefined' is not assignable to type 'String'.
 parser.ts(1089,7): error TS2554: Expected 1 arguments, but got 0.
 parser.ts(1090,26): error TS2554: Expected 1 arguments, but got 0.
 parser.ts(1116,9): error TS2554: Expected 4 arguments, but got 1.
@@ -402,13 +315,9 @@ parser.ts(1267,9): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(1273,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 parser.ts(1281,9): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(1302,9): error TS2554: Expected 4 arguments, but got 1.
-parser.ts(1306,9): error TS2322: Type 'String' is not assignable to type 'Boolean'.
-parser.ts(1311,7): error TS2322: Type 'Object' is not assignable to type 'Boolean'.
+parser.ts(1311,7): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-parser.ts(1325,38): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 parser.ts(1331,26): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
-parser.ts(1332,32): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 parser.ts(1336,11): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(1339,9): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -423,29 +332,20 @@ parser.ts(1433,20): error TS2322: Type 'Object' is not assignable to type 'Strin
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(1436,11): error TS2554: Expected 4 arguments, but got 3.
 parser.ts(1451,9): error TS2554: Expected 4 arguments, but got 2.
-parser.ts(1460,35): error TS2454: Variable 'start' is used before being assigned.
 parser.ts(1460,47): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 parser.ts(1463,9): error TS2554: Expected 4 arguments, but got 2.
-parser.ts(1469,14): error TS2454: Variable 'start' is used before being assigned.
+parser.ts(1472,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 parser.ts(1481,13): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-parser.ts(1482,11): error TS2322: Type 'Function' is not assignable to type 'String'.
 parser.ts(1484,11): error TS2554: Expected 4 arguments, but got 3.
-parser.ts(1491,52): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 parser.ts(1497,11): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(1497,26): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
-parser.ts(1502,50): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 parser.ts(1511,16): error TS2554: Expected 4 arguments, but got 3.
 parser.ts(1513,9): error TS2554: Expected 4 arguments, but got 3.
 parser.ts(1513,62): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 parser.ts(1514,33): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 parser.ts(1515,16): error TS2554: Expected 4 arguments, but got 3.
-parser.ts(1515,44): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-parser.ts(1515,67): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-parser.ts(1519,9): error TS2322: Type 'null' is not assignable to type 'Object'.
 parser.ts(1528,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 parser.ts(1530,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 parser.ts(1537,38): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'Function'.
@@ -460,9 +360,11 @@ parser.ts(1569,48): error TS2362: The left-hand side of an arithmetic operation 
 parser.ts(1569,55): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 parser.ts(1574,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 parser.ts(1578,9): error TS2322: Type 'boolean' is not assignable to type 'Number'.
-parser.ts(1578,48): error TS2339: Property 'indexOf' does not exist on type 'Number'.
+parser.ts(1578,48): error TS2339: Property 'indexOf' does not exist on type 'Number | ""'.
+  Property 'indexOf' does not exist on type 'Number'.
 parser.ts(1579,9): error TS2322: Type 'boolean' is not assignable to type 'Number'.
-parser.ts(1579,51): error TS2339: Property 'indexOf' does not exist on type 'Number'.
+parser.ts(1579,51): error TS2339: Property 'indexOf' does not exist on type 'Number | ""'.
+  Property 'indexOf' does not exist on type 'Number'.
 parser.ts(1580,9): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'number' is not assignable to type 'boolean'.

@@ -8,20 +8,7 @@ src/browser.ts(132,71): error TS2339: Property 'firebug' does not exist on type 
 src/browser.ts(132,98): error TS2339: Property 'exception' does not exist on type 'Console'.
 src/browser.ts(146,10): error TS2393: Duplicate function implementation.
 src/browser.ts(146,36): error TS2304: Cannot find name 'Void'.
-src/browser.ts(147,2): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-src/browser.ts(147,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/browser.ts(148,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/browser.ts(149,4): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/browser.ts(150,3): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-src/browser.ts(151,4): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/browser.ts(152,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/browser.ts(154,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/browser.ts(158,32): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 src/browser.ts(159,7): error TS2339: Property 'splice' does not exist on type 'Object'.
-src/browser.ts(166,2): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 src/browser.ts(167,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 src/browser.ts(170,3): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/browser.ts(171,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
@@ -29,18 +16,11 @@ src/browser.ts(178,7): error TS2339: Property 'splice' does not exist on type 'O
 src/browser.ts(197,10): error TS2393: Duplicate function implementation.
 src/browser.ts(197,36): error TS2304: Cannot find name 'Void'.
 src/browser.ts(216,10): error TS2393: Duplicate function implementation.
-src/browser.ts(226,7): error TS2454: Variable 'r' is used before being assigned.
-src/browser.ts(227,3): error TS2322: Type 'string | undefined' is not assignable to type 'String'.
-  Type 'undefined' is not assignable to type 'String'.
-src/browser.ts(230,9): error TS2454: Variable 'r' is used before being assigned.
 src/browser.ts(244,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/browser.ts(257,8): error TS2451: Cannot redeclare block-scoped variable 'formatters'.
 src/browser.ts(263,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/browser.ts(267,43): error TS2571: Object is of type 'unknown'.
 src/common.ts(18,15): error TS2538: Type 'String' cannot be used as an index type.
 src/common.ts(18,26): error TS2538: Type 'String' cannot be used as an index type.
-src/common.ts(25,2): error TS7008: Member 'names' implicitly has an 'any[]' type.
-src/common.ts(26,2): error TS7008: Member 'skips' implicitly has an 'any[]' type.
 src/common.ts(45,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/common.ts(45,26): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/common.ts(46,4): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -48,8 +28,6 @@ src/common.ts(49,22): error TS2339: Property 'colors' does not exist on type '{ 
 src/common.ts(49,38): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 src/common.ts(49,58): error TS2339: Property 'colors' does not exist on type '{ (namespace: String): String; debug: ...; default: ...; coerce: (val: Object) => any; disable: () => String; enable: (namespaces: String) => Void; enabled: (name: String) => Boolean; ... 5 more ...; selectColor: (namespace: String) => String; }'.
-src/common.ts(62,7): error TS2322: Type 'null' is not assignable to type 'String'.
-src/common.ts(66,18): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 src/common.ts(66,28): error TS2304: Cannot find name 'Void'.
 src/common.ts(68,15): error TS2339: Property 'enabled' does not exist on type '{ (...args: any[]): Void; namespace: String; useColors: any; color: String; extend: (namespace: String, delimiter: String) => HTMLElement; destroy: () => Void; }'.
 src/common.ts(72,10): error TS2740: Type '{ (...args: any[]): Void; namespace: String; useColors: any; color: String; extend: (namespace: String, delimiter: String) => HTMLElement; destroy: () => Void; }' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
@@ -63,7 +41,7 @@ src/common.ts(96,5): error TS2356: An arithmetic operand must be of type 'any', 
 src/common.ts(97,56): error TS2538: Type 'String' cannot be used as an index type.
 src/common.ts(99,31): error TS2538: Type 'Number' cannot be used as an index type.
 src/common.ts(103,18): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(start: number, deleteCount?: number | undefined): any[]', gave the following error.
+  Overload 1 of 2, '(start: number, deleteCount?: number): any[]', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
   Overload 2 of 2, '(start: number, deleteCount: number, ...items: any[]): any[]', gave the following error.
@@ -81,9 +59,7 @@ src/common.ts(131,6): error TS2739: Type 'Boolean' is missing the following prop
 src/common.ts(142,26): error TS2339: Property 'init' does not exist on type '{ (namespace: String): String; debug: ...; default: ...; coerce: (val: Object) => any; disable: () => String; enable: (namespaces: String) => Void; enabled: (name: String) => Boolean; ... 5 more ...; selectColor: (namespace: String) => String; }'.
 src/common.ts(143,16): error TS2339: Property 'init' does not exist on type '{ (namespace: String): String; debug: ...; default: ...; coerce: (val: Object) => any; disable: () => String; enable: (namespaces: String) => Void; enabled: (name: String) => Boolean; ... 5 more ...; selectColor: (namespace: String) => String; }'.
 src/common.ts(146,3): error TS2740: Type '{ (...args: any[]): Void; namespace: String; useColors: any; color: String; extend: (namespace: String, delimiter: String) => HTMLElement; destroy: () => Void; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-src/common.ts(150,40): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 src/common.ts(151,12): error TS2339: Property 'log' does not exist on type 'Object'.
-src/common.ts(151,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 src/common.ts(152,3): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 src/common.ts(162,39): error TS2304: Cannot find name 'Void'.
@@ -114,7 +90,6 @@ src/node.ts(136,33): error TS2538: Type 'String' cannot be used as an index type
 src/node.ts(137,38): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'string'.
 src/node.ts(139,47): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'string'.
 src/node.ts(141,13): error TS2367: This condition will always return 'false' since the types 'Boolean' and 'string' have no overlap.
-src/node.ts(142,3): error TS2322: Type 'null' is not assignable to type 'Boolean'.
 src/node.ts(144,3): error TS2322: Type 'number' is not assignable to type 'Boolean'.
 src/node.ts(147,6): error TS2538: Type 'String' cannot be used as an index type.
 src/node.ts(155,10): error TS2393: Duplicate function implementation.
@@ -122,19 +97,13 @@ src/node.ts(158,7): error TS2339: Property 'isatty' does not exist on type 'Stri
 src/node.ts(167,10): error TS2393: Duplicate function implementation.
 src/node.ts(167,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/node.ts(167,35): error TS2304: Cannot find name 'Void'.
-src/node.ts(168,39): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/node.ts(171,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 src/node.ts(172,43): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
-src/node.ts(176,56): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/node.ts(193,14): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
 src/node.ts(194,2): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 src/node.ts(194,35): error TS2339: Property 'format' does not exist on type 'String'.
 src/node.ts(203,10): error TS2393: Duplicate function implementation.
 src/node.ts(203,38): error TS2304: Cannot find name 'Void'.
 src/node.ts(205,3): error TS2322: Type 'Function' is not assignable to type 'string'.
 src/node.ts(220,10): error TS2393: Duplicate function implementation.
-src/node.ts(221,2): error TS2322: Type 'string | undefined' is not assignable to type 'Object'.
-  Type 'undefined' is not assignable to type 'Object'.
 src/node.ts(231,31): error TS2304: Cannot find name 'Void'.
 src/node.ts(232,8): error TS2339: Property 'inspectOpts' does not exist on type 'Object'.
 src/node.ts(234,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

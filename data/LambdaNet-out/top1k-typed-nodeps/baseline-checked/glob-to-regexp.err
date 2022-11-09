@@ -7,9 +7,9 @@ index.ts(61,9): error TS2365: Operator '+=' cannot be applied to types 'String' 
 index.ts(93,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(119,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
 index.ts(129,21): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(pattern: string | RegExp, flags?: string | undefined): RegExp', gave the following error.
+  Overload 1 of 3, '(pattern: string | RegExp, flags?: string): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
-  Overload 2 of 3, '(pattern: string, flags?: string | undefined): RegExp', gave the following error.
+  Overload 2 of 3, '(pattern: string, flags?: string): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 

@@ -1,6 +1,8 @@
 index.ts(3,45): error TS2304: Cannot find name 'Void'.
-index.ts(5,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(5,21): error TS2345: Argument of type 'String | "Assertion failed"' is not assignable to parameter of type 'string'.
+  Type 'String' is not assignable to type 'string'.
+    'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(8,73): error TS2304: Cannot find name 'Void'.
-index.ts(10,21): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
+index.ts(10,21): error TS2345: Argument of type 'string | Number' is not assignable to parameter of type 'string'.
+  Type 'Number' is not assignable to type 'string'.
 

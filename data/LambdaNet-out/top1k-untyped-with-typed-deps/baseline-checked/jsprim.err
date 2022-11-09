@@ -1,29 +1,17 @@
 lib/jsprim-jsv.ts(17,33): error TS2339: Property 'JSV' does not exist on type 'Number'.
 lib/jsprim-jsv.ts(18,32): error TS2339: Property 'validate' does not exist on type 'HTMLElement'.
 lib/jsprim-jsv.ts(20,13): error TS2339: Property 'errors' does not exist on type 'HTMLElement'.
-lib/jsprim-jsv.ts(21,3): error TS2322: Type 'null' is not assignable to type 'Error'.
 lib/jsprim-jsv.ts(24,13): error TS2339: Property 'ok' does not exist on type 'String'.
 lib/jsprim-jsv.ts(24,23): error TS2339: Property 'errors' does not exist on type 'HTMLElement'.
 lib/jsprim-jsv.ts(25,29): error TS2339: Property 'errors' does not exist on type 'HTMLElement'.
-lib/jsprim-jsv.ts(28,25): error TS7053: Element implicitly has an 'any' type because expression of type '"uri"' can't be used to index type 'Object'.
-  Property 'uri' does not exist on type 'Object'.
-lib/jsprim-jsv.ts(28,45): error TS7053: Element implicitly has an 'any' type because expression of type '"uri"' can't be used to index type 'Object'.
-  Property 'uri' does not exist on type 'Object'.
-lib/jsprim-jsv.ts(35,10): error TS7053: Element implicitly has an 'any' type because expression of type '"attribute"' can't be used to index type 'Object'.
-  Property 'attribute' does not exist on type 'Object'.
 lib/jsprim-jsv.ts(37,3): error TS2322: Type 'string' is not assignable to type 'Number'.
-lib/jsprim-jsv.ts(37,26): error TS7053: Element implicitly has an 'any' type because expression of type '"details"' can't be used to index type 'Object'.
-  Property 'details' does not exist on type 'Object'.
-lib/jsprim-jsv.ts(40,12): error TS7053: Element implicitly has an 'any' type because expression of type '"message"' can't be used to index type 'Object'.
-  Property 'message' does not exist on type 'Object'.
-lib/jsprim-jsv.ts(45,6): error TS2740: Type 'Error' is missing the following properties from type 'HTMLCanvasElement': height, width, captureStream, getContext, and 283 more.
-lib/jsprim-jsv.ts(45,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+lib/jsprim-jsv.ts(45,6): error TS2740: Type 'Error' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+lib/jsprim-jsv.ts(45,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/jsprim-jsv.ts(46,5): error TS2339: Property 'jsv_details' does not exist on type 'HTMLCanvasElement'.
-lib/jsprim-jsv.ts(47,2): error TS2739: Type 'HTMLCanvasElement' is missing the following properties from type 'Error': name, message
+lib/jsprim-jsv.ts(46,5): error TS2339: Property 'jsv_details' does not exist on type 'HTMLElement'.
 lib/jsprim.ts(5,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'mod_assert' must be of type 'String', but here has type 'HTMLElement'.
-lib/jsprim.ts(9,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/jsprim.ts(10,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/jsprim.ts(52,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/jsprim.ts(54,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/jsprim.ts(57,17): error TS2538: Type 'String' cannot be used as an index type.
 lib/jsprim.ts(62,7): error TS2538: Type 'String' cannot be used as an index type.
@@ -43,13 +31,10 @@ lib/jsprim.ts(108,32): error TS2538: Type 'Function' cannot be used as an index 
 lib/jsprim.ts(112,7): error TS2405: The left-hand side of a 'for...in' statement must be of type 'string' or 'any'.
 lib/jsprim.ts(113,9): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
 lib/jsprim.ts(130,13): error TS2339: Property 'equal' does not exist on type 'String'.
-lib/jsprim.ts(131,52): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 lib/jsprim.ts(134,55): error TS2304: Cannot find name 'Void'.
 lib/jsprim.ts(137,14): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-lib/jsprim.ts(138,18): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 lib/jsprim.ts(145,13): error TS2339: Property 'equal' does not exist on type 'String'.
 lib/jsprim.ts(149,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/jsprim.ts(154,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
@@ -94,7 +79,6 @@ lib/jsprim.ts(243,44): error TS2339: Property 'getUTCSeconds' does not exist on 
 lib/jsprim.ts(244,8): error TS2339: Property 'getUTCMilliseconds' does not exist on type 'HTMLDivElement'.
 lib/jsprim.ts(247,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/jsprim.ts(250,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/jsprim.ts(253,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/jsprim.ts(254,25): error TS2339: Property 'sprintf' does not exist on type 'String'.
 lib/jsprim.ts(255,24): error TS2339: Property 'getUTCDay' does not exist on type 'HTMLElement'.
 lib/jsprim.ts(255,43): error TS2339: Property 'getUTCDate' does not exist on type 'HTMLElement'.
@@ -187,12 +171,7 @@ lib/jsprim.ts(474,15): error TS2363: The right-hand side of an arithmetic operat
 lib/jsprim.ts(477,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/jsprim.ts(477,15): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/jsprim.ts(533,13): error TS2339: Property 'errors' does not exist on type 'HTMLElement'.
-lib/jsprim.ts(534,3): error TS2322: Type 'null' is not assignable to type 'Object'.
 lib/jsprim.ts(537,29): error TS2339: Property 'errors' does not exist on type 'HTMLElement'.
-lib/jsprim.ts(540,25): error TS7053: Element implicitly has an 'any' type because expression of type '"property"' can't be used to index type 'Object'.
-  Property 'property' does not exist on type 'Object'.
-lib/jsprim.ts(541,23): error TS7053: Element implicitly has an 'any' type because expression of type '"message"' can't be used to index type 'Object'.
-  Property 'message' does not exist on type 'Object'.
 lib/jsprim.ts(551,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/jsprim.ts(552,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/jsprim.ts(553,4): error TS2322: Type 'string' is not assignable to type 'Number'.
@@ -205,6 +184,7 @@ lib/jsprim.ts(555,46): error TS2345: Argument of type 'Number' is not assignable
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/jsprim.ts(555,49): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/jsprim.ts(555,53): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/jsprim.ts(560,34): error TS2339: Property 'VError' does not exist on type 'String'.
 lib/jsprim.ts(561,5): error TS2339: Property 'jsv_details' does not exist on type 'Object'.
 lib/jsprim.ts(565,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/jsprim.ts(567,13): error TS2339: Property 'ok' does not exist on type 'String'.
@@ -213,67 +193,9 @@ lib/jsprim.ts(573,36): error TS2304: Cannot find name 'Void'.
 lib/jsprim.ts(575,13): error TS2339: Property 'ok' does not exist on type 'String'.
 lib/jsprim.ts(577,13): error TS2339: Property 'ok' does not exist on type 'String'.
 lib/jsprim.ts(592,13): error TS2339: Property 'ok' does not exist on type 'String'.
-lib/jsprim.ts(592,16): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/jsprim.ts(592,23): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/jsprim.ts(592,32): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/jsprim.ts(592,40): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/jsprim.ts(592,48): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/jsprim.ts(592,56): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/jsprim.ts(595,10): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/jsprim.ts(595,22): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/jsprim.ts(595,29): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/jsprim.ts(597,6): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/jsprim.ts(597,14): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/jsprim.ts(598,11): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/jsprim.ts(598,18): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/jsprim.ts(601,18): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/jsprim.ts(601,25): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/jsprim.ts(615,21): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/jsprim.ts(615,34): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/jsprim.ts(626,21): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/jsprim.ts(626,34): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/jsprim.ts(637,21): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/jsprim.ts(637,34): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/jsprim.ts(653,2): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/jsprim.ts(653,10): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/jsprim.ts(654,6): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/jsprim.ts(659,3): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/jsprim.ts(660,3): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/jsprim.ts(666,2): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/jsprim.ts(666,10): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 lib/jsprim.ts(675,43): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/jsprim.ts(679,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/jsprim.ts(679,20): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/jsprim.ts(679,26): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/jsprim.ts(692,57): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/jsprim.ts(694,13): error TS2339: Property 'ok' does not exist on type 'String'.
 lib/jsprim.ts(696,13): error TS2339: Property 'ok' does not exist on type 'String'.

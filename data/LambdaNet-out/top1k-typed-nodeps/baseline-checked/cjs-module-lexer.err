@@ -9,28 +9,17 @@ build.ts(22,4): error TS2339: Property 'writeFileSync' does not exist on type 'S
 build.ts(22,58): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
 lexer.ts(14,18): error TS2314: Generic type 'Set<T>' requires 1 type argument(s).
 lexer.ts(17,25): error TS2304: Cannot find name 'Void'.
-lexer.ts(28,3): error TS2322: Type 'null' is not assignable to type 'Function'.
 lexer.ts(30,3): error TS2740: Type 'Set<unknown>' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lexer.ts(32,3): error TS2739: Type 'Set<unknown>' is missing the following properties from type 'Error': name, message
 lexer.ts(43,17): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
   Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
-lexer.ts(46,5): error TS2571: Object is of type 'unknown'.
 lexer.ts(46,52): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lexer.ts(46,79): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(46,110): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(47,5): error TS2571: Object is of type 'unknown'.
 lexer.ts(50,41): error TS2488: Type 'HTMLElement' must have a '[Symbol.iterator]()' method that returns an iterator.
 lexer.ts(50,140): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
-lexer.ts(55,32): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-lexer.ts(56,7): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lexer.ts(56,25): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 lexer.ts(58,41): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
-lexer.ts(69,13): error TS2322: Type 'undefined' is not assignable to type 'Object'.
-lexer.ts(73,11): error TS2322: Type 'undefined' is not assignable to type 'Object'.
-lexer.ts(85,45): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 lexer.ts(86,3): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lexer.ts(95,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lexer.ts(96,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -49,8 +38,6 @@ lexer.ts(125,13): error TS2365: Operator '+=' cannot be applied to types 'Number
 lexer.ts(126,35): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lexer.ts(127,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(128,15): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 lexer.ts(128,33): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(129,35): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 lexer.ts(130,50): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -62,8 +49,6 @@ lexer.ts(136,43): error TS2345: Argument of type 'Number' is not assignable to p
 lexer.ts(137,15): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lexer.ts(138,35): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lexer.ts(139,15): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 lexer.ts(139,33): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(140,39): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(141,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
@@ -73,17 +58,11 @@ lexer.ts(159,60): error TS2365: Operator '+' cannot be applied to types 'Number'
 lexer.ts(159,99): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lexer.ts(163,40): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lexer.ts(167,40): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lexer.ts(171,9): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 lexer.ts(171,27): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(176,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(179,27): error TS2538: Type 'Number' cannot be used as an index type.
-lexer.ts(181,9): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 lexer.ts(181,27): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(186,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(187,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 lexer.ts(187,43): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(203,51): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lexer.ts(219,55): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
@@ -238,7 +217,6 @@ lexer.ts(444,15): error TS2367: This condition will always return 'true' since t
 lexer.ts(445,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(447,15): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
 lexer.ts(448,20): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-lexer.ts(453,11): error TS2454: Variable 'expt' is used before being assigned.
 lexer.ts(457,22): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 lexer.ts(457,66): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lexer.ts(459,9): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
@@ -499,7 +477,7 @@ lexer.ts(844,5): error TS2356: An arithmetic operand must be of type 'any', 'num
 lexer.ts(847,7): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 lexer.ts(847,54): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lexer.ts(848,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lexer.ts(857,45): error TS2304: Cannot find name 'Void'.
+lexer.ts(857,45): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lexer.ts(858,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lexer.ts(859,29): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(861,7): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
@@ -586,12 +564,9 @@ lexer.ts(1018,9): error TS2367: This condition will always return 'false' since 
 lexer.ts(1021,9): error TS2367: This condition will always return 'true' since the types 'String' and 'number' have no overlap.
 lexer.ts(1063,7): error TS2740: Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lexer.ts(1064,7): error TS2322: Type 'RegExp' is not assignable to type 'HTMLElement'.
-lexer.ts(1066,1): error TS2322: Type 'null' is not assignable to type 'String'.
-lexer.ts(1066,32): error TS2322: Type 'null' is not assignable to type 'String'.
 lexer.ts(1075,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lexer.ts(1078,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lexer.ts(1083,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lexer.ts(1083,51): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 lexer.ts(1100,70): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
 lexer.ts(1100,95): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -600,16 +575,12 @@ lexer.ts(1114,65): error TS2339: Property 'test' does not exist on type 'HTMLEle
 lexer.ts(1114,90): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lexer.ts(1115,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
-lexer.ts(1120,7): error TS2322: Type 'number | undefined' is not assignable to type 'Number'.
-  Type 'undefined' is not assignable to type 'Number'.
 lexer.ts(1120,39): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lexer.ts(1121,30): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
 lexer.ts(1121,39): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lexer.ts(1123,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.
 lexer.ts(1123,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-lexer.ts(1124,10): error TS2322: Type 'number | undefined' is not assignable to type 'Number'.
-  Type 'undefined' is not assignable to type 'Number'.
 lexer.ts(1124,34): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lexer.ts(1125,30): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
@@ -625,8 +596,6 @@ lexer.ts(1148,62): error TS2362: The left-hand side of an arithmetic operation m
 lexer.ts(1152,37): error TS2304: Cannot find name 'Void'.
 lexer.ts(1154,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lexer.ts(1158,10): error TS2678: Type 'number' is not comparable to type 'String'.
-lexer.ts(1159,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 lexer.ts(1159,25): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(1162,10): error TS2678: Type 'number' is not comparable to type 'String'.
 lexer.ts(1167,19): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
@@ -651,8 +620,6 @@ lexer.ts(1214,42): error TS2345: Argument of type 'Number' is not assignable to 
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lexer.ts(1215,45): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lexer.ts(1216,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lexer.ts(1217,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 lexer.ts(1217,21): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(1218,25): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lexer.ts(1224,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -768,19 +735,10 @@ src/lexer.ts(33,49): error TS2339: Property 'has' does not exist on type 'Error'
 src/lexer.ts(34,15): error TS2339: Property 'add' does not exist on type 'Error'.
 src/lexer.ts(37,25): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 src/lexer.ts(37,50): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
-src/lexer.ts(40,32): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-src/lexer.ts(41,7): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-src/lexer.ts(41,25): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 src/lexer.ts(43,41): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
-src/lexer.ts(54,13): error TS2322: Type 'undefined' is not assignable to type 'Object'.
-src/lexer.ts(58,11): error TS2322: Type 'undefined' is not assignable to type 'Object'.
 src/lexer.ts(70,50): error TS2304: Cannot find name 'Void'.
 src/lexer.ts(74,39): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-src/lexer.ts(75,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 src/lexer.ts(75,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/lexer.ts(75,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/lexer.ts(75,40): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.

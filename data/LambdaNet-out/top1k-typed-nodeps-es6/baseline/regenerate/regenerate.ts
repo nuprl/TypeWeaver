@@ -866,7 +866,7 @@
 				var otherMapping: Object = surrogateMappings[innerIndex];
 				var otherLowSurrogates: Array = otherMapping[1];
 				var otherLowSurrogateStart: String = otherLowSurrogates[0];
-				var otherLowSurrogateEnd: Number = otherLowSurrogates[1];
+				var otherLowSurrogateEnd: String = otherLowSurrogates[1];
 				if (
 					lowSurrogateStart == otherLowSurrogateStart &&
 					lowSurrogateEnd == otherLowSurrogateEnd &&
@@ -1000,8 +1000,8 @@
 		var result: Array = [];
 
 		var parts: HTMLElement = splitAtBMP(data);
-		var loneHighSurrogates: Number = parts.loneHighSurrogates;
-		var loneLowSurrogates: Number = parts.loneLowSurrogates;
+		var loneHighSurrogates: String = parts.loneHighSurrogates;
+		var loneLowSurrogates: Function = parts.loneLowSurrogates;
 		var bmp: String = parts.bmp;
 		var astral: Function = parts.astral;
 		var hasLoneHighSurrogates: Boolean = !dataIsEmpty(loneHighSurrogates);
@@ -1066,7 +1066,7 @@
 
 	var proto: Object = regenerate.prototype;
 	extend(proto, {
-		'add': function(value: String) {
+		'add': function(value: Function) {
 			var $this: HTMLElement = this;
 			if (value == null) {
 				return $this;
@@ -1091,7 +1091,7 @@
 			);
 			return $this;
 		},
-		'remove': function(value: Array) {
+		'remove': function(value: Function) {
 			var $this: Object = this;
 			if (value == null) {
 				return $this;
@@ -1152,7 +1152,7 @@
 			);
 		},
 		'clone': function() {
-			var set: Array = new regenerate;
+			var set: Object = new regenerate;
 			set.data = this.data.slice(0);
 			return set;
 		},

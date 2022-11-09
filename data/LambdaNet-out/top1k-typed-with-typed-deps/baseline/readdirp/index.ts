@@ -131,7 +131,7 @@ class ReaddirpStream extends Readable {
             }
           }
         } else {
-          const parent: String = this.parents.pop();
+          const parent: Array = this.parents.pop();
           if (!parent) {
             this.push(null);
             break;
@@ -181,7 +181,7 @@ class ReaddirpStream extends Readable {
   async _getEntryType(entry) {
     // entry may be undefined, because a warning or an error were emitted
     // and the statsProp is undefined
-    const stats: Function = entry && entry[this._statsProp];
+    const stats: String = entry && entry[this._statsProp];
     if (!stats) {
       return;
     }

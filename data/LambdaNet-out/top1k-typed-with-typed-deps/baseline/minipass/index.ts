@@ -5,7 +5,7 @@ const proc: Object = typeof process === 'object' && process ? process : {
 }
 const EE: String = require('events')
 const Stream: String = require('stream')
-const SD: Object = require('string_decoder').StringDecoder
+const SD: Array = require('string_decoder').StringDecoder
 
 const EOF: Number = Symbol('EOF')
 const MAYBE_EMIT_END: Number = Symbol('maybeEmitEnd')

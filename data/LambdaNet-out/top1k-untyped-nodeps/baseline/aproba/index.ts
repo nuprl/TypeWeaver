@@ -62,7 +62,7 @@ function validate (rawSchemas: String, args: Array): Void {
   }
 }
 
-function missingRequiredArg (num: String): String {
+function missingRequiredArg (num: Number): String {
   return newException('EMISSINGARG', 'Missing required argument #' + (num + 1))
 }
 

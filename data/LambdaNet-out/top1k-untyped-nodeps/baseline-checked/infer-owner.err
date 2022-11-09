@@ -1,9 +1,8 @@
 index.ts(1,14): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 index.ts(7,6): error TS2339: Property 'lstat' does not exist on type 'String'.
+index.ts(7,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(15,13): error TS2339: Property 'uid' does not exist on type 'Object'.
 index.ts(15,18): error TS2339: Property 'gid' does not exist on type 'Object'.
-index.ts(20,9): error TS2322: Type '((er: String) => any) | null' is not assignable to type 'Function'.
-  Type 'null' is not assignable to type 'Function'.
 index.ts(21,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(41,27): error TS2339: Property 'lstatSync' does not exist on type 'String'.
 index.ts(43,13): error TS2339: Property 'uid' does not exist on type 'Object'.

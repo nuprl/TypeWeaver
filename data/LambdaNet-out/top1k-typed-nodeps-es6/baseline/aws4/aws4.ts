@@ -73,7 +73,7 @@ function RequestSigner(request: Object, credentials: String): Void {
   this.isCodeCommitGit = this.service === 'codecommit' && request.method === 'GIT'
 }
 
-RequestSigner.prototype.matchHost = function(host: String) {
+RequestSigner.prototype.matchHost = function(host: Number) {
   var match: Array = (host || '').match(/([^\.]+)\.(?:([^\.]*)\.)?amazonaws\.com(\.cn)?$/)
   var hostParts: Object = (match || []).slice(1, 3)
 

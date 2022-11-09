@@ -38,7 +38,7 @@ function feFpToBigInteger(): Number {
   return this.x;
 }
 
-function feFpNegate(): Object {
+function feFpNegate(): Promise {
   return new ECFieldElementFp(this.q, this.x.negate().mod(this.q));
 }
 
@@ -46,7 +46,7 @@ function feFpAdd(b: Object): Promise {
   return new ECFieldElementFp(this.q, this.x.add(b.toBigInteger()).mod(this.q));
 }
 
-function feFpSubtract(b: Object): Promise {
+function feFpSubtract(b: Object): Object {
   return new ECFieldElementFp(
     this.q,
     this.x.subtract(b.toBigInteger()).mod(this.q)
@@ -368,7 +368,7 @@ function curveFpEquals(other: Object): Boolean {
   );
 }
 
-function curveFpGetInfinity(): Promise {
+function curveFpGetInfinity(): Object {
   return this.infinity;
 }
 
@@ -537,7 +537,7 @@ ECFieldElementFp.prototype.sqrt = function() {
   var Q: Number = this.x;
   var fourQ: String = this.modDouble(this.modDouble(Q));
 
-  var U: Object, V: String;
+  var U: String, V: String;
   do {
     var P: Object;
     do {

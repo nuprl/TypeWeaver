@@ -60,7 +60,7 @@ function onFile (srcStat: String, destStat: Boolean, src: String, dest: String, 
   return mayCopyFile(srcStat, src, dest, opts)
 }
 
-function mayCopyFile (srcStat: String, src: String, dest: String, opts: Object): String {
+function mayCopyFile (srcStat: String, src: String, dest: String, opts: HTMLElement): String {
   if (opts.overwrite) {
     fs.unlinkSync(dest)
     return copyFile(srcStat, src, dest, opts)
@@ -108,7 +108,7 @@ function onDir (srcStat: Object, destStat: Boolean, src: String, dest: String, o
   return copyDir(src, dest, opts)
 }
 
-function mkDirAndCopy (srcMode: String, src: String, dest: String, opts: String): Boolean {
+function mkDirAndCopy (srcMode: String, src: String, dest: String, opts: String): String {
   fs.mkdirSync(dest)
   copyDir(src, dest, opts)
   return setDestMode(dest, srcMode)

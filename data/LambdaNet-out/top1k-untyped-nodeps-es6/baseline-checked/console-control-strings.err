@@ -1,10 +1,9 @@
-console-test.ts(2,8): error TS1192: Module '"index"' has no default export.
-index.ts(8,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
-index.ts(12,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
-index.ts(16,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
-index.ts(20,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
-index.ts(24,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
-index.ts(28,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
+index.ts(8,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'string | String'.
+index.ts(12,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'string | Number'.
+index.ts(16,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'string | String'.
+index.ts(20,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'string | String'.
+index.ts(24,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'string | Number'.
+index.ts(28,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'string | String'.
 index.ts(31,52): error TS2322: Type '(num: Number) => String' is not assignable to type 'String'.
 index.ts(33,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
 index.ts(45,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.

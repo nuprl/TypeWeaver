@@ -1,13 +1,10 @@
-index.ts(3,5): error TS2322: Type 'MapConstructor | null' is not assignable to type 'Boolean'.
-  Type 'null' is not assignable to type 'Boolean'.
-index.ts(4,5): error TS2322: Type 'SetConstructor | null' is not assignable to type 'Boolean'.
-  Type 'null' is not assignable to type 'Boolean'.
-index.ts(16,5): error TS2322: Type '((key: any) => boolean) | null' is not assignable to type 'Function'.
-  Type 'null' is not assignable to type 'Function'.
-index.ts(17,5): error TS2322: Type '((value: any) => boolean) | null' is not assignable to type 'String'.
-  Type 'null' is not assignable to type 'String'.
-index.ts(18,6): error TS2454: Variable 'exported' is used before being assigned.
-index.ts(26,18): error TS2454: Variable 'exported' is used before being assigned.
+index.ts(3,5): error TS2322: Type 'MapConstructor' is not assignable to type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'Object' is not assignable to type 'boolean'.
+index.ts(4,5): error TS2322: Type 'SetConstructor' is not assignable to type 'Boolean'.
+  Types of property 'valueOf' are incompatible.
+    Type '() => Object' is not assignable to type '() => boolean'.
+index.ts(17,5): error TS2322: Type '(value: any) => boolean' is not assignable to type 'String'.
 index.ts(34,13): error TS2339: Property 'call' does not exist on type 'String'.
 index.ts(39,23): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 

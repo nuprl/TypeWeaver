@@ -8,11 +8,9 @@ fixtures/view-codes.ts(5,18): error TS2314: Generic type 'Array<T>' requires 1 t
 fixtures/view-codes.ts(6,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 fixtures/view-codes.ts(8,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 fixtures/view-codes.ts(8,40): error TS2304: Cannot find name 'Void'.
-fixtures/view-codes.ts(10,3): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 fixtures/view-codes.ts(14,36): error TS2304: Cannot find name 'Void'.
 fixtures/view-codes.ts(15,6): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-fixtures/view-codes.ts(19,4): error TS2322: Type '{ code: string; matches: RegExpMatchArray | null; description: string; }' is not assignable to type 'Function'.
+fixtures/view-codes.ts(19,4): error TS2322: Type '{ code: string; matches: RegExpMatchArray; description: string; }' is not assignable to type 'Function'.
   Object literal may only specify known properties, and 'code' does not exist in type 'Function'.
 fixtures/view-codes.ts(24,19): error TS2339: Property 'matches' does not exist on type 'Function'.
 fixtures/view-codes.ts(24,51): error TS2339: Property 'matches' does not exist on type 'Function'.

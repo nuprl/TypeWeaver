@@ -1,5 +1,5 @@
 //.CommonJS
-var CSSOM: HTMLElement = {
+var CSSOM: Element = {
 	CSSRule: require("./CSSRule").CSSRule,
 	CSSStyleDeclaration: require('./CSSStyleDeclaration').CSSStyleDeclaration
 };
@@ -10,7 +10,7 @@ var CSSOM: HTMLElement = {
  * @constructor
  * @see http://www.w3.org/TR/css3-animations/#DOM-CSSKeyframeRule
  */
-CSSOM.CSSKeyframeRule = function CSSKeyframeRule(): Promise {
+CSSOM.CSSKeyframeRule = function CSSKeyframeRule(): Void {
 	CSSOM.CSSRule.call(this);
 	this.keyText = '';
 	this.style = new CSSOM.CSSStyleDeclaration();

@@ -27,7 +27,7 @@ import baseSet from './.internal/baseSet.js'
  * console.log(object.x[0].y.z)
  * // => 5
  */
-function set(object: Object, path: String, value: String): String {
+function set(object: Object, path: String, value: String): Hash {
   return object == null ? object : baseSet(object, path, value)
 }
 

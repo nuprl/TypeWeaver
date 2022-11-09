@@ -1,5 +1,4 @@
 index.ts(9,10): error TS2451: Cannot redeclare block-scoped variable 'name'.
-index.ts(11,3): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(11,27): error TS2538: Type 'void' cannot be used as an index type.
 index.ts(20,4): error TS2339: Property 'get' does not exist on type 'Object'.
 index.ts(26,13): error TS2339: Property 'get' does not exist on type 'Object'.
@@ -11,135 +10,43 @@ index.ts(66,22): error TS2356: An arithmetic operand must be of type 'any', 'num
 index.ts(68,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(69,8): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(69,38): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-index.ts(73,4): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
 index.ts(73,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(79,22): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(80,8): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(84,4): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
 index.ts(84,22): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 index.ts(87,22): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(88,8): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(88,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-index.ts(93,5): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-index.ts(95,5): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
 index.ts(99,22): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(100,8): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(100,41): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-index.ts(105,5): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-index.ts(107,5): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-index.ts(119,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-index.ts(120,3): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
 index.ts(127,21): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(128,7): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(128,22): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(130,2): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-index.ts(130,17): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
 index.ts(135,4): error TS2339: Property 'get' does not exist on type 'Object'.
-index.ts(141,6): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-index.ts(144,34): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
-  Property '4' does not exist on type 'Object'.
-index.ts(145,32): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 index.ts(146,7): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-index.ts(146,36): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 index.ts(147,7): error TS2322: Type 'Number' is not assignable to type 'String'.
-index.ts(147,36): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
 index.ts(148,7): error TS2322: Type 'Number' is not assignable to type 'String'.
 index.ts(148,31): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(156,4): error TS2339: Property 'get' does not exist on type 'Object'.
-index.ts(162,6): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-index.ts(165,34): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
-  Property '4' does not exist on type 'Object'.
-index.ts(166,32): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 index.ts(167,7): error TS2322: Type 'Number' is not assignable to type 'String'.
-index.ts(167,36): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 index.ts(168,7): error TS2322: Type 'Number' is not assignable to type 'String'.
-index.ts(168,36): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
 index.ts(169,7): error TS2322: Type 'Number' is not assignable to type 'String'.
 index.ts(169,31): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(176,4): error TS2339: Property 'to' does not exist on type 'Object'.
-index.ts(181,13): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(182,13): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-index.ts(183,13): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-index.ts(184,4): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-index.ts(185,28): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
 index.ts(190,4): error TS2339: Property 'to' does not exist on type 'Object'.
 index.ts(193,14): error TS2339: Property 'length' does not exist on type 'Object'.
-index.ts(193,28): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-index.ts(194,25): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(194,54): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-index.ts(194,83): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-index.ts(195,26): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(195,55): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-index.ts(195,84): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-index.ts(195,102): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
 index.ts(198,4): error TS2339: Property 'to' does not exist on type 'Object'.
 index.ts(199,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(210,4): error TS2339: Property 'to' does not exist on type 'Object'.
 index.ts(212,14): error TS2339: Property 'length' does not exist on type 'Object'.
-index.ts(212,28): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-index.ts(213,14): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(213,31): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-index.ts(213,49): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-index.ts(214,15): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(214,32): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-index.ts(214,50): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-index.ts(214,68): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
 index.ts(219,4): error TS2339: Property 'to' does not exist on type 'Object'.
 index.ts(223,11): error TS2339: Property 'length' does not exist on type 'Object'.
-index.ts(223,26): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-index.ts(224,14): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-index.ts(227,18): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(227,35): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-index.ts(227,53): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 index.ts(230,4): error TS2339: Property 'to' does not exist on type 'Object'.
 index.ts(230,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(231,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(236,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(236,38): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.

@@ -686,12 +686,12 @@ function cloneDeep(value: Array): Array {
   }
 }
 
-function visit(node: Array, fn: Function): Node {
+function visit(node: Array, fn: Function): String {
   fn(node);
   return node.nodes ? mapVisit(node, fn) : node;
 }
 
-function mapVisit(node: Node, fn: Number): Array {
+function mapVisit(node: Array, fn: Number): Array {
   node.nodes.forEach((n: Number) => visit(n, fn));
   return node;
 }

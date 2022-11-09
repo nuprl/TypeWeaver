@@ -416,7 +416,7 @@ jQuery.extend( {
 			i: String,
 
 			// uncached part of the url
-			uncached: String,
+			uncached: Number,
 
 			// Create the final options object
 			s: Object = jQuery.ajaxSetup( {}, options ),

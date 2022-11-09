@@ -50,7 +50,7 @@ function useMutationObserver(): Function {
 
 // web worker
 function useMessageChannel(): Function {
-  let channel: HTMLElement = new MessageChannel();
+  let channel: Enumerator = new MessageChannel();
   channel.port1.onmessage = flush;
   return () => channel.port2.postMessage(0);
 }

@@ -297,7 +297,7 @@
   }
 
   // (public) return the number of bits in "this"
-  function bnBitLength(): Number {
+  function bnBitLength(): Boolean {
     if (this.t <= 0) return 0;
     return (
       this.DB * (this.t - 1) + nbits(this[this.t - 1] ^ (this.s & this.DM))
@@ -396,7 +396,7 @@
 
   // (protected) r = this * a, r != this,a (HAC 14.12)
   // "this" should be the larger one if appropriate.
-  function bnpMultiplyTo(a: HTMLElement, r: Object): Void {
+  function bnpMultiplyTo(a: Object, r: Object): Void {
     var x: HTMLElement = this.abs(),
       y: Object = a.abs();
     var i: Number = x.t;
@@ -564,7 +564,7 @@
 
   // xR mod m
   function montConvert(x: Function): String {
-    var r: Function = nbi();
+    var r: Object = nbi();
     x.abs().dlShiftTo(this.m.t, r);
     r.divRemTo(this.m, null, r);
     if (x.s < 0 && r.compareTo(BigInteger.ZERO) > 0) this.m.subTo(r, r);
@@ -715,7 +715,7 @@
   }
 
   // (public) return value as byte
-  function bnByteValue(): Number {
+  function bnByteValue(): Boolean {
     return this.t == 0 ? this.s : (this[0] << 24) >> 24;
   }
 
@@ -1002,7 +1002,7 @@
   }
 
   // (public) this | (1<<n)
-  function bnSetBit(n: String): Object {
+  function bnSetBit(n: Number): Promise {
     return this.changeBit(n, op_or);
   }
 
@@ -1051,7 +1051,7 @@
   }
 
   // (public) this + a
-  function bnAdd(a: Function): String {
+  function bnAdd(a: Array): String {
     var r: String = nbi();
     this.addTo(a, r);
     return r;
@@ -1137,7 +1137,7 @@
   NullExp.prototype.sqrTo = nSqrTo;
 
   // (public) this^e
-  function bnPow(e: Function): Object {
+  function bnPow(e: Array): Object {
     return this.exp(e, new NullExp());
   }
 
@@ -1157,7 +1157,7 @@
 
   // (protected) r = "this * a" without lower n words, n > 0
   // "this" should be the larger one if appropriate.
-  function bnpMultiplyUpperTo(a: Object, n: Number, r: Array): Void {
+  function bnpMultiplyUpperTo(a: Object, n: Number, r: Object): Void {
     --n;
     var i: Number = (r.t = this.t + a.t - n);
     r.s = 0; // assumes a,this >= 0
@@ -1226,7 +1226,7 @@
   Barrett.prototype.sqrTo = barrettSqrTo;
 
   // (public) this^e % m (HAC 14.85)
-  function bnModPow(e: Array, m: String): String {
+  function bnModPow(e: Array, m: String): Object {
     var i: Number = e.bitLength(),
       k: Number,
       r: String = nbv(1),
@@ -1581,7 +1581,7 @@
   // (public) test primality with certainty >= 1-.5^t
   function bnIsProbablePrime(t: String): Boolean {
     var i: Number,
-      x: Object = this.abs();
+      x: Function = this.abs();
     if (x.t == 1 && x[0] <= lowprimes[lowprimes.length - 1]) {
       for (i = 0; i < lowprimes.length; ++i)
         if (x[0] == lowprimes[i]) return true;
@@ -1806,7 +1806,7 @@
   Arcfour.prototype.next = ARC4next;
 
   // Plug in your RNG constructor here
-  function prng_newstate(): Promise {
+  function prng_newstate(): String {
     return new Arcfour();
   }
 

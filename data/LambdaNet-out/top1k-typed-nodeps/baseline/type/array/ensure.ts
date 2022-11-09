@@ -17,7 +17,7 @@ module.exports = function (value: Array /*, options*/) {
 
 	var ensureItem: Function = ensurePlainFunction(options.ensureItem, { isOptional: true });
 	if (ensureItem) {
-		var coercedValue: Object = [], invalidItems: Array;
+		var coercedValue: Promise = [], invalidItems: Array;
 		for (var index = 0, length = value.length; index < length; ++index) {
 			if (!objHasOwnProperty.call(value, index)) continue;
 			var coercedItem: Function;

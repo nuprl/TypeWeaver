@@ -25,7 +25,7 @@ const main: Function = async () => {
     const a: Array = [__filename]
     for (const i of impls) {
       const res: Pipe = await promiseSpawn(process.execPath, [...a, i], opt)
-        .catch((e: Array) => e)
+        .catch((e: Dest) => e)
       try {
         results[i] = JSON.parse(res.stdout)
       } catch (e) {
@@ -36,7 +36,7 @@ const main: Function = async () => {
     const a: Array = [__filename, impl]
     for (const c of cases) {
       const res: Pipe = await promiseSpawn(process.execPath, [...a, c], opt)
-        .catch((e: Array) => e)
+        .catch((e: Dest) => e)
       try {
         results[c] = JSON.parse(res.stdout)
       } catch (e) {
@@ -47,7 +47,7 @@ const main: Function = async () => {
     const a: Array = [__filename, impl, cse]
     for (const l of pipeLen) {
       const res: Pipe = await promiseSpawn(process.execPath, [...a, l], opt)
-        .catch((e: Array) => e)
+        .catch((e: Dest) => e)
       try {
         results[l] = JSON.parse(res.stdout)
       } catch (e) {

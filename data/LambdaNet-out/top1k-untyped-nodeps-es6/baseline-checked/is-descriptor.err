@@ -1,11 +1,7 @@
 index.ts(4,7): error TS2739: Type 'Set<string>' is missing the following properties from type 'Error': name, message
 index.ts(5,7): error TS2322: Type 'Set<string>' is not assignable to type 'Error'.
-index.ts(9,7): error TS2322: Type 'Object | undefined' is not assignable to type 'Object'.
-  Type 'undefined' is not assignable to type 'Object'.
 index.ts(9,65): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 index.ts(11,23): error TS2367: This condition will always return 'true' since the types 'Number' and 'boolean' have no overlap.
-index.ts(12,5): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'Object'.
-  Type 'undefined' is not assignable to type 'Object'.
 index.ts(12,71): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 index.ts(16,19): error TS2339: Property 'configurable' does not exist on type 'Object'.
 index.ts(16,61): error TS2339: Property 'enumerable' does not exist on type 'Object'.

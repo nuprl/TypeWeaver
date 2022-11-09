@@ -174,7 +174,7 @@ Diff.prototype = {
   }
 };
 
-function buildValues(diff: Array, components: Array, newString: Array, oldString: Array, useLongestToken: String): Object {
+function buildValues(diff: Array, components: Array, newString: Array, oldString: Array, useLongestToken: Boolean): Object {
   let componentPos: Number = 0,
       componentLen: Number = components.length,
       newPos: Number = 0,

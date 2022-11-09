@@ -1,5 +1,4 @@
-async/index.browser.ts(1,12): error TS2322: Type '(bytes: HTMLElement) => Promise<Uint8Array>' is not assignable to type 'Date'.
-async/index.browser.ts(1,95): error TS2769: No overload matches this call.
+async/index.browser.ts(1,99): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'HTMLElement' is not assignable to parameter of type 'ArrayBufferLike'.
 async/index.browser.ts(3,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -12,8 +11,7 @@ async/index.browser.ts(30,65): error TS2769: No overload matches this call.
 async/index.browser.ts(33,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 async/index.browser.ts(35,30): error TS2538: Type 'Number' cannot be used as an index type.
 async/index.browser.ts(35,35): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-async/index.browser.ts(42,12): error TS2322: Type '(size?: String) => Promise<String>' is not assignable to type 'Date'.
-async/index.browser.ts(42,34): error TS2322: Type 'number' is not assignable to type 'String'.
+async/index.browser.ts(42,38): error TS2322: Type 'number' is not assignable to type 'String'.
 async/index.browser.ts(44,61): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'ArrayBufferLike'.
@@ -31,10 +29,9 @@ async/index.native.ts(33,35): error TS2363: The right-hand side of an arithmetic
 async/index.native.ts(43,29): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 async/index.native.ts(46,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 async/index.ts(7,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-async/index.ts(12,43): error TS2345: Argument of type '(err: String, buf: Number) => void' is not assignable to parameter of type '(err: Error | null, buf: ArrayBufferView) => void'.
+async/index.ts(12,43): error TS2345: Argument of type '(err: String, buf: Number) => void' is not assignable to parameter of type '(err: Error, buf: Buffer) => void'.
   Types of parameters 'err' and 'err' are incompatible.
-    Type 'Error | null' is not assignable to type 'String'.
-      Type 'null' is not assignable to type 'String'.
+    Type 'Error' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 async/index.ts(22,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 async/index.ts(40,39): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 async/index.ts(40,46): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -46,9 +43,6 @@ async/index.ts(62,12): error TS2356: An arithmetic operand must be of type 'any'
 bin/nanoid.ts(5,30): error TS2304: Cannot find name 'Void'.
 bin/nanoid.ts(9,30): error TS2304: Cannot find name 'Void'.
 bin/nanoid.ts(43,5): error TS2322: Type 'string' is not assignable to type 'Function'.
-bin/nanoid.ts(50,5): error TS2454: Variable 'alphabet' is used before being assigned.
-bin/nanoid.ts(51,57): error TS2454: Variable 'size' is used before being assigned.
-bin/nanoid.ts(54,16): error TS2454: Variable 'size' is used before being assigned.
 index.browser.ts(6,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.browser.ts(8,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.browser.ts(30,32): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.

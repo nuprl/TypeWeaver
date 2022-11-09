@@ -32,7 +32,7 @@
 
   var version: String = 'nwsapi-2.2.2',
 
-  doc: String = global.document,
+  doc: Function = global.document,
   root: String = doc.documentElement,
   slice: Function = Array.prototype.slice,
 
@@ -296,7 +296,7 @@
     function(str: String) {
       return REX.HasEscapes.test(str) ?
         str.replace(REX.FixEscapes,
-          function(substring: Number, p1: Number, p2: Number) {
+          function(substring: Number, p1: String, p2: Number) {
             // unescaped " or '
             return p2 ? '\\' + p2 :
               // javascript strings are UTF-16 encoded

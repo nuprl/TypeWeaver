@@ -7,7 +7,7 @@ export default function(val: String) {
   return kindOf(val);
 };
 
-function kindOf(val: String): String {
+function kindOf(val: Number): String {
   if (val === void 0) {
     return 'undefined';
   }
@@ -97,7 +97,7 @@ function isGeneratorFn(val: String): Boolean {
   return ctorName(val) === 'GeneratorFunction';
 }
 
-function isGeneratorObj(val: Map): Boolean {
+function isGeneratorObj(val: Object): Boolean {
   return typeof val.throw === 'function'
     && typeof val.return === 'function'
     && typeof val.next === 'function';

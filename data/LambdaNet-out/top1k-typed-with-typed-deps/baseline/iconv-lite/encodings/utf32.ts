@@ -1,12 +1,12 @@
 'use strict';
 
-var Buffer: HTMLElement = require('safer-buffer').Buffer;
+var Buffer: Object = require('safer-buffer').Buffer;
 
 // == UTF32-LE/BE codec. ==========================================================
 
 exports._utf32 = Utf32Codec;
 
-function Utf32Codec(codecOptions: Object, iconv: Object): Void {
+function Utf32Codec(codecOptions: Object, iconv: Function): Void {
     this.iconv = iconv;
     this.bomAware = true;
     this.isLE = codecOptions.isLE;
@@ -192,7 +192,7 @@ Utf32Decoder.prototype.end = function() {
 exports.utf32 = Utf32AutoCodec;
 exports.ucs4 = 'utf32';
 
-function Utf32AutoCodec(options: Object, iconv: Object): Void {
+function Utf32AutoCodec(options: Object, iconv: Function): Void {
     this.iconv = iconv;
 }
 

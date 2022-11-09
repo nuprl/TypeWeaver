@@ -3,7 +3,7 @@ default-exclude.ts(3,25): error TS2314: Generic type 'Array<T>' requires 1 type 
 default-exclude.ts(5,3): error TS2339: Property 'map' does not exist on type 'String'.
 default-exclude.ts(5,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'defaultExtension'.
-index.ts(7,2): error TS2322: Type '{ all: (string | null)[]; testExclude: (string | null)[]; instrument: (string | null)[]; checkCoverage: (string | null)[]; report: (string | null)[]; main: null[]; instrumentOnly: string[]; }' is not assignable to type 'HTMLInputElement'.
+index.ts(7,2): error TS2322: Type '{ all: string[]; testExclude: string[]; instrument: string[]; checkCoverage: string[]; report: string[]; main: null[]; instrumentOnly: string[]; }' is not assignable to type 'HTMLInputElement'.
   Object literal may only specify known properties, and 'all' does not exist in type 'HTMLInputElement'.
 index.ts(22,27): error TS2339: Property 'all' does not exist on type 'HTMLInputElement'.
 index.ts(27,27): error TS2339: Property 'all' does not exist on type 'HTMLInputElement'.
@@ -51,8 +51,6 @@ index.ts(348,28): error TS2339: Property 'instrumentOnly' does not exist on type
 index.ts(372,29): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
 index.ts(381,29): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
 index.ts(388,29): error TS2339: Property 'instrument' does not exist on type 'HTMLInputElement'.
-index.ts(439,45): error TS7031: Binding element 'name' implicitly has an 'any' type.
-index.ts(439,61): error TS7031: Binding element 'value' implicitly has an 'any' type.
 index.ts(439,71): error TS2304: Cannot find name 'Void'.
 index.ts(450,12): error TS2769: No overload matches this call.
   Overload 1 of 3, '(callbackfn: (previousValue: string, currentValue: string, currentIndex: number, array: string[]) => string, initialValue: string): string', gave the following error.
@@ -64,16 +62,5 @@ index.ts(450,12): error TS2769: No overload matches this call.
       Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(452,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 index.ts(456,36): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(457,42): error TS2571: Object is of type 'unknown'.
-index.ts(458,15): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(callbackfn: (previousValue: [string, unknown], currentValue: [string, unknown], currentIndex: number, array: [string, unknown][]) => [string, unknown], initialValue: [string, unknown]): [string, unknown]', gave the following error.
-    Argument of type '(defaults: String, [name, { default: value }]: [any, { default: any; }]) => Void' is not assignable to parameter of type '(previousValue: [string, unknown], currentValue: [string, unknown], currentIndex: number, array: [string, unknown][]) => [string, unknown]'.
-      Types of parameters 'defaults' and 'previousValue' are incompatible.
-        Type '[string, unknown]' is not assignable to type 'String'.
-  Overload 2 of 3, '(callbackfn: (previousValue: String, currentValue: [string, unknown], currentIndex: number, array: [string, unknown][]) => String, initialValue: String): String', gave the following error.
-    Argument of type '(defaults: String, [name, { default: value }]: [any, { default: any; }]) => Void' is not assignable to parameter of type '(previousValue: String, currentValue: [string, unknown], currentIndex: number, array: [string, unknown][]) => String'.
-      Types of parameters '__1' and 'currentValue' are incompatible.
-        Type '[string, unknown]' is not assignable to type '[any, { default: any; }]'.
-          Type at position 1 in source is not compatible with type at position 1 in target.
-            Type 'unknown' is not assignable to type '{ default: any; }'.
+index.ts(457,42): error TS2361: The right-hand side of an 'in' expression must not be a primitive.
 

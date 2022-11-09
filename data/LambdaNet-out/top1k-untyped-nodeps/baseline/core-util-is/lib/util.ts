@@ -40,7 +40,7 @@ function isNull(arg: Number): Boolean {
 }
 exports.isNull = isNull;
 
-function isNullOrUndefined(arg: String): Boolean {
+function isNullOrUndefined(arg: Number): Boolean {
   return arg == null;
 }
 exports.isNullOrUndefined = isNullOrUndefined;

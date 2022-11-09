@@ -18,7 +18,7 @@
         root.jsonSchemaLinks = factory();
     }
 }(this, function () {// setup primitive classes to be JSON Schema types
-var exports: Element = {};
+var exports: HTMLElement = {};
 exports.cacheLinks = true;
 exports.getLink = function(relation: Array, instance: Function, schema: HTMLElement){
 	// gets the URI of the link for the given relation based on the instance and schema

@@ -1,7 +1,7 @@
 import jQuery from "../core.js";
 import nodeName from "../core/nodeName.js";
 
-function getAll( context: HTMLElement, tag: Number ): Object {
+function getAll( context: HTMLElement, tag: Number ): Array {
 
 	// Support: IE <=9 - 11+
 	// Use typeof to avoid zero-argument method invocation on host objects (trac-15151)

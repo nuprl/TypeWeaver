@@ -28,7 +28,7 @@ const CLONE_DEEP_FLAG: Number = 1
  * find(objects, matchesProperty('a', 4))
  * // => { 'a': 4, 'b': 5, 'c': 6 }
  */
-function matchesProperty(path: String, srcValue: String): String {
+function matchesProperty(path: String, srcValue: String): Hash {
   return baseMatchesProperty(path, baseClone(srcValue, CLONE_DEEP_FLAG))
 }
 

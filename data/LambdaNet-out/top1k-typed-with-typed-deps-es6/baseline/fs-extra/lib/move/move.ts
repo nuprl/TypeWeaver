@@ -16,7 +16,7 @@ function move (src: String, dest: String, opts: Object, cb: Function): Void {
 
   opts = opts || {}
 
-  const overwrite: Number = opts.overwrite || opts.clobber || false
+  const overwrite: String = opts.overwrite || opts.clobber || false
 
   stat.checkPaths(src, dest, 'move', opts, (err: String, stats: Object) => {
     if (err) return cb(err)

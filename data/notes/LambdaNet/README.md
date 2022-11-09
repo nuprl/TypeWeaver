@@ -21,58 +21,58 @@
 
 ```
 Dataset: top1k-typed-nodeps
-Number of successes: 251
-Number of fails: 36
-Time for type inference: 0:51:18
+Number of successes: 249
+Number of fails: 38
+Time for type inference: 0:58:39
 ```
 
 ```
 Dataset: top1k-typed-nodeps-es6
-Number of successes: 247
-Number of fails: 40
-Time for type inference: 0:57:08
+Number of successes: 248
+Number of fails: 39
+Time for type inference: 0:56:09
 ```
 
 ```
 Dataset: top1k-typed-with-typed-deps
 Number of successes: 70
 Number of fails: 15
-Time for type inference: 0:13:56
+Time for type inference: 0:13:41
 ```
 
 ```
 Dataset: top1k-typed-with-typed-deps-es6
 Number of successes: 70
 Number of fails: 15
-Time for type inference: 0:13:56
+Time for type inference: 0:13:46
 ```
 
 ```
 Dataset: top1k-untyped-nodeps
-Number of successes: 86
-Number of fails: 16
-Time for type inference: 0:15:41
+Number of successes: 87
+Number of fails: 15
+Time for type inference: 0:15:26
 ```
 
 ```
 Dataset: top1k-untyped-nodeps-es6
-Number of successes: 86
-Number of fails: 16
-Time for type inference: 0:15:46
+Number of successes: 87
+Number of fails: 15
+Time for type inference: 0:15:21
 ```
 
 ```
 Dataset: top1k-untyped-with-typed-deps
 Number of successes: 34
 Number of fails: 6
-Time for type inference: 0:07:05
+Time for type inference: 0:06:56
 ```
 
 ```
 Dataset: top1k-untyped-with-typed-deps-es6
 Number of successes: 35
 Number of fails: 5
-Time for type inference: 0:07:00
+Time for type inference: 0:06:56
 ```
 
 ## Type weaving
@@ -90,16 +90,16 @@ Time for type inference: 0:07:00
 
 ```
 Dataset: top1k-typed-nodeps
-Number of successes: 251
+Number of successes: 249
 Number of fails: 0
-Time for type weaving: 0:09:27
+Time for type weaving: 0:09:06
 ```
 
 ```
 Dataset: top1k-typed-nodeps-es6
-Number of successes: 247
+Number of successes: 248
 Number of fails: 0
-Time for type weaving: 0:08:56
+Time for type weaving: 0:09:10
 ```
 
 ```
@@ -113,35 +113,35 @@ Time for type weaving: 0:01:03
 Dataset: top1k-typed-with-typed-deps-es6
 Number of successes: 70
 Number of fails: 0
-Time for type weaving: 0:01:07
+Time for type weaving: 0:01:05
 ```
 
 ```
 Dataset: top1k-untyped-nodeps
-Number of successes: 86
+Number of successes: 87
 Number of fails: 0
-Time for type weaving: 0:02:02
+Time for type weaving: 0:01:58
 ```
 
 ```
 Dataset: top1k-untyped-nodeps-es6
-Number of successes: 86
+Number of successes: 87
 Number of fails: 0
-Time for type weaving: 0:02:01
+Time for type weaving: 0:02:02
 ```
 
 ```
 Dataset: top1k-untyped-with-typed-deps
 Number of successes: 34
 Number of fails: 0
-Time for type weaving: 0:02:50
+Time for type weaving: 0:02:51
 ```
 
 ```
 Dataset: top1k-untyped-with-typed-deps-es6
 Number of successes: 35
 Number of fails: 0
-Time for type weaving: 0:02:53
+Time for type weaving: 0:02:52
 ```
 
 ## Type checking
@@ -159,16 +159,16 @@ Time for type weaving: 0:02:53
 
 ```
 Dataset: top1k-typed-nodeps
-Number of successes: 13
-Number of fails: 238
-Time for type checking: 0:02:18
+Number of successes: 16
+Number of fails: 233
+Time for type checking: 0:02:20
 ```
 
 ```
 Dataset: top1k-typed-nodeps-es6
-Number of successes: 14
-Number of fails: 233
-Time for type checking: 0:02:16
+Number of successes: 16
+Number of fails: 232
+Time for type checking: 0:02:19
 ```
 
 ```
@@ -182,21 +182,21 @@ Time for type checking: 0:00:42
 Dataset: top1k-typed-with-typed-deps-es6
 Number of successes: 0
 Number of fails: 70
-Time for type checking: 0:00:42
+Time for type checking: 0:00:43
 ```
 
 ```
 Dataset: top1k-untyped-nodeps
-Number of successes: 0
-Number of fails: 86
-Time for type checking: 0:00:47
+Number of successes: 2
+Number of fails: 85
+Time for type checking: 0:00:50
 ```
 
 ```
 Dataset: top1k-untyped-nodeps-es6
-Number of successes: 0
-Number of fails: 86
-Time for type checking: 0:00:47
+Number of successes: 2
+Number of fails: 85
+Time for type checking: 0:00:49
 ```
 
 ```
@@ -210,5 +210,5 @@ Time for type checking: 0:00:20
 Dataset: top1k-untyped-with-typed-deps-es6
 Number of successes: 2
 Number of fails: 33
-Time for type checking: 0:00:20
+Time for type checking: 0:00:21
 ```

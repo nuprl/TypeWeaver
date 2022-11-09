@@ -1,19 +1,14 @@
-lib/ber/errors.ts(9,5): error TS2322: Type 'String' is not assignable to type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/ber/errors.ts(9,5): error TS2322: Type 'String | ""' is not assignable to type 'string'.
+  Type 'String' is not assignable to type 'string'.
+    'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/ber/index.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'errors' must be of type 'String', but here has type 'Object'.
 lib/ber/index.ts(6,5): error TS2300: Duplicate identifier 'Reader'.
 lib/ber/index.ts(7,5): error TS2300: Duplicate identifier 'Writer'.
-lib/ber/index.ts(22,25): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 lib/ber/reader.ts(12,42): error TS2339: Property 'newInvalidAsn1Error' does not exist on type 'String'.
 lib/ber/reader.ts(18,10): error TS2300: Duplicate identifier 'Reader'.
 lib/ber/reader.ts(18,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ber/reader.ts(18,31): error TS2304: Cannot find name 'Void'.
 lib/ber/reader.ts(19,24): error TS2339: Property 'isBuffer' does not exist on type 'HTMLElement'.
-lib/ber/reader.ts(22,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/reader.ts(23,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/reader.ts(26,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/reader.ts(27,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/ber/reader.ts(30,30): error TS2339: Property 'prototype' does not exist on type 'String'.
 lib/ber/reader.ts(35,30): error TS2339: Property 'prototype' does not exist on type 'String'.
 lib/ber/reader.ts(40,30): error TS2339: Property 'prototype' does not exist on type 'String'.
@@ -81,8 +76,7 @@ lib/ber/writer.ts(24,10): error TS2339: Property 'ok' does not exist on type 'St
 lib/ber/writer.ts(25,10): error TS2339: Property 'equal' does not exist on type 'String'.
 lib/ber/writer.ts(27,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ber/writer.ts(29,12): error TS2538: Type 'String' cannot be used as an index type.
-lib/ber/writer.ts(32,9): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'String'.
-  Type 'undefined' is not assignable to type 'String'.
+lib/ber/writer.ts(32,9): error TS2740: Type 'PropertyDescriptor' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/ber/writer.ts(32,63): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 lib/ber/writer.ts(33,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 lib/ber/writer.ts(43,10): error TS2300: Duplicate identifier 'Writer'.
@@ -90,14 +84,8 @@ lib/ber/writer.ts(43,35): error TS2304: Cannot find name 'Void'.
 lib/ber/writer.ts(44,19): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-lib/ber/writer.ts(46,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/ber/writer.ts(46,22): error TS2339: Property 'alloc' does not exist on type 'HTMLElement'.
 lib/ber/writer.ts(46,36): error TS2339: Property 'size' does not exist on type 'Object'.
-lib/ber/writer.ts(47,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/writer.ts(47,16): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/writer.ts(48,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/writer.ts(49,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ber/writer.ts(53,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/ber/writer.ts(59,13): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 lib/ber/writer.ts(65,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

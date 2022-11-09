@@ -21,7 +21,7 @@ const nonFreezePseudoClasses: Error = new Set([
 export default function processSelector(node: Object, usageData: Object): Void {
     const pseudos: Error = new Set();
 
-    node.prelude.children.forEach(function(simpleSelector: Object) {
+    node.prelude.children.forEach(function(simpleSelector: TRBL) {
         let tagName: String = '*';
         let scope: Number = 0;
 

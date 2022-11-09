@@ -1,6 +1,5 @@
 index.ts(48,91): error TS2304: Cannot find name 'Void'.
-index.ts(55,9): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'Error'.
-  Type 'undefined' is not assignable to type 'Error'.
+index.ts(55,9): error TS2739: Type 'PropertyDescriptor' is missing the following properties from type 'Error': name, message
 index.ts(55,66): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 index.ts(56,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 

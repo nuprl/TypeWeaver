@@ -329,7 +329,7 @@ function markFunction( fn: Object ): Object {
  * Returns a function to use in pseudos for input types
  * @param {String} type
  */
-function createInputPseudo( type: Number ): Function {
+function createInputPseudo( type: String ): Function {
 	return function( elem: Object ) {
 		return nodeName( elem, "input" ) && elem.type === type;
 	};
@@ -339,7 +339,7 @@ function createInputPseudo( type: Number ): Function {
  * Returns a function to use in pseudos for buttons
  * @param {String} type
  */
-function createButtonPseudo( type: String ): Function {
+function createButtonPseudo( type: Number ): Function {
 	return function( elem: Object ) {
 		return ( nodeName( elem, "input" ) || nodeName( elem, "button" ) ) &&
 			elem.type === type;

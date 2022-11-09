@@ -12,25 +12,14 @@ bench.ts(60,2): error TS2304: Cannot find name 'bench'.
 bench.ts(64,2): error TS2304: Cannot find name 'bench'.
 bench.ts(68,2): error TS2304: Cannot find name 'bench'.
 index.ts(21,29): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-index.ts(31,3): error TS7053: Element implicitly has an 'any' type because expression of type '5' can't be used to index type 'Object'.
-  Property '5' does not exist on type 'Object'.
-index.ts(39,4): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 index.ts(41,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(41,61): error TS2345: Argument of type '(n: Number) => any' is not assignable to parameter of type '(value: string, index: number, array: string[]) => any'.
   Types of parameters 'n' and 'value' are incompatible.
     Type 'string' is not assignable to type 'Number'.
 index.ts(42,17): error TS2538: Type 'Number' cannot be used as an index type.
-index.ts(50,62): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(51,4): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
+index.ts(51,10): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(67,28): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Number'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 index.ts(68,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(75,5): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-index.ts(75,15): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-index.ts(83,6): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-index.ts(83,23): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 

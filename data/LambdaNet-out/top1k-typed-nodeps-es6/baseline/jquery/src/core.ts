@@ -101,7 +101,7 @@ jQuery.fn = jQuery.prototype = {
 		} ) );
 	},
 
-	eq: function( i: String ) {
+	eq: function( i: Number ) {
 		var len: Number = this.length,
 			j: Number = +i + ( i < 0 ? len : 0 );
 		return this.pushStack( j >= 0 && j < len ? [ this[ j ] ] : [] );
@@ -301,7 +301,7 @@ jQuery.extend( {
 		return ret;
 	},
 
-	inArray: function( elem: String, arr: Number, i: String ) {
+	inArray: function( elem: String, arr: String, i: String ) {
 		return arr == null ? -1 : indexOf.call( arr, elem, i );
 	},
 

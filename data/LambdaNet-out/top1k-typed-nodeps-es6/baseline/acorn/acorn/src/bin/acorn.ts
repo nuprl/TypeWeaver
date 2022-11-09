@@ -3,7 +3,7 @@ import {readFileSync as readFile} from "fs"
 import * as acorn from "acorn"
 
 let inputFilePaths: Array = [], forceFileName: Boolean = false, fileMode: Boolean = false, silent: Boolean = false, compact: Boolean = false, tokenize: Boolean = false
-const options: Object = {}
+const options: HTMLCanvasElement = {}
 
 function help(status: String): Void {
   const print: Function = (status === 0) ? console.log : console.error
@@ -45,7 +45,7 @@ function run(codeList: Array): Void {
         result = acorn.parse(code, options)
         options.program = result
       } else {
-        let tokenizer: Parser = acorn.tokenizer(code, options), token: Parser
+        let tokenizer: Position = acorn.tokenizer(code, options), token: Parser
         do {
           token = tokenizer.getToken()
           result.push(token)

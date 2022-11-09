@@ -161,7 +161,7 @@ GNTP.prototype.send = function(callback: Function) {
         });
     });
 
-    socket.on('data', function(data: String) {
+    socket.on('data', function(data: Array) {
         resp += data.toString();
 
         /* Wait until we have a complete response which is signaled by two CRLF's. */

@@ -3,9 +3,7 @@ implementation.ts(4,22): error TS2307: Cannot find module 'es-abstract/2021/ToLe
 implementation.ts(5,22): error TS2307: Cannot find module 'es-abstract/2021/ToObject' or its corresponding type declarations.
 implementation.ts(6,27): error TS2307: Cannot find module 'es-abstract/2021/SameValueZero' or its corresponding type declarations.
 implementation.ts(14,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-implementation.ts(20,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 implementation.ts(23,9): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-implementation.ts(23,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 implementation.ts(25,6): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 implementation.ts(28,55): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
 implementation.ts(29,9): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
@@ -15,11 +13,11 @@ index.ts(9,41): error TS2345: Argument of type 'Boolean' is not assignable to pa
   Type 'Boolean' provides no match for the signature '(this: unknown, ...args: readonly unknown[]): unknown'.
 index.ts(15,52): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(15,84): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-polyfill.ts(10,10): error TS2322: Type '(searchElement: any, fromIndex?: number | undefined) => boolean' is not assignable to type 'Boolean'.
+polyfill.ts(10,10): error TS2322: Type '(searchElement: any, fromIndex?: number) => boolean' is not assignable to type 'Boolean'.
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'Object' is not assignable to type 'boolean'.
 polyfill.ts(12,9): error TS2322: Type '(searchElement: HTMLElement) => Boolean' is not assignable to type 'Boolean'.
   Types of property 'valueOf' are incompatible.
     Type '() => Object' is not assignable to type '() => boolean'.
-shim.ts(11,36): error TS2367: This condition will always return 'true' since the types '(searchElement: any, fromIndex?: number | undefined) => boolean' and 'Boolean' have no overlap.
+shim.ts(11,36): error TS2367: This condition will always return 'true' since the types '(searchElement: any, fromIndex?: number) => boolean' and 'Boolean' have no overlap.
 

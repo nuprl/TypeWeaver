@@ -1,38 +1,22 @@
 Mime.ts(7,10): error TS2451: Cannot redeclare block-scoped variable 'Mime'.
 Mime.ts(7,18): error TS2304: Cannot find name 'Void'.
-Mime.ts(8,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-Mime.ts(9,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-Mime.ts(12,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-Mime.ts(15,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-Mime.ts(15,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-Mime.ts(15,34): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-Mime.ts(16,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-Mime.ts(16,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-Mime.ts(16,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-Mime.ts(17,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-Mime.ts(17,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-Mime.ts(17,46): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 Mime.ts(41,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-Mime.ts(41,29): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-Mime.ts(51,11): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 Mime.ts(55,22): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
+Mime.ts(58,46): error TS2538: Type 'Object' cannot be used as an index type.
+Mime.ts(64,19): error TS2538: Type 'Object' cannot be used as an index type.
 Mime.ts(69,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 Mime.ts(83,7): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 Mime.ts(84,7): error TS2322: Type 'boolean' is not assignable to type 'Number'.
-Mime.ts(93,3): error TS2322: Type 'string | false' is not assignable to type 'String'.
-  Type 'boolean' is not assignable to type 'String'.
+Mime.ts(86,46): error TS2538: Type 'String' cannot be used as an index type.
 Mime.ts(93,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 cli.ts(6,5): error TS2451: Cannot redeclare block-scoped variable 'mime'.
+cli.ts(6,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 cli.ts(8,5): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 cli.ts(11,19): error TS2339: Property 'version' does not exist on type 'Object'.
 cli.ts(14,19): error TS2339: Property 'name' does not exist on type 'Object'.
 cli.ts(17,19): error TS2339: Property 'name' does not exist on type 'Object'.
 cli.ts(17,38): error TS2339: Property 'description' does not exist on type 'Object'.
-cli.ts(44,32): error TS2339: Property 'getExtension' does not exist on type 'HTMLElement'.
-cli.ts(50,25): error TS2339: Property 'getType' does not exist on type 'HTMLElement'.
 index.ts(3,5): error TS2451: Cannot redeclare block-scoped variable 'Mime'.
 index.ts(3,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lite.ts(3,5): error TS2451: Cannot redeclare block-scoped variable 'Mime'.
@@ -42,15 +26,11 @@ src/benchmark.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'mim
 src/benchmark.ts(4,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/benchmark.ts(5,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/benchmark.ts(9,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/benchmark.ts(9,44): error TS2339: Property '_types' does not exist on type 'HTMLElement'.
 src/benchmark.ts(13,4): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-src/benchmark.ts(15,12): error TS2339: Property 'getType' does not exist on type 'HTMLElement'.
 src/benchmark.ts(15,31): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/benchmark.ts(21,35): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/benchmark.ts(26,30): error TS2339: Property 'target' does not exist on type 'Object'.
 src/build.ts(10,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/build.ts(18,25): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 src/build.ts(19,9): error TS2339: Property 'type' does not exist on type 'Object'.
 src/build.ts(20,14): error TS2339: Property 'extensions' does not exist on type 'Object'.
 src/build.ts(22,9): error TS2339: Property 'extensions' does not exist on type 'Object'.
@@ -84,10 +64,8 @@ src/build.ts(61,31): error TS2538: Type 'Number' cannot be used as an index type
 src/build.ts(63,13): error TS2339: Property 'extensions' does not exist on type 'HTMLElement'.
 src/build.ts(64,25): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
 src/build.ts(64,37): error TS2339: Property 'source' does not exist on type 'HTMLElement'.
-src/build.ts(65,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 src/build.ts(65,22): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
 src/build.ts(65,36): error TS2339: Property 'extensions' does not exist on type 'HTMLElement'.
-src/build.ts(67,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 src/build.ts(67,19): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
 src/build.ts(67,33): error TS2339: Property 'extensions' does not exist on type 'HTMLElement'.
 src/build.ts(72,16): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.

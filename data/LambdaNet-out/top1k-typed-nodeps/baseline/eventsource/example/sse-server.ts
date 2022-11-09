@@ -7,7 +7,7 @@ app.use(serveStatic(__dirname))
 app.get('/sse', (req: Array, res: HTMLElement) => {
   console.log('new connection')
 
-  const sseStream: Array = new SseStream(req)
+  const sseStream: Object = new SseStream(req)
   sseStream.pipe(res)
   const pusher: Number = setInterval(() => {
     sseStream.write({

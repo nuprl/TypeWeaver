@@ -924,7 +924,7 @@ const unicodeProperties: Function = require('../unicode/parser-unicode-propertie
 /**
  * Unicode property.
  */
-function UnicodeProperty(matched: String, loc: String): String {
+function UnicodeProperty(matched: String, loc: String): DFA {
   const negative: Boolean = matched[1] === 'P';
   const separatorIdx: Number = matched.indexOf('=');
 
@@ -1149,7 +1149,7 @@ function validateUnicodeGroupName(name: String, state: String): String {
 const uidRe: RegExp = /\\u(?:([dD][89aAbB][0-9a-fA-F]{2})\\u([dD][c-fC-F][0-9a-fA-F]{2})|([dD][89aAbB][0-9a-fA-F]{2})|([dD][c-fC-F][0-9a-fA-F]{2})|([0-9a-ce-fA-CE-F][0-9a-fA-F]{3}|[dD][0-7][0-9a-fA-F]{2})|\{(0*(?:[0-9a-fA-F]{1,5}|10[0-9a-fA-F]{4}))\})/;
 
 function decodeUnicodeGroupName(name: String): String {
-  return name.replace(new RegExp(uidRe, 'g'), function (_: Array, leadSurrogate: Number, trailSurrogate: Number, leadSurrogateOnly: Number, trailSurrogateOnly: Number, nonSurrogate: Number, codePoint: String) {
+  return name.replace(new RegExp(uidRe, 'g'), function (_: Writer, leadSurrogate: Number, trailSurrogate: Number, leadSurrogateOnly: Number, trailSurrogateOnly: Number, nonSurrogate: Number, codePoint: String) {
     if (leadSurrogate) {
       return String.fromCodePoint(parseInt(leadSurrogate, 16), parseInt(trailSurrogate, 16));
     }

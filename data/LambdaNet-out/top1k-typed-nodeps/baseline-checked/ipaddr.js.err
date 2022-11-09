@@ -1,13 +1,11 @@
 ipaddr.min.ts(1,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 ipaddr.min.ts(1,23): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 ipaddr.min.ts(1,291): error TS2740: Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-ipaddr.min.ts(1,808): error TS2322: Type 'null' is not assignable to type 'String'.
 ipaddr.min.ts(1,890): error TS2339: Property 'zoneIndex' does not exist on type 'Object'.
 ipaddr.min.ts(1,975): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 ipaddr.min.ts(1,985): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 ipaddr.min.ts(1,1014): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 ipaddr.min.ts(1,1041): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-ipaddr.min.ts(1,1049): error TS2322: Type 'null' is not assignable to type 'String'.
 ipaddr.min.ts(1,1067): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 ipaddr.min.ts(1,1069): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 ipaddr.min.ts(1,1071): error TS2322: Type 'string' is not assignable to type 'Number'.
@@ -32,10 +30,6 @@ ipaddr.min.ts(1,1565): error TS2363: The right-hand side of an arithmetic operat
 ipaddr.min.ts(1,1567): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 ipaddr.min.ts(1,1621): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
 ipaddr.min.ts(1,1640): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
-ipaddr.min.ts(1,1655): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-ipaddr.min.ts(1,1677): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 ipaddr.min.ts(1,1693): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
 ipaddr.min.ts(1,1717): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
 ipaddr.min.ts(1,1792): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
@@ -45,27 +39,22 @@ ipaddr.min.ts(1,1900): error TS2339: Property 'IPv4' does not exist on type 'HTM
 ipaddr.min.ts(1,1930): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 ipaddr.min.ts(1,1938): error TS2304: Cannot find name 'Void'.
 ipaddr.min.ts(1,2058): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-ipaddr.min.ts(1,2147): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-ipaddr.min.ts(1,2209): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-ipaddr.min.ts(1,2242): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-ipaddr.min.ts(1,2284): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-ipaddr.min.ts(1,2319): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-ipaddr.min.ts(1,2356): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-ipaddr.min.ts(1,2397): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-ipaddr.min.ts(1,2432): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-ipaddr.min.ts(1,2454): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-ipaddr.min.ts(1,2479): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-ipaddr.min.ts(1,2516): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-ipaddr.min.ts(1,2540): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-ipaddr.min.ts(1,2564): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-ipaddr.min.ts(1,2590): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-ipaddr.min.ts(1,2619): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-ipaddr.min.ts(1,2646): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-ipaddr.min.ts(1,2672): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-ipaddr.min.ts(1,2818): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-ipaddr.min.ts(1,2829): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
+ipaddr.min.ts(1,2209): error TS2350: Only a void function can be called with the 'new' keyword.
+ipaddr.min.ts(1,2242): error TS2350: Only a void function can be called with the 'new' keyword.
+ipaddr.min.ts(1,2284): error TS2350: Only a void function can be called with the 'new' keyword.
+ipaddr.min.ts(1,2319): error TS2350: Only a void function can be called with the 'new' keyword.
+ipaddr.min.ts(1,2356): error TS2350: Only a void function can be called with the 'new' keyword.
+ipaddr.min.ts(1,2397): error TS2350: Only a void function can be called with the 'new' keyword.
+ipaddr.min.ts(1,2432): error TS2350: Only a void function can be called with the 'new' keyword.
+ipaddr.min.ts(1,2454): error TS2350: Only a void function can be called with the 'new' keyword.
+ipaddr.min.ts(1,2479): error TS2350: Only a void function can be called with the 'new' keyword.
+ipaddr.min.ts(1,2516): error TS2350: Only a void function can be called with the 'new' keyword.
+ipaddr.min.ts(1,2540): error TS2350: Only a void function can be called with the 'new' keyword.
+ipaddr.min.ts(1,2564): error TS2350: Only a void function can be called with the 'new' keyword.
+ipaddr.min.ts(1,2590): error TS2350: Only a void function can be called with the 'new' keyword.
+ipaddr.min.ts(1,2619): error TS2350: Only a void function can be called with the 'new' keyword.
+ipaddr.min.ts(1,2646): error TS2350: Only a void function can be called with the 'new' keyword.
+ipaddr.min.ts(1,2672): error TS2350: Only a void function can be called with the 'new' keyword.
 ipaddr.min.ts(1,2846): error TS2339: Property 'kind' does not exist on type 'Object'.
 ipaddr.min.ts(1,2947): error TS2339: Property 'octets' does not exist on type 'Object'.
 ipaddr.min.ts(1,3157): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -76,10 +65,6 @@ ipaddr.min.ts(1,3264): error TS2363: The right-hand side of an arithmetic operat
 ipaddr.min.ts(1,3305): error TS2339: Property 'subnetMatch' does not exist on type 'HTMLElement'.
 ipaddr.min.ts(1,3459): error TS2339: Property 'IPv6' does not exist on type 'HTMLElement'.
 ipaddr.min.ts(1,3635): error TS2339: Property 'IPv4' does not exist on type 'HTMLElement'.
-ipaddr.min.ts(1,3733): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-ipaddr.min.ts(1,3794): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 ipaddr.min.ts(1,3817): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 ipaddr.min.ts(1,3870): error TS2538: Type 'Number' cannot be used as an index type.
 ipaddr.min.ts(1,3892): error TS2538: Type 'Number' cannot be used as an index type.
@@ -90,20 +75,12 @@ ipaddr.min.ts(1,4164): error TS2339: Property 'IPv4' does not exist on type 'HTM
 ipaddr.min.ts(1,4223): error TS2339: Property 'IPv4' does not exist on type 'HTMLElement'.
 ipaddr.min.ts(1,4290): error TS2339: Property 'IPv4' does not exist on type 'HTMLElement'.
 ipaddr.min.ts(1,4375): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-ipaddr.min.ts(1,4474): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 ipaddr.min.ts(1,4526): error TS2538: Type 'Number' cannot be used as an index type.
 ipaddr.min.ts(1,4544): error TS2538: Type 'Number' cannot be used as an index type.
 ipaddr.min.ts(1,4552): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 ipaddr.min.ts(1,4658): error TS2339: Property 'IPv4' does not exist on type 'HTMLElement'.
 ipaddr.min.ts(1,4826): error TS2339: Property 'IPv4' does not exist on type 'HTMLElement'.
-ipaddr.min.ts(1,4878): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-ipaddr.min.ts(1,4931): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 ipaddr.min.ts(1,4962): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-ipaddr.min.ts(1,4980): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 ipaddr.min.ts(1,5155): error TS2339: Property 'IPv4' does not exist on type 'HTMLElement'.
 ipaddr.min.ts(1,5194): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 ipaddr.min.ts(1,5235): error TS2339: Property 'fourOctet' does not exist on type 'Object'.
@@ -116,21 +93,11 @@ ipaddr.min.ts(1,5554): error TS2362: The left-hand side of an arithmetic operati
 ipaddr.min.ts(1,5557): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 ipaddr.min.ts(1,5605): error TS2339: Property 'twoOctet' does not exist on type 'Object'.
 ipaddr.min.ts(1,5659): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-ipaddr.min.ts(1,5676): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-ipaddr.min.ts(1,5770): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 ipaddr.min.ts(1,5784): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 ipaddr.min.ts(1,5802): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 ipaddr.min.ts(1,5823): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 ipaddr.min.ts(1,5844): error TS2339: Property 'threeOctet' does not exist on type 'Object'.
 ipaddr.min.ts(1,5900): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-ipaddr.min.ts(1,5917): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-ipaddr.min.ts(1,6008): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-ipaddr.min.ts(1,6024): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 ipaddr.min.ts(1,6038): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 ipaddr.min.ts(1,6059): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 ipaddr.min.ts(1,6075): error TS2339: Property 'IPv4' does not exist on type 'HTMLElement'.
@@ -144,42 +111,32 @@ ipaddr.min.ts(1,6344): error TS2362: The left-hand side of an arithmetic operati
 ipaddr.min.ts(1,6364): error TS2339: Property 'IPv6' does not exist on type 'HTMLElement'.
 ipaddr.min.ts(1,6394): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 ipaddr.min.ts(1,6413): error TS2304: Cannot find name 'Void'.
-ipaddr.min.ts(1,6463): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 ipaddr.min.ts(1,6487): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-ipaddr.min.ts(1,6492): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 ipaddr.min.ts(1,6518): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-ipaddr.min.ts(1,6606): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-ipaddr.min.ts(1,6629): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 ipaddr.min.ts(1,6647): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-ipaddr.min.ts(1,6662): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 ipaddr.min.ts(1,6673): error TS2538: Type 'Number' cannot be used as an index type.
-ipaddr.min.ts(1,6751): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+ipaddr.min.ts(1,6813): error TS2350: Only a void function can be called with the 'new' keyword.
 ipaddr.min.ts(1,6813): error TS2554: Expected 2 arguments, but got 1.
-ipaddr.min.ts(1,6813): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+ipaddr.min.ts(1,6854): error TS2350: Only a void function can be called with the 'new' keyword.
 ipaddr.min.ts(1,6854): error TS2554: Expected 2 arguments, but got 1.
-ipaddr.min.ts(1,6854): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+ipaddr.min.ts(1,6898): error TS2350: Only a void function can be called with the 'new' keyword.
 ipaddr.min.ts(1,6898): error TS2554: Expected 2 arguments, but got 1.
-ipaddr.min.ts(1,6898): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+ipaddr.min.ts(1,6940): error TS2350: Only a void function can be called with the 'new' keyword.
 ipaddr.min.ts(1,6940): error TS2554: Expected 2 arguments, but got 1.
-ipaddr.min.ts(1,6940): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+ipaddr.min.ts(1,6983): error TS2350: Only a void function can be called with the 'new' keyword.
 ipaddr.min.ts(1,6983): error TS2554: Expected 2 arguments, but got 1.
-ipaddr.min.ts(1,6983): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+ipaddr.min.ts(1,7027): error TS2350: Only a void function can be called with the 'new' keyword.
 ipaddr.min.ts(1,7027): error TS2554: Expected 2 arguments, but got 1.
-ipaddr.min.ts(1,7027): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+ipaddr.min.ts(1,7069): error TS2350: Only a void function can be called with the 'new' keyword.
 ipaddr.min.ts(1,7069): error TS2554: Expected 2 arguments, but got 1.
-ipaddr.min.ts(1,7069): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+ipaddr.min.ts(1,7111): error TS2350: Only a void function can be called with the 'new' keyword.
 ipaddr.min.ts(1,7111): error TS2554: Expected 2 arguments, but got 1.
-ipaddr.min.ts(1,7111): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+ipaddr.min.ts(1,7154): error TS2350: Only a void function can be called with the 'new' keyword.
 ipaddr.min.ts(1,7154): error TS2554: Expected 2 arguments, but got 1.
-ipaddr.min.ts(1,7154): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+ipaddr.min.ts(1,7194): error TS2350: Only a void function can be called with the 'new' keyword.
 ipaddr.min.ts(1,7194): error TS2554: Expected 2 arguments, but got 1.
-ipaddr.min.ts(1,7194): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+ipaddr.min.ts(1,7237): error TS2350: Only a void function can be called with the 'new' keyword.
 ipaddr.min.ts(1,7237): error TS2554: Expected 2 arguments, but got 1.
-ipaddr.min.ts(1,7237): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-ipaddr.min.ts(1,7474): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-ipaddr.min.ts(1,7485): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 ipaddr.min.ts(1,7502): error TS2339: Property 'kind' does not exist on type 'Object'.
 ipaddr.min.ts(1,7602): error TS2339: Property 'parts' does not exist on type 'Object'.
 ipaddr.min.ts(1,7946): error TS2538: Type 'String' cannot be used as an index type.
@@ -191,40 +148,22 @@ ipaddr.min.ts(1,8150): error TS2314: Generic type 'Array<T>' requires 1 type arg
 ipaddr.min.ts(1,8208): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 ipaddr.min.ts(1,8225): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 ipaddr.min.ts(1,8317): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-ipaddr.min.ts(1,8340): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-ipaddr.min.ts(1,8371): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 ipaddr.min.ts(1,8398): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 ipaddr.min.ts(1,8492): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
-ipaddr.min.ts(1,8688): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-ipaddr.min.ts(1,8703): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 ipaddr.min.ts(1,8721): error TS2339: Property 'IPv4' does not exist on type 'HTMLElement'.
 ipaddr.min.ts(1,8727): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 ipaddr.min.ts(1,8736): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 ipaddr.min.ts(1,8738): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 ipaddr.min.ts(1,8747): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 ipaddr.min.ts(1,8830): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-ipaddr.min.ts(1,8853): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-ipaddr.min.ts(1,8882): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 ipaddr.min.ts(1,9000): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
-ipaddr.min.ts(1,9163): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 ipaddr.min.ts(1,9172): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-ipaddr.min.ts(1,9176): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 ipaddr.min.ts(1,9196): error TS2339: Property 'index' does not exist on type 'Object'.
-ipaddr.min.ts(1,9204): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 ipaddr.min.ts(1,9247): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 ipaddr.min.ts(1,9266): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 ipaddr.min.ts(1,9380): error TS2339: Property 'IPv6' does not exist on type 'HTMLElement'.
-ipaddr.min.ts(1,9478): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-ipaddr.min.ts(1,9539): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 ipaddr.min.ts(1,9562): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 ipaddr.min.ts(1,9616): error TS2538: Type 'Number' cannot be used as an index type.
 ipaddr.min.ts(1,9638): error TS2538: Type 'Number' cannot be used as an index type.
@@ -235,8 +174,6 @@ ipaddr.min.ts(1,9961): error TS2339: Property 'parts' does not exist on type 'Ob
 ipaddr.min.ts(1,9969): error TS2339: Property 'zoneId' does not exist on type 'Object'.
 ipaddr.min.ts(1,10002): error TS2339: Property 'IPv6' does not exist on type 'HTMLElement'.
 ipaddr.min.ts(1,10087): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-ipaddr.min.ts(1,10186): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 ipaddr.min.ts(1,10239): error TS2538: Type 'Number' cannot be used as an index type.
 ipaddr.min.ts(1,10257): error TS2538: Type 'Number' cannot be used as an index type.
 ipaddr.min.ts(1,10265): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -245,37 +182,13 @@ ipaddr.min.ts(1,10452): error TS2339: Property 'parts' does not exist on type 'O
 ipaddr.min.ts(1,10548): error TS2339: Property 'parts' does not exist on type 'Object'.
 ipaddr.min.ts(1,10556): error TS2339: Property 'zoneId' does not exist on type 'Object'.
 ipaddr.min.ts(1,10567): error TS2339: Property 'IPv6' does not exist on type 'HTMLElement'.
-ipaddr.min.ts(1,10642): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-ipaddr.min.ts(1,10683): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 ipaddr.min.ts(1,10708): error TS2740: Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
-ipaddr.min.ts(1,10722): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 ipaddr.min.ts(1,10889): error TS2339: Property 'IPv6' does not exist on type 'HTMLElement'.
 ipaddr.min.ts(1,10968): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-ipaddr.min.ts(1,10987): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 ipaddr.min.ts(1,10999): error TS2339: Property 'deprecatedTransitional' does not exist on type 'Object'.
-ipaddr.min.ts(1,11052): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 ipaddr.min.ts(1,11065): error TS2339: Property 'native' does not exist on type 'Object'.
-ipaddr.min.ts(1,11098): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 ipaddr.min.ts(1,11110): error TS2339: Property 'transitional' does not exist on type 'Object'.
-ipaddr.min.ts(1,11129): error TS7053: Element implicitly has an 'any' type because expression of type '6' can't be used to index type 'Object'.
-  Property '6' does not exist on type 'Object'.
-ipaddr.min.ts(1,11143): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 ipaddr.min.ts(1,11166): error TS2339: Property 'parts' does not exist on type 'String'.
-ipaddr.min.ts(1,11190): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-ipaddr.min.ts(1,11205): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-ipaddr.min.ts(1,11220): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
-  Property '4' does not exist on type 'Object'.
-ipaddr.min.ts(1,11235): error TS7053: Element implicitly has an 'any' type because expression of type '5' can't be used to index type 'Object'.
-  Property '5' does not exist on type 'Object'.
 ipaddr.min.ts(1,11257): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 ipaddr.min.ts(1,11308): error TS2339: Property 'parts' does not exist on type 'Object'.
 ipaddr.min.ts(1,11335): error TS2339: Property 'parts' does not exist on type 'Object'.
@@ -306,19 +219,14 @@ ipaddr.min.ts(1,12231): error TS2339: Property 'IPv6' does not exist on type 'HT
 ipaddr.min.ts(1,12271): error TS2339: Property 'IPv4' does not exist on type 'HTMLElement'.
 ipaddr.min.ts(1,12380): error TS2339: Property 'process' does not exist on type 'HTMLElement'.
 ipaddr.min.ts(1,12417): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-ipaddr.min.ts(1,12428): error TS2339: Property 'parse' does not exist on type 'HTMLElement'.
 ipaddr.min.ts(1,12509): error TS2339: Property 'subnetMatch' does not exist on type 'HTMLElement'.
 ipaddr.min.ts(1,12553): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 ipaddr.min.ts(1,12587): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-ipaddr.min.ts(1,12692): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 ipaddr.min.ts(1,12705): error TS2538: Type 'String' cannot be used as an index type.
 ipaddr.min.ts(1,12758): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 ipaddr.min.ts(1,12774): error TS2339: Property 'kind' does not exist on type 'Object'.
-ipaddr.min.ts(1,12783): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 ipaddr.min.ts(1,12798): error TS2339: Property 'match' does not exist on type 'Object'.
 ipaddr.min.ts(1,12896): error TS2339: Property 'ipaddr' does not exist on type 'Function'.
-ipaddr.min.ts(1,12906): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 ipaddr.min.ts(1,12913): error TS2345: Argument of type '(Window & typeof globalThis) | {}' is not assignable to parameter of type 'String'.
   Type 'Window & typeof globalThis' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 ipaddr.min.ts(1,12940): error TS2322: Type '{}' is not assignable to type 'Window & typeof globalThis'.
@@ -326,18 +234,16 @@ ipaddr.min.ts(1,12940): error TS2322: Type '{}' is not assignable to type 'Windo
 lib/ipaddr.ts(15,11): error TS2322: Type 'RegExp' is not assignable to type 'HTMLElement'.
 lib/ipaddr.ts(16,11): error TS2322: Type 'RegExp' is not assignable to type 'HTMLElement'.
 lib/ipaddr.ts(26,31): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(pattern: string | RegExp, flags?: string | undefined): RegExp', gave the following error.
+  Overload 1 of 3, '(pattern: string | RegExp, flags?: string): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
-  Overload 2 of 3, '(pattern: string, flags?: string | undefined): RegExp', gave the following error.
+  Overload 2 of 3, '(pattern: string, flags?: string): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/ipaddr.ts(36,13): error TS2322: Type 'null' is not assignable to type 'Object'.
 lib/ipaddr.ts(41,56): error TS2339: Property 'zoneIndex' does not exist on type 'Object'.
 lib/ipaddr.ts(51,49): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/ipaddr.ts(52,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(57,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(61,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ipaddr.ts(66,13): error TS2322: Type 'null' is not assignable to type 'Object'.
 lib/ipaddr.ts(70,28): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(70,36): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(72,16): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -358,10 +264,6 @@ lib/ipaddr.ts(125,25): error TS2363: The right-hand side of an arithmetic operat
 lib/ipaddr.ts(126,13): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/ipaddr.ts(134,22): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(135,29): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
-lib/ipaddr.ts(140,13): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Function'.
-  Property '0' does not exist on type 'Function'.
-lib/ipaddr.ts(140,50): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Function'.
-  Property '1' does not exist on type 'Function'.
 lib/ipaddr.ts(141,24): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(142,29): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
 lib/ipaddr.ts(147,25): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
@@ -370,27 +272,22 @@ lib/ipaddr.ts(161,12): error TS2339: Property 'IPv4' does not exist on type 'HTM
 lib/ipaddr.ts(165,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ipaddr.ts(165,40): error TS2304: Cannot find name 'Void'.
 lib/ipaddr.ts(172,44): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ipaddr.ts(179,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ipaddr.ts(185,28): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/ipaddr.ts(186,26): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/ipaddr.ts(188,26): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/ipaddr.ts(190,26): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/ipaddr.ts(192,25): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/ipaddr.ts(194,32): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/ipaddr.ts(197,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/ipaddr.ts(198,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/ipaddr.ts(199,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/ipaddr.ts(203,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/ipaddr.ts(204,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/ipaddr.ts(205,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/ipaddr.ts(206,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/ipaddr.ts(207,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/ipaddr.ts(208,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/ipaddr.ts(209,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/ipaddr.ts(223,25): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/ipaddr.ts(224,29): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
+lib/ipaddr.ts(185,28): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/ipaddr.ts(186,26): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/ipaddr.ts(188,26): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/ipaddr.ts(190,26): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/ipaddr.ts(192,25): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/ipaddr.ts(194,32): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/ipaddr.ts(197,18): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/ipaddr.ts(198,18): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/ipaddr.ts(199,18): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/ipaddr.ts(203,18): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/ipaddr.ts(204,18): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/ipaddr.ts(205,18): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/ipaddr.ts(206,18): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/ipaddr.ts(207,18): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/ipaddr.ts(208,18): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/ipaddr.ts(209,18): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ipaddr.ts(227,23): error TS2339: Property 'kind' does not exist on type 'Object'.
 lib/ipaddr.ts(231,49): error TS2339: Property 'octets' does not exist on type 'Object'.
 lib/ipaddr.ts(255,33): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -402,10 +299,6 @@ lib/ipaddr.ts(273,25): error TS2363: The right-hand side of an arithmetic operat
 lib/ipaddr.ts(278,27): error TS2339: Property 'subnetMatch' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(288,27): error TS2339: Property 'IPv6' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(305,12): error TS2339: Property 'IPv4' does not exist on type 'HTMLElement'.
-lib/ipaddr.ts(309,47): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/ipaddr.ts(310,78): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/ipaddr.ts(311,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ipaddr.ts(315,56): error TS2538: Type 'Number' cannot be used as an index type.
 lib/ipaddr.ts(315,92): error TS2538: Type 'Number' cannot be used as an index type.
@@ -416,22 +309,12 @@ lib/ipaddr.ts(341,12): error TS2339: Property 'IPv4' does not exist on type 'HTM
 lib/ipaddr.ts(342,20): error TS2339: Property 'IPv4' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(350,12): error TS2339: Property 'IPv4' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(351,73): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ipaddr.ts(355,33): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/ipaddr.ts(356,64): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/ipaddr.ts(361,56): error TS2538: Type 'Number' cannot be used as an index type.
 lib/ipaddr.ts(361,92): error TS2538: Type 'Number' cannot be used as an index type.
 lib/ipaddr.ts(362,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(373,12): error TS2339: Property 'IPv4' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(384,12): error TS2339: Property 'IPv4' does not exist on type 'HTMLElement'.
-lib/ipaddr.ts(387,14): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-lib/ipaddr.ts(388,49): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 lib/ipaddr.ts(390,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ipaddr.ts(390,51): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/ipaddr.ts(406,12): error TS2339: Property 'IPv4' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(407,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ipaddr.ts(410,47): error TS2339: Property 'fourOctet' does not exist on type 'Object'.
@@ -444,21 +327,11 @@ lib/ipaddr.ts(433,35): error TS2362: The left-hand side of an arithmetic operati
 lib/ipaddr.ts(433,44): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(438,54): error TS2339: Property 'twoOctet' does not exist on type 'Object'.
 lib/ipaddr.ts(441,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ipaddr.ts(443,38): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/ipaddr.ts(448,43): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 lib/ipaddr.ts(449,31): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(450,31): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(451,31): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(455,54): error TS2339: Property 'threeOctet' does not exist on type 'Object'.
 lib/ipaddr.ts(458,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ipaddr.ts(460,38): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-lib/ipaddr.ts(465,43): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/ipaddr.ts(466,43): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/ipaddr.ts(467,31): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(468,31): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(478,12): error TS2339: Property 'IPv4' does not exist on type 'HTMLElement'.
@@ -472,52 +345,42 @@ lib/ipaddr.ts(494,76): error TS2362: The left-hand side of an arithmetic operati
 lib/ipaddr.ts(501,12): error TS2339: Property 'IPv6' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(505,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ipaddr.ts(505,55): error TS2304: Cannot find name 'Void'.
-lib/ipaddr.ts(509,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/ipaddr.ts(510,38): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lib/ipaddr.ts(511,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/ipaddr.ts(511,61): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lib/ipaddr.ts(514,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ipaddr.ts(519,29): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/ipaddr.ts(519,48): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ipaddr.ts(520,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/ipaddr.ts(520,35): error TS2538: Type 'Number' cannot be used as an index type.
-lib/ipaddr.ts(527,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/ipaddr.ts(534,27): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ipaddr.ts(534,27): error TS2554: Expected 2 arguments, but got 1.
-lib/ipaddr.ts(534,27): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ipaddr.ts(535,25): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ipaddr.ts(535,25): error TS2554: Expected 2 arguments, but got 1.
-lib/ipaddr.ts(535,25): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ipaddr.ts(536,25): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ipaddr.ts(536,25): error TS2554: Expected 2 arguments, but got 1.
-lib/ipaddr.ts(536,25): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ipaddr.ts(537,24): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ipaddr.ts(537,24): error TS2554: Expected 2 arguments, but got 1.
-lib/ipaddr.ts(537,24): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ipaddr.ts(538,27): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ipaddr.ts(538,27): error TS2554: Expected 2 arguments, but got 1.
-lib/ipaddr.ts(538,27): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ipaddr.ts(539,26): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ipaddr.ts(539,26): error TS2554: Expected 2 arguments, but got 1.
-lib/ipaddr.ts(539,26): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ipaddr.ts(541,23): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ipaddr.ts(541,23): error TS2554: Expected 2 arguments, but got 1.
-lib/ipaddr.ts(541,23): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ipaddr.ts(543,23): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ipaddr.ts(543,23): error TS2554: Expected 2 arguments, but got 1.
-lib/ipaddr.ts(543,23): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ipaddr.ts(545,22): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ipaddr.ts(545,22): error TS2554: Expected 2 arguments, but got 1.
-lib/ipaddr.ts(545,22): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ipaddr.ts(547,22): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ipaddr.ts(547,22): error TS2554: Expected 2 arguments, but got 1.
-lib/ipaddr.ts(547,22): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ipaddr.ts(549,25): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ipaddr.ts(549,25): error TS2554: Expected 2 arguments, but got 1.
-lib/ipaddr.ts(549,25): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ipaddr.ts(550,28): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ipaddr.ts(550,28): error TS2554: Expected 2 arguments, but got 1.
-lib/ipaddr.ts(550,28): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ipaddr.ts(551,19): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ipaddr.ts(551,19): error TS2554: Expected 2 arguments, but got 1.
-lib/ipaddr.ts(551,19): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ipaddr.ts(552,23): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ipaddr.ts(552,23): error TS2554: Expected 2 arguments, but got 1.
-lib/ipaddr.ts(552,23): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ipaddr.ts(553,26): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ipaddr.ts(553,26): error TS2554: Expected 2 arguments, but got 1.
-lib/ipaddr.ts(553,26): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/ipaddr.ts(554,23): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/ipaddr.ts(554,23): error TS2554: Expected 2 arguments, but got 1.
-lib/ipaddr.ts(554,23): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/ipaddr.ts(573,25): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/ipaddr.ts(574,29): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/ipaddr.ts(577,23): error TS2339: Property 'kind' does not exist on type 'Object'.
 lib/ipaddr.ts(581,48): error TS2339: Property 'parts' does not exist on type 'Object'.
 lib/ipaddr.ts(615,21): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
@@ -530,39 +393,21 @@ lib/ipaddr.ts(644,24): error TS2314: Generic type 'Array<T>' requires 1 type arg
 lib/ipaddr.ts(647,28): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(648,28): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(658,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ipaddr.ts(659,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ipaddr.ts(660,42): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/ipaddr.ts(672,20): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
-lib/ipaddr.ts(683,34): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/ipaddr.ts(684,33): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/ipaddr.ts(686,31): error TS2339: Property 'IPv4' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(686,37): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(686,48): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(686,61): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(686,71): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(695,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ipaddr.ts(697,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/ipaddr.ts(698,34): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/ipaddr.ts(710,20): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
-lib/ipaddr.ts(723,21): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 lib/ipaddr.ts(723,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/ipaddr.ts(724,21): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 lib/ipaddr.ts(725,44): error TS2339: Property 'index' does not exist on type 'Object'.
-lib/ipaddr.ts(726,39): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 lib/ipaddr.ts(734,43): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/ipaddr.ts(734,80): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 lib/ipaddr.ts(749,12): error TS2339: Property 'IPv6' does not exist on type 'HTMLElement'.
-lib/ipaddr.ts(752,47): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/ipaddr.ts(753,78): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/ipaddr.ts(754,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ipaddr.ts(758,56): error TS2538: Type 'Number' cannot be used as an index type.
 lib/ipaddr.ts(758,92): error TS2538: Type 'Number' cannot be used as an index type.
@@ -573,10 +418,6 @@ lib/ipaddr.ts(784,27): error TS2339: Property 'parts' does not exist on type 'Ob
 lib/ipaddr.ts(784,39): error TS2339: Property 'zoneId' does not exist on type 'Object'.
 lib/ipaddr.ts(792,12): error TS2339: Property 'IPv6' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(793,73): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ipaddr.ts(797,33): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/ipaddr.ts(798,64): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/ipaddr.ts(803,56): error TS2538: Type 'Number' cannot be used as an index type.
 lib/ipaddr.ts(803,92): error TS2538: Type 'Number' cannot be used as an index type.
 lib/ipaddr.ts(804,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -586,36 +427,12 @@ lib/ipaddr.ts(822,30): error TS2339: Property 'parts' does not exist on type 'Ob
 lib/ipaddr.ts(822,42): error TS2339: Property 'zoneId' does not exist on type 'Object'.
 lib/ipaddr.ts(825,12): error TS2339: Property 'IPv6' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(826,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ipaddr.ts(828,14): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-lib/ipaddr.ts(829,35): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-lib/ipaddr.ts(831,38): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/ipaddr.ts(845,12): error TS2339: Property 'IPv6' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(846,76): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ipaddr.ts(848,14): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 lib/ipaddr.ts(848,47): error TS2339: Property 'deprecatedTransitional' does not exist on type 'Object'.
-lib/ipaddr.ts(849,42): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/ipaddr.ts(851,25): error TS2339: Property 'native' does not exist on type 'Object'.
-lib/ipaddr.ts(854,14): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 lib/ipaddr.ts(854,47): error TS2339: Property 'transitional' does not exist on type 'Object'.
-lib/ipaddr.ts(855,22): error TS7053: Element implicitly has an 'any' type because expression of type '6' can't be used to index type 'Object'.
-  Property '6' does not exist on type 'Object'.
-lib/ipaddr.ts(856,31): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/ipaddr.ts(857,22): error TS2339: Property 'parts' does not exist on type 'Object'.
-lib/ipaddr.ts(859,30): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-lib/ipaddr.ts(860,30): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-lib/ipaddr.ts(861,30): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
-  Property '4' does not exist on type 'Object'.
-lib/ipaddr.ts(862,30): error TS7053: Element implicitly has an 'any' type because expression of type '5' can't be used to index type 'Object'.
-  Property '5' does not exist on type 'Object'.
 lib/ipaddr.ts(864,48): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(871,22): error TS2339: Property 'parts' does not exist on type 'Object'.
 lib/ipaddr.ts(872,22): error TS2339: Property 'parts' does not exist on type 'Object'.
@@ -645,18 +462,14 @@ lib/ipaddr.ts(939,12): error TS2339: Property 'parseCIDR' does not exist on type
 lib/ipaddr.ts(941,27): error TS2339: Property 'IPv6' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(944,31): error TS2339: Property 'IPv4' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(952,12): error TS2339: Property 'process' does not exist on type 'HTMLElement'.
-lib/ipaddr.ts(953,40): error TS2339: Property 'parse' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(955,18): error TS2339: Property 'kind' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(955,44): error TS2339: Property 'isIPv4MappedAddress' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(956,25): error TS2339: Property 'toIPv4Address' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(965,12): error TS2339: Property 'subnetMatch' does not exist on type 'HTMLElement'.
 lib/ipaddr.ts(966,57): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ipaddr.ts(973,65): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 lib/ipaddr.ts(974,42): error TS2538: Type 'String' cannot be used as an index type.
 lib/ipaddr.ts(980,54): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(982,33): error TS2339: Property 'kind' does not exist on type 'Object'.
-lib/ipaddr.ts(982,44): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 lib/ipaddr.ts(982,72): error TS2339: Property 'match' does not exist on type 'Object'.
 lib/ipaddr.ts(997,14): error TS2339: Property 'ipaddr' does not exist on type 'Object'.
 

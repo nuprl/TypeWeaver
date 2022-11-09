@@ -3,24 +3,20 @@ lib/doctrine.ts(34,36): error TS2345: Argument of type 'String' is not assignabl
 lib/doctrine.ts(35,21): error TS2538: Type 'String' cannot be used as an index type.
 lib/doctrine.ts(35,32): error TS2538: Type 'String' cannot be used as an index type.
 lib/doctrine.ts(109,32): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(pattern: string | RegExp, flags?: string | undefined): RegExp', gave the following error.
+  Overload 1 of 3, '(pattern: string | RegExp, flags?: string): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
-  Overload 2 of 3, '(pattern: string, flags?: string | undefined): RegExp', gave the following error.
+  Overload 2 of 3, '(pattern: string, flags?: string): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/doctrine.ts(123,13): error TS2740: Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lib/doctrine.ts(123,47): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(pattern: string | RegExp, flags?: string | undefined): RegExp', gave the following error.
+  Overload 1 of 3, '(pattern: string | RegExp, flags?: string): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
-  Overload 2 of 3, '(pattern: string, flags?: string | undefined): RegExp', gave the following error.
+  Overload 2 of 3, '(pattern: string, flags?: string): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/doctrine.ts(126,33): error TS2339: Property 'exec' does not exist on type 'HTMLElement'.
-lib/doctrine.ts(127,32): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/doctrine.ts(129,23): error TS2339: Property 'index' does not exist on type 'Object'.
-lib/doctrine.ts(129,31): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 lib/doctrine.ts(129,49): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
 lib/doctrine.ts(130,24): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
 lib/doctrine.ts(151,48): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
@@ -56,15 +52,12 @@ lib/doctrine.ts(240,21): error TS2365: Operator '+=' cannot be applied to types 
 lib/doctrine.ts(246,32): error TS2339: Property 'throwError' does not exist on type 'HTMLElement'.
 lib/doctrine.ts(250,30): error TS2339: Property 'parseParamType' does not exist on type 'Element'.
 lib/doctrine.ts(250,77): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-lib/doctrine.ts(250,77): error TS2454: Variable 'startIndex' is used before being assigned.
 lib/doctrine.ts(253,26): error TS2339: Property 'parseType' does not exist on type 'Element'.
 lib/doctrine.ts(253,68): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-lib/doctrine.ts(253,68): error TS2454: Variable 'startIndex' is used before being assigned.
 lib/doctrine.ts(258,26): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
 lib/doctrine.ts(258,70): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/doctrine.ts(258,89): error TS2538: Type 'Number' cannot be used as an index type.
-lib/doctrine.ts(259,17): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/doctrine.ts(261,13): error TS2322: Type 'Number' is not assignable to type 'String'.
 lib/doctrine.ts(262,44): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
 lib/doctrine.ts(262,87): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
@@ -77,11 +70,9 @@ lib/doctrine.ts(269,81): error TS2345: Argument of type 'Number' is not assignab
 lib/doctrine.ts(269,100): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
 lib/doctrine.ts(269,140): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/doctrine.ts(283,17): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/doctrine.ts(286,35): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/doctrine.ts(289,21): error TS2322: Type 'Number' is not assignable to type 'String'.
-lib/doctrine.ts(291,21): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/doctrine.ts(295,13): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
 lib/doctrine.ts(298,39): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -104,21 +95,17 @@ lib/doctrine.ts(314,43): error TS2345: Argument of type 'Number' is not assignab
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/doctrine.ts(315,21): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
 lib/doctrine.ts(316,21): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
-lib/doctrine.ts(320,17): error TS2454: Variable 'useBrackets' is used before being assigned.
 lib/doctrine.ts(323,39): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/doctrine.ts(325,21): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
 lib/doctrine.ts(333,48): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/doctrine.ts(335,37): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
-lib/doctrine.ts(336,34): error TS2454: Variable 'insideString' is used before being assigned.
 lib/doctrine.ts(338,56): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/doctrine.ts(343,34): error TS2454: Variable 'insideString' is used before being assigned.
 lib/doctrine.ts(344,33): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/doctrine.ts(346,37): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/doctrine.ts(347,37): error TS2322: Type 'string' is not assignable to type 'Number'.
-lib/doctrine.ts(353,34): error TS2454: Variable 'insideString' is used before being assigned.
 lib/doctrine.ts(354,33): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/doctrine.ts(356,37): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/doctrine.ts(357,37): error TS2322: Type 'string' is not assignable to type 'Number'.
@@ -127,7 +114,6 @@ lib/doctrine.ts(365,31): error TS2356: An arithmetic operand must be of type 'an
 lib/doctrine.ts(369,25): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
 lib/doctrine.ts(375,56): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/doctrine.ts(377,21): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/doctrine.ts(381,17): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
 lib/doctrine.ts(388,56): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -144,19 +130,15 @@ lib/doctrine.ts(402,13): error TS2322: Type 'Number' is not assignable to type '
 lib/doctrine.ts(402,49): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
   Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/doctrine.ts(405,63): error TS2304: Cannot find name 'Void'.
-lib/doctrine.ts(406,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/doctrine.ts(407,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/doctrine.ts(408,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/doctrine.ts(412,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/doctrine.ts(413,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/doctrine.ts(415,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/doctrine.ts(415,27): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/doctrine.ts(416,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/doctrine.ts(418,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/doctrine.ts(423,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/doctrine.ts(426,21): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(whole: Function, index: Number) => any' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
+      Types of parameters 'whole' and 'substring' are incompatible.
+        Type 'string' is not assignable to type 'Function'.
 lib/doctrine.ts(427,33): error TS2339: Property 'assert' does not exist on type 'HTMLElement'.
 lib/doctrine.ts(436,25): error TS2339: Property 'throwError' does not exist on type 'HTMLElement'.
-lib/doctrine.ts(456,40): error TS2571: Object is of type 'unknown'.
 lib/doctrine.ts(495,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/doctrine.ts(546,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
@@ -173,15 +155,11 @@ lib/doctrine.ts(629,23): error TS2345: Argument of type 'Number' is not assignab
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/doctrine.ts(676,13): error TS2740: Type 'string[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 lib/doctrine.ts(742,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/doctrine.ts(748,21): error TS2322: Type 'null' is not assignable to type 'HTMLElement'.
 lib/doctrine.ts(753,38): error TS2554: Expected 0 arguments, but got 1.
-lib/doctrine.ts(760,29): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 lib/doctrine.ts(766,48): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 lib/doctrine.ts(766,58): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/doctrine.ts(768,27): error TS2538: Type 'String' cannot be used as an index type.
-lib/doctrine.ts(769,21): error TS2322: Type 'null' is not assignable to type 'HTMLElement'.
-lib/doctrine.ts(781,17): error TS2322: Type 'null' is not assignable to type 'Object'.
-lib/doctrine.ts(788,22): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/doctrine.ts(788,22): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/doctrine.ts(788,36): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
@@ -204,7 +182,6 @@ lib/doctrine.ts(845,46): error TS2339: Property 'tags' does not exist on type 'O
 lib/doctrine.ts(845,59): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 lib/doctrine.ts(845,67): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/doctrine.ts(846,44): error TS2339: Property 'tags' does not exist on type 'Object'.
-lib/doctrine.ts(847,29): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 lib/doctrine.ts(847,53): error TS2339: Property 'tags' does not exist on type 'Object'.
 lib/doctrine.ts(849,37): error TS2339: Property 'throwError' does not exist on type 'HTMLElement'.
 lib/doctrine.ts(849,87): error TS2339: Property 'tags' does not exist on type 'Object'.
@@ -215,7 +192,6 @@ lib/doctrine.ts(861,30): error TS2339: Property 'sloppy' does not exist on type 
 lib/doctrine.ts(862,30): error TS2339: Property 'strict' does not exist on type 'Object'.
 lib/doctrine.ts(864,13): error TS2322: Type 'Number' is not assignable to type 'String'.
 lib/doctrine.ts(864,56): error TS2339: Property 'preserveWhitespace' does not exist on type 'Object'.
-lib/doctrine.ts(871,22): error TS2454: Variable 'interestingTags' is used before being assigned.
 lib/doctrine.ts(871,76): error TS2339: Property 'title' does not exist on type 'Object'.
 lib/doctrine.ts(881,17): error TS2339: Property 'parse' does not exist on type 'HTMLElement'.
 lib/doctrine.ts(882,7): error TS2740: Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
@@ -235,11 +211,7 @@ lib/typed.ts(78,62): error TS2345: Argument of type 'String' is not assignable t
 lib/typed.ts(78,86): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
 lib/typed.ts(78,120): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
 lib/typed.ts(81,90): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
-lib/typed.ts(82,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/typed.ts(83,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/typed.ts(84,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/typed.ts(85,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/typed.ts(96,16): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/typed.ts(96,16): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/typed.ts(96,38): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 lib/typed.ts(99,49): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/typed.ts(101,18): error TS2339: Property 'range' does not exist on type 'Object'.
@@ -388,7 +360,6 @@ lib/typed.ts(563,30): error TS2339: Property 'COMMA' does not exist on type 'Obj
 lib/typed.ts(566,9): error TS2554: Expected 2 arguments, but got 1.
 lib/typed.ts(566,22): error TS2339: Property 'RBRACK' does not exist on type 'Object'.
 lib/typed.ts(568,26): error TS2339: Property 'ArrayType' does not exist on type 'Object'.
-lib/typed.ts(573,32): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 lib/typed.ts(574,13): error TS2322: Type 'String' is not assignable to type 'Number'.
 lib/typed.ts(575,29): error TS2339: Property 'NAME' does not exist on type 'Object'.
 lib/typed.ts(575,53): error TS2551: Property 'STRING' does not exist on type 'Object'. Did you mean 'toString'?
@@ -481,7 +452,6 @@ lib/typed.ts(809,9): error TS2554: Expected 2 arguments, but got 1.
 lib/typed.ts(809,23): error TS2339: Property 'NAME' does not exist on type 'Object'.
 lib/typed.ts(813,9): error TS2554: Expected 2 arguments, but got 1.
 lib/typed.ts(813,22): error TS2339: Property 'LPAREN' does not exist on type 'Object'.
-lib/typed.ts(817,9): error TS2322: Type 'null' is not assignable to type 'Function'.
 lib/typed.ts(818,29): error TS2339: Property 'RPAREN' does not exist on type 'Object'.
 lib/typed.ts(820,33): error TS2339: Property 'NAME' does not exist on type 'Object'.
 lib/typed.ts(825,17): error TS2554: Expected 2 arguments, but got 1.
@@ -495,10 +465,6 @@ lib/typed.ts(837,9): error TS2554: Expected 2 arguments, but got 1.
 lib/typed.ts(837,22): error TS2339: Property 'RPAREN' does not exist on type 'Object'.
 lib/typed.ts(840,29): error TS2339: Property 'COLON' does not exist on type 'Object'.
 lib/typed.ts(845,26): error TS2339: Property 'FunctionType' does not exist on type 'Object'.
-lib/typed.ts(851,13): error TS7053: Element implicitly has an 'any' type because expression of type '"this"' can't be used to index type 'Object'.
-  Property 'this' does not exist on type 'Object'.
-lib/typed.ts(853,17): error TS7053: Element implicitly has an 'any' type because expression of type '"new"' can't be used to index type 'Object'.
-  Property 'new' does not exist on type 'Object'.
 lib/typed.ts(868,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/typed.ts(871,20): error TS2339: Property 'STAR' does not exist on type 'Object'.
 lib/typed.ts(872,13): error TS2554: Expected 2 arguments, but got 1.
@@ -626,14 +592,8 @@ lib/typed.ts(1191,62): error TS2554: Expected 3 arguments, but got 2.
 lib/typed.ts(1191,81): error TS2339: Property 'value' does not exist on type 'Object'.
 lib/typed.ts(1193,31): error TS2339: Property 'key' does not exist on type 'Object'.
 lib/typed.ts(1197,21): error TS2339: Property 'FunctionType' does not exist on type 'Object'.
-lib/typed.ts(1200,17): error TS7053: Element implicitly has an 'any' type because expression of type '"this"' can't be used to index type 'Object'.
-  Property 'this' does not exist on type 'Object'.
-lib/typed.ts(1201,21): error TS7053: Element implicitly has an 'any' type because expression of type '"new"' can't be used to index type 'Object'.
-  Property 'new' does not exist on type 'Object'.
 lib/typed.ts(1207,17): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
 lib/typed.ts(1207,27): error TS2554: Expected 3 arguments, but got 2.
-lib/typed.ts(1207,41): error TS7053: Element implicitly has an 'any' type because expression of type '"this"' can't be used to index type 'Object'.
-  Property 'this' does not exist on type 'Object'.
 lib/typed.ts(1209,26): error TS2339: Property 'params' does not exist on type 'Object'.
 lib/typed.ts(1214,35): error TS2339: Property 'params' does not exist on type 'Object'.
 lib/typed.ts(1214,60): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -687,14 +647,11 @@ lib/typed.ts(1282,21): error TS2339: Property 'BooleanLiteralType' does not exis
 lib/typed.ts(1283,34): error TS2339: Property 'value' does not exist on type 'Object'.
 lib/typed.ts(1287,21): error TS2339: Property 'throwError' does not exist on type 'HTMLElement'.
 lib/typed.ts(1287,55): error TS2339: Property 'type' does not exist on type 'Object'.
-lib/typed.ts(1290,16): error TS2454: Variable 'result' is used before being assigned.
 lib/typed.ts(1297,44): error TS2339: Property 'compact' does not exist on type 'Object'.
 lib/typed.ts(1297,61): error TS2339: Property 'topLevel' does not exist on type 'Object'.
 lib/utility.ts(15,46): error TS2304: Cannot find name 'Void'.
-lib/utility.ts(16,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/utility.ts(17,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/utility.ts(22,20): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
 lib/utility.ts(27,43): error TS2304: Cannot find name 'Void'.
-lib/utility.ts(28,15): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/utility.ts(28,15): error TS2350: Only a void function can be called with the 'new' keyword.
 

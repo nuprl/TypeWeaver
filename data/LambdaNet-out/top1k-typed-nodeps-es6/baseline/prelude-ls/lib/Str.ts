@@ -33,7 +33,7 @@ unchars = function(it: Object){
 reverse = function(str: String){
   return str.split('').reverse().join('');
 };
-repeat = curry$(function(n: Number, str: String){
+repeat = curry$(function(n: Number, str: Number){
   var result: String, i$: Number;
   result = '';
   for (i$ = 0; i$ < n; ++i$) {

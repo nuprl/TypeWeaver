@@ -277,7 +277,7 @@ function processRule(rule: Object, item: String, list: Map, props: Object, finge
 
 export default function restructBlock(ast: Function): Void {
     const stylesheetMap: Function = {};
-    const fingerprints: Object = Object.create(null);
+    const fingerprints: TRBL = Object.create(null);
 
     walk(ast, {
         visit: 'Rule',

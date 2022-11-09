@@ -109,7 +109,7 @@ function rimraf_ (p: Object, options: Object, cb: Function): Void {
   })
 }
 
-function fixWinEPERM (p: Function, options: Object, er: String, cb: Function): Void {
+function fixWinEPERM (p: String, options: Object, er: String, cb: Function): Void {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
@@ -256,7 +256,7 @@ function rimrafSync (p: String, options: Object): Void {
   }
 }
 
-function rmdirSync (p: String, options: Object, originalEr: Function): Void {
+function rmdirSync (p: Function, options: Object, originalEr: Function): Void {
   assert(p)
   assert(options)
 

@@ -42,7 +42,7 @@
         };
       }
     },
-    Undefined: function(it: String){
+    Undefined: function(it: Number){
       if (it === 'undefined' || it === void 8) {
         return {
           type: 'Just',
@@ -66,7 +66,7 @@
         };
       }
     },
-    NaN: function(it: String){
+    NaN: function(it: Number){
       if (it === 'NaN') {
         return {
           type: 'Just',
@@ -283,7 +283,7 @@
     };
   }
   function typeCast(node: Object, typeObj: Object, options: Object): Array{
-    var type: String, structure: String, castFunc: Function, ref$: Object;
+    var type: String, structure: String, castFunc: Function, ref$: HTMLElement;
     type = typeObj.type, structure = typeObj.structure;
     if (type) {
       castFunc = ((ref$ = options.customTypes[type]) != null ? ref$.cast : void 8) || types[type];

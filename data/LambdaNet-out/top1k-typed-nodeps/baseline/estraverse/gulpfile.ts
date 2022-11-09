@@ -24,7 +24,7 @@
 
 'use strict';
 
-var gulp: Array = require('gulp'),
+var gulp: String = require('gulp'),
     git: String = require('gulp-git'),
     bump: Function = require('gulp-bump'),
     filter: Function = require('gulp-filter'),

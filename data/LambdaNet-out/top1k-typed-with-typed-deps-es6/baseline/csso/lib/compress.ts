@@ -120,7 +120,7 @@ function wrapBlock(block: Object): TRBL {
     });
 }
 
-export default function compress(ast: TRBL, options: Object): Object {
+export default function compress(ast: TRBL, options: TRBL): Object {
     ast = ast || { type: 'StyleSheet', loc: null, children: new List() };
     options = options || {};
 

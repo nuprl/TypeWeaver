@@ -3,7 +3,7 @@ import lenientFunction from './lenient.js';
 export default function yn(value: String, {
 	lenient = false,
 	default: default_,
-} = {}): String {
+} = {}): Void {
 	if (default_ !== undefined && typeof default_ !== 'boolean') {
 		throw new TypeError(`Expected the \`default\` option to be of type \`boolean\`, got \`${typeof default_}\``);
 	}

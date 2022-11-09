@@ -22,7 +22,7 @@ import last from './last.js'
  * // => [2.1, 1.2]
  */
 function unionBy(...arrays): Promise {
-  let iteratee: Function = last(arrays)
+  let iteratee: String = last(arrays)
   if (isArrayLikeObject(iteratee)) {
     iteratee = undefined
   }

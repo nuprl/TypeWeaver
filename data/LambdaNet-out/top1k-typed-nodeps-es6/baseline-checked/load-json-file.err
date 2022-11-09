@@ -1,19 +1,19 @@
 index.ts(5,43): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
 index.ts(5,56): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
-index.ts(7,38): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'BufferSource | undefined'.
+index.ts(7,38): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'BufferSource'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(16,77): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(17,40): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(path: PathLike | FileHandle, options?: ({ encoding?: null | undefined; flag?: OpenMode | undefined; } & Abortable) | null | undefined): Promise<...>', gave the following error.
+  Overload 1 of 3, '(path: PathLike | FileHandle, options?: { encoding?: null; flag?: OpenMode; } & Abortable): Promise<Buffer>', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathLike | FileHandle'.
       Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-  Overload 2 of 3, '(path: PathLike | FileHandle, options?: BufferEncoding | (ObjectEncodingOptions & Abortable & { flag?: OpenMode | undefined; }) | null | undefined): Promise<...>', gave the following error.
+  Overload 2 of 3, '(path: PathLike | FileHandle, options?: BufferEncoding | (ObjectEncodingOptions & Abortable & { flag?: OpenMode; })): Promise<...>', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathLike | FileHandle'.
 index.ts(21,70): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(22,38): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null | undefined; flag?: string | undefined; } | null | undefined): Buffer', gave the following error.
+  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
       Type 'String' is not assignable to type 'Buffer'.
-  Overload 2 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string | undefined; }) | null | undefined): string | Buffer', gave the following error.
+  Overload 2 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string; })): string | Buffer', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
 

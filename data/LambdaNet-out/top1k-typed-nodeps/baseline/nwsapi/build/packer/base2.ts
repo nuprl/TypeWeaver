@@ -862,7 +862,7 @@ function _dummy(): Void{};
 // lang/extend.js
 // =========================================================================
 
-function base(object: Object, args: Function): Void {
+function base(object: Object, args: Function): Promise {
   return object.base.apply(object, args);
 };
 
@@ -1142,7 +1142,7 @@ var JavaScript: Object = {
   }
 };
 
-function _createObject2(Native: Object, constructor: Function, generics: String, extensions: Function): HTMLElement {
+function _createObject2(Native: Object, constructor: Function, generics: String, extensions: Function): Error {
   // Clone native objects and extend them.
 
   // Create a Module that will contain all the new methods.
@@ -1383,7 +1383,7 @@ var _TRIM_TIMEZONE: RegExp = /(T[0-9:.]+)$/;
 
 var Date2: HTMLElement = _createObject2(
   Date, 
-  function(yy: String, mm: Number, dd: Number, h: Number, m: String, s: String, ms: Boolean) {
+  function(yy: String, mm: Number, dd: Number, h: Number, m: String, s: String, ms: Number) {
     switch (arguments.length) {
       case 0: return new Date;
       case 1: return typeof yy == "number" ? new Date(yy) : Date2.parse(yy);

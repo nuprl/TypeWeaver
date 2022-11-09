@@ -3,21 +3,11 @@ index.ts(4,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s
 index.ts(6,9): error TS2451: Cannot redeclare block-scoped variable 'STATUS_MAPPING'.
 index.ts(9,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(12,38): error TS7031: Binding element 'useSTD3ASCIIRules' implicitly has an 'any' type.
 index.ts(12,60): error TS2304: Cannot find name 'Void'.
-index.ts(44,41): error TS7031: Binding element 'useSTD3ASCIIRules' implicitly has an 'any' type.
-index.ts(44,60): error TS7031: Binding element 'processingOption' implicitly has an 'any' type.
 index.ts(44,81): error TS2304: Cannot find name 'Void'.
-index.ts(49,42): error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'Function'.
-  Type 'undefined' is not assignable to type 'Function'.
-index.ts(80,41): error TS7031: Binding element 'checkHyphens' implicitly has an 'any' type.
-index.ts(80,55): error TS7031: Binding element 'checkBidi' implicitly has an 'any' type.
-index.ts(80,66): error TS7031: Binding element 'checkJoiners' implicitly has an 'any' type.
-index.ts(80,80): error TS7031: Binding element 'processingOption' implicitly has an 'any' type.
-index.ts(80,98): error TS7031: Binding element 'useSTD3ASCIIRules' implicitly has an 'any' type.
+index.ts(49,42): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 index.ts(80,120): error TS2304: Cannot find name 'Void'.
-index.ts(100,33): error TS2345: Argument of type 'number | undefined' is not assignable to parameter of type 'Function'.
-  Type 'undefined' is not assignable to type 'Function'.
+index.ts(100,33): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 index.ts(161,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(165,25): error TS2339: Property 'decode' does not exist on type 'String'.
 index.ts(176,11): error TS2339: Property 'processingOption' does not exist on type 'Object'.
@@ -27,12 +17,11 @@ index.ts(179,48): error TS2345: Argument of type 'Object' is not assignable to p
 index.ts(185,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(194,26): error TS2339: Property 'decode' does not exist on type 'String'.
 index.ts(207,23): error TS2304: Cannot find name 'Void'.
-index.ts(207,51): error TS2345: Argument of type '{ processingOption: String; checkBidi: any; constructor: Function; toString(): string; toLocaleString(): string; valueOf(): Object; hasOwnProperty(v: PropertyKey): boolean; isPrototypeOf(v: Object): boolean; propertyIsEnumerable(v: PropertyKey): boolean; abbrev(): { ...; }; }' is not assignable to parameter of type '{ checkHyphens: any; checkBidi: any; checkJoiners: any; processingOption: any; useSTD3ASCIIRules: any; }'.
-  Type '{ processingOption: String; checkBidi: any; constructor: Function; toString(): string; toLocaleString(): string; valueOf(): Object; hasOwnProperty(v: PropertyKey): boolean; isPrototypeOf(v: Object): boolean; propertyIsEnumerable(v: PropertyKey): boolean; abbrev(): { ...; }; }' is missing the following properties from type '{ checkHyphens: any; checkBidi: any; checkJoiners: any; processingOption: any; useSTD3ASCIIRules: any; }': checkHyphens, checkJoiners, useSTD3ASCIIRules
+index.ts(207,51): error TS2345: Argument of type '{ processingOption: String; checkBidi: Boolean; constructor: Function; toString(): string; toLocaleString(): string; valueOf(): Object; hasOwnProperty(v: PropertyKey): boolean; isPrototypeOf(v: Object): boolean; propertyIsEnumerable(v: PropertyKey): boolean; abbrev(): { ...; }; }' is not assignable to parameter of type '{ checkHyphens: any; checkBidi: any; checkJoiners: any; processingOption: any; useSTD3ASCIIRules: any; }'.
+  Type '{ processingOption: String; checkBidi: Boolean; constructor: Function; toString(): string; toLocaleString(): string; valueOf(): Object; hasOwnProperty(v: PropertyKey): boolean; isPrototypeOf(v: Object): boolean; propertyIsEnumerable(v: PropertyKey): boolean; abbrev(): { ...; }; }' is missing the following properties from type '{ checkHyphens: any; checkBidi: any; checkJoiners: any; processingOption: any; useSTD3ASCIIRules: any; }': checkHyphens, checkJoiners, useSTD3ASCIIRules
 index.ts(210,26): error TS2339: Property 'checkBidi' does not exist on type 'Object'.
 index.ts(230,10): error TS2304: Cannot find name 'Void'.
 index.ts(242,23): error TS2551: Property 'string' does not exist on type 'Object'. Did you mean 'toString'?
-index.ts(243,23): error TS7006: Parameter 'l' implicitly has an 'any' type.
 index.ts(246,32): error TS2339: Property 'encode' does not exist on type 'String'.
 index.ts(248,16): error TS2339: Property 'error' does not exist on type 'Object'.
 index.ts(257,14): error TS2339: Property 'error' does not exist on type 'Object'.
@@ -48,16 +37,10 @@ scripts/generateMappingTable.ts(6,9): error TS2451: Cannot redeclare block-scope
 scripts/generateMappingTable.ts(7,9): error TS2451: Cannot redeclare block-scoped variable 'STATUS_MAPPING'.
 scripts/generateMappingTable.ts(9,16): error TS2393: Duplicate function implementation.
 scripts/generateMappingTable.ts(9,24): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-scripts/generateMappingTable.ts(10,9): error TS2322: Type 'Response' is not assignable to type 'Element'.
+scripts/generateMappingTable.ts(10,9): error TS2740: Type 'Response' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
 scripts/generateMappingTable.ts(11,39): error TS2339: Property 'text' does not exist on type 'Element'.
 scripts/generateMappingTable.ts(13,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/generateMappingTable.ts(17,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/generateMappingTable.ts(26,36): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-scripts/generateMappingTable.ts(27,34): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-scripts/generateMappingTable.ts(27,46): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 scripts/generateMappingTable.ts(39,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/generateMappingTable.ts(45,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 scripts/generateMappingTable.ts(57,6): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
@@ -66,7 +49,6 @@ scripts/generateRegexes.ts(3,7): error TS2451: Cannot redeclare block-scoped var
 scripts/generateRegexes.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 scripts/generateRegexes.ts(6,9): error TS2451: Cannot redeclare block-scoped variable 'unicodeVersion'.
 scripts/generateRegexes.ts(29,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/generateRegexes.ts(29,28): error TS7019: Rest parameter 'regs' implicitly has an 'any[]' type.
 scripts/generateRegexes.ts(39,7): error TS2451: Cannot redeclare block-scoped variable 'regexes'.
 scripts/generateRegexes.ts(44,37): error TS2339: Property 'Mark' does not exist on type 'Object'.
 scripts/generateRegexes.ts(50,43): error TS2339: Property 'CombiningClassVirama' does not exist on type 'Object'.
@@ -117,10 +99,6 @@ scripts/generateUnicodeCodePoints.ts(9,3): error TS1108: A 'return' statement ca
 scripts/generateUnicodeCodePoints.ts(13,7): error TS2739: Type 'Set<string>' is missing the following properties from type 'Error': name, message
 scripts/generateUnicodeCodePoints.ts(15,27): error TS2339: Property 'readFileSync' does not exist on type 'String'.
 scripts/generateUnicodeCodePoints.ts(16,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-scripts/generateUnicodeCodePoints.ts(25,28): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-scripts/generateUnicodeCodePoints.ts(26,32): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 scripts/generateUnicodeCodePoints.ts(26,89): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 scripts/generateUnicodeCodePoints.ts(29,14): error TS2538: Type 'String' cannot be used as an index type.
@@ -139,11 +117,11 @@ scripts/getLatestTests.ts(18,16): error TS2393: Duplicate function implementatio
 scripts/getLatestTests.ts(18,24): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 scripts/getLatestTests.ts(21,33): error TS2339: Property 'createWriteStream' does not exist on type 'String'.
 scripts/getLatestTests.ts(21,56): error TS2339: Property 'resolve' does not exist on type 'String'.
-scripts/getLatestTests.ts(22,13): error TS2740: Type 'Response' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
-scripts/getLatestTests.ts(23,38): error TS2339: Property 'body' does not exist on type 'Element'.
+scripts/getLatestTests.ts(22,13): error TS2740: Type 'Response' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+scripts/getLatestTests.ts(23,38): error TS2339: Property 'body' does not exist on type 'HTMLElement'.
 scripts/getLatestTests.ts(26,38): error TS2339: Property 'createWriteStream' does not exist on type 'String'.
 scripts/getLatestTests.ts(26,61): error TS2339: Property 'resolve' does not exist on type 'String'.
-scripts/getLatestTests.ts(27,13): error TS2322: Type 'Response' is not assignable to type 'Element'.
-scripts/getLatestTests.ts(28,38): error TS2339: Property 'body' does not exist on type 'Element'.
+scripts/getLatestTests.ts(27,13): error TS2322: Type 'Response' is not assignable to type 'HTMLElement'.
+scripts/getLatestTests.ts(28,38): error TS2339: Property 'body' does not exist on type 'HTMLElement'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18095,18): error TS2451: Cannot redeclare block-scoped variable 'fetch'.
 

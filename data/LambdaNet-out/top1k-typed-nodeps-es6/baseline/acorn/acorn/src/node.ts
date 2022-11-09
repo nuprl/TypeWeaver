@@ -29,7 +29,7 @@ pp.startNodeAt = function(pos: String, loc: String) {
 
 // Finish an AST node, adding `type` and `end` properties.
 
-function finishNodeAt(node: TokenType, type: String, pos: Number, loc: Number): RegExpValidationState {
+function finishNodeAt(node: Node, type: String, pos: Number, loc: Number): RegExpValidationState {
   node.type = type
   node.end = pos
   if (this.options.locations)
@@ -39,17 +39,17 @@ function finishNodeAt(node: TokenType, type: String, pos: Number, loc: Number): 
   return node
 }
 
-pp.finishNode = function(node: TokenType, type: String) {
+pp.finishNode = function(node: Node, type: Scope) {
   return finishNodeAt.call(this, node, type, this.lastTokEnd, this.lastTokEndLoc)
 }
 
 // Finish node at given position
 
-pp.finishNodeAt = function(node: TokenType, type: Scope, pos: String, loc: String) {
+pp.finishNodeAt = function(node: Node, type: Scope, pos: String, loc: String) {
   return finishNodeAt.call(this, node, type, pos, loc)
 }
 
-pp.copyNode = function(node: TokenType) {
+pp.copyNode = function(node: Node) {
   let newNode: RegExpValidationState = new Node(this, node.start, this.startLoc)
   for (let prop in node) newNode[prop] = node[prop]
   return newNode

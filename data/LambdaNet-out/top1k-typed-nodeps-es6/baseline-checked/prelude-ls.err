@@ -2,8 +2,6 @@ browser/prelude-browser-min.ts(6,1): error TS2739: Type 'Function' is missing th
 browser/prelude-browser-min.ts(6,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(6,120): error TS2538: Type 'String' cannot be used as an index type.
 browser/prelude-browser-min.ts(6,130): error TS2538: Type 'String' cannot be used as an index type.
-browser/prelude-browser-min.ts(6,138): error TS2322: Type 'false | NodeRequire' is not assignable to type 'Function'.
-  Type 'boolean' is not assignable to type 'Function'.
 browser/prelude-browser-min.ts(6,226): error TS2554: Expected 1 arguments, but got 2.
 browser/prelude-browser-min.ts(6,292): error TS2339: Property 'code' does not exist on type 'Error'.
 browser/prelude-browser-min.ts(6,336): error TS2538: Type 'String' cannot be used as an index type.
@@ -39,8 +37,6 @@ browser/prelude-browser-min.ts(8,905): error TS2339: Property 'exports' does not
 browser/prelude-browser-min.ts(8,975): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(8,1040): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 browser/prelude-browser-min.ts(8,1081): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser-min.ts(8,1110): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser/prelude-browser-min.ts(8,1115): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/prelude-browser-min.ts(10,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(10,69): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(10,180): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -137,12 +133,6 @@ browser/prelude-browser-min.ts(10,2881): error TS2314: Generic type 'Array<T>' r
 browser/prelude-browser-min.ts(10,2932): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser-min.ts(10,2976): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(10,3007): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-browser/prelude-browser-min.ts(10,3040): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-browser/prelude-browser-min.ts(10,3048): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-browser/prelude-browser-min.ts(10,3111): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'ConcatArray<never>[]'.
-  Type 'Number' is missing the following properties from type 'ConcatArray<never>[]': length, pop, push, concat, and 29 more.
 browser/prelude-browser-min.ts(10,3117): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser-min.ts(10,3241): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(10,3258): error TS2322: Type 'number' is not assignable to type 'String'.
@@ -315,7 +305,6 @@ browser/prelude-browser-min.ts(10,8569): error TS2322: Type 'number' is not assi
 browser/prelude-browser-min.ts(10,8588): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 browser/prelude-browser-min.ts(10,8594): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/prelude-browser-min.ts(10,8614): error TS2538: Type 'Number' cannot be used as an index type.
-browser/prelude-browser-min.ts(10,8622): error TS2322: Type 'undefined' is not assignable to type 'Number'.
 browser/prelude-browser-min.ts(10,8653): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 browser/prelude-browser-min.ts(10,8659): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/prelude-browser-min.ts(10,8687): error TS2739: Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
@@ -330,7 +319,6 @@ browser/prelude-browser-min.ts(10,8931): error TS2322: Type 'number' is not assi
 browser/prelude-browser-min.ts(10,8950): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 browser/prelude-browser-min.ts(10,8956): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/prelude-browser-min.ts(10,8976): error TS2538: Type 'Number' cannot be used as an index type.
-browser/prelude-browser-min.ts(10,8984): error TS2322: Type 'undefined' is not assignable to type 'Number'.
 browser/prelude-browser-min.ts(10,9015): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 browser/prelude-browser-min.ts(10,9021): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/prelude-browser-min.ts(10,9049): error TS2322: Type 'Function' is not assignable to type 'Number'.
@@ -370,12 +358,9 @@ browser/prelude-browser-min.ts(10,9941): error TS2339: Property 'exports' does n
 browser/prelude-browser-min.ts(10,10631): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(10,10696): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 browser/prelude-browser-min.ts(10,10737): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser-min.ts(10,10766): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser/prelude-browser-min.ts(10,10771): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/prelude-browser-min.ts(10,10901): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(10,10965): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/prelude-browser-min.ts(10,11037): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-browser/prelude-browser-min.ts(10,11108): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/prelude-browser-min.ts(10,11145): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/prelude-browser-min.ts(12,62): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(12,71): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -383,68 +368,66 @@ browser/prelude-browser-min.ts(12,80): error TS2314: Generic type 'Array<T>' req
 browser/prelude-browser-min.ts(12,89): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(12,130): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(12,139): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser-min.ts(12,198): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser-min.ts(12,207): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser-min.ts(12,216): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser-min.ts(12,225): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser-min.ts(12,246): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser-min.ts(12,255): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser-min.ts(12,321): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser-min.ts(12,327): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
-browser/prelude-browser-min.ts(12,329): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser-min.ts(12,378): error TS2322: Type 'Boolean' is not assignable to type 'String'.
-browser/prelude-browser-min.ts(12,380): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser-min.ts(12,461): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
-browser/prelude-browser-min.ts(12,551): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser-min.ts(12,592): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser-min.ts(12,594): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser-min.ts(12,601): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser-min.ts(12,640): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser-min.ts(12,642): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser-min.ts(12,648): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser-min.ts(12,698): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser-min.ts(12,700): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser-min.ts(12,707): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser-min.ts(12,760): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser-min.ts(12,760): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
-browser/prelude-browser-min.ts(12,762): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser-min.ts(12,771): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser-min.ts(12,806): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser-min.ts(12,821): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser-min.ts(12,848): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
-browser/prelude-browser-min.ts(12,859): error TS2322: Type 'Boolean' is not assignable to type 'String'.
-browser/prelude-browser-min.ts(12,861): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser-min.ts(12,909): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+browser/prelude-browser-min.ts(12,208): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/prelude-browser-min.ts(12,217): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/prelude-browser-min.ts(12,226): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/prelude-browser-min.ts(12,247): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/prelude-browser-min.ts(12,256): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/prelude-browser-min.ts(12,322): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/prelude-browser-min.ts(12,328): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
+browser/prelude-browser-min.ts(12,330): error TS2554: Expected 2 arguments, but got 1.
+browser/prelude-browser-min.ts(12,379): error TS2322: Type 'Boolean' is not assignable to type 'String'.
+browser/prelude-browser-min.ts(12,381): error TS2554: Expected 2 arguments, but got 1.
+browser/prelude-browser-min.ts(12,462): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
+browser/prelude-browser-min.ts(12,552): error TS2554: Expected 2 arguments, but got 1.
+browser/prelude-browser-min.ts(12,593): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+browser/prelude-browser-min.ts(12,595): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+browser/prelude-browser-min.ts(12,602): error TS2554: Expected 2 arguments, but got 1.
+browser/prelude-browser-min.ts(12,641): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+browser/prelude-browser-min.ts(12,643): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+browser/prelude-browser-min.ts(12,649): error TS2554: Expected 2 arguments, but got 1.
+browser/prelude-browser-min.ts(12,699): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+browser/prelude-browser-min.ts(12,701): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+browser/prelude-browser-min.ts(12,708): error TS2554: Expected 2 arguments, but got 1.
+browser/prelude-browser-min.ts(12,761): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+browser/prelude-browser-min.ts(12,761): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
+browser/prelude-browser-min.ts(12,763): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+browser/prelude-browser-min.ts(12,772): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+browser/prelude-browser-min.ts(12,807): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+browser/prelude-browser-min.ts(12,822): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+browser/prelude-browser-min.ts(12,849): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
+browser/prelude-browser-min.ts(12,860): error TS2322: Type 'Boolean' is not assignable to type 'String'.
+browser/prelude-browser-min.ts(12,862): error TS2554: Expected 2 arguments, but got 1.
+browser/prelude-browser-min.ts(12,910): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-browser/prelude-browser-min.ts(12,916): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
-browser/prelude-browser-min.ts(12,927): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
-browser/prelude-browser-min.ts(12,938): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
-browser/prelude-browser-min.ts(12,987): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser-min.ts(12,1037): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+browser/prelude-browser-min.ts(12,917): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
+browser/prelude-browser-min.ts(12,928): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
+browser/prelude-browser-min.ts(12,939): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
+browser/prelude-browser-min.ts(12,950): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
+browser/prelude-browser-min.ts(12,988): error TS2554: Expected 2 arguments, but got 1.
+browser/prelude-browser-min.ts(12,1038): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-browser/prelude-browser-min.ts(12,1104): error TS2322: Type '(x: number) => number' is not assignable to type 'Number'.
-browser/prelude-browser-min.ts(12,1117): error TS2322: Type '(n: Number) => boolean' is not assignable to type 'Boolean'.
+browser/prelude-browser-min.ts(12,1105): error TS2322: Type '(x: number) => number' is not assignable to type 'Number'.
+browser/prelude-browser-min.ts(12,1118): error TS2322: Type '(n: Number) => boolean' is not assignable to type 'Boolean'.
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'Object' is not assignable to type 'boolean'.
-browser/prelude-browser-min.ts(12,1180): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser-min.ts(12,1218): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser-min.ts(12,1227): error TS2322: Type 'Boolean' is not assignable to type 'Function'.
-browser/prelude-browser-min.ts(12,1229): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser-min.ts(12,1286): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+browser/prelude-browser-min.ts(12,1181): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+browser/prelude-browser-min.ts(12,1219): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+browser/prelude-browser-min.ts(12,1228): error TS2322: Type 'Boolean' is not assignable to type 'Function'.
+browser/prelude-browser-min.ts(12,1230): error TS2554: Expected 2 arguments, but got 1.
+browser/prelude-browser-min.ts(12,1287): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-browser/prelude-browser-min.ts(12,1300): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+browser/prelude-browser-min.ts(12,1301): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-browser/prelude-browser-min.ts(12,1318): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser-min.ts(12,1320): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser-min.ts(12,1343): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser-min.ts(12,1402): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser-min.ts(12,1411): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser-min.ts(12,1419): error TS2339: Property 'exports' does not exist on type 'Object'.
-browser/prelude-browser-min.ts(12,1666): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser-min.ts(12,1731): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-browser/prelude-browser-min.ts(12,1772): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser-min.ts(12,1801): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser/prelude-browser-min.ts(12,1806): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+browser/prelude-browser-min.ts(12,1319): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+browser/prelude-browser-min.ts(12,1321): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+browser/prelude-browser-min.ts(12,1344): error TS2554: Expected 2 arguments, but got 1.
+browser/prelude-browser-min.ts(12,1403): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+browser/prelude-browser-min.ts(12,1412): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+browser/prelude-browser-min.ts(12,1420): error TS2339: Property 'exports' does not exist on type 'Object'.
+browser/prelude-browser-min.ts(12,1667): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/prelude-browser-min.ts(12,1732): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+browser/prelude-browser-min.ts(12,1773): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(14,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(14,99): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(14,140): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -455,11 +438,6 @@ browser/prelude-browser-min.ts(14,294): error TS2314: Generic type 'Array<T>' re
 browser/prelude-browser-min.ts(14,349): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(14,422): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
 browser/prelude-browser-min.ts(14,428): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser-min.ts(14,438): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-browser/prelude-browser-min.ts(14,440): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-browser/prelude-browser-min.ts(14,446): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 browser/prelude-browser-min.ts(14,512): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(14,525): error TS2405: The left-hand side of a 'for...in' statement must be of type 'string' or 'any'.
 browser/prelude-browser-min.ts(14,537): error TS2538: Type 'Function' cannot be used as an index type.
@@ -498,14 +476,12 @@ browser/prelude-browser-min.ts(14,1721): error TS2339: Property 'exports' does n
 browser/prelude-browser-min.ts(14,1881): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(14,1946): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 browser/prelude-browser-min.ts(14,1987): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser-min.ts(14,2016): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser/prelude-browser-min.ts(14,2021): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/prelude-browser-min.ts(16,157): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser-min.ts(16,204): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(splitter: { [Symbol.split](string: string, limit?: number | undefined): string[]; }, limit?: number | undefined): string[]', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.split](string: string, limit?: number | undefined): string[]; }'.
-      Property '[Symbol.split]' is missing in type 'String' but required in type '{ [Symbol.split](string: string, limit?: number | undefined): string[]; }'.
-  Overload 2 of 2, '(separator: string | RegExp, limit?: number | undefined): string[]', gave the following error.
+  Overload 1 of 2, '(splitter: { [Symbol.split](string: string, limit?: number): string[]; }, limit?: number): string[]', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.split](string: string, limit?: number): string[]; }'.
+      Property '[Symbol.split]' is missing in type 'String' but required in type '{ [Symbol.split](string: string, limit?: number): string[]; }'.
+  Overload 2 of 2, '(separator: string | RegExp, limit?: number): string[]', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
 browser/prelude-browser-min.ts(16,209): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 browser/prelude-browser-min.ts(16,211): error TS2554: Expected 2 arguments, but got 1.
@@ -536,8 +512,6 @@ browser/prelude-browser-min.ts(16,1168): error TS2339: Property 'exports' does n
 browser/prelude-browser-min.ts(16,1316): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(16,1381): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 browser/prelude-browser-min.ts(16,1422): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser-min.ts(16,1451): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser/prelude-browser-min.ts(16,1456): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/prelude-browser-min.ts(18,237): error TS2322: Type 'Boolean' is not assignable to type 'Function'.
 browser/prelude-browser-min.ts(18,239): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser-min.ts(18,306): error TS2322: Type 'Boolean' is not assignable to type 'String'.
@@ -815,14 +789,10 @@ browser/prelude-browser-min.ts(18,2807): error TS2339: Property 'exports' does n
 browser/prelude-browser-min.ts(18,2831): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(18,2896): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 browser/prelude-browser-min.ts(18,2937): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser-min.ts(18,2966): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser/prelude-browser-min.ts(18,2971): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/prelude-browser.ts(7,1): error TS2322: Type 'Function' is not assignable to type 'NodeRequire'.
 browser/prelude-browser.ts(7,55): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(7,121): error TS2538: Type 'String' cannot be used as an index type.
 browser/prelude-browser.ts(7,131): error TS2538: Type 'String' cannot be used as an index type.
-browser/prelude-browser.ts(7,139): error TS2322: Type 'false | NodeRequire' is not assignable to type 'Function'.
-  Type 'boolean' is not assignable to type 'Function'.
 browser/prelude-browser.ts(7,227): error TS2554: Expected 1 arguments, but got 2.
 browser/prelude-browser.ts(7,293): error TS2339: Property 'code' does not exist on type 'Error'.
 browser/prelude-browser.ts(7,337): error TS2538: Type 'String' cannot be used as an index type.
@@ -858,8 +828,6 @@ browser/prelude-browser.ts(57,3): error TS1258: A default export must be at the 
 browser/prelude-browser.ts(66,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(68,39): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(70,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser.ts(71,38): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser/prelude-browser.ts(71,45): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/prelude-browser.ts(81,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(81,111): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(81,276): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -952,12 +920,6 @@ browser/prelude-browser.ts(224,12): error TS2554: Expected 2 arguments, but got 
 browser/prelude-browser.ts(224,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(227,13): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(228,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser.ts(232,19): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-browser/prelude-browser.ts(233,11): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-browser/prelude-browser.ts(238,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'ConcatArray<never>[]'.
-  Type 'String' is missing the following properties from type 'ConcatArray<never>[]': pop, push, join, reverse, and 21 more.
 browser/prelude-browser.ts(240,15): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(243,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(244,20): error TS2322: Type 'number' is not assignable to type 'Function'.
@@ -1130,7 +1092,6 @@ browser/prelude-browser.ts(599,18): error TS2322: Type 'number' is not assignabl
 browser/prelude-browser.ts(599,42): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 browser/prelude-browser.ts(599,54): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/prelude-browser.ts(600,27): error TS2538: Type 'Number' cannot be used as an index type.
-browser/prelude-browser.ts(603,5): error TS2322: Type 'undefined' is not assignable to type 'Number'.
 browser/prelude-browser.ts(604,37): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 browser/prelude-browser.ts(604,50): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/prelude-browser.ts(606,43): error TS2322: Type 'Function' is not assignable to type 'Number'.
@@ -1145,7 +1106,6 @@ browser/prelude-browser.ts(622,18): error TS2322: Type 'number' is not assignabl
 browser/prelude-browser.ts(622,42): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 browser/prelude-browser.ts(622,54): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/prelude-browser.ts(623,27): error TS2538: Type 'Number' cannot be used as an index type.
-browser/prelude-browser.ts(626,5): error TS2322: Type 'undefined' is not assignable to type 'Number'.
 browser/prelude-browser.ts(627,37): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 browser/prelude-browser.ts(627,50): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/prelude-browser.ts(629,43): error TS2322: Type 'Function' is not assignable to type 'Number'.
@@ -1185,12 +1145,9 @@ browser/prelude-browser.ts(695,3): error TS1258: A default export must be at the
 browser/prelude-browser.ts(768,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(770,39): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(772,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser.ts(773,38): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser/prelude-browser.ts(773,45): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/prelude-browser.ts(781,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(783,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/prelude-browser.ts(787,20): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-browser/prelude-browser.ts(790,35): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/prelude-browser.ts(791,43): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/prelude-browser.ts(800,88): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(800,100): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -1198,8 +1155,8 @@ browser/prelude-browser.ts(800,112): error TS2314: Generic type 'Array<T>' requi
 browser/prelude-browser.ts(800,124): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(800,178): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(800,191): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser.ts(800,268): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser.ts(800,281): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/prelude-browser.ts(800,241): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/prelude-browser.ts(800,295): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(800,309): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(800,343): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(800,359): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -1232,14 +1189,14 @@ browser/prelude-browser.ts(841,9): error TS2554: Expected 2 arguments, but got 1
 browser/prelude-browser.ts(842,21): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 browser/prelude-browser.ts(844,3): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
-browser/prelude-browser.ts(845,3): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
 browser/prelude-browser.ts(846,3): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
-browser/prelude-browser.ts(849,3): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
+browser/prelude-browser.ts(847,3): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
+browser/prelude-browser.ts(848,3): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
 browser/prelude-browser.ts(850,11): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(851,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 browser/prelude-browser.ts(858,11): error TS2322: Type '(x: number) => number' is not assignable to type 'Number'.
-browser/prelude-browser.ts(859,13): error TS2322: Type '(x: String) => boolean' is not assignable to type 'Boolean'.
+browser/prelude-browser.ts(859,13): error TS2322: Type '(x: Number) => boolean' is not assignable to type 'Boolean'.
   Types of property 'valueOf' are incompatible.
     Type '() => Object' is not assignable to type '() => boolean'.
 browser/prelude-browser.ts(863,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -1259,8 +1216,6 @@ browser/prelude-browser.ts(883,3): error TS1258: A default export must be at the
 browser/prelude-browser.ts(918,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(920,39): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(922,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser.ts(923,38): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser/prelude-browser.ts(923,45): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/prelude-browser.ts(933,97): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(933,162): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(933,231): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -1270,11 +1225,6 @@ browser/prelude-browser.ts(943,30): error TS2314: Generic type 'Array<T>' requir
 browser/prelude-browser.ts(949,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(951,40): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 browser/prelude-browser.ts(951,53): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser.ts(953,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-browser/prelude-browser.ts(953,18): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-browser/prelude-browser.ts(953,26): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 browser/prelude-browser.ts(958,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(960,22): error TS2538: Type 'String' cannot be used as an index type.
 browser/prelude-browser.ts(965,16): error TS2554: Expected 2 arguments, but got 1.
@@ -1313,8 +1263,6 @@ browser/prelude-browser.ts(1058,3): error TS1258: A default export must be at th
 browser/prelude-browser.ts(1075,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(1077,39): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(1079,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser.ts(1080,38): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser/prelude-browser.ts(1080,45): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/prelude-browser.ts(1091,11): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(1091,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(1094,3): error TS2322: Type 'Boolean' is not assignable to type 'String'.
@@ -1326,7 +1274,7 @@ browser/prelude-browser.ts(1119,15): error TS2339: Property 'join' does not exis
 browser/prelude-browser.ts(1124,3): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 browser/prelude-browser.ts(1124,12): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(1127,28): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser.ts(1128,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+browser/prelude-browser.ts(1128,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
 browser/prelude-browser.ts(1136,37): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type '(arg$: Function, c: String) => string' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
@@ -1346,8 +1294,6 @@ browser/prelude-browser.ts(1154,3): error TS1258: A default export must be at th
 browser/prelude-browser.ts(1170,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(1172,39): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(1174,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser.ts(1175,38): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser/prelude-browser.ts(1175,45): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser/prelude-browser.ts(1194,3): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 browser/prelude-browser.ts(1194,12): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(1197,3): error TS2322: Type 'Boolean' is not assignable to type 'String'.
@@ -1625,8 +1571,6 @@ browser/prelude-browser.ts(1348,3): error TS1258: A default export must be at th
 browser/prelude-browser.ts(1349,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(1351,39): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(1353,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser.ts(1354,38): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser/prelude-browser.ts(1354,45): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/Func.ts(2,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Func.ts(3,1): error TS2322: Type 'Boolean' is not assignable to type 'Function'.
 lib/Func.ts(3,9): error TS2554: Expected 2 arguments, but got 1.
@@ -1651,8 +1595,6 @@ lib/Func.ts(46,11): error TS2339: Property 'apply' does not exist on type 'Objec
 lib/Func.ts(59,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Func.ts(61,37): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/Func.ts(63,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/Func.ts(64,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/Func.ts(64,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/List.ts(2,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/List.ts(2,109): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/List.ts(2,274): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -1745,11 +1687,6 @@ lib/List.ts(145,10): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(145,41): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/List.ts(148,11): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(149,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/List.ts(153,17): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/List.ts(154,9): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/List.ts(159,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'ConcatArray<never>[]'.
 lib/List.ts(161,13): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(164,61): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/List.ts(165,18): error TS2322: Type 'number' is not assignable to type 'Function'.
@@ -1922,7 +1859,6 @@ lib/List.ts(520,16): error TS2322: Type 'number' is not assignable to type 'Func
 lib/List.ts(520,40): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 lib/List.ts(520,52): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/List.ts(521,25): error TS2538: Type 'Number' cannot be used as an index type.
-lib/List.ts(524,3): error TS2322: Type 'undefined' is not assignable to type 'Number'.
 lib/List.ts(525,35): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 lib/List.ts(525,48): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/List.ts(527,41): error TS2322: Type 'Function' is not assignable to type 'Number'.
@@ -1937,7 +1873,6 @@ lib/List.ts(543,16): error TS2322: Type 'number' is not assignable to type 'Func
 lib/List.ts(543,40): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 lib/List.ts(543,52): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/List.ts(544,25): error TS2538: Type 'Number' cannot be used as an index type.
-lib/List.ts(547,3): error TS2322: Type 'undefined' is not assignable to type 'Number'.
 lib/List.ts(548,35): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 lib/List.ts(548,48): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/List.ts(550,41): error TS2322: Type 'Function' is not assignable to type 'Number'.
@@ -1976,12 +1911,9 @@ lib/List.ts(606,47): error TS2356: An arithmetic operand must be of type 'any', 
 lib/List.ts(689,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/List.ts(691,37): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/List.ts(693,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/List.ts(694,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/List.ts(694,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/List.ts(702,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/List.ts(704,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/List.ts(708,18): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/List.ts(711,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/List.ts(712,41): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/Num.ts(2,86): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Num.ts(2,98): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -1989,8 +1921,8 @@ lib/Num.ts(2,110): error TS2314: Generic type 'Array<T>' requires 1 type argumen
 lib/Num.ts(2,122): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Num.ts(2,176): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Num.ts(2,189): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/Num.ts(2,266): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/Num.ts(2,279): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/Num.ts(2,239): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/Num.ts(2,293): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Num.ts(2,307): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Num.ts(2,341): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Num.ts(2,357): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -2023,14 +1955,14 @@ lib/Num.ts(43,7): error TS2554: Expected 2 arguments, but got 1.
 lib/Num.ts(44,19): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/Num.ts(46,1): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
-lib/Num.ts(47,1): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
 lib/Num.ts(48,1): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
-lib/Num.ts(51,1): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
+lib/Num.ts(49,1): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
+lib/Num.ts(50,1): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
 lib/Num.ts(52,9): error TS2554: Expected 2 arguments, but got 1.
 lib/Num.ts(53,21): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/Num.ts(60,9): error TS2322: Type '(x: number) => number' is not assignable to type 'Number'.
-lib/Num.ts(61,11): error TS2322: Type '(x: String) => boolean' is not assignable to type 'Boolean'.
+lib/Num.ts(61,11): error TS2322: Type '(x: Number) => boolean' is not assignable to type 'Boolean'.
   Types of property 'valueOf' are incompatible.
     Type '() => Object' is not assignable to type '() => boolean'.
 lib/Num.ts(65,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -2049,8 +1981,6 @@ lib/Num.ts(82,46): error TS2363: The right-hand side of an arithmetic operation 
 lib/Num.ts(120,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Num.ts(122,37): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/Num.ts(124,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/Num.ts(125,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/Num.ts(125,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/Obj.ts(2,95): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Obj.ts(2,160): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Obj.ts(2,229): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -2060,11 +1990,6 @@ lib/Obj.ts(12,28): error TS2314: Generic type 'Array<T>' requires 1 type argumen
 lib/Obj.ts(18,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Obj.ts(20,38): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 lib/Obj.ts(20,51): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/Obj.ts(22,5): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-lib/Obj.ts(22,16): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/Obj.ts(22,24): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/Obj.ts(27,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Obj.ts(29,20): error TS2538: Type 'String' cannot be used as an index type.
 lib/Obj.ts(34,14): error TS2554: Expected 2 arguments, but got 1.
@@ -2102,8 +2027,6 @@ lib/Obj.ts(120,16): error TS2538: Type 'String' cannot be used as an index type.
 lib/Obj.ts(144,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Obj.ts(146,37): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/Obj.ts(148,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/Obj.ts(149,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/Obj.ts(149,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/Str.ts(3,9): error TS2554: Expected 2 arguments, but got 1.
 lib/Str.ts(3,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Str.ts(6,1): error TS2322: Type 'Boolean' is not assignable to type 'String'.
@@ -2115,7 +2038,7 @@ lib/Str.ts(31,13): error TS2339: Property 'join' does not exist on type 'Object'
 lib/Str.ts(36,1): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 lib/Str.ts(36,10): error TS2554: Expected 2 arguments, but got 1.
 lib/Str.ts(39,26): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/Str.ts(40,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/Str.ts(40,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
 lib/Str.ts(48,35): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type '(arg$: Function, c: String) => string' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
@@ -2134,8 +2057,6 @@ lib/Str.ts(57,27): error TS2769: No overload matches this call.
 lib/Str.ts(82,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Str.ts(84,37): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/Str.ts(86,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/Str.ts(87,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/Str.ts(87,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/index.ts(11,1): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 lib/index.ts(11,10): error TS2554: Expected 2 arguments, but got 1.
 lib/index.ts(14,1): error TS2322: Type 'Boolean' is not assignable to type 'String'.
@@ -2412,6 +2333,4 @@ lib/index.ts(164,9): error TS2339: Property 'VERSION' does not exist on type 'Ob
 lib/index.ts(166,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/index.ts(168,37): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/index.ts(170,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/index.ts(171,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/index.ts(171,43): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 

@@ -23,29 +23,11 @@ index.ts(29,36): error TS2339: Property 'end' does not exist on type 'HTMLElemen
 index.ts(30,6): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
 index.ts(37,74): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Readable'.
   Type 'String' is missing the following properties from type 'Readable': readableAborted, readableDidRead, readableEncoding, readableEnded, and 39 more.
-index.ts(41,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(41,48): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
-index.ts(42,22): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(44,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(45,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(46,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(48,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(48,37): error TS2339: Property 'autoDestroy' does not exist on type 'Object'.
-index.ts(49,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(49,40): error TS2339: Property 'destroy' does not exist on type 'Object'.
-index.ts(50,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(50,36): error TS2339: Property 'end' does not exist on type 'Object'.
-index.ts(51,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(52,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(53,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(54,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(55,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(56,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(57,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(59,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(61,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(62,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(67,11): error TS2339: Property 'obj' does not exist on type 'Function'.
 index.ts(69,8): error TS2339: Property 'objectMode' does not exist on type 'Object'.
 index.ts(70,8): error TS2339: Property 'highWaterMark' does not exist on type 'Object'.
@@ -64,8 +46,8 @@ index.ts(132,13): error TS2314: Generic type 'Array<T>' requires 1 type argument
 index.ts(133,29): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Stream'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(151,30): error TS2339: Property '_readableState' does not exist on type 'Object'.
-index.ts(170,28): error TS2322: Type 'string | Buffer | null' is not assignable to type 'Function'.
-  Type 'null' is not assignable to type 'Function'.
+index.ts(170,28): error TS2322: Type 'string | Buffer' is not assignable to type 'Function'.
+  Type 'string' is not assignable to type 'Function'.
 index.ts(185,10): error TS2339: Property '_destroy' does not exist on type 'HTMLElement'.
 index.ts(220,14): error TS2339: Property '_forwardEnd' does not exist on type 'HTMLElement'.
 index.ts(220,34): error TS2339: Property '_writable' does not exist on type 'HTMLElement'.

@@ -50,7 +50,7 @@ export default class ExtensionAliasPlugin {
 					);
 				};
 
-				const stoppingCallback: Function = (err: String, result: ResultPlugin) => {
+				const stoppingCallback: Function = (err: Resolver, result: ResultPlugin) => {
 					if (err) return callback(err);
 					if (result) return callback(null, result);
 					// Don't allow other aliasing or raw request

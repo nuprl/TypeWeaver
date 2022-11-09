@@ -7,7 +7,7 @@
 
 var regex: RegExp = /(\\).|([@?!+*]\(.*\))/;
 
-export default function isExtglob(str: Array): Promise {
+export default function isExtglob(str: String): Boolean {
   if (typeof str !== 'string' || str === '') {
     return false;
   }

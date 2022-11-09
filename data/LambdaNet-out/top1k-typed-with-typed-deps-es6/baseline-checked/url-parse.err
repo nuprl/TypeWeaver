@@ -5,13 +5,13 @@ index.ts(45,27): error TS2345: Argument of type 'Number' is not assignable to pa
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(60,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(64,26): error TS2339: Property 'protocol' does not exist on type 'String'.
-index.ts(103,37): error TS2339: Property 'location' does not exist on type 'Object'.
+index.ts(103,36): error TS2339: Property 'location' does not exist on type 'Object'.
 index.ts(110,23): error TS2339: Property 'protocol' does not exist on type 'Object'.
+index.ts(111,24): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(111,24): error TS2554: Expected 3 arguments, but got 2.
-index.ts(111,24): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 index.ts(111,45): error TS2339: Property 'pathname' does not exist on type 'Object'.
+index.ts(113,24): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(113,24): error TS2554: Expected 3 arguments, but got 2.
-index.ts(113,24): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 index.ts(114,49): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(117,11): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
 index.ts(118,24): error TS2538: Type 'String' cannot be used as an index type.
@@ -25,49 +25,11 @@ index.ts(140,5): error TS2367: This condition will always return 'false' since t
 index.ts(141,5): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 index.ts(142,5): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 index.ts(143,5): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-index.ts(168,7): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 index.ts(168,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(169,26): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-index.ts(169,37): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-index.ts(170,35): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-index.ts(171,33): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-index.ts(177,14): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-index.ts(177,25): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-index.ts(177,36): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
-  Property '4' does not exist on type 'Object'.
-index.ts(178,22): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-index.ts(178,40): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-index.ts(180,14): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-index.ts(180,25): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
-  Property '4' does not exist on type 'Object'.
-index.ts(181,22): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-index.ts(185,14): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-index.ts(185,25): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
-  Property '4' does not exist on type 'Object'.
-index.ts(186,22): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-index.ts(188,14): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
-  Property '4' does not exist on type 'Object'.
 index.ts(196,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
   Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-index.ts(197,12): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
-  Property '4' does not exist on type 'Object'.
 index.ts(202,54): error TS2339: Property 'protocol' does not exist on type 'Object'.
-index.ts(203,12): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
-  Property '4' does not exist on type 'Object'.
 index.ts(208,42): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 index.ts(225,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(227,27): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -76,14 +38,10 @@ index.ts(236,7): error TS2356: An arithmetic operand must be of type 'any', 'num
 index.ts(240,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(245,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 index.ts(245,23): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-index.ts(264,68): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-index.ts(265,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(266,12): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+index.ts(266,12): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(270,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(272,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(287,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-index.ts(288,5): error TS2322: Type 'null' is not assignable to type 'Object'.
 index.ts(299,25): error TS2339: Property 'protocol' does not exist on type 'Object'.
 index.ts(299,48): error TS2339: Property 'slashes' does not exist on type 'Object'.
 index.ts(300,7): error TS2339: Property 'slashes' does not exist on type 'String'.
@@ -112,8 +70,6 @@ index.ts(342,36): error TS2345: Argument of type 'Function' is not assignable to
 index.ts(343,38): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'number'.
 index.ts(346,31): error TS2339: Property 'exec' does not exist on type 'Function'.
 index.ts(347,11): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(347,18): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Function'.
-  Property '1' does not exist on type 'Function'.
 index.ts(348,40): error TS2339: Property 'index' does not exist on type 'Function'.
 index.ts(351,9): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(351,20): error TS2538: Type 'String' cannot be used as an index type.
@@ -165,10 +121,10 @@ index.ts(420,75): error TS2339: Property 'host' does not exist on type 'String'.
 index.ts(421,11): error TS2339: Property 'protocol' does not exist on type 'String'.
 index.ts(421,31): error TS2339: Property 'host' does not exist on type 'String'.
 index.ts(427,7): error TS2339: Property 'href' does not exist on type 'String'.
-index.ts(447,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(450,10): error TS2678: Type 'string' is not comparable to type 'Number'.
 index.ts(452,17): error TS2349: This expression is not callable.
-  Type 'Boolean' has no call signatures.
+  Not all constituents of type 'Boolean | ((query: string) => object)' are callable.
+    Type 'Boolean' has no call signatures.
 index.ts(455,7): error TS2322: Type 'String' is not assignable to type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(455,7): error TS2542: Index signature in type 'String' only permits reading.
@@ -238,13 +194,7 @@ index.ts(527,66): error TS2339: Property 'password' does not exist on type 'Stri
 index.ts(529,13): error TS2339: Property 'username' does not exist on type 'String'.
 index.ts(529,62): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(536,9): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
-  Property '4' does not exist on type 'Object'.
 index.ts(536,17): error TS2542: Index signature in type 'String' only permits reading.
-index.ts(536,21): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-index.ts(536,35): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 index.ts(539,7): error TS2339: Property 'auth' does not exist on type 'String'.
 index.ts(539,18): error TS2339: Property 'password' does not exist on type 'String'.
 index.ts(539,33): error TS2339: Property 'username' does not exist on type 'String'.
@@ -257,7 +207,6 @@ index.ts(541,75): error TS2339: Property 'host' does not exist on type 'String'.
 index.ts(542,11): error TS2339: Property 'protocol' does not exist on type 'String'.
 index.ts(542,31): error TS2339: Property 'host' does not exist on type 'String'.
 index.ts(545,7): error TS2339: Property 'href' does not exist on type 'String'.
-index.ts(561,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(562,26): error TS2339: Property 'host' does not exist on type 'String'.
 index.ts(563,30): error TS2339: Property 'protocol' does not exist on type 'String'.
 index.ts(569,23): error TS2339: Property 'slashes' does not exist on type 'String'.

@@ -178,7 +178,7 @@ function comparativeDistance(x: Promise, y: Promise): String {
 }
 
 convert.rgb.keyword = function (rgb: String) {
-	const reversed: String = reverseKeywords[rgb];
+	const reversed: Array = reverseKeywords[rgb];
 	if (reversed) {
 		return reversed;
 	}

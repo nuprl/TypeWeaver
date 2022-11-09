@@ -451,7 +451,7 @@ function crypto_stream(c: String,cpos: String,d: String,n: Object,k: Number): St
   return crypto_stream_salsa20(c,cpos,d,sn,s);
 }
 
-function crypto_stream_xor(c: String,cpos: String,m: String,mpos: String,d: Number,n: Object,k: Number): String {
+function crypto_stream_xor(c: String,cpos: String,m: String,mpos: Number,d: Number,n: Object,k: Number): Boolean {
   var s: String = new Uint8Array(32);
   crypto_core_hsalsa20(s,n,k,sigma);
   var sn: Object = new Uint8Array(8);
@@ -823,7 +823,7 @@ function crypto_onetimeauth(out: Function, outpos: String, m: String, mpos: Stri
   return 0;
 }
 
-function crypto_onetimeauth_verify(h: String, hpos: String, m: String, mpos: String, n: String, k: String): String {
+function crypto_onetimeauth_verify(h: String, hpos: String, m: String, mpos: String, n: Number, k: String): String {
   var x: String = new Uint8Array(16);
   crypto_onetimeauth(x,0,m,mpos,n,k);
   return crypto_verify_16(h,hpos,x,0);
@@ -838,7 +838,7 @@ function crypto_secretbox(c: Object,m: String,d: Number,n: Number,k: Number): Nu
   return 0;
 }
 
-function crypto_secretbox_open(m: Object,c: String,d: Number,n: Number,k: String): Number {
+function crypto_secretbox_open(m: Object,c: String,d: Number,n: String,k: String): Number {
   var i: Number;
   var x: String = new Uint8Array(32);
   if (d < 32) return -1;
@@ -904,7 +904,7 @@ function neq25519(a: Function, b: String): String {
   return crypto_verify_32(c, 0, d, 0);
 }
 
-function par25519(a: Function): Number {
+function par25519(a: String): Number {
   var d: Object = new Uint8Array(32);
   pack25519(d, a);
   return d[0] & 1;
@@ -1374,7 +1374,7 @@ function crypto_scalarmult(q: String, n: Promise, p: Function): Number {
   return 0;
 }
 
-function crypto_scalarmult_base(q: String, n: Number): Boolean {
+function crypto_scalarmult_base(q: String, n: Number): Void {
   return crypto_scalarmult(q, n, _9);
 }
 
@@ -1383,7 +1383,7 @@ function crypto_box_keypair(y: String, x: String): Boolean {
   return crypto_scalarmult_base(y, x);
 }
 
-function crypto_box_beforenm(k: String, y: String, x: String): String {
+function crypto_box_beforenm(k: String, y: String, x: String): Void {
   var s: String = new Uint8Array(32);
   crypto_scalarmult(s, x, y);
   return crypto_core_hsalsa20(k, _0, s, sigma);
@@ -1398,7 +1398,7 @@ function crypto_box(c: String, m: Function, d: String, n: String, y: String, x: 
   return crypto_box_afternm(c, m, d, n, k);
 }
 
-function crypto_box_open(m: Array, c: String, d: String, n: Number, y: String, x: String): Boolean {
+function crypto_box_open(m: Function, c: String, d: String, n: Number, y: String, x: String): Boolean {
   var k: String = new Uint8Array(32);
   crypto_box_beforenm(k, y, x);
   return crypto_box_open_afternm(m, c, d, n, k);
@@ -1935,7 +1935,7 @@ function crypto_sign_keypair(pk: Object, sk: Object, seeded: Boolean): Number {
 var L: Object = new Float64Array([0xed, 0xd3, 0xf5, 0x5c, 0x1a, 0x63, 0x12, 0x58, 0xd6, 0x9c, 0xf7, 0xa2, 0xde, 0xf9, 0xde, 0x14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0x10]);
 
 function modL(r: Promise, x: Object): Void {
-  var carry: Number, i: Number, j: Number, k: String;
+  var carry: Number, i: Number, j: Number, k: Function;
   for (i = 63; i >= 32; --i) {
     carry = 0;
     for (j = i - 32, k = i - 12; j < k; ++j) {
@@ -2244,7 +2244,7 @@ nacl.box.open = function(msg: String, nonce: Array, publicKey: String, secretKey
 nacl.box.open.after = nacl.secretbox.open;
 
 nacl.box.keyPair = function() {
-  var pk: String = new Uint8Array(crypto_box_PUBLICKEYBYTES);
+  var pk: Function = new Uint8Array(crypto_box_PUBLICKEYBYTES);
   var sk: Function = new Uint8Array(crypto_box_SECRETKEYBYTES);
   crypto_box_keypair(pk, sk);
   return {publicKey: pk, secretKey: sk};
@@ -2279,7 +2279,7 @@ nacl.sign.open = function(signedMsg: Array, publicKey: String) {
   if (publicKey.length !== crypto_sign_PUBLICKEYBYTES)
     throw new Error('bad public key size');
   var tmp: Object = new Uint8Array(signedMsg.length);
-  var mlen: Function = crypto_sign_open(tmp, signedMsg, signedMsg.length, publicKey);
+  var mlen: Object = crypto_sign_open(tmp, signedMsg, signedMsg.length, publicKey);
   if (mlen < 0) return null;
   var m: Array = new Uint8Array(mlen);
   for (var i = 0; i < m.length; i++) m[i] = tmp[i];

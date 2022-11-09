@@ -55,7 +55,7 @@
             return "any character";
           },
 
-          end: function(expectation: String) {
+          end: function(expectation: Function) {
             return "end of input";
           },
 
@@ -185,7 +185,7 @@
           },
         peg$c24: String = "*",
         peg$c25: Function = peg$literalExpectation("*", false),
-        peg$c26: Function = function(a: String) { return { type: 'wildcard', value: a }; },
+        peg$c26: Function = function(a: Array) { return { type: 'wildcard', value: a }; },
         peg$c27: String = "#",
         peg$c28: Function = peg$literalExpectation("#", false),
         peg$c29: Function = function(i: String) { return { type: 'identifier', value: i }; },
@@ -202,7 +202,7 @@
         peg$c40: RegExp = /^[><]/,
         peg$c41: Function = peg$classExpectation([">", "<"], false, false),
         peg$c42: String = ".",
-        peg$c43: Object = peg$literalExpectation(".", false),
+        peg$c43: Function = peg$literalExpectation(".", false),
         peg$c44: Function = function(a: Function, as: Number) {
             return [].concat.apply([a], as).join('');
           },
@@ -234,11 +234,11 @@
               },
         peg$c63: Function = function(i: String) { return { type: 'literal', value: i }; },
         peg$c64: String = "type(",
-        peg$c65: Function = peg$literalExpectation("type(", false),
+        peg$c65: Object = peg$literalExpectation("type(", false),
         peg$c66: RegExp = /^[^ )]/,
         peg$c67: Function = peg$classExpectation([" ", ")"], true, false),
         peg$c68: String = ")",
-        peg$c69: Object = peg$literalExpectation(")", false),
+        peg$c69: Function = peg$literalExpectation(")", false),
         peg$c70: Function = function(t: Array) { return { type: 'type', value: t.join('') }; },
         peg$c71: RegExp = /^[imsu]/,
         peg$c72: Function = peg$classExpectation(["i", "m", "s", "u"], false, false),
@@ -418,7 +418,7 @@
       return new peg$SyntaxError(message, null, null, location);
     }
 
-    function peg$buildStructuredError(expected: String, found: String, location: String): String {
+    function peg$buildStructuredError(expected: String, found: Function, location: Number): String {
       return new peg$SyntaxError(
         peg$SyntaxError.buildMessage(expected, found),
         expected,
@@ -1880,7 +1880,7 @@
     }
 
     function peg$parseregex(): Boolean {
-      var s0: Number, s1: String, s2: Array, s3: String, s4: String;
+      var s0: Number, s1: String, s2: Array, s3: String, s4: Function;
 
       var key: String    = peg$currPos * 30 + 20,
           cached: Object = peg$resultsCache[key];

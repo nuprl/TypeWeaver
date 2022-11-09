@@ -15,7 +15,7 @@ var a: HTMLElement = new App('a');
 var b: Object = a.create('b');
 var c: Object = b.create('c');
 var d: Object = c.create('d');
-var e: Object = d.create('e');
+var e: HTMLElement = d.create('e');
 var f: Object = e.create('f');
 
 a.children = [];

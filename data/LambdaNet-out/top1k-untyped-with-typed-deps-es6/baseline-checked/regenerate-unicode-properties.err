@@ -1435,7 +1435,6 @@ build.ts(5,30): error TS2307: Cannot find module 'fs-extra' or its corresponding
 build.ts(13,35): error TS2554: Expected 0 arguments, but got 1.
 build.ts(18,22): error TS2339: Property 'toCode' does not exist on type 'regenerate'.
 build.ts(19,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-build.ts(19,27): error TS2339: Property 'data' does not exist on type 'regenerate'.
 build.ts(25,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build.ts(26,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build.ts(29,14): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
@@ -1445,8 +1444,6 @@ build.ts(48,8): error TS2356: An arithmetic operand must be of type 'any', 'numb
 build.ts(60,14): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 build.ts(64,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build.ts(71,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-build.ts(76,17): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-build.ts(77,22): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 build.ts(84,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build.ts(84,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'RegenerateArgValueOrArray'.
   Type 'String' is missing the following properties from type 'readonly RegenerateArgValueOrArray[]': join, every, some, forEach, and 11 more.
@@ -1461,7 +1458,6 @@ build.ts(115,28): error TS2314: Generic type 'Array<T>' requires 1 type argument
 build.ts(120,7): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 build.ts(139,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build.ts(140,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-build.ts(142,60): error TS2532: Object is possibly 'undefined'.
 build.ts(148,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build.ts(150,19): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
 build.ts(161,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string | ArrayBufferView'.

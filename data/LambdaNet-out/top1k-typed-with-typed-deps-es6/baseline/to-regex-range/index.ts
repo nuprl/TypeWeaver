@@ -93,7 +93,7 @@ function collatePatterns(neg: String, pos: String, options: Object): String {
   return subpatterns.join('|');
 }
 
-function splitToRanges(min: Number, max: Number): Object {
+function splitToRanges(min: Number, max: Number): Map {
   let nines: Number = 1;
   let zeros: Number = 1;
 

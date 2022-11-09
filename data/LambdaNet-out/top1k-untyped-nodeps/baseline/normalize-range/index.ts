@@ -17,7 +17,7 @@ function limitRange(min: Number, max: Number, value: Number): Number {
   return Math.max(min, Math.min(max, value));
 }
 
-function validateRange(min: String, max: String, value: String, minExclusive: Number, maxExclusive: String): String {
+function validateRange(min: String, max: Number, value: String, minExclusive: Number, maxExclusive: String): String {
   if (!testRange(min, max, value, minExclusive, maxExclusive)) {
     throw new Error(value + ' is outside of range [' + min + ',' + max + ')');
   }

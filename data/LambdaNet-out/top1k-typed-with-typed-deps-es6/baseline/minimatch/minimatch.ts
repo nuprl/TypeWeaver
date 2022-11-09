@@ -414,7 +414,7 @@ class Minimatch {
   parse (pattern, isSub) {
     assertValidPattern(pattern)
 
-    const options: Minimatch = this.options
+    const options: Object = this.options
 
     // shortcuts
     if (pattern === '**') {

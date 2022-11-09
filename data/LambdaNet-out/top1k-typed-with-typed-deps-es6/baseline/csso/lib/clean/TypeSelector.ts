@@ -1,5 +1,5 @@
 // remove useless universal selector
-export default function cleanTypeSelector(node: Object, item: Object, list: Map): Void {
+export default function cleanTypeSelector(node: Object, item: TRBL, list: Map): Void {
     const name: String = item.data.name;
 
     // check it's a non-namespaced universal selector

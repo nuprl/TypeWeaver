@@ -11,7 +11,7 @@ module.exports = function forEachBail(array: Array, iterator: Function, callback
 	let i: Number = 0;
 	const next: Function = () => {
 		let loop: Boolean = undefined;
-		iterator(array[i++], (err: String, result: Number) => {
+		iterator(array[i++], (err: Resolver, result: Number) => {
 			if (err || result !== undefined || i >= array.length) {
 				return callback(err, result);
 			}

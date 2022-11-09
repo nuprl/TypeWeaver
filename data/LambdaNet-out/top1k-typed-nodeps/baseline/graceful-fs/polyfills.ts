@@ -72,7 +72,7 @@ function patch (fs: String): Void {
 
   // if lchmod/lchown do not exist, then make them no-ops
   if (fs.chmod && !fs.lchmod) {
-    fs.lchmod = function (path: String, mode: Number, cb: Boolean) {
+    fs.lchmod = function (path: String, mode: String, cb: Boolean) {
       if (cb) process.nextTick(cb)
     }
     fs.lchmodSync = function () {}
@@ -104,7 +104,7 @@ function patch (fs: String): Void {
               && (er.code === "EACCES" || er.code === "EPERM")
               && Date.now() - start < 60000) {
             setTimeout(function() {
-              fs.stat(to, function (stater: Object, st: Function) {
+              fs.stat(to, function (stater: Object, st: Array) {
                 if (stater && stater.code === "ENOENT")
                   fs$rename(from, to, CB);
                 else
@@ -213,8 +213,8 @@ function patch (fs: String): Void {
             if (cb) cb(er)
             return
           }
-          fs.futimes(fd, at, mt, function (er: Number) {
-            fs.close(fd, function (er2: Boolean) {
+          fs.futimes(fd, at, mt, function (er: String) {
+            fs.close(fd, function (er2: Number) {
               if (cb) cb(er || er2)
             })
           })
@@ -249,7 +249,7 @@ function patch (fs: String): Void {
   function chmodFix (orig: Function): Function {
     if (!orig) return orig
     return function (target: Object, mode: String, cb: Array) {
-      return orig.call(fs, target, mode, function (er: String) {
+      return orig.call(fs, target, mode, function (er: Array) {
         if (chownErOk(er)) er = null
         if (cb) cb.apply(this, arguments)
       })
@@ -271,7 +271,7 @@ function patch (fs: String): Void {
   function chownFix (orig: Function): Function {
     if (!orig) return orig
     return function (target: Object, uid: String, gid: String, cb: Array) {
-      return orig.call(fs, target, uid, gid, function (er: String) {
+      return orig.call(fs, target, uid, gid, function (er: Array) {
         if (chownErOk(er)) er = null
         if (cb) cb.apply(this, arguments)
       })

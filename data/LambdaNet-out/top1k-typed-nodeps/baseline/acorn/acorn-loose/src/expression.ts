@@ -24,7 +24,7 @@ lp.parseExpression = function(noIn: Number) {
   let start: RegExpValidationState = this.storeCurrentPos()
   let expr: RegExpValidationState = this.parseMaybeAssign(noIn)
   if (this.tok.type === tt.comma) {
-    let node: TokenType = this.startNodeAt(start)
+    let node: Node = this.startNodeAt(start)
     node.expressions = [expr]
     while (this.eat(tt.comma)) node.expressions.push(this.parseMaybeAssign(noIn))
     return this.finishNode(node, "SequenceExpression")
@@ -35,7 +35,7 @@ lp.parseExpression = function(noIn: Number) {
 lp.parseParenExpression = function() {
   this.pushCx()
   this.expect(tt.parenL)
-  let val: RegExpValidationState = this.parseExpression()
+  let val: Position = this.parseExpression()
   this.popCx()
   this.expect(tt.parenR)
   return val
@@ -73,7 +73,7 @@ lp.parseMaybeConditional = function(noIn: Number) {
   let start: RegExpValidationState = this.storeCurrentPos()
   let expr: Number = this.parseExprOps(noIn)
   if (this.eat(tt.question)) {
-    let node: TokenType = this.startNodeAt(start)
+    let node: Node = this.startNodeAt(start)
     node.test = expr
     node.consequent = this.parseMaybeAssign()
     node.alternate = this.expect(tt.colon) ? this.parseMaybeAssign(noIn) : this.dummyIdent()
@@ -84,11 +84,11 @@ lp.parseMaybeConditional = function(noIn: Number) {
 
 lp.parseExprOps = function(noIn: Number) {
   let start: String = this.storeCurrentPos()
-  let indent: Function = this.curIndent, line: String = this.curLineStart
+  let indent: Position = this.curIndent, line: Position = this.curLineStart
   return this.parseExprOp(this.parseMaybeUnary(false), start, -1, noIn, indent, line)
 }
 
-lp.parseExprOp = function(left: Number, start: String, minPrec: Number, noIn: Boolean, indent: RegExpValidationState, line: RegExpValidationState) {
+lp.parseExprOp = function(left: Number, start: String, minPrec: Number, noIn: Boolean, indent: Position, line: RegExpValidationState) {
   if (this.curLineStart !== line && this.curIndent < indent && this.tokenStartsLine()) return left
   let prec: Number = this.tok.type.binop
   if (prec != null && (!noIn || this.tok.type !== tt._in)) {
@@ -127,7 +127,7 @@ lp.parseMaybeUnary = function(sawUnary: Boolean) {
     if (update) node.argument = this.checkLVal(node.argument)
     expr = this.finishNode(node, update ? "UpdateExpression" : "UnaryExpression")
   } else if (this.tok.type === tt.ellipsis) {
-    let node: TokenType = this.startNode()
+    let node: Node = this.startNode()
     this.next()
     node.argument = this.parseMaybeUnary(sawUnary)
     expr = this.finishNode(node, "SpreadElement")
@@ -136,7 +136,7 @@ lp.parseMaybeUnary = function(sawUnary: Boolean) {
   } else {
     expr = this.parseExprSubscripts()
     while (this.tok.type.postfix && !this.canInsertSemicolon()) {
-      let node: TokenType = this.startNodeAt(start)
+      let node: Node = this.startNodeAt(start)
       node.operator = this.tok.value
       node.prefix = false
       node.argument = this.checkLVal(expr)
@@ -161,7 +161,7 @@ lp.parseExprSubscripts = function() {
   return this.parseSubscripts(this.parseExprAtom(), start, false, this.curIndent, this.curLineStart)
 }
 
-lp.parseSubscripts = function(base: Object, start: String, noCalls: Boolean, startIndent: Number, line: RegExpValidationState) {
+lp.parseSubscripts = function(base: Object, start: String, noCalls: Boolean, startIndent: Number, line: Position) {
   const optionalSupported: Boolean = this.options.ecmaVersion >= 11
   let optionalChained: Boolean = false
   for (;;) {
@@ -173,7 +173,7 @@ lp.parseSubscripts = function(base: Object, start: String, noCalls: Boolean, sta
     }
 
     let maybeAsyncArrow: Boolean = base.type === "Identifier" && base.name === "async" && !this.canInsertSemicolon()
-    let optional: String = optionalSupported && this.eat(tt.questionDot)
+    let optional: Position = optionalSupported && this.eat(tt.questionDot)
     if (optional) {
       optionalChained = true
     }
@@ -207,7 +207,7 @@ lp.parseSubscripts = function(base: Object, start: String, noCalls: Boolean, sta
       let exprList: String = this.parseExprList(tt.parenR)
       if (maybeAsyncArrow && this.eat(tt.arrow))
         return this.parseArrowExpression(this.startNodeAt(start), exprList, true)
-      let node: TokenType = this.startNodeAt(start)
+      let node: Node = this.startNodeAt(start)
       node.callee = base
       node.arguments = exprList
       if (optionalSupported) {
@@ -215,7 +215,7 @@ lp.parseSubscripts = function(base: Object, start: String, noCalls: Boolean, sta
       }
       base = this.finishNode(node, "CallExpression")
     } else if (this.tok.type === tt.backQuote) {
-      let node: TokenType = this.startNodeAt(start)
+      let node: Node = this.startNodeAt(start)
       node.tag = base
       node.quasi = this.parseTemplate()
       base = this.finishNode(node, "TaggedTemplateExpression")
@@ -225,7 +225,7 @@ lp.parseSubscripts = function(base: Object, start: String, noCalls: Boolean, sta
   }
 
   if (optionalChained) {
-    const chainNode: TokenType = this.startNodeAt(start)
+    const chainNode: Node = this.startNodeAt(start)
     chainNode.expression = base
     base = this.finishNode(chainNode, "ChainExpression")
   }
@@ -285,7 +285,7 @@ lp.parseExprAtom = function() {
   case tt.parenL:
     let parenStart: String = this.storeCurrentPos()
     this.next()
-    let inner: RegExpValidationState = this.parseExpression()
+    let inner: Position = this.parseExpression()
     this.expect(tt.parenR)
     if (this.eat(tt.arrow)) {
       // (a,)=>a // SequenceExpression makes dummy in the last hole. Drop the dummy.
@@ -295,7 +295,7 @@ lp.parseExprAtom = function() {
       return this.parseArrowExpression(this.startNodeAt(parenStart), params)
     }
     if (this.options.preserveParens) {
-      let par: RegExpValidationState = this.startNodeAt(parenStart)
+      let par: Position = this.startNodeAt(parenStart)
       par.expression = inner
       inner = this.finishNode(par, "ParenthesizedExpression")
     }
@@ -338,7 +338,7 @@ lp.parseExprAtom = function() {
 
 lp.parseExprImport = function() {
   const node: Node = this.startNode()
-  const meta: RegExpValidationState = this.parseIdent(true)
+  const meta: Position = this.parseIdent(true)
   switch (this.tok.type) {
   case tt.parenL:
     return this.parseDynamicImport(node)
@@ -351,20 +351,20 @@ lp.parseExprImport = function() {
   }
 }
 
-lp.parseDynamicImport = function(node: TokenType) {
+lp.parseDynamicImport = function(node: Node) {
   node.source = this.parseExprList(tt.parenR)[0] || this.dummyString()
   return this.finishNode(node, "ImportExpression")
 }
 
-lp.parseImportMeta = function(node: TokenType) {
+lp.parseImportMeta = function(node: Node) {
   this.next() // skip '.'
   node.property = this.parseIdent(true)
   return this.finishNode(node, "MetaProperty")
 }
 
 lp.parseNew = function() {
-  let node: Node = this.startNode(), startIndent: Function = this.curIndent, line: String = this.curLineStart
-  let meta: RegExpValidationState = this.parseIdent(true)
+  let node: Node = this.startNode(), startIndent: Function = this.curIndent, line: Position = this.curLineStart
+  let meta: Position = this.parseIdent(true)
   if (this.options.ecmaVersion >= 6 && this.eat(tt.dot)) {
     node.meta = meta
     node.property = this.parseIdent(true)
@@ -519,14 +519,14 @@ lp.parsePropertyAccessor = function() {
 lp.parseIdent = function() {
   let name: String = this.tok.type === tt.name ? this.tok.value : this.tok.type.keyword
   if (!name) return this.dummyIdent()
-  let node: TokenType = this.startNode()
+  let node: Node = this.startNode()
   this.next()
   node.name = name
   return this.finishNode(node, "Identifier")
 }
 
 lp.parsePrivateIdent = function() {
-  const node: TokenType = this.startNode()
+  const node: Node = this.startNode()
   node.name = this.tok.value
   this.next()
   return this.finishNode(node, "PrivateIdentifier")
@@ -586,7 +586,7 @@ lp.parseFunctionParams = function(params: String) {
 }
 
 lp.parseMethod = function(isGenerator: Boolean, isAsync: Boolean) {
-  let node: Node = this.startNode(), oldInAsync: Boolean = this.inAsync, oldInGenerator: String = this.inGenerator, oldInFunction: Boolean = this.inFunction
+  let node: Node = this.startNode(), oldInAsync: Number = this.inAsync, oldInGenerator: Position = this.inGenerator, oldInFunction: Boolean = this.inFunction
   this.initFunction(node)
   if (this.options.ecmaVersion >= 6)
     node.generator = !!isGenerator
@@ -605,7 +605,7 @@ lp.parseMethod = function(isGenerator: Boolean, isAsync: Boolean) {
 }
 
 lp.parseArrowExpression = function(node: Node, params: Array, isAsync: Boolean) {
-  let oldInAsync: Boolean = this.inAsync, oldInGenerator: String = this.inGenerator, oldInFunction: Boolean = this.inFunction
+  let oldInAsync: Number = this.inAsync, oldInGenerator: Position = this.inGenerator, oldInFunction: Boolean = this.inFunction
   this.initFunction(node)
   if (this.options.ecmaVersion >= 8)
     node.async = !!isAsync
@@ -655,7 +655,7 @@ lp.parseExprList = function(close: String, allowEmpty: Boolean) {
 }
 
 lp.parseAwait = function() {
-  let node: TokenType = this.startNode()
+  let node: Node = this.startNode()
   this.next()
   node.argument = this.parseMaybeUnary()
   return this.finishNode(node, "AwaitExpression")

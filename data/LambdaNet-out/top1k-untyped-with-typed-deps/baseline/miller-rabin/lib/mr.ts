@@ -38,7 +38,7 @@ MillerRabin.prototype.test = function test(n: Object, k: Number, cb: Function): 
     k = Math.max(1, (len / 48) | 0);
 
   // Find d and s, (n - 1) = (2 ^ s) * d;
-  var n1: Array = n.subn(1);
+  var n1: HTMLElement = n.subn(1);
   for (var s = 0; !n1.testn(s); s++) {}
   var d: String = n.shrn(s);
 

@@ -111,7 +111,7 @@ iconv._canonicalizeEncoding = function(encoding: String) {
     return (''+encoding).toLowerCase().replace(/:\d{4}$|[^0-9a-z]/g, "");
 }
 
-iconv.getEncoder = function getEncoder(encoding: String, options: Object): String {
+iconv.getEncoder = function getEncoder(encoding: String, options: Object): Object {
     var codec: Object = iconv.getCodec(encoding),
         encoder: String = new codec.encoder(options, codec);
 
@@ -121,7 +121,7 @@ iconv.getEncoder = function getEncoder(encoding: String, options: Object): Strin
     return encoder;
 }
 
-iconv.getDecoder = function getDecoder(encoding: String, options: Object): String {
+iconv.getDecoder = function getDecoder(encoding: String, options: Object): Object {
     var codec: Object = iconv.getCodec(encoding),
         decoder: String = new codec.decoder(options, codec);
 

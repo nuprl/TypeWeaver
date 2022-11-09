@@ -3,8 +3,6 @@ setImmediate.ts(1,44): error TS2314: Generic type 'Array<T>' requires 1 type arg
 setImmediate.ts(4,16): error TS2339: Property 'setImmediate' does not exist on type 'HTMLElement'.
 setImmediate.ts(11,31): error TS2339: Property 'document' does not exist on type 'HTMLElement'.
 setImmediate.ts(21,32): error TS2339: Property 'length' does not exist on type 'Object'.
-setImmediate.ts(22,11): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 setImmediate.ts(26,21): error TS2538: Type 'Number' cannot be used as an index type.
 setImmediate.ts(28,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 setImmediate.ts(31,46): error TS2304: Cannot find name 'Void'.
@@ -20,7 +18,6 @@ setImmediate.ts(71,36): error TS2345: Argument of type 'Number' is not assignabl
 setImmediate.ts(78,47): error TS2304: Cannot find name 'Void'.
 setImmediate.ts(80,57): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
   Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-setImmediate.ts(84,35): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 setImmediate.ts(87,20): error TS2339: Property 'postMessage' does not exist on type 'HTMLElement'.
 setImmediate.ts(87,43): error TS2339: Property 'importScripts' does not exist on type 'HTMLElement'.
 setImmediate.ts(89,47): error TS2339: Property 'onmessage' does not exist on type 'HTMLElement'.
@@ -33,9 +30,9 @@ setImmediate.ts(107,30): error TS2339: Property 'data' does not exist on type 'O
 setImmediate.ts(108,23): error TS2339: Property 'data' does not exist on type 'Object'.
 setImmediate.ts(109,37): error TS2339: Property 'data' does not exist on type 'Object'.
 setImmediate.ts(114,13): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(type: keyof HTMLElementEventMap, listener: (this: HTMLElement, ev: PointerEvent | MouseEvent | UIEvent | Event | ErrorEvent | ... 13 more ... | WheelEvent) => any, options?: boolean | ... 1 more ... | undefined): void', gave the following error.
+  Overload 1 of 2, '(type: keyof HTMLElementEventMap, listener: (this: HTMLElement, ev: PointerEvent | MouseEvent | UIEvent | Event | ErrorEvent | ... 13 more ... | WheelEvent) => any, options?: boolean | AddEventListenerOptions): void', gave the following error.
     Argument of type '"message"' is not assignable to parameter of type 'keyof HTMLElementEventMap'.
-  Overload 2 of 2, '(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions | undefined): void', gave the following error.
+  Overload 2 of 2, '(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void', gave the following error.
     Argument of type 'Function' is not assignable to parameter of type 'EventListenerOrEventListenerObject'.
 setImmediate.ts(116,20): error TS2339: Property 'attachEvent' does not exist on type 'HTMLElement'.
 setImmediate.ts(120,20): error TS2339: Property 'postMessage' does not exist on type 'HTMLElement'.
@@ -51,7 +48,6 @@ setImmediate.ts(141,43): error TS2339: Property 'createElement' does not exist o
 setImmediate.ts(142,20): error TS2339: Property 'onreadystatechange' does not exist on type 'HTMLElement'.
 setImmediate.ts(143,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 setImmediate.ts(144,24): error TS2339: Property 'onreadystatechange' does not exist on type 'HTMLElement'.
-setImmediate.ts(146,17): error TS2322: Type 'null' is not assignable to type 'HTMLElement'.
 setImmediate.ts(152,49): error TS2304: Cannot find name 'Void'.
 setImmediate.ts(160,37): error TS2339: Property 'setTimeout' does not exist on type 'Object'.
 setImmediate.ts(163,33): error TS2339: Property 'process' does not exist on type 'HTMLElement'.

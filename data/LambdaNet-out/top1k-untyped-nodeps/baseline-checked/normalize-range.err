@@ -14,17 +14,7 @@ index.ts(21,18): error TS2345: Argument of type 'String' is not assignable to pa
   Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 index.ts(36,10): error TS2451: Cannot redeclare block-scoped variable 'name'.
 index.ts(41,34): error TS2339: Property 'bind' does not exist on type 'void'.
-index.ts(43,32): error TS2769: No overload matches this call.
-  Overload 1 of 6, '(this: (this: null, arg0: Number, arg1: Number, value: Number) => String, thisArg: null, arg0: Number, arg1: Number): (value: Number) => String', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'Number'.
-  Overload 2 of 6, '(this: (this: null, ...args: Number[]) => String, thisArg: null, ...args: Number[]): (...args: Number[]) => String', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'Number'.
-index.ts(44,34): error TS2769: No overload matches this call.
-  Overload 1 of 6, '(this: (this: null, arg0: Number, arg1: Number, value: Number) => Number, thisArg: null, arg0: Number, arg1: Number): (value: Number) => Number', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'Number'.
-  Overload 2 of 6, '(this: (this: null, ...args: Number[]) => Number, thisArg: null, ...args: Number[]): (...args: Number[]) => Number', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'Number'.
-index.ts(46,45): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+index.ts(46,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 index.ts(49,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 index.ts(51,5): error TS2322: Type 'String' is not assignable to type '() => string'.
   Type 'String' provides no match for the signature '(): string'.

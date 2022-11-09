@@ -297,7 +297,7 @@
   }
 
   // (public) return the number of bits in "this"
-  function bnBitLength(): Boolean {
+  function bnBitLength(): Number {
     if (this.t <= 0) return 0;
     return (
       this.DB * (this.t - 1) + nbits(this[this.t - 1] ^ (this.s & this.DM))
@@ -396,7 +396,7 @@
 
   // (protected) r = this * a, r != this,a (HAC 14.12)
   // "this" should be the larger one if appropriate.
-  function bnpMultiplyTo(a: HTMLElement, r: Object): Void {
+  function bnpMultiplyTo(a: Object, r: Object): Void {
     var x: HTMLElement = this.abs(),
       y: Object = a.abs();
     var i: Number = x.t;
@@ -430,7 +430,7 @@
 
   // (protected) divide this by m, quotient and remainder to q, r (HAC 14.20)
   // r != q, this != m.  q or r may be null.
-  function bnpDivRemTo(m: HTMLElement, q: String, r: Function): Void {
+  function bnpDivRemTo(m: Object, q: String, r: Function): Void {
     var pm: Object = m.abs();
     if (pm.t <= 0) return;
     var pt: HTMLElement = this.abs();
@@ -725,7 +725,7 @@
   }
 
   // (protected) return x s.t. r^x < DV
-  function bnpChunkSize(r: Number): Number {
+  function bnpChunkSize(r: String): Number {
     return Math.floor((Math.LN2 * this.DB) / Math.log(r));
   }
 
@@ -1093,7 +1093,7 @@
   }
 
   // (public) [this/a,this%a]
-  function bnDivideAndRemainder(a: Function): Array {
+  function bnDivideAndRemainder(a: Array): Array {
     var q: String = nbi(),
       r: String = nbi();
     this.divRemTo(a, q, r);
@@ -1137,7 +1137,7 @@
   NullExp.prototype.sqrTo = nSqrTo;
 
   // (public) this^e
-  function bnPow(e: Array): Promise {
+  function bnPow(e: Array): Object {
     return this.exp(e, new NullExp());
   }
 
@@ -1226,7 +1226,7 @@
   Barrett.prototype.sqrTo = barrettSqrTo;
 
   // (public) this^e % m (HAC 14.85)
-  function bnModPow(e: Array, m: String): String {
+  function bnModPow(e: Array, m: Function): Object {
     var i: Number = e.bitLength(),
       k: Number,
       r: String = nbv(1),
@@ -1581,7 +1581,7 @@
   // (public) test primality with certainty >= 1-.5^t
   function bnIsProbablePrime(t: String): Boolean {
     var i: Number,
-      x: Object = this.abs();
+      x: Function = this.abs();
     if (x.t == 1 && x[0] <= lowprimes[lowprimes.length - 1]) {
       for (i = 0; i < lowprimes.length; ++i)
         if (x[0] == lowprimes[i]) return true;
@@ -1792,7 +1792,7 @@
     this.j = 0;
   }
 
-  function ARC4next(): Object {
+  function ARC4next(): String {
     var t: String;
     this.i = (this.i + 1) & 255;
     this.j = (this.j + this.S[this.i]) & 255;
@@ -1806,7 +1806,7 @@
   Arcfour.prototype.next = ARC4next;
 
   // Plug in your RNG constructor here
-  function prng_newstate(): Promise {
+  function prng_newstate(): String {
     return new Arcfour();
   }
 

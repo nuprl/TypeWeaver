@@ -17,7 +17,7 @@ const MAX_ARRAY_INDEX: Number = MAX_ARRAY_LENGTH - 1
  * @returns {number} Returns the index at which `value` should be inserted
  *  into `array`.
  */
-function baseSortedIndexBy(array: Array, value: Number, iteratee: Function, retHighest: Boolean): Number {
+function baseSortedIndexBy(array: Array, value: Number, iteratee: Function, retHighest: Number): Number {
   let low: Number = 0
   let high: Number = array == null ? 0 : array.length
   if (high == 0) {

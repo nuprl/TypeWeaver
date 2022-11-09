@@ -1,24 +1,12 @@
-Int64.ts(37,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
-Int64.ts(55,10): error TS2339: Property 'buffer' does not exist on type 'NodeModule'.
-Int64.ts(56,10): error TS2339: Property 'offset' does not exist on type 'NodeModule'.
-Int64.ts(62,10): error TS2339: Property 'buffer' does not exist on type 'NodeModule'.
 Int64.ts(62,30): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'Buffer'.
       Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-Int64.ts(63,10): error TS2339: Property 'offset' does not exist on type 'NodeModule'.
-Int64.ts(65,10): error TS2339: Property 'buffer' does not exist on type 'NodeModule'.
-Int64.ts(65,24): error TS2339: Property 'buffer' does not exist on type 'NodeModule'.
-Int64.ts(66,10): error TS2339: Property 'offset' does not exist on type 'NodeModule'.
-Int64.ts(67,10): error TS2339: Property 'setValue' does not exist on type 'NodeModule'.
 Int64.ts(73,7): error TS2339: Property 'MAX_INT' does not exist on type 'Object'.
 Int64.ts(76,7): error TS2339: Property 'MIN_INT' does not exist on type 'Object'.
 Int64.ts(78,7): error TS2339: Property 'prototype' does not exist on type 'Object'.
 Int64.ts(88,18): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 Int64.ts(89,23): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
-Int64.ts(89,24): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-Int64.ts(90,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 Int64.ts(90,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 Int64.ts(91,15): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 Int64.ts(109,9): error TS2322: Type 'number' is not assignable to type 'String'.
@@ -35,14 +23,12 @@ Int64.ts(118,9): error TS2322: Type 'number' is not assignable to type 'String'.
 Int64.ts(118,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 Int64.ts(119,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
-Int64.ts(131,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 Int64.ts(131,9): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
 Int64.ts(131,16): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 Int64.ts(132,7): error TS2322: Type 'number | String' is not assignable to type 'Number'.
   Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 Int64.ts(132,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 Int64.ts(154,28): error TS2538: Type 'String' cannot be used as an index type.
-Int64.ts(156,23): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 Int64.ts(156,25): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
 Int64.ts(160,13): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
 Int64.ts(160,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -52,8 +38,6 @@ Int64.ts(165,7): error TS2365: Operator '+=' cannot be applied to types 'Number'
 Int64.ts(165,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 Int64.ts(169,39): error TS2339: Property 'MAX_INT' does not exist on type 'Object'.
 Int64.ts(199,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-Int64.ts(202,16): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-Int64.ts(202,21): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 Int64.ts(202,23): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
 Int64.ts(216,9): error TS2740: Type 'Buffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 37 more.
 Int64.ts(240,53): error TS2339: Property 'buffer' does not exist on type 'HTMLElement'.

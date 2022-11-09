@@ -1,9 +1,9 @@
 configure/request-next.ts(3,18): error TS2307: Cannot find module '../' or its corresponding type declarations.
 configure/request-next.ts(14,29): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+  Overload 2 of 2, '(message?: string): Error', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 configure/request-next.ts(17,29): error TS2339: Property 'client' does not exist on type 'Object'.
@@ -19,14 +19,12 @@ configure/request-next.ts(48,22): error TS2314: Generic type 'Array<T>' requires
 configure/request-next.ts(48,38): error TS2339: Property 'client' does not exist on type 'Object'.
 configure/request-next.ts(50,38): error TS2339: Property 'expose' does not exist on type 'Object'.
 configure/request-next.ts(52,42): error TS2339: Property 'expose' does not exist on type 'Object'.
-configure/request-next.ts(54,13): error TS7053: Element implicitly has an 'any' type because expression of type '"exposePromise" | "exposePromiseMethod"' can't be used to index type 'Object'.
-  Property 'exposePromise' does not exist on type 'Object'.
 configure/request2.ts(3,18): error TS2307: Cannot find module '../' or its corresponding type declarations.
 configure/request2.ts(14,29): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+  Overload 2 of 2, '(message?: string): Error', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 configure/request2.ts(17,29): error TS2339: Property 'request' does not exist on type 'Object'.
@@ -40,8 +38,6 @@ configure/request2.ts(36,99): error TS2314: Generic type 'Promise<T>' requires 1
 configure/request2.ts(41,22): error TS2339: Property 'init' does not exist on type 'Object'.
 configure/request2.ts(53,34): error TS2339: Property 'expose' does not exist on type 'Object'.
 configure/request2.ts(55,38): error TS2339: Property 'expose' does not exist on type 'Object'.
-configure/request2.ts(57,9): error TS7053: Element implicitly has an 'any' type because expression of type '"exposePromise" | "exposePromiseMethod"' can't be used to index type 'Object'.
-  Property 'exposePromise' does not exist on type 'Object'.
 configure/request2.ts(58,21): error TS2339: Property 'request' does not exist on type 'Object'.
 gulpfile.ts(3,18): error TS2307: Cannot find module 'gulp' or its corresponding type declarations.
 gulpfile.ts(4,25): error TS2307: Cannot find module 'run-sequence' or its corresponding type declarations.
@@ -51,7 +47,6 @@ gulpfile.ts(7,19): error TS2307: Cannot find module 'chalk' or its corresponding
 gulpfile.ts(9,23): error TS2307: Cannot find module 'gulp-coveralls' or its corresponding type declarations.
 gulpfile.ts(10,20): error TS2307: Cannot find module 'gulp-eslint' or its corresponding type declarations.
 gulpfile.ts(12,18): error TS2307: Cannot find module 'chai' or its corresponding type declarations.
-gulpfile.ts(13,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 gulpfile.ts(30,15): error TS2339: Property 'libJsFiles' does not exist on type 'Object'.
 gulpfile.ts(31,15): error TS2339: Property 'specFiles' does not exist on type 'Object'.
 gulpfile.ts(32,15): error TS2339: Property 'fixtureFiles' does not exist on type 'Object'.
@@ -65,37 +60,16 @@ gulpfile.ts(57,15): error TS2339: Property 'gulpfile' does not exist on type 'Ob
 gulpfile.ts(69,20): error TS2339: Property 'libJsFiles' does not exist on type 'Object'.
 gulpfile.ts(76,28): error TS2339: Property 'specFiles' does not exist on type 'Object'.
 gulpfile.ts(95,27): error TS2339: Property 'specFiles' does not exist on type 'Object'.
-gulpfile.ts(106,26): error TS2345: Argument of type 'Number' is not assignable to parameter of type '(error: Error | null | undefined) => void'.
-  Type 'Number' provides no match for the signature '(error: Error | null | undefined): void'.
+gulpfile.ts(106,26): error TS2345: Argument of type 'Number' is not assignable to parameter of type '(error: Error) => void'.
+  Type 'Number' provides no match for the signature '(error: Error): void'.
 lib/errors.ts(4,76): error TS2304: Cannot find name 'Void'.
-lib/errors.ts(6,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(7,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(8,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(9,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(10,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(11,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(14,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/errors.ts(22,96): error TS2304: Cannot find name 'Void'.
-lib/errors.ts(24,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(25,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(26,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(27,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(28,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(29,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(32,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/errors.ts(40,78): error TS2304: Cannot find name 'Void'.
-lib/errors.ts(42,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(43,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(44,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(45,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(46,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(47,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(50,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/plumbing.ts(15,29): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+  Overload 2 of 2, '(message?: string): Error', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/plumbing.ts(18,29): error TS2339: Property 'PromiseImpl' does not exist on type 'Object'.
@@ -129,7 +103,7 @@ lib/plumbing.ts(74,29): error TS2339: Property '_rp_callbackOrig' does not exist
 lib/plumbing.ts(76,22): error TS2339: Property '_rp_callbackOrig' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(83,62): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(87,18): error TS2339: Property '_rp_reject' does not exist on type 'HTMLElement'.
-lib/plumbing.ts(87,29): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/plumbing.ts(87,29): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/plumbing.ts(87,53): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Function'.
   Type 'Boolean' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/plumbing.ts(87,63): error TS2339: Property '_rp_options' does not exist on type 'HTMLElement'.
@@ -141,16 +115,16 @@ lib/plumbing.ts(93,22): error TS2351: This expression is not constructable.
 lib/plumbing.ts(94,34): error TS2339: Property '_rp_options' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(94,77): error TS2339: Property '_rp_options' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(97,30): error TS2339: Property '_rp_reject' does not exist on type 'HTMLElement'.
-lib/plumbing.ts(97,41): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/plumbing.ts(97,41): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/plumbing.ts(97,77): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(97,89): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 lib/plumbing.ts(97,100): error TS2339: Property '_rp_options' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(100,30): error TS2339: Property '_rp_reject' does not exist on type 'HTMLElement'.
-lib/plumbing.ts(100,41): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/plumbing.ts(100,41): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/plumbing.ts(100,67): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Function'.
 lib/plumbing.ts(100,86): error TS2339: Property '_rp_options' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(104,22): error TS2339: Property '_rp_reject' does not exist on type 'HTMLElement'.
-lib/plumbing.ts(104,33): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/plumbing.ts(104,33): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/plumbing.ts(104,69): error TS2339: Property 'statusCode' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(104,81): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
   Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
@@ -163,7 +137,7 @@ lib/plumbing.ts(112,34): error TS2339: Property '_rp_options' does not exist on 
 lib/plumbing.ts(112,77): error TS2339: Property '_rp_options' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(115,30): error TS2339: Property '_rp_resolve' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(118,30): error TS2339: Property '_rp_reject' does not exist on type 'HTMLElement'.
-lib/plumbing.ts(118,41): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/plumbing.ts(118,41): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/plumbing.ts(118,67): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Function'.
 lib/plumbing.ts(118,86): error TS2339: Property '_rp_options' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(121,29): error TS2339: Property '_rp_options' does not exist on type 'HTMLElement'.

@@ -66,7 +66,7 @@ function isPrimitiveEquals(val: String): Boolean {
     || typeof val === 'symbol';
 }
 
-function isPrimitiveEqualsNot(val: String): Boolean {
+function isPrimitiveEqualsNot(val: Number): Boolean {
   return val === null || val === void 0 || (typeof val !== 'function' && typeof val !== 'object');
 }
 
@@ -90,7 +90,7 @@ function isPrimitiveObjectOwn(val: Number): Boolean {
   return val === null || array.hasOwnProperty(typeof val);
 }
 
-function isPrimitiveObjectLookup(val: String): Boolean {
+function isPrimitiveObjectLookup(val: Number): Boolean {
   return val === null || !!array[typeof val];
 }
 

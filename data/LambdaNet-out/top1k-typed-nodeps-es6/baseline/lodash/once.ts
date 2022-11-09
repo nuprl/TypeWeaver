@@ -16,7 +16,7 @@ import before from './before.js'
  * initialize()
  * // => `createApplication` is invoked once
  */
-function once(func: String): Hash {
+function once(func: String): Stack {
   return before(2, func)
 }
 

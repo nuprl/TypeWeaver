@@ -18,7 +18,7 @@ function toNumber(value: Number, options: Object): Number {
 }
 
 // Round x to the nearest integer, choosing the even integer if it lies halfway between two.
-function evenRound(x: Number): Promise {
+function evenRound(x: Number): String {
   // There are four cases for numbers with fractional part being .5:
   //
   // case |     x     | floor(x) | round(x) | expected | x <> 0 | x % 1 | x & 1 |   example

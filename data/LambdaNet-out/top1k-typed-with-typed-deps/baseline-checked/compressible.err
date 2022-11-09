@@ -1,16 +1,8 @@
-index.ts(47,7): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-index.ts(48,31): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 index.ts(49,26): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(52,20): error TS2339: Property 'compressible' does not exist on type 'Element'.
 index.ts(53,17): error TS2339: Property 'compressible' does not exist on type 'Element'.
-index.ts(57,3): error TS2322: Type 'boolean | undefined' is not assignable to type 'Boolean'.
-  Type 'undefined' is not assignable to type 'Boolean'.
 index.ts(57,40): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 scripts/version-history.ts(6,38): error TS2339: Property 'join' does not exist on type 'String'.
-scripts/version-history.ts(8,5): error TS2322: Type 'string | undefined' is not assignable to type 'String'.
-  Type 'undefined' is not assignable to type 'String'.
 scripts/version-history.ts(11,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/version-history.ts(11,34): error TS2339: Property 'readFileSync' does not exist on type 'String'.
 scripts/version-history.ts(24,7): error TS2740: Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.

@@ -37,7 +37,7 @@ function evenRound(x: Number): String {
   return censorNegativeZero(Math.round(x));
 }
 
-function integerPart(n: Number): Promise {
+function integerPart(n: Number): Boolean {
   return censorNegativeZero(Math.trunc(n));
 }
 

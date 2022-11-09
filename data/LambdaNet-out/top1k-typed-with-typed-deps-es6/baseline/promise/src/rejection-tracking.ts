@@ -17,7 +17,7 @@ function disable(): Void {
 }
 
 exports.enable = enable;
-function enable(options: Element): Void {
+function enable(options: HTMLElement): Void {
   options = options || {};
   if (enabled) disable();
   enabled = true;

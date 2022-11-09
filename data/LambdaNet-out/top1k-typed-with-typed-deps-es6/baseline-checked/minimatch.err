@@ -2,15 +2,12 @@
 .github/workflows/package-json-repo.ts(4,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 .github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'String'.
-.github/workflows/package-json-repo.ts(12,9): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-.github/workflows/package-json-repo.ts(13,26): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-.github/workflows/package-json-repo.ts(14,26): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(value: any, replacer?: ((this: any, key: string, value: any) => any) | undefined, space?: string | number | undefined): string', gave the following error.
-    Argument of type 'null' is not assignable to parameter of type '((this: any, key: string, value: any) => any) | undefined'.
-  Overload 2 of 2, '(value: any, replacer?: (string | number)[] | null | undefined, space?: string | number | undefined): string', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string | number | undefined'.
+.github/workflows/package-json-repo.ts(14,51): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
+    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
+      Type 'String' is not assignable to type 'string | number'.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
+    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
 .github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
 benchmark.ts(4,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark.ts(5,5): error TS2322: Type '[number, number]' is not assignable to type 'Number'.
@@ -44,8 +41,6 @@ minimatch.ts(71,11): error TS2339: Property 'defaults' does not exist on type 'F
 minimatch.ts(78,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 minimatch.ts(79,5): error TS2339: Property 'Minimatch' does not exist on type 'Function'.
 minimatch.ts(79,46): error TS2339: Property 'Minimatch' does not exist on type 'Function'.
-minimatch.ts(80,18): error TS7006: Parameter 'pattern' implicitly has an 'any' type.
-minimatch.ts(80,27): error TS7006: Parameter 'options' implicitly has an 'any' type.
 minimatch.ts(84,5): error TS2339: Property 'Minimatch' does not exist on type 'Function'.
 minimatch.ts(84,52): error TS2339: Property 'defaults' does not exist on type 'Function'.
 minimatch.ts(85,5): error TS2339: Property 'filter' does not exist on type 'Function'.
@@ -72,13 +67,11 @@ minimatch.ts(150,11): error TS2339: Property 'match' does not exist on type 'Fun
 minimatch.ts(150,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 minimatch.ts(151,9): error TS2740: Type 'Minimatch' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 minimatch.ts(152,46): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(matcher: { [Symbol.match](string: string): RegExpMatchArray | null; }): RegExpMatchArray | null', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.match](string: string): RegExpMatchArray | null; }'.
-  Overload 2 of 2, '(regexp: string | RegExp): RegExpMatchArray | null', gave the following error.
+  Overload 1 of 2, '(matcher: { [Symbol.match](string: string): RegExpMatchArray; }): RegExpMatchArray', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.match](string: string): RegExpMatchArray; }'.
+  Overload 2 of 2, '(regexp: string | RegExp): RegExpMatchArray', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
 minimatch.ts(153,10): error TS2339: Property 'options' does not exist on type 'String'.
-minimatch.ts(164,16): error TS7006: Parameter 'pattern' implicitly has an 'any' type.
-minimatch.ts(164,25): error TS7006: Parameter 'options' implicitly has an 'any' type.
 minimatch.ts(169,10): error TS2339: Property 'options' does not exist on type 'Minimatch'.
 minimatch.ts(170,10): error TS2339: Property 'set' does not exist on type 'Minimatch'.
 minimatch.ts(171,10): error TS2339: Property 'pattern' does not exist on type 'Minimatch'.
@@ -118,9 +111,6 @@ minimatch.ts(247,28): error TS2339: Property 'pattern' does not exist on type 'M
 minimatch.ts(247,53): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 minimatch.ts(248,10): error TS2339: Property 'negate' does not exist on type 'Minimatch'.
-minimatch.ts(256,13): error TS7006: Parameter 'file' implicitly has an 'any' type.
-minimatch.ts(256,19): error TS7006: Parameter 'pattern' implicitly has an 'any' type.
-minimatch.ts(256,28): error TS7006: Parameter 'partial' implicitly has an 'any' type.
 minimatch.ts(257,32): error TS2339: Property 'options' does not exist on type 'Minimatch'.
 minimatch.ts(259,16): error TS2554: Expected 0 arguments, but got 2.
 minimatch.ts(262,16): error TS2554: Expected 0 arguments, but got 3.
@@ -141,25 +131,22 @@ minimatch.ts(345,13): error TS2356: An arithmetic operand must be of type 'any',
 minimatch.ts(355,22): error TS2554: Expected 0 arguments, but got 5.
 minimatch.ts(366,9): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 minimatch.ts(367,20): error TS2554: Expected 0 arguments, but got 4.
-minimatch.ts(369,9): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Number'.
-  Type 'null' is not assignable to type 'Number'.
+minimatch.ts(369,9): error TS2739: Type 'RegExpMatchArray' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 minimatch.ts(369,23): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(matcher: { [Symbol.match](string: string): RegExpMatchArray | null; }): RegExpMatchArray | null', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.match](string: string): RegExpMatchArray | null; }'.
-      Property '[Symbol.match]' is missing in type 'String' but required in type '{ [Symbol.match](string: string): RegExpMatchArray | null; }'.
-  Overload 2 of 2, '(regexp: string | RegExp): RegExpMatchArray | null', gave the following error.
+  Overload 1 of 2, '(matcher: { [Symbol.match](string: string): RegExpMatchArray; }): RegExpMatchArray', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.match](string: string): RegExpMatchArray; }'.
+      Property '[Symbol.match]' is missing in type 'String' but required in type '{ [Symbol.match](string: string): RegExpMatchArray; }'.
+  Overload 2 of 2, '(regexp: string | RegExp): RegExpMatchArray', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
 minimatch.ts(370,20): error TS2554: Expected 0 arguments, but got 4.
 minimatch.ts(411,29): error TS2339: Property 'pattern' does not exist on type 'Minimatch'.
 minimatch.ts(411,43): error TS2339: Property 'options' does not exist on type 'Minimatch'.
-minimatch.ts(414,10): error TS7006: Parameter 'pattern' implicitly has an 'any' type.
-minimatch.ts(414,19): error TS7006: Parameter 'isSub' implicitly has an 'any' type.
-minimatch.ts(417,37): error TS2339: Property 'options' does not exist on type 'Minimatch'.
-minimatch.ts(421,20): error TS2339: Property 'noglobstar' does not exist on type 'Minimatch'.
-minimatch.ts(429,39): error TS2339: Property 'nocase' does not exist on type 'Minimatch'.
+minimatch.ts(417,34): error TS2339: Property 'options' does not exist on type 'Minimatch'.
+minimatch.ts(421,20): error TS2339: Property 'noglobstar' does not exist on type 'Object'.
+minimatch.ts(429,39): error TS2339: Property 'nocase' does not exist on type 'Object'.
 minimatch.ts(432,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 minimatch.ts(433,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-minimatch.ts(445,15): error TS2339: Property 'dot' does not exist on type 'Minimatch'.
+minimatch.ts(445,15): error TS2339: Property 'dot' does not exist on type 'Object'.
 minimatch.ts(453,16): error TS2678: Type 'string' is not comparable to type 'Number'.
 minimatch.ts(454,13): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
 minimatch.ts(457,16): error TS2678: Type 'string' is not comparable to type 'Number'.
@@ -167,14 +154,11 @@ minimatch.ts(458,13): error TS2365: Operator '+=' cannot be applied to types 'St
 minimatch.ts(465,20): error TS2554: Expected 0 arguments, but got 3.
 minimatch.ts(466,9): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 minimatch.ts(471,18): error TS2554: Expected 0 arguments, but got 5.
-minimatch.ts(480,13): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 minimatch.ts(507,22): error TS2554: Expected 0 arguments, but got 5.
 minimatch.ts(512,24): error TS2554: Expected 0 arguments, but got 1.
 minimatch.ts(513,36): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 minimatch.ts(521,22): error TS2554: Expected 0 arguments, but got 2.
-minimatch.ts(521,48): error TS2454: Variable 'stateChar' is used before being assigned.
-minimatch.ts(527,23): error TS2339: Property 'noext' does not exist on type 'Minimatch'.
-minimatch.ts(536,16): error TS2454: Variable 'stateChar' is used before being assigned.
+minimatch.ts(527,23): error TS2339: Property 'noext' does not exist on type 'Object'.
 minimatch.ts(545,27): error TS2538: Type 'Number' cannot be used as an index type.
 minimatch.ts(546,28): error TS2538: Type 'Number' cannot be used as an index type.
 minimatch.ts(549,17): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
@@ -187,18 +171,9 @@ minimatch.ts(603,21): error TS2365: Operator '+' cannot be applied to types 'Num
 minimatch.ts(617,34): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 minimatch.ts(623,31): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-minimatch.ts(623,55): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-minimatch.ts(624,36): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-minimatch.ts(639,15): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 minimatch.ts(656,27): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 minimatch.ts(658,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-minimatch.ts(658,49): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-minimatch.ts(659,30): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 minimatch.ts(670,26): error TS2339: Property 'reStart' does not exist on type 'Object'.
 minimatch.ts(670,39): error TS2339: Property 'open' does not exist on type 'Object'.
 minimatch.ts(671,18): error TS2554: Expected 0 arguments, but got 3.
@@ -208,8 +183,6 @@ minimatch.ts(690,28): error TS2339: Property 'type' does not exist on type 'Obje
 minimatch.ts(691,14): error TS2339: Property 'type' does not exist on type 'Object'.
 minimatch.ts(692,21): error TS2339: Property 'type' does not exist on type 'Object'.
 minimatch.ts(695,27): error TS2339: Property 'reStart' does not exist on type 'Object'.
-minimatch.ts(707,37): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Function'.
-  No index signature with a parameter of type 'string' was found on type 'Function'.
 minimatch.ts(717,47): error TS2339: Property 'reStart' does not exist on type 'Minimatch'.
 minimatch.ts(718,43): error TS2339: Property 'reStart' does not exist on type 'Minimatch'.
 minimatch.ts(718,55): error TS2339: Property 'reEnd' does not exist on type 'Minimatch'.
@@ -218,12 +191,12 @@ minimatch.ts(720,42): error TS2339: Property 'reEnd' does not exist on type 'Min
 minimatch.ts(720,56): error TS2339: Property 'reEnd' does not exist on type 'Minimatch'.
 minimatch.ts(733,12): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 minimatch.ts(744,12): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
-minimatch.ts(759,35): error TS2339: Property 'nocase' does not exist on type 'Minimatch'.
+minimatch.ts(759,35): error TS2339: Property 'nocase' does not exist on type 'Object'.
 minimatch.ts(761,55): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(pattern: string | RegExp, flags?: string | undefined): RegExp', gave the following error.
+  Overload 1 of 3, '(pattern: string | RegExp, flags?: string): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 3, '(pattern: string, flags?: string | undefined): RegExp', gave the following error.
+  Overload 2 of 3, '(pattern: string, flags?: string): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 minimatch.ts(775,14): error TS2339: Property 'regexp' does not exist on type 'Minimatch'.
@@ -253,14 +226,13 @@ minimatch.ts(830,44): error TS2367: This condition will always return 'true' sin
 minimatch.ts(838,14): error TS2339: Property 'negate' does not exist on type 'Minimatch'.
 minimatch.ts(841,12): error TS2339: Property 'regexp' does not exist on type 'Minimatch'.
 minimatch.ts(841,32): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(pattern: string | RegExp, flags?: string | undefined): RegExp', gave the following error.
+  Overload 1 of 3, '(pattern: string | RegExp, flags?: string): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
-  Overload 2 of 3, '(pattern: string, flags?: string | undefined): RegExp', gave the following error.
+  Overload 2 of 3, '(pattern: string, flags?: string): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 minimatch.ts(843,12): error TS2339: Property 'regexp' does not exist on type 'Minimatch'.
 minimatch.ts(845,17): error TS2339: Property 'regexp' does not exist on type 'Minimatch'.
-minimatch.ts(848,10): error TS7006: Parameter 'f' implicitly has an 'any' type.
 minimatch.ts(848,28): error TS2339: Property 'partial' does not exist on type 'Minimatch'.
 minimatch.ts(849,16): error TS2554: Expected 0 arguments, but got 3.
 minimatch.ts(849,33): error TS2339: Property 'pattern' does not exist on type 'Minimatch'.
@@ -276,12 +248,10 @@ minimatch.ts(874,21): error TS2339: Property 'pattern' does not exist on type 'M
 minimatch.ts(884,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 minimatch.ts(885,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 minimatch.ts(886,19): error TS2339: Property 'matchBase' does not exist on type 'Object'.
-minimatch.ts(887,17): error TS2454: Variable 'filename' is used before being assigned.
 minimatch.ts(891,21): error TS2339: Property 'flipNegate' does not exist on type 'Object'.
 minimatch.ts(892,22): error TS2339: Property 'negate' does not exist on type 'Minimatch'.
 minimatch.ts(898,17): error TS2339: Property 'flipNegate' does not exist on type 'Object'.
 minimatch.ts(899,17): error TS2339: Property 'negate' does not exist on type 'Minimatch'.
-minimatch.ts(902,20): error TS7006: Parameter 'def' implicitly has an 'any' type.
 minimatch.ts(903,22): error TS2339: Property 'defaults' does not exist on type 'Function'.
 minimatch.ts(907,11): error TS2339: Property 'Minimatch' does not exist on type 'Function'.
 

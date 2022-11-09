@@ -337,7 +337,7 @@ function processRule(rule: Object, shorts: Object, shortDeclarations: Array, las
         }
 
         const key: String = MAIN_PROPERTY[property];
-        let shorthand: String;
+        let shorthand: TRBL;
         let operation: Number;
 
         if (!lastShortSelector || selector === lastShortSelector) {

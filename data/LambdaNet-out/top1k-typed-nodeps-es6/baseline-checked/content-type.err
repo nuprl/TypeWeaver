@@ -15,30 +15,19 @@ index.ts(122,24): error TS2345: Argument of type 'Number' is not assignable to p
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(125,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(129,26): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+index.ts(129,26): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(137,5): error TS2322: Type 'Number' is not assignable to type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-index.ts(139,13): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 index.ts(140,17): error TS2339: Property 'index' does not exist on type 'Object'.
-index.ts(144,16): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(145,13): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-index.ts(146,15): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 index.ts(155,11): error TS2339: Property 'parameters' does not exist on type 'HTMLElement'.
 index.ts(177,18): error TS2339: Property 'getHeader' does not exist on type 'HTMLElement'.
 index.ts(179,18): error TS2339: Property 'getHeader' does not exist on type 'HTMLElement'.
 index.ts(180,25): error TS2339: Property 'headers' does not exist on type 'HTMLElement'.
 index.ts(182,18): error TS2339: Property 'headers' does not exist on type 'HTMLElement'.
 index.ts(182,33): error TS2339: Property 'headers' does not exist on type 'HTMLElement'.
-index.ts(185,14): error TS2454: Variable 'header' is used before being assigned.
 index.ts(204,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(208,43): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(219,38): error TS2304: Cannot find name 'Void'.
-index.ts(220,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(221,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 

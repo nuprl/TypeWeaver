@@ -37,16 +37,16 @@ pp.treatFunctionsAsVarInScope = function(scope: Scope) {
 pp.declareName = function(name: String, bindingType: Number, pos: Array) {
   let redeclared: Boolean = false
   if (bindingType === BIND_LEXICAL) {
-    const scope: RegExpValidationState = this.currentScope()
+    const scope: TokContext = this.currentScope()
     redeclared = scope.lexical.indexOf(name) > -1 || scope.functions.indexOf(name) > -1 || scope.var.indexOf(name) > -1
     scope.lexical.push(name)
     if (this.inModule && (scope.flags & SCOPE_TOP))
       delete this.undefinedExports[name]
   } else if (bindingType === BIND_SIMPLE_CATCH) {
-    const scope: Node = this.currentScope()
+    const scope: TokenType = this.currentScope()
     scope.lexical.push(name)
   } else if (bindingType === BIND_FUNCTION) {
-    const scope: RegExpValidationState = this.currentScope()
+    const scope: Position = this.currentScope()
     if (this.treatFunctionsAsVar)
       redeclared = scope.lexical.indexOf(name) > -1
     else
@@ -54,7 +54,7 @@ pp.declareName = function(name: String, bindingType: Number, pos: Array) {
     scope.functions.push(name)
   } else {
     for (let i = this.scopeStack.length - 1; i >= 0; --i) {
-      const scope: RegExpValidationState = this.scopeStack[i]
+      const scope: TokContext = this.scopeStack[i]
       if (scope.lexical.indexOf(name) > -1 && !((scope.flags & SCOPE_SIMPLE_CATCH) && scope.lexical[0] === name) ||
           !this.treatFunctionsAsVarInScope(scope) && scope.functions.indexOf(name) > -1) {
         redeclared = true
@@ -83,7 +83,7 @@ pp.currentScope = function() {
 
 pp.currentVarScope = function() {
   for (let i = this.scopeStack.length - 1;; i--) {
-    let scope: String = this.scopeStack[i]
+    let scope: Node = this.scopeStack[i]
     if (scope.flags & SCOPE_VAR) return scope
   }
 }
@@ -91,7 +91,7 @@ pp.currentVarScope = function() {
 // Could be useful for `this`, `new.target`, `super()`, `super.property`, and `super[property]`.
 pp.currentThisScope = function() {
   for (let i = this.scopeStack.length - 1;; i--) {
-    let scope: Node = this.scopeStack[i]
+    let scope: Scope = this.scopeStack[i]
     if (scope.flags & SCOPE_VAR && !(scope.flags & SCOPE_ARROW)) return scope
   }
 }

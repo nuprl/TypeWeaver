@@ -112,7 +112,7 @@ function loadDescriptionFile(
 					});
 				}
 			},
-			(err: Function, result: Boolean) => {
+			(err: Resolver, result: Boolean) => {
 				if (err) return callback(err);
 				if (result) {
 					return callback(null, result);

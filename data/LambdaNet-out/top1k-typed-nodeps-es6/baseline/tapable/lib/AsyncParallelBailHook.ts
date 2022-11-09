@@ -71,7 +71,7 @@ const COMPILE: Function = function(options: Object) {
 	return factory.create(options);
 };
 
-function AsyncParallelBailHook(args: Array = [], name: String = undefined): Hook {
+function AsyncParallelBailHook(args: String = [], name: String = undefined): Hook {
 	const hook: Hook = new Hook(args, name);
 	hook.constructor = AsyncParallelBailHook;
 	hook.compile = COMPILE;

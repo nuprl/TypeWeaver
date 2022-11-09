@@ -32,7 +32,7 @@
         VisitorOption: Object,
         VisitorKeys: Object,
         BREAK: Number,
-        SKIP: Function,
+        SKIP: Number,
         REMOVE: String;
 
     function deepCopy(obj: Object): Object {
@@ -239,7 +239,7 @@
         Remove: REMOVE
     };
 
-    function Reference(parent: String, key: String): Void {
+    function Reference(parent: String, key: String): String {
         this.parent = parent;
         this.key = key;
     }

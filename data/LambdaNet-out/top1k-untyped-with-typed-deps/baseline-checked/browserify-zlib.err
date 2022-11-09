@@ -4,18 +4,6 @@ src/binding.ts(6,14): error TS2314: Generic type 'Array<T>' requires 1 type argu
 src/binding.ts(7,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/binding.ts(31,10): error TS2393: Duplicate function implementation.
 src/binding.ts(31,31): error TS2304: Cannot find name 'Void'.
-src/binding.ts(36,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/binding.ts(37,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/binding.ts(38,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/binding.ts(39,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/binding.ts(40,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/binding.ts(41,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/binding.ts(42,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/binding.ts(43,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/binding.ts(44,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/binding.ts(45,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/binding.ts(46,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/binding.ts(47,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 src/binding.ts(58,3): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 src/binding.ts(59,3): error TS2349: This expression is not callable.
@@ -35,7 +23,6 @@ src/binding.ts(91,10): error TS2339: Property 'equal' does not exist on type 'Ob
 src/binding.ts(105,20): error TS2339: Property 'alloc' does not exist on type 'Function'.
 src/binding.ts(131,10): error TS2339: Property '_process' does not exist on type 'HTMLElement'.
 src/binding.ts(132,10): error TS2551: Property '_after' does not exist on type 'HTMLElement'. Did you mean 'after'?
-src/binding.ts(148,7): error TS2322: Type 'null' is not assignable to type 'Number'.
 src/binding.ts(170,31): error TS2538: Type 'Number' cannot be used as an index type.
 src/binding.ts(172,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/binding.ts(189,31): error TS2538: Type 'Number' cannot be used as an index type.
@@ -84,51 +71,50 @@ src/index.ts(52,24): error TS2339: Property 'Z_MEM_ERROR' does not exist on type
 src/index.ts(53,24): error TS2339: Property 'Z_BUF_ERROR' does not exist on type 'HTMLInputElement'.
 src/index.ts(54,28): error TS2339: Property 'Z_VERSION_ERROR' does not exist on type 'HTMLInputElement'.
 src/index.ts(57,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/index.ts(60,3): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 src/index.ts(60,15): error TS2538: Type 'String' cannot be used as an index type.
-src/index.ts(76,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-src/index.ts(80,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-src/index.ts(84,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-src/index.ts(88,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-src/index.ts(92,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-src/index.ts(96,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-src/index.ts(100,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/index.ts(76,10): error TS2350: Only a void function can be called with the 'new' keyword.
+src/index.ts(80,10): error TS2350: Only a void function can be called with the 'new' keyword.
+src/index.ts(84,10): error TS2350: Only a void function can be called with the 'new' keyword.
+src/index.ts(88,10): error TS2350: Only a void function can be called with the 'new' keyword.
+src/index.ts(92,10): error TS2350: Only a void function can be called with the 'new' keyword.
+src/index.ts(96,10): error TS2350: Only a void function can be called with the 'new' keyword.
+src/index.ts(100,10): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(109,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-src/index.ts(111,21): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/index.ts(111,21): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(111,33): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
   Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 src/index.ts(114,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/index.ts(115,25): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/index.ts(115,25): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(121,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-src/index.ts(123,21): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/index.ts(123,21): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(123,30): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 src/index.ts(126,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/index.ts(127,25): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/index.ts(127,25): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(133,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-src/index.ts(135,21): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/index.ts(135,21): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(135,36): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 src/index.ts(138,57): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/index.ts(139,25): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/index.ts(139,25): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(145,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-src/index.ts(147,21): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/index.ts(147,21): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(147,31): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 src/index.ts(150,52): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/index.ts(151,25): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/index.ts(151,25): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(157,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-src/index.ts(159,21): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/index.ts(159,21): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(159,33): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 src/index.ts(162,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/index.ts(163,25): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/index.ts(163,25): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(169,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-src/index.ts(171,21): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/index.ts(171,21): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(171,32): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 src/index.ts(174,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/index.ts(175,25): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/index.ts(175,25): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(181,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-src/index.ts(183,21): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/index.ts(183,21): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(183,36): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 src/index.ts(186,57): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/index.ts(187,25): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/index.ts(187,25): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(190,79): error TS2304: Cannot find name 'Void'.
 src/index.ts(191,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/index.ts(194,10): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
@@ -143,12 +129,11 @@ src/index.ts(210,12): error TS2339: Property 'removeListener' does not exist on 
 src/index.ts(211,12): error TS2339: Property 'removeListener' does not exist on type 'HTMLElement'.
 src/index.ts(215,21): error TS2304: Cannot find name 'Void'.
 src/index.ts(216,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/index.ts(217,9): error TS2322: Type 'null' is not assignable to type 'Object'.
 src/index.ts(220,28): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string | undefined): RangeError', gave the following error.
+  Overload 1 of 2, '(message?: string): RangeError', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+  Overload 2 of 2, '(message?: string): Error', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 src/index.ts(222,20): error TS2339: Property 'concat' does not exist on type 'Function'.
@@ -159,47 +144,19 @@ src/index.ts(233,21): error TS2339: Property 'from' does not exist on type 'Func
 src/index.ts(235,15): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
 src/index.ts(238,36): error TS2339: Property '_finishFlushFlag' does not exist on type 'HTMLElement'.
 src/index.ts(240,17): error TS2339: Property '_processChunk' does not exist on type 'HTMLElement'.
-src/index.ts(245,33): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-src/index.ts(246,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(246,42): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-src/index.ts(247,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(247,25): error TS2554: Expected 2 arguments, but got 3.
+src/index.ts(246,42): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(247,33): error TS2339: Property 'DEFLATE' does not exist on type 'HTMLInputElement'.
-src/index.ts(250,33): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-src/index.ts(251,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(251,42): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-src/index.ts(252,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(252,25): error TS2554: Expected 2 arguments, but got 3.
+src/index.ts(251,42): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(252,33): error TS2339: Property 'INFLATE' does not exist on type 'HTMLInputElement'.
-src/index.ts(257,30): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-src/index.ts(258,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(258,39): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-src/index.ts(259,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(259,25): error TS2554: Expected 2 arguments, but got 3.
+src/index.ts(258,39): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(259,33): error TS2339: Property 'GZIP' does not exist on type 'HTMLInputElement'.
-src/index.ts(262,32): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-src/index.ts(263,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(263,41): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-src/index.ts(264,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(264,25): error TS2554: Expected 2 arguments, but got 3.
+src/index.ts(263,41): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(264,33): error TS2339: Property 'GUNZIP' does not exist on type 'HTMLInputElement'.
-src/index.ts(269,36): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-src/index.ts(270,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(270,45): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-src/index.ts(271,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(271,25): error TS2554: Expected 2 arguments, but got 3.
+src/index.ts(270,45): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(271,33): error TS2339: Property 'DEFLATERAW' does not exist on type 'HTMLInputElement'.
-src/index.ts(274,36): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-src/index.ts(275,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(275,45): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-src/index.ts(276,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(276,25): error TS2554: Expected 2 arguments, but got 3.
+src/index.ts(275,45): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(276,33): error TS2339: Property 'INFLATERAW' does not exist on type 'HTMLInputElement'.
-src/index.ts(281,31): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-src/index.ts(282,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(282,40): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-src/index.ts(283,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(283,25): error TS2554: Expected 2 arguments, but got 3.
+src/index.ts(282,40): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(283,33): error TS2339: Property 'UNZIP' does not exist on type 'HTMLInputElement'.
 src/index.ts(287,27): error TS2339: Property 'Z_NO_FLUSH' does not exist on type 'HTMLInputElement'.
 src/index.ts(288,27): error TS2339: Property 'Z_PARTIAL_FLUSH' does not exist on type 'HTMLInputElement'.
@@ -209,20 +166,17 @@ src/index.ts(291,27): error TS2339: Property 'Z_FINISH' does not exist on type '
 src/index.ts(292,27): error TS2339: Property 'Z_BLOCK' does not exist on type 'HTMLInputElement'.
 src/index.ts(300,10): error TS2393: Duplicate function implementation.
 src/index.ts(300,49): error TS2304: Cannot find name 'Void'.
-src/index.ts(301,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(302,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+src/index.ts(301,16): error TS2322: Type 'HTMLElement | {}' is not assignable to type 'HTMLElement'.
+  Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 src/index.ts(302,26): error TS2339: Property 'chunkSize' does not exist on type 'HTMLElement'.
-src/index.ts(304,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 src/index.ts(306,12): error TS2339: Property 'flush' does not exist on type 'HTMLElement'.
 src/index.ts(306,44): error TS2339: Property 'flush' does not exist on type 'HTMLElement'.
 src/index.ts(307,51): error TS2339: Property 'flush' does not exist on type 'HTMLElement'.
 src/index.ts(309,12): error TS2339: Property 'finishFlush' does not exist on type 'HTMLElement'.
 src/index.ts(309,50): error TS2339: Property 'finishFlush' does not exist on type 'HTMLElement'.
 src/index.ts(310,51): error TS2339: Property 'finishFlush' does not exist on type 'HTMLElement'.
-src/index.ts(313,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 src/index.ts(313,26): error TS2339: Property 'flush' does not exist on type 'HTMLElement'.
 src/index.ts(313,43): error TS2339: Property 'Z_NO_FLUSH' does not exist on type 'HTMLInputElement'.
-src/index.ts(314,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 src/index.ts(314,39): error TS2339: Property 'finishFlush' does not exist on type 'HTMLElement'.
 src/index.ts(315,10): error TS2339: Property 'finishFlush' does not exist on type 'HTMLElement'.
 src/index.ts(315,32): error TS2339: Property 'Z_FINISH' does not exist on type 'HTMLInputElement'.
@@ -252,11 +206,7 @@ src/index.ts(351,51): error TS2339: Property 'strategy' does not exist on type '
 src/index.ts(355,12): error TS2339: Property 'dictionary' does not exist on type 'HTMLElement'.
 src/index.ts(356,17): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
 src/index.ts(356,31): error TS2339: Property 'dictionary' does not exist on type 'HTMLElement'.
-src/index.ts(361,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 src/index.ts(361,30): error TS2339: Property 'Zlib' does not exist on type 'HTMLInputElement'.
-src/index.ts(363,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(364,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(365,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 src/index.ts(368,5): error TS2554: Expected 2 arguments, but got 1.
 src/index.ts(369,10): error TS2339: Property '_hadError' does not exist on type 'HTMLElement'.
 src/index.ts(371,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -269,20 +219,10 @@ src/index.ts(378,19): error TS2339: Property 'level' does not exist on type 'HTM
 src/index.ts(378,52): error TS2339: Property 'level' does not exist on type 'HTMLElement'.
 src/index.ts(381,19): error TS2339: Property 'strategy' does not exist on type 'HTMLElement'.
 src/index.ts(381,58): error TS2339: Property 'strategy' does not exist on type 'HTMLElement'.
-src/index.ts(383,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 src/index.ts(383,26): error TS2339: Property 'windowBits' does not exist on type 'HTMLElement'.
 src/index.ts(385,26): error TS2339: Property 'memLevel' does not exist on type 'HTMLElement'.
 src/index.ts(387,26): error TS2339: Property 'dictionary' does not exist on type 'HTMLElement'.
-src/index.ts(389,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 src/index.ts(389,25): error TS2339: Property 'allocUnsafe' does not exist on type 'Function'.
-src/index.ts(389,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(390,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(391,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(392,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(394,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(394,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(396,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(397,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 src/index.ts(403,6): error TS2339: Property 'inherits' does not exist on type 'String'.
 src/index.ts(420,24): error TS2339: Property 'Z_SYNC_FLUSH' does not exist on type 'HTMLInputElement'.
 src/index.ts(421,7): error TS2349: This expression is not callable.
@@ -321,17 +261,12 @@ src/index.ts(521,48): error TS2314: Generic type 'Array<T>' requires 1 type argu
 src/index.ts(531,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/index.ts(539,5): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-src/index.ts(548,42): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-src/index.ts(548,50): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-src/index.ts(551,13): error TS2454: Variable 'error' is used before being assigned.
 src/index.ts(555,7): error TS2554: Expected 2 arguments, but got 1.
 src/index.ts(556,28): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string | undefined): RangeError', gave the following error.
+  Overload 1 of 2, '(message?: string): RangeError', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+  Overload 2 of 2, '(message?: string): Error', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 src/index.ts(559,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -341,12 +276,7 @@ src/index.ts(565,3): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 src/index.ts(574,7): error TS2339: Property 'buffer' does not exist on type 'Object'.
 src/index.ts(575,7): error TS2339: Property 'callback' does not exist on type 'Object'.
-src/index.ts(577,67): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-src/index.ts(583,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(584,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-src/index.ts(585,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 src/index.ts(588,14): error TS2339: Property '_hadError' does not exist on type 'HTMLElement'.
-src/index.ts(589,7): error TS2322: Type 'undefined' is not assignable to type 'Boolean'.
 src/index.ts(591,24): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/index.ts(591,41): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/index.ts(592,5): error TS2349: This expression is not callable.
@@ -373,7 +303,6 @@ src/index.ts(629,44): error TS2339: Property '_offset' does not exist on type 'H
 src/index.ts(630,44): error TS2339: Property '_chunkSize' does not exist on type 'HTMLElement'.
 src/index.ts(631,14): error TS2339: Property 'callback' does not exist on type 'Object'.
 src/index.ts(632,14): error TS2339: Property 'buffer' does not exist on type 'Object'.
-src/index.ts(633,7): error TS2322: Type 'undefined' is not assignable to type 'Boolean'.
 src/index.ts(644,6): error TS2339: Property 'inherits' does not exist on type 'String'.
 src/index.ts(645,6): error TS2339: Property 'inherits' does not exist on type 'String'.
 src/index.ts(646,6): error TS2339: Property 'inherits' does not exist on type 'String'.

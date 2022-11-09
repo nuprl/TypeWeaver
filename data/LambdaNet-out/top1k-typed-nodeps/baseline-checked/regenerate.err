@@ -3,8 +3,7 @@ Gruntfile.ts(36,8): error TS2339: Property 'loadNpmTasks' does not exist on type
 Gruntfile.ts(38,8): error TS2339: Property 'registerTask' does not exist on type 'HTMLElement'.
 Gruntfile.ts(45,8): error TS2339: Property 'registerTask' does not exist on type 'HTMLElement'.
 Gruntfile.ts(50,8): error TS2339: Property 'registerTask' does not exist on type 'HTMLElement'.
-regenerate.ts(8,6): error TS2322: Type 'false | NodeModule' is not assignable to type 'String'.
-  Type 'boolean' is not assignable to type 'String'.
+regenerate.ts(8,6): error TS2740: Type 'NodeModule' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 regenerate.ts(14,17): error TS2339: Property 'global' does not exist on type 'Object'.
 regenerate.ts(14,53): error TS2339: Property 'window' does not exist on type 'Object'.
 regenerate.ts(43,17): error TS2538: Type 'String' cannot be used as an index type.
@@ -19,7 +18,6 @@ regenerate.ts(92,12): error TS2356: An arithmetic operand must be of type 'any',
 regenerate.ts(99,16): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 regenerate.ts(105,19): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 regenerate.ts(109,18): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-regenerate.ts(115,16): error TS2454: Variable 'tmp' is used before being assigned.
 regenerate.ts(115,16): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 regenerate.ts(120,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 regenerate.ts(128,15): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
@@ -41,7 +39,6 @@ regenerate.ts(202,10): error TS2365: Operator '+' cannot be applied to types 'Nu
 regenerate.ts(213,19): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 regenerate.ts(217,4): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 regenerate.ts(222,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-regenerate.ts(227,7): error TS2322: Type 'null' is not assignable to type 'Number'.
 regenerate.ts(230,28): error TS2339: Property 'codePointRange' does not exist on type 'Object'.
 regenerate.ts(234,15): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 regenerate.ts(237,30): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
@@ -86,12 +83,9 @@ regenerate.ts(419,4): error TS2365: Operator '+=' cannot be applied to types 'Nu
 regenerate.ts(424,26): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 regenerate.ts(431,29): error TS2339: Property 'length' does not exist on type 'Object'.
 regenerate.ts(433,28): error TS2538: Type 'Number' cannot be used as an index type.
-regenerate.ts(434,21): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 regenerate.ts(434,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 regenerate.ts(436,29): error TS2365: Operator '>' cannot be applied to types 'Number' and 'String'.
 regenerate.ts(442,17): error TS2538: Type 'Number' cannot be used as an index type.
-regenerate.ts(443,10): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 regenerate.ts(443,15): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 regenerate.ts(444,30): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
 regenerate.ts(447,4): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
@@ -164,66 +158,12 @@ regenerate.ts(796,15): error TS2314: Generic type 'Array<T>' requires 1 type arg
 regenerate.ts(801,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 regenerate.ts(806,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 regenerate.ts(808,36): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-regenerate.ts(813,21): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-regenerate.ts(814,20): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-regenerate.ts(815,25): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-regenerate.ts(816,24): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-regenerate.ts(822,5): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-regenerate.ts(822,26): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-regenerate.ts(823,5): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-regenerate.ts(823,26): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-regenerate.ts(827,31): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-regenerate.ts(831,7): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-regenerate.ts(832,7): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 regenerate.ts(835,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-regenerate.ts(837,22): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-regenerate.ts(838,21): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 regenerate.ts(839,37): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-regenerate.ts(840,41): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-regenerate.ts(841,40): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 regenerate.ts(853,70): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 regenerate.ts(859,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-regenerate.ts(861,32): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-regenerate.ts(862,36): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-regenerate.ts(863,34): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 regenerate.ts(865,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 regenerate.ts(867,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-regenerate.ts(867,37): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-regenerate.ts(876,26): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-regenerate.ts(877,7): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-regenerate.ts(877,28): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-regenerate.ts(877,40): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-regenerate.ts(879,7): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-regenerate.ts(880,8): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-regenerate.ts(881,8): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-regenerate.ts(882,8): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 regenerate.ts(887,8): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 regenerate.ts(894,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 regenerate.ts(908,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -250,16 +190,13 @@ regenerate.ts(1003,42): error TS2339: Property 'loneHighSurrogates' does not exi
 regenerate.ts(1004,41): error TS2339: Property 'loneLowSurrogates' does not exist on type 'HTMLElement'.
 regenerate.ts(1005,27): error TS2339: Property 'bmp' does not exist on type 'HTMLElement'.
 regenerate.ts(1006,32): error TS2339: Property 'astral' does not exist on type 'HTMLElement'.
-regenerate.ts(1058,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-regenerate.ts(1059,4): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-regenerate.ts(1060,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-regenerate.ts(1060,37): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 regenerate.ts(1062,15): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
 regenerate.ts(1065,13): error TS2339: Property 'version' does not exist on type 'Function'.
+regenerate.ts(1069,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 regenerate.ts(1076,11): error TS2339: Property 'data' does not exist on type 'HTMLElement'.
 regenerate.ts(1076,36): error TS2339: Property 'data' does not exist on type 'HTMLElement'.
-regenerate.ts(1076,48): error TS2339: Property 'data' does not exist on type 'Function'.
+regenerate.ts(1076,48): error TS2339: Property 'data' does not exist on type '{}'.
 regenerate.ts(1084,12): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 regenerate.ts(1088,10): error TS2339: Property 'data' does not exist on type 'HTMLElement'.
 regenerate.ts(1089,11): error TS2339: Property 'data' does not exist on type 'HTMLElement'.
@@ -285,9 +222,9 @@ regenerate.ts(1155,25): error TS2351: This expression is not constructable.
 regenerate.ts(1162,23): error TS2339: Property 'bmpOnly' does not exist on type 'Object'.
 regenerate.ts(1163,23): error TS2339: Property 'hasUnicodeFlag' does not exist on type 'Object'.
 regenerate.ts(1180,18): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(pattern: string | RegExp, flags?: string | undefined): RegExp', gave the following error.
+  Overload 1 of 3, '(pattern: string | RegExp, flags?: string): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
-  Overload 2 of 3, '(pattern: string, flags?: string | undefined): RegExp', gave the following error.
+  Overload 2 of 3, '(pattern: string, flags?: string): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 regenerate.ts(1187,8): error TS2339: Property 'toArray' does not exist on type 'Object'.

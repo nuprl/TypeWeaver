@@ -19,20 +19,18 @@ index.ts(21,72): error TS2345: Argument of type 'Number' is not assignable to pa
 index.ts(24,26): error TS2339: Property 'toJSON' does not exist on type 'Object'.
 index.ts(24,48): error TS2339: Property 'toJSON' does not exist on type 'Object'.
 index.ts(25,25): error TS2339: Property 'toJSON' does not exist on type 'Object'.
-index.ts(31,13): error TS2322: Type 'undefined' is not assignable to type 'String'.
 index.ts(37,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(38,38): error TS2339: Property 'length' does not exist on type 'Object'.
-index.ts(39,21): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+index.ts(39,21): error TS2322: Type 'string | String' is not assignable to type 'Number'.
+  Type 'string' is not assignable to type 'Number'.
 index.ts(39,46): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-index.ts(39,55): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(39,64): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
 index.ts(40,26): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
 index.ts(51,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(52,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(55,21): error TS2322: Type 'String' is not assignable to type 'Number'.
+index.ts(55,21): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 index.ts(55,47): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(55,63): error TS2538: Type 'String' cannot be used as an index type.

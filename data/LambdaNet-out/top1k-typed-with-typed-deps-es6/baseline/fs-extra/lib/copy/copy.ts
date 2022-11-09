@@ -86,7 +86,7 @@ function onFile (srcStat: String, destStat: Boolean, src: String, dest: String, 
   return mayCopyFile(srcStat, src, dest, opts, cb)
 }
 
-function mayCopyFile (srcStat: String, src: String, dest: String, opts: Object, cb: Function): Void {
+function mayCopyFile (srcStat: String, src: String, dest: String, opts: HTMLElement, cb: Function): Void {
   if (opts.overwrite) {
     fs.unlink(dest, (err: String) => {
       if (err) return cb(err)
@@ -133,15 +133,15 @@ function setDestTimestampsAndMode (srcMode: String, src: String, dest: String, c
   })
 }
 
-function setDestMode (dest: String, srcMode: String, cb: String): Number {
+function setDestMode (dest: String, srcMode: String, cb: String): Boolean {
   return fs.chmod(dest, srcMode, cb)
 }
 
-function setDestTimestamps (src: String, dest: Number, cb: Function): Void {
+function setDestTimestamps (src: String, dest: String, cb: Function): Void {
   // The initial srcStat.atime cannot be trusted
   // because it is modified by the read(2) system call
   // (See https://nodejs.org/api/fs.html#fs_stat_time_values)
-  fs.stat(src, (err: String, updatedSrcStat: Object) => {
+  fs.stat(src, (err: Boolean, updatedSrcStat: Object) => {
     if (err) return cb(err)
     return utimesMillis(dest, updatedSrcStat.atime, updatedSrcStat.mtime, cb)
   })
@@ -169,7 +169,7 @@ function copyDir (src: String, dest: String, opts: String, cb: Function): Void {
   })
 }
 
-function copyDirItems (items: Array, src: String, dest: Number, opts: String, cb: Function): Promise {
+function copyDirItems (items: Array, src: String, dest: Number, opts: String, cb: Function): Void {
   const item: String = items.pop()
   if (!item) return cb()
   return copyDirItem(items, item, src, dest, opts, cb)

@@ -21,18 +21,18 @@ examples/async_pi_estimate/addon.ts(48,41): error TS2363: The right-hand side of
 tools/1to2.ts(10,23): error TS2307: Cannot find module 'commander' or its corresponding type declarations.
 tools/1to2.ts(22,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 tools/1to2.ts(24,1): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(path: PathOrFileDescriptor, options: ({ encoding?: null | undefined; flag?: string | undefined; } & Abortable) | null | undefined, callback: (err: ErrnoException | null, data: Buffer) => void): void', gave the following error.
-    Type '"utf8"' has no properties in common with type '{ encoding?: null | undefined; flag?: string | undefined; } & Abortable'.
-  Overload 2 of 4, '(path: PathOrFileDescriptor, options: BufferEncoding | ({ encoding: BufferEncoding; flag?: string | undefined; } & Abortable), callback: (err: ErrnoException | null, data: string) => void): void', gave the following error.
-    Argument of type '(err: Boolean, data: Object) => void' is not assignable to parameter of type '(err: ErrnoException | null, data: string) => void'.
+  Overload 1 of 4, '(path: PathOrFileDescriptor, options: { encoding?: null; flag?: string; } & Abortable, callback: (err: ErrnoException, data: Buffer) => void): void', gave the following error.
+    Type '"utf8"' has no properties in common with type '{ encoding?: null; flag?: string; } & Abortable'.
+  Overload 2 of 4, '(path: PathOrFileDescriptor, options: BufferEncoding | ({ encoding: BufferEncoding; flag?: string; } & Abortable), callback: (err: ErrnoException, data: string) => void): void', gave the following error.
+    Argument of type '(err: Boolean, data: Object) => void' is not assignable to parameter of type '(err: ErrnoException, data: string) => void'.
       Types of parameters 'err' and 'err' are incompatible.
-        Type 'ErrnoException | null' is not assignable to type 'Boolean'.
-          Type 'null' is not assignable to type 'Boolean'.
-  Overload 3 of 4, '(path: PathOrFileDescriptor, options: BufferEncoding | (ObjectEncodingOptions & { flag?: string | undefined; } & Abortable) | null | undefined, callback: (err: ErrnoException | null, data: string | Buffer) => void): void', gave the following error.
-    Argument of type '(err: Boolean, data: Object) => void' is not assignable to parameter of type '(err: ErrnoException | null, data: string | Buffer) => void'.
+        Type 'ErrnoException' is not assignable to type 'Boolean'.
+          The types returned by 'valueOf()' are incompatible between these types.
+            Type 'Object' is not assignable to type 'boolean'.
+  Overload 3 of 4, '(path: PathOrFileDescriptor, options: BufferEncoding | (ObjectEncodingOptions & { flag?: string; } & Abortable), callback: (err: ErrnoException, data: string | Buffer) => void): void', gave the following error.
+    Argument of type '(err: Boolean, data: Object) => void' is not assignable to parameter of type '(err: ErrnoException, data: string | Buffer) => void'.
       Types of parameters 'err' and 'err' are incompatible.
-        Type 'ErrnoException | null' is not assignable to type 'Boolean'.
-          Type 'null' is not assignable to type 'Boolean'.
+        Type 'ErrnoException' is not assignable to type 'Boolean'.
 tools/1to2.ts(30,27): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
 tools/1to2.ts(179,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 tools/1to2.ts(180,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -44,12 +44,12 @@ tools/1to2.ts(191,1): error TS2304: Cannot find name 'master'.
 tools/1to2.ts(191,45): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 tools/1to2.ts(393,37): error TS2304: Cannot find name 'Void'.
 tools/1to2.ts(394,15): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(path: PathOrFileDescriptor, options: ({ encoding?: null | undefined; flag?: string | undefined; } & Abortable) | null | undefined, callback: (err: ErrnoException | null, data: Buffer) => void): void', gave the following error.
+  Overload 1 of 4, '(path: PathOrFileDescriptor, options: { encoding?: null; flag?: string; } & Abortable, callback: (err: ErrnoException, data: Buffer) => void): void', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
       Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-  Overload 2 of 4, '(path: PathOrFileDescriptor, options: BufferEncoding | ({ encoding: BufferEncoding; flag?: string | undefined; } & Abortable), callback: (err: ErrnoException | null, data: string) => void): void', gave the following error.
+  Overload 2 of 4, '(path: PathOrFileDescriptor, options: BufferEncoding | ({ encoding: BufferEncoding; flag?: string; } & Abortable), callback: (err: ErrnoException, data: string) => void): void', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-  Overload 3 of 4, '(path: PathOrFileDescriptor, options: BufferEncoding | (ObjectEncodingOptions & { flag?: string | undefined; } & Abortable) | null | undefined, callback: (err: ErrnoException | null, data: string | Buffer) => void): void', gave the following error.
+  Overload 3 of 4, '(path: PathOrFileDescriptor, options: BufferEncoding | (ObjectEncodingOptions & { flag?: string; } & Abortable), callback: (err: ErrnoException, data: string | Buffer) => void): void', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
 tools/1to2.ts(400,18): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
 tools/1to2.ts(400,37): error TS2304: Cannot find name 'master'.
@@ -66,9 +66,10 @@ tools/1to2.ts(409,13): error TS2322: Type 'number' is not assignable to type 'St
 tools/1to2.ts(409,43): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
 tools/1to2.ts(409,55): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 tools/1to2.ts(410,21): error TS2538: Type 'Number' cannot be used as an index type.
-tools/1to2.ts(410,25): error TS2345: Argument of type '(err: Boolean, matches: any) => void' is not assignable to parameter of type '(err: Error | null, matches: string[]) => void'.
+tools/1to2.ts(410,25): error TS2345: Argument of type '(err: Boolean, matches: any) => void' is not assignable to parameter of type '(err: Error, matches: string[]) => void'.
   Types of parameters 'err' and 'err' are incompatible.
-    Type 'Error | null' is not assignable to type 'Boolean'.
-      Type 'null' is not assignable to type 'Boolean'.
+    Type 'Error' is not assignable to type 'Boolean'.
+      Types of property 'valueOf' are incompatible.
+        Type '() => Object' is not assignable to type '() => boolean'.
 tools/1to2.ts(410,58): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 

@@ -3,7 +3,7 @@
 export default function( Release: Object, files: Array, complete: Function ) {
 
 	const fs: Function = require( "fs" ).promises;
-	const shell: Array = require( "shelljs" );
+	const shell: String = require( "shelljs" );
 	const inquirer: String = require( "inquirer" );
 	const pkg: Object = require( `${ Release.dir.repo }/package.json` );
 	const distRemote: String = Release.remote

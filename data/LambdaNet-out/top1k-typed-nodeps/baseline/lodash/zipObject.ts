@@ -16,7 +16,7 @@ import baseZipObject from './.internal/baseZipObject.js'
  * zipObject(['a', 'b'], [1, 2])
  * // => { 'a': 1, 'b': 2 }
  */
-function zipObject(props: Object, values: String): Array {
+function zipObject(props: Object, values: Array): Array {
   return baseZipObject(props || [], values || [], assignValue)
 }
 

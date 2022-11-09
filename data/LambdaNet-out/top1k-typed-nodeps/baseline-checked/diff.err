@@ -1,10 +1,6 @@
 Gruntfile.ts(8,9): error TS2339: Property 'initConfig' does not exist on type 'HTMLElement'.
 Gruntfile.ts(9,16): error TS2339: Property 'file' does not exist on type 'HTMLElement'.
 Gruntfile.ts(105,26): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
-Gruntfile.ts(128,8): error TS2339: Property 'registerTask' does not exist on type 'NodeModule'.
-Gruntfile.ts(129,8): error TS2339: Property 'registerTask' does not exist on type 'NodeModule'.
-Gruntfile.ts(130,8): error TS2339: Property 'registerTask' does not exist on type 'NodeModule'.
-Gruntfile.ts(132,8): error TS2339: Property 'registerTask' does not exist on type 'NodeModule'.
 Gruntfile.ts(135,9): error TS2339: Property 'loadNpmTasks' does not exist on type 'HTMLElement'.
 Gruntfile.ts(136,9): error TS2339: Property 'loadNpmTasks' does not exist on type 'HTMLElement'.
 Gruntfile.ts(137,9): error TS2339: Property 'loadNpmTasks' does not exist on type 'HTMLElement'.
@@ -45,37 +41,14 @@ src/convert/xml.ts(22,33): error TS2314: Generic type 'Array<T>' requires 1 type
 src/convert/xml.ts(23,7): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 src/diff/array.ts(3,25): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-src/diff/array.ts(3,31): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/diff/array.ts(3,31): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/array.ts(4,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/base.ts(1,33): error TS2304: Cannot find name 'Void'.
-src/diff/base.ts(4,8): error TS7006: Parameter 'oldString' implicitly has an 'any' type.
-src/diff/base.ts(4,19): error TS7006: Parameter 'newString' implicitly has an 'any' type.
 src/diff/base.ts(5,28): error TS2339: Property 'callback' does not exist on type '{}'.
-src/diff/base.ts(14,19): error TS7006: Parameter 'value' implicitly has an 'any' type.
 src/diff/base.ts(33,16): error TS2339: Property 'maxEditLength' does not exist on type '{}'.
 src/diff/base.ts(34,55): error TS2339: Property 'maxEditLength' does not exist on type '{}'.
-src/diff/base.ts(55,11): error TS2322: Type 'undefined' is not assignable to type '{ newPos: number; components: never[]; }'.
-src/diff/base.ts(62,11): error TS2322: Type 'undefined' is not assignable to type '{ newPos: number; components: never[]; }'.
-src/diff/base.ts(70,32): error TS2345: Argument of type '{ newPos: number; components: never[]; }' is not assignable to parameter of type 'String'.
-  Type '{ newPos: number; components: never[]; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-src/diff/base.ts(71,39): error TS2339: Property 'components' does not exist on type 'Object'.
-src/diff/base.ts(81,22): error TS2339: Property 'newPos' does not exist on type 'Object'.
-src/diff/base.ts(82,50): error TS2339: Property 'components' does not exist on type 'Object'.
-src/diff/base.ts(85,11): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type '{ newPos: number; components: never[]; }': newPos, components
-src/diff/base.ts(118,17): error TS7006: Parameter 'components' implicitly has an 'any' type.
-src/diff/base.ts(118,29): error TS7006: Parameter 'added' implicitly has an 'any' type.
-src/diff/base.ts(118,36): error TS7006: Parameter 'removed' implicitly has an 'any' type.
-src/diff/base.ts(128,17): error TS7006: Parameter 'basePath' implicitly has an 'any' type.
-src/diff/base.ts(128,27): error TS7006: Parameter 'newString' implicitly has an 'any' type.
-src/diff/base.ts(128,38): error TS7006: Parameter 'oldString' implicitly has an 'any' type.
-src/diff/base.ts(128,49): error TS7006: Parameter 'diagonalPath' implicitly has an 'any' type.
-src/diff/base.ts(149,10): error TS7006: Parameter 'left' implicitly has an 'any' type.
-src/diff/base.ts(149,16): error TS7006: Parameter 'right' implicitly has an 'any' type.
-src/diff/base.ts(157,15): error TS7006: Parameter 'array' implicitly has an 'any' type.
-src/diff/base.ts(166,13): error TS7006: Parameter 'value' implicitly has an 'any' type.
-src/diff/base.ts(169,12): error TS7006: Parameter 'value' implicitly has an 'any' type.
-src/diff/base.ts(172,8): error TS7006: Parameter 'chars' implicitly has an 'any' type.
+src/diff/base.ts(70,32): error TS2345: Argument of type '{ newPos: number; components: any[]; }' is not assignable to parameter of type 'String'.
+  Type '{ newPos: number; components: any[]; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/diff/base.ts(177,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/base.ts(177,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/base.ts(177,65): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -110,20 +83,17 @@ src/diff/base.ts(226,57): error TS2339: Property 'value' does not exist on type 
 src/diff/base.ts(234,25): error TS2339: Property 'newPos' does not exist on type 'String'.
 src/diff/base.ts(234,50): error TS2339: Property 'components' does not exist on type 'String'.
 src/diff/character.ts(3,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/character.ts(3,37): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/diff/character.ts(3,37): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/css.ts(3,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/css.ts(3,31): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-src/diff/json.ts(7,38): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/diff/css.ts(3,31): error TS2350: Only a void function can be called with the 'new' keyword.
+src/diff/json.ts(7,38): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/json.ts(10,10): error TS2339: Property 'useLongestToken' does not exist on type 'HTMLElement'.
 src/diff/json.ts(12,10): error TS2339: Property 'tokenize' does not exist on type 'HTMLElement'.
 src/diff/json.ts(12,30): error TS2339: Property 'tokenize' does not exist on type 'HTMLElement'.
 src/diff/json.ts(13,10): error TS2339: Property 'castInput' does not exist on type 'HTMLElement'.
-src/diff/json.ts(14,53): error TS7006: Parameter 'k' implicitly has an 'any' type.
-src/diff/json.ts(14,56): error TS7006: Parameter 'v' implicitly has an 'any' type.
-src/diff/json.ts(14,122): error TS2339: Property 'options' does not exist on type 'HTMLElement'.
 src/diff/json.ts(16,61): error TS2554: Expected 5 arguments, but got 4.
 src/diff/json.ts(18,10): error TS2339: Property 'equals' does not exist on type 'HTMLElement'.
-src/diff/json.ts(22,106): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
+src/diff/json.ts(22,104): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
 src/diff/json.ts(26,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/json.ts(26,75): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/json.ts(36,33): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
@@ -139,22 +109,18 @@ src/diff/json.ts(68,30): error TS2345: Argument of type 'String' is not assignab
 src/diff/json.ts(73,40): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 src/diff/json.ts(75,24): error TS2538: Type 'String' cannot be used as an index type.
 src/diff/json.ts(75,48): error TS2538: Type 'String' cannot be used as an index type.
-src/diff/line.ts(4,38): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/diff/line.ts(4,38): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/line.ts(5,10): error TS2339: Property 'tokenize' does not exist on type 'HTMLElement'.
 src/diff/line.ts(6,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/line.ts(7,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/line.ts(18,24): error TS2339: Property 'options' does not exist on type 'HTMLElement'.
-src/diff/line.ts(21,16): error TS2339: Property 'options' does not exist on type 'HTMLElement'.
 src/diff/line.ts(31,106): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
 src/diff/line.ts(32,76): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/line.ts(34,19): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
-src/diff/sentence.ts(4,42): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/diff/sentence.ts(4,42): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/sentence.ts(5,14): error TS2339: Property 'tokenize' does not exist on type 'HTMLElement'.
-src/diff/sentence.ts(9,113): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
-src/diff/word.ts(26,38): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+src/diff/sentence.ts(9,114): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
+src/diff/word.ts(26,38): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/word.ts(27,10): error TS2339: Property 'equals' does not exist on type 'HTMLElement'.
-src/diff/word.ts(28,12): error TS2339: Property 'options' does not exist on type 'HTMLElement'.
-src/diff/word.ts(32,34): error TS2339: Property 'options' does not exist on type 'HTMLElement'.
 src/diff/word.ts(32,81): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 src/diff/word.ts(32,109): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -195,13 +161,8 @@ src/patch/apply.ts(95,9): error TS2356: An arithmetic operand must be of type 'a
 src/patch/apply.ts(103,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/patch/apply.ts(105,46): error TS2339: Property 'lines' does not exist on type 'Object'.
 src/patch/apply.ts(105,66): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/apply.ts(116,7): error TS2454: Variable 'removeEOFNL' is used before being assigned.
-src/patch/apply.ts(121,14): error TS2454: Variable 'addEOFNL' is used before being assigned.
 src/patch/apply.ts(132,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/patch/apply.ts(132,64): error TS2304: Cannot find name 'Void'.
-src/patch/apply.ts(138,28): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-src/patch/apply.ts(139,25): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 src/patch/apply.ts(139,33): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/patch/apply.ts(149,11): error TS2740: Type 'Boolean' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 src/patch/apply.ts(149,49): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
@@ -213,24 +174,23 @@ src/patch/create.ts(11,15): error TS2314: Generic type 'Array<T>' requires 1 typ
 src/patch/create.ts(11,49): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-src/patch/create.ts(13,5): error TS2322: Type 'undefined' is not assignable to type 'Object'.
 src/patch/create.ts(18,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/patch/create.ts(18,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/patch/create.ts(22,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/patch/create.ts(23,71): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/patch/create.ts(27,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/create.ts(27,34): error TS2339: Property 'lines' does not exist on type 'HTMLElement'.
-src/patch/create.ts(27,51): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
-src/patch/create.ts(28,13): error TS2339: Property 'lines' does not exist on type 'HTMLElement'.
-src/patch/create.ts(30,17): error TS2339: Property 'added' does not exist on type 'HTMLElement'.
-src/patch/create.ts(30,34): error TS2551: Property 'removed' does not exist on type 'HTMLElement'. Did you mean 'remove'?
+src/patch/create.ts(27,34): error TS2339: Property 'lines' does not exist on type 'Object'.
+src/patch/create.ts(27,51): error TS2339: Property 'value' does not exist on type 'Object'.
+src/patch/create.ts(28,13): error TS2339: Property 'lines' does not exist on type 'Object'.
+src/patch/create.ts(30,17): error TS2339: Property 'added' does not exist on type 'Object'.
+src/patch/create.ts(30,34): error TS2339: Property 'removed' does not exist on type 'Object'.
 src/patch/create.ts(38,30): error TS2339: Property 'context' does not exist on type 'Object'.
 src/patch/create.ts(38,62): error TS2339: Property 'lines' does not exist on type 'String'.
 src/patch/create.ts(38,83): error TS2339: Property 'context' does not exist on type 'Object'.
 src/patch/create.ts(39,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/patch/create.ts(40,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/create.ts(46,25): error TS2339: Property 'added' does not exist on type 'HTMLElement'.
-src/patch/create.ts(50,19): error TS2339: Property 'added' does not exist on type 'HTMLElement'.
+src/patch/create.ts(46,25): error TS2339: Property 'added' does not exist on type 'Object'.
+src/patch/create.ts(50,19): error TS2339: Property 'added' does not exist on type 'Object'.
 src/patch/create.ts(59,37): error TS2339: Property 'context' does not exist on type 'Object'.
 src/patch/create.ts(64,68): error TS2339: Property 'context' does not exist on type 'Object'.
 src/patch/create.ts(69,24): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -330,6 +290,7 @@ src/patch/merge.ts(66,40): error TS2339: Property 'hunks' does not exist on type
 src/patch/merge.ts(68,20): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 src/patch/merge.ts(70,11): error TS2339: Property 'hunks' does not exist on type 'Object'.
+src/patch/merge.ts(70,45): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 src/patch/merge.ts(71,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/patch/merge.ts(72,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 src/patch/merge.ts(72,35): error TS2339: Property 'newLines' does not exist on type 'Object'.
@@ -337,6 +298,7 @@ src/patch/merge.ts(72,58): error TS2339: Property 'oldLines' does not exist on t
 src/patch/merge.ts(73,27): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 src/patch/merge.ts(75,11): error TS2339: Property 'hunks' does not exist on type 'Object'.
+src/patch/merge.ts(75,47): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 src/patch/merge.ts(76,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/patch/merge.ts(77,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 src/patch/merge.ts(77,35): error TS2339: Property 'newLines' does not exist on type 'Object'.
@@ -382,36 +344,12 @@ src/patch/merge.ts(151,36): error TS2339: Property 'lines' does not exist on typ
 src/patch/merge.ts(151,47): error TS2339: Property 'index' does not exist on type 'Object'.
 src/patch/merge.ts(152,38): error TS2339: Property 'lines' does not exist on type 'Object'.
 src/patch/merge.ts(152,50): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(154,10): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-src/patch/merge.ts(154,36): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-src/patch/merge.ts(155,13): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-src/patch/merge.ts(155,40): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 src/patch/merge.ts(157,26): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-src/patch/merge.ts(158,16): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-src/patch/merge.ts(158,42): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 src/patch/merge.ts(160,12): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(161,16): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-src/patch/merge.ts(161,43): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 src/patch/merge.ts(163,12): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(164,16): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-src/patch/merge.ts(164,42): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 src/patch/merge.ts(166,7): error TS2554: Expected 4 arguments, but got 3.
-src/patch/merge.ts(167,16): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-src/patch/merge.ts(167,43): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-src/patch/merge.ts(169,21): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
+src/patch/merge.ts(169,21): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 src/patch/merge.ts(172,12): error TS2339: Property 'lines' does not exist on type 'Object'.
 src/patch/merge.ts(173,12): error TS2339: Property 'index' does not exist on type 'Object'.
@@ -424,7 +362,7 @@ src/patch/merge.ts(190,21): error TS2314: Generic type 'Array<T>' requires 1 typ
 src/patch/merge.ts(196,12): error TS2339: Property 'lines' does not exist on type 'Object'.
 src/patch/merge.ts(200,12): error TS2339: Property 'lines' does not exist on type 'Object'.
 src/patch/merge.ts(204,10): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(211,79): error TS2304: Cannot find name 'Void'.
+src/patch/merge.ts(211,77): error TS2304: Cannot find name 'Void'.
 src/patch/merge.ts(214,20): error TS2339: Property 'merged' does not exist on type 'Object'.
 src/patch/merge.ts(215,10): error TS2339: Property 'lines' does not exist on type 'Object'.
 src/patch/merge.ts(215,38): error TS2339: Property 'merged' does not exist on type 'Object'.
@@ -456,10 +394,6 @@ src/patch/merge.ts(247,16): error TS2339: Property 'index' does not exist on typ
 src/patch/merge.ts(247,30): error TS2339: Property 'lines' does not exist on type 'Object'.
 src/patch/merge.ts(248,30): error TS2339: Property 'lines' does not exist on type 'Object'.
 src/patch/merge.ts(248,42): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(251,30): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-src/patch/merge.ts(255,23): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 src/patch/merge.ts(257,13): error TS2339: Property 'index' does not exist on type 'Object'.
 src/patch/merge.ts(265,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/patch/merge.ts(265,62): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -470,8 +404,6 @@ src/patch/merge.ts(272,32): error TS2339: Property 'lines' does not exist on typ
 src/patch/merge.ts(273,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/patch/merge.ts(273,31): error TS2339: Property 'lines' does not exist on type 'Object'.
 src/patch/merge.ts(273,43): error TS2339: Property 'index' does not exist on type 'Object'.
-src/patch/merge.ts(277,9): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Function'.
-  Property '0' does not exist on type 'Function'.
 src/patch/merge.ts(284,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/patch/merge.ts(293,24): error TS2339: Property 'lines' does not exist on type 'Object'.
 src/patch/merge.ts(293,38): error TS2339: Property 'index' does not exist on type 'Object'.
@@ -480,8 +412,6 @@ src/patch/merge.ts(299,13): error TS2339: Property 'index' does not exist on typ
 src/patch/merge.ts(315,30): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/patch/merge.ts(324,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/patch/merge.ts(324,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/patch/merge.ts(326,20): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 src/patch/merge.ts(329,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/patch/merge.ts(331,70): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/patch/merge.ts(332,15): error TS2339: Property 'lines' does not exist on type 'Object'.
@@ -497,11 +427,9 @@ src/patch/merge.ts(348,57): error TS2339: Property 'theirs' does not exist on ty
 src/patch/merge.ts(351,21): error TS2339: Property 'oldLines' does not exist on type 'String'.
 src/patch/merge.ts(351,45): error TS2339: Property 'oldLines' does not exist on type 'String'.
 src/patch/merge.ts(352,31): error TS2339: Property 'oldLines' does not exist on type 'String'.
-src/patch/merge.ts(354,11): error TS2322: Type 'undefined' is not assignable to type 'Number'.
 src/patch/merge.ts(359,21): error TS2339: Property 'newLines' does not exist on type 'String'.
 src/patch/merge.ts(359,45): error TS2339: Property 'newLines' does not exist on type 'String'.
 src/patch/merge.ts(360,31): error TS2339: Property 'newLines' does not exist on type 'String'.
-src/patch/merge.ts(362,11): error TS2322: Type 'undefined' is not assignable to type 'Number'.
 src/patch/merge.ts(367,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/patch/merge.ts(370,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/patch/parse.ts(1,68): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -525,36 +453,10 @@ src/patch/parse.ts(44,34): error TS2339: Property 'strict' does not exist on typ
 src/patch/parse.ts(46,44): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 src/patch/parse.ts(48,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/patch/parse.ts(55,44): error TS2304: Cannot find name 'Void'.
-src/patch/parse.ts(56,11): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-src/patch/parse.ts(58,31): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-src/patch/parse.ts(59,28): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-src/patch/parse.ts(60,30): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 src/patch/parse.ts(61,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/patch/parse.ts(64,7): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-src/patch/parse.ts(65,7): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-src/patch/parse.ts(65,38): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 src/patch/parse.ts(67,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/patch/parse.ts(75,43): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/patch/parse.ts(79,18): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-src/patch/parse.ts(80,24): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-src/patch/parse.ts(80,62): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-src/patch/parse.ts(81,18): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-src/patch/parse.ts(82,24): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
-  Property '4' does not exist on type 'Object'.
-src/patch/parse.ts(82,62): error TS7053: Element implicitly has an 'any' type because expression of type '4' can't be used to index type 'Object'.
-  Property '4' does not exist on type 'Object'.
 src/patch/parse.ts(90,14): error TS2339: Property 'oldLines' does not exist on type 'Object'.
 src/patch/parse.ts(91,12): error TS2339: Property 'oldStart' does not exist on type 'Object'.
 src/patch/parse.ts(93,14): error TS2339: Property 'newLines' does not exist on type 'Object'.
@@ -585,19 +487,13 @@ src/util/array.ts(1,31): error TS2314: Generic type 'Array<T>' requires 1 type a
 src/util/array.ts(1,41): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/util/array.ts(9,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/util/array.ts(9,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/util/distance-iterator.ts(10,31): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 src/util/distance-iterator.ts(13,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/util/distance-iterator.ts(20,11): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 src/util/distance-iterator.ts(34,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/util/distance-iterator.ts(34,30): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/util/distance-iterator.ts(35,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/util/params.ts(3,14): error TS2339: Property 'callback' does not exist on type 'Object'.
-src/util/params.ts(8,9): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-src/util/params.ts(8,26): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 tasks/version.ts(4,9): error TS2339: Property 'registerTask' does not exist on type 'HTMLElement'.
-tasks/version.ts(5,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 tasks/version.ts(6,29): error TS2339: Property 'config' does not exist on type 'HTMLElement'.
 tasks/version.ts(7,33): error TS2339: Property 'option' does not exist on type 'HTMLElement'.
 tasks/version.ts(9,17): error TS2339: Property 'valid' does not exist on type 'String'.

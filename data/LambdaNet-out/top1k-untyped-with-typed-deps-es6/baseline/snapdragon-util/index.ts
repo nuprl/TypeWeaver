@@ -433,7 +433,7 @@ utils.shiftNode = function(node: Array) {
  * @api public
  */
 
-utils.removeNode = function(parent: Map, node: Object) {
+utils.removeNode = function(parent: HTMLElement, node: Object) {
   assert(utils.isNode(parent), 'expected parent to be an instance of Node');
   if (!parent.nodes) return;
   if (!node) return;
@@ -1025,7 +1025,7 @@ utils.lastNode = function(node: Map) {
  * @api public
  */
 
-utils.arrayify = function(value: Array) {
+utils.arrayify = function(value: String) {
   if (typeof value === 'string' && value !== '') {
     return [value];
   }

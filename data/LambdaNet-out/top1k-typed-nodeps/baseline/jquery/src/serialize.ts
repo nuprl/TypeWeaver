@@ -12,7 +12,7 @@ var
 	rsubmitterTypes: RegExp = /^(?:submit|button|image|reset|file)$/i,
 	rsubmittable: RegExp = /^(?:input|select|textarea|keygen)/i;
 
-function buildParams( prefix: String, obj: Object, traditional: Boolean, add: Function ): Void {
+function buildParams( prefix: String, obj: Object, traditional: Number, add: Function ): Void {
 	var name: String;
 
 	if ( Array.isArray( obj ) ) {

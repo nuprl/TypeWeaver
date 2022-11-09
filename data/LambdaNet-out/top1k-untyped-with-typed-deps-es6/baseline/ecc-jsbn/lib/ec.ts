@@ -39,7 +39,7 @@ function feFpToBigInteger(): Number {
   return this.x;
 }
 
-function feFpNegate(): Object {
+function feFpNegate(): Promise {
   return new ECFieldElementFp(this.q, this.x.negate().mod(this.q));
 }
 

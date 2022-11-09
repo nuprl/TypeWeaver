@@ -126,13 +126,13 @@ export function isCommentToken(token: Object): Number {
 }
 
 export const isNotArrowToken: Function = negate(isArrowToken)
-export const isNotCommaToken: String = negate(isCommaToken)
-export const isNotSemicolonToken: String = negate(isSemicolonToken)
+export const isNotCommaToken: Function = negate(isCommaToken)
+export const isNotSemicolonToken: Function = negate(isSemicolonToken)
 export const isNotColonToken: Function = negate(isColonToken)
 export const isNotOpeningParenToken: Function = negate(isOpeningParenToken)
 export const isNotClosingParenToken: Function = negate(isClosingParenToken)
 export const isNotOpeningBracketToken: Function = negate(isOpeningBracketToken)
 export const isNotClosingBracketToken: Function = negate(isClosingBracketToken)
-export const isNotOpeningBraceToken: String = negate(isOpeningBraceToken)
+export const isNotOpeningBraceToken: Function = negate(isOpeningBraceToken)
 export const isNotClosingBraceToken: Function = negate(isClosingBraceToken)
 export const isNotCommentToken: Function = negate(isCommentToken)

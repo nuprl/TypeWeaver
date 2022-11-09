@@ -1,55 +1,27 @@
 lib/SymbolTree.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'TreeIterator'.
 lib/SymbolTree.ts(16,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/SymbolTree.ts(17,41): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/SymbolTree.ts(27,21): error TS7006: Parameter 'description' implicitly has an 'any' type.
 lib/SymbolTree.ts(28,22): error TS2339: Property 'symbol' does not exist on type 'SymbolTree'.
-lib/SymbolTree.ts(43,20): error TS7006: Parameter 'object' implicitly has an 'any' type.
-lib/SymbolTree.ts(49,15): error TS7006: Parameter 'object' implicitly has an 'any' type.
 lib/SymbolTree.ts(54,50): error TS2339: Property 'symbol' does not exist on type 'SymbolTree'.
 lib/SymbolTree.ts(60,37): error TS2339: Property 'symbol' does not exist on type 'SymbolTree'.
 lib/SymbolTree.ts(60,51): error TS2351: This expression is not constructable.
   Type 'String' has no construct signatures.
-lib/SymbolTree.ts(73,21): error TS7006: Parameter 'object' implicitly has an 'any' type.
-lib/SymbolTree.ts(87,20): error TS7006: Parameter 'object' implicitly has an 'any' type.
-lib/SymbolTree.ts(101,19): error TS7006: Parameter 'object' implicitly has an 'any' type.
-lib/SymbolTree.ts(115,25): error TS7006: Parameter 'object' implicitly has an 'any' type.
-lib/SymbolTree.ts(129,21): error TS7006: Parameter 'object' implicitly has an 'any' type.
-lib/SymbolTree.ts(143,16): error TS7006: Parameter 'object' implicitly has an 'any' type.
-lib/SymbolTree.ts(157,33): error TS7006: Parameter 'object' implicitly has an 'any' type.
 lib/SymbolTree.ts(162,25): error TS2740: Type 'SymbolTree' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-lib/SymbolTree.ts(185,19): error TS7006: Parameter 'object' implicitly has an 'any' type.
-lib/SymbolTree.ts(185,27): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/SymbolTree.ts(220,19): error TS7006: Parameter 'object' implicitly has an 'any' type.
-lib/SymbolTree.ts(220,27): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/SymbolTree.ts(233,29): error TS2367: This condition will always return 'false' since the types 'String' and 'SymbolTree' have no overlap.
-lib/SymbolTree.ts(265,25): error TS7006: Parameter 'parent' implicitly has an 'any' type.
-lib/SymbolTree.ts(265,33): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/SymbolTree.ts(266,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/SymbolTree.ts(276,30): error TS2339: Property 'setCachedIndex' does not exist on type 'SymbolTree'.
 lib/SymbolTree.ts(283,27): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/SymbolTree.ts(305,26): error TS7006: Parameter 'object' implicitly has an 'any' type.
-lib/SymbolTree.ts(305,34): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/SymbolTree.ts(306,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/SymbolTree.ts(338,21): error TS7006: Parameter 'root' implicitly has an 'any' type.
-lib/SymbolTree.ts(338,27): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/SymbolTree.ts(339,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/SymbolTree.ts(349,25): error TS2322: Type 'Function | Boolean | null' is not assignable to type 'String'.
-  Type 'null' is not assignable to type 'String'.
-lib/SymbolTree.ts(367,26): error TS7006: Parameter 'parent' implicitly has an 'any' type.
-lib/SymbolTree.ts(367,34): error TS7006: Parameter 'options' implicitly has an 'any' type.
+lib/SymbolTree.ts(349,25): error TS2322: Type 'Function | Boolean' is not assignable to type 'String'.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/SymbolTree.ts(375,48): error TS2339: Property 'PREV' does not exist on type 'typeof TreeIterator'.
 lib/SymbolTree.ts(375,68): error TS2339: Property 'NEXT' does not exist on type 'typeof TreeIterator'.
-lib/SymbolTree.ts(389,34): error TS7006: Parameter 'object' implicitly has an 'any' type.
 lib/SymbolTree.ts(394,38): error TS2339: Property 'PREV' does not exist on type 'typeof TreeIterator'.
-lib/SymbolTree.ts(408,30): error TS7006: Parameter 'object' implicitly has an 'any' type.
 lib/SymbolTree.ts(413,38): error TS2339: Property 'NEXT' does not exist on type 'typeof TreeIterator'.
-lib/SymbolTree.ts(427,27): error TS7006: Parameter 'object' implicitly has an 'any' type.
 lib/SymbolTree.ts(432,38): error TS2339: Property 'PARENT' does not exist on type 'typeof TreeIterator'.
-lib/SymbolTree.ts(451,22): error TS7006: Parameter 'root' implicitly has an 'any' type.
-lib/SymbolTree.ts(451,28): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/SymbolTree.ts(458,48): error TS2339: Property 'PRECEDING' does not exist on type 'typeof TreeIterator'.
 lib/SymbolTree.ts(458,73): error TS2339: Property 'FOLLOWING' does not exist on type 'typeof TreeIterator'.
-lib/SymbolTree.ts(473,15): error TS7006: Parameter 'child' implicitly has an 'any' type.
 lib/SymbolTree.ts(484,54): error TS2339: Property 'getCachedIndex' does not exist on type 'SymbolTree'.
 lib/SymbolTree.ts(493,32): error TS2339: Property 'childIndexCachedUpTo' does not exist on type 'SymbolTree'.
 lib/SymbolTree.ts(494,82): error TS2339: Property 'childIndexCachedUpTo' does not exist on type 'SymbolTree'.
@@ -57,10 +29,7 @@ lib/SymbolTree.ts(496,55): error TS2339: Property 'getCachedIndex' does not exis
 lib/SymbolTree.ts(501,30): error TS2339: Property 'setCachedIndex' does not exist on type 'SymbolTree'.
 lib/SymbolTree.ts(507,27): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/SymbolTree.ts(511,28): error TS2339: Property 'childIndexCachedUpTo' does not exist on type 'SymbolTree'.
-lib/SymbolTree.ts(527,23): error TS7006: Parameter 'parent' implicitly has an 'any' type.
 lib/SymbolTree.ts(534,24): error TS2365: Operator '+' cannot be applied to types 'number | Number' and 'number'.
-lib/SymbolTree.ts(563,29): error TS7006: Parameter 'left' implicitly has an 'any' type.
-lib/SymbolTree.ts(563,35): error TS7006: Parameter 'right' implicitly has an 'any' type.
 lib/SymbolTree.ts(574,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/SymbolTree.ts(579,61): error TS2339: Property 'CONTAINS' does not exist on type 'SymbolTree'.
 lib/SymbolTree.ts(579,85): error TS2551: Property 'PRECEDING' does not exist on type 'SymbolTree'. Did you mean 'preceding'?
@@ -79,32 +48,18 @@ lib/SymbolTree.ts(627,89): error TS2365: Operator '+' cannot be applied to types
 lib/SymbolTree.ts(629,24): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
 lib/SymbolTree.ts(630,40): error TS2551: Property 'PRECEDING' does not exist on type 'SymbolTree'. Did you mean 'preceding'?
 lib/SymbolTree.ts(631,40): error TS2551: Property 'FOLLOWING' does not exist on type 'SymbolTree'. Did you mean 'following'?
-lib/SymbolTree.ts(645,16): error TS7006: Parameter 'removeObject' implicitly has an 'any' type.
 lib/SymbolTree.ts(666,34): error TS2339: Property 'previousSibling' does not exist on type 'Object'.
-lib/SymbolTree.ts(669,17): error TS2322: Type 'null' is not assignable to type '(object: any) => any'.
-lib/SymbolTree.ts(670,17): error TS2322: Type 'null' is not assignable to type '(object: any) => any'.
-lib/SymbolTree.ts(671,17): error TS2322: Type 'null' is not assignable to type '(object: any) => any'.
 lib/SymbolTree.ts(672,28): error TS2339: Property 'cachedIndex' does not exist on type 'SymbolTree'.
 lib/SymbolTree.ts(673,28): error TS2339: Property 'cachedIndexVersion' does not exist on type 'SymbolTree'.
 lib/SymbolTree.ts(676,36): error TS2339: Property 'childrenChanged' does not exist on type 'SymbolTree'.
-lib/SymbolTree.ts(695,22): error TS7006: Parameter 'referenceObject' implicitly has an 'any' type.
-lib/SymbolTree.ts(695,39): error TS7006: Parameter 'newObject' implicitly has an 'any' type.
 lib/SymbolTree.ts(701,29): error TS2339: Property 'isAttached' does not exist on type 'SymbolTree'.
 lib/SymbolTree.ts(719,36): error TS2339: Property 'childrenChanged' does not exist on type 'SymbolTree'.
-lib/SymbolTree.ts(738,21): error TS7006: Parameter 'referenceObject' implicitly has an 'any' type.
-lib/SymbolTree.ts(738,38): error TS7006: Parameter 'newObject' implicitly has an 'any' type.
 lib/SymbolTree.ts(744,29): error TS2339: Property 'isAttached' does not exist on type 'SymbolTree'.
 lib/SymbolTree.ts(754,34): error TS2339: Property 'previousSibling' does not exist on type 'Object'.
 lib/SymbolTree.ts(762,36): error TS2339: Property 'childrenChanged' does not exist on type 'SymbolTree'.
-lib/SymbolTree.ts(781,22): error TS7006: Parameter 'referenceObject' implicitly has an 'any' type.
-lib/SymbolTree.ts(781,39): error TS7006: Parameter 'newObject' implicitly has an 'any' type.
 lib/SymbolTree.ts(785,29): error TS2339: Property 'isAttached' does not exist on type 'SymbolTree'.
-lib/SymbolTree.ts(789,21): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
 lib/SymbolTree.ts(796,39): error TS2339: Property 'childrenChanged' does not exist on type 'SymbolTree'.
-lib/SymbolTree.ts(815,21): error TS7006: Parameter 'referenceObject' implicitly has an 'any' type.
-lib/SymbolTree.ts(815,38): error TS7006: Parameter 'newObject' implicitly has an 'any' type.
 lib/SymbolTree.ts(819,29): error TS2339: Property 'isAttached' does not exist on type 'SymbolTree'.
-lib/SymbolTree.ts(823,21): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
 lib/SymbolTree.ts(830,39): error TS2339: Property 'childrenChanged' does not exist on type 'SymbolTree'.
 lib/SymbolTree.ts(838,12): error TS2339: Property 'TreePosition' does not exist on type 'typeof SymbolTree'.
 lib/SymbolTreeNode.ts(5,22): error TS2339: Property 'parent' does not exist on type 'SymbolTreeNode'.
@@ -123,12 +78,9 @@ lib/SymbolTreeNode.ts(28,37): error TS2339: Property 'firstChild' does not exist
 lib/SymbolTreeNode.ts(34,22): error TS2339: Property 'childrenVersion' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTreeNode.ts(34,46): error TS2339: Property 'childrenVersion' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTreeNode.ts(35,22): error TS2339: Property 'childIndexCachedUpTo' does not exist on type 'SymbolTreeNode'.
-lib/SymbolTreeNode.ts(38,24): error TS7006: Parameter 'parentNode' implicitly has an 'any' type.
 lib/SymbolTreeNode.ts(40,26): error TS2339: Property 'cachedIndexVersion' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTreeNode.ts(41,30): error TS2339: Property 'cachedIndexVersion' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTreeNode.ts(46,29): error TS2339: Property 'cachedIndex' does not exist on type 'SymbolTreeNode'.
-lib/SymbolTreeNode.ts(49,24): error TS7006: Parameter 'parentNode' implicitly has an 'any' type.
-lib/SymbolTreeNode.ts(49,36): error TS7006: Parameter 'index' implicitly has an 'any' type.
 lib/SymbolTreeNode.ts(51,22): error TS2339: Property 'cachedIndexVersion' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTreeNode.ts(52,22): error TS2339: Property 'cachedIndex' does not exist on type 'SymbolTreeNode'.
 lib/TreeIterator.ts(3,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -136,15 +88,9 @@ lib/TreeIterator.ts(4,7): error TS2322: Type 'typeof ROOT' is not assignable to 
 lib/TreeIterator.ts(5,7): error TS2322: Type 'typeof NEXT' is not assignable to type 'String'.
 lib/TreeIterator.ts(6,7): error TS2322: Type 'typeof ITERATE_FUNC' is not assignable to type 'Number'.
 lib/TreeIterator.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'TreeIterator'.
-lib/TreeIterator.ts(9,21): error TS7006: Parameter 'tree' implicitly has an 'any' type.
-lib/TreeIterator.ts(9,27): error TS7006: Parameter 'root' implicitly has an 'any' type.
-lib/TreeIterator.ts(9,33): error TS7006: Parameter 'firstResult' implicitly has an 'any' type.
-lib/TreeIterator.ts(9,46): error TS7006: Parameter 'iterateFunction' implicitly has an 'any' type.
-lib/TreeIterator.ts(10,17): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'TreeIterator'.
 lib/TreeIterator.ts(11,22): error TS2538: Type 'String' cannot be used as an index type.
 lib/TreeIterator.ts(12,22): error TS2538: Type 'String' cannot be used as an index type.
 lib/TreeIterator.ts(13,22): error TS2538: Type 'Number' cannot be used as an index type.
-lib/TreeIterator.ts(17,42): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'TreeIterator'.
 lib/TreeIterator.ts(18,50): error TS2538: Type 'Number' cannot be used as an index type.
 lib/TreeIterator.ts(19,43): error TS2538: Type 'String' cannot be used as an index type.
 lib/TreeIterator.ts(21,27): error TS2538: Type 'String' cannot be used as an index type.

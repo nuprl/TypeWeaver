@@ -244,13 +244,13 @@ function iso8601(d: HTMLDivElement): Object
 	    d.getUTCMilliseconds()));
 }
 
-var RFC1123_MONTHS: Object = [
+var RFC1123_MONTHS: Array = [
     'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 var RFC1123_DAYS: Array = [
     'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-function rfc1123(date: HTMLElement): String {
+function rfc1123(date: HTMLElement): Object {
 	return (mod_extsprintf.sprintf('%s, %02d %s %04d %02d:%02d:%02d GMT',
 	    RFC1123_DAYS[date.getUTCDay()], date.getUTCDate(),
 	    RFC1123_MONTHS[date.getUTCMonth()], date.getUTCFullYear(),
@@ -562,7 +562,7 @@ function validateJsonObjectJS(schema: String, input: Element): Object
 	return (rv);
 }
 
-function randElt(arr: Array): String
+function randElt(arr: Array): Object
 {
 	mod_assert.ok(Array.isArray(arr) && arr.length > 0,
 	    'randElt argument must be a non-empty array');

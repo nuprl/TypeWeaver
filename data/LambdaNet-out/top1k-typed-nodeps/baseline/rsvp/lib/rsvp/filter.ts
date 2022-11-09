@@ -130,7 +130,7 @@ class FilterEnumerator extends MapEnumerator {
   @return {Promise}
 */
 
-export default function filter(promises: Function, filterFn: Object, label: String): Array {
+export default function filter(promises: Function, filterFn: Function, label: String): Array {
   if (typeof filterFn !== 'function') {
     return Promise.reject(new TypeError("filter expects function as a second argument"), label);
   }

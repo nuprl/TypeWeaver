@@ -1,4 +1,4 @@
-export let random: Date = async (bytes: HTMLElement) => crypto.getRandomValues(new Uint8Array(bytes))
+export let random: Function = async (bytes: HTMLElement) => crypto.getRandomValues(new Uint8Array(bytes))
 
 export let customAlphabet: Function = (alphabet: Array, defaultSize: Number = 21) => {
   // First, a bitmask is necessary to generate the ID. The bitmask makes bytes
@@ -39,7 +39,7 @@ export let customAlphabet: Function = (alphabet: Array, defaultSize: Number = 21
   }
 }
 
-export let nanoid: Date = async (size: String = 21) => {
+export let nanoid: Function = async (size: String = 21) => {
   let id: String = ''
   let bytes: Object = crypto.getRandomValues(new Uint8Array(size))
 

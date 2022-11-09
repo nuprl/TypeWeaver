@@ -112,7 +112,7 @@ class WatchpackDirectoryWatcher {
 				watchpack._onRemove(item, item, type);
 			}
 		});
-		watcher.on("change", (file: String, mtime: String, type: Number) => {
+		watcher.on("change", (file: String, mtime: Number, type: Number) => {
 			for (const item of this.directories) {
 				watchpack._onChange(item, mtime, file, type);
 			}

@@ -370,7 +370,7 @@ var TWO_PWR_24: String = fromInt(TWO_PWR_24_DBL);
  * @type {!Long}
  * @inner
  */
-var ZERO: Object = fromInt(0);
+var ZERO: Function = fromInt(0);
 
 /**
  * Signed zero.
@@ -507,7 +507,7 @@ LongPrototype.toString = function toString(radix: String): String {
       // We need to change the Long value before it can be negated, so we remove
       // the bottom-most digit in this base and then recurse to do the rest.
       var radixLong: String = fromNumber(radix),
-        div: HTMLElement = this.div(radixLong),
+        div: Array = this.div(radixLong),
         rem1: HTMLElement = div.mul(radixLong).sub(this);
       return div.toString(radix) + rem1.toInt().toString(radix);
     } else
@@ -517,7 +517,7 @@ LongPrototype.toString = function toString(radix: String): String {
   // Do several (6) digits each time through the loop, so as to
   // minimize the calls to the very expensive emulated div.
   var radixToPower: String = fromNumber(pow_dbl(radix, 6), this.unsigned),
-    rem: HTMLElement = this;
+    rem: Array = this;
   var result: String = '';
   while (true) {
     var remDiv: HTMLElement = rem.div(radixToPower),
@@ -575,7 +575,7 @@ LongPrototype.getLowBitsUnsigned = function getLowBitsUnsigned(): Boolean {
  * @this {!Long}
  * @returns {number}
  */
-LongPrototype.getNumBitsAbs = function getNumBitsAbs(): Boolean {
+LongPrototype.getNumBitsAbs = function getNumBitsAbs(): Number {
   if (this.isNegative()) // Unsigned Longs are never negative
     return this.eq(MIN_VALUE) ? 64 : this.neg().getNumBitsAbs();
   var val: String = this.high != 0 ? this.high : this.low;
@@ -887,7 +887,7 @@ LongPrototype.sub = LongPrototype.subtract;
  * @param {!Long|number|string} multiplier Multiplier
  * @returns {!Long} Product
  */
-LongPrototype.multiply = function multiply(multiplier: String): String {
+LongPrototype.multiply = function multiply(multiplier: String): Array {
   if (this.isZero())
     return this;
   if (!isLong(multiplier))
@@ -1263,7 +1263,7 @@ LongPrototype.shr = LongPrototype.shiftRight;
  * @param {number|!Long} numBits Number of bits
  * @returns {!Long} Shifted Long
  */
-LongPrototype.shiftRightUnsigned = function shiftRightUnsigned(numBits: Number): Array {
+LongPrototype.shiftRightUnsigned = function shiftRightUnsigned(numBits: Number): Promise {
   if (isLong(numBits)) numBits = numBits.toInt();
   if ((numBits &= 63) === 0) return this;
   if (numBits < 32) return fromBits((this.low >>> numBits) | (this.high << (32 - numBits)), this.high >>> numBits, this.unsigned);

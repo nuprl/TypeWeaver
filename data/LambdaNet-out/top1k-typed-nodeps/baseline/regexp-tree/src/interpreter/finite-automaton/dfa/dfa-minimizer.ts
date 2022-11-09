@@ -25,7 +25,7 @@ function minimize(dfa: DFA): DFA {
 
   currentTransitionMap = {};
 
-  const nonAccepting: Error = new Set();
+  const nonAccepting: Element = new Set();
 
   allStates.forEach((state: Number) => {
     state = Number(state);

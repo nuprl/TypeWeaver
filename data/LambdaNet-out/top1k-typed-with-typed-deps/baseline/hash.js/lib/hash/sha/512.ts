@@ -98,7 +98,7 @@ SHA512.prototype._prepareBlock = function _prepareBlock(msg: Object, start: Numb
     var c1_hi: String = W[i - 14];  // i - 7
     var c1_lo: String = W[i - 13];
     var c2_hi: Function = g0_512_hi(W[i - 30], W[i - 29]);  // i - 15
-    var c2_lo: String = g0_512_lo(W[i - 30], W[i - 29]);
+    var c2_lo: Function = g0_512_lo(W[i - 30], W[i - 29]);
     var c3_hi: String = W[i - 32];  // i - 16
     var c3_lo: String = W[i - 31];
 
@@ -147,7 +147,7 @@ SHA512.prototype._update = function _update(msg: String, start: String): Void {
     var c2_lo: Function = ch64_lo(eh, el, fh, fl, gh, gl);
     var c3_hi: Function = this.k[i];
     var c3_lo: String = this.k[i + 1];
-    var c4_hi: Function = W[i];
+    var c4_hi: String = W[i];
     var c4_lo: String = W[i + 1];
 
     var T1_hi: String = sum64_5_hi(
@@ -241,7 +241,7 @@ function maj64_lo(xh: Function, xl: Number, yh: Function, yl: Number, zh: Functi
   return r;
 }
 
-function s0_512_hi(xh: Function, xl: String): Number {
+function s0_512_hi(xh: Function, xl: Function): Number {
   var c0_hi: String = rotr64_hi(xh, xl, 28);
   var c1_hi: String = rotr64_hi(xl, xh, 2);  // 34
   var c2_hi: String = rotr64_hi(xl, xh, 7);  // 39
@@ -252,7 +252,7 @@ function s0_512_hi(xh: Function, xl: String): Number {
   return r;
 }
 
-function s0_512_lo(xh: Function, xl: String): Number {
+function s0_512_lo(xh: Function, xl: Function): Number {
   var c0_lo: String = rotr64_lo(xh, xl, 28);
   var c1_lo: String = rotr64_lo(xl, xh, 2);  // 34
   var c2_lo: String = rotr64_lo(xl, xh, 7);  // 39
@@ -263,7 +263,7 @@ function s0_512_lo(xh: Function, xl: String): Number {
   return r;
 }
 
-function s1_512_hi(xh: String, xl: String): Number {
+function s1_512_hi(xh: String, xl: Function): Number {
   var c0_hi: String = rotr64_hi(xh, xl, 14);
   var c1_hi: String = rotr64_hi(xh, xl, 18);
   var c2_hi: String = rotr64_hi(xl, xh, 9);  // 41
@@ -274,7 +274,7 @@ function s1_512_hi(xh: String, xl: String): Number {
   return r;
 }
 
-function s1_512_lo(xh: Function, xl: String): Number {
+function s1_512_lo(xh: String, xl: Function): Number {
   var c0_lo: String = rotr64_lo(xh, xl, 14);
   var c1_lo: String = rotr64_lo(xh, xl, 18);
   var c2_lo: String = rotr64_lo(xl, xh, 9);  // 41
@@ -285,7 +285,7 @@ function s1_512_lo(xh: Function, xl: String): Number {
   return r;
 }
 
-function g0_512_hi(xh: String, xl: String): Number {
+function g0_512_hi(xh: String, xl: Function): Number {
   var c0_hi: String = rotr64_hi(xh, xl, 1);
   var c1_hi: String = rotr64_hi(xh, xl, 8);
   var c2_hi: String = shr64_hi(xh, xl, 7);
@@ -296,7 +296,7 @@ function g0_512_hi(xh: String, xl: String): Number {
   return r;
 }
 
-function g0_512_lo(xh: String, xl: String): Number {
+function g0_512_lo(xh: String, xl: Function): Number {
   var c0_lo: String = rotr64_lo(xh, xl, 1);
   var c1_lo: String = rotr64_lo(xh, xl, 8);
   var c2_lo: String = shr64_lo(xh, xl, 7);
@@ -307,7 +307,7 @@ function g0_512_lo(xh: String, xl: String): Number {
   return r;
 }
 
-function g1_512_hi(xh: String, xl: String): Number {
+function g1_512_hi(xh: String, xl: Function): Number {
   var c0_hi: String = rotr64_hi(xh, xl, 19);
   var c1_hi: String = rotr64_hi(xl, xh, 29);  // 61
   var c2_hi: String = shr64_hi(xh, xl, 6);
@@ -318,7 +318,7 @@ function g1_512_hi(xh: String, xl: String): Number {
   return r;
 }
 
-function g1_512_lo(xh: String, xl: String): Number {
+function g1_512_lo(xh: String, xl: Function): Number {
   var c0_lo: String = rotr64_lo(xh, xl, 19);
   var c1_lo: String = rotr64_lo(xl, xh, 29);  // 61
   var c2_lo: String = shr64_lo(xh, xl, 6);

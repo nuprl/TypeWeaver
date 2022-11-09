@@ -21,7 +21,7 @@ var ee1: HTMLElement = new EventEmitter1()
   , master: HTMLElement = new Master()
   , drip: HTMLElement = new Drip()
   , fe: HTMLElement = new FE()
-  , ce: HTMLElement = CE()
+  , ce: Object = CE()
   , ee: Object = EE();
 
 (

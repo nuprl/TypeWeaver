@@ -54,7 +54,7 @@
     // MIT License
 
     function upperBound(array: Array, func: Function): Number {
-        var diff: Number, len: Number, i: Number, current: String;
+        var diff: Number, len: Number, i: Number, current: Number;
 
         len = array.length;
         i = 0;

@@ -12,39 +12,23 @@ example/stop.ts(3,67): error TS2304: Cannot find name 'Void'.
 example/stop.ts(13,13): error TS2339: Property 'attempt' does not exist on type 'HTMLElement'.
 example/stop.ts(14,27): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'HTMLInputElement'.
   Type 'Element' is missing the following properties from type 'HTMLInputElement': accept, align, alt, autocomplete, and 169 more.
-example/stop.ts(14,52): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-example/stop.ts(14,69): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+example/stop.ts(14,67): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 example/stop.ts(17,19): error TS2339: Property 'stop' does not exist on type 'HTMLElement'.
 example/stop.ts(21,21): error TS2339: Property 'retry' does not exist on type 'HTMLElement'.
 example/stop.ts(25,20): error TS2339: Property 'mainError' does not exist on type 'HTMLElement'.
 example/stop.ts(25,43): error TS2339: Property 'errors' does not exist on type 'HTMLElement'.
 example/stop.ts(30,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Element'.
 example/stop.ts(39,3): error TS2739: Type 'Immediate' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-lib/retry.ts(4,28): error TS2454: Variable 'timeouts' is used before being assigned.
-lib/retry.ts(5,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/retry.ts(5,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/retry.ts(6,36): error TS2339: Property 'forever' does not exist on type 'Object'.
 lib/retry.ts(6,55): error TS2339: Property 'retries' does not exist on type 'Object'.
 lib/retry.ts(7,33): error TS2339: Property 'unref' does not exist on type 'Object'.
 lib/retry.ts(8,40): error TS2339: Property 'maxRetryTime' does not exist on type 'Object'.
-lib/retry.ts(14,22): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
-    Argument of type 'any[]' is not assignable to parameter of type 'ConcatArray<never>'.
-      The types returned by 'slice(...)' are incompatible between these types.
-        Type 'any[]' is not assignable to type 'never[]'.
-          Type 'any' is not assignable to type 'never'.
-  Overload 2 of 2, '(...items: ConcatArray<never>[]): never[]', gave the following error.
-    Argument of type 'any[]' is not assignable to parameter of type 'ConcatArray<never>'.
-lib/retry.ts(25,5): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-lib/retry.ts(25,17): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 lib/retry.ts(28,12): error TS2339: Property 'minTimeout' does not exist on type 'Object'.
 lib/retry.ts(28,30): error TS2339: Property 'maxTimeout' does not exist on type 'Object'.
 lib/retry.ts(32,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/retry.ts(33,28): error TS2339: Property 'retries' does not exist on type 'Object'.
-lib/retry.ts(34,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/retry.ts(37,26): error TS2339: Property 'forever' does not exist on type 'Object'.
-lib/retry.ts(38,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/retry.ts(43,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/retry.ts(43,16): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/retry.ts(50,30): error TS2339: Property 'randomize' does not exist on type 'Object'.
@@ -58,40 +42,16 @@ lib/retry.ts(55,22): error TS2345: Argument of type 'Number' is not assignable t
 lib/retry.ts(55,36): error TS2339: Property 'maxTimeout' does not exist on type 'Object'.
 lib/retry.ts(60,62): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/retry.ts(60,78): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/retry.ts(69,18): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 lib/retry.ts(77,32): error TS2538: Type 'String' cannot be used as an index type.
 lib/retry.ts(79,9): error TS2538: Type 'String' cannot be used as an index type.
 lib/retry.ts(79,62): error TS2304: Cannot find name 'Void'.
 lib/retry.ts(81,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/retry.ts(85,16): error TS2339: Property 'retry' does not exist on type 'HTMLElement'.
 lib/retry.ts(89,29): error TS2339: Property 'mainError' does not exist on type 'HTMLElement'.
-lib/retry.ts(91,24): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/retry.ts(94,10): error TS2339: Property 'attempt' does not exist on type 'HTMLElement'.
-lib/retry.ts(97,17): error TS2769: No overload matches this call.
-  Overload 1 of 6, '(this: (this: Object, arg0: Function) => Void, thisArg: Object, arg0: Function): () => Void', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'Function'.
-      Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
-  Overload 2 of 6, '(this: (this: Object, ...args: Function[]) => Void, thisArg: Object, ...args: Function[]): (...args: Function[]) => Void', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'Function'.
 lib/retry.ts(98,9): error TS2538: Type 'String' cannot be used as an index type.
-lib/retry_operation.ts(1,63): error TS2304: Cannot find name 'Void'.
-lib/retry_operation.ts(7,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(8,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(9,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(10,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/retry_operation.ts(1,61): error TS2304: Cannot find name 'Void'.
 lib/retry_operation.ts(10,43): error TS2339: Property 'maxRetryTime' does not exist on type 'Object'.
-lib/retry_operation.ts(11,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(12,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(13,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(14,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(15,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(16,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(17,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(18,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(20,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(21,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/retry_operation.ts(21,28): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/retry_operation.ts(52,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/retry_operation.ts(73,10): error TS2339: Property '_attempts' does not exist on type 'HTMLElement'.
 lib/retry_operation.ts(75,14): error TS2339: Property '_operationTimeoutCb' does not exist on type 'HTMLElement'.
@@ -104,19 +64,18 @@ lib/retry_operation.ts(81,16): error TS2339: Property '_timeout' does not exist 
 lib/retry_operation.ts(85,10): error TS2339: Property '_fn' does not exist on type 'HTMLElement'.
 lib/retry_operation.ts(85,19): error TS2339: Property '_attempts' does not exist on type 'HTMLElement'.
 lib/retry_operation.ts(86,6): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(callback: () => void, ms?: number | undefined): Timeout', gave the following error.
+  Overload 1 of 3, '(callback: () => void, ms?: number): Timeout', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-  Overload 2 of 3, '(callback: (args: void) => void, ms?: number | undefined): Timeout', gave the following error.
+  Overload 2 of 3, '(callback: (args: void) => void, ms?: number): Timeout', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-  Overload 3 of 3, '(handler: TimerHandler, timeout?: number | undefined, ...arguments: any[]): number', gave the following error.
+  Overload 3 of 3, '(handler: TimerHandler, timeout?: number, ...arguments: any[]): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/retry_operation.ts(95,71): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/retry_operation.ts(110,12): error TS2339: Property '_operationTimeoutCb' does not exist on type 'HTMLElement'.
 lib/retry_operation.ts(111,13): error TS2339: Property '_operationTimeout' does not exist on type 'HTMLElement'.
-lib/retry_operation.ts(145,7): error TS2322: Type 'null' is not assignable to type 'HTMLElement'.
 lib/retry_operation.ts(149,16): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/retry_operation.ts(151,33): error TS2538: Type 'String' cannot be used as an index type.
 lib/retry_operation.ts(153,12): error TS2538: Type 'String' cannot be used as an index type.

@@ -20,18 +20,14 @@ index.ts(39,21): error TS2345: Argument of type 'String' is not assignable to pa
 index.ts(41,18): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(47,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(47,25): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(52,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(53,28): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(54,41): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(58,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(58,46): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-index.ts(58,58): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(59,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 index.ts(66,3): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-index.ts(66,71): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+index.ts(66,71): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 index.ts(70,3): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(70,84): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
@@ -40,7 +36,6 @@ index.ts(76,57): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(78,3): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(78,55): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
-index.ts(79,48): error TS2454: Variable 'valueType' is used before being assigned.
 index.ts(82,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(86,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(88,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

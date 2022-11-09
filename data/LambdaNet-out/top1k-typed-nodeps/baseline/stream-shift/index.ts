@@ -1,7 +1,7 @@
 module.exports = shift
 
-function shift (stream: Number): Boolean {
-  var rs: Object = stream._readableState
+function shift (stream: Number): Number {
+  var rs: Date = stream._readableState
   if (!rs) return null
   return (rs.objectMode || typeof stream._duplexState === 'number') ? stream.read() : stream.read(getStateLength(rs))
 }

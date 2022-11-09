@@ -12,16 +12,4 @@ benchmark.ts(9,81): error TS2769: No overload matches this call.
   Overload 2 of 4, '(arrayLike: ArrayLike<unknown>, mapfn: (v: unknown, k: number) => unknown, thisArg?: any): unknown[]', gave the following error.
     Type 'String' is not assignable to type 'number'.
 benchmark.ts(28,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(1,29): error TS7006: Parameter 'object' implicitly has an 'any' type.
-index.ts(1,37): error TS7006: Parameter 'predicate' implicitly has an 'any' type.
-index.ts(15,8): error TS2532: Object is possibly 'undefined'.
-index.ts(18,41): error TS2345: Argument of type 'PropertyDescriptor | undefined' is not assignable to parameter of type 'PropertyDescriptor & ThisType<any>'.
-  Type 'undefined' is not assignable to type 'PropertyDescriptor & ThisType<any>'.
-    Type 'undefined' is not assignable to type 'PropertyDescriptor'.
-index.ts(27,29): error TS7006: Parameter 'object' implicitly has an 'any' type.
-index.ts(27,37): error TS7006: Parameter 'predicate' implicitly has an 'any' type.
-index.ts(30,30): error TS7006: Parameter 'key' implicitly has an 'any' type.
-index.ts(33,30): error TS7006: Parameter 'key' implicitly has an 'any' type.
-index.ts(33,35): error TS7006: Parameter 'value' implicitly has an 'any' type.
-index.ts(33,42): error TS7006: Parameter 'object' implicitly has an 'any' type.
 

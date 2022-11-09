@@ -3,13 +3,4 @@ index.ts(16,31): error TS2345: Argument of type 'Number' is not assignable to pa
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(19,43): error TS1064: The return type of an async function or method must be the global Promise<T> type. Did you mean to write 'Promise<HTMLElement>'?
 index.ts(21,2): error TS2322: Type 'string' is not assignable to type 'HTMLElement'.
-test-buffer.ts(1,18): error TS2307: Cannot find module 'ava' or its corresponding type declarations.
-test-buffer.ts(2,19): error TS2307: Cannot find module 'delay' or its corresponding type declarations.
-test-buffer.ts(5,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-test-buffer.ts(8,17): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-test-buffer.ts(14,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-test-buffer.ts(19,57): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-test-real.ts(4,8): error TS2322: Type 'HTMLElement' is not assignable to type 'Boolean'.
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'Object' is not assignable to type 'boolean'.
 

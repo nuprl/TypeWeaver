@@ -1,12 +1,7 @@
-benchmark/fullurl.ts(6,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-benchmark/fullurl.ts(8,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-benchmark/fullurl.ts(9,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/fullurl.ts(17,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/fullurl.ts(18,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/fullurl.ts(23,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/fullurl.ts(29,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-benchmark/fullurl.ts(30,31): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-benchmark/fullurl.ts(35,12): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/fullurl.ts(36,9): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/fullurl.ts(43,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/fullurl.ts(49,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
@@ -20,22 +15,15 @@ benchmark/fullurl.ts(61,7): error TS2339: Property 'run' does not exist on type 
 benchmark/fullurl.ts(63,10): error TS2393: Duplicate function implementation.
 benchmark/index.ts(14,15): error TS2339: Property 'readdirSync' does not exist on type 'String'.
 benchmark/index.ts(16,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/index.ts(16,41): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-benchmark/index.ts(19,18): error TS2322: Type 'undefined' is not assignable to type 'String'.
 benchmark/index.ts(20,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 benchmark/index.ts(23,31): error TS2339: Property 'join' does not exist on type 'String'.
 benchmark/index.ts(25,36): error TS2339: Property 'relative' does not exist on type 'String'.
 benchmark/index.ts(31,8): error TS2339: Property 'on' does not exist on type 'Object'.
-benchmark/pathquery.ts(6,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-benchmark/pathquery.ts(8,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-benchmark/pathquery.ts(9,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/pathquery.ts(17,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/pathquery.ts(18,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/pathquery.ts(23,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/pathquery.ts(29,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-benchmark/pathquery.ts(30,31): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-benchmark/pathquery.ts(35,12): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/pathquery.ts(36,9): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/pathquery.ts(43,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/pathquery.ts(49,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
@@ -47,15 +35,10 @@ benchmark/pathquery.ts(57,7): error TS2339: Property 'on' does not exist on type
 benchmark/pathquery.ts(57,46): error TS2304: Cannot find name 'Void'.
 benchmark/pathquery.ts(61,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 benchmark/pathquery.ts(63,10): error TS2393: Duplicate function implementation.
-benchmark/samerequest.ts(6,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-benchmark/samerequest.ts(8,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-benchmark/samerequest.ts(9,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/samerequest.ts(17,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/samerequest.ts(18,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/samerequest.ts(23,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/samerequest.ts(30,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-benchmark/samerequest.ts(31,31): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-benchmark/samerequest.ts(37,12): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/samerequest.ts(38,9): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/samerequest.ts(46,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/samerequest.ts(53,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
@@ -67,15 +50,10 @@ benchmark/samerequest.ts(61,7): error TS2339: Property 'on' does not exist on ty
 benchmark/samerequest.ts(61,46): error TS2304: Cannot find name 'Void'.
 benchmark/samerequest.ts(65,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 benchmark/samerequest.ts(67,10): error TS2393: Duplicate function implementation.
-benchmark/simplepath.ts(6,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-benchmark/simplepath.ts(8,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-benchmark/simplepath.ts(9,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/simplepath.ts(17,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/simplepath.ts(18,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/simplepath.ts(23,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/simplepath.ts(29,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-benchmark/simplepath.ts(30,31): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-benchmark/simplepath.ts(35,12): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/simplepath.ts(36,9): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/simplepath.ts(44,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/simplepath.ts(50,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
@@ -87,15 +65,10 @@ benchmark/simplepath.ts(58,7): error TS2339: Property 'on' does not exist on typ
 benchmark/simplepath.ts(58,46): error TS2304: Cannot find name 'Void'.
 benchmark/simplepath.ts(62,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 benchmark/simplepath.ts(64,10): error TS2393: Duplicate function implementation.
-benchmark/slash.ts(6,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-benchmark/slash.ts(8,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-benchmark/slash.ts(9,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/slash.ts(17,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/slash.ts(18,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/slash.ts(23,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/slash.ts(29,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-benchmark/slash.ts(30,31): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-benchmark/slash.ts(35,12): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/slash.ts(36,9): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/slash.ts(43,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/slash.ts(49,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
@@ -111,7 +84,6 @@ index.ts(16,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(
 index.ts(16,24): error TS2339: Property 'parse' does not exist on type 'String'.
 index.ts(17,23): error TS2339: Property 'Url' does not exist on type 'String'.
 index.ts(36,25): error TS2339: Property 'url' does not exist on type 'Object'.
-index.ts(40,5): error TS2322: Type 'undefined' is not assignable to type 'String'.
 index.ts(43,28): error TS2339: Property '_parsedUrl' does not exist on type 'Object'.
 index.ts(45,18): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
   Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
@@ -128,8 +100,6 @@ index.ts(81,3): error TS2322: Type 'String' is not assignable to type 'Number'.
 index.ts(82,10): error TS2339: Property '_raw' does not exist on type 'Number'.
 index.ts(84,3): error TS2322: Type 'Number' is not assignable to type 'String'.
 index.ts(84,15): error TS2339: Property '_parsedOriginalUrl' does not exist on type 'HTMLElement'.
-index.ts(101,7): error TS2322: Type 'null' is not assignable to type 'String'.
-index.ts(102,7): error TS2322: Type 'null' is not assignable to type 'String'.
 index.ts(129,11): error TS2351: This expression is not constructable.
   Type 'String' has no construct signatures.
 index.ts(132,7): error TS2339: Property 'path' does not exist on type 'String'.

@@ -8,7 +8,7 @@ import toFinite from '../toFinite.js'
  * @param {boolean} [fromRight] Specify iterating from right to left.
  * @returns {Function} Returns the new range function.
  */
-function createRange(fromRight: ListCache): Function {
+function createRange(fromRight: Hash): Function {
   return (start: Number, end: Number, step: Number) => {
     // Ensure the sign of `-0` is preserved.
     start = toFinite(start)

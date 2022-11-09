@@ -2,30 +2,14 @@ index.ts(8,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s
 index.ts(8,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(16,7): error TS2322: Type '{ start: any; end: any; pre: any; body: any; post: any; }' is not assignable to type 'Boolean'.
   Object literal may only specify known properties, and 'start' does not exist in type 'Boolean'.
-index.ts(16,14): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(17,12): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-index.ts(18,25): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(19,23): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(19,40): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-index.ts(20,23): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-index.ts(30,9): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 index.ts(30,31): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(matcher: { [Symbol.match](string: string): RegExpMatchArray | null; }): RegExpMatchArray | null', gave the following error.
-    Argument of type 'Object' is not assignable to parameter of type '{ [Symbol.match](string: string): RegExpMatchArray | null; }'.
+  Overload 1 of 2, '(matcher: { [Symbol.match](string: string): RegExpMatchArray; }): RegExpMatchArray', gave the following error.
+    Argument of type 'Object' is not assignable to parameter of type '{ [Symbol.match](string: string): RegExpMatchArray; }'.
       The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-        Property '[Symbol.match]' is missing in type 'Object' but required in type '{ [Symbol.match](string: string): RegExpMatchArray | null; }'.
-  Overload 2 of 2, '(regexp: string | RegExp): RegExpMatchArray | null', gave the following error.
+        Property '[Symbol.match]' is missing in type 'Object' but required in type '{ [Symbol.match](string: string): RegExpMatchArray; }'.
+  Overload 2 of 2, '(regexp: string | RegExp): RegExpMatchArray', gave the following error.
     Argument of type 'Object' is not assignable to parameter of type 'string | RegExp'.
       The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-index.ts(31,14): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
 index.ts(41,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(42,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(42,71): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -42,5 +26,4 @@ index.ts(63,11): error TS2739: Type 'Boolean' is missing the following propertie
 index.ts(67,26): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(67,29): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-index.ts(74,23): error TS2454: Variable 'right' is used before being assigned.
 

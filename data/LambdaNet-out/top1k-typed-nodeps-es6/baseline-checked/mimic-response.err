@@ -2,10 +2,6 @@ index.ts(4,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s
 index.ts(23,15): error TS2339: Property '_readableState' does not exist on type 'Object'.
 index.ts(27,8): error TS2739: Type 'Set<any>' is missing the following properties from type 'Error': name, message
 index.ts(31,25): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
-index.ts(37,3): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-index.ts(39,19): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'HTMLElement'.
-index.ts(44,8): error TS7006: Parameter 'value' implicitly has an 'any' type.
-index.ts(45,5): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'HTMLElement'.
 index.ts(52,36): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'PropertyDescriptorMap & ThisType<any>'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is not assignable to type 'PropertyDescriptorMap'.

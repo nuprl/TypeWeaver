@@ -1,11 +1,11 @@
 bench/bench.ts(5,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bench/bench.ts(5,38): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null | undefined; flag?: string | undefined; } | null | undefined): Buffer', gave the following error.
+  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
       Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-  Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string | undefined; } | BufferEncoding): string', gave the following error.
+  Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string; } | BufferEncoding): string', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-  Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string | undefined; }) | null | undefined): string | Buffer', gave the following error.
+  Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string; })): string | Buffer', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
 bench/bench.ts(7,1): error TS2304: Cannot find name 'bench'.
 bench/bench.ts(8,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -23,30 +23,30 @@ index.ts(25,32): error TS2345: Argument of type 'String' is not assignable to pa
 index.ts(26,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(33,20): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(splitter: { [Symbol.split](string: string, limit?: number | undefined): string[]; }, limit?: number | undefined): string[]', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.split](string: string, limit?: number | undefined): string[]; }'.
-      Property '[Symbol.split]' is missing in type 'String' but required in type '{ [Symbol.split](string: string, limit?: number | undefined): string[]; }'.
-  Overload 2 of 2, '(separator: string | RegExp, limit?: number | undefined): string[]', gave the following error.
+  Overload 1 of 2, '(splitter: { [Symbol.split](string: string, limit?: number): string[]; }, limit?: number): string[]', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.split](string: string, limit?: number): string[]; }'.
+      Property '[Symbol.split]' is missing in type 'String' but required in type '{ [Symbol.split](string: string, limit?: number): string[]; }'.
+  Overload 2 of 2, '(separator: string | RegExp, limit?: number): string[]', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
 index.ts(34,20): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(splitter: { [Symbol.split](string: string, limit?: number | undefined): string[]; }, limit?: number | undefined): string[]', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.split](string: string, limit?: number | undefined): string[]; }'.
-  Overload 2 of 2, '(separator: string | RegExp, limit?: number | undefined): string[]', gave the following error.
+  Overload 1 of 2, '(splitter: { [Symbol.split](string: string, limit?: number): string[]; }, limit?: number): string[]', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.split](string: string, limit?: number): string[]; }'.
+  Overload 2 of 2, '(separator: string | RegExp, limit?: number): string[]', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
 index.ts(35,20): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(splitter: { [Symbol.split](string: string, limit?: number | undefined): string[]; }, limit?: number | undefined): string[]', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.split](string: string, limit?: number | undefined): string[]; }'.
-  Overload 2 of 2, '(separator: string | RegExp, limit?: number | undefined): string[]', gave the following error.
+  Overload 1 of 2, '(splitter: { [Symbol.split](string: string, limit?: number): string[]; }, limit?: number): string[]', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.split](string: string, limit?: number): string[]; }'.
+  Overload 2 of 2, '(separator: string | RegExp, limit?: number): string[]', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
 index.ts(36,20): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(splitter: { [Symbol.split](string: string, limit?: number | undefined): string[]; }, limit?: number | undefined): string[]', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.split](string: string, limit?: number | undefined): string[]; }'.
-  Overload 2 of 2, '(separator: string | RegExp, limit?: number | undefined): string[]', gave the following error.
+  Overload 1 of 2, '(splitter: { [Symbol.split](string: string, limit?: number): string[]; }, limit?: number): string[]', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.split](string: string, limit?: number): string[]; }'.
+  Overload 2 of 2, '(separator: string | RegExp, limit?: number): string[]', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
 index.ts(37,20): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(splitter: { [Symbol.split](string: string, limit?: number | undefined): string[]; }, limit?: number | undefined): string[]', gave the following error.
-    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.split](string: string, limit?: number | undefined): string[]; }'.
-  Overload 2 of 2, '(separator: string | RegExp, limit?: number | undefined): string[]', gave the following error.
+  Overload 1 of 2, '(splitter: { [Symbol.split](string: string, limit?: number): string[]; }, limit?: number): string[]', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.split](string: string, limit?: number): string[]; }'.
+  Overload 2 of 2, '(separator: string | RegExp, limit?: number): string[]', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
 index.ts(46,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(50,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

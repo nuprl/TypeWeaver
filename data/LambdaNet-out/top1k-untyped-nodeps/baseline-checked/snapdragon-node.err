@@ -2,9 +2,6 @@ example.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'Node'.
 example.ts(2,22): error TS2554: Expected 0 arguments, but got 1.
 example.ts(3,22): error TS2554: Expected 0 arguments, but got 2.
 index.ts(20,7): error TS2300: Duplicate identifier 'Node'.
-index.ts(21,15): error TS7006: Parameter 'type' implicitly has an 'any' type.
-index.ts(21,21): error TS7006: Parameter 'value' implicitly has an 'any' type.
-index.ts(21,28): error TS7006: Parameter 'clone' implicitly has an 'any' type.
 index.ts(22,12): error TS2345: Argument of type 'this' is not assignable to parameter of type 'Node'.
   Type 'Node' is missing the following properties from type 'Node': baseURI, childNodes, firstChild, isConnected, and 46 more.
 index.ts(23,12): error TS2345: Argument of type 'this' is not assignable to parameter of type 'Node'.
@@ -14,8 +11,6 @@ index.ts(29,12): error TS2339: Property 'type' does not exist on type 'Node'.
 index.ts(31,14): error TS2339: Property 'value' does not exist on type 'Node'.
 index.ts(51,16): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
-index.ts(68,18): error TS7006: Parameter 'n' implicitly has an 'any' type.
-index.ts(88,8): error TS7006: Parameter 'node' implicitly has an 'any' type.
 index.ts(90,12): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Number'.
   Type 'Boolean' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 index.ts(91,12): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
@@ -27,7 +22,6 @@ index.ts(95,23): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(97,5): error TS2554: Expected 2 arguments, but got 1.
 index.ts(98,10): error TS2339: Property 'size' does not exist on type 'Node'.
 index.ts(99,17): error TS2339: Property 'nodes' does not exist on type 'Node'.
-index.ts(117,11): error TS7006: Parameter 'node' implicitly has an 'any' type.
 index.ts(119,12): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Number'.
 index.ts(120,12): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
 index.ts(121,27): error TS2339: Property 'isNode' does not exist on type 'Function'.
@@ -46,31 +40,23 @@ index.ts(179,14): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(179,28): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(180,12): error TS2339: Property 'size' does not exist on type 'Node'.
 index.ts(181,19): error TS2339: Property 'nodes' does not exist on type 'Node'.
-index.ts(197,10): error TS7006: Parameter 'node' implicitly has an 'any' type.
 index.ts(198,15): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(199,29): error TS2339: Property 'isNode' does not exist on type 'Function'.
 index.ts(200,12): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
 index.ts(202,30): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(206,12): error TS2339: Property 'size' does not exist on type 'Node'.
 index.ts(207,19): error TS2339: Property 'nodes' does not exist on type 'Node'.
-index.ts(228,8): error TS7006: Parameter 'type' implicitly has an 'any' type.
 index.ts(229,29): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(229,44): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(230,47): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(231,30): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(232,31): error TS2339: Property 'nodes' does not exist on type 'Node'.
-index.ts(239,9): error TS7006: Parameter 'fn' implicitly has an 'any' type.
-index.ts(259,7): error TS7006: Parameter 'node' implicitly has an 'any' type.
 index.ts(260,26): error TS2339: Property 'isNode' does not exist on type 'Function'.
 index.ts(261,33): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(261,48): error TS2339: Property 'nodes' does not exist on type 'Node'.
-index.ts(284,11): error TS7006: Parameter 'type' implicitly has an 'any' type.
 index.ts(285,31): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(285,46): error TS2339: Property 'nodes' does not exist on type 'Node'.
-index.ts(303,10): error TS7006: Parameter 'type' implicitly has an 'any' type.
 index.ts(304,19): error TS2345: Argument of type 'this' is not assignable to parameter of type 'Node'.
-index.ts(323,11): error TS7006: Parameter 'fn' implicitly has an 'any' type.
-index.ts(342,12): error TS7006: Parameter 'type' implicitly has an 'any' type.
 index.ts(343,17): error TS2339: Property 'parent' does not exist on type 'Node'.
 index.ts(343,33): error TS2339: Property 'parent' does not exist on type 'Node'.
 index.ts(343,62): error TS2339: Property 'parent' does not exist on type 'Node'.
@@ -90,7 +76,6 @@ index.ts(505,45): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(505,56): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(526,17): error TS2339: Property 'parent' does not exist on type 'Node'.
 index.ts(526,31): error TS2339: Property 'parent' does not exist on type 'Node'.
-index.ts(545,17): error TS7006: Parameter 'node' implicitly has an 'any' type.
 index.ts(554,50): error TS2304: Cannot find name 'Void'.
 index.ts(555,7): error TS2367: This condition will always return 'true' since the types 'Number' and 'boolean' have no overlap.
 index.ts(555,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -98,7 +83,6 @@ index.ts(555,39): error TS2345: Argument of type 'String' is not assignable to p
 index.ts(558,47): error TS2304: Cannot find name 'Void'.
 index.ts(559,10): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
   Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-index.ts(563,42): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 index.ts(566,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(567,15): error TS2339: Property 'isNode' does not exist on type '{ new (): Node; prototype: Node; readonly ATTRIBUTE_NODE: number; readonly CDATA_SECTION_NODE: number; readonly COMMENT_NODE: number; readonly DOCUMENT_FRAGMENT_NODE: number; ... 13 more ...; readonly TEXT_NODE: number; }'.
 index.ts(589,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -112,8 +96,6 @@ index.ts(630,8): error TS2345: Argument of type 'Node' is not assignable to para
   Type 'Node' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(634,10): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'String'.
 index.ts(638,67): error TS2304: Cannot find name 'Void'.
-index.ts(642,24): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 index.ts(644,34): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
 index.ts(645,12): error TS2339: Property 'value' does not exist on type 'Node'.
 index.ts(645,35): error TS2339: Property 'value' does not exist on type 'Node'.
@@ -126,8 +108,6 @@ index.ts(661,15): error TS2339: Property 'index' does not exist on type 'Node'.
 index.ts(663,7): error TS2554: Expected 2 arguments, but got 1.
 index.ts(673,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(673,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(680,9): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 index.ts(689,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(691,38): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
   Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision

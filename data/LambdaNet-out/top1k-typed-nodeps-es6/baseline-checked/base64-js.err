@@ -1,13 +1,10 @@
 base64js.min.ts(1,126): error TS2304: Cannot find name 'define'.
 base64js.min.ts(1,134): error TS2304: Cannot find name 'define'.
 base64js.min.ts(1,145): error TS2304: Cannot find name 'define'.
-base64js.min.ts(1,263): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 base64js.min.ts(1,289): error TS2339: Property 'base64js' does not exist on type 'HTMLElement'.
 base64js.min.ts(1,368): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 base64js.min.ts(1,431): error TS2538: Type 'String' cannot be used as an index type.
 base64js.min.ts(1,441): error TS2538: Type 'String' cannot be used as an index type.
-base64js.min.ts(1,449): error TS2322: Type 'false | NodeRequire' is not assignable to type 'Function'.
-  Type 'boolean' is not assignable to type 'Function'.
 base64js.min.ts(1,537): error TS2554: Expected 1 arguments, but got 2.
 base64js.min.ts(1,603): error TS2339: Property 'code' does not exist on type 'Error'.
 base64js.min.ts(1,647): error TS2538: Type 'String' cannot be used as an index type.
@@ -26,12 +23,8 @@ base64js.min.ts(1,1212): error TS2365: Operator '+' cannot be applied to types '
 base64js.min.ts(1,1219): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 base64js.min.ts(1,1293): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'String'.
   Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-base64js.min.ts(1,1306): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-base64js.min.ts(1,1321): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 base64js.min.ts(1,1342): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(arrayLength?: number | undefined): any[] | Uint8Array', gave the following error.
+  Overload 1 of 3, '(arrayLength?: number): any[] | Uint8Array', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
   Overload 2 of 3, '(length: number): any[] | Uint8Array', gave the following error.
@@ -42,92 +35,54 @@ base64js.min.ts(1,1348): error TS2345: Argument of type 'String' is not assignab
 base64js.min.ts(1,1374): error TS2365: Operator '<' cannot be applied to types 'number' and 'String'.
 base64js.min.ts(1,1378): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 base64js.min.ts(1,1396): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-base64js.min.ts(1,1403): error TS7005: Variable 'l' implicitly has an 'any[]' type.
 base64js.min.ts(1,1407): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
-base64js.min.ts(1,1426): error TS7005: Variable 'l' implicitly has an 'any[]' type.
 base64js.min.ts(1,1430): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
 base64js.min.ts(1,1441): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-base64js.min.ts(1,1451): error TS7005: Variable 'l' implicitly has an 'any[]' type.
 base64js.min.ts(1,1455): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
 base64js.min.ts(1,1466): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-base64js.min.ts(1,1475): error TS7005: Variable 'l' implicitly has an 'any[]' type.
 base64js.min.ts(1,1479): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
 base64js.min.ts(1,1490): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-base64js.min.ts(1,1496): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 base64js.min.ts(1,1498): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 base64js.min.ts(1,1507): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-base64js.min.ts(1,1513): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 base64js.min.ts(1,1515): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 base64js.min.ts(1,1524): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-base64js.min.ts(1,1529): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 base64js.min.ts(1,1531): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 base64js.min.ts(1,1540): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 base64js.min.ts(1,1542): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'Object' is not assignable to type 'boolean'.
 base64js.min.ts(1,1549): error TS2367: This condition will always return 'false' since the types 'number' and 'String' have no overlap.
-base64js.min.ts(1,1559): error TS7005: Variable 'l' implicitly has an 'any[]' type.
 base64js.min.ts(1,1563): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
-base64js.min.ts(1,1581): error TS7005: Variable 'l' implicitly has an 'any[]' type.
 base64js.min.ts(1,1585): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
 base64js.min.ts(1,1596): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-base64js.min.ts(1,1605): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 base64js.min.ts(1,1607): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 base64js.min.ts(1,1616): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 base64js.min.ts(1,1619): error TS2367: This condition will always return 'false' since the types 'number' and 'String' have no overlap.
-base64js.min.ts(1,1629): error TS7005: Variable 'l' implicitly has an 'any[]' type.
 base64js.min.ts(1,1633): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
-base64js.min.ts(1,1652): error TS7005: Variable 'l' implicitly has an 'any[]' type.
 base64js.min.ts(1,1656): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
 base64js.min.ts(1,1667): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-base64js.min.ts(1,1676): error TS7005: Variable 'l' implicitly has an 'any[]' type.
 base64js.min.ts(1,1680): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
 base64js.min.ts(1,1691): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-base64js.min.ts(1,1700): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 base64js.min.ts(1,1702): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 base64js.min.ts(1,1711): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-base64js.min.ts(1,1716): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 base64js.min.ts(1,1718): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 base64js.min.ts(1,1727): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-base64js.min.ts(1,1769): error TS7005: Variable 'k' implicitly has an 'any[]' type.
 base64js.min.ts(1,1774): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-base64js.min.ts(1,1781): error TS7005: Variable 'k' implicitly has an 'any[]' type.
 base64js.min.ts(1,1786): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-base64js.min.ts(1,1793): error TS7005: Variable 'k' implicitly has an 'any[]' type.
 base64js.min.ts(1,1798): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-base64js.min.ts(1,1804): error TS7005: Variable 'k' implicitly has an 'any[]' type.
 base64js.min.ts(1,1809): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 base64js.min.ts(1,1885): error TS2365: Operator '+=' cannot be applied to types 'String' and 'number'.
 base64js.min.ts(1,1904): error TS2538: Type 'String' cannot be used as an index type.
-base64js.min.ts(1,1919): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 base64js.min.ts(1,1921): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
-base64js.min.ts(1,1935): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 base64js.min.ts(1,1937): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
 base64js.min.ts(1,1988): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 base64js.min.ts(1,2074): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 base64js.min.ts(1,2090): error TS2322: Type 'string' is not assignable to type 'Boolean'.
-base64js.min.ts(1,2120): error TS7005: Variable 'k' implicitly has an 'any[]' type.
-base64js.min.ts(1,2128): error TS7005: Variable 'k' implicitly has an 'any[]' type.
-base64js.min.ts(1,2182): error TS7005: Variable 'k' implicitly has an 'any[]' type.
-base64js.min.ts(1,2191): error TS7005: Variable 'k' implicitly has an 'any[]' type.
-base64js.min.ts(1,2202): error TS7005: Variable 'k' implicitly has an 'any[]' type.
 base64js.min.ts(1,2232): error TS2339: Property 'byteLength' does not exist on type 'Number'.
-base64js.min.ts(1,2292): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-base64js.min.ts(1,2307): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 base64js.min.ts(1,2322): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
 base64js.min.ts(1,2329): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 base64js.min.ts(1,2334): error TS2339: Property 'toByteArray' does not exist on type 'Number'.
 base64js.min.ts(1,2350): error TS2339: Property 'fromByteArray' does not exist on type 'Number'.
-base64js.min.ts(1,2374): error TS7034: Variable 'k' implicitly has type 'any[]' in some locations where its type cannot be determined.
-base64js.min.ts(1,2379): error TS7034: Variable 'l' implicitly has type 'any[]' in some locations where its type cannot be determined.
 bench/basic.ts(2,17): error TS2306: File 'index.ts' is not a module.
 bench/basic.ts(16,3): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bench/basic.ts(16,13): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -149,102 +104,55 @@ bench/bench.ts(19,33): error TS2314: Generic type 'TypedPropertyDescriptor<T>' r
 bench/bench.ts(23,30): error TS2339: Property 'target' does not exist on type 'Object'.
 index.ts(9,5): error TS2322: Type 'ArrayConstructor | Uint8ArrayConstructor' is not assignable to type 'String'.
   Type 'ArrayConstructor' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-index.ts(13,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
-index.ts(14,3): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
-index.ts(19,1): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
-index.ts(20,1): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(22,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(25,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(36,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(44,26): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(45,33): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 index.ts(46,12): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
 index.ts(46,51): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(50,12): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 index.ts(50,51): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(55,30): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'String'.
-index.ts(56,26): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(57,33): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 index.ts(59,25): error TS2351: This expression is not constructable.
   Type 'String' has no construct signatures.
 index.ts(59,41): error TS2345: Argument of type 'HTMLElement' is not assignable to parameter of type 'String'.
 index.ts(65,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(69,24): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-index.ts(71,8): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(71,22): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
-index.ts(72,8): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(72,22): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
 index.ts(72,33): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-index.ts(73,8): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(73,22): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
 index.ts(73,33): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-index.ts(74,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(74,21): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
 index.ts(74,32): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-index.ts(75,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(75,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(75,23): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(76,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(76,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(76,23): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(77,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(77,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(77,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(82,8): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(82,22): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
-index.ts(83,8): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(83,22): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
 index.ts(83,33): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-index.ts(84,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(84,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(84,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(89,8): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(89,22): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
-index.ts(90,8): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(90,22): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
 index.ts(90,33): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-index.ts(91,8): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(91,22): error TS2339: Property 'charCodeAt' does not exist on type 'HTMLElement'.
 index.ts(91,33): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-index.ts(92,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(92,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(92,23): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(93,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(93,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(93,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(100,10): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(100,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(101,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(101,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(102,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(102,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(103,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(103,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(108,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(109,32): error TS2365: Operator '+=' cannot be applied to types 'String' and 'number'.
 index.ts(110,5): error TS2322: Type 'number' is not assignable to type 'String'.
 index.ts(111,15): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(112,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(112,15): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
-index.ts(113,8): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 index.ts(113,14): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
 index.ts(114,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 index.ts(119,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -257,21 +165,11 @@ index.ts(128,35): error TS2345: Argument of type 'number' is not assignable to p
 index.ts(128,39): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
 index.ts(128,76): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
 index.ts(133,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(135,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(135,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(136,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(136,15): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(140,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(140,41): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(142,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(142,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(143,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(143,15): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(144,7): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(144,15): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 

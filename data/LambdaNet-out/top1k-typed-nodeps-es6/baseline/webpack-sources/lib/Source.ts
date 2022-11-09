@@ -10,7 +10,7 @@ class Source {
 	}
 
 	buffer() {
-		const source: ReplaceSource = this.source();
+		const source: Source = this.source();
 		if (Buffer.isBuffer(source)) return source;
 		return Buffer.from(source, "utf-8");
 	}

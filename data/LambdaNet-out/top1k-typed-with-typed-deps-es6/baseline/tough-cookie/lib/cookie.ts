@@ -1390,7 +1390,7 @@ class CookieJar {
 
       // RFC6265bis-02 S5.3.7
       if (sameSiteLevel) {
-        const cookieLevel: Number = Cookie.sameSiteLevel[c.sameSite || "none"];
+        const cookieLevel: String = Cookie.sameSiteLevel[c.sameSite || "none"];
         if (cookieLevel > sameSiteLevel) {
           // only allow cookies at or below the request level
           return false;
@@ -1438,7 +1438,7 @@ class CookieJar {
   getCookieString(...args) {
     const cb: Function = args.pop();
     validators.validate(validators.isFunction(cb), cb);
-    const next: Function = function(err: Function, cookies: Array) {
+    const next: Function = function(err: Cookie, cookies: Array) {
       if (err) {
         cb(err);
       } else {
@@ -1458,7 +1458,7 @@ class CookieJar {
   getSetCookieStrings(...args) {
     const cb: Function = args.pop();
     validators.validate(validators.isFunction(cb), cb);
-    const next: Function = function(err: Function, cookies: Array) {
+    const next: Function = function(err: Cookie, cookies: Array) {
       if (err) {
         cb(err);
       } else {

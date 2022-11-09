@@ -84,7 +84,7 @@ fs.writeFileSync(path.join(__dirname, "..", destFileName),
     "module.exports = "+JSON.stringify(encodings, undefined, "  "));
 
 
-function generateCharsString(encoding: Number): String {
+function generateCharsString(encoding: String): String {
     console.log("Generate encoding for " + encoding);
     var iconvToUtf8: Object = new Iconv(encoding, "UTF-8");
     var iconvFromUtf8: Object = new Iconv("UTF-8", encoding);

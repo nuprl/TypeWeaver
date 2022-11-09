@@ -14,7 +14,7 @@ function startsWith(prefix: String, string: String): Boolean {
   return string.slice(0, prefix.length) === prefix;
 }
 
-function usesLicenseRef(ast: HTMLElement): Boolean {
+function usesLicenseRef(ast: Object): Boolean {
   if (ast.hasOwnProperty('license')) {
     var license: String = ast.license;
     return (

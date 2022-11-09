@@ -108,7 +108,7 @@ class MapCache {
    * @returns {Object} Returns the map cache instance.
    */
   set(key, value) {
-    const data: HTMLElement = getMapData(this, key)
+    const data: Hash = getMapData(this, key)
     const size: Number = data.size
 
     data.set(key, value)

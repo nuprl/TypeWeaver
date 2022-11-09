@@ -29,7 +29,7 @@ const overrided: Array = [
   '_encodeNull', '_encodeInt', '_encodeBool'
 ];
 
-function Node(enc: String, parent: String, name: String): Void {
+function Node(enc: Function, parent: String, name: String): Void {
   const state: Object = {};
   this._baseState = state;
 

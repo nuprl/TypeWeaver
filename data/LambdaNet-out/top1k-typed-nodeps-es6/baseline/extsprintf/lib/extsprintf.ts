@@ -183,7 +183,7 @@ function jsPrintf(): Void {
 	jsFprintf.apply(null, args);
 }
 
-function jsFprintf(stream: String): Number {
+function jsFprintf(stream: Number): Number {
 	var args: String = Array.prototype.slice.call(arguments, 1);
 	return (stream.write(jsSprintf.apply(this, args)));
 }

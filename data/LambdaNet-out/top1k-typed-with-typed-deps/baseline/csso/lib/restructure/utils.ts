@@ -1,6 +1,6 @@
 const { hasOwnProperty } = Object.prototype;
 
-export function isEqualSelectors(a: Object, b: Object): Boolean {
+export function isEqualSelectors(a: TRBL, b: Object): Boolean {
     let cursor1: Object = a.head;
     let cursor2: Object = b.head;
 
@@ -12,7 +12,7 @@ export function isEqualSelectors(a: Object, b: Object): Boolean {
     return cursor1 === null && cursor2 === null;
 }
 
-export function isEqualDeclarations(a: Object, b: Object): Boolean {
+export function isEqualDeclarations(a: TRBL, b: Object): Boolean {
     let cursor1: Object = a.head;
     let cursor2: Object = b.head;
 
@@ -24,7 +24,7 @@ export function isEqualDeclarations(a: Object, b: Object): Boolean {
     return cursor1 === null && cursor2 === null;
 }
 
-export function compareDeclarations(declarations1: Function, declarations2: Object): TRBL {
+export function compareDeclarations(declarations1: Function, declarations2: TRBL): TRBL {
     const result: Object = {
         eq: [],
         ne1: [],
@@ -40,7 +40,7 @@ export function compareDeclarations(declarations1: Function, declarations2: Obje
     }
 
     for (let cursor = declarations1.head; cursor; cursor = cursor.next)  {
-        const data: HTMLElement = cursor.data;
+        const data: TRBL = cursor.data;
 
         if (data.fingerprint) {
             fingerprints[data.fingerprint] = data.important;
@@ -72,7 +72,7 @@ export function compareDeclarations(declarations1: Function, declarations2: Obje
     return result;
 }
 
-export function addSelectors(dest: HTMLElement, source: Array): Object {
+export function addSelectors(dest: TRBL, source: Array): TRBL {
     source.forEach((sourceData: Object) => {
         const newStr: String = sourceData.id;
         let cursor: Object = dest.head;

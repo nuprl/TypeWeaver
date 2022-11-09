@@ -8,53 +8,30 @@ example/fn.ts(4,64): error TS2365: Operator '+' cannot be applied to types 'Numb
 example/fn.ts(5,13): error TS2554: Expected 4 arguments, but got 1.
 example/inspect.ts(6,5): error TS2740: Type 'HTMLDivElement' is missing the following properties from type 'HTMLInputElement': accept, alt, autocomplete, capture, and 51 more.
 example/inspect.ts(10,13): error TS2554: Expected 4 arguments, but got 1.
-index.ts(1,5): error TS2322: Type 'false | Map<any, any>' is not assignable to type 'Number'.
-  Type 'boolean' is not assignable to type 'Number'.
-index.ts(2,5): error TS2322: Type 'PropertyDescriptor | null | undefined' is not assignable to type 'Object'.
-  Type 'undefined' is not assignable to type 'Object'.
-index.ts(2,33): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
+index.ts(1,5): error TS2739: Type 'Map<any, any>' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 index.ts(3,81): error TS2339: Property 'get' does not exist on type 'Object'.
 index.ts(3,120): error TS2339: Property 'get' does not exist on type 'Object'.
-index.ts(5,5): error TS2322: Type 'false | Set<any>' is not assignable to type 'Number'.
-  Type 'boolean' is not assignable to type 'Number'.
-index.ts(6,5): error TS2322: Type 'PropertyDescriptor | null | undefined' is not assignable to type 'Object'.
-  Type 'undefined' is not assignable to type 'Object'.
-index.ts(6,33): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
+index.ts(5,5): error TS2739: Type 'Set<any>' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 index.ts(7,81): error TS2339: Property 'get' does not exist on type 'Object'.
 index.ts(7,120): error TS2339: Property 'get' does not exist on type 'Object'.
-index.ts(9,5): error TS2322: Type 'false | WeakMap<object, any>' is not assignable to type 'Number'.
-  Type 'boolean' is not assignable to type 'Number'.
-index.ts(10,5): error TS2322: Type '((key: object) => boolean) | null' is not assignable to type 'Function'.
-  Type 'null' is not assignable to type 'Function'.
-index.ts(11,5): error TS2322: Type 'false | WeakSet<object>' is not assignable to type 'Number'.
-  Type 'boolean' is not assignable to type 'Number'.
-index.ts(12,5): error TS2322: Type '((value: object) => boolean) | null' is not assignable to type 'Function'.
-  Type 'null' is not assignable to type 'Function'.
-index.ts(13,5): error TS2322: Type 'false | WeakRef<any>' is not assignable to type 'Boolean'.
-  Type 'WeakRef<any>' is not assignable to type 'Boolean'.
-    The types returned by 'valueOf()' are incompatible between these types.
-      Type 'Object' is not assignable to type 'boolean'.
-index.ts(14,5): error TS2322: Type '(() => any) | null' is not assignable to type 'Function'.
-  Type 'null' is not assignable to type 'Function'.
+index.ts(9,5): error TS2739: Type 'WeakMap<object, any>' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+index.ts(11,5): error TS2739: Type 'WeakSet<object>' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+index.ts(13,5): error TS2322: Type 'WeakRef<any>' is not assignable to type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'Object' is not assignable to type 'boolean'.
 index.ts(15,5): error TS2322: Type '() => boolean' is not assignable to type 'Number'.
 index.ts(22,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(23,5): error TS2322: Type '(string: string) => boolean' is not assignable to type 'String'.
 index.ts(24,5): error TS2322: Type '{ (...items: ConcatArray<any>[]): any[]; (...items: any[]): any[]; }' is not assignable to type 'EventTarget'.
-index.ts(28,5): error TS2322: Type '(() => bigint) | null' is not assignable to type 'Function'.
-  Type 'null' is not assignable to type 'Function'.
-index.ts(30,5): error TS2322: Type '(() => string) | null' is not assignable to type 'String'.
-  Type 'null' is not assignable to type 'String'.
-index.ts(33,5): error TS2322: Type 'typeof Symbol.toStringTag | null' is not assignable to type 'String'.
-  Type 'null' is not assignable to type 'String'.
+index.ts(30,27): error TS2322: Type '() => string' is not assignable to type 'String'.
+index.ts(33,5): error TS2322: Type 'typeof Symbol.toStringTag' is not assignable to type 'String'.
 index.ts(33,82): error TS2367: This condition will always return 'false' since the types 'string' and 'Boolean' have no overlap.
-index.ts(39,8): error TS2339: Property '__proto__' does not exist on type 'never[]'.
+index.ts(39,8): error TS2339: Property '__proto__' does not exist on type 'undefined[]'.
 index.ts(41,22): error TS2339: Property '__proto__' does not exist on type 'Function'.
 index.ts(46,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(46,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(52,18): error TS2339: Property 'call' does not exist on type 'String'.
 index.ts(60,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(70,5): error TS2322: Type 'Function | null' is not assignable to type 'Function'.
-  Type 'null' is not assignable to type 'Function'.
 index.ts(70,40): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
   Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(72,85): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -178,17 +155,12 @@ index.ts(268,132): error TS2360: The left-hand side of an 'in' expression must b
 index.ts(269,134): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
 index.ts(283,21): error TS2339: Property 'call' does not exist on type 'String'.
 index.ts(300,91): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
-index.ts(300,98): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(310,11): error TS2339: Property 'name' does not exist on type 'HTMLElement'.
 index.ts(310,28): error TS2339: Property 'name' does not exist on type 'HTMLElement'.
-index.ts(312,21): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-index.ts(313,5): error TS2322: Type 'null' is not assignable to type 'String'.
 index.ts(317,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(404,21): error TS2339: Property 'nodeName' does not exist on type 'Object'.
 index.ts(404,55): error TS2339: Property 'getAttribute' does not exist on type 'Object'.
-index.ts(407,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(408,27): error TS2339: Property 'maxStringLength' does not exist on type 'Object'.
 index.ts(409,51): error TS2339: Property 'maxStringLength' does not exist on type 'Object'.
 index.ts(411,16): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
@@ -200,7 +172,6 @@ index.ts(455,14): error TS2339: Property 'indent' does not exist on type 'HTMLEl
 index.ts(457,28): error TS2339: Property 'indent' does not exist on type 'HTMLElement'.
 index.ts(457,56): error TS2339: Property 'indent' does not exist on type 'HTMLElement'.
 index.ts(458,44): error TS2339: Property 'indent' does not exist on type 'HTMLElement'.
-index.ts(460,9): error TS2322: Type 'null' is not assignable to type 'Object'.
 index.ts(464,32): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 index.ts(468,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(470,44): error TS2339: Property 'prev' does not exist on type 'Object'.
@@ -211,23 +182,5 @@ index.ts(474,53): error TS2314: Generic type 'Array<T>' requires 1 type argument
 index.ts(476,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(480,30): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 index.ts(483,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(488,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-index.ts(495,34): error TS2454: Variable 'symMap' is used before being assigned.
-index.ts(495,34): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 index.ts(498,26): error TS2339: Property 'call' does not exist on type 'String'.
-test-core-js.ts(5,18): error TS2307: Cannot find module 'tape' or its corresponding type declarations.
-test-core-js.ts(8,7): error TS2339: Property 'equal' does not exist on type 'Object'.
-test-core-js.ts(8,13): error TS2554: Expected 4 arguments, but got 1.
-test-core-js.ts(9,7): error TS2339: Property 'end' does not exist on type 'Object'.
-test-core-js.ts(13,7): error TS2339: Property 'equal' does not exist on type 'Object'.
-test-core-js.ts(13,13): error TS2554: Expected 4 arguments, but got 1.
-test-core-js.ts(14,7): error TS2339: Property 'end' does not exist on type 'Object'.
-test-core-js.ts(18,7): error TS2339: Property 'equal' does not exist on type 'Object'.
-test-core-js.ts(18,13): error TS2554: Expected 4 arguments, but got 1.
-test-core-js.ts(19,7): error TS2339: Property 'end' does not exist on type 'Object'.
-test-core-js.ts(23,7): error TS2339: Property 'equal' does not exist on type 'Object'.
-test-core-js.ts(23,13): error TS2554: Expected 4 arguments, but got 1.
-test-core-js.ts(24,7): error TS2339: Property 'end' does not exist on type 'Object'.
 

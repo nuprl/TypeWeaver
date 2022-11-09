@@ -16,9 +16,9 @@
 // walker, and state can be used to give this walked an initial
 // state.
 
-export function simple(node: TokenType, visitors: Object, baseVisitor: Object, state: RegExpValidationState, override: RegExpValidationState): Parser {
+export function simple(node: Node, visitors: Object, baseVisitor: Object, state: RegExpValidationState, override: RegExpValidationState): RegExpValidationState {
   if (!baseVisitor) baseVisitor = base
-  ;(function c(node: Scope, st: String, override: String): Void {
+  ;(function c(node: Node, st: String, override: String): Void {
     let type: String = override || node.type, found: Function = visitors[type]
     baseVisitor[type](node, st, c)
     if (found) found(node, st)
@@ -28,10 +28,10 @@ export function simple(node: TokenType, visitors: Object, baseVisitor: Object, s
 // An ancestor walk keeps an array of ancestor nodes (including the
 // current node) and passes them to the callback as third parameter
 // (and also as state parameter when no other state is present).
-export function ancestor(node: TokenType, visitors: Object, baseVisitor: Object, state: RegExpValidationState, override: RegExpValidationState): Position {
+export function ancestor(node: Node, visitors: Object, baseVisitor: Object, state: RegExpValidationState, override: RegExpValidationState): Position {
   let ancestors: Array = []
   if (!baseVisitor) baseVisitor = base
-  ;(function c(node: Scope, st: String, override: String): Void {
+  ;(function c(node: Node, st: String, override: String): Void {
     let type: String = override || node.type, found: Function = visitors[type]
     let isNew: Boolean = node !== ancestors[ancestors.length - 1]
     if (isNew) ancestors.push(node)
@@ -46,9 +46,9 @@ export function ancestor(node: TokenType, visitors: Object, baseVisitor: Object,
 // threaded through the walk, and can opt how and whether to walk
 // their child nodes (by calling their third argument on these
 // nodes).
-export function recursive(node: TokenType, state: RegExpValidationState, funcs: RegExpValidationState, baseVisitor: String, override: RegExpValidationState): Position {
+export function recursive(node: Node, state: RegExpValidationState, funcs: String, baseVisitor: String, override: RegExpValidationState): RegExpValidationState {
   let visitor: Object = funcs ? make(funcs, baseVisitor || undefined) : baseVisitor
-  ;(function c(node: Scope, st: Function, override: String): Void {
+  ;(function c(node: Node, st: String, override: String): Void {
     visitor[override || node.type](node, st, c)
   })(node, state, override)
 }
@@ -67,10 +67,10 @@ class Found {
 }
 
 // A full walk triggers the callback on each node
-export function full(node: TokenType, callback: Function, baseVisitor: Object, state: RegExpValidationState, override: RegExpValidationState): Position {
+export function full(node: Node, callback: Function, baseVisitor: Object, state: RegExpValidationState, override: RegExpValidationState): RegExpValidationState {
   if (!baseVisitor) baseVisitor = base
   let last: String
-  ;(function c(node: Scope, st: String, override: String): Void {
+  ;(function c(node: Node, st: String, override: String): Void {
     let type: Number = override || node.type
     baseVisitor[type](node, st, c)
     if (last !== node) {
@@ -82,10 +82,10 @@ export function full(node: TokenType, callback: Function, baseVisitor: Object, s
 
 // An fullAncestor walk is like an ancestor walk, but triggers
 // the callback on each node
-export function fullAncestor(node: TokenType, callback: Function, baseVisitor: Object, state: RegExpValidationState): Void {
+export function fullAncestor(node: Node, callback: Function, baseVisitor: Object, state: RegExpValidationState): Void {
   if (!baseVisitor) baseVisitor = base
   let ancestors: Array = [], last: String
-  ;(function c(node: Scope, st: String, override: String): Void {
+  ;(function c(node: Node, st: String, override: String): Void {
     let type: Number = override || node.type
     let isNew: Boolean = node !== ancestors[ancestors.length - 1]
     if (isNew) ancestors.push(node)
@@ -101,11 +101,11 @@ export function fullAncestor(node: TokenType, callback: Function, baseVisitor: O
 // Find a node with a given start, end, and type (all are optional,
 // null can be used as wildcard). Returns a {node, state} object, or
 // undefined when it doesn't find a matching node.
-export function findNodeAt(node: TokenType, start: Number, end: Number, test: Function, baseVisitor: Object, state: RegExpValidationState): Void {
+export function findNodeAt(node: Node, start: Number, end: Number, test: Function, baseVisitor: Object, state: RegExpValidationState): Void {
   if (!baseVisitor) baseVisitor = base
   test = makeTest(test)
   try {
-    (function c(node: Scope, st: String, override: String): Void {
+    (function c(node: Node, st: String, override: String): Void {
       let type: Number = override || node.type
       if ((start == null || node.start <= start) &&
           (end == null || node.end >= end))
@@ -123,11 +123,11 @@ export function findNodeAt(node: TokenType, start: Number, end: Number, test: Fu
 
 // Find the innermost node of a given type that contains the given
 // position. Interface similar to findNodeAt.
-export function findNodeAround(node: TokenType, pos: Number, test: Function, baseVisitor: Object, state: RegExpValidationState): Void {
+export function findNodeAround(node: Node, pos: Number, test: Function, baseVisitor: Object, state: RegExpValidationState): Void {
   test = makeTest(test)
   if (!baseVisitor) baseVisitor = base
   try {
-    (function c(node: Scope, st: String, override: String): Void {
+    (function c(node: Node, st: String, override: String): Void {
       let type: Number = override || node.type
       if (node.start > pos || node.end < pos) return
       baseVisitor[type](node, st, c)
@@ -140,11 +140,11 @@ export function findNodeAround(node: TokenType, pos: Number, test: Function, bas
 }
 
 // Find the outermost matching node after a given position.
-export function findNodeAfter(node: TokenType, pos: Number, test: Function, baseVisitor: Object, state: RegExpValidationState): Void {
+export function findNodeAfter(node: Node, pos: Number, test: Function, baseVisitor: Object, state: RegExpValidationState): Void {
   test = makeTest(test)
   if (!baseVisitor) baseVisitor = base
   try {
-    (function c(node: Scope, st: String, override: String): Void {
+    (function c(node: Node, st: String, override: String): Void {
       if (node.end < pos) return
       let type: Number = override || node.type
       if (node.start >= pos && test(type, node)) throw new Found(node, st)
@@ -157,11 +157,11 @@ export function findNodeAfter(node: TokenType, pos: Number, test: Function, base
 }
 
 // Find the outermost matching node before a given position.
-export function findNodeBefore(node: TokenType, pos: Number, test: Function, baseVisitor: Object, state: RegExpValidationState): Parser {
+export function findNodeBefore(node: Node, pos: Number, test: Function, baseVisitor: Object, state: RegExpValidationState): RegExpValidationState {
   test = makeTest(test)
   if (!baseVisitor) baseVisitor = base
   let max: RegExpValidationState
-  ;(function c(node: Scope, st: String, override: String): Void {
+  ;(function c(node: Node, st: String, override: String): Void {
     if (node.start > pos) return
     let type: Number = override || node.type
     if (node.end <= pos && (!max || max.node.end < node.end) && test(type, node))
@@ -179,33 +179,33 @@ export function make(funcs: Object, baseVisitor: Number): Object {
   return visitor
 }
 
-function skipThrough(node: TokenType, st: Number, c: Function): Void { c(node, st) }
-function ignore(_node: TokenType, _st: Array, _c: Number): Void {}
+function skipThrough(node: Node, st: Number, c: Function): Void { c(node, st) }
+function ignore(_node: Node, _st: Array, _c: Number): Void {}
 
 // Node walkers.
 
 export const base: Parser = {}
 
-base.Program = base.BlockStatement = base.StaticBlock = (node: Scope, st: Array, c: Function) => {
+base.Program = base.BlockStatement = base.StaticBlock = (node: Node, st: Number, c: Function) => {
   for (let stmt of node.body)
     c(stmt, st, "Statement")
 }
 base.Statement = skipThrough
 base.EmptyStatement = ignore
 base.ExpressionStatement = base.ParenthesizedExpression = base.ChainExpression =
-  (node: Scope, st: Array, c: Function) => c(node.expression, st, "Expression")
-base.IfStatement = (node: Scope, st: String, c: Function) => {
+  (node: Node, st: Number, c: Function) => c(node.expression, st, "Expression")
+base.IfStatement = (node: Node, st: String, c: Function) => {
   c(node.test, st, "Expression")
   c(node.consequent, st, "Statement")
   if (node.alternate) c(node.alternate, st, "Statement")
 }
-base.LabeledStatement = (node: Scope, st: String, c: Function) => c(node.body, st, "Statement")
+base.LabeledStatement = (node: Node, st: Number, c: Function) => c(node.body, st, "Statement")
 base.BreakStatement = base.ContinueStatement = ignore
-base.WithStatement = (node: Scope, st: String, c: Function) => {
+base.WithStatement = (node: Node, st: Number, c: Function) => {
   c(node.object, st, "Expression")
   c(node.body, st, "Statement")
 }
-base.SwitchStatement = (node: Scope, st: String, c: Function) => {
+base.SwitchStatement = (node: Node, st: String, c: Function) => {
   c(node.discriminant, st, "Expression")
   for (let cs of node.cases) {
     if (cs.test) c(cs.test, st, "Expression")
@@ -213,30 +213,30 @@ base.SwitchStatement = (node: Scope, st: String, c: Function) => {
       c(cons, st, "Statement")
   }
 }
-base.SwitchCase = (node: Scope, st: String, c: Function) => {
+base.SwitchCase = (node: Node, st: Number, c: Function) => {
   if (node.test) c(node.test, st, "Expression")
   for (let cons of node.consequent)
     c(cons, st, "Statement")
 }
-base.ReturnStatement = base.YieldExpression = base.AwaitExpression = (node: Scope, st: Array, c: Function) => {
+base.ReturnStatement = base.YieldExpression = base.AwaitExpression = (node: Node, st: Number, c: Function) => {
   if (node.argument) c(node.argument, st, "Expression")
 }
 base.ThrowStatement = base.SpreadElement =
-  (node: Scope, st: Array, c: Function) => c(node.argument, st, "Expression")
-base.TryStatement = (node: Scope, st: String, c: Function) => {
+  (node: Node, st: Number, c: Function) => c(node.argument, st, "Expression")
+base.TryStatement = (node: Node, st: String, c: Function) => {
   c(node.block, st, "Statement")
   if (node.handler) c(node.handler, st)
   if (node.finalizer) c(node.finalizer, st, "Statement")
 }
-base.CatchClause = (node: Scope, st: String, c: Function) => {
+base.CatchClause = (node: Node, st: Number, c: Function) => {
   if (node.param) c(node.param, st, "Pattern")
   c(node.body, st, "Statement")
 }
-base.WhileStatement = base.DoWhileStatement = (node: Scope, st: Number, c: Function) => {
+base.WhileStatement = base.DoWhileStatement = (node: Node, st: Number, c: Function) => {
   c(node.test, st, "Expression")
   c(node.body, st, "Statement")
 }
-base.ForStatement = (node: Scope, st: String, c: Function) => {
+base.ForStatement = (node: Node, st: String, c: Function) => {
   if (node.init) c(node.init, st, "ForInit")
   if (node.test) c(node.test, st, "Expression")
   if (node.update) c(node.update, st, "Expression")
@@ -247,30 +247,30 @@ base.ForInStatement = base.ForOfStatement = (node: String, st: String, c: Functi
   c(node.right, st, "Expression")
   c(node.body, st, "Statement")
 }
-base.ForInit = (node: TokenType, st: Number, c: Function) => {
+base.ForInit = (node: Node, st: Number, c: Function) => {
   if (node.type === "VariableDeclaration") c(node, st)
   else c(node, st, "Expression")
 }
 base.DebuggerStatement = ignore
 
-base.FunctionDeclaration = (node: TokenType, st: String, c: Function) => c(node, st, "Function")
-base.VariableDeclaration = (node: Scope, st: String, c: Function) => {
+base.FunctionDeclaration = (node: Node, st: Number, c: Function) => c(node, st, "Function")
+base.VariableDeclaration = (node: Node, st: Number, c: Function) => {
   for (let decl of node.declarations)
     c(decl, st)
 }
-base.VariableDeclarator = (node: Scope, st: String, c: Function) => {
+base.VariableDeclarator = (node: Node, st: Number, c: Function) => {
   c(node.id, st, "Pattern")
   if (node.init) c(node.init, st, "Expression")
 }
 
-base.Function = (node: Scope, st: String, c: Function) => {
+base.Function = (node: Node, st: String, c: Function) => {
   if (node.id) c(node.id, st, "Pattern")
   for (let param of node.params)
     c(param, st, "Pattern")
   c(node.body, st, node.expression ? "Expression" : "Statement")
 }
 
-base.Pattern = (node: Scope, st: String, c: Function) => {
+base.Pattern = (node: Node, st: String, c: Function) => {
   if (node.type === "Identifier")
     c(node, st, "VariablePattern")
   else if (node.type === "MemberExpression")
@@ -280,13 +280,13 @@ base.Pattern = (node: Scope, st: String, c: Function) => {
 }
 base.VariablePattern = ignore
 base.MemberPattern = skipThrough
-base.RestElement = (node: Scope, st: String, c: Function) => c(node.argument, st, "Pattern")
-base.ArrayPattern = (node: Scope, st: String, c: Function) => {
+base.RestElement = (node: Node, st: Number, c: Function) => c(node.argument, st, "Pattern")
+base.ArrayPattern = (node: Node, st: Number, c: Function) => {
   for (let elt of node.elements) {
     if (elt) c(elt, st, "Pattern")
   }
 }
-base.ObjectPattern = (node: Scope, st: String, c: Function) => {
+base.ObjectPattern = (node: Node, st: String, c: Function) => {
   for (let prop of node.properties) {
     if (prop.type === "Property") {
       if (prop.computed) c(prop.key, st, "Expression")
@@ -299,21 +299,21 @@ base.ObjectPattern = (node: Scope, st: String, c: Function) => {
 
 base.Expression = skipThrough
 base.ThisExpression = base.Super = base.MetaProperty = ignore
-base.ArrayExpression = (node: Scope, st: String, c: Function) => {
+base.ArrayExpression = (node: Node, st: Number, c: Function) => {
   for (let elt of node.elements) {
     if (elt) c(elt, st, "Expression")
   }
 }
-base.ObjectExpression = (node: Scope, st: String, c: Function) => {
+base.ObjectExpression = (node: Node, st: Number, c: Function) => {
   for (let prop of node.properties)
     c(prop, st)
 }
 base.FunctionExpression = base.ArrowFunctionExpression = base.FunctionDeclaration
-base.SequenceExpression = (node: Scope, st: String, c: Function) => {
+base.SequenceExpression = (node: Node, st: Number, c: Function) => {
   for (let expr of node.expressions)
     c(expr, st, "Expression")
 }
-base.TemplateLiteral = (node: Scope, st: Number, c: Function) => {
+base.TemplateLiteral = (node: Node, st: Number, c: Function) => {
   for (let quasi of node.quasis)
     c(quasi, st)
 
@@ -321,67 +321,67 @@ base.TemplateLiteral = (node: Scope, st: Number, c: Function) => {
     c(expr, st, "Expression")
 }
 base.TemplateElement = ignore
-base.UnaryExpression = base.UpdateExpression = (node: Scope, st: Array, c: Function) => {
+base.UnaryExpression = base.UpdateExpression = (node: Node, st: Number, c: Function) => {
   c(node.argument, st, "Expression")
 }
-base.BinaryExpression = base.LogicalExpression = (node: Array, st: Number, c: Function) => {
+base.BinaryExpression = base.LogicalExpression = (node: Position, st: Number, c: Function) => {
   c(node.left, st, "Expression")
   c(node.right, st, "Expression")
 }
-base.AssignmentExpression = base.AssignmentPattern = (node: Array, st: Number, c: Function) => {
+base.AssignmentExpression = base.AssignmentPattern = (node: Position, st: Number, c: Function) => {
   c(node.left, st, "Pattern")
   c(node.right, st, "Expression")
 }
-base.ConditionalExpression = (node: Scope, st: String, c: Function) => {
+base.ConditionalExpression = (node: Node, st: String, c: Function) => {
   c(node.test, st, "Expression")
   c(node.consequent, st, "Expression")
   c(node.alternate, st, "Expression")
 }
-base.NewExpression = base.CallExpression = (node: Scope, st: Number, c: Function) => {
+base.NewExpression = base.CallExpression = (node: Node, st: Number, c: Function) => {
   c(node.callee, st, "Expression")
   if (node.arguments)
     for (let arg of node.arguments)
       c(arg, st, "Expression")
 }
-base.MemberExpression = (node: Scope, st: String, c: Function) => {
+base.MemberExpression = (node: Node, st: Number, c: Function) => {
   c(node.object, st, "Expression")
   if (node.computed) c(node.property, st, "Expression")
 }
-base.ExportNamedDeclaration = base.ExportDefaultDeclaration = (node: Scope, st: Number, c: Function) => {
+base.ExportNamedDeclaration = base.ExportDefaultDeclaration = (node: Node, st: Number, c: Function) => {
   if (node.declaration)
     c(node.declaration, st, node.type === "ExportNamedDeclaration" || node.declaration.id ? "Statement" : "Expression")
   if (node.source) c(node.source, st, "Expression")
 }
-base.ExportAllDeclaration = (node: Scope, st: Number, c: Function) => {
+base.ExportAllDeclaration = (node: Node, st: Number, c: Function) => {
   if (node.exported)
     c(node.exported, st)
   c(node.source, st, "Expression")
 }
-base.ImportDeclaration = (node: TokenType, st: Number, c: Function) => {
+base.ImportDeclaration = (node: Node, st: Number, c: Function) => {
   for (let spec of node.specifiers)
     c(spec, st)
   c(node.source, st, "Expression")
 }
-base.ImportExpression = (node: TokenType, st: String, c: Function) => {
+base.ImportExpression = (node: Node, st: Number, c: Function) => {
   c(node.source, st, "Expression")
 }
 base.ImportSpecifier = base.ImportDefaultSpecifier = base.ImportNamespaceSpecifier = base.Identifier = base.PrivateIdentifier = base.Literal = ignore
 
-base.TaggedTemplateExpression = (node: Scope, st: String, c: Function) => {
+base.TaggedTemplateExpression = (node: Node, st: Number, c: Function) => {
   c(node.tag, st, "Expression")
   c(node.quasi, st, "Expression")
 }
-base.ClassDeclaration = base.ClassExpression = (node: TokenType, st: Array, c: Function) => c(node, st, "Class")
-base.Class = (node: Scope, st: String, c: Function) => {
+base.ClassDeclaration = base.ClassExpression = (node: Node, st: Number, c: Function) => c(node, st, "Class")
+base.Class = (node: Node, st: String, c: Function) => {
   if (node.id) c(node.id, st, "Pattern")
   if (node.superClass) c(node.superClass, st, "Expression")
   c(node.body, st)
 }
-base.ClassBody = (node: Scope, st: String, c: Function) => {
+base.ClassBody = (node: Node, st: Number, c: Function) => {
   for (let elt of node.body)
     c(elt, st)
 }
-base.MethodDefinition = base.PropertyDefinition = base.Property = (node: Scope, st: Number, c: Function) => {
+base.MethodDefinition = base.PropertyDefinition = base.Property = (node: Node, st: Number, c: Function) => {
   if (node.computed) c(node.key, st, "Expression")
   if (node.value) c(node.value, st, "Expression")
 }

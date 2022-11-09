@@ -167,7 +167,7 @@ function processRule(node: Object, item: Object, list: HTMLElement): Void {
     });
 }
 
-export default function restructRule(ast: Array): Void {
+export default function restructRule(ast: Function): Void {
     walk(ast, {
         visit: 'Rule',
         reverse: true,

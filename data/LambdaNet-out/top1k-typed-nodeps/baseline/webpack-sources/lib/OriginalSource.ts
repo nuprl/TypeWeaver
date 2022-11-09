@@ -69,7 +69,7 @@ class OriginalSource extends Source {
 					if (isEndOfLine && match.length === 1) {
 						if (!finalSource) onChunk(match, line, column, -1, -1, -1, -1);
 					} else {
-						const chunk: Function = finalSource ? undefined : match;
+						const chunk: String = finalSource ? undefined : match;
 						onChunk(chunk, line, column, 0, line, column, -1);
 					}
 					if (isEndOfLine) {

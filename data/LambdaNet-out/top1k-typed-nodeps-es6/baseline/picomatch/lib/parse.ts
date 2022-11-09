@@ -1035,7 +1035,7 @@ parse.fastpaths = (input: Array, options: Object) => {
     star = `(${star})`;
   }
 
-  const globstar: Function = (opts: String) => {
+  const globstar: Function = (opts: HTMLElement) => {
     if (opts.noglobstar === true) return star;
     return `(${capture}(?:(?!${START_ANCHOR}${opts.dot ? DOTS_SLASH : DOT_LITERAL}).)*?)`;
   };

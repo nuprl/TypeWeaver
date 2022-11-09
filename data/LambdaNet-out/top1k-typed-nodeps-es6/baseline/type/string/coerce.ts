@@ -9,7 +9,7 @@ export default function (value: String) {
 	if (!isValue(value)) return null;
 	if (isObject(value)) {
 		// Reject Object.prototype.toString coercion
-		var valueToString: String = value.toString;
+		var valueToString: Number = value.toString;
 		if (typeof valueToString !== "function") return null;
 		if (valueToString === objectToString) return null;
 		// Note: It can be object coming from other realm, still as there's no ES3 and CSP compliant

@@ -45,7 +45,7 @@ function getPass(opts: Function, cb: Function): Void {
 	if (opts.prompt === undefined)
 		opts.prompt = 'Password';
 
-	openTTY(function (err: String, rfd: String, wfd: Number, rtty: HTMLElement, wtty: HTMLElement) {
+	openTTY(function (err: String, rfd: Number, wfd: Number, rtty: HTMLElement, wtty: HTMLElement) {
 		if (err) {
 			cb(err);
 			return;
@@ -111,7 +111,7 @@ function openTTY(cb: Function): Void {
 			return;
 		}
 		var rtty: String = new mod_tty.ReadStream(rttyfd);
-		mod_fs.open('/dev/tty', 'w+', function (err3: Function, wttyfd: String) {
+		mod_fs.open('/dev/tty', 'w+', function (err3: Function, wttyfd: Array) {
 			var wtty: String = new mod_tty.WriteStream(wttyfd);
 			if (err3) {
 				cb(err3);

@@ -14,7 +14,7 @@ keysShim.shim = function shimObjectKeys(): Boolean {
 			return args && args.length === arguments.length;
 		}(1, 2));
 		if (!keysWorksWithArguments) {
-			Object.keys = function keys(object: Function): String { // eslint-disable-line func-name-matching
+			Object.keys = function keys(object: Function): Array { // eslint-disable-line func-name-matching
 				if (isArgs(object)) {
 					return origKeys(slice.call(object));
 				}

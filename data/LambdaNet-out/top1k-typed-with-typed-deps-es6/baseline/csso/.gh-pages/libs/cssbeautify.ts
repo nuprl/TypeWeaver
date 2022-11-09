@@ -34,7 +34,7 @@
 
     function cssbeautify(style: String, opt: Number): String {
 
-        var options: HTMLElement, index: Number = 0, length: Number = style.length, blocks: Array, formatted: String = '',
+        var options: TRBL, index: Number = 0, length: Number = style.length, blocks: Array, formatted: String = '',
             ch: String, ch2: String, str: String, state: Number, State: Object, depth: Number, quote: Number, comment: Boolean,
             openbracesuffix: Boolean = true,
             autosemicolon: Boolean = false,
@@ -109,7 +109,7 @@
         }
 
         if (String.prototype.trimRight) {
-            trimRight = function (s: Object) {
+            trimRight = function (s: TRBL) {
                 return s.trimRight();
             };
         } else {

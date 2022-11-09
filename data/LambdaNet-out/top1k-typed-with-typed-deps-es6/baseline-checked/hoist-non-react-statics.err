@@ -6,13 +6,9 @@ rollup.config.ts(6,17): error TS2732: Cannot find module './package.json'. Consi
 rollup.config.ts(11,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rollup.config.ts(16,84): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/index.ts(49,1): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Object'.
-src/index.ts(50,1): error TS7053: Element implicitly has an 'any' type because expression of type 'symbol' can't be used to index type 'Object'.
-src/index.ts(59,12): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-src/index.ts(59,25): error TS7053: Element implicitly has an 'any' type because expression of type '"$$typeof"' can't be used to index type 'Object'.
-  Property '$$typeof' does not exist on type 'Object'.
-src/index.ts(69,88): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/index.ts(69,117): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/index.ts(69,120): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/index.ts(75,55): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Function'.
+  Type 'Boolean' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 src/index.ts(79,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/index.ts(90,32): error TS2538: Type 'String' cannot be used as an index type.
 src/index.ts(91,46): error TS2538: Type 'String' cannot be used as an index type.

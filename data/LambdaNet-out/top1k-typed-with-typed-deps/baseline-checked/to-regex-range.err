@@ -53,6 +53,7 @@ index.ts(90,58): error TS2345: Argument of type 'boolean' is not assignable to p
 index.ts(91,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(91,59): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
 index.ts(92,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(96,51): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 index.ts(100,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
   Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(101,14): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
@@ -68,14 +69,13 @@ index.ts(134,15): error TS2314: Generic type 'Array<T>' requires 1 type argument
 index.ts(146,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
 index.ts(149,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(154,24): error TS2339: Property 'shorthand' does not exist on type 'Object'.
-index.ts(160,88): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(160,83): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(161,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(161,37): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
   Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 index.ts(162,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(168,38): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
-index.ts(171,14): error TS2339: Property 'isPadded' does not exist on type 'HTMLElement'.
-index.ts(171,26): error TS2454: Variable 'prev' is used before being assigned.
+index.ts(171,14): error TS2339: Property 'isPadded' does not exist on type 'String'.
 index.ts(171,39): error TS2339: Property 'pattern' does not exist on type 'Object'.
 index.ts(171,55): error TS2339: Property 'pattern' does not exist on type 'Object'.
 index.ts(172,16): error TS2339: Property 'count' does not exist on type 'Object'.
@@ -86,10 +86,9 @@ index.ts(177,12): error TS2551: Property 'string' does not exist on type 'Object
 index.ts(177,26): error TS2339: Property 'pattern' does not exist on type 'Object'.
 index.ts(177,54): error TS2339: Property 'count' does not exist on type 'Object'.
 index.ts(178,15): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
-index.ts(182,13): error TS2339: Property 'isPadded' does not exist on type 'HTMLElement'.
-index.ts(183,34): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Element'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
+index.ts(182,13): error TS2339: Property 'isPadded' does not exist on type 'String'.
+index.ts(183,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
+  Type 'String' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 276 more.
 index.ts(186,9): error TS2551: Property 'string' does not exist on type 'Object'. Did you mean 'toString'?
 index.ts(186,30): error TS2339: Property 'pattern' does not exist on type 'Object'.
 index.ts(186,57): error TS2339: Property 'count' does not exist on type 'Object'.
@@ -100,8 +99,6 @@ index.ts(196,15): error TS2314: Generic type 'Array<T>' requires 1 type argument
 index.ts(218,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(218,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(219,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(220,54): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 index.ts(228,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(229,40): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(233,57): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.

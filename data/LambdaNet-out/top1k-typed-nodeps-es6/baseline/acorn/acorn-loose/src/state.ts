@@ -52,7 +52,7 @@ export class LooseParser {
   }
 
   dummyNode(type) {
-    let dummy: Parser = this.startNode()
+    let dummy: RegExpValidationState = this.startNode()
     dummy.type = type
     dummy.end = dummy.start
     if (this.options.locations)

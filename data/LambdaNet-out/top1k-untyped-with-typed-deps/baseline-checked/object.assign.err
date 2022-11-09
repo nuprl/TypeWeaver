@@ -6,9 +6,7 @@ hasSymbols.ts(25,6): error TS2538: Type 'String' cannot be used as an index type
 hasSymbols.ts(27,6): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 hasSymbols.ts(32,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-hasSymbols.ts(35,55): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-hasSymbols.ts(38,7): error TS2322: Type 'PropertyDescriptor | undefined' is not assignable to type 'Element'.
-  Type 'undefined' is not assignable to type 'Element'.
+hasSymbols.ts(38,7): error TS2740: Type 'PropertyDescriptor' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
 hasSymbols.ts(38,66): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 hasSymbols.ts(39,18): error TS2339: Property 'value' does not exist on type 'Element'.
 hasSymbols.ts(39,49): error TS2339: Property 'enumerable' does not exist on type 'Element'.
@@ -18,11 +16,9 @@ implementation.ts(23,13): error TS2314: Generic type 'Array<T>' requires 1 type 
 implementation.ts(26,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 implementation.ts(39,34): error TS2538: Type 'String' cannot be used as an index type.
 implementation.ts(40,8): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(8,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 polyfill.ts(3,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 polyfill.ts(14,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-polyfill.ts(17,3): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-polyfill.ts(39,10): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 shim.ts(11,34): error TS2367: This condition will always return 'true' since the types '{ <T extends {}, U>(target: T, source: U): T & U; <T extends {}, U, V>(target: T, source1: U, source2: V): T & U & V; <T extends {}, U, V, W>(target: T, source1: U, source2: V, source3: W): T & ... 2 more ... & W; (target: object, ...sources: any[]): any; }' and 'String' have no overlap.
 shim.ts(13,2): error TS2322: Type 'String' is not assignable to type 'Boolean'.
   The types returned by 'valueOf()' are incompatible between these types.

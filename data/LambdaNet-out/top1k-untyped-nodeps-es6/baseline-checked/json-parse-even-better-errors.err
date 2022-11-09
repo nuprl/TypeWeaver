@@ -2,8 +2,6 @@ index.ts(8,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s
 index.ts(11,18): error TS2339: Property 'message' does not exist on type 'Object'.
 index.ts(15,19): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(15,31): error TS2339: Property 'message' does not exist on type 'Object'.
-index.ts(16,9): error TS2322: Type 'number | null' is not assignable to type 'Number'.
-  Type 'null' is not assignable to type 'Number'.
 index.ts(17,9): error TS2339: Property 'message' does not exist on type 'Object'.
 index.ts(20,36): error TS2339: Property 'message' does not exist on type 'Object'.
 index.ts(23,9): error TS2339: Property 'message' does not exist on type 'Object'.
@@ -13,15 +11,13 @@ index.ts(29,25): error TS2365: Operator '+' cannot be applied to types 'Number' 
 index.ts(30,9): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 index.ts(32,11): error TS2322: Type 'string' is not assignable to type 'Number'.
 index.ts(44,54): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(51,16): error TS7006: Parameter 'er' implicitly has an 'any' type.
-index.ts(51,20): error TS7006: Parameter 'txt' implicitly has an 'any' type.
-index.ts(51,25): error TS7006: Parameter 'context' implicitly has an 'any' type.
-index.ts(51,34): error TS7006: Parameter 'caller' implicitly has an 'any' type.
 index.ts(54,20): error TS2339: Property 'message' does not exist on type 'Object'.
 index.ts(56,10): error TS2339: Property 'code' does not exist on type 'JSONParseError'.
 index.ts(57,10): error TS2339: Property 'systemError' does not exist on type 'JSONParseError'.
 index.ts(65,7): error TS2322: Type 'typeof kIndent' is not assignable to type 'String'.
 index.ts(66,7): error TS2322: Type 'typeof kNewline' is not assignable to type 'String'.
+index.ts(76,3): error TS2322: Type 'String | 20' is not assignable to type 'String'.
+  Type 'number' is not assignable to type 'String'.
 index.ts(88,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(90,14): error TS2538: Type 'String' cannot be used as an index type.

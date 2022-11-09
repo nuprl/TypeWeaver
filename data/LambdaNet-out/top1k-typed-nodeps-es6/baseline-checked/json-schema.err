@@ -10,12 +10,10 @@ lib/links.ts(25,74): error TS2314: Generic type 'Array<T>' requires 1 type argum
 lib/links.ts(33,36): error TS2339: Property '__linkTemplates' does not exist on type 'HTMLElement'.
 lib/links.ts(36,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/links.ts(36,45): error TS2339: Property 'links' does not exist on type 'HTMLElement'.
-lib/links.ts(45,21): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 lib/links.ts(45,32): error TS2339: Property 'rel' does not exist on type 'Object'.
 lib/links.ts(45,44): error TS2339: Property 'href' does not exist on type 'Object'.
 lib/links.ts(48,24): error TS2339: Property 'cacheLinks' does not exist on type 'Object'.
 lib/links.ts(49,24): error TS2339: Property '__linkTemplates' does not exist on type 'HTMLElement'.
-lib/links.ts(52,36): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 lib/links.ts(56,5): error TS1184: Modifiers cannot appear here.
 lib/links.ts(57,54): error TS2769: No overload matches this call.
   The last overload gave the following error.
@@ -23,8 +21,6 @@ lib/links.ts(57,54): error TS2769: No overload matches this call.
       Types of parameters 't' and 'substring' are incompatible.
         Type 'string' is not assignable to type 'Number'.
 lib/links.ts(58,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/links.ts(58,36): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 lib/links.ts(58,64): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/validate.ts(15,16): error TS2304: Cannot find name 'define'.
@@ -42,7 +38,6 @@ lib/validate.ts(66,5): error TS2300: Duplicate identifier 'validate'.
 lib/validate.ts(66,34): error TS2339: Property '_validate' does not exist on type 'HTMLElement'.
 lib/validate.ts(66,123): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/validate.ts(72,17): error TS2339: Property 'type' does not exist on type 'Object'.
-lib/validate.ts(72,26): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 lib/validate.ts(72,55): error TS2339: Property 'name' does not exist on type 'Object'.
 lib/validate.ts(72,81): error TS2339: Property 'name' does not exist on type 'Object'.
 lib/validate.ts(74,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -50,12 +45,7 @@ lib/validate.ts(76,28): error TS2314: Generic type 'Array<T>' requires 1 type ar
 lib/validate.ts(79,3): error TS2365: Operator '+=' cannot be applied to types 'String' and 'string | String'.
 lib/validate.ts(80,39): error TS2304: Cannot find name 'Void'.
 lib/validate.ts(87,71): error TS2339: Property 'name' does not exist on type 'never'.
-lib/validate.ts(92,4): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/validate.ts(94,26): error TS2339: Property 'readonly' does not exist on type 'Object'.
-lib/validate.ts(97,6): error TS7053: Element implicitly has an 'any' type because expression of type '"extends"' can't be used to index type 'Object'.
-  Property 'extends' does not exist on type 'Object'.
-lib/validate.ts(98,20): error TS7053: Element implicitly has an 'any' type because expression of type '"extends"' can't be used to index type 'Object'.
-  Property 'extends' does not exist on type 'Object'.
 lib/validate.ts(101,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/validate.ts(101,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/validate.ts(107,30): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -103,46 +93,16 @@ lib/validate.ts(175,22): error TS2339: Property 'maximum' does not exist on type
 lib/validate.ts(175,79): error TS2339: Property 'maximum' does not exist on type 'Object'.
 lib/validate.ts(176,14): error TS2339: Property 'maximum' does not exist on type 'Object'.
 lib/validate.ts(177,56): error TS2339: Property 'maximum' does not exist on type 'Object'.
-lib/validate.ts(179,8): error TS7053: Element implicitly has an 'any' type because expression of type '"enum"' can't be used to index type 'Object'.
-  Property 'enum' does not exist on type 'Object'.
 lib/validate.ts(180,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/validate.ts(180,26): error TS7053: Element implicitly has an 'any' type because expression of type '"enum"' can't be used to index type 'Object'.
-  Property 'enum' does not exist on type 'Object'.
-lib/validate.ts(189,10): error TS2454: Variable 'found' is used before being assigned.
 lib/validate.ts(193,22): error TS2339: Property 'maxDecimal' does not exist on type 'Object'.
 lib/validate.ts(194,63): error TS2339: Property 'maxDecimal' does not exist on type 'Object'.
 lib/validate.ts(195,41): error TS2339: Property 'maxDecimal' does not exist on type 'Object'.
-lib/validate.ts(199,3): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/validate.ts(202,94): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/validate.ts(211,78): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-lib/validate.ts(214,28): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-lib/validate.ts(216,32): error TS7053: Element implicitly has an 'any' type because expression of type '"default"' can't be used to index type 'Object'.
-  Property 'default' does not exist on type 'Object'.
-lib/validate.ts(217,15): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-lib/validate.ts(217,29): error TS7053: Element implicitly has an 'any' type because expression of type '"default"' can't be used to index type 'Object'.
-  Property 'default' does not exist on type 'Object'.
-lib/validate.ts(220,15): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-lib/validate.ts(227,122): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 lib/validate.ts(227,139): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
-lib/validate.ts(229,13): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-lib/validate.ts(236,41): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-lib/validate.ts(236,58): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 lib/validate.ts(237,21): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
-lib/validate.ts(240,12): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-lib/validate.ts(243,14): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 lib/validate.ts(247,36): error TS2339: Property '$schema' does not exist on type 'String'.
 lib/validate.ts(248,50): error TS2339: Property '$schema' does not exist on type 'String'.
-lib/validate.ts(254,32): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'String'.
+lib/validate.ts(254,32): error TS2345: Argument of type 'Boolean | ""' is not assignable to parameter of type 'String'.
   Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/validate.ts(256,40): error TS2339: Property '$schema' does not exist on type 'Object'.
 lib/validate.ts(257,31): error TS2339: Property '$schema' does not exist on type 'Object'.

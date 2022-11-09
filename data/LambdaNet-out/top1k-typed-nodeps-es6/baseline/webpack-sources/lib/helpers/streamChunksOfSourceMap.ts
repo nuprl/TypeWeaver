@@ -12,7 +12,7 @@ import splitIntoLines from './splitIntoLines';
 
 const streamChunksOfSourceMapFull: Function = (
 	source: String,
-	sourceMap: CachedSource,
+	sourceMap: SourceMapSource,
 	onChunk: Object,
 	onSource: Function,
 	onName: Function
@@ -250,7 +250,7 @@ const streamChunksOfSourceMapLinesFull: Function = (
 
 const streamChunksOfSourceMapFinal: Function = (
 	source: String,
-	sourceMap: CachedSource,
+	sourceMap: SourceMapSource,
 	onChunk: Function,
 	onSource: Function,
 	onName: Function
@@ -373,7 +373,7 @@ export default (
 	onChunk: String,
 	onSource: String,
 	onName: String,
-	finalSource: CachedSource,
+	finalSource: Source,
 	columns: Boolean
 ) => {
 	if (columns) {

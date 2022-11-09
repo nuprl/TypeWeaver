@@ -36,8 +36,7 @@ index.ts(98,43): error TS2345: Argument of type 'String' is not assignable to pa
 index.ts(101,42): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
 index.ts(105,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(105,64): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-index.ts(111,30): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string | number | undefined'.
-index.ts(114,31): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
+index.ts(111,30): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string | number'.
 index.ts(115,68): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
 index.ts(119,15): error TS2339: Property 'strictRanges' does not exist on type 'Object'.
 index.ts(124,15): error TS2339: Property 'strictRanges' does not exist on type 'Object'.
@@ -47,8 +46,6 @@ index.ts(147,28): error TS2345: Argument of type 'Number' is not assignable to p
 index.ts(151,7): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 index.ts(152,34): error TS2339: Property 'transform' does not exist on type 'Object'.
 index.ts(154,15): error TS2339: Property 'toRegex' does not exist on type 'Object'.
-index.ts(159,41): error TS7053: Element implicitly has an 'any' type because expression of type '"negatives" | "positives"' can't be used to index type 'Object'.
-  Property 'negatives' does not exist on type 'Object'.
 index.ts(159,98): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(160,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

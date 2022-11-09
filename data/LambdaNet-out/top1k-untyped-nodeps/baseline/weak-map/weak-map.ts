@@ -217,7 +217,7 @@
       typeof crypto.getRandomValues === 'function' &&
       typeof ArrayBuffer === 'function' &&
       typeof Uint8Array === 'function') {
-    var ab: Object = new ArrayBuffer(25);
+    var ab: Array = new ArrayBuffer(25);
     var u8s: String = new Uint8Array(ab);
     crypto.getRandomValues(u8s);
     HIDDEN_NAME = HIDDEN_NAME_PREFIX + 'rand:' +
@@ -650,7 +650,7 @@
           has___:    { value: constFunc(dhas) },
           set___:    { value: constFunc(dset) },
           delete___: { value: constFunc(ddelete) },
-          permitHostObjects___: { value: constFunc(function(token: Number) {
+          permitHostObjects___: { value: constFunc(function(token: String) {
             if (token === weakMapPermitHostObjects) {
               enableSwitching = true;
             } else {

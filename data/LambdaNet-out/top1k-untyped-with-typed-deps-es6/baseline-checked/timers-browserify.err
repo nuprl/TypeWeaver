@@ -11,12 +11,12 @@ example/enroll/js/browserify.ts(23,9): error TS2339: Property 'resolve' does not
 example/enroll/js/browserify.ts(27,21): error TS2339: Property '_core' does not exist on type 'Object'.
 example/enroll/js/browserify.ts(28,36): error TS2339: Property 'modules' does not exist on type 'Object'.
 example/enroll/js/browserify.ts(29,20): error TS2339: Property 'resolve' does not exist on type 'String'.
-example/enroll/js/browserify.ts(33,17): error TS2322: Type 'String' is not assignable to type 'Boolean'.
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'string' is not assignable to type 'boolean'.
+example/enroll/js/browserify.ts(33,17): error TS2322: Type 'String | Number' is not assignable to type 'Boolean'.
+  Type 'String' is not assignable to type 'Boolean'.
+    The types returned by 'valueOf()' are incompatible between these types.
+      Type 'string' is not assignable to type 'boolean'.
 example/enroll/js/browserify.ts(33,50): error TS2339: Property 'resolve' does not exist on type 'String'.
 example/enroll/js/browserify.ts(34,45): error TS2339: Property 'resolve' does not exist on type 'String'.
-example/enroll/js/browserify.ts(43,46): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 example/enroll/js/browserify.ts(44,25): error TS2339: Property 'modules' does not exist on type 'Object'.
 example/enroll/js/browserify.ts(48,41): error TS2339: Property 'extensions' does not exist on type 'Object'.
 example/enroll/js/browserify.ts(49,43): error TS2339: Property 'extensions' does not exist on type 'Object'.
@@ -37,7 +37,6 @@ example/enroll/js/browserify.ts(69,25): error TS2322: Type 'String' is not assig
 example/enroll/js/browserify.ts(69,57): error TS2339: Property 'resolve' does not exist on type 'String'.
 example/enroll/js/browserify.ts(69,72): error TS2339: Property 'main' does not exist on type 'HTMLElement'.
 example/enroll/js/browserify.ts(74,13): error TS2322: Type 'String' is not assignable to type 'Number'.
-example/enroll/js/browserify.ts(77,66): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
 example/enroll/js/browserify.ts(78,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 example/enroll/js/browserify.ts(81,21): error TS2322: Type 'String' is not assignable to type 'Boolean'.
 example/enroll/js/browserify.ts(83,21): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
@@ -49,13 +48,12 @@ example/enroll/js/browserify.ts(92,24): error TS2314: Generic type 'Array<T>' re
 example/enroll/js/browserify.ts(94,41): error TS2769: No overload matches this call.
   Overload 1 of 2, '(form: "NFC" | "NFD" | "NFKC" | "NFKD"): string', gave the following error.
     Argument of type 'String' is not assignable to parameter of type '"NFC" | "NFD" | "NFKC" | "NFKD"'.
-  Overload 2 of 2, '(form?: string | undefined): string', gave the following error.
+  Overload 2 of 2, '(form?: string): string', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 example/enroll/js/browserify.ts(96,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 example/enroll/js/browserify.ts(108,9): error TS2339: Property 'alias' does not exist on type 'Object'.
 example/enroll/js/browserify.ts(109,32): error TS2339: Property 'modules' does not exist on type 'Object'.
-example/enroll/js/browserify.ts(110,9): error TS2322: Type 'null' is not assignable to type 'String'.
 example/enroll/js/browserify.ts(112,23): error TS2339: Property 'resolve' does not exist on type 'Object'.
 example/enroll/js/browserify.ts(115,23): error TS2339: Property 'resolve' does not exist on type 'Object'.
 example/enroll/js/browserify.ts(117,32): error TS2339: Property 'dirname' does not exist on type 'String'.
@@ -94,22 +92,20 @@ example/enroll/js/browserify.ts(170,24): error TS2322: Type '(fn: Number) => voi
   Types of parameters 'fn' and 'callback' are incompatible.
     Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 example/enroll/js/browserify.ts(171,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-example/enroll/js/browserify.ts(172,9): error TS2322: Type 'false | ({ <K extends keyof WindowEventMap>(type: K, listener: (this: Window, ev: WindowEventMap[K]) => any, options?: boolean | AddEventListenerOptions | undefined): void; (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | ... 1 more ... | undefined): void; } & { ...; })' is not assignable to type 'Boolean'.
-  Type '{ <K extends keyof WindowEventMap>(type: K, listener: (this: Window, ev: WindowEventMap[K]) => any, options?: boolean | AddEventListenerOptions | undefined): void; (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | ... 1 more ... | undefined): void; } & { ...; }' is not assignable to type 'Boolean'.
-    Types of property 'valueOf' are incompatible.
-      Type '() => Object' is not assignable to type '() => boolean'.
-example/enroll/js/browserify.ts(173,12): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
+example/enroll/js/browserify.ts(172,9): error TS2322: Type '{ <K extends keyof WindowEventMap>(type: K, listener: (this: Window, ev: WindowEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void; (type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void; } & { ...; }' is not assignable to type 'Boolean'.
+  Types of property 'valueOf' are incompatible.
+    Type '() => Object' is not assignable to type '() => boolean'.
 example/enroll/js/browserify.ts(178,20): error TS2339: Property 'source' does not exist on type 'Object'.
 example/enroll/js/browserify.ts(178,44): error TS2339: Property 'data' does not exist on type 'Object'.
 example/enroll/js/browserify.ts(179,20): error TS2339: Property 'stopPropagation' does not exist on type 'Object'.
 example/enroll/js/browserify.ts(193,25): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(callback: () => void, ms?: number | undefined): Timeout', gave the following error.
+  Overload 1 of 3, '(callback: () => void, ms?: number): Timeout', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type '() => void'.
       Type 'Number' provides no match for the signature '(): void'.
-  Overload 2 of 3, '(callback: (args: void) => void, ms?: number | undefined): Timeout', gave the following error.
+  Overload 2 of 3, '(callback: (args: void) => void, ms?: number): Timeout', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type '(args: void) => void'.
       Type 'Number' provides no match for the signature '(args: void): void'.
-  Overload 3 of 3, '(handler: TimerHandler, timeout?: number | undefined, ...arguments: any[]): number', gave the following error.
+  Overload 3 of 3, '(handler: TimerHandler, timeout?: number, ...arguments: any[]): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'TimerHandler'.
       Type 'Number' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 example/enroll/js/browserify.ts(199,14): error TS2339: Property 'binding' does not exist on type 'Process'.
@@ -127,7 +123,6 @@ example/enroll/js/browserify.ts(225,5): error TS2345: Argument of type 'string[]
 example/enroll/js/browserify.ts(229,9): error TS2339: Property 'define' does not exist on type 'Object'.
 example/enroll/js/browserify.ts(230,5): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
 example/enroll/js/main.ts(5,65): error TS2339: Property 'now' does not exist on type 'Object'.
-example/enroll/js/main.ts(9,10): error TS2339: Property 'now' does not exist on type 'Object'.
 example/enroll/js/main.ts(10,12): error TS2339: Property 'enroll' does not exist on type 'typeof import("timers")'.
 example/enroll/js/main.ts(14,5): error TS2339: Property 'start' does not exist on type 'Object'.
 example/enroll/server.ts(1,21): error TS2307: Cannot find module 'connect' or its corresponding type declarations.
@@ -138,15 +133,13 @@ example/enroll/server.ts(9,29): error TS2345: Argument of type 'string | 8080' i
   Type 'number' is not assignable to type 'string'.
 example/enroll/server.ts(10,8): error TS2339: Property 'listen' does not exist on type 'HTMLElement'.
 main.ts(1,5): error TS2740: Type 'typeof globalThis' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-main.ts(9,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+main.ts(9,10): error TS2350: Only a void function can be called with the 'new' keyword.
 main.ts(9,64): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
   Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-main.ts(13,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-main.ts(13,65): error TS2345: Argument of type '{ (id?: number | undefined): void; (intervalId: string | number | Timeout | undefined): void; }' is not assignable to parameter of type 'String'.
+main.ts(13,10): error TS2350: Only a void function can be called with the 'new' keyword.
+main.ts(13,65): error TS2345: Argument of type '{ (id?: number): void; (intervalId: string | number | Timeout): void; }' is not assignable to parameter of type 'String'.
 main.ts(18,13): error TS2339: Property 'close' does not exist on type 'Function'.
 main.ts(22,48): error TS2304: Cannot find name 'Void'.
-main.ts(23,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-main.ts(24,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 main.ts(33,21): error TS2339: Property '_idleTimeoutId' does not exist on type 'Object'.
 main.ts(34,8): error TS2339: Property '_idleTimeout' does not exist on type 'Object'.
 main.ts(38,21): error TS2339: Property '_idleTimeoutId' does not exist on type 'Object'.
@@ -160,10 +153,8 @@ main.ts(47,10): error TS2339: Property '_idleTimeoutId' does not exist on type '
 main.ts(47,60): error TS2304: Cannot find name 'Void'.
 main.ts(48,16): error TS2339: Property '_onTimeout' does not exist on type 'HTMLElement'.
 main.ts(49,14): error TS2339: Property '_onTimeout' does not exist on type 'HTMLElement'.
-main.ts(60,14): error TS2322: Type 'typeof setImmediate | undefined' is not assignable to type 'Number'.
-  Type 'undefined' is not assignable to type 'Number'.
+main.ts(60,37): error TS2739: Type 'typeof setImmediate' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 main.ts(62,33): error TS2532: Object is possibly 'undefined'.
-main.ts(64,14): error TS2322: Type '{ (handle: number): void; (immediateId: Immediate | undefined): void; } | undefined' is not assignable to type 'Number'.
-  Type 'undefined' is not assignable to type 'Number'.
+main.ts(64,14): error TS2322: Type '{ (handle: number): void; (immediateId: Immediate): void; }' is not assignable to type 'Number'.
 main.ts(66,35): error TS2532: Object is possibly 'undefined'.
 

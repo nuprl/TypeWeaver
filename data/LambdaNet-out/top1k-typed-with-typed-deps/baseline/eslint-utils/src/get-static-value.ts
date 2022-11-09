@@ -13,7 +13,7 @@ const globalObject: Function =
         ? global
         : {}
 
-const builtinNames: Array = Object.freeze(
+const builtinNames: PatternMatcher = Object.freeze(
     new Set([
         "Array",
         "ArrayBuffer",
@@ -160,7 +160,7 @@ function getElementValues(nodeList: Array, initialScope: String): Array {
             }
             valueList.push(...argument.value)
         } else {
-            const element: Element = getStaticValueR(elementNode, initialScope)
+            const element: ReferenceTracker = getStaticValueR(elementNode, initialScope)
             if (element == null) {
                 return null
             }

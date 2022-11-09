@@ -13,39 +13,24 @@ index.ts(31,71): error TS2339: Property 'exclude' does not exist on type 'HTMLEl
 index.ts(34,15): error TS2339: Property 'exclude' does not exist on type 'HTMLElement'.
 index.ts(34,41): error TS2339: Property 'exclude' does not exist on type 'HTMLElement'.
 index.ts(34,75): error TS2339: Property 'exclude' does not exist on type 'HTMLElement'.
-index.ts(44,5): error TS2322: Type 'null' is not assignable to type 'String'.
-index.ts(50,16): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-index.ts(51,7): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-index.ts(51,23): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
+index.ts(38,66): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(57,28): error TS2339: Property 'filename' does not exist on type 'HTMLElement'.
 index.ts(57,58): error TS2339: Property 'filename' does not exist on type 'HTMLElement'.
 index.ts(57,69): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(60,18): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(path: PathLike, options?: { encoding: BufferEncoding | null; withFileTypes?: false | undefined; } | BufferEncoding | null | undefined): string[]', gave the following error.
+  Overload 1 of 4, '(path: PathLike, options?: { encoding: BufferEncoding; withFileTypes?: false; } | BufferEncoding): string[]', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathLike'.
       Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-  Overload 2 of 4, '(path: PathLike, options?: BufferEncoding | (ObjectEncodingOptions & { withFileTypes?: false | undefined; }) | null | undefined): string[] | Buffer[]', gave the following error.
+  Overload 2 of 4, '(path: PathLike, options?: BufferEncoding | (ObjectEncodingOptions & { withFileTypes?: false; })): string[] | Buffer[]', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathLike'.
 index.ts(61,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(66,21): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-index.ts(66,54): error TS2339: Property 'recurse' does not exist on type 'Object'.
 index.ts(68,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-index.ts(71,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-index.ts(71,24): error TS2339: Property 'rename' does not exist on type 'Object'.
 index.ts(74,24): error TS2339: Property 'filename' does not exist on type 'HTMLElement'.
-index.ts(74,73): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 index.ts(77,17): error TS2339: Property 'require' does not exist on type 'HTMLElement'.
-index.ts(78,9): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
-index.ts(78,24): error TS2339: Property 'rename' does not exist on type 'Object'.
-index.ts(78,65): error TS2339: Property 'visit' does not exist on type 'Object'.
 

@@ -65,7 +65,7 @@ export default function fromStringWithSourceMap(code: String, map: Object): Prom
 		addCode(lines.slice(idx).join("\n"));
 	}
 	return new SourceListMap(nodes);
-	function processMapping(mapping: Object, line: CodeNode, ignore: Boolean): Boolean {
+	function processMapping(mapping: Object, line: SingleLineNode, ignore: Boolean): Boolean {
 		if(mapping.rest && mapping.rest[0] !== ",") {
 			base64VLQ.decode(mapping.rest, mapping);
 		}

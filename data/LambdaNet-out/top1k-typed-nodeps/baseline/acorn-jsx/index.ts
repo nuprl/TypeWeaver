@@ -55,7 +55,7 @@ function getJsxTokens(acorn: HTMLElement): Object {
 
 // Transforms JSX element name to string.
 
-function getQualifiedJSXName(object: Array): String {
+function getQualifiedJSXName(object: Object): String {
   if (!object)
     return object;
 
@@ -92,11 +92,11 @@ Object.defineProperty(module.exports, "tokTypes", {
 
 function plugin(options: Object, Parser: Object): Object {
   const acorn: HTMLElement = Parser.acorn || require("acorn");
-  const acornJsx: HTMLElement = getJsxTokens(acorn);
+  const acornJsx: Object = getJsxTokens(acorn);
   const tt: HTMLInputElement = acorn.tokTypes;
   const tok: Function = acornJsx.tokTypes;
   const tokContexts: Function = acorn.tokContexts;
-  const tc_oTag: String = acornJsx.tokContexts.tc_oTag;
+  const tc_oTag: Function = acornJsx.tokContexts.tc_oTag;
   const tc_cTag: String = acornJsx.tokContexts.tc_cTag;
   const tc_expr: Function = acornJsx.tokContexts.tc_expr;
   const isNewLine: Boolean = acorn.isNewLine;

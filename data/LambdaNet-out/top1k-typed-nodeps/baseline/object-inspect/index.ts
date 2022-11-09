@@ -404,7 +404,7 @@ function isElement(x: Object): Boolean {
     return typeof x.nodeName === 'string' && typeof x.getAttribute === 'function';
 }
 
-function inspectString(str: Array, opts: Object): String {
+function inspectString(str: String, opts: Object): String {
     if (str.length > opts.maxStringLength) {
         var remaining: Number = str.length - opts.maxStringLength;
         var trailer: String = '... ' + remaining + ' more character' + (remaining > 1 ? 's' : '');

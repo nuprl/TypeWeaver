@@ -95,7 +95,7 @@
         };
       }
     },
-    Number: function(it: String){
+    Number: function(it: Number){
       return {
         type: 'Just',
         value: +it

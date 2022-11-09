@@ -625,7 +625,7 @@ function _isENOENT(error: Object): Boolean {
  * @param {string} code
  * @private
  */
-function _isExpectedError(error: Object, errno: Array, code: String): Boolean {
+function _isExpectedError(error: Object, errno: Object, code: String): Boolean {
   return IS_WIN32 ? error.code === code : error.code === code && error.errno === errno;
 }
 

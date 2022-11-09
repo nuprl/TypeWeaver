@@ -232,7 +232,7 @@ var getBaseIntrinsic: Function = function getBaseIntrinsic(name: String, allowMi
 	}
 
 	if (hasOwn(INTRINSICS, intrinsicName)) {
-		var value: Object = INTRINSICS[intrinsicName];
+		var value: Function = INTRINSICS[intrinsicName];
 		if (value === needsEval) {
 			value = doEval(intrinsicName);
 		}

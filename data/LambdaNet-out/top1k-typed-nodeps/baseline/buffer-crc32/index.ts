@@ -86,7 +86,7 @@ function ensureBuffer(input: Object): Array {
   }
 }
 
-function bufferizeInt(num: String): Object {
+function bufferizeInt(num: String): HTMLElement {
   var tmp: String = ensureBuffer(4);
   tmp.writeInt32BE(num, 0);
   return tmp;

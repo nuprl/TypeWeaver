@@ -90,7 +90,7 @@ function isPrimitiveObjectOwn(val: Number): Boolean {
   return val === null || array.hasOwnProperty(typeof val);
 }
 
-function isPrimitiveObjectLookup(val: String): Boolean {
+function isPrimitiveObjectLookup(val: Number): Boolean {
   return val === null || !!array[typeof val];
 }
 

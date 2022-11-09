@@ -5,7 +5,7 @@ var cyan: Function = require('ansi-cyan');
 var argv: Object = require('yargs-parser')(process.argv.slice(2));
 var Suite: Array = require('benchmarked');
 
-var suite: HTMLElement = new Suite({
+var suite: Object = new Suite({
   cwd: __dirname,
   fixtures: 'fixtures/{2,3,10,50,250,2000,20000}.js',
   code: 'code/{repeat-string,repeating,native}.js'

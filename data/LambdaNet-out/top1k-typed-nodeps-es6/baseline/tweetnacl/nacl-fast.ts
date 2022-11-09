@@ -451,7 +451,7 @@ function crypto_stream(c: String,cpos: String,d: String,n: Object,k: Number): St
   return crypto_stream_salsa20(c,cpos,d,sn,s);
 }
 
-function crypto_stream_xor(c: String,cpos: String,m: String,mpos: String,d: Number,n: Object,k: Number): Boolean {
+function crypto_stream_xor(c: String,cpos: String,m: String,mpos: String,d: Number,n: Object,k: Number): String {
   var s: String = new Uint8Array(32);
   crypto_core_hsalsa20(s,n,k,sigma);
   var sn: Object = new Uint8Array(8);
@@ -823,7 +823,7 @@ function crypto_onetimeauth(out: Function, outpos: String, m: String, mpos: Stri
   return 0;
 }
 
-function crypto_onetimeauth_verify(h: String, hpos: String, m: String, mpos: String, n: Number, k: String): String {
+function crypto_onetimeauth_verify(h: String, hpos: String, m: String, mpos: String, n: String, k: String): String {
   var x: String = new Uint8Array(16);
   crypto_onetimeauth(x,0,m,mpos,n,k);
   return crypto_verify_16(h,hpos,x,0);
@@ -904,7 +904,7 @@ function neq25519(a: Function, b: String): String {
   return crypto_verify_32(c, 0, d, 0);
 }
 
-function par25519(a: String): Number {
+function par25519(a: Function): Number {
   var d: Object = new Uint8Array(32);
   pack25519(d, a);
   return d[0] & 1;
@@ -1383,7 +1383,7 @@ function crypto_box_keypair(y: String, x: String): Boolean {
   return crypto_scalarmult_base(y, x);
 }
 
-function crypto_box_beforenm(k: String, y: String, x: String): String {
+function crypto_box_beforenm(k: String, y: String, x: String): Void {
   var s: String = new Uint8Array(32);
   crypto_scalarmult(s, x, y);
   return crypto_core_hsalsa20(k, _0, s, sigma);
@@ -2221,7 +2221,7 @@ nacl.scalarMult.base = function(n: Array) {
 nacl.scalarMult.scalarLength = crypto_scalarmult_SCALARBYTES;
 nacl.scalarMult.groupElementLength = crypto_scalarmult_BYTES;
 
-nacl.box = function(msg: String, nonce: Array, publicKey: String, secretKey: String) {
+nacl.box = function(msg: String, nonce: String, publicKey: String, secretKey: String) {
   var k: String = nacl.box.before(publicKey, secretKey);
   return nacl.secretbox(msg, nonce, k);
 };
@@ -2236,7 +2236,7 @@ nacl.box.before = function(publicKey: String, secretKey: String) {
 
 nacl.box.after = nacl.secretbox;
 
-nacl.box.open = function(msg: String, nonce: Array, publicKey: String, secretKey: String) {
+nacl.box.open = function(msg: String, nonce: String, publicKey: String, secretKey: String) {
   var k: String = nacl.box.before(publicKey, secretKey);
   return nacl.secretbox.open(msg, nonce, k);
 };
@@ -2279,7 +2279,7 @@ nacl.sign.open = function(signedMsg: Array, publicKey: String) {
   if (publicKey.length !== crypto_sign_PUBLICKEYBYTES)
     throw new Error('bad public key size');
   var tmp: Object = new Uint8Array(signedMsg.length);
-  var mlen: Object = crypto_sign_open(tmp, signedMsg, signedMsg.length, publicKey);
+  var mlen: Function = crypto_sign_open(tmp, signedMsg, signedMsg.length, publicKey);
   if (mlen < 0) return null;
   var m: Array = new Uint8Array(mlen);
   for (var i = 0; i < m.length; i++) m[i] = tmp[i];

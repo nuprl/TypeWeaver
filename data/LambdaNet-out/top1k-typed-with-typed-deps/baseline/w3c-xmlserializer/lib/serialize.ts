@@ -184,7 +184,7 @@ function serializeElement(node: HTMLElement, namespace: String, prefixMap: Strin
   let skipEndTag: Boolean = false;
   let ignoreNamespaceDefinitionAttr: Boolean = false;
   const map: Object = { ...prefixMap };
-  const localPrefixesMap: Array = Object.create(null);
+  const localPrefixesMap: Object = Object.create(null);
   const localDefaultNamespace: Number = recordNamespaceInformation(
     node,
     map,
@@ -303,7 +303,7 @@ function serializeCDATASection(node: Object): String {
 /**
  * @param {{prefixIndex: number}} refs
  */
-function xmlSerialization(node: Object, namespace: String, prefixMap: String, requireWellFormed: Function, refs: String): String {
+function xmlSerialization(node: Object, namespace: String, prefixMap: String, requireWellFormed: String, refs: String): String {
   switch (node.nodeType) {
     case NODE_TYPES.ELEMENT_NODE:
       return serializeElement(

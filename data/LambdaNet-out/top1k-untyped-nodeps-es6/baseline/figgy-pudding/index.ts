@@ -95,7 +95,7 @@ function BadKeyError (key: String): Void {
   ), {code: 'EBADKEY'})
 }
 
-function pudGet (pud: FiggyPudding, key: String, validate: Boolean): Array {
+function pudGet (pud: HTMLElement, key: String, validate: Boolean): Array {
   let spec: FiggyPudding = pud.__specs[key]
   if (validate && !spec && (!pud.__opts.other || !pud.__opts.other(key))) {
     BadKeyError(key)

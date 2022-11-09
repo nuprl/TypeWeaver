@@ -123,7 +123,7 @@ Promise.prototype.nodeify = function (callback: Function, ctx: String) {
     asap(function () {
       callback.call(ctx, null, value);
     });
-  }, function (err: String) {
+  }, function (err: Function) {
     asap(function () {
       callback.call(ctx, err);
     });

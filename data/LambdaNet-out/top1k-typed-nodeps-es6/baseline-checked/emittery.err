@@ -11,92 +11,28 @@ examples/clock.ts(37,23): error TS2339: Property 'timer' does not exist on type 
 examples/clock.ts(40,8): error TS2339: Property 'startedAt' does not exist on type 'Clock'.
 examples/clock.ts(41,8): error TS2339: Property 'timer' does not exist on type 'Clock'.
 examples/clock.ts(43,8): error TS2554: Expected 2 arguments, but got 1.
-examples/clock.ts(47,18): error TS7031: Binding element 'duration' implicitly has an 'any' type.
-examples/clock.ts(55,18): error TS7006: Parameter 'error' implicitly has an 'any' type.
 examples/emit.ts(4,7): error TS2322: Type 'Emittery' is not assignable to type 'HTMLElement'.
 examples/emit.ts(7,11): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 examples/emit.ts(11,11): error TS2339: Property 'onAny' does not exist on type 'HTMLElement'.
-examples/emit.ts(11,17): error TS7006: Parameter 'eventName' implicitly has an 'any' type.
 examples/emit.ts(16,11): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 examples/emitonce.ts(4,7): error TS2740: Type 'Emittery' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 examples/emitonce.ts(8,58): error TS2551: Property 'once' does not exist on type 'HTMLElement'. Did you mean 'nonce'?
 examples/emitonce.ts(12,11): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 examples/emitonce.ts(13,11): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
-examples/eventdata.ts(7,34): error TS7031: Binding element 'a' implicitly has an 'any' type.
-examples/eventdata.ts(7,37): error TS7031: Binding element 'b' implicitly has an 'any' type.
-examples/eventdata.ts(7,41): error TS7019: Rest parameter 'arguments_' implicitly has an 'any[]' type.
-examples/eventdata.ts(8,32): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 examples/eventdata.ts(12,45): error TS2554: Expected 2 arguments, but got 4.
-index.ts(13,26): error TS7006: Parameter 'eventName' implicitly has an 'any' type.
-index.ts(19,25): error TS7006: Parameter 'listener' implicitly has an 'any' type.
-index.ts(25,23): error TS7006: Parameter 'instance' implicitly has an 'any' type.
-index.ts(25,33): error TS7006: Parameter 'eventName' implicitly has an 'any' type.
-index.ts(34,28): error TS7006: Parameter 'instance' implicitly has an 'any' type.
-index.ts(34,38): error TS7006: Parameter 'eventName' implicitly has an 'any' type.
-index.ts(44,27): error TS7006: Parameter 'instance' implicitly has an 'any' type.
-index.ts(44,37): error TS7006: Parameter 'eventName' implicitly has an 'any' type.
-index.ts(44,48): error TS7006: Parameter 'eventData' implicitly has an 'any' type.
-index.ts(60,19): error TS7006: Parameter 'instance' implicitly has an 'any' type.
-index.ts(60,29): error TS7006: Parameter 'eventNames' implicitly has an 'any' type.
-index.ts(65,6): error TS7034: Variable 'queue' implicitly has type 'any[]' in some locations where its type cannot be determined.
-index.ts(68,11): error TS7006: Parameter 'item' implicitly has an 'any' type.
-index.ts(90,9): error TS7023: 'next' implicitly has return type 'any' because it does not have a return type annotation and is referenced directly or indirectly in one of its return expressions.
-index.ts(91,9): error TS7005: Variable 'queue' implicitly has an 'any[]' type.
-index.ts(97,6): error TS2322: Type 'undefined' is not assignable to type 'any[]'.
 index.ts(102,6): error TS2322: Type '(value: unknown) => void' is not assignable to type '() => void'.
-index.ts(110,18): error TS7005: Variable 'queue' implicitly has an 'any[]' type.
-index.ts(114,16): error TS7006: Parameter 'value' implicitly has an 'any' type.
-index.ts(115,4): error TS2322: Type 'undefined' is not assignable to type 'any[]'.
-index.ts(141,37): error TS7006: Parameter 'methodNames' implicitly has an 'any' type.
-index.ts(163,21): error TS7006: Parameter 'eventName' implicitly has an 'any' type.
-index.ts(165,24): error TS7006: Parameter 'emitter' implicitly has an 'any' type.
-index.ts(165,33): error TS7006: Parameter 'eventName' implicitly has an 'any' type.
-index.ts(165,44): error TS7006: Parameter 'eventData' implicitly has an 'any' type.
-index.ts(177,15): error TS7006: Parameter 'emitteryPropertyName' implicitly has an 'any' type.
-index.ts(177,37): error TS7006: Parameter 'methodNames' implicitly has an 'any' type.
-index.ts(179,10): error TS7006: Parameter 'target' implicitly has an 'any' type.
-index.ts(191,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(195,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(203,33): error TS7006: Parameter 'methodName' implicitly has an 'any' type.
-index.ts(203,57): error TS7019: Rest parameter 'args' implicitly has an 'any[]' type.
-index.ts(204,12): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(226,14): error TS2339: Property 'DEBUG' does not exist on type '{}'.
+index.ts(226,42): error TS2339: Property 'DEBUG' does not exist on type '{}'.
 index.ts(240,8): error TS2339: Property 'debug' does not exist on type 'Emittery'.
 index.ts(240,24): error TS2339: Property 'debug' does not exist on type '{}'.
 index.ts(242,12): error TS2339: Property 'debug' does not exist on type 'Emittery'.
 index.ts(243,9): error TS2339: Property 'debug' does not exist on type 'Emittery'.
 index.ts(246,13): error TS2339: Property 'debug' does not exist on type 'Emittery'.
 index.ts(247,9): error TS2339: Property 'debug' does not exist on type 'Emittery'.
-index.ts(247,25): error TS7006: Parameter 'type' implicitly has an 'any' type.
-index.ts(247,31): error TS7006: Parameter 'debugName' implicitly has an 'any' type.
-index.ts(247,42): error TS7006: Parameter 'eventName' implicitly has an 'any' type.
-index.ts(247,53): error TS7006: Parameter 'eventData' implicitly has an 'any' type.
-index.ts(266,20): error TS7006: Parameter 'type' implicitly has an 'any' type.
-index.ts(266,26): error TS7006: Parameter 'eventName' implicitly has an 'any' type.
-index.ts(266,37): error TS7006: Parameter 'eventData' implicitly has an 'any' type.
 index.ts(267,39): error TS2339: Property 'debug' does not exist on type 'Emittery'.
 index.ts(268,9): error TS2339: Property 'debug' does not exist on type 'Emittery'.
 index.ts(268,33): error TS2339: Property 'debug' does not exist on type 'Emittery'.
-index.ts(272,5): error TS7006: Parameter 'eventNames' implicitly has an 'any' type.
-index.ts(272,17): error TS7006: Parameter 'listener' implicitly has an 'any' type.
-index.ts(297,6): error TS7006: Parameter 'eventNames' implicitly has an 'any' type.
-index.ts(297,18): error TS7006: Parameter 'listener' implicitly has an 'any' type.
-index.ts(320,7): error TS7006: Parameter 'eventNames' implicitly has an 'any' type.
-index.ts(321,7): error TS7034: Variable 'off_' implicitly has type 'any' in some locations where its type cannot be determined.
-index.ts(324,31): error TS7006: Parameter 'data' implicitly has an 'any' type.
-index.ts(325,5): error TS7005: Variable 'off_' implicitly has an 'any' type.
 index.ts(330,11): error TS2339: Property 'off' does not exist on type 'Promise<unknown>'.
-index.ts(334,9): error TS7006: Parameter 'eventNames' implicitly has an 'any' type.
-index.ts(343,13): error TS7006: Parameter 'eventName' implicitly has an 'any' type.
-index.ts(343,24): error TS7006: Parameter 'eventData' implicitly has an 'any' type.
-index.ts(374,19): error TS7006: Parameter 'eventName' implicitly has an 'any' type.
-index.ts(374,30): error TS7006: Parameter 'eventData' implicitly has an 'any' type.
-index.ts(404,8): error TS7006: Parameter 'listener' implicitly has an 'any' type.
 index.ts(415,10): error TS2554: Expected 2 arguments, but got 1.
-index.ts(418,9): error TS7006: Parameter 'listener' implicitly has an 'any' type.
-index.ts(427,17): error TS7006: Parameter 'eventNames' implicitly has an 'any' type.
-index.ts(467,16): error TS7006: Parameter 'eventNames' implicitly has an 'any' type.
 index.ts(476,9): error TS2554: Expected 2 arguments, but got 1.
-index.ts(499,14): error TS7006: Parameter 'target' implicitly has an 'any' type.
-index.ts(499,22): error TS7006: Parameter 'methodNames' implicitly has an 'any' type.
-index.ts(513,12): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Emittery'.
 

@@ -2,13 +2,6 @@ ava.config.ts(1,25): error TS2307: Cannot find module '@ehmicky/dev-tasks/ava.co
 gulpfile.ts(1,15): error TS2307: Cannot find module '@ehmicky/dev-tasks' or its corresponding type declarations.
 src/core.ts(3,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/main.ts(9,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/main.ts(14,3): error TS7031: Binding element 'name' implicitly has an 'any' type.
-src/main.ts(15,3): error TS7031: Binding element 'number' implicitly has an 'any' type.
-src/main.ts(16,3): error TS7031: Binding element 'description' implicitly has an 'any' type.
-src/main.ts(17,3): error TS7031: Binding element 'supported' implicitly has an 'any' type.
-src/main.ts(18,3): error TS7031: Binding element 'action' implicitly has an 'any' type.
-src/main.ts(19,3): error TS7031: Binding element 'forced' implicitly has an 'any' type.
-src/main.ts(20,3): error TS7031: Binding element 'standard' implicitly has an 'any' type.
 src/main.ts(35,26): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 src/main.ts(36,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/main.ts(36,40): error TS2769: No overload matches this call.
@@ -24,8 +17,6 @@ src/main.ts(49,49): error TS2339: Property 'forced' does not exist on type 'Obje
 src/main.ts(49,57): error TS2339: Property 'standard' does not exist on type 'Object'.
 src/main.ts(51,5): error TS2464: A computed property name must be of type 'string', 'number', 'symbol', or 'any'.
 src/main.ts(65,73): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/main.ts(66,42): error TS7031: Binding element 'name' implicitly has an 'any' type.
-src/main.ts(66,53): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'SignalConstants'.
 src/main.ts(72,52): error TS2339: Property 'number' does not exist on type 'Object'.
 src/realtime.ts(3,9): error TS2322: Type 'number' is not assignable to type 'String'.
 src/realtime.ts(3,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -41,10 +32,5 @@ src/signals.ts(9,26): error TS2314: Generic type 'Array<T>' requires 1 type argu
 src/signals.ts(10,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/signals.ts(10,63): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(value: any, index: number, array: any[]) => unknown'.
   Type 'Function' provides no match for the signature '(value: any, index: number, array: any[]): unknown'.
-src/signals.ts(21,3): error TS7031: Binding element 'name' implicitly has an 'any' type.
-src/signals.ts(22,11): error TS7031: Binding element 'defaultNumber' implicitly has an 'any' type.
-src/signals.ts(23,3): error TS7031: Binding element 'description' implicitly has an 'any' type.
-src/signals.ts(24,3): error TS7031: Binding element 'action' implicitly has an 'any' type.
-src/signals.ts(26,3): error TS7031: Binding element 'standard' implicitly has an 'any' type.
 src/signals.ts(29,17): error TS2538: Type 'any' cannot be used as an index type.
 

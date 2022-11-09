@@ -184,7 +184,7 @@ class SymbolTree {
          * @return {?Object}
          */
         preceding(object, options) {
-                const treeRoot: String = options && options.root;
+                const treeRoot: Number = options && options.root;
 
                 if (object === treeRoot) {
                         return null;
@@ -219,7 +219,7 @@ class SymbolTree {
          * @return {?Object}
          */
         following(object, options) {
-                const treeRoot: String = options && options.root;
+                const treeRoot: Number = options && options.root;
                 const skipChildren: Boolean = options && options.skipChildren;
 
                 const firstChild: Boolean = !skipChildren && this._node(object).firstChild;
@@ -268,7 +268,7 @@ class SymbolTree {
                 const filter: Function  = (options && options.filter) || returnTrue;
                 const thisArg: Number = (options && options.thisArg) || undefined;
 
-                const parentNode: String = this._node(parent);
+                const parentNode: SymbolTreeNode = this._node(parent);
                 let object: Function = parentNode.firstChild;
                 let index: Number = 0;
 
@@ -526,7 +526,7 @@ class SymbolTree {
          * @return {Number}
          */
         childrenCount(parent) {
-                const parentNode: String = this._node(parent);
+                const parentNode: SymbolTreeNode = this._node(parent);
 
                 if (!parentNode.lastChild) {
                         return 0;

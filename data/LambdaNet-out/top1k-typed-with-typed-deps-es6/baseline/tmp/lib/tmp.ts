@@ -45,7 +45,7 @@ const
 
   // API change in fs.rmdirSync leads to error when passing in a second parameter, e.g. the callback
   FN_RMDIR_SYNC: Array = fs.rmdirSync.bind(fs),
-  FN_RIMRAF_SYNC: Number = rimraf.sync;
+  FN_RIMRAF_SYNC: String = rimraf.sync;
 
 let
   _gracefulCleanup: Boolean = false;
@@ -136,7 +136,7 @@ function file(options: Object, callback: Function): Void {
     if (err) return cb(err);
 
     // create and open the file
-    fs.open(name, CREATE_FLAGS, opts.mode || FILE_MODE, function _fileCreated(err: Function, fd: Number): Number {
+    fs.open(name, CREATE_FLAGS, opts.mode || FILE_MODE, function _fileCreated(err: Function, fd: Number): String {
       /* istanbu ignore else */
       if (err) return cb(err);
 
@@ -504,7 +504,7 @@ function _assertAndSanitizeOptions(options: HTMLElement): Void {
 
   options.tmpdir = _getTmpDir(options);
 
-  const tmpDir: String = options.tmpdir;
+  const tmpDir: Number = options.tmpdir;
 
   /* istanbul ignore else */
   if (!_isUndefined(options.name))
@@ -626,7 +626,7 @@ function _isENOENT(error: Object): Boolean {
  * @param {string} code
  * @private
  */
-function _isExpectedError(error: Object, errno: Array, code: String): Boolean {
+function _isExpectedError(error: Object, errno: Boolean, code: String): Boolean {
   return IS_WIN32 ? error.code === code : error.code === code && error.errno === errno;
 }
 

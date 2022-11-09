@@ -22,7 +22,6 @@ benchmark/code/2-1-0.ts(6,41): error TS2356: An arithmetic operand must be of ty
 benchmark/code/2-1-0.ts(19,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/2-1-0.ts(19,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/concat-apply.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
-benchmark/code/concat-apply.ts(6,37): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'ConcatArray<never>[]'.
 benchmark/code/for-concat.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
 benchmark/code/for-concat.ts(9,17): error TS2339: Property 'concat' does not exist on type 'Object'.
 benchmark/code/for-each.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
@@ -43,8 +42,6 @@ benchmark/code/reduce.ts(8,46): error TS2314: Generic type 'Array<T>' requires 1
 benchmark/code/reduce.ts(8,58): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/while-concat-push.ts(3,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/while-concat-push.ts(4,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-concat-push.ts(4,40): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'ConcatArray<never>[]'.
-  Type 'IArguments' is missing the following properties from type 'ConcatArray<never>[]': pop, push, concat, join, and 27 more.
 benchmark/code/while-concat-push.ts(6,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/while-concat-push.ts(8,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmark/code/while-concat.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
@@ -73,7 +70,6 @@ benchmark/code/while-push-apply.ts(8,12): error TS2356: An arithmetic operand mu
 benchmark/code/while-push-apply.ts(9,37): error TS2538: Type 'Number' cannot be used as an index type.
 benchmark/code/while-seen.ts(3,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/while-seen.ts(4,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/while-seen.ts(4,41): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'ConcatArray<never>[]'.
 benchmark/code/while-seen.ts(7,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/while-seen.ts(9,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmark/code/while-seen.ts(11,16): error TS2538: Type 'String' cannot be used as an index type.

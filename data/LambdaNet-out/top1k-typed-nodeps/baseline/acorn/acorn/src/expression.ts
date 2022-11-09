@@ -60,7 +60,7 @@ pp.checkPropClash = function(prop: Parser, propHash: Object, refDestructuringErr
   name = "$" + name
   let other: Object = propHash[name]
   if (other) {
-    let redefinition: Boolean
+    let redefinition: Position
     if (kind === "init") {
       redefinition = this.strict && other.init || other.get || other.set
     } else {
@@ -97,7 +97,7 @@ pp.parseExpression = function(forInit: Array, refDestructuringErrors: String) {
   let startPos: Number = this.start, startLoc: Function = this.startLoc
   let expr: RegExpValidationState = this.parseMaybeAssign(forInit, refDestructuringErrors)
   if (this.type === tt.comma) {
-    let node: TokenType = this.startNodeAt(startPos, startLoc)
+    let node: Node = this.startNodeAt(startPos, startLoc)
     node.expressions = [expr]
     while (this.eat(tt.comma)) node.expressions.push(this.parseMaybeAssign(forInit, refDestructuringErrors))
     return this.finishNode(node, "SequenceExpression")
@@ -168,7 +168,7 @@ pp.parseMaybeConditional = function(forInit: String, refDestructuringErrors: Str
   let expr: Number = this.parseExprOps(forInit, refDestructuringErrors)
   if (this.checkExpressionErrors(refDestructuringErrors)) return expr
   if (this.eat(tt.question)) {
-    let node: TokenType = this.startNodeAt(startPos, startLoc)
+    let node: Node = this.startNodeAt(startPos, startLoc)
     node.test = expr
     node.consequent = this.parseMaybeAssign()
     this.expect(tt.colon)
@@ -208,7 +208,7 @@ pp.parseExprOp = function(left: String, leftStartPos: Boolean, leftStartLoc: Num
       this.next()
       let startPos: Number = this.start, startLoc: Function = this.startLoc
       let right: RegExpValidationState = this.parseExprOp(this.parseMaybeUnary(null, false, false, forInit), startPos, startLoc, prec, forInit)
-      let node: TokenType = this.buildBinary(leftStartPos, leftStartLoc, left, right, op, logical || coalesce)
+      let node: Node = this.buildBinary(leftStartPos, leftStartLoc, left, right, op, logical || coalesce)
       if ((logical && this.type === tt.coalesce) || (coalesce && (this.type === tt.logicalOR || this.type === tt.logicalAND))) {
         this.raiseRecoverable(this.start, "Logical expressions and coalesce expressions cannot be mixed. Wrap either by parentheses")
       }
@@ -230,7 +230,7 @@ pp.buildBinary = function(startPos: Number, startLoc: Number, left: Number, righ
 // Parse unary operators, both prefix and postfix.
 
 pp.parseMaybeUnary = function(refDestructuringErrors: String, sawUnary: Boolean, incDec: Boolean, forInit: String) {
-  let startPos: Number = this.start, startLoc: Function = this.startLoc, expr: RegExpValidationState
+  let startPos: Number = this.start, startLoc: Function = this.startLoc, expr: Object
   if (this.isContextual("await") && this.canAwait) {
     expr = this.parseAwait(forInit)
     sawUnary = true
@@ -258,7 +258,7 @@ pp.parseMaybeUnary = function(refDestructuringErrors: String, sawUnary: Boolean,
     expr = this.parseExprSubscripts(refDestructuringErrors, forInit)
     if (this.checkExpressionErrors(refDestructuringErrors)) return expr
     while (this.type.postfix && !this.canInsertSemicolon()) {
-      let node: TokenType = this.startNodeAt(startPos, startLoc)
+      let node: Node = this.startNodeAt(startPos, startLoc)
       node.operator = this.value
       node.prefix = false
       node.argument = expr
@@ -287,7 +287,7 @@ function isPrivateFieldAccess(node: Node): Boolean {
 
 // Parse call, dot, and `[]`-subscript expressions.
 
-pp.parseExprSubscripts = function(refDestructuringErrors: String, forInit: Number) {
+pp.parseExprSubscripts = function(refDestructuringErrors: DestructuringErrors, forInit: Number) {
   let startPos: Number = this.start, startLoc: Function = this.startLoc
   let expr: Parser = this.parseExprAtom(refDestructuringErrors, forInit)
   if (expr.type === "ArrowFunctionExpression" && this.input.slice(this.lastTokStart, this.lastTokEnd) !== ")")
@@ -313,7 +313,7 @@ pp.parseSubscripts = function(base: Object, startPos: Number, startLoc: Number, 
     if (element.optional) optionalChained = true
     if (element === base || element.type === "ArrowFunctionExpression") {
       if (optionalChained) {
-        const chainNode: TokenType = this.startNodeAt(startPos, startLoc)
+        const chainNode: Node = this.startNodeAt(startPos, startLoc)
         chainNode.expression = element
         element = this.finishNode(chainNode, "ChainExpression")
       }
@@ -366,7 +366,7 @@ pp.parseSubscript = function(base: Object, startPos: Number, startLoc: String, n
     this.yieldPos = oldYieldPos || this.yieldPos
     this.awaitPos = oldAwaitPos || this.awaitPos
     this.awaitIdentPos = oldAwaitIdentPos || this.awaitIdentPos
-    let node: TokenType = this.startNodeAt(startPos, startLoc)
+    let node: Node = this.startNodeAt(startPos, startLoc)
     node.callee = base
     node.arguments = exprList
     if (optionalSupported) {
@@ -377,7 +377,7 @@ pp.parseSubscript = function(base: Object, startPos: Number, startLoc: String, n
     if (optional || optionalChained) {
       this.raise(this.start, "Optional chaining cannot appear in the tag of tagged template expressions")
     }
-    let node: TokenType = this.startNodeAt(startPos, startLoc)
+    let node: Node = this.startNodeAt(startPos, startLoc)
     node.tag = base
     node.quasi = this.parseTemplate({isTagged: true})
     base = this.finishNode(node, "TaggedTemplateExpression")
@@ -390,7 +390,7 @@ pp.parseSubscript = function(base: Object, startPos: Number, startLoc: String, n
 // `new`, or an expression wrapped in punctuation like `()`, `[]`,
 // or `{}`.
 
-pp.parseExprAtom = function(refDestructuringErrors: String, forInit: String) {
+pp.parseExprAtom = function(refDestructuringErrors: DestructuringErrors, forInit: String) {
   // If a division operator appears in an expression position, the
   // tokenizer got confused, and we force it to read a regexp instead.
   if (this.type === tt.slash) this.readRegexp()
@@ -502,12 +502,12 @@ pp.parseExprAtom = function(refDestructuringErrors: String, forInit: String) {
 }
 
 pp.parseExprImport = function() {
-  const node: TokenType = this.startNode()
+  const node: Node = this.startNode()
 
   // Consume `import` as an identifier for `import.meta`.
   // Because `this.parseIdent(true)` doesn't check escape sequences, it needs the check of `this.containsEsc`.
   if (this.containsEsc) this.raiseRecoverable(this.start, "Escape sequence in keyword import")
-  const meta: RegExpValidationState = this.parseIdent(true)
+  const meta: Position = this.parseIdent(true)
 
   switch (this.type) {
   case tt.parenL:
@@ -520,7 +520,7 @@ pp.parseExprImport = function() {
   }
 }
 
-pp.parseDynamicImport = function(node: TokenType) {
+pp.parseDynamicImport = function(node: Node) {
   this.next() // skip `(`
 
   // Parse node.source.
@@ -566,7 +566,7 @@ pp.parseLiteral = function(value: String) {
 
 pp.parseParenExpression = function() {
   this.expect(tt.parenL)
-  let val: RegExpValidationState = this.parseExpression()
+  let val: Position = this.parseExpression()
   this.expect(tt.parenR)
   return val
 }
@@ -625,7 +625,7 @@ pp.parseParenAndDistinguishExpression = function(canBeArrow: Boolean, forInit: B
   }
 
   if (this.options.preserveParens) {
-    let par: RegExpValidationState = this.startNodeAt(startPos, startLoc)
+    let par: Position = this.startNodeAt(startPos, startLoc)
     par.expression = val
     return this.finishNode(par, "ParenthesizedExpression")
   } else {
@@ -651,8 +651,8 @@ const empty: Array = []
 
 pp.parseNew = function() {
   if (this.containsEsc) this.raiseRecoverable(this.start, "Escape sequence in keyword new")
-  let node: RegExpValidationState = this.startNode()
-  let meta: RegExpValidationState = this.parseIdent(true)
+  let node: Node = this.startNode()
+  let meta: Position = this.parseIdent(true)
   if (this.options.ecmaVersion >= 6 && this.eat(tt.dot)) {
     node.meta = meta
     let containsEsc: Number = this.containsEsc
@@ -715,7 +715,7 @@ pp.parseTemplate = function({isTagged = false} = {}) {
   return this.finishNode(node, "TemplateLiteral")
 }
 
-pp.isAsyncProp = function(prop: Parser) {
+pp.isAsyncProp = function(prop: Token) {
   return !prop.computed && prop.key.type === "Identifier" && prop.key.name === "async" &&
     (this.type === tt.name || this.type === tt.num || this.type === tt.string || this.type === tt.bracketL || this.type.keyword || (this.options.ecmaVersion >= 9 && this.type === tt.star)) &&
     !lineBreak.test(this.input.slice(this.lastTokEnd, this.start))
@@ -741,7 +741,7 @@ pp.parseObj = function(isPattern: Boolean, refDestructuringErrors: String) {
 }
 
 pp.parseProperty = function(isPattern: Boolean, refDestructuringErrors: String) {
-  let prop: Parser = this.startNode(), isGenerator: Boolean, isAsync: Boolean, startPos: Number, startLoc: Function
+  let prop: Position = this.startNode(), isGenerator: Boolean, isAsync: Boolean, startPos: Number, startLoc: Function
   if (this.options.ecmaVersion >= 9 && this.eat(tt.ellipsis)) {
     if (isPattern) {
       prop.argument = this.parseIdent(false)
@@ -782,7 +782,7 @@ pp.parseProperty = function(isPattern: Boolean, refDestructuringErrors: String) 
   return this.finishNode(prop, "Property")
 }
 
-pp.parsePropertyValue = function(prop: Parser, isPattern: Boolean, isGenerator: Boolean, isAsync: Boolean, startPos: Array, startLoc: Number, refDestructuringErrors: String, containsEsc: Boolean) {
+pp.parsePropertyValue = function(prop: Parser, isPattern: Boolean, isGenerator: Boolean, isAsync: Boolean, startPos: Array, startLoc: Number, refDestructuringErrors: DestructuringErrors, containsEsc: Boolean) {
   if ((isGenerator || isAsync) && this.type === tt.colon)
     this.unexpected()
 
@@ -857,7 +857,7 @@ pp.initFunction = function(node: Node) {
 // Parse object or class method.
 
 pp.parseMethod = function(isGenerator: Boolean, isAsync: Boolean, allowDirectSuper: Boolean) {
-  let node: TokenType = this.startNode(), oldYieldPos: Function = this.yieldPos, oldAwaitPos: Function = this.awaitPos, oldAwaitIdentPos: Function = this.awaitIdentPos
+  let node: Node = this.startNode(), oldYieldPos: Function = this.yieldPos, oldAwaitPos: Function = this.awaitPos, oldAwaitIdentPos: Function = this.awaitIdentPos
 
   this.initFunction(node)
   if (this.options.ecmaVersion >= 6)
@@ -883,7 +883,7 @@ pp.parseMethod = function(isGenerator: Boolean, isAsync: Boolean, allowDirectSup
 
 // Parse arrow function expression with given parameters.
 
-pp.parseArrowExpression = function(node: TokenType, params: Array, isAsync: Boolean, forInit: Number) {
+pp.parseArrowExpression = function(node: Node, params: Array, isAsync: Boolean, forInit: Number) {
   let oldYieldPos: Function = this.yieldPos, oldAwaitPos: Function = this.awaitPos, oldAwaitIdentPos: Function = this.awaitIdentPos
 
   this.enterScope(functionFlags(isAsync, false) | SCOPE_ARROW)
@@ -971,7 +971,7 @@ pp.parseExprList = function(close: String, allowTrailingComma: Boolean, allowEmp
       if (allowTrailingComma && this.afterTrailingComma(close)) break
     } else first = false
 
-    let elt: Function
+    let elt: RegExpValidationState
     if (allowEmpty && this.type === tt.comma)
       elt = null
     else if (this.type === tt.ellipsis) {
@@ -1079,7 +1079,7 @@ pp.parseYield = function(forInit: Array) {
 pp.parseAwait = function(forInit: Function) {
   if (!this.awaitPos) this.awaitPos = this.start
 
-  let node: TokenType = this.startNode()
+  let node: Node = this.startNode()
   this.next()
   node.argument = this.parseMaybeUnary(null, true, false, forInit)
   return this.finishNode(node, "AwaitExpression")

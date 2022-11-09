@@ -1,10 +1,8 @@
 benchmark/body0-100b.ts(6,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/body0-100b.ts(7,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/body0-100b.ts(15,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/body0-100b.ts(15,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'number' is not assignable to parameter of type 'String'.
-benchmark/body0-100b.ts(17,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/body0-100b.ts(17,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'number' is not assignable to parameter of type 'String'.
@@ -28,11 +26,9 @@ benchmark/body0-100b.ts(64,18): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 benchmark/body1-1kb.ts(6,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/body1-1kb.ts(7,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/body1-1kb.ts(15,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/body1-1kb.ts(15,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'number' is not assignable to parameter of type 'String'.
-benchmark/body1-1kb.ts(17,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/body1-1kb.ts(17,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'number' is not assignable to parameter of type 'String'.
@@ -56,11 +52,9 @@ benchmark/body1-1kb.ts(64,18): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 benchmark/body2-5kb.ts(6,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/body2-5kb.ts(7,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/body2-5kb.ts(15,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/body2-5kb.ts(15,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'number' is not assignable to parameter of type 'String'.
-benchmark/body2-5kb.ts(17,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/body2-5kb.ts(17,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'number' is not assignable to parameter of type 'String'.
@@ -84,11 +78,9 @@ benchmark/body2-5kb.ts(64,18): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 benchmark/body3-10kb.ts(6,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/body3-10kb.ts(7,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/body3-10kb.ts(15,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/body3-10kb.ts(15,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'number' is not assignable to parameter of type 'String'.
-benchmark/body3-10kb.ts(17,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/body3-10kb.ts(17,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'number' is not assignable to parameter of type 'String'.
@@ -112,11 +104,9 @@ benchmark/body3-10kb.ts(64,18): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 benchmark/body4-100kb.ts(6,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/body4-100kb.ts(7,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/body4-100kb.ts(15,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/body4-100kb.ts(15,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'number' is not assignable to parameter of type 'String'.
-benchmark/body4-100kb.ts(17,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/body4-100kb.ts(17,27): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'number' is not assignable to parameter of type 'String'.
@@ -140,8 +130,6 @@ benchmark/body4-100kb.ts(64,18): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 benchmark/index.ts(14,15): error TS2339: Property 'readdirSync' does not exist on type 'String'.
 benchmark/index.ts(16,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/index.ts(16,41): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-benchmark/index.ts(19,18): error TS2322: Type 'undefined' is not assignable to type 'String'.
 benchmark/index.ts(20,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 benchmark/index.ts(23,31): error TS2339: Property 'join' does not exist on type 'String'.
@@ -149,8 +137,6 @@ benchmark/index.ts(25,36): error TS2339: Property 'relative' does not exist on t
 benchmark/index.ts(31,8): error TS2339: Property 'on' does not exist on type 'Object'.
 benchmark/stats.ts(6,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/stats.ts(7,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/stats.ts(15,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
-benchmark/stats.ts(16,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 benchmark/stats.ts(20,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/stats.ts(26,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 benchmark/stats.ts(32,7): error TS2339: Property 'add' does not exist on type 'HTMLElement'.

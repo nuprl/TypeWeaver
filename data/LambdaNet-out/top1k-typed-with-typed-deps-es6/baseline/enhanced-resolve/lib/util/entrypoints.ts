@@ -332,7 +332,7 @@ function findMatch(request: String, treeRoot: Object): Array {
 		slashIndex = request.indexOf("/", lastNonSlashIndex);
 	}
 
-	const remainingRequest: Array =
+	const remainingRequest: String =
 		lastNonSlashIndex > 0 ? request.slice(lastNonSlashIndex) : request;
 
 	const value: String = node.files.get(remainingRequest);
@@ -368,7 +368,7 @@ function isConditionalMapping(mapping: Number): Boolean {
  */
 function directMapping(
 	remainingRequest: String,
-	subpathMapping: String,
+	subpathMapping: Function,
 	mappingTarget: Array,
 	conditionNames: Function,
 	assert: String

@@ -27,7 +27,7 @@ export default function getPaths(path: String): Object {
 	};
 };
 
-export const basename: RestrictionsPlugin = function basename(path: String): Resolver {
+export const basename: ConditionalPlugin = function basename(path: String): Resolver {
 	const i: Number = path.lastIndexOf("/"),
 		j: Number = path.lastIndexOf("\\");
 	const p: Number = i < 0 ? j : j < 0 ? i : i < j ? j : i;

@@ -13,29 +13,13 @@ src/stable.ts(63,9): error TS2365: Operator '+' cannot be applied to types 'Numb
 src/stable.ts(64,9): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 src/stable.ts(76,22): error TS2538: Type 'Number' cannot be used as an index type.
 src/stable.ts(76,31): error TS2538: Type 'Number' cannot be used as an index type.
-src/stable.ts(77,11): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 src/stable.ts(77,18): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/stable.ts(77,25): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 src/stable.ts(77,29): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/stable.ts(80,11): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 src/stable.ts(80,18): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/stable.ts(80,25): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 src/stable.ts(80,29): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/stable.ts(85,9): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 src/stable.ts(85,16): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/stable.ts(85,23): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 src/stable.ts(85,27): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/stable.ts(88,9): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 src/stable.ts(88,16): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/stable.ts(88,23): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 src/stable.ts(88,27): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 stable.min.ts(3,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 stable.min.ts(3,125): error TS2304: Cannot find name 'define'.
@@ -47,7 +31,7 @@ stable.min.ts(3,261): error TS2345: Argument of type 'Number' is not assignable 
   Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 stable.min.ts(3,328): error TS2322: Type '(e: Function, n: Number) => number' is not assignable to type 'String'.
 stable.min.ts(3,393): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(that: string, locales?: string | string[] | undefined, options?: CollatorOptions | undefined): number', gave the following error.
+  Overload 1 of 2, '(that: string, locales?: string | string[], options?: CollatorOptions): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'string'.
   Overload 2 of 2, '(that: string): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'string'.
@@ -69,31 +53,15 @@ stable.min.ts(3,852): error TS2365: Operator '<' cannot be applied to types 'Num
 stable.min.ts(3,857): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
 stable.min.ts(3,865): error TS2538: Type 'Number' cannot be used as an index type.
 stable.min.ts(3,870): error TS2538: Type 'Number' cannot be used as an index type.
-stable.min.ts(3,877): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 stable.min.ts(3,879): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-stable.min.ts(3,884): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 stable.min.ts(3,886): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-stable.min.ts(3,891): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 stable.min.ts(3,893): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-stable.min.ts(3,898): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 stable.min.ts(3,900): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 stable.min.ts(3,913): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
-stable.min.ts(3,917): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 stable.min.ts(3,919): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-stable.min.ts(3,924): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 stable.min.ts(3,926): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 stable.min.ts(3,941): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
-stable.min.ts(3,952): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 stable.min.ts(3,954): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-stable.min.ts(3,959): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 stable.min.ts(3,961): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 stable.ts(6,10): error TS2304: Cannot find name 'define'.
 stable.ts(6,35): error TS2304: Cannot find name 'define'.
@@ -116,28 +84,12 @@ stable.ts(72,11): error TS2365: Operator '+' cannot be applied to types 'Number'
 stable.ts(73,11): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 stable.ts(85,24): error TS2538: Type 'Number' cannot be used as an index type.
 stable.ts(85,33): error TS2538: Type 'Number' cannot be used as an index type.
-stable.ts(86,13): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 stable.ts(86,20): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-stable.ts(86,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 stable.ts(86,31): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-stable.ts(89,13): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 stable.ts(89,20): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-stable.ts(89,27): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 stable.ts(89,31): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-stable.ts(94,11): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 stable.ts(94,18): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-stable.ts(94,25): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 stable.ts(94,29): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-stable.ts(97,11): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 stable.ts(97,18): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-stable.ts(97,25): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 stable.ts(97,29): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 

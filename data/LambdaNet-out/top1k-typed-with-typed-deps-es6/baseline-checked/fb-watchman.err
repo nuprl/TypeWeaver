@@ -8,28 +8,22 @@ watchman/integration/capabilities.ts(25,10): error TS2339: Property 'capabilityC
 watchman/integration/capabilities.ts(29,16): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
 watchman/integration/capabilities.ts(34,19): error TS2304: Cannot find name 'Void'.
 watchman/integration/capabilities.ts(37,3): error TS2304: Cannot find name 'resp'.
-watchman/integration/capabilities.ts(37,17): error TS2339: Property '_synthesizeCapabilityCheck' does not exist on type 'Element'.
+watchman/integration/capabilities.ts(37,17): error TS2339: Property '_synthesizeCapabilityCheck' does not exist on type 'HTMLElement'.
 watchman/integration/capabilities.ts(39,16): error TS2304: Cannot find name 'resp'.
 watchman/integration/capabilities.ts(41,3): error TS2304: Cannot find name 'resp'.
-watchman/integration/capabilities.ts(41,17): error TS2339: Property '_synthesizeCapabilityCheck' does not exist on type 'Element'.
+watchman/integration/capabilities.ts(41,17): error TS2339: Property '_synthesizeCapabilityCheck' does not exist on type 'HTMLElement'.
 watchman/integration/capabilities.ts(43,16): error TS2304: Cannot find name 'resp'.
 watchman/integration/capabilities.ts(45,3): error TS2304: Cannot find name 'resp'.
-watchman/integration/capabilities.ts(45,17): error TS2339: Property '_synthesizeCapabilityCheck' does not exist on type 'Element'.
+watchman/integration/capabilities.ts(45,17): error TS2339: Property '_synthesizeCapabilityCheck' does not exist on type 'HTMLElement'.
 watchman/integration/capabilities.ts(47,16): error TS2304: Cannot find name 'resp'.
 watchman/integration/capabilities.ts(49,3): error TS2304: Cannot find name 'resp'.
-watchman/integration/capabilities.ts(49,17): error TS2339: Property '_synthesizeCapabilityCheck' does not exist on type 'Element'.
+watchman/integration/capabilities.ts(49,17): error TS2339: Property '_synthesizeCapabilityCheck' does not exist on type 'HTMLElement'.
 watchman/integration/capabilities.ts(52,45): error TS2304: Cannot find name 'resp'.
 watchman/integration/case.ts(10,22): error TS2307: Cannot find module 'fb-watchman' or its corresponding type declarations.
 watchman/integration/case.ts(16,5): error TS2322: Type 'string' is not assignable to type 'Number'.
   Type 'string' is not assignable to type 'Number'.
 watchman/integration/case.ts(17,5): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 watchman/integration/case.ts(17,29): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-watchman/integration/case.ts(18,37): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(path: PathLike, options?: EncodingOption): string', gave the following error.
-    Argument of type 'string | undefined' is not assignable to parameter of type 'PathLike'.
-      Type 'undefined' is not assignable to type 'PathLike'.
-  Overload 2 of 3, '(path: PathLike, options?: EncodingOption): string | Buffer', gave the following error.
-    Argument of type 'string | undefined' is not assignable to parameter of type 'PathLike'.
 watchman/integration/case.ts(19,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 watchman/integration/case.ts(20,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -50,36 +44,32 @@ watchman/integration/node_basic.ts(21,8): error TS2339: Property 'command' does 
 watchman/integration/node_basic.ts(23,51): error TS2339: Property 'version' does not exist on type 'Object'.
 watchman/integration/node_basic.ts(24,10): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
 watchman/integration/node_basic.ts(25,16): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(timeoutId: string | number | Timeout | undefined): void', gave the following error.
-    Argument of type 'Number' is not assignable to parameter of type 'string | number | Timeout | undefined'.
-  Overload 2 of 2, '(id?: number | undefined): void', gave the following error.
+  Overload 1 of 2, '(timeoutId: string | number | Timeout): void', gave the following error.
+    Argument of type 'Number' is not assignable to parameter of type 'string | number | Timeout'.
+  Overload 2 of 2, '(id?: number): void', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 watchman/node/bser/index.ts(13,19): error TS2307: Cannot find module 'node-int64' or its corresponding type declarations.
-watchman/node/bser/index.ts(22,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
+watchman/node/bser/index.ts(22,41): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 watchman/node/bser/index.ts(26,41): error TS2304: Cannot find name 'Void'.
-watchman/node/bser/index.ts(27,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 watchman/node/bser/index.ts(27,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-watchman/node/bser/index.ts(28,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-watchman/node/bser/index.ts(29,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+watchman/node/bser/index.ts(27,36): error TS2345: Argument of type 'String | 8192' is not assignable to parameter of type 'Number'.
+  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 watchman/node/bser/index.ts(63,7): error TS2740: Type 'Buffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 37 more.
 watchman/node/bser/index.ts(63,34): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-watchman/node/bser/index.ts(63,43): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 watchman/node/bser/index.ts(69,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/bser/index.ts(75,9): error TS2322: Type 'number' is not assignable to type 'String'.
 watchman/node/bser/index.ts(114,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/bser/index.ts(128,41): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'number'.
 watchman/node/bser/index.ts(129,5): error TS2322: Type 'Object' is not assignable to type 'HTMLElement'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-watchman/node/bser/index.ts(143,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/bser/index.ts(221,23): error TS2304: Cannot find name 'Void'.
-watchman/node/bser/index.ts(222,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-watchman/node/bser/index.ts(223,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+watchman/node/bser/index.ts(222,3): error TS2684: The 'this' context of type 'typeof EventEmitter' is not assignable to method's 'this' of type 'Function'.
+watchman/node/bser/index.ts(223,14): error TS2350: Only a void function can be called with the 'new' keyword.
 watchman/node/bser/index.ts(223,14): error TS2554: Expected 1 arguments, but got 0.
-watchman/node/bser/index.ts(223,14): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-watchman/node/bser/index.ts(224,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 watchman/node/bser/index.ts(249,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/bser/index.ts(316,7): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 watchman/node/bser/index.ts(324,10): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
@@ -101,19 +91,16 @@ watchman/node/bser/index.ts(371,9): error TS2538: Type 'String' cannot be used a
 watchman/node/bser/index.ts(378,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/bser/index.ts(380,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/bser/index.ts(381,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'String'.
-watchman/node/bser/index.ts(389,7): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 watchman/node/bser/index.ts(416,10): error TS2678: Type 'Number' is not comparable to type 'String'.
 watchman/node/bser/index.ts(419,10): error TS2678: Type 'Number' is not comparable to type 'String'.
 watchman/node/bser/index.ts(422,10): error TS2678: Type 'Number' is not comparable to type 'String'.
 watchman/node/bser/index.ts(425,10): error TS2678: Type 'Number' is not comparable to type 'String'.
 watchman/node/bser/index.ts(432,51): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
-watchman/node/bser/index.ts(441,26): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+watchman/node/bser/index.ts(441,26): error TS2350: Only a void function can be called with the 'new' keyword.
 watchman/node/bser/index.ts(442,7): error TS2322: Type 'void' is not assignable to type 'String'.
 watchman/node/bser/index.ts(442,42): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string | Node'.
 watchman/node/bser/index.ts(443,11): error TS2339: Property 'buf' does not exist on type 'HTMLElement'.
 watchman/node/bser/index.ts(457,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-watchman/node/bser/index.ts(460,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 watchman/node/bser/index.ts(465,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/bser/index.ts(465,47): error TS2304: Cannot find name 'Void'.
 watchman/node/bser/index.ts(467,24): error TS2339: Property 'toBuffer' does not exist on type 'Object'.
@@ -149,10 +136,9 @@ watchman/node/bser/index.ts(543,11): error TS2356: An arithmetic operand must be
 watchman/node/bser/index.ts(546,16): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 watchman/node/bser/index.ts(549,29): error TS2538: Type 'String' cannot be used as an index type.
-watchman/node/bser/index.ts(559,13): error TS2571: Object is of type 'unknown'.
 watchman/node/bser/index.ts(571,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+watchman/node/bser/index.ts(572,26): error TS2350: Only a void function can be called with the 'new' keyword.
 watchman/node/bser/index.ts(572,26): error TS2554: Expected 1 arguments, but got 0.
-watchman/node/bser/index.ts(572,26): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 watchman/node/bser/index.ts(574,7): error TS2339: Property 'writeByte' does not exist on type 'HTMLElement'.
 watchman/node/bser/index.ts(575,7): error TS2339: Property 'writeByte' does not exist on type 'HTMLElement'.
 watchman/node/bser/index.ts(577,7): error TS2339: Property 'writeByte' does not exist on type 'HTMLElement'.
@@ -188,13 +174,11 @@ watchman/node/index.ts(14,18): error TS2307: Cannot find module 'bser' or its co
 watchman/node/index.ts(17,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/index.ts(25,35): error TS2304: Cannot find name 'Void'.
 watchman/node/index.ts(26,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-watchman/node/index.ts(26,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-watchman/node/index.ts(27,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-watchman/node/index.ts(29,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+watchman/node/index.ts(27,3): error TS2684: The 'this' context of type 'typeof EventEmitter' is not assignable to method's 'this' of type 'Function'.
+  Types of property 'once' are incompatible.
+    Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
 watchman/node/index.ts(30,26): error TS2339: Property 'watchmanBinaryPath' does not exist on type 'Object'.
-watchman/node/index.ts(31,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 watchman/node/index.ts(31,39): error TS2339: Property 'watchmanBinaryPath' does not exist on type 'Object'.
-watchman/node/index.ts(33,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 watchman/node/index.ts(55,49): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/index.ts(60,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/index.ts(70,9): error TS2339: Property 'cb' does not exist on type 'Object'.
@@ -215,11 +199,11 @@ watchman/node/index.ts(110,10): error TS2339: Property 'bunser' does not exist o
 watchman/node/index.ts(111,12): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 watchman/node/index.ts(114,10): error TS2339: Property 'socket' does not exist on type 'HTMLElement'.
 watchman/node/index.ts(114,40): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(options: NetConnectOpts, connectionListener?: (() => void) | undefined): Socket', gave the following error.
+  Overload 1 of 3, '(options: NetConnectOpts, connectionListener?: () => void): Socket', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'NetConnectOpts'.
-  Overload 2 of 3, '(port: number, host?: string | undefined, connectionListener?: (() => void) | undefined): Socket', gave the following error.
+  Overload 2 of 3, '(port: number, host?: string, connectionListener?: () => void): Socket', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'number'.
-  Overload 3 of 3, '(path: string, connectionListener?: (() => void) | undefined): Socket', gave the following error.
+  Overload 3 of 3, '(path: string, connectionListener?: () => void): Socket', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 watchman/node/index.ts(115,10): error TS2339: Property 'socket' does not exist on type 'HTMLElement'.
@@ -238,7 +222,6 @@ watchman/node/index.ts(131,12): error TS2339: Property 'bunser' does not exist o
 watchman/node/index.ts(132,12): error TS2339: Property 'cancelCommands' does not exist on type 'HTMLElement'.
 watchman/node/index.ts(133,12): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 watchman/node/index.ts(149,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-watchman/node/index.ts(155,7): error TS2322: Type 'null' is not assignable to type 'HTMLElement'.
 watchman/node/index.ts(158,44): error TS2304: Cannot find name 'Void'.
 watchman/node/index.ts(165,15): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
 watchman/node/index.ts(165,42): error TS2339: Property 'errno' does not exist on type 'HTMLElement'.
@@ -249,7 +232,6 @@ watchman/node/index.ts(169,13): error TS2339: Property 'message' does not exist 
 watchman/node/index.ts(173,39): error TS2339: Property 'message' does not exist on type 'HTMLElement'.
 watchman/node/index.ts(174,10): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 watchman/node/index.ts(178,5): error TS2740: Type 'ChildProcessByStdio<null, Readable, Readable>' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-watchman/node/index.ts(182,16): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'HTMLElement'.
 watchman/node/index.ts(186,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/index.ts(187,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/index.ts(188,8): error TS2339: Property 'stdout' does not exist on type 'HTMLElement'.
@@ -268,7 +250,6 @@ watchman/node/index.ts(209,16): error TS2314: Generic type 'Array<T>' requires 1
 watchman/node/index.ts(212,15): error TS2339: Property 'watchmanResponse' does not exist on type 'Error'.
 watchman/node/index.ts(213,14): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 watchman/node/index.ts(218,12): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
-watchman/node/index.ts(223,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/index.ts(253,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/index.ts(253,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/index.ts(266,7): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
@@ -283,7 +264,7 @@ watchman/node/index.ts(282,10): error TS2339: Property 'capabilities' does not e
 watchman/node/index.ts(284,12): error TS2339: Property 'error' does not exist on type 'HTMLElement'.
 watchman/node/index.ts(292,31): error TS2339: Property 'optional' does not exist on type 'Object'.
 watchman/node/index.ts(293,31): error TS2339: Property 'required' does not exist on type 'Object'.
-watchman/node/index.ts(306,19): error TS2339: Property '_synthesizeCapabilityCheck' does not exist on type 'HTMLElement'.
+watchman/node/index.ts(294,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/index.ts(307,16): error TS2339: Property 'error' does not exist on type 'Object'.
 watchman/node/index.ts(308,32): error TS2339: Property 'error' does not exist on type 'Object'.
 watchman/node/index.ts(309,15): error TS2339: Property 'watchmanResponse' does not exist on type 'Object'.

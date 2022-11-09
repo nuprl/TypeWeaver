@@ -63,7 +63,7 @@ module.exports = function (app: Function) {
     }
   });
 
-  const rsvpES6: String = new Rollup(lib, {
+  const rsvpES6: Function = new Rollup(lib, {
     rollup: {
       input: 'lib/rsvp.js',
       output: [

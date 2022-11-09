@@ -117,7 +117,7 @@ class Emitter {
       if (!fn) return this;
     }
 
-    const existing: String = this._only[event];
+    const existing: Emitter = this._only[event];
     if (existing) {
       if (this._first === true) return this;
       this.off(event, existing);

@@ -10,7 +10,7 @@ function startWatcher(name: String, files: String, folders: String): Void {
 		aggregateTimeout: 3000
 	});
 
-	w.on("change", function(file: String, mtime: String) {
+	w.on("change", function(file: String, mtime: Number) {
 		console.log(name, "change", path.relative(folder, file), mtime);
 	});
 

@@ -46,7 +46,7 @@ function checkAdjacentCalls(callMap: Object, spy: Object, index: Number, spies: 
  * @param  {SinonProxy[] | SinonProxy} spies An array of proxies, or several proxies as arguments
  * @returns {boolean} true when spies are called in order, false otherwise
  */
-function calledInOrder(spies: String): String {
+function calledInOrder(spies: String): Promise {
     var callMap: String = {};
     // eslint-disable-next-line no-underscore-dangle
     var _spies: String = arguments.length > 1 ? arguments : spies;

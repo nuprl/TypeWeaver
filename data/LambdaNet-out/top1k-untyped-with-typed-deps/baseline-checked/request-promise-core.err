@@ -1,8 +1,8 @@
 configure/request-next.ts(14,29): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+  Overload 2 of 2, '(message?: string): Error', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 configure/request-next.ts(17,29): error TS2339: Property 'client' does not exist on type 'Object'.
@@ -18,13 +18,11 @@ configure/request-next.ts(48,22): error TS2314: Generic type 'Array<T>' requires
 configure/request-next.ts(48,38): error TS2339: Property 'client' does not exist on type 'Object'.
 configure/request-next.ts(50,38): error TS2339: Property 'expose' does not exist on type 'Object'.
 configure/request-next.ts(52,42): error TS2339: Property 'expose' does not exist on type 'Object'.
-configure/request-next.ts(54,13): error TS7053: Element implicitly has an 'any' type because expression of type '"exposePromise" | "exposePromiseMethod"' can't be used to index type 'Object'.
-  Property 'exposePromise' does not exist on type 'Object'.
 configure/request2.ts(14,29): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+  Overload 2 of 2, '(message?: string): Error', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 configure/request2.ts(17,29): error TS2339: Property 'request' does not exist on type 'Object'.
@@ -38,12 +36,9 @@ configure/request2.ts(36,99): error TS2314: Generic type 'Promise<T>' requires 1
 configure/request2.ts(41,22): error TS2339: Property 'init' does not exist on type 'Object'.
 configure/request2.ts(53,34): error TS2339: Property 'expose' does not exist on type 'Object'.
 configure/request2.ts(55,38): error TS2339: Property 'expose' does not exist on type 'Object'.
-configure/request2.ts(57,9): error TS7053: Element implicitly has an 'any' type because expression of type '"exposePromise" | "exposePromiseMethod"' can't be used to index type 'Object'.
-  Property 'exposePromise' does not exist on type 'Object'.
 configure/request2.ts(58,21): error TS2339: Property 'request' does not exist on type 'Object'.
 gulpfile.ts(7,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 gulpfile.ts(11,8): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-gulpfile.ts(14,8): error TS7017: Element implicitly has an 'any' type because type 'typeof globalThis' has no index signature.
 gulpfile.ts(14,22): error TS2339: Property 'expect' does not exist on type 'String'.
 gulpfile.ts(26,6): error TS2339: Property 'task' does not exist on type 'HTMLElement'.
 gulpfile.ts(28,6): error TS2339: Property 'task' does not exist on type 'HTMLElement'.
@@ -86,35 +81,14 @@ gulpfile.ts(115,5): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 gulpfile.ts(118,6): error TS2339: Property 'task' does not exist on type 'HTMLElement'.
 gulpfile.ts(119,17): error TS2339: Property 'src' does not exist on type 'HTMLElement'.
-lib/errors.ts(4,76): error TS2304: Cannot find name 'Void'.
-lib/errors.ts(6,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(7,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(8,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(9,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(10,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(11,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(14,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/errors.ts(4,74): error TS2304: Cannot find name 'Void'.
 lib/errors.ts(22,96): error TS2304: Cannot find name 'Void'.
-lib/errors.ts(24,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(25,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(26,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(27,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(28,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(29,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(32,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(40,78): error TS2304: Cannot find name 'Void'.
-lib/errors.ts(42,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(43,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(44,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(45,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(46,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(47,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/errors.ts(50,33): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/errors.ts(40,76): error TS2304: Cannot find name 'Void'.
 lib/plumbing.ts(15,29): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(message?: string | undefined): TypeError', gave the following error.
+  Overload 1 of 2, '(message?: string): TypeError', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-  Overload 2 of 2, '(message?: string | undefined): Error', gave the following error.
+  Overload 2 of 2, '(message?: string): Error', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/plumbing.ts(18,29): error TS2339: Property 'PromiseImpl' does not exist on type 'Object'.

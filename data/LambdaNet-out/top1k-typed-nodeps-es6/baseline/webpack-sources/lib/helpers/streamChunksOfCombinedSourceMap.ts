@@ -14,7 +14,7 @@ const streamChunksOfCombinedSourceMap: Function = (
 	innerSourceName: String,
 	innerSource: String,
 	innerSourceMap: String,
-	removeInnerSource: OriginalSource,
+	removeInnerSource: SourceMapSource,
 	onChunk: Object,
 	onSource: Function,
 	onName: Function,
@@ -271,7 +271,7 @@ const streamChunksOfCombinedSourceMap: Function = (
 					sourceContent,
 					innerSourceMap,
 					(
-						chunk: String,
+						chunk: SourceMapSource,
 						generatedLine: Number,
 						generatedColumn: String,
 						sourceIndex: String,

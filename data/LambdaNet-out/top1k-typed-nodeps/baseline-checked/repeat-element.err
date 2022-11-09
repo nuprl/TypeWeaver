@@ -11,7 +11,6 @@ benchmark/check.ts(23,29): error TS2538: Type 'String' cannot be used as an inde
 benchmark/check.ts(24,84): error TS2538: Type 'String' cannot be used as an index type.
 benchmark/check.ts(33,38): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 benchmark/check.ts(33,65): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/array-from.ts(4,10): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 benchmark/code/array-from.ts(7,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/array-from.ts(8,22): error TS2769: No overload matches this call.
   Overload 1 of 4, '(iterable: Iterable<unknown> | ArrayLike<unknown>, mapfn: (v: unknown, k: number) => Object, thisArg?: any): Object[]', gave the following error.
@@ -20,21 +19,20 @@ benchmark/code/array-from.ts(8,22): error TS2769: No overload matches this call.
   Overload 2 of 4, '(arrayLike: ArrayLike<unknown>, mapfn: (v: unknown, k: number) => Object, thisArg?: any): Object[]', gave the following error.
     Type 'Number' is not assignable to type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-benchmark/code/array-map-call.ts(4,3): error TS2740: Type 'unknown[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
-benchmark/code/array-map-call.ts(4,35): error TS2365: Operator '+' cannot be applied to types 'never[]' and 'any[]'.
+benchmark/code/array-map-call.ts(4,35): error TS2365: Operator '+' cannot be applied to types 'undefined[]' and 'any[]'.
 benchmark/code/array-map-call.ts(4,46): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-benchmark/code/array-map-valueOf.ts(3,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/array-map-valueOf.ts(3,61): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/for-concat.ts(3,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/for-concat.ts(4,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/for-join-1.ts(3,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/for-join-1.ts(3,61): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/for-join-1.ts(4,12): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 benchmark/code/for-join-1.ts(6,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 benchmark/code/for-join-1.ts(7,3): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/for-join-2.ts(3,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/for-join-2.ts(3,61): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/for-join-2.ts(4,12): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 benchmark/code/for-join-2.ts(6,25): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmark/code/for-length.ts(5,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
-benchmark/code/for-length.ts(5,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/for-length.ts(5,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/for-length.ts(8,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/for-length.ts(12,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 benchmark/code/for-length.ts(12,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -42,23 +40,16 @@ benchmark/code/for-length.ts(13,11): error TS2365: Operator '+' cannot be applie
 benchmark/code/for-length.ts(13,30): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 benchmark/code/for-new-array-1.ts(3,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
 benchmark/code/for-new-array-1.ts(6,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'String'.
-benchmark/code/for-new-array-1.ts(7,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 benchmark/code/for-new-array-2.ts(3,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
 benchmark/code/for-new-array-2.ts(6,16): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/for-new-array-2.ts(7,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 benchmark/code/for-push.ts(3,61): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/for-push.ts(4,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/for-push.ts(6,28): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/new-array-map-1.ts(3,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/code/new-array-map-1.ts(4,46): error TS2345: Argument of type '(nil: Function) => Function' is not assignable to parameter of type '(value: unknown, index: number, array: unknown[]) => Function'.
-  Types of parameters 'nil' and 'value' are incompatible.
-    Type 'unknown' is not assignable to type 'Function'.
-benchmark/code/new-array-map-2.ts(3,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/new-array-map-1.ts(3,61): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/new-array-map-2.ts(3,61): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/new-array-map-2.ts(4,16): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 benchmark/code/new-array-map-2.ts(4,30): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-benchmark/code/new-array-map-2.ts(4,47): error TS2345: Argument of type '(nil: Function) => Function' is not assignable to parameter of type '(value: string, index: number, array: string[]) => Function'.
+benchmark/code/new-array-map-2.ts(4,47): error TS2345: Argument of type '(nil: Function) => String' is not assignable to parameter of type '(value: string, index: number, array: string[]) => String'.
   Types of parameters 'nil' and 'value' are incompatible.
     Type 'string' is not assignable to type 'Function'.
 benchmark/code/while-array-1.ts(3,61): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -72,12 +63,13 @@ benchmark/code/while-array-3.ts(7,10): error TS2451: Cannot redeclare block-scop
 benchmark/code/while-array-3.ts(8,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmark/code/while-array-3.ts(9,9): error TS2538: Type 'Number' cannot be used as an index type.
 benchmark/code/while-bitwise.ts(4,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
-benchmark/code/while-bitwise.ts(4,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-bitwise.ts(4,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/while-bitwise.ts(5,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/while-bitwise.ts(6,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/while-bitwise.ts(9,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 benchmark/code/while-bitwise.ts(12,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/while-concat.ts(3,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-concat.ts(3,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-concat.ts(3,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/while-concat.ts(4,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/while-concat.ts(6,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmark/code/while-exp.ts(4,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -86,8 +78,6 @@ benchmark/code/while-new-array-1.ts(6,10): error TS2356: An arithmetic operand m
 benchmark/code/while-new-array-1.ts(7,9): error TS2538: Type 'Number' cannot be used as an index type.
 benchmark/code/while-new-array-2.ts(3,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
 benchmark/code/while-new-array-2.ts(7,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/code/while-new-array-2.ts(8,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 benchmark/code/while-new-array-2.ts(8,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmark/code/while-push.ts(3,61): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/while-push.ts(4,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -99,10 +89,7 @@ benchmark/code/while-unshift.ts(4,12): error TS2314: Generic type 'Array<T>' req
 benchmark/code/while-unshift.ts(6,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmark/index.ts(3,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/index.ts(11,7): error TS2339: Property 'run' does not exist on type 'Object'.
-index.ts(11,7): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
 index.ts(12,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
   Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 index.ts(17,19): error TS2365: Operator '<' cannot be applied to types 'number' and 'Function'.
-index.ts(18,5): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'number' was found on type 'Object'.
 

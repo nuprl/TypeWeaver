@@ -9,7 +9,7 @@ import slice from '../slice.js'
  * @param {Array} path The path to get the parent value of.
  * @returns {*} Returns the parent value.
  */
-function parent(object: Object, path: String): Stack {
+function parent(object: Object, path: String): Hash {
   return path.length < 2 ? object : baseGet(object, slice(path, 0, -1))
 }
 

@@ -225,7 +225,7 @@ InternalEncoderUtf8.prototype.write = function (str: String) {
 
 InternalEncoderUtf8.prototype.end = function () {
     if (this.highSurrogate) {
-        var str: String = this.highSurrogate;
+        var str: Function = this.highSurrogate;
         this.highSurrogate = '';
         return Buffer.from(str, this.enc);
     }

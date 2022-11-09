@@ -92,7 +92,6 @@ lib/portfinder.ts(210,94): error TS2339: Property 'startPort' does not exist on 
 lib/portfinder.ts(210,123): error TS2339: Property 'stopPort' does not exist on type 'Object'.
 lib/portfinder.ts(248,5): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-lib/portfinder.ts(252,7): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/portfinder.ts(253,10): error TS2339: Property 'timesSeries' does not exist on type 'String'.
 lib/portfinder.ts(255,15): error TS2339: Property 'port' does not exist on type 'Object'.
 lib/portfinder.ts(262,9): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
@@ -123,22 +122,14 @@ lib/portfinder.ts(352,18): error TS2339: Property 'exists' does not exist on typ
 lib/portfinder.ts(364,10): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/portfinder.ts(374,26): error TS2339: Property 'dirname' does not exist on type 'String'.
 lib/portfinder.ts(375,27): error TS2339: Property 'basename' does not exist on type 'String'.
-lib/portfinder.ts(376,7): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-lib/portfinder.ts(377,32): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-lib/portfinder.ts(378,22): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/portfinder.ts(379,13): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/portfinder.ts(383,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/portfinder.ts(384,15): error TS2339: Property 'join' does not exist on type 'String'.
 lib/portfinder.ts(384,25): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
 lib/portfinder.ts(466,21): error TS2339: Property 'networkInterfaces' does not exist on type 'String'.
-lib/portfinder.ts(478,9): error TS2571: Object is of type 'unknown'.
 lib/portfinder.ts(486,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/portfinder.ts(488,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/portfinder.ts(490,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/portfinder.ts(490,29): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 lib/portfinder.ts(493,25): error TS2339: Property 'address' does not exist on type 'Element'.
 

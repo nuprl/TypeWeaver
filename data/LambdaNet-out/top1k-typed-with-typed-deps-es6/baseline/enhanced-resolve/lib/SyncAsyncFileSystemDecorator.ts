@@ -51,7 +51,7 @@ function SyncAsyncFileSystemDecorator(fs: String): Void {
 		}
 		(callback || options)(null, result);
 	};
-	this.readdirSync = (arg: String, options: Function) => fs.readdirSync(arg, options);
+	this.readdirSync = (arg: String, options: Object) => fs.readdirSync(arg, options);
 
 	this.readFile = (arg: String, options: Object, callback: Number) => {
 		let result: Number;

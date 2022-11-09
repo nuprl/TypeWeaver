@@ -38,7 +38,7 @@ process.stdin.on("end", function() {
 
     encodings = encodings.map(function(enc: String) {
         process.stderr.write("Checking "+enc+": ");
-        var hash: Map = crypto.createHash("sha1");
+        var hash: HTMLElement = crypto.createHash("sha1");
 
         var converter: String = new iconv.Iconv(enc, "utf-8"), buf: String = Buffer.alloc(10);
         var res: Object = {

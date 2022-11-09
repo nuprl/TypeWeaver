@@ -38,7 +38,7 @@ var
 	 * 2) the catchall symbol "*" can be used
 	 * 3) selection will start with transport dataType and THEN go to "*" if needed
 	 */
-	transports: String = {},
+	transports: Function = {},
 
 	// Avoid comment-prolog char sequence (trac-10098); must appease lint and evade compression
 	allTypes: String = "*/".concat( "*" ),
@@ -83,7 +83,7 @@ function addToPrefiltersOrTransports( structure: Object ): Function {
 }
 
 // Base inspection function for prefilters and transports
-function inspectPrefiltersOrTransports( structure: Object, options: Object, originalOptions: Function, jqXHR: Boolean ): Boolean {
+function inspectPrefiltersOrTransports( structure: Object, options: Object, originalOptions: Function, jqXHR: Number ): Boolean {
 
 	var inspected: Object = {},
 		seekingTransport: Boolean = ( structure === transports );
@@ -132,7 +132,7 @@ function ajaxExtend( target: Object, src: Object ): String {
  * - finds the right dataType (mediates between content-type and expected dataType)
  * - returns the corresponding response
  */
-function ajaxHandleResponses( s: Object, jqXHR: Error, responses: Object ): String {
+function ajaxHandleResponses( s: Object, jqXHR: HTMLElement, responses: Object ): String {
 
 	var ct: Number, type: Number, finalDataType: Number, firstDataType: Number,
 		contents: Object = s.contents,

@@ -16,7 +16,7 @@ async function _readFile (file: Array, options: Object = {}): Map {
 
   const shouldThrow: Boolean = 'throws' in options ? options.throws : true
 
-  let data: Object = await universalify.fromCallback(fs.readFile)(file, options)
+  let data: Array = await universalify.fromCallback(fs.readFile)(file, options)
 
   data = stripBom(data)
 

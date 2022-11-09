@@ -139,7 +139,7 @@ Accumulator.prototype.peekDouble = function() {
 }
 
 Accumulator.prototype.readDouble = function() {
-  var dval: Array = this.peekDouble();
+  var dval: String = this.peekDouble();
   this.readOffset += 8;
   return dval;
 }
@@ -225,7 +225,7 @@ function BunserBuf(): Void {
 util.inherits(BunserBuf, EE);
 exports.BunserBuf = BunserBuf;
 
-BunserBuf.prototype.append = function(buf: String, synchronous: Number) {
+BunserBuf.prototype.append = function(buf: String, synchronous: String) {
   if (synchronous) {
     this.buf.append(buf);
     return this.process(synchronous);
@@ -310,7 +310,7 @@ BunserBuf.prototype.raise = function(reason: Number) {
           this.buf.readOffset, this.buf.readOffset + 32).toJSON()));
 }
 
-BunserBuf.prototype.expectCode = function(expected: String) {
+BunserBuf.prototype.expectCode = function(expected: Number) {
   var code: String = this.buf.readInt(1);
   if (code != expected) {
     this.raise("expected bser opcode " + expected + " but got " + code);

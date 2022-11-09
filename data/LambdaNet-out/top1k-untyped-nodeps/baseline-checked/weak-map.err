@@ -23,11 +23,8 @@ weak-map.ts(159,20): error TS2314: Generic type 'Map<K, V>' requires 2 type argu
 weak-map.ts(159,30): error TS2351: This expression is not constructable.
   Type 'Error' has no construct signatures.
 weak-map.ts(172,7): error TS2322: Type '(v: PropertyKey) => boolean' is not assignable to type 'Number'.
+weak-map.ts(220,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 weak-map.ts(221,9): error TS2740: Type 'Uint8Array' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 37 more.
-weak-map.ts(221,38): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type 'Object' is not assignable to parameter of type 'ArrayBufferLike'.
-      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 weak-map.ts(222,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'ArrayBufferView'.
   Type 'String' is missing the following properties from type 'ArrayBufferView': buffer, byteLength, byteOffset
 weak-map.ts(225,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -57,8 +54,7 @@ weak-map.ts(385,68): error TS2314: Generic type 'Promise<T>' requires 1 type arg
 weak-map.ts(386,25): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 weak-map.ts(393,10): error TS2339: Property 'prototype' does not exist on type 'Object'.
 weak-map.ts(398,39): error TS2304: Cannot find name 'Void'.
-weak-map.ts(411,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-weak-map.ts(417,9): error TS2740: Type 'never[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
+weak-map.ts(417,9): error TS2740: Type 'undefined[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 weak-map.ts(418,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 weak-map.ts(419,22): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 weak-map.ts(425,16): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
@@ -72,7 +68,6 @@ weak-map.ts(445,22): error TS2538: Type 'Number' cannot be used as an index type
 weak-map.ts(447,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 weak-map.ts(459,16): error TS2538: Type 'Number' cannot be used as an index type.
-weak-map.ts(462,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 weak-map.ts(469,16): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
 weak-map.ts(469,58): error TS2538: Type 'Number' cannot be used as an index type.
 weak-map.ts(471,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -81,12 +76,8 @@ weak-map.ts(484,14): error TS2538: Type 'Number' cannot be used as an index type
 weak-map.ts(491,14): error TS2538: Type 'Number' cannot be used as an index type.
 weak-map.ts(491,28): error TS2538: Type 'Number' cannot be used as an index type.
 weak-map.ts(494,14): error TS2540: Cannot assign to 'length' because it is a read-only property.
-weak-map.ts(566,14): error TS2454: Variable 'HostWeakMap' is used before being assigned.
-weak-map.ts(576,9): error TS2322: Type 'undefined' is not assignable to type 'ProxyConstructor'.
-weak-map.ts(580,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 weak-map.ts(585,32): error TS2351: This expression is not constructable.
   Type 'Error' has no construct signatures.
-weak-map.ts(590,13): error TS2322: Type 'undefined' is not assignable to type 'Object'.
 weak-map.ts(605,25): error TS2339: Property 'has' does not exist on type 'Object'.
 weak-map.ts(605,41): error TS2339: Property 'get' does not exist on type 'Object'.
 weak-map.ts(606,24): error TS2339: Property 'get___' does not exist on type 'Object'.
@@ -98,16 +89,11 @@ weak-map.ts(620,23): error TS2339: Property 'has' does not exist on type 'Object
 weak-map.ts(621,39): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
 weak-map.ts(622,20): error TS2339: Property 'set' does not exist on type 'Object'.
-weak-map.ts(624,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 weak-map.ts(630,22): error TS2339: Property 'set' does not exist on type 'Object'.
 weak-map.ts(632,41): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
 weak-map.ts(633,22): error TS2339: Property 'set___' does not exist on type 'Object'.
 weak-map.ts(636,20): error TS2339: Property 'set' does not exist on type 'Object'.
-weak-map.ts(638,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-weak-map.ts(643,35): error TS7053: Element implicitly has an 'any' type because expression of type '"delete"' can't be used to index type 'Object'.
-  Property 'delete' does not exist on type 'Object'.
 weak-map.ts(644,35): error TS2339: Property 'delete___' does not exist on type 'Object'.
-weak-map.ts(654,17): error TS2367: This condition will always return 'false' since the types 'Number' and '(map: Object) => Void' have no overlap.
-weak-map.ts(680,7): error TS2322: Type 'undefined' is not assignable to type 'ProxyConstructor'.
+weak-map.ts(654,17): error TS2367: This condition will always return 'false' since the types 'String' and '(map: Object) => Void' have no overlap.
 

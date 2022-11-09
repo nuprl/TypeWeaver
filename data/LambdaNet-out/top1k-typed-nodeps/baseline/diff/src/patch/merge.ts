@@ -128,7 +128,7 @@ function hunkBefore(test: String, check: Object): Boolean {
     && (test.oldStart + test.oldLines) < check.oldStart;
 }
 
-function cloneHunk(hunk: Object, offset: Number): Object {
+function cloneHunk(hunk: Object, offset: String): Object {
   return {
     oldStart: hunk.oldStart, oldLines: hunk.oldLines,
     newStart: hunk.newStart + offset, newLines: hunk.newLines,
@@ -208,7 +208,7 @@ function mutualChange(hunk: Object, mine: String, their: String): Void {
   conflict(hunk, myChanges, theirChanges);
 }
 
-function removal(hunk: Object, mine: Function, their: String, swap: Boolean): Void {
+function removal(hunk: Object, mine: String, their: String, swap: Boolean): Void {
   let myChanges: Function = collectChange(mine),
       theirChanges: Object = collectContext(their, myChanges);
   if (theirChanges.merged) {

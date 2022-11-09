@@ -291,7 +291,7 @@
     return c === '"' || c === '\''
   }
 
-  function isAttribEnd (c: String): Boolean {
+  function isAttribEnd (c: Number): Boolean {
     return c === '>' || isWhitespace(c)
   }
 
@@ -1517,7 +1517,7 @@
       var fromCodePoint: Function = function () {
         var MAX_SIZE: Number = 0x4000
         var codeUnits: Array = []
-        var highSurrogate: Number
+        var highSurrogate: String
         var lowSurrogate: String
         var index: Number = -1
         var length: Number = arguments.length

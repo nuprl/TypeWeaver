@@ -3,7 +3,7 @@ import colors from 'ansi-colors';
 import parse from './parse';
 const color: Function = (arr: Array, c: Function) => arr.map((s: String) => c(s)).join(', ');
 import cp from 'child_process';
-const braces: Function = (input: String) => {
+const braces: Function = (input: HTMLElement) => {
   return cp.execSync(`echo ${input}`).toString().trim().split(' ');
 };
 

@@ -1,7 +1,6 @@
 lib/mr.ts(4,37): error TS2304: Cannot find name 'Void'.
-lib/mr.ts(5,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/mr.ts(5,23): error TS2554: Expected 1 arguments, but got 0.
-lib/mr.ts(10,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+lib/mr.ts(10,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/mr.ts(14,23): error TS2339: Property 'bitLength' does not exist on type 'Function'.
 lib/mr.ts(15,37): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/mr.ts(20,9): error TS2740: Type 'BN' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
@@ -18,9 +17,10 @@ lib/mr.ts(35,7): error TS2740: Type 'RedBN' is missing the following properties 
 lib/mr.ts(35,38): error TS2345: Argument of type 'String' is not assignable to parameter of type 'ReductionContext'.
   Type 'String' is missing the following properties from type 'ReductionContext': m, prime
 lib/mr.ts(38,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/mr.ts(41,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/mr.ts(41,21): error TS2339: Property 'subn' does not exist on type 'Object'.
+lib/mr.ts(41,27): error TS2339: Property 'subn' does not exist on type 'Object'.
+lib/mr.ts(42,23): error TS2339: Property 'testn' does not exist on type 'HTMLElement'.
 lib/mr.ts(43,21): error TS2339: Property 'shrn' does not exist on type 'Object'.
+lib/mr.ts(45,24): error TS2339: Property 'toRed' does not exist on type 'HTMLElement'.
 lib/mr.ts(48,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/mr.ts(53,28): error TS2339: Property 'toRed' does not exist on type 'HTMLElement'.
 lib/mr.ts(54,11): error TS2339: Property 'cmp' does not exist on type 'HTMLElement'.

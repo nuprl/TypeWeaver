@@ -1,5 +1,5 @@
 'use strict';
 
-module.exports = function repeat(ele: Function, num: String): Array {
+module.exports = function repeat(ele: String, num: String): Array {
   return Array.apply(null, Array(num)).map(String.prototype.valueOf, ele);
 };

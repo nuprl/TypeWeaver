@@ -1,24 +1,15 @@
 lib/DirectoryWatcher.ts(10,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/watchpack/lib/watchEventSource"' has no default export.
 lib/DirectoryWatcher.ts(12,7): error TS2740: Type 'Readonly<{}>' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-lib/DirectoryWatcher.ts(17,7): error TS2322: Type 'string | undefined' is not assignable to type 'Number'.
-  Type 'undefined' is not assignable to type 'Number'.
+lib/DirectoryWatcher.ts(17,7): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/DirectoryWatcher.ts(18,7): error TS2322: Type 'number | boolean' is not assignable to type 'String'.
   Type 'number' is not assignable to type 'String'.
 lib/DirectoryWatcher.ts(19,2): error TS2367: This condition will always return 'false' since the types 'string' and 'Number' have no overlap.
 lib/DirectoryWatcher.ts(21,28): error TS2367: This condition will always return 'true' since the types 'Number' and 'string' have no overlap.
 lib/DirectoryWatcher.ts(29,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/DirectoryWatcher.ts(36,14): error TS7006: Parameter 'directoryWatcher' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(36,32): error TS7006: Parameter 'filePath' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(36,42): error TS7006: Parameter 'startTime' implicitly has an 'any' type.
 lib/DirectoryWatcher.ts(38,8): error TS2339: Property 'directoryWatcher' does not exist on type 'Watcher'.
 lib/DirectoryWatcher.ts(39,8): error TS2339: Property 'path' does not exist on type 'Watcher'.
 lib/DirectoryWatcher.ts(40,8): error TS2339: Property 'startTime' does not exist on type 'Watcher'.
-lib/DirectoryWatcher.ts(43,17): error TS7006: Parameter 'mtime' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(43,24): error TS7006: Parameter 'initial' implicitly has an 'any' type.
 lib/DirectoryWatcher.ts(44,34): error TS2339: Property 'startTime' does not exist on type 'Watcher'.
-lib/DirectoryWatcher.ts(55,14): error TS7006: Parameter 'watcherManager' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(55,30): error TS7006: Parameter 'directoryPath' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(55,45): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/DirectoryWatcher.ts(60,8): error TS2339: Property 'watcherManager' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(61,8): error TS2339: Property 'options' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(62,8): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
@@ -50,13 +41,8 @@ lib/DirectoryWatcher.ts(112,10): error TS2551: Property 'watcher' does not exist
 lib/DirectoryWatcher.ts(112,48): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(113,10): error TS2551: Property 'watcher' does not exist on type 'DirectoryWatcher'. Did you mean 'watch'?
 lib/DirectoryWatcher.ts(114,10): error TS2551: Property 'watcher' does not exist on type 'DirectoryWatcher'. Did you mean 'watch'?
-lib/DirectoryWatcher.ts(121,17): error TS7006: Parameter 'path' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(121,23): error TS7006: Parameter 'fn' implicitly has an 'any' type.
 lib/DirectoryWatcher.ts(122,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/DirectoryWatcher.ts(122,32): error TS2339: Property 'watchers' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(130,13): error TS7006: Parameter 'itemPath' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(130,23): error TS7006: Parameter 'initial' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(130,32): error TS7006: Parameter 'type' implicitly has an 'any' type.
 lib/DirectoryWatcher.ts(131,12): error TS2339: Property 'initialScan' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(132,9): error TS2339: Property 'initialScanRemoved' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(135,47): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
@@ -69,11 +55,6 @@ lib/DirectoryWatcher.ts(152,31): error TS2339: Property 'filesWithoutCase' does 
 lib/DirectoryWatcher.ts(154,10): error TS2339: Property 'filesWithoutCase' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(157,10): error TS2339: Property 'filesWithoutCase' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(161,30): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(168,14): error TS7006: Parameter 'filePath' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(168,24): error TS7006: Parameter 'mtime' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(168,31): error TS7006: Parameter 'initial' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(168,40): error TS7006: Parameter 'ignoreWhenEqual' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(168,57): error TS7006: Parameter 'type' implicitly has an 'any' type.
 lib/DirectoryWatcher.ts(171,12): error TS2339: Property 'ignored' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(173,28): error TS2339: Property 'files' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(177,15): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
@@ -84,12 +65,8 @@ lib/DirectoryWatcher.ts(192,37): error TS2339: Property 'timestamp' does not exi
 lib/DirectoryWatcher.ts(194,8): error TS2339: Property 'files' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(202,31): error TS2339: Property 'filesWithoutCase' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(203,9): error TS2339: Property 'filesWithoutCase' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(203,35): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+lib/DirectoryWatcher.ts(203,35): error TS2365: Operator '+' cannot be applied to types 'number | String' and 'number'.
 lib/DirectoryWatcher.ts(221,28): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(228,15): error TS7006: Parameter 'directoryPath' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(228,30): error TS7006: Parameter 'birthtime' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(228,41): error TS7006: Parameter 'initial' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(228,50): error TS7006: Parameter 'type' implicitly has an 'any' type.
 lib/DirectoryWatcher.ts(229,12): error TS2339: Property 'ignored' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(230,30): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(232,30): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
@@ -100,19 +77,15 @@ lib/DirectoryWatcher.ts(249,17): error TS2365: Operator '+' cannot be applied to
 lib/DirectoryWatcher.ts(249,26): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/DirectoryWatcher.ts(259,30): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(268,22): error TS7006: Parameter 'directoryPath' implicitly has an 'any' type.
 lib/DirectoryWatcher.ts(269,42): error TS2339: Property 'watcherManager' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(271,29): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(277,8): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(280,20): error TS7006: Parameter 'flag' implicitly has an 'any' type.
 lib/DirectoryWatcher.ts(281,12): error TS2339: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(282,9): error TS2339: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(283,13): error TS2339: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(284,34): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(288,45): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(290,11): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(296,8): error TS7006: Parameter 'filePath' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(296,18): error TS7006: Parameter 'startTime' implicitly has an 'any' type.
 lib/DirectoryWatcher.ts(298,17): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/DirectoryWatcher.ts(298,28): error TS2339: Property 'watchers' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(301,9): error TS2339: Property 'watchers' does not exist on type 'DirectoryWatcher'.
@@ -136,8 +109,6 @@ lib/DirectoryWatcher.ts(359,15): error TS2551: Property 'closed' does not exist 
 lib/DirectoryWatcher.ts(364,10): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(365,32): error TS2339: Property 'initialScanFinished' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(368,14): error TS2551: Property 'closed' does not exist on type 'DirectoryWatcher'. Did you mean 'close'?
-lib/DirectoryWatcher.ts(375,15): error TS7006: Parameter 'eventType' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(375,26): error TS7006: Parameter 'filename' implicitly has an 'any' type.
 lib/DirectoryWatcher.ts(376,12): error TS2551: Property 'closed' does not exist on type 'DirectoryWatcher'. Did you mean 'close'?
 lib/DirectoryWatcher.ts(386,43): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(387,12): error TS2339: Property 'ignored' does not exist on type 'DirectoryWatcher'.
@@ -157,15 +128,11 @@ lib/DirectoryWatcher.ts(411,44): error TS2339: Property 'path' does not exist on
 lib/DirectoryWatcher.ts(413,33): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(419,11): error TS2339: Property 'lastWatchEvent' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(445,9): error TS2339: Property '_activeEvents' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(449,17): error TS7006: Parameter 'err' implicitly has an 'any' type.
 lib/DirectoryWatcher.ts(450,12): error TS2551: Property 'closed' does not exist on type 'DirectoryWatcher'. Did you mean 'close'?
-lib/DirectoryWatcher.ts(459,15): error TS7006: Parameter 'err' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(465,14): error TS7006: Parameter 'err' implicitly has an 'any' type.
 lib/DirectoryWatcher.ts(473,12): error TS2339: Property 'polledWatching' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(474,9): error TS2339: Property 'timeout' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(475,14): error TS2551: Property 'closed' does not exist on type 'DirectoryWatcher'. Did you mean 'close'?
 lib/DirectoryWatcher.ts(477,12): error TS2339: Property 'polledWatching' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(481,21): error TS7006: Parameter 'reason' implicitly has an 'any' type.
 lib/DirectoryWatcher.ts(482,12): error TS2551: Property 'watcher' does not exist on type 'DirectoryWatcher'. Did you mean 'watch'?
 lib/DirectoryWatcher.ts(483,9): error TS2551: Property 'watcher' does not exist on type 'DirectoryWatcher'. Did you mean 'watch'?
 lib/DirectoryWatcher.ts(484,9): error TS2551: Property 'watcher' does not exist on type 'DirectoryWatcher'. Did you mean 'watch'?
@@ -189,7 +156,6 @@ lib/DirectoryWatcher.ts(514,15): error TS2551: Property 'watcher' does not exist
 lib/DirectoryWatcher.ts(519,31): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(520,29): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(524,9): error TS2339: Property 'parentWatcher' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(530,9): error TS7006: Parameter 'initial' implicitly has an 'any' type.
 lib/DirectoryWatcher.ts(531,12): error TS2339: Property 'scanning' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(532,13): error TS2339: Property 'scanAgain' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(533,24): error TS2339: Property 'scanAgainInitial' does not exist on type 'DirectoryWatcher'.
@@ -201,10 +167,6 @@ lib/DirectoryWatcher.ts(542,22): error TS2339: Property 'timeout' does not exist
 lib/DirectoryWatcher.ts(543,9): error TS2339: Property 'timeout' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(546,13): error TS2551: Property 'closed' does not exist on type 'DirectoryWatcher'. Did you mean 'close'?
 lib/DirectoryWatcher.ts(547,20): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(547,26): error TS2345: Argument of type '(err: Object, items: any) => void' is not assignable to parameter of type '(err: ErrnoException | null, files: string[]) => void'.
-  Types of parameters 'err' and 'err' are incompatible.
-    Type 'ErrnoException | null' is not assignable to type 'Object'.
-      Type 'null' is not assignable to type 'Object'.
 lib/DirectoryWatcher.ts(547,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/DirectoryWatcher.ts(548,14): error TS2551: Property 'closed' does not exist on type 'DirectoryWatcher'. Did you mean 'close'?
 lib/DirectoryWatcher.ts(550,14): error TS2339: Property 'code' does not exist on type 'Object'.
@@ -235,10 +197,9 @@ lib/DirectoryWatcher.ts(618,15): error TS2339: Property 'scanAgain' does not exi
 lib/DirectoryWatcher.ts(619,12): error TS2339: Property 'scanAgain' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(620,24): error TS2339: Property 'scanAgainInitial' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(622,12): error TS2339: Property 'scanning' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(627,25): error TS2345: Argument of type '(err2: HTMLElement, stats: any) => void' is not assignable to parameter of type '(err: ErrnoException | null, stats: Stats) => void'.
+lib/DirectoryWatcher.ts(627,25): error TS2345: Argument of type '(err2: HTMLElement, stats: any) => void' is not assignable to parameter of type '(err: ErrnoException, stats: Stats) => void'.
   Types of parameters 'err2' and 'err' are incompatible.
-    Type 'ErrnoException | null' is not assignable to type 'HTMLElement'.
-      Type 'null' is not assignable to type 'HTMLElement'.
+    Type 'ErrnoException' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lib/DirectoryWatcher.ts(627,52): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/DirectoryWatcher.ts(628,16): error TS2551: Property 'closed' does not exist on type 'DirectoryWatcher'. Did you mean 'close'?
 lib/DirectoryWatcher.ts(631,14): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
@@ -251,23 +212,14 @@ lib/DirectoryWatcher.ts(673,31): error TS2339: Property 'lastWatchEvent' does no
 lib/DirectoryWatcher.ts(674,36): error TS2339: Property 'files' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(676,24): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/DirectoryWatcher.ts(677,4): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 lib/DirectoryWatcher.ts(679,12): error TS2339: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(680,25): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(683,27): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 lib/DirectoryWatcher.ts(684,26): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/DirectoryWatcher.ts(685,6): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-lib/DirectoryWatcher.ts(688,4): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 lib/DirectoryWatcher.ts(688,13): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(690,13): error TS2339: Property 'initialScan' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(691,32): error TS2339: Property 'watchers' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(694,53): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 lib/DirectoryWatcher.ts(695,11): error TS2538: Type 'String' cannot be used as an index type.
-lib/DirectoryWatcher.ts(703,25): error TS7006: Parameter 'fileTimestamps' implicitly has an 'any' type.
-lib/DirectoryWatcher.ts(703,41): error TS7006: Parameter 'directoryTimestamps' implicitly has an 'any' type.
 lib/DirectoryWatcher.ts(704,31): error TS2339: Property 'lastWatchEvent' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(705,36): error TS2339: Property 'files' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(707,24): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
@@ -309,7 +261,6 @@ lib/DirectoryWatcher.ts(784,33): error TS2362: The left-hand side of an arithmet
 lib/LinkResolver.ts(11,7): error TS2739: Type 'Set<string>' is missing the following properties from type 'Error': name, message
 lib/LinkResolver.ts(14,51): error TS2339: Property 'add' does not exist on type 'Error'.
 lib/LinkResolver.ts(18,8): error TS2339: Property 'cache' does not exist on type 'LinkResolver'.
-lib/LinkResolver.ts(25,10): error TS7006: Parameter 'file' implicitly has an 'any' type.
 lib/LinkResolver.ts(26,35): error TS2339: Property 'cache' does not exist on type 'LinkResolver'.
 lib/LinkResolver.ts(30,9): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/LinkResolver.ts(33,10): error TS2740: Type 'readonly any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
@@ -338,22 +289,15 @@ lib/LinkResolver.ts(68,39): error TS2769: No overload matches this call.
       Property 'length' is missing in type 'Error' but required in type 'ArrayLike<unknown>'.
 lib/LinkResolver.ts(92,9): error TS2339: Property 'cache' does not exist on type 'LinkResolver'.
 lib/LinkResolver.ts(95,25): error TS2339: Property 'has' does not exist on type 'Error'.
-lib/LinkResolver.ts(95,29): error TS2571: Object is of type 'unknown'.
 lib/LinkResolver.ts(102,9): error TS2339: Property 'cache' does not exist on type 'LinkResolver'.
 lib/getWatcherManager.ts(8,8): error TS1192: Module '"lib/DirectoryWatcher"' has no default export.
-lib/getWatcherManager.ts(11,14): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/getWatcherManager.ts(12,8): error TS2339: Property 'options' does not exist on type 'WatcherManager'.
 lib/getWatcherManager.ts(13,8): error TS2551: Property 'directoryWatchers' does not exist on type 'WatcherManager'. Did you mean 'getDirectoryWatcher'?
-lib/getWatcherManager.ts(16,22): error TS7006: Parameter 'directory' implicitly has an 'any' type.
 lib/getWatcherManager.ts(17,42): error TS2551: Property 'directoryWatchers' does not exist on type 'WatcherManager'. Did you mean 'getDirectoryWatcher'?
 lib/getWatcherManager.ts(19,84): error TS2339: Property 'options' does not exist on type 'WatcherManager'.
 lib/getWatcherManager.ts(20,9): error TS2551: Property 'directoryWatchers' does not exist on type 'WatcherManager'. Did you mean 'getDirectoryWatcher'?
 lib/getWatcherManager.ts(22,10): error TS2551: Property 'directoryWatchers' does not exist on type 'WatcherManager'. Did you mean 'getDirectoryWatcher'?
-lib/getWatcherManager.ts(29,12): error TS7006: Parameter 'p' implicitly has an 'any' type.
-lib/getWatcherManager.ts(29,15): error TS7006: Parameter 'startTime' implicitly has an 'any' type.
 lib/getWatcherManager.ts(30,9): error TS2322: Type 'string' is not assignable to type 'Number'.
-lib/getWatcherManager.ts(35,17): error TS7006: Parameter 'directory' implicitly has an 'any' type.
-lib/getWatcherManager.ts(35,28): error TS7006: Parameter 'startTime' implicitly has an 'any' type.
 lib/getWatcherManager.ts(40,7): error TS2739: Type 'WeakMap<object, any>' is missing the following properties from type 'Error': name, message
 lib/getWatcherManager.ts(46,57): error TS2339: Property 'get' does not exist on type 'Error'.
 lib/getWatcherManager.ts(49,18): error TS2339: Property 'set' does not exist on type 'Error'.
@@ -366,7 +310,6 @@ lib/reducePlan.ts(64,13): error TS2339: Property 'entries' does not exist on typ
 lib/reducePlan.ts(65,22): error TS2339: Property 'parent' does not exist on type 'Object'.
 lib/reducePlan.ts(73,29): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/reducePlan.ts(73,44): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/reducePlan.ts(74,7): error TS2322: Type 'undefined' is not assignable to type 'Object'.
 lib/reducePlan.ts(85,27): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/reducePlan.ts(86,8): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/reducePlan.ts(86,39): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -389,13 +332,11 @@ lib/reducePlan.ts(117,9): error TS2739: Type 'Set<any>' is missing the following
 lib/reducePlan.ts(118,22): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/reducePlan.ts(131,12): error TS2339: Property 'add' does not exist on type 'Error'.
 lib/watchEventSource.ts(14,7): error TS2739: Type 'Boolean' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-lib/watchEventSource.ts(17,3): error TS2532: Object is possibly 'undefined'.
 lib/watchEventSource.ts(19,32): error TS2304: Cannot find name 'WatcherManager'.
 lib/watchEventSource.ts(26,24): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/watchEventSource.ts(29,26): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/watchEventSource.ts(32,23): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/watchEventSource.ts(35,26): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/watchEventSource.ts(38,14): error TS7006: Parameter 'filePath' implicitly has an 'any' type.
 lib/watchEventSource.ts(39,8): error TS2339: Property 'filePath' does not exist on type 'DirectWatcher'.
 lib/watchEventSource.ts(40,8): error TS2339: Property 'watchers' does not exist on type 'DirectWatcher'.
 lib/watchEventSource.ts(41,8): error TS2339: Property 'watcher' does not exist on type 'DirectWatcher'.
@@ -405,9 +346,7 @@ lib/watchEventSource.ts(46,26): error TS2339: Property 'watchers' does not exist
 lib/watchEventSource.ts(51,26): error TS2339: Property 'watchers' does not exist on type 'DirectWatcher'.
 lib/watchEventSource.ts(57,26): error TS2339: Property 'watchers' does not exist on type 'DirectWatcher'.
 lib/watchEventSource.ts(62,3): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/watchEventSource.ts(65,6): error TS7006: Parameter 'watcher' implicitly has an 'any' type.
 lib/watchEventSource.ts(67,8): error TS2339: Property 'watchers' does not exist on type 'DirectWatcher'.
-lib/watchEventSource.ts(70,9): error TS7006: Parameter 'watcher' implicitly has an 'any' type.
 lib/watchEventSource.ts(71,8): error TS2339: Property 'watchers' does not exist on type 'DirectWatcher'.
 lib/watchEventSource.ts(72,12): error TS2339: Property 'watchers' does not exist on type 'DirectWatcher'.
 lib/watchEventSource.ts(73,31): error TS2339: Property 'filePath' does not exist on type 'DirectWatcher'.
@@ -415,7 +354,6 @@ lib/watchEventSource.ts(74,4): error TS2356: An arithmetic operand must be of ty
 lib/watchEventSource.ts(75,13): error TS2339: Property 'watcher' does not exist on type 'DirectWatcher'.
 lib/watchEventSource.ts(75,27): error TS2339: Property 'watcher' does not exist on type 'DirectWatcher'.
 lib/watchEventSource.ts(80,15): error TS2339: Property 'watchers' does not exist on type 'DirectWatcher'.
-lib/watchEventSource.ts(85,14): error TS7006: Parameter 'rootPath' implicitly has an 'any' type.
 lib/watchEventSource.ts(86,8): error TS2339: Property 'rootPath' does not exist on type 'RecursiveWatcher'.
 lib/watchEventSource.ts(88,8): error TS2339: Property 'mapWatcherToPath' does not exist on type 'RecursiveWatcher'.
 lib/watchEventSource.ts(90,8): error TS2339: Property 'mapPathToWatchers' does not exist on type 'RecursiveWatcher'.
@@ -432,8 +370,6 @@ lib/watchEventSource.ts(123,44): error TS2345: Argument of type 'Number' is not 
 lib/watchEventSource.ts(128,26): error TS2339: Property 'mapWatcherToPath' does not exist on type 'RecursiveWatcher'.
 lib/watchEventSource.ts(134,26): error TS2339: Property 'mapWatcherToPath' does not exist on type 'RecursiveWatcher'.
 lib/watchEventSource.ts(139,3): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/watchEventSource.ts(147,6): error TS7006: Parameter 'filePath' implicitly has an 'any' type.
-lib/watchEventSource.ts(147,16): error TS7006: Parameter 'watcher' implicitly has an 'any' type.
 lib/watchEventSource.ts(149,47): error TS2339: Property 'rootPath' does not exist on type 'RecursiveWatcher'.
 lib/watchEventSource.ts(150,8): error TS2339: Property 'mapWatcherToPath' does not exist on type 'RecursiveWatcher'.
 lib/watchEventSource.ts(151,38): error TS2339: Property 'mapPathToWatchers' does not exist on type 'RecursiveWatcher'.
@@ -441,7 +377,6 @@ lib/watchEventSource.ts(153,10): error TS2322: Type 'Set<unknown>' is not assign
 lib/watchEventSource.ts(154,11): error TS2339: Property 'add' does not exist on type 'Error'.
 lib/watchEventSource.ts(155,9): error TS2339: Property 'mapPathToWatchers' does not exist on type 'RecursiveWatcher'.
 lib/watchEventSource.ts(157,8): error TS2554: Expected 2 arguments, but got 1.
-lib/watchEventSource.ts(161,9): error TS7006: Parameter 'watcher' implicitly has an 'any' type.
 lib/watchEventSource.ts(162,32): error TS2339: Property 'mapWatcherToPath' does not exist on type 'RecursiveWatcher'.
 lib/watchEventSource.ts(164,8): error TS2339: Property 'mapWatcherToPath' does not exist on type 'RecursiveWatcher'.
 lib/watchEventSource.ts(165,14): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
@@ -495,37 +430,28 @@ lib/watchpack.ts(60,20): error TS2314: Generic type 'Array<T>' requires 1 type a
 lib/watchpack.ts(60,43): error TS2339: Property 'get' does not exist on type 'Error'.
 lib/watchpack.ts(62,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/watchpack.ts(63,17): error TS2339: Property 'set' does not exist on type 'Error'.
-lib/watchpack.ts(68,14): error TS7006: Parameter 'watchpack' implicitly has an 'any' type.
-lib/watchpack.ts(68,25): error TS7006: Parameter 'watcher' implicitly has an 'any' type.
-lib/watchpack.ts(68,34): error TS7006: Parameter 'files' implicitly has an 'any' type.
 lib/watchpack.ts(69,8): error TS2339: Property 'files' does not exist on type 'WatchpackFileWatcher'.
 lib/watchpack.ts(70,8): error TS2339: Property 'watcher' does not exist on type 'WatchpackFileWatcher'.
 lib/watchpack.ts(72,28): error TS2339: Property 'files' does not exist on type 'WatchpackFileWatcher'.
 lib/watchpack.ts(78,28): error TS2339: Property 'files' does not exist on type 'WatchpackFileWatcher'.
 lib/watchpack.ts(83,28): error TS2339: Property 'files' does not exist on type 'WatchpackFileWatcher'.
-lib/watchpack.ts(89,9): error TS7006: Parameter 'files' implicitly has an 'any' type.
 lib/watchpack.ts(91,13): error TS2339: Property 'files' does not exist on type 'WatchpackFileWatcher'.
 lib/watchpack.ts(92,10): error TS2339: Property 'files' does not exist on type 'WatchpackFileWatcher'.
 lib/watchpack.ts(93,20): error TS2339: Property 'files' does not exist on type 'WatchpackFileWatcher'.
 lib/watchpack.ts(94,10): error TS2339: Property 'files' does not exist on type 'WatchpackFileWatcher'.
 lib/watchpack.ts(97,9): error TS2339: Property 'files' does not exist on type 'WatchpackFileWatcher'.
 lib/watchpack.ts(102,8): error TS2339: Property 'watcher' does not exist on type 'WatchpackFileWatcher'.
-lib/watchpack.ts(107,14): error TS7006: Parameter 'watchpack' implicitly has an 'any' type.
-lib/watchpack.ts(107,25): error TS7006: Parameter 'watcher' implicitly has an 'any' type.
-lib/watchpack.ts(107,34): error TS7006: Parameter 'directories' implicitly has an 'any' type.
 lib/watchpack.ts(108,8): error TS2339: Property 'directories' does not exist on type 'WatchpackDirectoryWatcher'.
 lib/watchpack.ts(109,8): error TS2339: Property 'watcher' does not exist on type 'WatchpackDirectoryWatcher'.
 lib/watchpack.ts(111,28): error TS2339: Property 'directories' does not exist on type 'WatchpackDirectoryWatcher'.
 lib/watchpack.ts(116,28): error TS2339: Property 'directories' does not exist on type 'WatchpackDirectoryWatcher'.
 lib/watchpack.ts(121,28): error TS2339: Property 'directories' does not exist on type 'WatchpackDirectoryWatcher'.
-lib/watchpack.ts(127,9): error TS7006: Parameter 'directories' implicitly has an 'any' type.
 lib/watchpack.ts(129,13): error TS2339: Property 'directories' does not exist on type 'WatchpackDirectoryWatcher'.
 lib/watchpack.ts(130,10): error TS2339: Property 'directories' does not exist on type 'WatchpackDirectoryWatcher'.
 lib/watchpack.ts(131,20): error TS2339: Property 'directories' does not exist on type 'WatchpackDirectoryWatcher'.
 lib/watchpack.ts(132,10): error TS2339: Property 'directories' does not exist on type 'WatchpackDirectoryWatcher'.
 lib/watchpack.ts(135,9): error TS2339: Property 'directories' does not exist on type 'WatchpackDirectoryWatcher'.
 lib/watchpack.ts(140,8): error TS2339: Property 'watcher' does not exist on type 'WatchpackDirectoryWatcher'.
-lib/watchpack.ts(145,14): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/watchpack.ts(148,8): error TS2339: Property 'options' does not exist on type 'Watchpack'.
 lib/watchpack.ts(149,8): error TS2339: Property 'aggregateTimeout' does not exist on type 'Watchpack'.
 lib/watchpack.ts(153,8): error TS2339: Property 'watcherOptions' does not exist on type 'Watchpack'.
@@ -539,16 +465,12 @@ lib/watchpack.ts(159,8): error TS2551: Property 'paused' does not exist on type 
 lib/watchpack.ts(160,8): error TS2339: Property 'aggregatedChanges' does not exist on type 'Watchpack'.
 lib/watchpack.ts(161,8): error TS2339: Property 'aggregatedRemovals' does not exist on type 'Watchpack'.
 lib/watchpack.ts(162,8): error TS2339: Property 'aggregateTimer' does not exist on type 'Watchpack'.
-lib/watchpack.ts(166,8): error TS7006: Parameter 'arg1' implicitly has an 'any' type.
-lib/watchpack.ts(166,14): error TS7006: Parameter 'arg2' implicitly has an 'any' type.
-lib/watchpack.ts(166,20): error TS7006: Parameter 'arg3' implicitly has an 'any' type.
 lib/watchpack.ts(167,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/watchpack.ts(167,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/watchpack.ts(181,8): error TS2551: Property 'paused' does not exist on type 'Watchpack'. Did you mean 'pause'?
 lib/watchpack.ts(182,23): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/watchpack.ts(182,34): error TS2339: Property 'fileWatchers' does not exist on type 'Watchpack'.
-lib/watchpack.ts(183,28): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/watchpack.ts(183,39): error TS2339: Property 'directoryWatchers' does not exist on type 'Watchpack'.
+lib/watchpack.ts(183,42): error TS2339: Property 'directoryWatchers' does not exist on type 'Watchpack'.
 lib/watchpack.ts(184,34): error TS2339: Property 'watcherOptions' does not exist on type 'Watchpack'.
 lib/watchpack.ts(186,36): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/watchpack.ts(187,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -560,10 +482,13 @@ lib/watchpack.ts(201,23): error TS2488: Type 'Function' must have a '[Symbol.ite
 lib/watchpack.ts(214,21): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 lib/watchpack.ts(236,23): error TS2488: Type 'Function' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/watchpack.ts(243,19): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+lib/watchpack.ts(265,26): error TS2488: Type 'Object' must have a '[Symbol.iterator]()' method that returns an iterator.
+lib/watchpack.ts(269,23): error TS2339: Property 'delete' does not exist on type 'Object'.
 lib/watchpack.ts(278,20): error TS2304: Cannot find name 'Watcher'.
 lib/watchpack.ts(278,35): error TS2339: Property 'watcherManager' does not exist on type 'Watchpack'.
 lib/watchpack.ts(284,20): error TS2304: Cannot find name 'Watcher'.
 lib/watchpack.ts(284,35): error TS2339: Property 'watcherManager' does not exist on type 'Watchpack'.
+lib/watchpack.ts(286,24): error TS2339: Property 'set' does not exist on type 'Object'.
 lib/watchpack.ts(293,8): error TS2339: Property '_missing' does not exist on type 'Watchpack'.
 lib/watchpack.ts(294,8): error TS2339: Property 'startTime' does not exist on type 'Watchpack'.
 lib/watchpack.ts(298,8): error TS2551: Property 'paused' does not exist on type 'Watchpack'. Did you mean 'pause'?
@@ -580,13 +505,7 @@ lib/watchpack.ts(312,9): error TS2322: Type 'Set<unknown>' is not assignable to 
 lib/watchpack.ts(313,25): error TS2339: Property 'fileWatchers' does not exist on type 'Watchpack'.
 lib/watchpack.ts(314,25): error TS2339: Property 'directoryWatchers' does not exist on type 'Watchpack'.
 lib/watchpack.ts(316,19): error TS2488: Type 'HTMLElement' must have a '[Symbol.iterator]()' method that returns an iterator.
-lib/watchpack.ts(318,43): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-lib/watchpack.ts(318,55): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 lib/watchpack.ts(324,14): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/watchpack.ts(329,25): error TS7006: Parameter 'fileTimestamps' implicitly has an 'any' type.
-lib/watchpack.ts(329,41): error TS7006: Parameter 'directoryTimestamps' implicitly has an 'any' type.
 lib/watchpack.ts(330,9): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
 lib/watchpack.ts(331,25): error TS2339: Property 'fileWatchers' does not exist on type 'Watchpack'.
 lib/watchpack.ts(332,25): error TS2339: Property 'directoryWatchers' does not exist on type 'Watchpack'.
@@ -598,10 +517,6 @@ lib/watchpack.ts(344,34): error TS2339: Property 'aggregatedChanges' does not ex
 lib/watchpack.ts(345,33): error TS2339: Property 'aggregatedRemovals' does not exist on type 'Watchpack'.
 lib/watchpack.ts(346,8): error TS2339: Property 'aggregatedChanges' does not exist on type 'Watchpack'.
 lib/watchpack.ts(347,8): error TS2339: Property 'aggregatedRemovals' does not exist on type 'Watchpack'.
-lib/watchpack.ts(351,12): error TS7006: Parameter 'item' implicitly has an 'any' type.
-lib/watchpack.ts(351,18): error TS7006: Parameter 'mtime' implicitly has an 'any' type.
-lib/watchpack.ts(351,25): error TS7006: Parameter 'file' implicitly has an 'any' type.
-lib/watchpack.ts(351,31): error TS7006: Parameter 'type' implicitly has an 'any' type.
 lib/watchpack.ts(353,13): error TS2551: Property 'paused' does not exist on type 'Watchpack'. Did you mean 'pause'?
 lib/watchpack.ts(355,13): error TS2339: Property 'aggregateTimer' does not exist on type 'Watchpack'.
 lib/watchpack.ts(355,47): error TS2339: Property 'aggregateTimer' does not exist on type 'Watchpack'.
@@ -609,9 +524,6 @@ lib/watchpack.ts(356,9): error TS2339: Property 'aggregateTimer' does not exist 
 lib/watchpack.ts(356,59): error TS2339: Property 'aggregateTimeout' does not exist on type 'Watchpack'.
 lib/watchpack.ts(358,8): error TS2339: Property 'aggregatedRemovals' does not exist on type 'Watchpack'.
 lib/watchpack.ts(359,8): error TS2339: Property 'aggregatedChanges' does not exist on type 'Watchpack'.
-lib/watchpack.ts(362,12): error TS7006: Parameter 'item' implicitly has an 'any' type.
-lib/watchpack.ts(362,18): error TS7006: Parameter 'file' implicitly has an 'any' type.
-lib/watchpack.ts(362,24): error TS7006: Parameter 'type' implicitly has an 'any' type.
 lib/watchpack.ts(364,13): error TS2551: Property 'paused' does not exist on type 'Watchpack'. Did you mean 'pause'?
 lib/watchpack.ts(366,13): error TS2339: Property 'aggregateTimer' does not exist on type 'Watchpack'.
 lib/watchpack.ts(366,47): error TS2339: Property 'aggregateTimer' does not exist on type 'Watchpack'.
@@ -631,13 +543,11 @@ playground/watch-folder.ts(14,45): error TS2345: Argument of type 'String' is no
 playground/watch-folder.ts(17,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 playground/watch-folder.ts(20,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-playground/watch-folder.ts(22,4): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 playground/watch-folder.ts(22,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 playground/watch-folder.ts(22,45): error TS2538: Type 'String' cannot be used as an index type.
-playground/watch-folder.ts(32,24): error TS2345: Argument of type 'never[]' is not assignable to parameter of type 'String'.
-  Type 'never[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
+playground/watch-folder.ts(32,24): error TS2345: Argument of type 'undefined[]' is not assignable to parameter of type 'String'.
+  Type 'undefined[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 playground/watch-folder.ts(33,27): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'String'.
   Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 playground/watch-folder.ts(34,12): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.

@@ -279,7 +279,7 @@ function doVisit(lo: String, hi: String, compare: Function, visit: Function, nod
 }
 
 
-proto.forEach = function rbTreeForEach(visit: String, lo: String, hi: String): Promise {
+proto.forEach = function rbTreeForEach(visit: String, lo: String, hi: String): String {
   if(!this.root) {
     return
   }

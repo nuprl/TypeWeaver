@@ -92,7 +92,7 @@ export class Parser {
   }
 
   parse() {
-    let node: TokenType = this.options.program || this.startNode()
+    let node: Node = this.options.program || this.startNode()
     this.nextToken()
     return this.parseTopLevel(node)
   }

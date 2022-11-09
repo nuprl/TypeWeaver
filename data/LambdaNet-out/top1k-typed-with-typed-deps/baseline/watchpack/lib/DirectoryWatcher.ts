@@ -235,7 +235,7 @@ class DirectoryWatcher extends EventEmitter {
 				);
 			}
 		} else {
-			const old: String = this.directories.get(directoryPath);
+			const old: RecursiveWatcher = this.directories.get(directoryPath);
 			if (!old) {
 				const now: Number = Date.now();
 

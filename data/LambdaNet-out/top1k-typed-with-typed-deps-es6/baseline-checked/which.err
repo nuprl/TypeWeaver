@@ -12,13 +12,14 @@ which.ts(62,36): error TS2345: Argument of type 'String' is not assignable to pa
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 which.ts(63,53): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-which.ts(71,27): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+which.ts(71,27): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
 which.ts(72,33): error TS2538: Type 'Number' cannot be used as an index type.
 which.ts(73,11): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.
-which.ts(73,45): error TS2345: Argument of type '(er: Boolean, is: Boolean) => any' is not assignable to parameter of type '(error: ErrnoException | undefined, isExe: boolean) => void'.
+which.ts(73,45): error TS2345: Argument of type '(er: Boolean, is: Boolean) => any' is not assignable to parameter of type '(error: ErrnoException, isExe: boolean) => void'.
   Types of parameters 'er' and 'error' are incompatible.
-    Type 'ErrnoException | undefined' is not assignable to type 'Boolean'.
-      Type 'undefined' is not assignable to type 'Boolean'.
+    Type 'ErrnoException' is not assignable to type 'Boolean'.
+      The types returned by 'valueOf()' are incompatible between these types.
+        Type 'Object' is not assignable to type 'boolean'.
 which.ts(76,22): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.
 which.ts(78,26): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.
 which.ts(80,36): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.

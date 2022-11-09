@@ -66,6 +66,6 @@ const deburredLetters: Object = {
  * @param {string} letter The matched letter to deburr.
  * @returns {string} Returns the deburred letter.
  */
-const deburrLetter: Array = basePropertyOf(deburredLetters)
+const deburrLetter: Function = basePropertyOf(deburredLetters)
 
 export default deburrLetter

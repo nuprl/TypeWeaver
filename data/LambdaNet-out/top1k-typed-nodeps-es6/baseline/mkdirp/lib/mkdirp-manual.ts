@@ -12,7 +12,7 @@ const mkdirpManual: Function = (path: String, opts: HTMLElement, made: String) =
     })
   }
 
-  return opts.mkdirAsync(path, opts).then(() => made || path, (er: Object) => {
+  return opts.mkdirAsync(path, opts).then(() => made || path, (er: HTMLElement) => {
     if (er.code === 'ENOENT')
       return mkdirpManual(parent, opts)
         .then((made: String) => mkdirpManual(path, opts, made))

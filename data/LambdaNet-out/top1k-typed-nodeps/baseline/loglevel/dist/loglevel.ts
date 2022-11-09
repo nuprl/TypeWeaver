@@ -257,7 +257,7 @@
     var defaultLogger: Object = new Logger();
 
     var _loggersByName: Object = {};
-    defaultLogger.getLogger = function getLogger(name: String): Object {
+    defaultLogger.getLogger = function getLogger(name: String): Promise {
         if ((typeof name !== "symbol" && typeof name !== "string") || name === "") {
           throw new TypeError("You must supply a name when creating a logger.");
         }

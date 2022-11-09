@@ -173,7 +173,7 @@ function debounce(func: Function, wait: Number, options: Object): Hash {
     lastArgs = lastCallTime = lastThis = timerId = undefined
   }
 
-  function flush(): Stack {
+  function flush(): Hash {
     return timerId === undefined ? result : trailingEdge(Date.now())
   }
 

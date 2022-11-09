@@ -6,19 +6,9 @@ index.ts(54,39): error TS2345: Argument of type 'String' is not assignable to pa
 index.ts(58,45): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 index.ts(67,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(114,7): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-index.ts(120,22): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-index.ts(121,25): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 index.ts(127,29): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 index.ts(128,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-index.ts(131,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-index.ts(131,39): error TS2454: Variable 'suffix' is used before being assigned.
+index.ts(131,10): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(139,69): error TS2304: Cannot find name 'Void'.
-index.ts(140,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(141,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(142,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 

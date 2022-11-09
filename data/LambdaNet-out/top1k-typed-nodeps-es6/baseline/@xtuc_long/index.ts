@@ -212,7 +212,7 @@ Long.fromNumber = fromNumber;
  * @returns {!Long}
  * @inner
  */
-function fromBits(lowBits: Function, highBits: Number, unsigned: Number): String {
+function fromBits(lowBits: Number, highBits: Number, unsigned: Number): String {
   return new Long(lowBits, highBits, unsigned);
 }
 
@@ -370,7 +370,7 @@ var TWO_PWR_24: String = fromInt(TWO_PWR_24_DBL);
  * @type {!Long}
  * @inner
  */
-var ZERO: Function = fromInt(0);
+var ZERO: Object = fromInt(0);
 
 /**
  * Signed zero.
@@ -517,7 +517,7 @@ LongPrototype.toString = function toString(radix: String): String {
   // Do several (6) digits each time through the loop, so as to
   // minimize the calls to the very expensive emulated div.
   var radixToPower: String = fromNumber(pow_dbl(radix, 6), this.unsigned),
-    rem: Array = this;
+    rem: HTMLElement = this;
   var result: String = '';
   while (true) {
     var remDiv: HTMLElement = rem.div(radixToPower),
@@ -575,7 +575,7 @@ LongPrototype.getLowBitsUnsigned = function getLowBitsUnsigned(): Boolean {
  * @this {!Long}
  * @returns {number}
  */
-LongPrototype.getNumBitsAbs = function getNumBitsAbs(): Number {
+LongPrototype.getNumBitsAbs = function getNumBitsAbs(): Boolean {
   if (this.isNegative()) // Unsigned Longs are never negative
     return this.eq(MIN_VALUE) ? 64 : this.neg().getNumBitsAbs();
   var val: String = this.high != 0 ? this.high : this.low;
@@ -887,7 +887,7 @@ LongPrototype.sub = LongPrototype.subtract;
  * @param {!Long|number|string} multiplier Multiplier
  * @returns {!Long} Product
  */
-LongPrototype.multiply = function multiply(multiplier: String): String {
+LongPrototype.multiply = function multiply(multiplier: String): Array {
   if (this.isZero())
     return this;
   if (!isLong(multiplier))
@@ -1263,7 +1263,7 @@ LongPrototype.shr = LongPrototype.shiftRight;
  * @param {number|!Long} numBits Number of bits
  * @returns {!Long} Shifted Long
  */
-LongPrototype.shiftRightUnsigned = function shiftRightUnsigned(numBits: Number): Promise {
+LongPrototype.shiftRightUnsigned = function shiftRightUnsigned(numBits: Number): Array {
   if (isLong(numBits)) numBits = numBits.toInt();
   if ((numBits &= 63) === 0) return this;
   if (numBits < 32) return fromBits((this.low >>> numBits) | (this.high << (32 - numBits)), this.high >>> numBits, this.unsigned);
@@ -1293,7 +1293,7 @@ LongPrototype.shr_u = LongPrototype.shiftRightUnsigned;
  * @param {number|!Long} numBits Number of bits
  * @returns {!Long} Rotated Long
  */
-LongPrototype.rotateLeft = function rotateLeft(numBits: Number): Array {
+LongPrototype.rotateLeft = function rotateLeft(numBits: Number): String {
   var b: Number;
   if (isLong(numBits)) numBits = numBits.toInt();
   if ((numBits &= 63) === 0) return this;

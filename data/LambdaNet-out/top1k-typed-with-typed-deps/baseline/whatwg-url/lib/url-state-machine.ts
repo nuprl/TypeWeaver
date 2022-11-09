@@ -478,7 +478,7 @@ function isNormalizedWindowsDriveLetter(string: String): Boolean {
   return /^[A-Za-z]:$/u.test(string);
 }
 
-function URLStateMachine(input: Element, base: String, encodingOverride: Number, url: String, stateOverride: String): Void {
+function URLStateMachine(input: Element, base: String, encodingOverride: Number, url: String, stateOverride: Object): Void {
   this.pointer = 0;
   this.input = input;
   this.base = base || null;

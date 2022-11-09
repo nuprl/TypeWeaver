@@ -210,7 +210,7 @@ function drainQueue(): Void {
     var timeout: String = runTimeout(cleanUpNextTick);
     draining = true;
 
-    var len: Number = queue.length;
+    var len: Boolean = queue.length;
     while(len) {
         currentQueue = queue;
         queue = [];
@@ -227,7 +227,7 @@ function drainQueue(): Void {
     runClearTimeout(timeout);
 }
 
-process.nextTick = function (fun: Array) {
+process.nextTick = function (fun: String) {
     var args: Object = new Array(arguments.length - 1);
     if (arguments.length > 1) {
         for (var i = 1; i < arguments.length; i++) {
@@ -241,7 +241,7 @@ process.nextTick = function (fun: Array) {
 };
 
 // v8 likes predictible objects
-function Item(fun: Function, array: Array): String {
+function Item(fun: Function, array: Array): Void {
     this.fun = fun;
     this.array = array;
 }
@@ -1460,7 +1460,7 @@ Buffer.prototype.readUInt16BE = function readUInt16BE (offset: Number, noAssert:
   return (this[offset] << 8) | this[offset + 1]
 }
 
-Buffer.prototype.readUInt32LE = function readUInt32LE (offset: Number, noAssert: Boolean): String {
+Buffer.prototype.readUInt32LE = function readUInt32LE (offset: String, noAssert: Boolean): String {
   if (!noAssert) checkOffset(offset, 4, this.length)
 
   return ((this[offset]) |
@@ -1469,7 +1469,7 @@ Buffer.prototype.readUInt32LE = function readUInt32LE (offset: Number, noAssert:
       (this[offset + 3] * 0x1000000)
 }
 
-Buffer.prototype.readUInt32BE = function readUInt32BE (offset: Number, noAssert: Boolean): String {
+Buffer.prototype.readUInt32BE = function readUInt32BE (offset: String, noAssert: Boolean): String {
   if (!noAssert) checkOffset(offset, 4, this.length)
 
   return (this[offset] * 0x1000000) +
@@ -1532,7 +1532,7 @@ Buffer.prototype.readInt16BE = function readInt16BE (offset: Number, noAssert: B
   return (val & 0x8000) ? val | 0xFFFF0000 : val
 }
 
-Buffer.prototype.readInt32LE = function readInt32LE (offset: Number, noAssert: Boolean): Number {
+Buffer.prototype.readInt32LE = function readInt32LE (offset: String, noAssert: Boolean): Number {
   if (!noAssert) checkOffset(offset, 4, this.length)
 
   return (this[offset]) |
@@ -1550,12 +1550,12 @@ Buffer.prototype.readInt32BE = function readInt32BE (offset: Number, noAssert: B
     (this[offset + 3])
 }
 
-Buffer.prototype.readFloatLE = function readFloatLE (offset: String, noAssert: Boolean): Boolean {
+Buffer.prototype.readFloatLE = function readFloatLE (offset: String, noAssert: Boolean): Void {
   if (!noAssert) checkOffset(offset, 4, this.length)
   return ieee754.read(this, offset, true, 23, 4)
 }
 
-Buffer.prototype.readFloatBE = function readFloatBE (offset: String, noAssert: Boolean): Boolean {
+Buffer.prototype.readFloatBE = function readFloatBE (offset: String, noAssert: Boolean): Void {
   if (!noAssert) checkOffset(offset, 4, this.length)
   return ieee754.read(this, offset, false, 23, 4)
 }
@@ -1565,7 +1565,7 @@ Buffer.prototype.readDoubleLE = function readDoubleLE (offset: String, noAssert:
   return ieee754.read(this, offset, true, 52, 8)
 }
 
-Buffer.prototype.readDoubleBE = function readDoubleBE (offset: String, noAssert: Boolean): Boolean {
+Buffer.prototype.readDoubleBE = function readDoubleBE (offset: String, noAssert: Boolean): Void {
   if (!noAssert) checkOffset(offset, 8, this.length)
   return ieee754.read(this, offset, false, 52, 8)
 }
@@ -1576,7 +1576,7 @@ function checkInt (buf: Array, value: Number, offset: Number, ext: String, max: 
   if (offset + ext > buf.length) throw new RangeError('Index out of range')
 }
 
-Buffer.prototype.writeUIntLE = function writeUIntLE (value: Number, offset: Number, byteLength: Number, noAssert: Boolean): String {
+Buffer.prototype.writeUIntLE = function writeUIntLE (value: Number, offset: Number, byteLength: Number, noAssert: Boolean): Number {
   value = +value
   offset = offset | 0
   byteLength = byteLength | 0
@@ -1776,7 +1776,7 @@ Buffer.prototype.writeInt16BE = function writeInt16BE (value: Number, offset: Nu
   return offset + 2
 }
 
-Buffer.prototype.writeInt32LE = function writeInt32LE (value: Number, offset: Number, noAssert: Boolean): String {
+Buffer.prototype.writeInt32LE = function writeInt32LE (value: Number, offset: Number, noAssert: Boolean): Number {
   value = +value
   offset = offset | 0
   if (!noAssert) checkInt(this, value, offset, 4, 0x7fffffff, -0x80000000)
@@ -2351,7 +2351,7 @@ exports.isPrimitive = isPrimitive;
 
 exports.isBuffer = Buffer.isBuffer;
 
-function objectToString(o: String): String {
+function objectToString(o: String): Boolean {
   return Object.prototype.toString.call(o);
 }
 
@@ -2506,8 +2506,8 @@ SafeBuffer.allocUnsafeSlow = function (size: String) {
 
 
 
-var punycode: Boolean = __webpack_require__(25);
-var util: Boolean = __webpack_require__(27);
+var punycode: Void = __webpack_require__(25);
+var util: Void = __webpack_require__(27);
 
 exports.parse = urlParse;
 exports.resolve = urlResolve;
@@ -2584,7 +2584,7 @@ var protocolPattern: RegExp = /^([a-z0-9.+-]+:)/i,
     },
     querystring: Void = __webpack_require__(28);
 
-function urlParse(url: String, parseQueryString: String, slashesDenoteHost: Number): String {
+function urlParse(url: String, parseQueryString: String, slashesDenoteHost: Boolean): String {
   if (url && util.isObject(url) && url instanceof Url) return url;
 
   var u: String = new Url;
@@ -3032,7 +3032,7 @@ Url.prototype.resolveObject = function(relative: String) {
       ),
       mustEndAbs: Number = (isRelAbs || isSourceAbs ||
                     (result.host && relative.pathname)),
-      removeAllDots: Boolean = mustEndAbs,
+      removeAllDots: Number = mustEndAbs,
       srcPath: Array = result.pathname && result.pathname.split('/') || [],
       relPath: Array = relative.pathname && relative.pathname.split('/') || [],
       psychotic: Boolean = result.protocol && !slashedProtocol[result.protocol];
@@ -3771,7 +3771,7 @@ http.request = function (opts: Object, cb: Boolean) {
 
 	// Also valid opts.auth, opts.mode
 
-	var req: Object = new ClientRequest(opts)
+	var req: HTMLElement = new ClientRequest(opts)
 	if (cb)
 		req.on('response', cb)
 	return req
@@ -3919,7 +3919,7 @@ var rStates: Object = exports.readyStates = {
 	DONE: 4
 }
 
-var IncomingMessage: Element = exports.IncomingMessage = function (xhr: Object, response: HTMLElement, mode: Number, fetchTimer: String) {
+var IncomingMessage: HTMLInputElement = exports.IncomingMessage = function (xhr: Object, response: HTMLElement, mode: Number, fetchTimer: String) {
 	var self: Object = this
 	stream.Readable.call(self)
 
@@ -4601,7 +4601,7 @@ Readable.prototype.read = function (n: Number) {
     if (!state.reading) n = howMuchToRead(nOrig, state);
   }
 
-  var ret: String;
+  var ret: Function;
   if (n > 0) ret = fromList(n, state);else ret = null;
 
   if (ret === null) {
@@ -4665,7 +4665,7 @@ function emitReadable_(stream: String): Void {
 // it's in progress.
 // However, if we're not ended, or reading, and the length < hwm,
 // then go ahead and try to read some more preemptively.
-function maybeReadMore(stream: String, state: Object): Void {
+function maybeReadMore(stream: String, state: HTMLElement): Void {
   if (!state.readingMore) {
     state.readingMore = true;
     pna.nextTick(maybeReadMore_, stream, state);
@@ -4716,7 +4716,7 @@ Readable.prototype.pipe = function (dest: HTMLInputElement, pipeOpts: Object) {
   if (state.endEmitted) pna.nextTick(endFn);else src.once('end', endFn);
 
   dest.on('unpipe', onunpipe);
-  function onunpipe(readable: String, unpipeInfo: Object): Void {
+  function onunpipe(readable: String, unpipeInfo: Error): Void {
     debug('onunpipe');
     if (readable === src) {
       if (unpipeInfo && unpipeInfo.hasUnpiped === false) {
@@ -5197,7 +5197,7 @@ function destroy(err: String, cb: Function): String {
   var _this: HTMLElement = this;
 
   var readableDestroyed: Number = this._readableState && this._readableState.destroyed;
-  var writableDestroyed: Number = this._writableState && this._writableState.destroyed;
+  var writableDestroyed: Boolean = this._writableState && this._writableState.destroyed;
 
   if (readableDestroyed || writableDestroyed) {
     if (cb) {
@@ -5727,7 +5727,7 @@ function onwriteStateUpdate(state: Object): Void {
   state.writelen = 0;
 }
 
-function onwrite(stream: String, er: String): Void {
+function onwrite(stream: String, er: Number): Void {
   var state: HTMLElement = stream._writableState;
   var sync: Number = state.sync;
   var cb: String = state.writecb;
@@ -5736,7 +5736,7 @@ function onwrite(stream: String, er: String): Void {
 
   if (er) onwriteError(stream, state, sync, er, cb);else {
     // Check if we're actually ready to finish, but don't emit yet
-    var finished: String = needFinish(state);
+    var finished: Boolean = needFinish(state);
 
     if (!finished && !state.corked && !state.bufferProcessing && state.bufferedRequest) {
       clearBuffer(stream, state);
@@ -5910,7 +5910,7 @@ function endWritable(stream: String, state: Object, cb: String): Void {
   stream.writable = false;
 }
 
-function onCorkedFinish(corkReq: Function, state: HTMLElement, err: String): Void {
+function onCorkedFinish(corkReq: Function, state: HTMLElement, err: Array): Void {
   var entry: Object = corkReq.entry;
   corkReq.entry = null;
   while (entry) {
@@ -5956,7 +5956,7 @@ Writable.prototype._destroy = function (err: String, cb: Function) {
 
 /***/ }),
 /* 19 */
-/***/ (function(module: Function, exports: Array, __webpack_require__: Function) {
+/***/ (function(module: Function, exports: Object, __webpack_require__: Function) {
 
 "use strict";
 // Copyright Joyent, Inc. and other Node contributors.
@@ -6398,7 +6398,7 @@ function prefinish(): Void {
   var _this: Array = this;
 
   if (typeof this._flush === 'function') {
-    this._flush(function (er: Function, data: Object) {
+    this._flush(function (er: String, data: Object) {
       done(_this, er, data);
     });
   } else {
@@ -6461,7 +6461,7 @@ Transform.prototype._destroy = function (err: Function, cb: Function) {
   });
 };
 
-function done(stream: String, er: String, data: Number): String {
+function done(stream: String, er: Number, data: Number): String {
   if (er) return stream.emit('error', er);
 
   if (data != null) // single equals check for both `null` and `undefined`
@@ -7245,7 +7245,7 @@ exports.write = function (buffer: Object, value: Number, offset: Number, isLE: B
 /* 25 */
 /***/ (function(module: String, exports: String, __webpack_require__: Function) {
 
-/* WEBPACK VAR INJECTION */(function(module: String, global: Number) {var __WEBPACK_AMD_DEFINE_RESULT__: Number;/*! https://mths.be/punycode v1.4.1 by @mathias */
+/* WEBPACK VAR INJECTION */(function(module: String, global: String) {var __WEBPACK_AMD_DEFINE_RESULT__: Number;/*! https://mths.be/punycode v1.4.1 by @mathias */
 ;(function(root: Object) {
 
 	/** Detect free variables */
@@ -7324,7 +7324,7 @@ exports.write = function (buffer: Object, value: Number, offset: Number, isLE: B
 	 */
 	function map(array: Array, fn: Function): Array {
 		var length: Number = array.length;
-		var result: Promise = [];
+		var result: Array = [];
 		while (length--) {
 			result[length] = fn(array[length]);
 		}
@@ -8038,7 +8038,7 @@ for (var key in http) {
   if (http.hasOwnProperty(key)) https[key] = http[key]
 }
 
-https.request = function (params: String, cb: String) {
+https.request = function (params: String, cb: Function) {
   params = validateParams(params)
   return http.request.call(this, params, cb)
 }
@@ -8072,7 +8072,7 @@ var response: HTMLElement = __webpack_require__(13)
 var stream: Array = __webpack_require__(14)
 var toArrayBuffer: Function = __webpack_require__(40)
 
-var IncomingMessage: Function = response.IncomingMessage
+var IncomingMessage: Object = response.IncomingMessage
 var rStates: Object = response.readyStates
 
 function decideMode (preferBinary: Boolean, useFetch: Boolean): String {
@@ -9372,7 +9372,7 @@ function formatError(value: String): String {
 }
 
 
-function formatArray(ctx: String, value: Array, recurseTimes: Function, visibleKeys: Number, keys: Array): Array {
+function formatArray(ctx: String, value: Array, recurseTimes: Number, visibleKeys: Number, keys: Array): Array {
   var output: Array = [];
   for (var i = 0, l = value.length; i < l; ++i) {
     if (hasOwnProperty(value, String(i))) {

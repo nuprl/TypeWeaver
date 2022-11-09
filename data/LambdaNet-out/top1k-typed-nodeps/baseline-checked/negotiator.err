@@ -38,9 +38,9 @@ examples/encoding.ts(27,59): error TS2314: Generic type 'Array<T>' requires 1 ty
 examples/encoding.ts(29,24): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
 examples/encoding.ts(30,45): error TS2339: Property 'headers' does not exist on type 'Object'.
-examples/encoding.ts(31,47): error TS2339: Property 'encodings' does not exist on type 'HTMLElement'.
-examples/encoding.ts(32,46): error TS2339: Property 'encodings' does not exist on type 'HTMLElement'.
-examples/encoding.ts(33,29): error TS2339: Property 'encoding' does not exist on type 'HTMLElement'.
+examples/encoding.ts(31,47): error TS2339: Property 'encodings' does not exist on type 'Object'.
+examples/encoding.ts(32,46): error TS2339: Property 'encodings' does not exist on type 'Object'.
+examples/encoding.ts(33,29): error TS2339: Property 'encoding' does not exist on type 'Object'.
 examples/encoding.ts(39,33): error TS2538: Type 'String' cannot be used as an index type.
 examples/encoding.ts(45,19): error TS2339: Property 'listen' does not exist on type 'Object'.
 examples/language.ts(14,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -59,38 +59,14 @@ index.ts(11,5): error TS2300: Duplicate identifier 'preferredCharsets'.
 index.ts(12,5): error TS2300: Duplicate identifier 'preferredEncodings'.
 index.ts(13,5): error TS2300: Duplicate identifier 'preferredLanguages'.
 index.ts(14,5): error TS2300: Duplicate identifier 'preferredMediaTypes'.
-index.ts(30,39): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-index.ts(31,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(32,12): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-index.ts(35,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(40,17): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(49,17): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(58,17): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-index.ts(67,17): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
+index.ts(32,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/charset.ts(31,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/charset.ts(32,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/charset.ts(35,9): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-lib/charset.ts(54,7): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 lib/charset.ts(54,48): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/charset.ts(55,15): error TS2322: Type 'null' is not assignable to type 'Object'.
-lib/charset.ts(57,25): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/charset.ts(59,7): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 lib/charset.ts(60,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/charset.ts(60,25): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-lib/charset.ts(63,11): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/charset.ts(64,24): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/charset.ts(82,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/charset.ts(88,27): error TS2339: Property 's' does not exist on type 'Object'.
 lib/charset.ts(88,36): error TS2339: Property 's' does not exist on type 'Object'.
@@ -102,14 +78,13 @@ lib/charset.ts(101,10): error TS2393: Duplicate function implementation.
 lib/charset.ts(103,11): error TS2339: Property 'charset' does not exist on type 'Object'.
 lib/charset.ts(104,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/charset.ts(105,19): error TS2339: Property 'charset' does not exist on type 'Object'.
-lib/charset.ts(106,5): error TS2322: Type 'null' is not assignable to type 'Object'.
 lib/charset.ts(111,13): error TS2339: Property 'i' does not exist on type 'Object'.
 lib/charset.ts(112,13): error TS2339: Property 'q' does not exist on type 'Object'.
 lib/charset.ts(122,10): error TS2300: Duplicate identifier 'preferredCharsets'.
 lib/charset.ts(122,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/charset.ts(122,62): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/charset.ts(124,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/charset.ts(124,43): error TS2345: Argument of type 'Number | "*"' is not assignable to parameter of type 'String'.
+lib/charset.ts(124,43): error TS2345: Argument of type 'Number | "" | "*"' is not assignable to parameter of type 'String'.
   Type 'Number' is not assignable to type 'String'.
 lib/charset.ts(134,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/charset.ts(134,91): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
@@ -129,26 +104,16 @@ lib/charset.ts(167,10): error TS2393: Duplicate function implementation.
 lib/charset.ts(168,15): error TS2339: Property 'q' does not exist on type 'Object'.
 lib/encoding.ts(31,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/encoding.ts(32,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/encoding.ts(41,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'Object' is not assignable to type 'boolean'.
 lib/encoding.ts(41,36): error TS2554: Expected 3 arguments, but got 2.
 lib/encoding.ts(42,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/encoding.ts(42,50): error TS2339: Property 'q' does not exist on type 'Object'.
-lib/encoding.ts(70,7): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 lib/encoding.ts(70,49): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/encoding.ts(71,15): error TS2322: Type 'null' is not assignable to type 'Object'.
-lib/encoding.ts(73,26): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/encoding.ts(75,7): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
 lib/encoding.ts(76,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/encoding.ts(76,25): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-lib/encoding.ts(79,11): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/encoding.ts(80,24): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/encoding.ts(98,58): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/encoding.ts(104,27): error TS2339: Property 's' does not exist on type 'Object'.
 lib/encoding.ts(104,36): error TS2339: Property 's' does not exist on type 'Object'.
@@ -160,14 +125,14 @@ lib/encoding.ts(117,10): error TS2393: Duplicate function implementation.
 lib/encoding.ts(119,11): error TS2339: Property 'encoding' does not exist on type 'Object'.
 lib/encoding.ts(120,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/encoding.ts(121,19): error TS2339: Property 'encoding' does not exist on type 'Object'.
-lib/encoding.ts(122,5): error TS2322: Type 'null' is not assignable to type 'Object'.
 lib/encoding.ts(127,13): error TS2339: Property 'i' does not exist on type 'Object'.
 lib/encoding.ts(128,13): error TS2339: Property 'q' does not exist on type 'Object'.
 lib/encoding.ts(138,10): error TS2300: Duplicate identifier 'preferredEncodings'.
 lib/encoding.ts(138,55): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/encoding.ts(138,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/encoding.ts(139,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/encoding.ts(139,44): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+lib/encoding.ts(139,44): error TS2345: Argument of type 'Number | ""' is not assignable to parameter of type 'String'.
+  Type 'Number' is not assignable to type 'String'.
 lib/encoding.ts(149,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/encoding.ts(150,5): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -188,24 +153,9 @@ lib/language.ts(31,47): error TS2314: Generic type 'Array<T>' requires 1 type ar
 lib/language.ts(32,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/language.ts(35,9): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-lib/language.ts(54,7): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 lib/language.ts(54,49): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/language.ts(55,15): error TS2322: Type 'null' is not assignable to type 'Object'.
-lib/language.ts(57,24): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/language.ts(58,24): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-lib/language.ts(64,7): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
 lib/language.ts(65,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/language.ts(65,25): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
-lib/language.ts(68,11): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/language.ts(68,40): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/language.ts(86,58): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/language.ts(92,27): error TS2339: Property 's' does not exist on type 'Object'.
 lib/language.ts(92,36): error TS2339: Property 's' does not exist on type 'Object'.
@@ -215,7 +165,6 @@ lib/language.ts(92,73): error TS2339: Property 'o' does not exist on type 'Objec
 lib/language.ts(92,82): error TS2339: Property 'o' does not exist on type 'Object'.
 lib/language.ts(105,10): error TS2393: Duplicate function implementation.
 lib/language.ts(106,19): error TS2554: Expected 2 arguments, but got 1.
-lib/language.ts(107,11): error TS2322: Type 'null' is not assignable to type 'Object'.
 lib/language.ts(109,11): error TS2339: Property 'full' does not exist on type 'Object'.
 lib/language.ts(109,36): error TS2339: Property 'full' does not exist on type 'Object'.
 lib/language.ts(110,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -226,14 +175,13 @@ lib/language.ts(113,19): error TS2339: Property 'full' does not exist on type 'O
 lib/language.ts(113,44): error TS2339: Property 'prefix' does not exist on type 'Object'.
 lib/language.ts(114,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/language.ts(115,19): error TS2339: Property 'full' does not exist on type 'Object'.
-lib/language.ts(116,5): error TS2322: Type 'null' is not assignable to type 'Object'.
 lib/language.ts(121,13): error TS2339: Property 'i' does not exist on type 'Object'.
 lib/language.ts(122,13): error TS2339: Property 'q' does not exist on type 'Object'.
 lib/language.ts(132,10): error TS2300: Duplicate identifier 'preferredLanguages'.
 lib/language.ts(132,55): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/language.ts(132,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/language.ts(134,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/language.ts(134,44): error TS2345: Argument of type 'Number | "*"' is not assignable to parameter of type 'String'.
+lib/language.ts(134,44): error TS2345: Argument of type 'Number | "" | "*"' is not assignable to parameter of type 'String'.
   Type 'Number' is not assignable to type 'String'.
 lib/language.ts(144,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/language.ts(145,5): error TS2322: Type 'Object' is not assignable to type 'String'.
@@ -255,25 +203,10 @@ lib/mediaType.ts(31,39): error TS2314: Generic type 'Array<T>' requires 1 type a
 lib/mediaType.ts(32,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mediaType.ts(35,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-lib/mediaType.ts(54,7): error TS2322: Type 'RegExpExecArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
 lib/mediaType.ts(54,50): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/mediaType.ts(55,15): error TS2322: Type 'null' is not assignable to type 'Object'.
-lib/mediaType.ts(59,25): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-lib/mediaType.ts(60,22): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
-lib/mediaType.ts(62,7): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
 lib/mediaType.ts(63,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/mediaType.ts(63,39): error TS7053: Element implicitly has an 'any' type because expression of type '3' can't be used to index type 'Object'.
-  Property '3' does not exist on type 'Object'.
 lib/mediaType.ts(63,49): error TS2339: Property 'map' does not exist on type 'Object'.
-lib/mediaType.ts(67,25): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Object'.
-  Property '0' does not exist on type 'Object'.
-lib/mediaType.ts(68,25): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/mediaType.ts(76,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/mediaType.ts(81,14): error TS2538: Type 'String' cannot be used as an index type.
@@ -286,31 +219,27 @@ lib/mediaType.ts(105,73): error TS2339: Property 'o' does not exist on type 'Obj
 lib/mediaType.ts(105,82): error TS2339: Property 'o' does not exist on type 'Object'.
 lib/mediaType.ts(118,10): error TS2393: Duplicate function implementation.
 lib/mediaType.ts(119,19): error TS2554: Expected 2 arguments, but got 1.
-lib/mediaType.ts(123,5): error TS2322: Type 'null' is not assignable to type 'Object'.
 lib/mediaType.ts(126,11): error TS2339: Property 'type' does not exist on type 'Object'.
 lib/mediaType.ts(126,35): error TS2339: Property 'type' does not exist on type 'Object'.
 lib/mediaType.ts(127,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/mediaType.ts(128,18): error TS2339: Property 'type' does not exist on type 'Object'.
-lib/mediaType.ts(129,5): error TS2322: Type 'null' is not assignable to type 'Object'.
 lib/mediaType.ts(132,11): error TS2339: Property 'subtype' does not exist on type 'Object'.
 lib/mediaType.ts(132,38): error TS2339: Property 'subtype' does not exist on type 'Object'.
 lib/mediaType.ts(133,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/mediaType.ts(134,18): error TS2339: Property 'subtype' does not exist on type 'Object'.
-lib/mediaType.ts(135,5): error TS2322: Type 'null' is not assignable to type 'Object'.
 lib/mediaType.ts(138,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mediaType.ts(138,38): error TS2339: Property 'params' does not exist on type 'Object'.
 lib/mediaType.ts(141,19): error TS2339: Property 'params' does not exist on type 'Object'.
 lib/mediaType.ts(141,45): error TS2339: Property 'params' does not exist on type 'Object'.
 lib/mediaType.ts(141,82): error TS2339: Property 'params' does not exist on type 'Object'.
 lib/mediaType.ts(143,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/mediaType.ts(145,7): error TS2322: Type 'null' is not assignable to type 'Object'.
 lib/mediaType.ts(151,13): error TS2339: Property 'i' does not exist on type 'Object'.
 lib/mediaType.ts(152,13): error TS2339: Property 'q' does not exist on type 'Object'.
 lib/mediaType.ts(162,10): error TS2300: Duplicate identifier 'preferredMediaTypes'.
 lib/mediaType.ts(162,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mediaType.ts(162,64): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mediaType.ts(164,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/mediaType.ts(164,36): error TS2345: Argument of type 'Number | "*/*"' is not assignable to parameter of type 'String'.
+lib/mediaType.ts(164,36): error TS2345: Argument of type 'Number | "" | "*/*"' is not assignable to parameter of type 'String'.
   Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/mediaType.ts(174,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mediaType.ts(175,5): error TS2322: Type 'Object' is not assignable to type 'String'.
@@ -337,7 +266,6 @@ lib/mediaType.ts(233,42): error TS2314: Generic type 'Promise<T>' requires 1 typ
 lib/mediaType.ts(241,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/mediaType.ts(242,22): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lib/mediaType.ts(245,16): error TS2454: Variable 'val' is used before being assigned.
 lib/mediaType.ts(254,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mediaType.ts(257,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/mediaType.ts(276,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

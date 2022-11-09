@@ -100,7 +100,7 @@
     return ctorName(name) === 'GeneratorFunction';
   }
 
-  function isGeneratorObj(val: Map): Boolean {
+  function isGeneratorObj(val: Object): Boolean {
     return typeof val.throw === 'function'
       && typeof val.return === 'function'
       && typeof val.next === 'function';

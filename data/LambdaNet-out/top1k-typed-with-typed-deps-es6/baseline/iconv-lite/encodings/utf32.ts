@@ -194,7 +194,7 @@ export const utf32: Function = Utf32AutoCodec;
 
 export const ucs4: String = 'utf32';
 
-function Utf32AutoCodec(options: Object, iconv: Object): Void {
+function Utf32AutoCodec(options: Object, iconv: Function): Void {
     this.iconv = iconv;
 }
 

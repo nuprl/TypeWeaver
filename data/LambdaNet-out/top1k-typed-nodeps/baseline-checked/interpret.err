@@ -1,4 +1,3 @@
-cjs-stub.ts(1,1): error TS2322: Type 'null' is not assignable to type '((m: Module, filename: string) => any) | undefined'.
 index.ts(5,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(8,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(11,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -21,20 +20,88 @@ index.ts(59,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(
 index.ts(63,28): error TS2339: Property 'join' does not exist on type 'String'.
 index.ts(64,28): error TS2339: Property 'join' does not exist on type 'String'.
 index.ts(67,15): error TS2339: Property 'relative' does not exist on type 'String'.
+index.ts(75,9): error TS2322: Type 'Number | { rootMode: string; overrides: { only: ((filename: any) => String)[]; presets: string[]; }[]; }' is not assignable to type 'Number'.
+  Type '{ rootMode: string; overrides: { only: ((filename: any) => String)[]; presets: string[]; }[]; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'rootMode' does not exist in type 'Number'.
+index.ts(86,9): error TS2322: Type 'Number | { rootMode: string; overrides: { only: ((filename: any) => String)[]; presets: string[]; }[]; }' is not assignable to type 'Number'.
+  Type '{ rootMode: string; overrides: { only: ((filename: any) => String)[]; presets: string[]; }[]; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'rootMode' does not exist in type 'Number'.
+index.ts(103,11): error TS2322: Type 'Number | { rootMode: string; overrides: { only: ((filename: any) => String)[]; presets: string[]; }[]; }' is not assignable to type 'Number'.
+  Type '{ rootMode: string; overrides: { only: ((filename: any) => String)[]; presets: string[]; }[]; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'rootMode' does not exist in type 'Number'.
+index.ts(120,9): error TS2322: Type 'Number | { rootMode: string; overrides: { only: ((filename: any) => String)[]; presets: (string | (string | { isTSX: boolean; allExtensions: boolean; })[])[]; }[]; }' is not assignable to type 'Number'.
+  Type '{ rootMode: string; overrides: { only: ((filename: any) => String)[]; presets: (string | (string | { isTSX: boolean; allExtensions: boolean; })[])[]; }[]; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'rootMode' does not exist in type 'Number'.
+index.ts(149,9): error TS2322: Type 'Number | { target: string; hookMatcher: (filename: any) => String; }' is not assignable to type 'Number'.
+  Type '{ target: string; hookMatcher: (filename: any) => String; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'target' does not exist in type 'Number'.
 index.ts(153,11): error TS2339: Property 'register' does not exist on type 'Object'.
+index.ts(160,9): error TS2322: Type 'Number | { target: string; hookMatcher: (filename: any) => String; }' is not assignable to type 'Number'.
+  Type '{ target: string; hookMatcher: (filename: any) => String; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'target' does not exist in type 'Number'.
 index.ts(164,11): error TS2339: Property 'register' does not exist on type 'Object'.
+index.ts(171,9): error TS2322: Type 'Number | { target: string; hookMatcher: (filename: any) => String; }' is not assignable to type 'Number'.
+  Type '{ target: string; hookMatcher: (filename: any) => String; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'target' does not exist in type 'Number'.
 index.ts(175,11): error TS2339: Property 'register' does not exist on type 'Object'.
+index.ts(182,9): error TS2322: Type 'Number | { target: string; hookMatcher: (filename: any) => String; }' is not assignable to type 'Number'.
+  Type '{ target: string; hookMatcher: (filename: any) => String; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'target' does not exist in type 'Number'.
 index.ts(186,11): error TS2339: Property 'register' does not exist on type 'Object'.
+index.ts(206,11): error TS2322: Type 'Number | { rootMode: string; overrides: { only: ((filename: any) => String)[]; presets: string[]; }[]; }' is not assignable to type 'Number'.
+  Type '{ rootMode: string; overrides: { only: ((filename: any) => String)[]; presets: string[]; }[]; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'rootMode' does not exist in type 'Number'.
+index.ts(230,9): error TS2322: Type 'Number | { matcher: (filename: any) => String; }' is not assignable to type 'Number'.
+  Type '{ matcher: (filename: any) => String; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'matcher' does not exist in type 'Number'.
 index.ts(233,12): error TS2339: Property 'registerJS' does not exist on type 'Object'.
+index.ts(240,9): error TS2322: Type 'Number | { matcher: (filename: any) => String; }' is not assignable to type 'Number'.
+  Type '{ matcher: (filename: any) => String; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'matcher' does not exist in type 'Number'.
 index.ts(243,12): error TS2339: Property 'registerJSX' does not exist on type 'Object'.
+index.ts(250,9): error TS2322: Type 'Number | { matcher: (filename: any) => String; }' is not assignable to type 'Number'.
+  Type '{ matcher: (filename: any) => String; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'matcher' does not exist in type 'Number'.
 index.ts(253,12): error TS2339: Property 'registerTS' does not exist on type 'Object'.
+index.ts(260,9): error TS2322: Type 'Number | { matcher: (filename: any) => String; }' is not assignable to type 'Number'.
+  Type '{ matcher: (filename: any) => String; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'matcher' does not exist in type 'Number'.
 index.ts(263,12): error TS2339: Property 'registerTSX' does not exist on type 'Object'.
+index.ts(270,9): error TS2322: Type 'Number | { only: ((filename: any) => String)[]; ignore: ((file: String) => Boolean)[]; jsc: { parser: { syntax: string; }; }; module: { type: string; }; }' is not assignable to type 'Number'.
+  Type '{ only: ((filename: any) => String)[]; ignore: ((file: String) => Boolean)[]; jsc: { parser: { syntax: string; }; }; module: { type: string; }; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'only' does not exist in type 'Number'.
+index.ts(293,9): error TS2322: Type 'Number | { only: ((filename: any) => String)[]; ignore: ((file: String) => Boolean)[]; jsc: { parser: { syntax: string; jsx: boolean; }; }; module: { type: string; }; }' is not assignable to type 'Number'.
+  Type '{ only: ((filename: any) => String)[]; ignore: ((file: String) => Boolean)[]; jsc: { parser: { syntax: string; jsx: boolean; }; }; module: { type: string; }; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'only' does not exist in type 'Number'.
+index.ts(317,9): error TS2322: Type 'Number | { only: ((filename: any) => String)[]; ignore: ((file: String) => Boolean)[]; jsc: { parser: { syntax: string; }; }; module: { type: string; }; }' is not assignable to type 'Number'.
+  Type '{ only: ((filename: any) => String)[]; ignore: ((file: String) => Boolean)[]; jsc: { parser: { syntax: string; }; }; module: { type: string; }; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'only' does not exist in type 'Number'.
+index.ts(340,9): error TS2322: Type 'Number | { only: ((filename: any) => String)[]; ignore: ((file: String) => Boolean)[]; jsc: { parser: { syntax: string; tsx: boolean; }; }; module: { type: string; }; }' is not assignable to type 'Number'.
+  Type '{ only: ((filename: any) => String)[]; ignore: ((file: String) => Boolean)[]; jsc: { parser: { syntax: string; tsx: boolean; }; }; module: { type: string; }; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'only' does not exist in type 'Number'.
 index.ts(362,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(362,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(373,11): error TS2322: Type 'Number | { rootMode: string; overrides: { only: ((filename: any) => String)[]; presets: string[]; }[]; }' is not assignable to type 'Number'.
+  Type '{ rootMode: string; overrides: { only: ((filename: any) => String)[]; presets: string[]; }[]; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'rootMode' does not exist in type 'Number'.
+index.ts(393,11): error TS2322: Type 'Number | { target: string; hookMatcher: (filename: any) => String; }' is not assignable to type 'Number'.
+  Type '{ target: string; hookMatcher: (filename: any) => String; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'target' does not exist in type 'Number'.
 index.ts(397,13): error TS2339: Property 'register' does not exist on type 'Object'.
+index.ts(408,11): error TS2322: Type 'Number | { only: ((filename: any) => String)[]; ignore: ((file: String) => Boolean)[]; jsc: { parser: { syntax: string; }; }; module: { type: string; }; }' is not assignable to type 'Number'.
+  Type '{ only: ((filename: any) => String)[]; ignore: ((file: String) => Boolean)[]; jsc: { parser: { syntax: string; }; }; module: { type: string; }; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'only' does not exist in type 'Number'.
+index.ts(436,11): error TS2322: Type 'Number | { rootMode: string; overrides: { only: ((filename: any) => String)[]; presets: (string | (string | { isTSX: boolean; allExtensions: boolean; })[])[]; }[]; }' is not assignable to type 'Number'.
+  Type '{ rootMode: string; overrides: { only: ((filename: any) => String)[]; presets: (string | (string | { isTSX: boolean; allExtensions: boolean; })[])[]; }[]; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'rootMode' does not exist in type 'Number'.
+index.ts(466,11): error TS2322: Type 'Number | { target: string; hookMatcher: (filename: any) => String; }' is not assignable to type 'Number'.
+  Type '{ target: string; hookMatcher: (filename: any) => String; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'target' does not exist in type 'Number'.
 index.ts(470,13): error TS2339: Property 'register' does not exist on type 'Object'.
+index.ts(481,11): error TS2322: Type 'Number | { only: ((filename: any) => String)[]; ignore: ((file: String) => Boolean)[]; jsc: { parser: { syntax: string; tsx: boolean; }; }; module: { type: string; }; }' is not assignable to type 'Number'.
+  Type '{ only: ((filename: any) => String)[]; ignore: ((file: String) => Boolean)[]; jsc: { parser: { syntax: string; tsx: boolean; }; }; module: { type: string; }; }' is not assignable to type 'Number'.
+    Object literal may only specify known properties, and 'only' does not exist in type 'Number'.
 index.ts(506,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(539,12): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(539,30): error TS2538: Type 'String' cannot be used as an index type.
-mjs-stub.ts(1,1): error TS2322: Type 'null' is not assignable to type '((m: Module, filename: string) => any) | undefined'.
 

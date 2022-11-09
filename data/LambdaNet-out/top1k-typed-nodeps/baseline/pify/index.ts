@@ -61,7 +61,7 @@ export default function pify(input: HTMLElement, options: Object): Object {
 
 		const match: Function = (pattern: Array) => (typeof pattern === 'string' || typeof key === 'symbol') ? key === pattern : pattern.test(key);
 		const descriptor: Array = Reflect.getOwnPropertyDescriptor(target, key);
-		const writableOrConfigurableOwn: Boolean = (descriptor === undefined || descriptor.writable || descriptor.configurable);
+		const writableOrConfigurableOwn: Number = (descriptor === undefined || descriptor.writable || descriptor.configurable);
 		const included: Boolean = options.include ? options.include.some((element: Element) => match(element)) : !options.exclude.some((element: Element) => match(element));
 		const shouldFilter: String = included && writableOrConfigurableOwn;
 		cached[key] = shouldFilter;
@@ -70,7 +70,7 @@ export default function pify(input: HTMLElement, options: Object): Object {
 
 	const cache: Error = new WeakMap();
 
-	const proxy: Function = new Proxy(input, {
+	const proxy: Array = new Proxy(input, {
 		apply(target, thisArg, args) {
 			const cached = cache.get(target);
 

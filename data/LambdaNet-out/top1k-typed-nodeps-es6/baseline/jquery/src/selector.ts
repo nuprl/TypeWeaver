@@ -339,7 +339,7 @@ function createInputPseudo( type: String ): Function {
  * Returns a function to use in pseudos for buttons
  * @param {String} type
  */
-function createButtonPseudo( type: Number ): Function {
+function createButtonPseudo( type: String ): Function {
 	return function( elem: Object ) {
 		return ( nodeName( elem, "input" ) || nodeName( elem, "button" ) ) &&
 			elem.type === type;
@@ -1267,7 +1267,7 @@ function setMatcher( preFilter: Number, selector: Number, matcher: Function, pos
 			preexisting: Number = results.length,
 
 			// Get initial elements from seed or context
-			elems: String = seed ||
+			elems: Array = seed ||
 				multipleContexts( selector || "*",
 					context.nodeType ? [ context ] : context, [] ),
 

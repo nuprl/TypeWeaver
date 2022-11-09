@@ -138,7 +138,7 @@ function format(value: Number, options: Object): String {
  * @public
  */
 
-function parse(val: String): Number {
+function parse(val: Number): Number {
   if (typeof val === 'number' && !isNaN(val)) {
     return val;
   }

@@ -16,7 +16,7 @@ const cycle: Function = (e: HTMLElement, newline: Boolean) => {
 
 const bench: Function = (name: String, options: Object) => {
   const config: Object = { name, ...options };
-  const suite: Object = new Suite(config);
+  const suite: HTMLElement = new Suite(config);
   const add: Function = suite.add.bind(suite);
   suite.on('error', console.error);
 

@@ -7,16 +7,16 @@ bench/index.ts(16,40): error TS2339: Property 'sync' does not exist on type 'Fun
 bench/index.ts(24,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bench/index.ts(24,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bench/index.ts(24,55): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-bench/index.ts(28,33): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
 bench/index.ts(30,24): error TS2339: Property 'equal' does not exist on type 'String'.
 bench/index.ts(31,11): error TS2339: Property 'equal' does not exist on type 'String'.
-bench/index.ts(35,48): error TS2571: Object is of type 'unknown'.
 bench/index.ts(40,24): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
 bench/index.ts(45,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 bench/index.ts(46,16): error TS2538: Type 'String' cannot be used as an index type.
 bench/index.ts(49,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 bench/index.ts(50,22): error TS2538: Type 'String' cannot be used as an index type.
+bench/index.ts(55,21): error TS2345: Argument of type '(res: Function, rej: String) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
+  Types of parameters 'rej' and 'reject' are incompatible.
+    Type '(reason?: any) => void' is not assignable to type 'String'.
 bench/index.ts(56,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 bench/index.ts(57,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 bench/index.ts(58,9): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
@@ -46,9 +46,9 @@ src/sync.ts(8,13): error TS2339: Property 'isDirectory' does not exist on type '
 src/sync.ts(9,3): error TS2322: Type 'string' is not assignable to type 'Number'.
 src/sync.ts(9,17): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 src/sync.ts(13,35): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(path: PathLike, options?: { encoding: BufferEncoding | null; withFileTypes?: false | undefined; } | BufferEncoding | null | undefined): string[]', gave the following error.
+  Overload 1 of 4, '(path: PathLike, options?: { encoding: BufferEncoding; withFileTypes?: false; } | BufferEncoding): string[]', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'PathLike'.
-  Overload 2 of 4, '(path: PathLike, options?: BufferEncoding | (ObjectEncodingOptions & { withFileTypes?: false | undefined; }) | null | undefined): string[] | Buffer[]', gave the following error.
+  Overload 2 of 4, '(path: PathLike, options?: BufferEncoding | (ObjectEncodingOptions & { withFileTypes?: false; })): string[] | Buffer[]', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'PathLike'.
 src/sync.ts(14,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 src/sync.ts(15,3): error TS2322: Type 'string' is not assignable to type 'Number'.

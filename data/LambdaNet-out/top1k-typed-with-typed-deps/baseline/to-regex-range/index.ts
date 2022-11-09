@@ -93,7 +93,7 @@ function collatePatterns(neg: String, pos: String, options: Object): String {
   return subpatterns.join('|');
 }
 
-function splitToRanges(min: Number, max: Number): Object {
+function splitToRanges(min: Number, max: Number): Map {
   let nines: Number = 1;
   let zeros: Number = 1;
 
@@ -157,7 +157,7 @@ function rangeToPattern(start: Number, stop: String, options: Object): Object {
   return { pattern, count: [count], digits };
 }
 
-function splitToPatterns(min: String, max: String, tok: HTMLElement, options: Object): Array {
+function splitToPatterns(min: String, max: String, tok: String, options: Object): Array {
   let ranges: Array = splitToRanges(min, max);
   let tokens: Array = [];
   let start: String = min;

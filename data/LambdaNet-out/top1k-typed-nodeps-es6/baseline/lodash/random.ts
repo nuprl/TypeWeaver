@@ -1,7 +1,7 @@
 import toFinite from './toFinite.js'
 
 /** Built-in method references without a dependency on `root`. */
-const freeParseFloat: Array = parseFloat
+const freeParseFloat: Promise = parseFloat
 
 /**
  * Produces a random number between the inclusive `lower` and `upper` bounds.

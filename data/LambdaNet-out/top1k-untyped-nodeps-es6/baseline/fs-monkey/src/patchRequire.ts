@@ -93,7 +93,7 @@ export default function patchRequire(vol: Object, unixifyPaths: Boolean = false,
     const preserveSymlinks: Boolean = false;
 
 
-    function toRealPath(requestPath: String): Boolean {
+    function toRealPath(requestPath: String): Promise {
         return vol.realpathSync(requestPath);
     }
 

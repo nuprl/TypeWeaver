@@ -254,7 +254,7 @@ parsedFiles.forEach(function(file: Object) {
 });
 var propertyDefinitions: Array = [];
 parsedFiles.forEach(function(file: Object) {
-  var dashed: Number = camelToDashed(file.property);
+  var dashed: String = camelToDashed(file.property);
   propertyDefinitions.push(
     t.objectProperty(
       t.identifier(file.property),

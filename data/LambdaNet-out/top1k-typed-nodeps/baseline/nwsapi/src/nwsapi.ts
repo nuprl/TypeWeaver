@@ -32,7 +32,7 @@
 
   var version: String = 'nwsapi-2.2.2',
 
-  doc: String = global.document,
+  doc: Function = global.document,
   root: String = doc.documentElement,
   slice: Function = Array.prototype.slice,
 

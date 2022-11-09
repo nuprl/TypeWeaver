@@ -468,7 +468,7 @@ var Shrinker: HTMLElement = Base.extend({
     var blocks: Array = []; // store program blocks (anything between braces {})
     var total: Number = 0;
     // encoder for program blocks
-    function encodeBlocks($: Function, prefix: String, blockType: String, args: String, block: String): String {
+    function encodeBlocks($: Function, prefix: String, blockType: Number, args: String, block: String): String {
       if (!prefix) prefix = "";
       if (blockType == "function") {
         // decode the function block (THIS IS THE IMPORTANT BIT)

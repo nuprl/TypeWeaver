@@ -128,7 +128,7 @@ jQuery.fn.extend( {
 			} );
 		}
 
-		return access( this, function( value: Number ) {
+		return access( this, function( value: String ) {
 			var data: String;
 
 			// The calling jQuery object (element matches) is not empty

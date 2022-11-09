@@ -61,7 +61,7 @@ base64.encode = function base64_encode(aNumber: Number): Object {
 /**
  * Decode a single base 64 digit to an integer.
  */
-base64.decode = function base64_decode(aChar: Number): Object {
+base64.decode = function base64_decode(aChar: Number): SourceNode {
   if (aChar in charToIntMap) {
     return charToIntMap[aChar];
   }

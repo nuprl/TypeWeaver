@@ -130,7 +130,7 @@ export default function compress(ast: Object, options: Object): Object {
         forceMediaMerge: Boolean(options.forceMediaMerge),
         usage: options.usage ? buildIndex(options.usage) : false
     };
-    const output: HTMLElement = new List();
+    const output: TRBL = new List();
     let specialComments: Boolean = getCommentsOption(options);
     let firstAtrulesAllowed: Boolean = true;
     let input: HTMLInputElement;

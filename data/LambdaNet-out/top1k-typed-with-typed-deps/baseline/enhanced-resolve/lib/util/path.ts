@@ -178,8 +178,8 @@ const joinCache: Map = new Map();
  * @returns {string} the joined path
  */
 const cachedJoin: Function = (rootPath: String, request: Object) => {
-	let cacheEntry: Function;
-	let cache: Object = joinCache.get(rootPath);
+	let cacheEntry: Resolver;
+	let cache: Map = joinCache.get(rootPath);
 	if (cache === undefined) {
 		joinCache.set(rootPath, (cache = new Map()));
 	} else {

@@ -12,33 +12,23 @@ example.ts(45,8): error TS2339: Property 'end' does not exist on type 'HTMLEleme
 index.ts(3,86): error TS2304: Cannot find name 'Void'.
 index.ts(6,3): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'Request': cache, credentials, destination, headers, and 17 more.
-index.ts(7,3): error TS2322: Type 'undefined' is not assignable to type 'Object'.
-index.ts(10,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(10,2): error TS2684: The 'this' context of type 'typeof Duplex' is not assignable to method's 'this' of type 'Function'.
+  Types of property 'once' are incompatible.
+    Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
 index.ts(12,22): error TS2339: Property 'read' does not exist on type 'Object'.
 index.ts(13,50): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'ReadableStream'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'ReadableStream': readable, read, setEncoding, pause, and 22 more.
-index.ts(16,2): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(17,2): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(18,2): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(20,11): error TS2339: Property 'once' does not exist on type 'Request'.
-index.ts(21,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(24,2): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(25,12): error TS2339: Property 'end' does not exist on type 'Request'.
 index.ts(28,11): error TS2339: Property 'on' does not exist on type 'Object'.
-index.ts(29,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(30,4): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(31,4): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(35,11): error TS2339: Property 'once' does not exist on type 'Object'.
-index.ts(36,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(39,33): error TS2339: Property 'bubbleErrors' does not exist on type 'Object'.
 index.ts(39,73): error TS2339: Property 'bubbleErrors' does not exist on type 'Object'.
 index.ts(40,12): error TS2339: Property 'on' does not exist on type 'Request'.
-index.ts(41,4): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(44,12): error TS2339: Property 'on' does not exist on type 'Object'.
-index.ts(45,4): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 index.ts(61,3): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(70,9): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+index.ts(70,9): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(70,36): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Request'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 

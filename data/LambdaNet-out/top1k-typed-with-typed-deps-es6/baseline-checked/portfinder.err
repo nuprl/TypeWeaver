@@ -26,7 +26,6 @@ lib/portfinder.ts(47,106): error TS2339: Property 'code' does not exist on type 
 lib/portfinder.ts(49,13): error TS2339: Property 'server' does not exist on type 'Object'.
 lib/portfinder.ts(51,15): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
 lib/portfinder.ts(51,43): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
-lib/portfinder.ts(55,30): error TS2454: Variable 'nextPort' is used before being assigned.
 lib/portfinder.ts(55,47): error TS2339: Property 'port' does not exist on type 'Object'.
 lib/portfinder.ts(61,15): error TS2339: Property 'testPort' does not exist on type 'HTMLElement'.
 lib/portfinder.ts(63,21): error TS2339: Property 'host' does not exist on type 'Object'.
@@ -74,10 +73,6 @@ lib/portfinder.ts(156,9): error TS2349: This expression is not callable.
 lib/portfinder.ts(156,100): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/portfinder.ts(160,9): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-lib/portfinder.ts(166,6): error TS2345: Argument of type '(err: Object) => any' is not assignable to parameter of type 'ErrorCallback<Object>'.
-  Types of parameters 'err' and 'err' are incompatible.
-    Type 'Object | null | undefined' is not assignable to type 'Object'.
-      Type 'undefined' is not assignable to type 'Object'.
 lib/portfinder.ts(169,7): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 lib/portfinder.ts(172,15): error TS2339: Property 'code' does not exist on type 'Object'.
@@ -101,7 +96,6 @@ lib/portfinder.ts(211,102): error TS2339: Property 'stopPort' does not exist on 
 lib/portfinder.ts(251,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'Object' is not assignable to type 'boolean'.
-lib/portfinder.ts(255,7): error TS2322: Type 'null' is not assignable to type 'String'.
 lib/portfinder.ts(256,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
 lib/portfinder.ts(258,15): error TS2339: Property 'port' does not exist on type 'Object'.
 lib/portfinder.ts(265,9): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
@@ -114,10 +108,6 @@ lib/portfinder.ts(286,11): error TS2339: Property 'path' does not exist on type 
 lib/portfinder.ts(286,26): error TS2339: Property 'path' does not exist on type 'Object'.
 lib/portfinder.ts(291,27): error TS2304: Cannot find name 'Void'.
 lib/portfinder.ts(292,21): error TS2339: Property 'path' does not exist on type 'Object'.
-lib/portfinder.ts(292,27): error TS2345: Argument of type '(err: Object) => void' is not assignable to parameter of type '(err: ErrnoException | null, stats: Stats) => void'.
-  Types of parameters 'err' and 'err' are incompatible.
-    Type 'ErrnoException | null' is not assignable to type 'Object'.
-      Type 'null' is not assignable to type 'Object'.
 lib/portfinder.ts(298,17): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/portfinder.ts(299,34): error TS2339: Property 'path' does not exist on type 'Object'.
 lib/portfinder.ts(310,17): error TS2339: Property 'path' does not exist on type 'Object'.
@@ -137,22 +127,14 @@ lib/portfinder.ts(377,34): error TS2345: Argument of type 'String' is not assign
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/portfinder.ts(378,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/portfinder.ts(379,7): error TS2322: Type 'RegExpMatchArray | null' is not assignable to type 'Object'.
-  Type 'null' is not assignable to type 'Object'.
-lib/portfinder.ts(380,32): error TS7053: Element implicitly has an 'any' type because expression of type '2' can't be used to index type 'Object'.
-  Property '2' does not exist on type 'Object'.
-lib/portfinder.ts(381,22): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Object'.
-  Property '1' does not exist on type 'Object'.
 lib/portfinder.ts(382,13): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/portfinder.ts(386,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/portfinder.ts(387,20): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/portfinder.ts(387,25): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
-lib/portfinder.ts(481,9): error TS2571: Object is of type 'unknown'.
 lib/portfinder.ts(489,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/portfinder.ts(491,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/portfinder.ts(493,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/portfinder.ts(493,29): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Object'.
 lib/portfinder.ts(496,25): error TS2339: Property 'address' does not exist on type 'Element'.
 

@@ -5,7 +5,7 @@ import {getLineInfo, tokTypes as tt} from "acorn"
 const lp: Parser = LooseParser.prototype
 
 lp.parseTopLevel = function() {
-  let node: TokenType = this.startNodeAt(this.options.locations ? [0, getLineInfo(this.input, 0)] : 0)
+  let node: Node = this.startNodeAt(this.options.locations ? [0, getLineInfo(this.input, 0)] : 0)
   node.body = []
   while (this.tok.type !== tt.eof) node.body.push(this.parseStatement())
   this.toks.adaptDirectivePrologue(node.body)
@@ -15,7 +15,7 @@ lp.parseTopLevel = function() {
 }
 
 lp.parseStatement = function() {
-  let starttype: String = this.tok.type, node: RegExpValidationState = this.startNode(), kind: String
+  let starttype: String = this.tok.type, node: DestructuringErrors = this.startNode(), kind: String
 
   if (this.toks.isLet()) {
     starttype = tt._var
@@ -91,7 +91,7 @@ lp.parseStatement = function() {
     return this.finishNode(node, "ReturnStatement")
 
   case tt._switch:
-    let blockIndent: Function = this.curIndent, line: String = this.curLineStart
+    let blockIndent: Function = this.curIndent, line: Position = this.curLineStart
     this.next()
     node.discriminant = this.parseParenExpression()
     node.cases = []
@@ -214,10 +214,10 @@ lp.parseStatement = function() {
 }
 
 lp.parseBlock = function() {
-  let node: TokenType = this.startNode()
+  let node: Node = this.startNode()
   this.pushCx()
   this.expect(tt.braceL)
-  let blockIndent: Function = this.curIndent, line: String = this.curLineStart
+  let blockIndent: Function = this.curIndent, line: Position = this.curLineStart
   node.body = []
   while (!this.closes(tt.braceR, blockIndent, line, true))
     node.body.push(this.parseStatement())
@@ -226,7 +226,7 @@ lp.parseBlock = function() {
   return this.finishNode(node, "BlockStatement")
 }
 
-lp.parseFor = function(node: String, init: Boolean) {
+lp.parseFor = function(node: Node, init: Boolean) {
   node.init = init
   node.test = node.update = null
   if (this.eat(tt.semi) && this.tok.type !== tt.semi) node.test = this.parseExpression()
@@ -237,7 +237,7 @@ lp.parseFor = function(node: String, init: Boolean) {
   return this.finishNode(node, "ForStatement")
 }
 
-lp.parseForIn = function(node: String, init: Number) {
+lp.parseForIn = function(node: DestructuringErrors, init: Number) {
   let type: String = this.tok.type === tt._in ? "ForInStatement" : "ForOfStatement"
   this.next()
   node.left = init
@@ -301,7 +301,7 @@ lp.parseClassElement = function() {
 
   const {ecmaVersion, locations} = this.options
   const indent: Number = this.curIndent
-  const line: String = this.curLineStart
+  const line: Position = this.curLineStart
   const node: Position = this.startNode()
   let keyName: String = ""
   let isGenerator: Boolean = false
@@ -383,8 +383,8 @@ lp.parseClassElement = function() {
         // Estimated the next line is the next class element by indentations.
         node.value = null
       } else {
-        const oldInAsync: Boolean = this.inAsync
-        const oldInGenerator: String = this.inGenerator
+        const oldInAsync: Number = this.inAsync
+        const oldInGenerator: Position = this.inGenerator
         this.inAsync = false
         this.inGenerator = false
         node.value = this.parseMaybeAssign()
@@ -402,7 +402,7 @@ lp.parseClassElement = function() {
 }
 
 lp.parseClassStaticBlock = function(node: Node) {
-  let blockIndent: Function = this.curIndent, line: String = this.curLineStart
+  let blockIndent: Function = this.curIndent, line: Position = this.curLineStart
   node.body = []
   this.pushCx()
   while (!this.closes(tt.braceR, blockIndent, line, true))
@@ -417,7 +417,7 @@ lp.isClassElementNameStart = function() {
   return this.toks.isClassElementNameStart()
 }
 
-lp.parseClassElementName = function(element: Parser) {
+lp.parseClassElementName = function(element: Element) {
   if (this.toks.type === tt.privateId) {
     element.computed = false
     element.key = this.parsePrivateIdent()
@@ -427,7 +427,7 @@ lp.parseClassElementName = function(element: Parser) {
 }
 
 lp.parseFunction = function(node: Node, isStatement: Boolean, isAsync: Boolean) {
-  let oldInAsync: Boolean = this.inAsync, oldInGenerator: String = this.inGenerator, oldInFunction: Boolean = this.inFunction
+  let oldInAsync: Number = this.inAsync, oldInGenerator: Position = this.inGenerator, oldInFunction: Boolean = this.inFunction
   this.initFunction(node)
   if (this.options.ecmaVersion >= 6) {
     node.generator = this.eat(tt.star)
@@ -450,7 +450,7 @@ lp.parseFunction = function(node: Node, isStatement: Boolean, isAsync: Boolean) 
 }
 
 lp.parseExport = function() {
-  let node: String = this.startNode()
+  let node: DestructuringErrors = this.startNode()
   this.next()
   if (this.eat(tt.star)) {
     if (this.options.ecmaVersion >= 11) {
@@ -468,7 +468,7 @@ lp.parseExport = function() {
     // export default (function foo() {}) // This is FunctionExpression.
     let isAsync: Boolean
     if (this.tok.type === tt._function || (isAsync = this.toks.isAsyncFunction())) {
-      let fNode: TokenType = this.startNode()
+      let fNode: Node = this.startNode()
       this.next()
       if (isAsync) this.next()
       node.declaration = this.parseFunction(fNode, "nullableID", isAsync)
@@ -500,7 +500,7 @@ lp.parseImport = function() {
     node.specifiers = []
     node.source = this.parseExprAtom()
   } else {
-    let elt: RegExpValidationState
+    let elt: Position
     if (this.tok.type === tt.name && this.tok.value !== "from") {
       elt = this.startNode()
       elt.local = this.parseIdent()
@@ -518,7 +518,7 @@ lp.parseImport = function() {
 lp.parseImportSpecifiers = function() {
   let elts: Array = []
   if (this.tok.type === tt.star) {
-    let elt: RegExpValidationState = this.startNode()
+    let elt: Position = this.startNode()
     this.next()
     elt.local = this.eatContextual("as") ? this.parseIdent() : this.dummyIdent()
     elts.push(this.finishNode(elt, "ImportNamespaceSpecifier"))

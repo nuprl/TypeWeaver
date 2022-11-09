@@ -23,7 +23,7 @@ function makeIndent(depth: String): String {
 	if (depth in makeIndent.cache) {
 		return makeIndent.cache[depth];
 	} else {
-		var result: String = INDENT;
+		var result: Number = INDENT;
 		for (var i = depth; --i;) {
 			result += INDENT;
 		}
@@ -145,7 +145,7 @@ var output: HTMLElement = byId("output");
 var serialized: HTMLElement = byId("serialized");
 
 function outputUpdated(): Void {
-	var value: String = style.value;
+	var value: Number = style.value;
 	if (value !== style.prevValue) {
 		style.prevValue = value;
 		var css: String = CSSOM.parse(value);

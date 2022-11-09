@@ -1,11 +1,9 @@
 imurmurhash.min.ts(12,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
-imurmurhash.min.ts(12,68): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-imurmurhash.min.ts(12,86): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-imurmurhash.min.ts(12,93): error TS2322: Type 'Object | undefined' is not assignable to type 'Boolean'.
-  Type 'undefined' is not assignable to type 'Boolean'.
+imurmurhash.min.ts(12,93): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'Object' is not assignable to type 'boolean'.
 imurmurhash.min.ts(12,102): error TS2339: Property 'reset' does not exist on type 'Object'.
 imurmurhash.min.ts(12,145): error TS2339: Property 'hash' does not exist on type 'Object'.
-imurmurhash.min.ts(12,157): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 imurmurhash.min.ts(12,337): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 imurmurhash.min.ts(12,363): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 imurmurhash.min.ts(12,377): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -63,15 +61,10 @@ imurmurhash.min.ts(12,1362): error TS2363: The right-hand side of an arithmetic 
 imurmurhash.min.ts(12,1365): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 imurmurhash.min.ts(12,1368): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 imurmurhash.min.ts(12,1375): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+imurmurhash.min.ts(12,1494): error TS2350: Only a void function can be called with the 'new' keyword.
 imurmurhash.min.ts(12,1494): error TS2554: Expected 2 arguments, but got 0.
-imurmurhash.min.ts(12,1494): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-imurmurhash.min.ts(12,1544): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-imurmurhash.ts(21,54): error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
-imurmurhash.ts(22,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-imurmurhash.ts(22,55): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 imurmurhash.ts(23,11): error TS2339: Property 'reset' does not exist on type 'Object'.
 imurmurhash.ts(25,15): error TS2339: Property 'hash' does not exist on type 'Object'.
-imurmurhash.ts(28,19): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 imurmurhash.ts(29,13): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 imurmurhash.ts(46,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -131,8 +124,7 @@ imurmurhash.ts(114,30): error TS2362: The left-hand side of an arithmetic operat
 imurmurhash.ts(115,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 imurmurhash.ts(115,15): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 imurmurhash.ts(117,16): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+imurmurhash.ts(131,13): error TS2350: Only a void function can be called with the 'new' keyword.
 imurmurhash.ts(131,13): error TS2554: Expected 2 arguments, but got 0.
-imurmurhash.ts(131,13): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 imurmurhash.ts(134,9): error TS1258: A default export must be at the top level of a file or module declaration.
-imurmurhash.ts(136,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 
