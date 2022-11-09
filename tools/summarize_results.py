@@ -46,6 +46,7 @@ def did_package_typecheck(data_dir, dataset, package, system):
         return "NA"
 
 def typecheck_summary(data_dir, summary_csv):
+    print("Generating summary of packages that typecheck...")
     datasets = sorted([d.parts[-1] for d in Path(data_dir, "original").iterdir()])
 
     with open(summary_csv, "w") as file:
@@ -89,6 +90,7 @@ def errors_per_file_for_package(data_dir, original_dataset, ts_dataset, package)
     return entries
 
 def errors_per_file_summary(data_dir):
+    print("Counting errors per file, for each system and dataset...")
     datasets = sorted([d.parts[-1] for d in Path(data_dir, "original").iterdir()])
 
     for s in SYSTEMS:
@@ -99,6 +101,7 @@ def errors_per_file_summary(data_dir):
             if not ts_dataset.exists():
                 break
 
+            print(f"{s} {d}...")
             output_csv = Path(data_dir, "notes", s, d, "errors_per_file.csv")
             with open(output_csv, "w") as file:
                 file.write('Package,File,"Number of errors"')
