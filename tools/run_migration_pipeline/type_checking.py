@@ -88,12 +88,11 @@ class TypeChecker:
         # Set some compiler flags; these appear to be reasonable defaults for the entire dataset
         # But individual projects may need different flags
         #   --noEmit                  // don't emit JavaScript
-        #   --strict                  // strict type checking
         #   --esModuleInterop         // better handling of CommonJS and ES6 modules
         #   --moduleResolution node   // make the default option explicit, use Node.js module resolution
         #   --target es6              // enable es6 features; some libraries use features not supported in the default es3 target
         #   --lib es2021,dom          // include default es2021 library definitions and browser DOM definitions
-        args = [self.path, "--noEmit", "--strict", "--esModuleInterop", "--moduleResolution", "node", "--target", "es6", "--lib", "es2021,dom", *ts_files]
+        args = [self.path, "--noEmit", "--esModuleInterop", "--moduleResolution", "node", "--target", "es6", "--lib", "es2021,dom", *ts_files]
         result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=package)
 
         if result.returncode == 0:
