@@ -22,17 +22,17 @@ Filter out NAs and for each system and dataset, compute the number of packages t
 dt_pct <- summary_tbl %>%
   group_by(dataset) %>%
   filter(!is.na(dt)) %>%
-  summarize(typechecks.dt = sum(dt), n.dt = n(), pct.dt = typechecks.dt / n.dt * 100)
+  summarize(dt.typechecks = sum(dt), dt.n = n(), dt.pct = dt.typechecks / dt.n * 100)
 
 ln_pct <- summary_tbl %>%
   group_by(dataset) %>%
   filter(!is.na(ln)) %>%
-  summarize(typechecks.ln = sum(ln), n.ln = n(), pct.ln = typechecks.ln / n.ln * 100)
+  summarize(ln.typechecks = sum(ln), ln.n = n(), ln.pct = ln.typechecks / ln.n * 100)
 
 ic_pct <- summary_tbl %>%
   group_by(dataset) %>%
   filter(!is.na(ic)) %>%
-  summarize(typechecks.ic = sum(ic), n.ic = n(), pct.ic = typechecks.ic / n.ic * 100)
+  summarize(ic.typechecks = sum(ic), ic.n = n(), ic.pct = ic.typechecks / ic.n * 100)
 ```
 
 Summarize everything in a single table.
@@ -42,4 +42,32 @@ typechecks_pct <- dt_pct %>%
   inner_join(ln_pct, by = "dataset") %>%
   inner_join(ic_pct, by = "dataset")
 typechecks_pct
+```
+
+## Percentage of files that type check
+
+```{r}
+dt_files <- read_csv("../data/notes/DeepTyper/errors_per_file.csv", col_types = "ccci") %>%
+  rename(dataset = 1, package = 2, file = 3, dt = 4) %>%
+  group_by(dataset) %>%
+  summarize(dt.no_errors = sum(dt == 0), dt.n = n(), dt.pct = dt.no_errors / dt.n * 100)
+
+ln_files <- read_csv("../data/notes/LambdaNet/errors_per_file.csv", col_types = "ccci") %>%
+  rename(dataset = 1, package = 2, file = 3, ln = 4) %>%
+  group_by(dataset) %>%
+  summarize(ln.no_errors = sum(ln == 0), ln.n = n(), ln.pct = ln.no_errors / ln.n * 100)
+
+ic_files <- read_csv("../data/notes/InCoder/errors_per_file.csv", col_types = "ccci") %>%
+  rename(dataset = 1, package = 2, file = 3, ic = 4) %>%
+  group_by(dataset) %>%
+  summarize(ic.no_errors = sum(ic == 0), ic.n = n(), ic.pct = ic.no_errors / ic.n * 100)
+```
+
+Summarize everything in a single table.
+
+```{r}
+files_no_errors_pct <- dt_files %>%
+  inner_join(ln_files, by = "dataset") %>%
+  inner_join(ic_files, by = "dataset")
+files_no_errors_pct
 ```
