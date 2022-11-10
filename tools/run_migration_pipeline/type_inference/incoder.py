@@ -67,13 +67,10 @@ class InCoder:
         input_files = [f.resolve() for f in package.rglob("*.js") if f.is_file()]
         output_dir = Path(self.out_directory, self.short_name(package)).resolve()
 
-        # Delete the old output files
-        # Don't glob all *.ts, might get *.d.ts by accident
-        ts_output_files = [f.with_suffix(".ts") for f in input_files if f.with_suffix(".ts").exists()]
-        err_output_files = [f.with_suffix(".err") for f in input_files if f.with_suffix(".err").exists()]
-        output_files = ts_output_files + err_output_files
-        for f in output_files:
-            f.unlink()
+        # Don't delete the old output files. Otherwise there may be a race condition:
+        # we finish inference and then delete the files we just produced!
+        # Unfortunately, this means interrupting the script may leave junk files in the
+        # input directory, that have to be cleaned up manually.
 
         # Poll until the done file is created
         done_file = Path(package, "incoder.done")

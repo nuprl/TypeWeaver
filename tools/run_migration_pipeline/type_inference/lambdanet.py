@@ -73,6 +73,8 @@ class LambdaNet:
         output_dir = Path(self.out_directory, self.short_name(package)).resolve()
 
         # Delete the old output files
+        # Note: there is no race condition where we finish inference before reaching this point,
+        # because we're deleting files from the output directory, not the input directory
         output_files = [f.resolve()
                         for f in output_dir.rglob("*")
                         if f.is_file() and (f.suffix == ".csv" or f.suffix == ".err")]
