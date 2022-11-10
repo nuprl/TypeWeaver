@@ -141,6 +141,7 @@ class TypeInference:
                 print("WARNING: Truncated output")
             filled_type = _extract_maybe_type(generated[len(prompt) :])
             if filled_type == "":
+                filled_type = "any"
                 continue
             # Run
             validate_process = subprocess.run(
