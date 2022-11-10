@@ -1,2 +1,69 @@
-scripts/fetch-iana.ts(67,51): error TS1005: '>' expected.
+scripts/build.ts(20,1): error TS2554: Expected 3 arguments, but got 2.
+scripts/build.ts(23,18): error TS2732: Cannot find module '../src/custom-suffix.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+scripts/build.ts(28,43): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
+scripts/build.ts(47,20): error TS2339: Property 'toLowerCase' does not exist on type 'string | number'.
+  Property 'toLowerCase' does not exist on type 'number'.
+scripts/build.ts(62,49): error TS2304: Cannot find name 'Extension'.
+scripts/build.ts(91,35): error TS2304: Cannot find name 'Source'.
+scripts/build.ts(95,9): error TS2339: Property 'source' does not exist on type '{}'.
+scripts/build.ts(105,34): error TS2538: Type 'false' cannot be used as an index type.
+scripts/build.ts(105,34): error TS2538: Type 'true' cannot be used as an index type.
+scripts/build.ts(106,9): error TS2538: Type 'false' cannot be used as an index type.
+scripts/build.ts(106,9): error TS2538: Type 'true' cannot be used as an index type.
+scripts/fetch-apache.ts(14,21): error TS2307: Cannot find module 'raw-body' or its corresponding type declarations.
+scripts/fetch-apache.ts(42,20): error TS2339: Property 'index' does not exist on type 'RegExp'.
+scripts/fetch-apache.ts(44,41): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
+scripts/fetch-apache.ts(67,49): error TS2304: Cannot find name 'Extension'.
+scripts/fetch-apache.ts(97,44): error TS2552: Cannot find name 'esponse'. Did you mean 'Response'?
+scripts/fetch-iana.ts(14,16): error TS2307: Cannot find module 'co' or its corresponding type declarations.
+scripts/fetch-iana.ts(15,24): error TS2307: Cannot find module 'raw-body' or its corresponding type declarations.
+scripts/fetch-iana.ts(16,20): error TS2307: Cannot find module 'cogent' or its corresponding type declarations.
+scripts/fetch-iana.ts(17,20): error TS2307: Cannot find module 'csv-parse' or its corresponding type declarations.
+scripts/fetch-iana.ts(18,21): error TS2307: Cannot find module 'stream-to-array' or its corresponding type declarations.
+scripts/fetch-iana.ts(48,5): error TS2554: Expected 2 arguments, but got 1.
+scripts/fetch-iana.ts(69,12): error TS2538: Type 'string[]' cannot be used as an index type.
+scripts/fetch-iana.ts(69,25): error TS2538: Type 'string[]' cannot be used as an index type.
+scripts/fetch-iana.ts(75,37): error TS2304: Cannot find name 'IFileResult'.
+scripts/fetch-iana.ts(94,70): error TS2304: Cannot find name 'Extension'.
+scripts/fetch-iana.ts(172,42): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'string'.
+scripts/fetch-iana.ts(180,38): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string'.
+scripts/fetch-iana.ts(181,47): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string'.
+scripts/fetch-iana.ts(183,58): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string'.
+scripts/fetch-iana.ts(191,3): error TS2322: Type 'string' is not assignable to type 'RegExpExecArray'.
+scripts/fetch-iana.ts(192,3): error TS2322: Type 'string' is not assignable to type 'RegExpExecArray'.
+scripts/fetch-iana.ts(198,7): error TS2367: This condition will always return 'false' since the types 'string[]' and 'string' have no overlap.
+scripts/fetch-iana.ts(200,5): error TS2739: Type 'string[]' is missing the following properties from type 'RegExpExecArray': index, input
+scripts/fetch-iana.ts(207,52): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string'.
+scripts/fetch-iana.ts(211,43): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string'.
+scripts/fetch-iana.ts(218,43): error TS2304: Cannot find name 'Template'.
+scripts/fetch-iana.ts(228,25): error TS2304: Cannot find name 'Extension'.
+scripts/fetch-iana.ts(229,28): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
+scripts/fetch-iana.ts(248,35): error TS2304: Cannot find name 'Row'.
+scripts/fetch-iana.ts(286,40): error TS2304: Cannot find name 'ring'.
+scripts/fetch-iana.ts(286,55): error TS2304: Cannot find name 'Line'.
+scripts/fetch-iana.ts(302,49): error TS2367: This condition will always return 'true' since the types 'string' and 'number' have no overlap.
+scripts/fetch-iana.ts(323,30): error TS2304: Cannot find name 'Line'.
+scripts/fetch-iana.ts(326,11): error TS2339: Property 'trimLeft' does not exist on type 'string | string[]'.
+  Property 'trimLeft' does not exist on type 'string[]'.
+scripts/fetch-iana.ts(327,17): error TS2339: Property 'trimLeft' does not exist on type 'string | string[]'.
+  Property 'trimLeft' does not exist on type 'string[]'.
+scripts/fetch-iana.ts(331,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+scripts/fetch-iana.ts(331,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+scripts/fetch-iana.ts(336,36): error TS2304: Cannot find name 'bject'.
+scripts/fetch-iana.ts(337,9): error TS2367: This condition will always return 'true' since the types 'number' and 'string' have no overlap.
+scripts/fetch-iana.ts(345,39): error TS2304: Cannot find name 'Reference'.
+scripts/fetch-iana.ts(349,22): error TS2339: Property 'index' does not exist on type 'RegExp'.
+scripts/fetch-iana.ts(358,39): error TS2304: Cannot find name 'Reference'.
+scripts/fetch-iana.ts(362,22): error TS2339: Property 'index' does not exist on type 'RegExp'.
+scripts/fetch-iana.ts(388,26): error TS2339: Property 'toLowerCase' does not exist on type 'string | string[]'.
+  Property 'toLowerCase' does not exist on type 'string[]'.
+scripts/fetch-iana.ts(388,55): error TS2339: Property 'replace' does not exist on type 'string | string[]'.
+  Property 'replace' does not exist on type 'string[]'.
+scripts/fetch-iana.ts(393,38): error TS2304: Cannot find name 'Reference'.
+scripts/fetch-iana.ts(394,92): error TS2304: Cannot find name 'Rfc'.
+scripts/fetch-nginx.ts(14,21): error TS2307: Cannot find module 'raw-body' or its corresponding type declarations.
+scripts/fetch-nginx.ts(40,20): error TS2339: Property 'index' does not exist on type 'RegExp'.
+scripts/fetch-nginx.ts(42,41): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
+scripts/fetch-nginx.ts(61,49): error TS2304: Cannot find name 'Extension'.
+scripts/fetch-nginx.ts(91,44): error TS2552: Cannot find name 'esponse'. Did you mean 'Response'?
 

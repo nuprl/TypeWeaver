@@ -9,7 +9,7 @@ const decimalNumber = /^\d+$/;
 const acornJsxMap = new WeakMap();
 
 // Get the original tokens for the given `acorn` namespace object.
-function getJsxTokens(acorn: ) {
+function getJsxTokens(acorn: any) {
   acorn = acorn.Parser.acorn || acorn;
   let acornJsx = acornJsxMap.get(acorn);
   if (!acornJsx) {
@@ -36,7 +36,7 @@ function getJsxTokens(acorn: ) {
       this.context.push(tc_oTag); // start opening tag context
       this.exprAllowed = false;
     };
-    tokTypes.jsxTagEnd.updateContext = function(prevType: ?string, nextType:?) {
+    tokTypes.jsxTagEnd.updateContext = function(prevType: any) {
       let out = this.context.pop();
       if (out === tc_oTag && prevType === tt.slash || out === tc_cTag) {
         this.context.pop();

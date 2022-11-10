@@ -152,7 +152,7 @@ var Base62 = Encoder.extend({
 
     var empty = K("");
     var index = 0;
-    forEach (words, function(word: ) {
+    forEach (words, function(word: any) {
       if (encoded.has(word)) {
         word.index = encoded.get(word);
         word.toString = empty;
@@ -216,7 +216,7 @@ var Base62 = Encoder.extend({
       "([A-Z])(\\|[A-Z])+\\|([A-Z])": "$1-$3",
       "\\|": ""
     });
-    var pattern = trim.exec(words.map(function(word: ) {
+    var pattern = trim.exec(words.map(function(word: any) {
       if (word.toString()) return word.replacement;
       return "";
     }).slice(0, 62).join("|"));
@@ -443,7 +443,7 @@ var Shrinker = Base.extend({
     });
   },
   
-  shrink: function(script: ) {
+  shrink: function(script: any) {
     script = this.encodeData(script);
     
     // Windows Scripting Host cannot do regexp.test() on global regexps.
@@ -452,7 +452,7 @@ var Shrinker = Base.extend({
       return new RegExp(regexp.source, "g");
     };
         
-    // identify blocks, particularly identify function blocks (which define scope: function/block/method)
+    // identify blocks, particularly identify function blocks (which define scope: any)
     var BLOCK         = /((catch|do|if|while|with|function)\b[^~{};]*(\(\s*[^{};]*\s*\))\s*)?(\{[^{}]*\})/;
     var BLOCK_g       = global(BLOCK);
     var BRACKETS      = /\{[^{}]*\}|\[[^\[\]]*\]|\([^\(\)]*\)|~[^~]+~/;

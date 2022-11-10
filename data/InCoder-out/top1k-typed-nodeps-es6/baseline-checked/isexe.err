@@ -1,9 +1,8 @@
+index.ts(12,50): error TS2304: Cannot find name 'IExecFileOptions'.
+index.ts(12,73): error TS2304: Cannot find name 'IExecFileCallback'.
+index.ts(51,28): error TS2339: Property 'ignoreErrors' does not exist on type 'Object'.
 mode.ts(6,50): error TS2304: Cannot find name 'IExecFileOptions'.
 mode.ts(6,73): error TS2304: Cannot find name 'IExecFileCallback'.
-mode.ts(7,17): error TS2345: Argument of type '(er: Error, stat: fs.Stat) => void' is not assignable to parameter of type '(err: ErrnoException | null, stats: Stats) => void'.
-  Types of parameters 'er' and 'err' are incompatible.
-    Type 'ErrnoException | null' is not assignable to type 'Error'.
-      Type 'null' is not assignable to type 'Error'.
 mode.ts(7,48): error TS2724: '"fs"' has no exported member named 'Stat'. Did you mean 'stat'?
 mode.ts(13,32): error TS2769: No overload matches this call.
   The last overload gave the following error.
@@ -20,10 +19,6 @@ windows.ts(27,41): error TS2304: Cannot find name 'Path'.
 windows.ts(27,57): error TS2503: Cannot find namespace 'Stats'.
 windows.ts(34,50): error TS2304: Cannot find name 'IExecFileOptions'.
 windows.ts(34,73): error TS2304: Cannot find name 'IExecFileCallback'.
-windows.ts(35,17): error TS2345: Argument of type '(er: Error, stat: fs.Stat) => void' is not assignable to parameter of type '(err: ErrnoException | null, stats: Stats) => void'.
-  Types of parameters 'er' and 'err' are incompatible.
-    Type 'ErrnoException | null' is not assignable to type 'Error'.
-      Type 'null' is not assignable to type 'Error'.
 windows.ts(35,48): error TS2724: '"fs"' has no exported member named 'Stat'. Did you mean 'stat'?
 windows.ts(41,32): error TS2769: No overload matches this call.
   The last overload gave the following error.

@@ -2,22 +2,22 @@ import path from 'path';
 
 // We only register on the final extension (like `.js`) due to https://github.com/joyent/node/blob/v0.12.0/lib/module.js#L353
 // However, we use these matchers to apply the transform only if the full extension matches
-function endsInJsx(filename: ) {
+function endsInJsx(filename: any) {
   return filename.endsWith('.jsx');
 }
-function endsInTs(filename: ) {
+function endsInTs(filename: any) {
   return filename.endsWith('.ts');
 }
-function endsInTsx(filename: ) {
+function endsInTsx(filename: any) {
   return filename.endsWith('.tsx');
 }
-function endsInBabelJs(filename: ?string) {
+function endsInBabelJs(filename: any) {
   return filename.endsWith('.babel.js');
 }
 function endsInBabelJsx(filename: string | undefined) {
   return filename.endsWith('.babel.jsx');
 }
-function endsInBabelTs(filename: ?string) {
+function endsInBabelTs(filename: any) {
   return filename.endsWith('.babel.ts');
 }
 function endsInBabelTsx(filename: string | undefined) {

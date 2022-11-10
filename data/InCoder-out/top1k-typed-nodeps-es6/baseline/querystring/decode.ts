@@ -28,7 +28,7 @@ function hasOwnProperty(obj: any,  prop: string | symbol) {
   return Object.prototype.hasOwnProperty.call(obj, prop);
 }
 
-export default function(qs: string,  sep: ?,  eq: ,  options: |endofmask|>) {
+export default function(qs: string,  sep: any,  eq: any,  options: any) {
   sep = sep || '&';
   eq = eq || '=';
   var obj = {};

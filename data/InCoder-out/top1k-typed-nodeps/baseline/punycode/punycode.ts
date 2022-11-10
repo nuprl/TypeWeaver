@@ -384,7 +384,7 @@ const encode = function(input: number) {
  * string.
  */
 const toUnicode = function(input: Domain) {
-	return mapDomain(input, function(string: ) {
+	return mapDomain(input, function(string: any) {
 		return regexPunycode.test(string)
 			? decode(string.slice(4).toLowerCase())
 			: string;
@@ -403,7 +403,7 @@ const toUnicode = function(input: Domain) {
  * email address.
  */
 const toASCII = function(input: Domain) {
-	return mapDomain(input, function(string: ?string, pattern:?) {
+	return mapDomain(input, function(string: any) {
 		return regexNonASCII.test(string)
 			? 'xn--' + encode(string)
 			: string;

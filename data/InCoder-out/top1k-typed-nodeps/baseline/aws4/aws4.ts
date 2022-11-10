@@ -7,7 +7,7 @@ var aws4 = exports,
 
 // http://docs.amazonwebservices.com/general/latest/gr/signature-version-4.html
 
-function hmac(key: ,  string: algorithm,  encoding: ncoding) {
+function hmac(key: any,  string: any,  encoding: any) {
   return crypto.createHmac('sha256', key).update(string, 'utf8').digest(encoding)
 }
 

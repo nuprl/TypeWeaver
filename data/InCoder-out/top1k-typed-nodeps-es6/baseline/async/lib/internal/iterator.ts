@@ -33,7 +33,7 @@ function createObjectIterator(obj: any) {
     };
 }
 
-export default function createIterator(coll: ) {
+export default function createIterator(coll: any) {
     if (isArrayLike(coll)) {
         return createArrayIterator(coll);
     }

@@ -37,7 +37,7 @@ var stringifyPrimitive = function(v: ny) {
   }
 };
 
-export default function(obj: any,  sep: ,  eq: eq2,  name: ame2) {
+export default function(obj: any,  sep: any,  eq: any,  name: any) {
   sep = sep || '&';
   eq = eq || '=';
   if (obj === null) {

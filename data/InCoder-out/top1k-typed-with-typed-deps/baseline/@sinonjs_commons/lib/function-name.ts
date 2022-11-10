@@ -19,7 +19,7 @@ module.exports = function functionName(func: Function) {
             // name. Does not rely on function decomposition to work - if it
             // doesn't debugging will be slightly less informative
             // (i.e. toString will say 'spy' rather than 'myFunc').
-            (String(func).match(/function ([^\s(]+: ?([^\s(]+)/) || [])[1]
+            (String(func).match(/function ([^\s(]+: any)/) || [])[1]
         );
     } catch (e) {
         // Stringify may fail and we might get an exception, as a last-last

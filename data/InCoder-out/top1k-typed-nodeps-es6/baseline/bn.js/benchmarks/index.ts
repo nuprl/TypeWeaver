@@ -189,7 +189,7 @@ add('create-10', {
 });
 
 add('create-hex', {
-  'bn.js': function (fixture: ) {
+  'bn.js': function (fixture: any) {
     new bn(fixture.a16base, 16);
   },
   bignum: function (fixture: BignumFixture) {
@@ -198,7 +198,7 @@ add('create-hex', {
   bigi: function (fixture: Bigi) {
     new bigi(fixture.a16base, 16);
   },
-  sjcl: function (fixture: ) {
+  sjcl: function (fixture: any) {
     new sjcl(fixture.a16base);
   },
   yaffle: function (fixture: BigInteger) {
@@ -336,7 +336,7 @@ add('mul-jumbo', {
   'bn.js[FFT]': function (fixture: fixtures.fixture) {
     fixture.a1j.mulf(fixture.b1j);
   },
-  BigInt: function (fixture: ) {
+  BigInt: function (fixture: any) {
     fixture.a2j * fixture.b2j;
   },
   bignum: function (fixture: Fixture) {
@@ -432,7 +432,7 @@ add('mul-mod k256', {
   'bn.js': function (fixture: ComponentFixture) {
     fixture.am1.redSqr();
   },
-  sjcl: function (fixture: ) {
+  sjcl: function (fixture: any) {
     fixture.am5.square().fullReduce();
   }
 });

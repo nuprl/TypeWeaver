@@ -18,7 +18,7 @@
 
 export function simple(node: Node,  visitors: Visitor[],  baseVisitor: BaseVisitor,  state: State,  override: Override) {
   if (!baseVisitor) baseVisitor = base
-  ;(function c(node: Node,  st: Statement,  override: ?boolean) {
+  ;(function c(node: Node,  st: Statement,  override: any) {
     let type = override || node.type, found = visitors[type]
     baseVisitor[type](node, st, c)
     if (found) found(node, st)
@@ -31,7 +31,7 @@ export function simple(node: Node,  visitors: Visitor[],  baseVisitor: BaseVisit
 export function ancestor(node: Node,  visitors: Array<Function>,  baseVisitor: Function,  state: Object,  override: Function) {
   let ancestors = []
   if (!baseVisitor) baseVisitor = base
-  ;(function c(node: Node,  st: Statement,  override: ?boolean) {
+  ;(function c(node: Node,  st: Statement,  override: any) {
     let type = override || node.type, found = visitors[type]
     let isNew = node !== ancestors[ancestors.length - 1]
     if (isNew) ancestors.push(node)
@@ -48,7 +48,7 @@ export function ancestor(node: Node,  visitors: Array<Function>,  baseVisitor: F
 // nodes).
 export function recursive(node: Node,  state: State,  funcs: Functions,  baseVisitor: BaseVisitor,  override: OverrideVisitor) {
   let visitor = funcs ? make(funcs, baseVisitor || undefined) : baseVisitor
-  ;(function c(node: Node,  st: Statement,  override: ?boolean) {
+  ;(function c(node: Node,  st: Statement,  override: any) {
     visitor[override || node.type](node, st, c)
   })(node, state, override)
 }
@@ -70,7 +70,7 @@ class Found {
 export function full(node: ASTNode,  callback: Function,  baseVisitor: ASTVisitor,  state: State,  override: Override) {
   if (!baseVisitor) baseVisitor = base
   let last
-  ;(function c(node: Node,  st: Statement,  override: ?boolean) {
+  ;(function c(node: Node,  st: Statement,  override: any) {
     let type = override || node.type
     baseVisitor[type](node, st, c)
     if (last !== node) {
@@ -82,10 +82,10 @@ export function full(node: ASTNode,  callback: Function,  baseVisitor: ASTVisito
 
 // An fullAncestor walk is like an ancestor walk, but triggers
 // the callback on each node
-export function fullAncestor(node: Node,  callback: (fullAncestorCallback,  baseVisitor: BaseVisitor,  state: State) {
+export function fullAncestor(node: Node,  callback: any,  baseVisitor: Function,  state: Object) {
   if (!baseVisitor) baseVisitor = base
   let ancestors = [], last
-  ;(function c(node: Node,  st: Statement,  override: ?boolean) {
+  ;(function c(node: Node,  st: Statement,  override: any) {
     let type = override || node.type
     let isNew = node !== ancestors[ancestors.length - 1]
     if (isNew) ancestors.push(node)
@@ -105,7 +105,7 @@ export function findNodeAt(node: Node,  start: number,  end: number,  test: Func
   if (!baseVisitor) baseVisitor = base
   test = makeTest(test)
   try {
-    (function c(node: Node,  st: Statement,  override: ?boolean) {
+    (function c(node: Node,  st: Statement,  override: any) {
       let type = override || node.type
       if ((start == null || node.start <= start) &&
           (end == null || node.end >= end))
@@ -127,7 +127,7 @@ export function findNodeAround(node: Node,  pos: number,  test: Function,  baseV
   test = makeTest(test)
   if (!baseVisitor) baseVisitor = base
   try {
-    (function c(node: Node,  st: Statement,  override: ?boolean) {
+    (function c(node: Node,  st: Statement,  override: any) {
       let type = override || node.type
       if (node.start > pos || node.end < pos) return
       baseVisitor[type](node, st, c)
@@ -144,7 +144,7 @@ export function findNodeAfter(node: Node,  pos: number,  test: Function,  baseVi
   test = makeTest(test)
   if (!baseVisitor) baseVisitor = base
   try {
-    (function c(node: Node,  st: Statement,  override: ?boolean) {
+    (function c(node: Node,  st: Statement,  override: any) {
       if (node.end < pos) return
       let type = override || node.type
       if (node.start >= pos && test(type, node)) throw new Found(node, st)
@@ -161,7 +161,7 @@ export function findNodeBefore(node: Node,  pos: number,  test: Function,  baseV
   test = makeTest(test)
   if (!baseVisitor) baseVisitor = base
   let max
-  ;(function c(node: Node,  st: Statement,  override: ?boolean) {
+  ;(function c(node: Node,  st: Statement,  override: any) {
     if (node.start > pos) return
     let type = override || node.type
     if (node.end <= pos && (!max || max.node.end < node.end) && test(type, node))

@@ -141,7 +141,7 @@ pp.parseBindingAtom = function() {
   return this.parseIdent()
 }
 
-pp.parseBindingList = function(close: ?boolean, allowEmpty,  allowEmpty: boolean,  allowTrailingComma: boolean) {
+pp.parseBindingList = function(close: any,  allowEmpty: boolean,  allowTrailingComma: boolean) {
   let elts = [], first = true
   while (!this.eat(close)) {
     if (first) first = false
@@ -166,7 +166,7 @@ pp.parseBindingList = function(close: ?boolean, allowEmpty,  allowEmpty: boolean
   return elts
 }
 
-pp.parseBindingListItem = function(param: ) {
+pp.parseBindingListItem = function(param: any) {
   return param
 }
 

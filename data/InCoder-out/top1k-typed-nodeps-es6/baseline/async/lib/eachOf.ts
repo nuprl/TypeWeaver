@@ -17,7 +17,7 @@ function eachOfArrayLike(coll: ArrayLike<any>,  iteratee: Function,  callback: F
         callback(null);
     }
 
-    function iteratorCallback(err: ?boolean,  value: any) {
+    function iteratorCallback(err: any,  value: any) {
         if (err === false) {
             canceled = true
         }

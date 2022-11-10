@@ -176,7 +176,7 @@ const proxyHandler = {
 
 export default figgyPudding;
 function figgyPudding (specs: any,  opts: any) {
-  function factory (...providers: Array<Type|Provider) {
+  function factory (...providers: any) {
     return new Proxy(new FiggyPudding(
       specs,
       opts,

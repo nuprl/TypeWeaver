@@ -1,18 +1,117 @@
-graceful-fs.ts(111,88): error TS1005: ';' expected.
-graceful-fs.ts(117,113): error TS1005: ';' expected.
-graceful-fs.ts(131,99): error TS1131: Property or signature expected.
-graceful-fs.ts(131,108): error TS1005: ';' expected.
-graceful-fs.ts(137,145): error TS1005: ';' expected.
-graceful-fs.ts(152,100): error TS1131: Property or signature expected.
-graceful-fs.ts(152,109): error TS1005: ';' expected.
-graceful-fs.ts(158,146): error TS1005: ';' expected.
-graceful-fs.ts(200,108): error TS1005: ';' expected.
-graceful-fs.ts(205,108): error TS1005: ';' expected.
-graceful-fs.ts(256,25): error TS1110: Type expected.
-graceful-fs.ts(266,25): error TS1110: Type expected.
-graceful-fs.ts(297,73): error TS1131: Property or signature expected.
-graceful-fs.ts(340,80): error TS1131: Property or signature expected.
-graceful-fs.ts(344,82): error TS1131: Property or signature expected.
-legacy-streams.ts(11,73): error TS1131: Property or signature expected.
-polyfills.ts(98,29): error TS1110: Type expected.
+clone.ts(6,14): error TS2339: Property '__proto__' does not exist on type 'Object'.
+clone.ts(9,10): error TS2300: Duplicate identifier 'clone'.
+clone.ts(9,22): error TS2304: Cannot find name 'bject'.
+clone.ts(16,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'copy' must be of type '{ __proto__: any; }', but here has type 'any'.
+graceful-fs.ts(3,5): error TS2300: Duplicate identifier 'legacy'.
+graceful-fs.ts(4,5): error TS2300: Duplicate identifier 'clone'.
+graceful-fs.ts(24,32): error TS2304: Cannot find name 'Context'.
+graceful-fs.ts(24,49): error TS2304: Cannot find name 'Queue'.
+graceful-fs.ts(86,13): error TS2554: Expected 0 arguments, but got 1.
+graceful-fs.ts(102,10): error TS2393: Duplicate function implementation.
+graceful-fs.ts(102,28): error TS2694: Namespace 'NodeJS' has no exported member 'ReadWrite'.
+graceful-fs.ts(115,12): error TS2554: Expected 4 arguments, but got 3.
+graceful-fs.ts(119,25): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(119,50): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(120,19): error TS2345: Argument of type '(number | Error | ((path: string | Buffer, options: any, cb: Function, startTime: number) => any) | any[])[]' is not assignable to parameter of type 'Element'.
+  Type '(number | Error | ((path: string | Buffer, options: any, cb: Function, startTime: number) => any) | any[])[]' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
+graceful-fs.ts(135,12): error TS2554: Expected 5 arguments, but got 4.
+graceful-fs.ts(139,25): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(139,50): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(140,19): error TS2345: Argument of type '(number | Error | ((path: string | Buffer, data: string | Buffer, options: any, cb: Function, startTime: number) => any) | any[])[]' is not assignable to parameter of type 'Element'.
+  Type '(number | Error | ((path: string | Buffer, data: string | Buffer, options: any, cb: Function, startTime: number) => any) | any[])[]' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
+graceful-fs.ts(156,12): error TS2554: Expected 5 arguments, but got 4.
+graceful-fs.ts(160,25): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(160,50): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(161,19): error TS2345: Argument of type '(number | Error | ((path: string | Buffer, data: string | Buffer, options: any, cb: Function, startTime: number) => any) | any[])[]' is not assignable to parameter of type 'Element'.
+  Type '(number | Error | ((path: string | Buffer, data: string | Buffer, options: any, cb: Function, startTime: number) => any) | any[])[]' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
+graceful-fs.ts(173,27): error TS2503: Cannot find namespace 'fs'.
+graceful-fs.ts(173,49): error TS2503: Cannot find namespace 'fs'.
+graceful-fs.ts(178,12): error TS2554: Expected 5 arguments, but got 4.
+graceful-fs.ts(182,25): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(182,50): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(183,19): error TS2345: Argument of type '(number | Error | ((src: any, dest: any, flags: any, cb: Function, startTime: number) => any) | any[])[]' is not assignable to parameter of type 'Element'.
+  Type '(number | Error | ((src: any, dest: any, flags: any, cb: Function, startTime: number) => any) | any[])[]' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
+graceful-fs.ts(202,30): error TS2345: Argument of type 'number' is not assignable to parameter of type '15774889'.
+graceful-fs.ts(207,30): error TS2345: Argument of type 'number' is not assignable to parameter of type '15774889'.
+graceful-fs.ts(211,12): error TS2554: Expected 4 arguments, but got 3.
+graceful-fs.ts(213,58): error TS2304: Cannot find name 'fs$ReaddirOption'.
+graceful-fs.ts(213,81): error TS2304: Cannot find name 'fs$ReaddirCallback'.
+graceful-fs.ts(215,25): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(215,50): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(216,19): error TS2345: Argument of type '(number | Error | ((path: string, options: any, cb: Function, startTime: number) => any) | any[])[]' is not assignable to parameter of type 'Element'.
+  Type '(number | Error | ((path: string, options: any, cb: Function, startTime: number) => any) | any[])[]' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
+graceful-fs.ts(236,5): error TS2630: Cannot assign to 'ReadStream' because it is a function.
+graceful-fs.ts(237,5): error TS2630: Cannot assign to 'WriteStream' because it is a function.
+graceful-fs.ts(257,7): error TS2630: Cannot assign to 'ReadStream' because it is a function.
+graceful-fs.ts(267,7): error TS2630: Cannot assign to 'WriteStream' because it is a function.
+graceful-fs.ts(279,25): error TS2749: 'FileReadStream' refers to a value, but is being used as a type here. Did you mean 'typeof FileReadStream'?
+graceful-fs.ts(290,25): error TS2749: 'FileWriteStream' refers to a value, but is being used as a type here. Did you mean 'typeof FileWriteStream'?
+graceful-fs.ts(320,31): error TS2304: Cannot find name 'Path'.
+graceful-fs.ts(320,47): error TS2304: Cannot find name 'WriteStreamOptions'.
+graceful-fs.ts(354,12): error TS2554: Expected 5 arguments, but got 4.
+graceful-fs.ts(358,25): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(358,50): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(359,19): error TS2345: Argument of type '(number | Error | ((path: String, flags: number, mode: number, cb: Function, startTime: number) => any) | (number | Function | String)[])[]' is not assignable to parameter of type 'Element'.
+  Type '(number | Error | ((path: String, flags: number, mode: number, cb: Function, startTime: number) => any) | (number | Function | String)[])[]' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
+graceful-fs.ts(372,9): error TS2554: Expected 0 arguments, but got 3.
+graceful-fs.ts(416,11): error TS2554: Expected 0 arguments, but got 3.
+graceful-fs.ts(420,11): error TS2554: Expected 0 arguments, but got 3.
+graceful-fs.ts(435,13): error TS2554: Expected 0 arguments, but got 3.
+legacy-streams.ts(5,10): error TS2300: Duplicate identifier 'legacy'.
+legacy-streams.ts(12,47): error TS2350: Only a void function can be called with the 'new' keyword.
+legacy-streams.ts(75,31): error TS2304: Cannot find name 'Path'.
+legacy-streams.ts(75,47): error TS2304: Cannot find name 'WriteStreamOptions'.
+legacy-streams.ts(76,48): error TS2350: Only a void function can be called with the 'new' keyword.
+polyfills.ts(29,10): error TS2393: Duplicate function implementation.
+polyfills.ts(29,28): error TS2694: Namespace 'NodeJS' has no exported member 'ReadWrite'.
+polyfills.ts(104,22): error TS2339: Property 'code' does not exist on type 'Error'.
+polyfills.ts(104,46): error TS2339: Property 'code' does not exist on type 'Error'.
+polyfills.ts(107,45): error TS2304: Cannot find name 'Stater'.
+polyfills.ts(107,58): error TS2304: Cannot find name 'Stats'.
+polyfills.ts(150,16): error TS2502: 'fs$readSync' is referenced directly or indirectly in its own type annotation.
+polyfills.ts(166,8): error TS2339: Property 'lchmod' does not exist on type 'TypedArray'.
+  Property 'lchmod' does not exist on type 'Int8Array'.
+polyfills.ts(167,10): error TS2339: Property 'open' does not exist on type 'TypedArray'.
+  Property 'open' does not exist on type 'Int8Array'.
+polyfills.ts(177,12): error TS2339: Property 'fchmod' does not exist on type 'TypedArray'.
+  Property 'fchmod' does not exist on type 'Int8Array'.
+polyfills.ts(178,14): error TS2339: Property 'close' does not exist on type 'TypedArray'.
+  Property 'close' does not exist on type 'Int8Array'.
+polyfills.ts(185,8): error TS2339: Property 'lchmodSync' does not exist on type 'TypedArray'.
+  Property 'lchmodSync' does not exist on type 'Int8Array'.
+polyfills.ts(185,37): error TS2304: Cannot find name 'Path'.
+polyfills.ts(185,50): error TS2304: Cannot find name 'Mode'.
+polyfills.ts(186,19): error TS2339: Property 'openSync' does not exist on type 'TypedArray'.
+  Property 'openSync' does not exist on type 'Int8Array'.
+polyfills.ts(193,18): error TS2339: Property 'fchmodSync' does not exist on type 'TypedArray'.
+  Property 'fchmodSync' does not exist on type 'Int8Array'.
+polyfills.ts(198,16): error TS2339: Property 'closeSync' does not exist on type 'TypedArray'.
+  Property 'closeSync' does not exist on type 'Int8Array'.
+polyfills.ts(201,14): error TS2339: Property 'closeSync' does not exist on type 'TypedArray'.
+  Property 'closeSync' does not exist on type 'Int8Array'.
+polyfills.ts(209,53): error TS2339: Property 'futimes' does not exist on type 'FileSystem'.
+polyfills.ts(210,10): error TS2339: Property 'lutimes' does not exist on type 'FileSystem'.
+polyfills.ts(210,36): error TS2304: Cannot find name 'Path'.
+polyfills.ts(211,12): error TS2339: Property 'open' does not exist on type 'FileSystem'.
+polyfills.ts(216,14): error TS2339: Property 'futimes' does not exist on type 'FileSystem'.
+polyfills.ts(217,16): error TS2339: Property 'close' does not exist on type 'FileSystem'.
+polyfills.ts(224,10): error TS2339: Property 'lutimesSync' does not exist on type 'FileSystem'.
+polyfills.ts(224,40): error TS2304: Cannot find name 'Path'.
+polyfills.ts(224,51): error TS2304: Cannot find name 'Position'.
+polyfills.ts(224,66): error TS2304: Cannot find name 'Marker'.
+polyfills.ts(225,21): error TS2339: Property 'openSync' does not exist on type 'FileSystem'.
+polyfills.ts(229,20): error TS2339: Property 'futimesSync' does not exist on type 'FileSystem'.
+polyfills.ts(234,18): error TS2339: Property 'closeSync' does not exist on type 'FileSystem'.
+polyfills.ts(237,16): error TS2339: Property 'closeSync' does not exist on type 'FileSystem'.
+polyfills.ts(243,19): error TS2339: Property 'futimes' does not exist on type 'FileSystem'.
+polyfills.ts(244,10): error TS2339: Property 'lutimes' does not exist on type 'FileSystem'.
+polyfills.ts(245,10): error TS2339: Property 'lutimesSync' does not exist on type 'FileSystem'.
+polyfills.ts(252,19): error TS2339: Property 'call' does not exist on type 'number'.
+polyfills.ts(263,21): error TS2339: Property 'call' does not exist on type 'number'.
+polyfills.ts(281,39): error TS2694: Namespace 'NodeJS' has no exported member 'Errno'.
+polyfills.ts(301,45): error TS2503: Cannot find namespace 'fs'.
+polyfills.ts(313,31): error TS2304: Cannot find name 'Stat'.
+polyfills.ts(344,12): error TS2339: Property 'code' does not exist on type 'Error'.
+polyfills.ts(349,14): error TS2339: Property 'code' does not exist on type 'Error'.
+polyfills.ts(349,38): error TS2339: Property 'code' does not exist on type 'Error'.
 

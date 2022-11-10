@@ -210,7 +210,7 @@ function Utf32AutoEncoder(options: Utf32EncoderOption,  codec: Utf32Codec) {
     this.encoder = codec.iconv.getEncoder(options.defaultEncoding || 'utf-32le', options);
 }
 
-Utf32AutoEncoder.prototype.write = function(str: ) {
+Utf32AutoEncoder.prototype.write = function(str: any) {
     return this.encoder.write(str);
 };
 

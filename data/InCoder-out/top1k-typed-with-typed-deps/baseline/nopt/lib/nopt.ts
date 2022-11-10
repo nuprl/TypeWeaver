@@ -59,7 +59,7 @@ function clean (data: any,  types: any,  typeDefs: any) {
   var remove = {}
   var typeDefault = [false, true, null, String, Array]
 
-  Object.keys(data).forEach(function (k: ) {
+  Object.keys(data).forEach(function (k: any) {
     if (k === 'argv') {
       return
     }
@@ -484,12 +484,12 @@ function resolveShort (arg: number,  shorthands: string[],  shortAbbr: number,  
     debug('shorthand singles', singles)
   }
 
-  var chrs = arg.split('').filter(function (c: ) {
+  var chrs = arg.split('').filter(function (c: any) {
     return singles[c]
   })
 
   if (chrs.join('') === arg) {
-    return chrs.map(function (c: ) {
+    return chrs.map(function (c: any) {
       return shorthands[c]
     }).reduce(function (l: List,  r: List) {
       return l.concat(r)

@@ -455,7 +455,7 @@ ECCurveFp.prototype.decodePointHex = function(s: string) {
       return null;
   }
 };
-ECCurveFp.prototype.encodeCompressedPointHex = function(p: ) {
+ECCurveFp.prototype.encodeCompressedPointHex = function(p: any) {
   if (p.isInfinity()) return "00";
   var xHex = p
     .getX()

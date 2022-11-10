@@ -1,21 +1,26 @@
-lib/pipeline/cell.ts(16,46): error TS1110: Type expected.
-lib/websocket_extensions.ts(60,30): error TS1110: Type expected.
-spec/parser_spec.ts(6,38): error TS1110: Type expected.
-spec/websocket_extensions_spec.ts(193,102): error TS1128: Declaration or statement expected.
-spec/websocket_extensions_spec.ts(193,104): error TS1005: ';' expected.
-spec/websocket_extensions_spec.ts(196,10): error TS1128: Declaration or statement expected.
-spec/websocket_extensions_spec.ts(256,67): error TS1128: Declaration or statement expected.
-spec/websocket_extensions_spec.ts(256,69): error TS1005: ';' expected.
-spec/websocket_extensions_spec.ts(419,102): error TS1128: Declaration or statement expected.
-spec/websocket_extensions_spec.ts(419,104): error TS1005: ';' expected.
-spec/websocket_extensions_spec.ts(422,10): error TS1128: Declaration or statement expected.
-spec/websocket_extensions_spec.ts(433,5): error TS1128: Declaration or statement expected.
-spec/websocket_extensions_spec.ts(433,6): error TS1128: Declaration or statement expected.
-spec/websocket_extensions_spec.ts(433,7): error TS1128: Declaration or statement expected.
-spec/websocket_extensions_spec.ts(434,3): error TS1128: Declaration or statement expected.
-spec/websocket_extensions_spec.ts(434,4): error TS1128: Declaration or statement expected.
-spec/websocket_extensions_spec.ts(434,5): error TS1128: Declaration or statement expected.
-spec/websocket_extensions_spec.ts(525,1): error TS1128: Declaration or statement expected.
-spec/websocket_extensions_spec.ts(525,2): error TS1128: Declaration or statement expected.
-spec/websocket_extensions_spec.ts(525,3): error TS1128: Declaration or statement expected.
+lib/parser.ts(14,33): error TS2552: Cannot find name 'Header'. Did you mean 'Headers'?
+lib/parser.ts(83,18): error TS2538: Type 'String' cannot be used as an index type.
+lib/parser.ts(85,16): error TS2538: Type 'String' cannot be used as an index type.
+lib/parser.ts(96,23): error TS2538: Type 'String' cannot be used as an index type.
+lib/pipeline/functor.ts(5,33): error TS2304: Cannot find name 'Session'.
+lib/pipeline/functor.ts(5,51): error TS2304: Cannot find name 'Method'.
+lib/pipeline/functor.ts(8,42): error TS2339: Property 'QUEUE_SIZE' does not exist on type '(session: Session, method: Method) => void'.
+lib/pipeline/functor.ts(13,9): error TS2339: Property 'QUEUE_SIZE' does not exist on type '(session: Session, method: Method) => void'.
+lib/pipeline/functor.ts(31,11): error TS2447: The '^' operator is not allowed for boolean types. Consider using '!==' instead.
+lib/pipeline/functor.ts(48,5): error TS2554: Expected 2 arguments, but got 1.
+lib/pipeline/index.ts(6,35): error TS2304: Cannot find name 'Session'.
+lib/pipeline/index.ts(7,50): error TS2304: Cannot find name 'Session'.
+lib/pipeline/index.ts(26,12): error TS2339: Property 'all' does not exist on type '() => void'.
+lib/pipeline/pledge.ts(7,43): error TS2339: Property 'QUEUE_SIZE' does not exist on type '() => void'.
+lib/pipeline/pledge.ts(10,8): error TS2339: Property 'QUEUE_SIZE' does not exist on type '() => void'.
+lib/pipeline/pledge.ts(12,8): error TS2339: Property 'all' does not exist on type '() => void'.
+lib/websocket_extensions.ts(15,12): error TS2339: Property 'MESSAGE_OPCODES' does not exist on type '() => void'.
+lib/websocket_extensions.ts(18,22): error TS2304: Cannot find name 'Extension'.
+lib/websocket_extensions.ts(38,41): error TS2552: Cannot find name 'Ext'. Did you mean 'Text'?
+lib/websocket_extensions.ts(65,32): error TS2538: Type 'String' cannot be used as an index type.
+lib/websocket_extensions.ts(96,41): error TS2304: Cannot find name 'Extension'.
+lib/websocket_extensions.ts(114,34): error TS2503: Cannot find namespace 'Phaser'.
+lib/websocket_extensions.ts(118,20): error TS2339: Property 'MESSAGE_OPCODES' does not exist on type '() => void'.
+lib/websocket_extensions.ts(145,27): error TS2304: Cannot find name 'Extension'.
+lib/websocket_extensions.ts(151,28): error TS2304: Cannot find name 'Extension'.
 

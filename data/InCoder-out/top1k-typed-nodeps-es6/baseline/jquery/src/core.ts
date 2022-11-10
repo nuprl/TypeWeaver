@@ -18,7 +18,7 @@ var version = "@VERSION",
 	rhtmlSuffix = /HTML$/i,
 
 	// Define a local copy of jQuery
-	jQuery = function( selector: string,  context : JQuery|Element|) {
+	jQuery = function( selector: string,  context : any) {
 
 		// The jQuery object is actually just the init constructor 'enhanced'
 		// Need init if jQuery is called (just allow error to be thrown if not included)
@@ -67,7 +67,7 @@ jQuery.fn = jQuery.prototype = {
 	},
 
 	// Execute a callback for every element in the matched set.
-	each: function( callback : ) {
+	each: function( callback : any) {
 		return jQuery.each( this, callback );
 	},
 

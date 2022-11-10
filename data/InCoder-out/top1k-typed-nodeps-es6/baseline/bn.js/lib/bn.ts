@@ -58,7 +58,7 @@
   } catch (e) {
   }
 
-  BN.isBN = function isBN (num: ) {
+  BN.isBN = function isBN (num: any) {
     if (num instanceof BN) {
       return true;
     }
@@ -1803,7 +1803,7 @@
 
   // Performs "tweedling" phase, therefore 'emulating'
   // behaviour of the recursive algorithm
-  FFTM.prototype.permute = function permute (rbt: RBT<N>,  rws: RWSet<N,  iws: ISet<N>,  rtws: RWSet<N,  itws: ISet<N>,  N: N) {
+  FFTM.prototype.permute = function permute (rbt: RBT<N>,  rws: any,  iws: any,  rtws: any,  itws: any,  N: number) {
     for (var i = 0; i < N; i++) {
       rtws[i] = rws[rbt[i]];
       itws[i] = iws[rbt[i]];
@@ -3096,7 +3096,7 @@
     return r;
   };
 
-  MPrime.prototype.split = function split (input: IArrayLike<number>,  out: IArrayLike<number) {
+  MPrime.prototype.split = function split (input: IArrayLike<number>,  out: any) {
     input.iushrn(this.n, 0, out);
   };
 

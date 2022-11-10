@@ -35,7 +35,7 @@ function isSpecificValue(val: any) {
 	) ? true : false;
 }
 
-function cloneSpecificValue(val: ) {
+function cloneSpecificValue(val: any) {
 	if (val instanceof Buffer) {
 		var x = Buffer.alloc
 			? Buffer.alloc(val.length)

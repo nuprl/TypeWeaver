@@ -341,7 +341,7 @@ function Animation( elem: HTMLElement,  properties: Object,  options : Object) {
 				animation.tweens.push( tween );
 				return tween;
 			},
-			stop: function( gotoEnd : ) {
+			stop: function( gotoEnd : any) {
 				var index = 0,
 
 					// If we are going to the end, we want to run all the tweens

@@ -12,7 +12,7 @@ export default function wcwidth(str: string | number) {
   return wcswidth(str, DEFAULTS)
 };
 
-export const config = function(opts: ) {
+export const config = function(opts: any) {
   opts = defaults(opts || {}, DEFAULTS)
   return function wcwidth(str: string | number) {
     return wcswidth(str, opts)

@@ -21,7 +21,7 @@ function generateConfig(name: string | undefined) {
   return config;
 }
 
-['axios', 'axios.min'].forEach(function (key: ) {
+['axios', 'axios.min'].forEach(function (key: any) {
   config[key] = generateConfig(key);
 });
 

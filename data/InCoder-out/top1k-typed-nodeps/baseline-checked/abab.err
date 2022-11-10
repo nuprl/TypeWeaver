@@ -1,0 +1,12 @@
+index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'atob'.
+index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'btoa'.
+karma.conf.ts(5,36): error TS2304: Cannot find name 'Config'.
+lib/atob.ts(7,10): error TS2384: Overload signatures must all be ambient or non-ambient.
+lib/atob.ts(57,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/atob.ts(92,7): error TS2451: Cannot redeclare block-scoped variable 'keystr'.
+lib/atob.ts(96,32): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/btoa.ts(7,10): error TS2384: Overload signatures must all be ambient or non-ambient.
+lib/btoa.ts(50,7): error TS2451: Cannot redeclare block-scoped variable 'keystr'.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18089,18): error TS2451: Cannot redeclare block-scoped variable 'atob'.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18090,18): error TS2451: Cannot redeclare block-scoped variable 'btoa'.
+

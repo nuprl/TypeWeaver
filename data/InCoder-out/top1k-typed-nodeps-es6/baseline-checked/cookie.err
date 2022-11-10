@@ -1,2 +1,45 @@
-index.ts(240,50): error TS1110: Type expected.
+benchmark/index.ts(14,12): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+benchmark/index.ts(17,28): error TS2339: Property 'shift' does not exist on type 'string'.
+benchmark/parse-top.ts(5,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+benchmark/parse-top.ts(7,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
+benchmark/parse-top.ts(8,17): error TS2732: Cannot find module './parse-top.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+benchmark/parse-top.ts(18,44): error TS2304: Cannot find name 'main'.
+benchmark/parse.ts(5,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+benchmark/parse.ts(7,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
+index.ts(47,21): error TS2304: Cannot find name 'ring'.
+index.ts(47,46): error TS2304: Cannot find name 'ParseOptions'.
+index.ts(86,28): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Uint8Array'.
+index.ts(111,40): error TS2304: Cannot find name 'Any'.
+index.ts(111,55): error TS2304: Cannot find name 'Any'.
+index.ts(119,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+index.ts(227,23): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
+scripts/update-benchmark.ts(7,22): error TS2307: Cannot find module 'top-sites' or its corresponding type declarations.
+scripts/update-benchmark.ts(23,28): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(urlString: string, parseQueryString: true, slashesDenoteHost?: boolean): UrlWithParsedQuery', gave the following error.
+    Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+      Type 'string[]' is not assignable to type 'string'.
+  Overload 2 of 4, '(urlString: string, parseQueryString: false, slashesDenoteHost?: boolean): UrlWithStringQuery', gave the following error.
+    Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+      Type 'string[]' is not assignable to type 'string'.
+  Overload 3 of 4, '(urlString: string, parseQueryString: boolean, slashesDenoteHost?: boolean): Url', gave the following error.
+    Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+      Type 'string[]' is not assignable to type 'string'.
+scripts/update-benchmark.ts(26,13): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string | URL | RequestOptions'.
+  Type 'string[]' is not assignable to type 'string | URL | RequestOptions'.
+    Type 'string[]' is missing the following properties from type 'URL': hash, host, hostname, href, and 9 more.
+scripts/update-benchmark.ts(27,18): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'Function' is not assignable to parameter of type '(...args: any[]) => void'.
+      Type 'Function' provides no match for the signature '(...args: any[]): void'.
+scripts/update-benchmark.ts(29,23): error TS2339: Property 'location' does not exist on type 'Headers'.
+scripts/update-benchmark.ts(29,39): error TS2339: Property 'statusCode' does not exist on type 'Response'.
+scripts/update-benchmark.ts(29,64): error TS2339: Property 'statusCode' does not exist on type 'Response'.
+scripts/update-benchmark.ts(30,25): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+  Type 'string[]' is not assignable to type 'string'.
+scripts/update-benchmark.ts(30,43): error TS2339: Property 'location' does not exist on type 'Headers'.
+scripts/update-benchmark.ts(41,33): error TS2304: Cannot find name 'Site'.
+scripts/update-benchmark.ts(54,42): error TS2339: Property 'rootDomain' does not exist on type 'string'.
+scripts/update-benchmark.ts(64,6): error TS2339: Property 'replace' does not exist on type 'string | Buffer'.
+  Property 'replace' does not exist on type 'Buffer'.
 

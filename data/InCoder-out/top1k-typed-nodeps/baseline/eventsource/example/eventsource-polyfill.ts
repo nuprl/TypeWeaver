@@ -311,7 +311,7 @@ if (typeof Object.create === 'function') {
 
 /***/ }),
 /* 3 */
-/***/ (function(module: ,  exports: require,  __webpack_require__: _dirname) {
+/***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global: any) {/*!
@@ -412,7 +412,7 @@ function createBuffer (that: Buffer,  length: number) {
  * The `Uint8Array` prototype remains unmodified.
  */
 
-function Buffer (arg: number|string|ArrayBuffer|,  encodingOrOffset: number|string|ArrayBufferView,  length: number) {
+function Buffer (arg: any,  encodingOrOffset: number,  length: number) {
   if (!Buffer.TYPED_ARRAY_SUPPORT && !(this instanceof Buffer)) {
     return new Buffer(arg, encodingOrOffset, length)
   }
@@ -2108,7 +2108,7 @@ function isnan (val: number) {
 
 /***/ }),
 /* 4 */
-/***/ (function(module: ,  exports: require,  __webpack_require__: _dirname) {
+/***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
 "use strict";
 // Copyright Joyent, Inc. and other Node contributors.
@@ -2271,7 +2271,7 @@ Duplex.prototype._destroy = function (err: Error,  cb: Function) {
 // NOTE: These type checking functions intentionally don't use `instanceof`
 // because it is fragile and can be easily faked with `Object.create()`.
 
-function isArray(arg: ?any): boolean {) {
+function isArray(arg: any) {
   if (Array.isArray) {
     return Array.isArray(arg);
   }
@@ -2294,12 +2294,12 @@ function isNullOrUndefined(arg: unknown) {
 }
 exports.isNullOrUndefined = isNullOrUndefined;
 
-function isNumber(arg: ) {
+function isNumber(arg: any) {
   return typeof arg === 'number';
 }
 exports.isNumber = isNumber;
 
-function isString(arg: |endofmask|>) {
+function isString(arg: any) {
   return typeof arg === 'string';
 }
 exports.isString = isString;
@@ -2334,7 +2334,7 @@ function isError(e: any) {
 }
 exports.isError = isError;
 
-function isFunction(arg: ?any) {
+function isFunction(arg: any) {
   return typeof arg === 'function';
 }
 exports.isFunction = isFunction;
@@ -2359,7 +2359,7 @@ function objectToString(o: Object) {
 
 /***/ }),
 /* 6 */
-/***/ (function(module: ,  exports: require,  __webpack_require__: _dirname) {
+/***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process: any) {
@@ -2432,7 +2432,7 @@ if (Buffer.from && Buffer.alloc && Buffer.allocUnsafe && Buffer.allocUnsafeSlow)
   exports.Buffer = SafeBuffer
 }
 
-function SafeBuffer (arg: number|ArrayBufferView|,  encodingOrOffset: number|number|string,  length: number|number|string) {
+function SafeBuffer (arg: any,  encodingOrOffset: number,  length: number) {
   return Buffer(arg, encodingOrOffset, length)
 }
 
@@ -2480,7 +2480,7 @@ SafeBuffer.allocUnsafeSlow = function (size: umber) {
 
 /***/ }),
 /* 8 */
-/***/ (function(module: ,  exports: require,  __webpack_require__: _dirname) {
+/***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
 "use strict";
 // Copyright Joyent, Inc. and other Node contributors.
@@ -2584,7 +2584,7 @@ var protocolPattern = /^([a-z0-9.+-]+:)/i,
     },
     querystring = __webpack_require__(28);
 
-function urlParse(url: ?string, baseUrl:,  parseQueryString: boolean,  slashesDenoteHost: boolean) {
+function urlParse(url: any,  parseQueryString: boolean | null,  slashesDenoteHost: boolean | null) {
   if (url && util.isObject(url) && url instanceof Url) return url;
 
   var u = new Url;
@@ -2592,7 +2592,7 @@ function urlParse(url: ?string, baseUrl:,  parseQueryString: boolean,  slashesDe
   return u;
 }
 
-Url.prototype.parse = function(url: ?string, params?:?,  parseQueryString: boolean,  slashesDenoteHost: boolean) {
+Url.prototype.parse = function(url: any,  parseQueryString: boolean,  slashesDenoteHost: boolean) {
   if (!util.isString(url)) {
     throw new TypeError("Parameter 'url' must be a string, not " + typeof url);
   }
@@ -2928,12 +2928,12 @@ Url.prototype.resolve = function(relative: Relative) {
   return this.resolveObject(urlParse(relative, false, true)).format();
 };
 
-function urlResolveObject(source: ?string, base:?,  relative: string) {
+function urlResolveObject(source: any,  relative: string | string[] | any) {
   if (!source) return relative;
   return urlParse(source, false, true).resolveObject(relative);
 }
 
-Url.prototype.resolveObject = function(relative: ) {
+Url.prototype.resolveObject = function(relative: any) {
   if (util.isString(relative)) {
     var rel = new Url();
     rel.parse(relative, false, true);
@@ -3219,7 +3219,7 @@ Url.prototype.parseHost = function() {
 
 /***/ }),
 /* 9 */
-/***/ (function(module: ,  exports: require,  __webpack_require__: _dirname) {
+/***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
 "use strict";
 // Copyright Joyent, Inc. and other Node contributors.
@@ -3736,7 +3736,7 @@ module.exports = Array.isArray || function (arr: Array<any>) {
 /* 11 */
 /***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
-/* WEBPACK VAR INJECTION */(function(global: ) {var ClientRequest = __webpack_require__(32)
+/* WEBPACK VAR INJECTION */(function(global: any) {var ClientRequest = __webpack_require__(32)
 var response = __webpack_require__(13)
 var extend = __webpack_require__(41)
 var statusCodes = __webpack_require__(42)
@@ -4010,7 +4010,7 @@ var IncomingMessage = exports.IncomingMessage = function (xhr: XMLHttpRequest,  
 		self.statusCode = xhr.status
 		self.statusMessage = xhr.statusText
 		var headers = xhr.getAllResponseHeaders().split(/\r?\n/)
-		headers.forEach(function (header: ) {
+		headers.forEach(function (header: any) {
 			var matches = header.match(/^([^:]+):\s*(.*)/)
 			if (matches) {
 				var key = matches[1].toLowerCase()
@@ -4149,10 +4149,10 @@ exports.PassThrough = __webpack_require__(39);
 
 /***/ }),
 /* 15 */
-/***/ (function(module: ,  exports: require,  __webpack_require__: _dirname) {
+/***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global: ,  process: Buffer) {// Copyright Joyent, Inc. and other Node contributors.
+/* WEBPACK VAR INJECTION */(function(global: any,  process: any) {// Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
 // copy of this software and associated documentation files (the
@@ -5182,7 +5182,7 @@ module.exports = __webpack_require__(9).EventEmitter;
 
 /***/ }),
 /* 17 */
-/***/ (function(module: ,  exports: require,  __webpack_require__: _dirname) {
+/***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
 "use strict";
 
@@ -5262,7 +5262,7 @@ module.exports = {
 
 /***/ }),
 /* 18 */
-/***/ (function(module: ,  exports: require,  __webpack_require__: _dirname) {
+/***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process: any,  setImmediate: Function,  global: any) {// Copyright Joyent, Inc. and other Node contributors.
@@ -5752,7 +5752,7 @@ function onwrite(stream: WritableStream,  er: Error) {
   }
 }
 
-function afterWrite(stream: WritableStream,  state: WritableStreamState,  finished: ?Function,  cb: Function) {
+function afterWrite(stream: WritableStream,  state: WritableStreamState,  finished: any,  cb: Function) {
   if (!finished) onwriteDrain(stream, state);
   state.pendingcb--;
   cb();
@@ -5956,7 +5956,7 @@ Writable.prototype._destroy = function (err: Error,  cb: Function) {
 
 /***/ }),
 /* 19 */
-/***/ (function(module: ,  exports: require,  __webpack_require__: _dirname) {
+/***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
 "use strict";
 // Copyright Joyent, Inc. and other Node contributors.
@@ -5987,7 +5987,7 @@ Writable.prototype._destroy = function (err: Error,  cb: Function) {
 var Buffer = __webpack_require__(7).Buffer;
 /*</replacement>*/
 
-var isEncoding = Buffer.isEncoding || function (encoding: ) {
+var isEncoding = Buffer.isEncoding || function (encoding: any) {
   encoding = '' + encoding;
   switch (encoding && encoding.toLowerCase()) {
     case 'hex':case 'utf8':case 'utf-8':case 'ascii':case 'binary':case 'base64':case 'ucs2':case 'ucs-2':case 'utf16le':case 'utf-16le':case 'raw':
@@ -6106,7 +6106,7 @@ function utf8CheckByte(byte: number) {
 // Checks at most 3 bytes at the end of a Buffer in order to detect an
 // incomplete multi-byte UTF-8 character. The total number of bytes (2, 3, or 4)
 // needed to complete the UTF-8 character (if applicable) are returned.
-function utf8CheckIncomplete(self: Utf8Checker,  buf: ArraySegment<UInt8,  i: number) {
+function utf8CheckIncomplete(self: Utf8Checker,  buf: any,  i: number) {
   var j = buf.length - 1;
   if (j < i) return 0;
   var nb = utf8CheckByte(buf[j]);
@@ -6258,7 +6258,7 @@ function simpleEnd(buf: Buffer) {
 
 /***/ }),
 /* 20 */
-/***/ (function(module: ,  exports: require,  __webpack_require__: _dirname) {
+/***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
 "use strict";
 // Copyright Joyent, Inc. and other Node contributors.
@@ -6995,7 +6995,7 @@ function removeUnsafeHeaders (headers: Array<string>) {
 
 /***/ }),
 /* 23 */
-/***/ (function(module: ,  exports: require,  __webpack_require__: _dirname) {
+/***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
 "use strict";
 
@@ -7370,7 +7370,7 @@ exports.write = function (buffer: Buffer,  value: number,  offset: number,  isLE
 	 * @param {String} string The Unicode input string (UCS-2).
 	 * @returns {Array} The new array of code points.
 	 */
-	function ucs2decode(string: ) {
+	function ucs2decode(string: any) {
 		var output = [],
 		    counter = 0,
 		    length = string.length,
@@ -7698,7 +7698,7 @@ exports.write = function (buffer: Buffer,  value: number,  offset: number,  isLE
 	 * string.
 	 */
 	function toUnicode(input: string | Uint8Array) {
-		return mapDomain(input, function(string: ?string, pattern:?) {
+		return mapDomain(input, function(string: any) {
 			return regexPunycode.test(string)
 				? decode(string.slice(4).toLowerCase())
 				: string;
@@ -7717,7 +7717,7 @@ exports.write = function (buffer: Buffer,  value: number,  offset: number,  isLE
 	 * email address.
 	 */
 	function toASCII(input: string | Uint8Array) {
-		return mapDomain(input, function(string: ?string, pattern:?) {
+		return mapDomain(input, function(string: any) {
 			return regexNonASCII.test(string)
 				? 'xn--' + encode(string)
 				: string;
@@ -7810,7 +7810,7 @@ module.exports = function(module: any) {
 
 /***/ }),
 /* 27 */
-/***/ (function(module: ,  exports: require,  __webpack_require__: _dirname) {
+/***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
 "use strict";
 
@@ -7822,10 +7822,10 @@ module.exports = {
   isObject: function(arg: ny) {
     return typeof(arg) === 'object' && arg !== null;
   },
-  isNull: function(arg: ?any) {
+  isNull: function(arg: any) {
     return arg === null;
   },
-  isNullOrUndefined: function(arg: ?any): boolean {) {
+  isNullOrUndefined: function(arg: any) {
     return arg == null;
   }
 };
@@ -7833,7 +7833,7 @@ module.exports = {
 
 /***/ }),
 /* 28 */
-/***/ (function(module: ,  exports: require,  __webpack_require__: _dirname) {
+/***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
 "use strict";
 
@@ -7844,7 +7844,7 @@ exports.encode = exports.stringify = __webpack_require__(30);
 
 /***/ }),
 /* 29 */
-/***/ (function(module: ,  exports: require,  __webpack_require__: _dirname) {
+/***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
 "use strict";
 // Copyright Joyent, Inc. and other Node contributors.
@@ -7877,7 +7877,7 @@ function hasOwnProperty(obj: any,  prop: string | symbol) {
   return Object.prototype.hasOwnProperty.call(obj, prop);
 }
 
-module.exports = function(qs: string,  sep: ?,  eq: ,  options: |endofmask|>) {
+module.exports = function(qs: string,  sep: any,  eq: any,  options: any) {
   sep = sep || '&';
   eq = eq || '=';
   var obj = {};
@@ -7935,7 +7935,7 @@ var isArray = Array.isArray || function (xs: Observable<number>) {
 
 /***/ }),
 /* 30 */
-/***/ (function(module: ,  exports: require,  __webpack_require__: _dirname) {
+/***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
 "use strict";
 // Copyright Joyent, Inc. and other Node contributors.
@@ -7977,7 +7977,7 @@ var stringifyPrimitive = function(v: ny) {
   }
 };
 
-module.exports = function(obj: any,  sep: ,  eq: eq2,  name: ame2) {
+module.exports = function(obj: any,  sep: any,  eq: any,  name: any) {
   sep = sep || '&';
   eq = eq || '=';
   if (obj === null) {
@@ -8148,7 +8148,7 @@ ClientRequest.prototype.setHeader = function (name: String,  value: any) {
 	}
 }
 
-ClientRequest.prototype.getHeader = function (name: ) {
+ClientRequest.prototype.getHeader = function (name: any) {
 	var header = this._headers[name.toLowerCase()]
 	if (header)
 		return header.value
@@ -8186,7 +8186,7 @@ ClientRequest.prototype._onFinish = function () {
 
 	// create flattened list of headers
 	var headersList = []
-	Object.keys(headersObj).forEach(function (keyName: ) {
+	Object.keys(headersObj).forEach(function (keyName: any) {
 		var name = headersObj[keyName].name
 		var value = headersObj[keyName].value
 		if (Array.isArray(value)) {
@@ -8404,12 +8404,12 @@ var unsafeHeaders = [
 
 /***/ }),
 /* 34 */
-/***/ (function(module: ,  exports: require,  __webpack_require__: _dirname) {
+/***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
 "use strict";
 
 
-function _classCallCheck(instance: Constructor,  Constructor: ) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _classCallCheck(instance: Constructor,  Constructor: any) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Buffer = __webpack_require__(7).Buffer;
 var util = __webpack_require__(35);
@@ -8497,7 +8497,7 @@ if (util && util.inspect && util.inspect.custom) {
 /* 36 */
 /***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
-/* WEBPACK VAR INJECTION */(function(global: |endofmask|>) {var scope = (typeof global !== "undefined" && global) ||
+/* WEBPACK VAR INJECTION */(function(global: any) {var scope = (typeof global !== "undefined" && global) ||
             (typeof self !== "undefined" && self) ||
             window;
 var apply = Function.prototype.apply;
@@ -8567,7 +8567,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* 37 */
 /***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
-/* WEBPACK VAR INJECTION */(function(global: ,  process: Buffer) {(function (global, undefined) {
+/* WEBPACK VAR INJECTION */(function(global: any,  process: any) {(function (global, undefined) {
     "use strict";
 
     if (global.setImmediate) {
@@ -8832,7 +8832,7 @@ function config (name: String) {
 
 /***/ }),
 /* 39 */
-/***/ (function(module: ,  exports: require,  __webpack_require__: _dirname) {
+/***/ (function(module: any,  exports: any,  __webpack_require__: __w_pdfjs_require) {
 
 "use strict";
 // Copyright Joyent, Inc. and other Node contributors.
@@ -8879,7 +8879,7 @@ function PassThrough(options: PassThroughOptions) {
   Transform.call(this, options);
 }
 
-PassThrough.prototype._transform = function (chunk: Buffer,  encoding: ,  cb: unction) {
+PassThrough.prototype._transform = function (chunk: Buffer,  encoding: any,  cb: Function) {
   cb(null, chunk);
 };
 
@@ -9382,7 +9382,7 @@ function formatArray(ctx: Context,  value: any[],  recurseTimes: number,  visibl
       output.push('');
     }
   }
-  keys.forEach(function(key: ) {
+  keys.forEach(function(key: any) {
     if (!key.match(/^\d+$/)) {
       output.push(formatProperty(ctx, value, recurseTimes, visibleKeys,
           key, true));
@@ -9494,12 +9494,12 @@ function isNullOrUndefined(arg: unknown) {
 }
 exports.isNullOrUndefined = isNullOrUndefined;
 
-function isNumber(arg: ) {
+function isNumber(arg: any) {
   return typeof arg === 'number';
 }
 exports.isNumber = isNumber;
 
-function isString(arg: |endofmask|>) {
+function isString(arg: any) {
   return typeof arg === 'string';
 }
 exports.isString = isString;
@@ -9535,7 +9535,7 @@ function isError(e: any) {
 }
 exports.isError = isError;
 
-function isFunction(arg: ?any) {
+function isFunction(arg: any) {
   return typeof arg === 'function';
 }
 exports.isFunction = isFunction;
@@ -9725,7 +9725,7 @@ exports.callbackify = callbackify;
 /* 44 */
 /***/ (function(module: any,  exports: any) {
 
-module.exports = function isBuffer(arg: ?any) {
+module.exports = function isBuffer(arg: any) {
   return arg && typeof arg === 'object'
     && typeof arg.copy === 'function'
     && typeof arg.fill === 'function'

@@ -13,14 +13,6 @@ lib/index.ts(94,10): error TS2339: Property 'end' does not exist on type 'Writab
 lib/index.ts(95,22): error TS2345: Argument of type 'WritableStream<any>' is not assignable to parameter of type 'number'.
 lib/index.ts(98,10): error TS2339: Property 'end' does not exist on type 'ReadableStream<any>'.
 lib/index.ts(99,22): error TS2345: Argument of type 'ReadableStream<any>' is not assignable to parameter of type 'number'.
-lib/index.ts(106,32): error TS2345: Argument of type '(err: Error, rttyfd: number) => void' is not assignable to parameter of type '(err: ErrnoException | null, fd: number) => void'.
-  Types of parameters 'err' and 'err' are incompatible.
-    Type 'ErrnoException | null' is not assignable to type 'Error'.
-      Type 'null' is not assignable to type 'Error'.
 lib/index.ts(107,20): error TS2339: Property 'code' does not exist on type 'Error'.
 lib/index.ts(107,45): error TS2339: Property 'code' does not exist on type 'Error'.
-lib/index.ts(114,33): error TS2345: Argument of type '(err3: Error, wttyfd: number) => void' is not assignable to parameter of type '(err: ErrnoException | null, fd: number) => void'.
-  Types of parameters 'err3' and 'err' are incompatible.
-    Type 'ErrnoException | null' is not assignable to type 'Error'.
-      Type 'null' is not assignable to type 'Error'.
 

@@ -198,7 +198,7 @@ function _choices_to_array(choices: Choice[]) {
 }
 
 // decorator that allows a class to be called without new
-function _callable(cls: Class<*>, method) {
+function _callable(cls: any) {
     let result = { // object is needed for inferred class name
         [cls.name]: function (...args: any[]) {
             let this_class = new.target === result || !new.target

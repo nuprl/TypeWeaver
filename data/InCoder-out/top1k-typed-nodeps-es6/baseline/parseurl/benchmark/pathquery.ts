@@ -61,7 +61,7 @@ suite.on('complete', function onComplete () {
 
 suite.run({ async: false })
 
-function createReq (url: ) {
+function createReq (url: any) {
   return {
     url: url
   }

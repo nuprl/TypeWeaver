@@ -35,7 +35,7 @@ module.exports.mime = send.mime
  * @public
  */
 
-function serveStatic (root: ?string, options?: Static,  options: taticOptions) {
+function serveStatic (root: any,  options: any) {
   if (!root) {
     throw new TypeError('root path required')
   }

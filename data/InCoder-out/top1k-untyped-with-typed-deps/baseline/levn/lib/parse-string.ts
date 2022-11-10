@@ -109,5 +109,5 @@
     }
     return node;
   };
-  function not$(x: |endofmask|>){ return !x; }
+  function not$(x: any){ return !x; }
 }).call(this);

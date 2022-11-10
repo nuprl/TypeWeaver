@@ -52,7 +52,7 @@ colors.disable = function() {
   colors.enabled = false;
 };
 
-colors.stripColors = colors.strip = function(str: ) {
+colors.stripColors = colors.strip = function(str: any) {
   return ('' + str).replace(/\x1B\[\d+m/g, '');
 };
 
@@ -75,7 +75,7 @@ var stylize = colors.stylize = function stylize(str: any,  style: any) {
 };
 
 var matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
-var escapeStringRegexp = function(str: endofmask|>) {
+var escapeStringRegexp = function(str: any) {
   if (typeof str !== 'string') {
     throw new TypeError('Expected a string');
   }
@@ -156,7 +156,7 @@ colors.setTheme = function(theme: heme) {
     return;
   }
   for (var style in theme) {
-    (function(style: ) {
+    (function(style: any) {
       colors[style] = function(str: string | string[]) {
         if (typeof theme[style] === 'object') {
           var out = str;
@@ -201,7 +201,7 @@ colors.maps.rainbow = require('./maps/rainbow')(colors);
 colors.maps.random = require('./maps/random')(colors);
 
 for (var map in colors.maps) {
-  (function(map: ) {
+  (function(map: any) {
     colors[map] = function(str: string | number) {
       return sequencer(colors.maps[map], str);
     };

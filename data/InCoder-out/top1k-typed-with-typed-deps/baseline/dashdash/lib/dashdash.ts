@@ -621,7 +621,7 @@ Parser.prototype.parse = function parse(inputs: any) {
  *        bounds.
  * @returns {String}
  */
-Parser.prototype.help = function help(config: ) {
+Parser.prototype.help = function help(config: any) {
     config = config || {};
     assert.object(config, 'config');
 
@@ -1063,7 +1063,7 @@ function addOptionType(optionType: OptionType) {
     };
 }
 
-function getOptionType(name: ) {
+function getOptionType(name: any) {
     assert.string(name, 'name');
     return optionTypes[name];
 }
@@ -1077,7 +1077,7 @@ function getOptionType(name: ) {
  *      > synopsisFromOpt({name: 'file', type: 'string', helpArg: 'FILE'});
  *      '[ --file=FILE ]'
  */
-function synopsisFromOpt(o: ) {
+function synopsisFromOpt(o: any) {
     assert.object(o, 'o');
 
     if (Object.prototype.hasOwnProperty.call(o, 'group')) {

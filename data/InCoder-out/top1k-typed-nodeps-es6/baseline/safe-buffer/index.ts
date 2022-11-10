@@ -18,7 +18,7 @@ if (Buffer.from && Buffer.alloc && Buffer.allocUnsafe && Buffer.allocUnsafeSlow)
   export const Buffer = SafeBuffer;
 }
 
-function SafeBuffer (arg: number|ArrayBufferView|,  encodingOrOffset: number|number|string,  length: number|number|string) {
+function SafeBuffer (arg: any,  encodingOrOffset: number,  length: number) {
   return Buffer(arg, encodingOrOffset, length)
 }
 

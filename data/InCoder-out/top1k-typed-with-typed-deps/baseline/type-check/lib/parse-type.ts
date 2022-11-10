@@ -174,7 +174,7 @@
     return types;
   }
   tokenRegex = RegExp('\\.\\.\\.|::|->|' + identifierRegex.source + '|\\S', 'g');
-  module.exports = function(input: ){
+  module.exports = function(input: any){
     var tokens, e;
     if (!input.length) {
       throw new Error('No type specified.');
@@ -190,7 +190,7 @@
       throw new Error(e.message + " - Remaining tokens: " + JSON.stringify(tokens) + " - Initial input: '" + input + "'");
     }
   };
-  function in$(x: ?,  xs: rray<T>){
+  function in$(x: any,  xs: Array<any>){
     var i = -1, l = xs.length >>> 0;
     while (++i < l) if (x === xs[i]) return true;
     return false;

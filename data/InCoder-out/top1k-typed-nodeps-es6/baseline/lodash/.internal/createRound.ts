@@ -5,7 +5,7 @@
  * @param {string} methodName The name of the `Math` method to use when rounding.
  * @returns {Function} Returns the new round function.
  */
-function createRound(methodName: ) {
+function createRound(methodName: any) {
   const func = Math[methodName]
   return (number, precision) => {
     precision = precision == null ? 0 : (precision >= 0 ? Math.min(precision, 292) : Math.max(precision, -292))

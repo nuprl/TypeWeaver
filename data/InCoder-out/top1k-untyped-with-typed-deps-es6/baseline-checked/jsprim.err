@@ -1,102 +1,22 @@
-lib/jsprim.ts(52,10): error TS7023: 'deepCopy' implicitly has return type 'any' because it does not have a return type annotation and is referenced directly or indirectly in one of its return expressions.
-lib/jsprim.ts(68,4): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-lib/jsprim.ts(77,7): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-lib/jsprim.ts(82,15): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-lib/jsprim.ts(138,18): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Object'.
-  No index signature with a parameter of type 'string' was found on type 'Object'.
-lib/jsprim.ts(149,10): error TS7023: 'pluckv' implicitly has return type 'any' because it does not have a return type annotation and is referenced directly or indirectly in one of its return expressions.
+lib/jsprim-jsv.ts(15,40): error TS2304: Cannot find name 'JSVSchema'.
+lib/jsprim-jsv.ts(15,59): error TS2304: Cannot find name 'JSVInput'.
+lib/jsprim-jsv.ts(49,5): error TS2339: Property 'jsv_details' does not exist on type 'Error'.
 lib/jsprim.ts(157,14): error TS2339: Property 'indexOf' does not exist on type 'string | number'.
   Property 'indexOf' does not exist on type 'number'.
 lib/jsprim.ts(161,17): error TS2339: Property 'substr' does not exist on type 'string | number'.
   Property 'substr' does not exist on type 'number'.
 lib/jsprim.ts(165,32): error TS2339: Property 'substr' does not exist on type 'string | number'.
   Property 'substr' does not exist on type 'number'.
-lib/jsprim.ts(213,6): error TS7034: Variable 'rv' implicitly has type 'any[]' in some locations where its type cannot be determined.
-lib/jsprim.ts(214,6): error TS7034: Variable 'key' implicitly has type 'any' in some locations where its type cannot be determined.
-lib/jsprim.ts(218,14): error TS7005: Variable 'key' implicitly has an 'any' type.
-lib/jsprim.ts(222,10): error TS7005: Variable 'rv' implicitly has an 'any[]' type.
 lib/jsprim.ts(227,14): error TS2339: Property 'substr' does not exist on type 'string | RegExp'.
   Property 'substr' does not exist on type 'RegExp'.
 lib/jsprim.ts(227,31): error TS2339: Property 'length' does not exist on type 'string | RegExp'.
   Property 'length' does not exist on type 'RegExp'.
 lib/jsprim.ts(332,28): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
-lib/jsprim.ts(342,3): error TS2740: Type '{}' is missing the following properties from type '{ base: number; allowSign: boolean; allowPrefix: boolean; allowTrailing: boolean; allowImprecise: boolean; trimWhitespace: boolean; leadingZeroIsOctal: boolean; }': base, allowSign, allowPrefix, allowTrailing, and 3 more.
 lib/jsprim.ts(342,13): error TS2554: Expected 3 arguments, but got 2.
 lib/jsprim.ts(529,39): error TS2304: Cannot find name 'JsonObjectSchema'.
 lib/jsprim.ts(529,65): error TS2304: Cannot find name 'JsonObject'.
 lib/jsprim.ts(561,5): error TS2339: Property 'jsv_details' does not exist on type 'VError'.
-lib/jsprim.ts(575,16): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-lib/jsprim.ts(575,29): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
-lib/jsprim.ts(577,16): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
-lib/jsprim.ts(592,16): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-lib/jsprim.ts(592,23): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-lib/jsprim.ts(592,32): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-lib/jsprim.ts(592,40): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-lib/jsprim.ts(592,48): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
-lib/jsprim.ts(592,56): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
-lib/jsprim.ts(595,13): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-lib/jsprim.ts(595,20): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-lib/jsprim.ts(597,6): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
-lib/jsprim.ts(597,14): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
-lib/jsprim.ts(598,11): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
-lib/jsprim.ts(598,18): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
-lib/jsprim.ts(601,18): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
-lib/jsprim.ts(601,25): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
-lib/jsprim.ts(615,21): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-lib/jsprim.ts(615,34): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
-lib/jsprim.ts(626,21): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-lib/jsprim.ts(626,34): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
-lib/jsprim.ts(637,21): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-lib/jsprim.ts(637,34): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
-lib/jsprim.ts(653,2): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
-lib/jsprim.ts(653,10): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
-lib/jsprim.ts(654,6): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
-lib/jsprim.ts(659,3): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-lib/jsprim.ts(660,3): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
-lib/jsprim.ts(666,2): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-lib/jsprim.ts(666,10): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-lib/jsprim.ts(679,13): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Number'.
-  Property '0' does not exist on type 'Number'.
-lib/jsprim.ts(679,19): error TS7053: Element implicitly has an 'any' type because expression of type '1' can't be used to index type 'Number'.
-  Property '1' does not exist on type 'Number'.
 lib/jsprim.ts(681,22): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'number'.
 lib/jsprim.ts(704,27): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
   Type 'string[]' is not assignable to type 'string'.
-lib/jsprim.ts(721,4): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-lib/jsprim.ts(726,4): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-lib/jsprim.ts(731,4): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 

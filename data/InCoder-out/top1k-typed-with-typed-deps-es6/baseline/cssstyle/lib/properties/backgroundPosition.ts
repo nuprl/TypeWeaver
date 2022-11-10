@@ -4,7 +4,7 @@ import parsers from '../parsers';
 
 var valid_keywords = ['top', 'center', 'bottom', 'left', 'right'];
 
-var parse = function parse(v: string | number | boolean |) {
+var parse = function parse(v: any) {
   if (v === '' || v === null) {
     return undefined;
   }

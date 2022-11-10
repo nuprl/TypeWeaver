@@ -182,7 +182,7 @@ export default {
       delete data.keywords
       this.warn('nonArrayKeywords')
     } else if (data.keywords) {
-      data.keywords = data.keywords.filter(function (kw: ndofmask|>) {
+      data.keywords = data.keywords.filter(function (kw: any) {
         if (typeof kw !== 'string' || !kw) {
           this.warn('nonStringKeyword')
           return false
@@ -465,7 +465,7 @@ function bugsTypos (bugs: boolean,  warn: boolean) {
   if (!bugs) {
     return
   }
-  Object.keys(bugs).forEach(function (k: ) {
+  Object.keys(bugs).forEach(function (k: any) {
     if (typos.bugs[k]) {
       warn('typo', k, typos.bugs[k], 'bugs')
       bugs[typos.bugs[k]] = bugs[k]

@@ -1,56 +1,28 @@
 example/bakery.ts(18,79): error TS2304: Cannot find name 'Action'.
 lib/gntp.ts(2,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'any'.
 lib/gntp.ts(15,10): error TS2300: Duplicate identifier 'GNTP'.
-lib/gntp.ts(17,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/gntp.ts(18,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/gntp.ts(19,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/gntp.ts(20,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/gntp.ts(21,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/gntp.ts(22,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/gntp.ts(23,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/gntp.ts(49,17): error TS2339: Property 'slice' does not exist on type 'Response'.
 lib/gntp.ts(49,31): error TS2339: Property 'indexOf' does not exist on type 'Response'.
-lib/gntp.ts(50,12): error TS7053: Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'Response'.
-  Property '0' does not exist on type 'Response'.
 lib/gntp.ts(51,17): error TS2339: Property 'slice' does not exist on type 'Response'.
 lib/gntp.ts(53,12): error TS2339: Property 'state' does not exist on type '{}'.
 lib/gntp.ts(54,31): error TS2304: Cannot find name 'LineNumber'.
-lib/gntp.ts(56,9): error TS7053: Element implicitly has an 'any' type because expression of type 'LineNumber' can't be used to index type '{}'.
 lib/gntp.ts(86,21): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
 lib/gntp.ts(87,63): error TS2339: Property 'length' does not exist on type 'File'.
-lib/gntp.ts(101,51): error TS8020: JSDoc types can only be used inside documentation comments.
 lib/gntp.ts(106,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/gntp.ts(158,30): error TS2551: Property 'header' does not exist on type 'Response'. Did you mean 'headers'?
 lib/gntp.ts(159,30): error TS2339: Property 'file' does not exist on type 'Response'.
 lib/gntp.ts(174,18): error TS2339: Property 'state' does not exist on type 'string'.
 lib/gntp.ts(174,44): error TS2339: Property 'state' does not exist on type 'string'.
-lib/gntp.ts(182,48): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-lib/gntp.ts(187,75): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-lib/gntp.ts(187,95): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
 lib/growly.ts(1,5): error TS2300: Duplicate identifier 'GNTP'.
-lib/growly.ts(10,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/growly.ts(11,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/growly.ts(12,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/growly.ts(13,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/growly.ts(14,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/growly.ts(15,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/growly.ts(16,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/growly.ts(30,22): error TS2339: Property 'label' does not exist on type 'Notification'.
-lib/growly.ts(76,9): error TS7034: Variable 'gntp' implicitly has type 'any' in some locations where its type cannot be determined.
-lib/growly.ts(80,9): error TS2322: Type 'undefined' is not assignable to type 'String'.
 lib/growly.ts(84,26): error TS2322: Type '{ label: string; dispname: string; enabled: true; }' is not assignable to type 'string'.
 lib/growly.ts(104,19): error TS2339: Property 'forEach' does not exist on type 'String'.
 lib/growly.ts(105,19): error TS2339: Property 'enabled' does not exist on type 'Notification'.
 lib/growly.ts(105,48): error TS2339: Property 'enabled' does not exist on type 'Notification'.
-lib/growly.ts(106,9): error TS7005: Variable 'gntp' implicitly has an 'any' type.
 lib/growly.ts(106,45): error TS2339: Property 'label' does not exist on type 'Notification'.
-lib/growly.ts(107,9): error TS7005: Variable 'gntp' implicitly has an 'any' type.
 lib/growly.ts(107,53): error TS2339: Property 'dispname' does not exist on type 'Notification'.
-lib/growly.ts(108,9): error TS7005: Variable 'gntp' implicitly has an 'any' type.
 lib/growly.ts(108,48): error TS2339: Property 'enabled' does not exist on type 'Notification'.
-lib/growly.ts(109,9): error TS7005: Variable 'gntp' implicitly has an 'any' type.
-lib/growly.ts(110,9): error TS7005: Variable 'gntp' implicitly has an 'any' type.
 lib/growly.ts(167,40): error TS2339: Property 'label' does not exist on type 'Object'.
 lib/growly.ts(169,41): error TS2339: Property 'title' does not exist on type 'Object'.
 lib/growly.ts(171,42): error TS2339: Property 'sticky' does not exist on type 'Object'.
@@ -58,7 +30,4 @@ lib/growly.ts(172,44): error TS2339: Property 'priority' does not exist on type 
 lib/growly.ts(173,40): error TS2339: Property 'icon' does not exist on type 'Object'.
 lib/growly.ts(174,49): error TS2339: Property 'coalescingId' does not exist on type 'Object'.
 lib/growly.ts(183,37): error TS2339: Property 'state' does not exist on type 'Response'.
-lib/growly.ts(184,33): error TS7053: Element implicitly has an 'any' type because expression of type '"Notification-Callback-Result"' can't be used to index type 'Response'.
-  Property 'Notification-Callback-Result' does not exist on type 'Response'.
-lib/growly.ts(193,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 

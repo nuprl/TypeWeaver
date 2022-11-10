@@ -19,7 +19,7 @@ function getUniqueIndex() {
 
 var property_files = fs
   .readdirSync(path.resolve(__dirname, '../lib/properties'))
-  .filter(function(property: ) {
+  .filter(function(property: any) {
     return property.substr(-3) === '.js';
   });
 var out_file = fs.createWriteStream(path.resolve(__dirname, '../lib/properties.js'), {
@@ -108,7 +108,7 @@ function addFile(filename: string | string[],  dependencyPath: string | string[]
   }
   addedFiles[filename] = true;
 }
-Object.keys(parsedFilesByPath).forEach(function(filename: ) {
+Object.keys(parsedFilesByPath).forEach(function(filename: any) {
   addFile(filename, []);
 });
 // Step 3: add files to output
@@ -116,7 +116,7 @@ Object.keys(parsedFilesByPath).forEach(function(filename: ) {
 // and updating require calls as appropriate
 var moduleExportsByPath = {};
 var statements = [];
-externalDependencies.forEach(function(filename: ?string,  i: umber) {
+externalDependencies.forEach(function(filename: any,  i: number) {
   var id = t.identifier(
     'external_dependency_' + basename(filename, '.js').replace(/[^A-Za-z]/g, '') + '_' + i
   );

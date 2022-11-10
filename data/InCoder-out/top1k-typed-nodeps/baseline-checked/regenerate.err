@@ -1,2 +1,30 @@
-regenerate.ts(599,43): error TS1110: Type expected.
+Gruntfile.ts(1,34): error TS2749: 'grunt' refers to a value, but is being used as a type here. Did you mean 'typeof grunt'?
+regenerate.ts(49,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+regenerate.ts(467,35): error TS2304: Cannot find name 'ny'.
+regenerate.ts(501,4): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+regenerate.ts(508,4): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+regenerate.ts(575,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+regenerate.ts(579,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+regenerate.ts(1062,11): error TS2350: Only a void function can be called with the 'new' keyword.
+regenerate.ts(1062,11): error TS2554: Expected 1 arguments, but got 0.
+regenerate.ts(1065,13): error TS2339: Property 'version' does not exist on type '(value: any) => any'.
+regenerate.ts(1076,48): error TS2339: Property 'data' does not exist on type '{}'.
+regenerate.ts(1083,35): error TS2304: Cannot find name 'IItem'.
+regenerate.ts(1101,51): error TS2339: Property 'data' does not exist on type '{}'.
+regenerate.ts(1108,35): error TS2304: Cannot find name 'IItem'.
+regenerate.ts(1143,26): error TS2339: Property 'data' does not exist on type '{}'.
+regenerate.ts(1155,14): error TS2350: Only a void function can be called with the 'new' keyword.
+regenerate.ts(1155,14): error TS2554: Expected 1 arguments, but got 0.
+regenerate.ts(1176,20): error TS2339: Property 'indexOf' does not exist on type 'number'.
+regenerate.ts(1180,27): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(pattern: string | RegExp, flags?: string): RegExp', gave the following error.
+    Argument of type 'number | ""' is not assignable to parameter of type 'string'.
+      Type 'number' is not assignable to type 'string'.
+  Overload 2 of 3, '(pattern: string, flags?: string): RegExp', gave the following error.
+    Argument of type 'number | ""' is not assignable to parameter of type 'string'.
+      Type 'number' is not assignable to type 'string'.
+regenerate.ts(1192,10): error TS2304: Cannot find name 'define'.
+regenerate.ts(1193,10): error TS2304: Cannot find name 'define'.
+regenerate.ts(1194,3): error TS2304: Cannot find name 'define'.
+regenerate.ts(1196,3): error TS2304: Cannot find name 'define'.
 

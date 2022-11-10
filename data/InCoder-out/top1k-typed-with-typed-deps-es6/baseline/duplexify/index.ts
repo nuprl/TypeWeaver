@@ -37,7 +37,7 @@ var toStreams2 = function(rs: ResultSet) {
   return new (stream.Readable)({objectMode:true, highWaterMark:16}).wrap(rs)
 }
 
-var Duplexify = function(writable: ?boolean, readable:,  readable: boolean,  opts: Object) {
+var Duplexify = function(writable: any,  readable: any,  opts: any) {
   if (!(this instanceof Duplexify)) return new Duplexify(writable, readable, opts)
   stream.Duplex.call(this, opts)
 
@@ -64,7 +64,7 @@ var Duplexify = function(writable: ?boolean, readable:,  readable: boolean,  opt
 
 inherits(Duplexify, stream.Duplex)
 
-Duplexify.obj = function(writable: ?boolean, readable:,  readable: boolean,  opts: Object) {
+Duplexify.obj = function(writable: any,  readable: any,  opts: any) {
   if (!opts) opts = {}
   opts.objectMode = true
   opts.highWaterMark = 16

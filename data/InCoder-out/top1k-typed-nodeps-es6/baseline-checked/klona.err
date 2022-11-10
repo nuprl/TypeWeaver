@@ -1,18 +1,74 @@
-src/full.ts(8,17): error TS7023: 'klona' implicitly has return type 'any' because it does not have a return type annotation and is referenced directly or indirectly in one of its return expressions.
+bench/fixtures/default.ts(3,8): error TS2339: Property 'value' does not exist on type 'Test'.
+bench/fixtures/default.ts(4,8): error TS2339: Property 'items' does not exist on type 'Test'.
+bench/fixtures/default.ts(7,15): error TS2339: Property 'value' does not exist on type 'Test'.
+bench/index.ts(2,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+bench/index.ts(7,20): error TS2307: Cannot find module 'lodash/clonedeep' or its corresponding type declarations.
+bench/index.ts(11,18): error TS2307: Cannot find module 'rfdc' or its corresponding type declarations.
+bench/index.ts(19,23): error TS2307: Cannot find module 'clone-deep' or its corresponding type declarations.
+bench/index.ts(23,22): error TS2307: Cannot find module 'deep-copy' or its corresponding type declarations.
+bench/index.ts(27,18): error TS2307: Cannot find module 'klona/full' or its corresponding type declarations.
+bench/index.ts(31,19): error TS2307: Cannot find module 'klona' or its corresponding type declarations.
+bench/index.ts(35,18): error TS2307: Cannot find module 'klona/lite' or its corresponding type declarations.
+bench/index.ts(39,18): error TS2307: Cannot find module 'klona/json' or its corresponding type declarations.
+bench/index.ts(82,2): error TS2345: Argument of type '{ 'JSON.stringify': (x: any) => any; lodash: any; rfdc: any; clone: typeof clone; 'clone/include': (x: any) => any; 'clone-deep': any; 'deep-copy': any; 'klona/full': any; klona: any; 'klona/lite': any; 'klona/json': any; }' is not assignable to parameter of type 'Function[]'.
+  Object literal may only specify known properties, and ''JSON.stringify'' does not exist in type 'Function[]'.
+bench/index.ts(96,2): error TS2345: Argument of type '{ lodash: any; clone: typeof clone; 'clone/include': (x: any) => any; 'clone-deep': any; 'klona/full': any; klona: any; 'klona/lite': any; }' is not assignable to parameter of type 'Function[]'.
+  Object literal may only specify known properties, and ''lodash'' does not exist in type 'Function[]'.
+bench/index.ts(106,2): error TS2345: Argument of type '{ lodash: any; clone: typeof clone; 'clone/include': (x: any) => any; 'klona/full': any; klona: any; }' is not assignable to parameter of type 'Function[]'.
+  Object literal may only specify known properties, and ''lodash'' does not exist in type 'Function[]'.
+bench/index.ts(115,2): error TS2345: Argument of type '{ lodash: any; 'clone/include': (x: any) => any; 'klona/full': any; }' is not assignable to parameter of type 'Function[]'.
+  Object literal may only specify known properties, and ''lodash'' does not exist in type 'Function[]'.
+bench/validate/default.ts(7,7): error TS2339: Property 'regexp' does not exist on type 'boolean'.
+bench/validate/default.ts(12,23): error TS2339: Property 'array' does not exist on type 'boolean'.
+bench/validate/default.ts(14,7): error TS2339: Property 'array' does not exist on type 'boolean'.
+bench/validate/default.ts(14,32): error TS2339: Property 'array' does not exist on type 'boolean'.
+bench/validate/default.ts(19,20): error TS2339: Property 'set' does not exist on type 'boolean'.
+bench/validate/default.ts(21,11): error TS2339: Property 'set' does not exist on type 'boolean'.
+bench/validate/default.ts(23,28): error TS2339: Property 'set' does not exist on type 'boolean'.
+bench/validate/default.ts(27,20): error TS2339: Property 'map' does not exist on type 'boolean'.
+bench/validate/default.ts(29,11): error TS2339: Property 'map' does not exist on type 'boolean'.
+bench/validate/default.ts(31,28): error TS2339: Property 'map' does not exist on type 'boolean'.
+bench/validate/default.ts(35,20): error TS2339: Property 'custom' does not exist on type 'boolean'.
+bench/validate/default.ts(38,24): error TS2339: Property 'custom' does not exist on type 'boolean'.
+bench/validate/default.ts(40,7): error TS2339: Property 'custom' does not exist on type 'boolean'.
+bench/validate/default.ts(44,7): error TS2339: Property 'int8arr' does not exist on type 'boolean'.
+bench/validate/default.ts(48,20): error TS2339: Property 'int8arr' does not exist on type 'boolean'.
+bench/validate/default.ts(51,7): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/default.ts(54,7): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/default.ts(55,40): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/default.ts(57,23): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/default.ts(59,20): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/default.ts(64,20): error TS2339: Property 'dataview' does not exist on type 'boolean'.
+bench/validate/default.ts(66,7): error TS2339: Property 'dataview' does not exist on type 'boolean'.
+bench/validate/default.ts(68,20): error TS2339: Property 'dataview' does not exist on type 'boolean'.
+bench/validate/full.ts(7,7): error TS2339: Property 'regexp' does not exist on type 'boolean'.
+bench/validate/full.ts(12,23): error TS2339: Property 'array' does not exist on type 'boolean'.
+bench/validate/full.ts(14,7): error TS2339: Property 'array' does not exist on type 'boolean'.
+bench/validate/full.ts(14,32): error TS2339: Property 'array' does not exist on type 'boolean'.
+bench/validate/full.ts(19,20): error TS2339: Property 'set' does not exist on type 'boolean'.
+bench/validate/full.ts(21,11): error TS2339: Property 'set' does not exist on type 'boolean'.
+bench/validate/full.ts(23,28): error TS2339: Property 'set' does not exist on type 'boolean'.
+bench/validate/full.ts(27,20): error TS2339: Property 'map' does not exist on type 'boolean'.
+bench/validate/full.ts(29,11): error TS2339: Property 'map' does not exist on type 'boolean'.
+bench/validate/full.ts(31,28): error TS2339: Property 'map' does not exist on type 'boolean'.
+bench/validate/full.ts(34,7): error TS2339: Property 'int8arr' does not exist on type 'boolean'.
+bench/validate/full.ts(38,20): error TS2339: Property 'int8arr' does not exist on type 'boolean'.
+bench/validate/full.ts(41,7): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/full.ts(44,7): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/full.ts(45,40): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/full.ts(47,23): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/full.ts(49,20): error TS2339: Property 'buffer' does not exist on type 'boolean'.
+bench/validate/full.ts(52,35): error TS2339: Property 'symbol1' does not exist on type 'boolean'.
+bench/validate/full.ts(53,35): error TS2339: Property 'symbol2' does not exist on type 'boolean'.
+bench/validate/full.ts(57,25): error TS2339: Property 'symbol1' does not exist on type 'boolean'.
+bench/validate/full.ts(61,25): error TS2339: Property 'symbol2' does not exist on type 'boolean'.
+bench/validate/full.ts(63,12): error TS2339: Property 'symbol2' does not exist on type 'boolean'.
+bench/validate/full.ts(65,25): error TS2339: Property 'symbol2' does not exist on type 'boolean'.
+bench/validate/full.ts(80,34): error TS2339: Property 'secret' does not exist on type 'boolean'.
+bench/validate/full.ts(82,7): error TS2339: Property 'hidden2' does not exist on type 'boolean'.
+bench/validate/json.ts(1,20): error TS2307: Cannot find module 'uvu/assert' or its corresponding type declarations.
+bench/validate/lite.ts(1,20): error TS2307: Cannot find module 'uvu/assert' or its corresponding type declarations.
 src/full.ts(8,26): error TS2552: Cannot find name 'bject'. Did you mean 'object'?
-src/full.ts(11,20): error TS7034: Variable 'tmp' implicitly has type 'any' in some locations where its type cannot be determined.
-src/full.ts(20,4): error TS7005: Variable 'tmp' implicitly has an 'any' type.
-src/full.ts(25,4): error TS7005: Variable 'tmp' implicitly has an 'any' type.
-src/index.ts(1,17): error TS7023: 'klona' implicitly has return type 'any' because it does not have a return type annotation and is referenced directly or indirectly in one of its return expressions.
 src/index.ts(1,26): error TS2552: Cannot find name 'bject'. Did you mean 'object'?
-src/index.ts(4,9): error TS7034: Variable 'tmp' implicitly has type 'any' in some locations where its type cannot be determined.
-src/index.ts(25,6): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-src/index.ts(43,4): error TS7005: Variable 'tmp' implicitly has an 'any' type.
-src/index.ts(51,4): error TS7005: Variable 'tmp' implicitly has an 'any' type.
-src/json.ts(21,5): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 src/lite.ts(1,26): error TS2552: Cannot find name 'bject'. Did you mean 'object'?
-src/lite.ts(25,6): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 

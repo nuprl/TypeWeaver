@@ -1,3 +1,4 @@
+Gruntfile.ts(3,33): error TS2749: 'grunt' refers to a value, but is being used as a type here. Did you mean 'typeof grunt'?
 dist/loglevel.min.ts(2,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 dist/loglevel.min.ts(2,65): error TS2304: Cannot find name 'define'.
 dist/loglevel.min.ts(2,73): error TS2304: Cannot find name 'define'.
@@ -7,50 +8,7 @@ dist/loglevel.min.ts(2,149): error TS2349: This expression is not callable.
 dist/loglevel.min.ts(2,155): error TS2339: Property 'log' does not exist on type 'Object'.
 dist/loglevel.min.ts(2,159): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-dist/loglevel.min.ts(2,204): error TS7006: Parameter 'a' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,206): error TS7006: Parameter 'b' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,466): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[message?: any, ...optionalParams: any[]]'.
-dist/loglevel.min.ts(2,584): error TS7006: Parameter 'c' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,663): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Console'.
-dist/loglevel.min.ts(2,739): error TS7006: Parameter 'a' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,741): error TS7006: Parameter 'b' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,783): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-dist/loglevel.min.ts(2,797): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-dist/loglevel.min.ts(2,823): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-dist/loglevel.min.ts(2,832): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-dist/loglevel.min.ts(2,854): error TS7006: Parameter 'a' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,856): error TS7006: Parameter 'b' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,858): error TS7006: Parameter 'c' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,907): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-dist/loglevel.min.ts(2,917): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-dist/loglevel.min.ts(2,931): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-dist/loglevel.min.ts(2,960): error TS7006: Parameter 'a' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,962): error TS7006: Parameter 'b' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,964): error TS7006: Parameter 'd' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,988): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-dist/loglevel.min.ts(2,993): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[a: any, b: any, c: any]'.
-dist/loglevel.min.ts(2,1015): error TS7006: Parameter 'a' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,1017): error TS7006: Parameter 'b' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,1019): error TS7006: Parameter 'c' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,1033): error TS7006: Parameter 'a' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,1403): error TS2531: Object is possibly 'null'.
-dist/loglevel.min.ts(2,1694): error TS7034: Variable 'j' implicitly has type 'any' in some locations where its type cannot be determined.
-dist/loglevel.min.ts(2,1698): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-dist/loglevel.min.ts(2,1788): error TS2322: Type 'undefined' is not assignable to type 'string'.
-dist/loglevel.min.ts(2,1915): error TS7005: Variable 'j' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,1938): error TS7006: Parameter 'b' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,1940): error TS7006: Parameter 'c' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,2273): error TS7006: Parameter 'a' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,2370): error TS7006: Parameter 'a' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,2425): error TS7006: Parameter 'a' implicitly has an 'any' type.
 dist/loglevel.min.ts(2,2679): error TS2554: Expected 3 arguments, but got 0.
-dist/loglevel.min.ts(2,2679): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-dist/loglevel.min.ts(2,2711): error TS7006: Parameter 'a' implicitly has an 'any' type.
-dist/loglevel.min.ts(2,2840): error TS7053: Element implicitly has an 'any' type because expression of type 'string | symbol' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-dist/loglevel.min.ts(2,2858): error TS7053: Element implicitly has an 'any' type because expression of type 'string | symbol' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-dist/loglevel.min.ts(2,2863): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 dist/loglevel.min.ts(2,2936): error TS2339: Property 'log' does not exist on type 'Window & typeof globalThis'.
 dist/loglevel.min.ts(2,3011): error TS2339: Property 'log' does not exist on type 'Window & typeof globalThis'.
 dist/loglevel.min.ts(2,3028): error TS2339: Property 'log' does not exist on type 'Window & typeof globalThis'.
@@ -58,28 +16,11 @@ dist/loglevel.ts(4,16): error TS2304: Cannot find name 'define'.
 dist/loglevel.ts(4,41): error TS2304: Cannot find name 'define'.
 dist/loglevel.ts(5,9): error TS2304: Cannot find name 'define'.
 dist/loglevel.ts(7,9): error TS1258: A default export must be at the top level of a file or module declaration.
-dist/loglevel.ts(50,44): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[message?: any, ...optionalParams: any[]]'.
-dist/loglevel.ts(70,20): error TS7053: Element implicitly has an 'any' type because expression of type 'string | symbol' can't be used to index type 'Console'.
-  No index signature with a parameter of type 'string' was found on type 'Console'.
 dist/loglevel.ts(81,43): error TS2304: Cannot find name 'Level'.
 dist/loglevel.ts(81,63): error TS2304: Cannot find name 'LoggerName'.
-dist/loglevel.ts(85,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-dist/loglevel.ts(87,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-dist/loglevel.ts(91,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-dist/loglevel.ts(91,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-dist/loglevel.ts(99,44): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-dist/loglevel.ts(100,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 dist/loglevel.ts(100,22): error TS2538: Type 'Function' cannot be used as an index type.
-dist/loglevel.ts(100,40): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-dist/loglevel.ts(110,54): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-dist/loglevel.ts(110,60): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[methodName: Function, level: number, loggerName: string]'.
 dist/loglevel.ts(113,50): error TS2304: Cannot find name 'Level'.
 dist/loglevel.ts(113,67): error TS2304: Cannot find name 'LoggerFactory'.
-dist/loglevel.ts(114,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-dist/loglevel.ts(115,11): error TS7034: Variable 'currentLevel' implicitly has type 'any' in some locations where its type cannot be determined.
-dist/loglevel.ts(122,9): error TS2322: Type 'undefined' is not assignable to type 'string'.
-dist/loglevel.ts(159,37): error TS2531: Object is possibly 'null'.
-dist/loglevel.ts(202,18): error TS7005: Variable 'currentLevel' implicitly has an 'any' type.
 dist/loglevel.ts(205,58): error TS2304: Cannot find name 'Persist'.
 dist/loglevel.ts(206,62): error TS2339: Property 'toUpperCase' does not exist on type 'never'.
 dist/loglevel.ts(207,41): error TS2339: Property 'toUpperCase' does not exist on type 'never'.
@@ -87,12 +28,6 @@ dist/loglevel.ts(223,47): error TS2304: Cannot find name 'Level'.
 dist/loglevel.ts(235,42): error TS2304: Cannot find name 'Persist'.
 dist/loglevel.ts(239,43): error TS2304: Cannot find name 'Persist'.
 dist/loglevel.ts(257,25): error TS2554: Expected 3 arguments, but got 0.
-dist/loglevel.ts(257,25): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-dist/loglevel.ts(265,22): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-dist/loglevel.ts(267,20): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-dist/loglevel.ts(267,43): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 dist/loglevel.ts(274,59): error TS2339: Property 'log' does not exist on type 'Window & typeof globalThis'.
 dist/loglevel.ts(277,23): error TS2339: Property 'log' does not exist on type 'Window & typeof globalThis'.
 dist/loglevel.ts(278,20): error TS2339: Property 'log' does not exist on type 'Window & typeof globalThis'.
@@ -100,28 +35,11 @@ lib/loglevel.ts(9,16): error TS2304: Cannot find name 'define'.
 lib/loglevel.ts(9,41): error TS2304: Cannot find name 'define'.
 lib/loglevel.ts(10,9): error TS2304: Cannot find name 'define'.
 lib/loglevel.ts(12,9): error TS1258: A default export must be at the top level of a file or module declaration.
-lib/loglevel.ts(55,44): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[message?: any, ...optionalParams: any[]]'.
-lib/loglevel.ts(75,20): error TS7053: Element implicitly has an 'any' type because expression of type 'string | symbol' can't be used to index type 'Console'.
-  No index signature with a parameter of type 'string' was found on type 'Console'.
 lib/loglevel.ts(86,43): error TS2304: Cannot find name 'Level'.
 lib/loglevel.ts(86,63): error TS2304: Cannot find name 'LoggerName'.
-lib/loglevel.ts(90,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/loglevel.ts(92,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/loglevel.ts(96,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/loglevel.ts(96,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/loglevel.ts(104,44): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/loglevel.ts(105,17): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/loglevel.ts(105,22): error TS2538: Type 'Function' cannot be used as an index type.
-lib/loglevel.ts(105,40): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/loglevel.ts(115,54): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/loglevel.ts(115,60): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type '[methodName: Function, level: number, loggerName: string]'.
 lib/loglevel.ts(118,50): error TS2304: Cannot find name 'Level'.
 lib/loglevel.ts(118,67): error TS2304: Cannot find name 'LoggerFactory'.
-lib/loglevel.ts(119,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/loglevel.ts(120,11): error TS7034: Variable 'currentLevel' implicitly has type 'any' in some locations where its type cannot be determined.
-lib/loglevel.ts(127,9): error TS2322: Type 'undefined' is not assignable to type 'string'.
-lib/loglevel.ts(164,37): error TS2531: Object is possibly 'null'.
-lib/loglevel.ts(207,18): error TS7005: Variable 'currentLevel' implicitly has an 'any' type.
 lib/loglevel.ts(210,58): error TS2304: Cannot find name 'Persist'.
 lib/loglevel.ts(211,62): error TS2339: Property 'toUpperCase' does not exist on type 'never'.
 lib/loglevel.ts(212,41): error TS2339: Property 'toUpperCase' does not exist on type 'never'.
@@ -129,12 +47,6 @@ lib/loglevel.ts(228,47): error TS2304: Cannot find name 'Level'.
 lib/loglevel.ts(240,42): error TS2304: Cannot find name 'Persist'.
 lib/loglevel.ts(244,43): error TS2304: Cannot find name 'Persist'.
 lib/loglevel.ts(262,25): error TS2554: Expected 3 arguments, but got 0.
-lib/loglevel.ts(262,25): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/loglevel.ts(270,22): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-lib/loglevel.ts(272,20): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-lib/loglevel.ts(272,43): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 lib/loglevel.ts(279,59): error TS2339: Property 'log' does not exist on type 'Window & typeof globalThis'.
 lib/loglevel.ts(282,23): error TS2339: Property 'log' does not exist on type 'Window & typeof globalThis'.
 lib/loglevel.ts(283,20): error TS2339: Property 'log' does not exist on type 'Window & typeof globalThis'.

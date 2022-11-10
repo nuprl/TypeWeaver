@@ -84,7 +84,7 @@ if (isWindows) {
   var splitRootRe = /^[\/]*/;
 }
 
-exports.realpathSync = function realpathSync(p: string | Buffer,  cache: ?string): string;) {
+exports.realpathSync = function realpathSync(p: string | Buffer,  cache: any) {
   // make p is absolute
   p = pathModule.resolve(p);
 

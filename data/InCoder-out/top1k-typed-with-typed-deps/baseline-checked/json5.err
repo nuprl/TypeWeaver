@@ -1,4 +1,55 @@
-lib/parse.ts(13,78): error TS1128: Declaration or statement expected.
-lib/parse.ts(1023,26): error TS1110: Type expected.
-lib/parse.ts(1087,2): error TS1005: '}' expected.
+build/es5.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'JSON5'.
+build/package.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+build/package.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+build/package.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'JSON5'.
+build/package.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'pkg'.
+build/unicode.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+build/unicode.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+lib/cli.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+lib/cli.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+lib/cli.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'pkg'.
+lib/cli.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'JSON5'.
+lib/index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'JSON5'.
+lib/parse.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'util'.
+lib/parse.ts(133,20): error TS2554: Expected 2 arguments, but got 1.
+lib/parse.ts(210,20): error TS2554: Expected 2 arguments, but got 1.
+lib/parse.ts(686,26): error TS2304: Cannot find name 'TokenType'.
+lib/parse.ts(707,10): error TS2384: Overload signatures must all be ambient or non-ambient.
+lib/parse.ts(1074,9): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
+lib/parse.ts(1075,29): error TS2339: Property 'charCodeAt' does not exist on type 'number'.
+lib/parse.ts(1083,33): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(message?: string): SyntaxError', gave the following error.
+    Argument of type 'string | Error' is not assignable to parameter of type 'string'.
+      Type 'Error' is not assignable to type 'string'.
+  Overload 2 of 2, '(message?: string): Error', gave the following error.
+    Argument of type 'string | Error' is not assignable to parameter of type 'string'.
+      Type 'Error' is not assignable to type 'string'.
+lib/parse.ts(1084,9): error TS2339: Property 'lineNumber' does not exist on type 'SyntaxError & Error'.
+lib/parse.ts(1085,9): error TS2339: Property 'columnNumber' does not exist on type 'SyntaxError & Error'.
+lib/register.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+lib/register.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'JSON5'.
+lib/stringify.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'util'.
+lib/stringify.ts(16,26): error TS2339: Property 'space' does not exist on type 'never'.
+lib/stringify.ts(17,26): error TS2339: Property 'quote' does not exist on type 'never'.
+lib/stringify.ts(18,29): error TS2339: Property 'replacer' does not exist on type 'never'.
+lib/stringify.ts(25,25): error TS2488: Type 'never' must have a '[Symbol.iterator]()' method that returns an iterator.
+lib/stringify.ts(44,9): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+lib/stringify.ts(46,16): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+lib/stringify.ts(47,9): error TS2322: Type 'string' is not assignable to type 'number'.
+lib/stringify.ts(56,21): error TS2339: Property 'substr' does not exist on type 'never'.
+lib/stringify.ts(90,39): error TS2554: Expected 1 arguments, but got 2.
+lib/stringify.ts(127,35): error TS2339: Property 'length' does not exist on type 'string | number'.
+  Property 'length' does not exist on type 'number'.
+lib/stringify.ts(209,17): error TS2339: Property 'length' does not exist on type 'string | number'.
+  Property 'length' does not exist on type 'number'.
+lib/stringify.ts(210,37): error TS2554: Expected 1 arguments, but got 2.
+lib/stringify.ts(213,52): error TS2339: Property 'codePointAt' does not exist on type 'string | number'.
+  Property 'codePointAt' does not exist on type 'number'.
+lib/stringify.ts(215,37): error TS2554: Expected 1 arguments, but got 2.
+lib/stringify.ts(218,48): error TS2339: Property 'length' does not exist on type 'string | number'.
+  Property 'length' does not exist on type 'number'.
+lib/stringify.ts(219,65): error TS2339: Property 'codePointAt' does not exist on type 'string | number'.
+  Property 'codePointAt' does not exist on type 'number'.
+lib/stringify.ts(220,41): error TS2554: Expected 1 arguments, but got 2.
+rollup.config.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'pkg'.
 

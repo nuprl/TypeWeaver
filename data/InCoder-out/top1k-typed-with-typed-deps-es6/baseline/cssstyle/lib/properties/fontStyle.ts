@@ -2,7 +2,7 @@
 
 var valid_styles = ['normal', 'italic', 'oblique', 'inherit'];
 
-export const isValid = function(v: |endofmask|>) {
+export const isValid = function(v: any) {
   return valid_styles.indexOf(v.toLowerCase()) !== -1;
 };
 

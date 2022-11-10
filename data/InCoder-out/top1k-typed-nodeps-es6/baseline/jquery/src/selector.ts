@@ -295,7 +295,7 @@ function find( selector: Selector,  context: Element | Document | Window,  resul
 
 /**
  * Create key-value caches of limited size
- * @returns {function(string: ?string, object:?,  object: Object)} Returns the Object data after storing it on itself with
+ * @returns {function(string: any,  object: Object)} Returns the Object data after storing it on itself with
  *	property name the (space-suffixed) string and (if the cache is larger than Expr.cacheLength)
  *	deleting the oldest entry
  */
@@ -688,7 +688,7 @@ Expr = jQuery.expr = {
 			};
 		},
 
-		CHILD: function( type: ,  what: _argument,  _argument: _argument,  first: second,  last : third) {
+		CHILD: function( type: any,  what: any,  _argument: any,  first: any,  last : any) {
 			var simple = type.slice( 0, 3 ) !== "nth",
 				forward = type.slice( -4 ) !== "last",
 				ofType = what === "of-type";
@@ -1023,7 +1023,7 @@ Expr = jQuery.expr = {
 			return matchIndexes;
 		} ),
 
-		lt: createPositionalPseudo( function( matchIndexes: ,  length: toArray,  argument : |endofmask|>) {
+		lt: createPositionalPseudo( function( matchIndexes: any,  length: number,  argument : any) {
 			var i;
 
 			if ( argument < 0 ) {
@@ -1260,7 +1260,7 @@ function setMatcher( preFilter: RegExp,  selector: String,  matcher: Function,  
 	if ( postFinder && !postFinder[ expando ] ) {
 		postFinder = setMatcher( postFinder, postSelector );
 	}
-	return markFunction( function( seed: ?number, context?:?,  results: Array,  context: ,  xml : MLDocument) {
+	return markFunction( function( seed: any,  results: any,  context: any,  xml : any) {
 		var temp, i, elem, matcherOut,
 			preMap = [],
 			postMap = [],

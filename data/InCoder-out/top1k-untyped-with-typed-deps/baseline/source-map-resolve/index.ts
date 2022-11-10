@@ -6,7 +6,7 @@ var decodeUriComponentLib = require("decode-uri-component")
 
 
 function resolveUrl(/* ...urls */: rray<string>) {
-  return Array.prototype.reduce.call(arguments, function(resolved: boolean,  nextUrl: ?string) {) {
+  return Array.prototype.reduce.call(arguments, function(resolved: boolean,  nextUrl: any) {
     return urlLib.resolve(resolved, nextUrl)
   })
 }

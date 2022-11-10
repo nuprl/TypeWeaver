@@ -157,7 +157,7 @@ function rangeToPattern(start: number,  stop: number,  options: IRangeOptions) {
   return { pattern, count: [count], digits };
 }
 
-function splitToPatterns(min: number,  max: number,  tok: Token,  options: { [key: string]: any) {
+function splitToPatterns(min: number,  max: number,  tok: Token,  options: any) {
   let ranges = splitToRanges(min, max);
   let tokens = [];
   let start = min;

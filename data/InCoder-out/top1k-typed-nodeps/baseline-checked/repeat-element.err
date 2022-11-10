@@ -1,4 +1,13 @@
-benchmark/code/new-array-map-2.ts(4,73): error TS1128: Declaration or statement expected.
-benchmark/code/new-array-map-2.ts(4,75): error TS1005: ';' expected.
-benchmark/code/new-array-map-2.ts(6,4): error TS1128: Declaration or statement expected.
+benchmark/check.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
+benchmark/check.ts(20,39): error TS2304: Cannot find name 'ComponentFixture'.
+benchmark/code/array-map-call.ts(4,35): error TS2365: Operator '+' cannot be applied to types 'undefined[]' and 'any[]'.
+benchmark/code/for-length.ts(5,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
+benchmark/code/for-new-array-1.ts(3,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
+benchmark/code/for-new-array-2.ts(3,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
+benchmark/code/new-array-map-1.ts(4,61): error TS2749: 'nil' refers to a value, but is being used as a type here. Did you mean 'typeof nil'?
+benchmark/code/new-array-map-2.ts(4,30): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+benchmark/code/while-array-3.ts(7,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
+benchmark/code/while-bitwise.ts(4,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
+benchmark/code/while-new-array-1.ts(3,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
+benchmark/code/while-new-array-2.ts(3,10): error TS2451: Cannot redeclare block-scoped variable 'repeat'.
 

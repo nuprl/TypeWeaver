@@ -370,7 +370,7 @@ exports.nextPort = function (port: number) {
 // Gets the next socket path in sequence from the
 // specified `socketPath`.
 //
-exports.nextSocket = function (socketPath: ) {
+exports.nextSocket = function (socketPath: any) {
   var dir = path.dirname(socketPath),
       name = path.basename(socketPath, '.sock'),
       match = name.match(/^([a-zA-z]+)(\d*)$/i),

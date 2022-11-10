@@ -26,7 +26,7 @@ const threadId = (function getId () {
 })()
 
 let invocations = 0
-function getTmpname (filename: ) {
+function getTmpname (filename: any) {
   return filename + '.' +
     MurmurHash3(__filename)
       .hash(String(process.pid))
@@ -158,7 +158,7 @@ async function writeFileAsync (filename: string | Buffer,  data: string | Buffer
   }
 }
 
-async function writeFile (filename: string | Buffer,  data: string | Buffer,  options: { encoding?: string,  callback: Function) {
+async function writeFile (filename: string | Buffer,  data: string | Buffer,  options: any,  callback: Function) {
   if (options instanceof Function) {
     callback = options
     options = {}
@@ -177,7 +177,7 @@ async function writeFile (filename: string | Buffer,  data: string | Buffer,  op
   return promise
 }
 
-function writeFileSync (filename: string | Buffer,  data: string | Buffer,  options: { encoding?: string;) {
+function writeFileSync (filename: string | Buffer,  data: string | Buffer,  options: any) {
   if (typeof options === 'string') {
     options = { encoding: options }
   } else if (!options) {

@@ -120,7 +120,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function reduce(coll: Coll<T>,  memo: T,  iteratee: MemoIterator<T, TResult,  callback: MemoIteratorCallback<T, T) {
+function reduce(coll: Coll<T>,  memo: T,  iteratee: any,  callback: Function) {
     callback = once(callback);
     var _iteratee = wrapAsync(iteratee);
     return eachOfSeries(coll, (x, i, iterCb) => {

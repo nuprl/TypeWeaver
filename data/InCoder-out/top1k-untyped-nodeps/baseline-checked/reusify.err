@@ -1,0 +1,9 @@
+benchmarks/createNoCodeFunction.ts(3,5): error TS2300: Duplicate identifier 'fib'.
+benchmarks/fib.ts(3,10): error TS2300: Duplicate identifier 'fib'.
+benchmarks/reuseNoCodeFunction.ts(3,5): error TS2300: Duplicate identifier 'reusify'.
+reusify.ts(3,10): error TS2300: Duplicate identifier 'reusify'.
+reusify.ts(4,18): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+reusify.ts(13,18): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+

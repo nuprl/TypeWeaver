@@ -11,7 +11,7 @@ Diff.prototype = {
 
     let self = this;
 
-    function done(value: ?any) {) {
+    function done(value: any) {
       if (callback) {
         setTimeout(function() { callback(undefined, value); }, 0);
         return true;

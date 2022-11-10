@@ -2,7 +2,7 @@ var sax = require('../lib/sax'),
   printer = sax.createStream(false, {lowercasetags: true, trim: true}),
   fs = require('fs')
 
-function entity (str: ) {
+function entity (str: any) {
   return str.replace('"', '&quot;')
 }
 
@@ -61,7 +61,7 @@ if (!process.argv[2]) {
 var xmlfile = require('path').join(process.cwd(), process.argv[2])
 var fstr = fs.createReadStream(xmlfile, { encoding: 'utf8' })
 
-function print (c: ) {
+function print (c: any) {
   if (!process.stdout.write(c)) {
     fstr.pause()
   }

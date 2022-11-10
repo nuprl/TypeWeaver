@@ -48,7 +48,7 @@ export const ECKey = function(curve: Curve,  key: Key,  isPublic: Boolean) {
       unstupid(priv.toString(16), bytes * 2),
       "hex"
     );
-    this.deriveSharedSecret = function(key: |endofmask|>) {
+    this.deriveSharedSecret = function(key: any) {
       if (!key || !key.P) return false;
       var S = key.P.multiply(priv);
       return Buffer.from(

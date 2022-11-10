@@ -3,23 +3,47 @@ Dataset: top1k-untyped-with-typed-deps
 Type checking with: /mnt/data/mhyee/not-type-inference/tools/node_modules/typescript/bin/tsc
 Input directory: /mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-untyped-with-typed-deps/baseline
 Output directory: /mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-untyped-with-typed-deps/baseline-checked
-Found 15 packages
-[1/15] @npmcli_move-file ... [FAIL]
-[2/15] browserify-zlib ... [FAIL]
-[3/15] create-ecdh ... [FAIL]
-[4/15] des.js ... [FAIL]
-[5/15] ecc-jsbn ... [FAIL]
-[6/15] for-each ... [FAIL]
-[7/15] get-symbol-description ... [ OK ]
-[8/15] jsprim ... [FAIL]
-[9/15] levn ... [FAIL]
-[10/15] miller-rabin ... [FAIL]
-[11/15] request-promise-core ... [FAIL]
-[12/15] snapdragon-util ... [FAIL]
-[13/15] source-map-resolve ... [FAIL]
-[14/15] string.prototype.trimend ... [ OK ]
-[15/15] timers-browserify ... [FAIL]
-Number of successes: 2
-Number of fails: 13
+Found 39 packages
+[1/39] @npmcli_move-file ... [FAIL]
+[2/39] array-includes ... [FAIL]
+[3/39] browserify-rsa ... [FAIL]
+[4/39] browserify-zlib ... [FAIL]
+[5/39] capture-exit ... [FAIL]
+[6/39] create-ecdh ... [FAIL]
+[7/39] des.js ... [FAIL]
+[8/39] ecc-jsbn ... [FAIL]
+[9/39] esrecurse ... [FAIL]
+[10/39] for-each ... [FAIL]
+[11/39] fs-write-stream-atomic ... [FAIL]
+[12/39] get-symbol-description ... [ OK ]
+[13/39] has-tostringtag ... [ OK ]
+[14/39] has-values ... [FAIL]
+[15/39] is-nan ... [FAIL]
+[16/39] is-symbol ... [FAIL]
+[17/39] is-weakset ... [ OK ]
+[18/39] jsprim ... [FAIL]
+[19/39] levn ... [FAIL]
+[20/39] makeerror ... [FAIL]
+[21/39] miller-rabin ... [FAIL]
+[22/39] mississippi ... [ OK ]
+[23/39] object-is ... [FAIL]
+[24/39] object.assign ... [FAIL]
+[25/39] object.entries ... [ OK ]
+[26/39] object.values ... [ OK ]
+[27/39] regenerate-unicode-properties ... [FAIL]
+[28/39] request-promise-core ... [FAIL]
+[29/39] shallow-clone ... [FAIL]
+[30/39] side-channel ... [FAIL]
+[31/39] snapdragon-util ... [FAIL]
+[32/39] source-map-resolve ... [FAIL]
+[33/39] stream-browserify ... [ OK ]
+[34/39] string.prototype.trimend ... [ OK ]
+[35/39] string.prototype.trimstart ... [ OK ]
+[36/39] timers-browserify ... [FAIL]
+[37/39] to-object-path ... [FAIL]
+[38/39] union-value ... [FAIL]
+[39/39] unique-slug ... [ OK ]
+Number of successes: 10
+Number of fails: 29
 Number of skips: 0
-Time for type checking: 0:00:09
+Time for type checking: 0:00:25

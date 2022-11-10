@@ -362,7 +362,7 @@ pp.regexp_eatInvalidBracedQuantifier = function(state: State) {
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-SyntaxCharacter
-pp.regexp_eatSyntaxCharacter = function(state: ) {
+pp.regexp_eatSyntaxCharacter = function(state: any) {
   const ch = state.current()
   if (isSyntaxCharacter(ch)) {
     state.lastIntValue = ch
@@ -513,7 +513,7 @@ function isRegExpIdentifierPart(ch: number) {
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-annexB-AtomEscape
-pp.regexp_eatAtomEscape = function(state: ) {
+pp.regexp_eatAtomEscape = function(state: any) {
   if (
     this.regexp_eatBackReference(state) ||
     this.regexp_eatCharacterClassEscape(state) ||
@@ -592,7 +592,7 @@ pp.regexp_eatZero = function(state: State) {
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-ControlEscape
-pp.regexp_eatControlEscape = function(state: ) {
+pp.regexp_eatControlEscape = function(state: any) {
   const ch = state.current()
   if (ch === 0x74 /* t */) {
     state.lastIntValue = 0x09 /* \t */
@@ -623,7 +623,7 @@ pp.regexp_eatControlEscape = function(state: ) {
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-ControlLetter
-pp.regexp_eatControlLetter = function(state: ) {
+pp.regexp_eatControlLetter = function(state: any) {
   const ch = state.current()
   if (isControlLetter(ch)) {
     state.lastIntValue = ch % 0x20
@@ -921,7 +921,7 @@ pp.regexp_eatClassEscape = function(state: State) {
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-annexB-ClassControlLetter
-pp.regexp_eatClassControlLetter = function(state: ) {
+pp.regexp_eatClassControlLetter = function(state: any) {
   const ch = state.current()
   if (isDecimalDigit(ch) || ch === 0x5F /* _ */) {
     state.lastIntValue = ch % 0x20
@@ -1010,7 +1010,7 @@ pp.regexp_eatLegacyOctalEscapeSequence = function(state: State) {
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-OctalDigit
-pp.regexp_eatOctalDigit = function(state: ) {
+pp.regexp_eatOctalDigit = function(state: any) {
   const ch = state.current()
   if (isOctalDigit(ch)) {
     state.lastIntValue = ch - 0x30 /* 0 */

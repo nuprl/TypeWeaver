@@ -1,2 +1,18 @@
-index.ts(136,28): error TS1110: Type expected.
+index.ts(29,26): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+  Type 'string[]' is not assignable to type 'string'.
+index.ts(111,24): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(111,24): error TS2554: Expected 3 arguments, but got 2.
+index.ts(113,24): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(113,24): error TS2554: Expected 3 arguments, but got 2.
+index.ts(121,26): error TS2339: Property 'slashes' does not exist on type '{}'.
+index.ts(122,24): error TS2339: Property 'slashes' does not exist on type '{}'.
+index.ts(166,3): error TS2322: Type 'Location | {}' is not assignable to type 'Location'.
+  Type '{}' is missing the following properties from type 'Location': ancestorOrigins, hash, host, hostname, and 9 more.
+index.ts(222,28): error TS2304: Cannot find name 'Path'.
+index.ts(222,41): error TS2304: Cannot find name 'Path'.
+index.ts(264,61): error TS2304: Cannot find name 'Parser'.
+index.ts(266,12): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(293,3): error TS2740: Type '{}' is missing the following properties from type 'Location': ancestorOrigins, hash, host, hostname, and 9 more.
+index.ts(300,59): error TS2339: Property 'slashes' does not exist on type 'Location'.
+index.ts(374,17): error TS2339: Property 'slashes' does not exist on type 'Location'.
 

@@ -1149,7 +1149,7 @@ function validateUnicodeGroupName(name: string | null,  state: State) {
 const uidRe = /\\u(?:([dD][89aAbB][0-9a-fA-F]{2})\\u([dD][c-fC-F][0-9a-fA-F]{2})|([dD][89aAbB][0-9a-fA-F]{2})|([dD][c-fC-F][0-9a-fA-F]{2})|([0-9a-ce-fA-CE-F][0-9a-fA-F]{3}|[dD][0-7][0-9a-fA-F]{2})|\{(0*(?:[0-9a-fA-F]{1,5}|10[0-9a-fA-F]{4}))\})/;
 
 function decodeUnicodeGroupName(name: number) {
-  return name.replace(new RegExp(uidRe, 'g'), function (_: TrailingSurro,  leadSurrogate: ?TrailingSur,  trailSurrogate: Surrogate,  leadSurrogateOnly: LeadSurrogate,  trailSurrogateOnly: trailSurrogateOnly,  nonSurrogate: trailSurrogateOnly,  codePoint: leadSurrogate) {
+  return name.replace(new RegExp(uidRe, 'g'), function (_: TrailingSurro,  leadSurrogate: any,  trailSurrogate: any,  leadSurrogateOnly: boolean,  trailSurrogateOnly: boolean,  nonSurrogate: number,  codePoint: number) {
     if (leadSurrogate) {
       return String.fromCodePoint(parseInt(leadSurrogate, 16), parseInt(trailSurrogate, 16));
     }

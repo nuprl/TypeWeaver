@@ -3,10 +3,10 @@ var split, join, lines, unlines, words, unwords, chars, unchars, reverse, repeat
 split = curry$(function(sep: RegExp,  str: String){
   return str.split(sep);
 });
-join = curry$(function(sep: ,  xs: rray<any>){
+join = curry$(function(sep: any,  xs: any[]){
   return xs.join(sep);
 });
-lines = function(str: ){
+lines = function(str: any){
   if (!str.length) {
     return [];
   }
@@ -15,7 +15,7 @@ lines = function(str: ){
 unlines = function(it: Iterable<any>){
   return it.join('\n');
 };
-words = function(str: ){
+words = function(str: any){
   if (!str.length) {
     return [];
   }
@@ -30,7 +30,7 @@ chars = function(it: Iterable<any>){
 unchars = function(it: Iterable<any>){
   return it.join('');
 };
-reverse = function(str: ){
+reverse = function(str: any){
   return str.split('').reverse().join('');
 };
 repeat = curry$(function(n: number,  str: number){
@@ -41,11 +41,11 @@ repeat = curry$(function(n: number,  str: number){
   }
   return result;
 });
-capitalize = function(str: ){
+capitalize = function(str: any){
   return str.charAt(0).toUpperCase() + str.slice(1);
 };
-camelize = function(it: ){
-  return it.replace(/[-_]+(.)?/g, function(arg$: endofmask|>,  c: endofmask|>,){
+camelize = function(it: any){
+  return it.replace(/[-_]+(.)?/g, function(arg$: any,  c: any){
     return (c != null ? c : '').toUpperCase();
   });
 };

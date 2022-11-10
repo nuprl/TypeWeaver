@@ -17,7 +17,7 @@ var source, result, permalink, default_text;
 var SexyYamlType = new jsyaml.Type('!sexy', {
   kind: 'sequence', // See node kinds in YAML spec: http://www.yaml.org/spec/1.2/spec.html#kind//
   construct: function (data: any) {
-    return data.map(function (string: ndofmask|>) { return 'sexy ' + string; });
+    return data.map(function (string: any) { return 'sexy ' + string; });
   }
 });
 

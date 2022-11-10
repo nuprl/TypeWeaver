@@ -195,7 +195,7 @@ function createSuite(suiteConfig: SuiteConfig) {
 
 }
 
-function requireVersion(tag: ) {
+function requireVersion(tag: any) {
     if (tag === "current") {
         return async;
     }

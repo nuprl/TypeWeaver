@@ -1,27 +1,58 @@
-index.ts(29,8): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
+benchmarks/run/add-remove.ts(10,5): error TS2300: Duplicate identifier 'EE'.
+benchmarks/run/add-remove.ts(14,10): error TS2393: Duplicate function implementation.
+benchmarks/run/add-remove.ts(25,10): error TS2554: Expected 3 arguments, but got 0.
+benchmarks/run/add-remove.ts(48,6): error TS2339: Property 'on' does not exist on type 'void'.
+benchmarks/run/add-remove.ts(49,6): error TS2339: Property 'off' does not exist on type 'void'.
+benchmarks/run/context.ts(10,5): error TS2300: Duplicate identifier 'EE'.
+benchmarks/run/context.ts(16,10): error TS2393: Duplicate function implementation.
+benchmarks/run/context.ts(27,10): error TS2554: Expected 3 arguments, but got 0.
+benchmarks/run/context.ts(34,4): error TS2339: Property 'on' does not exist on type 'void'.
+benchmarks/run/context.ts(71,6): error TS2339: Property 'emit' does not exist on type 'void'.
+benchmarks/run/context.ts(72,6): error TS2339: Property 'emit' does not exist on type 'void'.
+benchmarks/run/context.ts(73,6): error TS2339: Property 'emit' does not exist on type 'void'.
+benchmarks/run/context.ts(74,6): error TS2339: Property 'emit' does not exist on type 'void'.
+benchmarks/run/emit-multiple-listeners.ts(9,5): error TS2300: Duplicate identifier 'EE'.
+benchmarks/run/emit-multiple-listeners.ts(13,10): error TS2393: Duplicate function implementation.
+benchmarks/run/emit-multiple-listeners.ts(37,10): error TS2554: Expected 3 arguments, but got 0.
+benchmarks/run/emit-multiple-listeners.ts(40,4): error TS2339: Property 'on' does not exist on type 'void'.
+benchmarks/run/emit-multiple-listeners.ts(80,6): error TS2339: Property 'emit' does not exist on type 'void'.
+benchmarks/run/emit-multiple-listeners.ts(81,6): error TS2339: Property 'emit' does not exist on type 'void'.
+benchmarks/run/emit-multiple-listeners.ts(82,6): error TS2339: Property 'emit' does not exist on type 'void'.
+benchmarks/run/emit-multiple-listeners.ts(83,6): error TS2339: Property 'emit' does not exist on type 'void'.
+benchmarks/run/emit.ts(10,5): error TS2300: Duplicate identifier 'EE'.
+benchmarks/run/emit.ts(14,10): error TS2393: Duplicate function implementation.
+benchmarks/run/emit.ts(25,10): error TS2554: Expected 3 arguments, but got 0.
+benchmarks/run/emit.ts(27,4): error TS2339: Property 'on' does not exist on type 'void'.
+benchmarks/run/emit.ts(69,6): error TS2339: Property 'emit' does not exist on type 'void'.
+benchmarks/run/emit.ts(70,6): error TS2339: Property 'emit' does not exist on type 'void'.
+benchmarks/run/emit.ts(71,6): error TS2339: Property 'emit' does not exist on type 'void'.
+benchmarks/run/emit.ts(72,6): error TS2339: Property 'emit' does not exist on type 'void'.
+benchmarks/run/hundreds.ts(10,5): error TS2300: Duplicate identifier 'EE'.
+benchmarks/run/hundreds.ts(14,10): error TS2393: Duplicate function implementation.
+benchmarks/run/hundreds.ts(27,10): error TS2554: Expected 3 arguments, but got 0.
+benchmarks/run/hundreds.ts(28,8): error TS2403: Subsequent variable declarations must have the same type.  Variable 'i' must be of type 'number', but here has type 'any'.
+benchmarks/run/hundreds.ts(33,8): error TS2339: Property 'on' does not exist on type 'void'.
+benchmarks/run/hundreds.ts(71,8): error TS2339: Property 'emit' does not exist on type 'void'.
+benchmarks/run/init.ts(10,5): error TS2300: Duplicate identifier 'EE'.
+benchmarks/run/init.ts(35,13): error TS2554: Expected 3 arguments, but got 0.
+benchmarks/run/listeners.ts(12,10): error TS2393: Duplicate function implementation.
+benchmarks/run/once.ts(10,5): error TS2300: Duplicate identifier 'EE'.
+benchmarks/run/once.ts(14,10): error TS2393: Duplicate function implementation.
+benchmarks/run/once.ts(25,10): error TS2554: Expected 3 arguments, but got 0.
+benchmarks/run/once.ts(42,6): error TS2339: Property 'once' does not exist on type 'void'.
+benchmarks/run/remove-emit.ts(10,5): error TS2300: Duplicate identifier 'EE'.
+benchmarks/run/remove-emit.ts(13,10): error TS2393: Duplicate function implementation.
+benchmarks/run/remove-emit.ts(23,10): error TS2554: Expected 3 arguments, but got 0.
+benchmarks/run/remove-emit.ts(25,70): error TS2709: Cannot use namespace 'EventEmitter' as a type.
+benchmarks/run/remove-emit.ts(70,6): error TS2339: Property 'emit' does not exist on type 'void'.
+benchmarks/run/remove-emit.ts(71,6): error TS2339: Property 'emit' does not exist on type 'void'.
+benchmarks/run/remove-emit.ts(72,6): error TS2339: Property 'emit' does not exist on type 'void'.
+benchmarks/run/remove-emit.ts(73,6): error TS2339: Property 'emit' does not exist on type 'void'.
 index.ts(29,32): error TS2322: Type 'boolean' is not assignable to type 'string'.
-index.ts(42,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(43,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(44,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+index.ts(41,10): error TS2300: Duplicate identifier 'EE'.
 index.ts(58,31): error TS2709: Cannot use namespace 'EventEmitter' as a type.
-index.ts(63,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 index.ts(64,31): error TS2469: The '+' operator cannot be applied to type 'symbol'.
 index.ts(80,30): error TS2709: Cannot use namespace 'EventEmitter' as a type.
-index.ts(81,55): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-index.ts(93,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(93,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-index.ts(94,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(105,7): error TS7034: Variable 'names' implicitly has type 'any[]' in some locations where its type cannot be determined.
-index.ts(109,39): error TS7005: Variable 'names' implicitly has an 'any[]' type.
-index.ts(116,25): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(...items: ConcatArray<string>[]): string[]', gave the following error.
-    Argument of type 'symbol[]' is not assignable to parameter of type 'ConcatArray<string>'.
-      The types returned by 'slice(...)' are incompatible between these types.
-        Type 'symbol[]' is not assignable to type 'string[]'.
-          Type 'symbol' is not assignable to type 'string'.
-  Overload 2 of 2, '(...items: (string | ConcatArray<string>)[]): string[]', gave the following error.
-    Argument of type 'symbol[]' is not assignable to parameter of type 'string | ConcatArray<string>'.
-      Type 'symbol[]' is not assignable to type 'ConcatArray<string>'.
 index.ts(131,31): error TS2538: Type 'Event' cannot be used as an index type.
 index.ts(152,32): error TS2538: Type 'Event' cannot be used as an index type.
 index.ts(169,21): error TS2538: Type 'Event' cannot be used as an index type.
@@ -38,7 +69,4 @@ index.ts(287,37): error TS2538: Type 'Event' cannot be used as an index type.
 index.ts(288,27): error TS2345: Argument of type 'string | Event' is not assignable to parameter of type 'Event'.
   Type 'string' is not assignable to type 'Event'.
 index.ts(305,29): error TS2469: The '+' operator cannot be applied to type 'symbol'.
-index.ts(306,45): error TS2345: Argument of type 'string | symbol' is not assignable to parameter of type 'Event'.
-  Type 'string' is not assignable to type 'Event'.
-index.ts(308,20): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 

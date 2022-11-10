@@ -920,7 +920,7 @@ function A(o: any,  a: any,  b: any) {
   for (var i = 0; i < 16; i++) o[i] = a[i] + b[i];
 }
 
-function Z(o: Object,  a: ?Object,  b: Object) {
+function Z(o: Object,  a: any,  b: any) {
   for (var i = 0; i < 16; i++) o[i] = a[i] - b[i];
 }
 

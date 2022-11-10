@@ -34,7 +34,7 @@ CSSStyleDeclaration.prototype = {
    * @return {string} the value of the property if it has been explicitly set for this declaration block.
    * Returns the empty string if the property has not been set.
    */
-  getPropertyValue: function(name: ) {
+  getPropertyValue: function(name: any) {
     if (!this._values.hasOwnProperty(name)) {
       return '';
     }
@@ -101,7 +101,7 @@ CSSStyleDeclaration.prototype = {
    * @return {string} the value of the property if it has been explicitly set for this declaration block.
    * Returns the empty string if the property has not been set or the property name does not correspond to a known CSS property.
    */
-  removeProperty: function(name: ) {
+  removeProperty: function(name: any) {
     if (!this._values.hasOwnProperty(name)) {
       return '';
     }
@@ -129,7 +129,7 @@ CSSStyleDeclaration.prototype = {
    *
    * @param {String} name
    */
-  getPropertyPriority: function(name: ?string) {
+  getPropertyPriority: function(name: any) {
     return this._importants[name] || '';
   },
 

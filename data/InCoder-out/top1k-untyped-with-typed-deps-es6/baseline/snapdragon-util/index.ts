@@ -1057,7 +1057,7 @@ utils.stringify = function(value: any) {
  * @api public
  */
 
-utils.trim = function(str: endofmask|>) {
+utils.trim = function(str: any) {
   return typeof str === 'string' ? str.trim() : '';
 };
 
@@ -1089,7 +1089,7 @@ function isFunction(value: mixed) {
  * Return true if value is an array
  */
 
-function isArray(value: ?any) {
+function isArray(value: any) {
   return Array.isArray(value);
 }
 

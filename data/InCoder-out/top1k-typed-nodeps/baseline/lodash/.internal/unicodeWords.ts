@@ -63,7 +63,7 @@ const reUnicodeWords = RegExp([
  * @param {string} The string to inspect.
  * @returns {Array} Returns the words of `string`.
  */
-function unicodeWords(string: ) {
+function unicodeWords(string: any) {
   return string.match(reUnicodeWords)
 }
 

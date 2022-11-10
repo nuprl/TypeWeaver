@@ -1,19 +1,17 @@
 lib/ip.ts(2,9): error TS2451: Cannot redeclare block-scoped variable 'Buffer'.
 lib/ip.ts(5,29): error TS2304: Cannot find name 'IP'.
 lib/ip.ts(5,40): error TS2304: Cannot find name 'Buff'.
-lib/ip.ts(12,26): error TS7006: Parameter 'byte' implicitly has an 'any' type.
-lib/ip.ts(41,19): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/ip.ts(61,31): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 lib/ip.ts(71,5): error TS2322: Type 'string' is not assignable to type 'any[]'.
 lib/ip.ts(77,5): error TS2322: Type 'string' is not assignable to type 'any[]'.
 lib/ip.ts(78,21): error TS2339: Property 'replace' does not exist on type 'any[]'.
+lib/ip.ts(79,21): error TS2339: Property 'replace' does not exist on type 'any[]'.
 lib/ip.ts(88,31): error TS2304: Cannot find name 'IPv4Address'.
 lib/ip.ts(103,26): error TS2339: Property 'toLowerCase' does not exist on type 'number'.
 lib/ip.ts(110,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/ip.ts(132,27): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 lib/ip.ts(132,42): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 lib/ip.ts(171,33): error TS2304: Cannot find name 'CIDR'.
-lib/ip.ts(219,14): error TS7006: Parameter 'other' implicitly has an 'any' type.
 lib/ip.ts(225,39): error TS2304: Cannot find name 'CIDR'.
 lib/ip.ts(238,26): error TS2304: Cannot find name 'IP'.
 lib/ip.ts(246,22): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
@@ -26,10 +24,7 @@ lib/ip.ts(326,33): error TS2304: Cannot find name 'IPv6Address'.
 lib/ip.ts(338,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/ip.ts(368,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
 lib/ip.ts(375,28): error TS2538: Type 'String' cannot be used as an index type.
-lib/ip.ts(375,42): error TS7006: Parameter 'details' implicitly has an 'any' type.
-lib/ip.ts(390,47): error TS7006: Parameter 'details' implicitly has an 'any' type.
 lib/ip.ts(408,27): error TS2304: Cannot find name 'IP'.
-lib/ip.ts(410,26): error TS7006: Parameter 'octet' implicitly has an 'any' type.
 ../../../../node_modules/@types/assert-plus/index.d.ts(14,32): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 ../../../../node_modules/@types/assert-plus/index.d.ts(38,36): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 ../../../../node_modules/@types/assert-plus/index.d.ts(62,40): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?

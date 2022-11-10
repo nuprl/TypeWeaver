@@ -58,7 +58,7 @@ jQuery.ajaxPrefilter( "jsonp", function( s: string,  originalSettings: any,  jqX
 		responseContainer = arguments;
 	};
 
-	// Clean-up function (fires after converters: ))
+	// Clean-up function (fires after converters: any)
 	jqXHR.always( function() {
 
 		// If previous value didn't exist - remove it

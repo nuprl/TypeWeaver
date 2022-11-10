@@ -1,20 +1,5 @@
-assert.ts(19,13): error TS2531: Object is possibly 'null'.
-assert.ts(19,43): error TS2531: Object is possibly 'null'.
 assert.ts(51,31): error TS2304: Cannot find name 'ny'.
 assert.ts(77,31): error TS2749: 'Stream' refers to a value, but is being used as a type here. Did you mean 'typeof Stream'?
-assert.ts(101,9): error TS7034: Variable 'out' implicitly has type 'any' in some locations where its type cannot be determined.
 assert.ts(109,17): error TS2554: Expected 5 arguments, but got 3.
-assert.ts(120,20): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ bool: { check: (arg: any) => boolean; }; func: { check: (arg: any) => boolean; }; string: { check: (arg: ny) => boolean; }; object: { check: (arg: any) => boolean; }; number: { check: (arg: any) => boolean; }; ... 6 more ...; uuid: { ...; }; }'.
-assert.ts(132,13): error TS7005: Variable 'out' implicitly has an 'any' type.
-assert.ts(135,20): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ bool: { check: (arg: any) => boolean; }; func: { check: (arg: any) => boolean; }; string: { check: (arg: ny) => boolean; }; object: { check: (arg: any) => boolean; }; number: { check: (arg: any) => boolean; }; ... 6 more ...; uuid: { ...; }; }'.
-assert.ts(136,9): error TS7005: Variable 'out' implicitly has an 'any' type.
-assert.ts(150,13): error TS7005: Variable 'out' implicitly has an 'any' type.
-assert.ts(153,20): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ bool: { check: (arg: any) => boolean; }; func: { check: (arg: any) => boolean; }; string: { check: (arg: ny) => boolean; }; object: { check: (arg: any) => boolean; }; number: { check: (arg: any) => boolean; }; ... 6 more ...; uuid: { ...; }; }'.
-assert.ts(155,9): error TS7005: Variable 'out' implicitly has an 'any' type.
-assert.ts(172,13): error TS7005: Variable 'out' implicitly has an 'any' type.
-assert.ts(175,20): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ bool: { check: (arg: any) => boolean; }; func: { check: (arg: any) => boolean; }; string: { check: (arg: ny) => boolean; }; object: { check: (arg: any) => boolean; }; number: { check: (arg: any) => boolean; }; ... 6 more ...; uuid: { ...; }; }'.
-assert.ts(177,9): error TS7005: Variable 'out' implicitly has an 'any' type.
-assert.ts(207,9): error TS2339: Property '_setExports' does not exist on type '(arg: any, msg: any) => void'.
-assert.ts(212,30): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'number'.
-  Type 'undefined' is not assignable to type 'number'.
+assert.ts(212,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 

@@ -2,7 +2,7 @@
 
 var parsers = require('../parsers');
 
-var isValid = (module.exports.isValid = function isValid(v: ?string): boolean {) {
+var isValid = (module.exports.isValid = function isValid(v: any) {
   return (
     parsers.valueType(v) === parsers.TYPES.KEYWORD &&
     (v.toLowerCase() === 'scroll' || v.toLowerCase() === 'fixed' || v.toLowerCase() === 'inherit')

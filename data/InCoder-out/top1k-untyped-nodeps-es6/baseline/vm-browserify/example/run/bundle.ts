@@ -148,7 +148,7 @@
         }
         return copy;
     };
-},{}],2:[function(require: , module: |endofmask|>, exports: require){
+},{}],2:[function(require: any, module: any, exports: any){
 var vm = require('vm');
 
 window.addEventListener('load', function () {

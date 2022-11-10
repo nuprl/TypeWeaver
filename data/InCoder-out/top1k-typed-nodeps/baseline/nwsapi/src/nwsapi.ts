@@ -293,7 +293,7 @@
   // convert escape sequence in a CSS string or identifier
   // to javascript string with javascript escape sequences
   convertEscapes =
-    function(str: |endofmask|>) {
+    function(str: any) {
       return REX.HasEscapes.test(str) ?
         str.replace(REX.FixEscapes,
           function(substring: number,  p1: number,  p2: number) {
@@ -312,7 +312,7 @@
   // convert escape sequence in a CSS string or identifier
   // to javascript string with characters representations
   unescapeIdentifier =
-    function(str: |endofmask|>) {
+    function(str: any) {
       return REX.HasEscapes.test(str) ?
         str.replace(REX.FixEscapes,
           function(substring: number,  p1: number,  p2: number) {
@@ -409,7 +409,7 @@
 
   // context agnostic getElementsByClassName
   byClass =
-    function(cls: Class<?>,  context: Class<?>) {
+    function(cls: any,  context: any) {
       var e, nodes, api = method['.'], reCls;
       // DOCUMENT_NODE (9) & ELEMENT_NODE (1)
       if (api in context) {
@@ -726,7 +726,7 @@
   // compile groups or single selector strings into
   // executable functions for matching or selecting
   compile =
-    function(selector: ?string, callback:?,  mode: string,  callback: Function) {
+    function(selector: any,  mode: any,  callback: Function) {
       var factory, token, head = '', loop = '', macro = '', source = '', vars = '';
 
       // 'mode' can be boolean or null

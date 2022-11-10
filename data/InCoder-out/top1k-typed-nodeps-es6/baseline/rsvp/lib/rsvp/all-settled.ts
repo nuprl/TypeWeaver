@@ -70,7 +70,7 @@ AllSettled.prototype._setResultAt = setSettledResult;
   states of the constituent promises.
   */
 
-export default function allSettled(entries: Array<[string, Promise<,  label: ?string]>) {
+export default function allSettled(entries: any,  label: any) {
   if (!Array.isArray(entries)) {
     return Promise.reject(new TypeError("Promise.allSettled must be called with an array"), label);
   }

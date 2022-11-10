@@ -107,7 +107,7 @@ function logError(id: number,  error: Error) {
 }
 
 function matchWhitelist(error: Error,  list: Array<string>) {
-  return list.some(function (cls: Class<*>) {
+  return list.some(function (cls: any) {
     return error instanceof cls;
   });
 }

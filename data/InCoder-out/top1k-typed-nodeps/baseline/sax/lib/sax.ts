@@ -287,11 +287,11 @@
     return c === ' ' || c === '\n' || c === '\r' || c === '\t'
   }
 
-  function isQuote (c: ) {
+  function isQuote (c: any) {
     return c === '"' || c === '\''
   }
 
-  function isAttribEnd (c: ) {
+  function isAttribEnd (c: any) {
     return c === '>' || isWhitespace(c)
   }
 
@@ -607,7 +607,7 @@
     'diams': 9830
   }
 
-  Object.keys(sax.ENTITIES).forEach(function (key: ) {
+  Object.keys(sax.ENTITIES).forEach(function (key: any) {
     var e = sax.ENTITIES[key]
     var s = typeof e === 'number' ? String.fromCharCode(e) : e
     sax.ENTITIES[key] = s
@@ -941,7 +941,7 @@
     return String.fromCodePoint(num)
   }
 
-  function beginWhiteSpace (parser: Parser,  c: ) {
+  function beginWhiteSpace (parser: Parser,  c: any) {
     if (c === '<') {
       parser.state = S.OPEN_WAKA
       parser.startTagPosition = parser.position

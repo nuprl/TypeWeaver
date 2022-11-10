@@ -77,7 +77,7 @@ function customDecodeURIComponent(input: string | Uint8Array) {
 	return input;
 }
 
-module.exports = function (encodedURI: endofmask|>) {
+module.exports = function (encodedURI: any) {
 	if (typeof encodedURI !== 'string') {
 		throw new TypeError('Expected `encodedURI` to be of type `string`, got `' + typeof encodedURI + '`');
 	}

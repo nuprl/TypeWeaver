@@ -9,7 +9,7 @@ var isModern = (
   typeof Buffer.from === 'function'
 )
 
-function isArrayBuffer (input: ?ArrayBuffer) {
+function isArrayBuffer (input: any) {
   return toString.call(input).slice(8, -1) === 'ArrayBuffer'
 }
 

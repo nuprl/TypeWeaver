@@ -55,7 +55,7 @@ suite.on('complete', function onComplete () {
 
 suite.run({ async: false })
 
-function getstat (real: ?boolean) {
+function getstat (real: any) {
   if (real) {
     return fs.statSync(__filename)
   }

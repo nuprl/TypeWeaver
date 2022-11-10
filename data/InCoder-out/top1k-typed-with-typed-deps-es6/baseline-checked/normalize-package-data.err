@@ -1,8 +1,40 @@
-lib/fixer.ts(185,67): error TS1110: Type expected.
-lib/fixer.ts(185,68): error TS1109: Expression expected.
-lib/fixer.ts(185,70): error TS1005: ';' expected.
-lib/fixer.ts(192,8): error TS1128: Declaration or statement expected.
-lib/fixer.ts(192,14): error TS1005: ';' expected.
-lib/fixer.ts(468,42): error TS1110: Type expected.
-lib/normalize.ts(12,56): error TS1110: Type expected.
+lib/fixer.ts(9,19): error TS2732: Cannot find module './typos.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+lib/fixer.ts(62,52): error TS2304: Cannot find name 'yof'.
+lib/fixer.ts(78,54): error TS2304: Cannot find name 'le'.
+lib/fixer.ts(147,50): error TS2345: Argument of type '(deps: string[]) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+  Types of parameters 'deps' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'string[]'.
+lib/fixer.ts(148,13): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
+lib/fixer.ts(151,17): error TS2538: Type 'string[]' cannot be used as an index type.
+lib/fixer.ts(151,38): error TS2538: Type 'string[]' cannot be used as an index type.
+lib/fixer.ts(153,21): error TS2538: Type 'string[]' cannot be used as an index type.
+lib/fixer.ts(156,24): error TS2538: Type 'string[]' cannot be used as an index type.
+lib/fixer.ts(157,22): error TS2538: Type 'string[]' cannot be used as an index type.
+lib/fixer.ts(160,23): error TS2538: Type 'string[]' cannot be used as an index type.
+lib/fixer.ts(162,49): error TS2538: Type 'string[]' cannot be used as an index type.
+lib/fixer.ts(164,16): error TS2538: Type 'string[]' cannot be used as an index type.
+lib/fixer.ts(177,37): error TS2304: Cannot find name 'ny'.
+lib/fixer.ts(344,42): error TS2304: Cannot find name 'ScopedPackageSpec'.
+lib/fixer.ts(359,40): error TS2304: Cannot find name 'Spec'.
+lib/fixer.ts(374,30): error TS2304: Cannot find name 'People'.
+lib/fixer.ts(377,44): error TS2345: Argument of type '(set: Set<string>) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+  Types of parameters 'set' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'Set<string>'.
+lib/fixer.ts(386,33): error TS2304: Cannot find name 'erson'.
+lib/fixer.ts(398,31): error TS2304: Cannot find name 'ring'.
+lib/fixer.ts(398,38): error TS2304: Cannot find name 'Person'.
+lib/fixer.ts(407,9): error TS2339: Property 'name' does not exist on type '{}'.
+lib/fixer.ts(410,9): error TS2339: Property 'email' does not exist on type '{}'.
+lib/fixer.ts(413,9): error TS2339: Property 'url' does not exist on type '{}'.
+lib/fixer.ts(435,17): error TS2339: Property 'trim' does not exist on type 'never'.
+lib/fixer.ts(442,28): error TS2304: Cannot find name 'ny'.
+lib/fixer.ts(470,7): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+lib/make_warning.ts(2,22): error TS2732: Cannot find module './warning_messages.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+lib/make_warning.ts(16,104): error TS2304: Cannot find name 'Field'.
+lib/normalize.ts(29,5): error TS2322: Type '(msg: any) => void' is not assignable to type 'boolean'.
+lib/normalize.ts(38,5): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+lib/normalize.ts(47,17): error TS2339: Property 'charAt' does not exist on type 'string | string[]'.
+  Property 'charAt' does not exist on type 'string[]'.
 

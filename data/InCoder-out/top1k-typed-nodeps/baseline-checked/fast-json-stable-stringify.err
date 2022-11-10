@@ -1,0 +1,11 @@
+example/key_cmp.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'obj' must be of type '{ c: number; b: number[]; a: number; }', but here has type '{ c: number; b: (number | { z: number; y: number; x: number; })[]; a: number; }'.
+example/key_cmp.ts(4,37): error TS2304: Cannot find name 'ny'.
+example/key_cmp.ts(4,45): error TS2304: Cannot find name 'y'.
+example/nested.ts(2,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'obj' must be of type '{ c: number; b: number[]; a: number; }', but here has type '{ c: number; b: (number | { z: number; y: number; x: number; })[]; a: number; }'.
+example/value_cmp.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'obj' must be of type '{ c: number; b: number[]; a: number; }', but here has type '{ d: number; c: number; b: (number | { z: number; y: number; x: number; })[]; a: number; }'.
+example/value_cmp.ts(4,37): error TS2552: Cannot find name 'umber'. Did you mean 'number'?
+example/value_cmp.ts(4,48): error TS2304: Cannot find name 'mber'.
+index.ts(20,26): error TS2339: Property 'toJSON' does not exist on type 'Node'.
+index.ts(20,48): error TS2339: Property 'toJSON' does not exist on type 'Node'.
+index.ts(21,25): error TS2339: Property 'toJSON' does not exist on type 'Node'.
+

@@ -126,7 +126,7 @@ export default function tokenize (input: string | string[]) {
         quote,
         tokenType;
 
-    function unclosed (what: ?string) {,  fix: string) {
+    function unclosed (what: any,  fix: Function) {
         if ( input.safe ) { // fyi: this is never set to true.
             css += fix;
             next = css.length - 1;

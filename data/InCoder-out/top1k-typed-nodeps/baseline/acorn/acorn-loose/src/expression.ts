@@ -161,7 +161,7 @@ lp.parseExprSubscripts = function() {
   return this.parseSubscripts(this.parseExprAtom(), start, false, this.curIndent, this.curLineStart)
 }
 
-lp.parseSubscripts = function(base: ?string, start: number, end:,  start: umber,  noCalls: oolean,  startIndent: number,  line: number) {
+lp.parseSubscripts = function(base: any,  start: number,  noCalls: boolean,  startIndent: number,  line: number) {
   const optionalSupported = this.options.ecmaVersion >= 11
   let optionalChained = false
   for (;;) {
@@ -585,7 +585,7 @@ lp.parseFunctionParams = function(params: any) {
   return this.toAssignableList(params, true)
 }
 
-lp.parseMethod = function(isGenerator: ?boolean,  isAsync: boolean) {
+lp.parseMethod = function(isGenerator: any,  isAsync: any) {
   let node = this.startNode(), oldInAsync = this.inAsync, oldInGenerator = this.inGenerator, oldInFunction = this.inFunction
   this.initFunction(node)
   if (this.options.ecmaVersion >= 6)

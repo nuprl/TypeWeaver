@@ -1,40 +1,13 @@
-clone.ts(8,5): error TS7034: Variable 'nativeMap' implicitly has type 'any' in some locations where its type cannot be determined.
-clone.ts(17,5): error TS7034: Variable 'nativeSet' implicitly has type 'any' in some locations where its type cannot be determined.
-clone.ts(24,5): error TS7034: Variable 'nativePromise' implicitly has type 'any' in some locations where its type cannot be determined.
 clone.ts(54,22): error TS2339: Property 'depth' does not exist on type 'never'.
 clone.ts(55,26): error TS2339: Property 'prototype' does not exist on type 'never'.
 clone.ts(56,37): error TS2339: Property 'includeNonEnumerable' does not exist on type 'never'.
 clone.ts(57,25): error TS2339: Property 'circular' does not exist on type 'never'.
-clone.ts(61,7): error TS7034: Variable 'allParents' implicitly has type 'any[]' in some locations where its type cannot be determined.
-clone.ts(62,7): error TS7034: Variable 'allChildren' implicitly has type 'any[]' in some locations where its type cannot be determined.
-clone.ts(81,9): error TS7034: Variable 'child' implicitly has type 'any' in some locations where its type cannot be determined.
-clone.ts(87,29): error TS7005: Variable 'nativeMap' implicitly has an 'any' type.
-clone.ts(88,19): error TS7005: Variable 'nativeMap' implicitly has an 'any' type.
-clone.ts(89,36): error TS7005: Variable 'nativeSet' implicitly has an 'any' type.
-clone.ts(90,19): error TS7005: Variable 'nativeSet' implicitly has an 'any' type.
-clone.ts(91,36): error TS7005: Variable 'nativePromise' implicitly has an 'any' type.
-clone.ts(92,19): error TS7005: Variable 'nativePromise' implicitly has an 'any' type.
-clone.ts(130,19): error TS7005: Variable 'allParents' implicitly has an 'any[]' type.
-clone.ts(133,16): error TS7005: Variable 'allChildren' implicitly has an 'any[]' type.
-clone.ts(139,29): error TS7005: Variable 'nativeMap' implicitly has an 'any' type.
-clone.ts(143,9): error TS7005: Variable 'child' implicitly has an 'any' type.
-clone.ts(146,29): error TS7005: Variable 'nativeSet' implicitly has an 'any' type.
-clone.ts(149,9): error TS7005: Variable 'child' implicitly has an 'any' type.
-clone.ts(161,13): error TS2532: Object is possibly 'undefined'.
-clone.ts(161,13): error TS2367: This condition will always return 'false' since the types '((v: any) => void) | undefined' and 'string' have no overlap.
+clone.ts(161,13): error TS2367: This condition will always return 'false' since the types '(v: any) => void' and 'string' have no overlap.
 clone.ts(181,16): error TS2403: Subsequent variable declarations must have the same type.  Variable 'i' must be of type 'string', but here has type 'number'.
 clone.ts(181,23): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
 clone.ts(181,43): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-clone.ts(184,30): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-clone.ts(190,46): error TS2345: Argument of type 'PropertyDescriptor | undefined' is not assignable to parameter of type 'PropertyDescriptor & ThisType<any>'.
-  Type 'undefined' is not assignable to type 'PropertyDescriptor & ThisType<any>'.
-    Type 'undefined' is not assignable to type 'PropertyDescriptor'.
 clone.ts(196,16): error TS2403: Subsequent variable declarations must have the same type.  Variable 'i' must be of type 'string', but here has type 'number'.
 clone.ts(196,23): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
 clone.ts(196,52): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-clone.ts(197,45): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-clone.ts(203,52): error TS2345: Argument of type 'PropertyDescriptor | undefined' is not assignable to parameter of type 'PropertyDescriptor & ThisType<any>'.
-  Type 'undefined' is not assignable to type 'PropertyDescriptor & ThisType<any>'.
-clone.ts(226,10): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 clone.ts(264,3): error TS1258: A default export must be at the top level of a file or module declaration.
 

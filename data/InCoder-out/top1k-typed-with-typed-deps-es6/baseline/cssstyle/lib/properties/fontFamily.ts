@@ -5,7 +5,7 @@ import { valueType } from '../parsers';
 
 var partsRegEx = /\s*,\s*/;
 
-export const isValid = function isValid(v: ?string) {
+export const isValid = function isValid(v: any) {
   if (v === '' || v === null) {
     return true;
   }

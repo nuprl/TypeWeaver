@@ -141,7 +141,7 @@ function makeError(msg: string | Error,  code: number) {
  * Given an options object, return a new generator that dispatches the
  * correct handler based on sync or async execution.
  */
-function newGenerator({ name: ,  fn,  arity: params,  sync: await,  async: await,  errback }: Function) {
+function newGenerator({ name: any,  arity: number,  sync: boolean,  async: boolean,  errback }: IRequestOptions) {
   assertTypeof("string", "name", name, true /* allowUndefined */);
   assertTypeof("number", "arity", arity, true /* allowUndefined */);
   assertTypeof("function", "sync", sync);

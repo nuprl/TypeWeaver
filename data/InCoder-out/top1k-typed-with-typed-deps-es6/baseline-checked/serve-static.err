@@ -1,9 +1,3 @@
-index.ts(40,29): error TS8020: JSDoc types can only be used inside documentation comments.
-index.ts(40,38): error TS2300: Duplicate identifier 'options'.
-index.ts(40,48): error TS2304: Cannot find name 'Static'.
-index.ts(40,57): error TS1016: A required parameter cannot follow an optional parameter.
-index.ts(40,57): error TS2300: Duplicate identifier 'options'.
-index.ts(40,66): error TS2304: Cannot find name 'taticOptions'.
 index.ts(74,69): error TS2304: Cannot find name 'Next'.
 index.ts(81,11): error TS2339: Property 'statusCode' does not exist on type 'Response'.
 index.ts(82,11): error TS2339: Property 'setHeader' does not exist on type 'Response'.
@@ -11,32 +5,12 @@ index.ts(83,11): error TS2339: Property 'setHeader' does not exist on type 'Resp
 index.ts(84,11): error TS2339: Property 'end' does not exist on type 'Response'.
 index.ts(89,41): error TS2345: Argument of type 'Request' is not assignable to parameter of type 'IncomingMessage'.
   Type 'Request' is missing the following properties from type 'IncomingMessage': aborted, httpVersion, httpVersionMajor, httpVersionMinor, and 48 more.
-index.ts(90,16): error TS2532: Object is possibly 'undefined'.
 index.ts(90,25): error TS2345: Argument of type 'Request' is not assignable to parameter of type 'IncomingMessage'.
-index.ts(93,25): error TS2532: Object is possibly 'undefined'.
-index.ts(93,25): error TS2531: Object is possibly 'null'.
 index.ts(98,23): error TS2345: Argument of type 'Request' is not assignable to parameter of type 'Readable'.
   Type 'Request' is missing the following properties from type 'Readable': readableAborted, readable, readableDidRead, readableEncoding, and 37 more.
 index.ts(118,33): error TS2339: Property 'statusCode' does not exist on type 'Error'.
 index.ts(127,17): error TS2345: Argument of type 'Response' is not assignable to parameter of type 'WritableStream'.
   Type 'Response' is missing the following properties from type 'WritableStream': writable, write, end, addListener, and 14 more.
-index.ts(136,23): error TS2531: Object is possibly 'null'.
-index.ts(137,9): error TS2531: Object is possibly 'null'.
-index.ts(143,13): error TS2531: Object is possibly 'null'.
-index.ts(175,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(186,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(187,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(192,41): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-index.ts(195,5): error TS2532: Object is possibly 'undefined'.
-index.ts(196,5): error TS2532: Object is possibly 'undefined'.
-index.ts(196,51): error TS2532: Object is possibly 'undefined'.
-index.ts(199,36): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(urlObject: URL, options?: URLFormatOptions | undefined): string', gave the following error.
-    Argument of type 'Url | undefined' is not assignable to parameter of type 'URL'.
-      Type 'undefined' is not assignable to type 'URL'.
-  Overload 2 of 2, '(urlObject: string | UrlObject): string', gave the following error.
-    Argument of type 'Url | undefined' is not assignable to parameter of type 'string | UrlObject'.
-      Type 'undefined' is not assignable to type 'string | UrlObject'.
 index.ts(204,9): error TS2339: Property 'statusCode' does not exist on type 'Response'.
 index.ts(205,9): error TS2339: Property 'setHeader' does not exist on type 'Response'.
 index.ts(206,9): error TS2339: Property 'setHeader' does not exist on type 'Response'.
@@ -44,6 +18,4 @@ index.ts(207,9): error TS2339: Property 'setHeader' does not exist on type 'Resp
 index.ts(208,9): error TS2339: Property 'setHeader' does not exist on type 'Response'.
 index.ts(209,9): error TS2339: Property 'setHeader' does not exist on type 'Response'.
 index.ts(210,9): error TS2339: Property 'end' does not exist on type 'Response'.
-scripts/version-history.ts(26,32): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
-  Type 'undefined' is not assignable to type 'string'.
 

@@ -53,7 +53,7 @@ function isAppropriateChar(node: Node) {
   );
 }
 
-function isMeta(value: ) {
+function isMeta(value: any) {
   return /^\\[dwsDWS]$/.test(value);
 }
 

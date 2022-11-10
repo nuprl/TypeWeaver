@@ -1,13 +1,9 @@
-index.ts(21,15): error TS7006: Parameter 'type' implicitly has an 'any' type.
-index.ts(21,21): error TS7006: Parameter 'value' implicitly has an 'any' type.
-index.ts(21,28): error TS7006: Parameter 'clone' implicitly has an 'any' type.
+example.ts(2,13): error TS2554: Expected 3 arguments, but got 1.
+example.ts(3,13): error TS2554: Expected 3 arguments, but got 2.
 index.ts(29,12): error TS2339: Property 'type' does not exist on type 'Node'.
 index.ts(31,14): error TS2339: Property 'value' does not exist on type 'Node'.
 index.ts(51,16): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
-index.ts(68,18): error TS7006: Parameter 'n' implicitly has an 'any' type.
-index.ts(70,17): error TS7006: Parameter 'n' implicitly has an 'any' type.
-index.ts(88,8): error TS7006: Parameter 'node' implicitly has an 'any' type.
 index.ts(92,27): error TS2339: Property 'isNode' does not exist on type 'Function'.
 index.ts(93,18): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
@@ -16,7 +12,6 @@ index.ts(95,23): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(97,5): error TS2554: Expected 2 arguments, but got 1.
 index.ts(98,10): error TS2339: Property 'size' does not exist on type 'Node'.
 index.ts(99,17): error TS2339: Property 'nodes' does not exist on type 'Node'.
-index.ts(117,11): error TS7006: Parameter 'node' implicitly has an 'any' type.
 index.ts(121,27): error TS2339: Property 'isNode' does not exist on type 'Function'.
 index.ts(122,18): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
@@ -33,30 +28,21 @@ index.ts(179,14): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(179,28): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(180,12): error TS2339: Property 'size' does not exist on type 'Node'.
 index.ts(181,19): error TS2339: Property 'nodes' does not exist on type 'Node'.
-index.ts(197,10): error TS7006: Parameter 'node' implicitly has an 'any' type.
 index.ts(198,15): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(199,29): error TS2339: Property 'isNode' does not exist on type 'Function'.
 index.ts(202,22): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(206,12): error TS2339: Property 'size' does not exist on type 'Node'.
 index.ts(207,19): error TS2339: Property 'nodes' does not exist on type 'Node'.
-index.ts(228,8): error TS7006: Parameter 'type' implicitly has an 'any' type.
 index.ts(229,29): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(229,44): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(230,47): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(231,30): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(232,25): error TS2339: Property 'nodes' does not exist on type 'Node'.
-index.ts(239,9): error TS7006: Parameter 'fn' implicitly has an 'any' type.
-index.ts(259,7): error TS7006: Parameter 'node' implicitly has an 'any' type.
 index.ts(260,26): error TS2339: Property 'isNode' does not exist on type 'Function'.
 index.ts(261,33): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(261,48): error TS2339: Property 'nodes' does not exist on type 'Node'.
-index.ts(284,11): error TS7006: Parameter 'type' implicitly has an 'any' type.
 index.ts(285,31): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(285,46): error TS2339: Property 'nodes' does not exist on type 'Node'.
-index.ts(285,57): error TS7006: Parameter 'node' implicitly has an 'any' type.
-index.ts(303,10): error TS7006: Parameter 'type' implicitly has an 'any' type.
-index.ts(323,11): error TS7006: Parameter 'fn' implicitly has an 'any' type.
-index.ts(342,12): error TS7006: Parameter 'type' implicitly has an 'any' type.
 index.ts(343,17): error TS2339: Property 'parent' does not exist on type 'Node'.
 index.ts(343,33): error TS2339: Property 'parent' does not exist on type 'Node'.
 index.ts(343,62): error TS2339: Property 'parent' does not exist on type 'Node'.
@@ -74,8 +60,7 @@ index.ts(505,45): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(505,56): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(526,17): error TS2339: Property 'parent' does not exist on type 'Node'.
 index.ts(526,31): error TS2339: Property 'parent' does not exist on type 'Node'.
-index.ts(545,17): error TS7006: Parameter 'node' implicitly has an 'any' type.
-index.ts(555,39): error TS2345: Argument of type 'string | Error' is not assignable to parameter of type 'string | undefined'.
+index.ts(555,39): error TS2345: Argument of type 'string | Error' is not assignable to parameter of type 'string'.
   Type 'Error' is not assignable to type 'string'.
 index.ts(569,27): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(573,18): error TS2339: Property 'value' does not exist on type 'Node'.
@@ -95,10 +80,6 @@ index.ts(659,22): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(659,47): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(663,7): error TS2554: Expected 2 arguments, but got 1.
 index.ts(665,10): error TS2339: Property 'size' does not exist on type 'Node'.
-index.ts(677,24): error TS7006: Parameter 'ele' implicitly has an 'any' type.
-index.ts(680,9): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
 index.ts(691,15): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(695,8): error TS2339: Property 'nodes' does not exist on type 'Node'.
-index.ts(695,22): error TS7006: Parameter 'n' implicitly has an 'any' type.
 

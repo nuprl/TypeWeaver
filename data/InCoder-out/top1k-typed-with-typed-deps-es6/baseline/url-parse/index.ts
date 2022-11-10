@@ -133,7 +133,7 @@ function lolcation(loc: Location) {
  * @return {Boolean} `true` if the protocol scheme is special, else `false`
  * @private
  */
-function isSpecial(scheme: ) {
+function isSpecial(scheme: any) {
   return (
     scheme === 'file:' ||
     scheme === 'ftp:' ||

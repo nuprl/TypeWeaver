@@ -1,0 +1,20 @@
+benchmark/check.ts(5,18): error TS2307: Cannot find module 'ansi-bold' or its corresponding type declarations.
+benchmark/check.ts(12,45): error TS2345: Argument of type '(fp: number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+  Types of parameters 'fp' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'number'.
+benchmark/check.ts(13,52): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+benchmark/check.ts(14,28): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+benchmark/check.ts(14,45): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+benchmark/check.ts(17,72): error TS2304: Cannot find name 'ComponentFixture'.
+benchmark/code/concat-apply.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
+benchmark/code/for-concat.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
+benchmark/code/for-each.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
+benchmark/code/for.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
+benchmark/code/reduce.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
+benchmark/code/reduce.ts(5,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/while-concat.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
+benchmark/code/while-for-unique.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
+benchmark/code/while-push-apply.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
+benchmark/code/while-while-unique.ts(3,20): error TS2307: Cannot find module 'array-unique' or its corresponding type declarations.
+benchmark/index.ts(3,19): error TS2307: Cannot find module 'benchmarked' or its corresponding type declarations.
+

@@ -13,7 +13,7 @@ var Cell = function(tuple: Array<string>) {
   };
 };
 
-Cell.prototype.pending = function(direction: ) {
+Cell.prototype.pending = function(direction: any) {
   var functor = this._functors[direction];
   if (!functor._stopped) functor.pending += 1;
 };

@@ -392,7 +392,7 @@ pp.parseEmptyStatement = function(node: Node) {
   return this.finishNode(node, "EmptyStatement")
 }
 
-pp.parseLabeledStatement = function(node: Node,  maybeName: ?string, maybeEmptyExpr,  expr: Expr,  context: Context) {
+pp.parseLabeledStatement = function(node: Node,  maybeName: any,  expr: Expression,  context: any) {
   for (let label of this.labels)
     if (label.name === maybeName)
       this.raise(expr.start, "Label '" + maybeName + "' is already declared")
@@ -422,7 +422,7 @@ pp.parseExpressionStatement = function(node: Node,  expr: Expression) {
 // strict"` declarations when `allowStrict` is true (used for
 // function bodies).
 
-pp.parseBlock = function(createNewLexicalScope = true: LexicalScope,  node = this.startNode(: ?), exitStrict) {
+pp.parseBlock = function(createNewLexicalScope = true: LexicalScope,  node = this.startNode(: any), exitStrict) {
   node.body = []
   this.expect(tt.braceL)
   if (createNewLexicalScope) this.enterScope(0)
@@ -440,7 +440,7 @@ pp.parseBlock = function(createNewLexicalScope = true: LexicalScope,  node = thi
 // `parseStatement` will already have parsed the init statement or
 // expression.
 
-pp.parseFor = function(node: Node,  init: ?Function) {
+pp.parseFor = function(node: Node,  init: any) {
   node.init = init
   this.expect(tt.semi)
   node.test = this.type === tt.semi ? null : this.parseExpression()
@@ -568,7 +568,7 @@ pp.parseFunctionParams = function(node: Node) {
 // Parse a class declaration or literal (depending on the
 // `isStatement` parameter).
 
-pp.parseClass = function(node: Node,  isStatement: ?boolean):?Node) {
+pp.parseClass = function(node: Node,  isStatement: any) {
   this.next()
 
   // ecma-262 14.6 Class Definitions
@@ -760,7 +760,7 @@ pp.parseClassStaticBlock = function(node: Node) {
   return this.finishNode(node, "StaticBlock")
 }
 
-pp.parseClassId = function(node: Node,  isStatement: ?boolean):?Node) {
+pp.parseClassId = function(node: Node,  isStatement: any) {
   if (this.type === tt.name) {
     node.id = this.parseIdent()
     if (isStatement)

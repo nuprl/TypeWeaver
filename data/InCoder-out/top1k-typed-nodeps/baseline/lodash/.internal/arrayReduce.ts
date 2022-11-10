@@ -9,7 +9,7 @@
  *  the initial value.
  * @returns {*} Returns the accumulated value.
  */
-function arrayReduce(array: Array<T>,  iteratee: MemoIterator<T, TResult,  accumulator: Accumulator<T, TResult,  initAccum: initAccum) {
+function arrayReduce(array: Array<T>,  iteratee: any,  accumulator: Array<T>,  initAccum: Array<T>) {
   let index = -1
   const length = array == null ? 0 : array.length
 

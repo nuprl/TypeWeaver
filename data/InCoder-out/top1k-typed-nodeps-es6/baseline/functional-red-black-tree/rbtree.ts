@@ -26,7 +26,7 @@ function recount(node: Node) {
   node._count = 1 + (node.left ? node.left._count : 0) + (node.right ? node.right._count : 0)
 }
 
-function RedBlackTree(compare: ?function,  root: null) {
+function RedBlackTree(compare: any,  root: RedBlackNode) {
   this._compare = compare
   this.root = root
 }
@@ -991,6 +991,6 @@ function defaultCompare(a: number,  b: number) {
 }
 
 //Build a tree
-function createRBTree(compare: (a: any, b: any) {
+function createRBTree(compare: any) {
   return new RedBlackTree(compare || defaultCompare, null)
 }

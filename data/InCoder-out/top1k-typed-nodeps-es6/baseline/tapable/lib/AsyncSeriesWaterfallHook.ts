@@ -31,7 +31,7 @@ const COMPILE = function(options: any) {
 	return factory.create(options);
 };
 
-function AsyncSeriesWaterfallHook(args = []: Array<any>,  name = undefined: ?string) {
+function AsyncSeriesWaterfallHook(args = []: Array<any>,  name = undefined: any) {
 	if (args.length < 1)
 		throw new Error("Waterfall hooks must have at least one argument");
 	const hook = new Hook(args, name);

@@ -5112,7 +5112,7 @@ BigDecimal.ONE = BigDecimal.prototype.ONE = new BigDecimal("1");
  /* <sgml> Report a conversion exception. </sgml> */
 
  //--private void bad(char s[]){
- function bad(prefix: ,  s: tring) {
+ function bad(prefix: any,  s: string) {
   throw prefix + "Not a number: "+s;
   }
 

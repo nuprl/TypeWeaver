@@ -1,13 +1,13 @@
 var toString = Object.prototype.toString;
 
-module.exports = function(val: ) {
+module.exports = function(val: any) {
   if (val === 'arguments') {
     return kindOf(arguments);
   }
   return kindOf(val);
 };
 
-function kindOf(val: ?) {
+function kindOf(val: any) {
   if (val === void 0) {
     return 'undefined';
   }

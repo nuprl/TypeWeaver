@@ -844,7 +844,7 @@ jQuery.extend( {
 } );
 
 jQuery.each( [ "get", "post" ], function( _i: number,  method : string) {
-	jQuery[ method ] = function( url: ,  data: success,  callback: dataType,  type : ET) {
+	jQuery[ method ] = function( url: any,  data: any,  callback: any,  type : string) {
 
 		// Shift arguments if data argument was omitted
 		if ( typeof data === "function" ) {
@@ -864,7 +864,7 @@ jQuery.each( [ "get", "post" ], function( _i: number,  method : string) {
 	};
 } );
 
-jQuery.ajaxPrefilter( function( s : ) {
+jQuery.ajaxPrefilter( function( s : any) {
 	var i;
 	for ( i in s.headers ) {
 		if ( i.toLowerCase() === "content-type" ) {

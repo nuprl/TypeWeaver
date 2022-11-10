@@ -5,7 +5,7 @@
  * @param {string} string The string to convert.
  * @returns {Array} Returns the converted array.
  */
-function asciiToArray(string: ) {
+function asciiToArray(string: any) {
   return string.split('')
 }
 

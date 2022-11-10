@@ -69,7 +69,7 @@ var utilInspect = require('./util.inspect');
 var inspectCustom = utilInspect.custom;
 var inspectSymbol = isSymbol(inspectCustom) ? inspectCustom : null;
 
-module.exports = function inspect_(obj: any,  options: { depth?: number,  depth: number,  seen: number) {
+module.exports = function inspect_(obj: any,  options: any,  depth: number,  seen: number) {
     var opts = options || {};
 
     if (has(opts, 'quoteStyle') && (opts.quoteStyle !== 'single' && opts.quoteStyle !== 'double')) {
@@ -251,7 +251,7 @@ module.exports = function inspect_(obj: any,  options: { depth?: number,  depth:
     return String(obj);
 };
 
-function wrapQuotes(s: string,  defaultStyle: Style,  opts: { quoteStyle: Quote) {
+function wrapQuotes(s: string,  defaultStyle: Style,  opts: any) {
     var quoteChar = (opts.quoteStyle || defaultStyle) === 'double' ? '"' : "'";
     return quoteChar + s + quoteChar;
 }
@@ -321,7 +321,7 @@ function indexOf(xs: Array<T>,  x: T) {
     return -1;
 }
 
-function isMap(x: ?T): x is) {
+function isMap(x: any) {
     if (!mapSize || !x || typeof x !== 'object') {
         return false;
     }
@@ -337,7 +337,7 @@ function isMap(x: ?T): x is) {
     return false;
 }
 
-function isWeakMap(x: ?Object): x is) {
+function isWeakMap(x: any) {
     if (!weakMapHas || !x || typeof x !== 'object') {
         return false;
     }
@@ -364,7 +364,7 @@ function isWeakRef(x: any) {
     return false;
 }
 
-function isSet(x: ?T): x is) {
+function isSet(x: any) {
     if (!setSize || !x || typeof x !== 'object') {
         return false;
     }
@@ -380,7 +380,7 @@ function isSet(x: ?T): x is) {
     return false;
 }
 
-function isWeakSet(x: ?Set<T>): x) {
+function isWeakSet(x: any) {
     if (!weakSetHas || !x || typeof x !== 'object') {
         return false;
     }
@@ -436,7 +436,7 @@ function weakCollectionOf(type: ing) {
     return type + ' { ? }';
 }
 
-function collectionOf(type: string,  size: number,  entries: Array<[string, any],  indent: number) {
+function collectionOf(type: string,  size: number,  entries: any,  indent: number) {
     var joinedEntries = indent ? indentedJoin(entries, indent) : $join.call(entries, ', ');
     return type + ' (' + size + ') {' + joinedEntries + '}';
 }

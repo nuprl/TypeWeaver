@@ -35,7 +35,7 @@ jQuery.proxy = function( fn: Function,  context : Object) {
 	return proxy;
 };
 
-jQuery.holdReady = function( hold : ) {
+jQuery.holdReady = function( hold : any) {
 	if ( hold ) {
 		jQuery.readyWait++;
 	} else {

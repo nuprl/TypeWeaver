@@ -8,7 +8,7 @@ function PrependBOMWrapper(encoder: Encoder,  options: PrependBOMOption) {
     this.addBOM = true;
 }
 
-PrependBOMWrapper.prototype.write = function(str: ) {
+PrependBOMWrapper.prototype.write = function(str: any) {
     if (this.addBOM) {
         str = BOMChar + str;
         this.addBOM = false;

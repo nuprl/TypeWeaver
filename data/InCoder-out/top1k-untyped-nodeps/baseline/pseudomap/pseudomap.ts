@@ -80,7 +80,7 @@ PseudoMap.prototype.entries = function () {
 }
 
 // Either identical, or both NaN
-function same (a: y,  b: |endofmask|>) {
+function same (a: y,  b: any) {
   return a === b || a !== a && b !== b
 }
 

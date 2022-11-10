@@ -1,5 +1,5 @@
 let len = 0;
-export default function asap(callback: Function,  arg: *) {) {
+export default function asap(callback: Function,  arg: any) {
   queue[len] = callback;
   queue[len + 1] = arg;
   len += 2;

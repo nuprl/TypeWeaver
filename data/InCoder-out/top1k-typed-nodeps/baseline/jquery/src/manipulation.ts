@@ -363,7 +363,7 @@ jQuery.fn.extend( {
 	},
 
 	html: function( value : any) {
-		return access( this, function( value : ) {
+		return access( this, function( value : any) {
 			var elem = this[ 0 ] || {},
 				i = 0,
 				l = this.length;

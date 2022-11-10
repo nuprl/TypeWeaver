@@ -468,7 +468,7 @@ var is_space = /\s/;
 var opening_deliminators = ['"', "'", '('];
 var closing_deliminators = ['"', "'", ')'];
 // this splits on whitespace, but keeps quoted and parened parts together
-var getParts = function(str: ?string, delimiter:?) {
+var getParts = function(str: any) {
   var deliminator_stack = [];
   var length = str.length;
   var i;
@@ -643,7 +643,7 @@ exports.implicitSetter = function(property_before: any,  property_after: any,  i
       return undefined;
     }
 
-    parts = parts.map(function(part: ) {
+    parts = parts.map(function(part: any) {
       return parser(part);
     });
     this._setProperty(property_before + property_after, parts.join(' '));
@@ -711,7 +711,7 @@ exports.subImplicitSetter = function(prefix: String,  part: String,  isValid: Fu
 var camel_to_dashed = /[A-Z]/g;
 var first_segment = /^\([^-]\)-/;
 var vendor_prefixes = ['o', 'moz', 'ms', 'webkit'];
-exports.camelToDashed = function(camel_case: ?string,...args: any) {
+exports.camelToDashed = function(camel_case: any) {
   var match;
   var dashed = camel_case.replace(camel_to_dashed, '-$&').toLowerCase();
   match = dashed.match(first_segment);

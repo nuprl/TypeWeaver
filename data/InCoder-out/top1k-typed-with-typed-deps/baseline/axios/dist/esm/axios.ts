@@ -31,7 +31,7 @@ function kindOfTest(type: string) {
  * @param {Object} val The value to test
  * @returns {boolean} True if value is an Array, otherwise false
  */
-function isArray(val: ?any) {
+function isArray(val: any) {
   return Array.isArray(val);
 }
 
@@ -41,7 +41,7 @@ function isArray(val: ?any) {
  * @param {Object} val The value to test
  * @returns {boolean} True if the value is undefined, otherwise false
  */
-function isUndefined(val: ) {
+function isUndefined(val: any) {
   return typeof val === 'undefined';
 }
 
@@ -72,7 +72,7 @@ var isArrayBuffer = kindOfTest('ArrayBuffer');
  * @param {Object} val The value to test
  * @returns {boolean} True if value is a view on an ArrayBuffer, otherwise false
  */
-function isArrayBufferView(val: ?ArrayBufferView) {
+function isArrayBufferView(val: any) {
   var result;
   if ((typeof ArrayBuffer !== 'undefined') && (ArrayBuffer.isView)) {
     result = ArrayBuffer.isView(val);
@@ -98,7 +98,7 @@ function isString(val: string) {
  * @param {Object} val The value to test
  * @returns {boolean} True if value is a Number, otherwise false
  */
-function isNumber(val: ) {
+function isNumber(val: any) {
   return typeof val === 'number';
 }
 
@@ -169,7 +169,7 @@ var isFileList = kindOfTest('FileList');
  * @param {Object} val The value to test
  * @returns {boolean} True if value is a Function, otherwise false
  */
-function isFunction(val: ?any): boolean {) {
+function isFunction(val: any) {
   return toString.call(val) === '[object Function]';
 }
 
@@ -300,7 +300,7 @@ function forEach(obj: any,  fn: Function) {
  * @param {Object} obj1 Object to merge
  * @returns {Object} Result of all merge properties
  */
-function merge(/* obj1: ny,  obj2: y,  obj3: ..,  ... */: ject) {
+function merge(/* obj1: ny,  obj2: y,  obj3: any,  ... */: bject) {
   var result = {};
   function assignValue(val: any,  key: any) {
     if (isPlainObject(result[key]) && isPlainObject(val)) {
@@ -579,7 +579,7 @@ var descriptors = {};
   'ERR_NOT_SUPPORT',
   'ERR_INVALID_URL'
 // eslint-disable-next-line func-names
-].forEach(function(code: ) {
+].forEach(function(code: any) {
   descriptors[code] = {value: code};
 });
 
@@ -634,7 +634,7 @@ function isFlatArray(arr: Array<any>) {
   return utils.isArray(arr) && !arr.some(isVisitable);
 }
 
-var predicates = utils.toFlatObject(utils, {}, null, function filter(prop: ) {
+var predicates = utils.toFlatObject(utils, {}, null, function filter(prop: any) {
   return /^is[A-Z]/.test(prop);
 });
 
@@ -2166,7 +2166,7 @@ function CancelToken(executor: AsyncExecutor) {
     return promise;
   };
 
-  executor(function cancel(message: string | Error,  config: CancelableRequestConfig,  request: CancelableRequest<any) {
+  executor(function cancel(message: string | Error,  config: CancelableRequestConfig,  request: any) {
     if (token.reason) {
       // Cancellation has already been requested
       return;

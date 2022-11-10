@@ -1,3 +1,37 @@
-estraverse.ts(242,76): error TS1110: Type expected.
-estraverse.ts(345,57): error TS1110: Type expected.
+estraverse.ts(242,32): error TS2749: 'Reference' refers to a value, but is being used as a type here. Did you mean 'typeof Reference'?
+estraverse.ts(261,41): error TS2304: Cannot find name 'Path'.
+estraverse.ts(261,54): error TS2304: Cannot find name 'Wrap'.
+estraverse.ts(261,66): error TS2304: Cannot find name 'Ref'.
+estraverse.ts(336,50): error TS2339: Property 'node' does not exist on type 'HTMLElement'.
+estraverse.ts(367,71): error TS2304: Cannot find name 'Visitor'.
+estraverse.ts(391,56): error TS2339: Property 'type' does not exist on type 'Node'.
+estraverse.ts(394,35): error TS2304: Cannot find name 'NodeType'.
+estraverse.ts(398,52): error TS2304: Cannot find name 'LeaveList'.
+estraverse.ts(398,75): error TS2304: Cannot find name 'Leave'.
+estraverse.ts(407,77): error TS2304: Cannot find name 'Visitor'.
+estraverse.ts(513,59): error TS2304: Cannot find name 'AST'.
+estraverse.ts(513,74): error TS2304: Cannot find name 'ParseTreeVisitor'.
+estraverse.ts(534,25): error TS2339: Property 'ref' does not exist on type 'HTMLElement'.
+estraverse.ts(536,31): error TS2339: Property 'ref' does not exist on type 'HTMLElement'.
+estraverse.ts(537,34): error TS2339: Property 'ref' does not exist on type 'HTMLElement'.
+estraverse.ts(668,45): error TS2304: Cannot find name 'Visitor'.
+estraverse.ts(673,28): error TS2304: Cannot find name 'AST'.
+estraverse.ts(673,43): error TS2304: Cannot find name 'Visitor'.
+estraverse.ts(678,60): error TS2304: Cannot find name 'Token'.
+estraverse.ts(681,60): error TS2304: Cannot find name 'Token'.
+estraverse.ts(682,45): error TS2339: Property 'range' does not exist on type 'Comment'.
+estraverse.ts(685,17): error TS2339: Property 'extendedRange' does not exist on type 'Comment'.
+estraverse.ts(685,42): error TS2339: Property 'range' does not exist on type 'Comment'.
+estraverse.ts(685,60): error TS2339: Property 'range' does not exist on type 'Comment'.
+estraverse.ts(688,21): error TS2339: Property 'extendedRange' does not exist on type 'Comment'.
+estraverse.ts(693,21): error TS2339: Property 'extendedRange' does not exist on type 'Comment'.
+estraverse.ts(699,35): error TS2304: Cannot find name 'Tree'.
+estraverse.ts(699,80): error TS2304: Cannot find name 'Token'.
+estraverse.ts(721,46): error TS2345: Argument of type '{}' is not assignable to parameter of type 'Comment'.
+  Type '{}' is missing the following properties from type 'CharacterData': data, length, ownerDocument, appendData, and 59 more.
+estraverse.ts(727,36): error TS2503: Cannot find namespace 'ts'.
+estraverse.ts(760,36): error TS2503: Cannot find namespace 'ts'.
+gulpfile.ts(68,50): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+gulpfile.ts(69,50): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+gulpfile.ts(70,50): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 

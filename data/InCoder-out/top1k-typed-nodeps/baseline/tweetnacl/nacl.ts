@@ -336,7 +336,7 @@ function A(o: any,  a: any,  b: any) {
   for (i = 0; i < 16; i++) o[i] = (a[i] + b[i])|0;
 }
 
-function Z(o: Object,  a: ?Object,  b: Object) {
+function Z(o: Object,  a: any,  b: any) {
   var i;
   for (i = 0; i < 16; i++) o[i] = (a[i] - b[i])|0;
 }

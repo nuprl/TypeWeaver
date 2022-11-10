@@ -6,7 +6,7 @@ function MillerRabin(rand: number) {
 }
 module.exports = MillerRabin;
 
-MillerRabin.create = function create(rand: ) {
+MillerRabin.create = function create(rand: any) {
   return new MillerRabin(rand);
 };
 

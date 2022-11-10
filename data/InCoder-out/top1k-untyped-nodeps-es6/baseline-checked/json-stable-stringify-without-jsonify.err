@@ -1,10 +1,7 @@
-index.ts(12,45): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Node'.
-index.ts(13,45): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Node'.
-index.ts(19,9): error TS7034: Variable 'seen' implicitly has type 'any[]' in some locations where its type cannot be determined.
-index.ts(20,22): error TS7023: 'stringify' implicitly has return type 'any' because it does not have a return type annotation and is referenced directly or indirectly in one of its return expressions.
-index.ts(39,21): error TS7022: 'item' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
-index.ts(45,17): error TS7005: Variable 'seen' implicitly has an 'any[]' type.
-index.ts(54,21): error TS2403: Subsequent variable declarations must have the same type.  Variable 'key' must be of type 'any', but here has type 'string'.
-index.ts(55,21): error TS7022: 'value' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
-index.ts(59,21): error TS7022: 'keyValue' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
+example/key_cmp.ts(4,37): error TS2304: Cannot find name 'ny'.
+example/key_cmp.ts(4,45): error TS2304: Cannot find name 'y'.
+example/nested.ts(3,13): error TS2554: Expected 2 arguments, but got 1.
+example/str.ts(3,13): error TS2554: Expected 2 arguments, but got 1.
+example/value_cmp.ts(4,37): error TS2552: Cannot find name 'umber'. Did you mean 'number'?
+example/value_cmp.ts(4,48): error TS2304: Cannot find name 'mber'.
 

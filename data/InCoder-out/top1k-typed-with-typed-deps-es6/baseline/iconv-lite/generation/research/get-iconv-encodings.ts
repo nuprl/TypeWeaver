@@ -36,7 +36,7 @@ process.stdin.on("end", function() {
 
     var hashes = {};
 
-    encodings = encodings.map(function(enc: ) {
+    encodings = encodings.map(function(enc: any) {
         process.stderr.write("Checking "+enc+": ");
         var hash = crypto.createHash("sha1");
 

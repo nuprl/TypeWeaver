@@ -207,7 +207,7 @@ var $exec = bind.call(Function.call, RegExp.prototype.exec);
 /* adapted from https://github.com/lodash/lodash/blob/4.17.15/dist/lodash.js#L6735-L6744 */
 var rePropName = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g;
 var reEscapeChar = /\\(\\)?/g; /** Used to match backslashes in property paths. */
-var stringToPath = function stringToPath(string: ) {
+var stringToPath = function stringToPath(string: any) {
 	var first = $strSlice(string, 0, 1);
 	var last = $strSlice(string, -1);
 	if (first === '%' && last !== '%') {

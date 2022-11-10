@@ -75,7 +75,7 @@ function packBrowserVersions(agents: Agent[]) {
     .then(() => [agents, browserVersions])
 }
 
-function getAgents(data: ) {
+function getAgents(data: any) {
   return JSON.parse(data).agents
 }
 

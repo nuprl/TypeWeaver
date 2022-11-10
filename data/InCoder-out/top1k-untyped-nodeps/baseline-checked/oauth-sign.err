@@ -1,2 +1,22 @@
-index.ts(52,21): error TS1110: Type expected.
+index.ts(1,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'any'.
+index.ts(4,17): error TS2339: Property 'createHmac' does not exist on type 'Crypto'.
+index.ts(8,17): error TS2339: Property 'createSign' does not exist on type 'Crypto'.
+index.ts(12,29): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string | number | boolean'.
+  Type 'string[]' is not assignable to type 'string | number | boolean'.
+index.ts(40,22): error TS2304: Cannot find name 'mber'.
+index.ts(40,32): error TS2304: Cannot find name 'er'.
+index.ts(44,36): error TS2304: Cannot find name 'HttpMethod'.
+index.ts(44,59): error TS2304: Cannot find name 'Uri'.
+index.ts(86,14): error TS2345: Argument of type 'string' is not assignable to parameter of type 'CryptoKey'.
+index.ts(96,14): error TS2345: Argument of type 'string' is not assignable to parameter of type 'CryptoKey'.
+index.ts(103,19): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Buffer'.
+index.ts(110,9): error TS2345: Argument of type '(str: string | string[]) => string' is not assignable to parameter of type '(value: string | String, index: number, array: (string | String)[]) => string'.
+  Types of parameters 'str' and 'value' are incompatible.
+    Type 'string | String' is not assignable to type 'string | string[]'.
+      Type 'String' is not assignable to type 'string | string[]'.
+        Type 'String' is missing the following properties from type 'string[]': pop, push, join, reverse, and 21 more.
+index.ts(115,28): error TS2304: Cannot find name 'SignMethod'.
+index.ts(115,53): error TS2304: Cannot find name 'HttpMethod'.
+index.ts(115,76): error TS2304: Cannot find name 'Uri'.
+index.ts(115,90): error TS2304: Cannot find name 'Dictionary'.
 

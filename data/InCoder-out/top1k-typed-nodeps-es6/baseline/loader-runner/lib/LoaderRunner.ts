@@ -296,7 +296,7 @@ export const runLoaders = function runLoaders(options: any,  callback: Function)
 	loaderContext.resourceFragment = resourceFragment;
 	loaderContext.async = null;
 	loaderContext.callback = null;
-	loaderContext.cacheable = function cacheable(flag: ) {
+	loaderContext.cacheable = function cacheable(flag: any) {
 		if(flag === false) {
 			requestCacheable = false;
 		}

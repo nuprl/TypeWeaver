@@ -24,7 +24,7 @@ Caseless.prototype.has = function (name: any) {
   }
   return false
 }
-Caseless.prototype.get = function (name: ?string, value:?any) {
+Caseless.prototype.get = function (name: any) {
   name = name.toLowerCase()
   var result, _key
   var headers = this.dict
@@ -34,14 +34,14 @@ Caseless.prototype.get = function (name: ?string, value:?any) {
   })
   return result
 }
-Caseless.prototype.swap = function (name: ) {
+Caseless.prototype.swap = function (name: any) {
   var has = this.has(name)
   if (has === name) return
   if (!has) throw new Error('There is no header than matches "'+name+'"')
   this.dict[name] = this.dict[has]
   delete this.dict[has]
 }
-Caseless.prototype.del = function (name: ) {
+Caseless.prototype.del = function (name: any) {
   name = String(name).toLowerCase()
   var deleted = false
   var changed = 0

@@ -1,7 +1,7 @@
 'use strict';
 
 
-function RequestError(cause: Error,  options: RequestOptions,  response: BodyResponseCallback<Schema) {
+function RequestError(cause: Error,  options: RequestOptions,  response: any) {
 
     this.name = 'RequestError';
     this.message = String(cause);

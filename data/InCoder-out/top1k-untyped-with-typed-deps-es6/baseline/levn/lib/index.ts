@@ -11,7 +11,7 @@
     options.customTypes == null && (options.customTypes = {});
     return cast(parseString(parsedType, string, options), parsedType, options);
   };
-  parse = function(type: string,  string: ?string, options:?Object,  options: Object){
+  parse = function(type: string,  string: any,  options: any){
     return parsedTypeParse(parseType(type), string, options);
   };
 

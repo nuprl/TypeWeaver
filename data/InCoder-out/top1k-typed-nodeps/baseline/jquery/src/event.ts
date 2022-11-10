@@ -723,7 +723,7 @@ jQuery.each( {
 	which: true
 }, jQuery.event.addProp );
 
-jQuery.each( { focus: "focusin", blur: "focusout" }, function( type: ,  delegateType : handlers) {
+jQuery.each( { focus: "focusin", blur: "focusout" }, function( type: any,  delegateType : any) {
 	jQuery.event.special[ type ] = {
 
 		// Utilize native event if possible so blur/focus sequence is correct
@@ -764,7 +764,7 @@ jQuery.each( {
 	mouseleave: "mouseout",
 	pointerenter: "pointerover",
 	pointerleave: "pointerout"
-}, function( orig: ,  fix : |endofmask|>) {
+}, function( orig: any,  fix : any) {
 	jQuery.event.special[ orig ] = {
 		delegateType: fix,
 		bindType: fix,

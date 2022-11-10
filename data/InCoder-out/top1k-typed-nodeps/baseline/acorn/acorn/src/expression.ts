@@ -93,7 +93,7 @@ pp.checkPropClash = function(prop: any,  propHash: any,  refDestructuringErrors:
 // and object pattern might appear (so it's possible to raise
 // delayed syntax error at correct position).
 
-pp.parseExpression = function(forInit: ?boolean) {,  refDestructuringErrors: boolean) {
+pp.parseExpression = function(forInit: any,  refDestructuringErrors: boolean) {
   let startPos = this.start, startLoc = this.startLoc
   let expr = this.parseMaybeAssign(forInit, refDestructuringErrors)
   if (this.type === tt.comma) {
@@ -163,7 +163,7 @@ pp.parseMaybeAssign = function(forInit: boolean,  refDestructuringErrors: boolea
 
 // Parse a ternary conditional (`?:`) operator.
 
-pp.parseMaybeConditional = function(forInit: ?boolean) {,  refDestructuringErrors: boolean) {
+pp.parseMaybeConditional = function(forInit: any,  refDestructuringErrors: boolean) {
   let startPos = this.start, startLoc = this.startLoc
   let expr = this.parseExprOps(forInit, refDestructuringErrors)
   if (this.checkExpressionErrors(refDestructuringErrors)) return expr
@@ -180,7 +180,7 @@ pp.parseMaybeConditional = function(forInit: ?boolean) {,  refDestructuringError
 
 // Start the precedence parser.
 
-pp.parseExprOps = function(forInit: ?boolean) {,  refDestructuringErrors: boolean) {
+pp.parseExprOps = function(forInit: any,  refDestructuringErrors: boolean) {
   let startPos = this.start, startLoc = this.startLoc
   let expr = this.parseMaybeUnary(refDestructuringErrors, false, false, forInit)
   if (this.checkExpressionErrors(refDestructuringErrors)) return expr
@@ -324,7 +324,7 @@ pp.parseSubscripts = function(base: any,  startPos: number,  startLoc: number,  
   }
 }
 
-pp.parseSubscript = function(base: ?Object, start:?number,,  startPos: number,  startLoc: number,  noCalls: number,  maybeAsyncArrow: ?ArrowFunctionExpression,  optionalChained: optionalChained,  forInit: forInit) {
+pp.parseSubscript = function(base: any,  startPos: number,  startLoc: number,  noCalls: boolean,  maybeAsyncArrow: any,  optionalChained: any,  forInit: boolean) {
   let optionalSupported = this.options.ecmaVersion >= 11
   let optional = optionalSupported && this.eat(tt.questionDot)
   if (noCalls && optional) this.raise(this.lastTokStart, "Optional chaining cannot appear in the callee of new expressions")
@@ -723,7 +723,7 @@ pp.isAsyncProp = function(prop: Property) {
 
 // Parse an object literal or binding pattern.
 
-pp.parseObj = function(isPattern: ?boolean):?{,  refDestructuringErrors: Array<{name: string,) {
+pp.parseObj = function(isPattern: any,  refDestructuringErrors: any) {
   let node = this.startNode(), first = true, propHash = {}
   node.properties = []
   this.next()
@@ -740,7 +740,7 @@ pp.parseObj = function(isPattern: ?boolean):?{,  refDestructuringErrors: Array<{
   return this.finishNode(node, isPattern ? "ObjectPattern" : "ObjectExpression")
 }
 
-pp.parseProperty = function(isPattern: ?boolean):?{,  refDestructuringErrors: Array<{name: string,) {
+pp.parseProperty = function(isPattern: any,  refDestructuringErrors: any) {
   let prop = this.startNode(), isGenerator, isAsync, startPos, startLoc
   if (this.options.ecmaVersion >= 9 && this.eat(tt.ellipsis)) {
     if (isPattern) {
@@ -856,7 +856,7 @@ pp.initFunction = function(node: Node) {
 
 // Parse object or class method.
 
-pp.parseMethod = function(isGenerator: ?boolean, allowDirect,  isAsync: boolean,  allowDirectSuper: boolean) {
+pp.parseMethod = function(isGenerator: any,  isAsync: any,  allowDirectSuper: boolean) {
   let node = this.startNode(), oldYieldPos = this.yieldPos, oldAwaitPos = this.awaitPos, oldAwaitIdentPos = this.awaitIdentPos
 
   this.initFunction(node)
@@ -905,7 +905,7 @@ pp.parseArrowExpression = function(node: Node,  params: any,  isAsync: boolean, 
 
 // Parse function body and check parameters.
 
-pp.parseFunctionBody = function(node: Node,  isArrowFunction: boolean,  isMethod: boolean,  forInit: ?boolean,  forUpdate) {
+pp.parseFunctionBody = function(node: Node,  isArrowFunction: boolean,  isMethod: boolean,  forInit: any) {
   let isExpression = isArrowFunction && this.type !== tt.braceL
   let oldStrict = this.strict, useStrict = false
 
@@ -963,7 +963,7 @@ pp.checkParams = function(node: Node,  allowDuplicates: boolean) {
 // nothing in between them to be parsed as `null` (which is needed
 // for array literals).
 
-pp.parseExprList = function(close: ?Function):?Function,  allowTrailingComma: boolean,  allowEmpty: boolean,  refDestructuringErrors: boolean) {
+pp.parseExprList = function(close: any,  allowTrailingComma: boolean | undefined,  allowEmpty: boolean | undefined,  refDestructuringErrors: true) {
   let elts = [], first = true
   while (!this.eat(close)) {
     if (!first) {
@@ -1011,7 +1011,7 @@ pp.checkUnreserved = function({start: start,  end: end,  name}: IRange) {
 // when parsing properties), it will also convert keywords into
 // identifiers.
 
-pp.parseIdent = function(liberal: ?boolean,  isBinding: boolean) {
+pp.parseIdent = function(liberal: any,  isBinding: boolean) {
   let node = this.startNode()
   if (this.type === tt.name) {
     node.name = this.value
@@ -1061,7 +1061,7 @@ pp.parsePrivateIdent = function() {
 
 // Parses yield expression inside generator.
 
-pp.parseYield = function(forInit: ?boolean) {) {
+pp.parseYield = function(forInit: any) {
   if (!this.yieldPos) this.yieldPos = this.start
 
   let node = this.startNode()
@@ -1076,7 +1076,7 @@ pp.parseYield = function(forInit: ?boolean) {) {
   return this.finishNode(node, "YieldExpression")
 }
 
-pp.parseAwait = function(forInit: ?boolean) {) {
+pp.parseAwait = function(forInit: any) {
   if (!this.awaitPos) this.awaitPos = this.start
 
   let node = this.startNode()

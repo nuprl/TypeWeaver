@@ -4,7 +4,7 @@ var parseMeasurement = require('../parsers').parseMeasurement;
 
 var shape_regex = /^rect\((.*)\)$/i;
 
-var parse = function(val: ) {
+var parse = function(val: any) {
   if (val === '' || val === null) {
     return val;
   }

@@ -21,7 +21,7 @@ module.exports = onHeaders
  * @private
  */
 
-function createWriteHead (prevWriteHead: ?WriteHead, callback,  listener: Function) {
+function createWriteHead (prevWriteHead: any,  listener: Function) {
   var fired = false
 
   // return function with core name and argument list

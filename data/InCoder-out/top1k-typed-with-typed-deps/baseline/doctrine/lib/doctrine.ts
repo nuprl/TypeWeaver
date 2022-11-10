@@ -271,7 +271,7 @@
             }
         }
 
-        function parseName(last: ?string): string {,  allowBrackets: oolean,  allowNestedParams: boolean) {
+        function parseName(last: any,  allowBrackets: boolean,  allowNestedParams: boolean) {
             var name = '',
                 useBrackets,
                 insideString;
@@ -468,7 +468,7 @@
             return true;
         };
 
-        TagParser.prototype._parseNamePath = function (optional: ?string, optional:?) {
+        TagParser.prototype._parseNamePath = function (optional: any) {
             var name;
             name = parseName(this._last, sloppy && isAllowedOptional(this._title), true);
             if (!name) {

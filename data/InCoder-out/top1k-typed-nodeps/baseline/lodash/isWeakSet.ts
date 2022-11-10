@@ -16,7 +16,7 @@ import isObjectLike from './isObjectLike.js'
  * isWeakSet(new Set)
  * // => false
  */
-function isWeakSet(value: ?Set) {
+function isWeakSet(value: any) {
   return isObjectLike(value) && getTag(value) == '[object WeakSet]'
 }
 

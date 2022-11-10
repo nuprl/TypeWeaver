@@ -53,7 +53,7 @@ pp.isContextual = function(name: any) {
 
 // Consumes contextual keyword if possible.
 
-pp.eatContextual = function(name: ) {
+pp.eatContextual = function(name: any) {
   if (!this.isContextual(name)) return false
   this.next()
   return true
@@ -61,7 +61,7 @@ pp.eatContextual = function(name: ) {
 
 // Asserts that following token is given contextual keyword.
 
-pp.expectContextual = function(name: ) {
+pp.expectContextual = function(name: any) {
   if (!this.eatContextual(name)) this.unexpected()
 }
 

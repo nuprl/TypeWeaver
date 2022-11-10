@@ -144,7 +144,7 @@ RedirectableRequest.prototype.setHeader = function (name: String,  value: Any) {
 };
 
 // Clears a header value on the current native request
-RedirectableRequest.prototype.removeHeader = function (name: ) {
+RedirectableRequest.prototype.removeHeader = function (name: any) {
   delete this._options.headers[name];
   this._currentRequest.removeHeader(name);
 };
@@ -473,7 +473,7 @@ function wrap(protocols: Array<string>) {
 
   // Wrap each protocol
   var nativeProtocols = {};
-  Object.keys(protocols).forEach(function (scheme: ) {
+  Object.keys(protocols).forEach(function (scheme: any) {
     var protocol = scheme + ":";
     var nativeProtocol = nativeProtocols[protocol] = protocols[scheme];
     var wrappedProtocol = exports[scheme] = Object.create(nativeProtocol);

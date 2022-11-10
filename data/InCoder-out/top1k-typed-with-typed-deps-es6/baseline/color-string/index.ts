@@ -20,7 +20,7 @@ var cs = {
 
 export default cs;
 
-cs.get = function (string: ?string, callback:?) {
+cs.get = function (string: any) {
 	var prefix = string.substring(0, 3).toLowerCase();
 	var val;
 	var model;
@@ -46,7 +46,7 @@ cs.get = function (string: ?string, callback:?) {
 	return {model: model, value: val};
 };
 
-cs.get.rgb = function (string: ) {
+cs.get.rgb = function (string: any) {
 	if (!string) {
 		return null;
 	}
@@ -135,7 +135,7 @@ cs.get.rgb = function (string: ) {
 	return rgb;
 };
 
-cs.get.hsl = function (string: ) {
+cs.get.hsl = function (string: any) {
 	if (!string) {
 		return null;
 	}
@@ -156,7 +156,7 @@ cs.get.hsl = function (string: ) {
 	return null;
 };
 
-cs.get.hwb = function (string: ) {
+cs.get.hwb = function (string: any) {
 	if (!string) {
 		return null;
 	}

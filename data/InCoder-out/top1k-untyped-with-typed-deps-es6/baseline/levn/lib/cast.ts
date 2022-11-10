@@ -42,7 +42,7 @@
         };
       }
     },
-    Undefined: function(it: ){
+    Undefined: function(it: any){
       if (it === 'undefined' || it === void 8) {
         return {
           type: 'Just',
@@ -54,7 +54,7 @@
         };
       }
     },
-    Null: function(it: ){
+    Null: function(it: any){
       if (it === 'null') {
         return {
           type: 'Just',
@@ -78,7 +78,7 @@
         };
       }
     },
-    Boolean: function(it: ){
+    Boolean: function(it: any){
       if (it === 'true') {
         return {
           type: 'Just',

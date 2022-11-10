@@ -830,7 +830,7 @@ convert.gray.cmyk = function (gray: number) {
 	return [0, 0, 0, gray[0]];
 };
 
-convert.gray.lab = function (gray: ) {
+convert.gray.lab = function (gray: any) {
 	return [gray[0], 0, 0];
 };
 

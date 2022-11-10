@@ -17,7 +17,7 @@ const idCounter = {}
  * uniqueId()
  * // => '105'
  */
-function uniqueId(prefix='$lodash$': ) {
+function uniqueId(prefix='$lodash$': any) {
   if (!idCounter[prefix]) {
     idCounter[prefix] = 0
   }

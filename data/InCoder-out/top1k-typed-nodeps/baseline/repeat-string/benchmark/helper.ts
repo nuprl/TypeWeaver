@@ -66,7 +66,7 @@ function format(tok: Token,  max: number,  diff: number) {
   return [tok.name.trim(), bar(tok, max, diff).trim(), '(' + tok.val + ' ops/sec)'];
 }
 
-function parseStats(line: ) {
+function parseStats(line: any) {
   var str = line.trim();
   var m = /^([^ ]+) x ([\d,.]+)/.exec(str);
   var tok = {num: 0, val: ''};

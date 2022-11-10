@@ -20,7 +20,7 @@ import unzip from './unzip.js'
  * unzipWith(zipped, add)
  * // => [3, 30, 300]
  */
-function unzipWith(array: Array,  iteratee: Iteratee<Array) {
+function unzipWith(array: Array,  iteratee: any) {
   if (!(array != null && array.length)) {
     return []
   }

@@ -1,2 +1,61 @@
-index.ts(144,31): error TS1003: Identifier expected.
+index.ts(28,7): error TS2345: Argument of type '{ name: string; arity: number; sync: (args: any) => any[]; async: (args: any, resolve: Function, reject: Function) => void; }' is not assignable to parameter of type 'Function'.
+  Object literal may only specify known properties, and 'arity' does not exist in type 'Function'.
+index.ts(31,47): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Generator<unknown, any, unknown>'.
+  Type '{}' is missing the following properties from type 'Generator<unknown, any, unknown>': next, return, throw, [Symbol.iterator]
+index.ts(45,13): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Generator<unknown, any, unknown>'.
+index.ts(59,7): error TS2345: Argument of type '{ name: string; arity: number; sync: (args: any) => any; async: (args: any, resolve: Function, reject: Function) => void; }' is not assignable to parameter of type 'Function'.
+  Object literal may only specify known properties, and 'arity' does not exist in type 'Function'.
+index.ts(63,56): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+index.ts(66,29): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Generator<unknown, any, unknown>'.
+index.ts(71,56): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+index.ts(75,25): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Generator<unknown, any, unknown>'.
+index.ts(101,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+index.ts(134,24): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+index.ts(137,34): error TS2345: Argument of type 'string | Error' is not assignable to parameter of type 'string'.
+  Type 'Error' is not assignable to type 'string'.
+index.ts(144,59): error TS2300: Duplicate identifier 'boolean'.
+index.ts(144,76): error TS2300: Duplicate identifier 'boolean'.
+index.ts(144,97): error TS2304: Cannot find name 'IRequestOptions'.
+index.ts(146,35): error TS2304: Cannot find name 'arity'.
+index.ts(147,3): error TS2554: Expected 4 arguments, but got 3.
+index.ts(147,36): error TS2304: Cannot find name 'sync'.
+index.ts(148,37): error TS2686: 'async' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+index.ts(150,7): error TS2686: 'async' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+index.ts(153,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+index.ts(162,9): error TS2686: 'async' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+index.ts(162,18): error TS2686: 'async' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+index.ts(162,24): error TS2339: Property 'name' does not exist on type 'typeof import("/mnt/data/mhyee/not-type-inference/data/node_modules/@types/async/index")'.
+index.ts(162,32): error TS2686: 'async' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+index.ts(162,38): error TS2339: Property 'name' does not exist on type 'typeof import("/mnt/data/mhyee/not-type-inference/data/node_modules/@types/async/index")'.
+index.ts(163,16): error TS2686: 'async' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+index.ts(163,22): error TS2339: Property 'name' does not exist on type 'typeof import("/mnt/data/mhyee/not-type-inference/data/node_modules/@types/async/index")'.
+index.ts(165,9): error TS2552: Cannot find name 'sync'. Did you mean 'async'?
+index.ts(165,17): error TS2552: Cannot find name 'sync'. Did you mean 'async'?
+index.ts(165,30): error TS2552: Cannot find name 'sync'. Did you mean 'async'?
+index.ts(166,16): error TS2552: Cannot find name 'sync'. Did you mean 'async'?
+index.ts(170,7): error TS2588: Cannot assign to 'name' because it is a constant.
+index.ts(174,14): error TS2304: Cannot find name 'arity'.
+index.ts(175,5): error TS2304: Cannot find name 'arity'.
+index.ts(175,13): error TS2552: Cannot find name 'sync'. Did you mean 'async'?
+index.ts(179,5): error TS2322: Type 'void' is not assignable to type 'string'.
+index.ts(180,5): error TS18004: No value exists in scope for the shorthand property 'arity'. Either declare one or provide an initializer.
+index.ts(182,14): error TS2304: Cannot find name 'sync'.
+index.ts(185,11): error TS2686: 'async' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+index.ts(186,9): error TS2686: 'async' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+index.ts(186,33): error TS2339: Property 'then' does not exist on type 'AsyncFunction<any, Error>'.
+index.ts(193,17): error TS2304: Cannot find name 'sync'.
+index.ts(205,49): error TS2339: Property 'arity' does not exist on type 'Function'.
+index.ts(205,64): error TS2339: Property 'sync' does not exist on type 'Function'.
+index.ts(205,77): error TS2339: Property 'async' does not exist on type 'Function'.
+index.ts(252,24): error TS2345: Argument of type 'Generator<unknown, any, unknown>' is not assignable to parameter of type 'Function'.
+  Type 'Generator<unknown, any, unknown>' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+index.ts(262,28): error TS2345: Argument of type 'Generator<unknown, any, unknown>' is not assignable to parameter of type 'Function'.
+index.ts(298,5): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Generator<unknown, any, unknown>'.
+  Type 'Function' is missing the following properties from type 'Generator<unknown, any, unknown>': next, return, throw, [Symbol.iterator]
+index.ts(303,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+index.ts(307,51): error TS2304: Cannot find name 'Suspend'.
+index.ts(308,16): error TS2304: Cannot find name 'value'.
+index.ts(316,13): error TS2304: Cannot find name 'value'.
+index.ts(318,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+index.ts(332,28): error TS2304: Cannot find name 'ixed'.
 

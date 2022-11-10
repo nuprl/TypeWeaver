@@ -344,7 +344,7 @@ function isScriptCategoryValue(value: ScriptCategory) {
   );
 }
 
-function isBinaryPropertyName(name: ?string): boolean {) {
+function isBinaryPropertyName(name: any) {
   return (
     BINARY_PROP_NAMES_TO_ALIASES.hasOwnProperty(name) ||
     BINARY_ALIASES_TO_PROP_NAMES.hasOwnProperty(name)

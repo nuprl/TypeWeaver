@@ -1,9 +1,26 @@
-index.ts(56,54): error TS1128: Declaration or statement expected.
-index.ts(427,54): error TS1109: Expression expected.
-index.ts(427,56): error TS1005: ',' expected.
-index.ts(427,60): error TS1002: Unterminated string literal.
-index.ts(428,5): error TS1005: ':' expected.
-index.ts(428,44): error TS1005: ':' expected.
-index.ts(430,8): error TS1005: ';' expected.
-index.ts(538,2): error TS1005: '}' expected.
+benchmark/index.ts(8,12): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+benchmark/index.ts(11,28): error TS2339: Property 'shift' does not exist on type 'string'.
+benchmark/wrapfunction.ts(6,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+benchmark/wrapfunction.ts(8,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
+benchmark/wrapproperty.ts(6,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+benchmark/wrapproperty.ts(8,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
+index.ts(29,43): error TS2304: Cannot find name 'Namespace'.
+index.ts(29,66): error TS2304: Cannot find name 'Namespace'.
+index.ts(85,36): error TS2304: Cannot find name 'Stack'.
+index.ts(141,35): error TS2304: Cannot find name 'EventEmitter'.
+index.ts(154,15): error TS2339: Property 'noDeprecation' does not exist on type 'Process'.
+index.ts(185,36): error TS2304: Cannot find name 'Site'.
+index.ts(251,18): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '"deprecation"' is not assignable to parameter of type 'Signals'.
+index.ts(267,38): error TS2304: Cannot find name 'CallSite'.
+index.ts(278,8): error TS2339: Property 'callSite' does not exist on type 'any[]'.
+index.ts(279,8): error TS2339: Property 'name' does not exist on type 'any[]'.
+index.ts(288,32): error TS2304: Cannot find name 'Site'.
+index.ts(371,36): error TS2304: Cannot find name 'CallSite'.
+index.ts(393,19): error TS2339: Property 'stack' does not exist on type '{}'.
+index.ts(413,28): error TS2552: Cannot find name 'unction'. Did you mean 'Function'?
+index.ts(422,8): error TS2339: Property 'name' does not exist on type 'any[]'.
+index.ts(459,8): error TS2339: Property 'name' does not exist on type 'any[]'.
+lib/browser/index.ts(48,28): error TS2552: Cannot find name 'unction'. Did you mean 'Function'?
 

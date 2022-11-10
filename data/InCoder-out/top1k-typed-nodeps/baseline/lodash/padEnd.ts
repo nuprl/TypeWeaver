@@ -22,7 +22,7 @@ import stringSize from './.internal/stringSize.js'
  * padEnd('abc', 2)
  * // => 'abc'
  */
-function padEnd(string: ?string, length: number,,  length: umber,  chars: string) {
+function padEnd(string: any,  length: number,  chars: string) {
   const strLength = length ? stringSize(string) : 0
   return (length && strLength < length)
     ? (string + createPadding(length - strLength, chars))

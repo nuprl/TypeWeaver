@@ -11,7 +11,7 @@ jQuery.Tween = Tween;
 
 Tween.prototype = {
 	constructor: Tween,
-	init: function( elem: HTMLElement,  options: { duration: number,  prop: string,  end: number,  easing: string,  unit : string) {
+	init: function( elem: HTMLElement,  options: any,  prop: string,  end: boolean,  easing: string,  unit : string) {
 		this.elem = elem;
 		this.prop = prop;
 		this.easing = easing || jQuery.easing._default;

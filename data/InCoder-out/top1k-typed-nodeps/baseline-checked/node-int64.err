@@ -1,12 +1,3 @@
-Int64.ts(35,5): error TS7034: Variable '_HEX' implicitly has type 'any[]' in some locations where its type cannot be determined.
-Int64.ts(55,10): error TS2339: Property 'buffer' does not exist on type 'NodeModule'.
-Int64.ts(56,10): error TS2339: Property 'offset' does not exist on type 'NodeModule'.
-Int64.ts(62,10): error TS2339: Property 'buffer' does not exist on type 'NodeModule'.
-Int64.ts(63,10): error TS2339: Property 'offset' does not exist on type 'NodeModule'.
-Int64.ts(65,10): error TS2339: Property 'buffer' does not exist on type 'NodeModule'.
-Int64.ts(65,24): error TS2339: Property 'buffer' does not exist on type 'NodeModule'.
-Int64.ts(66,10): error TS2339: Property 'offset' does not exist on type 'NodeModule'.
-Int64.ts(67,10): error TS2339: Property 'setValue' does not exist on type 'NodeModule'.
 Int64.ts(73,7): error TS2339: Property 'MAX_INT' does not exist on type '(a1: any, a2: any) => void'.
 Int64.ts(76,7): error TS2339: Property 'MIN_INT' does not exist on type '(a1: any, a2: any) => void'.
 Int64.ts(115,9): error TS2322: Type 'string' is not assignable to type 'number'.
@@ -17,8 +8,8 @@ Int64.ts(117,46): error TS2339: Property 'length' does not exist on type 'number
 Int64.ts(118,23): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 Int64.ts(119,23): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 Int64.ts(169,39): error TS2339: Property 'MAX_INT' does not exist on type '(a1: any, a2: any) => void'.
-Int64.ts(202,16): error TS7005: Variable '_HEX' implicitly has an 'any[]' type.
-Int64.ts(204,21): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'string'.
+Int64.ts(204,21): error TS2345: Argument of type 'RegExp | ""' is not assignable to parameter of type 'string'.
+  Type 'RegExp' is not assignable to type 'string'.
 Int64.ts(227,32): error TS2304: Cannot find name 'WebGLRenderingBuffer'.
 Int64.ts(237,28): error TS2552: Cannot find name 'umber'. Did you mean 'number'?
 Int64.ts(258,27): error TS2304: Cannot find name 'Comparator'.

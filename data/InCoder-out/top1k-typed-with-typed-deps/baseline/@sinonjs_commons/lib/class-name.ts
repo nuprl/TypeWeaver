@@ -8,7 +8,7 @@ var functionName = require("./function-name");
  * @param  {object} value A value to examine
  * @returns {(string|null)} A string or null
  */
-function className(value: ?string) {
+function className(value: any) {
     return (
         (value.constructor && value.constructor.name) ||
         // The next branch is for IE11 support only:

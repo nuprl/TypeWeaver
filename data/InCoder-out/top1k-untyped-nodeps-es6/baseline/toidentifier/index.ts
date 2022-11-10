@@ -21,7 +21,7 @@ export default toIdentifier;
  * @public
  */
 
-function toIdentifier (str: |endofmask|>) {
+function toIdentifier (str: any) {
   return str
     .split(' ')
     .map(function (token: Token) {

@@ -21,7 +21,7 @@ var extendStatics = function(d: any,  b: any) {
     return extendStatics(d, b);
 };
 
-export function __extends(d: ,  b: c) {
+export function __extends(d: any,  b: any) {
     if (typeof b !== "function" && b !== null)
         throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
     extendStatics(d, b);
@@ -187,7 +187,7 @@ export function __asyncGenerator(thisArg: any,  _arguments: any[],  generator: G
     function verb(n: number) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
     function resume(n: number,  v: any) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
     function step(r: _await) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
-    function fulfill(value: ?) { resume("next", value); }
+    function fulfill(value: any) { resume("next", value); }
     function reject(value: any) { resume("throw", value); }
     function settle(f: Function,  v: any) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
 }
@@ -195,7 +195,7 @@ export function __asyncGenerator(thisArg: any,  _arguments: any[],  generator: G
 export function __asyncDelegator(o: any) {
     var i, p;
     return i = {}, verb("next"), verb("throw", function (e: Error) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
-    function verb(n: , o: any, p:,  f: y) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
+    function verb(n: any,  f: nction) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
 }
 
 export function __asyncValues(o: Object) {

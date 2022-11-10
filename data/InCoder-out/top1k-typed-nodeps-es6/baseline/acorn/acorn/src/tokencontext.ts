@@ -39,7 +39,7 @@ pp.curContext = function() {
   return this.context[this.context.length - 1]
 }
 
-pp.braceIsBlock = function(prevType: ?string, curType:?) {
+pp.braceIsBlock = function(prevType: any) {
   let parent = this.curContext()
   if (parent === types.f_expr || parent === types.f_stat)
     return true
@@ -69,7 +69,7 @@ pp.inGeneratorContext = function() {
   return false
 }
 
-pp.updateContext = function(prevType: ?string, prevProps:) {
+pp.updateContext = function(prevType: any) {
   let update, type = this.type
   if (type.keyword && prevType === tt.dot)
     this.exprAllowed = false
@@ -101,7 +101,7 @@ tt.parenR.updateContext = tt.braceR.updateContext = function() {
   this.exprAllowed = !out.isExpr
 }
 
-tt.braceL.updateContext = function(prevType: ?string, prevProps:) {
+tt.braceL.updateContext = function(prevType: any) {
   this.context.push(this.braceIsBlock(prevType) ? types.b_stat : types.b_expr)
   this.exprAllowed = true
 }
@@ -111,7 +111,7 @@ tt.dollarBraceL.updateContext = function() {
   this.exprAllowed = true
 }
 
-tt.parenL.updateContext = function(prevType: ?string, prevProps:) {
+tt.parenL.updateContext = function(prevType: any) {
   let statementParens = prevType === tt._if || prevType === tt._for || prevType === tt._with || prevType === tt._while
   this.context.push(statementParens ? types.p_stat : types.p_expr)
   this.exprAllowed = true
@@ -121,7 +121,7 @@ tt.incDec.updateContext = function() {
   // tokExprAllowed stays unchanged
 }
 
-tt._function.updateContext = tt._class.updateContext = function(prevType: ?string, prevProps:) {
+tt._function.updateContext = tt._class.updateContext = function(prevType: any) {
   if (prevType.beforeExpr && prevType !== tt._else &&
       !(prevType === tt.semi && this.curContext() !== types.p_stat) &&
       !(prevType === tt._return && lineBreak.test(this.input.slice(this.lastTokEnd, this.start))) &&
@@ -151,7 +151,7 @@ tt.star.updateContext = function(prevType: tt.Type) {
   this.exprAllowed = true
 }
 
-tt.name.updateContext = function(prevType: ?string, prevValue:) {
+tt.name.updateContext = function(prevType: any) {
   let allowed = false
   if (this.options.ecmaVersion >= 6 && prevType !== tt.dot) {
     if (this.value === "of" && !this.exprAllowed ||

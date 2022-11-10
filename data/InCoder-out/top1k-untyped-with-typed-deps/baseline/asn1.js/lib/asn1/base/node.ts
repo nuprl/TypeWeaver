@@ -147,7 +147,7 @@ Node.prototype._useArgs = function useArgs(args: any[]) {
 // Overrided methods
 //
 
-overrided.forEach(function(method: ) {
+overrided.forEach(function(method: any) {
   Node.prototype[method] = function _overrided() {
     const state = this._baseState;
     throw new Error(method + ' not implemented for encoding: ' + state.enc);
@@ -158,7 +158,7 @@ overrided.forEach(function(method: ) {
 // Public methods
 //
 
-tags.forEach(function(tag: ) {
+tags.forEach(function(tag: any) {
   Node.prototype[tag] = function _tagMethod() {
     const state = this._baseState;
     const args = Array.prototype.slice.call(arguments);
@@ -272,7 +272,7 @@ Node.prototype.contains = function contains(item: T) {
 // Decoding
 //
 
-Node.prototype._decode = function decode(input: Uint8Array,  options: { decodeAsArrayBuff) {
+Node.prototype._decode = function decode(input: Uint8Array,  options: any) {
   const state = this._baseState;
 
   // Decode root node
@@ -544,7 +544,7 @@ Node.prototype._encodeValue = function encode(data: any,  reporter: Reporter,  p
       reporter.leaveKey(prevKey);
 
       return res;
-    }, this).filter(function(child: ) {
+    }, this).filter(function(child: any) {
       return child;
     });
     content = this._createEncoderBuffer(content);

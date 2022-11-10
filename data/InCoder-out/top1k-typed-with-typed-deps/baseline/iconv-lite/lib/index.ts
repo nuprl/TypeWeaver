@@ -14,7 +14,7 @@ iconv.defaultCharUnicode = '�';
 iconv.defaultCharSingleByte = '?';
 
 // Public API.
-iconv.encode = function encode(str: string | Buffer,  encoding: string | null,  options: { [key: string]: any) {
+iconv.encode = function encode(str: string | Buffer,  encoding: string | null,  options: any) {
     str = "" + (str || ""); // Ensure string.
 
     var encoder = iconv.getEncoder(encoding, options);

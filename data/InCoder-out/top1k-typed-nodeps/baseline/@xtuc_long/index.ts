@@ -243,7 +243,7 @@ var pow_dbl = Math.pow; // Used 4 times (4*8 to 15+4)
  * @returns {!Long}
  * @inner
  */
-function fromString(str: number|string|boolean|,  unsigned: boolean,  radix: number) {
+function fromString(str: any,  unsigned: boolean,  radix: number) {
   if (str.length === 0)
     throw Error('empty string');
   if (typeof unsigned === 'number') {

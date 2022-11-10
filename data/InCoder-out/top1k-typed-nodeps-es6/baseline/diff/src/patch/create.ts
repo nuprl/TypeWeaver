@@ -1,6 +1,6 @@
 import {diffLines} from '../diff/line';
 
-export function structuredPatch(oldFileName: string | undefined,  newFileName: string | undefined,  oldStr: string | undefined,  newStr: string | undefined,  oldHeader: string | undefined,  newHeader: string | undefined,  options: { headers?: Headers,) {
+export function structuredPatch(oldFileName: string | undefined,  newFileName: string | undefined,  oldStr: string | undefined,  newStr: string | undefined,  oldHeader: string | undefined,  newHeader: string | undefined,  options: any) {
   if (!options) {
     options = {};
   }
@@ -135,7 +135,7 @@ export function formatPatch(diff: Diff) {
   return ret.join('\n') + '\n';
 }
 
-export function createTwoFilesPatch(oldFileName: string | undefined,  newFileName: string | undefined,  oldStr: string | undefined,  newStr: string | undefined,  oldHeader: string | undefined,  newHeader: string | undefined,  options: { headers: Headers,) {
+export function createTwoFilesPatch(oldFileName: string | undefined,  newFileName: string | undefined,  oldStr: string | undefined,  newStr: string | undefined,  oldHeader: string | undefined,  newHeader: string | undefined,  options: any) {
   return formatPatch(structuredPatch(oldFileName, newFileName, oldStr, newStr, oldHeader, newHeader, options));
 }
 

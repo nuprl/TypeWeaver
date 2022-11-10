@@ -55,7 +55,7 @@ function getStats (destStat: Stats,  src: Stats,  dest: Stats,  opts: Stats.Opti
   throw new Error(`Unknown file: ${src}`)
 }
 
-function onFile (srcStat: fs.Stats,  destStat: fs.Stats,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: { flags: 'a') {
+function onFile (srcStat: fs.Stats,  destStat: fs.Stats,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: any) {
   if (!destStat) return copyFile(srcStat, src, dest, opts)
   return mayCopyFile(srcStat, src, dest, opts)
 }
@@ -69,7 +69,7 @@ function mayCopyFile (srcStat: fs.Stats,  src: fs.ReadStream,  dest: fs.WriteStr
   }
 }
 
-function copyFile (srcStat: fs.Stats,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: { flags: 'a') {
+function copyFile (srcStat: fs.Stats,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: any) {
   fs.copyFileSync(src, dest)
   if (opts.preserveTimestamps) handleTimestamps(srcStat.mode, src, dest)
   return setDestMode(dest, srcStat.mode)
@@ -103,7 +103,7 @@ function setDestTimestamps (src: Timestamp,  dest: Timestamp) {
   return utimesMillisSync(dest, updatedSrcStat.atime, updatedSrcStat.mtime)
 }
 
-function onDir (srcStat: Stats,  destStat: Stats,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: { flags: 'a') {
+function onDir (srcStat: Stats,  destStat: Stats,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: any) {
   if (!destStat) return mkDirAndCopy(srcStat.mode, src, dest, opts)
   return copyDir(src, dest, opts)
 }

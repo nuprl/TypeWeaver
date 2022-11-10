@@ -1,4 +1,4 @@
-module.exports = function isArrayish(obj: ) {
+module.exports = function isArrayish(obj: any) {
 	if (!obj || typeof obj === 'string') {
 		return false;
 	}

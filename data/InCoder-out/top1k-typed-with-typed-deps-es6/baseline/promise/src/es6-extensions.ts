@@ -15,7 +15,7 @@ var UNDEFINED = valuePromise(undefined);
 var ZERO = valuePromise(0);
 var EMPTYSTRING = valuePromise('');
 
-function valuePromise(value: ?) {
+function valuePromise(value: any) {
   var p = new Promise(Promise._noop);
   p._state = 1;
   p._value = value;

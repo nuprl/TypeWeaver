@@ -234,6 +234,6 @@ function isGeneratorFunction(obj: Function) {
  * @api private
  */
 
-function isObject(val: ?Object) {
+function isObject(val: any) {
   return Object == val.constructor;
 }

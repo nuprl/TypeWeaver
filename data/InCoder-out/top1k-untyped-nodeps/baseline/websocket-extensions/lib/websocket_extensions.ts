@@ -57,7 +57,7 @@ var instance = {
     return offer.length > 0 ? offer.join(', ') : null;
   },
 
-  activate: function(header: ) {
+  activate: function(header: any) {
     var responses = Parser.parseHeader(header),
         sessions  = [];
 

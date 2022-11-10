@@ -1,43 +1,17 @@
-lib/tracker-group.ts(3,25): error TS2307: Cannot find module './tracker-base.js' or its corresponding type declarations.
-lib/tracker-group.ts(7,36): error TS8020: JSDoc types can only be used inside documentation comments.
-lib/tracker-group.ts(8,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-group.ts(9,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-group.ts(10,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-group.ts(11,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-group.ts(12,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-group.ts(13,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-group.ts(14,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-group.ts(15,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-group.ts(15,36): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/tracker-base.ts(7,3): error TS2684: The 'this' context of type 'typeof EventEmitter' is not assignable to method's 'this' of type 'Function'.
+  Types of property 'once' are incompatible.
+    Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
 lib/tracker-group.ts(20,38): error TS2749: 'TrackerGroup' refers to a value, but is being used as a type here. Did you mean 'typeof TrackerGroup'?
 lib/tracker-group.ts(40,50): error TS2304: Cannot find name 'Unit'.
 lib/tracker-group.ts(79,68): error TS2304: Cannot find name 'Float'.
-lib/tracker-group.ts(80,23): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/tracker-group.ts(80,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/tracker-group.ts(83,65): error TS2304: Cannot find name 'Todo'.
-lib/tracker-group.ts(84,23): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 lib/tracker-group.ts(87,67): error TS2304: Cannot find name 'Todo'.
 lib/tracker-group.ts(88,23): error TS2554: Expected 3 arguments, but got 2.
-lib/tracker-group.ts(88,23): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 lib/tracker-group.ts(94,18): error TS2554: Expected 2 arguments, but got 0.
-lib/tracker-group.ts(94,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 lib/tracker-group.ts(109,44): error TS2749: 'Tracker' refers to a value, but is being used as a type here. Did you mean 'typeof Tracker'?
 lib/tracker-group.ts(111,25): error TS2339: Property 'debug' does not exist on type '{}'.
-lib/tracker-stream.ts(8,25): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-stream.ts(9,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-stream.ts(9,18): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/tracker-stream.ts(10,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-stream.ts(11,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-stream.ts(11,13): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-stream.ts(12,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker-stream.ts(12,44): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/tracker-stream.ts(17,41): error TS2749: 'TrackerStream' refers to a value, but is being used as a type here. Did you mean 'typeof TrackerStream'?
-lib/tracker.ts(3,25): error TS2307: Cannot find module './tracker-base.js' or its corresponding type declarations.
 lib/tracker.ts(5,46): error TS2304: Cannot find name 'Todo'.
-lib/tracker.ts(6,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker.ts(7,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/tracker.ts(8,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/tracker.ts(17,45): error TS2304: Cannot find name 'Work'.
 lib/tracker.ts(22,50): error TS2304: Cannot find name 'Work'.
 

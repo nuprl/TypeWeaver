@@ -10,7 +10,7 @@ function DESState() {
   this.keys = null;
 }
 
-function DES(options: ) {
+function DES(options: any) {
   Cipher.call(this, options);
 
   var state = new DESState();

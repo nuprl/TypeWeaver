@@ -6,10 +6,10 @@ browser-atob.ts(39,5): error TS2339: Property 'atob' does not exist on type 'num
 browser-atob.ts(42,5): error TS1258: A default export must be at the top level of a file or module declaration.
 browser-atob.ts(44,3): error TS2345: Argument of type 'Window & typeof globalThis' is not assignable to parameter of type 'number'.
 node-atob.ts(4,22): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(arrayBuffer: WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>, byteOffset?: number | undefined, length?: number | undefined): Buffer', gave the following error.
+  Overload 1 of 4, '(arrayBuffer: WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>, byteOffset?: number, length?: number): Buffer', gave the following error.
     Argument of type 'string | ArrayBuffer' is not assignable to parameter of type 'WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>'.
       Type 'string' is not assignable to type 'WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>'.
-  Overload 2 of 4, '(str: WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }, encoding?: BufferEncoding | undefined): Buffer', gave the following error.
+  Overload 2 of 4, '(str: WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }, encoding?: BufferEncoding): Buffer', gave the following error.
     Argument of type 'string | ArrayBuffer' is not assignable to parameter of type 'WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }'.
       Type 'ArrayBuffer' is not assignable to type 'WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }'.
 

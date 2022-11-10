@@ -100,7 +100,7 @@ Reporter.prototype.wrapResult = function wrapResult(result: IReporterResult) {
   };
 };
 
-function ReporterError(path: ,  msg: line) {
+function ReporterError(path: any,  msg: any) {
   this.path = path;
   this.rethrow(msg);
 }

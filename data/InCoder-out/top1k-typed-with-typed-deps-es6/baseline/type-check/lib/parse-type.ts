@@ -175,7 +175,7 @@
   }
   tokenRegex = RegExp('\\.\\.\\.|::|->|' + identifierRegex.source + '|\\S', 'g');
 
-  export default function(input: ){
+  export default function(input: any){
     var tokens, e;
     if (!input.length) {
       throw new Error('No type specified.');
@@ -192,7 +192,7 @@
     }
   };
 
-  function in$(x: ?,  xs: rray<T>){
+  function in$(x: any,  xs: Array<any>){
     var i = -1, l = xs.length >>> 0;
     while (++i < l) if (x === xs[i]) return true;
     return false;

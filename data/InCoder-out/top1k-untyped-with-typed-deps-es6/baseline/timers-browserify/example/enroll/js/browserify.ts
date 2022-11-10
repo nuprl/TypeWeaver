@@ -21,7 +21,7 @@ require._core = {
 };
 
 require.resolve = (function () {
-    return function (x: string,  cwd: ) {
+    return function (x: string,  cwd: any) {
         if (!cwd) cwd = '/';
         
         if (require._core[x]) return x;
@@ -134,7 +134,7 @@ require.alias = function (from: number,  to: number) {
     }
 };
 
-require.define = function (filename: ,  fn: cb) {
+require.define = function (filename: any,  fn: Function) {
     var dirname = require._core[filename]
         ? ''
         : require.modules.path().dirname(filename)
@@ -196,7 +196,7 @@ if (!process.nextTick) process.nextTick = (function () {
 
 if (!process.title) process.title = 'browser';
 
-if (!process.binding) process.binding = function (name: ) {
+if (!process.binding) process.binding = function (name: any) {
     if (name === 'evals') return require('vm')
     else throw new Error('No such module')
 };

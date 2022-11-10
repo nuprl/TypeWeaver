@@ -1,14 +1,18 @@
+src/index.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'topologicalSort'.
+src/index.ts(29,72): error TS2304: Cannot find name 'Graph'.
+src/index.ts(55,20): error TS2339: Property 'createImportedName' does not exist on type '{}'.
+src/index.ts(58,17): error TS2339: Property 'createImportedName' does not exist on type '{}'.
+src/index.ts(59,36): error TS2339: Property 'failOnWrongOrder' does not exist on type '{}'.
+src/index.ts(80,32): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+src/index.ts(120,44): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+src/index.ts(140,45): error TS2339: Property 'nodes' does not exist on type 'Error'.
+src/index.ts(148,30): error TS2339: Property 'nodes' does not exist on type 'Error'.
 src/topologicalSort.ts(4,42): error TS2304: Cannot find name 'Graph'.
-src/topologicalSort.ts(9,6): error TS7006: Parameter 'relatedNode' implicitly has an 'any' type.
 src/topologicalSort.ts(12,6): error TS2339: Property 'nodes' does not exist on type 'Error'.
-src/topologicalSort.ts(17,10): error TS7023: 'walkGraph' implicitly has return type 'any' because it does not have a return type annotation and is referenced directly or indirectly in one of its return expressions.
 src/topologicalSort.ts(17,26): error TS2304: Cannot find name 'GraphNode'.
 src/topologicalSort.ts(17,45): error TS2304: Cannot find name 'Graph'.
 src/topologicalSort.ts(17,60): error TS2304: Cannot find name 'State'.
 src/topologicalSort.ts(17,76): error TS2304: Cannot find name 'Result'.
-src/topologicalSort.ts(36,11): error TS7022: 'error' implicitly has type 'any' because it does not have a type annotation and is referenced directly or indirectly in its own initializer.
+src/topologicalSort.ts(48,10): error TS2451: Cannot redeclare block-scoped variable 'topologicalSort'.
 src/topologicalSort.ts(48,33): error TS2304: Cannot find name 'Graph'.
-src/topologicalSort.ts(49,9): error TS7034: Variable 'result' implicitly has type 'any[]' in some locations where its type cannot be determined.
-src/topologicalSort.ts(56,50): error TS7005: Variable 'result' implicitly has an 'any[]' type.
-src/topologicalSort.ts(63,10): error TS7005: Variable 'result' implicitly has an 'any[]' type.
 

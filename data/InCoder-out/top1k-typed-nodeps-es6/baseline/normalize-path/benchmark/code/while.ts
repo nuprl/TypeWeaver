@@ -35,6 +35,6 @@ export default function normalize(str: string | string[],  strip: boolean | stri
 };
 
 
-function isSlash(ch: ) {
+function isSlash(ch: any) {
   return ch === '\\' || ch === '/';
 }

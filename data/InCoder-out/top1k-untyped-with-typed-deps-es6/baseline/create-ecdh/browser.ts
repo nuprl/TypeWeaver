@@ -58,7 +58,7 @@ ECDH.prototype.generateKeys = function (enc: Encoder,  format: Format) {
   return this.getPublicKey(enc, format)
 }
 
-ECDH.prototype.computeSecret = function (other: any,  inenc: ,  enc: cb) {
+ECDH.prototype.computeSecret = function (other: any,  inenc: any,  enc: any) {
   inenc = inenc || 'utf8'
   if (!Buffer.isBuffer(other)) {
     other = new Buffer(other, inenc)

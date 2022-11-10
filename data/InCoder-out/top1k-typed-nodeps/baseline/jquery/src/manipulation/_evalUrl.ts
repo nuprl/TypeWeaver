@@ -1,6 +1,6 @@
 import jQuery from "../ajax.js";
 
-jQuery._evalUrl = function( url: ,  options: |endofmask|>,  doc : endofmask|>) {
+jQuery._evalUrl = function( url: any,  options: any,  doc : any) {
 	return jQuery.ajax( {
 		url: url,
 

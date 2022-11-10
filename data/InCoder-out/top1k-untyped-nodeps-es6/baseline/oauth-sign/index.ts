@@ -49,7 +49,7 @@ function generateBase (httpMethod: HttpMethod,  base_uri: Uri,  params: any) {
   // http://tools.ietf.org/html/rfc5849#section-3.4.1.3.2
   var normalized = map(params)
   // 1.  First, the name and value of each parameter are encoded
-  .map(function (p: ) {
+  .map(function (p: any) {
     return [ rfc3986(p[0]), rfc3986(p[1] || '') ]
   })
   // 2.  The parameters are sorted by name, using ascending byte value

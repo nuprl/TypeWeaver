@@ -1608,7 +1608,7 @@
     // the total number of capture groups set.
     //
     // SEE: https://github.com/jviereck/regjsparser/issues/70
-    shouldReparse = shouldReparse || backrefDenied.some(function (ref: CapturedValue<any) {
+    shouldReparse = shouldReparse || backrefDenied.some(function (ref: any) {
       return ref <= closedCaptureCounter;
     });
     if (shouldReparse) {

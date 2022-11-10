@@ -150,7 +150,7 @@ function Utf7IMAPEncoder(options: Utf7IMAP,  codec: IMAPCodec) {
     this.base64AccumIdx = 0;
 }
 
-Utf7IMAPEncoder.prototype.write = function(str: ) {
+Utf7IMAPEncoder.prototype.write = function(str: any) {
     var inBase64 = this.inBase64,
         base64Accum = this.base64Accum,
         base64AccumIdx = this.base64AccumIdx,

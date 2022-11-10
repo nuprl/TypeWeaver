@@ -152,7 +152,7 @@ function hasDestroy (stream: Stream) {
  * @private
  */
 
-function isEventEmitter (val: ) {
+function isEventEmitter (val: any) {
   return val instanceof EventEmitter
 }
 

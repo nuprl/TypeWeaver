@@ -13,7 +13,7 @@ jQuery.each( { Height: "height", Width: "width" }, function( name: string,  type
 	}, function( defaultExtra: any,  funcName : string) {
 
 		// Margin is only for outerHeight, outerWidth
-		jQuery.fn[ funcName ] = function( margin: ) {,  value : ) {
+		jQuery.fn[ funcName ] = function( margin: any,  value : any) {
 			var chainable = arguments.length && ( defaultExtra || typeof margin !== "boolean" ),
 				extra = defaultExtra || ( margin === true || value === true ? "margin" : "border" );
 

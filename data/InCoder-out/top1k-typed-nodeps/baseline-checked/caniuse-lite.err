@@ -1,0 +1,130 @@
+check-mdn-bcd.ts(1,9): error TS2451: Cannot redeclare block-scoped variable 'writeFile'.
+check-mdn-bcd.ts(2,9): error TS2451: Cannot redeclare block-scoped variable 'get'.
+check-mdn-bcd.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'pkg'.
+check.ts(1,9): error TS2451: Cannot redeclare block-scoped variable 'writeFile'.
+check.ts(2,9): error TS2451: Cannot redeclare block-scoped variable 'get'.
+check.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'pkg'.
+commit.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'pkg'.
+consumer.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'features'.
+copy-mdn.ts(8,49): error TS2304: Cannot find name 'Browser'.
+copy-mdn.ts(40,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+copy-mdn.ts(44,56): error TS2339: Property 'includes' does not exist on type 'never'.
+copy-mdn.ts(45,33): error TS2339: Property 'version_added' does not exist on type 'never'.
+copy-mdn.ts(49,16): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+copy-mdn.ts(49,46): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+copy-mdn.ts(56,45): error TS2367: This condition will always return 'false' since the types 'number' and 'boolean' have no overlap.
+copy-mdn.ts(59,35): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+copy-mdn.ts(59,64): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+copy-mdn.ts(75,19): error TS2339: Property 'spec_url' does not exist on type 'number[]'.
+copy-mdn.ts(80,29): error TS2339: Property 'support' does not exist on type 'number[]'.
+copy-mdn.ts(188,7): error TS2451: Cannot redeclare block-scoped variable 'features'.
+copy-mdn.ts(192,3): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number[]'.
+copy-mdn.ts(198,3): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number[]'.
+copy-mdn.ts(207,3): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number[]'.
+copy-mdn.ts(213,3): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number[]'.
+copy-mdn.ts(222,3): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number[]'.
+copy-mdn.ts(231,3): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number[]'.
+copy-mdn.ts(240,3): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number[]'.
+copy-mdn.ts(249,3): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number[]'.
+copy-mdn.ts(258,3): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number[]'.
+copy-mdn.ts(267,3): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number[]'.
+copy-mdn.ts(276,3): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number[]'.
+dist/unpacker/agents.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'browsers'.
+dist/unpacker/agents.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'versions'.
+dist/unpacker/agents.ts(18,12): error TS2339: Property 'usage_global' does not exist on type '{}'.
+dist/unpacker/agents.ts(20,12): error TS2339: Property 'versions' does not exist on type '{}'.
+dist/unpacker/agents.ts(29,12): error TS2339: Property 'prefix_exceptions' does not exist on type '{}'.
+dist/unpacker/agents.ts(31,12): error TS2339: Property 'browser' does not exist on type '{}'.
+dist/unpacker/agents.ts(33,12): error TS2339: Property 'release_date' does not exist on type '{}'.
+dist/unpacker/agents.ts(42,12): error TS2339: Property 'prefix' does not exist on type '{}'.
+dist/unpacker/feature.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'statuses'.
+dist/unpacker/feature.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'supported'.
+dist/unpacker/feature.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'browsers'.
+dist/unpacker/feature.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'versions'.
+dist/unpacker/feature.ts(10,32): error TS2304: Cannot find name 'Cipher'.
+dist/unpacker/feature.ts(30,44): error TS2339: Property 'B' does not exist on type 'Uint8Array'.
+dist/unpacker/feature.ts(30,62): error TS2339: Property 'C' does not exist on type 'Uint8Array'.
+dist/unpacker/feature.ts(31,12): error TS2551: Property 'stats' does not exist on type '{ status: any; title: any; }'. Did you mean 'status'?
+dist/unpacker/feature.ts(31,39): error TS2339: Property 'A' does not exist on type 'Uint8Array'.
+dist/unpacker/feature.ts(32,26): error TS2339: Property 'A' does not exist on type 'Uint8Array'.
+dist/unpacker/region.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'browsers'.
+src/lib/base62.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'sum'.
+src/lib/base62.ts(6,10): error TS2451: Cannot redeclare block-scoped variable 'encode'.
+src/lib/base62.ts(16,25): error TS2304: Cannot find name 'ase62'.
+src/lib/generateCode.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 't'.
+src/lib/generateCode.ts(4,10): error TS2451: Cannot redeclare block-scoped variable 'generateCode'.
+src/lib/generateCode.ts(4,42): error TS2304: Cannot find name 'ProgramStatement'.
+src/lib/getContents.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+src/lib/getContents.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+src/lib/moduleExports.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 't'.
+src/lib/moduleExports.ts(3,10): error TS2451: Cannot redeclare block-scoped variable 'moduleExports'.
+src/lib/moduleExports.ts(3,36): error TS2304: Cannot find name 'Expression'.
+src/lib/runTasks.ts(1,33): error TS2304: Cannot find name 'Task'.
+src/lib/runTasks.ts(11,43): error TS2304: Cannot find name 'Task'.
+src/lib/stringifyObject.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 't'.
+src/lib/stringifyObject.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'generateCode'.
+src/lib/stringifyObject.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'moduleExports'.
+src/packer/agents.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+src/packer/agents.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+src/packer/agents.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'stringifyObject'.
+src/packer/agents.ts(6,9): error TS2451: Cannot redeclare block-scoped variable 'encode'.
+src/packer/agents.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'fromEntries'.
+src/packer/agents.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'invertObj'.
+src/packer/agents.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'browsers'.
+src/packer/agents.ts(12,31): error TS2304: Cannot find name 'Agent'.
+src/packer/agents.ts(12,51): error TS2304: Cannot find name 'Version'.
+src/packer/agents.ts(12,75): error TS2304: Cannot find name 'FullAgent'.
+src/packer/agents.ts(38,13): error TS2339: Property 'D' does not exist on type '{ A: any; B: any; C: any; E: any; F: any; }'.
+src/packer/agents.ts(51,38): error TS2304: Cannot find name 'Agent'.
+src/packer/browsers.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+src/packer/browsers.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+src/packer/browsers.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'stringifyObject'.
+src/packer/browsers.ts(7,9): error TS2451: Cannot redeclare block-scoped variable 'encode'.
+src/packer/browsers.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'fromEntries'.
+src/packer/browsers.ts(10,32): error TS2304: Cannot find name 'IGetBrowsersRequest'.
+src/packer/feature.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+src/packer/feature.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+src/packer/feature.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 't'.
+src/packer/feature.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'generateCode'.
+src/packer/feature.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'getContentsFactory'.
+src/packer/feature.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'moduleExports'.
+src/packer/feature.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'stringifyObject'.
+src/packer/feature.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'statuses'.
+src/packer/feature.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'supported'.
+src/packer/feature.ts(11,7): error TS2451: Cannot redeclare block-scoped variable 'fromEntries'.
+src/packer/feature.ts(12,7): error TS2451: Cannot redeclare block-scoped variable 'invertObj'.
+src/packer/feature.ts(13,7): error TS2451: Cannot redeclare block-scoped variable 'parseDecimal'.
+src/packer/feature.ts(14,7): error TS2451: Cannot redeclare block-scoped variable 'sum'.
+src/packer/feature.ts(15,7): error TS2451: Cannot redeclare block-scoped variable 'browsers'.
+src/packer/feature.ts(16,7): error TS2451: Cannot redeclare block-scoped variable 'versions'.
+src/packer/feature.ts(18,7): error TS2451: Cannot redeclare block-scoped variable 'browsersInverted'.
+src/packer/feature.ts(22,7): error TS2451: Cannot redeclare block-scoped variable 'base'.
+src/packer/feature.ts(27,7): error TS2451: Cannot redeclare block-scoped variable 'getContents'.
+src/packer/feature.ts(32,33): error TS2304: Cannot find name 'Feature'.
+src/packer/feature.ts(42,35): error TS2304: Cannot find name 'SupportData'.
+src/packer/feature.ts(60,14): error TS2339: Property 'A' does not exist on type '{}'.
+src/packer/feature.ts(71,24): error TS2538: Type 'unknown' cannot be used as an index type.
+src/packer/feature.ts(72,21): error TS2538: Type 'unknown' cannot be used as an index type.
+src/packer/feature.ts(74,21): error TS2538: Type 'unknown' cannot be used as an index type.
+src/packer/feature.ts(84,14): error TS2339: Property 'B' does not exist on type '{}'.
+src/packer/feature.ts(85,14): error TS2339: Property 'C' does not exist on type '{}'.
+src/packer/index.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+src/packer/index.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+src/packer/region.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+src/packer/region.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+src/packer/region.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'getContentsFactory'.
+src/packer/region.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'stringifyObject'.
+src/packer/region.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'fromEntries'.
+src/packer/region.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'invertObj'.
+src/packer/region.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'browsers'.
+src/packer/region.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'browsersInverted'.
+src/packer/region.ts(12,7): error TS2451: Cannot redeclare block-scoped variable 'base'.
+src/packer/region.ts(17,7): error TS2451: Cannot redeclare block-scoped variable 'getContents'.
+src/packer/region.ts(32,21): error TS2339: Property '_' does not exist on type '{}'.
+src/packer/region.ts(33,19): error TS2339: Property '_' does not exist on type '{}'.
+src/packer/region.ts(35,19): error TS2339: Property '_' does not exist on type '{}'.
+src/util/fromEntries.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'fromEntries'.
+src/util/invertObj.ts(1,10): error TS2451: Cannot redeclare block-scoped variable 'invertObj'.
+src/util/parseDecimal.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'parseDecimal'.
+src/util/sum.ts(1,10): error TS2451: Cannot redeclare block-scoped variable 'sum'.
+

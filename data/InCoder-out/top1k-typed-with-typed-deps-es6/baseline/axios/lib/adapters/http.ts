@@ -128,7 +128,7 @@ export default function httpAdapter(config: HttpAdapterConfig) {
       emitter.removeAllListeners();
     }
 
-    function done(value: ?Promise<any>,  isRejected: boolean) {
+    function done(value: any,  isRejected: boolean) {
       if (isDone) return;
 
       isDone = true;

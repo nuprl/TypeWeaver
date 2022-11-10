@@ -14,7 +14,7 @@ import eq from '../eq.js'
  *  else `false`.
  */
 
-function isIterateeCall(value: any,  index: number,  object: ?Object) {
+function isIterateeCall(value: any,  index: number,  object: any) {
   if (!isObject(object)) {
     return false
   }

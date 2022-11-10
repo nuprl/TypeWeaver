@@ -16,7 +16,7 @@ export default function normalize(str: string | RegExp) {
 };
 
 
-function replace(str: ,  pattern: |endofmask|>,  replacement: {) {
+function replace(str: any,  pattern: RegExp,  replacement: any) {
   var i, from = 0;
 
   while (str.indexOf(pattern, from) !== -1) {

@@ -1,40 +1,15 @@
-browser.ts(11,5): error TS7034: Variable 'cachedSetTimeout' implicitly has type 'any' in some locations where its type cannot be determined.
-browser.ts(12,5): error TS7034: Variable 'cachedClearTimeout' implicitly has type 'any' in some locations where its type cannot be determined.
-browser.ts(41,9): error TS7005: Variable 'cachedSetTimeout' implicitly has an 'any' type.
-browser.ts(46,10): error TS7005: Variable 'cachedSetTimeout' implicitly has an 'any' type.
-browser.ts(46,53): error TS7005: Variable 'cachedSetTimeout' implicitly has an 'any' type.
-browser.ts(52,16): error TS7005: Variable 'cachedSetTimeout' implicitly has an 'any' type.
-browser.ts(56,20): error TS7005: Variable 'cachedSetTimeout' implicitly has an 'any' type.
-browser.ts(59,20): error TS7005: Variable 'cachedSetTimeout' implicitly has an 'any' type.
-browser.ts(59,42): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser.ts(66,9): error TS7005: Variable 'cachedClearTimeout' implicitly has an 'any' type.
 browser.ts(68,29): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(timeoutId: string | number | Timeout | undefined): void', gave the following error.
-    Argument of type 'Function' is not assignable to parameter of type 'string | number | Timeout | undefined'.
-  Overload 2 of 2, '(id?: number | undefined): void', gave the following error.
+  Overload 1 of 2, '(timeoutId: string | number | Timeout): void', gave the following error.
+    Argument of type 'Function' is not assignable to parameter of type 'string | number | Timeout'.
+  Overload 2 of 2, '(id?: number): void', gave the following error.
     Argument of type 'Function' is not assignable to parameter of type 'number'.
-browser.ts(71,10): error TS7005: Variable 'cachedClearTimeout' implicitly has an 'any' type.
-browser.ts(71,57): error TS7005: Variable 'cachedClearTimeout' implicitly has an 'any' type.
 browser.ts(73,29): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(timeoutId: string | number | Timeout | undefined): void', gave the following error.
-    Argument of type 'Function' is not assignable to parameter of type 'string | number | Timeout | undefined'.
-  Overload 2 of 2, '(id?: number | undefined): void', gave the following error.
+  Overload 1 of 2, '(timeoutId: string | number | Timeout): void', gave the following error.
+    Argument of type 'Function' is not assignable to parameter of type 'string | number | Timeout'.
+  Overload 2 of 2, '(id?: number): void', gave the following error.
     Argument of type 'Function' is not assignable to parameter of type 'number'.
-browser.ts(77,16): error TS7005: Variable 'cachedClearTimeout' implicitly has an 'any' type.
-browser.ts(81,20): error TS7005: Variable 'cachedClearTimeout' implicitly has an 'any' type.
-browser.ts(85,20): error TS7005: Variable 'cachedClearTimeout' implicitly has an 'any' type.
-browser.ts(85,44): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser.ts(92,5): error TS7034: Variable 'queue' implicitly has type 'any[]' in some locations where its type cannot be determined.
-browser.ts(94,5): error TS7034: Variable 'currentQueue' implicitly has type 'any' in some locations where its type cannot be determined.
-browser.ts(98,23): error TS7005: Variable 'currentQueue' implicitly has an 'any' type.
-browser.ts(103,17): error TS7005: Variable 'currentQueue' implicitly has an 'any' type.
-browser.ts(103,37): error TS7005: Variable 'queue' implicitly has an 'any[]' type.
-browser.ts(121,24): error TS7005: Variable 'queue' implicitly has an 'any[]' type.
 browser.ts(136,9): error TS2339: Property 'nextTick' does not exist on type '{}'.
-browser.ts(143,16): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
 browser.ts(150,44): error TS2304: Cannot find name 'T'.
-browser.ts(151,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-browser.ts(152,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 browser.ts(157,9): error TS2339: Property 'title' does not exist on type '{}'.
 browser.ts(158,9): error TS2339: Property 'browser' does not exist on type '{}'.
 browser.ts(159,9): error TS2339: Property 'env' does not exist on type '{}'.

@@ -19,7 +19,7 @@ function processRule(node: RuleNode,  item: RuleItem,  list: ListNode) {
     const nodeCompareMarker = selectors.first.compareMarker;
     const skippedCompareMarkers = {};
 
-    list.nextUntil(item.next, function(next: ,  nextItem: nextIndex) {
+    list.nextUntil(item.next, function(next: any,  nextItem: any) {
         // skip non-ruleset node if safe
         if (next.type !== 'Rule') {
             return unsafeToSkipNode.call(selectors, next);

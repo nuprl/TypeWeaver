@@ -55,7 +55,7 @@ function writeTypesFile(types: TypeScriptService,  path: Path) {
 let standard = {};
 let other = {};
 
-Object.keys(db).sort().forEach(function(k: ) {
+Object.keys(db).sort().forEach(function(k: any) {
   let entry = db[k];
 
   if (entry.extensions) {

@@ -1,24 +1,64 @@
+bench/parser.benchmark.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'benchmark'.
+bench/parser.benchmark.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
+bench/parser.benchmark.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'WebSocket'.
+bench/parser.benchmark.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'Receiver'.
+bench/parser.benchmark.ts(8,28): error TS2339: Property 'Receiver' does not exist on type '{ new (url: string | URL, protocols?: string | string[]): WebSocket; prototype: WebSocket; readonly CLOSED: number; readonly CLOSING: number; readonly CONNECTING: number; readonly OPEN: number; }'.
+bench/parser.benchmark.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'Sender'.
+bench/parser.benchmark.ts(9,26): error TS2339: Property 'Sender' does not exist on type '{ new (url: string | URL, protocols?: string | string[]): WebSocket; prototype: WebSocket; readonly CLOSED: number; readonly CLOSING: number; readonly CONNECTING: number; readonly OPEN: number; }'.
+bench/parser.benchmark.ts(19,36): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
+bench/parser.benchmark.ts(28,23): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
+bench/parser.benchmark.ts(38,7): error TS2451: Cannot redeclare block-scoped variable 'suite'.
+bench/sender.benchmark.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'benchmark'.
+bench/sender.benchmark.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
+bench/sender.benchmark.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'Sender'.
+bench/sender.benchmark.ts(8,22): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
+bench/sender.benchmark.ts(9,22): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
+bench/sender.benchmark.ts(10,22): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
+bench/sender.benchmark.ts(11,22): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
+bench/sender.benchmark.ts(12,22): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
+bench/sender.benchmark.ts(29,7): error TS2451: Cannot redeclare block-scoped variable 'suite'.
+bench/speed.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'http'.
+bench/speed.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'WebSocket'.
+bench/speed.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
+bench/speed.ts(14,29): error TS2339: Property 'Server' does not exist on type '{ new (url: string | URL, protocols?: string | string[]): WebSocket; prototype: WebSocket; readonly CLOSED: number; readonly CLOSING: number; readonly CONNECTING: number; readonly OPEN: number; }'.
+bench/speed.ts(63,42): error TS2345: Argument of type 'number | boolean' is not assignable to parameter of type 'number'.
+  Type 'boolean' is not assignable to type 'number'.
+bench/speed.ts(75,7): error TS2345: Argument of type '{ maxPayload: number; }' is not assignable to parameter of type 'string | string[]'.
+  Object literal may only specify known properties, and 'maxPayload' does not exist in type 'string[]'.
+bench/speed.ts(80,8): error TS2339: Property 'on' does not exist on type 'WebSocket'.
+bench/speed.ts(84,8): error TS2339: Property 'on' does not exist on type 'WebSocket'.
+bench/speed.ts(86,21): error TS2554: Expected 1 arguments, but got 2.
+bench/speed.ts(88,8): error TS2339: Property 'on' does not exist on type 'WebSocket'.
+bench/speed.ts(90,30): error TS2554: Expected 1 arguments, but got 2.
+bench/speed.ts(93,7): error TS2322: Type 'number' is not assignable to type '[number, number]'.
+bench/speed.ts(100,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+bench/speed.ts(101,46): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+bench/speed.ts(112,17): error TS2345: Argument of type '() => any' is not assignable to parameter of type 'number | boolean'.
+examples/express-session-parse/index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'express'.
+examples/express-session-parse/index.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'http'.
+examples/express-session-parse/index.ts(8,9): error TS2451: Cannot redeclare block-scoped variable 'WebSocketServer'.
+examples/express-session-parse/index.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'app'.
+examples/express-session-parse/index.ts(36,7): error TS2339: Property 'session' does not exist on type 'Request'.
+examples/express-session-parse/index.ts(37,7): error TS2339: Property 'send' does not exist on type 'Response'.
+examples/express-session-parse/index.ts(41,30): error TS2339: Property 'session' does not exist on type 'Request'.
+examples/express-session-parse/index.ts(44,11): error TS2339: Property 'session' does not exist on type 'Request'.
+examples/express-session-parse/index.ts(47,14): error TS2339: Property 'send' does not exist on type 'Response'.
+examples/express-session-parse/index.ts(54,7): error TS2451: Cannot redeclare block-scoped variable 'server'.
+examples/express-session-parse/index.ts(59,7): error TS2451: Cannot redeclare block-scoped variable 'wss'.
+examples/express-session-parse/index.ts(61,59): error TS2304: Cannot find name 'Socket'.
+examples/express-session-parse/index.ts(61,74): error TS2304: Cannot find name 'Head'.
+examples/express-session-parse/index.ts(65,18): error TS2339: Property 'session' does not exist on type 'Request'.
+examples/express-session-parse/index.ts(79,36): error TS2552: Cannot find name 'Websocket'. Did you mean 'WebSocket'?
+examples/express-session-parse/index.ts(80,26): error TS2339: Property 'session' does not exist on type 'Request'.
 examples/express-session-parse/public/app.ts(8,33): error TS2304: Cannot find name 'Message'.
-examples/express-session-parse/public/app.ts(9,5): error TS2531: Object is possibly 'null'.
-examples/express-session-parse/public/app.ts(10,5): error TS2531: Object is possibly 'null'.
-examples/express-session-parse/public/app.ts(10,26): error TS2531: Object is possibly 'null'.
-examples/express-session-parse/public/app.ts(19,3): error TS2531: Object is possibly 'null'.
 examples/express-session-parse/public/app.ts(19,9): error TS2339: Property 'onclick' does not exist on type 'Element'.
-examples/express-session-parse/public/app.ts(28,3): error TS2531: Object is possibly 'null'.
 examples/express-session-parse/public/app.ts(28,10): error TS2339: Property 'onclick' does not exist on type 'Element'.
-examples/express-session-parse/public/app.ts(37,7): error TS7034: Variable 'ws' implicitly has type 'any' in some locations where its type cannot be determined.
-examples/express-session-parse/public/app.ts(39,3): error TS2531: Object is possibly 'null'.
 examples/express-session-parse/public/app.ts(39,12): error TS2339: Property 'onclick' does not exist on type 'Element'.
-examples/express-session-parse/public/app.ts(40,9): error TS7005: Variable 'ws' implicitly has an 'any' type.
-examples/express-session-parse/public/app.ts(41,7): error TS7005: Variable 'ws' implicitly has an 'any' type.
-examples/express-session-parse/public/app.ts(41,20): error TS7005: Variable 'ws' implicitly has an 'any' type.
-examples/express-session-parse/public/app.ts(41,32): error TS7005: Variable 'ws' implicitly has an 'any' type.
-examples/express-session-parse/public/app.ts(42,7): error TS7005: Variable 'ws' implicitly has an 'any' type.
-examples/express-session-parse/public/app.ts(58,3): error TS2531: Object is possibly 'null'.
 examples/express-session-parse/public/app.ts(58,16): error TS2339: Property 'onclick' does not exist on type 'Element'.
-examples/express-session-parse/public/app.ts(59,10): error TS7005: Variable 'ws' implicitly has an 'any' type.
-examples/express-session-parse/public/app.ts(64,5): error TS7005: Variable 'ws' implicitly has an 'any' type.
+examples/server-stats/index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'express'.
+examples/server-stats/index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 examples/server-stats/index.ts(7,9): error TS2451: Cannot redeclare block-scoped variable 'WebSocketServer'.
+examples/server-stats/index.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'app'.
 examples/server-stats/index.ts(12,7): error TS2451: Cannot redeclare block-scoped variable 'server'.
 examples/server-stats/index.ts(13,7): error TS2451: Cannot redeclare block-scoped variable 'wss'.
 examples/server-stats/index.ts(17,52): error TS2554: Expected 1 arguments, but got 2.
@@ -30,17 +70,17 @@ examples/ssl.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'serv
 examples/ssl.ts(13,7): error TS2451: Cannot redeclare block-scoped variable 'wss'.
 examples/ssl.ts(16,6): error TS2339: Property 'on' does not exist on type 'WebSocket'.
 examples/ssl.ts(16,42): error TS2304: Cannot find name 'Message'.
-examples/ssl.ts(31,5): error TS2345: Argument of type '{ rejectUnauthorized: boolean; }' is not assignable to parameter of type 'string | string[] | undefined'.
+examples/ssl.ts(31,5): error TS2345: Argument of type '{ rejectUnauthorized: boolean; }' is not assignable to parameter of type 'string | string[]'.
   Object literal may only specify known properties, and 'rejectUnauthorized' does not exist in type 'string[]'.
 examples/ssl.ts(34,6): error TS2339: Property 'on' does not exist on type 'WebSocket'.
 index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'WebSocket'.
-index.ts(5,11): error TS2339: Property 'createWebSocketStream' does not exist on type '{ new (url: string | URL, protocols?: string | string[] | undefined): WebSocket; prototype: WebSocket; readonly CLOSED: number; readonly CLOSING: number; readonly CONNECTING: number; readonly OPEN: number; }'.
-index.ts(6,11): error TS2339: Property 'Server' does not exist on type '{ new (url: string | URL, protocols?: string | string[] | undefined): WebSocket; prototype: WebSocket; readonly CLOSED: number; readonly CLOSING: number; readonly CONNECTING: number; readonly OPEN: number; }'.
-index.ts(7,11): error TS2339: Property 'Receiver' does not exist on type '{ new (url: string | URL, protocols?: string | string[] | undefined): WebSocket; prototype: WebSocket; readonly CLOSED: number; readonly CLOSING: number; readonly CONNECTING: number; readonly OPEN: number; }'.
-index.ts(8,11): error TS2339: Property 'Sender' does not exist on type '{ new (url: string | URL, protocols?: string | string[] | undefined): WebSocket; prototype: WebSocket; readonly CLOSED: number; readonly CLOSING: number; readonly CONNECTING: number; readonly OPEN: number; }'.
-index.ts(10,11): error TS2339: Property 'WebSocket' does not exist on type '{ new (url: string | URL, protocols?: string | string[] | undefined): WebSocket; prototype: WebSocket; readonly CLOSED: number; readonly CLOSING: number; readonly CONNECTING: number; readonly OPEN: number; }'.
-index.ts(11,11): error TS2339: Property 'WebSocketServer' does not exist on type '{ new (url: string | URL, protocols?: string | string[] | undefined): WebSocket; prototype: WebSocket; readonly CLOSED: number; readonly CLOSING: number; readonly CONNECTING: number; readonly OPEN: number; }'.
-index.ts(11,39): error TS2339: Property 'Server' does not exist on type '{ new (url: string | URL, protocols?: string | string[] | undefined): WebSocket; prototype: WebSocket; readonly CLOSED: number; readonly CLOSING: number; readonly CONNECTING: number; readonly OPEN: number; }'.
+index.ts(5,11): error TS2339: Property 'createWebSocketStream' does not exist on type '{ new (url: string | URL, protocols?: string | string[]): WebSocket; prototype: WebSocket; readonly CLOSED: number; readonly CLOSING: number; readonly CONNECTING: number; readonly OPEN: number; }'.
+index.ts(6,11): error TS2339: Property 'Server' does not exist on type '{ new (url: string | URL, protocols?: string | string[]): WebSocket; prototype: WebSocket; readonly CLOSED: number; readonly CLOSING: number; readonly CONNECTING: number; readonly OPEN: number; }'.
+index.ts(7,11): error TS2339: Property 'Receiver' does not exist on type '{ new (url: string | URL, protocols?: string | string[]): WebSocket; prototype: WebSocket; readonly CLOSED: number; readonly CLOSING: number; readonly CONNECTING: number; readonly OPEN: number; }'.
+index.ts(8,11): error TS2339: Property 'Sender' does not exist on type '{ new (url: string | URL, protocols?: string | string[]): WebSocket; prototype: WebSocket; readonly CLOSED: number; readonly CLOSING: number; readonly CONNECTING: number; readonly OPEN: number; }'.
+index.ts(10,11): error TS2339: Property 'WebSocket' does not exist on type '{ new (url: string | URL, protocols?: string | string[]): WebSocket; prototype: WebSocket; readonly CLOSED: number; readonly CLOSING: number; readonly CONNECTING: number; readonly OPEN: number; }'.
+index.ts(11,11): error TS2339: Property 'WebSocketServer' does not exist on type '{ new (url: string | URL, protocols?: string | string[]): WebSocket; prototype: WebSocket; readonly CLOSED: number; readonly CLOSING: number; readonly CONNECTING: number; readonly OPEN: number; }'.
+index.ts(11,39): error TS2339: Property 'Server' does not exist on type '{ new (url: string | URL, protocols?: string | string[]): WebSocket; prototype: WebSocket; readonly CLOSED: number; readonly CLOSING: number; readonly CONNECTING: number; readonly OPEN: number; }'.
 lib/buffer-util.ts(3,9): error TS2451: Cannot redeclare block-scoped variable 'EMPTY_BUFFER'.
 lib/buffer-util.ts(13,10): error TS2451: Cannot redeclare block-scoped variable 'concat'.
 lib/buffer-util.ts(67,10): error TS2451: Cannot redeclare block-scoped variable 'toArrayBuffer'.
@@ -50,129 +90,51 @@ lib/buffer-util.ts(72,14): error TS2339: Property 'buffer' does not exist on typ
 lib/buffer-util.ts(72,31): error TS2339: Property 'byteOffset' does not exist on type 'ArrayBuffer'.
 lib/buffer-util.ts(72,47): error TS2339: Property 'byteOffset' does not exist on type 'ArrayBuffer'.
 lib/buffer-util.ts(83,10): error TS2451: Cannot redeclare block-scoped variable 'toBuffer'.
-lib/buffer-util.ts(84,12): error TS2339: Property 'readOnly' does not exist on type '(data: any) => Buffer'.
-lib/buffer-util.ts(96,14): error TS2339: Property 'readOnly' does not exist on type '(data: any) => Buffer'.
+lib/buffer-util.ts(84,12): error TS2339: Property 'readOnly' does not exist on type '(data: any) => any'.
+lib/buffer-util.ts(96,14): error TS2339: Property 'readOnly' does not exist on type '(data: any) => any'.
 lib/buffer-util.ts(121,47): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Buffer'.
 lib/event-target.ts(3,9): error TS2451: Cannot redeclare block-scoped variable 'kForOnEventAttribute'.
 lib/event-target.ts(3,31): error TS2451: Cannot redeclare block-scoped variable 'kListener'.
 lib/event-target.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'kError'.
 lib/event-target.ts(17,7): error TS2300: Duplicate identifier 'Event'.
-lib/event-target.ts(24,15): error TS7006: Parameter 'type' implicitly has an 'any' type.
-lib/event-target.ts(25,5): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'Event'.
-  Property '[kTarget]' does not exist on type 'Event'.
-lib/event-target.ts(26,5): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'Event'.
-  Property '[kType]' does not exist on type 'Event'.
-lib/event-target.ts(33,12): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'Event'.
-  Property '[kTarget]' does not exist on type 'Event'.
-lib/event-target.ts(40,12): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'Event'.
-  Property '[kType]' does not exist on type 'Event'.
 lib/event-target.ts(52,7): error TS2300: Duplicate identifier 'CloseEvent'.
-lib/event-target.ts(66,15): error TS7006: Parameter 'type' implicitly has an 'any' type.
-lib/event-target.ts(69,5): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'CloseEvent'.
-  Property '[kCode]' does not exist on type 'CloseEvent'.
 lib/event-target.ts(69,27): error TS2339: Property 'code' does not exist on type '{}'.
 lib/event-target.ts(69,60): error TS2339: Property 'code' does not exist on type '{}'.
-lib/event-target.ts(70,5): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'CloseEvent'.
-  Property '[kReason]' does not exist on type 'CloseEvent'.
 lib/event-target.ts(70,29): error TS2339: Property 'reason' does not exist on type '{}'.
 lib/event-target.ts(70,65): error TS2339: Property 'reason' does not exist on type '{}'.
-lib/event-target.ts(71,5): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'CloseEvent'.
-  Property '[kWasClean]' does not exist on type 'CloseEvent'.
 lib/event-target.ts(71,31): error TS2339: Property 'wasClean' does not exist on type '{}'.
 lib/event-target.ts(71,72): error TS2339: Property 'wasClean' does not exist on type '{}'.
-lib/event-target.ts(78,12): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'CloseEvent'.
-  Property '[kCode]' does not exist on type 'CloseEvent'.
-lib/event-target.ts(85,12): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'CloseEvent'.
-  Property '[kReason]' does not exist on type 'CloseEvent'.
-lib/event-target.ts(92,12): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'CloseEvent'.
-  Property '[kWasClean]' does not exist on type 'CloseEvent'.
 lib/event-target.ts(105,7): error TS2300: Duplicate identifier 'ErrorEvent'.
-lib/event-target.ts(115,15): error TS7006: Parameter 'type' implicitly has an 'any' type.
-lib/event-target.ts(118,5): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'ErrorEvent'.
-  Property '[kError]' does not exist on type 'ErrorEvent'.
 lib/event-target.ts(118,28): error TS2339: Property 'error' does not exist on type '{}'.
 lib/event-target.ts(118,65): error TS2339: Property 'error' does not exist on type '{}'.
-lib/event-target.ts(119,5): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'ErrorEvent'.
-  Property '[kMessage]' does not exist on type 'ErrorEvent'.
 lib/event-target.ts(119,30): error TS2339: Property 'message' does not exist on type '{}'.
 lib/event-target.ts(119,67): error TS2339: Property 'message' does not exist on type '{}'.
-lib/event-target.ts(126,12): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'ErrorEvent'.
-  Property '[kError]' does not exist on type 'ErrorEvent'.
-lib/event-target.ts(133,12): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'ErrorEvent'.
-  Property '[kMessage]' does not exist on type 'ErrorEvent'.
 lib/event-target.ts(145,7): error TS2300: Duplicate identifier 'MessageEvent'.
-lib/event-target.ts(154,15): error TS7006: Parameter 'type' implicitly has an 'any' type.
-lib/event-target.ts(157,5): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'MessageEvent'.
-  Property '[kData]' does not exist on type 'MessageEvent'.
 lib/event-target.ts(157,27): error TS2339: Property 'data' does not exist on type '{}'.
 lib/event-target.ts(157,63): error TS2339: Property 'data' does not exist on type '{}'.
-lib/event-target.ts(164,12): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'MessageEvent'.
-  Property '[kData]' does not exist on type 'MessageEvent'.
 lib/event-target.ts(176,7): error TS2451: Cannot redeclare block-scoped variable 'EventTarget'.
-lib/event-target.ts(189,20): error TS7006: Parameter 'type' implicitly has an 'any' type.
-lib/event-target.ts(189,26): error TS7006: Parameter 'listener' implicitly has an 'any' type.
 lib/event-target.ts(193,42): error TS2552: Cannot find name 'MessageEventData'. Did you mean 'MessageEventInit'?
-lib/event-target.ts(198,9): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'MessageEvent<any>'.
-  Property '[kTarget]' does not exist on type 'MessageEvent<any>'.
-lib/event-target.ts(198,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/event-target.ts(199,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/event-target.ts(206,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/event-target.ts(206,49): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/event-target.ts(209,9): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'CloseEvent'.
-  Property '[kTarget]' does not exist on type 'CloseEvent'.
-lib/event-target.ts(209,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/event-target.ts(210,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/event-target.ts(219,9): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'ErrorEvent'.
-  Property '[kTarget]' does not exist on type 'ErrorEvent'.
-lib/event-target.ts(219,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/event-target.ts(220,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/event-target.ts(226,9): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'Event'.
-  Property '[kTarget]' does not exist on type 'Event'.
-lib/event-target.ts(226,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/event-target.ts(227,23): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/event-target.ts(233,5): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '((data: MessageEventData, isBinary: boolean) => void) | ((code: number, message: string | Error) => void) | ((error: Error) => void)'.
-lib/event-target.ts(233,39): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{}'.
-lib/event-target.ts(234,5): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '((data: MessageEventData, isBinary: boolean) => void) | ((code: number, message: string | Error) => void) | ((error: Error) => void)'.
 lib/event-target.ts(236,17): error TS2339: Property 'once' does not exist on type '{}'.
-lib/event-target.ts(237,12): error TS2339: Property 'once' does not exist on type '{ addEventListener(type: any, listener: any, options?: {}): void; removeEventListener(type: any, handler: any): void; }'.
-lib/event-target.ts(239,12): error TS2339: Property 'on' does not exist on type '{ addEventListener(type: any, listener: any, options?: {}): void; removeEventListener(type: any, handler: any): void; }'.
-lib/event-target.ts(250,23): error TS7006: Parameter 'type' implicitly has an 'any' type.
-lib/event-target.ts(250,29): error TS7006: Parameter 'handler' implicitly has an 'any' type.
-lib/event-target.ts(251,33): error TS2339: Property 'listeners' does not exist on type '{ addEventListener(type: any, listener: any, options?: {}): void; removeEventListener(type: any, handler: any): void; }'.
-lib/event-target.ts(253,14): error TS2339: Property 'removeListener' does not exist on type '{ addEventListener(type: any, listener: any, options?: {}): void; removeEventListener(type: any, handler: any): void; }'.
 lib/extension.ts(3,9): error TS2451: Cannot redeclare block-scoped variable 'tokenChars'.
 lib/extension.ts(27,10): error TS2451: Cannot redeclare block-scoped variable 'parse'.
 lib/extension.ts(27,24): error TS2304: Cannot find name 'Header'.
 lib/extension.ts(179,10): error TS2451: Cannot redeclare block-scoped variable 'format'.
 lib/extension.ts(179,29): error TS2304: Cannot find name 'Extension'.
-lib/extension.ts(182,39): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-lib/extension.ts(185,15): error TS7006: Parameter 'params' implicitly has an 'any' type.
-lib/extension.ts(192,25): error TS7006: Parameter 'v' implicitly has an 'any' type.
 lib/limiter.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'Limiter'.
-lib/limiter.ts(17,15): error TS7006: Parameter 'concurrency' implicitly has an 'any' type.
-lib/limiter.ts(18,5): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'Limiter'.
-  Property '[kDone]' does not exist on type 'Limiter'.
 lib/limiter.ts(19,12): error TS2339: Property 'pending' does not exist on type 'Limiter'.
 lib/limiter.ts(22,10): error TS2339: Property 'concurrency' does not exist on type 'Limiter'.
 lib/limiter.ts(23,10): error TS2339: Property 'jobs' does not exist on type 'Limiter'.
 lib/limiter.ts(24,10): error TS2339: Property 'pending' does not exist on type 'Limiter'.
-lib/limiter.ts(33,7): error TS7006: Parameter 'job' implicitly has an 'any' type.
 lib/limiter.ts(34,10): error TS2339: Property 'jobs' does not exist on type 'Limiter'.
 lib/limiter.ts(44,14): error TS2339: Property 'pending' does not exist on type 'Limiter'.
 lib/limiter.ts(44,31): error TS2339: Property 'concurrency' does not exist on type 'Limiter'.
 lib/limiter.ts(46,14): error TS2339: Property 'jobs' does not exist on type 'Limiter'.
 lib/limiter.ts(47,24): error TS2339: Property 'jobs' does not exist on type 'Limiter'.
 lib/limiter.ts(49,12): error TS2339: Property 'pending' does not exist on type 'Limiter'.
-lib/limiter.ts(50,11): error TS7053: Element implicitly has an 'any' type because expression of type 'unique symbol' can't be used to index type 'Limiter'.
-  Property '[kDone]' does not exist on type 'Limiter'.
 lib/permessage-deflate.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'Limiter'.
 lib/permessage-deflate.ts(7,9): error TS2451: Cannot redeclare block-scoped variable 'kStatusCode'.
 lib/permessage-deflate.ts(14,7): error TS2451: Cannot redeclare block-scoped variable 'kError'.
-lib/permessage-deflate.ts(23,5): error TS7034: Variable 'zlibLimiter' implicitly has type 'any' in some locations where its type cannot be determined.
 lib/permessage-deflate.ts(28,7): error TS2451: Cannot redeclare block-scoped variable 'PerMessageDeflate'.
-lib/permessage-deflate.ts(53,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/permessage-deflate.ts(53,24): error TS7006: Parameter 'isServer' implicitly has an 'any' type.
-lib/permessage-deflate.ts(53,34): error TS7006: Parameter 'maxPayload' implicitly has an 'any' type.
 lib/permessage-deflate.ts(54,10): error TS2339: Property '_maxPayload' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(55,10): error TS2339: Property '_options' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(56,10): error TS2339: Property '_threshold' does not exist on type 'PerMessageDeflate'.
@@ -182,7 +144,6 @@ lib/permessage-deflate.ts(58,10): error TS2339: Property '_isServer' does not ex
 lib/permessage-deflate.ts(59,10): error TS2339: Property '_deflate' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(60,10): error TS2339: Property '_inflate' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(62,10): error TS2339: Property 'params' does not exist on type 'PerMessageDeflate'.
-lib/permessage-deflate.ts(64,10): error TS7005: Variable 'zlibLimiter' implicitly has an 'any' type.
 lib/permessage-deflate.ts(66,14): error TS2339: Property '_options' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(67,18): error TS2339: Property '_options' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(89,14): error TS2339: Property '_options' does not exist on type 'PerMessageDeflate'.
@@ -197,7 +158,6 @@ lib/permessage-deflate.ts(99,14): error TS2339: Property 'client_max_window_bits
 lib/permessage-deflate.ts(99,44): error TS2339: Property '_options' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(100,21): error TS2339: Property '_options' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(101,14): error TS2339: Property 'client_max_window_bits' does not exist on type '{}'.
-lib/permessage-deflate.ts(114,10): error TS7006: Parameter 'configurations' implicitly has an 'any' type.
 lib/permessage-deflate.ts(117,10): error TS2339: Property 'params' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(117,24): error TS2339: Property '_isServer' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(121,17): error TS2339: Property 'params' does not exist on type 'PerMessageDeflate'.
@@ -208,36 +168,14 @@ lib/permessage-deflate.ts(135,14): error TS2339: Property '_deflate' does not ex
 lib/permessage-deflate.ts(136,29): error TS2339: Property '_deflate' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(138,12): error TS2339: Property '_deflate' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(139,12): error TS2339: Property '_deflate' does not exist on type 'PerMessageDeflate'.
-lib/permessage-deflate.ts(158,18): error TS7006: Parameter 'offers' implicitly has an 'any' type.
 lib/permessage-deflate.ts(159,23): error TS2339: Property '_options' does not exist on type 'PerMessageDeflate'.
-lib/permessage-deflate.ts(160,35): error TS7006: Parameter 'params' implicitly has an 'any' type.
-lib/permessage-deflate.ts(209,18): error TS7006: Parameter 'response' implicitly has an 'any' type.
 lib/permessage-deflate.ts(213,12): error TS2339: Property '_options' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(220,23): error TS2339: Property '_options' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(221,46): error TS2339: Property '_options' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(224,12): error TS2339: Property '_options' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(225,20): error TS2339: Property '_options' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(226,46): error TS2339: Property '_options' does not exist on type 'PerMessageDeflate'.
-lib/permessage-deflate.ts(243,19): error TS7006: Parameter 'configurations' implicitly has an 'any' type.
-lib/permessage-deflate.ts(244,29): error TS7006: Parameter 'params' implicitly has an 'any' type.
 lib/permessage-deflate.ts(263,28): error TS2339: Property '_isServer' does not exist on type 'PerMessageDeflate'.
-lib/permessage-deflate.ts(304,14): error TS7006: Parameter 'data' implicitly has an 'any' type.
-lib/permessage-deflate.ts(304,20): error TS7006: Parameter 'fin' implicitly has an 'any' type.
-lib/permessage-deflate.ts(304,25): error TS7006: Parameter 'callback' implicitly has an 'any' type.
-lib/permessage-deflate.ts(305,5): error TS7005: Variable 'zlibLimiter' implicitly has an 'any' type.
-lib/permessage-deflate.ts(305,22): error TS7006: Parameter 'done' implicitly has an 'any' type.
-lib/permessage-deflate.ts(306,36): error TS7006: Parameter 'err' implicitly has an 'any' type.
-lib/permessage-deflate.ts(306,41): error TS7006: Parameter 'result' implicitly has an 'any' type.
-lib/permessage-deflate.ts(321,12): error TS7006: Parameter 'data' implicitly has an 'any' type.
-lib/permessage-deflate.ts(321,18): error TS7006: Parameter 'fin' implicitly has an 'any' type.
-lib/permessage-deflate.ts(321,23): error TS7006: Parameter 'callback' implicitly has an 'any' type.
-lib/permessage-deflate.ts(322,5): error TS7005: Variable 'zlibLimiter' implicitly has an 'any' type.
-lib/permessage-deflate.ts(322,22): error TS7006: Parameter 'done' implicitly has an 'any' type.
-lib/permessage-deflate.ts(323,34): error TS7006: Parameter 'err' implicitly has an 'any' type.
-lib/permessage-deflate.ts(323,39): error TS7006: Parameter 'result' implicitly has an 'any' type.
-lib/permessage-deflate.ts(338,15): error TS7006: Parameter 'data' implicitly has an 'any' type.
-lib/permessage-deflate.ts(338,21): error TS7006: Parameter 'fin' implicitly has an 'any' type.
-lib/permessage-deflate.ts(338,26): error TS7006: Parameter 'callback' implicitly has an 'any' type.
 lib/permessage-deflate.ts(339,27): error TS2339: Property '_isServer' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(341,15): error TS2339: Property '_inflate' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(344,21): error TS2339: Property 'params' does not exist on type 'PerMessageDeflate'.
@@ -265,9 +203,6 @@ lib/permessage-deflate.ts(383,14): error TS2339: Property '_inflate' does not ex
 lib/permessage-deflate.ts(384,14): error TS2339: Property '_inflate' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(386,25): error TS2339: Property 'params' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(387,16): error TS2339: Property '_inflate' does not exist on type 'PerMessageDeflate'.
-lib/permessage-deflate.ts(403,13): error TS7006: Parameter 'data' implicitly has an 'any' type.
-lib/permessage-deflate.ts(403,19): error TS7006: Parameter 'fin' implicitly has an 'any' type.
-lib/permessage-deflate.ts(403,24): error TS7006: Parameter 'callback' implicitly has an 'any' type.
 lib/permessage-deflate.ts(404,27): error TS2339: Property '_isServer' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(406,15): error TS2339: Property '_deflate' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(409,21): error TS2339: Property 'params' does not exist on type 'PerMessageDeflate'.
@@ -288,21 +223,6 @@ lib/permessage-deflate.ts(448,12): error TS2339: Property '_deflate' does not ex
 lib/permessage-deflate.ts(449,12): error TS2339: Property '_deflate' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(451,23): error TS2339: Property 'params' does not exist on type 'PerMessageDeflate'.
 lib/permessage-deflate.ts(452,14): error TS2339: Property '_deflate' does not exist on type 'PerMessageDeflate'.
-lib/permessage-deflate.ts(469,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/permessage-deflate.ts(470,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/permessage-deflate.ts(480,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/permessage-deflate.ts(483,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/permessage-deflate.ts(484,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/permessage-deflate.ts(484,27): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/permessage-deflate.ts(486,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/permessage-deflate.ts(490,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/permessage-deflate.ts(491,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/permessage-deflate.ts(492,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/permessage-deflate.ts(493,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/permessage-deflate.ts(494,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/permessage-deflate.ts(508,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/permessage-deflate.ts(509,3): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Error'.
-lib/permessage-deflate.ts(510,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/receiver.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'PerMessageDeflate'.
 lib/receiver.ts(7,3): error TS2451: Cannot redeclare block-scoped variable 'BINARY_TYPES'.
 lib/receiver.ts(8,3): error TS2451: Cannot redeclare block-scoped variable 'EMPTY_BUFFER'.
@@ -317,11 +237,6 @@ lib/receiver.ts(45,32): error TS2339: Property 'extensions' does not exist on ty
 lib/receiver.ts(46,32): error TS2339: Property 'isServer' does not exist on type '{}'.
 lib/receiver.ts(47,32): error TS2339: Property 'maxPayload' does not exist on type '{}'.
 lib/receiver.ts(48,42): error TS2339: Property 'skipUTF8Validation' does not exist on type '{}'.
-lib/receiver.ts(78,10): error TS7006: Parameter 'chunk' implicitly has an 'any' type.
-lib/receiver.ts(78,17): error TS7006: Parameter 'encoding' implicitly has an 'any' type.
-lib/receiver.ts(78,27): error TS7006: Parameter 'cb' implicitly has an 'any' type.
-lib/receiver.ts(93,11): error TS7006: Parameter 'n' implicitly has an 'any' type.
-lib/receiver.ts(129,13): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/receiver.ts(179,9): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
 lib/receiver.ts(192,9): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
 lib/receiver.ts(208,11): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
@@ -335,14 +250,8 @@ lib/receiver.ts(292,11): error TS2345: Argument of type 'true' is not assignable
 lib/receiver.ts(302,9): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
 lib/receiver.ts(355,9): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/receiver.ts(379,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-lib/receiver.ts(410,11): error TS7006: Parameter 'cb' implicitly has an 'any' type.
-lib/receiver.ts(456,14): error TS7006: Parameter 'data' implicitly has an 'any' type.
-lib/receiver.ts(456,20): error TS7006: Parameter 'cb' implicitly has an 'any' type.
-lib/receiver.ts(459,52): error TS7006: Parameter 'err' implicitly has an 'any' type.
-lib/receiver.ts(459,57): error TS7006: Parameter 'buf' implicitly has an 'any' type.
 lib/receiver.ts(471,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/receiver.ts(522,13): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
-lib/receiver.ts(542,18): error TS7006: Parameter 'data' implicitly has an 'any' type.
 lib/receiver.ts(553,11): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
 lib/receiver.ts(564,13): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
 lib/receiver.ts(576,13): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
@@ -354,9 +263,6 @@ lib/sender.ts(10,9): error TS2451: Cannot redeclare block-scoped variable 'EMPTY
 lib/sender.ts(11,9): error TS2451: Cannot redeclare block-scoped variable 'isValidStatusCode'.
 lib/sender.ts(12,26): error TS2451: Cannot redeclare block-scoped variable 'toBuffer'.
 lib/sender.ts(20,7): error TS2451: Cannot redeclare block-scoped variable 'Sender'.
-lib/sender.ts(29,15): error TS7006: Parameter 'socket' implicitly has an 'any' type.
-lib/sender.ts(29,23): error TS7006: Parameter 'extensions' implicitly has an 'any' type.
-lib/sender.ts(29,35): error TS7006: Parameter 'generateMask' implicitly has an 'any' type.
 lib/sender.ts(30,10): error TS2339: Property '_extensions' does not exist on type 'Sender'.
 lib/sender.ts(33,12): error TS2339: Property '_generateMask' does not exist on type 'Sender'.
 lib/sender.ts(34,12): error TS2339: Property '_maskBuffer' does not exist on type 'Sender'.
@@ -366,34 +272,19 @@ lib/sender.ts(40,10): error TS2339: Property '_compress' does not exist on type 
 lib/sender.ts(42,10): error TS2339: Property '_bufferedBytes' does not exist on type 'Sender'.
 lib/sender.ts(43,10): error TS2339: Property '_deflating' does not exist on type 'Sender'.
 lib/sender.ts(44,10): error TS2339: Property '_queue' does not exist on type 'Sender'.
-lib/sender.ts(68,16): error TS7006: Parameter 'data' implicitly has an 'any' type.
-lib/sender.ts(68,22): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/sender.ts(156,9): error TS7006: Parameter 'code' implicitly has an 'any' type.
-lib/sender.ts(156,15): error TS7006: Parameter 'data' implicitly has an 'any' type.
-lib/sender.ts(156,21): error TS7006: Parameter 'mask' implicitly has an 'any' type.
-lib/sender.ts(156,27): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/sender.ts(186,26): error TS2339: Property '_generateMask' does not exist on type 'Sender'.
 lib/sender.ts(188,24): error TS2339: Property '_maskBuffer' does not exist on type 'Sender'.
 lib/sender.ts(194,14): error TS2339: Property '_deflating' does not exist on type 'Sender'.
-lib/sender.ts(209,8): error TS7006: Parameter 'data' implicitly has an 'any' type.
-lib/sender.ts(209,14): error TS7006: Parameter 'mask' implicitly has an 'any' type.
-lib/sender.ts(209,20): error TS7006: Parameter 'cb' implicitly has an 'any' type.
-lib/sender.ts(219,27): error TS2339: Property 'readOnly' does not exist on type '(data: any) => Buffer'.
+lib/sender.ts(219,27): error TS2339: Property 'readOnly' does not exist on type '(data: any) => any'.
 lib/sender.ts(229,26): error TS2339: Property '_generateMask' does not exist on type 'Sender'.
 lib/sender.ts(231,24): error TS2339: Property '_maskBuffer' does not exist on type 'Sender'.
 lib/sender.ts(237,14): error TS2339: Property '_deflating' does not exist on type 'Sender'.
-lib/sender.ts(252,8): error TS7006: Parameter 'data' implicitly has an 'any' type.
-lib/sender.ts(252,14): error TS7006: Parameter 'mask' implicitly has an 'any' type.
-lib/sender.ts(252,20): error TS7006: Parameter 'cb' implicitly has an 'any' type.
-lib/sender.ts(262,27): error TS2339: Property 'readOnly' does not exist on type '(data: any) => Buffer'.
+lib/sender.ts(262,27): error TS2339: Property 'readOnly' does not exist on type '(data: any) => any'.
 lib/sender.ts(272,26): error TS2339: Property '_generateMask' does not exist on type 'Sender'.
 lib/sender.ts(274,24): error TS2339: Property '_maskBuffer' does not exist on type 'Sender'.
 lib/sender.ts(280,14): error TS2339: Property '_deflating' does not exist on type 'Sender'.
-lib/sender.ts(303,8): error TS7006: Parameter 'data' implicitly has an 'any' type.
-lib/sender.ts(303,14): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/sender.ts(303,23): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/sender.ts(304,36): error TS2339: Property '_extensions' does not exist on type 'Sender'.
-lib/sender.ts(317,27): error TS2339: Property 'readOnly' does not exist on type '(data: any) => Buffer'.
+lib/sender.ts(317,27): error TS2339: Property 'readOnly' does not exist on type '(data: any) => any'.
 lib/sender.ts(320,14): error TS2339: Property '_firstFragment' does not exist on type 'Sender'.
 lib/sender.ts(321,12): error TS2339: Property '_firstFragment' does not exist on type 'Sender'.
 lib/sender.ts(333,12): error TS2339: Property '_compress' does not exist on type 'Sender'.
@@ -405,15 +296,9 @@ lib/sender.ts(354,49): error TS2339: Property '_compress' does not exist on type
 lib/sender.ts(356,34): error TS2339: Property '_compress' does not exist on type 'Sender'.
 lib/sender.ts(363,30): error TS2339: Property '_generateMask' does not exist on type 'Sender'.
 lib/sender.ts(365,28): error TS2339: Property '_maskBuffer' does not exist on type 'Sender'.
-lib/sender.ts(398,12): error TS7006: Parameter 'data' implicitly has an 'any' type.
-lib/sender.ts(398,18): error TS7006: Parameter 'compress' implicitly has an 'any' type.
-lib/sender.ts(398,28): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/sender.ts(398,37): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/sender.ts(404,36): error TS2339: Property '_extensions' does not exist on type 'Sender'.
 lib/sender.ts(406,10): error TS2339: Property '_bufferedBytes' does not exist on type 'Sender'.
 lib/sender.ts(407,10): error TS2339: Property '_deflating' does not exist on type 'Sender'.
-lib/sender.ts(408,52): error TS7006: Parameter '_' implicitly has an 'any' type.
-lib/sender.ts(408,55): error TS7006: Parameter 'buf' implicitly has an 'any' type.
 lib/sender.ts(409,16): error TS2339: Property '_socket' does not exist on type 'Sender'.
 lib/sender.ts(416,34): error TS2339: Property '_queue' does not exist on type 'Sender'.
 lib/sender.ts(417,31): error TS2339: Property '_queue' does not exist on type 'Sender'.
@@ -423,11 +308,8 @@ lib/sender.ts(440,18): error TS2339: Property '_deflating' does not exist on typ
 lib/sender.ts(440,37): error TS2339: Property '_queue' does not exist on type 'Sender'.
 lib/sender.ts(441,27): error TS2339: Property '_queue' does not exist on type 'Sender'.
 lib/sender.ts(443,12): error TS2339: Property '_bufferedBytes' does not exist on type 'Sender'.
-lib/sender.ts(454,11): error TS7006: Parameter 'params' implicitly has an 'any' type.
 lib/sender.ts(455,10): error TS2339: Property '_bufferedBytes' does not exist on type 'Sender'.
 lib/sender.ts(456,10): error TS2339: Property '_queue' does not exist on type 'Sender'.
-lib/sender.ts(466,13): error TS7006: Parameter 'list' implicitly has an 'any' type.
-lib/sender.ts(466,19): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/sender.ts(468,12): error TS2339: Property '_socket' does not exist on type 'Sender'.
 lib/sender.ts(469,12): error TS2339: Property '_socket' does not exist on type 'Sender'.
 lib/sender.ts(470,12): error TS2339: Property '_socket' does not exist on type 'Sender'.
@@ -435,13 +317,6 @@ lib/sender.ts(471,12): error TS2339: Property '_socket' does not exist on type '
 lib/sender.ts(473,12): error TS2339: Property '_socket' does not exist on type 'Sender'.
 lib/stream.ts(11,10): error TS2393: Duplicate function implementation.
 lib/stream.ts(12,10): error TS2339: Property 'emit' does not exist on type 'WritableStream<any>'.
-lib/stream.ts(21,8): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/stream.ts(21,26): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/stream.ts(22,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/stream.ts(33,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/stream.ts(34,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/stream.ts(35,7): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/stream.ts(37,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/stream.ts(49,57): error TS2552: Cannot find name 'WebSocketOptions'. Did you mean 'WorkletOptions'?
 lib/stream.ts(60,6): error TS2339: Property 'on' does not exist on type 'WebSocket'.
 lib/stream.ts(64,32): error TS2339: Property 'pause' does not exist on type 'WebSocket'.
@@ -474,51 +349,20 @@ lib/websocket-server.ts(15,7): error TS2451: Cannot redeclare block-scoped varia
 lib/websocket-server.ts(16,9): error TS2451: Cannot redeclare block-scoped variable 'GUID'.
 lib/websocket-server.ts(16,15): error TS2451: Cannot redeclare block-scoped variable 'kWebSocket'.
 lib/websocket-server.ts(29,7): error TS2451: Cannot redeclare block-scoped variable 'WebSocketServer'.
-lib/websocket-server.ts(56,15): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/websocket-server.ts(56,24): error TS7006: Parameter 'callback' implicitly has an 'any' type.
-lib/websocket-server.ts(88,41): error TS7006: Parameter 'req' implicitly has an 'any' type.
-lib/websocket-server.ts(88,46): error TS7006: Parameter 'res' implicitly has an 'any' type.
 lib/websocket-server.ts(111,9): error TS2345: Argument of type '{ listening: any; error: any; upgrade: (req: any, socket: any, head: any) => void; }' is not assignable to parameter of type 'Map<string, Function>'.
   Object literal may only specify known properties, and 'listening' does not exist in type 'Map<string, Function>'.
-lib/websocket-server.ts(113,19): error TS7006: Parameter 'req' implicitly has an 'any' type.
-lib/websocket-server.ts(113,24): error TS7006: Parameter 'socket' implicitly has an 'any' type.
-lib/websocket-server.ts(113,32): error TS7006: Parameter 'head' implicitly has an 'any' type.
-lib/websocket-server.ts(154,9): error TS7006: Parameter 'cb' implicitly has an 'any' type.
-lib/websocket-server.ts(209,16): error TS7006: Parameter 'req' implicitly has an 'any' type.
-lib/websocket-server.ts(230,17): error TS7006: Parameter 'req' implicitly has an 'any' type.
-lib/websocket-server.ts(230,22): error TS7006: Parameter 'socket' implicitly has an 'any' type.
-lib/websocket-server.ts(230,30): error TS7006: Parameter 'head' implicitly has an 'any' type.
-lib/websocket-server.ts(230,36): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/websocket-server.ts(261,7): error TS2554: Expected 3-4 arguments, but got 2.
-lib/websocket-server.ts(296,11): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type '{}'.
-  No index signature with a parameter of type 'string' was found on type '{}'.
-lib/websocket-server.ts(318,42): error TS7006: Parameter 'verified' implicitly has an 'any' type.
-lib/websocket-server.ts(318,52): error TS7006: Parameter 'code' implicitly has an 'any' type.
-lib/websocket-server.ts(318,58): error TS7006: Parameter 'message' implicitly has an 'any' type.
-lib/websocket-server.ts(318,67): error TS7006: Parameter 'headers' implicitly has an 'any' type.
 lib/websocket-server.ts(336,52): error TS2554: Expected 3-4 arguments, but got 2.
-lib/websocket-server.ts(356,19): error TS7006: Parameter 'extensions' implicitly has an 'any' type.
-lib/websocket-server.ts(356,31): error TS7006: Parameter 'key' implicitly has an 'any' type.
-lib/websocket-server.ts(356,36): error TS7006: Parameter 'protocols' implicitly has an 'any' type.
-lib/websocket-server.ts(356,47): error TS7006: Parameter 'req' implicitly has an 'any' type.
-lib/websocket-server.ts(356,52): error TS7006: Parameter 'socket' implicitly has an 'any' type.
-lib/websocket-server.ts(356,60): error TS7006: Parameter 'head' implicitly has an 'any' type.
-lib/websocket-server.ts(356,66): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/websocket-server.ts(369,39): error TS2554: Expected 3-4 arguments, but got 2.
 lib/websocket-server.ts(447,31): error TS2304: Cannot find name 'Server'.
-lib/websocket-server.ts(448,58): error TS7052: Element implicitly has an 'any' type because type 'Map<string, Function>' has no index signature. Did you mean to call 'map.get'?
-lib/websocket-server.ts(452,36): error TS7052: Element implicitly has an 'any' type because type 'Map<string, Function>' has no index signature. Did you mean to call 'map.get'?
 lib/websocket-server.ts(463,10): error TS2393: Duplicate function implementation.
 lib/websocket-server.ts(463,28): error TS2304: Cannot find name 'Server'.
 lib/websocket-server.ts(473,10): error TS2393: Duplicate function implementation.
-lib/websocket-server.ts(474,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/websocket-server.ts(486,10): error TS2393: Duplicate function implementation.
 lib/websocket-server.ts(486,33): error TS2304: Cannot find name 'Socket'.
 lib/websocket-server.ts(499,41): error TS2345: Argument of type 'string | Error' is not assignable to parameter of type 'string | ArrayBuffer | SharedArrayBuffer | ArrayBufferView'.
   Type 'Error' is not assignable to type 'string | ArrayBuffer | SharedArrayBuffer | ArrayBufferView'.
 lib/websocket-server.ts(500,5): error TS2698: Spread types may only be created from object types.
-lib/websocket-server.ts(508,30): error TS7053: Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'string | Headers'.
-  No index signature with a parameter of type 'string' was found on type 'string | Headers'.
 lib/websocket-server.ts(526,52): error TS2304: Cannot find name 'Server'.
 lib/websocket-server.ts(526,66): error TS2503: Cannot find namespace 'http'.
 lib/websocket-server.ts(526,97): error TS2503: Cannot find namespace 'net'.
@@ -545,57 +389,31 @@ lib/websocket.ts(30,9): error TS2451: Cannot redeclare block-scoped variable 'fo
 lib/websocket.ts(30,17): error TS2451: Cannot redeclare block-scoped variable 'parse'.
 lib/websocket.ts(31,9): error TS2451: Cannot redeclare block-scoped variable 'toBuffer'.
 lib/websocket.ts(44,7): error TS2300: Duplicate identifier 'WebSocket'.
-lib/websocket.ts(52,15): error TS7006: Parameter 'address' implicitly has an 'any' type.
-lib/websocket.ts(52,24): error TS7006: Parameter 'protocols' implicitly has an 'any' type.
-lib/websocket.ts(52,35): error TS7006: Parameter 'options' implicitly has an 'any' type.
 lib/websocket.ts(85,20): error TS2345: Argument of type 'this' is not assignable to parameter of type 'WebSocket'.
   Type 'WebSocket' is missing the following properties from type 'WebSocket': CLOSED, CLOSING, CONNECTING, OPEN, and 3 more.
-lib/websocket.ts(203,13): error TS7006: Parameter 'socket' implicitly has an 'any' type.
-lib/websocket.ts(203,21): error TS7006: Parameter 'head' implicitly has an 'any' type.
-lib/websocket.ts(203,27): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/websocket.ts(281,9): error TS7006: Parameter 'code' implicitly has an 'any' type.
-lib/websocket.ts(281,15): error TS7006: Parameter 'data' implicitly has an 'any' type.
 lib/websocket.ts(285,29): error TS2345: Argument of type 'this' is not assignable to parameter of type 'WebSocket'.
-lib/websocket.ts(300,54): error TS7006: Parameter 'err' implicitly has an 'any' type.
-lib/websocket.ts(351,8): error TS7006: Parameter 'data' implicitly has an 'any' type.
-lib/websocket.ts(351,14): error TS7006: Parameter 'mask' implicitly has an 'any' type.
-lib/websocket.ts(351,20): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/websocket.ts(367,22): error TS2345: Argument of type 'this' is not assignable to parameter of type 'WebSocket'.
-lib/websocket.ts(383,8): error TS7006: Parameter 'data' implicitly has an 'any' type.
-lib/websocket.ts(383,14): error TS7006: Parameter 'mask' implicitly has an 'any' type.
-lib/websocket.ts(383,20): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/websocket.ts(399,22): error TS2345: Argument of type 'this' is not assignable to parameter of type 'WebSocket'.
-lib/websocket.ts(439,8): error TS7006: Parameter 'data' implicitly has an 'any' type.
-lib/websocket.ts(439,14): error TS7006: Parameter 'options' implicitly has an 'any' type.
-lib/websocket.ts(439,23): error TS7006: Parameter 'cb' implicitly has an 'any' type.
 lib/websocket.ts(452,22): error TS2345: Argument of type 'this' is not assignable to parameter of type 'WebSocket'.
 lib/websocket.ts(480,29): error TS2345: Argument of type 'this' is not assignable to parameter of type 'WebSocket'.
 lib/websocket.ts(666,7): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 lib/websocket.ts(668,15): error TS2551: Property '_url' does not exist on type 'WebSocket'. Did you mean 'url'?
 lib/websocket.ts(676,15): error TS2551: Property '_url' does not exist on type 'WebSocket'. Did you mean 'url'?
 lib/websocket.ts(695,19): error TS2339: Property '_redirects' does not exist on type 'WebSocket'.
-lib/websocket.ts(707,7): error TS7034: Variable 'perMessageDeflate' implicitly has type 'any' in some locations where its type cannot be determined.
-lib/websocket.ts(709,3): error TS2322: Type '(options: tls.ConnectionOptions) => any' is not assignable to type 'undefined'.
-lib/websocket.ts(710,8): error TS2339: Property 'defaultPort' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
-lib/websocket.ts(710,27): error TS2339: Property 'defaultPort' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
-lib/websocket.ts(711,3): error TS2322: Type 'string | 443 | 80' is not assignable to type 'undefined'.
-  Type 'string' is not assignable to type 'undefined'.
-lib/websocket.ts(712,3): error TS2322: Type 'string' is not assignable to type 'undefined'.
-lib/websocket.ts(715,8): error TS2339: Property 'headers' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
-lib/websocket.ts(716,13): error TS2339: Property 'headers' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
-lib/websocket.ts(722,3): error TS2322: Type 'string' is not assignable to type 'undefined'.
-lib/websocket.ts(723,23): error TS2339: Property 'handshakeTimeout' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
-lib/websocket.ts(731,10): error TS2339: Property 'headers' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
-lib/websocket.ts(750,10): error TS2339: Property 'headers' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
+lib/websocket.ts(710,8): error TS2339: Property 'defaultPort' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
+lib/websocket.ts(710,27): error TS2339: Property 'defaultPort' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
+lib/websocket.ts(715,8): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
+lib/websocket.ts(716,13): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
+lib/websocket.ts(723,23): error TS2339: Property 'handshakeTimeout' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
+lib/websocket.ts(731,10): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
+lib/websocket.ts(750,10): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
 lib/websocket.ts(750,56): error TS2339: Property 'join' does not exist on type 'string'.
-lib/websocket.ts(752,12): error TS2339: Property 'origin' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
-lib/websocket.ts(754,12): error TS2339: Property 'headers' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
-lib/websocket.ts(754,51): error TS2339: Property 'origin' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
-lib/websocket.ts(756,12): error TS2339: Property 'headers' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
-lib/websocket.ts(756,34): error TS2339: Property 'origin' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
-lib/websocket.ts(760,10): error TS2339: Property 'auth' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
-lib/websocket.ts(764,19): error TS2532: Object is possibly 'undefined'.
-lib/websocket.ts(770,7): error TS7034: Variable 'req' implicitly has type 'any' in some locations where its type cannot be determined.
+lib/websocket.ts(752,12): error TS2339: Property 'origin' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
+lib/websocket.ts(754,12): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
+lib/websocket.ts(754,51): error TS2339: Property 'origin' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
+lib/websocket.ts(756,12): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
+lib/websocket.ts(756,34): error TS2339: Property 'origin' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
+lib/websocket.ts(760,10): error TS2339: Property 'auth' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
 lib/websocket.ts(773,19): error TS2339: Property '_redirects' does not exist on type 'WebSocket'.
 lib/websocket.ts(774,17): error TS2339: Property '_originalUnixSocket' does not exist on type 'WebSocket'.
 lib/websocket.ts(775,17): error TS2339: Property '_originalSecure' does not exist on type 'WebSocket'.
@@ -608,43 +426,27 @@ lib/websocket.ts(796,43): error TS2339: Property '_originalHostOrSocketPath' doe
 lib/websocket.ts(798,21): error TS2339: Property '_originalUnixSocket' does not exist on type 'WebSocket'.
 lib/websocket.ts(800,40): error TS2339: Property '_originalHostOrSocketPath' does not exist on type 'WebSocket'.
 lib/websocket.ts(802,37): error TS2339: Property '_originalSecure' does not exist on type 'WebSocket'.
-lib/websocket.ts(807,21): error TS2339: Property 'headers' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
-lib/websocket.ts(808,21): error TS2339: Property 'headers' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
-lib/websocket.ts(810,38): error TS2339: Property 'headers' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
-lib/websocket.ts(812,14): error TS2339: Property 'auth' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
-lib/websocket.ts(821,14): error TS2339: Property 'auth' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
+lib/websocket.ts(807,21): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
+lib/websocket.ts(808,21): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
+lib/websocket.ts(810,38): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
+lib/websocket.ts(812,14): error TS2339: Property 'auth' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
+lib/websocket.ts(821,14): error TS2339: Property 'auth' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
 lib/websocket.ts(821,31): error TS2339: Property 'headers' does not exist on type 'object'.
 lib/websocket.ts(822,15): error TS2339: Property 'headers' does not exist on type 'object'.
-lib/websocket.ts(823,37): error TS2339: Property 'auth' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
+lib/websocket.ts(823,37): error TS2339: Property 'auth' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
 lib/websocket.ts(826,21): error TS2339: Property '_req' does not exist on type 'WebSocket'.
 lib/websocket.ts(828,19): error TS2339: Property '_redirects' does not exist on type 'WebSocket'.
 lib/websocket.ts(838,17): error TS2339: Property 'emit' does not exist on type 'WebSocket'.
 lib/websocket.ts(841,21): error TS2339: Property '_req' does not exist on type 'WebSocket'.
-lib/websocket.ts(846,33): error TS7005: Variable 'req' implicitly has an 'any' type.
-lib/websocket.ts(850,20): error TS7006: Parameter 'err' implicitly has an 'any' type.
-lib/websocket.ts(851,9): error TS7005: Variable 'req' implicitly has an 'any' type.
-lib/websocket.ts(851,25): error TS7005: Variable 'req' implicitly has an 'any' type.
 lib/websocket.ts(853,21): error TS2339: Property '_req' does not exist on type 'WebSocket'.
-lib/websocket.ts(857,23): error TS7006: Parameter 'res' implicitly has an 'any' type.
 lib/websocket.ts(867,23): error TS2339: Property '_redirects' does not exist on type 'WebSocket'.
-lib/websocket.ts(868,35): error TS7005: Variable 'req' implicitly has an 'any' type.
-lib/websocket.ts(872,7): error TS7005: Variable 'req' implicitly has an 'any' type.
-lib/websocket.ts(884,31): error TS2345: Argument of type 'URL' is not assignable to parameter of type 'string'.
 lib/websocket.ts(885,27): error TS2339: Property 'emit' does not exist on type 'WebSocket'.
-lib/websocket.ts(885,55): error TS7005: Variable 'req' implicitly has an 'any' type.
-lib/websocket.ts(888,9): error TS7005: Variable 'req' implicitly has an 'any' type.
-lib/websocket.ts(894,22): error TS7006: Parameter 'res' implicitly has an 'any' type.
-lib/websocket.ts(894,27): error TS7006: Parameter 'socket' implicitly has an 'any' type.
-lib/websocket.ts(894,35): error TS7006: Parameter 'head' implicitly has an 'any' type.
 lib/websocket.ts(895,15): error TS2339: Property 'emit' does not exist on type 'WebSocket'.
 lib/websocket.ts(903,21): error TS2339: Property '_req' does not exist on type 'WebSocket'.
 lib/websocket.ts(937,31): error TS2551: Property '_protocol' does not exist on type 'WebSocket'. Did you mean 'protocol'?
-lib/websocket.ts(942,12): error TS7005: Variable 'perMessageDeflate' implicitly has an 'any' type.
-lib/websocket.ts(972,9): error TS7005: Variable 'perMessageDeflate' implicitly has an 'any' type.
 lib/websocket.ts(979,17): error TS2551: Property '_extensions' does not exist on type 'WebSocket'. Did you mean 'extensions'?
-lib/websocket.ts(980,9): error TS7005: Variable 'perMessageDeflate' implicitly has an 'any' type.
 lib/websocket.ts(983,15): error TS2339: Property 'setSocket' does not exist on type 'WebSocket'.
-lib/websocket.ts(984,26): error TS2339: Property 'generateMask' does not exist on type '{ createConnection: undefined; socketPath: undefined; hostname: undefined; protocol: undefined; timeout: undefined; method: string; host: undefined; path: undefined; port: undefined; protocolVersion: number; ... 4 more ...; maxRedirects: number; }'.
+lib/websocket.ts(984,26): error TS2339: Property 'generateMask' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
 lib/websocket.ts(1001,13): error TS2551: Property '_readyState' does not exist on type 'WebSocket'. Did you mean 'readyState'?
 lib/websocket.ts(1002,13): error TS2339: Property 'emit' does not exist on type 'WebSocket'.
 lib/websocket.ts(1003,13): error TS2339: Property 'emitClose' does not exist on type 'WebSocket'.
@@ -661,31 +463,9 @@ lib/websocket.ts(1090,38): error TS2339: Property '_sender' does not exist on ty
 lib/websocket.ts(1091,20): error TS2551: Property '_bufferedAmount' does not exist on type 'WebSocket'. Did you mean 'bufferedAmount'?
 lib/websocket.ts(1110,35): error TS2304: Cannot find name 'Code'.
 lib/websocket.ts(1110,50): error TS2304: Cannot find name 'Reason'.
-lib/websocket.ts(1111,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket.ts(1132,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket.ts(1144,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket.ts(1155,21): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Error'.
-lib/websocket.ts(1167,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket.ts(1178,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket.ts(1188,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/websocket.ts(1200,31): error TS2304: Cannot find name 'Pong'.
-lib/websocket.ts(1201,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/websocket.ts(1211,10): error TS2339: Property 'resume' does not exist on type 'ReadableStream<any>'.
-lib/websocket.ts(1220,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket.ts(1222,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket.ts(1223,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket.ts(1224,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket.ts(1240,6): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket.ts(1250,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket.ts(1272,8): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket.ts(1273,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket.ts(1283,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket.ts(1287,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 lib/websocket.ts(1295,10): error TS2393: Duplicate function implementation.
-lib/websocket.ts(1296,21): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket.ts(1298,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket.ts(1299,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/websocket.ts(1303,5): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(3630,11): error TS2300: Duplicate identifier 'CloseEvent'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(3639,13): error TS2300: Duplicate identifier 'CloseEvent'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(5000,11): error TS2300: Duplicate identifier 'ErrorEvent'.
@@ -702,6 +482,7 @@ lib/websocket.ts(1303,5): error TS2683: 'this' implicitly has type 'any' because
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(16541,11): error TS2451: Cannot redeclare block-scoped variable 'WebSocket'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(16580,13): error TS2300: Duplicate identifier 'WebSocket'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(16580,13): error TS2451: Cannot redeclare block-scoped variable 'WebSocket'.
+../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18084,13): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18102,18): error TS2451: Cannot redeclare block-scoped variable 'addEventListener'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18103,18): error TS2451: Cannot redeclare block-scoped variable 'addEventListener'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18104,18): error TS2451: Cannot redeclare block-scoped variable 'removeEventListener'.

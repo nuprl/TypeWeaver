@@ -239,7 +239,7 @@
         Remove: REMOVE
     };
 
-    function Reference(parent: Reference,  key: string | number | boolean |) {
+    function Reference(parent: Reference,  key: any) {
         this.parent = parent;
         this.key = key;
     }
@@ -342,7 +342,7 @@
 
     // API:
     // notify control skip / break
-    Controller.prototype.notify = function notify(flag: ) {
+    Controller.prototype.notify = function notify(flag: any) {
         this.__state = flag;
     };
 

@@ -41,7 +41,7 @@ function copy (src: any,  dest: any,  opts: any,  cb: Function) {
   })
 }
 
-function checkParentDir (destStat: fs.Stats,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: { flags: 'a',  cb: cb) {
+function checkParentDir (destStat: fs.Stats,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: any,  cb: Function) {
   const destParent = path.dirname(dest)
   pathExists(destParent, (err, dirExists) => {
     if (err) return cb(err)
@@ -81,7 +81,7 @@ function getStats (destStat: Stats,  src: Stats,  dest: Stats,  opts: Stats.Opti
   })
 }
 
-function onFile (srcStat: fs.Stats,  destStat: fs.Stats,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: { flags: 'a',  cb: cb) {
+function onFile (srcStat: fs.Stats,  destStat: fs.Stats,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: any,  cb: Function) {
   if (!destStat) return copyFile(srcStat, src, dest, opts, cb)
   return mayCopyFile(srcStat, src, dest, opts, cb)
 }
@@ -97,7 +97,7 @@ function mayCopyFile (srcStat: fs.Stats,  src: fs.ReadStream,  dest: fs.WriteStr
   } else return cb()
 }
 
-function copyFile (srcStat: fs.Stats,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: { flags: 'a',  cb: cb) {
+function copyFile (srcStat: fs.Stats,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: any,  cb: Function) {
   fs.copyFile(src, dest, err => {
     if (err) return cb(err)
     if (opts.preserveTimestamps) return handleTimestampsAndMode(srcStat.mode, src, dest, cb)
@@ -147,12 +147,12 @@ function setDestTimestamps (src: number,  dest: number,  cb: Function) {
   })
 }
 
-function onDir (srcStat: Stats,  destStat: Stats,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: { flags: 'a',  cb: cb) {
+function onDir (srcStat: Stats,  destStat: Stats,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: any,  cb: Function) {
   if (!destStat) return mkDirAndCopy(srcStat.mode, src, dest, opts, cb)
   return copyDir(src, dest, opts, cb)
 }
 
-function mkDirAndCopy (srcMode: number,  src: string | Buffer,  dest: string | Buffer,  opts: { recursive?: boolean,  cb: Function) {
+function mkDirAndCopy (srcMode: number,  src: string | Buffer,  dest: string | Buffer,  opts: any,  cb: Function) {
   fs.mkdir(dest, err => {
     if (err) return cb(err)
     copyDir(src, dest, opts, err => {

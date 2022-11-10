@@ -369,7 +369,7 @@ jQuery.each( {
 	border: "Width"
 }, function( prefix: string,  suffix : string) {
 	jQuery.cssHooks[ prefix + suffix ] = {
-		expand: function( value : ) {
+		expand: function( value : any) {
 			var i = 0,
 				expanded = {},
 

@@ -17,7 +17,7 @@ export default depd;
  * Create deprecate for namespace in caller.
  */
 
-function depd (namespace: ?) {
+function depd (namespace: any) {
   if (!namespace) {
     throw new TypeError('argument namespace is required')
   }

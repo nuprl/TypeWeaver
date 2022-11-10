@@ -1,42 +1,178 @@
-browser/type-check.ts(314,36): error TS1110: Type expected.
-browser/type-check.ts(533,70): error TS1005: '{' expected.
-browser/type-check.ts(533,71): error TS1128: Declaration or statement expected.
-browser/type-check.ts(533,76): error TS1005: ',' expected.
-browser/type-check.ts(533,88): error TS1005: ',' expected.
-browser/type-check.ts(533,89): error TS1005: ';' expected.
-browser/type-check.ts(540,2): error TS1128: Declaration or statement expected.
-browser/type-check.ts(835,65): error TS1128: Declaration or statement expected.
-browser/type-check.ts(835,82): error TS1005: ';' expected.
-browser/type-check.ts(835,83): error TS1005: ';' expected.
-browser/type-check.ts(838,2): error TS1128: Declaration or statement expected.
-browser/type-check.ts(1107,27): error TS1128: Declaration or statement expected.
-browser/type-check.ts(1107,42): error TS1005: ';' expected.
-browser/type-check.ts(1123,29): error TS1110: Type expected.
-browser/type-check.ts(1123,30): error TS1109: Expression expected.
-browser/type-check.ts(1124,2): error TS1128: Declaration or statement expected.
-browser/type-check.ts(1124,5): error TS1128: Declaration or statement expected.
-browser/type-check.ts(1124,6): error TS1128: Declaration or statement expected.
-browser/type-check.ts(1124,8): error TS1005: ';' expected.
-browser/type-check.ts(1255,8): error TS1005: ';' expected.
-browser/type-check.ts(1410,8): error TS1005: ';' expected.
-browser/type-check.ts(1416,29): error TS1110: Type expected.
-browser/type-check.ts(1419,23): error TS1110: Type expected.
-browser/type-check.ts(1428,23): error TS1110: Type expected.
-browser/type-check.ts(1443,25): error TS1110: Type expected.
-browser/type-check.ts(1454,28): error TS1110: Type expected.
-browser/type-check.ts(1457,25): error TS1110: Type expected.
-browser/type-check.ts(1458,60): error TS1110: Type expected.
-browser/type-check.ts(1458,61): error TS1109: Expression expected.
-browser/type-check.ts(1458,65): error TS1005: ',' expected.
-browser/type-check.ts(1458,77): error TS1109: Expression expected.
-browser/type-check.ts(1458,78): error TS1109: Expression expected.
-browser/type-check.ts(1458,80): error TS1005: ';' expected.
-browser/type-check.ts(1460,4): error TS1128: Declaration or statement expected.
-browser/type-check.ts(1503,8): error TS1005: ';' expected.
-browser/type-check.ts(1682,85): error TS1005: ';' expected.
-browser/type-check.ts(1700,34): error TS1128: Declaration or statement expected.
-browser/type-check.ts(1700,35): error TS1128: Declaration or statement expected.
-browser/type-check.ts(1700,38): error TS1128: Declaration or statement expected.
-browser/type-check.ts(1700,41): error TS1005: ';' expected.
-lib/parse-type.ts(177,36): error TS1110: Type expected.
+browser/type-check.ts(7,1): error TS2739: Type '(i: any, f: any) => any' is missing the following properties from type 'NodeRequire': resolve, cache, extensions, main
+browser/type-check.ts(7,137): error TS2554: Expected 1 arguments, but got 2.
+browser/type-check.ts(7,157): error TS2554: Expected 1 arguments, but got 2.
+browser/type-check.ts(7,215): error TS2339: Property 'code' does not exist on type 'Error'.
+browser/type-check.ts(7,324): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(7,439): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(15,30): error TS2552: Cannot find name 'umber'. Did you mean 'number'?
+browser/type-check.ts(25,30): error TS2304: Cannot find name 'umber'.
+browser/type-check.ts(31,30): error TS2304: Cannot find name 'umber'.
+browser/type-check.ts(37,30): error TS2304: Cannot find name 'terable'.
+browser/type-check.ts(46,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(48,37): error TS2339: Property 'of' does not exist on type 'string'.
+browser/type-check.ts(72,29): error TS2339: Property 'of' does not exist on type 'string'.
+browser/type-check.ts(81,17): error TS2551: Property 'subset' does not exist on type 'string'. Did you mean 'substr'?
+browser/type-check.ts(87,18): error TS2339: Property 'structure' does not exist on type 'string'.
+browser/type-check.ts(98,20): error TS2339: Property 'type' does not exist on type 'Object'.
+browser/type-check.ts(98,46): error TS2339: Property 'structure' does not exist on type 'Object'.
+browser/type-check.ts(103,25): error TS2339: Property 'customTypes' does not exist on type 'Object'.
+browser/type-check.ts(107,100): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
+browser/type-check.ts(115,36): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
+browser/type-check.ts(128,41): error TS2304: Cannot find name 'Type'.
+browser/type-check.ts(158,30): error TS2304: Cannot find name 'TokenStream'.
+browser/type-check.ts(158,48): error TS2304: Cannot find name 'Token'.
+browser/type-check.ts(166,35): error TS2304: Cannot find name 'Token'.
+browser/type-check.ts(166,49): error TS2304: Cannot find name 'Token'.
+browser/type-check.ts(208,34): error TS2304: Cannot find name 'TokenStream'.
+browser/type-check.ts(232,33): error TS2304: Cannot find name 'Token'.
+browser/type-check.ts(314,10): error TS2339: Property 'exports' does not exist on type '[]'.
+browser/type-check.ts(340,9): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(344,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(346,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(350,22): error TS2304: Cannot find name 'Graph'.
+browser/type-check.ts(354,17): error TS2304: Cannot find name 'Graph'.
+browser/type-check.ts(360,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(386,8): error TS2339: Property 'exports' does not exist on type '[]'.
+browser/type-check.ts(396,27): error TS2304: Cannot find name 'ny'.
+browser/type-check.ts(405,10): error TS2554: Expected 1 arguments, but got 0.
+browser/type-check.ts(410,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(418,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(436,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(446,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(456,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(465,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(475,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(502,22): error TS2552: Cannot find name 'rray'. Did you mean 'Array'?
+browser/type-check.ts(519,12): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(533,16): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(541,18): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(544,9): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(544,64): error TS2304: Cannot find name 'T'.
+browser/type-check.ts(552,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(555,11): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(568,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(653,11): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(667,11): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(701,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(711,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(732,12): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(732,52): error TS2304: Cannot find name 'T'.
+browser/type-check.ts(733,27): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(a: T, b: T) => number'.
+  Type 'Function' provides no match for the signature '(a: T, b: T): number'.
+browser/type-check.ts(735,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(795,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(806,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(817,16): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(817,71): error TS2304: Cannot find name 'T'.
+browser/type-check.ts(829,18): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(835,9): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(839,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(846,9): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(849,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(856,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(863,11): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(866,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(878,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(890,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(893,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(893,32): error TS2304: Cannot find name 'UnaryPredicate'.
+browser/type-check.ts(894,24): error TS2554: Expected 0 arguments, but got 2.
+browser/type-check.ts(896,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(896,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(896,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(910,11): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(910,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(910,57): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(973,6): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(980,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(990,15): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1001,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1011,15): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1022,8): error TS2339: Property 'exports' does not exist on type '[]'.
+browser/type-check.ts(1096,27): error TS2304: Cannot find name 'ny'.
+browser/type-check.ts(1105,10): error TS2554: Expected 1 arguments, but got 0.
+browser/type-check.ts(1127,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1127,27): error TS2304: Cannot find name 'umber'.
+browser/type-check.ts(1127,39): error TS2304: Cannot find name 'umber'.
+browser/type-check.ts(1130,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1130,27): error TS2304: Cannot find name 'umber'.
+browser/type-check.ts(1130,39): error TS2304: Cannot find name 'umber'.
+browser/type-check.ts(1146,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1149,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1152,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1155,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1167,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1176,9): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1185,23): error TS2304: Cannot find name 'ny'.
+browser/type-check.ts(1191,19): error TS2552: Cannot find name 'umber'. Did you mean 'number'?
+browser/type-check.ts(1194,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1205,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1208,8): error TS2339: Property 'exports' does not exist on type '[]'.
+browser/type-check.ts(1244,27): error TS2304: Cannot find name 'ny'.
+browser/type-check.ts(1253,10): error TS2554: Expected 1 arguments, but got 0.
+browser/type-check.ts(1289,14): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1316,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1324,7): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1342,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1352,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1362,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1372,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1381,8): error TS2339: Property 'exports' does not exist on type '[]'.
+browser/type-check.ts(1399,27): error TS2304: Cannot find name 'ny'.
+browser/type-check.ts(1408,10): error TS2554: Expected 1 arguments, but got 0.
+browser/type-check.ts(1413,9): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1416,8): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1426,13): error TS2339: Property 'join' does not exist on type 'Iterable<any>'.
+browser/type-check.ts(1435,13): error TS2339: Property 'join' does not exist on type 'Iterable<any>'.
+browser/type-check.ts(1438,13): error TS2339: Property 'split' does not exist on type 'Iterable<any>'.
+browser/type-check.ts(1441,13): error TS2339: Property 'join' does not exist on type 'Iterable<any>'.
+browser/type-check.ts(1446,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1464,33): error TS2339: Property 'length' does not exist on type 'Boolean'.
+browser/type-check.ts(1466,15): error TS2339: Property 'toLowerCase' does not exist on type 'Boolean'.
+browser/type-check.ts(1468,15): error TS2339: Property 'length' does not exist on type 'Boolean'.
+browser/type-check.ts(1471,20): error TS2339: Property 'toLowerCase' does not exist on type 'Boolean'.
+browser/type-check.ts(1475,8): error TS2339: Property 'exports' does not exist on type '[]'.
+browser/type-check.ts(1492,27): error TS2304: Cannot find name 'ny'.
+browser/type-check.ts(1501,10): error TS2554: Expected 1 arguments, but got 0.
+browser/type-check.ts(1506,8): error TS2349: This expression is not callable.
+  Type '[]' has no call signatures.
+browser/type-check.ts(1507,8): error TS2349: This expression is not callable.
+  Type '[]' has no call signatures.
+browser/type-check.ts(1508,7): error TS2349: This expression is not callable.
+  Type '[]' has no call signatures.
+browser/type-check.ts(1509,7): error TS2349: This expression is not callable.
+  Type '[]' has no call signatures.
+browser/type-check.ts(1510,7): error TS2349: This expression is not callable.
+  Type '[]' has no call signatures.
+browser/type-check.ts(1514,10): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1517,13): error TS2554: Expected 2 arguments, but got 1.
+browser/type-check.ts(1668,8): error TS2339: Property 'exports' does not exist on type '[]'.
+browser/type-check.ts(1671,27): error TS2304: Cannot find name 'ny'.
+browser/type-check.ts(1680,10): error TS2554: Expected 1 arguments, but got 0.
+browser/type-check.ts(1687,15): error TS2349: This expression is not callable.
+  Type '[]' has no call signatures.
+browser/type-check.ts(1688,21): error TS2349: This expression is not callable.
+  Type '[]' has no call signatures.
+browser/type-check.ts(1692,10): error TS2339: Property 'exports' does not exist on type '[]'.
+lib/check.ts(8,30): error TS2304: Cannot find name 'umber'.
+lib/check.ts(18,30): error TS2304: Cannot find name 'umber'.
+lib/check.ts(24,30): error TS2304: Cannot find name 'umber'.
+lib/check.ts(30,30): error TS2304: Cannot find name 'terable'.
+lib/check.ts(39,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/check.ts(41,37): error TS2339: Property 'of' does not exist on type 'string'.
+lib/check.ts(65,29): error TS2339: Property 'of' does not exist on type 'string'.
+lib/check.ts(74,17): error TS2551: Property 'subset' does not exist on type 'string'. Did you mean 'substr'?
+lib/check.ts(80,18): error TS2339: Property 'structure' does not exist on type 'string'.
+lib/check.ts(91,20): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/check.ts(91,46): error TS2339: Property 'structure' does not exist on type 'Object'.
+lib/check.ts(96,25): error TS2339: Property 'customTypes' does not exist on type 'Object'.
+lib/check.ts(100,100): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
+lib/check.ts(108,36): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
+lib/check.ts(121,41): error TS2304: Cannot find name 'Type'.
+lib/parse-type.ts(21,30): error TS2304: Cannot find name 'TokenStream'.
+lib/parse-type.ts(21,48): error TS2304: Cannot find name 'Token'.
+lib/parse-type.ts(29,35): error TS2304: Cannot find name 'Token'.
+lib/parse-type.ts(29,49): error TS2304: Cannot find name 'Token'.
+lib/parse-type.ts(71,34): error TS2304: Cannot find name 'TokenStream'.
+lib/parse-type.ts(95,33): error TS2304: Cannot find name 'Token'.
 

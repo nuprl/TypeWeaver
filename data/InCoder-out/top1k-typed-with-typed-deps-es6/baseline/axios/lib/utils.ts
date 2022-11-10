@@ -281,7 +281,7 @@ function forEach(obj: Object,  fn: Function,  {allOwnKeys = false} = {}: Functio
  *
  * @returns {Object} Result of all merge properties
  */
-function merge(/* obj1: ny,  obj2: y,  obj3: ..,  ... */: ject) {
+function merge(/* obj1: ny,  obj2: y,  obj3: any,  ... */: bject) {
   const result = {};
   const assignValue = (val, key) => {
     if (isPlainObject(result[key]) && isPlainObject(val)) {

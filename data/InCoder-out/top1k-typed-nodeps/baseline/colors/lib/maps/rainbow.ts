@@ -1,7 +1,7 @@
 module['exports'] = function(colors: Array<string>) {
   // RoY G BiV
   var rainbowColors = ['red', 'yellow', 'green', 'blue', 'magenta'];
-  return function(letter: endofmask|>,  i: number,  exploded: number) {
+  return function(letter: any,  i: mber,  exploded: Array<any>) {
     if (letter === ' ') {
       return letter;
     } else {

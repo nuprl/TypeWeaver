@@ -10,7 +10,7 @@ let dirs;
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-function listDirs(root: ) {
+function listDirs(root: any) {
   const files = fs.readdirSync(root);
   const dirs = [];
 
@@ -28,7 +28,7 @@ function listDirs(root: ) {
 }
 
 function getIndexTemplate() {
-  const links = dirs.map(function (dir: ) {
+  const links = dirs.map(function (dir: any) {
     const url = '/' + dir;
     return '<li onclick="document.location=\'' + url + '\'"><a href="' + url + '">' + url + '</a></li>';
   });

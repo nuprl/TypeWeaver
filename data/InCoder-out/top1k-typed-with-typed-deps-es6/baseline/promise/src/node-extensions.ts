@@ -32,7 +32,7 @@ function denodeifyWithCount(fn: Function,  argumentCount: number) {
     args.push('a' + i);
   }
   var body = [
-    'return function (' + args.join(': , ': + ')',) + ') {',
+    'return function (' + args.join(': any, ': type) + ') {',
     'var self = this;',
     'return new Promise(function (rs: any,  rj: any) {',
     'var res = fn.call(',
@@ -54,7 +54,7 @@ function denodeifyWithoutCount(fn: Function) {
     args.push('a' + i);
   }
   var body = [
-    'return function (' + args.join(': , ': + ')',) + ') {',
+    'return function (' + args.join(': any, ': type) + ') {',
     'var self = this;',
     'var args;',
     'var argLength = arguments.length;',

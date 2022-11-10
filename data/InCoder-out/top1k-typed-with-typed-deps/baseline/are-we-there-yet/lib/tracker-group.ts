@@ -4,7 +4,7 @@ var TrackerBase = require('./tracker-base.js')
 var Tracker = require('./tracker.js')
 var TrackerStream = require('./tracker-stream.js')
 
-var TrackerGroup = module.exports = function (name: ?string) {
+var TrackerGroup = module.exports = function (name: any) {
   TrackerBase.call(this, name)
   this.parentGroup = null
   this.trackers = []

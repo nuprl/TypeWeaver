@@ -28,7 +28,7 @@ var simpleEncodingRegExp = /^\s*([^\s;]+)\s*(?:;(.*))?$/;
  * @private
  */
 
-function parseAcceptEncoding(accept: ?string): string {) {
+function parseAcceptEncoding(accept: any) {
   var accepts = accept.split(',');
   var hasIdentity = false;
   var minQuality = 1;

@@ -399,7 +399,7 @@ function subjects(selector: Selector,  ancestor: Node) {
  * @param {ESQueryOptions} [options]
  * @returns {external:AST[]}
  */
-function traverse(ast: AST,  selector: Selector,  visitor: Visitor,  options: { selector: Selector,) {
+function traverse(ast: AST,  selector: Selector,  visitor: Visitor,  options: any) {
     if (!selector) { return; }
     const ancestry = [];
     const altSubjects = subjects(selector);

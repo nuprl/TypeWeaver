@@ -123,7 +123,7 @@ uniqueBy = curry$(function(f: Function,  xs: Array<any>){
   }
   return results$;
 });
-fold = foldl = curry$(function(f: Function,  memo: ?Object): Function;,  xs: Array<any>){
+fold = foldl = curry$(function(f: Function,  memo: any,  xs: Array<any>){
   var i$, len$, x;
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
     x = xs[i$];
@@ -425,7 +425,7 @@ scan1 = scanl1 = curry$(function(f: Function,  xs: Array<any>){
   }
   return scan(f, xs[0], xs.slice(1));
 });
-scanr = curry$(function(f: Function,  memo: ?Object): Function {,  xs: Array<any>){
+scanr = curry$(function(f: Function,  memo: any,  xs: Array<any>){
   xs = xs.concat().reverse();
   return scan(f, memo, xs).reverse();
 });
@@ -699,7 +699,7 @@ function curry$(f: Function,  bound: Function){
   };
   return _curry();
 }
-function in$(x: *): bool {,  xs: Array<T>){
+function in$(x: any,  xs: Array<any>){
   var i = -1, l = xs.length >>> 0;
   while (++i < l) if (x === xs[i]) return true;
   return false;
@@ -715,4 +715,4 @@ function compose$() {
     return result;
   };
 }
-function not$(x: |endofmask|>){ return !x; }
+function not$(x: any){ return !x; }

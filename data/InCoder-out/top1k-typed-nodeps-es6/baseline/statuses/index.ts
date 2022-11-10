@@ -90,7 +90,7 @@ function createStatusCodeList (codes: number[]) {
  * @private
  */
 
-function getStatusCode (message: ) {
+function getStatusCode (message: any) {
   var msg = message.toLowerCase()
 
   if (!Object.prototype.hasOwnProperty.call(status.code, msg)) {

@@ -1,14 +1,30 @@
-example/run/bundle.ts(152,28): error TS1110: Type expected.
-example/run/bundle.ts(152,49): error TS1110: Type expected.
-example/run/bundle.ts(152,50): error TS1109: Expression expected.
-example/run/bundle.ts(152,59): error TS1005: ',' expected.
-example/run/bundle.ts(152,68): error TS1005: ',' expected.
-example/run/bundle.ts(152,69): error TS1005: ';' expected.
-example/run/bundle.ts(160,2): error TS1128: Declaration or statement expected.
-example/run/bundle.ts(160,8): error TS1005: ';' expected.
-example/run/bundle.ts(160,11): error TS1128: Declaration or statement expected.
-example/run/bundle.ts(160,12): error TS1128: Declaration or statement expected.
-example/run/bundle.ts(160,13): error TS1128: Declaration or statement expected.
-example/run/bundle.ts(160,16): error TS1128: Declaration or statement expected.
-example/run/bundle.ts(160,20): error TS1005: ';' expected.
+example/run/bundle.ts(1,129): error TS2554: Expected 1 arguments, but got 2.
+example/run/bundle.ts(1,149): error TS2554: Expected 1 arguments, but got 2.
+example/run/bundle.ts(1,207): error TS2339: Property 'code' does not exist on type 'Error'.
+example/run/bundle.ts(1,316): error TS2554: Expected 2 arguments, but got 1.
+example/run/bundle.ts(1,431): error TS2554: Expected 2 arguments, but got 1.
+example/run/bundle.ts(52,67): error TS2749: 'NodeScript' refers to a value, but is being used as a type here. Did you mean 'typeof NodeScript'?
+example/run/bundle.ts(53,43): error TS2350: Only a void function can be called with the 'new' keyword.
+example/run/bundle.ts(57,52): error TS2749: 'Context' refers to a value, but is being used as a type here. Did you mean 'typeof Context'?
+example/run/bundle.ts(63,31): error TS2540: Cannot assign to 'style' because it is a read-only property.
+example/run/bundle.ts(69,21): error TS2339: Property 'eval' does not exist on type 'Window'.
+example/run/bundle.ts(69,45): error TS2339: Property 'execScript' does not exist on type 'Window'.
+example/run/bundle.ts(74,21): error TS2339: Property 'eval' does not exist on type 'Window'.
+example/run/bundle.ts(114,55): error TS2749: 'Script' refers to a value, but is being used as a type here. Did you mean 'typeof Script'?
+example/run/bundle.ts(115,22): error TS2339: Property 'createContext' does not exist on type '(code: any) => any'.
+example/run/bundle.ts(134,40): error TS2749: 'Context' refers to a value, but is being used as a type here. Did you mean 'typeof Context'?
+example/run/bundle.ts(142,32): error TS2339: Property 'createContext' does not exist on type '(code: any) => any'.
+example/run/bundle.ts(142,67): error TS2749: 'Context' refers to a value, but is being used as a type here. Did you mean 'typeof Context'?
+index.ts(51,67): error TS2749: 'NodeScript' refers to a value, but is being used as a type here. Did you mean 'typeof NodeScript'?
+index.ts(52,43): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(56,52): error TS2749: 'Context' refers to a value, but is being used as a type here. Did you mean 'typeof Context'?
+index.ts(62,31): error TS2540: Cannot assign to 'style' because it is a read-only property.
+index.ts(68,21): error TS2339: Property 'eval' does not exist on type 'Window'.
+index.ts(68,45): error TS2339: Property 'execScript' does not exist on type 'Window'.
+index.ts(73,21): error TS2339: Property 'eval' does not exist on type 'Window'.
+index.ts(113,55): error TS2749: 'Script' refers to a value, but is being used as a type here. Did you mean 'typeof Script'?
+index.ts(114,22): error TS2339: Property 'createContext' does not exist on type '(code: any) => any'.
+index.ts(133,40): error TS2749: 'Context' refers to a value, but is being used as a type here. Did you mean 'typeof Context'?
+index.ts(141,32): error TS2339: Property 'createContext' does not exist on type '(code: any) => any'.
+index.ts(141,67): error TS2749: 'Context' refers to a value, but is being used as a type here. Did you mean 'typeof Context'?
 

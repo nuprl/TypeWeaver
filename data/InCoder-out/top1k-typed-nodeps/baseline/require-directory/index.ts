@@ -15,7 +15,7 @@ var fs = require('fs'),
     }
   };
 
-function checkFileInclusion(path: Path,  filename: string | null,  options: { [key: string]: any) {
+function checkFileInclusion(path: Path,  filename: string | null,  options: any) {
   return (
     // verify file has valid extension
     (new RegExp('\\.(' + options.extensions.join('|') + ')$', 'i').test(filename)) &&
@@ -34,7 +34,7 @@ function checkFileInclusion(path: Path,  filename: string | null,  options: { [k
   );
 }
 
-function requireDirectory(m: Module,  path: string,  options: { [key: string]: any) {
+function requireDirectory(m: Module,  path: string,  options: any) {
   var retval = {};
 
   // path is optional
@@ -56,7 +56,7 @@ function requireDirectory(m: Module,  path: string,  options: { [key: string]: a
   path = !path ? dirname(m.filename) : resolve(dirname(m.filename), path);
 
   // get the path of each file in specified directory, append to current tree node, recurse
-  fs.readdirSync(path).forEach(function (filename: ) {
+  fs.readdirSync(path).forEach(function (filename: any) {
     var joined = join(path, filename),
       files,
       key,

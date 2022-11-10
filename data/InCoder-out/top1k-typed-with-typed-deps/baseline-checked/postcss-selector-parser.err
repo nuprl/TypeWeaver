@@ -1,5 +1,435 @@
-src/tokenize.ts(129,40): error TS1128: Declaration or statement expected.
-src/tokenize.ts(129,48): error TS1434: Unexpected keyword or identifier.
-src/tokenize.ts(129,54): error TS1128: Declaration or statement expected.
-src/tokenize.ts(300,2): error TS1005: '}' expected.
+src/index.ts(4,29): error TS2554: Expected 2 arguments, but got 1.
+src/index.ts(8,15): error TS2339: Property '__esModule' does not exist on type '(processor: any) => Processor'.
+src/parser.ts(34,29): error TS2304: Cannot find name 'Token'.
+src/parser.ts(41,27): error TS2304: Cannot find name 'Token'.
+src/parser.ts(62,33): error TS2304: Cannot find name 'Token'.
+src/parser.ts(71,42): error TS2503: Cannot find namespace 'ts'.
+src/parser.ts(71,63): error TS2503: Cannot find namespace 'ts'.
+src/parser.ts(84,22): error TS2538: Type 'String' cannot be used as an index type.
+src/parser.ts(90,14): error TS2538: Type 'String' cannot be used as an index type.
+src/parser.ts(91,18): error TS2339: Property 'raws' does not exist on type 'Object'.
+src/parser.ts(92,18): error TS2339: Property 'raws' does not exist on type 'Object'.
+src/parser.ts(98,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/parser.ts(117,14): error TS2339: Property 'rule' does not exist on type 'Parser'.
+src/parser.ts(118,14): error TS2339: Property 'options' does not exist on type 'Parser'.
+src/parser.ts(119,14): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(121,14): error TS2339: Property 'css' does not exist on type 'Parser'.
+src/parser.ts(121,32): error TS2339: Property 'rule' does not exist on type 'Parser'.
+src/parser.ts(121,57): error TS2339: Property 'rule' does not exist on type 'Parser'.
+src/parser.ts(121,69): error TS2339: Property 'rule' does not exist on type 'Parser'.
+src/parser.ts(123,14): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(124,13): error TS2345: Argument of type '{ css: any; error: (message: any, errorOptions: any) => any; safe: any; }' is not assignable to parameter of type 'string | string[]'.
+  Object literal may only specify known properties, and 'css' does not exist in type 'string[]'.
+src/parser.ts(124,23): error TS2339: Property 'css' does not exist on type 'Parser'.
+src/parser.ts(126,24): error TS2339: Property 'options' does not exist on type 'Parser'.
+src/parser.ts(129,50): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(129,66): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(129,78): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(130,14): error TS2339: Property 'root' does not exist on type 'Parser'.
+src/parser.ts(131,14): error TS2339: Property 'root' does not exist on type 'Parser'.
+src/parser.ts(135,14): error TS2339: Property 'root' does not exist on type 'Parser'.
+src/parser.ts(136,14): error TS2339: Property 'current' does not exist on type 'Parser'.
+src/parser.ts(143,29): error TS2339: Property 'rule' does not exist on type 'Parser'.
+src/parser.ts(146,25): error TS2339: Property 'rule' does not exist on type 'Parser'.
+src/parser.ts(153,14): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(155,18): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(155,34): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(159,18): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(162,25): error TS2554: Expected 3 arguments, but got 2.
+src/parser.ts(177,25): error TS2554: Expected 3 arguments, but got 2.
+src/parser.ts(200,26): error TS2339: Property 'options' does not exist on type 'Parser'.
+src/parser.ts(205,46): error TS2339: Property 'spaces' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(206,26): error TS2339: Property 'spaces' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(211,30): error TS2339: Property 'raws' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(220,26): error TS2339: Property 'operator' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(222,35): error TS2339: Property 'namespace' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(225,30): error TS2339: Property 'spaces' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(230,30): error TS2339: Property 'raws' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(233,26): error TS2339: Property 'namespace' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(233,44): error TS2339: Property 'namespace' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(236,30): error TS2339: Property 'raws' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(245,26): error TS2339: Property 'value' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(247,30): error TS2339: Property 'raws' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(254,26): error TS2339: Property 'operator' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(261,26): error TS2339: Property 'operator' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(269,26): error TS2339: Property 'operator' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(271,34): error TS2339: Property 'namespace' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(271,53): error TS2339: Property 'attribute' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(272,26): error TS2339: Property 'namespace' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(281,27): error TS2339: Property 'operator' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(282,27): error TS2339: Property 'namespace' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(284,26): error TS2339: Property 'namespace' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(286,34): error TS2339: Property 'attribute' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(289,30): error TS2339: Property 'spaces' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(295,30): error TS2339: Property 'raws' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(298,26): error TS2339: Property 'attribute' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(298,44): error TS2339: Property 'attribute' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(301,30): error TS2339: Property 'raws' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(304,35): error TS2339: Property 'value' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(304,49): error TS2339: Property 'value' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(307,41): error TS2339: Property 'value' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(308,26): error TS2339: Property 'value' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(309,26): error TS2339: Property 'quoteMark' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(312,30): error TS2339: Property 'raws' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(317,31): error TS2339: Property 'value' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(317,45): error TS2339: Property 'value' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(317,68): error TS2339: Property 'quoteMark' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(318,30): error TS2339: Property 'insensitive' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(321,34): error TS2339: Property 'raws' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(326,34): error TS2339: Property 'spaces' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(332,34): error TS2339: Property 'raws' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(335,37): error TS2339: Property 'value' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(335,51): error TS2339: Property 'value' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(337,30): error TS2339: Property 'value' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(338,34): error TS2339: Property 'raws' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(339,34): error TS2339: Property 'raws' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(346,27): error TS2339: Property 'attribute' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(346,46): error TS2339: Property 'operator' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(352,22): error TS2339: Property 'value' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(353,22): error TS2339: Property 'quoteMark' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(357,22): error TS2339: Property 'raws' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(362,27): error TS2339: Property 'attribute' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(365,26): error TS2339: Property 'value' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(368,22): error TS2339: Property 'operator' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(368,38): error TS2339: Property 'operator' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(368,54): error TS2339: Property 'operator' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(381,30): error TS2339: Property 'raws' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(386,30): error TS2339: Property 'raws' does not exist on type '{ source: { start: { line: number; column: number; }; end: { line: number; column: number; }; }; sourceIndex: any; }'.
+src/parser.ts(399,14): error TS2554: Expected 2 arguments, but got 1.
+src/parser.ts(400,14): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(417,33): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(419,34): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(425,27): error TS2339: Property 'options' does not exist on type 'Parser'.
+src/parser.ts(431,28): error TS2339: Property 'before' does not exist on type '{}'.
+src/parser.ts(442,25): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(447,30): error TS2339: Property 'options' does not exist on type 'Parser'.
+src/parser.ts(448,39): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(449,38): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(449,50): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(486,40): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(487,21): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(487,50): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(488,21): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(488,50): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(489,21): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(489,50): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(494,45): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(494,57): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(498,22): error TS2339: Property 'value' does not exist on type '{}'.
+src/parser.ts(505,26): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(505,38): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(506,26): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(506,38): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(511,18): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(511,34): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(523,67): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(525,41): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(528,33): error TS2339: Property 'current' does not exist on type 'Parser'.
+src/parser.ts(536,45): error TS2554: Expected 2 arguments, but got 1.
+src/parser.ts(544,36): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(557,18): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(579,24): error TS2339: Property 'before' does not exist on type '{}'.
+src/parser.ts(580,29): error TS2339: Property 'before' does not exist on type '{}'.
+src/parser.ts(582,24): error TS2339: Property 'after' does not exist on type '{}'.
+src/parser.ts(583,29): error TS2339: Property 'after' does not exist on type '{}'.
+src/parser.ts(585,22): error TS2339: Property 'value' does not exist on type '{ spaces: {}; }'.
+src/parser.ts(589,61): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(589,73): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(598,18): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(601,21): error TS2554: Expected 2 arguments, but got 1.
+src/parser.ts(605,18): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(605,36): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(606,18): error TS2339: Property 'root' does not exist on type 'Parser'.
+src/parser.ts(607,18): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(610,14): error TS2339: Property 'current' does not exist on type 'Parser'.
+src/parser.ts(611,72): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(611,84): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(612,14): error TS2339: Property 'current' does not exist on type 'Parser'.
+src/parser.ts(613,14): error TS2339: Property 'current' does not exist on type 'Parser'.
+src/parser.ts(614,14): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(619,14): error TS2554: Expected 2 arguments, but got 1.
+src/parser.ts(624,14): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(628,20): error TS2339: Property 'root' does not exist on type 'Parser'.
+src/parser.ts(638,21): error TS2554: Expected 3 arguments, but got 2.
+src/parser.ts(642,21): error TS2554: Expected 3 arguments, but got 2.
+src/parser.ts(652,18): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(655,18): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(664,22): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(669,14): error TS2554: Expected 2 arguments, but got 1.
+src/parser.ts(674,14): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(678,25): error TS2339: Property 'current' does not exist on type 'Parser'.
+src/parser.ts(680,14): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(682,76): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(682,88): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(683,32): error TS2339: Property 'current' does not exist on type 'Parser'.
+src/parser.ts(685,18): error TS2339: Property 'current' does not exist on type 'Parser'.
+src/parser.ts(686,25): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(686,41): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(694,26): error TS2554: Expected 1 arguments, but got 0.
+src/parser.ts(696,26): error TS2339: Property 'current' does not exist on type 'Parser'.
+src/parser.ts(697,26): error TS2339: Property 'current' does not exist on type 'Parser'.
+src/parser.ts(698,26): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(701,18): error TS2339: Property 'current' does not exist on type 'Parser'.
+src/parser.ts(708,25): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(708,41): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(717,22): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(722,22): error TS2554: Expected 2 arguments, but got 1.
+src/parser.ts(735,25): error TS2554: Expected 3 arguments, but got 2.
+src/parser.ts(744,18): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(747,25): error TS2554: Expected 3 arguments, but got 2.
+src/parser.ts(747,75): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(752,22): error TS2554: Expected 2 arguments, but got 1.
+src/parser.ts(768,25): error TS2554: Expected 3 arguments, but got 2.
+src/parser.ts(776,18): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(779,19): error TS2339: Property 'current' does not exist on type 'Parser'.
+src/parser.ts(781,18): error TS2551: Property 'spaces' does not exist on type 'Parser'. Did you mean 'space'?
+src/parser.ts(782,18): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(784,18): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(784,37): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(788,18): error TS2339: Property 'current' does not exist on type 'Parser'.
+src/parser.ts(789,18): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(797,14): error TS2554: Expected 2 arguments, but got 1.
+src/parser.ts(802,14): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(808,18): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(817,14): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(827,18): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(834,26): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(852,37): error TS2554: Expected 0 arguments, but got 1.
+src/parser.ts(895,14): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(901,18): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(904,21): error TS2554: Expected 2 arguments, but got 1.
+src/parser.ts(908,21): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(908,37): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(911,14): error TS2339: Property 'current' does not exist on type 'Parser'.
+src/parser.ts(912,21): error TS2339: Property 'root' does not exist on type 'Parser'.
+src/parser.ts(938,18): error TS2554: Expected 1 arguments, but got 0.
+src/parser.ts(947,18): error TS2554: Expected 1 arguments, but got 0.
+src/parser.ts(992,21): error TS2339: Property 'options' does not exist on type 'Parser'.
+src/parser.ts(996,21): error TS2339: Property 'options' does not exist on type 'Parser'.
+src/parser.ts(1000,18): error TS2339: Property 'options' does not exist on type 'Parser'.
+src/parser.ts(1019,27): error TS2339: Property 'options' does not exist on type 'Parser'.
+src/parser.ts(1020,26): error TS2551: Property 'spaces' does not exist on type 'Parser'. Did you mean 'space'?
+src/parser.ts(1020,41): error TS2551: Property 'spaces' does not exist on type 'Parser'. Did you mean 'space'?
+src/parser.ts(1027,18): error TS2551: Property 'spaces' does not exist on type 'Parser'. Did you mean 'space'?
+src/parser.ts(1028,39): error TS2551: Property 'spaces' does not exist on type 'Parser'. Did you mean 'space'?
+src/parser.ts(1029,18): error TS2551: Property 'spaces' does not exist on type 'Parser'. Did you mean 'space'?
+src/parser.ts(1031,21): error TS2339: Property 'current' does not exist on type 'Parser'.
+src/parser.ts(1035,21): error TS2339: Property 'css' does not exist on type 'Parser'.
+src/parser.ts(1039,21): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(1039,33): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(1043,21): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(1043,33): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(1047,21): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(1047,33): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(1054,53): error TS2339: Property 'position' does not exist on type 'Parser'.
+src/parser.ts(1056,38): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/parser.ts(1057,46): error TS2339: Property 'tokens' does not exist on type 'Parser'.
+src/processor.ts(5,14): error TS2339: Property 'func' does not exist on type 'Processor'.
+src/processor.ts(6,14): error TS2339: Property 'funcRes' does not exist on type 'Processor'.
+src/processor.ts(7,14): error TS2339: Property 'options' does not exist on type 'Processor'.
+src/processor.ts(11,45): error TS2339: Property 'options' does not exist on type 'Processor'.
+src/processor.ts(20,45): error TS2339: Property 'options' does not exist on type 'Processor'.
+src/processor.ts(30,23): error TS2339: Property 'root' does not exist on type 'Parser'.
+src/processor.ts(43,38): error TS2339: Property 'func' does not exist on type 'Processor'.
+src/processor.ts(60,30): error TS2339: Property 'func' does not exist on type 'Processor'.
+src/processor.ts(65,21): error TS2339: Property 'updateSelector' does not exist on type '{}'.
+src/processor.ts(80,63): error TS2339: Property 'root' does not exist on type 'unknown'.
+src/processor.ts(102,63): error TS2339: Property 'transform' does not exist on type 'unknown'.
+src/processor.ts(125,38): error TS2339: Property 'string' does not exist on type 'unknown'.
+src/processor.ts(125,55): error TS2339: Property 'root' does not exist on type 'unknown'.
+src/selectors/attribute.ts(24,23): error TS2339: Property 'match' does not exist on type 'string | number'.
+  Property 'match' does not exist on type 'number'.
+src/selectors/attribute.ts(29,23): error TS2345: Argument of type 'string | number' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
+src/selectors/attribute.ts(66,14): error TS2339: Property 'type' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(67,14): error TS2339: Property 'raws' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(67,26): error TS2339: Property 'raws' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(68,36): error TS2339: Property 'raws' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(74,14): error TS2339: Property '_constructed' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(101,35): error TS2551: Property '_value' does not exist on type 'Attribute'. Did you mean 'value'?
+src/selectors/attribute.ts(115,14): error TS2551: Property '_value' does not exist on type 'Attribute'. Did you mean 'value'?
+src/selectors/attribute.ts(116,14): error TS2551: Property '_quoteMark' does not exist on type 'Attribute'. Did you mean 'quoteMark'?
+src/selectors/attribute.ts(197,21): error TS2551: Property '_quoteMark' does not exist on type 'Attribute'. Did you mean 'quoteMark'?
+src/selectors/attribute.ts(208,19): error TS2339: Property '_constructed' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(209,18): error TS2551: Property '_quoteMark' does not exist on type 'Attribute'. Did you mean 'quoteMark'?
+src/selectors/attribute.ts(212,18): error TS2551: Property '_quoteMark' does not exist on type 'Attribute'. Did you mean 'quoteMark'?
+src/selectors/attribute.ts(213,18): error TS2551: Property '_quoteMark' does not exist on type 'Attribute'. Did you mean 'quoteMark'?
+src/selectors/attribute.ts(219,36): error TS2551: Property '_value' does not exist on type 'Attribute'. Did you mean 'value'?
+src/selectors/attribute.ts(220,31): error TS2551: Property '_value' does not exist on type 'Attribute'. Did you mean 'value'?
+src/selectors/attribute.ts(221,22): error TS2339: Property 'raws' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(222,29): error TS2339: Property 'raws' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(225,18): error TS2339: Property 'raws' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(230,40): error TS2339: Property 'raws' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(234,21): error TS2339: Property 'insensitive' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(238,21): error TS2551: Property '_value' does not exist on type 'Attribute'. Did you mean 'value'?
+src/selectors/attribute.ts(254,18): error TS2339: Property '_constructed' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(263,36): error TS2551: Property '_value' does not exist on type 'Attribute'. Did you mean 'value'?
+src/selectors/attribute.ts(263,65): error TS2551: Property '_quoteMark' does not exist on type 'Attribute'. Did you mean 'quoteMark'?
+src/selectors/attribute.ts(266,18): error TS2551: Property '_value' does not exist on type 'Attribute'. Did you mean 'value'?
+src/selectors/attribute.ts(267,18): error TS2551: Property '_quoteMark' does not exist on type 'Attribute'. Did you mean 'quoteMark'?
+src/selectors/attribute.ts(270,18): error TS2551: Property '_value' does not exist on type 'Attribute'. Did you mean 'value'?
+src/selectors/attribute.ts(275,21): error TS2551: Property '_attribute' does not exist on type 'Attribute'. Did you mean 'attribute'?
+src/selectors/attribute.ts(280,14): error TS2551: Property '_attribute' does not exist on type 'Attribute'. Did you mean 'attribute'?
+src/selectors/attribute.ts(284,18): error TS2339: Property '_constructed' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(287,22): error TS2339: Property 'raws' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(289,29): error TS2339: Property 'raws' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(296,27): error TS2339: Property 'spaces' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(297,31): error TS2339: Property 'raws' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(297,51): error TS2339: Property 'raws' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(362,26): error TS2339: Property 'insensitive' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(375,18): error TS2339: Property 'operator' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(381,35): error TS2339: Property 'before' does not exist on type 'string[]'.
+src/selectors/attribute.ts(382,31): error TS2339: Property 'spaces' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(382,52): error TS2339: Property 'spaces' does not exist on type 'Attribute'.
+src/selectors/attribute.ts(384,32): error TS2339: Property 'before' does not exist on type 'string[]'.
+src/selectors/attribute.ts(399,5): error TS2464: A computed property name must be of type 'string', 'number', 'symbol', or 'any'.
+src/selectors/attribute.ts(403,26): error TS2339: Property 'before' does not exist on type 'string[]'.
+src/selectors/attribute.ts(403,58): error TS2339: Property 'after' does not exist on type 'string[]'.
+src/selectors/className.ts(9,14): error TS2339: Property 'type' does not exist on type 'ClassName'.
+src/selectors/className.ts(10,14): error TS2339: Property '_constructed' does not exist on type 'ClassName'.
+src/selectors/className.ts(14,18): error TS2339: Property '_constructed' does not exist on type 'ClassName'.
+src/selectors/className.ts(18,22): error TS2339: Property 'raws' does not exist on type 'ClassName'.
+src/selectors/className.ts(19,29): error TS2339: Property 'raws' does not exist on type 'ClassName'.
+src/selectors/className.ts(20,29): error TS2339: Property 'raws' does not exist on type 'ClassName'.
+src/selectors/className.ts(23,14): error TS2551: Property '_value' does not exist on type 'ClassName'. Did you mean 'value'?
+src/selectors/className.ts(27,21): error TS2551: Property '_value' does not exist on type 'ClassName'. Did you mean 'value'?
+src/selectors/combinator.ts(7,14): error TS2339: Property 'type' does not exist on type 'Combinator'.
+src/selectors/comment.ts(7,14): error TS2339: Property 'type' does not exist on type 'Comment'.
+src/selectors/container.ts(7,19): error TS2339: Property 'nodes' does not exist on type 'Container'.
+src/selectors/container.ts(8,18): error TS2339: Property 'nodes' does not exist on type 'Container'.
+src/selectors/container.ts(14,14): error TS2339: Property 'nodes' does not exist on type 'Container'.
+src/selectors/container.ts(20,14): error TS2339: Property 'nodes' does not exist on type 'Container'.
+src/selectors/container.ts(25,21): error TS2339: Property 'nodes' does not exist on type 'Container'.
+src/selectors/container.ts(32,21): error TS2339: Property 'nodes' does not exist on type 'Container'.
+src/selectors/container.ts(44,21): error TS2339: Property 'nodes' does not exist on type 'Container'.
+src/selectors/container.ts(50,14): error TS2339: Property 'nodes' does not exist on type 'Container'.
+src/selectors/container.ts(53,30): error TS2551: Property 'indexes' does not exist on type 'Container'. Did you mean 'index'?
+src/selectors/container.ts(54,26): error TS2551: Property 'indexes' does not exist on type 'Container'. Did you mean 'index'?
+src/selectors/container.ts(56,22): error TS2551: Property 'indexes' does not exist on type 'Container'. Did you mean 'index'?
+src/selectors/container.ts(64,31): error TS2339: Property 'nodes' does not exist on type 'Container'.
+src/selectors/container.ts(67,14): error TS2339: Property 'nodes' does not exist on type 'Container'.
+src/selectors/container.ts(78,14): error TS2339: Property 'nodes' does not exist on type 'Container'.
+src/selectors/container.ts(83,30): error TS2551: Property 'indexes' does not exist on type 'Container'. Did you mean 'index'?
+src/selectors/container.ts(84,26): error TS2551: Property 'indexes' does not exist on type 'Container'. Did you mean 'index'?
+src/selectors/container.ts(86,22): error TS2551: Property 'indexes' does not exist on type 'Container'. Did you mean 'index'?
+src/selectors/container.ts(96,14): error TS2339: Property 'nodes' does not exist on type 'Container'.
+src/selectors/container.ts(101,30): error TS2551: Property 'indexes' does not exist on type 'Container'. Did you mean 'index'?
+src/selectors/container.ts(102,26): error TS2551: Property 'indexes' does not exist on type 'Container'. Did you mean 'index'?
+src/selectors/container.ts(104,22): error TS2551: Property 'indexes' does not exist on type 'Container'. Did you mean 'index'?
+src/selectors/container.ts(151,18): error TS2339: Property 'source' does not exist on type 'Container'.
+src/selectors/container.ts(151,32): error TS2339: Property 'source' does not exist on type 'Container'.
+src/selectors/container.ts(152,18): error TS2339: Property 'source' does not exist on type 'Container'.
+src/selectors/container.ts(152,36): error TS2339: Property 'source' does not exist on type 'Container'.
+src/selectors/container.ts(153,32): error TS2339: Property 'source' does not exist on type 'Container'.
+src/selectors/container.ts(158,19): error TS2339: Property 'lastEach' does not exist on type 'Container'.
+src/selectors/container.ts(159,18): error TS2339: Property 'lastEach' does not exist on type 'Container'.
+src/selectors/container.ts(161,19): error TS2551: Property 'indexes' does not exist on type 'Container'. Did you mean 'index'?
+src/selectors/container.ts(162,18): error TS2551: Property 'indexes' does not exist on type 'Container'. Did you mean 'index'?
+src/selectors/container.ts(165,14): error TS2339: Property 'lastEach' does not exist on type 'Container'.
+src/selectors/container.ts(166,23): error TS2339: Property 'lastEach' does not exist on type 'Container'.
+src/selectors/container.ts(167,14): error TS2551: Property 'indexes' does not exist on type 'Container'. Did you mean 'index'?
+src/selectors/container.ts(174,21): error TS2551: Property 'indexes' does not exist on type 'Container'. Did you mean 'index'?
+src/selectors/container.ts(175,26): error TS2551: Property 'indexes' does not exist on type 'Container'. Did you mean 'index'?
+src/selectors/container.ts(181,18): error TS2551: Property 'indexes' does not exist on type 'Container'. Did you mean 'index'?
+src/selectors/container.ts(184,21): error TS2551: Property 'indexes' does not exist on type 'Container'. Did you mean 'index'?
+src/selectors/container.ts(293,21): error TS2339: Property 'nodes' does not exist on type 'Container'.
+src/selectors/container.ts(297,21): error TS2339: Property 'nodes' does not exist on type 'Container'.
+src/selectors/container.ts(301,21): error TS2339: Property 'nodes' does not exist on type 'Container'.
+src/selectors/container.ts(305,21): error TS2339: Property 'nodes' does not exist on type 'Container'.
+src/selectors/container.ts(309,21): error TS2339: Property 'nodes' does not exist on type 'Container'.
+src/selectors/container.ts(313,21): error TS2339: Property 'nodes' does not exist on type 'Container'.
+src/selectors/guards.ts(32,54): error TS2339: Property 'type' does not exist on type 'Node'.
+src/selectors/guards.ts(36,33): error TS2339: Property 'type' does not exist on type 'Node'.
+src/selectors/guards.ts(54,20): error TS2339: Property 'value' does not exist on type 'Node'.
+src/selectors/guards.ts(56,21): error TS2339: Property 'value' does not exist on type 'Node'.
+src/selectors/guards.ts(57,22): error TS2339: Property 'value' does not exist on type 'Node'.
+src/selectors/guards.ts(58,22): error TS2339: Property 'value' does not exist on type 'Node'.
+src/selectors/guards.ts(59,22): error TS2339: Property 'value' does not exist on type 'Node'.
+src/selectors/guards.ts(60,22): error TS2339: Property 'value' does not exist on type 'Node'.
+src/selectors/guards.ts(68,36): error TS2339: Property 'walk' does not exist on type 'Node'.
+src/selectors/id.ts(7,14): error TS2339: Property 'type' does not exist on type 'ID'.
+src/selectors/namespace.ts(7,21): error TS2551: Property '_namespace' does not exist on type 'Namespace'. Did you mean 'namespace'?
+src/selectors/namespace.ts(11,18): error TS2551: Property '_namespace' does not exist on type 'Namespace'. Did you mean 'namespace'?
+src/selectors/namespace.ts(12,22): error TS2339: Property 'raws' does not exist on type 'Namespace'.
+src/selectors/namespace.ts(13,29): error TS2339: Property 'raws' does not exist on type 'Namespace'.
+src/selectors/namespace.ts(19,14): error TS2551: Property '_namespace' does not exist on type 'Namespace'. Did you mean 'namespace'?
+src/selectors/namespace.ts(22,18): error TS2339: Property 'raws' does not exist on type 'Namespace'.
+src/selectors/namespace.ts(23,25): error TS2339: Property 'raws' does not exist on type 'Namespace'.
+src/selectors/namespace.ts(24,25): error TS2339: Property 'raws' does not exist on type 'Namespace'.
+src/selectors/namespace.ts(28,21): error TS2551: Property '_namespace' does not exist on type 'Namespace'. Did you mean 'namespace'?
+src/selectors/nesting.ts(7,14): error TS2339: Property 'type' does not exist on type 'Nesting'.
+src/selectors/nesting.ts(8,14): error TS2339: Property 'value' does not exist on type 'Nesting'.
+src/selectors/node.ts(34,14): error TS2339: Property 'spaces' does not exist on type 'Node'.
+src/selectors/node.ts(34,28): error TS2339: Property 'spaces' does not exist on type 'Node'.
+src/selectors/node.ts(35,14): error TS2339: Property 'spaces' does not exist on type 'Node'.
+src/selectors/node.ts(35,35): error TS2339: Property 'spaces' does not exist on type 'Node'.
+src/selectors/node.ts(36,14): error TS2339: Property 'spaces' does not exist on type 'Node'.
+src/selectors/node.ts(36,34): error TS2339: Property 'spaces' does not exist on type 'Node'.
+src/selectors/node.ts(40,18): error TS2339: Property 'parent' does not exist on type 'Node'.
+src/selectors/node.ts(41,18): error TS2339: Property 'parent' does not exist on type 'Node'.
+src/selectors/node.ts(43,14): error TS2339: Property 'parent' does not exist on type 'Node'.
+src/selectors/node.ts(48,18): error TS2339: Property 'parent' does not exist on type 'Node'.
+src/selectors/node.ts(50,22): error TS2339: Property 'parent' does not exist on type 'Node'.
+src/selectors/node.ts(58,21): error TS2339: Property 'parent' does not exist on type 'Node'.
+src/selectors/node.ts(58,36): error TS2339: Property 'parent' does not exist on type 'Node'.
+src/selectors/node.ts(62,21): error TS2339: Property 'parent' does not exist on type 'Node'.
+src/selectors/node.ts(62,36): error TS2339: Property 'parent' does not exist on type 'Node'.
+src/selectors/node.ts(66,22): error TS2554: Expected 2 arguments, but got 1.
+src/selectors/node.ts(83,19): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/node.ts(84,18): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/node.ts(87,36): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/node.ts(90,18): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/node.ts(92,25): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/node.ts(105,19): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/node.ts(106,18): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/node.ts(109,14): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/node.ts(121,18): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/node.ts(122,25): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/node.ts(132,18): error TS2339: Property 'source' does not exist on type 'Node'.
+src/selectors/node.ts(132,33): error TS2339: Property 'source' does not exist on type 'Node'.
+src/selectors/node.ts(132,54): error TS2339: Property 'source' does not exist on type 'Node'.
+src/selectors/node.ts(133,22): error TS2339: Property 'source' does not exist on type 'Node'.
+src/selectors/node.ts(136,22): error TS2339: Property 'source' does not exist on type 'Node'.
+src/selectors/node.ts(139,22): error TS2339: Property 'source' does not exist on type 'Node'.
+src/selectors/node.ts(139,57): error TS2339: Property 'source' does not exist on type 'Node'.
+src/selectors/node.ts(142,22): error TS2339: Property 'source' does not exist on type 'Node'.
+src/selectors/node.ts(142,55): error TS2339: Property 'source' does not exist on type 'Node'.
+src/selectors/node.ts(151,22): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/node.ts(151,35): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/node.ts(155,29): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/node.ts(155,42): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/node.ts(155,62): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/node.ts(157,29): error TS2339: Property 'spaces' does not exist on type 'Node'.
+src/selectors/node.ts(157,44): error TS2339: Property 'spaces' does not exist on type 'Node'.
+src/selectors/node.ts(164,14): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/node.ts(168,29): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/node.ts(168,42): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/node.ts(168,62): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/node.ts(170,29): error TS2339: Property 'spaces' does not exist on type 'Node'.
+src/selectors/node.ts(177,14): error TS2339: Property 'raws' does not exist on type 'Node'.
+src/selectors/pseudo.ts(7,14): error TS2339: Property 'type' does not exist on type 'Pseudo'.
+src/selectors/root.ts(7,14): error TS2339: Property 'type' does not exist on type 'Root'.
+src/selectors/root.ts(15,21): error TS2339: Property 'trailingComma' does not exist on type 'Root'.
+src/selectors/root.ts(19,18): error TS2551: Property '_error' does not exist on type 'Root'. Did you mean 'error'?
+src/selectors/root.ts(20,25): error TS2551: Property '_error' does not exist on type 'Root'. Did you mean 'error'?
+src/selectors/root.ts(27,14): error TS2551: Property '_error' does not exist on type 'Root'. Did you mean 'error'?
+src/selectors/selector.ts(7,14): error TS2339: Property 'type' does not exist on type 'Selector'.
+src/selectors/string.ts(7,14): error TS2339: Property 'type' does not exist on type 'String'.
+src/selectors/tag.ts(7,14): error TS2339: Property 'type' does not exist on type 'Tag'.
+src/selectors/universal.ts(7,14): error TS2339: Property 'type' does not exist on type 'Universal'.
+src/selectors/universal.ts(8,14): error TS2339: Property 'value' does not exist on type 'Universal'.
+src/tokenize.ts(108,28): error TS2339: Property 'css' does not exist on type 'string | string[]'.
+  Property 'css' does not exist on type 'string'.
+src/tokenize.ts(130,20): error TS2339: Property 'safe' does not exist on type 'string | string[]'.
+  Property 'safe' does not exist on type 'string'.
+src/tokenize.ts(134,25): error TS2339: Property 'error' does not exist on type 'string | string[]'.
+  Property 'error' does not exist on type 'string'.
+src/tokenize.ts(243,41): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
+src/util/ensureObject.ts(1,44): error TS2552: Cannot find name 'bject'. Did you mean 'object'?
+src/util/ensureObject.ts(1,62): error TS2304: Cannot find name 'ny'.
+src/util/getProp.ts(1,39): error TS2304: Cannot find name 'ny'.
+src/util/getProp.ts(1,54): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
+src/util/unesc.ts(10,23): error TS2339: Property 'toLowerCase' does not exist on type 'string | number'.
+  Property 'toLowerCase' does not exist on type 'number'.
+src/util/unesc.ts(58,17): error TS2365: Operator '+=' cannot be applied to types 'number' and 'string | number'.
 

@@ -226,7 +226,7 @@ lp.parseBlock = function() {
   return this.finishNode(node, "BlockStatement")
 }
 
-lp.parseFor = function(node: Node,  init: ?Function) {
+lp.parseFor = function(node: Node,  init: any) {
   node.init = init
   node.test = node.update = null
   if (this.eat(tt.semi) && this.tok.type !== tt.semi) node.test = this.parseExpression()
@@ -237,7 +237,7 @@ lp.parseFor = function(node: Node,  init: ?Function) {
   return this.finishNode(node, "ForStatement")
 }
 
-lp.parseForIn = function(node: Node,  init: ?Node) {
+lp.parseForIn = function(node: Node,  init: any) {
   let type = this.tok.type === tt._in ? "ForInStatement" : "ForOfStatement"
   this.next()
   node.left = init
@@ -267,7 +267,7 @@ lp.parseVar = function(node: Node,  noIn: Boolean,  kind: Kind) {
   return this.finishNode(node, "VariableDeclaration")
 }
 
-lp.parseClass = function(isStatement: ?boolean, statement:) {
+lp.parseClass = function(isStatement: any) {
   let node = this.startNode()
   this.next()
   if (this.tok.type === tt.name) node.id = this.parseIdent()

@@ -11,7 +11,7 @@
  * fromEntries([['a', 1], ['b', 2]])
  * // => { 'a': 1, 'b': 2 }
  */
-function fromEntries(pairs: Array<[string, string]) {
+function fromEntries(pairs: any) {
   const result = {}
   if (pairs == null) {
     return result

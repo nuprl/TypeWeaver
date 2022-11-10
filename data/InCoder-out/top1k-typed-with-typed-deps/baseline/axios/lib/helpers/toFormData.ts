@@ -55,7 +55,7 @@ function isFlatArray(arr: Array<any>) {
   return utils.isArray(arr) && !arr.some(isVisitable);
 }
 
-const predicates = utils.toFlatObject(utils, {}, null, function filter(prop: ) {
+const predicates = utils.toFlatObject(utils, {}, null, function filter(prop: any) {
   return /^is[A-Z]/.test(prop);
 });
 

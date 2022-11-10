@@ -1,91 +1,19 @@
+examples/async_pi_estimate/addon.ts(9,19): error TS2307: Cannot find module './build/Release/addon' or its corresponding type declarations.
+examples/async_pi_estimate/addon.ts(48,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+examples/async_pi_estimate/addon.ts(48,41): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 tools/1to2.ts(10,23): error TS2307: Cannot find module 'commander' or its corresponding type declarations.
-tools/1to2.ts(22,5): error TS7034: Variable 'groups' implicitly has type 'any[]' in some locations where its type cannot be determined.
-tools/1to2.ts(24,1): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(path: PathOrFileDescriptor, options: ({ encoding?: null | undefined; flag?: string | undefined; } & Abortable) | null | undefined, callback: (err: ErrnoException | null, data: Buffer) => void): void', gave the following error.
-    Type '"utf8"' has no properties in common with type '{ encoding?: null | undefined; flag?: string | undefined; } & Abortable'.
-  Overload 2 of 4, '(path: PathOrFileDescriptor, options: BufferEncoding | ({ encoding: BufferEncoding; flag?: string | undefined; } & Abortable), callback: (err: ErrnoException | null, data: string) => void): void', gave the following error.
-    Argument of type '(err: Error, data: any) => void' is not assignable to parameter of type '(err: ErrnoException | null, data: string) => void'.
-      Types of parameters 'err' and 'err' are incompatible.
-        Type 'ErrnoException | null' is not assignable to type 'Error'.
-          Type 'null' is not assignable to type 'Error'.
-  Overload 3 of 4, '(path: PathOrFileDescriptor, options: BufferEncoding | (ObjectEncodingOptions & { flag?: string | undefined; } & Abortable) | null | undefined, callback: (err: ErrnoException | null, data: string | Buffer) => void): void', gave the following error.
-    Argument of type '(err: Error, data: any) => void' is not assignable to parameter of type '(err: ErrnoException | null, data: string | Buffer) => void'.
-      Types of parameters 'err' and 'err' are incompatible.
-        Type 'ErrnoException | null' is not assignable to type 'Error'.
-          Type 'null' is not assignable to type 'Error'.
-tools/1to2.ts(186,22): error TS2345: Argument of type 'string | number' is not assignable to parameter of type 'string'.
-  Type 'number' is not assignable to type 'string'.
-tools/1to2.ts(187,2): error TS2365: Operator '+=' cannot be applied to types 'string | number' and 'number'.
 tools/1to2.ts(191,1): error TS2304: Cannot find name 'master'.
-tools/1to2.ts(196,25): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(217,25): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(228,21): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(229,26): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(233,21): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(238,25): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(248,28): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(253,25): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(267,28): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(272,25): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(280,29): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(280,72): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(280,104): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(285,25): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(287,29): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(287,74): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(289,29): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(289,77): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(291,29): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(291,77): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(293,29): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(293,78): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(298,21): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(300,21): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(304,25): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(306,29): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(308,29): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(313,21): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(314,26): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(318,25): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(330,29): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(330,66): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(330,97): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(350,29): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(350,66): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(350,97): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(355,25): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(359,39): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(359,69): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(364,21): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(365,27): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(365,71): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(365,107): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(369,21): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(370,27): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(374,21): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(375,27): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(375,65): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(379,21): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(380,27): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(380,74): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(384,21): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(385,27): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
-tools/1to2.ts(385,74): error TS7005: Variable 'groups' implicitly has an 'any[]' type.
 tools/1to2.ts(394,15): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(path: PathOrFileDescriptor, options: ({ encoding?: null | undefined; flag?: string | undefined; } & Abortable) | null | undefined, callback: (err: ErrnoException | null, data: Buffer) => void): void', gave the following error.
+  Overload 1 of 4, '(path: PathOrFileDescriptor, options: { encoding?: null; flag?: string; } & Abortable, callback: (err: ErrnoException, data: Buffer) => void): void', gave the following error.
     Argument of type 'File' is not assignable to parameter of type 'PathOrFileDescriptor'.
       Type 'File' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 96 more.
-  Overload 2 of 4, '(path: PathOrFileDescriptor, options: BufferEncoding | ({ encoding: BufferEncoding; flag?: string | undefined; } & Abortable), callback: (err: ErrnoException | null, data: string) => void): void', gave the following error.
+  Overload 2 of 4, '(path: PathOrFileDescriptor, options: BufferEncoding | ({ encoding: BufferEncoding; flag?: string; } & Abortable), callback: (err: ErrnoException, data: string) => void): void', gave the following error.
     Argument of type 'File' is not assignable to parameter of type 'PathOrFileDescriptor'.
-  Overload 3 of 4, '(path: PathOrFileDescriptor, options: BufferEncoding | (ObjectEncodingOptions & { flag?: string | undefined; } & Abortable) | null | undefined, callback: (err: ErrnoException | null, data: string | Buffer) => void): void', gave the following error.
+  Overload 3 of 4, '(path: PathOrFileDescriptor, options: BufferEncoding | (ObjectEncodingOptions & { flag?: string; } & Abortable), callback: (err: ErrnoException, data: string | Buffer) => void): void', gave the following error.
     Argument of type 'File' is not assignable to parameter of type 'PathOrFileDescriptor'.
 tools/1to2.ts(400,18): error TS2345: Argument of type 'File' is not assignable to parameter of type 'PathOrFileDescriptor'.
 tools/1to2.ts(400,37): error TS2304: Cannot find name 'master'.
 tools/1to2.ts(400,62): error TS2304: Cannot find name 'master'.
-tools/1to2.ts(410,25): error TS2345: Argument of type '(err: Error, matches: string[]) => void' is not assignable to parameter of type '(err: Error | null, matches: string[]) => void'.
-  Types of parameters 'err' and 'err' are incompatible.
-    Type 'Error | null' is not assignable to type 'Error'.
-      Type 'null' is not assignable to type 'Error'.
 tools/1to2.ts(414,21): error TS2345: Argument of type '(file: File) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
   Types of parameters 'file' and 'value' are incompatible.
     Type 'string' is not assignable to type 'File'.

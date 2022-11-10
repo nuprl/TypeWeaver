@@ -6,7 +6,7 @@ var parsers = require('../parsers');
 // if one, it applies to both horizontal and verical spacing
 // if two, the first applies to the horizontal and the second applies to vertical spacing
 
-var parse = function parse(v: string | number | boolean |) {
+var parse = function parse(v: any) {
   if (v === '' || v === null) {
     return undefined;
   }

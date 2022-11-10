@@ -78,7 +78,7 @@ Promise.prototype.then = function(onFulfilled: Function,  onRejected: Function) 
   return res;
 };
 
-function safeThen(self: Promise<T>,  onFulfilled: () => void,  onRejected: ((reason: any) => void) {
+function safeThen(self: Promise<T>,  onFulfilled: () => void,  onRejected: any) {
   return new self.constructor(function (resolve: Function,  reject: Function) {
     var res = new Promise(noop);
     res.then(resolve, reject);

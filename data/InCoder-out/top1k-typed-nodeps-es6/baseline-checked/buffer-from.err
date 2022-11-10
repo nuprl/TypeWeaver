@@ -1,11 +1,10 @@
-index.ts(12,32): error TS8020: JSDoc types can only be used inside documentation comments.
 index.ts(36,23): error TS2339: Property 'slice' does not exist on type 'ArrayBufferView'.
 index.ts(37,37): error TS2339: Property 'slice' does not exist on type 'ArrayBufferView'.
 index.ts(50,19): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(arrayBuffer: WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>, byteOffset?: number | undefined, length?: number | undefined): Buffer', gave the following error.
+  Overload 1 of 4, '(arrayBuffer: WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>, byteOffset?: number, length?: number): Buffer', gave the following error.
     Argument of type 'string | Buffer' is not assignable to parameter of type 'WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>'.
       Type 'string' is not assignable to type 'WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>'.
-  Overload 2 of 4, '(str: WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }, encoding?: BufferEncoding | undefined): Buffer', gave the following error.
+  Overload 2 of 4, '(str: WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }, encoding?: BufferEncoding): Buffer', gave the following error.
     Argument of type 'string | Buffer' is not assignable to parameter of type 'WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }'.
       Type 'Buffer' is not assignable to type 'WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }'.
         Type 'Buffer' is not assignable to type '{ valueOf(): string; }'.

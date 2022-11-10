@@ -26,7 +26,7 @@ function clearCache(requireCache: boolean) {
     });
 }
 
-module.exports = function (requireCache: ?boolean, modulesTo,  callback: Function,  callbackForModulesToKeep: Function,  module: Module) {
+module.exports = function (requireCache: any,  callback: Function,  callbackForModulesToKeep: Function,  module: Module) {
 
     var originalCache = assign({}, requireCache);
     clearCache(requireCache);

@@ -1,23 +1,6 @@
-assert.ts(20,13): error TS2531: Object is possibly 'null'.
-assert.ts(20,43): error TS2531: Object is possibly 'null'.
-assert.ts(29,9): error TS2345: Argument of type '{ message: string; actual: any; expected: any; operator: any; stackStartFunction: Function; }' is not assignable to parameter of type '{ message?: string | undefined; actual?: unknown; expected?: unknown; operator?: string | undefined; stackStartFn?: Function | undefined; }'.
-  Object literal may only specify known properties, and 'stackStartFunction' does not exist in type '{ message?: string | undefined; actual?: unknown; expected?: unknown; operator?: string | undefined; stackStartFn?: Function | undefined; }'.
+assert.ts(29,9): error TS2345: Argument of type '{ message: string; actual: any; expected: any; operator: any; stackStartFunction: Function; }' is not assignable to parameter of type '{ message?: string; actual?: unknown; expected?: unknown; operator?: string; stackStartFn?: Function; }'.
+  Object literal may only specify known properties, and 'stackStartFunction' does not exist in type '{ message?: string; actual?: unknown; expected?: unknown; operator?: string; stackStartFn?: Function; }'.
 assert.ts(52,31): error TS2304: Cannot find name 'ny'.
-assert.ts(102,9): error TS7034: Variable 'out' implicitly has type 'any' in some locations where its type cannot be determined.
 assert.ts(110,17): error TS2554: Expected 5 arguments, but got 3.
-assert.ts(121,20): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ bool: { check: (arg: any) => boolean; }; func: { check: (arg: any) => boolean; }; string: { check: (arg: ny) => boolean; }; object: { check: (arg: any) => boolean; }; number: { check: (arg: any) => boolean; }; ... 6 more ...; uuid: { ...; }; }'.
-assert.ts(133,13): error TS7005: Variable 'out' implicitly has an 'any' type.
-assert.ts(136,20): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ bool: { check: (arg: any) => boolean; }; func: { check: (arg: any) => boolean; }; string: { check: (arg: ny) => boolean; }; object: { check: (arg: any) => boolean; }; number: { check: (arg: any) => boolean; }; ... 6 more ...; uuid: { ...; }; }'.
-assert.ts(137,9): error TS7005: Variable 'out' implicitly has an 'any' type.
-assert.ts(151,13): error TS7005: Variable 'out' implicitly has an 'any' type.
-assert.ts(154,20): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ bool: { check: (arg: any) => boolean; }; func: { check: (arg: any) => boolean; }; string: { check: (arg: ny) => boolean; }; object: { check: (arg: any) => boolean; }; number: { check: (arg: any) => boolean; }; ... 6 more ...; uuid: { ...; }; }'.
-assert.ts(156,9): error TS7005: Variable 'out' implicitly has an 'any' type.
-assert.ts(173,13): error TS7005: Variable 'out' implicitly has an 'any' type.
-assert.ts(176,20): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type '{ bool: { check: (arg: any) => boolean; }; func: { check: (arg: any) => boolean; }; string: { check: (arg: ny) => boolean; }; object: { check: (arg: any) => boolean; }; number: { check: (arg: any) => boolean; }; ... 6 more ...; uuid: { ...; }; }'.
-assert.ts(178,9): error TS7005: Variable 'out' implicitly has an 'any' type.
-assert.ts(197,22): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'typeof assert'.
-assert.ts(204,18): error TS7053: Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'typeof assert'.
-assert.ts(208,9): error TS2339: Property '_setExports' does not exist on type '(arg: any, msg: any) => void'.
-assert.ts(213,28): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'number'.
-  Type 'undefined' is not assignable to type 'number'.
+assert.ts(213,28): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 

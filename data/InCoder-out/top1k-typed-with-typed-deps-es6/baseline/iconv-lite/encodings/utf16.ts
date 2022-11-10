@@ -86,14 +86,14 @@ Utf16Codec.prototype.decoder = Utf16Decoder;
 
 // -- Encoding (pass-through)
 
-function Utf16Encoder(options: { allowBOM: boolean,  codec: string) {
+function Utf16Encoder(options: any,  codec: number) {
     options = options || {};
     if (options.addBOM === undefined)
         options.addBOM = true;
     this.encoder = codec.iconv.getEncoder('utf-16le', options);
 }
 
-Utf16Encoder.prototype.write = function(str: ) {
+Utf16Encoder.prototype.write = function(str: any) {
     return this.encoder.write(str);
 }
 

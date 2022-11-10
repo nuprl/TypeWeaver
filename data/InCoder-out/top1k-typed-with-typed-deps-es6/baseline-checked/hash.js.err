@@ -1,53 +1,46 @@
+lib/hash/common.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/common.ts(20,51): error TS2304: Cannot find name 'Message'.
+lib/hash/common.ts(20,66): error TS2304: Cannot find name 'Enc'.
+lib/hash/common.ts(47,51): error TS2304: Cannot find name 'Encoding'.
+lib/hash/hmac.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/hmac.ts(6,21): error TS2304: Cannot find name 'Hash'.
+lib/hash/hmac.ts(6,33): error TS2304: Cannot find name 'Key'.
+lib/hash/hmac.ts(6,44): error TS2304: Cannot find name 'Encoding'.
+lib/hash/hmac.ts(8,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/hash/hmac.ts(27,9): error TS2339: Property 'push' does not exist on type 'string | string[]'.
+  Property 'push' does not exist on type 'string'.
+lib/hash/hmac.ts(30,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/hash/hmac.ts(30,5): error TS2542: Index signature in type 'string | string[]' only permits reading.
+lib/hash/hmac.ts(35,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/hash/hmac.ts(35,5): error TS2542: Index signature in type 'string | string[]' only permits reading.
+lib/hash/hmac.ts(39,60): error TS2304: Cannot find name 'Encoding'.
+lib/hash/hmac.ts(44,46): error TS2304: Cannot find name 'Encoding'.
 lib/hash/ripemd.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
-lib/hash/ripemd.ts(4,20): error TS2307: Cannot find module './common' or its corresponding type declarations.
-lib/hash/ripemd.ts(13,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/hash/ripemd.ts(14,12): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/hash/ripemd.ts(16,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/hash/ripemd.ts(18,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/hash/ripemd.ts(19,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/hash/ripemd.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
+lib/hash/ripemd.ts(14,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/hash/ripemd.ts(29,52): error TS2304: Cannot find name 'Message'.
 lib/hash/ripemd.ts(70,52): error TS2304: Cannot find name 'Encoding'.
 lib/hash/sha/1.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
-lib/hash/sha/1.ts(4,20): error TS2307: Cannot find module '../common' or its corresponding type declarations.
+lib/hash/sha/1.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
 lib/hash/sha/1.ts(5,8): error TS1192: Module '"lib/hash/sha/common"' has no default export.
-lib/hash/sha/1.ts(19,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/hash/sha/1.ts(20,12): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/hash/sha/1.ts(22,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/hash/sha/1.ts(23,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/hash/sha/1.ts(26,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/hash/sha/1.ts(20,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/hash/sha/1.ts(37,48): error TS2304: Cannot find name 'Message'.
 lib/hash/sha/1.ts(69,47): error TS2304: Cannot find name 'Encoding'.
 lib/hash/sha/224.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
-lib/hash/sha/224.ts(7,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/hash/sha/224.ts(8,12): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/hash/sha/224.ts(10,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/hash/sha/224.ts(11,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/hash/sha/224.ts(8,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/hash/sha/224.ts(23,49): error TS2304: Cannot find name 'Encoding'.
 lib/hash/sha/256.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
-lib/hash/sha/256.ts(4,20): error TS2307: Cannot find module '../common' or its corresponding type declarations.
+lib/hash/sha/256.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
 lib/hash/sha/256.ts(5,8): error TS1192: Module '"lib/hash/sha/common"' has no default export.
-lib/hash/sha/256.ts(40,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/hash/sha/256.ts(41,12): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/hash/sha/256.ts(43,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/hash/sha/256.ts(44,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/hash/sha/256.ts(48,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/hash/sha/256.ts(49,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/hash/sha/256.ts(41,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/hash/sha/256.ts(59,50): error TS2304: Cannot find name 'Message'.
 lib/hash/sha/256.ts(100,49): error TS2304: Cannot find name 'Encoding'.
 lib/hash/sha/384.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
-lib/hash/sha/384.ts(7,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/hash/sha/384.ts(8,12): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/hash/sha/384.ts(10,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/hash/sha/384.ts(11,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/hash/sha/384.ts(8,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/hash/sha/384.ts(29,49): error TS2304: Cannot find name 'Encoding'.
 lib/hash/sha/512.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
-lib/hash/sha/512.ts(4,20): error TS2307: Cannot find module '../common' or its corresponding type declarations.
-lib/hash/sha/512.ts(65,9): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/hash/sha/512.ts(66,12): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-lib/hash/sha/512.ts(68,18): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/hash/sha/512.ts(69,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/hash/sha/512.ts(78,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-lib/hash/sha/512.ts(79,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+lib/hash/sha/512.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
+lib/hash/sha/512.ts(66,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/hash/sha/512.ts(89,62): error TS2304: Cannot find name 'Message'.
 lib/hash/sha/512.ts(118,50): error TS2304: Cannot find name 'Message'.
 lib/hash/sha/512.ts(146,45): error TS2554: Expected 5 arguments, but got 6.
@@ -76,8 +69,6 @@ lib/hash/utils.ts(18,38): error TS2304: Cannot find name 'Encoding'.
 lib/hash/utils.ts(68,18): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/hash/utils.ts(82,40): error TS2304: Cannot find name 'Endian'.
 lib/hash/utils.ts(84,27): error TS2339: Property 'length' does not exist on type 'number'.
-lib/hash/utils.ts(85,13): error TS7053: Element implicitly has an 'any' type because expression of type 'number' can't be used to index type 'Number'.
-  No index signature with a parameter of type 'number' was found on type 'Number'.
 lib/hash/utils.ts(95,12): error TS2339: Property 'length' does not exist on type 'number'.
 lib/hash/utils.ts(103,12): error TS2339: Property 'length' does not exist on type 'number'.
 lib/hash/utils.ts(105,17): error TS2339: Property 'length' does not exist on type 'number'.

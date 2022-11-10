@@ -37,7 +37,7 @@ const Import = 0;
 const ExportAssign = 1;
 const ExportStar = 2;
 
-function parseCJS (source: Source,  name = '@': ?string) {) {
+function parseCJS (source: Source,  name = '@': any) {
   resetState();
   try {
     parseSource(source);
@@ -869,7 +869,7 @@ function tryParseModuleExportsDotAssign () {
   pos = revertPos;
 }
 
-function tryParseExportsDotAssign (assign: ?string, pos: number) {
+function tryParseExportsDotAssign (assign: any) {
   pos += 7;
   const revertPos = pos - 1;
   let ch = commentWhitespace();
@@ -1245,7 +1245,7 @@ function lineComment () {
   }
 }
 
-function stringLiteral (quote: ?string, escape:?) {
+function stringLiteral (quote: any) {
   while (pos++ < end) {
     let ch = source.charCodeAt(pos);
     if (ch === quote)

@@ -1,4 +1,13 @@
-benchmark/code/new-array-map-2.ts(4,73): error TS1128: Declaration or statement expected.
-benchmark/code/new-array-map-2.ts(4,75): error TS1005: ';' expected.
-benchmark/code/new-array-map-2.ts(6,4): error TS1128: Declaration or statement expected.
+benchmark/check.ts(3,19): error TS2307: Cannot find module 'chalk' or its corresponding type declarations.
+benchmark/check.ts(15,45): error TS2345: Argument of type '(fp: number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+  Types of parameters 'fp' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'number'.
+benchmark/check.ts(16,52): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+benchmark/check.ts(17,28): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+benchmark/check.ts(17,45): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+benchmark/check.ts(20,39): error TS2304: Cannot find name 'ComponentFixture'.
+benchmark/code/array-map-call.ts(4,35): error TS2365: Operator '+' cannot be applied to types 'undefined[]' and 'any[]'.
+benchmark/code/new-array-map-1.ts(4,61): error TS2749: 'nil' refers to a value, but is being used as a type here. Did you mean 'typeof nil'?
+benchmark/code/new-array-map-2.ts(4,30): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+benchmark/index.ts(3,19): error TS2307: Cannot find module 'benchmarked' or its corresponding type declarations.
 

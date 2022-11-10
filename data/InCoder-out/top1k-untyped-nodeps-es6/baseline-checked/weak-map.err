@@ -1,3 +1,10 @@
+bench.ts(2,21): error TS2306: File 'weak-map.ts' is not a module.
+bench.ts(10,1): error TS2582: Cannot find name 'suite'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+bench.ts(11,5): error TS2304: Cannot find name 'bench'.
+bench.ts(16,5): error TS2304: Cannot find name 'bench'.
+bench.ts(22,5): error TS2304: Cannot find name 'bench'.
+bench.ts(28,5): error TS2304: Cannot find name 'bench'.
+bench.ts(35,5): error TS2304: Cannot find name 'bench'.
 weak-map.ts(102,14): error TS2304: Cannot find name 'ses'.
 weak-map.ts(102,37): error TS2304: Cannot find name 'ses'.
 weak-map.ts(102,48): error TS2304: Cannot find name 'ses'.
@@ -9,41 +16,13 @@ weak-map.ts(166,9): error TS1258: A default export must be at the top level of a
 weak-map.ts(229,34): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
 weak-map.ts(258,43): error TS2339: Property 'getPropertyNames' does not exist on type 'ObjectConstructor'.
 weak-map.ts(305,33): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
-weak-map.ts(411,11): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-weak-map.ts(417,9): error TS7034: Variable 'keys' implicitly has type 'any[]' in some locations where its type cannot be determined.
-weak-map.ts(418,9): error TS7034: Variable 'values' implicitly has type 'any[]' in some locations where its type cannot be determined.
-weak-map.ts(427,17): error TS7005: Variable 'keys' implicitly has an 'any[]' type.
-weak-map.ts(428,29): error TS7005: Variable 'values' implicitly has an 'any[]' type.
-weak-map.ts(437,16): error TS7005: Variable 'keys' implicitly has an 'any[]' type.
-weak-map.ts(447,17): error TS7005: Variable 'keys' implicitly has an 'any[]' type.
-weak-map.ts(462,14): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-weak-map.ts(471,17): error TS7005: Variable 'keys' implicitly has an 'any[]' type.
-weak-map.ts(488,25): error TS7005: Variable 'values' implicitly has an 'any[]' type.
-weak-map.ts(491,23): error TS7005: Variable 'keys' implicitly has an 'any[]' type.
-weak-map.ts(566,14): error TS2454: Variable 'HostWeakMap' is used before being assigned.
-weak-map.ts(576,9): error TS2322: Type 'undefined' is not assignable to type 'ProxyConstructor'.
-weak-map.ts(580,15): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-weak-map.ts(590,13): error TS7034: Variable 'omap' implicitly has type 'any' in some locations where its type cannot be determined.
-weak-map.ts(604,15): error TS7005: Variable 'omap' implicitly has an 'any' type.
-weak-map.ts(606,19): error TS7005: Variable 'omap' implicitly has an 'any' type.
 weak-map.ts(608,34): error TS2554: Expected 1 arguments, but got 2.
 weak-map.ts(613,27): error TS2345: Argument of type 'string | symbol' is not assignable to parameter of type 'object'.
   Type 'string' is not assignable to type 'object'.
-weak-map.ts(613,36): error TS7005: Variable 'omap' implicitly has an 'any' type.
-weak-map.ts(613,43): error TS7005: Variable 'omap' implicitly has an 'any' type.
-weak-map.ts(621,20): error TS7005: Variable 'omap' implicitly has an 'any' type.
-weak-map.ts(621,35): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-weak-map.ts(622,15): error TS7005: Variable 'omap' implicitly has an 'any' type.
-weak-map.ts(624,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-weak-map.ts(632,22): error TS7005: Variable 'omap' implicitly has an 'any' type.
-weak-map.ts(632,37): error TS7009: 'new' expression, whose target lacks a construct signature, implicitly has an 'any' type.
-weak-map.ts(633,17): error TS7005: Variable 'omap' implicitly has an 'any' type.
-weak-map.ts(638,20): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+weak-map.ts(621,35): error TS2350: Only a void function can be called with the 'new' keyword.
+weak-map.ts(632,37): error TS2350: Only a void function can be called with the 'new' keyword.
 weak-map.ts(642,31): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
-weak-map.ts(644,15): error TS7005: Variable 'omap' implicitly has an 'any' type.
-weak-map.ts(644,30): error TS7005: Variable 'omap' implicitly has an 'any' type.
 weak-map.ts(653,68): error TS2304: Cannot find name 'Token'.
 weak-map.ts(663,7): error TS1258: A default export must be at the top level of a file or module declaration.
-weak-map.ts(680,7): error TS2322: Type 'undefined' is not assignable to type 'ProxyConstructor'.
 weak-map.ts(683,5): error TS1258: A default export must be at the top level of a file or module declaration.
 

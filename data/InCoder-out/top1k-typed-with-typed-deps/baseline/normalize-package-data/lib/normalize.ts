@@ -9,7 +9,7 @@ var fieldsToFix = ['name', 'version', 'description', 'repository', 'modules', 's
   'files', 'bin', 'man', 'bugs', 'keywords', 'readme', 'homepage', 'license']
 var otherThingsToFix = ['dependencies', 'people', 'typos']
 
-var thingsToFix = fieldsToFix.map(function (fieldName: ) {
+var thingsToFix = fieldsToFix.map(function (fieldName: any) {
   return ucFirst(fieldName) + 'Field'
 })
 // two ways to do this in CoffeeScript on only one line, sub-70 chars:

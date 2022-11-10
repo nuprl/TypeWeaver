@@ -53,7 +53,7 @@ function convertDataDescriptorToAccessor (obj: any,  prop: string | symbol,  mes
   descriptor.get = function getter () { return value }
 
   if (descriptor.writable) {
-    descriptor.set = function setter (val: ?string) {) { return (value = val) }
+    descriptor.set = function setter (val: any) { return (value = val) }
   }
 
   delete descriptor.value
@@ -100,7 +100,7 @@ function createStackString (stack: Stack) {
  * Create deprecate for namespace in caller.
  */
 
-function depd (namespace: ?) {
+function depd (namespace: any) {
   if (!namespace) {
     throw new TypeError('argument namespace is required')
   }
@@ -150,7 +150,7 @@ function eehaslisteners (emitter: EventEmitter,  type: string) {
  * Determine if namespace is ignored.
  */
 
-function isignored (namespace: ?string, name:?string) {
+function isignored (namespace: any) {
   if (process.noDeprecation) {
     // --no-deprecation support
     return true
@@ -166,7 +166,7 @@ function isignored (namespace: ?string, name:?string) {
  * Determine if namespace is traced.
  */
 
-function istraced (namespace: ?string, func:?) {
+function istraced (namespace: any) {
   if (process.traceDeprecation) {
     // --trace-deprecation support
     return true
@@ -424,7 +424,7 @@ function wrapfunction (fn: unction,  message: string) {
   // eslint-disable-next-line no-new-func
   var deprecatedfn = new Function('fn', 'log', 'deprecate', 'message', 'site',
     '"use strict"\n' +
-    'return function (' + args + ': ' + typeof(val) +) {' +
+    'return function (' + args + ': any) {' +
     'log.call(deprecate, message, site)\n' +
     'return fn.apply(this, arguments)\n' +
     '}')(fn, log, this, message, site)
@@ -489,7 +489,7 @@ function wrapproperty (obj: any,  prop: string | symbol,  message: string | symb
  * Create DeprecationError for deprecation
  */
 
-function DeprecationError (namespace: ?string, message: string, stack,  message: string,  stack: Error) {
+function DeprecationError (namespace: any,  message: any,  stack: any) {
   var error = new Error()
   var stackString
 

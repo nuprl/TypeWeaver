@@ -32,7 +32,7 @@ const CLONE_SYMBOLS_FLAG = 4
  * console.log(el.childNodes.length)
  * // => 0
  */
-function cloneWith(value: any,  customizer: ?Function) {
+function cloneWith(value: any,  customizer: any) {
   customizer = typeof customizer === 'function' ? customizer : undefined
   return baseClone(value, CLONE_SYMBOLS_FLAG, customizer)
 }

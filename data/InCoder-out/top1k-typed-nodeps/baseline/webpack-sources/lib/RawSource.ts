@@ -47,7 +47,7 @@ class RawSource extends Source {
 	 * @param {object} options options
 	 * @param {function(string: number,  number: number,  number: number,  number: number,  number: number,  number: number,  number: number): void} onChunk called for each chunk of code
 	 * @param {function(number: number,  string: string,  string: number)} onSource called for each source
-	 * @param {function(number: number,  string: string | { (first)} onName called for each name
+	 * @param {function(number: number,  string: any)} onName called for each name
 	 * @returns {void}
 	 */
 	streamChunks(options, onChunk, onSource, onName) {

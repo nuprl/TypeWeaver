@@ -19,7 +19,7 @@ import baseUniq from './.internal/baseUniq.js'
  * uniqWith(objects, isEqual)
  * // => [{ 'x': 1, 'y': 2 }, { 'x': 2, 'y': 1 }]
  */
-function uniqWith(array: Array<T>,  comparator: (a: T, b: T) =>) {
+function uniqWith(array: Array<T>,  comparator: any) {
   comparator = typeof comparator === 'function' ? comparator : undefined
   return (array != null && array.length)
     ? baseUniq(array, undefined, comparator)

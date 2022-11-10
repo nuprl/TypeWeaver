@@ -294,7 +294,7 @@ function _removeFileSync(fdPath: number) {
  * @returns {fileCallback | fileCallbackSync}
  * @private
  */
-function _prepareTmpFileRemoveCallback(name: string | Buffer,  fd: number,  opts: { flag?: string,  sync: boolean) {
+function _prepareTmpFileRemoveCallback(name: string | Buffer,  fd: number,  opts: any,  sync: boolean) {
   const removeCallbackSync = _prepareRemoveCallback(_removeFileSync, [fd, name], sync);
   const removeCallback = _prepareRemoveCallback(_removeFileAsync, [fd, name], sync, removeCallbackSync);
 
@@ -427,7 +427,7 @@ function _isBlank(s: string) {
  * @returns {boolean} true if the object is undefined
  * @private
  */
-function _isUndefined(obj: ) {
+function _isUndefined(obj: any) {
   return typeof obj === 'undefined';
 }
 
@@ -468,7 +468,7 @@ function _parseArguments(options: any,  callback: Function) {
  * @returns {string} the new random name according to opts
  * @private
  */
-function _generateTmpName(opts: ) {
+function _generateTmpName(opts: any) {
 
   const tmpDir = opts.tmpdir;
 

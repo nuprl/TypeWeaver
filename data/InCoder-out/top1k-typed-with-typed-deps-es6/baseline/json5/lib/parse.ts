@@ -10,7 +10,7 @@ let token
 let key
 let root
 
-export default function parse (text: String,  reviver: ?Function): Object {) {
+export default function parse (text: String,  reviver: any) {
     source = String(text)
     parseState = 'start'
     stack = []
@@ -39,7 +39,7 @@ export default function parse (text: String,  reviver: ?Function): Object {) {
     return root
 };
 
-function internalize (holder: ?Object, partials:?,  name: string,  reviver: ?,  holder:?) {
+function internalize (holder: any,  name: any,  reviver: Function) {
     const value = holder[name]
     if (value != null && typeof value === 'object') {
         for (const key in value) {
@@ -1020,7 +1020,7 @@ function pop () {
 //     return new Error(`JSON5: invalid lex state '${state}'`)
 // }
 
-function invalidChar (c: ) {
+function invalidChar (c: any) {
     if (c === undefined) {
         return syntaxError(`JSON5: invalid end of input at ${line}:${column}`)
     }

@@ -1,4 +1,4 @@
-function stringifyNode(node: Node,  custom: ?boolean) {
+function stringifyNode(node: Node,  custom: any) {
   var type = node.type;
   var value = node.value;
   var buf;

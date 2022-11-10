@@ -16,7 +16,7 @@ import dashdash from '../lib/dashdash';
 
 function parseCommaSepStringNoEmpties(option: Option,  optstr: Option,  arg: Option) {
     return arg.trim().split(/\s*,\s*/g)
-        .filter(function (part: ) { return part; });
+        .filter(function (part: any) { return part; });
 }
 
 dashdash.addOptionType({

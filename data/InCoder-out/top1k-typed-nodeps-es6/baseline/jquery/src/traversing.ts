@@ -21,7 +21,7 @@ var rparentsprev = /^(?:parents|prev(?:Until|All))/,
 	};
 
 jQuery.fn.extend( {
-	has: function( target : ) {
+	has: function( target : any) {
 		var targets = jQuery( target, this ),
 			l = targets.length;
 
@@ -86,7 +86,7 @@ jQuery.fn.extend( {
 		);
 	},
 
-	add: function( selector: string,  context : JQuery|Element|) {
+	add: function( selector: string,  context : any) {
 		return this.pushStack(
 			jQuery.uniqueSort(
 				jQuery.merge( this.get(), jQuery( selector, context ) )

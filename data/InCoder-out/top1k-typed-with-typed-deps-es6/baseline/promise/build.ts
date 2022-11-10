@@ -14,7 +14,7 @@ fs.readdirSync(__dirname + '/src').sort().forEach(function (filename: string | u
 const names = {};
 const characterSet = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 let i = characterSet.indexOf(shasum.digest('base64').replace(/[^0-9a-zA-Z]/g, '')[0]);
-function getIdFor(name: ) {
+function getIdFor(name: any) {
   if (names[name]) return names[name];
   return names[name] = '_' + characterSet[i++ % characterSet.length]
 }
@@ -23,7 +23,7 @@ function fixup(src: string | Buffer) {
   var ast = acorn.parse(src);
   src = src.split('');
   walk.simple(ast, {
-    MemberExpression: function (node: ) {
+    MemberExpression: function (node: any) {
       if (node.computed) return;
       if (node.property.type !== 'Identifier') return;
       if (node.property.name[0] !== '_') return;

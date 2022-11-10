@@ -1,42 +1,23 @@
-error/ensure.ts(6,48): error TS1005: ',' expected.
-error/ensure.ts(6,49): error TS1138: Parameter declaration expected.
-error/ensure.ts(6,50): error TS1161: Unterminated regular expression literal.
-error/ensure.ts(12,1): error TS1128: Declaration or statement expected.
-function/ensure.ts(6,48): error TS1005: ',' expected.
-function/ensure.ts(6,49): error TS1138: Parameter declaration expected.
-function/ensure.ts(6,50): error TS1161: Unterminated regular expression literal.
-function/ensure.ts(14,1): error TS1128: Declaration or statement expected.
-lib/to-short-string.ts(13,53): error TS1110: Type expected.
-map/ensure.ts(6,49): error TS1005: ',' expected.
-map/ensure.ts(6,50): error TS1138: Parameter declaration expected.
-map/ensure.ts(6,51): error TS1161: Unterminated regular expression literal.
-map/ensure.ts(12,1): error TS1128: Declaration or statement expected.
-object/ensure.ts(6,48): error TS1005: ',' expected.
-object/ensure.ts(6,49): error TS1138: Parameter declaration expected.
-object/ensure.ts(6,50): error TS1161: Unterminated regular expression literal.
-object/ensure.ts(12,1): error TS1128: Declaration or statement expected.
-plain-function/ensure.ts(6,48): error TS1005: ',' expected.
-plain-function/ensure.ts(6,49): error TS1138: Parameter declaration expected.
-plain-function/ensure.ts(6,50): error TS1161: Unterminated regular expression literal.
-plain-function/ensure.ts(14,1): error TS1128: Declaration or statement expected.
-promise/ensure.ts(6,48): error TS1005: ',' expected.
-promise/ensure.ts(6,49): error TS1138: Parameter declaration expected.
-promise/ensure.ts(6,50): error TS1161: Unterminated regular expression literal.
-promise/ensure.ts(12,1): error TS1128: Declaration or statement expected.
-reg-exp/ensure.ts(6,48): error TS1005: ',' expected.
-reg-exp/ensure.ts(6,49): error TS1138: Parameter declaration expected.
-reg-exp/ensure.ts(6,50): error TS1161: Unterminated regular expression literal.
-reg-exp/ensure.ts(14,1): error TS1128: Declaration or statement expected.
-set/ensure.ts(6,49): error TS1005: ',' expected.
-set/ensure.ts(6,50): error TS1138: Parameter declaration expected.
-set/ensure.ts(6,51): error TS1161: Unterminated regular expression literal.
-set/ensure.ts(12,1): error TS1128: Declaration or statement expected.
-thenable/ensure.ts(6,48): error TS1005: ',' expected.
-thenable/ensure.ts(6,49): error TS1138: Parameter declaration expected.
-thenable/ensure.ts(6,50): error TS1161: Unterminated regular expression literal.
-thenable/ensure.ts(14,1): error TS1128: Declaration or statement expected.
-value/ensure.ts(6,48): error TS1005: ',' expected.
-value/ensure.ts(6,49): error TS1138: Parameter declaration expected.
-value/ensure.ts(6,50): error TS1161: Unterminated regular expression literal.
-value/ensure.ts(12,1): error TS1128: Declaration or statement expected.
+array-like/ensure.ts(7,16): error TS2554: Expected 1 arguments, but got 2.
+array-like/is.ts(16,23): error TS2339: Property 'length' does not exist on type 'Object'.
+array/ensure.ts(18,59): error TS2554: Expected 1 arguments, but got 2.
+array/ensure.ts(21,38): error TS2339: Property 'length' does not exist on type 'Object'.
+array/is.ts(17,7): error TS2304: Cannot find name 'hasOwnProperty'.
+ensure.ts(14,112): error TS2304: Cannot find name 'lidationDatum'.
+function/is.ts(5,33): error TS2304: Cannot find name 'ny'.
+function/is.ts(8,7): error TS2304: Cannot find name 'hasOwnProperty'.
+iterable/ensure.ts(17,17): error TS2554: Expected 1 arguments, but got 2.
+iterable/ensure.ts(20,59): error TS2554: Expected 1 arguments, but got 2.
+lib/resolve-error-message.ts(6,83): error TS2304: Cannot find name 'InputOptions'.
+lib/resolve-exception.ts(6,89): error TS2304: Cannot find name 'InputOptions'.
+lib/resolve-exception.ts(12,55): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
+  Type 'string[]' is not assignable to type 'string'.
+object/is.ts(10,9): error TS2304: Cannot find name 'hasOwnProperty'.
+plain-object/ensure.ts(21,53): error TS2554: Expected 1 arguments, but got 2.
+plain-object/ensure.ts(38,77): error TS2554: Expected 1 arguments, but got 2.
+plain-object/is.ts(9,15): error TS2339: Property '__proto__' does not exist on type '{}'.
+plain-object/is.ts(10,61): error TS2339: Property '__proto__' does not exist on type 'Object'.
+plain-object/is.ts(26,20): error TS2304: Cannot find name 'hasOwnProperty'.
+reg-exp/is.ts(14,7): error TS2304: Cannot find name 'hasOwnProperty'.
+value/is.ts(6,33): error TS2304: Cannot find name 'y'.
 

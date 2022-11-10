@@ -22,7 +22,7 @@
 // NOTE: These type checking functions intentionally don't use `instanceof`
 // because it is fragile and can be easily faked with `Object.create()`.
 
-function isArray(arg: ?any): boolean {) {
+function isArray(arg: any) {
   if (Array.isArray) {
     return Array.isArray(arg);
   }
@@ -45,12 +45,12 @@ function isNullOrUndefined(arg: unknown) {
 }
 exports.isNullOrUndefined = isNullOrUndefined;
 
-function isNumber(arg: ) {
+function isNumber(arg: any) {
   return typeof arg === 'number';
 }
 exports.isNumber = isNumber;
 
-function isString(arg: |endofmask|>) {
+function isString(arg: any) {
   return typeof arg === 'string';
 }
 exports.isString = isString;
@@ -85,7 +85,7 @@ function isError(e: any) {
 }
 exports.isError = isError;
 
-function isFunction(arg: ?any) {
+function isFunction(arg: any) {
   return typeof arg === 'function';
 }
 exports.isFunction = isFunction;

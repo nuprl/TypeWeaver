@@ -95,7 +95,7 @@ function patch (fs: NodeJS.ReadWrite) {
   // contention to be starved of CPU by node, so the contention doesn't resolve.
   if (platform === "win32") {
     fs.rename = typeof fs.rename !== 'function' ? fs.rename
-    : (function (fs$rename: ) {
+    : (function (fs$rename: any) {
       function rename (from: String,  to: String,  cb: Function) {
         var start = Date.now()
         var backoff = 0;

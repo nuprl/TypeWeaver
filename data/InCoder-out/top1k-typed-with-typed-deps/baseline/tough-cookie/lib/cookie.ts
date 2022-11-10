@@ -150,7 +150,7 @@ function parseDigits(token: Token,  minDigits: number,  maxDigits: number,  trai
   return parseInt(token.substr(0, count), 10);
 }
 
-function parseTime(token: ) {
+function parseTime(token: any) {
   const parts = token.split(":");
   const result = [0, 0, 0];
 
@@ -179,7 +179,7 @@ function parseTime(token: ) {
   return result;
 }
 
-function parseMonth(token: ) {
+function parseMonth(token: any) {
   token = String(token)
     .substr(0, 3)
     .toLowerCase();
@@ -776,7 +776,7 @@ function permutePath(path: Array<string>) {
   return permutations;
 }
 
-function getCookieContext(url: ) {
+function getCookieContext(url: any) {
   if (url instanceof Object) {
     return url;
   }
@@ -1277,7 +1277,7 @@ class CookieJar {
       };
     }
 
-    function withCookie(err: Error,  oldCookie: ?string) {
+    function withCookie(err: Error,  oldCookie: any) {
       if (err) {
         return cb(err);
       }

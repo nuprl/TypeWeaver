@@ -108,13 +108,13 @@ function patch (fs: NodeJS.ReadWrite) {
   fs.createWriteStream = createWriteStream
   var fs$readFile = fs.readFile
   fs.readFile = readFile
-  function readFile (path: string | Buffer,  options: { encoding: string,  cb: Function) {
+  function readFile (path: string | Buffer,  options: any,  cb: Function) {
     if (typeof options === 'function')
       cb = options, options = null
 
     return go$readFile(path, options, cb)
 
-    function go$readFile (path: string | Buffer,  options: { encoding: string,  cb: Function,  startTime: number) {
+    function go$readFile (path: string | Buffer,  options: any,  cb: Function,  startTime: number) {
       return fs$readFile(path, options, function (err: Error) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$readFile, [path, options, cb], err, startTime || Date.now(), Date.now()])
@@ -128,13 +128,13 @@ function patch (fs: NodeJS.ReadWrite) {
 
   var fs$writeFile = fs.writeFile
   fs.writeFile = writeFile
-  function writeFile (path: string | Buffer,  data: string | Buffer,  options: { encoding: 'utf8',,  cb: cb) {
+  function writeFile (path: string | Buffer,  data: string | Buffer,  options: any,  cb: Function) {
     if (typeof options === 'function')
       cb = options, options = null
 
     return go$writeFile(path, data, options, cb)
 
-    function go$writeFile (path: string | Buffer,  data: string | Buffer,  options: { encoding?: string, mode,  cb: Function,  startTime: number) {
+    function go$writeFile (path: string | Buffer,  data: string | Buffer,  options: any,  cb: Function,  startTime: number) {
       return fs$writeFile(path, data, options, function (err: Error) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$writeFile, [path, data, options, cb], err, startTime || Date.now(), Date.now()])
@@ -149,13 +149,13 @@ function patch (fs: NodeJS.ReadWrite) {
   var fs$appendFile = fs.appendFile
   if (fs$appendFile)
     fs.appendFile = appendFile
-  function appendFile (path: string | Buffer,  data: string | Buffer,  options: { encoding: 'utf8',,  cb: cb) {
+  function appendFile (path: string | Buffer,  data: string | Buffer,  options: any,  cb: Function) {
     if (typeof options === 'function')
       cb = options, options = null
 
     return go$appendFile(path, data, options, cb)
 
-    function go$appendFile (path: string | Buffer,  data: string | Buffer,  options: { encoding?: string, mode,  cb: Function,  startTime: number) {
+    function go$appendFile (path: string | Buffer,  data: string | Buffer,  options: any,  cb: Function,  startTime: number) {
       return fs$appendFile(path, data, options, function (err: Error) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$appendFile, [path, data, options, cb], err, startTime || Date.now(), Date.now()])
@@ -197,12 +197,12 @@ function patch (fs: NodeJS.ReadWrite) {
       cb = options, options = null
 
     var go$readdir = noReaddirOptionVersions.test(process.version)
-      ? function go$readdir (path: string,  options: { encoding?: string,  cb: Function,  startTime: number) {
+      ? function go$readdir (path: string,  options: any,  cb: Function,  startTime: number) {
         return fs$readdir(path, fs$readdirCallback(
           path, options, cb, startTime
         ))
       }
-      : function go$readdir (path: string,  options: { encoding?: string,  cb: Function,  startTime: number) {
+      : function go$readdir (path: string,  options: any,  cb: Function,  startTime: number) {
         return fs$readdir(path, options, fs$readdirCallback(
           path, options, cb, startTime
         ))
@@ -253,7 +253,7 @@ function patch (fs: NodeJS.ReadWrite) {
     get: function () {
       return ReadStream
     },
-    set: function (val: ) {
+    set: function (val: any) {
       ReadStream = val
     },
     enumerable: true,
@@ -263,7 +263,7 @@ function patch (fs: NodeJS.ReadWrite) {
     get: function () {
       return WriteStream
     },
-    set: function (val: ) {
+    set: function (val: any) {
       WriteStream = val
     },
     enumerable: true,
@@ -294,7 +294,7 @@ function patch (fs: NodeJS.ReadWrite) {
     configurable: true
   })
 
-  function ReadStream (path: string | Buffer,  options: { flag?: string;) {
+  function ReadStream (path: string | Buffer,  options: any) {
     if (this instanceof ReadStream)
       return fs$ReadStream.apply(this, arguments), this
     else
@@ -337,11 +337,11 @@ function patch (fs: NodeJS.ReadWrite) {
     })
   }
 
-  function createReadStream (path: string | Buffer,  options: { flags?: string;) {
+  function createReadStream (path: string | Buffer,  options: any) {
     return new fs.ReadStream(path, options)
   }
 
-  function createWriteStream (path: string | Buffer,  options: { flags?: string, encoding) {
+  function createWriteStream (path: string | Buffer,  options: any) {
     return new fs.WriteStream(path, options)
   }
 

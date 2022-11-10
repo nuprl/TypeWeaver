@@ -27,7 +27,7 @@ function EDEState(type: string,  key: number) {
   }
 }
 
-function EDE(options: ) {
+function EDE(options: any) {
   Cipher.call(this, options);
 
   var state = new EDEState(this.type, this.options.key);

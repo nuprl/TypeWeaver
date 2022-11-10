@@ -9,7 +9,7 @@ function withOwnPromise() {
   return new TypeError('A promises callback cannot return that same promise.');
 }
 
-function objectOrFunction(x: ?) {
+function objectOrFunction(x: any) {
   let type = typeof x;
   return x !== null && (type === 'object' || type === 'function');
 }
@@ -73,7 +73,7 @@ function handleOwnThenable(promise: Promise,  thenable: Thenable<any>) {
   }
 }
 
-export function handleMaybeThenable(promise: Promise,  maybeThenable: MaybeThenable<any,  then: Thenable<any>) {
+export function handleMaybeThenable(promise: Promise,  maybeThenable: any,  then: Function) {
   let isOwnThenable =
     maybeThenable.constructor === promise.constructor &&
     then === originalThen &&

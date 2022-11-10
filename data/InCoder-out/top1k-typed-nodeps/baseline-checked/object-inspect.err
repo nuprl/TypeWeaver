@@ -1,8 +1,36 @@
-index.ts(72,103): error TS1005: ';' expected.
-index.ts(254,80): error TS1005: ';' expected.
-index.ts(324,28): error TS1110: Type expected.
-index.ts(340,37): error TS1110: Type expected.
-index.ts(367,28): error TS1110: Type expected.
-index.ts(383,34): error TS1144: '{' or ';' expected.
-index.ts(439,90): error TS1005: '>' expected.
+example/all.ts(10,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'obj' must be of type '(number | ((n: number) => number))[]', but here has type '{ a: number; b: number[]; c: any; d: any; e: { regex: RegExp; buf: any; holes: string[]; }; now: Date; }'.
+example/all.ts(22,5): error TS2339: Property 'self' does not exist on type '(number | ((n: number) => number))[]'.
+example/circular.ts(4,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'obj' must be of type '(number | ((n: number) => number))[]', but here has type '{ a: number; b: number[]; }'.
+example/circular.ts(5,5): error TS2339: Property 'c' does not exist on type '(number | ((n: number) => number))[]'.
+index.ts(33,74): error TS2367: This condition will always return 'false' since the types 'string' and 'boolean' have no overlap.
+index.ts(39,8): error TS2339: Property '__proto__' does not exist on type 'undefined[]'.
+index.ts(122,60): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+index.ts(126,55): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'number'.
+index.ts(138,9): error TS2322: Type 'undefined[]' is not assignable to type 'number'.
+index.ts(139,24): error TS2345: Argument of type 'number' is not assignable to parameter of type 'T[]'.
+index.ts(146,18): error TS2339: Property 'push' does not exist on type 'number'.
+index.ts(153,25): error TS2339: Property 'quoteStyle' does not exist on type '{ depth: any; }'.
+index.ts(184,43): error TS2345: Argument of type '{ base: any; prev: any; }' is not assignable to parameter of type 'number'.
+index.ts(191,87): error TS2554: Expected 3 arguments, but got 1.
+index.ts(206,62): error TS2554: Expected 3 arguments, but got 2.
+index.ts(208,65): error TS2345: Argument of type '{ base: any; prev: any; }' is not assignable to parameter of type 'number'.
+index.ts(213,27): error TS2554: Expected 3 arguments, but got 2.
+index.ts(215,65): error TS2345: Argument of type '{ base: any; prev: any; }' is not assignable to parameter of type 'number'.
+index.ts(227,26): error TS2554: Expected 3 arguments, but got 1.
+index.ts(230,26): error TS2554: Expected 3 arguments, but got 1.
+index.ts(236,26): error TS2554: Expected 3 arguments, but got 1.
+index.ts(247,49): error TS2345: Argument of type '{ base: any; prev: any; }' is not assignable to parameter of type 'number'.
+index.ts(254,47): error TS2304: Cannot find name 'Style'.
+index.ts(316,28): error TS2304: Cannot find name 'T'.
+index.ts(316,36): error TS2304: Cannot find name 'T'.
+index.ts(419,15): error TS2339: Property 'charCodeAt' does not exist on type 'number'.
+index.ts(435,33): error TS2304: Cannot find name 'ing'.
+index.ts(446,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'T[]'.
+index.ts(453,26): error TS2304: Cannot find name 'IndentOptions'.
+index.ts(470,36): error TS2339: Property 'prev' does not exist on type 'number'.
+index.ts(470,50): error TS2339: Property 'base' does not exist on type 'number'.
+index.ts(471,74): error TS2339: Property 'prev' does not exist on type 'number'.
+index.ts(488,26): error TS2469: The '+' operator cannot be applied to type 'symbol'.
+../../../../node_modules/@types/node/ts4.8/buffer.d.ts(98,14): error TS2661: Cannot export 'Buffer'. Only local declarations can be exported from a module.
+../../../../node_modules/@types/node/ts4.8/buffer.d.ts(2209,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Buffer' must be of type 'any', but here has type 'BufferConstructor'.
 

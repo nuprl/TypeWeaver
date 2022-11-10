@@ -4,7 +4,7 @@ import TrackerBase from './tracker-base.js';
 import Tracker from './tracker.js';
 import TrackerStream from './tracker-stream.js';
 
-var TrackerGroup = function (name: ?string) {
+var TrackerGroup = function (name: any) {
   TrackerBase.call(this, name)
   this.parentGroup = null
   this.trackers = []

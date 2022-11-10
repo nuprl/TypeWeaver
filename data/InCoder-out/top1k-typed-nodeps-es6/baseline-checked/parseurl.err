@@ -1,5 +1,20 @@
-benchmark/pathquery.ts(64,26): error TS1110: Type expected.
-benchmark/samerequest.ts(68,26): error TS1110: Type expected.
-benchmark/simplepath.ts(65,26): error TS1110: Type expected.
-benchmark/slash.ts(64,26): error TS1110: Type expected.
+benchmark/fullurl.ts(17,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+benchmark/fullurl.ts(19,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
+benchmark/index.ts(14,12): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+benchmark/index.ts(17,28): error TS2339: Property 'shift' does not exist on type 'string'.
+benchmark/pathquery.ts(17,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+benchmark/pathquery.ts(19,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
+benchmark/samerequest.ts(17,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+benchmark/samerequest.ts(19,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
+benchmark/simplepath.ts(17,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+benchmark/simplepath.ts(19,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
+benchmark/slash.ts(17,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+benchmark/slash.ts(19,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
+index.ts(18,15): error TS2551: Property 'Url' does not exist on type 'typeof import("url")'. Did you mean 'URL'?
+index.ts(37,25): error TS2503: Cannot find namespace 'express'.
+index.ts(67,28): error TS2503: Cannot find namespace 'express'.
+index.ts(77,13): error TS2345: Argument of type 'string' is not assignable to parameter of type 'URL'.
+index.ts(99,18): error TS2345: Argument of type 'string | number' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
+index.ts(159,15): error TS2339: Property '_raw' does not exist on type 'URL'.
 

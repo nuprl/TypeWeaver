@@ -1,6 +1,6 @@
 var defaultIsMergeableObject = require('is-mergeable-object')
 
-function emptyTarget(val: |endofmask|>) {
+function emptyTarget(val: any) {
 	return Array.isArray(val) ? [] : {}
 }
 

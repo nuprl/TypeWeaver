@@ -60,7 +60,7 @@ module.exports = function (options: IOptions) {
     };
 
     plumbing.defaultTransformations = {
-        HEAD: function (body: any,  response: Response,  resolveWithFullResponse: ng.IPromise<any) {
+        HEAD: function (body: any,  response: Response,  resolveWithFullResponse: any) {
             return resolveWithFullResponse ? response : response.headers;
         }
     };

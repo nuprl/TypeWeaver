@@ -18,7 +18,7 @@
     child.prototype = new ctor();
   }
 
-  function peg$SyntaxError(message: ?string, location:?,  expected: string,  found: ?,  reason:?,  location: ,  data:?}) {
+  function peg$SyntaxError(message: any,  expected: peg$SyntaxError,  found: peg$FAILED,  location: peg$computeLocation) {
     this.message  = message;
     this.expected = expected;
     this.found    = found;
@@ -32,7 +32,7 @@
 
   peg$subclass(peg$SyntaxError, Error);
 
-  peg$SyntaxError.buildMessage = function(expected: ?string, actual:?,  found: string) {
+  peg$SyntaxError.buildMessage = function(expected: any,  found: any) {
     var DESCRIBE_EXPECTATION_FNS = {
           literal: function(expectation: Expectation) {
             return "\"" + literalEscape(expectation.text) + "\"";
@@ -332,11 +332,11 @@
       throw peg$buildSimpleError(message, location);
     }
 
-    function peg$literalExpectation(text: ?string, type:?string,,  ignoreCase: ?boolean, source:) {
+    function peg$literalExpectation(text: any,  ignoreCase: boolean) {
       return { type: "literal", text: text, ignoreCase: ignoreCase };
     }
 
-    function peg$classExpectation(parts: Array<string>,  inverted: ?boolean,  ignoreCase: boolean) {
+    function peg$classExpectation(parts: Array<string>,  inverted: any,  ignoreCase: boolean) {
       return { type: "class", parts: parts, inverted: inverted, ignoreCase: ignoreCase };
     }
 
@@ -348,7 +348,7 @@
       return { type: "end" };
     }
 
-    function peg$otherExpectation(description: ?string) {
+    function peg$otherExpectation(description: any) {
       return { type: "other", description: description };
     }
 
@@ -403,7 +403,7 @@
       };
     }
 
-    function peg$fail(expected: ?string, actual:?) {
+    function peg$fail(expected: any) {
       if (peg$currPos < peg$maxFailPos) { return; }
 
       if (peg$currPos > peg$maxFailPos) {
@@ -414,11 +414,11 @@
       peg$maxFailExpected.push(expected);
     }
 
-    function peg$buildSimpleError(message: ?string,  location: string) {
+    function peg$buildSimpleError(message: any,  location: peg$loc) {
       return new peg$SyntaxError(message, null, null, location);
     }
 
-    function peg$buildStructuredError(expected: ?string, found:?,  found: string,  location: undefined) {
+    function peg$buildStructuredError(expected: any,  found: any,  location: Location) {
       return new peg$SyntaxError(
         peg$SyntaxError.buildMessage(expected, found),
         expected,

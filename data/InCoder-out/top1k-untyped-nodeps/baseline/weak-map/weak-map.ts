@@ -110,7 +110,7 @@
    * keys and one which is capable of safely using proxies as keys. See
    * comments below about HostWeakMap and DoubleWeakMap for details.
    *
-   * This function (which is a global: ,  not exposed to guests: ) marks a
+   * This function (which is a global: any,  not exposed to guests: any) marks a
    * WeakMap as permitted to do what is necessary to index all host
    * objects, at the cost of making it unsafe for proxies.
    *

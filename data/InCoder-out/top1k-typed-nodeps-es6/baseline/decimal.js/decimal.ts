@@ -3165,7 +3165,7 @@
   }
 
 
-  function getPi(Ctor: Class<*>, sd,  sd: number,  rm: number) {
+  function getPi(Ctor: any,  sd: number,  rm: number) {
     if (sd > PI_PRECISION) throw Error(precisionLimitExceeded);
     return finalise(new Ctor(PI), sd, rm, true);
   }
@@ -3596,7 +3596,7 @@
   /*
    * Parse the value of a new Decimal `x` from a string `str`, which is not a decimal value.
    */
-  function parseOther(x: string,  str: ?string) {
+  function parseOther(x: string,  str: any) {
     var base, Ctor, divisor, i, isFloat, len, p, xd, xe;
 
     if (str.indexOf('_') > -1) {

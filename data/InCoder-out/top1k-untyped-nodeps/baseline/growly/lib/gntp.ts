@@ -98,7 +98,7 @@ GNTP.prototype.addResource = function(file: File) {
  * @api public
  */
 
-GNTP.prototype.add = function(name: String,  val: *) {
+GNTP.prototype.add = function(name: String,  val: any) {
     if (val === undefined) 
         return;
 

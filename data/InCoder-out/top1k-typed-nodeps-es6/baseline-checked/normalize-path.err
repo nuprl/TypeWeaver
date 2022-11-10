@@ -1,8 +1,25 @@
-benchmark/code/no-regex.ts(19,23): error TS1110: Type expected.
-benchmark/code/no-regex.ts(19,46): error TS1110: Type expected.
-benchmark/code/no-regex.ts(19,47): error TS1109: Expression expected.
-benchmark/code/no-regex.ts(19,61): error TS1005: ';' expected.
-benchmark/code/no-regex.ts(19,64): error TS1128: Declaration or statement expected.
-benchmark/code/no-regex.ts(31,2): error TS1005: '}' expected.
-benchmark/code/while.ts(38,22): error TS1110: Type expected.
+benchmark/code/no-regex.ts(2,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'RegExp'.
+benchmark/code/no-regex.ts(3,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'RegExp'.
+benchmark/code/no-regex.ts(5,22): error TS2339: Property 'length' does not exist on type 'string | RegExp'.
+  Property 'length' does not exist on type 'RegExp'.
+benchmark/code/no-regex.ts(8,15): error TS2339: Property 'substr' does not exist on type 'string | RegExp'.
+  Property 'substr' does not exist on type 'RegExp'.
+benchmark/code/no-regex.ts(8,29): error TS2339: Property 'length' does not exist on type 'string | RegExp'.
+  Property 'length' does not exist on type 'RegExp'.
+benchmark/code/no-regex.ts(12,15): error TS2339: Property 'substr' does not exist on type 'string | RegExp'.
+  Property 'substr' does not exist on type 'RegExp'.
+benchmark/code/no-regex.ts(12,29): error TS2339: Property 'length' does not exist on type 'string | RegExp'.
+  Property 'length' does not exist on type 'RegExp'.
+benchmark/code/no-regex.ts(15,14): error TS2339: Property 'toLowerCase' does not exist on type 'string | RegExp'.
+  Property 'toLowerCase' does not exist on type 'RegExp'.
+benchmark/code/no-regex.ts(24,24): error TS2339: Property 'length' does not exist on type 'RegExp'.
+benchmark/code/node-path.ts(2,6): error TS2540: Cannot assign to 'sep' because it is a read-only property.
+benchmark/code/node-path.ts(5,3): error TS2322: Type 'string' is not assignable to type 'File'.
+benchmark/code/node-path.ts(5,23): error TS2345: Argument of type 'File' is not assignable to parameter of type 'string'.
+benchmark/code/node-path.ts(9,13): error TS2339: Property 'replace' does not exist on type 'File'.
+benchmark/code/split.ts(2,13): error TS2339: Property 'split' does not exist on type 'string | string[]'.
+  Property 'split' does not exist on type 'string[]'.
+benchmark/code/v2.ts(8,37): error TS2307: Cannot find module 'remove-trailing-separator' or its corresponding type declarations.
+benchmark/index.ts(4,19): error TS2307: Cannot find module 'benchmarked' or its corresponding type declarations.
+index.ts(8,31): error TS2304: Cannot find name 'ring'.
 

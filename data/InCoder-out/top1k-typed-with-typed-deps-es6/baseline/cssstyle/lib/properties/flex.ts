@@ -20,7 +20,7 @@ module.exports.isValid = function isValid(v: any) {
 };
 
 module.exports.definition = {
-  set: function(v: |endofmask|>) {
+  set: function(v: any) {
     var normalizedValue = String(v)
       .trim()
       .toLowerCase();

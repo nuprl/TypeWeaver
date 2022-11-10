@@ -64,7 +64,7 @@ co(function * () {
 
   // gather extension frequency
   var exts = Object.create(null)
-  results.forEach(function (result: IPromise<IFile) {
+  results.forEach(function (result: any) {
     (result.extensions || []).forEach(function (ext: string | string[]) {
       exts[ext] = (exts[ext] || 0) + 1
     })

@@ -96,7 +96,7 @@ function normalizeStringPosix(path: string | undefined,  allowAboveRoot: boolean
   return res;
 }
 
-function _format(sep: ?string, pathObject:,  pathObject: string) {
+function _format(sep: any,  pathObject: any) {
   var dir = pathObject.dir || pathObject.root;
   var base = pathObject.base || (pathObject.name || '') + (pathObject.ext || '');
   if (!dir) {
@@ -315,7 +315,7 @@ var posix = {
     return path.slice(0, end);
   },
 
-  basename: function basename(path: Path,  ext: ?string) {
+  basename: function basename(path: Path,  ext: any) {
     if (ext !== undefined && typeof ext !== 'string') throw new TypeError('"ext" argument must be a string');
     assertPath(path);
 

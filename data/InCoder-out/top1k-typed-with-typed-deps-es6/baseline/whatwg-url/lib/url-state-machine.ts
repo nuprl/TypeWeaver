@@ -1041,7 +1041,7 @@ URLStateMachine.prototype["parse path"] = function parsePath(c: ParseContext) {
   return true;
 };
 
-URLStateMachine.prototype["parse opaque path"] = function parseOpaquePath(c: ) {
+URLStateMachine.prototype["parse opaque path"] = function parseOpaquePath(c: any) {
   if (c === p("?")) {
     this.url.query = "";
     this.state = "query";

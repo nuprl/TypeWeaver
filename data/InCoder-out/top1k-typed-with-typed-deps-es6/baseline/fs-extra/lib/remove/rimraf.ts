@@ -24,7 +24,7 @@ function defaults (options: Object) {
   options.maxBusyTries = options.maxBusyTries || 3
 }
 
-function rimraf (p: string | Buffer,  options: { recursive?: boolean,  cb: Function) {
+function rimraf (p: string | Buffer,  options: any,  cb: Function) {
   let busyTries = 0
 
   if (typeof options === 'function') {
@@ -69,7 +69,7 @@ function rimraf (p: string | Buffer,  options: { recursive?: boolean,  cb: Funct
 //
 // If anyone ever complains about this, then I guess the strategy could
 // be made configurable somehow.  But until then, YAGNI.
-function rimraf_ (p: string | Buffer,  options: { recursive?: boolean,  cb: Function) {
+function rimraf_ (p: string | Buffer,  options: any,  cb: Function) {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
@@ -164,7 +164,7 @@ function fixWinEPERMSync (p: PathLike,  options: { encoding?: string },  er: Err
   }
 }
 
-function rmdir (p: string | Buffer,  options: { recursive?: boolean,  originalEr: Error,  cb: Function) {
+function rmdir (p: string | Buffer,  options: any,  originalEr: Error,  cb: Function) {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
@@ -183,7 +183,7 @@ function rmdir (p: string | Buffer,  options: { recursive?: boolean,  originalEr
   })
 }
 
-function rmkids (p: Buffer,  options: { encoding?: string,  cb: Function) {
+function rmkids (p: Buffer,  options: any,  cb: Function) {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
@@ -213,7 +213,7 @@ function rmkids (p: Buffer,  options: { encoding?: string,  cb: Function) {
 // this looks simpler, and is strictly *faster*, but will
 // tie up the JavaScript thread and fail on excessively
 // deep directory trees.
-function rimrafSync (p: string | Buffer,  options: { recursive?: boolean,) {
+function rimrafSync (p: string | Buffer,  options: any) {
   let st
 
   options = options || {}
@@ -256,7 +256,7 @@ function rimrafSync (p: string | Buffer,  options: { recursive?: boolean,) {
   }
 }
 
-function rmdirSync (p: string | Buffer,  options: { recursive?: boolean,  originalEr: Error) {
+function rmdirSync (p: string | Buffer,  options: any,  originalEr: Error) {
   assert(p)
   assert(options)
 

@@ -1,5 +1,35 @@
-fetch.ts(49,40): error TS1110: Type expected.
-fetch.ts(49,41): error TS1109: Expression expected.
-fetch.ts(59,57): error TS1110: Type expected.
-fetch.ts(109,46): error TS1110: Type expected.
+fetch.ts(97,33): error TS2538: Type 'String' cannot be used as an index type.
+fetch.ts(105,27): error TS2538: Type 'String' cannot be used as an index type.
+fetch.ts(106,12): error TS2538: Type 'String' cannot be used as an index type.
+fetch.ts(163,12): error TS2339: Property 'bodyUsed' does not exist on type 'Node'.
+fetch.ts(166,8): error TS2339: Property 'bodyUsed' does not exist on type 'Node'.
+fetch.ts(241,48): error TS2339: Property 'buffer' does not exist on type 'Body'.
+fetch.ts(245,43): error TS2345: Argument of type 'Body' is not assignable to parameter of type 'Buffer'.
+  Type 'Body' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 97 more.
+fetch.ts(334,34): error TS2304: Cannot find name 'Method'.
+fetch.ts(339,32): error TS2552: Cannot find name 'RequestInput'. Did you mean 'RequestInit'?
+fetch.ts(339,56): error TS2304: Cannot find name 'RequestOptions'.
+fetch.ts(348,15): error TS2339: Property 'bodyUsed' does not exist on type '{}'.
+fetch.ts(351,22): error TS2339: Property 'url' does not exist on type '{}'.
+fetch.ts(352,30): error TS2339: Property 'credentials' does not exist on type '{}'.
+fetch.ts(354,40): error TS2339: Property 'headers' does not exist on type '{}'.
+fetch.ts(356,25): error TS2339: Property 'method' does not exist on type '{}'.
+fetch.ts(357,23): error TS2339: Property 'mode' does not exist on type '{}'.
+fetch.ts(358,25): error TS2339: Property 'signal' does not exist on type '{}'.
+fetch.ts(359,24): error TS2339: Property '_bodyInit' does not exist on type '{}'.
+fetch.ts(360,20): error TS2339: Property '_bodyInit' does not exist on type '{}'.
+fetch.ts(361,13): error TS2339: Property 'bodyUsed' does not exist on type '{}'.
+fetch.ts(409,6): error TS2339: Property 'trim' does not exist on type 'Blob'.
+fetch.ts(413,27): error TS2339: Property 'split' does not exist on type 'Uint8Array'.
+fetch.ts(423,17): error TS2554: Expected 1 arguments, but got 0.
+fetch.ts(435,29): error TS2304: Cannot find name 'Line'.
+fetch.ts(457,25): error TS2339: Property 'status' does not exist on type 'Object'.
+fetch.ts(457,62): error TS2339: Property 'status' does not exist on type 'Object'.
+fetch.ts(459,29): error TS2339: Property 'statusText' does not exist on type 'Object'.
+fetch.ts(459,74): error TS2339: Property 'statusText' does not exist on type 'Object'.
+fetch.ts(460,38): error TS2339: Property 'headers' does not exist on type 'Object'.
+fetch.ts(461,22): error TS2339: Property 'url' does not exist on type 'Object'.
+fetch.ts(485,32): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+fetch.ts(526,15): error TS2339: Property 'url' does not exist on type '{ status: number; statusText: string; headers: any; }'.
 

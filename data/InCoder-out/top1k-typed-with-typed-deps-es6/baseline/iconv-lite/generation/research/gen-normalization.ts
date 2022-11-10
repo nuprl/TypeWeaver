@@ -80,7 +80,7 @@ async.parallel({
     function f(ch: number) { return features[ch] || {combiningClass: 0}; }
     function hex(ch: number) { return (+ch).toString(16);}
 
-    function decompose(ch: ,  canonical: boolean) {
+    function decompose(ch: any,  canonical: boolean) {
         var feat = f(ch);
         if (feat.decomp && (feat.canonical || !canonical)) {
             return [].concat.apply([], feat.decomp.map(function(c: CharCode) {return decompose(c, canonical)}));

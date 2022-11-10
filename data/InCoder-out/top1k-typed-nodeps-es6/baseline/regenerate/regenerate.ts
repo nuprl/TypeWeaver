@@ -596,7 +596,7 @@
 		return '\\u{' + codePoint.toString(16).toUpperCase() + '}';
 	};
 
-	var symbolToCodePoint = function(symbol: ) {
+	var symbolToCodePoint = function(symbol: any) {
 		var length = symbol.length;
 		var first = symbol.charCodeAt(0);
 		var second;

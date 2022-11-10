@@ -111,7 +111,7 @@ var Base = _subclass.call(Object, {
   
   extend: delegate(extend)
 }, Base = {
-  ancestorOf: function(klass: Class<*>) {
+  ancestorOf: function(klass: any) {
     return _ancestorOf(this, klass);
   },
   
@@ -641,7 +641,7 @@ var Collection = Map.extend({
     return sliced;
   },
 
-  sort: function(compare: ?Function) { // optimised (refers to _HASH)
+  sort: function(compare: any) { // optimised (refers to _HASH)
     if (compare) {
       this[_KEYS].sort(bind(function(key1: any,  key2: any) {
         return compare(this[_HASH + key1], this[_HASH + key2], key1, key2);
@@ -696,7 +696,7 @@ var RegGrp = Collection.extend({
 
   ignoreCase: false,
 
-  exec: function(string: any,  override: ?boolean) { // optimised (refers to _HASH/_KEYS)
+  exec: function(string: any,  override: any) { // optimised (refers to _HASH/_KEYS)
     string += ""; // type-safe
     var items = this, keys = this[_KEYS];
     if (!keys.length) return string;
@@ -723,14 +723,14 @@ var RegGrp = Collection.extend({
     });
   },
 
-  insertAt: function(index: number,  expression: ,  replacement: {) {
+  insertAt: function(index: number,  expression: any,  replacement: any) {
     if (instanceOf(expression, RegExp)) {
       arguments[1] = expression.source;
     }
     return base(this, arguments);
   },
 
-  test: function(string: ?string, callback:?) {
+  test: function(string: any) {
     // The slow way to do it. Hopefully, this isn't called too often. :-)
     return this.exec(string) != string;
   },
@@ -831,7 +831,7 @@ function assertArity(args: any[],  arity: number,  message: string | string[]) {
   }
 };
 
-function assertType(object: any,  type: string,  message: ?string) {) {
+function assertType(object: any,  type: string,  message: any) {
   if (type && (typeof type == "function" ? !instanceOf(object, type) : typeOf(object) != type)) {
     throw new TypeError(message || "Invalid type.");
   }
@@ -975,7 +975,7 @@ function forEach(object: Object,  block: Function,  context: Object,  fn: Functi
   _Function_forEach(fn || Object, object, block, context);
 };
 
-forEach.csv = function(string: ?string) {,  block: (Function|string),  context: Object) {
+forEach.csv = function(string: any,  block: Function,  context: Object) {
   forEach (csv(string), block, context);
 };
 
@@ -1149,7 +1149,7 @@ function _createObject2(Native: any,  constructor: Function,  generics: Array,  
   var INative = Module.extend();
   var id = INative.toString().slice(1, -1);
   // http://developer.mozilla.org/en/docs/New_in_JavaScript_1.6#Array_and_String_generics
-  forEach.csv(generics, function(name: ) {
+  forEach.csv(generics, function(name: any) {
     INative[name] = unbind(Native.prototype[name]);
     INative.namespace += format("var %1=%2.%1;", name, id);
   });
@@ -1291,7 +1291,7 @@ var Array2 = _createObject2(
       return -1;
     },
     
-    insertAt: function(array: Array,  index: number,  item: *): boolean {) {
+    insertAt: function(array: Array,  index: number,  item: any) {
       Array2.splice(array, index, 0, item);
       return item;
     },
@@ -1452,7 +1452,7 @@ Date2.parse = function(string: Date,  defaultDate: Date) {
 
 var String2 = _createObject2(
   String, 
-  function(string: ?string, callback:?) {
+  function(string: any) {
     return new String(arguments.length == 0 ? "" : string);
   },
   "charAt,charCodeAt,concat,indexOf,lastIndexOf,match,replace,search,slice,split,substr,substring,toLowerCase,toUpperCase",

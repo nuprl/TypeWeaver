@@ -1,3 +1,17 @@
-lib/des/des.ts(13,23): error TS1110: Type expected.
-lib/des/ede.ts(30,23): error TS1110: Type expected.
+lib/des/cbc.ts(8,23): error TS2304: Cannot find name 'IV'.
+lib/des/cbc.ts(16,28): error TS2749: 'Base' refers to a value, but is being used as a type here. Did you mean 'typeof Base'?
+lib/des/cbc.ts(17,25): error TS2503: Cannot find namespace 'CBC'.
+lib/des/cbc.ts(29,41): error TS2304: Cannot find name 'CBCOptions'.
+lib/des/cbc.ts(38,7): error TS2339: Property '_cbcInit' does not exist on type '{}'.
+lib/des/cbc.ts(43,7): error TS2339: Property '_update' does not exist on type '{}'.
+lib/des/cipher.ts(5,26): error TS2304: Cannot find name 'CipherOptions'.
+lib/des/des.ts(5,8): error TS1192: Module '"lib/des/utils"' has no default export.
+lib/des/des.ts(24,39): error TS2709: Cannot use namespace 'DES' as a type.
+lib/des/des.ts(33,55): error TS2304: Cannot find name 'IState'.
+lib/des/des.ts(117,51): error TS2304: Cannot find name 'IBufferState'.
+lib/des/ede.ts(9,20): error TS2339: Property 'length' does not exist on type 'number'.
+lib/des/ede.ts(11,16): error TS2339: Property 'slice' does not exist on type 'number'.
+lib/des/ede.ts(12,16): error TS2339: Property 'slice' does not exist on type 'number'.
+lib/des/ede.ts(13,16): error TS2339: Property 'slice' does not exist on type 'number'.
+lib/des/ede.ts(40,39): error TS2552: Cannot find name 'EDEOptions'. Did you mean 'DelayOptions'?
 

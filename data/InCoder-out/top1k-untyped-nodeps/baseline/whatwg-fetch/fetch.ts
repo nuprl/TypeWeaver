@@ -46,7 +46,7 @@ if (support.arrayBuffer) {
     }
 }
 
-function normalizeName(name: endofmask|>) {
+function normalizeName(name: any) {
   if (typeof name !== 'string') {
     name = String(name)
   }
@@ -56,7 +56,7 @@ function normalizeName(name: endofmask|>) {
   return name.toLowerCase()
 }
 
-function normalizeValue(value: ring | number | boolean |) {
+function normalizeValue(value: any) {
   if (typeof value !== 'string') {
     value = String(value)
   }
@@ -106,11 +106,11 @@ Headers.prototype.append = function(name: String,  value: any) {
   this.map[name] = oldValue ? oldValue + ', ' + value : value
 }
 
-Headers.prototype['delete'] = function(name: ) {
+Headers.prototype['delete'] = function(name: any) {
   delete this.map[normalizeName(name)]
 }
 
-Headers.prototype.get = function(name: ?string) {
+Headers.prototype.get = function(name: any) {
   name = normalizeName(name)
   return this.has(name) ? this.map[name] : null
 }

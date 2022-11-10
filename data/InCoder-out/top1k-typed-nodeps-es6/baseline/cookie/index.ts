@@ -237,7 +237,7 @@ function decode (str: tring | Buffer) {
  * @returns {string}
  */
 
-function encode (val: string | number | boolean |) {
+function encode (val: any) {
   return encodeURIComponent(val)
 }
 

@@ -92,7 +92,7 @@ export default function base(app: Application,  options: any) {
    * `fns` array to be called by the `run` method.
    */
 
-  function use(type: string,  fn: Function,  options: { [key: string]: any) {
+  function use(type: string,  fn: Function,  options: any) {
     var offset = 1;
 
     if (typeof type === 'string' || Array.isArray(type)) {

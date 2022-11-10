@@ -201,7 +201,7 @@ function log(...args: any[]) {
  * @param {String} namespaces
  * @api private
  */
-function save(namespaces: ?string) {
+function save(namespaces: any) {
 	if (namespaces) {
 		process.env.DEBUG = namespaces;
 	} else {

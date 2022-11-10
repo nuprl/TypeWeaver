@@ -43,7 +43,7 @@ function parseUrlencodedString(input: string | Uint8Array) {
 }
 
 // https://url.spec.whatwg.org/#concept-urlencoded-serializer
-function serializeUrlencoded(tuples: Array<[string, string],  encodingOverride = undefined: defaults) {
+function serializeUrlencoded(tuples: any,  encodingOverride = undefined: any) {
   let encoding = "utf-8";
   if (encodingOverride !== undefined) {
     // TODO "get the output encoding", i.e. handle encoding labels vs. names.

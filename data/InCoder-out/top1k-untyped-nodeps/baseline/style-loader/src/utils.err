@@ -1,9 +1,9 @@
 Traceback (most recent call last):
-  File "main.py", line 240, in _infer_on_file
+  File "main.py", line 242, in _infer_on_file
     result = typeinf.infer(input_file)
-  File "main.py", line 186, in infer
+  File "main.py", line 188, in infer
     lines = [_templatize_function(line) for line in lines]
-  File "main.py", line 186, in <listcomp>
+  File "main.py", line 188, in <listcomp>
     lines = [_templatize_function(line) for line in lines]
   File "main.py", line 44, in _templatize_function
     function_end = line.index(")", function_start)

@@ -302,7 +302,7 @@
     })();
 
     // A utility function to return broadcast address given the IPv4 interface and prefix length in CIDR notation
-    ipaddr.IPv4.broadcastAddressFromCIDR = function (string: ?string) {) {
+    ipaddr.IPv4.broadcastAddressFromCIDR = function (string: any) {
 
         try {
             const cidr = this.parseCIDR(string);
@@ -328,7 +328,7 @@
     };
 
     // Checks if a given string is a valid IPv4 address.
-    ipaddr.IPv4.isValid = function (string: ?string, callback:?) {
+    ipaddr.IPv4.isValid = function (string: any) {
         try {
             new this(this.parser(string));
             return true;
@@ -338,7 +338,7 @@
     };
 
     // Checks if a given string is a full four-part IPv4 Address.
-    ipaddr.IPv4.isValidFourPartDecimal = function (string: ?string, callback:?) {
+    ipaddr.IPv4.isValidFourPartDecimal = function (string: any) {
         if (ipaddr.IPv4.isValid(string) && string.match(/^(0|[1-9]\d*)(\.(0|[1-9]\d*)){3}$/)) {
             return true;
         } else {
@@ -347,7 +347,7 @@
     };
 
     // A utility function to return network address given the IPv4 interface and prefix length in CIDR notation
-    ipaddr.IPv4.networkAddressFromCIDR = function (string: ?string, callback:?) {
+    ipaddr.IPv4.networkAddressFromCIDR = function (string: any) {
         let cidr, i, ipInterfaceOctets, octets, subnetMaskOctets;
 
         try {
@@ -381,7 +381,7 @@
     };
 
     // Parses the string as an IPv4 Address with CIDR Notation.
-    ipaddr.IPv4.parseCIDR = function (string: ) {
+    ipaddr.IPv4.parseCIDR = function (string: any) {
         let match;
 
         if ((match = string.match(/^(.+)\/(\d+)$/))) {
@@ -403,7 +403,7 @@
     // Classful variants (like a.b, where a is an octet, and b is a 24-bit
     // value representing last three octets; this corresponds to a class C
     // address) are omitted due to classless nature of modern Internet.
-    ipaddr.IPv4.parser = function (string: ?string) {
+    ipaddr.IPv4.parser = function (string: any) {
         let match, part, value;
 
         // parseInt recognizes all that octal & hexadecimal weirdness for us
@@ -746,7 +746,7 @@
     })();
 
     // A utility function to return broadcast address given the IPv6 interface and prefix length in CIDR notation
-    ipaddr.IPv6.broadcastAddressFromCIDR = function (string: ?string, callback:?) {
+    ipaddr.IPv6.broadcastAddressFromCIDR = function (string: any) {
         try {
             const cidr = this.parseCIDR(string);
             const ipInterfaceOctets = cidr[0].toByteArray();
@@ -771,7 +771,7 @@
     };
 
     // Checks to see if string is a valid IPv6 Address
-    ipaddr.IPv6.isValid = function (string: ?string, callback: (err) {
+    ipaddr.IPv6.isValid = function (string: any) {
 
         // Since IPv6.isValid is always called first, this shortcut
         // provides a substantial performance gain.
@@ -789,7 +789,7 @@
     };
 
     // A utility function to return network address given the IPv6 interface and prefix length in CIDR notation
-    ipaddr.IPv6.networkAddressFromCIDR = function (string: ?string, callback:?) {
+    ipaddr.IPv6.networkAddressFromCIDR = function (string: any) {
         let cidr, i, ipInterfaceOctets, octets, subnetMaskOctets;
 
         try {
@@ -842,7 +842,7 @@
     };
 
     // Parse an IPv6 address.
-    ipaddr.IPv6.parser = function (string: ?string, callback:?) {
+    ipaddr.IPv6.parser = function (string: any) {
         let addr, i, match, octet, octets, zoneId;
 
         if ((match = string.match(ipv6Regexes.deprecatedTransitional))) {
@@ -917,7 +917,7 @@
     };
 
     // Checks if the address is valid IP address
-    ipaddr.isValid = function (string: ?string, callback:?) {
+    ipaddr.isValid = function (string: any) {
         return ipaddr.IPv6.isValid(string) || ipaddr.IPv4.isValid(string);
     };
 
@@ -936,7 +936,7 @@
 
     // Attempt to parse CIDR notation, first through IPv6 then IPv4.
     // Throws an error if it could not be parsed.
-    ipaddr.parseCIDR = function (string: ?string, callback:?) {
+    ipaddr.parseCIDR = function (string: any) {
         try {
             return ipaddr.IPv6.parseCIDR(string);
         } catch (e) {

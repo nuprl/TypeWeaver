@@ -715,7 +715,7 @@ function lineComment () {
   }
 }
 
-function stringLiteral (quote: ?string, escape:?) {
+function stringLiteral (quote: any) {
   while (pos++ < end) {
     let ch = source.charCodeAt(pos);
     if (ch === quote)
@@ -759,7 +759,7 @@ function regularExpression () {
   syntaxError();
 }
 
-function readToWsOrPunctuator (ch: ) {
+function readToWsOrPunctuator (ch: any) {
   do {
     if (isBrOrWs(ch) || isPunctuator(ch))
       return ch;

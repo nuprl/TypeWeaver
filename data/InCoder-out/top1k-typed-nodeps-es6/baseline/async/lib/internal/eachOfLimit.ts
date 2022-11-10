@@ -26,7 +26,7 @@ export default (limit) => {
         var running = 0;
         var looping = false;
 
-        function iterateeCallback(err: ?Error, value:?any,  value: any) {
+        function iterateeCallback(err: any,  value: any) {
             if (canceled) return
             running -= 1;
             if (err) {

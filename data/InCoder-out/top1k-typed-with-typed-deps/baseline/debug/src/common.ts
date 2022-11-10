@@ -159,7 +159,7 @@ function setup(env: Env) {
 	* @param {String} namespaces
 	* @api public
 	*/
-	function enable(namespaces: ) {
+	function enable(namespaces: any) {
 		createDebug.save(namespaces);
 		createDebug.namespaces = namespaces;
 

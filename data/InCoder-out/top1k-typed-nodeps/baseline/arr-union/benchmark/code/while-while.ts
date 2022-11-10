@@ -18,6 +18,6 @@ module.exports = function union(init: Array<any>) {
   return init;
 };
 
-function arrayify(val: |endofmask|>) {
+function arrayify(val: any) {
   return Array.isArray(val) ? val : [val];
 }

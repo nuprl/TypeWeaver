@@ -2,7 +2,7 @@
 
 var fs = require('fs')
 
-module.exports = function write (path: ,  obj: opts) {
+module.exports = function write (path: any,  obj: any) {
   var fd = fs.openSync(path, 'w')
   var keys = Object.keys(obj).sort()
 

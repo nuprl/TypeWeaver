@@ -29,7 +29,7 @@ if ($setHas) {
 	};
 } else {
     // eslint-disable-next-line no-unused-vars
-    export default function isWeakSet(x: ?Set<T>): x) {
+    export default function isWeakSet(x: any) {
 		// `WeakSet` does not exist, or does not have a `has` method
 		return false;
 	};

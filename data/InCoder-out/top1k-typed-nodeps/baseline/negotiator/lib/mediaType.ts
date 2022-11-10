@@ -50,7 +50,7 @@ function parseAccept(accept: Array<string>) {
  * @private
  */
 
-function parseMediaType(str: ?string): MediaType,  i: umber) {
+function parseMediaType(str: any,  i: number) {
   var match = simpleMediaTypeRegExp.exec(str);
   if (!match) return null;
 
@@ -230,7 +230,7 @@ function quoteCount(string: string | number) {
  * @private
  */
 
-function splitKeyValuePair(str: ) {
+function splitKeyValuePair(str: any) {
   var index = str.indexOf('=');
   var key;
   var val;
@@ -272,7 +272,7 @@ function splitMediaTypes(accept: string | string[]) {
  * @private
  */
 
-function splitParameters(str: ) {
+function splitParameters(str: any) {
   var parameters = str.split(';');
 
   for (var i = 1, j = 0; i < parameters.length; i++) {
