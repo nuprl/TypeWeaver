@@ -97,16 +97,13 @@ def errors_per_file_summary(data_dir):
         print(f"  {s} ...")
         output_csv = Path(data_dir, "notes", s, "errors_per_file.csv")
         with open(output_csv, "w") as file:
+            file.write('Dataset,Package,File,"Number of errors"')
+            file.write("\n")
+
             for d in datasets:
                 print(f"    {d} ...")
                 original_dataset = Path(data_dir, "original", d)
                 ts_dataset = Path(data_dir, f"{s}-out", d, "baseline")
-
-                if not ts_dataset.exists():
-                    break
-
-                file.write('Dataset,Package,File,"Number of errors"')
-                file.write("\n")
 
                 packages = sorted([p.parts[-1] for p in ts_dataset.iterdir()])
                 for p in packages:
