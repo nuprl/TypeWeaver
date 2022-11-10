@@ -71,7 +71,7 @@ def count_errors_in_file(err_file, src_file):
                 count += 1
     return str(count)
 
-def errors_per_file_for_package(data_dir, original_dataset, ts_dataset, package):
+def errors_per_file_for_package(data_dir, dataset, ts_dataset, package):
     package_dir = Path(ts_dataset, package)
     out_file = Path(ts_dataset, "..", "baseline-checked", f"{package}.out").resolve()
     err_file = Path(ts_dataset, "..", "baseline-checked", f"{package}.err").resolve()
@@ -79,7 +79,7 @@ def errors_per_file_for_package(data_dir, original_dataset, ts_dataset, package)
     entries = []
     files = sorted([f.relative_to(package_dir) for f in package_dir.rglob("*.ts")])
     for file in files:
-        entry = f"{package},{file},"
+        entry = f"{dataset},{package},{file},"
 
         if out_file.exists():
             entries.append(entry + "0")
@@ -94,22 +94,23 @@ def errors_per_file_summary(data_dir):
     datasets = sorted([d.parts[-1] for d in Path(data_dir, "original").iterdir()])
 
     for s in SYSTEMS:
-        for d in datasets:
-            original_dataset = Path(data_dir, "original", d)
-            ts_dataset = Path(data_dir, f"{s}-out", d, "baseline")
+        print(f"  {s} ...")
+        output_csv = Path(data_dir, "notes", s, "errors_per_file.csv")
+        with open(output_csv, "w") as file:
+            for d in datasets:
+                print(f"    {d} ...")
+                original_dataset = Path(data_dir, "original", d)
+                ts_dataset = Path(data_dir, f"{s}-out", d, "baseline")
 
-            if not ts_dataset.exists():
-                break
+                if not ts_dataset.exists():
+                    break
 
-            print(f"{s} {d}...")
-            output_csv = Path(data_dir, "notes", s, d, "errors_per_file.csv")
-            with open(output_csv, "w") as file:
-                file.write('Package,File,"Number of errors"')
+                file.write('Dataset,Package,File,"Number of errors"')
                 file.write("\n")
 
                 packages = sorted([p.parts[-1] for p in ts_dataset.iterdir()])
                 for p in packages:
-                    entries = errors_per_file_for_package(data_dir, original_dataset, ts_dataset, p)
+                    entries = errors_per_file_for_package(data_dir, d, ts_dataset, p)
                     for e in entries:
                         file.write(e)
                         file.write("\n")
