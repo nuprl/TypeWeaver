@@ -85,8 +85,6 @@ def errors_per_file_for_package(data_dir, dataset, ts_dataset, package):
             entries.append(entry + "0")
         elif err_file.exists():
             entries.append(entry + count_errors_in_file(err_file, file))
-        else:
-            entries.append(entry + "NA")
     return entries
 
 def errors_per_file_summary(data_dir):
