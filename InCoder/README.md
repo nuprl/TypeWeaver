@@ -35,8 +35,8 @@ After installing dependencies, compile the Rust code:
 
 ## Downloading the model
 
-The 1B model is 2.44 GB and needs to be downloaded for the first time. To warm
+The 6B model is 12.4 GB and needs to be downloaded for the first time. To warm
 the cache, you can run:
 
     cd py
-    python -c "import model; m = model.init_model('facebook/incoder-1B')"
+    python -c "import model; m = model.init_model('facebook/incoder-6B')"

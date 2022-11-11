@@ -260,7 +260,7 @@ def main():
     args = _parse_args()
 
     import model
-    m = model.init_model("facebook/incoder-1B")
+    m = model.init_model("facebook/incoder-6B")
     typeinf = TypeInference(**m)
 
     if args.files:
