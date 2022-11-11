@@ -4,7 +4,7 @@ import ArrayIterator from './array-iterator';
 import ObjectIterator from './object-iterator';
 
 export default iterate;
-function iterate(iterable: Iterable<any>,  start: number,  stop: number,  step: number) {
+function iterate(iterable: any,  start: number,  stop: number,  step: number) {
     if (!iterable) {
         return empty;
     } else if (Array.isArray(iterable)) {

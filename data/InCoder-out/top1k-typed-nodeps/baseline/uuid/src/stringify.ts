@@ -10,7 +10,7 @@ for (let i = 0; i < 256; ++i) {
   byteToHex.push((i + 0x100).toString(16).slice(1));
 }
 
-export function unsafeStringify(arr: ArrayLike<any>,  offset = 0: number) {
+export function unsafeStringify(arr: any,  offset = 0: number) {
   // Note: Be careful editing this code!  It's been tuned for performance
   // and works in ways you may not expect. See https://github.com/uuidjs/uuid/pull/434
   return (
@@ -37,7 +37,7 @@ export function unsafeStringify(arr: ArrayLike<any>,  offset = 0: number) {
   ).toLowerCase();
 }
 
-function stringify(arr: Array<any>,  offset = 0: number) {
+function stringify(arr: number[],  offset = 0: number) {
   const uuid = unsafeStringify(arr, offset);
   // Consistency check for valid UUID.  If this throws, it's likely due to one
   // of the following:

@@ -1,4 +1,4 @@
-export function arrayEqual(a: rray,  b: ray) {
+export function arrayEqual(a: ny[],  b: y[]) {
   if (a.length !== b.length) {
     return false;
   }
@@ -6,7 +6,7 @@ export function arrayEqual(a: rray,  b: ray) {
   return arrayStartsWith(a, b);
 }
 
-export function arrayStartsWith(array: ArrayLike<number>,  start: number) {
+export function arrayStartsWith(array: ArrayLike<any>,  start: number) {
   if (start.length > array.length) {
     return false;
   }

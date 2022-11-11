@@ -12,7 +12,7 @@ function Reporter(options: ReporterOptions) {
 }
 exports.Reporter = Reporter;
 
-Reporter.prototype.isError = function isError(obj: unknown) {
+Reporter.prototype.isError = function isError(obj: ReporterError) {
   return obj instanceof ReporterError;
 };
 
@@ -22,14 +22,14 @@ Reporter.prototype.save = function save() {
   return { obj: state.obj, pathLen: state.path.length };
 };
 
-Reporter.prototype.restore = function restore(data: Object) {
+Reporter.prototype.restore = function restore(data: any) {
   const state = this._reporterState;
 
   state.obj = data.obj;
   state.path = state.path.slice(0, data.pathLen);
 };
 
-Reporter.prototype.enterKey = function enterKey(key: Key) {
+Reporter.prototype.enterKey = function enterKey(key: any) {
   return this._reporterState.path.push(key);
 };
 
@@ -39,7 +39,7 @@ Reporter.prototype.exitKey = function exitKey(index: number) {
   state.path = state.path.slice(0, index - 1);
 };
 
-Reporter.prototype.leaveKey = function leaveKey(index: number,  key: any,  value: any) {
+Reporter.prototype.leaveKey = function leaveKey(index: number,  key: number,  value: any) {
   const state = this._reporterState;
 
   this.exitKey(index);
@@ -59,7 +59,7 @@ Reporter.prototype.enterObject = function enterObject() {
   return prev;
 };
 
-Reporter.prototype.leaveObject = function leaveObject(prev: Object) {
+Reporter.prototype.leaveObject = function leaveObject(prev: State) {
   const state = this._reporterState;
 
   const now = state.obj;
@@ -67,7 +67,7 @@ Reporter.prototype.leaveObject = function leaveObject(prev: Object) {
   return now;
 };
 
-Reporter.prototype.error = function error(msg: string | Error) {
+Reporter.prototype.error = function error(msg: any) {
   let err;
   const state = this._reporterState;
 
@@ -89,7 +89,7 @@ Reporter.prototype.error = function error(msg: string | Error) {
   return err;
 };
 
-Reporter.prototype.wrapResult = function wrapResult(result: IReporterResult) {
+Reporter.prototype.wrapResult = function wrapResult(result: any) {
   const state = this._reporterState;
   if (!state.options.partial)
     return result;
@@ -100,13 +100,13 @@ Reporter.prototype.wrapResult = function wrapResult(result: IReporterResult) {
   };
 };
 
-function ReporterError(path: any,  msg: any) {
+function ReporterError(path: String,  msg: String) {
   this.path = path;
   this.rethrow(msg);
 }
 inherits(ReporterError, Error);
 
-ReporterError.prototype.rethrow = function rethrow(msg: string | Error) {
+ReporterError.prototype.rethrow = function rethrow(msg: any) {
   this.message = msg + ' at: ' + (this.path || '(shallow)');
   if (Error.captureStackTrace)
     Error.captureStackTrace(this, ReporterError);

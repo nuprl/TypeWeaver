@@ -146,7 +146,7 @@ export const encode = function base64VLQ_encode(aValue: number) {
  * Decodes the next base 64 VLQ value from the given string and returns the
  * value and the rest of the string via the out parameter.
  */
-export const decode = function base64VLQ_decode(aStr: number,  aOutParam: number) {
+export const decode = function base64VLQ_decode(aStr: any,  aOutParam: any) {
   var i = 0;
   var strLen = aStr.length;
   var result = 0;

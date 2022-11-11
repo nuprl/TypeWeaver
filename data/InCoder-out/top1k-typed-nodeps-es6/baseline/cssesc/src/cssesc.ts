@@ -93,7 +93,7 @@ const cssesc = (string, options) => {
 	// Remove spaces after `\HEX` escapes that are not followed by a hex digit,
 	// since they’re redundant. Note that this is only possible if the escape
 	// sequence isn’t preceded by an odd number of backslashes.
-	output = output.replace(regexExcessiveSpaces, function($0: any,  $1: any,  $2: any) {
+	output = output.replace(regexExcessiveSpaces, function($0: number,  $1: number,  $2: number) {
 		if ($1 && $1.length % 2) {
 			// It’s not safe to remove the space, so don’t.
 			return $0;

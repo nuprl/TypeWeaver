@@ -47,22 +47,22 @@ const {
 
 /**
  * @typedef {Object} FileSystem
- * @property {(function(string: any,  FileSystemCallback<Buffer | string>: void): void) & function(string, object, FileSystemCallback<Buffer | string>): void} readFile
- * @property {(function(string: string | Buffer,  FileSystemCallback<(Buffer | string: FileSystemDirent)[] | FileSystemDirent[]>): void) & function(string, object, FileSystemCallback<(Buffer | string)[] | FileSystemDirent[]>): void} readdir
+ * @property {(function(string: string,  FileSystemCallback<Buffer | string>: void): void) & function(string, object, FileSystemCallback<Buffer | string>): void} readFile
+ * @property {(function(string: string | Buffer,  FileSystemCallback<(Buffer | string: Buffer | string)[] | FileSystemDirent[]>): void) & function(string, object, FileSystemCallback<(Buffer | string)[] | FileSystemDirent[]>): void} readdir
  * @property {((function(string: any,  FileSystemCallback<object>: void): void) & function(string, object, FileSystemCallback<object>): void)=} readJson
- * @property {(function(string: any,  FileSystemCallback<Buffer | string>: void): void) & function(string, object, FileSystemCallback<Buffer | string>): void} readlink
+ * @property {(function(string: string,  FileSystemCallback<Buffer | string>: void): void) & function(string, object, FileSystemCallback<Buffer | string>): void} readlink
  * @property {(function(string: FileSystemPath,  FileSystemCallback<FileSystemStats>: void): void) & function(string, object, FileSystemCallback<Buffer | string>): void=} lstat
  * @property {(function(string: FileSystemPath,  FileSystemCallback<FileSystemStats>: void): void) & function(string, object, FileSystemCallback<Buffer | string>): void} stat
  */
 
 /**
  * @typedef {Object} SyncFileSystem
- * @property {function(string: Buffer,  object=: Object): Buffer | string} readFileSync
- * @property {function(string: any,  object=: any): (Buffer | string)[] | FileSystemDirent[]} readdirSync
- * @property {(function(string: object,  object=: object): object)=} readJsonSync
- * @property {function(string: Buffer,  object=: Object): Buffer | string} readlinkSync
- * @property {function(string: any,  object=: any): FileSystemStats=} lstatSync
- * @property {function(string: any,  object=: Object): FileSystemStats} statSync
+ * @property {function(string: string | Buffer,  object=: any): Buffer | string} readFileSync
+ * @property {function(string: string | Buffer,  object=: Object | null): (Buffer | string)[] | FileSystemDirent[]} readdirSync
+ * @property {(function(string: string | number,  object=: object | null): object)=} readJsonSync
+ * @property {function(string: Buffer | string,  object=: Buffer | string): Buffer | string} readlinkSync
+ * @property {function(string: path,  object=: FileSystemStats): FileSystemStats=} lstatSync
+ * @property {function(string: any,  object=: any): FileSystemStats} statSync
  */
 
 /**
@@ -113,7 +113,7 @@ const {
  * @param {string} str input string
  * @returns {string} in camel case
  */
-function toCamelCase(str: string | string[]) {
+function toCamelCase(str: string | null) {
 	return str.replace(/-([a-z])/g, str => str.substr(1).toUpperCase());
 }
 
@@ -254,7 +254,7 @@ class Resolver {
 	 * @param {string} path context path
 	 * @param {string} request request string
 	 * @param {ResolveContext} resolveContext resolve context
-	 * @param {function(Error | null: Error,  (string|false: string | false)=, ResolveRequest=): void} callback callback function
+	 * @param {function(Error | null: Error,  (string|false: string | undefined)=, ResolveRequest=): void} callback callback function
 	 * @returns {void}
 	 */
 	resolve(context, path, request, resolveContext, callback) {

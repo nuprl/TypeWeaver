@@ -30,7 +30,7 @@ export default {
   },
 };
 
-function shouldUnescape(path: Path,  hasXFlag: boolean) {
+function shouldUnescape(path: Path,  hasXFlag: Boolean) {
   const {
     node: {value},
     index,
@@ -48,7 +48,7 @@ function shouldUnescape(path: Path,  hasXFlag: boolean) {
 /**
  * \], \\, \^, \-
  */
-function preservesInCharClass(value: any,  index: number,  parent: any) {
+function preservesInCharClass(value: any,  index: any,  parent: any) {
   if (value === '^') {
     // Avoid [\^a] turning into [^a]
     return index === 0 && !parent.negative;
@@ -60,7 +60,7 @@ function preservesInCharClass(value: any,  index: number,  parent: any) {
   return /[\]\\]/.test(value);
 }
 
-function preservesEscape(value: any,  index: number,  parent: any,  hasXFlag: boolean) {
+function preservesEscape(value: any,  index: number,  parent: any,  hasXFlag: number) {
   if (value === '{') {
     return preservesOpeningCurlyBraceEscape(index, parent);
   }
@@ -76,7 +76,7 @@ function preservesEscape(value: any,  index: number,  parent: any,  hasXFlag: bo
   return /[*[()+?^$./\\|]/.test(value);
 }
 
-function consumeNumbers(startIndex: number,  parent: HTMLElement,  rtl: boolean) {
+function consumeNumbers(startIndex: number,  parent: ParseNode,  rtl: boolean) {
   let i = startIndex;
   let siblingNode =
     (rtl ? i >= 0 : i < parent.expressions.length) && parent.expressions[i];
@@ -96,7 +96,7 @@ function consumeNumbers(startIndex: number,  parent: HTMLElement,  rtl: boolean)
   return Math.abs(startIndex - i);
 }
 
-function isSimpleChar(node: Node,  value: any) {
+function isSimpleChar(node: Node,  value: string) {
   return (
     node &&
     node.type === 'Char' &&
@@ -106,7 +106,7 @@ function isSimpleChar(node: Node,  value: any) {
   );
 }
 
-function preservesOpeningCurlyBraceEscape(index: number,  parent: ts.Node) {
+function preservesOpeningCurlyBraceEscape(index: number,  parent: AST.Node) {
   // (?:\{) -> (?:{)
   if (index == null) {
     return false;
@@ -134,7 +134,7 @@ function preservesOpeningCurlyBraceEscape(index: number,  parent: ts.Node) {
   return false;
 }
 
-function preservesClosingCurlyBraceEscape(index: number,  parent: ts.Node) {
+function preservesClosingCurlyBraceEscape(index: number,  parent: ASTNode) {
   // (?:\{) -> (?:{)
   if (index == null) {
     return false;

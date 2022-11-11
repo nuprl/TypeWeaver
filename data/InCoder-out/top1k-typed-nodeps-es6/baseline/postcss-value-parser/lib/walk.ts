@@ -1,4 +1,4 @@
-export default function walk(nodes: Node[],  cb: Function,  bubble: Boolean) {
+export default function walk(nodes: Array,  cb: Function,  bubble: Boolean) {
   var i, max, node, result;
 
   for (i = 0, max = nodes.length; i < max; i += 1) {

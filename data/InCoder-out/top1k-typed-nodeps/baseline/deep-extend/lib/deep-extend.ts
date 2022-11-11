@@ -54,9 +54,9 @@ function cloneSpecificValue(val: any) {
 /**
  * Recursive cloning array.
  */
-function deepCloneArray(arr: Array<any>) {
+function deepCloneArray(arr: number[]) {
 	var clone = [];
-	arr.forEach(function (item: IItem,  index: number) {
+	arr.forEach(function (item: any,  index: number) {
 		if (typeof item === 'object' && item !== null) {
 			if (Array.isArray(item)) {
 				clone[index] = deepCloneArray(item);
@@ -85,7 +85,7 @@ function safeGetProperty(object: any,  property: string | symbol) {
  * object as first argument, like this:
  *   deepExtend({}, yourObj_1, [yourObj_N]);
  */
-var deepExtend = module.exports = function (/*obj_1: [obj_N],  [obj_2]: obj_N,  [obj_N]*/: Function) {
+var deepExtend = module.exports = function (/*obj_1: Object,  [obj_2]: Object,  [obj_N]*/: Object[]) {
 	if (arguments.length < 1 || typeof arguments[0] !== 'object') {
 		return false;
 	}

@@ -9,14 +9,14 @@
 
 var typeOf = require('kind-of');
 
-module.exports = function toPath(args: ny) {
+module.exports = function toPath(args: ny[]) {
   if (typeOf(args) !== 'arguments') {
     args = arguments;
   }
   return filter(args).join('.');
 };
 
-function filter(arr: Array<any>) {
+function filter(arr: number[]) {
   var len = arr.length;
   var idx = -1;
   var res = [];

@@ -122,7 +122,7 @@ Accumulator.prototype.peekInt = function(size: number) {
   }
 }
 
-Accumulator.prototype.readInt = function(bytes: Uint8Array) {
+Accumulator.prototype.readInt = function(bytes: ByteArray) {
   var ival = this.peekInt(bytes);
   if (ival instanceof Int64 && isFinite(ival.valueOf())) {
     ival = ival.valueOf();
@@ -461,7 +461,7 @@ function byteswap64(buf: Buffer) {
   return swap;
 }
 
-function dump_int64(buf: Uint8Array,  val: number) {
+function dump_int64(buf: &mut,  val: i64) {
   // Get the raw bytes.  The Int64 buffer is big endian
   var be = val.toBuffer();
 
@@ -478,7 +478,7 @@ function dump_int64(buf: Uint8Array,  val: number) {
   buf.append(le);
 }
 
-function dump_int(buf: Uint8Array,  val: number) {
+function dump_int(buf: Buffer,  val: number) {
   var abs = Math.abs(val);
   if (abs <= MAX_INT8) {
     buf.writeByte(BSER_INT8);
@@ -494,7 +494,7 @@ function dump_int(buf: Uint8Array,  val: number) {
   }
 }
 
-function dump_any(buf: Uint8Array,  val: any) {
+function dump_any(buf: Buffer,  val: any) {
   switch (typeof(val)) {
     case 'number':
       // check if it is an integer or a float

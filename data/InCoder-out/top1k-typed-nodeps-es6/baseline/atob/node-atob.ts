@@ -1,6 +1,6 @@
 "use strict";
 
-function atob(str: string | ArrayBuffer) {
+function atob(str: any) {
   return Buffer.from(str, 'base64').toString('binary');
 }
 

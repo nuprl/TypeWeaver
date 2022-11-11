@@ -63,7 +63,7 @@
 
   // Ensures that nodes have the correct types.
   var assertTypeRegexMap = {};
-  function assertType(type: Type<any>,  expected: Type<any>) {
+  function assertType(type: string,  expected: any) {
     if (expected.indexOf('|') == -1) {
       if (type == expected) {
         return;
@@ -97,7 +97,7 @@
   }
 
   // Constructs a string by concatentating the output of each term.
-  function generateSequence(generator: Generator,  terms: Array<any>,  /* optional */  separator: ',') {
+  function generateSequence(generator: Generator,  terms: Array<any>,  /* optional */  separator: string | RegExp) {
     var i = -1,
         length = terms.length,
         result = '',
@@ -137,7 +137,7 @@
     return generateSequence(generateTerm, node.body);
   }
 
-  function generateAnchor(node: Node) {
+  function generateAnchor(node: ASTNode) {
     assertType(node.type, 'anchor');
 
     switch (node.kind) {
@@ -174,13 +174,13 @@
     ']';
   }
 
-  function generateCharacterClassEscape(node: Node) {
+  function generateCharacterClassEscape(node: CharacterClassNode) {
     assertType(node.type, 'characterClassEscape');
 
     return '\\' + node.value;
   }
 
-  function generateCharacterClassRange(node: Node) {
+  function generateCharacterClassRange(node: CharacterClassNode) {
     assertType(node.type, 'characterClassRange');
 
     var min = node.min,
@@ -193,32 +193,32 @@
     return generateClassAtom(min) + '-' + generateClassAtom(max);
   }
 
-  function generateClassAtom(node: Node) {
+  function generateClassAtom(node: ClassAtom) {
     assertType(node.type, 'anchor|characterClass|characterClassEscape|characterClassRange|dot|value|unicodePropertyEscape|classStrings');
 
     return generate(node);
   }
 
-  function generateClassStrings(node: ClassDeclaration) {
+  function generateClassStrings(node: ts.Node) {
     assertType(node.type, 'classStrings');
 
     return '\\q{' + generateSequence(generateClassString, node.strings, '|') + '}';
   }
 
-  function generateClassString(node: ClassDeclaration) {
+  function generateClassString(node: ts.ClassDeclaration) {
     assertType(node.type, 'classString');
 
     return generateSequence(generate, node.characters);
   }
 
-  function generateDisjunction(node: Node) {
+  function generateDisjunction(node: AST.BinaryExpression) {
     assertType(node.type, 'disjunction');
 
     return generateSequence(generate, node.body, '|');
   }
 
 
-  function generateDot(node: Dot) {
+  function generateDot(node: Node) {
     assertType(node.type, 'dot');
 
     return '.';
@@ -259,13 +259,13 @@
     return '(' + result + ')';
   }
 
-  function generateIdentifier(node: Node) {
+  function generateIdentifier(node: ts.Identifier) {
     assertType(node.type, 'identifier');
 
     return node.value;
   }
 
-  function generateQuantifier(node: Node) {
+  function generateQuantifier(node: QuantifierNode) {
     assertType(node.type, 'quantifier');
 
     var quantifier = '',
@@ -295,7 +295,7 @@
     return generateAtom(node.body[0]) + quantifier;
   }
 
-  function generateReference(node: Node) {
+  function generateReference(node: ts.Node) {
     assertType(node.type, 'reference');
 
     if (node.matchIndex) {
@@ -308,19 +308,19 @@
     throw new Error('Unknown reference type');
   }
 
-  function generateTerm(node: Node) {
+  function generateTerm(node: ts.Node) {
     assertType(node.type, atomType + '|empty|quantifier');
 
     return generate(node);
   }
 
-  function generateUnicodePropertyEscape(node: Node) {
+  function generateUnicodePropertyEscape(node: Property) {
     assertType(node.type, 'unicodePropertyEscape');
 
     return '\\' + (node.negative ? 'P' : 'p') + '{' + node.value + '}';
   }
 
-  function generateValue(node: ValueNode) {
+  function generateValue(node: Node) {
     assertType(node.type, 'value');
 
     var kind = node.kind,

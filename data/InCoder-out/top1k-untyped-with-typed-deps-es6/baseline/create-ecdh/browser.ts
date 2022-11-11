@@ -1,7 +1,7 @@
 import elliptic from 'elliptic';
 import BN from 'bn.js';
 
-export default function createECDH (curve: EC) {
+export default function createECDH (curve: Curve) {
   return new ECDH(curve)
 };
 
@@ -42,7 +42,7 @@ aliases.p192 = aliases.secp192r1 = aliases.prime192v1
 aliases.p384 = aliases.secp384r1
 aliases.p521 = aliases.secp521r1
 
-function ECDH (curve: ECCurve) {
+function ECDH (curve: Curve) {
   this.curveType = aliases[curve]
   if (!this.curveType) {
     this.curveType = {
@@ -53,12 +53,12 @@ function ECDH (curve: ECCurve) {
   this.keys = void 0
 }
 
-ECDH.prototype.generateKeys = function (enc: Encoder,  format: Format) {
+ECDH.prototype.generateKeys = function (enc: Buffer,  format: Buffer) {
   this.keys = this.curve.genKeyPair()
   return this.getPublicKey(enc, format)
 }
 
-ECDH.prototype.computeSecret = function (other: any,  inenc: any,  enc: any) {
+ECDH.prototype.computeSecret = function (other: Buffer,  inenc: Buffer,  enc: Buffer) {
   inenc = inenc || 'utf8'
   if (!Buffer.isBuffer(other)) {
     other = new Buffer(other, inenc)
@@ -68,7 +68,7 @@ ECDH.prototype.computeSecret = function (other: any,  inenc: any,  enc: any) {
   return formatReturnValue(out, enc, this.curveType.byteLength)
 }
 
-ECDH.prototype.getPublicKey = function (enc: Encoding,  format: Format) {
+ECDH.prototype.getPublicKey = function (enc: any,  format: any) {
   var key = this.keys.getPublic(format === 'compressed', true)
   if (format === 'hybrid') {
     if (key[key.length - 1] % 2) {
@@ -80,11 +80,11 @@ ECDH.prototype.getPublicKey = function (enc: Encoding,  format: Format) {
   return formatReturnValue(key, enc)
 }
 
-ECDH.prototype.getPrivateKey = function (enc: Encoding) {
+ECDH.prototype.getPrivateKey = function (enc: any) {
   return formatReturnValue(this.keys.getPrivate(), enc)
 }
 
-ECDH.prototype.setPublicKey = function (pub: ECPair,  enc: Encoding) {
+ECDH.prototype.setPublicKey = function (pub: Buffer,  enc: Buffer) {
   enc = enc || 'utf8'
   if (!Buffer.isBuffer(pub)) {
     pub = new Buffer(pub, enc)
@@ -93,7 +93,7 @@ ECDH.prototype.setPublicKey = function (pub: ECPair,  enc: Encoding) {
   return this
 }
 
-ECDH.prototype.setPrivateKey = function (priv: IBufferPriv,  enc: Encoding) {
+ECDH.prototype.setPrivateKey = function (priv: Buffer,  enc: Buffer) {
   enc = enc || 'utf8'
   if (!Buffer.isBuffer(priv)) {
     priv = new Buffer(priv, enc)
@@ -106,7 +106,7 @@ ECDH.prototype.setPrivateKey = function (priv: IBufferPriv,  enc: Encoding) {
   return this
 }
 
-function formatReturnValue (bn: BigNumber,  enc: Encoding,  len: number) {
+function formatReturnValue (bn: BigNumber,  enc: BigNumber,  len: BigNumber) {
   if (!Array.isArray(bn)) {
     bn = bn.toArray()
   }

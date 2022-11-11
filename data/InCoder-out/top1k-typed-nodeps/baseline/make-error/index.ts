@@ -28,7 +28,7 @@ if (captureStackTrace === undefined) {
 
         return stack;
       },
-      set: function setStack(stack: Array<Error>) {
+      set: function setStack(stack: ErrorStack) {
         defineProperty(error, "stack", {
           configurable: true,
           value: stack,

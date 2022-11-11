@@ -4,7 +4,7 @@
  * Implementation of atob() according to the HTML and Infra specs, except that
  * instead of throwing INVALID_CHARACTER_ERR we return null.
  */
-function atob(data: string | ArrayBuffer) {
+function atob(data: any) {
   if (arguments.length === 0) {
     throw new TypeError("1 argument required, but only 0 present.");
   }

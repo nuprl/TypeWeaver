@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function getBasicPropertyDescriptor(name: PropertyName) {
+module.exports = function getBasicPropertyDescriptor(name: PropertyKey) {
   return {
     set: function(v: any) {
       this._setProperty(name, v);

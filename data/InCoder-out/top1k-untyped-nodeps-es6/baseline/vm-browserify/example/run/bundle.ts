@@ -1,12 +1,12 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw (a.code="MODULE_NOT_FOUND", a)}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-    var indexOf = function (xs: Observable<any>,  item: any) {
+    var indexOf = function (xs: List,  item: T) {
         if (xs.indexOf) return xs.indexOf(item);
         else for (var i = 0; i < xs.length; i++) {
             if (xs[i] === item) return i;
         }
         return -1;
     };
-    var Object_keys = function (obj: Object) {
+    var Object_keys = function (obj: any) {
         if (Object.keys) return Object.keys(obj)
         else {
             var res = [];
@@ -15,7 +15,7 @@
         }
     };
 
-    var forEach = function (xs: any,  fn: Function) {
+    var forEach = function (xs: Array<T>,  fn: (x: T) => boolean) {
         if (xs.forEach) return xs.forEach(fn)
         else for (var i = 0; i < xs.length; i++) {
             fn(xs[i], i, xs);
@@ -49,7 +49,7 @@
     function Context() {}
     Context.prototype = {};
 
-    var Script = exports.Script = function NodeScript (code: string | NodeScript) {
+    var Script = exports.Script = function NodeScript (code: string | Buffer | NodeJ) {
         if (!(this instanceof Script)) return new Script(code);
         this.code = code;
     };
@@ -77,7 +77,7 @@
         forEach(Object_keys(context), function (key: any) {
             win[key] = context[key];
         });
-        forEach(globals, function (key: string | symbol) {
+        forEach(globals, function (key: any) {
             if (context[key]) {
                 win[key] = context[key];
             }
@@ -111,12 +111,12 @@
         return eval(this.code); // maybe...
     };
 
-    Script.prototype.runInNewContext = function (context: Script) {
+    Script.prototype.runInNewContext = function (context: ScriptContext) {
         var ctx = Script.createContext(context);
         var res = this.runInContext(ctx);
 
         if (context) {
-            forEach(Object_keys(ctx), function (key: string | symbol) {
+            forEach(Object_keys(ctx), function (key: any) {
                 context[key] = ctx[key];
             });
         }
@@ -124,7 +124,7 @@
         return res;
     };
 
-    forEach(Object_keys(Script.prototype), function (name: string | null) {
+    forEach(Object_keys(Script.prototype), function (name: any) {
         export const name = Script[name] = function (code: number) {
             var s = Script(code);
             return s[name].apply(s, [].slice.call(arguments, 1));
@@ -148,7 +148,7 @@
         }
         return copy;
     };
-},{}],2:[function(require: any, module: any, exports: any){
+},{}],2:[function(require: require, module: module, exports: exports){
 var vm = require('vm');
 
 window.addEventListener('load', function () {

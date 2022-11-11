@@ -1,33 +1,34 @@
 example/bakery.ts(18,79): error TS2304: Cannot find name 'Action'.
 lib/gntp.ts(2,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'any'.
 lib/gntp.ts(15,10): error TS2300: Duplicate identifier 'GNTP'.
+lib/gntp.ts(15,36): error TS2552: Cannot find name 'GNTPOptions'. Did you mean 'GainOptions'?
 lib/gntp.ts(49,17): error TS2339: Property 'slice' does not exist on type 'Response'.
 lib/gntp.ts(49,31): error TS2339: Property 'indexOf' does not exist on type 'Response'.
 lib/gntp.ts(51,17): error TS2339: Property 'slice' does not exist on type 'Response'.
 lib/gntp.ts(53,12): error TS2339: Property 'state' does not exist on type '{}'.
-lib/gntp.ts(54,31): error TS2304: Cannot find name 'LineNumber'.
 lib/gntp.ts(86,21): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
 lib/gntp.ts(87,63): error TS2339: Property 'length' does not exist on type 'File'.
 lib/gntp.ts(106,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/gntp.ts(158,30): error TS2551: Property 'header' does not exist on type 'Response'. Did you mean 'headers'?
-lib/gntp.ts(159,30): error TS2339: Property 'file' does not exist on type 'Response'.
+lib/gntp.ts(106,52): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
+lib/gntp.ts(107,39): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
+lib/gntp.ts(157,46): error TS2503: Cannot find namespace 'http'.
 lib/gntp.ts(174,18): error TS2339: Property 'state' does not exist on type 'string'.
 lib/gntp.ts(174,44): error TS2339: Property 'state' does not exist on type 'string'.
 lib/growly.ts(1,5): error TS2300: Duplicate identifier 'GNTP'.
 lib/growly.ts(30,22): error TS2339: Property 'label' does not exist on type 'Notification'.
-lib/growly.ts(84,26): error TS2322: Type '{ label: string; dispname: string; enabled: true; }' is not assignable to type 'string'.
-lib/growly.ts(104,19): error TS2339: Property 'forEach' does not exist on type 'String'.
+lib/growly.ts(42,58): error TS2304: Cannot find name 'Int'.
+lib/growly.ts(75,47): error TS2749: 'appname' refers to a value, but is being used as a type here. Did you mean 'typeof appname'?
+lib/growly.ts(75,66): error TS2749: 'appicon' refers to a value, but is being used as a type here. Did you mean 'typeof appicon'?
+lib/growly.ts(75,91): error TS2749: 'notifications' refers to a value, but is being used as a type here. Did you mean 'typeof notifications'?
+lib/growly.ts(75,117): error TS2749: 'callback' refers to a value, but is being used as a type here. Did you mean 'typeof callback'?
 lib/growly.ts(105,19): error TS2339: Property 'enabled' does not exist on type 'Notification'.
 lib/growly.ts(105,48): error TS2339: Property 'enabled' does not exist on type 'Notification'.
 lib/growly.ts(106,45): error TS2339: Property 'label' does not exist on type 'Notification'.
 lib/growly.ts(107,53): error TS2339: Property 'dispname' does not exist on type 'Notification'.
 lib/growly.ts(108,48): error TS2339: Property 'enabled' does not exist on type 'Notification'.
-lib/growly.ts(167,40): error TS2339: Property 'label' does not exist on type 'Object'.
-lib/growly.ts(169,41): error TS2339: Property 'title' does not exist on type 'Object'.
-lib/growly.ts(171,42): error TS2339: Property 'sticky' does not exist on type 'Object'.
-lib/growly.ts(172,44): error TS2339: Property 'priority' does not exist on type 'Object'.
-lib/growly.ts(173,40): error TS2339: Property 'icon' does not exist on type 'Object'.
-lib/growly.ts(174,49): error TS2339: Property 'coalescingId' does not exist on type 'Object'.
+lib/growly.ts(145,42): error TS2749: 'text' refers to a value, but is being used as a type here. Did you mean 'typeof text'?
+lib/growly.ts(145,55): error TS2749: 'opts' refers to a value, but is being used as a type here. Did you mean 'typeof opts'?
+lib/growly.ts(145,72): error TS2749: 'callback' refers to a value, but is being used as a type here. Did you mean 'typeof callback'?
 lib/growly.ts(183,37): error TS2339: Property 'state' does not exist on type 'Response'.
 

@@ -35,25 +35,25 @@ function Negotiator(request: Request) {
   this.request = request;
 }
 
-Negotiator.prototype.charset = function charset(available: Array<string>) {
+Negotiator.prototype.charset = function charset(available: AvailableCharsets) {
   var set = this.charsets(available);
   return set && set[0];
 };
 
-Negotiator.prototype.charsets = function charsets(available: Array<string>) {
+Negotiator.prototype.charsets = function charsets(available: any) {
   return preferredCharsets(this.request.headers['accept-charset'], available);
 };
 
-Negotiator.prototype.encoding = function encoding(available: number) {
+Negotiator.prototype.encoding = function encoding(available: AvailableEncodings) {
   var set = this.encodings(available);
   return set && set[0];
 };
 
-Negotiator.prototype.encodings = function encodings(available: Encoding[]) {
+Negotiator.prototype.encodings = function encodings(available: Encodings) {
   return preferredEncodings(this.request.headers['accept-encoding'], available);
 };
 
-Negotiator.prototype.language = function language(available: Array<string>) {
+Negotiator.prototype.language = function language(available: Language[]) {
   var set = this.languages(available);
   return set && set[0];
 };

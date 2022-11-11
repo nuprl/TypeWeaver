@@ -36,7 +36,7 @@ import wrapAsync from './internal/wrapAsync.js'
  *         finished = !!body.next
  *         next(err)
  *     })
- * }, function done (err: Error) {
+ * }, function done (err: any) {
  *     // all pages have been fetched
  * })
  */

@@ -60,7 +60,7 @@ function runTimeout(fun: Function) {
 
 
 }
-function runClearTimeout(marker: Function) {
+function runClearTimeout(marker: TimeoutMarker) {
     if (cachedClearTimeout === clearTimeout) {
         //normal enviroments in sane situations
         return clearTimeout(marker);
@@ -145,7 +145,7 @@ process.nextTick = function (fun: Function) {
 };
 
 // v8 likes predictible objects
-function Item(fun: Function,  array: Array<T>) {
+function Item(fun: Function,  array: Array) {
     this.fun = fun;
     this.array = array;
 }
@@ -171,14 +171,14 @@ process.emit = noop;
 process.prependListener = noop;
 process.prependOnceListener = noop;
 
-process.listeners = function (name: string | symbol) { return [] }
+process.listeners = function (name: any) { return [] }
 
-process.binding = function (name: string | null) {
+process.binding = function (name: any) {
     throw new Error('process.binding is not supported');
 };
 
 process.cwd = function () { return '/' };
-process.chdir = function (dir: Dir) {
+process.chdir = function (dir: Directory) {
     throw new Error('process.chdir is not supported');
 };
 process.umask = function() { return 0; };

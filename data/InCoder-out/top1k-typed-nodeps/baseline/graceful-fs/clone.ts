@@ -2,7 +2,7 @@
 
 module.exports = clone
 
-var getPrototypeOf = Object.getPrototypeOf || function (obj: Object) {
+var getPrototypeOf = Object.getPrototypeOf || function (obj: any) {
   return obj.__proto__
 }
 

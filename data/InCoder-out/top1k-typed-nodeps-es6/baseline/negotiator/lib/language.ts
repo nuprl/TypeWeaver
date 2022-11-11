@@ -102,7 +102,7 @@ function getLanguagePriority(language: Language,  accepted: Language[],  index: 
  * @private
  */
 
-function specify(language: Language,  spec: Spec,  index: number) {
+function specify(language: Language,  spec: LanguageSpec,  index: number) {
   var p = parseLanguage(language)
   if (!p) return null;
   var s = 0;
@@ -129,7 +129,7 @@ function specify(language: Language,  spec: Spec,  index: number) {
  * @public
  */
 
-function preferredLanguages(accept: LanguageAccept[],  provided: LanguageResolved[]) {
+function preferredLanguages(accept: string | string[],  provided: string | string[]) {
   // RFC 2616 sec 14.4: no header = *
   var accepts = parseAcceptLanguage(accept === undefined ? '*' : accept || '');
 
@@ -156,7 +156,7 @@ function preferredLanguages(accept: LanguageAccept[],  provided: LanguageResolve
  * @private
  */
 
-function compareSpecs(a: any,  b: any) {
+function compareSpecs(a: ISpec,  b: ISpec) {
   return (b.q - a.q) || (b.s - a.s) || (a.o - b.o) || (a.i - b.i) || 0;
 }
 
@@ -174,6 +174,6 @@ function getFullLanguage(spec: LanguageSpec) {
  * @private
  */
 
-function isQuality(spec: Quality) {
+function isQuality(spec: Spec) {
   return spec.q > 0;
 }

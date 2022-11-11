@@ -17,7 +17,7 @@ var naturalCompare = function(a: number,  b: number) {
 	, posB = 0
 	, alphabet = String.alphabet
 
-	function getCode(str: any,  pos: number,  code: number) {
+	function getCode(str: any,  pos: any,  code: any) {
 		if (code) {
 			for (i = pos; code = getCode(str, i), code < 76 && code > 65;) ++i;
 			return +str.slice(pos - 1, i)

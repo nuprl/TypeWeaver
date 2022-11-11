@@ -21,7 +21,7 @@ export default onHeaders;
  * @private
  */
 
-function createWriteHead (prevWriteHead: any,  listener: Function) {
+function createWriteHead (prevWriteHead: WriteHead,  listener: Function) {
   var fired = false
 
   // return function with core name and argument list
@@ -73,7 +73,7 @@ function onHeaders (res: Response,  listener: Function) {
  * @private
  */
 
-function setHeadersFromArray (res: Response,  headers: Array<string>) {
+function setHeadersFromArray (res: any,  headers: any) {
   for (var i = 0; i < headers.length; i++) {
     res.setHeader(headers[i][0], headers[i][1])
   }
@@ -87,7 +87,7 @@ function setHeadersFromArray (res: Response,  headers: Array<string>) {
  * @private
  */
 
-function setHeadersFromObject (res: Response,  headers: any) {
+function setHeadersFromObject (res: any,  headers: any) {
   var keys = Object.keys(headers)
   for (var i = 0; i < keys.length; i++) {
     var k = keys[i]

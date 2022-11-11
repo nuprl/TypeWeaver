@@ -15,14 +15,14 @@ var names = {
   , '[object Float64Array]': true
 }
 
-function isTypedArray(arr: ArrayLike) {
+function isTypedArray(arr: unknown) {
   return (
        isStrictTypedArray(arr)
     || isLooseTypedArray(arr)
   )
 }
 
-function isStrictTypedArray(arr: ArrayLike<any>) {
+function isStrictTypedArray(arr: unknown) {
   return (
        arr instanceof Int8Array
     || arr instanceof Int16Array
@@ -36,6 +36,6 @@ function isStrictTypedArray(arr: ArrayLike<any>) {
   )
 }
 
-function isLooseTypedArray(arr: ArrayLike<any>) {
+function isLooseTypedArray(arr: unknown) {
   return names[toString.call(arr)]
 }

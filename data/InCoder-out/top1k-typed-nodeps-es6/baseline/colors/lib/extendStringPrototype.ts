@@ -44,7 +44,7 @@ module['exports'] = function() {
   // Iterate through all default styles and colors
   //
   var x = Object.keys(colors.styles);
-  x.forEach(function(style: CSSStyleDeclaration) {
+  x.forEach(function(style: Style) {
     addProperty(style, function() {
       return colors.stylize(this, style);
     });
@@ -77,7 +77,7 @@ module['exports'] = function() {
             return colors[prop](this);
           });
         } else {
-          var themePropApplicator = function(str: string | this) {
+          var themePropApplicator = function(str: any) {
             var ret = str || this;
             for (var t = 0; t < theme[prop].length; t++) {
               ret = colors[theme[prop][t]](ret);
@@ -85,7 +85,7 @@ module['exports'] = function() {
             return ret;
           };
           addProperty(prop, themePropApplicator);
-          colors[prop] = function(str: string | ThemeProp) {
+          colors[prop] = function(str: any) {
             return themePropApplicator(str);
           };
         }

@@ -55,12 +55,12 @@ function deriveBFS(fromModel: Model) {
 }
 
 function link(from: any,  to: any) {
-	return function (args: any) {
+	return function (args: any[]) {
 		return to(from(args));
 	};
 }
 
-function wrapConversion(toModel: Function,  graph: Graph) {
+function wrapConversion(toModel: Graph,  graph: Graph) {
 	const path = [graph[toModel].parent, toModel];
 	let fn = conversions[graph[toModel].parent][toModel];
 

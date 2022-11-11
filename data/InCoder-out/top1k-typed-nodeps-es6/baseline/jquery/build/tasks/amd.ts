@@ -4,7 +4,7 @@
 
 "use strict";
 
-export default function( grunt : Grunt) {
+export default function( grunt : grunt.IGrun) {
 	const path = require( "path" );
 	const rimraf = require( "rimraf" );
 	const rollup = require( "rollup" );

@@ -1,15 +1,11 @@
-index.ts(51,46): error TS2339: Property 'apply' does not exist on type 'never'.
+index.ts(50,40): error TS2749: 'resolve' refers to a value, but is being used as a type here. Did you mean 'typeof resolve'?
+index.ts(50,58): error TS2749: 'reject' refers to a value, but is being used as a type here. Did you mean 'typeof reject'?
+index.ts(52,28): error TS2339: Property 'next' does not exist on type 'GeneratorFunction'.
 index.ts(54,5): error TS2554: Expected 1 arguments, but got 0.
-index.ts(62,31): error TS2552: Cannot find name 'IPromise'. Did you mean 'Promise'?
-index.ts(99,15): error TS2339: Property 'done' does not exist on type 'Promise<any>'.
-index.ts(99,40): error TS2339: Property 'value' does not exist on type 'Promise<any>'.
-index.ts(100,43): error TS2339: Property 'value' does not exist on type 'Promise<any>'.
-index.ts(103,65): error TS2339: Property 'value' does not exist on type 'Promise<any>'.
-index.ts(154,30): error TS2314: Generic type 'ArrayLike<T>' requires 1 type argument(s).
-index.ts(168,21): error TS2351: This expression is not constructable.
-  Type 'Function' has no construct signatures.
-index.ts(198,25): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-index.ts(211,35): error TS2339: Property 'next' does not exist on type 'Object'.
-index.ts(211,68): error TS2339: Property 'throw' does not exist on type 'Object'.
+index.ts(62,31): error TS2304: Cannot find name 'R'.
+index.ts(65,19): error TS2339: Property 'next' does not exist on type 'GeneratorFunction'.
+index.ts(82,19): error TS2339: Property 'throw' does not exist on type 'GeneratorFunction'.
+index.ts(211,35): error TS2339: Property 'next' does not exist on type 'unknown'.
+index.ts(211,68): error TS2339: Property 'throw' does not exist on type 'unknown'.
 index.ts(225,87): error TS2339: Property 'displayName' does not exist on type 'Function'.
 

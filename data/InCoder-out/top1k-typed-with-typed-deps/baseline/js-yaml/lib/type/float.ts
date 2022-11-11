@@ -27,7 +27,7 @@ function resolveYamlFloat(data: any) {
   return true;
 }
 
-function constructYamlFloat(data: any) {
+function constructYamlFloat(data: number) {
   var value, sign;
 
   value  = data.replace(/_/g, '').toLowerCase();
@@ -49,7 +49,7 @@ function constructYamlFloat(data: any) {
 
 var SCIENTIFIC_WITHOUT_DOT = /^[-+]?[0-9]+e/;
 
-function representYamlFloat(object: any,  style: number) {
+function representYamlFloat(object: any,  style: any) {
   var res;
 
   if (isNaN(object)) {
@@ -82,7 +82,7 @@ function representYamlFloat(object: any,  style: number) {
   return SCIENTIFIC_WITHOUT_DOT.test(res) ? res.replace('e', '.e') : res;
 }
 
-function isFloat(object: Object) {
+function isFloat(object: any) {
   return (Object.prototype.toString.call(object) === '[object Number]') &&
          (object % 1 !== 0 || common.isNegativeZero(object));
 }

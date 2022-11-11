@@ -21,13 +21,13 @@
     },
     Float: {
       typeOf: 'Number',
-      validate: function(it: umber){
+      validate: function(it: ate){
         return !isItNaN(it);
       }
     },
     Date: {
       typeOf: 'Date',
-      validate: function(it: terable<any>){
+      validate: function(it: ate){
         return !isItNaN(it.getTime());
       }
     }
@@ -36,8 +36,8 @@
     array: 'Array',
     tuple: 'Array'
   };
-  function checkArray(input: Array,  type: string,  options: any){
-    return all(function(it: Iterable<any>){
+  function checkArray(input: any,  type: any,  options: any){
+    return all(function(it: any){
       return checkMultiple(it, type.of, options);
     }, input);
   }
@@ -53,7 +53,7 @@
     }
     return input.length <= i;
   }
-  function checkFields(input: any,  type: string,  options: any){
+  function checkFields(input: any,  type: any,  options: any){
     var inputKeys, numInputKeys, k, numOfKeys, key, ref$, types;
     inputKeys = {};
     numInputKeys = 0;
@@ -73,7 +73,7 @@
     }
     return type.subset || numInputKeys === numOfKeys;
   }
-  function checkStructure(input: any,  type: string,  options: any){
+  function checkStructure(input: any,  type: any,  options: any){
     if (!(input instanceof Object)) {
       return false;
     }
@@ -86,7 +86,7 @@
       return checkTuple(input, type, options);
     }
   }
-  function check(input: any,  typeObj: Object,  options: Object){
+  function check(input: any,  typeObj: any,  options: any){
     var type, structure, setting, that;
     type = typeObj.type, structure = typeObj.structure;
     if (type) {
@@ -110,15 +110,15 @@
       throw new Error("No type defined. Input: " + input + ".");
     }
   }
-  function checkMultiple(input: any,  types: string[],  options: any){
+  function checkMultiple(input: any,  types: any,  options: any){
     if (toString$.call(types).slice(8, -1) !== 'Array') {
       throw new Error("Types must be in an array. Input: " + input + ".");
     }
-    return any(function(it: Iterable<any>){
+    return any(function(it: Type){
       return check(input, it, options);
     }, types);
   }
-  module.exports = function(parsedType: Type,  input: any,  options: any){
+  module.exports = function(parsedType: any,  input: any,  options: any){
     options == null && (options = {});
     if (options.customTypes == null) {
       options.customTypes = {};

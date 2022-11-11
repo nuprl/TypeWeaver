@@ -30,10 +30,18 @@ bigfraction.ts(267,9): error TS2322: Type 'number' is not assignable to type 'bi
 bigfraction.ts(270,9): error TS2322: Type 'number' is not assignable to type 'bigint'.
 bigfraction.ts(271,9): error TS2322: Type 'number' is not assignable to type 'bigint'.
 bigfraction.ts(272,9): error TS2322: Type 'number' is not assignable to type 'bigint'.
-bigfraction.ts(300,41): error TS2365: Operator '>>=' cannot be applied to types 'number' and 'bigint'.
-bigfraction.ts(302,11): error TS2365: Operator '&' cannot be applied to types 'number' and 'bigint'.
+bigfraction.ts(300,24): error TS2322: Type 'number' is not assignable to type 'BigInt'.
+bigfraction.ts(300,29): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+bigfraction.ts(300,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+bigfraction.ts(300,38): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+bigfraction.ts(300,41): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+bigfraction.ts(300,41): error TS2365: Operator '>>=' cannot be applied to types 'BigInt' and 'bigint'.
+bigfraction.ts(302,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+bigfraction.ts(302,11): error TS2365: Operator '&' cannot be applied to types 'BigInt' and 'bigint'.
 bigfraction.ts(303,9): error TS2322: Type 'number' is not assignable to type 'bigint'.
-bigfraction.ts(303,14): error TS2365: Operator '*' cannot be applied to types 'bigint' and 'number'.
+bigfraction.ts(303,14): error TS2365: Operator '*' cannot be applied to types 'bigint' and 'BigInt'.
+bigfraction.ts(303,18): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+bigfraction.ts(303,23): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(311,12): error TS2365: Operator '%' cannot be applied to types 'number' and 'bigint'.
 bigfraction.ts(312,7): error TS2365: Operator '/=' cannot be applied to types 'number' and 'bigint'.
 bigfraction.ts(315,12): error TS2365: Operator '%' cannot be applied to types 'number' and 'bigint'.
@@ -41,7 +49,7 @@ bigfraction.ts(316,7): error TS2365: Operator '/=' cannot be applied to types 'n
 bigfraction.ts(319,9): error TS2367: This condition will always return 'false' since the types 'number' and 'bigint' have no overlap.
 bigfraction.ts(327,15): error TS2365: Operator '%' cannot be applied to types 'bigint' and 'number'.
 bigfraction.ts(331,13): error TS2365: Operator '%' cannot be applied to types 'bigint' and 'number'.
-bigfraction.ts(342,23): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'number'.
+bigfraction.ts(342,30): error TS2345: Argument of type 'number' is not assignable to parameter of type 'BigInt'.
 bigfraction.ts(350,14): error TS2365: Operator '%' cannot be applied to types 'bigint' and 'number'.
 bigfraction.ts(351,14): error TS2365: Operator '%' cannot be applied to types 'bigint' and 'number'.
 bigfraction.ts(385,15): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'number'.
@@ -101,11 +109,15 @@ bigfraction.ts(873,42): error TS2345: Argument of type 'bigint' is not assignabl
 bigfraction.ts(886,14): error TS2304: Cannot find name 'define'.
 bigfraction.ts(886,39): error TS2304: Cannot find name 'define'.
 bigfraction.ts(887,5): error TS2304: Cannot find name 'define'.
-examples/hesse-convergence.ts(54,22): error TS2304: Cannot find name 'Matr3D'.
-examples/hesse-convergence.ts(54,34): error TS2304: Cannot find name 'Matr3D'.
+bigfraction.ts(899,4): error TS2345: Argument of type 'typeof globalThis' is not assignable to parameter of type 'Node'.
+  Type 'typeof globalThis' is missing the following properties from type 'Node': baseURI, childNodes, firstChild, isConnected, and 43 more.
+examples/hesse-convergence.ts(45,18): error TS2304: Cannot find name 'Tensor'.
+examples/hesse-convergence.ts(54,22): error TS2304: Cannot find name 'Matr'.
+examples/hesse-convergence.ts(54,32): error TS2304: Cannot find name 'Vec'.
 examples/hesse-convergence.ts(63,20): error TS2749: 'Fraction' refers to a value, but is being used as a type here. Did you mean 'typeof Fraction'?
-examples/hesse-convergence.ts(63,34): error TS2749: 'Fraction' refers to a value, but is being used as a type here. Did you mean 'typeof Fraction'?
-examples/hesse-convergence.ts(72,17): error TS2749: 'V' refers to a value, but is being used as a type here. Did you mean 'typeof V'?
+examples/hesse-convergence.ts(63,36): error TS2749: 'Fraction' refers to a value, but is being used as a type here. Did you mean 'typeof Fraction'?
+examples/hesse-convergence.ts(72,17): error TS2304: Cannot find name 'Vector'.
+examples/hesse-convergence.ts(72,29): error TS2304: Cannot find name 'Int'.
 examples/tape-measure.ts(17,32): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 examples/toFraction.ts(31,19): error TS2339: Property 'n' does not exist on type 'number'.
 examples/toFraction.ts(31,34): error TS2339: Property 'd' does not exist on type 'number'.
@@ -170,7 +182,9 @@ fraction.ts(647,22): error TS2345: Argument of type 'string' is not assignable t
 fraction.ts(657,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 fraction.ts(686,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(686,24): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+fraction.ts(829,31): error TS2304: Cannot find name 'Decimal'.
 fraction.ts(878,14): error TS2304: Cannot find name 'define'.
 fraction.ts(878,39): error TS2304: Cannot find name 'define'.
 fraction.ts(879,5): error TS2304: Cannot find name 'define'.
+fraction.ts(891,4): error TS2345: Argument of type 'typeof globalThis' is not assignable to parameter of type 'Node'.
 

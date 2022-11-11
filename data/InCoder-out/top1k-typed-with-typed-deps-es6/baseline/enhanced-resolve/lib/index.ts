@@ -28,7 +28,7 @@ const asyncResolver = ResolverFactory.createResolver({
 	extensions: [".js", ".json", ".node"],
 	fileSystem: nodeFileSystem
 });
-function resolve(context: any,  path: any,  request: any,  resolveContext: any,  callback: Function) {
+function resolve(context: RequestContext,  path: RequestPath,  request: Request,  resolveContext: ResolveContext,  callback: ResolveCallback) {
 	if (typeof context === "string") {
 		callback = resolveContext;
 		resolveContext = request;
@@ -48,7 +48,7 @@ const syncResolver = ResolverFactory.createResolver({
 	useSyncFileSystemCalls: true,
 	fileSystem: nodeFileSystem
 });
-function resolveSync(context: any,  path: any,  request: any) {
+function resolveSync(context: RequestContext,  path: RequestPath,  request: Request) {
 	if (typeof context === "string") {
 		request = path;
 		path = context;
@@ -63,7 +63,7 @@ function create(options: FileSystemOptions) {
 		...options
 	};
 	const resolver = ResolverFactory.createResolver(options);
-	return function (context: any,  path: any,  request: any,  resolveContext: any,  callback: Function) {
+	return function (context: any,  path: any,  request: any,  resolveContext: any,  callback: any) {
 		if (typeof context === "string") {
 			callback = resolveContext;
 			resolveContext = request;
@@ -78,7 +78,7 @@ function create(options: FileSystemOptions) {
 	};
 }
 
-function createSync(options: SyncOptions) {
+function createSync(options: IConfigurationServiceOptions) {
 	options = {
 		useSyncFileSystemCalls: true,
 		fileSystem: nodeFileSystem,

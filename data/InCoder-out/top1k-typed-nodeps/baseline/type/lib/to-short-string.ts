@@ -10,7 +10,7 @@ module.exports = function (value: any) {
 	// Trim if too long
 	if (string.length > 100) string = string.slice(0, 99) + "…";
 	// Replace eventual new lines
-	string = string.replace(reNewLine, function (char: any) {
+	string = string.replace(reNewLine, function (char: number) {
 		switch (char) {
 			case "\n":
 				return "\\n";

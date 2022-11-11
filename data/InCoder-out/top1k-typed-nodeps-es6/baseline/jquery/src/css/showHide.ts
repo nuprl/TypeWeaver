@@ -4,7 +4,7 @@ import isHiddenWithinTree from "../css/var/isHiddenWithinTree.js";
 
 var defaultDisplayMap = {};
 
-function getDefaultDisplay( elem : HTMLElement) {
+function getDefaultDisplay( elem : Node) {
 	var temp,
 		doc = elem.ownerDocument,
 		nodeName = elem.nodeName,
@@ -27,7 +27,7 @@ function getDefaultDisplay( elem : HTMLElement) {
 	return display;
 }
 
-function showHide( elements: jQuery | HTMLElement,  show : boolean) {
+function showHide( elements: Array,  show : Boolean) {
 	var display, elem,
 		values = [],
 		index = 0,
@@ -82,7 +82,7 @@ jQuery.fn.extend( {
 	hide: function() {
 		return showHide( this );
 	},
-	toggle: function( state : any) {
+	toggle: function( state : boolean) {
 		if ( typeof state === "boolean" ) {
 			return state ? this.show() : this.hide();
 		}

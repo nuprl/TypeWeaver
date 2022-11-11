@@ -25,7 +25,7 @@ import toFinite from './toFinite.js'
  * toInteger('3.2')
  * // => 3
  */
-function toInteger(value: any) {
+function toInteger(value: number) {
   const result = toFinite(value)
   const remainder = result % 1
 

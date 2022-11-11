@@ -43,7 +43,7 @@ var defer = typeof setImmediate === 'function'
  * @public
  */
 
-function onFinished (msg: Message,  listener: Function) {
+function onFinished (msg: any,  listener: Function) {
   if (isFinished(msg) !== false) {
     defer(listener, null, msg)
     return msg
@@ -63,7 +63,7 @@ function onFinished (msg: Message,  listener: Function) {
  * @public
  */
 
-function isFinished (msg: Message) {
+function isFinished (msg: any) {
   var socket = msg.socket
 
   if (typeof msg.finished === 'boolean') {
@@ -88,7 +88,7 @@ function isFinished (msg: Message) {
  * @private
  */
 
-function attachFinishedListener (msg: Message,  callback: Function) {
+function attachFinishedListener (msg: any,  callback: Function) {
   var eeMsg
   var eeSocket
   var finished = false
@@ -138,7 +138,7 @@ function attachFinishedListener (msg: Message,  callback: Function) {
  * @private
  */
 
-function attachListener (msg: Message,  listener: Function) {
+function attachListener (msg: any,  listener: Function) {
   var attached = msg.__onFinished
 
   // create a private single listener with queue
@@ -185,7 +185,7 @@ function createListener (msg: any) {
  */
 
 // istanbul ignore next: node.js 0.8 patch
-function patchAssignSocket (res: http.ServerResponse,  callback: Function) {
+function patchAssignSocket (res: any,  callback: Function) {
   var assignSocket = res.assignSocket
 
   if (typeof assignSocket !== 'function') return

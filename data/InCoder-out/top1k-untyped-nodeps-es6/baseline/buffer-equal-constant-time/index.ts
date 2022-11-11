@@ -5,7 +5,7 @@ import { SlowBuffer } from 'buffer';
 
 export default bufferEq;
 
-function bufferEq(a: any,  b: any) {
+function bufferEq(a: Buffer,  b: Buffer) {
 
   // shortcutting on type is necessary for correctness
   if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {

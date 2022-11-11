@@ -33,7 +33,7 @@
  * "A request-path path-matches a given cookie-path if at least one of the
  * following conditions holds:"
  */
-function pathMatch(reqPath: string,  cookiePath: string | string[]) {
+function pathMatch(reqPath: string | RegExp,  cookiePath: string | RegExp) {
   // "o  The cookie-path and the request-path are identical."
   if (cookiePath === reqPath) {
     return true;

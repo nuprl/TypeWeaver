@@ -1,6 +1,6 @@
 'use strict';
 
-export default function repeat(val: number,  amount: number) {
+export default function repeat(val: any,  amount: number) {
   var str = '';
   while (amount--) {
     str += val;

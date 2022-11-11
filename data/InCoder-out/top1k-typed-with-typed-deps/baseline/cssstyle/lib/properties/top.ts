@@ -3,7 +3,7 @@
 var parseMeasurement = require('../parsers').parseMeasurement;
 
 module.exports.definition = {
-  set: function(v: number) {
+  set: function(v: string | number) {
     this._setProperty('top', parseMeasurement(v));
   },
   get: function() {

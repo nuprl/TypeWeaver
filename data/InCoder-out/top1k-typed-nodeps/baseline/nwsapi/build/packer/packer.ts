@@ -46,7 +46,7 @@ var Parser = RegGrp.extend({
 // =========================================================================
 
 var Words = Collection.extend({
-  add: function(word: Word) {
+  add: function(word: any) {
     if (!this.has(word)) this.base(word);
     word = this.get(word);
     if (!word.index) {
@@ -56,7 +56,7 @@ var Words = Collection.extend({
     return word;
   },
 
-  sort: function(sorter: SortFunction) {
+  sort: function(sorter: Sorter) {
     return this.base(sorter || function(word1: string,  word2: string) {
       // sort by frequency
       return (word2.count - word1.count) || (word1.index - word2.index);
@@ -79,7 +79,7 @@ var Words = Collection.extend({
 // =========================================================================
 
 var Encoder = Base.extend({
-  constructor: function(pattern: RegExp,  encoder: Encoder,  ignore: RegExp) {
+  constructor: function(pattern: Pattern,  encoder: Encoder,  ignore: Pattern) {
     this.parser = new Parser(ignore);
     if (pattern) this.parser.put(pattern, "");
     this.encoder = encoder;
@@ -90,7 +90,7 @@ var Encoder = Base.extend({
 
   search: function(script: Script) {
     var words = new Words;
-    this.parser.putAt(-1, function(word: Word) {
+    this.parser.putAt(-1, function(word: any) {
       words.add(word);
     });
     this.parser.exec(script);
@@ -104,7 +104,7 @@ var Encoder = Base.extend({
     forEach (words, function(word: Word) {
       word.encoded = this.encoder(index++);
     }, this);
-    this.parser.putAt(-1, function(word: Word) {
+    this.parser.putAt(-1, function(word: any) {
       return words.get(word).encoded;
     });
     return this.parser.exec(script);
@@ -170,7 +170,7 @@ var Base62 = Encoder.extend({
     });
 
     // sort by encoding
-    words.sort(function(word1: number,  word2: number) {
+    words.sort(function(word1: Word,  word2: Word) {
       return word1.index - word2.index;
     });
 
@@ -204,7 +204,7 @@ var Base62 = Encoder.extend({
     return script.replace(/([\\'])/g, "\\$1").replace(/[\r\n]+/g, "\\n");
   },
 
-  getCount: function(words: Array<string>) {
+  getCount: function(words: List<String>) {
     return words.size() || 1;
   },
 
@@ -216,7 +216,7 @@ var Base62 = Encoder.extend({
       "([A-Z])(\\|[A-Z])+\\|([A-Z])": "$1-$3",
       "\\|": ""
     });
-    var pattern = trim.exec(words.map(function(word: any) {
+    var pattern = trim.exec(words.map(function(word: RegExp) {
       if (word.toString()) return word.replacement;
       return "";
     }).slice(0, 62).join("|"));
@@ -259,7 +259,7 @@ var Base62 = Encoder.extend({
     return pattern;
   },
 
-  getEncoder: function(words: Words<string>) {
+  getEncoder: function(words: List<String>) {
     var size = words.size();
     return Base62["ENCODE" + (size > 10 ? size > 36 ? 62 : 36 : 10)];
   },
@@ -276,11 +276,11 @@ var Base62 = Encoder.extend({
   WORDS: /\b[\da-zA-Z]\b|\w{2,}/g,
 
   ENCODE10: "String",
-  ENCODE36: "function(c: any){return c.toString(36)}",
+  ENCODE36: "function(c: number){return c.toString(36)}",
   ENCODE62: "function(c: number){return(c<62?'':e(parseInt(c/62)))+((c=c%62)>35?String.fromCharCode(c+29):c.toString(36))}",
 
-  UNPACK: "eval(function(p: any, a: any, c: any, k: any, e: any, r: any){e=%5;if('0'.replace(0,e)==0){while(c--)r[e(c)]=k[c];" +
-    "k=[function(e: Error){return r[e]||e}];e=function(){return'%6'};c=1};while(c--)if(k[c])p=p." +
+  UNPACK: "eval(function(p: number, a: number, c: number, k: number, e: number, r: number){e=%5;if('0'.replace(0,e)==0){while(c--)r[e(c)]=k[c];" +
+    "k=[function(e: any){return r[e]||e}];e=function(){return'%6'};c=1};while(c--)if(k[c])p=p." +
     "replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c]);return p}('%1',%2,%3,'%4'.split('|'),0,{}))"
 });
 
@@ -324,7 +324,7 @@ global.Packer = Base.extend({
 
   encode52: function(c: number) {
     // Base52 encoding (a-Z)
-    function encode(c: Code) {
+    function encode(c: number) {
       return (c < 52 ? '' : encode(parseInt(c / 52))) +
         ((c = c % 52) > 25 ? String.fromCharCode(c + 39) : String.fromCharCode(c + 97));
     };
@@ -362,7 +362,7 @@ var Minifier = Base.extend({
       }
       return parsed;
     });
-    forEach.csv("comments,clean,whitespace", function(name: any) {
+    forEach.csv("comments,clean,whitespace", function(name: String) {
       this[name] = Packer.data.union(new Parser(this[name]));
     }, this);
     this.conditionalComments = this.comments.copy();
@@ -391,10 +391,10 @@ var Minifier = Base.extend({
   },
 
   concat: {
-    "(STRING1)\\+(STRING1)": function(match: RegExpExecArray,  a: any,  $2: any,  b: any) {
+    "(STRING1)\\+(STRING1)": function(match: RegExpExecArray,  a: RegExpExecArray,  $2: RegExpExecArray,  b: Array) {
       return a.slice(0, -1) + b.slice(1);
     },
-    "(STRING2)\\+(STRING2)": function(match: RegExpExecArray,  a: any,  $2: any,  b: any) {
+    "(STRING2)\\+(STRING2)": function(match: RegExpExecArray,  a: RegExpExecArray,  $2: RegExpExecArray,  b: Array) {
       return a.slice(0, -1) + b.slice(1);
     }
   },
@@ -424,7 +424,7 @@ var Shrinker = Base.extend({
     // put strings and regular expressions back
     var data = this._data; // encoded strings and regular expressions
     delete this._data;
-    return script.replace(Shrinker.ENCODED_DATA, function(match: RegExpExecArray,  index: number) {
+    return script.replace(Shrinker.ENCODED_DATA, function(match: any,  index: number) {
       return data[index];
     });
   },
@@ -432,7 +432,7 @@ var Shrinker = Base.extend({
   encodeData: function(script: Script) {
     // encode strings and regular expressions
     var data = this._data = []; // encoded strings and regular expressions
-    return Packer.data.exec(script, function(match: RegExpExecArray,  operator: RegExpExecArray,  regexp: RegExpExecArray) {
+    return Packer.data.exec(script, function(match: RegExp,  operator: RegExp,  regexp: RegExp) {
       var replacement = "\x01" + data.length + "\x01";
       if (regexp) {
         replacement = operator + replacement;
@@ -443,7 +443,7 @@ var Shrinker = Base.extend({
     });
   },
   
-  shrink: function(script: any) {
+  shrink: function(script: Script) {
     script = this.encodeData(script);
     
     // Windows Scripting Host cannot do regexp.test() on global regexps.
@@ -468,10 +468,10 @@ var Shrinker = Base.extend({
     var blocks = []; // store program blocks (anything between braces {})
     var total = 0;
     // encoder for program blocks
-    function encodeBlocks($: Block,  prefix: BlockPrefix,  blockType: BlockType,  args: Args,  block: Block) {
+    function encodeBlocks($: Blocks$,  prefix: BlockType$,  blockType: BlockType$,  args: any,  block: Block$) {
       if (!prefix) prefix = "";
       if (blockType == "function") {
-        // decode the function block (THIS IS THE IMPORTANT BIT: it)
+        // decode the function block (THIS IS THE IMPORTANT BIT: THIS)
         // We are retrieving all sub-blocks and will re-parse them in light
         // of newly shrunk variables
         block = args + decodeBlocks(block, SCOPED);
@@ -522,9 +522,9 @@ var Shrinker = Base.extend({
     };
 
     // decoder for program blocks
-    function decodeBlocks(script: Script,  encoded: boolean) {
+    function decodeBlocks(script: Buffer,  encoded: boolean) {
       while (encoded.test(script)) {
-        script = script.replace(global(encoded), function(match: RegExpExecArray,  index: number) {
+        script = script.replace(global(encoded), function(match: RegExp,  index: number) {
           return blocks[index];
         });
       }

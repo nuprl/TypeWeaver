@@ -1,5 +1,5 @@
 const through2 = require('through2')
-module.exports = function (opts: any) {
+module.exports = function (opts: Options) {
   if (opts.objectMode)
     return through2.obj(func)
   s = through2(func)
@@ -8,7 +8,7 @@ module.exports = function (opts: any) {
   }
   return s
 
-  function func (data: Buffer,  enc: BufferEncoder,  done: Function) {
+  function func (data: Buffer,  enc: Buffer,  done: Function) {
     this.push(data, enc)
     done()
   }

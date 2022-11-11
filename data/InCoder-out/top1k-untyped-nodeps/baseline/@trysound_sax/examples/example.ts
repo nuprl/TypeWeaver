@@ -9,7 +9,7 @@ var fs = require('fs'),
       console.error('%s %s %j', this.line + ':' + this.column, ev, data)
     }}
 
-sax.EVENTS.forEach(function (ev: any) {
+sax.EVENTS.forEach(function (ev: Event) {
   loose['on' + ev] = inspector(ev)
 })
 loose.onend = function () {

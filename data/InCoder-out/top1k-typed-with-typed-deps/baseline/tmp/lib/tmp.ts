@@ -97,7 +97,7 @@ function tmpName(options: any,  callback: Function) {
  * @returns {string} the generated random name
  * @throws {Error} if the options are invalid or could not generate a filename
  */
-function tmpNameSync(options: SyncOptions) {
+function tmpNameSync(options: tmpNameSyncOptions) {
   const
     args = _parseArguments(options),
     opts = args[0];
@@ -130,17 +130,17 @@ function file(options: any,  callback: Function) {
     cb = args[1];
 
   // gets a temporary filename
-  tmpName(opts, function _tmpNameCreated(err: Error,  name: string | null) {
+  tmpName(opts, function _tmpNameCreated(err: Error,  name: string) {
     /* istanbul ignore else */
     if (err) return cb(err);
 
     // create and open the file
-    fs.open(name, CREATE_FLAGS, opts.mode || FILE_MODE, function _fileCreated(err: NodeJS.Errno,  fd: number) {
+    fs.open(name, CREATE_FLAGS, opts.mode || FILE_MODE, function _fileCreated(err: Error,  fd: number) {
       /* istanbu ignore else */
       if (err) return cb(err);
 
       if (opts.discardDescriptor) {
-        return fs.close(fd, function _discardCallback(possibleErr: Error) {
+        return fs.close(fd, function _discardCallback(possibleErr: any) {
           // the chance of getting an error on close here is rather low and might occur in the most edgiest cases only
           return cb(possibleErr, name, undefined, _prepareTmpFileRemoveCallback(name, -1, opts, false));
         });
@@ -161,7 +161,7 @@ function file(options: any,  callback: Function) {
  * @returns {FileSyncObject} object consists of name, fd and removeCallback
  * @throws {Error} if cannot create a file
  */
-function fileSync(options: { encoding?: string }) {
+function fileSync(options: FileSyncOptions) {
   const
     args = _parseArguments(options),
     opts = args[0];
@@ -188,14 +188,14 @@ function fileSync(options: { encoding?: string }) {
  * @param {(Options|dirCallback)} options the options or the callback function
  * @param {?dirCallback} callback
  */
-function dir(options: any,  callback: Function) {
+function dir(options: DirOptions,  callback: Callback<DirResult>) {
   const
     args = _parseArguments(options, callback),
     opts = args[0],
     cb = args[1];
 
   // gets a temporary filename
-  tmpName(opts, function _tmpNameCreated(err: Error,  name: string | null) {
+  tmpName(opts, function _tmpNameCreated(err: Error,  name: string) {
     /* istanbul ignore else */
     if (err) return cb(err);
 
@@ -216,7 +216,7 @@ function dir(options: any,  callback: Function) {
  * @returns {DirSyncObject} object consists of name and removeCallback
  * @throws {Error} if it cannot create a directory
  */
-function dirSync(options: SyncOptions) {
+function dirSync(options: Options) {
   const
     args = _parseArguments(options),
     opts = args[0];
@@ -237,8 +237,8 @@ function dirSync(options: SyncOptions) {
  * @param {Function} next
  * @private
  */
-function _removeFileAsync(fdPath: number,  next: Function) {
-  const _handler = function (err: rror) {
+function _removeFileAsync(fdPath: any,  next: Function) {
+  const _handler = function (err: odeJS.Errno) {
     if (err && !_isENOENT(err)) {
       // reraise any unanticipated error
       return next(err);
@@ -293,7 +293,7 @@ function _removeFileSync(fdPath: number) {
  * @returns {fileCallback | fileCallbackSync}
  * @private
  */
-function _prepareTmpFileRemoveCallback(name: string | Buffer,  fd: number,  opts: any,  sync: boolean) {
+function _prepareTmpFileRemoveCallback(name: string,  fd: number,  opts: any,  sync: boolean) {
   const removeCallbackSync = _prepareRemoveCallback(_removeFileSync, [fd, name], sync);
   const removeCallback = _prepareRemoveCallback(_removeFileAsync, [fd, name], sync, removeCallbackSync);
 
@@ -314,7 +314,7 @@ function _prepareTmpFileRemoveCallback(name: string | Buffer,  fd: number,  opts
  * @returns {Function} the callback
  * @private
  */
-function _prepareTmpDirRemoveCallback(name: string | null,  opts: IFileOperationOptions,  sync: boolean) {
+function _prepareTmpDirRemoveCallback(name: string,  opts: any,  sync: any) {
   const removeFunction = opts.unsafeCleanup ? rimraf : fs.rmdir.bind(fs);
   const removeFunctionSync = opts.unsafeCleanup ? FN_RIMRAF_SYNC : FN_RMDIR_SYNC;
   const removeCallbackSync = _prepareRemoveCallback(removeFunctionSync, name, sync);
@@ -337,7 +337,7 @@ function _prepareTmpDirRemoveCallback(name: string | null,  opts: IFileOperation
  * @returns {cleanupCallback | cleanupCallbackSync}
  * @private
  */
-function _prepareRemoveCallback(removeFunction: Function,  fileOrDirName: string | string[],  sync: boolean | SyncCallback,  cleanupCallbackSync: SyncCallback) {
+function _prepareRemoveCallback(removeFunction: Function,  fileOrDirName: String,  sync: Boolean,  cleanupCallbackSync: Boolean) {
   let called = false;
 
   // if sync is true, the next parameter will be ignored
@@ -426,7 +426,7 @@ function _isBlank(s: string) {
  * @returns {boolean} true if the object is undefined
  * @private
  */
-function _isUndefined(obj: any) {
+function _isUndefined(obj: unknown) {
   return typeof obj === 'undefined';
 }
 
@@ -467,7 +467,7 @@ function _parseArguments(options: any,  callback: Function) {
  * @returns {string} the new random name according to opts
  * @private
  */
-function _generateTmpName(opts: any) {
+function _generateTmpName(opts: Options) {
 
   const tmpDir = opts.tmpdir;
 
@@ -551,7 +551,7 @@ function _assertAndSanitizeOptions(options: IOptions) {
  * @returns {string}
  * @private
  */
-function _resolvePath(name: string,  tmpDir: string | undefined) {
+function _resolvePath(name: PathLike,  tmpDir: string | null | undefined) {
   if (name.startsWith(tmpDir)) {
     return path.resolve(name);
   } else {
@@ -568,7 +568,7 @@ function _resolvePath(name: string,  tmpDir: string | undefined) {
  * @throws {Error}
  * @private
  */
-function _assertIsRelative(name: string | undefined,  option: IOption,  tmpDir: IPath) {
+function _assertIsRelative(name: string,  option: Option<any>,  tmpDir: string) {
   if (option === 'name') {
     // assert that name is not absolute and does not contain a path
     if (path.isAbsolute(name))
@@ -594,7 +594,7 @@ function _assertIsRelative(name: string | undefined,  option: IOption,  tmpDir: 
  *
  * @private
  */
-function _isEBADF(error: Error) {
+function _isEBADF(error: any) {
   return _isExpectedError(error, -EBADF, 'EBADF');
 }
 
@@ -647,7 +647,7 @@ function setGracefulCleanup() {
  * @param {?Options} options
  * @returns {string} the currently configured tmp dir
  */
-function _getTmpDir(options: IOptions) {
+function _getTmpDir(options: any) {
   return path.resolve(options && options.tmpdir || os.tmpdir());
 }
 

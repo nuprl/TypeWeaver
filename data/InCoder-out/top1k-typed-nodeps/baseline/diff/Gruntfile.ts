@@ -3,7 +3,7 @@
 const pkg = require('./package.json');
 const babel = require('rollup-plugin-babel');
 
-module.exports = function(grunt: grunt) {
+module.exports = function(grunt: Grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -101,7 +101,7 @@ module.exports = function(grunt: grunt) {
     copy: {
       dist: {
         options: {
-          processContent: function(content: any) {
+          processContent: function(content: Content) {
             return grunt.template.process('/*!\n\n <%= pkg.name %> v<%= pkg.version %>\n\n<%= grunt.file.read("LICENSE") %>\n@license\n*/\n')
                 + content;
           }

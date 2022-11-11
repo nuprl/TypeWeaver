@@ -1,21 +1,21 @@
-punycode.ts(53,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-punycode.ts(72,28): error TS2304: Cannot find name 'Domain'.
-punycode.ts(106,24): error TS2339: Property 'charCodeAt' does not exist on type 'Buffer'.
-punycode.ts(109,25): error TS2339: Property 'charCodeAt' does not exist on type 'Buffer'.
+punycode.ts(73,23): error TS2339: Property 'split' does not exist on type 'string | string[]'.
+  Property 'split' does not exist on type 'string[]'.
+punycode.ts(82,18): error TS2339: Property 'replace' does not exist on type 'string | string[]'.
+  Property 'replace' does not exist on type 'string[]'.
+punycode.ts(83,24): error TS2339: Property 'split' does not exist on type 'string | string[]'.
+  Property 'split' does not exist on type 'string[]'.
+punycode.ts(84,30): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(x: number) => number'.
+  Type 'Function' provides no match for the signature '(x: number): number'.
+punycode.ts(106,24): error TS2339: Property 'charCodeAt' does not exist on type 'Uint8Array'.
+punycode.ts(109,25): error TS2339: Property 'charCodeAt' does not exist on type 'Uint8Array'.
 punycode.ts(171,27): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 punycode.ts(171,43): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 punycode.ts(208,32): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-punycode.ts(215,13): error TS2339: Property 'charCodeAt' does not exist on type 'number[]'.
-punycode.ts(218,21): error TS2339: Property 'charCodeAt' does not exist on type 'number[]'.
-punycode.ts(238,37): error TS2339: Property 'charCodeAt' does not exist on type 'number[]'.
+punycode.ts(215,13): error TS2339: Property 'charCodeAt' does not exist on type 'Uint8Array'.
+punycode.ts(218,21): error TS2339: Property 'charCodeAt' does not exist on type 'Uint8Array'.
+punycode.ts(238,37): error TS2339: Property 'charCodeAt' does not exist on type 'Uint8Array'.
 punycode.ts(261,31): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
-punycode.ts(291,2): error TS2322: Type 'any[]' is not assignable to type 'number'.
-punycode.ts(291,21): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Buffer'.
-punycode.ts(294,26): error TS2339: Property 'length' does not exist on type 'number'.
-punycode.ts(302,29): error TS2488: Type 'number' must have a '[Symbol.iterator]()' method that returns an iterator.
-punycode.ts(325,30): error TS2488: Type 'number' must have a '[Symbol.iterator]()' method that returns an iterator.
-punycode.ts(341,30): error TS2488: Type 'number' must have a '[Symbol.iterator]()' method that returns an iterator.
+punycode.ts(291,21): error TS2345: Argument of type 'number[]' is not assignable to parameter of type 'Uint8Array'.
+  Type 'number[]' is missing the following properties from type 'Uint8Array': BYTES_PER_ELEMENT, buffer, byteLength, byteOffset, and 3 more.
 punycode.ts(362,48): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
-punycode.ts(386,35): error TS2304: Cannot find name 'Domain'.
-punycode.ts(405,33): error TS2304: Cannot find name 'Domain'.
 

@@ -4,7 +4,7 @@ var buffer = require('buffer')
 var Buffer = buffer.Buffer
 
 // alternative to using Object.keys for old browsers
-function copyProps (src: any,  dst: any) {
+function copyProps (src: Object,  dst: Object) {
   for (var key in src) {
     dst[key] = src[key]
   }
@@ -17,7 +17,7 @@ if (Buffer.from && Buffer.alloc && Buffer.allocUnsafe && Buffer.allocUnsafeSlow)
   exports.Buffer = SafeBuffer
 }
 
-function SafeBuffer (arg: any,  encodingOrOffset: number,  length: number) {
+function SafeBuffer (arg: Buffer,  encodingOrOffset: Buffer,  length: number) {
   return Buffer(arg, encodingOrOffset, length)
 }
 
@@ -26,14 +26,14 @@ SafeBuffer.prototype = Object.create(Buffer.prototype)
 // Copy static methods from Buffer
 copyProps(Buffer, SafeBuffer)
 
-SafeBuffer.from = function (arg: number,  encodingOrOffset: number,  length: number) {
+SafeBuffer.from = function (arg: number,  encodingOrOffset: BufferEncoding,  length: number) {
   if (typeof arg === 'number') {
     throw new TypeError('Argument must not be a number')
   }
   return Buffer(arg, encodingOrOffset, length)
 }
 
-SafeBuffer.alloc = function (size: umber,  fill: number,  encoding: string) {
+SafeBuffer.alloc = function (size: umber,  fill: umber,  encoding: umber) {
   if (typeof size !== 'number') {
     throw new TypeError('Argument must be a number')
   }

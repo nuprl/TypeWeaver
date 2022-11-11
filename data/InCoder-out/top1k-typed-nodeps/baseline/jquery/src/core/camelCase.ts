@@ -2,7 +2,7 @@
 var rdashAlpha = /-([a-z])/g;
 
 // Used by camelCase as callback to replace()
-function fcamelCase( _all: boolean,  letter : string) {
+function fcamelCase( _all: any,  letter : string) {
 	return letter.toUpperCase();
 }
 

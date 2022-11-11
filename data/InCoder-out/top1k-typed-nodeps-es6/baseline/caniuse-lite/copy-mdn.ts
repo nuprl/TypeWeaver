@@ -5,7 +5,7 @@ import bcd from '@mdn/browser-compat-data';
 /**
  * This function maps the browser keys from @mdn/browser-compat-data, to caniuse's format.
  */
-function bcdBrowserToCanIUseBrowser(bcdBrowser: Browser) {
+function bcdBrowserToCanIUseBrowser(bcdBrowser: BCDBrowser) {
   let browser = bcdBrowser
 
   if (browser === 'samsunginternet_android') {
@@ -69,7 +69,7 @@ let unknown = {}
  * This function maps support data from @mdn/browser-compat-data, to caniuse's
  * format.
  */
-function bcdDataToCanIUseData(bcdData: number[],  title: number[]) {
+function bcdDataToCanIUseData(bcdData: number,  title: string | null) {
   let result = {
     title,
     spec: bcdData.spec_url,

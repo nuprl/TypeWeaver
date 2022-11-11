@@ -14,7 +14,7 @@
  * function App() {
  *   this.cache = {};
  * }
- * App.prototype.set = function(key: any,  val: any) {
+ * App.prototype.set = function(key: keyof T,  val: T) {
  *   this.cache[key] = val;
  *   return this;
  * };
@@ -75,6 +75,6 @@ module.exports = function copyDescriptor(receiver: any,  provider: any,  from: a
   if (val) Object.defineProperty(receiver, to, val);
 };
 
-function isObject(val: mixed) {
+function isObject(val: any) {
   return {}.toString.call(val) === '[object Object]';
 }

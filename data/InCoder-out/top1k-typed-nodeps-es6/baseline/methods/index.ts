@@ -27,7 +27,7 @@ export default getCurrentNodeMethods() || getBasicNodeMethods();
  */
 
 function getCurrentNodeMethods () {
-  return http.METHODS && http.METHODS.map(function lowerCaseMethod (method: Function) {
+  return http.METHODS && http.METHODS.map(function lowerCaseMethod (method: string | Function) {
     return method.toLowerCase()
   })
 }

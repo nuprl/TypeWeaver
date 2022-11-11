@@ -23,13 +23,13 @@ pp.startNode = function() {
   return new Node(this, this.start, this.startLoc)
 }
 
-pp.startNodeAt = function(pos: number,  loc: number) {
+pp.startNodeAt = function(pos: Position,  loc: Location) {
   return new Node(this, pos, loc)
 }
 
 // Finish an AST node, adding `type` and `end` properties.
 
-function finishNodeAt(node: Node,  type: NodeType,  pos: number,  loc: number) {
+function finishNodeAt(node: Node,  type: TokenType,  pos: number,  loc: Position) {
   node.type = type
   node.end = pos
   if (this.options.locations)
@@ -39,13 +39,13 @@ function finishNodeAt(node: Node,  type: NodeType,  pos: number,  loc: number) {
   return node
 }
 
-pp.finishNode = function(node: Node,  type: string) {
+pp.finishNode = function(node: AST.Node,  type: AST.NodeType) {
   return finishNodeAt.call(this, node, type, this.lastTokEnd, this.lastTokEndLoc)
 }
 
 // Finish node at given position
 
-pp.finishNodeAt = function(node: Node,  type: TokenType,  pos: number,  loc: number) {
+pp.finishNodeAt = function(node: Node,  type: NodeType,  pos: Position,  loc: SourceLocation) {
   return finishNodeAt.call(this, node, type, pos, loc)
 }
 

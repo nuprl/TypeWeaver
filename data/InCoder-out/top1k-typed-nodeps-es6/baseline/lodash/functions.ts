@@ -19,7 +19,7 @@
  * functions(new Foo)
  * // => ['a', 'b']
  */
-function functions(object: Object) {
+function functions(object: any) {
   if (object == null) {
     return []
   }

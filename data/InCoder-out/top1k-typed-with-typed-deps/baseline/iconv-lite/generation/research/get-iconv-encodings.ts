@@ -19,7 +19,7 @@ process.stdin.on("end", function() {
     input = input.replace(/\s|\n/g, " ");
     encodings = input.split(",").map(function(s: string) {return s.trim();}).filter(Boolean);
     encodings = input.split(" ").map(function(s: string) {return s.trim();}).filter(Boolean);
-    encodings = encodings.filter(function(enc: Encoding) {
+    encodings = encodings.filter(function(enc: any) {
         try {
             new iconv.Iconv("utf-8", enc).convert(Buffer.from("hello!"));
             if (skipEncodings[enc]) {
@@ -52,7 +52,7 @@ process.stdin.on("end", function() {
         }
 
         try {
-            forAllChars(converter, function(valid: Boolean,  inp: String,  outp: String) {
+            forAllChars(converter, function(valid: Boolean,  inp: Object,  outp: Object) {
                 res.isASCII = res.isASCII && (inp[0] >= 0x80 || (valid && (inp[0] == outp[0])));
                 res.isSBCS = res.isSBCS && (inp.length == 1);
                 res.isDBCS = res.isDBCS && (((inp.length == 1) && (inp[0] < 0x80 || !valid)) || ((inp.length == 2) && inp[0] >= 0x80));
@@ -91,7 +91,7 @@ process.stdin.resume();
 
 // Make all valid input combinations for a given encoding and call fn with it.
 // fn(valid, input, output)
-function forAllChars(converter: Function,  fn: Function,  origbuf: Array,  len: Number) {
+function forAllChars(converter: CharConverter,  fn: CharCallback,  origbuf: Buffer,  len: number) {
     var buf = origbuf.slice(0, len);
     for (var i = 0; i < 0x100; i++) {
         buf[len-1] = i;

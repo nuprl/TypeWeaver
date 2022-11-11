@@ -7,7 +7,7 @@ import wrapAsync from './internal/wrapAsync.js'
 import awaitify from './internal/awaitify.js'
 
 // eachOf implementation optimized for array-likes
-function eachOfArrayLike(coll: ArrayLike<any>,  iteratee: Function,  callback: Function) {
+function eachOfArrayLike(coll: Iterable<any>,  iteratee: any,  callback: Function) {
     callback = once(callback);
     var index = 0,
         completed = 0,
@@ -17,7 +17,7 @@ function eachOfArrayLike(coll: ArrayLike<any>,  iteratee: Function,  callback: F
         callback(null);
     }
 
-    function iteratorCallback(err: any,  value: any) {
+    function iteratorCallback(err: Error,  value: any) {
         if (err === false) {
             canceled = true
         }
@@ -35,7 +35,7 @@ function eachOfArrayLike(coll: ArrayLike<any>,  iteratee: Function,  callback: F
 }
 
 // a generic version of eachOf which can handle array, object, and iterator cases.
-function eachOfGeneric (coll: ArrayLike<any>,  iteratee: Function,  callback: Function) {
+function eachOfGeneric (coll: Iterable<any>,  iteratee: Generic,  callback: Generic) {
     return eachOfLimit(coll, Infinity, iteratee, callback);
 }
 
@@ -70,7 +70,7 @@ function eachOfGeneric (coll: ArrayLike<any>,  iteratee: Function,  callback: Fu
  * let invalidConfigFileMap = {dev: 'dev.json', test: 'test.json', invalid: 'invalid.json'};
  *
  * // asynchronous function that reads a json file and parses the contents as json object
- * function parseFile(file: File,  key: string | string[],  callback: Function) {
+ * function parseFile(file: File,  key: any,  callback: Function) {
  *     fs.readFile(file, "utf8", function(err: Error,  data: any) {
  *         if (err) return calback(err);
  *         try {
@@ -148,7 +148,7 @@ function eachOfGeneric (coll: ArrayLike<any>,  iteratee: Function,  callback: Fu
  * }
  *
  */
-function eachOf(coll: ArrayLike<any>,  iteratee: Function,  callback: Function) {
+function eachOf(coll: Iterable<any>,  iteratee: Function,  callback: Function) {
     var eachOfImplementation = isArrayLike(coll) ? eachOfArrayLike : eachOfGeneric;
     return eachOfImplementation(coll, wrapAsync(iteratee), callback);
 }

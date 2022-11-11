@@ -9,7 +9,7 @@
  * @params {boolean} [isCurried] Specify composing for a curried function.
  * @returns {Array} Returns the new array of composed arguments.
  */
-function composeArgs(args: Array<any>,  partials: Array<any>,  holders: Array<any>,  isCurried: boolean) {
+function composeArgs(args: any[],  partials: any[],  holders: any[],  isCurried: boolean) {
   const argsLength = args.length
   const holdersLength = holders.length
   const leftLength = partials.length

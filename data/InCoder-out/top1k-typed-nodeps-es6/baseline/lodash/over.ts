@@ -16,7 +16,7 @@ import map from './map.js'
  * func(1, 2, 3, 4)
  * // => [4, 1]
  */
-function over(iteratees: any) {
+function over(iteratees: Array<Function>) {
   return function(...args: any[]) {
     return map(iteratees, (iteratee) => iteratee.apply(this, args))
   }

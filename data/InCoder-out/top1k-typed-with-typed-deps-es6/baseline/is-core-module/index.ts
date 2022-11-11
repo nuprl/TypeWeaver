@@ -2,7 +2,7 @@
 
 import has from 'has';
 
-function specifierIncluded(current: Specifier,  specifier: Specifier) {
+function specifierIncluded(current: Node,  specifier: Node) {
 	var nodeParts = current.split('.');
 	var parts = specifier.split(' ');
 	var op = parts.length > 1 ? parts[0] : '=';
@@ -25,7 +25,7 @@ function specifierIncluded(current: Specifier,  specifier: Specifier) {
 	return op === '>=';
 }
 
-function matchesRange(current: Range,  range: Range) {
+function matchesRange(current: number,  range: number[]) {
 	var specifiers = range.split(/ ?&& ?/);
 	if (specifiers.length === 0) {
 		return false;
@@ -38,7 +38,7 @@ function matchesRange(current: Range,  range: Range) {
 	return true;
 }
 
-function versionIncluded(nodeVersion: NodeJS.Version,  specifierValue: string | boolean) {
+function versionIncluded(nodeVersion: number,  specifierValue: number) {
 	if (typeof specifierValue === 'boolean') {
 		return specifierValue;
 	}

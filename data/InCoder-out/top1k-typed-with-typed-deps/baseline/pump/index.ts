@@ -9,13 +9,13 @@ var isFn = function (fn: Function) {
   return typeof fn === 'function'
 }
 
-var isFS = function (stream: ReadableStream) {
+var isFS = function (stream: Readable) {
   if (!ancient) return false // newer node version do not need to care about fs is a special way
   if (!fs) return false // browser
   return (stream instanceof (fs.ReadStream || noop) || stream instanceof (fs.WriteStream || noop)) && isFn(stream.close)
 }
 
-var isRequest = function (stream: ReadableStream) {
+var isRequest = function (stream: Stream) {
   return stream.setHeader && isFn(stream.abort)
 }
 
@@ -64,7 +64,7 @@ var pump = function () {
   if (streams.length < 2) throw new Error('pump requires two streams per minimum')
 
   var error
-  var destroys = streams.map(function (stream: ReadableStream,  i: number) {
+  var destroys = streams.map(function (stream: Readable,  i: number) {
     var reading = i < streams.length - 1
     var writing = i > 0
     return destroyer(stream, reading, writing, function (err: Error) {

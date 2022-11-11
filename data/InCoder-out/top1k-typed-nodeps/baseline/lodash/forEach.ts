@@ -25,7 +25,7 @@ import baseEach from './.internal/baseEach.js'
  * forEach({ 'a': 1, 'b': 2 }, (value, key) => console.log(key))
  * // => Logs 'a' then 'b' (iteration order is not guaranteed).
  */
-function forEach(collection: Array<T>,  iteratee: Function) {
+function forEach(collection: any,  iteratee: Function) {
   const func = Array.isArray(collection) ? arrayEach : baseEach
   return func(collection, iteratee)
 }

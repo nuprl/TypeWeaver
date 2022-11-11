@@ -1,12 +1,11 @@
-aws4.ts(14,68): error TS2345: Argument of type 'string' is not assignable to parameter of type 'BinaryToTextEncoding'.
+aws4.ts(10,50): error TS2345: Argument of type 'Uint8Array' is not assignable to parameter of type 'string'.
+aws4.ts(10,73): error TS2345: Argument of type 'Uint8Array' is not assignable to parameter of type 'BinaryToTextEncoding'.
 aws4.ts(19,47): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type '(c: number) => string' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
       Types of parameters 'c' and 'substring' are incompatible.
         Type 'string' is not assignable to type 'number'.
 aws4.ts(20,20): error TS2339: Property 'charCodeAt' does not exist on type 'number'.
-aws4.ts(25,43): error TS2345: Argument of type 'string | Uint8Array' is not assignable to parameter of type 'string | number | boolean'.
-  Type 'Uint8Array' is not assignable to type 'string | number | boolean'.
 aws4.ts(44,56): error TS2552: Cannot find name 'Credentials'. Did you mean 'Credential'?
 aws4.ts(46,36): error TS2740: Type 'UrlWithStringQuery' is missing the following properties from type 'Request': cache, credentials, destination, headers, and 17 more.
 aws4.ts(48,25): error TS2540: Cannot assign to 'headers' because it is a read-only property.
@@ -30,20 +29,21 @@ aws4.ts(70,37): error TS2339: Property 'host' does not exist on type 'Request'.
 aws4.ts(71,13): error TS2339: Property 'hostname' does not exist on type 'Request'.
 aws4.ts(71,32): error TS2339: Property 'Host' does not exist on type '{}'.
 aws4.ts(71,48): error TS2339: Property 'host' does not exist on type '{}'.
-aws4.ts(76,52): error TS2304: Cannot find name 'Host'.
 aws4.ts(211,13): error TS2554: Expected 3 arguments, but got 2.
 aws4.ts(212,15): error TS2554: Expected 3 arguments, but got 2.
 aws4.ts(213,16): error TS2554: Expected 3 arguments, but got 2.
 aws4.ts(214,20): error TS2554: Expected 3 arguments, but got 2.
+aws4.ts(217,50): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Uint8Array'.
 aws4.ts(271,56): error TS2304: Cannot find name 'Path'.
 aws4.ts(271,70): error TS2304: Cannot find name 'Piece'.
+aws4.ts(296,28): error TS2552: Cannot find name 'Header'. Did you mean 'Headers'?
 aws4.ts(301,23): error TS2304: Cannot find name 'ny'.
 aws4.ts(301,31): error TS2304: Cannot find name 'y'.
 aws4.ts(309,27): error TS2304: Cannot find name 'ny'.
 aws4.ts(370,54): error TS2552: Cannot find name 'Credentials'. Did you mean 'Credential'?
 browser/index.ts(1,18): error TS2307: Cannot find module 'aws4' or its corresponding type declarations.
 example.ts(2,18): error TS2307: Cannot find module '.' or its corresponding type declarations.
-example.ts(5,24): error TS2304: Cannot find name 'RequestOptions'.
+example.ts(5,119): error TS2339: Property 'body' does not exist on type 'RequestOptions'.
 example.ts(17,1): error TS2739: Type '{ host: string; path: string; }' is missing the following properties from type '{ host: string; path: string; service: string; region: string; }': service, region
 example.ts(20,77): error TS2322: Type '{ host: string; path: string; signQuery: boolean; }' is not assignable to type '{ host: string; path: string; service: string; region: string; }'.
   Object literal may only specify known properties, and 'signQuery' does not exist in type '{ host: string; path: string; service: string; region: string; }'.
@@ -54,12 +54,5 @@ lru.ts(60,10): error TS2339: Property 'next' does not exist on type 'Node'.
 lru.ts(62,10): error TS2339: Property 'prev' does not exist on type 'Node'.
 lru.ts(63,10): error TS2339: Property 'next' does not exist on type 'Node'.
 lru.ts(64,10): error TS2339: Property 'next' does not exist on type 'Node'.
-lru.ts(79,27): error TS2339: Property 'next' does not exist on type 'Node'.
-lru.ts(80,19): error TS2339: Property 'prev' does not exist on type 'Node'.
-lru.ts(81,10): error TS2339: Property 'prev' does not exist on type 'Node'.
-lru.ts(81,27): error TS2339: Property 'next' does not exist on type 'Node'.
-lru.ts(84,26): error TS2339: Property 'prev' does not exist on type 'Node'.
-lru.ts(85,19): error TS2339: Property 'next' does not exist on type 'Node'.
-lru.ts(86,10): error TS2339: Property 'next' does not exist on type 'Node'.
-lru.ts(86,27): error TS2339: Property 'prev' does not exist on type 'Node'.
+lru.ts(77,52): error TS2503: Cannot find namespace 'AST'.
 

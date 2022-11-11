@@ -3,7 +3,7 @@
 var stringCoerce  = require("../string/coerce")
   , toShortString = require("./to-short-string");
 
-module.exports = function (errorMessage: string | null,  value: any,  inputOptions: InputOptions) {
+module.exports = function (errorMessage: any,  value: any,  inputOptions: any) {
 	if (inputOptions && inputOptions.errorMessage) {
 		errorMessage = stringCoerce(inputOptions.errorMessage);
 	}

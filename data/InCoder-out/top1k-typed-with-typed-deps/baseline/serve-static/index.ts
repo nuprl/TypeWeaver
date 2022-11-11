@@ -35,7 +35,7 @@ module.exports.mime = send.mime
  * @public
  */
 
-function serveStatic (root: any,  options: any) {
+function serveStatic (root: string | Buffer,  options: ServeStaticOptions) {
   if (!root) {
     throw new TypeError('root path required')
   }
@@ -69,7 +69,7 @@ function serveStatic (root: any,  options: any) {
     ? createRedirectDirectoryListener()
     : createNotFoundDirectoryListener()
 
-  return function serveStatic (req: Request,  res: Response,  next: Next) {
+  return function serveStatic (req: Request,  res: Response,  next: NextFunction) {
     if (req.method !== 'GET' && req.method !== 'HEAD') {
       if (fallthrough) {
         return next()
@@ -130,7 +130,7 @@ function serveStatic (root: any,  options: any) {
  * Collapse all leading slashes into a single slash
  * @private
  */
-function collapseLeadingSlashes (str: string | null) {
+function collapseLeadingSlashes (str: any) {
   for (var i = 0; i < str.length; i++) {
     if (str.charCodeAt(i) !== 0x2f /* / */) {
       break
@@ -150,7 +150,7 @@ function collapseLeadingSlashes (str: string | null) {
  * @private
  */
 
-function createHtmlDocument (title: String,  body: String) {
+function createHtmlDocument (title: string | null,  body: string | null) {
   return '<!DOCTYPE html>\n' +
     '<html lang="en">\n' +
     '<head>\n' +

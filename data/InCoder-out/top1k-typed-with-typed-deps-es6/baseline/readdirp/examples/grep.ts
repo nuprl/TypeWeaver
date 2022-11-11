@@ -5,7 +5,7 @@ import es from 'event-stream';
 import readdirp from '..';
 
 const findLinesMatching = (searchTerm) => {
-  return es.through(function (entry: string) {
+  return es.through(function (entry: Entry) {
     let lineno = 0;
     const matchingLines = [];
     const fileStream = this;

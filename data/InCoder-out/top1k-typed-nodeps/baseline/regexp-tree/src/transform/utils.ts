@@ -12,7 +12,7 @@
  *
  * {{{a, b}, c}, d} -> [a, b, c, d]
  */
-function disjunctionToList(node: Node) {
+function disjunctionToList(node: AST.Disjunction) {
   if (node.type !== 'Disjunction') {
     throw new TypeError(`Expected "Disjunction" node, got "${node.type}"`);
   }
@@ -35,7 +35,7 @@ function disjunctionToList(node: Node) {
  *
  * [a, b, c, d] -> {{{a, b}, c}, d}
  */
-function listToDisjunction(list: List) {
+function listToDisjunction(list: List<any>) {
   return list.reduce((left, right) => {
     return {
       type: 'Disjunction',
@@ -55,7 +55,7 @@ function listToDisjunction(list: List) {
  * {2,} -> {3,}
  * {2,3} -> {3,4}
  */
-function increaseQuantifierByOne(quantifier: number) {
+function increaseQuantifierByOne(quantifier: Quantifier) {
   if (quantifier.kind === '*') {
 
     quantifier.kind = '+';

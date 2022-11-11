@@ -8,7 +8,7 @@
  * @param  {Function} fn
  * @returns {boolean}
  */
-export default function every(obj: Object,  fn: Function) {
+export default function every(obj: any,  fn: Function) {
     var pass = true;
 
     try {

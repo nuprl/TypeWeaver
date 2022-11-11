@@ -21,7 +21,7 @@ import isArrayLikeObject from './isArrayLikeObject.js'
  * unzip(zipped)
  * // => [['a', 'b'], [1, 2], [true, false]]
  */
-function unzip(array: rrayLike) {
+function unzip(array: rray<any>) {
   if (!(array != null && array.length)) {
     return []
   }

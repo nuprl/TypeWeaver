@@ -8,7 +8,7 @@ async function run(tasks: Array<Task>) {
   }
 }
 
-module.exports = function runTasks(tasks: Task[]) {
+module.exports = function runTasks(tasks: Array<Task>) {
   run(tasks).catch(err => {
     if (typeof err === 'string') {
       process.stderr.write(err + '\n')

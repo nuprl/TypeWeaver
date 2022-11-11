@@ -45,8 +45,8 @@ import awaitify from './internal/awaitify.js'
  *
  * // asynchronous function that computes the file size in bytes
  * // file size is added to the memoized value, then returned
- * function getFileSizeInBytes(memo: Memo,  file: File,  callback: Function) {
- *     fs.stat(file, function(err: Error,  stat: fs.Stat) {
+ * function getFileSizeInBytes(memo: any,  file: any,  callback: Function) {
+ *     fs.stat(file, function(err: Error,  stat: fs.Stats) {
  *         if (err) {
  *             return callback(err);
  *         }
@@ -120,7 +120,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function reduce(coll: Coll<T>,  memo: T,  iteratee: any,  callback: Function) {
+function reduce(coll: Iterable<any>,  memo: any,  iteratee: Function,  callback: Function) {
     callback = once(callback);
     var _iteratee = wrapAsync(iteratee);
     return eachOfSeries(coll, (x, i, iterCb) => {

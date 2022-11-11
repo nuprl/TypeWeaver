@@ -56,7 +56,7 @@ SHA256.outSize = 256;
 SHA256.hmacStrength = 192;
 SHA256.padLength = 64;
 
-SHA256.prototype._update = function _update(msg: Message,  start: number) {
+SHA256.prototype._update = function _update(msg: any,  start: number) {
   var W = this.W;
 
   for (var i = 0; i < 16; i++)
@@ -97,7 +97,7 @@ SHA256.prototype._update = function _update(msg: Message,  start: number) {
   this.h[7] = sum32(this.h[7], h);
 };
 
-SHA256.prototype._digest = function digest(enc: Encoding) {
+SHA256.prototype._digest = function digest(enc: BufferEncoding) {
   if (enc === 'hex')
     return utils.toHex32(this.h, 'big');
   else

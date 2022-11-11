@@ -3,7 +3,7 @@
 import Module from 'module';
 import path from 'path';
 
-export default function requireFromString(code: string | Buffer,  filename: string | Buffer,  opts: { encoding?: string }) {
+export default function requireFromString(code: string | Buffer | Uint8Array,  filename: string | Buffer,  opts: any) {
 	if (typeof filename === 'object') {
 		opts = filename;
 		filename = undefined;

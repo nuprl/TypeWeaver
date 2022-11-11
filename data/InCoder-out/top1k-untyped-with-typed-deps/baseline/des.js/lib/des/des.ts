@@ -11,7 +11,7 @@ function DESState() {
   this.keys = null;
 }
 
-function DES(options: any) {
+function DES(options: CipherCCMOption) {
   Cipher.call(this, options);
 
   var state = new DESState();
@@ -22,7 +22,7 @@ function DES(options: any) {
 inherits(DES, Cipher);
 module.exports = DES;
 
-DES.create = function create(options: DES) {
+DES.create = function create(options: DESOptions) {
   return new DES(options);
 };
 
@@ -31,7 +31,7 @@ var shiftTable = [
   1, 2, 2, 2, 2, 2, 2, 1
 ];
 
-DES.prototype.deriveKeys = function deriveKeys(state: IState,  key: any) {
+DES.prototype.deriveKeys = function deriveKeys(state: State,  key: Key) {
   state.keys = new Array(16 * 2);
 
   assert.equal(key.length, this.blockSize, 'Invalid key length');
@@ -89,7 +89,7 @@ DES.prototype._unpad = function _unpad(buffer: Buffer) {
   return buffer.slice(0, buffer.length - pad);
 };
 
-DES.prototype._encrypt = function _encrypt(state: any,  lStart: number,  rStart: number,  out: Uint8Array,  off: number) {
+DES.prototype._encrypt = function _encrypt(state: IState,  lStart: number,  rStart: number,  out: number,  off: number) {
   var l = lStart;
   var r = rStart;
 
@@ -115,7 +115,7 @@ DES.prototype._encrypt = function _encrypt(state: any,  lStart: number,  rStart:
   utils.rip(r, l, out, off);
 };
 
-DES.prototype._decrypt = function _decrypt(state: IBufferState,  lStart: number,  rStart: number,  out: number,  off: number) {
+DES.prototype._decrypt = function _decrypt(state: IState,  lStart: number,  rStart: number,  out: number,  off: number) {
   var l = rStart;
   var r = lStart;
 

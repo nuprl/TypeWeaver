@@ -2,7 +2,7 @@ import { List, walk, keyword as resolveKeyword } from 'css-tree';
 
 const { hasOwnProperty } = Object.prototype;
 
-function addRuleToMap(map: Map<string, Rule>,  item: Rule,  list: List<Rule>,  single: SingleRule) {
+function addRuleToMap(map: RuleMap,  item: Rule,  list: RuleList,  single: RuleSingle) {
     const node = item.data;
     const name = resolveKeyword(node.name).basename;
     const id = node.name.toLowerCase() + '/' + (node.prelude ? node.prelude.id : null);
@@ -22,7 +22,7 @@ function addRuleToMap(map: Map<string, Rule>,  item: Rule,  list: List<Rule>,  s
     map[name][id].append(list.remove(item));
 }
 
-function relocateAtrules(ast: AST,  options: IOptions) {
+function relocateAtrules(ast: AtruleNode,  options: any) {
     const collected = Object.create(null);
     let topInjectPoint = null;
 
@@ -65,11 +65,11 @@ function relocateAtrules(ast: AST,  options: IOptions) {
     }
 };
 
-function isMediaRule(node: Node) {
+function isMediaRule(node: CssNode) {
     return node.type === 'Atrule' && node.name === 'media';
 }
 
-function processAtrule(node: Node,  item: Atrule,  list: List) {
+function processAtrule(node: CssAtRule,  item: CssAtRule,  list: CssList) {
     if (!isMediaRule(node)) {
         return;
     }
@@ -95,7 +95,7 @@ function processAtrule(node: Node,  item: Atrule,  list: List) {
     }
 }
 
-export default function rejoinAtrule(ast: Atrule,  options: AtruleOptions) {
+export default function rejoinAtrule(ast: Atrule,  options: any) {
     relocateAtrules(ast, options);
 
     walk(ast, {

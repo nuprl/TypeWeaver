@@ -1,13 +1,13 @@
 import BN from 'bn.js';
 import randomBytes from 'randombytes';
 
-function blind (priv: EC_PRIVATE) {
+function blind (priv: Buffer) {
   var r = getr(priv)
   var blinder = r.toRed(BN.mont(priv.modulus)).redPow(new BN(priv.publicExponent)).fromRed()
   return { blinder: blinder, unblinder: r.invm(priv.modulus) }
 }
 
-function getr (priv: EC_PRIVATE) {
+function getr (priv: Buffer) {
   var len = priv.modulus.byteLength()
   var r
   do {

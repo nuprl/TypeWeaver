@@ -69,7 +69,7 @@ function merge2 () {
       mergeStream()
     }
 
-    function pipe (stream: NodeJS.ReadableStream) {
+    function pipe (stream: Readable) {
       function onend () {
         stream.removeListener('merge2UnpipeEnd', onend)
         stream.removeListener('end', onend)
@@ -127,7 +127,7 @@ function merge2 () {
 }
 
 // check and pause streams for pipe.
-function pauseStreams (streams: Stream[],  options: StreamOptions) {
+function pauseStreams (streams: Array<MediaStream>,  options: { end: true }) {
   if (!Array.isArray(streams)) {
     // Backwards-compat with old-style streams
     if (!streams._readableState && streams.pipe) {

@@ -9,7 +9,7 @@ const escPeriod = '\0PERIOD'+Math.random()+'\0';
 /**
  * @return {number}
  */
-function numeric(str: number) {
+function numeric(str: string | number) {
   return parseInt(str, 10) == str
     ? parseInt(str, 10)
     : str.charCodeAt(0);
@@ -18,7 +18,7 @@ function numeric(str: number) {
 /**
  * @param {string} str
  */
-function escapeBraces(str: string | string[]) {
+function escapeBraces(str: any) {
   return str.split('\\\\').join(escSlash)
             .split('\\{').join(escOpen)
             .split('\\}').join(escClose)
@@ -29,7 +29,7 @@ function escapeBraces(str: string | string[]) {
 /**
  * @param {string} str
  */
-function unescapeBraces(str: string | string[]) {
+function unescapeBraces(str: any) {
   return str.split(escSlash).join('\\')
             .split(escOpen).join('{')
             .split(escClose).join('}')
@@ -43,7 +43,7 @@ function unescapeBraces(str: string | string[]) {
  * treated as individual members, like {a,{b,c},d}
  * @param {string} str
  */
-function parseCommaParts(str: string | number) {
+function parseCommaParts(str: string | null) {
   if (!str)
     return [''];
 
@@ -91,7 +91,7 @@ function expandTop(str: string | string[]) {
 /**
  * @param {string} str
  */
-function embrace(str: string | number) {
+function embrace(str: any) {
   return '{' + str + '}';
 }
 
@@ -122,7 +122,7 @@ function gte(i: number,  y: number) {
  * @param {string} str
  * @param {boolean} [isTop]
  */
-function expand(str: string | string[],  isTop: boolean) {
+function expand(str: string | RegExp,  isTop: boolean) {
   /** @type {string[]} */
   const expansions = [];
 
@@ -163,7 +163,7 @@ function expand(str: string | string[],  isTop: boolean) {
         // x{{a,b}}y ==> x{a}y x{b}y
         n = expand(n[0], false).map(embrace);
         if (n.length === 1) {
-          return post.map(function(p: any) {
+          return post.map(function(p: number) {
             return m.pre + n[0] + p;
           });
         }

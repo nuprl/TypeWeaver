@@ -30,7 +30,7 @@ function encode(val: any) {
  *
  * @returns {string} The formatted url
  */
-export default function buildURL(url: String,  params: Object,  options: Object) {
+export default function buildURL(url: any,  params: any,  options: any) {
   /*eslint no-param-reassign:0*/
   if (!params) {
     return url;

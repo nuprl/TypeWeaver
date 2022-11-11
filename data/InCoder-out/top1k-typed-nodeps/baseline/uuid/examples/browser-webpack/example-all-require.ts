@@ -13,7 +13,7 @@ const {
 
 const { default: testpage } = require('../utils/testpage');
 
-testpage(function (addTest: Function,  done: Function) {
+testpage(function (addTest: addTest,  done: done) {
   addTest('Named exports');
 
   addTest('uuidv1()', uuidv1());

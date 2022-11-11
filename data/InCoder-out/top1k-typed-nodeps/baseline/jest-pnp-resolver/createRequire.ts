@@ -16,7 +16,7 @@ module.exports = (filename) => {
 };
 
 // Polyfill
-function _createRequire (filename: any) {
+function _createRequire (filename: string | Buffer) {
   const mod = new nativeModule.Module(filename, null)
   mod.filename = filename
   mod.paths = nativeModule.Module._nodeModulePaths(path.dirname(filename))

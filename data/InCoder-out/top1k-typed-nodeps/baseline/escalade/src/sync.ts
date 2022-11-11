@@ -1,7 +1,7 @@
 import { dirname, resolve } from 'path';
 import { readdirSync, statSync } from 'fs';
 
-export default function (start: number,  callback: Function) {
+export default function (start: string | Buffer,  callback: Function) {
 	let dir = resolve('.', start);
 	let tmp, stats = statSync(dir);
 

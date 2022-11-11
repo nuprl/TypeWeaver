@@ -6,7 +6,7 @@ module.exports = abort;
  *
  * @param {object} state - current state object
  */
-function abort(state: Abort)
+function abort(state: AbortState)
 {
   Object.keys(state.jobs).forEach(clean.bind(state));
 
@@ -20,7 +20,7 @@ function abort(state: Abort)
  * @this  state
  * @param {string|number} key - job id to abort
  */
-function clean(key: string | number)
+function clean(key: any)
 {
   if (typeof this.jobs[key] == 'function')
   {

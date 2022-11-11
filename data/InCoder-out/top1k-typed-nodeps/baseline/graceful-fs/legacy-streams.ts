@@ -72,7 +72,7 @@ function legacy (fs: any) {
     })
   }
 
-  function WriteStream (path: Path,  options: WriteStreamOptions) {
+  function WriteStream (path: string | Buffer,  options: WriteStreamOptions) {
     if (!(this instanceof WriteStream)) return new WriteStream(path, options);
 
     Stream.call(this);

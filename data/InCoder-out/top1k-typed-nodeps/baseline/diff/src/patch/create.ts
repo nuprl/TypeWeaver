@@ -1,6 +1,6 @@
 import {diffLines} from '../diff/line';
 
-export function structuredPatch(oldFileName: string | undefined,  newFileName: string | undefined,  oldStr: string | undefined,  newStr: string | undefined,  oldHeader: string | undefined,  newHeader: string | undefined,  options: any) {
+export function structuredPatch(oldFileName: string | undefined,  newFileName: string | undefined,  oldStr: string | undefined,  newStr: string | undefined,  oldHeader: Header,  newHeader: Header,  options: RequestOptionsArgs) {
   if (!options) {
     options = {};
   }
@@ -15,7 +15,7 @@ export function structuredPatch(oldFileName: string | undefined,  newFileName: s
 
   diff.push({value: '', lines: []}); // Append an empty value to make cleanup easier
 
-  function contextLines(lines: string[]) {
+  function contextLines(lines: Line[]) {
     return lines.map(function(entry: ring) { return ' ' + entry; });
   }
 
@@ -135,10 +135,10 @@ export function formatPatch(diff: Diff) {
   return ret.join('\n') + '\n';
 }
 
-export function createTwoFilesPatch(oldFileName: string | undefined,  newFileName: string | undefined,  oldStr: string | undefined,  newStr: string | undefined,  oldHeader: string | undefined,  newHeader: string | undefined,  options: any) {
+export function createTwoFilesPatch(oldFileName: string | undefined,  newFileName: string | undefined,  oldStr: string | undefined,  newStr: string | undefined,  oldHeader: Header,  newHeader: Header,  options: RequestOptionsArgs) {
   return formatPatch(structuredPatch(oldFileName, newFileName, oldStr, newStr, oldHeader, newHeader, options));
 }
 
-export function createPatch(fileName: string | null,  oldStr: string | null,  newStr: string | null,  oldHeader: string | null,  newHeader: string | null,  options: HeadersInit) {
+export function createPatch(fileName: String,  oldStr: String,  newStr: String,  oldHeader: Header,  newHeader: Header,  options: RequestOptionsArgs) {
   return createTwoFilesPatch(fileName, fileName, oldStr, newStr, oldHeader, newHeader, options);
 }

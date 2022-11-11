@@ -13,7 +13,7 @@ var suite = new Suite({
 
 if (argv.dry) {
   console.log();
-  suite.dryRun(function(code: number,  fixture: number) {
+  suite.dryRun(function(code: number,  fixture: any) {
     console.log(cyan('%s > %s'), code.key, fixture.key);
     var args = require(fixture.path);
     var res = code.run.apply(null, args);

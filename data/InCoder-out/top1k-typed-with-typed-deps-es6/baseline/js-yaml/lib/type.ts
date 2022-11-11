@@ -21,12 +21,12 @@ var YAML_NODE_KINDS = [
   'mapping'
 ];
 
-function compileStyleAliases(map: Map<string, string>) {
+function compileStyleAliases(map: StyleMap) {
   var result = {};
 
   if (map !== null) {
     Object.keys(map).forEach(function (style: Style) {
-      map[style].forEach(function (alias: any) {
+      map[style].forEach(function (alias: string | Style) {
         result[String(alias)] = style;
       });
     });
@@ -35,10 +35,10 @@ function compileStyleAliases(map: Map<string, string>) {
   return result;
 }
 
-function Type(tag: Tag,  options: Object) {
+function Type(tag: string | void | null,  options: { nullable: boolean }) {
   options = options || {};
 
-  Object.keys(options).forEach(function (name: string | null) {
+  Object.keys(options).forEach(function (name: any) {
     if (TYPE_CONSTRUCTOR_OPTIONS.indexOf(name) === -1) {
       throw new YAMLException('Unknown option "' + name + '" is met in definition of "' + tag + '" YAML type.');
     }

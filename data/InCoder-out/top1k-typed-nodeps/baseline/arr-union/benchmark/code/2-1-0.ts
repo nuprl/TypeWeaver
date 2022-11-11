@@ -16,6 +16,6 @@ module.exports = function union(arr: Array<any>) {
   return res;
 };
 
-function arrayify(val: any) {
+function arrayify(val: ny) {
   return Array.isArray(val) ? val : [val];
 }

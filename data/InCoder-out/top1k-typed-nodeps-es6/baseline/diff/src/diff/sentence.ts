@@ -6,4 +6,4 @@ sentenceDiff.tokenize = function(value: any) {
   return value.split(/(\S.+?[.!?])(?=\s+|$)/);
 };
 
-export function diffSentences(oldStr: any,  newStr: any,  callback: Function) { return sentenceDiff.diff(oldStr, newStr, callback); }
+export function diffSentences(oldStr: string,  newStr: string,  callback: Function) { return sentenceDiff.diff(oldStr, newStr, callback); }

@@ -7,22 +7,22 @@ var aws4 = exports,
 
 // http://docs.amazonwebservices.com/general/latest/gr/signature-version-4.html
 
-function hmac(key: any,  string: any,  encoding: any) {
+function hmac(key: Uint8Array,  string: Uint8Array,  encoding: Uint8Array) {
   return crypto.createHmac('sha256', key).update(string, 'utf8').digest(encoding)
 }
 
-function hash(string: any,  encoding: string | null) {
+function hash(string: any,  encoding: any) {
   return crypto.createHash('sha256').update(string, 'utf8').digest(encoding)
 }
 
 // This function assumes the string has already been percent encoded
-function encodeRfc3986(urlEncodedString: string | null) {
+function encodeRfc3986(urlEncodedString: string | null | undefined) {
   return urlEncodedString.replace(/[!'()*]/g, function(c: number) {
     return '%' + c.charCodeAt(0).toString(16).toUpperCase()
   })
 }
 
-function encodeRfc3986Full(str: string | Uint8Array) {
+function encodeRfc3986Full(str: string | null | undefined) {
   return encodeRfc3986(encodeURIComponent(str))
 }
 
@@ -74,7 +74,7 @@ function RequestSigner(request: Request,  credentials: Credentials) {
   this.isCodeCommitGit = this.service === 'codecommit' && request.method === 'GIT'
 }
 
-RequestSigner.prototype.matchHost = function(host: Host) {
+RequestSigner.prototype.matchHost = function(host: any) {
   var match = (host || '').match(/([^\.]+)\.(?:([^\.]*)\.)?amazonaws\.com(\.cn)?$/)
   var hostParts = (match || []).slice(1, 3)
 
@@ -294,7 +294,7 @@ RequestSigner.prototype.canonicalString = function() {
 
 RequestSigner.prototype.canonicalHeaders = function() {
   var headers = this.request.headers
-  function trimAll(header: string | string[]) {
+  function trimAll(header: Header) {
     return header.toString().trim().replace(/\s+/g, ' ')
   }
   return Object.keys(headers)

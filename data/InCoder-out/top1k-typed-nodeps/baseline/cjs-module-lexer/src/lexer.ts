@@ -2,7 +2,7 @@ let wasm;
 
 const isLE = new Uint8Array(new Uint16Array([1]).buffer)[0] === 1;
 
-export function parse (source: string | Source,  name = '@': boolean) {
+export function parse (source: Buffer,  name = '@': string) {
   if (!wasm)
     throw new Error('Not initialized');
 
@@ -37,7 +37,7 @@ export function parse (source: string | Source,  name = '@': boolean) {
   return { exports: [...exports], reexports: [...reexports] };
 }
 
-function decode (str: string | Buffer) {
+function decode (str: any) {
   if (str[0] === '"' || str[0] === '\'') {
     try {
       const decoded = (0, eval)(str);
@@ -67,7 +67,7 @@ function decode (str: string | Buffer) {
   }
 }
 
-function copyBE (src: Buffer,  outBuf16: Buffer) {
+function copyBE (src: Uint8Array,  outBuf16: Uint8Array) {
   const len = src.length;
   let i = 0;
   while (i < len) {
@@ -76,7 +76,7 @@ function copyBE (src: Buffer,  outBuf16: Buffer) {
   }
 }
 
-function copyLE (src: Buffer,  outBuf16: Buffer) {
+function copyLE (src: Uint8Array,  outBuf16: Uint8Array) {
   const len = src.length;
   let i = 0;
   while (i < len)

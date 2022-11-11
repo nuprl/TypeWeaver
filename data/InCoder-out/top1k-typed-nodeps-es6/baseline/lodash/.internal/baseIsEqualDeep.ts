@@ -31,7 +31,7 @@ const hasOwnProperty = Object.prototype.hasOwnProperty
  * @param {Object} [stack] Tracks traversed `object` and `other` objects.
  * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
  */
-function baseIsEqualDeep(object: Object,  other: Object,  bitmask: number,  customizer: Function,  equalFunc: Function,  stack: Stack) {
+function baseIsEqualDeep(object: object,  other: object,  bitmask: number,  customizer: customizer,  equalFunc: equalFunc,  stack: stack) {
   let objIsArr = Array.isArray(object)
   const othIsArr = Array.isArray(other)
   let objTag = objIsArr ? arrayTag : getTag(object)

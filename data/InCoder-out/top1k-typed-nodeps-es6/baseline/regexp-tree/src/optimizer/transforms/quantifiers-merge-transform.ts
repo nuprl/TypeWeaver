@@ -96,7 +96,7 @@ export default {
   }
 };
 
-function isGreedyOpenRange(quantifier: number) {
+function isGreedyOpenRange(quantifier: Quantifier) {
   return quantifier.greedy &&
     (
       quantifier.kind === '+' ||
@@ -105,7 +105,7 @@ function isGreedyOpenRange(quantifier: number) {
     );
 }
 
-function extractFromTo(quantifier: number) {
+function extractFromTo(quantifier: Quantifier) {
   let from, to;
   if (quantifier.kind === '*') {
     from = 0;

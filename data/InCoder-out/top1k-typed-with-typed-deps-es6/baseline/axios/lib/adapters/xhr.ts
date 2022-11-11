@@ -42,7 +42,7 @@ function progressEventReducer(listener: ProgressEventListener,  isDownloadStream
   };
 }
 
-export default function xhrAdapter(config: XhrConfig) {
+export default function xhrAdapter(config: RequestConfig) {
   return new Promise(function dispatchXhrRequest(resolve: Function,  reject: Function) {
     let requestData = config.data;
     const requestHeaders = AxiosHeaders.from(config.headers).normalize();

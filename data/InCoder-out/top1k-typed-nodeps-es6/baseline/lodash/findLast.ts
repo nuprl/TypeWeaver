@@ -17,7 +17,7 @@ import isArrayLike from './isArrayLike.js'
  * findLast([1, 2, 3, 4], n => n % 2 == 1)
  * // => 3
  */
-function findLast(collection: ArrayLike<any>,  predicate: Function,  fromIndex: number) {
+function findLast(collection: any,  predicate: _.identity,  fromIndex: number) {
   let iteratee
   const iterable = Object(collection)
   if (!isArrayLike(collection)) {

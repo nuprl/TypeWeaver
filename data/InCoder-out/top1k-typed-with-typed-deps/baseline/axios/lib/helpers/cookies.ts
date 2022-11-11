@@ -8,7 +8,7 @@ export default platform.isStandardBrowserEnv ?
 // Standard browser envs support document.cookie
   (function standardBrowserEnv() {
     return {
-      write: function write(name: any,  value: any,  expires: number,  path: any,  domain: any,  secure: boolean) {
+      write: function write(name: any,  value: any,  expires: any,  path: any,  domain: any,  secure: any) {
         const cookie = [];
         cookie.push(name + '=' + encodeURIComponent(value));
 
@@ -31,12 +31,12 @@ export default platform.isStandardBrowserEnv ?
         document.cookie = cookie.join('; ');
       },
 
-      read: function read(name: string | symbol) {
+      read: function read(name: String) {
         const match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'));
         return (match ? decodeURIComponent(match[3]) : null);
       },
 
-      remove: function remove(name: string | symbol) {
+      remove: function remove(name: String) {
         this.write(name, '', Date.now() - 86400000);
       }
     };

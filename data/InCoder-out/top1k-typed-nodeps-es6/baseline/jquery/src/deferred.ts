@@ -6,7 +6,7 @@ import "./callbacks.js";
 function Identity( v : any) {
 	return v;
 }
-function Thrower( ex : Error) {
+function Thrower( ex : any) {
 	throw ex;
 }
 
@@ -71,8 +71,8 @@ jQuery.extend( {
 				pipe: function( /* fnDone: Function,  fnFail: Function,  fnProgress */ : Function) {
 					var fns = arguments;
 
-					return jQuery.Deferred( function( newDefer : Deferred) {
-						jQuery.each( tuples, function( _i: number,  tuple : Tuple<any>) {
+					return jQuery.Deferred( function( newDefer : Function) {
+						jQuery.each( tuples, function( _i: number,  tuple : Array<any>) {
 
 							// Map tuples (progress, done, fail) to arguments (done, fail, progress)
 							var fn = typeof fns[ tuple[ 4 ] ] === "function" &&
@@ -101,7 +101,7 @@ jQuery.extend( {
 				},
 				then: function( onFulfilled: Function,  onRejected: Function,  onProgress : Function) {
 					var maxDepth = 0;
-					function resolve( depth: number,  deferred: Deferred,  handler: Function,  special : Boolean) {
+					function resolve( depth: number,  deferred: Deferred<any>,  handler: Deferred<any>,  special : boolean) {
 						return function() {
 							var that = this,
 								args = arguments,
@@ -226,7 +226,7 @@ jQuery.extend( {
 						};
 					}
 
-					return jQuery.Deferred( function( newDefer : eferred) {
+					return jQuery.Deferred( function( newDefer : unction) {
 
 						// progress_handlers.add( ... )
 						tuples[ 0 ][ 3 ].add(
@@ -340,7 +340,7 @@ jQuery.extend( {
 	},
 
 	// Deferred helper
-	when: function( singleValue : string) {
+	when: function( singleValue : String) {
 		var
 
 			// count of uncompleted subordinates
@@ -357,7 +357,7 @@ jQuery.extend( {
 			primary = jQuery.Deferred(),
 
 			// subordinate callback factory
-			updateFunc = function( i : Int) {
+			updateFunc = function( i : any) {
 				return function( value : any) {
 					resolveContexts[ i ] = this;
 					resolveValues[ i ] = arguments.length > 1 ? slice.call( arguments ) : value;

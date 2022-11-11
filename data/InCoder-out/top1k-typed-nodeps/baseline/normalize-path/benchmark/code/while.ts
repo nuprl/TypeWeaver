@@ -1,4 +1,4 @@
-module.exports = function normalize(str: string | string[],  strip: boolean | string[]) {
+module.exports = function normalize(str: any,  strip: boolean | undefined) {
   var len = str.length, i = -1;
   var res = '';
   var prev;
@@ -35,6 +35,6 @@ module.exports = function normalize(str: string | string[],  strip: boolean | st
 };
 
 
-function isSlash(ch: any) {
+function isSlash(ch: number) {
   return ch === '\\' || ch === '/';
 }

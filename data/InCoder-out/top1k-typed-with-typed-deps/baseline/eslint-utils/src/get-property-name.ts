@@ -6,7 +6,7 @@ import { getStringIfConstant } from "./get-string-if-constant"
  * @param {Scope} [initialScope] The scope to start finding variable. Optional. If the node is a computed property node and this scope was given, this checks the computed property name by the `getStringIfConstant` function with the scope, and returns the value of it.
  * @returns {string|null} The property name of the node.
  */
-export function getPropertyName(node: ts.Node,  initialScope: ts.Scope) {
+export function getPropertyName(node: Node,  initialScope: SymbolTable) {
     switch (node.type) {
         case "MemberExpression":
             if (node.computed) {

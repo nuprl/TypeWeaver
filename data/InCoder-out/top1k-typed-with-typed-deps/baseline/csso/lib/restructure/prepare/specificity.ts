@@ -27,7 +27,7 @@ function maxSelectorListSpecificity(selectorList: SelectorList) {
 
 // §16. Calculating a selector’s specificity
 // https://www.w3.org/TR/selectors-4/#specificity-rules
-function specificity(simpleSelector: Selector) {
+function specificity(simpleSelector: SimpleSelector) {
     let A = 0;
     let B = 0;
     let C = 0;

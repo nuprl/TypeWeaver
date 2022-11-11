@@ -34,7 +34,7 @@ export const original = originalurl;
  * @public
  */
 
-function parseurl (req: express.Request) {
+function parseurl (req: IncomingMessage) {
   var url = req.url
 
   if (url === undefined) {
@@ -94,7 +94,7 @@ function originalurl (req: express.Request) {
  * @private
  */
 
-function fastparse (str: string | number) {
+function fastparse (str: any) {
   if (typeof str !== 'string' || str.charCodeAt(0) !== 0x2f /* / */) {
     return parse(str)
   }
@@ -152,7 +152,7 @@ function fastparse (str: string | number) {
  * @private
  */
 
-function fresh (url: URL,  parsedUrl: URL) {
+function fresh (url: string | Url,  parsedUrl: Url) {
   return typeof parsedUrl === 'object' &&
     parsedUrl !== null &&
     (Url === undefined || parsedUrl instanceof Url) &&

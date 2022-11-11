@@ -1,6 +1,6 @@
 'use strict';
 
-export default function diff(a: Array,  b: Array,  c: Array) {
+export default function diff(a: any,  b: any,  c: any) {
   var len = a.length;
   var rest = [];
   var arr = [];

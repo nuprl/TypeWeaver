@@ -295,7 +295,7 @@ export default [{
             });
         }
 
-        function worker(task: Function,  callback: Function) {
+        function worker(task: Task,  callback: Function) {
             if (task.num === numEntries) {
                 return done();
             }
@@ -325,7 +325,7 @@ export default [{
 
         var completedCnt = 0;
 
-        function worker(task: any,  callback: Function) {
+        function worker(task: Task,  callback: Function) {
             completedCnt++;
             if (completedCnt === numEntries) {
                 return done();

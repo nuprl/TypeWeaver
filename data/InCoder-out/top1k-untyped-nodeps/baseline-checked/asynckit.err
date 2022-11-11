@@ -4,43 +4,48 @@ bench.ts(38,32): error TS2339: Property 'length' does not exist on type 'Object'
 bench.ts(44,46): error TS2304: Cannot find name 'Deferred'.
 bench.ts(60,32): error TS2339: Property 'length' does not exist on type 'Object'.
 lib/abort.ts(9,10): error TS2300: Duplicate identifier 'abort'.
-lib/abort.ts(9,23): error TS2304: Cannot find name 'Abort'.
+lib/abort.ts(9,23): error TS2304: Cannot find name 'AbortState'.
 lib/async.ts(1,5): error TS2300: Duplicate identifier 'defer'.
 lib/async.ts(13,10): error TS2300: Duplicate identifier 'async'.
 lib/defer.ts(8,10): error TS2300: Duplicate identifier 'defer'.
 lib/iterate.ts(2,5): error TS2300: Duplicate identifier 'abort'.
 lib/iterate.ts(16,10): error TS2300: Duplicate identifier 'iterate'.
-lib/iterate.ts(16,24): error TS2304: Cannot find name 'List'.
-lib/iterate.ts(16,29): error TS2304: Cannot find name 'T'.
-lib/iterate.ts(16,53): error TS2304: Cannot find name 'T'.
-lib/iterate.ts(16,65): error TS2304: Cannot find name 'List'.
-lib/iterate.ts(16,70): error TS2304: Cannot find name 'T'.
-lib/iterate.ts(16,85): error TS2304: Cannot find name 'List'.
-lib/iterate.ts(16,90): error TS2304: Cannot find name 'T'.
+lib/iterate.ts(21,86): error TS2304: Cannot find name 'Output'.
 lib/iterate.ts(59,27): error TS2707: Generic type 'Iterator<T, TReturn, TNext>' requires between 1 and 3 type arguments.
 lib/readable_asynckit.ts(12,10): error TS2300: Duplicate identifier 'ReadableAsyncKit'.
 lib/readable_parallel.ts(1,5): error TS2300: Duplicate identifier 'parallel'.
 lib/readable_parallel.ts(14,10): error TS2300: Duplicate identifier 'ReadableParallel'.
 lib/readable_serial.ts(1,5): error TS2300: Duplicate identifier 'serial'.
 lib/readable_serial.ts(14,10): error TS2300: Duplicate identifier 'ReadableSerial'.
+lib/readable_serial.ts(14,31): error TS2304: Cannot find name 'ReadableList'.
+lib/readable_serial.ts(14,56): error TS2707: Generic type 'Iterator<T, TReturn, TNext>' requires between 1 and 3 type arguments.
 lib/readable_serial_ordered.ts(18,10): error TS2300: Duplicate identifier 'ReadableSerialOrdered'.
-lib/state.ts(13,22): error TS2304: Cannot find name 'List'.
-lib/state.ts(13,27): error TS2304: Cannot find name 'T'.
-lib/state.ts(13,44): error TS2304: Cannot find name 'SortMethod'.
-lib/state.ts(13,55): error TS2304: Cannot find name 'T'.
-lib/streamify.ts(16,33): error TS2707: Generic type 'Iterator<T, TReturn, TNext>' requires between 1 and 3 type arguments.
-lib/streamify.ts(102,42): error TS2304: Cannot find name 'Stream'.
+lib/readable_serial_ordered.ts(18,98): error TS2304: Cannot find name 'SortMethod'.
+lib/state.ts(30,30): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(a: string, b: string) => number'.
+  Type 'Function' provides no match for the signature '(a: string, b: string): number'.
+lib/streamify.ts(29,18): error TS2339: Property 'length' does not exist on type 'AsyncIterator<any, any, undefined>'.
+lib/streamify.ts(31,17): error TS2349: This expression is not callable.
+  Type 'AsyncIterator<any, any, undefined>' has no call signatures.
+lib/streamify.ts(36,17): error TS2349: This expression is not callable.
+  Type 'AsyncIterator<any, any, undefined>' has no call signatures.
+lib/streamify.ts(56,49): error TS2304: Cannot find name 'Result'.
+lib/streamify.ts(78,42): error TS2304: Cannot find name 'Output'.
+lib/streamify.ts(102,42): error TS2304: Cannot find name 'Output'.
+lib/streamify.ts(102,61): error TS2304: Cannot find name 'Output'.
 lib/terminator.ts(1,5): error TS2300: Duplicate identifier 'abort'.
 lib/terminator.ts(14,10): error TS2300: Duplicate identifier 'terminator'.
 parallel.ts(1,5): error TS2300: Duplicate identifier 'iterate'.
 parallel.ts(3,5): error TS2300: Duplicate identifier 'terminator'.
 parallel.ts(17,10): error TS2300: Duplicate identifier 'parallel'.
 parallel.ts(17,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+parallel.ts(23,68): error TS2304: Cannot find name 'Result'.
 serial.ts(1,5): error TS2300: Duplicate identifier 'serialOrdered'.
 serial.ts(14,10): error TS2300: Duplicate identifier 'serial'.
+serial.ts(14,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 serialOrdered.ts(1,5): error TS2300: Duplicate identifier 'iterate'.
 serialOrdered.ts(3,5): error TS2300: Duplicate identifier 'terminator'.
 serialOrdered.ts(21,10): error TS2300: Duplicate identifier 'serialOrdered'.
+serialOrdered.ts(21,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 serialOrdered.ts(60,23): error TS2304: Cannot find name 'mber'.
 serialOrdered.ts(60,33): error TS2304: Cannot find name 'mber'.
 stream.ts(3,5): error TS2300: Duplicate identifier 'ReadableAsyncKit'.

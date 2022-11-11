@@ -3,12 +3,13 @@ bench/index.ts(4,18): error TS2307: Cannot find module 'escalade/sync' or its co
 bench/index.ts(5,22): error TS2307: Cannot find module 'escalade' or its corresponding type declarations.
 bench/index.ts(6,20): error TS2307: Cannot find module 'find-up' or its corresponding type declarations.
 bench/index.ts(20,19): error TS2304: Cannot find name 'ring'.
-bench/index.ts(63,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
-bench/index.ts(64,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
-bench/index.ts(65,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
+bench/index.ts(63,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+bench/index.ts(64,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 bench/load.ts(2,20): error TS2307: Cannot find module 'find-up' or its corresponding type declarations.
 bench/load.ts(6,22): error TS2307: Cannot find module 'escalade' or its corresponding type declarations.
 bench/load.ts(10,18): error TS2307: Cannot find module 'escalade/sync' or its corresponding type declarations.
-src/async.ts(9,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-src/sync.ts(5,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+src/async.ts(9,25): error TS2345: Argument of type 'string | Buffer' is not assignable to parameter of type 'string'.
+  Type 'Buffer' is not assignable to type 'string'.
+src/sync.ts(5,25): error TS2345: Argument of type 'string | Buffer' is not assignable to parameter of type 'string'.
+  Type 'Buffer' is not assignable to type 'string'.
 

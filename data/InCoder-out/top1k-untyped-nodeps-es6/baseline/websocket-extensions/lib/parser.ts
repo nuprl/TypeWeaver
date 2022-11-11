@@ -25,7 +25,7 @@ var Parser = {
           name   = params.shift(),
           offer  = {};
 
-      params.forEach(function(param: any) {
+      params.forEach(function(param: number) {
         var args = param.match(PARAM), key = args[1], data;
 
         if (args[2] !== undefined) {

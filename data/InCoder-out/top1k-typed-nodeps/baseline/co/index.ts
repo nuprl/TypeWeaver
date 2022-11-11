@@ -40,14 +40,14 @@ co.wrap = function (fn: Function) {
  * @api public
  */
 
-function co(gen: Generator) {
+function co(gen: GeneratorFunction) {
   var ctx = this;
   var args = slice.call(arguments, 1);
 
   // we wrap everything in a promise to avoid promise chaining,
   // which leads to memory leak errors.
   // see https://github.com/tj/co/issues/180
-  return new Promise(function(resolve: Function,  reject: Function) {
+  return new Promise(function(resolve: resolve,  reject: reject) {
     if (typeof gen === 'function') gen = gen.apply(ctx, args);
     if (!gen || typeof gen.next !== 'function') return resolve(gen);
 
@@ -59,7 +59,7 @@ function co(gen: Generator) {
      * @api private
      */
 
-    function onFulfilled(res: IPromise<any>) {
+    function onFulfilled(res: R) {
       var ret;
       try {
         ret = gen.next(res);
@@ -95,7 +95,7 @@ function co(gen: Generator) {
      * @api private
      */
 
-    function next(ret: Promise<any>) {
+    function next(ret: any) {
       if (ret.done) return resolve(ret.value);
       var value = toPromise.call(ctx, ret.value);
       if (value && isPromise(value)) return value.then(onFulfilled, onRejected);
@@ -151,7 +151,7 @@ function thunkToPromise(fn: Function) {
  * @api private
  */
 
-function arrayToPromise(obj: ArrayLike) {
+function arrayToPromise(obj: Array<any>) {
   return Promise.all(obj.map(toPromise, this));
 }
 
@@ -164,7 +164,7 @@ function arrayToPromise(obj: ArrayLike) {
  * @api private
  */
 
-function objectToPromise(obj: Object){
+function objectToPromise(obj: any){
   var results = new obj.constructor();
   var keys = Object.keys(obj);
   var promises = [];
@@ -195,7 +195,7 @@ function objectToPromise(obj: Object){
  * @api private
  */
 
-function isPromise(obj: Promise) {
+function isPromise(obj: any) {
   return 'function' == typeof obj.then;
 }
 
@@ -207,7 +207,7 @@ function isPromise(obj: Promise) {
  * @api private
  */
 
-function isGenerator(obj: Object) {
+function isGenerator(obj: unknown) {
   return 'function' == typeof obj.next && 'function' == typeof obj.throw;
 }
 
@@ -219,7 +219,7 @@ function isGenerator(obj: Object) {
  * @api private
  */
  
-function isGeneratorFunction(obj: Function) {
+function isGeneratorFunction(obj: object) {
   var constructor = obj.constructor;
   if (!constructor) return false;
   if ('GeneratorFunction' === constructor.name || 'GeneratorFunction' === constructor.displayName) return true;
@@ -234,6 +234,6 @@ function isGeneratorFunction(obj: Function) {
  * @api private
  */
 
-function isObject(val: any) {
+function isObject(val: unknown) {
   return Object == val.constructor;
 }

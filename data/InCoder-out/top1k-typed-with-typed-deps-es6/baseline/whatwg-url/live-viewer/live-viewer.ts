@@ -41,7 +41,7 @@
     updateFragmentForSharing();
   }
 
-  function setResult(kind: ComponentType<any>,  result: ComponentType<any>,  mismatchedComponents: any[]) {
+  function setResult(kind: SyntaxKind,  result: Expression,  mismatchedComponents: any) {
     const output = document.querySelector(`#${kind}-output`);
     const error = document.querySelector(`#${kind}-error`);
 
@@ -141,14 +141,14 @@
   // btoa / atob don't work on Unicode.
   // This version is a superset of btoa / atob, so it maintains compatibility with older versions of
   // the live viewer which used btoa / atob directly.
-  function encodeToBase64(originalString: string | Uint8Array) {
+  function encodeToBase64(originalString: string | Buffer) {
     const bytes = te.encode(originalString);
     const byteString = Array.from(bytes, byte => String.fromCharCode(byte)).join("");
     const encoded = btoa(byteString);
     return encoded;
   }
 
-  function decodeFromBase64(encoded: Uint8Array) {
+  function decodeFromBase64(encoded: string) {
     const byteString = atob(encoded);
     const bytes = Uint8Array.from(byteString, char => char.charCodeAt(0));
     const originalString = td.decode(bytes);

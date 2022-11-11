@@ -68,7 +68,7 @@ function tryNpmPath() {
   } catch (err) { /* do nothing */ }
 }
 
-function tryConfigPath(configPath: string | undefined) {
+function tryConfigPath(configPath: string | null) {
   try {
     return ini.parse(fs.readFileSync(configPath, 'utf-8')).prefix;
   } catch (err) { /* do nothing */ }

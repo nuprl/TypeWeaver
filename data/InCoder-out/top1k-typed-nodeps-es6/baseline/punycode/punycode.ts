@@ -50,7 +50,7 @@ function error(type: string) {
  * item.
  * @returns {Array} A new array of values returned by the callback function.
  */
-function map(array: Array,  fn: Function) {
+function map(array: number[],  fn: (x: number) => number) {
 	const result = [];
 	let length = array.length;
 	while (length--) {
@@ -69,7 +69,7 @@ function map(array: Array,  fn: Function) {
  * @returns {Array} A new string of characters returned by the callback
  * function.
  */
-function mapDomain(string: Domain,  fn: Function) {
+function mapDomain(string: string | string[],  fn: Function) {
 	const parts = string.split('@');
 	let result = '';
 	if (parts.length > 1) {
@@ -98,7 +98,7 @@ function mapDomain(string: Domain,  fn: Function) {
  * @param {String} string The Unicode input string (UCS-2).
  * @returns {Array} The new array of code points.
  */
-function ucs2decode(string: Buffer) {
+function ucs2decode(string: Uint8Array) {
 	const output = [];
 	let counter = 0;
 	const length = string.length;
@@ -193,7 +193,7 @@ const adapt = function(delta: number,  numPoints: number,  firstTime: number) {
  * @param {String} input The Punycode string of ASCII-only symbols.
  * @returns {String} The resulting string of Unicode symbols.
  */
-const decode = function(input: number[]) {
+const decode = function(input: Uint8Array) {
 	// Don't use UCS-2.
 	const output = [];
 	const inputLength = input.length;
@@ -284,7 +284,7 @@ const decode = function(input: number[]) {
  * @param {String} input The string of Unicode symbols.
  * @returns {String} The resulting Punycode string of ASCII-only symbols.
  */
-const encode = function(input: number) {
+const encode = function(input: number[]) {
 	const output = [];
 
 	// Convert the input in UCS-2 to an array of Unicode code points.
@@ -383,7 +383,7 @@ const encode = function(input: number) {
  * @returns {String} The Unicode representation of the given Punycode
  * string.
  */
-const toUnicode = function(input: Domain) {
+const toUnicode = function(input: any) {
 	return mapDomain(input, function(string: any) {
 		return regexPunycode.test(string)
 			? decode(string.slice(4).toLowerCase())
@@ -402,7 +402,7 @@ const toUnicode = function(input: Domain) {
  * @returns {String} The Punycode representation of the given domain name or
  * email address.
  */
-const toASCII = function(input: Domain) {
+const toASCII = function(input: any) {
 	return mapDomain(input, function(string: any) {
 		return regexNonASCII.test(string)
 			? 'xn--' + encode(string)

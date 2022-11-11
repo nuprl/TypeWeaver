@@ -30,7 +30,7 @@ var ESCAPED_CHARS = {
     '\u2029': '\\u2029'
 };
 
-function escapeUnsafeChars(unsafeChar: number) {
+function escapeUnsafeChars(unsafeChar: string | number) {
     return ESCAPED_CHARS[unsafeChar];
 }
 

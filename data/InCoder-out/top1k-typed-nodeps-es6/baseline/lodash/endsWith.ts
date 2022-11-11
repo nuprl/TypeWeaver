@@ -20,7 +20,7 @@
  * endsWith('abc', 'b', 2)
  * // => true
  */
-function endsWith(string: string | RegExp,  target: string | RegExp,  position: number) {
+function endsWith(string: string,  target: string | RegExp,  position: number) {
   const { length } = string
   position = position === undefined ? length : +position
   if (position < 0 || position != position) {

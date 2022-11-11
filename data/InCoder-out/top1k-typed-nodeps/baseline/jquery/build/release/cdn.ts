@@ -55,11 +55,11 @@ function makeReleaseCopies( Release : Release) {
 	} );
 }
 
-function makeArchives( Release: Release,  callback : Function) {
+function makeArchives( Release: Release,  callback : any) {
 
 	Release.chdir( Release.dir.repo );
 
-	function makeArchive( cdn: string,  files: string,  callback : Function) {
+	function makeArchive( cdn: string,  files: string[],  callback : Function) {
 		if ( Release.preRelease ) {
 			console.log( "Skipping archive creation for " + cdn + "; this is a beta release." );
 			callback();
@@ -78,13 +78,13 @@ function makeArchives( Release: Release,  callback : Function) {
 
 		output.on( "close", callback );
 
-		output.on( "error", function( err : Error) {
+		output.on( "error", function( err : any) {
 			throw err;
 		} );
 
 		archiver.pipe( output );
 
-		files = files.map( function( item : any) {
+		files = files.map( function( item : T) {
 			return "dist" + ( rver.test( item ) ? "/cdn" : "" ) + "/" +
 				item.replace( rver, Release.newVersion );
 		} );
@@ -93,7 +93,7 @@ function makeArchives( Release: Release,  callback : Function) {
 		fs.writeFileSync( md5file, sum );
 		files.push( md5file );
 
-		files.forEach( function( file : String) {
+		files.forEach( function( file : string) {
 			archiver.append( fs.createReadStream( file ),
 				{ name: path.basename( file ) } );
 		} );

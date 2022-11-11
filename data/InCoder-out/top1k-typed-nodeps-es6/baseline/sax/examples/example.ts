@@ -9,7 +9,7 @@ var xml = fs.readFileSync(path.join(__dirname, 'test.xml'), 'utf8'),
         console.error('%s %s %j', this.line + ':' + this.column, ev, data)
       }};
 
-sax.EVENTS.forEach(function (ev: any) {
+sax.EVENTS.forEach(function (ev: Event) {
   loose['on' + ev] = inspector(ev)
 })
 loose.onend = function () {

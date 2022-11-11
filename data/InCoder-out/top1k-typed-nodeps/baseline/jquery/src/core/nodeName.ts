@@ -1,4 +1,4 @@
-function nodeName( elem: Element,  name : string) {
+function nodeName( elem: Node,  name : string) {
 
 	return elem.nodeName && elem.nodeName.toLowerCase() === name.toLowerCase();
 

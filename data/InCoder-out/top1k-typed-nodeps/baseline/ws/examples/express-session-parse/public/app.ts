@@ -5,7 +5,7 @@
   const logout = document.querySelector('#logout');
   const login = document.querySelector('#login');
 
-  function showMessage(message: Message) {
+  function showMessage(message: any) {
     messages.textContent += `\n${message}`;
     messages.scrollTop = messages.scrollHeight;
   }

@@ -26,7 +26,7 @@ const CLONE_DEEP_FLAG = 1
  * filter(objects, conforms({ 'b': function(n: number) { return n > 1 } }))
  * // => [{ 'a': 1, 'b': 2 }]
  */
-function conforms(source: any) {
+function conforms(source: Object) {
   return baseConforms(baseClone(source, CLONE_DEEP_FLAG))
 }
 

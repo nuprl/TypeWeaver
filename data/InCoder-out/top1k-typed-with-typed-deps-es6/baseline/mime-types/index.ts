@@ -75,7 +75,7 @@ function charset (type: ring) {
  * @return {boolean|string}
  */
 
-function contentType (str: string | null) {
+function contentType (str: string | undefined) {
   // TODO: should this even be in this module?
   if (!str || typeof str !== 'string') {
     return false
@@ -130,7 +130,7 @@ function extension (type: string) {
  * @return {boolean|string}
  */
 
-function lookup (path: ring | string[]) {
+function lookup (path: ring | Buffer) {
   if (!path || typeof path !== 'string') {
     return false
   }

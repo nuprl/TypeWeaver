@@ -23,7 +23,7 @@ import awaitify from './internal/awaitify.js'
  * tests. Invoked with (err, result).
  * @returns {Promise} a promise, if no callback provided
  */
-function someSeries(coll: Collection,  iteratee: Function,  callback: Function) {
+function someSeries(coll: Iterable<any>,  iteratee: Function,  callback: Function) {
     return createTester(Boolean, res => res)(eachOfSeries, coll, iteratee, callback)
 }
 export default awaitify(someSeries, 3);

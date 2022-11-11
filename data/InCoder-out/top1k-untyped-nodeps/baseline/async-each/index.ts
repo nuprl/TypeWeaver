@@ -1,5 +1,5 @@
 // async-each MIT license (by Paul Miller from https://paulmillr.com).
-(function(globals: any) {
+(function(globals: typeof self) {
   'use strict';
   var each = function(items: any[],  next: Function,  callback: Function) {
     if (!Array.isArray(items)) throw new TypeError('each() expects array as first argument');
@@ -12,8 +12,8 @@
     var count = 0;
     var returned = false;
 
-    items.forEach(function(item: IItem,  index: number) {
-      next(item, function(error: Error,  transformedItem: Item) {
+    items.forEach(function(item: any,  index: number) {
+      next(item, function(error: any,  transformedItem: IItem) {
         if (returned) return;
         if (error) {
           returned = true;

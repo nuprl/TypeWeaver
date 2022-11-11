@@ -6,7 +6,7 @@ import { Buffer } from 'safer-buffer';
 
 export const _utf32 = Utf32Codec;
 
-function Utf32Codec(codecOptions: IconvCodecOption,  iconv: Iconv) {
+function Utf32Codec(codecOptions: CodecOptions,  iconv: Iconv) {
     this.iconv = iconv;
     this.bomAware = true;
     this.isLE = codecOptions.isLE;
@@ -25,7 +25,7 @@ Utf32Codec.prototype.decoder = Utf32Decoder;
 
 // -- Encoding
 
-function Utf32Encoder(options: Utf32EncoderOption,  codec: Encoder) {
+function Utf32Encoder(options: { isLE: true },  codec: Codec) {
     this.isLE = codec.isLE;
     this.highSurrogate = 0;
 }
@@ -98,13 +98,13 @@ Utf32Encoder.prototype.end = function() {
 
 // -- Decoding
 
-function Utf32Decoder(options: Utf32DecoderOption,  codec: Decoder) {
+function Utf32Decoder(options: { isLE: true },  codec: Codec) {
     this.isLE = codec.isLE;
     this.badChar = codec.iconv.defaultCharUnicode.charCodeAt(0);
     this.overflow = [];
 }
 
-Utf32Decoder.prototype.write = function(src: Array<string>) {
+Utf32Decoder.prototype.write = function(src: any) {
     if (src.length === 0)
         return '';
 
@@ -153,7 +153,7 @@ Utf32Decoder.prototype.write = function(src: Array<string>) {
     return dst.slice(0, offset).toString('ucs2');
 };
 
-function _writeCodepoint(dst: Uint8Array,  offset: number,  codepoint: number,  badChar: number) {
+function _writeCodepoint(dst: Uint8Array,  offset: number,  codepoint: number,  badChar: string) {
     // NOTE: codepoint is signed int32 and can be negative. We keep it that way to help V8 with optimizations.
     if (codepoint < 0 || codepoint > 0x10FFFF) {
         // Not a valid Unicode codepoint
@@ -194,7 +194,7 @@ export const utf32 = Utf32AutoCodec;
 
 export const ucs4 = 'utf32';
 
-function Utf32AutoCodec(options: Utf32Codec,  iconv: Iconv) {
+function Utf32AutoCodec(options: Utf32AutoCode,  iconv: Iconv) {
     this.iconv = iconv;
 }
 
@@ -203,7 +203,7 @@ Utf32AutoCodec.prototype.decoder = Utf32AutoDecoder;
 
 // -- Encoding
 
-function Utf32AutoEncoder(options: Utf32EncoderOption,  codec: Utf32Codec) {
+function Utf32AutoEncoder(options: Utf32AutoEncoder,  codec: Codec) {
     options = options || {};
 
     if (options.addBOM === undefined)
@@ -222,7 +222,7 @@ Utf32AutoEncoder.prototype.end = function() {
 
 // -- Decoding
 
-function Utf32AutoDecoder(options: Utf32DecoderOption,  codec: Decoder) {
+function Utf32AutoDecoder(options: any,  codec: Utf32Decoder) {
     this.decoder = null;
     this.initialBufs = [];
     this.initialBufsLen = 0;

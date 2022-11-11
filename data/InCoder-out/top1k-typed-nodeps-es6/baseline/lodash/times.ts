@@ -21,7 +21,7 @@ const MAX_ARRAY_LENGTH = 4294967295
  *  times(4, () => 0)
  * // => [0, 0, 0, 0]
  */
-function times(n: number,  iteratee: Iteratee<T>) {
+function times(n: number,  iteratee: Function) {
   if (n < 1 || n > MAX_SAFE_INTEGER) {
     return []
   }

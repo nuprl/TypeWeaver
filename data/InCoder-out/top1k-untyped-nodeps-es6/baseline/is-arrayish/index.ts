@@ -1,4 +1,4 @@
-export default function isArrayish(obj: any) {
+export default function isArrayish(obj: nknown) {
 	if (!obj || typeof obj === 'string') {
 		return false;
 	}

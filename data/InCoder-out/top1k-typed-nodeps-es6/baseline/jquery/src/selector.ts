@@ -113,7 +113,7 @@ var i,
 	// https://www.w3.org/TR/CSS21/syndata.html#escaped-characters
 	runescape = new RegExp( "\\\\[\\da-fA-F]{1,6}" + whitespace +
 		"?|\\\\([^\\r\\n\\f])", "g" ),
-	funescape = function( escape: false,  nonHex : true) {
+	funescape = function( escape: any,  nonHex : any) {
 		var high = "0x" + escape.slice( 1 ) - 0x10000;
 
 		if ( nonHex ) {
@@ -140,7 +140,7 @@ var i,
 	},
 
 	inDisabledFieldset = addCombinator(
-		function( elem : Element) {
+		function( elem : elem.ownerDocument) {
 			return elem.disabled === true && nodeName( elem, "fieldset" );
 		},
 		{ dir: "parentNode", next: "legend" }
@@ -150,7 +150,7 @@ function selectorError( msg : string) {
 	throw new Error( "Syntax error, unrecognized expression: " + msg );
 }
 
-function find( selector: Selector,  context: Element | Document | Window,  results: Array,  seed : number) {
+function find( selector: Selector,  context: null,  results: Array,  seed : null) {
 	var m, i, elem, nid, match, groups, newSelector,
 		newContext = context && context.ownerDocument,
 
@@ -295,7 +295,7 @@ function find( selector: Selector,  context: Element | Document | Window,  resul
 
 /**
  * Create key-value caches of limited size
- * @returns {function(string: any,  object: Object)} Returns the Object data after storing it on itself with
+ * @returns {function(string: string,  object: Object)} Returns the Object data after storing it on itself with
  *	property name the (space-suffixed) string and (if the cache is larger than Expr.cacheLength)
  *	deleting the oldest entry
  */
@@ -330,7 +330,7 @@ function markFunction( fn : Function) {
  * @param {String} type
  */
 function createInputPseudo( type : String) {
-	return function( elem : Element) {
+	return function( elem : elem.ownerDocument) {
 		return nodeName( elem, "input" ) && elem.type === type;
 	};
 }
@@ -339,8 +339,8 @@ function createInputPseudo( type : String) {
  * Returns a function to use in pseudos for buttons
  * @param {String} type
  */
-function createButtonPseudo( type : string) {
-	return function( elem : Element) {
+function createButtonPseudo( type : String) {
+	return function( elem : elem.ownerDocument) {
 		return ( nodeName( elem, "input" ) || nodeName( elem, "button" ) ) &&
 			elem.type === type;
 	};
@@ -353,7 +353,7 @@ function createButtonPseudo( type : string) {
 function createDisabledPseudo( disabled : boolean) {
 
 	// Known :disabled false positives: fieldset[disabled] > legend:nth-of-type(n+2) :can-disable
-	return function( elem : Element) {
+	return function( elem : elem.ownerDocument) {
 
 		// Only certain elements can match :enabled or :disabled
 		// https://html.spec.whatwg.org/multipage/scripting.html#selector-enabled
@@ -405,10 +405,10 @@ function createDisabledPseudo( disabled : boolean) {
  * Returns a function to use in pseudos for positionals
  * @param {Function} fn
  */
-function createPositionalPseudo( fn : string) {
+function createPositionalPseudo( fn : Function) {
 	return markFunction( function( argument : any) {
 		argument = +argument;
-		return markFunction( function( seed: Int,  matches : Int) {
+		return markFunction( function( seed: any,  matches : any[]) {
 			var j,
 				matchIndexes = fn( [], seed.length, argument ),
 				i = matchIndexes.length;
@@ -428,7 +428,7 @@ function createPositionalPseudo( fn : string) {
  * @param {Element|Object=} context
  * @returns {Element|Object|Boolean} The input node if acceptable, otherwise a falsy value
  */
-function testContext( context : string) {
+function testContext( context : any) {
 	return context && typeof context.getElementsByTagName !== "undefined" && context;
 }
 
@@ -466,11 +466,11 @@ function setDocument( node : Node) {
 	}
 }
 
-find.matches = function( expr: Expr,  elements : Elements) {
+find.matches = function( expr: any,  elements : any[]) {
 	return find( expr, null, null, elements );
 };
 
-find.matchesSelector = function( elem: Element,  expr : string) {
+find.matchesSelector = function( elem: any,  expr : any) {
 	setDocument( elem );
 
 	if ( documentIsHTML &&
@@ -497,7 +497,7 @@ Expr = jQuery.expr = {
 	match: matchExpr,
 
 	find: {
-		ID: function( id: string,  context : any) {
+		ID: function( id: String,  context : String) {
 			if ( typeof context.getElementById !== "undefined" && documentIsHTML ) {
 				var elem = context.getElementById( id );
 				return elem ? [ elem ] : [];
@@ -514,7 +514,7 @@ Expr = jQuery.expr = {
 			}
 		},
 
-		CLASS: function( className: string,  context : any) {
+		CLASS: function( className: String,  context : Object) {
 			if ( typeof context.getElementsByClassName !== "undefined" && documentIsHTML ) {
 				return context.getElementsByClassName( className );
 			}
@@ -529,7 +529,7 @@ Expr = jQuery.expr = {
 	},
 
 	preFilter: {
-		ATTR: function( match : RegExp) {
+		ATTR: function( match : any) {
 			match[ 1 ] = match[ 1 ].replace( runescape, funescape );
 
 			// Move the given value to match[3] whether quoted or unquoted
@@ -543,7 +543,7 @@ Expr = jQuery.expr = {
 			return match.slice( 0, 4 );
 		},
 
-		CHILD: function( match : Matcher) {
+		CHILD: function( match : any) {
 
 			/* matches from matchExpr["CHILD"]
 				1 type (only|nth|...)
@@ -580,7 +580,7 @@ Expr = jQuery.expr = {
 			return match;
 		},
 
-		PSEUDO: function( match : RegExp) {
+		PSEUDO: function( match : matchExpr.exec) {
 			var excess,
 				unquoted = !match[ 6 ] && match[ 2 ];
 
@@ -612,9 +612,9 @@ Expr = jQuery.expr = {
 	},
 
 	filter: {
-		ID: function( id : id) {
+		ID: function( id : any) {
 			var attrId = id.replace( runescape, funescape );
-			return function( elem : Element) {
+			return function( elem : Attribute) {
 				return elem.getAttribute( "id" ) === attrId;
 			};
 		},
@@ -627,18 +627,18 @@ Expr = jQuery.expr = {
 					return true;
 				} :
 
-				function( elem : Element) {
+				function( elem : Node) {
 					return nodeName( elem, expectedNodeName );
 				};
 		},
 
-		CLASS: function( className : string) {
+		CLASS: function( className : String) {
 			var pattern = classCache[ className + " " ];
 
 			return pattern ||
 				( pattern = new RegExp( "(^|" + whitespace + ")" + className +
 					"(" + whitespace + "|$)" ) ) &&
-				classCache( className, function( elem : Element) {
+				classCache( className, function( elem : elem) {
 					return pattern.test(
 						typeof elem.className === "string" && elem.className ||
 							typeof elem.getAttribute !== "undefined" &&
@@ -648,8 +648,8 @@ Expr = jQuery.expr = {
 				} );
 		},
 
-		ATTR: function( name: string,  operator: string,  check : boolean) {
-			return function( elem : Element) {
+		ATTR: function( name: elem.nodeName.toLowerCase,  operator: elem.operator,  check : elem.check) {
+			return function( elem : any) {
 				var result = jQuery.attr( elem, name );
 
 				if ( result == null ) {
@@ -688,7 +688,7 @@ Expr = jQuery.expr = {
 			};
 		},
 
-		CHILD: function( type: any,  what: any,  _argument: any,  first: any,  last : any) {
+		CHILD: function( type: String,  what: Object,  _argument: Object,  first: Boolean,  last : Boolean) {
 			var simple = type.slice( 0, 3 ) !== "nth",
 				forward = type.slice( -4 ) !== "last",
 				ofType = what === "of-type";
@@ -696,11 +696,11 @@ Expr = jQuery.expr = {
 			return first === 1 && last === 0 ?
 
 				// Shortcut for :nth-*(n)
-				function( elem : lement) {
+				function( elem : lem.ownerDocument) {
 					return !!elem.parentNode;
 				} :
 
-				function( elem: Element,  _context: Element,  xml : XML) {
+				function( elem: elem,  _context: context,  xml : xml) {
 					var cache, outerCache, node, nodeIndex, start,
 						dir = simple !== forward ? "nextSibling" : "previousSibling",
 						parent = elem.parentNode,
@@ -798,7 +798,7 @@ Expr = jQuery.expr = {
 				};
 		},
 
-		PSEUDO: function( pseudo: pseudos,  argument : argument) {
+		PSEUDO: function( pseudo: any,  argument : any) {
 
 			// pseudo-class names are case-insensitive
 			// https://www.w3.org/TR/selectors/#pseudo-classes
@@ -819,7 +819,7 @@ Expr = jQuery.expr = {
 			if ( fn.length > 1 ) {
 				args = [ pseudo, pseudo, "", argument ];
 				return Expr.setFilters.hasOwnProperty( pseudo.toLowerCase() ) ?
-					markFunction( function( seed: Int,  matches : Int) {
+					markFunction( function( seed: any,  matches : any[]) {
 						var idx,
 							matched = fn( seed, argument ),
 							i = matched.length;
@@ -828,7 +828,7 @@ Expr = jQuery.expr = {
 							seed[ idx ] = !( matches[ idx ] = matched[ i ] );
 						}
 					} ) :
-					function( elem : Element) {
+					function( elem : elem) {
 						return fn( elem, 0, args );
 					};
 			}
@@ -840,7 +840,7 @@ Expr = jQuery.expr = {
 	pseudos: {
 
 		// Potentially complex pseudos
-		not: markFunction( function( selector : String) {
+		not: markFunction( function( selector : Selector) {
 
 			// Trim the selector passed to compile
 			// to avoid treating leading and trailing
@@ -850,7 +850,7 @@ Expr = jQuery.expr = {
 				matcher = compile( selector.replace( rtrim, "$1" ) );
 
 			return matcher[ expando ] ?
-				markFunction( function( seed: Int,  matches: Int,  _context: Int,  xml : String) {
+				markFunction( function( seed: any,  matches: any,  _context: any,  xml : any) {
 					var elem,
 						unmatched = matcher( seed, null, xml, [] ),
 						i = seed.length;
@@ -862,7 +862,7 @@ Expr = jQuery.expr = {
 						}
 					}
 				} ) :
-				function( elem: Element,  _context: any,  xml : XML) {
+				function( elem: elem,  _context: undefined,  xml : xml) {
 					input[ 0 ] = elem;
 					matcher( input, null, xml, results );
 
@@ -873,15 +873,15 @@ Expr = jQuery.expr = {
 				};
 		} ),
 
-		has: markFunction( function( selector : string) {
-			return function( elem : Element) {
+		has: markFunction( function( selector : any) {
+			return function( elem : any) {
 				return find( selector, elem ).length > 0;
 			};
 		} ),
 
 		contains: markFunction( function( text : string) {
 			text = text.replace( runescape, funescape );
-			return function( elem : Element) {
+			return function( elem : elem.ownerDocument) {
 				return ( elem.textContent || jQuery.text( elem ) ).indexOf( text ) > -1;
 			};
 		} ),
@@ -893,14 +893,14 @@ Expr = jQuery.expr = {
 		// The matching of C against the element's language value is performed case-insensitively.
 		// The identifier C does not have to be a valid language name."
 		// https://www.w3.org/TR/selectors/#lang-pseudo
-		lang: markFunction( function( lang : string) {
+		lang: markFunction( function( lang : lang) {
 
 			// lang value must be a valid identifier
 			if ( !ridentifier.test( lang || "" ) ) {
 				selectorError( "unsupported lang: " + lang );
 			}
 			lang = lang.replace( runescape, funescape ).toLowerCase();
-			return function( elem : Element) {
+			return function( elem : elem.ownerDocument) {
 				var elemLang;
 				do {
 					if ( ( elemLang = documentIsHTML ?
@@ -916,16 +916,16 @@ Expr = jQuery.expr = {
 		} ),
 
 		// Miscellaneous
-		target: function( elem : Element) {
+		target: function( elem : elem.ownerDocument) {
 			var hash = window.location && window.location.hash;
 			return hash && hash.slice( 1 ) === elem.id;
 		},
 
-		root: function( elem : Element) {
+		root: function( elem : any) {
 			return elem === documentElement;
 		},
 
-		focus: function( elem : HTMLElement) {
+		focus: function( elem : any) {
 			return elem === document.activeElement &&
 				document.hasFocus() &&
 				!!( elem.type || elem.href || ~elem.tabIndex );
@@ -935,7 +935,7 @@ Expr = jQuery.expr = {
 		enabled: createDisabledPseudo( false ),
 		disabled: createDisabledPseudo( true ),
 
-		checked: function( elem : Element) {
+		checked: function( elem : elem.ownerDocument) {
 
 			// In CSS3, :checked should return both checked and selected elements
 			// https://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
@@ -943,7 +943,7 @@ Expr = jQuery.expr = {
 				( nodeName( elem, "option" ) && !!elem.selected );
 		},
 
-		selected: function( elem : Element) {
+		selected: function( elem : elem.ownerDocument) {
 
 			// Support: IE <=11+
 			// Accessing the selectedIndex property
@@ -958,7 +958,7 @@ Expr = jQuery.expr = {
 		},
 
 		// Contents
-		empty: function( elem : Element) {
+		empty: function( elem : elem.ownerDocument) {
 
 			// https://www.w3.org/TR/selectors/#empty-pseudo
 			// :empty is negated by element (1) or content nodes (text: 3; cdata: 4; entity ref: 5),
@@ -972,25 +972,25 @@ Expr = jQuery.expr = {
 			return true;
 		},
 
-		parent: function( elem : lement) {
+		parent: function( elem : any) {
 			return !Expr.pseudos.empty( elem );
 		},
 
 		// Element/input types
-		header: function( elem : Element) {
+		header: function( elem : any) {
 			return rheader.test( elem.nodeName );
 		},
 
-		input: function( elem : Element) {
+		input: function( elem : any) {
 			return rinputs.test( elem.nodeName );
 		},
 
-		button: function( elem : Element) {
+		button: function( elem : elem.ownerDocument) {
 			return nodeName( elem, "input" ) && elem.type === "button" ||
 				nodeName( elem, "button" );
 		},
 
-		text: function( elem : Element) {
+		text: function( elem : elem.ownerDocument) {
 			return nodeName( elem, "input" ) && elem.type === "text";
 		},
 
@@ -999,15 +999,15 @@ Expr = jQuery.expr = {
 			return [ 0 ];
 		} ),
 
-		last: createPositionalPseudo( function( _matchIndexes: Array[Number],  length : Number) {
+		last: createPositionalPseudo( function( _matchIndexes: matchIndexes,  length : length) {
 			return [ length - 1 ];
 		} ),
 
-		eq: createPositionalPseudo( function( _matchIndexes: RegExpExecArray,  length: number,  argument : any) {
+		eq: createPositionalPseudo( function( _matchIndexes: matchIndexes,  length: length,  argument : argument) {
 			return [ argument < 0 ? argument + length : argument ];
 		} ),
 
-		even: createPositionalPseudo( function( matchIndexes: Int,  length : Int) {
+		even: createPositionalPseudo( function( matchIndexes: [ i ],  length : l) {
 			var i = 0;
 			for ( ; i < length; i += 2 ) {
 				matchIndexes.push( i );
@@ -1015,7 +1015,7 @@ Expr = jQuery.expr = {
 			return matchIndexes;
 		} ),
 
-		odd: createPositionalPseudo( function( matchIndexes: Int,  length : Int) {
+		odd: createPositionalPseudo( function( matchIndexes: any,  length : number) {
 			var i = 1;
 			for ( ; i < length; i += 2 ) {
 				matchIndexes.push( i );
@@ -1023,7 +1023,7 @@ Expr = jQuery.expr = {
 			return matchIndexes;
 		} ),
 
-		lt: createPositionalPseudo( function( matchIndexes: any,  length: number,  argument : any) {
+		lt: createPositionalPseudo( function( matchIndexes: matchIndexes,  length: length,  argument : argument) {
 			var i;
 
 			if ( argument < 0 ) {
@@ -1040,7 +1040,7 @@ Expr = jQuery.expr = {
 			return matchIndexes;
 		} ),
 
-		gt: createPositionalPseudo( function( matchIndexes: Int,  length: Int,  argument : String) {
+		gt: createPositionalPseudo( function( matchIndexes: matchIndexes,  length: length,  argument : argument) {
 			var i = argument < 0 ? argument + length : argument;
 			for ( ; ++i < length; ) {
 				matchIndexes.push( i );
@@ -1065,7 +1065,7 @@ function setFilters() {}
 setFilters.prototype = Expr.filters = Expr.pseudos;
 Expr.setFilters = new setFilters();
 
-function tokenize( selector: string,  parseOnly : boolean) {
+function tokenize( selector: Selector,  parseOnly : boolean) {
 	var matched, match, tokens, type,
 		soFar, groups, preFilters,
 		cached = tokenCache[ selector + " " ];
@@ -1137,7 +1137,7 @@ function tokenize( selector: string,  parseOnly : boolean) {
 		tokenCache( selector, groups ).slice( 0 );
 }
 
-function toSelector( tokens : Array<string>) {
+function toSelector( tokens : Array<any>) {
 	var i = 0,
 		len = tokens.length,
 		selector = "";
@@ -1147,7 +1147,7 @@ function toSelector( tokens : Array<string>) {
 	return selector;
 }
 
-function addCombinator( matcher: RegExp,  combinator: string,  base : string) {
+function addCombinator( matcher: MatcherFactory<any>,  combinator: string,  base : Element) {
 	var dir = combinator.dir,
 		skip = combinator.next,
 		key = skip || dir,
@@ -1157,7 +1157,7 @@ function addCombinator( matcher: RegExp,  combinator: string,  base : string) {
 	return combinator.first ?
 
 		// Check against closest ancestor/preceding element
-		function( elem: Element,  context: Element,  xml : Document) {
+		function( elem: elem,  context: xml,  xml : xml) {
 			while ( ( elem = elem[ dir ] ) ) {
 				if ( elem.nodeType === 1 || checkNonElements ) {
 					return matcher( elem, context, xml );
@@ -1167,7 +1167,7 @@ function addCombinator( matcher: RegExp,  combinator: string,  base : string) {
 		} :
 
 		// Check against all ancestor/preceding elements
-		function( elem: Element,  context: Element,  xml : Document) {
+		function( elem: elem,  context: xml,  xml : xml) {
 			var oldCache, outerCache,
 				newCache = [ dirruns, doneName ];
 
@@ -1209,9 +1209,9 @@ function addCombinator( matcher: RegExp,  combinator: string,  base : string) {
 		};
 }
 
-function elementMatcher( matchers : atchers) {
+function elementMatcher( matchers : rray<Matcher>) {
 	return matchers.length > 1 ?
-		function( elem: Element,  context: Element,  xml : Document) {
+		function( elem: matchers,  context: xml,  xml : context) {
 			var i = matchers.length;
 			while ( i-- ) {
 				if ( !matchers[ i ]( elem, context, xml ) ) {
@@ -1223,7 +1223,7 @@ function elementMatcher( matchers : atchers) {
 		matchers[ 0 ];
 }
 
-function multipleContexts( selector: string,  contexts: any,  results : any) {
+function multipleContexts( selector: Selector,  contexts: Array<any>,  results : Array<any>) {
 	var i = 0,
 		len = contexts.length;
 	for ( ; i < len; i++ ) {
@@ -1232,7 +1232,7 @@ function multipleContexts( selector: string,  contexts: any,  results : any) {
 	return results;
 }
 
-function condense( unmatched: [],  map: [],  filter: [],  context: [],  xml : []) {
+function condense( unmatched: matched,  map: map,  filter: filter,  context: context,  xml : xml) {
 	var elem,
 		newUnmatched = [],
 		i = 0,
@@ -1253,7 +1253,7 @@ function condense( unmatched: [],  map: [],  filter: [],  context: [],  xml : []
 	return newUnmatched;
 }
 
-function setMatcher( preFilter: RegExp,  selector: String,  matcher: Function,  postFilter: Function,  postFinder: Function,  postSelector : Function) {
+function setMatcher( preFilter: Array<Function>,  selector: Function,  matcher: Function,  postFilter: Function,  postFinder: Function,  postSelector : Function) {
 	if ( postFilter && !postFilter[ expando ] ) {
 		postFilter = setMatcher( postFilter );
 	}
@@ -1352,7 +1352,7 @@ function setMatcher( preFilter: RegExp,  selector: String,  matcher: Function,  
 	} );
 }
 
-function matcherFromTokens( tokens : Array<string>) {
+function matcherFromTokens( tokens : Array) {
 	var checkContext, matcher, j,
 		len = tokens.length,
 		leadingRelative = Expr.relative[ tokens[ 0 ].type ],
@@ -1360,13 +1360,13 @@ function matcherFromTokens( tokens : Array<string>) {
 		i = leadingRelative ? 1 : 0,
 
 		// The foundational matcher ensures that elements are reachable from top-level context(s)
-		matchContext = addCombinator( function( elem : Element) {
+		matchContext = addCombinator( function( elem : any) {
 			return elem === checkContext;
 		}, implicitRelative, true ),
-		matchAnyContext = addCombinator( function( elem : Element) {
+		matchAnyContext = addCombinator( function( elem : any) {
 			return indexOf.call( checkContext, elem ) > -1;
 		}, implicitRelative, true ),
-		matchers = [ function( elem: Element,  context: Element,  xml : Document) {
+		matchers = [ function( elem: elem,  context: xml,  xml : xml) {
 			var ret = ( !leadingRelative && ( xml || context !== outermostContext ) ) || (
 				( checkContext = context ).nodeType ?
 					matchContext( elem, context, xml ) :
@@ -1415,10 +1415,10 @@ function matcherFromTokens( tokens : Array<string>) {
 	return elementMatcher( matchers );
 }
 
-function matcherFromGroupMatchers( elementMatchers: Matcher[],  setMatchers : Matcher[]) {
+function matcherFromGroupMatchers( elementMatchers: Array<Matcher>,  setMatchers : Array<Matcher>) {
 	var bySet = setMatchers.length > 0,
 		byElement = elementMatchers.length > 0,
-		superMatcher = function( seed: JQuery.Selector,  context: Element,  xml: JQuery.XML,  results: JQuery.Results,  outermost : JQuery.Element) {
+		superMatcher = function( seed: any,  context: any,  xml: any,  results: any,  outermost : any) {
 			var elem, j, matcher,
 				matchedCount = 0,
 				i = "0",
@@ -1537,7 +1537,7 @@ function matcherFromGroupMatchers( elementMatchers: Matcher[],  setMatchers : Ma
 		superMatcher;
 }
 
-function compile( selector: string,  match /* Internal Use Only */ : boolean) {
+function compile( selector: Selector,  match /* Internal Use Only */ : string) {
 	var i,
 		setMatchers = [],
 		elementMatchers = [],
@@ -1578,7 +1578,7 @@ function compile( selector: string,  match /* Internal Use Only */ : boolean) {
  * @param {Array} [results]
  * @param {Array} [seed] A set of elements to match against
  */
-function select( selector: string,  context: object,  results: object,  seed : number) {
+function select( selector: Selector,  context: Element,  results: Array<Element>,  seed : number) {
 	var i, tokens, token, type, find,
 		compiled = typeof selector === "function" && selector,
 		match = !seed && tokenize( ( selector = compiled.selector || selector ) );

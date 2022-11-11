@@ -3,7 +3,7 @@
 'use strict';
 
 
-function formatError(exception: Error,  compact: boolean | undefined) {
+function formatError(exception: Error,  compact: Boolean) {
   var where = '', message = exception.reason || '(unknown reason)';
 
   if (!exception.mark) return message;
@@ -22,7 +22,7 @@ function formatError(exception: Error,  compact: boolean | undefined) {
 }
 
 
-function YAMLException(reason: string | null,  mark: Mark) {
+function YAMLException(reason: any,  mark: number) {
   // Super constructor
   Error.call(this);
 
@@ -47,7 +47,7 @@ YAMLException.prototype = Object.create(Error.prototype);
 YAMLException.prototype.constructor = YAMLException;
 
 
-YAMLException.prototype.toString = function toString(compact: boolean) {
+YAMLException.prototype.toString = function toString(compact: Boolean) {
   return this.name + ': ' + formatError(this, compact);
 };
 

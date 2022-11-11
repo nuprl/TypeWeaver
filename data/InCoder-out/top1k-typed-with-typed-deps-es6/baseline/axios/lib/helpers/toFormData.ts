@@ -11,7 +11,7 @@ import envFormData from '../env/classes/FormData.js';
  *
  * @returns {boolean}
  */
-function isVisitable(thing: any) {
+function isVisitable(thing: Thing) {
   return utils.isPlainObject(thing) || utils.isArray(thing);
 }
 
@@ -22,7 +22,7 @@ function isVisitable(thing: any) {
  *
  * @returns {string} the key without the brackets.
  */
-function removeBrackets(key: string | number) {
+function removeBrackets(key: Key) {
   return utils.endsWith(key, '[]') ? key.slice(0, -2) : key;
 }
 
@@ -35,7 +35,7 @@ function removeBrackets(key: string | number) {
  *
  * @returns {string} The path to the current key.
  */
-function renderKey(path: Array<string>,  key: any,  dots: boolean) {
+function renderKey(path: Array<string>,  key: string | number,  dots: boolean) {
   if (!path) return key;
   return path.concat(key).map(function each(token: Token,  i: number) {
     // eslint-disable-next-line no-param-reassign
@@ -51,11 +51,11 @@ function renderKey(path: Array<string>,  key: any,  dots: boolean) {
  *
  * @returns {boolean}
  */
-function isFlatArray(arr: Array<any>) {
+function isFlatArray(arr: number[]) {
   return utils.isArray(arr) && !arr.some(isVisitable);
 }
 
-const predicates = utils.toFlatObject(utils, {}, null, function filter(prop: any) {
+const predicates = utils.toFlatObject(utils, {}, null, function filter(prop: PropertyKey) {
   return /^is[A-Z]/.test(prop);
 });
 
@@ -106,7 +106,7 @@ function toFormData(obj: any,  formData: FormData,  options: any) {
     metaTokens: true,
     dots: false,
     indexes: false
-  }, false, function defined(option: any,  source: any) {
+  }, false, function defined(option: Option,  source: Source) {
     // eslint-disable-next-line no-eq-null,eqeqeq
     return !utils.isUndefined(source[option]);
   });
@@ -195,7 +195,7 @@ function toFormData(obj: any,  formData: FormData,  options: any) {
     isVisitable
   });
 
-  function build(value: any,  path: Array<string | number> | string) {
+  function build(value: any,  path: any) {
     if (utils.isUndefined(value)) return;
 
     if (stack.indexOf(value) !== -1) {
@@ -204,7 +204,7 @@ function toFormData(obj: any,  formData: FormData,  options: any) {
 
     stack.push(value);
 
-    utils.forEach(value, function each(el: HTMLElement,  key: any) {
+    utils.forEach(value, function each(el: HTMLElement,  key: string | number) {
       const result = !utils.isUndefined(el) && visitor.call(
         formData, el, utils.isString(key) ? key.trim() : key, path, exposedHelpers
       );

@@ -13,7 +13,7 @@ export default Delegator;
  * @api public
  */
 
-function Delegator(proto: Function,  target: Function) {
+function Delegator(proto: Object,  target: Object) {
   if (!(this instanceof Delegator)) return new Delegator(proto, target);
   this.proto = proto;
   this.target = target;
@@ -33,7 +33,7 @@ function Delegator(proto: Function,  target: Function) {
  * @api public
  */
 
-Delegator.auto = function(proto: Object,  targetProto: Object,  targetProp: String){
+Delegator.auto = function(proto: any,  targetProto: any,  targetProp: any){
   var delegator = Delegator(proto, targetProp);
   var properties = Object.getOwnPropertyNames(targetProto);
   for (var i = 0; i < properties.length; i++) {
@@ -139,12 +139,12 @@ Delegator.prototype.setter = function(name: String){
  * @api public
  */
 
-Delegator.prototype.fluent = function (name: any) {
+Delegator.prototype.fluent = function (name: String) {
   var proto = this.proto;
   var target = this.target;
   this.fluents.push(name);
 
-  proto[name] = function(val: any){
+  proto[name] = function(val: ny){
     if ('undefined' != typeof val) {
       this[target][name] = val;
       return this;

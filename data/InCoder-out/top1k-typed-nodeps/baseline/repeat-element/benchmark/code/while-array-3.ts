@@ -1,10 +1,10 @@
 'use strict';
 
-module.exports = function(val: number,  num: number) {
+module.exports = function(val: any,  num: number) {
   return repeat(val, num, []);
 };
 
-function repeat(val: number,  num: number,  arr: Array<any>) {
+function repeat(val: number,  num: number,  arr: number[]) {
   while (num--) {
     arr[num] = val;
   }

@@ -13,7 +13,7 @@ var controlOrWhitespace = /^[\x00-\x20\u00a0\u1680\u2000-\u200a\u2028\u2029\u202
  *     characters and whitespace from its beginning.
  * @public
  */
-function trimLeft(str: string | undefined) {
+function trimLeft(str: any) {
   return (str ? str : '').toString().replace(controlOrWhitespace, '');
 }
 
@@ -25,7 +25,7 @@ function trimLeft(str: string | undefined) {
  *     characters and whitespace from both its beginning and end.
  * @private
  */
-function trim(str: string | string[]) {
+function trim(str: string | null) {
   var trimmed = trimLeft(str);
   var i = trimmed.length;
 
@@ -133,7 +133,7 @@ function lolcation(loc: Location) {
  * @return {Boolean} `true` if the protocol scheme is special, else `false`
  * @private
  */
-function isSpecial(scheme: any) {
+function isSpecial(scheme: string | undefined) {
   return (
     scheme === 'file:' ||
     scheme === 'ftp:' ||
@@ -219,7 +219,7 @@ function extractProtocol(address: string,  location: Location) {
  * @return {String} Resolved pathname.
  * @private
  */
-function resolve(relative: Path,  base: Path) {
+function resolve(relative: URI,  base: URI) {
   if (relative === '') return base;
 
   var path = (base || '/').split('/').slice(0, -1).concat(relative.split('/'))
@@ -261,7 +261,7 @@ function resolve(relative: Path,  base: Path) {
  * @param {Boolean|Function} [parser] Parser for the query string.
  * @private
  */
-function Url(address: string,  location: Location,  parser: Parser) {
+function Url(address: string,  location: Location,  parser: UrlParser) {
   if (!(this instanceof Url)) {
     return new Url(address, location, parser);
   }
@@ -443,7 +443,7 @@ function Url(address: string,  location: Location,  parser: Parser) {
  * @returns {URL} URL instance for chaining.
  * @public
  */
-function set(part: any,  value: any,  fn: Function) {
+function set(part: Part,  value: any,  fn: Function) {
   var url = this;
 
   switch (part) {
@@ -554,7 +554,7 @@ function set(part: any,  value: any,  fn: Function) {
  * @returns {String} Compiled version of the URL.
  * @public
  */
-function toString(stringify: Function) {
+function toString(stringify: stringify) {
   if (!stringify || 'function' !== typeof stringify) stringify = qs.stringify;
 
   var query

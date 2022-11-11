@@ -23,7 +23,7 @@ import dashdash from '../lib/dashdash';
 
 
 var durationRe = /^([1-9]\d*)([smhd])$/;
-function parseDuration(option: DurationOption,  optstr: DurationOptionStr,  arg: DurationArg) {
+function parseDuration(option: DurationOption,  optstr: OptionString,  arg: OptionValue) {
     var d;
     var match = durationRe.exec(arg);
     if (!match) {

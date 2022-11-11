@@ -35,7 +35,7 @@ jQuery.fn.extend( {
 		} );
 	},
 
-	closest: function( selectors: Array,  context : Element) {
+	closest: function( selectors: $,  context : this[0]) {
 		var cur,
 			i = 0,
 			l = this.length,
@@ -66,7 +66,7 @@ jQuery.fn.extend( {
 	},
 
 	// Determine the position of an element within the set
-	index: function( elem : Element) {
+	index: function( elem : any) {
 
 		// No argument, return index in parent
 		if ( !elem ) {
@@ -86,7 +86,7 @@ jQuery.fn.extend( {
 		);
 	},
 
-	add: function( selector: string,  context : any) {
+	add: function( selector: Selector,  context : Element) {
 		return this.pushStack(
 			jQuery.uniqueSort(
 				jQuery.merge( this.get(), jQuery( selector, context ) )
@@ -94,54 +94,54 @@ jQuery.fn.extend( {
 		);
 	},
 
-	addBack: function( selector : tring) {
+	addBack: function( selector : elector) {
 		return this.add( selector == null ?
 			this.prevObject : this.prevObject.filter( selector )
 		);
 	}
 } );
 
-function sibling( cur: Element,  dir : string) {
+function sibling( cur: Node,  dir : number) {
 	while ( ( cur = cur[ dir ] ) && cur.nodeType !== 1 ) {}
 	return cur;
 }
 
 jQuery.each( {
-	parent: function( elem : HTMLElement) {
+	parent: function( elem : any) {
 		var parent = elem.parentNode;
 		return parent && parent.nodeType !== 11 ? parent : null;
 	},
-	parents: function( elem : Element) {
+	parents: function( elem : elem) {
 		return dir( elem, "parentNode" );
 	},
-	parentsUntil: function( elem: Element,  _i: number,  until : number) {
+	parentsUntil: function( elem: Node,  _i: number,  until : number) {
 		return dir( elem, "parentNode", until );
 	},
-	next: function( elem : Element) {
+	next: function( elem : any) {
 		return sibling( elem, "nextSibling" );
 	},
-	prev: function( elem : Element) {
+	prev: function( elem : any) {
 		return sibling( elem, "previousSibling" );
 	},
-	nextAll: function( elem : Element) {
+	nextAll: function( elem : elem) {
 		return dir( elem, "nextSibling" );
 	},
-	prevAll: function( elem : Element) {
+	prevAll: function( elem : elem) {
 		return dir( elem, "previousSibling" );
 	},
-	nextUntil: function( elem: Element,  _i: number,  until : number) {
+	nextUntil: function( elem: Node,  _i: number,  until : number) {
 		return dir( elem, "nextSibling", until );
 	},
-	prevUntil: function( elem: Element,  _i: number,  until : number) {
+	prevUntil: function( elem: Node,  _i: number,  until : number) {
 		return dir( elem, "previousSibling", until );
 	},
-	siblings: function( elem : Element) {
+	siblings: function( elem : elem.ownerDocument) {
 		return siblings( ( elem.parentNode || {} ).firstChild, elem );
 	},
-	children: function( elem : Element) {
+	children: function( elem : any) {
 		return siblings( elem.firstChild );
 	},
-	contents: function( elem : lement) {
+	contents: function( elem : lem.ownerDocument) {
 		if ( elem.contentDocument != null &&
 
 			// Support: IE 11+
@@ -161,8 +161,8 @@ jQuery.each( {
 
 		return jQuery.merge( [], elem.childNodes );
 	}
-}, function( name: string,  fn : Function) {
-	jQuery.fn[ name ] = function( until: Date | number,  selector : string) {
+}, function( name: String,  fn : Function) {
+	jQuery.fn[ name ] = function( until: Date,  selector : String) {
 		var matched = jQuery.map( this, fn, until );
 
 		if ( name.slice( -5 ) !== "Until" ) {

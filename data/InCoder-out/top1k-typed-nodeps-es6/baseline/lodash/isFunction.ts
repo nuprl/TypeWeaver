@@ -25,7 +25,7 @@
  * isFunction(/abc/)
  * // => false
  */
-function isFunction(value: mixed) {
+function isFunction(value: unknown) {
   return typeof value === 'function'
 }
 

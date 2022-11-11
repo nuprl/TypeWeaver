@@ -25,7 +25,7 @@ const MAX_INTEGER = 1.7976931348623157e+308
  * toFinite('3.2')
  * // => 3.2
  */
-function toFinite(value: number) {
+function toFinite(value: mixed) {
   if (!value) {
     return value === 0 ? value : 0
   }

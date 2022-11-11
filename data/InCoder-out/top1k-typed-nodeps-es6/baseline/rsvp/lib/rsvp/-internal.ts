@@ -20,14 +20,14 @@ export const PENDING   = void 0;
 export const FULFILLED = 1;
 export const REJECTED  = 2;
 
-function tryThen(then: Function,  value: any,  fulfillmentHandler: Function,  rejectionHandler: Function) {
+function tryThen(then: PromiseThenType,  value: any,  fulfillmentHandler: any,  rejectionHandler: any) {
   try {
     then.call(value, fulfillmentHandler, rejectionHandler);
   } catch(e) {
     return e;
   }
 }
-function handleForeignThenable(promise: Promise<any>,  thenable: Thenable<any>,  then: Thenable<any>) {
+function handleForeignThenable(promise: IThenable,  thenable: IThenable,  then: IThenable) {
   config.async(promise => {
     let sealed = false;
     let error = tryThen(then,
@@ -56,7 +56,7 @@ function handleForeignThenable(promise: Promise<any>,  thenable: Thenable<any>, 
   }, promise);
 }
 
-function handleOwnThenable(promise: Promise,  thenable: Thenable<any>) {
+function handleOwnThenable(promise: Promise<any>,  thenable: Thenable<any>) {
   if (thenable._state === FULFILLED) {
     fulfill(promise, thenable._result);
   } else if (thenable._state === REJECTED) {
@@ -73,7 +73,7 @@ function handleOwnThenable(promise: Promise,  thenable: Thenable<any>) {
   }
 }
 
-export function handleMaybeThenable(promise: Promise,  maybeThenable: any,  then: Function) {
+export function handleMaybeThenable(promise: Promise<any>,  maybeThenable: any,  then: Function) {
   let isOwnThenable =
     maybeThenable.constructor === promise.constructor &&
     then === originalThen &&
@@ -88,7 +88,7 @@ export function handleMaybeThenable(promise: Promise,  maybeThenable: any,  then
   }
 }
 
-export function resolve(promise: Promise,  value: any) {
+export function resolve(promise: Promise<any>,  value: any) {
   if (promise === value) {
     fulfill(promise, value);
   } else if (objectOrFunction(value)) {
@@ -105,7 +105,7 @@ export function resolve(promise: Promise,  value: any) {
   }
 }
 
-export function publishRejection(promise: Promise) {
+export function publishRejection(promise: ZoneAwarePromise) {
   if (promise._onError) {
     promise._onError(promise._result);
   }
@@ -128,14 +128,14 @@ export function fulfill(promise: Promise<any>,  value: any) {
   }
 }
 
-export function reject(promise: Promise,  reason: Error) {
+export function reject(promise: Promise<any>,  reason: any) {
   if (promise._state !== PENDING) { return; }
   promise._state = REJECTED;
   promise._result = reason;
   config.async(publishRejection, promise);
 }
 
-export function subscribe(parent: any,  child: any,  onFulfillment: Function,  onRejection: Function) {
+export function subscribe(parent: any,  child: any,  onFulfillment: any,  onRejection: any) {
   let subscribers = parent._subscribers;
   let length = subscribers.length;
 
@@ -176,7 +176,7 @@ export function publish(promise: Promise<any>) {
   promise._subscribers.length = 0;
 }
 
-export function invokeCallback(state: State,  promise: Promise,  callback: Function,  result: Object) {
+export function invokeCallback(state: any,  promise: Promise<any>,  callback: Function,  result: any) {
   let hasCallback = typeof callback === 'function';
   let value, succeeded = true, error;
 
@@ -206,7 +206,7 @@ export function invokeCallback(state: State,  promise: Promise,  callback: Funct
   }
 }
 
-export function initializePromise(promise: Promise,  resolver: Function) {
+export function initializePromise(promise: Promise<any>,  resolver: Resolver<T>) {
   let resolved = false;
   try {
     resolver(value => {

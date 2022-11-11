@@ -226,7 +226,7 @@ lp.parseBlock = function() {
   return this.finishNode(node, "BlockStatement")
 }
 
-lp.parseFor = function(node: Node,  init: any) {
+lp.parseFor = function(node: ASTNode,  init: ASTNode) {
   node.init = init
   node.test = node.update = null
   if (this.eat(tt.semi) && this.tok.type !== tt.semi) node.test = this.parseExpression()
@@ -237,7 +237,7 @@ lp.parseFor = function(node: Node,  init: any) {
   return this.finishNode(node, "ForStatement")
 }
 
-lp.parseForIn = function(node: Node,  init: any) {
+lp.parseForIn = function(node: AST.Node,  init: AST.Node) {
   let type = this.tok.type === tt._in ? "ForInStatement" : "ForOfStatement"
   this.next()
   node.left = init
@@ -248,7 +248,7 @@ lp.parseForIn = function(node: Node,  init: any) {
   return this.finishNode(node, type)
 }
 
-lp.parseVar = function(node: Node,  noIn: Boolean,  kind: Kind) {
+lp.parseVar = function(node: Node,  noIn: Boolean,  kind: String) {
   node.kind = kind
   this.next()
   node.declarations = []
@@ -267,7 +267,7 @@ lp.parseVar = function(node: Node,  noIn: Boolean,  kind: Kind) {
   return this.finishNode(node, "VariableDeclaration")
 }
 
-lp.parseClass = function(isStatement: any) {
+lp.parseClass = function(isStatement: Boolean) {
   let node = this.startNode()
   this.next()
   if (this.tok.type === tt.name) node.id = this.parseIdent()
@@ -417,7 +417,7 @@ lp.isClassElementNameStart = function() {
   return this.toks.isClassElementNameStart()
 }
 
-lp.parseClassElementName = function(element: Element) {
+lp.parseClassElementName = function(element: Node) {
   if (this.toks.type === tt.privateId) {
     element.computed = false
     element.key = this.parsePrivateIdent()
@@ -426,7 +426,7 @@ lp.parseClassElementName = function(element: Element) {
   }
 }
 
-lp.parseFunction = function(node: Node,  isStatement: boolean,  isAsync: boolean) {
+lp.parseFunction = function(node: Node,  isStatement: any,  isAsync: any) {
   let oldInAsync = this.inAsync, oldInGenerator = this.inGenerator, oldInFunction = this.inFunction
   this.initFunction(node)
   if (this.options.ecmaVersion >= 6) {

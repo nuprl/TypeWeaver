@@ -28,7 +28,7 @@ SOFTWARE.
 "use strict";
 
 /* Validation functions copied from check-types package - https://www.npmjs.com/package/check-types */
-function isFunction(data: mixed) {
+function isFunction(data: unknown) {
   return typeof data === "function";
 }
 
@@ -64,7 +64,7 @@ function isInteger(data: any) {
 }
 /* End validation functions */
 
-function validate(bool: boolean,  cb: Function,  options: Object) {
+function validate(bool: any,  cb: Function,  options: any) {
   if (!isFunction(cb)) {
     options = cb;
     cb = null;

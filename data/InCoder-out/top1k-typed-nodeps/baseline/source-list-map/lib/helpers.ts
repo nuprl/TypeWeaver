@@ -4,7 +4,7 @@
 */
 "use strict";
 
-exports.getNumberOfLines = function getNumberOfLines(str: string | string[]) {
+exports.getNumberOfLines = function getNumberOfLines(str: string | undefined) {
 	let nr = -1;
 	let idx = -1;
 	do {
@@ -14,7 +14,7 @@ exports.getNumberOfLines = function getNumberOfLines(str: string | string[]) {
 	return nr;
 };
 
-exports.getUnfinishedLine = function getUnfinishedLine(str: string | Buffer) {
+exports.getUnfinishedLine = function getUnfinishedLine(str: any) {
 	const idx = str.lastIndexOf("\n");
 	if(idx === -1)
 		return str.length;

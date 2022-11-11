@@ -1,7 +1,9 @@
 index.ts(7,20): error TS2552: Cannot find name 'unction'. Did you mean 'Function'?
 index.ts(7,36): error TS2304: Cannot find name 'ny'.
-index.ts(18,26): error TS2304: Cannot find name 'DelayedTask'.
+index.ts(18,26): error TS2749: 'Delayed' refers to a value, but is being used as a type here. Did you mean 'typeof Delayed'?
+index.ts(28,30): error TS2304: Cannot find name 'R'.
 index.ts(60,24): error TS2552: Cannot find name 'unction'. Did you mean 'Function'?
 index.ts(77,5): error TS2322: Type 'Function' is not assignable to type 'number'.
-index.ts(98,74): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(98,27): error TS2304: Cannot find name 'IResolve'.
+index.ts(98,42): error TS2304: Cannot find name 'IResolve'.
 

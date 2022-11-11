@@ -12,7 +12,7 @@ import slice from './slice.js'
  * initial([1, 2, 3])
  * // => [1, 2]
  */
-function initial(array: Array<any>) {
+function initial(array: number[]) {
   const length = array == null ? 0 : array.length
   return length ? slice(array, 0, -1) : []
 }

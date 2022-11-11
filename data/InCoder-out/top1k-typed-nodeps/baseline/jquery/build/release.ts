@@ -2,7 +2,7 @@
 
 var fs = require( "fs" );
 
-module.exports = function( Release : Release.default) {
+module.exports = function( Release : ReleaseType) {
 
 	const distFiles = [
 		"dist/jquery.js",

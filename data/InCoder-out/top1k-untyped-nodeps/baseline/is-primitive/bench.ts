@@ -45,7 +45,7 @@ function current(val: any) {
   return typeof val !== 'function';
 }
 
-function negation(val: any) {
+function negation(val: mixed) {
   if (val === null) {
     return true;
   }
@@ -98,7 +98,7 @@ function isPrimitiveObjectIn(val: any) {
   return val === null || (typeof val) in array;
 }
 
-function isPrimitiveSwitch(val: mixed) {
+function isPrimitiveSwitch(val: unknown) {
   switch (typeof val) {
     case 'boolean':
     case 'number':

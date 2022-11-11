@@ -5,7 +5,7 @@ const es = require('event-stream');
 const readdirp = require('..');
 
 const findLinesMatching = (searchTerm) => {
-  return es.through(function (entry: string) {
+  return es.through(function (entry: Entry) {
     let lineno = 0;
     const matchingLines = [];
     const fileStream = this;

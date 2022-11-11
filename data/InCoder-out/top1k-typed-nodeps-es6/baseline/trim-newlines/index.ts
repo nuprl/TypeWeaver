@@ -1,4 +1,4 @@
-export default function trimNewlines(string: string | null) {
+export default function trimNewlines(string: string | undefined) {
 	let start = 0;
 	let end = string.length;
 

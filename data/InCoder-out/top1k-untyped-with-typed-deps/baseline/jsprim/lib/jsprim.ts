@@ -140,13 +140,13 @@ function forEachKey(obj: Object,  callback: Function)
 	}
 }
 
-function pluck(obj: any,  key: any)
+function pluck(obj: any,  key: string | number | symbol)
 {
 	mod_assert.equal(typeof (key), 'string');
 	return (pluckv(obj, key));
 }
 
-function pluckv(obj: any,  key: string | number)
+function pluckv(obj: any,  key: string | number | symbol)
 {
 	if (obj === null || typeof (obj) !== 'object')
 		return (undefined);
@@ -176,7 +176,7 @@ function flattenIter(data: any,  depth: number,  callback: Function)
 	doFlattenIter(data, depth, [], callback);
 }
 
-function doFlattenIter(data: any,  depth: number,  accum: any,  callback: Function)
+function doFlattenIter(data: any,  depth: number,  accum: number,  callback: Function)
 {
 	var each;
 	var key;
@@ -222,12 +222,12 @@ function flattenObject(data: any,  depth: number)
 	return (rv);
 }
 
-function startsWith(str: string | RegExp,  prefix: string | RegExp)
+function startsWith(str: any,  prefix: any)
 {
 	return (str.substr(0, prefix.length) == prefix);
 }
 
-function endsWith(str: string,  suffix: string)
+function endsWith(str: any,  suffix: any)
 {
 	return (str.substr(
 	    str.length - suffix.length, suffix.length) == suffix);
@@ -329,7 +329,7 @@ var PI_CONV_LC = 0x57;
  * A stricter version of parseInt() that provides options for changing what
  * is an acceptable string (for example, disallowing trailing characters).
  */
-function parseInteger(str: tring | number,  uopts: number)
+function parseInteger(str: ny,  uopts: any)
 {
 	mod_assert.string(str, 'str');
 	mod_assert.optionalObject(uopts, 'options');
@@ -570,7 +570,7 @@ function randElt(arr: number[])
 	return (arr[Math.floor(Math.random() * arr.length)]);
 }
 
-function assertHrtime(a: number)
+function assertHrtime(a: number[])
 {
 	mod_assert.ok(a[0] >= 0 && a[1] >= 0,
 	    'negative numbers not allowed in hrtimes');
@@ -608,7 +608,7 @@ function hrtimeDiff(a: number,  b: number)
  * Convert a hrtime reading from the array format returned by Node's
  * process.hrtime() into a scalar number of nanoseconds.
  */
-function hrtimeNanosec(a: number)
+function hrtimeNanosec(a: hrtime_t)
 {
 	assertHrtime(a);
 
@@ -619,7 +619,7 @@ function hrtimeNanosec(a: number)
  * Convert a hrtime reading from the array format returned by Node's
  * process.hrtime() into a scalar number of microseconds.
  */
-function hrtimeMicrosec(a: number)
+function hrtimeMicrosec(a: number[])
 {
 	assertHrtime(a);
 
@@ -630,7 +630,7 @@ function hrtimeMicrosec(a: number)
  * Convert a hrtime reading from the array format returned by Node's
  * process.hrtime() into a scalar number of milliseconds.
  */
-function hrtimeMillisec(a: number)
+function hrtimeMillisec(a: number[])
 {
 	assertHrtime(a);
 
@@ -642,7 +642,7 @@ function hrtimeMillisec(a: number)
  * addition.  This function is useful for accumulating several hrtime intervals
  * into a counter.  Returns A.
  */
-function hrtimeAccum(a: number,  b: number)
+function hrtimeAccum(a: number[],  b: number[])
 {
 	assertHrtime(a);
 	assertHrtime(b);
@@ -689,7 +689,7 @@ function hrtimeAdd(a: number,  b: number)
  * properties.  If no properties were found, the returned array will be of
  * zero length.
  */
-function extraProperties(obj: any,  allowed: Array<string>)
+function extraProperties(obj: Object,  allowed: Array<string>)
 {
 	mod_assert.ok(typeof (obj) === 'object' && obj !== null,
 	    'obj argument must be a non-null object');
@@ -700,7 +700,7 @@ function extraProperties(obj: any,  allowed: Array<string>)
 		    'allowed argument must be an array of strings');
 	}
 
-	return (Object.keys(obj).filter(function (key: string | string[]) {
+	return (Object.keys(obj).filter(function (key: any) {
 		return (allowed.indexOf(key) === -1);
 	}));
 }
@@ -711,7 +711,7 @@ function extraProperties(obj: any,  allowed: Array<string>)
  * the union of these sets with "overrides" overriding "provided", and
  * "provided" overriding "defaults".  None of the input objects are modified.
  */
-function mergeObjects(provided: any,  overrides: any,  defaults: any)
+function mergeObjects(provided: Object,  overrides: Object,  defaults: Object)
 {
 	var rv, k;
 

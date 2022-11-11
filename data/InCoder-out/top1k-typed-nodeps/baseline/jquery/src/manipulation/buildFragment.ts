@@ -11,7 +11,7 @@ import isArrayLike from "../core/isArrayLike.js";
 
 var rhtml = /<|&#?\w+;/;
 
-function buildFragment( elems: any,  context: HTMLElement,  scripts: any,  selection: any,  ignored : any) {
+function buildFragment( elems: ArrayLike<Element>,  context: DocumentFragment,  scripts: Array<DocumentFragment>,  selection: Selection,  ignored : Boolean) {
 	var elem, tmp, tag, wrap, attached, j,
 		fragment = context.createDocumentFragment(),
 		nodes = [],

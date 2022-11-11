@@ -3,7 +3,7 @@
 var Base = require('base');
 var toPath = require('./');
 
-function App(options: any) {
+function App(options: AppOptions) {
   Base.call(this);
   this.options = options || {};
 }

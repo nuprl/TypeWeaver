@@ -10,7 +10,7 @@ import isIndex from './isIndex.js'
  * @param {number[]} indexes The indexes of elements to remove.
  * @returns {Array} Returns `array`.
  */
-function basePullAt(array: Array,  indexes: Array<number>) {
+function basePullAt(array: Uint8Array,  indexes: number[]) {
   let length = array ? indexes.length : 0
   const lastIndex = length - 1
 

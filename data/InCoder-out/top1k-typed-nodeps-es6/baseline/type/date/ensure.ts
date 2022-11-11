@@ -3,7 +3,7 @@
 import resolveException from '../lib/resolve-exception';
 import is from './is';
 
-export default function (value/*: any,  options*/: Object) {
+export default function (value/*: Object,  options*/: Object) {
 	if (is(value)) return value;
 	var options = arguments[1];
 	var errorMessage =

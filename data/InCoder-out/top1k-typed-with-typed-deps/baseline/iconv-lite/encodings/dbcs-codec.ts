@@ -19,7 +19,7 @@ for (var i = 0; i < 0x100; i++)
 
 
 // Class DBCSCodec reads and initializes mapping tables.
-function DBCSCodec(codecOptions: ICodecOptions,  iconv: IConverter) {
+function DBCSCodec(codecOptions: CodecOptions,  iconv: Iconv) {
     this.encodingName = codecOptions.encodingName;
     if (!codecOptions)
         throw new Error("DBCS codec is called without the data.")
@@ -140,7 +140,7 @@ DBCSCodec.prototype.encoder = DBCSEncoder;
 DBCSCodec.prototype.decoder = DBCSDecoder;
 
 // Decoder helpers
-DBCSCodec.prototype._getDecodeTrieNode = function(addr: number) {
+DBCSCodec.prototype._getDecodeTrieNode = function(addr: Address) {
     var bytes = [];
     for (; addr > 0; addr >>>= 8)
         bytes.push(addr & 0xFF);
@@ -228,7 +228,7 @@ DBCSCodec.prototype._setEncodeChar = function(uCode: number,  dbcsCode: number) 
         bucket[low] = dbcsCode;
 }
 
-DBCSCodec.prototype._setEncodeSequence = function(seq: Seq[String],  dbcsCode: String) {
+DBCSCodec.prototype._setEncodeSequence = function(seq: any,  dbcsCode: any) {
     
     // Get the root of character tree according to first character of the sequence.
     var uCode = seq[0];
@@ -299,7 +299,7 @@ DBCSCodec.prototype._fillEncodeTable = function(nodeIdx: number,  prefix: number
 
 // == Encoder ==================================================================
 
-function DBCSEncoder(options: DBCOptions,  codec: DBCCodec) {
+function DBCSEncoder(options: DBCEncoderOptions,  codec: Codec) {
     // Encoder state
     this.leadSurrogate = -1;
     this.seqObj = undefined;
@@ -311,7 +311,7 @@ function DBCSEncoder(options: DBCOptions,  codec: DBCCodec) {
     this.gb18030 = codec.gb18030;
 }
 
-DBCSEncoder.prototype.write = function(str: string | number) {
+DBCSEncoder.prototype.write = function(str: any) {
     var newBuf = Buffer.alloc(str.length * (this.gb18030 ? 4 : 3)),
         leadSurrogate = this.leadSurrogate,
         seqObj = this.seqObj, nextChar = -1,
@@ -473,7 +473,7 @@ DBCSEncoder.prototype.findIdx = findIdx;
 
 // == Decoder ==================================================================
 
-function DBCSDecoder(options: any,  codec: number) {
+function DBCSDecoder(options: DBCSOptions,  codec: Codec) {
     // Decoder state
     this.nodeIdx = 0;
     this.prevBytes = [];

@@ -13,7 +13,7 @@ if (process.platform !== "darwin") {
 import Native from './fsevents.node';
 const events = Native.constants;
 
-function watch(path: string | RegExp,  since: number,  handler: Function) {
+function watch(path: any,  since: Date,  handler: Function) {
   if (typeof path !== "string") {
     throw new TypeError(`fsevents argument 1 must be a string and not a ${typeof path}`);
   }
@@ -37,7 +37,7 @@ function watch(path: string | RegExp,  since: number,  handler: Function) {
   };
 }
 
-function getInfo(path: Path,  flags: Flags) {
+function getInfo(path: PathInfo,  flags: Flags) {
   return {
     path,
     flags,
@@ -47,7 +47,7 @@ function getInfo(path: Path,  flags: Flags) {
   };
 }
 
-function getFileType(flags: number) {
+function getFileType(flags: FileFlags) {
   if (events.ItemIsFile & flags) return "file";
   if (events.ItemIsDir & flags) return "directory";
   if (events.ItemIsSymlink & flags) return "symlink";
@@ -58,7 +58,7 @@ function anyIsTrue(obj: Object) {
   }
   return false;
 }
-function getEventType(flags: number) {
+function getEventType(flags: EventFlags) {
   if (events.ItemRemoved & flags) return "deleted";
   if (events.ItemRenamed & flags) return "moved";
   if (events.ItemCreated & flags) return "created";
@@ -68,7 +68,7 @@ function getEventType(flags: number) {
   if (anyIsTrue(flags)) return "modified";
   return "unknown";
 }
-function getFileChanges(flags: FileChangeFlags) {
+function getFileChanges(flags: FileFlags) {
   return {
     inode: !!(events.ItemInodeMetaMod & flags),
     finder: !!(events.ItemFinderInfoMod & flags),

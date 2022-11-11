@@ -39,7 +39,7 @@ const supportedProtocols = platform.protocols.map(protocol => {
  *
  * @returns {Object<string, any>}
  */
-function dispatchBeforeRedirect(options: RedirectOptions) {
+function dispatchBeforeRedirect(options: any) {
   if (options.beforeRedirects.proxy) {
     options.beforeRedirects.proxy(options);
   }
@@ -57,7 +57,7 @@ function dispatchBeforeRedirect(options: RedirectOptions) {
  *
  * @returns {http.ClientRequestArgs}
  */
-function setProxy(options: any,  configProxy: any,  location: Location) {
+function setProxy(options: any,  configProxy: any,  location: any) {
   let proxy = configProxy;
   if (!proxy && proxy !== false) {
     const proxyUrl = getProxyForUrl(location);
@@ -98,7 +98,7 @@ function setProxy(options: any,  configProxy: any,  location: Location) {
 }
 
 /*eslint consistent-return:0*/
-export default function httpAdapter(config: HttpAdapterConfig) {
+export default function httpAdapter(config: RequestConfig) {
   return new Promise(function dispatchHttpRequest(resolvePromise: Function,  rejectPromise: Function) {
     let onCanceled;
     let data = config.data;
@@ -128,7 +128,7 @@ export default function httpAdapter(config: HttpAdapterConfig) {
       emitter.removeAllListeners();
     }
 
-    function done(value: any,  isRejected: boolean) {
+    function done(value: any,  isRejected: any) {
       if (isDone) return;
 
       isDone = true;
@@ -149,7 +149,7 @@ export default function httpAdapter(config: HttpAdapterConfig) {
       done(value, true);
     };
 
-    function abort(reason: string | Error) {
+    function abort(reason: Error) {
       emitter.emit('abort', !reason || reason.type ? new CanceledError(null, config, req) : reason);
     }
 

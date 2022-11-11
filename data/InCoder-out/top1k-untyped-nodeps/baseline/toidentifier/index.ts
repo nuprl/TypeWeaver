@@ -21,7 +21,7 @@ module.exports = toIdentifier
  * @public
  */
 
-function toIdentifier (str: any) {
+function toIdentifier (str: tring | Array<string>) {
   return str
     .split(' ')
     .map(function (token: Token) {

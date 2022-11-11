@@ -9,10 +9,12 @@ src/index.ts(140,45): error TS2339: Property 'nodes' does not exist on type 'Err
 src/index.ts(148,30): error TS2339: Property 'nodes' does not exist on type 'Error'.
 src/topologicalSort.ts(4,42): error TS2304: Cannot find name 'Graph'.
 src/topologicalSort.ts(12,6): error TS2339: Property 'nodes' does not exist on type 'Error'.
-src/topologicalSort.ts(17,26): error TS2304: Cannot find name 'GraphNode'.
-src/topologicalSort.ts(17,45): error TS2304: Cannot find name 'Graph'.
-src/topologicalSort.ts(17,60): error TS2304: Cannot find name 'State'.
-src/topologicalSort.ts(17,76): error TS2304: Cannot find name 'Result'.
+src/topologicalSort.ts(17,40): error TS2304: Cannot find name 'Graph'.
+src/topologicalSort.ts(17,55): error TS2304: Cannot find name 'State'.
+src/topologicalSort.ts(17,71): error TS2304: Cannot find name 'Result'.
 src/topologicalSort.ts(48,10): error TS2451: Cannot redeclare block-scoped variable 'topologicalSort'.
 src/topologicalSort.ts(48,33): error TS2304: Cannot find name 'Graph'.
+src/topologicalSort.ts(48,39): error TS2304: Cannot find name 'V'.
+src/topologicalSort.ts(48,42): error TS2304: Cannot find name 'E'.
+src/topologicalSort.ts(56,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Node'.
 

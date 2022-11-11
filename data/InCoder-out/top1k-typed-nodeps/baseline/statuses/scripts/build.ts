@@ -21,8 +21,8 @@ addData(codes, require('../src/apache.json'))
 // write the JSON object
 write(path.join(__dirname, '../codes.json'), codes)
 
-function addData (db: Db,  obj: Object) {
-  Object.keys(obj).forEach(function (key: string | number) {
+function addData (db: any,  obj: any) {
+  Object.keys(obj).forEach(function (key: any) {
     db[key] = db[key] || obj[key]
   })
 }

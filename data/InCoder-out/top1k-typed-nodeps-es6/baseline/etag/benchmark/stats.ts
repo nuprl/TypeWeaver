@@ -46,7 +46,7 @@ suite.on('start', function onCycle (event: Event) {
   process.stdout.write('  stat\n\n')
 })
 
-suite.on('cycle', function onCycle (event: Event) {
+suite.on('cycle', function onCycle (event: BenchmarkEvent) {
   benchmarks.add(event.target)
 })
 
@@ -56,7 +56,7 @@ suite.on('complete', function onComplete () {
 
 suite.run({ async: false })
 
-function getstat (real: any) {
+function getstat (real: Boolean) {
   if (real) {
     return fs.statSync(__filename)
   }

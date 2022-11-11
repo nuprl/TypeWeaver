@@ -591,7 +591,7 @@ export default Receiver;
 /**
  * Builds an error object.
  *
- * @param {function(new:Error|RangeError: RangeError)} ErrorCtor The error constructor
+ * @param {function(new:Error|RangeError: RangeError|DOMException)} ErrorCtor The error constructor
  * @param {String} message The error message
  * @param {Boolean} prefix Specifies whether or not to add a default prefix to
  *     `message`
@@ -600,7 +600,7 @@ export default Receiver;
  * @return {(Error|RangeError)} The error
  * @private
  */
-function error(ErrorCtor: ErrorCtor,  message: string | Error,  prefix: string | false,  statusCode: number,  errorCode: number) {
+function error(ErrorCtor: ErrorConstructor,  message: string | ErrorObject,  prefix: string | ErrorObject,  statusCode: number,  errorCode: number) {
   const err = new ErrorCtor(
     prefix ? `Invalid WebSocket frame: ${message}` : message
   );

@@ -78,7 +78,7 @@ function needsNew() {
   `XMLHttpRequest`s.
 
   ```js
-  function getJSON(url: string | URL) {
+  function getJSON(url: URL) {
     return new Promise(function(resolve: Function,  reject: Function){
       let xhr = new XMLHttpRequest();
 
@@ -113,7 +113,7 @@ function needsNew() {
   Promise.all([
     getJSON('/posts'),
     getJSON('/comments')
-  ]).then(function(values: any){
+  ]).then(function(values: Array<any>){
     values[0] // => postsJSON
     values[1] // => commentsJSON
 
@@ -270,7 +270,7 @@ Promise.prototype._guidKey = guidKey;
     return user.name;
   }, function (reason: Error) {
     return 'default name';
-  }).then(function (userName: String) {
+  }).then(function (userName: any) {
     // If `findUser` fulfilled, `userName` will be the user's name, otherwise it
     // will be `'default name'`
   });
@@ -395,13 +395,13 @@ Promise.prototype._guidKey = guidKey;
 
   }
 
-  findAuthor(function(author: String,  err: Error){
+  findAuthor(function(author: Author,  err: Error){
     if (err) {
       failure(err);
       // failure
     } else {
       try {
-        findBoooksByAuthor(author, function(books: any[],  err: any) {
+        findBoooksByAuthor(author, function(books: Book[],  err: Error) {
           if (err) {
             failure(err);
           } else {
@@ -425,7 +425,7 @@ Promise.prototype._guidKey = guidKey;
   ```javascript
   findAuthor().
     then(findBooksByAuthor).
-    then(function(books: any){
+    then(function(books: Array<Book>){
       // found books
   }).catch(function(reason: Error){
     // something went wrong

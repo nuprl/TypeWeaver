@@ -34,7 +34,7 @@ CSSOM.CSSGroupingRule.prototype.constructor = CSSOM.CSSGroupingRule;
  * @see https://www.w3.org/TR/cssom-1/#dom-cssgroupingrule-insertrule
  * @return {number} The index within the grouping rule's collection of the newly inserted rule.
  */
-CSSOM.CSSGroupingRule.prototype.insertRule = function insertRule(rule: Rule,  index: number) {
+CSSOM.CSSGroupingRule.prototype.insertRule = function insertRule(rule: CSSRule,  index: number) {
    if (index < 0 || index > this.cssRules.length) {
        throw new RangeError("INDEX_SIZE_ERR");
    }

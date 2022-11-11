@@ -19,7 +19,7 @@ function parallel(list: Array,  iterator: Function,  callback: Function)
 
   while (state.index < (state['keyedList'] || list).length)
   {
-    iterate(list, iterator, state, function(error: any,  result: any)
+    iterate(list, iterator, state, function(error: Error,  result: Result)
     {
       if (error)
       {

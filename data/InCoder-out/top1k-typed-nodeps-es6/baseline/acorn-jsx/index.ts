@@ -9,7 +9,7 @@ const decimalNumber = /^\d+$/;
 const acornJsxMap = new WeakMap();
 
 // Get the original tokens for the given `acorn` namespace object.
-function getJsxTokens(acorn: any) {
+function getJsxTokens(acorn: typeof acorn) {
   acorn = acorn.Parser.acorn || acorn;
   let acornJsx = acornJsxMap.get(acorn);
   if (!acornJsx) {

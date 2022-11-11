@@ -19,7 +19,7 @@ class Scope {
 
 // The functions in this module keep track of declared variables in the current scope in order to detect duplicate variable names.
 
-pp.enterScope = function(flags: ScopeFlags) {
+pp.enterScope = function(flags: Flag) {
   this.scopeStack.push(new Scope(flags))
 }
 
@@ -30,11 +30,11 @@ pp.exitScope = function() {
 // The spec says:
 // > At the top level of a function, or script, function declarations are
 // > treated like var declarations rather than like lexical declarations.
-pp.treatFunctionsAsVarInScope = function(scope: any) {
+pp.treatFunctionsAsVarInScope = function(scope: Scope) {
   return (scope.flags & SCOPE_FUNCTION) || !this.inModule && (scope.flags & SCOPE_TOP)
 }
 
-pp.declareName = function(name: any,  bindingType: any,  pos: any) {
+pp.declareName = function(name: String,  bindingType: BindingType,  pos: Position) {
   let redeclared = false
   if (bindingType === BIND_LEXICAL) {
     const scope = this.currentScope()

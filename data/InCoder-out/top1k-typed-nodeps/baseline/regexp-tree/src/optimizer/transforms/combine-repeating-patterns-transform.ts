@@ -47,7 +47,7 @@ module.exports = {
 };
 
 // abcabc -> (?:abc){2}
-function combineRepeatingPatternLeft(alternative: Pattern,  child: Pattern,  index: Int) {
+function combineRepeatingPatternLeft(alternative: Pattern,  child: Pattern,  index: number) {
   const {node} = alternative;
 
   const nbPossibleLengths = Math.ceil(index / 2);
@@ -105,7 +105,7 @@ function combineRepeatingPatternLeft(alternative: Pattern,  child: Pattern,  ind
 }
 
 // (?:abc){2}abc -> (?:abc){3}
-function combineWithPreviousRepetition(alternative: Repetition,  child: Choice,  index: 0) {
+function combineWithPreviousRepetition(alternative: any,  child: any,  index: any) {
   const {node} = alternative;
 
   let i = 0;
@@ -152,7 +152,7 @@ function combineWithPreviousRepetition(alternative: Repetition,  child: Choice, 
 }
 
 // abc(?:abc){2} -> (?:abc){3}
-function combineRepetitionWithPrevious(alternative: any,  child: any,  index: number) {
+function combineRepetitionWithPrevious(alternative: any,  child: any,  index: any) {
   const {node} = alternative;
 
   if (child.node.type === 'Repetition' && child.node.quantifier.greedy) {

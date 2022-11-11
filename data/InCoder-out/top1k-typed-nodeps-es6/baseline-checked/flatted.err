@@ -17,23 +17,25 @@ esm/index.ts(28,25): error TS2538: Type 'String' cannot be used as an index type
 esm/index.ts(93,37): error TS2554: Expected 3 arguments, but got 1.
 esm/index.ts(94,32): error TS2554: Expected 2 arguments, but got 1.
 index.ts(1,6): error TS2339: Property 'Flatted' does not exist on type 'Window & typeof globalThis'.
-index.ts(4,25): error TS2304: Cannot find name 'mixed'.
 index.ts(7,12): error TS2630: Cannot assign to '_typeof' because it is a function.
-index.ts(37,76): error TS2503: Cannot find namespace 'ng'.
+index.ts(33,43): error TS2304: Cannot find name 'PrimitivesBuilder'.
+index.ts(33,70): error TS2749: 'Primitive' refers to a value, but is being used as a type here. Did you mean 'typeof Primitive'?
 index.ts(45,25): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(74,65): error TS2304: Cannot find name 'Reviver'.
-index.ts(75,24): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
-  Type 'string[]' is not assignable to type 'string'.
 index.ts(85,40): error TS2339: Property 'indexOf' does not exist on type 'Function'.
 index.ts(122,19): error TS2554: Expected 3 arguments, but got 1.
 index.ts(125,12): error TS2554: Expected 2 arguments, but got 1.
 min.ts(1,6): error TS2339: Property 'Flatted' does not exist on type 'Window & typeof globalThis'.
-min.ts(1,65): error TS2630: Cannot assign to 't' because it is a function.
+min.ts(1,68): error TS2630: Cannot assign to 't' because it is a function.
 min.ts(2,133): error TS2749: 'u' refers to a value, but is being used as a type here. Did you mean 'typeof u'?
 min.ts(2,139): error TS2749: 'u' refers to a value, but is being used as a type here. Did you mean 'typeof u'?
 min.ts(2,351): error TS2538: Type 'String' cannot be used as an index type.
+min.ts(2,1109): error TS2339: Property 'fromJSON' does not exist on type 'number'.
 min.ts(2,1137): error TS2554: Expected 2 arguments, but got 1.
+min.ts(2,1148): error TS2339: Property 'parse' does not exist on type 'number'.
+min.ts(2,1158): error TS2339: Property 'stringify' does not exist on type 'number'.
+min.ts(2,1172): error TS2339: Property 'toJSON' does not exist on type 'number'.
 min.ts(2,1200): error TS2554: Expected 3 arguments, but got 1.
+min.ts(2,1210): error TS2345: Argument of type '{}' is not assignable to parameter of type 'number'.
 rollup/babel.config.ts(1,19): error TS2307: Cannot find module 'rollup-plugin-babel' or its corresponding type declarations.
 rollup/es.config.ts(1,22): error TS2307: Cannot find module 'rollup-plugin-terser' or its corresponding type declarations.
 rollup/esm.config.ts(1,22): error TS2307: Cannot find module 'rollup-plugin-terser' or its corresponding type declarations.

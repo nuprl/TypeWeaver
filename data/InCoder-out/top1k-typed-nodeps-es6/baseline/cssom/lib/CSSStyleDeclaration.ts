@@ -38,7 +38,7 @@ CSSOM.CSSStyleDeclaration.prototype = {
 	 * @param {string} [priority=null] "important" or null
 	 * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration-setProperty
 	 */
-	setProperty: function(name: String,  value: any,  priority: number) {
+	setProperty: function(name: String,  value: String,  priority: Number) {
 		if (this[name]) {
 			// Property already exist. Overwrite it.
 			var index = Array.prototype.indexOf.call(this, name);
@@ -62,7 +62,7 @@ CSSOM.CSSStyleDeclaration.prototype = {
 	 * @return {string} the value of the property if it has been explicitly set for this declaration block.
 	 * Returns the empty string if the property has not been set or the property name does not correspond to a known CSS property.
 	 */
-	removeProperty: function(name: any) {
+	removeProperty: function(name: String) {
 		if (!(name in this)) {
 			return "";
 		}

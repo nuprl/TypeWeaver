@@ -28,7 +28,7 @@ const COMPILE = function(options: any) {
 	return factory.create(options);
 };
 
-function AsyncSeriesBailHook(args = []: Array<any>,  name = undefined: string | null) {
+function AsyncSeriesBailHook(args = []: Array<any>,  name = undefined: any) {
 	const hook = new Hook(args, name);
 	hook.constructor = AsyncSeriesBailHook;
 	hook.compile = COMPILE;

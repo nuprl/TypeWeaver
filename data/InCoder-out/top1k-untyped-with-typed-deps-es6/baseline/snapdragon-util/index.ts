@@ -210,7 +210,7 @@ utils.mapVisit = function(node: Node,  fn: Function) {
  * @api public
  */
 
-utils.addOpen = function(node: Node,  Node: Node,  value: any,  filter: Function) {
+utils.addOpen = function(node: Node,  Node: Node,  value: any,  filter: Filter) {
   expect(node, 'node');
   assert(isFunction(Node), 'expected Node to be a constructor function');
 
@@ -260,7 +260,7 @@ utils.addOpen = function(node: Node,  Node: Node,  value: any,  filter: Function
  * @api public
  */
 
-utils.addClose = function(node: Node,  Node: Node,  value: any,  filter: Function) {
+utils.addClose = function(node: Node,  Node: Node,  value: any,  filter: Filter) {
   assert(isFunction(Node), 'expected Node to be a constructor function');
   expect(node, 'node', Node);
 
@@ -290,7 +290,7 @@ utils.addClose = function(node: Node,  Node: Node,  value: any,  filter: Functio
  * @api public
  */
 
-utils.wrapNodes = function(node: Node,  Node: Node,  filter: Function) {
+utils.wrapNodes = function(node: Node,  Node: Node,  filter: Node) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
   assert(isFunction(Node), 'expected Node to be a constructor function');
 
@@ -315,7 +315,7 @@ utils.wrapNodes = function(node: Node,  Node: Node,  filter: Function) {
  * @api public
  */
 
-utils.pushNode = function(parent: Node,  node: Node) {
+utils.pushNode = function(parent: TreeNode,  node: TreeNode) {
   assert(utils.isNode(parent), 'expected parent node to be an instance of Node');
   if (!node) return;
 
@@ -345,7 +345,7 @@ utils.pushNode = function(parent: Node,  node: Node) {
  * @api public
  */
 
-utils.unshiftNode = function(parent: Node,  node: Node) {
+utils.unshiftNode = function(parent: TreeNode,  node: TreeNode) {
   assert(utils.isNode(parent), 'expected parent node to be an instance of Node');
   if (!node) return;
 
@@ -433,7 +433,7 @@ utils.shiftNode = function(node: Node) {
  * @api public
  */
 
-utils.removeNode = function(parent: Node,  node: Node) {
+utils.removeNode = function(parent: TreeNode,  node: TreeNode) {
   assert(utils.isNode(parent), 'expected parent to be an instance of Node');
   if (!parent.nodes) return;
   if (!node) return;
@@ -464,7 +464,7 @@ utils.removeNode = function(parent: Node,  node: Node) {
  * @api public
  */
 
-utils.isType = function(node: Node,  type: string) {
+utils.isType = function(node: ASTNode,  type: string) {
   if (!utils.isNode(node)) return false;
   switch (typeOf(type)) {
     case 'string':
@@ -506,7 +506,7 @@ utils.isType = function(node: Node,  type: string) {
  * @api public
  */
 
-utils.hasType = function(node: Node,  type: string) {
+utils.hasType = function(node: ASTNode,  type: string) {
   if (!utils.isNode(node)) return false;
   if (!Array.isArray(node.nodes)) return false;
   for (const child of node.nodes) {
@@ -539,7 +539,7 @@ utils.hasType = function(node: Node,  type: string) {
  * @api public
  */
 
-utils.firstOfType = function(nodes: Node[],  type: NodeType) {
+utils.firstOfType = function(nodes: Node[],  type: string) {
   for (const node of nodes) {
     if (utils.isType(node, type)) {
       return node;
@@ -599,7 +599,7 @@ utils.findNode = function(nodes: Node[],  type: Type) {
  * @api public
  */
 
-utils.isOpen = function(node: Node) {
+utils.isOpen = function(node: ASTNode) {
   if (!node) return false;
   if (node.parent && typeof node.parent.isOpen === 'function') {
     return node.parent.isOpen(node);
@@ -628,7 +628,7 @@ utils.isOpen = function(node: Node) {
  * @api public
  */
 
-utils.isClose = function(node: Node) {
+utils.isClose = function(node: ASTNode) {
   if (!node) return false;
   if (node.parent && typeof node.parent.isClose === 'function') {
     return node.parent.isClose(node);
@@ -953,7 +953,7 @@ utils.isInsideType = function(state: State,  type: string) {
  * @api public
  */
 
-utils.isInside = function(state: State,  node: Node,  type: NodeType) {
+utils.isInside = function(state: State,  node: Node,  type: string) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
   assert(isObject(state), 'expected state to be an object');
 
@@ -1001,7 +1001,7 @@ utils.isInside = function(state: State,  node: Node,  type: NodeType) {
  * @api public
  */
 
-utils.last = function(arr: Array,  n: number) {
+utils.last = function(arr: number[],  n: number) {
   return Array.isArray(arr) ? arr[arr.length - (n || 1)] : null;
 };
 
@@ -1057,7 +1057,7 @@ utils.stringify = function(value: any) {
  * @api public
  */
 
-utils.trim = function(str: any) {
+utils.trim = function(str: y) {
   return typeof str === 'string' ? str.trim() : '';
 };
 
@@ -1065,7 +1065,7 @@ utils.trim = function(str: any) {
  * Return true if value is an object
  */
 
-function isObject(value: mixed) {
+function isObject(value: unknown) {
   return typeOf(value) === 'object';
 }
 
@@ -1081,7 +1081,7 @@ function isString(value: ny) {
  * Return true if value is a function
  */
 
-function isFunction(value: mixed) {
+function isFunction(value: unknown) {
   return typeof value === 'function';
 }
 
@@ -1089,7 +1089,7 @@ function isFunction(value: mixed) {
  * Return true if value is an array
  */
 
-function isArray(value: any) {
+function isArray(value: unknown) {
   return Array.isArray(value);
 }
 
@@ -1097,7 +1097,7 @@ function isArray(value: any) {
  * Shim to ensure the `.append` methods work with any version of snapdragon
  */
 
-function append(compiler: Compiler,  value: any,  node: Node) {
+function append(compiler: Compiler,  value: Expression,  node: Node) {
   if (typeof compiler.append !== 'function') {
     return compiler.emit(value, node);
   }
@@ -1108,10 +1108,10 @@ function append(compiler: Compiler,  value: any,  node: Node) {
  * Simplified assertion. Throws an error is `value` is falsey.
  */
 
-function assert(value: any,  message: string | Error) {
+function assert(value: any,  message: any) {
   if (!value) throw new Error(message);
 }
-function expect(node: Node,  name: string | RegExp,  Node: Node) {
+function expect(node: Node,  name: string | null,  Node: Node) {
   const isNode = (Node && Node.isNode) ? Node.isNode : utils.isNode;
   assert(isNode(node), `expected ${name} to be an instance of Node`);
 }

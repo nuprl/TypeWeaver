@@ -6,7 +6,7 @@
  */
 
 var regex = /(\\).|([@?!+*]\(.*\))/;
-module.exports = function isExtglob(str: string | string[]) {
+module.exports = function isExtglob(str: string | undefined) {
   if (typeof str !== 'string' || str === '') {
     return false;
   }

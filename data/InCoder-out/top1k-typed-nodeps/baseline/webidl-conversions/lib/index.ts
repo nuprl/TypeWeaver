@@ -59,7 +59,7 @@ function censorNegativeZero(x: umber) {
   return x === 0 ? 0 : x;
 }
 
-function createIntegerConversion(bitLength: number,  { unsigned }: IConversionOptions) {
+function createIntegerConversion(bitLength: number,  { unsigned }: Boolean) {
   let lowerBound, upperBound;
   if (unsigned) {
     lowerBound = 0;
@@ -120,7 +120,7 @@ function createIntegerConversion(bitLength: number,  { unsigned }: IConversionOp
   };
 }
 
-function createLongLongConversion(bitLength: number,  { unsigned }: IConversionOptions) {
+function createLongLongConversion(bitLength: number,  { unsigned }: LongLongConversionOptions) {
   const upperBound = Number.MAX_SAFE_INTEGER;
   const lowerBound = unsigned ? 0 : Number.MIN_SAFE_INTEGER;
   const asBigIntN = unsigned ? BigInt.asUintN : BigInt.asIntN;

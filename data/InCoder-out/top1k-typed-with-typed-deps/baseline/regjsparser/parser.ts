@@ -267,7 +267,7 @@
     };
   }());
 
-  function parse(str: string | Buffer,  flags: number,  features: number) {
+  function parse(str: string | string[],  flags: string,  features: Feature[]) {
     if (!features) {
       features = {};
     }
@@ -276,12 +276,12 @@
       return node;
     }
 
-    function updateRawStart(node: VNode,  start: number) {
+    function updateRawStart(node: Node,  start: number) {
       node.range[0] = start;
       return addRaw(node);
     }
 
-    function createAnchor(kind: AnchorKind,  rawLength: number) {
+    function createAnchor(kind: number,  rawLength: number) {
       return addRaw({
         type: 'anchor',
         kind: kind,
@@ -301,7 +301,7 @@
       });
     }
 
-    function createEscaped(kind: number,  codePoint: number,  value: number,  fromOffset: number) {
+    function createEscaped(kind: SyntaxKind,  codePoint: number,  value: number,  fromOffset: number) {
       fromOffset = fromOffset || 0;
       return createValue(kind, codePoint, pos - (value.length + fromOffset), pos);
     }
@@ -326,7 +326,7 @@
       return createValue('symbol', first, pos - 1, pos);
     }
 
-    function createDisjunction(alternatives: Array<any>,  from: number,  to: number) {
+    function createDisjunction(alternatives: any,  from: number,  to: number) {
       return addRaw({
         type: 'disjunction',
         body: alternatives,
@@ -347,7 +347,7 @@
       });
     }
 
-    function createCharacterClassEscape(value: string | RegExp) {
+    function createCharacterClassEscape(value: CharacterClass) {
       return addRaw({
         type: 'characterClassEscape',
         value: value,
@@ -369,7 +369,7 @@
       });
     }
 
-    function createNamedReference(name: string | Identifier) {
+    function createNamedReference(name: Identifier) {
       return addRaw({
         type: 'reference',
         name: name,
@@ -380,7 +380,7 @@
       });
     }
 
-    function createGroup(behavior: Behavior,  disjunction: Disjunction,  from: from,  to: to) {
+    function createGroup(behavior: Behavior,  disjunction: Disjunction,  from: From,  to: To) {
       return addRaw({
         type: 'group',
         behavior: behavior,
@@ -412,7 +412,7 @@
       });
     }
 
-    function createAlternative(terms: any[],  from: number,  to: number) {
+    function createAlternative(terms: string[],  from: number,  to: number) {
       return addRaw({
         type: 'alternative',
         body: terms,
@@ -453,7 +453,7 @@
       });
     }
 
-    function createClassStrings(strings: Array<string>,  from: number,  to: number) {
+    function createClassStrings(strings: string[],  from: number,  to: number) {
       return addRaw({
         type: 'classStrings',
         strings: strings,
@@ -461,7 +461,7 @@
       });
     }
 
-    function createClassString(characters: string,  from: number,  to: number) {
+    function createClassString(characters: number,  from: number,  to: number) {
       return addRaw({
         type: 'classString',
         characters: characters,
@@ -490,7 +490,7 @@
       }
     }
 
-    function match(value: string | RegExp) {
+    function match(value: any) {
       if (str.indexOf(value, pos) === pos) {
         return incr(value.length);
       }
@@ -604,7 +604,7 @@
       return atom;
     }
 
-    function parseGroup(matchA: RegExp,  typeA: RegExp,  matchB: RegExp,  typeB: string) {
+    function parseGroup(matchA: RegExp,  typeA: RegExp,  matchB: RegExp,  typeB: RegExp) {
       var type = null, from = pos;
 
       if (match(matchA)) {
@@ -788,7 +788,7 @@
     }
 
     function parseModifiersGroup() {
-      function hasDupChar(str: string | null) {
+      function hasDupChar(str: any) {
         var i = 0;
         while (i < str.length) {
           if (str.indexOf(str[i], i + 1) != -1) {
@@ -863,7 +863,7 @@
       return parseAtomEscape(true);
     }
 
-    function parseAtomEscape(insideCharacterClass: RegExp) {
+    function parseAtomEscape(insideCharacterClass: boolean) {
       // AtomEscape ::
       //      DecimalEscape
       //      CharacterEscape
@@ -908,7 +908,7 @@
     }
 
 
-    function parseDecimalEscape(insideCharacterClass: RegExp) {
+    function parseDecimalEscape(insideCharacterClass: boolean) {
       // DecimalEscape ::
       //      DecimalIntegerLiteral [lookahead ∉ DecimalDigit]
 
@@ -1065,7 +1065,7 @@
       }
     }
 
-    function parseIdentifierAtom(check: Check) {
+    function parseIdentifierAtom(check: check) {
       var ch = lookahead();
       var from = pos;
       if (ch === '\\') {
@@ -1555,7 +1555,7 @@
       return createClassString(res, from, pos);
     }
 
-    function bail(message: any,  details: any,  from: any,  to: any) {
+    function bail(message: Error,  details: string,  from: Error,  to: Error) {
       from = from == null ? pos : from;
       to = to == null ? from : to;
 
@@ -1608,7 +1608,7 @@
     // the total number of capture groups set.
     //
     // SEE: https://github.com/jviereck/regjsparser/issues/70
-    shouldReparse = shouldReparse || backrefDenied.some(function (ref: any) {
+    shouldReparse = shouldReparse || backrefDenied.some(function (ref: RefObject) {
       return ref <= closedCaptureCounter;
     });
     if (shouldReparse) {

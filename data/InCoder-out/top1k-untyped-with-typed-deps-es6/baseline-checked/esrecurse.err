@@ -1,11 +1,11 @@
 esrecurse.ts(33,56): error TS2339: Property 'type' does not exist on type 'Node'.
-esrecurse.ts(36,35): error TS2304: Cannot find name 'NodeType'.
-esrecurse.ts(40,31): error TS2749: 'Visitor' refers to a value, but is being used as a type here. Did you mean 'typeof Visitor'?
-esrecurse.ts(40,50): error TS2304: Cannot find name 'VisitorOptions'.
+esrecurse.ts(36,35): error TS2304: Cannot find name 'SyntaxKind'.
+esrecurse.ts(36,53): error TS2304: Cannot find name 'SyntaxKind'.
+esrecurse.ts(40,31): error TS2304: Cannot find name 'VisitorT'.
+esrecurse.ts(40,51): error TS2304: Cannot find name 'VisitorOptions'.
 esrecurse.ts(65,21): error TS2339: Property 'type' does not exist on type 'Node'.
-esrecurse.ts(102,21): error TS2339: Property 'type' does not exist on type 'Node'.
+esrecurse.ts(95,47): error TS2503: Cannot find namespace 'AST'.
 esrecurse.ts(112,53): error TS2749: 'Visitor' refers to a value, but is being used as a type here. Did you mean 'typeof Visitor'?
-esrecurse.ts(112,72): error TS2304: Cannot find name 'VisitorOptions'.
 gulpfile.babel.ts(23,18): error TS2307: Cannot find module 'gulp' or its corresponding type declarations.
 gulpfile.babel.ts(24,19): error TS2307: Cannot find module 'gulp-mocha' or its corresponding type declarations.
 gulpfile.babel.ts(25,20): error TS2307: Cannot find module 'gulp-eslint' or its corresponding type declarations.

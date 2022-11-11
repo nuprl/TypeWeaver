@@ -42,7 +42,7 @@ function getLocaleDate () {
     zeroPad(now.getDate(), 2)
 }
 
-function repeat (str: String,  length: number) {
+function repeat (str: any,  length: number) {
   var out = ''
 
   for (var i = 0; i < length; i++) {

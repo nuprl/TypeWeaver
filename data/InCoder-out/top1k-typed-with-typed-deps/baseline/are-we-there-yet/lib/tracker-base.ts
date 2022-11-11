@@ -3,7 +3,7 @@ var EventEmitter = require('events').EventEmitter
 var util = require('util')
 
 var trackerId = 0
-var TrackerBase = module.exports = function (name: any) {
+var TrackerBase = module.exports = function (name: String) {
   EventEmitter.call(this)
   this.id = ++trackerId
   this.name = name

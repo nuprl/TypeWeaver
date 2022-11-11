@@ -103,7 +103,7 @@ function format (obj: ny) {
  * @public
  */
 
-function parse (string: any) {
+function parse (string: string | null) {
   if (!string) {
     throw new TypeError('argument string is required')
   }
@@ -171,7 +171,7 @@ function parse (string: any) {
  * @private
  */
 
-function getcontenttype (obj: Object) {
+function getcontenttype (obj: any) {
   var header
 
   if (typeof obj.getHeader === 'function') {

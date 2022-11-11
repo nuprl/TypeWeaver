@@ -45,7 +45,7 @@ function cleanupOnExit (tmpfile: File) {
   }
 }
 
-function serializeActiveFile (absoluteName: string | undefined) {
+function serializeActiveFile (absoluteName: AbsoluteFsPath) {
   return new Promise(resolve => {
     // make a queue if it doesn't already exist
     if (!activeFiles[absoluteName]) {
@@ -75,7 +75,7 @@ function isChownErrOk (err: Error) {
   return false
 }
 
-async function writeFileAsync (filename: string | Buffer,  data: string | Buffer,  options = {}: ExecOptions) {
+async function writeFileAsync (filename: string | Buffer | Uint8Array,  data: any,  options = {}: any) {
   if (typeof options === 'string') {
     options = { encoding: options }
   }
@@ -158,7 +158,7 @@ async function writeFileAsync (filename: string | Buffer,  data: string | Buffer
   }
 }
 
-async function writeFile (filename: string | Buffer,  data: string | Buffer,  options: any,  callback: Function) {
+async function writeFile (filename: string,  data: Buffer,  options: any,  callback: Function) {
   if (options instanceof Function) {
     callback = options
     options = {}
@@ -177,7 +177,7 @@ async function writeFile (filename: string | Buffer,  data: string | Buffer,  op
   return promise
 }
 
-function writeFileSync (filename: string | Buffer,  data: string | Buffer,  options: any) {
+function writeFileSync (filename: string | Buffer,  data: any,  options: any) {
   if (typeof options === 'string') {
     options = { encoding: options }
   } else if (!options) {

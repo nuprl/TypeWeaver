@@ -9,7 +9,7 @@ if (process.platform === 'win32' || global.TESTING_WINDOWS) {
 export default isexe;
 isexe.sync = sync
 
-function isexe (path: string | Buffer,  options: IExecFileOptions,  cb: IExecFileCallback) {
+function isexe (path: string | Buffer,  options: any,  cb: Function) {
   if (typeof options === 'function') {
     cb = options
     options = {}
@@ -20,8 +20,8 @@ function isexe (path: string | Buffer,  options: IExecFileOptions,  cb: IExecFil
       throw new TypeError('callback not provided')
     }
 
-    return new Promise(function (resolve: Function,  reject: Function) {
-      isexe(path, options || {}, function (er: any,  is: any) {
+    return new Promise(function (resolve: any,  reject: any) {
+      isexe(path, options || {}, function (er: Error,  is: number) {
         if (er) {
           reject(er)
         } else {
@@ -31,7 +31,7 @@ function isexe (path: string | Buffer,  options: IExecFileOptions,  cb: IExecFil
     })
   }
 
-  core(path, options || {}, function (er: any,  is: any) {
+  core(path, options || {}, function (er: Error,  is: number) {
     // ignore EACCES because that just means we aren't allowed to run it
     if (er) {
       if (er.code === 'EACCES' || options && options.ignoreErrors) {
@@ -43,7 +43,7 @@ function isexe (path: string | Buffer,  options: IExecFileOptions,  cb: IExecFil
   })
 }
 
-function sync (path: String,  options: Object) {
+function sync (path: Path,  options: Options) {
   // my kingdom for a filtered catch
   try {
     return core.sync(path, options || {})

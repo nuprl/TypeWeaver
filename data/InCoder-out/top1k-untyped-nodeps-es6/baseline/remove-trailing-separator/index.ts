@@ -11,7 +11,7 @@ export default function (str: any) {
 	return str.substr(0, i + 1);
 };
 
-function isSeparator(str: any,  i: number) {
+function isSeparator(str: any,  i: any) {
 	var char = str[i];
 	return i > 0 && (char === '/' || (isWin && char === '\\'));
 }

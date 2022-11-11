@@ -8,13 +8,13 @@ import isWindow from "../var/isWindow.js";
 import "../event.js";
 
 var rfocusMorph = /^(?:focusinfocus|focusoutblur)$/,
-	stopPropagationCallback = function( e : jQuery.Event) {
+	stopPropagationCallback = function( e : JQueryEventObject) {
 		e.stopPropagation();
 	};
 
 jQuery.extend( jQuery.event, {
 
-	trigger: function( event: jQuery.Event,  data: any,  elem: HTMLElement,  onlyHandlers : boolean) {
+	trigger: function( event: Event,  data: Object,  elem: Element,  onlyHandlers : Boolean) {
 
 		var i, cur, tmp, bubbleType, ontype, handle, special, lastElement,
 			eventPath = [ elem || document ],
@@ -161,7 +161,7 @@ jQuery.extend( jQuery.event, {
 
 	// Piggyback on a donor event to simulate a different one
 	// Used only for `focus(in | out)` events
-	simulate: function( type: jQuery.Event,  elem: Element,  event : jQuery.Event) {
+	simulate: function( type: any,  elem: any,  event : any) {
 		var e = jQuery.extend(
 			new jQuery.Event(),
 			event,
@@ -178,12 +178,12 @@ jQuery.extend( jQuery.event, {
 
 jQuery.fn.extend( {
 
-	trigger: function( type: String,  data : Object) {
+	trigger: function( type: dataTypeExpression,  data : data[ dataType ]) {
 		return this.each( function() {
 			jQuery.event.trigger( type, data, this );
 		} );
 	},
-	triggerHandler: function( type: jQuery.Event,  data : any) {
+	triggerHandler: function( type: any,  data : any) {
 		var elem = this[ 0 ];
 		if ( elem ) {
 			return jQuery.event.trigger( type, data, elem, true );

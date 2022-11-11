@@ -9,7 +9,7 @@ import baseToString from './baseToString.js'
  * @param {number} [defaultValue] The value used for `undefined` arguments.
  * @returns {Function} Returns the new mathematical operation function.
  */
-function createMathOperation(operator: MathOperation,  defaultValue: number) {
+function createMathOperation(operator: Operator,  defaultValue: number) {
   return (value, other) => {
     if (value === undefined && other === undefined) {
       return defaultValue

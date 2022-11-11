@@ -12,7 +12,7 @@ const server = https.createServer({
 const wss = new WebSocketServer({ server });
 
 wss.on('connection', function connection(ws: WebSocket) {
-  ws.on('message', function message(msg: Message) {
+  ws.on('message', function message(msg: any) {
     console.log(msg.toString());
   });
 });

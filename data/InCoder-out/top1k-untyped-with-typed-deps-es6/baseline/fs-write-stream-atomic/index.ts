@@ -14,7 +14,7 @@ function murmurhex () {
 }
 
 var invocations = 0
-function getTmpname (filename: string | null) {
+function getTmpname (filename: string | Buffer) {
   return filename + '.' + murmurhex(__filename, process.pid, ++invocations)
 }
 
@@ -63,7 +63,7 @@ WriteStreamAtomic.prototype.emit = function (event: Event) {
   return Writable.prototype.emit.apply(this, arguments)
 }
 
-WriteStreamAtomic.prototype._write = function (buffer: Buffer,  encoding: string,  cb: Function) {
+WriteStreamAtomic.prototype._write = function (buffer: Buffer,  encoding: BufferEncoding,  cb: Function) {
   var flushed = this.__atomicStream.write(buffer, encoding)
   if (flushed) return cb()
   this.__atomicStream.once('drain', cb)
@@ -109,11 +109,11 @@ function handleClose (writeStream: WriteStream) {
     var targetFileHash = crypto.createHash('sha512')
 
     fs.createReadStream(writeStream.__atomicTmp)
-      .on('data', function (data: any,  enc: any) { tmpFileHash.update(data, enc) })
+      .on('data', function (data: Buffer,  enc: Buffer) { tmpFileHash.update(data, enc) })
       .on('error', fileHashError)
       .on('end', fileHashComplete)
     fs.createReadStream(writeStream.__atomicTarget)
-      .on('data', function (data: Buffer,  enc: Encoding) { targetFileHash.update(data, enc) })
+      .on('data', function (data: Buffer,  enc: BufferEncoding) { targetFileHash.update(data, enc) })
       .on('error', fileHashError)
       .on('end', fileHashComplete)
 

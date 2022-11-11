@@ -49,28 +49,35 @@ v8-compile-cache.ts(102,12): error TS2339: Property '_storedMap' does not exist 
 v8-compile-cache.ts(104,10): error TS2339: Property '_dirty' does not exist on type 'FileSystemBlobStore'.
 v8-compile-cache.ts(105,10): error TS2339: Property '_memoryBlobs' does not exist on type 'FileSystemBlobStore'.
 v8-compile-cache.ts(106,10): error TS2339: Property '_invalidationKeys' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache.ts(116,14): error TS2538: Type 'Buffer' cannot be used as an index type.
 v8-compile-cache.ts(120,40): error TS2339: Property '_memoryBlobs' does not exist on type 'FileSystemBlobStore'.
 v8-compile-cache.ts(121,27): error TS2339: Property '_memoryBlobs' does not exist on type 'FileSystemBlobStore'.
 v8-compile-cache.ts(122,36): error TS2339: Property '_invalidationKeys' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache.ts(123,12): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Buffer'.
 v8-compile-cache.ts(126,40): error TS2339: Property '_storedMap' does not exist on type 'FileSystemBlobStore'.
 v8-compile-cache.ts(128,28): error TS2339: Property '_storedMap' does not exist on type 'FileSystemBlobStore'.
 v8-compile-cache.ts(129,27): error TS2339: Property '_storedBlob' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache.ts(130,12): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Buffer'.
 v8-compile-cache.ts(143,10): error TS2551: Property '_cacheStore' does not exist on type 'NativeCompileCache'. Did you mean 'setCacheStore'?
 v8-compile-cache.ts(144,10): error TS2339: Property '_previousModuleCompile' does not exist on type 'NativeCompileCache'.
 v8-compile-cache.ts(148,10): error TS2551: Property '_cacheStore' does not exist on type 'NativeCompileCache'. Did you mean 'setCacheStore'?
 v8-compile-cache.ts(154,10): error TS2339: Property '_previousModuleCompile' does not exist on type 'NativeCompileCache'.
 v8-compile-cache.ts(154,52): error TS2339: Property '_compile' does not exist on type 'Module'.
 v8-compile-cache.ts(155,22): error TS2339: Property '_compile' does not exist on type 'Module'.
-v8-compile-cache.ts(163,52): error TS2304: Cannot find name 'RequestOptions'.
+v8-compile-cache.ts(163,52): error TS2304: Cannot find name 'RequestOptionsArgs'.
 v8-compile-cache.ts(164,23): error TS2339: Property '_resolveFilename' does not exist on type 'typeof Module'.
 v8-compile-cache.ts(172,25): error TS2339: Property '_resolveLookupPaths' does not exist on type 'typeof Module'.
 v8-compile-cache.ts(179,35): error TS2339: Property '_extensions' does not exist on type 'typeof Module'.
 v8-compile-cache.ts(180,30): error TS2339: Property '_cache' does not exist on type 'typeof Module'.
+v8-compile-cache.ts(182,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 v8-compile-cache.ts(197,22): error TS2339: Property '_compile' does not exist on type 'Module'.
 v8-compile-cache.ts(197,38): error TS2339: Property '_previousModuleCompile' does not exist on type 'NativeCompileCache'.
 v8-compile-cache.ts(238,23): error TS2551: Property '_cacheStore' does not exist on type 'NativeCompileCache'. Did you mean 'setCacheStore'?
 v8-compile-cache.ts(249,12): error TS2551: Property '_cacheStore' does not exist on type 'NativeCompileCache'. Did you mean 'setCacheStore'?
 v8-compile-cache.ts(251,12): error TS2551: Property '_cacheStore' does not exist on type 'NativeCompileCache'. Did you mean 'setCacheStore'?
+v8-compile-cache.ts(273,28): error TS2345: Argument of type 'string | Buffer' is not assignable to parameter of type 'string'.
+  Type 'Buffer' is not assignable to type 'string'.
 v8-compile-cache.ts(281,7): error TS2554: Expected 2 arguments, but got 1.
 v8-compile-cache.ts(281,32): error TS2345: Argument of type 'string | Buffer' is not assignable to parameter of type 'string'.
   Type 'Buffer' is not assignable to type 'string'.

@@ -46,7 +46,7 @@ const beforeExpr = {beforeExpr: true}, startsExpr = {startsExpr: true}
 export const keywords = {}
 
 // Succinct definitions of keyword token types
-function kw(name: String,  options = {}: Object) {
+function kw(name: string | string[],  options = {}: any) {
   options.keyword = name
   return keywords[name] = new TokenType(name, options)
 }

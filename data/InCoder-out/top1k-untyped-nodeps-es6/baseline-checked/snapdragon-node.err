@@ -60,8 +60,6 @@ index.ts(505,45): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(505,56): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(526,17): error TS2339: Property 'parent' does not exist on type 'Node'.
 index.ts(526,31): error TS2339: Property 'parent' does not exist on type 'Node'.
-index.ts(555,39): error TS2345: Argument of type 'string | Error' is not assignable to parameter of type 'string'.
-  Type 'Error' is not assignable to type 'string'.
 index.ts(569,27): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(573,18): error TS2339: Property 'value' does not exist on type 'Node'.
 index.ts(576,12): error TS2339: Property 'nodes' does not exist on type 'Node'.
@@ -70,8 +68,10 @@ index.ts(594,19): error TS2339: Property 'type' does not exist on type 'Node'.
 index.ts(596,19): error TS2339: Property 'test' does not exist on type 'string'.
 index.ts(596,29): error TS2339: Property 'type' does not exist on type 'Node'.
 index.ts(599,31): error TS2554: Expected 1 arguments, but got 2.
-index.ts(610,24): error TS2304: Cannot find name 'mixed'.
-index.ts(629,37): error TS2304: Cannot find name 'Token'.
+index.ts(629,23): error TS2304: Cannot find name 'ASTNode'.
+index.ts(629,40): error TS2304: Cannot find name 'Token'.
+index.ts(629,55): error TS2304: Cannot find name 'ASTNode'.
+index.ts(644,34): error TS2367: This condition will always return 'false' since the types 'Function' and 'boolean' have no overlap.
 index.ts(652,13): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(654,26): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(655,22): error TS2339: Property 'nodes' does not exist on type 'Node'.
@@ -80,6 +80,7 @@ index.ts(659,22): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(659,47): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(663,7): error TS2554: Expected 2 arguments, but got 1.
 index.ts(665,10): error TS2339: Property 'size' does not exist on type 'Node'.
-index.ts(691,15): error TS2339: Property 'nodes' does not exist on type 'Node'.
+index.ts(689,22): error TS2304: Cannot find name 'ASTNode'.
+index.ts(694,36): error TS2304: Cannot find name 'VisitCallback'.
 index.ts(695,8): error TS2339: Property 'nodes' does not exist on type 'Node'.
 

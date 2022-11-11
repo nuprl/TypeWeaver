@@ -36,7 +36,7 @@ const reUnicode = RegExp(`${rsFitz}(?=${rsFitz})|${rsSymbol + rsSeq}`, 'g')
  * @param {string} string The string to convert.
  * @returns {Array} Returns the converted array.
  */
-function unicodeToArray(string: string | number) {
+function unicodeToArray(string: string | null) {
   return string.match(reUnicode) || []
 }
 

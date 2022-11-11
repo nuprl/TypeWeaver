@@ -92,7 +92,7 @@ RetryOperation.prototype.retry = function(err: Error) {
   return true;
 };
 
-RetryOperation.prototype.attempt = function(fn: Function,  timeoutOps: number) {
+RetryOperation.prototype.attempt = function(fn: Function,  timeoutOps: TimeoutOps) {
   this._fn = fn;
 
   if (timeoutOps) {

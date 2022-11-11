@@ -1,9 +1,10 @@
-decode.ts(41,3): error TS2322: Type 'string[]' is not assignable to type 'string'.
-decode.ts(82,46): error TS2304: Cannot find name 'Observable'.
+decode.ts(31,29): error TS2749: 'qs' refers to a value, but is being used as a type here. Did you mean 'typeof qs'?
+decode.ts(31,39): error TS2749: 'sep' refers to a value, but is being used as a type here. Did you mean 'typeof sep'?
+decode.ts(31,49): error TS2749: 'eq' refers to a value, but is being used as a type here. Did you mean 'typeof eq'?
+decode.ts(31,63): error TS2749: 'options' refers to a value, but is being used as a type here. Did you mean 'typeof options'?
+decode.ts(82,46): error TS2304: Cannot find name '$xs$'.
 encode.ts(24,38): error TS2304: Cannot find name 'ny'.
-encode.ts(48,45): error TS2304: Cannot find name 'K'.
-encode.ts(66,46): error TS2304: Cannot find name 'Observable'.
-encode.ts(71,10): error TS2339: Property 'map' does not exist on type 'Iterable<any>'.
-encode.ts(71,25): error TS2339: Property 'map' does not exist on type 'Iterable<any>'.
-encode.ts(73,26): error TS2339: Property 'length' does not exist on type 'Iterable<any>'.
+encode.ts(66,46): error TS2304: Cannot find name '$xs$'.
+encode.ts(71,10): error TS2339: Property 'map' does not exist on type 'ArrayLike<any>'.
+encode.ts(71,25): error TS2339: Property 'map' does not exist on type 'ArrayLike<any>'.
 

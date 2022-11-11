@@ -1,4 +1,4 @@
-export default function stripFinalNewline(input: string | string[]) {
+export default function stripFinalNewline(input: string | null | undefined) {
 	const LF = typeof input === 'string' ? '\n' : '\n'.charCodeAt();
 	const CR = typeof input === 'string' ? '\r' : '\r'.charCodeAt();
 

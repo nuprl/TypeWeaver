@@ -14,7 +14,7 @@ PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 /* global Reflect, Promise */
 
-var extendStatics = function(d: any,  b: any) {
+var extendStatics = function(d: Date,  b: Date) {
     extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d: any,  b: any) { d.__proto__ = b; }) ||
         function (d: any,  b: any) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
@@ -40,7 +40,7 @@ export var __assign = function() {
     return __assign.apply(this, arguments);
 }
 
-export function __rest(s: string,  e: number) {
+export function __rest(s: any,  e: any) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
         t[p] = s[p];
@@ -67,21 +67,21 @@ export function __metadata(metadataKey: any,  metadataValue: any) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
 }
 
-export function __awaiter(thisArg: any,  _arguments: any[],  P: Promise,  generator: Generator) {
-    function adopt(value: ny) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve: Function,  reject: Function) {
-        function fulfilled(value: any) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+export function __awaiter(thisArg: any,  _arguments: any[],  P: Promise<any>,  generator: GeneratorFunction) {
+    function adopt(value: any) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve: any,  reject: any) {
+        function fulfilled(value: T) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value: any) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result: AsyncOperation) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        function step(result: ny) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 }
 
-export function __generator(thisArg: any,  body: Function) {
+export function __generator(thisArg: any,  body: any) {
     var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
     return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
     function verb(n: number) { return function (v) { return step([n, v]); }; }
-    function step(op: number) {
+    function step(op: any) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
             if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
@@ -105,14 +105,14 @@ export function __generator(thisArg: any,  body: Function) {
     }
 }
 
-export var __createBinding = Object.create ? (function(o: any,  m: any,  k: any,  k2: any) {
+export var __createBinding = Object.create ? (function(o: number,  m: number,  k: number,  k2: number) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
     if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
         desc = { enumerable: true, get: function() { return m[k]; } };
     }
     Object.defineProperty(o, k2, desc);
-}) : (function(o: any,  m: any,  k: any,  k2: any) {
+}) : (function(o: number,  m: number,  k: number,  k2: number) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
 });
@@ -121,7 +121,7 @@ export function __exportStar(m: any,  o: any) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p)) __createBinding(o, m, p);
 }
 
-export function __values(o: Object) {
+export function __values(o: Iterable<any>) {
     var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
     if (m) return m.call(o);
     if (o && typeof o.length === "number") return {
@@ -133,7 +133,7 @@ export function __values(o: Object) {
     throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 }
 
-export function __read(o: Uint8Array,  n: number) {
+export function __read(o: any,  n: number) {
     var m = typeof Symbol === "function" && o[Symbol.iterator];
     if (!m) return o;
     var i = m.call(o), r, ar = [], e;
@@ -166,7 +166,7 @@ export function __spreadArrays() {
     return r;
 }
 
-export function __spreadArray(to: Array<any>,  from: Array<any>,  pack: Array<any>) {
+export function __spreadArray(to: any,  from: Array<any>,  pack: number) {
     if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
         if (ar || !(i in from)) {
             if (!ar) ar = Array.prototype.slice.call(from, 0, i);
@@ -180,40 +180,40 @@ export function __await(v: Promise<any>) {
     return this instanceof __await ? (this.v = v, this) : new __await(v);
 }
 
-export function __asyncGenerator(thisArg: any,  _arguments: any[],  generator: GeneratorFunction) {
+export function __asyncGenerator(thisArg: any,  _arguments: any,  generator: Function) {
     if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
     var g = generator.apply(thisArg, _arguments || []), i, q = [];
     return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i;
-    function verb(n: number) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
-    function resume(n: number,  v: any) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
-    function step(r: _await) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
+    function verb(n: any) { if (g[n]) i[n] = function (v) { return new Promise(function (a, b) { q.push([n, v, a, b]) > 1 || resume(n, v); }); }; }
+    function resume(n: any,  v: any) { try { step(g[n](v)); } catch (e) { settle(q[0][3], e); } }
+    function step(r: esponse) { r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r); }
     function fulfill(value: any) { resume("next", value); }
     function reject(value: any) { resume("throw", value); }
-    function settle(f: Function,  v: any) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
+    function settle(f: any,  v: any) { if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]); }
 }
 
 export function __asyncDelegator(o: any) {
     var i, p;
-    return i = {}, verb("next"), verb("throw", function (e: Error) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
-    function verb(n: any,  f: nction) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
+    return i = {}, verb("next"), verb("throw", function (e: any) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
+    function verb(n: any,  f: y) { i[n] = o[n] ? function (v) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
 }
 
-export function __asyncValues(o: Object) {
+export function __asyncValues(o: any) {
     if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
     var m = o[Symbol.asyncIterator], i;
     return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
-    function verb(n: number) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
-    function settle(resolve: Function,  reject: Function,  d: Function,  v: Function) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
+    function verb(n: any) { i[n] = o[n] && function (v) { return new Promise(function (resolve, reject) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+    function settle(resolve: any,  reject: any,  d: any,  v: any) { Promise.resolve(v).then(function(v) { resolve({ value: v, done: d }); }, reject); }
 }
 
-export function __makeTemplateObject(cooked: undefined,  raw: undefined) {
+export function __makeTemplateObject(cooked: boolean,  raw: any) {
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
 };
 
 var __setModuleDefault = Object.create ? (function(o: any,  v: any) {
     Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o: Object,  v: any) {
+}) : function(o: any,  v: any) {
     o["default"] = v;
 };
 
@@ -229,7 +229,7 @@ export function __importDefault(mod: any) {
     return (mod && mod.__esModule) ? mod : { default: mod };
 }
 
-export function __classPrivateFieldGet(receiver: any,  state: any,  kind: keyof any,  f: Function) {
+export function __classPrivateFieldGet(receiver: any,  state: any,  kind: Symbol,  f: any) {
     if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
     if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);

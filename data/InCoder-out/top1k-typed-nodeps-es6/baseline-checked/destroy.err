@@ -1,9 +1,6 @@
-index.ts(37,22): error TS2345: Argument of type 'internal' is not assignable to parameter of type 'ReadableStream'.
-  Type 'internal' is missing the following properties from type 'ReadableStream': readable, read, setEncoding, pause, and 6 more.
-index.ts(39,27): error TS2345: Argument of type 'internal' is not assignable to parameter of type 'ReadableStream'.
-index.ts(40,23): error TS2345: Argument of type 'internal' is not assignable to parameter of type 'ReadableStream'.
-index.ts(42,12): error TS2339: Property 'destroy' does not exist on type 'internal'.
-index.ts(60,37): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
+index.ts(38,23): error TS2345: Argument of type 'ReadableStream' is not assignable to parameter of type 'ReadStream'.
+  Type 'ReadableStream' is missing the following properties from type 'ReadStream': close, bytesRead, path, pending, and 15 more.
+index.ts(42,12): error TS2339: Property 'destroy' does not exist on type 'ReadableStream'.
 index.ts(80,14): error TS2339: Property '_hadError' does not exist on type 'ReadableStream'.
 index.ts(81,23): error TS2339: Property '_binding' does not exist on type 'ReadableStream'.
 index.ts(90,10): error TS2339: Property 'close' does not exist on type 'ReadableStream'.

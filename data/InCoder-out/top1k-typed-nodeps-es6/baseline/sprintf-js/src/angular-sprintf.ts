@@ -10,15 +10,15 @@
                 return sprintf.apply(null, arguments)
             }
         }).
-        filter('fmt', ['$filter', function($filter: ng.filter) {
+        filter('fmt', ['$filter', function($filter: ng.IFilterService) {
             return $filter('sprintf')
         }]).
         filter('vsprintf', function() {
-            return function(format: any,  argv: any) {
+            return function(format: formats.DateFormat,  argv: argv) {
                 return vsprintf(format, argv)
             }
         }).
-        filter('vfmt', ['$filter', function($filter: ng.filter) {
+        filter('vfmt', ['$filter', function($filter: ng.IFilterService) {
             return $filter('vsprintf')
         }])
 }(); // eslint-disable-line

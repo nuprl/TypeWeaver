@@ -1,4 +1,4 @@
-export default function(grunt: grunt) {
+export default function(grunt: Grunt) {
 
 	grunt.initConfig({
 		'template': {

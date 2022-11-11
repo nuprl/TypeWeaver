@@ -6,13 +6,13 @@ import errTo from 'errto';
 
 // Common utilities used in scripts.
 
-export const getFile = function(url: URL,  cb: Function) {
+export const getFile = function(url: String,  cb: Function) {
     var sourceDataFolder = path.join(__dirname, "source-data");
     var fullpath = path.join(sourceDataFolder, path.basename(url));
     fs.readFile(fullpath, "utf8", function(err: Error,  text: String) {
         if (!err) return cb(null, text);
         if (err.code != "ENOENT") return cb(err);
-        request(url, errTo(cb, function(res: Buffer,  buf: Buffer) {
+        request(url, errTo(cb, function(res: Response,  buf: Buffer) {
             fs.mkdir(sourceDataFolder, function(err: Error) {
                 if (err && err.code != "EEXIST") return cb(err);
                 fs.writeFile(fullpath, buf, errTo(cb, function() {
@@ -24,8 +24,8 @@ export const getFile = function(url: URL,  cb: Function) {
 };
 
 // Returns array of arrays.
-export const parseText = function(text: String,  splitChar: Char) {
-    return text.split("\n").map(function(line: Line) {
+export const parseText = function(text: String,  splitChar: String) {
+    return text.split("\n").map(function(line: String) {
         return line.split("#")[0].trim(); 
     }).filter(Boolean).map(function(line: number) {
         return line.split(splitChar || /\s+/).map(function(s: string) {return s.trim()}).filter(Boolean);
@@ -36,7 +36,7 @@ export const parseText = function(text: String,  splitChar: Char) {
 // so we emit surrogates when needed. Also, some character codes are actually
 // sequences (arrays) - we emit them prepended with U+0FFF-(length-2).
 // U+0FFF was chosen because it's small and unassigned, as well as 32 chars before it
-function arrToStr(arr: Array<any>) {
+function arrToStr(arr: number[]) {
     var s = '';
     for (var i = 0; i < arr.length; i++)
         if (Array.isArray(arr[i])) {
@@ -64,7 +64,7 @@ function arrToStr(arr: Array<any>) {
 // [0] = address of start of the chunk, hex string.
 // <str> - characters of the chunk.
 // <num> - increasing sequence of the length num, starting with prev character.
-export const generateTable = function(dbcs: DbConnection[],  maxBytes: number) {
+export const generateTable = function(dbcs: DbcsHandler,  maxBytes: number) {
     var minSeqLen = 4;
     var table = [], range, block, seqLen;
     var max = 1 << ((maxBytes || 2) * 8);
@@ -104,10 +104,10 @@ export const generateTable = function(dbcs: DbConnection[],  maxBytes: number) {
     return table;
 };
 
-export const writeTable = function(name: String,  table: Table) {
+export const writeTable = function(name: name,  table: table) {
     this.writeFile(name, "[\n" + table.map(function(a: any) {return JSON.stringify(a);}).join(",\n") + "\n]\n");
 };
 
-export const writeFile = function(name: String,  body: Function) {
+export const writeFile = function(name: name,  body: body) {
     fs.writeFileSync(path.join(__dirname, "../encodings/tables", name + ".json"), body);
 };

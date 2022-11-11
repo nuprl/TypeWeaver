@@ -22,7 +22,7 @@ module.exports.isValid = function isValid(v: any) {
 };
 
 module.exports.definition = {
-  set: function(v: any) {
+  set: function(v: number) {
     this._setProperty('font-weight', v);
   },
   get: function() {

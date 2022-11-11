@@ -4,7 +4,7 @@ import pkg from './package.json';
 
 import babel from 'rollup-plugin-babel';
 
-export default function(grunt: grunt) {
+export default function(grunt: Grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -102,7 +102,7 @@ export default function(grunt: grunt) {
     copy: {
       dist: {
         options: {
-          processContent: function(content: any) {
+          processContent: function(content: Content) {
             return grunt.template.process('/*!\n\n <%= pkg.name %> v<%= pkg.version %>\n\n<%= grunt.file.read("LICENSE") %>\n@license\n*/\n')
                 + content;
           }

@@ -210,7 +210,7 @@ function inspectFallback(val: any) {
   return result;
 }
 
-function formatDomain(domainName: DomainName,  domainValue: DomainValue) {
+function formatDomain(domainName: any,  domainValue: any) {
   const indent = "  ";
   let result = `${indent}'${domainName}': {\n`;
   Object.keys(domainValue).forEach((path, i, paths) => {
@@ -224,7 +224,7 @@ function formatDomain(domainName: DomainName,  domainValue: DomainValue) {
   return result;
 }
 
-function formatPath(pathName: Path,  pathValue: any) {
+function formatPath(pathName: PathName,  pathValue: PathValue) {
   const indent = "    ";
   let result = `${indent}'${pathName}': {\n`;
   Object.keys(pathValue).forEach((cookieName, i, cookieNames) => {

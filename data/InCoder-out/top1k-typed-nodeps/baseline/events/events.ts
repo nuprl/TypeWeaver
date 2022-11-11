@@ -24,7 +24,7 @@
 var R = typeof Reflect === 'object' ? Reflect : null
 var ReflectApply = R && typeof R.apply === 'function'
   ? R.apply
-  : function ReflectApply(target: Function,  receiver: Function,  args: Array<void>) {
+  : function ReflectApply(target: any,  receiver: any,  args: any[]) {
     return Function.prototype.apply.call(target, receiver, args);
   }
 
@@ -32,21 +32,21 @@ var ReflectOwnKeys
 if (R && typeof R.ownKeys === 'function') {
   ReflectOwnKeys = R.ownKeys
 } else if (Object.getOwnPropertySymbols) {
-  ReflectOwnKeys = function ReflectOwnKeys(target: Object) {
+  ReflectOwnKeys = function ReflectOwnKeys(target: any) {
     return Object.getOwnPropertyNames(target)
       .concat(Object.getOwnPropertySymbols(target));
   };
 } else {
-  ReflectOwnKeys = function ReflectOwnKeys(target: Object) {
+  ReflectOwnKeys = function ReflectOwnKeys(target: any) {
     return Object.getOwnPropertyNames(target);
   };
 }
 
-function ProcessEmitWarning(warning: string | Error) {
+function ProcessEmitWarning(warning: any) {
   if (console && console.warn) console.warn(warning);
 }
 
-var NumberIsNaN = Number.isNaN || function NumberIsNaN(value: ixed) {
+var NumberIsNaN = Number.isNaN || function NumberIsNaN(value: umber) {
   return value !== value;
 }
 
@@ -67,7 +67,7 @@ EventEmitter.prototype._maxListeners = undefined;
 // added to it. This is a useful default which helps finding memory leaks.
 var defaultMaxListeners = 10;
 
-function checkListener(listener: Function) {
+function checkListener(listener: Listener) {
   if (typeof listener !== 'function') {
     throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
   }
@@ -78,7 +78,7 @@ Object.defineProperty(EventEmitter, 'defaultMaxListeners', {
   get: function() {
     return defaultMaxListeners;
   },
-  set: function(arg: any) {
+  set: function(arg: number) {
     if (typeof arg !== 'number' || arg < 0 || NumberIsNaN(arg)) {
       throw new RangeError('The value of "defaultMaxListeners" is out of range. It must be a non-negative number. Received ' + arg + '.');
     }
@@ -161,7 +161,7 @@ EventEmitter.prototype.emit = function emit(type: string) {
   return true;
 };
 
-function _addListener(target: HTMLElement,  type: string,  listener: Function,  prepend: Boolean) {
+function _addListener(target: any,  type: string,  listener: Function,  prepend: Boolean) {
   var m;
   var events;
   var existing;
@@ -223,7 +223,7 @@ function _addListener(target: HTMLElement,  type: string,  listener: Function,  
   return target;
 }
 
-EventEmitter.prototype.addListener = function addListener(type: string,  listener: Function) {
+EventEmitter.prototype.addListener = function addListener(type: string,  listener: EventListenerOrEventListenerObject) {
   return _addListener(this, type, listener, false);
 };
 
@@ -244,7 +244,7 @@ function onceWrapper() {
   }
 }
 
-function _onceWrap(target: any,  type: string,  listener: Function) {
+function _onceWrap(target: any,  type: Function,  listener: Function) {
   var state = { fired: false, wrapFn: undefined, target: target, type: type, listener: listener };
   var wrapped = onceWrapper.bind(state);
   wrapped.listener = listener;
@@ -396,7 +396,7 @@ EventEmitter.prototype.rawListeners = function rawListeners(type: string) {
   return _listeners(this, type, false);
 };
 
-EventEmitter.listenerCount = function(emitter: IEventEmitter,  type: string) {
+EventEmitter.listenerCount = function(emitter: EventEmitter,  type: string) {
   if (typeof emitter.listenerCount === 'function') {
     return emitter.listenerCount(type);
   } else {
@@ -432,13 +432,13 @@ function arrayClone(arr: Array,  n: number) {
   return copy;
 }
 
-function spliceOne(list: ArrayLike<any>,  index: number) {
+function spliceOne(list: ReadonlyArray<any>,  index: number) {
   for (; index + 1 < list.length; index++)
     list[index] = list[index + 1];
   list.pop();
 }
 
-function unwrapListeners(arr: Array<Function>) {
+function unwrapListeners(arr: Array<any>) {
   var ret = new Array(arr.length);
   for (var i = 0; i < ret.length; ++i) {
     ret[i] = arr[i].listener || arr[i];
@@ -447,7 +447,7 @@ function unwrapListeners(arr: Array<Function>) {
 }
 
 function once(emitter: EventEmitter,  name: string | symbol) {
-  return new Promise(function (resolve: Function,  reject: Function) {
+  return new Promise(function (resolve: any,  reject: any) {
     function errorListener(err: Error) {
       emitter.removeListener(name, resolver);
       reject(err);
@@ -483,7 +483,7 @@ function eventTargetAgnosticAddListener(emitter: EventEmitter,  name: string | s
   } else if (typeof emitter.addEventListener === 'function') {
     // EventTarget does not have `error` event semantics like Node
     // EventEmitters, we do not listen for `error` events here.
-    emitter.addEventListener(name, function wrapListener(arg: any) {
+    emitter.addEventListener(name, function wrapListener(arg: Listener) {
       // IE does not have builtin `{ once: true }` support so we
       // have to do it manually.
       if (flags.once) {

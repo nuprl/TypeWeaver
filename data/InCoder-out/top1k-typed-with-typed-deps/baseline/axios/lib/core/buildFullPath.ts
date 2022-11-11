@@ -13,7 +13,7 @@ import combineURLs from '../helpers/combineURLs.js';
  *
  * @returns {string} The combined full path
  */
-export default function buildFullPath(baseURL: URL,  requestedURL: URL) {
+export default function buildFullPath(baseURL: any,  requestedURL: any) {
   if (baseURL && !isAbsoluteURL(requestedURL)) {
     return combineURLs(baseURL, requestedURL);
   }

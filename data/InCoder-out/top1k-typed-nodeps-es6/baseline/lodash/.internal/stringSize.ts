@@ -9,7 +9,7 @@ import unicodeSize from './unicodeSize.js'
  * @param {string} string The string to inspect.
  * @returns {number} Returns the string size.
  */
-function stringSize(string: string | null | undefined) {
+function stringSize(string: string | null) {
   return hasUnicode(string) ? unicodeSize(string) : asciiSize(string)
 }
 

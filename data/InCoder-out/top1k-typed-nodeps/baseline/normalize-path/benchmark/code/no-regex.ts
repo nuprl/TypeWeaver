@@ -1,4 +1,4 @@
-module.exports = function normalize(str: string | RegExp) {
+module.exports = function normalize(str: string | undefined) {
   str = replace(str, '\\', '/');
   str = replace(str, '//', '/');
 
@@ -16,7 +16,7 @@ module.exports = function normalize(str: string | RegExp) {
 };
 
 
-function replace(str: any,  pattern: RegExp,  replacement: any) {
+function replace(str: string,  pattern: RegExp,  replacement: string) {
   var i, from = 0;
 
   while (str.indexOf(pattern, from) !== -1) {

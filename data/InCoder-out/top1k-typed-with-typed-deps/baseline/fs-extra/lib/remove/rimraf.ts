@@ -6,7 +6,7 @@ const assert = require('assert')
 
 const isWindows = (process.platform === 'win32')
 
-function defaults (options: Object) {
+function defaults (options: any) {
   const methods = [
     'unlink',
     'chmod',
@@ -109,7 +109,7 @@ function rimraf_ (p: string | Buffer,  options: any,  cb: Function) {
   })
 }
 
-function fixWinEPERM (p: string | Buffer,  options: { encoding?: string },  er: Error,  cb: Function) {
+function fixWinEPERM (p: Buffer,  options: Object,  er: Error,  cb: Function) {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
@@ -131,7 +131,7 @@ function fixWinEPERM (p: string | Buffer,  options: { encoding?: string },  er: 
   })
 }
 
-function fixWinEPERMSync (p: PathLike,  options: { encoding?: string },  er: Error) {
+function fixWinEPERMSync (p: number,  options: any,  er: Error) {
   let stats
 
   assert(p)
@@ -273,7 +273,7 @@ function rmdirSync (p: string | Buffer,  options: any,  originalEr: Error) {
   }
 }
 
-function rmkidsSync (p: string | Buffer,  options: { encoding?: string }) {
+function rmkidsSync (p: Path,  options: Options) {
   assert(p)
   assert(options)
   options.readdirSync(p).forEach(f => rimrafSync(path.join(p, f), options))

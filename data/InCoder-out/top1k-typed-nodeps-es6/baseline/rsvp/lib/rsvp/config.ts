@@ -6,7 +6,7 @@ const config = {
 
 EventTarget['mixin'](config);
 
-function configure(name: String,  value: Any) {
+function configure(name: any,  value: any) {
   if (arguments.length === 2) {
     config[name] = value;
   } else {

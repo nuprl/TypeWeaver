@@ -46,7 +46,7 @@ cs.get = function (string: any) {
 	return {model: model, value: val};
 };
 
-cs.get.rgb = function (string: any) {
+cs.get.rgb = function (string: string | null) {
 	if (!string) {
 		return null;
 	}
@@ -135,7 +135,7 @@ cs.get.rgb = function (string: any) {
 	return rgb;
 };
 
-cs.get.hsl = function (string: any) {
+cs.get.hsl = function (string: string | null) {
 	if (!string) {
 		return null;
 	}
@@ -156,7 +156,7 @@ cs.get.hsl = function (string: any) {
 	return null;
 };
 
-cs.get.hwb = function (string: any) {
+cs.get.hwb = function (string: string | null) {
 	if (!string) {
 		return null;
 	}

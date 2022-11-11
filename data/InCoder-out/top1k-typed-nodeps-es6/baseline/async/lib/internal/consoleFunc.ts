@@ -1,6 +1,6 @@
 import wrapAsync from './wrapAsync.js'
 
-export default function consoleFunc(name: string) {
+export default function consoleFunc(name: any) {
     return (fn, ...args) => wrapAsync(fn)(...args, (err, ...resultArgs) => {
         /* istanbul ignore else */
         if (typeof console === 'object') {

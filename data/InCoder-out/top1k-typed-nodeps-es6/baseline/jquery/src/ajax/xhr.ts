@@ -12,12 +12,12 @@ var xhrSuccessStatus = {
 	0: 200
 };
 
-jQuery.ajaxTransport( function( options : any) {
+jQuery.ajaxTransport( function( options : Object) {
 	var callback;
 
 	// Cross domain only allowed if supported through XMLHttpRequest
 	return {
-		send: function( headers: Object,  complete : Function) {
+		send: function( headers: any,  complete : Function) {
 			var i,
 				xhr = options.xhr();
 
@@ -56,7 +56,7 @@ jQuery.ajaxTransport( function( options : any) {
 			}
 
 			// Callback
-			callback = function( type : String) {
+			callback = function( type : any) {
 				return function() {
 					if ( callback ) {
 						callback = xhr.onload = xhr.onerror = xhr.onabort = xhr.ontimeout = null;

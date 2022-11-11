@@ -57,7 +57,7 @@ var options = cli.parse_args();
 
 ////////////////////////////////////////////////////////////////////////////////
 
-function readFile(filename: string | Buffer,  encoding: string | null,  callback: Function) {
+function readFile(filename: string,  encoding: string | undefined | null,  callback: any) {
   if (options.file === '-') {
     // read from stdin
 
@@ -99,7 +99,7 @@ readFile(options.file, 'utf8', function (error: Error,  input: Input) {
     if (err instanceof SyntaxError) {
       try {
         output = [];
-        yaml.loadAll(input, function (doc: any) { output.push(doc); }, {});
+        yaml.loadAll(input, function (doc: Document) { output.push(doc); }, {});
         isYaml = true;
 
         if (output.length === 0) output = null;

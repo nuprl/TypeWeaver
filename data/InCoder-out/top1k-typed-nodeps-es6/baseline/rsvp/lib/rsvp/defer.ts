@@ -20,7 +20,7 @@ import Promise from "./promise";
 
    deferred.resolve("Success!");
 
-   deferred.promise.then(function(value: any){
+   deferred.promise.then(function(value: String){
      // value here is "Success!"
    });
    ```
@@ -34,7 +34,7 @@ import Promise from "./promise";
   @return {Object}
  */
 
-export default function defer(label: any) {
+export default function defer(label: Label) {
   let deferred = { resolve: undefined, reject: undefined };
 
   deferred.promise = new Promise((resolve, reject) => {

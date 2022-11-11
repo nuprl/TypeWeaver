@@ -1,6 +1,6 @@
 /* eslint-disable babel/new-cap, xo/throw-new-error */
 'use strict';
-module.exports = function (str: string | null,  pos: number) {
+module.exports = function (str: any,  pos: number) {
 	if (str === null || str === undefined) {
 		throw TypeError();
 	}

@@ -239,7 +239,7 @@
         Remove: REMOVE
     };
 
-    function Reference(parent: Reference,  key: any) {
+    function Reference(parent: Reference,  key: Reference) {
         this.parent = parent;
         this.key = key;
     }
@@ -272,7 +272,7 @@
     Controller.prototype.path = function path() {
         var i, iz, j, jz, result, element;
 
-        function addToPath(result: any,  path: Array<any>) {
+        function addToPath(result: any,  path: any) {
             if (Array.isArray(path)) {
                 for (j = 0, jz = path.length; j < jz; ++j) {
                     result.push(path[j]);
@@ -342,7 +342,7 @@
 
     // API:
     // notify control skip / break
-    Controller.prototype.notify = function notify(flag: any) {
+    Controller.prototype.notify = function notify(flag: number) {
         this.__state = flag;
     };
 
@@ -364,7 +364,7 @@
         this.notify(REMOVE);
     };
 
-    Controller.prototype.__initialize = function(root: any,  visitor: Visitor) {
+    Controller.prototype.__initialize = function(root: AST,  visitor: Visitor) {
         this.visitor = visitor;
         this.root = root;
         this.__worklist = [];
@@ -391,11 +391,11 @@
         return typeof node === 'object' && typeof node.type === 'string';
     }
 
-    function isProperty(nodeType: NodeType,  key: PropertyKey) {
+    function isProperty(nodeType: SyntaxKind,  key: SyntaxKind) {
         return (nodeType === Syntax.ObjectExpression || nodeType === Syntax.ObjectPattern) && 'properties' === key;
     }
   
-    function candidateExistsInLeaveList(leavelist: LeaveList,  candidate: Leave) {
+    function candidateExistsInLeaveList(leavelist: any,  candidate: any) {
         for (var i = leavelist.length - 1; i >= 0; --i) {
             if (leavelist[i].node === candidate) {
                 return true;
@@ -404,7 +404,7 @@
         return false;
     }
 
-    Controller.prototype.traverse = function traverse(root: Node,  visitor: Visitor) {
+    Controller.prototype.traverse = function traverse(root: AST,  visitor: Visitor) {
         var worklist,
             leavelist,
             element,
@@ -510,7 +510,7 @@
         }
     };
 
-    Controller.prototype.replace = function replace(root: AST,  visitor: ParseTreeVisitor) {
+    Controller.prototype.replace = function replace(root: Node,  visitor: Visitor) {
         var worklist,
             leavelist,
             node,
@@ -665,17 +665,17 @@
         return outer.root;
     };
 
-    function traverse(root: Node,  visitor: Visitor) {
+    function traverse(root: ASTNode,  visitor: Visitor) {
         var controller = new Controller();
         return controller.traverse(root, visitor);
     }
 
-    function replace(root: AST,  visitor: Visitor) {
+    function replace(root: Root,  visitor: Visitor) {
         var controller = new Controller();
         return controller.replace(root, visitor);
     }
 
-    function extendCommentRange(comment: Comment,  tokens: Token[]) {
+    function extendCommentRange(comment: CommentRange,  tokens: Token[]) {
         var target;
 
         target = upperBound(tokens, function search(token: Token) {
@@ -724,7 +724,7 @@
         // This is based on John Freeman's implementation.
         cursor = 0;
         traverse(tree, {
-            enter: function (node: ts.Node) {
+            enter: function (node: Node) {
                 var comment;
 
                 while (cursor < comments.length) {
@@ -757,7 +757,7 @@
 
         cursor = 0;
         traverse(tree, {
-            leave: function (node: ts.Node) {
+            leave: function (node: Node) {
                 var comment;
 
                 while (cursor < comments.length) {

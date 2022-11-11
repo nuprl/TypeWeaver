@@ -26,22 +26,15 @@ examples/express-session-parse/index.ts(40,30): error TS2339: Property 'session'
 examples/express-session-parse/index.ts(43,11): error TS2339: Property 'session' does not exist on type 'Request'.
 examples/express-session-parse/index.ts(46,14): error TS2339: Property 'send' does not exist on type 'Response'.
 examples/express-session-parse/index.ts(60,59): error TS2304: Cannot find name 'Socket'.
-examples/express-session-parse/index.ts(60,74): error TS2304: Cannot find name 'Head'.
 examples/express-session-parse/index.ts(64,18): error TS2339: Property 'session' does not exist on type 'Request'.
-examples/express-session-parse/index.ts(78,36): error TS2304: Cannot find name 'Websocket'.
-examples/express-session-parse/index.ts(79,26): error TS2339: Property 'session' does not exist on type 'Request'.
-examples/express-session-parse/public/app.ts(8,33): error TS2304: Cannot find name 'Message'.
 examples/express-session-parse/public/app.ts(19,9): error TS2339: Property 'onclick' does not exist on type 'Element'.
 examples/express-session-parse/public/app.ts(28,10): error TS2339: Property 'onclick' does not exist on type 'Element'.
 examples/express-session-parse/public/app.ts(39,12): error TS2339: Property 'onclick' does not exist on type 'Element'.
 examples/express-session-parse/public/app.ts(58,16): error TS2339: Property 'onclick' does not exist on type 'Element'.
 examples/server-stats/index.ts(3,21): error TS2307: Cannot find module 'express' or its corresponding type declarations.
 examples/server-stats/index.ts(6,10): error TS2614: Module '"../.."' has no exported member 'WebSocketServer'. Did you mean to use 'import WebSocketServer from "../.."' instead?
-examples/server-stats/index.ts(16,52): error TS2554: Expected 1 arguments, but got 2.
-examples/server-stats/index.ts(24,6): error TS2339: Property 'on' does not exist on type 'WebSocket'.
 examples/ssl.ts(5,10): error TS2614: Module '".."' has no exported member 'WebSocket'. Did you mean to use 'import WebSocket from ".."' instead?
 examples/ssl.ts(5,21): error TS2614: Module '".."' has no exported member 'WebSocketServer'. Did you mean to use 'import WebSocketServer from ".."' instead?
-examples/ssl.ts(15,42): error TS2304: Cannot find name 'Message'.
 examples/ssl.ts(29,64): error TS2339: Property 'port' does not exist on type 'string | AddressInfo'.
   Property 'port' does not exist on type 'string'.
 index.ts(5,11): error TS2339: Property 'createWebSocketStream' does not exist on type 'typeof WebSocket'.
@@ -52,16 +45,16 @@ index.ts(10,11): error TS2339: Property 'WebSocket' does not exist on type 'type
 index.ts(11,11): error TS2339: Property 'WebSocketServer' does not exist on type 'typeof WebSocket'.
 index.ts(11,39): error TS2339: Property 'Server' does not exist on type 'typeof WebSocket'.
 lib/buffer-util.ts(3,10): error TS2614: Module '"./constants"' has no exported member 'EMPTY_BUFFER'. Did you mean to use 'import EMPTY_BUFFER from "./constants"' instead?
-lib/buffer-util.ts(68,30): error TS2339: Property 'buffer' does not exist on type 'ArrayBuffer'.
-lib/buffer-util.ts(69,16): error TS2339: Property 'buffer' does not exist on type 'ArrayBuffer'.
-lib/buffer-util.ts(72,14): error TS2339: Property 'buffer' does not exist on type 'ArrayBuffer'.
-lib/buffer-util.ts(72,31): error TS2339: Property 'byteOffset' does not exist on type 'ArrayBuffer'.
-lib/buffer-util.ts(72,47): error TS2339: Property 'byteOffset' does not exist on type 'ArrayBuffer'.
-lib/buffer-util.ts(84,12): error TS2339: Property 'readOnly' does not exist on type '(data: any) => any'.
-lib/buffer-util.ts(96,14): error TS2339: Property 'readOnly' does not exist on type '(data: any) => any'.
+lib/buffer-util.ts(22,16): error TS2345: Argument of type 'number' is not assignable to parameter of type 'ArrayLike<number>'.
+lib/buffer-util.ts(23,19): error TS2339: Property 'length' does not exist on type 'number'.
+lib/buffer-util.ts(84,12): error TS2339: Property 'readOnly' does not exist on type '(data: Buffer) => any'.
+lib/buffer-util.ts(90,7): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+lib/buffer-util.ts(93,28): error TS2339: Property 'buffer' does not exist on type 'never'.
+lib/buffer-util.ts(93,41): error TS2339: Property 'byteOffset' does not exist on type 'never'.
+lib/buffer-util.ts(93,58): error TS2339: Property 'byteLength' does not exist on type 'never'.
+lib/buffer-util.ts(96,14): error TS2339: Property 'readOnly' does not exist on type '(data: Buffer) => any'.
 lib/buffer-util.ts(115,5): error TS1184: Modifiers cannot appear here.
 lib/buffer-util.ts(120,5): error TS1184: Modifiers cannot appear here.
-lib/buffer-util.ts(121,47): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Buffer'.
 lib/event-target.ts(3,10): error TS2614: Module '"./constants"' has no exported member 'kForOnEventAttribute'. Did you mean to use 'import kForOnEventAttribute from "./constants"' instead?
 lib/event-target.ts(3,32): error TS2614: Module '"./constants"' has no exported member 'kListener'. Did you mean to use 'import kListener from "./constants"' instead?
 lib/event-target.ts(69,27): error TS2339: Property 'code' does not exist on type '{}'.
@@ -76,11 +69,12 @@ lib/event-target.ts(119,30): error TS2339: Property 'message' does not exist on 
 lib/event-target.ts(119,67): error TS2339: Property 'message' does not exist on type '{}'.
 lib/event-target.ts(157,27): error TS2339: Property 'data' does not exist on type '{}'.
 lib/event-target.ts(157,63): error TS2339: Property 'data' does not exist on type '{}'.
-lib/event-target.ts(193,42): error TS2552: Cannot find name 'MessageEventData'. Did you mean 'MessageEventInit'?
 lib/event-target.ts(236,17): error TS2339: Property 'once' does not exist on type '{}'.
 lib/extension.ts(3,10): error TS2614: Module '"./validation"' has no exported member 'tokenChars'. Did you mean to use 'import tokenChars from "./validation"' instead?
-lib/extension.ts(27,24): error TS2552: Cannot find name 'Header'. Did you mean 'Headers'?
-lib/extension.ts(179,29): error TS2304: Cannot find name 'Extension'.
+lib/extension.ts(41,19): error TS2339: Property 'charCodeAt' does not exist on type 'Buffer'.
+lib/extension.ts(118,42): error TS2339: Property 'charCodeAt' does not exist on type 'Buffer'.
+lib/extension.ts(132,25): error TS2339: Property 'replace' does not exist on type 'Buffer'.
+lib/extension.ts(162,37): error TS2339: Property 'replace' does not exist on type 'Buffer'.
 lib/limiter.ts(19,12): error TS2339: Property 'pending' does not exist on type 'Limiter'.
 lib/limiter.ts(22,10): error TS2339: Property 'concurrency' does not exist on type 'Limiter'.
 lib/limiter.ts(23,10): error TS2339: Property 'jobs' does not exist on type 'Limiter'.
@@ -235,19 +229,19 @@ lib/receiver.ts(149,19): error TS2339: Property '_loop' does not exist on type '
 lib/receiver.ts(161,14): error TS2339: Property '_bufferedBytes' does not exist on type 'Receiver'.
 lib/receiver.ts(162,12): error TS2339: Property '_loop' does not exist on type 'Receiver'.
 lib/receiver.ts(169,12): error TS2339: Property '_loop' does not exist on type 'Receiver'.
-lib/receiver.ts(173,9): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
+lib/receiver.ts(175,9): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/receiver.ts(181,29): error TS2339: Property '_extensions' does not exist on type 'Receiver'.
 lib/receiver.ts(182,12): error TS2339: Property '_loop' does not exist on type 'Receiver'.
-lib/receiver.ts(186,9): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
+lib/receiver.ts(188,9): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/receiver.ts(192,10): error TS2339: Property '_fin' does not exist on type 'Receiver'.
 lib/receiver.ts(193,10): error TS2339: Property '_opcode' does not exist on type 'Receiver'.
 lib/receiver.ts(194,10): error TS2339: Property '_payloadLength' does not exist on type 'Receiver'.
 lib/receiver.ts(196,14): error TS2339: Property '_opcode' does not exist on type 'Receiver'.
 lib/receiver.ts(198,14): error TS2339: Property '_loop' does not exist on type 'Receiver'.
-lib/receiver.ts(202,11): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
+lib/receiver.ts(204,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/receiver.ts(208,17): error TS2339: Property '_fragmented' does not exist on type 'Receiver'.
 lib/receiver.ts(209,14): error TS2339: Property '_loop' does not exist on type 'Receiver'.
-lib/receiver.ts(213,11): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
+lib/receiver.ts(215,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/receiver.ts(219,12): error TS2339: Property '_opcode' does not exist on type 'Receiver'.
 lib/receiver.ts(219,27): error TS2339: Property '_fragmented' does not exist on type 'Receiver'.
 lib/receiver.ts(220,21): error TS2339: Property '_opcode' does not exist on type 'Receiver'.
@@ -255,22 +249,22 @@ lib/receiver.ts(220,46): error TS2339: Property '_opcode' does not exist on type
 lib/receiver.ts(221,16): error TS2339: Property '_fragmented' does not exist on type 'Receiver'.
 lib/receiver.ts(222,14): error TS2339: Property '_loop' does not exist on type 'Receiver'.
 lib/receiver.ts(225,34): error TS2339: Property '_opcode' does not exist on type 'Receiver'.
-lib/receiver.ts(226,11): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
+lib/receiver.ts(228,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/receiver.ts(232,12): error TS2339: Property '_compressed' does not exist on type 'Receiver'.
 lib/receiver.ts(233,21): error TS2339: Property '_opcode' does not exist on type 'Receiver'.
 lib/receiver.ts(233,44): error TS2339: Property '_opcode' does not exist on type 'Receiver'.
 lib/receiver.ts(234,17): error TS2339: Property '_fin' does not exist on type 'Receiver'.
 lib/receiver.ts(235,14): error TS2339: Property '_loop' does not exist on type 'Receiver'.
-lib/receiver.ts(239,11): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
+lib/receiver.ts(241,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/receiver.ts(246,14): error TS2339: Property '_loop' does not exist on type 'Receiver'.
-lib/receiver.ts(250,11): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
+lib/receiver.ts(252,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/receiver.ts(256,16): error TS2339: Property '_payloadLength' does not exist on type 'Receiver'.
 lib/receiver.ts(257,14): error TS2339: Property '_loop' does not exist on type 'Receiver'.
 lib/receiver.ts(260,42): error TS2339: Property '_payloadLength' does not exist on type 'Receiver'.
-lib/receiver.ts(261,11): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
+lib/receiver.ts(263,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/receiver.ts(267,12): error TS2339: Property '_loop' does not exist on type 'Receiver'.
 lib/receiver.ts(270,32): error TS2339: Property '_opcode' does not exist on type 'Receiver'.
-lib/receiver.ts(271,9): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
+lib/receiver.ts(273,9): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/receiver.ts(277,15): error TS2339: Property '_fin' does not exist on type 'Receiver'.
 lib/receiver.ts(277,29): error TS2339: Property '_fragmented' does not exist on type 'Receiver'.
 lib/receiver.ts(277,47): error TS2339: Property '_fragmented' does not exist on type 'Receiver'.
@@ -279,10 +273,10 @@ lib/receiver.ts(278,10): error TS2339: Property '_masked' does not exist on type
 lib/receiver.ts(280,14): error TS2339: Property '_isServer' does not exist on type 'Receiver'.
 lib/receiver.ts(281,17): error TS2339: Property '_masked' does not exist on type 'Receiver'.
 lib/receiver.ts(282,14): error TS2339: Property '_loop' does not exist on type 'Receiver'.
-lib/receiver.ts(286,11): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
+lib/receiver.ts(288,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/receiver.ts(291,21): error TS2339: Property '_masked' does not exist on type 'Receiver'.
 lib/receiver.ts(292,12): error TS2339: Property '_loop' does not exist on type 'Receiver'.
-lib/receiver.ts(296,9): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
+lib/receiver.ts(298,9): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/receiver.ts(302,14): error TS2339: Property '_payloadLength' does not exist on type 'Receiver'.
 lib/receiver.ts(302,43): error TS2339: Property '_state' does not exist on type 'Receiver'.
 lib/receiver.ts(303,19): error TS2339: Property '_payloadLength' does not exist on type 'Receiver'.
@@ -348,17 +342,19 @@ lib/receiver.ts(499,18): error TS2339: Property '_binaryType' does not exist on 
 lib/receiver.ts(501,25): error TS2339: Property '_binaryType' does not exist on type 'Receiver'.
 lib/receiver.ts(511,19): error TS2339: Property '_skipUTF8Validation' does not exist on type 'Receiver'.
 lib/receiver.ts(512,16): error TS2339: Property '_loop' does not exist on type 'Receiver'.
-lib/receiver.ts(516,13): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
+lib/receiver.ts(518,13): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/receiver.ts(526,10): error TS2339: Property '_state' does not exist on type 'Receiver'.
 lib/receiver.ts(537,14): error TS2339: Property '_opcode' does not exist on type 'Receiver'.
 lib/receiver.ts(538,12): error TS2339: Property '_loop' does not exist on type 'Receiver'.
-lib/receiver.ts(547,11): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
-lib/receiver.ts(558,13): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
+lib/receiver.ts(549,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/receiver.ts(560,13): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/receiver.ts(566,19): error TS2339: Property '_skipUTF8Validation' does not exist on type 'Receiver'.
-lib/receiver.ts(570,13): error TS2345: Argument of type 'true' is not assignable to parameter of type 'string | false'.
+lib/receiver.ts(572,13): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/receiver.ts(579,21): error TS2339: Property '_opcode' does not exist on type 'Receiver'.
 lib/receiver.ts(585,10): error TS2339: Property '_state' does not exist on type 'Receiver'.
-lib/receiver.ts(603,27): error TS2749: 'ErrorCtor' refers to a value, but is being used as a type here. Did you mean 'typeof ErrorCtor'?
+lib/receiver.ts(603,64): error TS2304: Cannot find name 'ErrorObject'.
+lib/receiver.ts(603,95): error TS2304: Cannot find name 'ErrorObject'.
+lib/receiver.ts(609,7): error TS2339: Property 'code' does not exist on type 'Error'.
 lib/sender.ts(9,10): error TS2614: Module '"./constants"' has no exported member 'EMPTY_BUFFER'. Did you mean to use 'import EMPTY_BUFFER from "./constants"' instead?
 lib/sender.ts(10,10): error TS2614: Module '"./validation"' has no exported member 'isValidStatusCode'. Did you mean to use 'import isValidStatusCode from "./validation"' instead?
 lib/sender.ts(11,10): error TS2614: Module '"./buffer-util"' has no exported member 'mask'. Did you mean to use 'import mask from "./buffer-util"' instead?
@@ -412,8 +408,6 @@ lib/sender.ts(468,12): error TS2339: Property '_socket' does not exist on type '
 lib/sender.ts(469,12): error TS2339: Property '_socket' does not exist on type 'Sender'.
 lib/sender.ts(470,12): error TS2339: Property '_socket' does not exist on type 'Sender'.
 lib/sender.ts(472,12): error TS2339: Property '_socket' does not exist on type 'Sender'.
-lib/stream.ts(12,10): error TS2339: Property 'emit' does not exist on type 'WritableStream<any>'.
-lib/stream.ts(49,57): error TS2304: Cannot find name 'WebSocketOptions'.
 lib/stream.ts(60,6): error TS2339: Property 'on' does not exist on type 'WebSocket'.
 lib/stream.ts(62,27): error TS2339: Property '_readableState' does not exist on type 'Duplex'.
 lib/stream.ts(64,32): error TS2339: Property 'pause' does not exist on type 'WebSocket'.
@@ -432,10 +426,11 @@ lib/stream.ts(129,10): error TS2339: Property '_socket' does not exist on type '
 lib/stream.ts(140,12): error TS2339: Property 'isPaused' does not exist on type 'WebSocket'.
 lib/stream.ts(140,25): error TS2339: Property 'resume' does not exist on type 'WebSocket'.
 lib/stream.ts(145,10): error TS2339: Property 'once' does not exist on type 'WebSocket'.
-lib/stream.ts(146,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'BufferEncoding'.
+lib/stream.ts(146,40): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(error?: Error) => void'.
+  Type 'Function' provides no match for the signature '(error?: Error): void'.
 lib/stream.ts(151,20): error TS2554: Expected 1 arguments, but got 2.
 lib/subprotocol.ts(3,10): error TS2614: Module '"./validation"' has no exported member 'tokenChars'. Did you mean to use 'import tokenChars from "./validation"' instead?
-lib/subprotocol.ts(12,24): error TS2304: Cannot find name 'Header'.
+lib/subprotocol.ts(12,24): error TS2552: Cannot find name 'Header'. Did you mean 'Headers'?
 lib/validation.ts(117,11): error TS2451: Cannot redeclare block-scoped variable 'isValidUTF8'.
 lib/validation.ts(119,5): error TS1184: Modifiers cannot appear here.
 lib/validation.ts(119,18): error TS2451: Cannot redeclare block-scoped variable 'isValidUTF8'.
@@ -488,8 +483,6 @@ lib/websocket-server.ts(368,39): error TS2554: Expected 4 arguments, but got 2.
 lib/websocket-server.ts(381,25): error TS2339: Property 'options' does not exist on type 'WebSocketServer'.
 lib/websocket-server.ts(387,29): error TS2339: Property 'options' does not exist on type 'WebSocketServer'.
 lib/websocket-server.ts(388,16): error TS2339: Property 'options' does not exist on type 'WebSocketServer'.
-lib/websocket-server.ts(399,38): error TS2345: Argument of type '{ [x: string]: any[]; }' is not assignable to parameter of type 'Extension[]'.
-  Type '{ [x: string]: any[]; }' is missing the following properties from type 'Extension[]': length, pop, push, concat, and 29 more.
 lib/websocket-server.ts(415,24): error TS2339: Property 'options' does not exist on type 'WebSocketServer'.
 lib/websocket-server.ts(416,32): error TS2339: Property 'options' does not exist on type 'WebSocketServer'.
 lib/websocket-server.ts(419,14): error TS2339: Property 'clients' does not exist on type 'WebSocketServer'.
@@ -500,9 +493,6 @@ lib/websocket-server.ts(424,44): error TS2339: Property 'clients' does not exist
 lib/websocket-server.ts(446,31): error TS2304: Cannot find name 'Server'.
 lib/websocket-server.ts(462,28): error TS2304: Cannot find name 'Server'.
 lib/websocket-server.ts(485,33): error TS2304: Cannot find name 'Socket'.
-lib/websocket-server.ts(498,41): error TS2345: Argument of type 'string | Error' is not assignable to parameter of type 'string | ArrayBuffer | SharedArrayBuffer | ArrayBufferView'.
-  Type 'Error' is not assignable to type 'string | ArrayBuffer | SharedArrayBuffer | ArrayBufferView'.
-lib/websocket-server.ts(499,5): error TS2698: Spread types may only be created from object types.
 lib/websocket-server.ts(525,52): error TS2304: Cannot find name 'Server'.
 lib/websocket-server.ts(532,5): error TS2554: Expected 4 arguments, but got 3.
 lib/websocket.ts(18,3): error TS2614: Module '"./constants"' has no exported member 'BINARY_TYPES'. Did you mean to use 'import BINARY_TYPES from "./constants"' instead?
@@ -622,39 +612,15 @@ lib/websocket.ts(665,7): error TS2358: The left-hand side of an 'instanceof' exp
 lib/websocket.ts(667,15): error TS2551: Property '_url' does not exist on type 'WebSocket'. Did you mean 'url'?
 lib/websocket.ts(675,15): error TS2551: Property '_url' does not exist on type 'WebSocket'. Did you mean 'url'?
 lib/websocket.ts(694,19): error TS2339: Property '_redirects' does not exist on type 'WebSocket'.
-lib/websocket.ts(709,8): error TS2339: Property 'defaultPort' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
-lib/websocket.ts(709,27): error TS2339: Property 'defaultPort' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
-lib/websocket.ts(714,8): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
-lib/websocket.ts(715,13): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
-lib/websocket.ts(722,23): error TS2339: Property 'handshakeTimeout' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
-lib/websocket.ts(730,10): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
-lib/websocket.ts(749,10): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
-lib/websocket.ts(749,56): error TS2339: Property 'join' does not exist on type 'string'.
-lib/websocket.ts(751,12): error TS2339: Property 'origin' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
-lib/websocket.ts(753,12): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
-lib/websocket.ts(753,51): error TS2339: Property 'origin' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
-lib/websocket.ts(755,12): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
-lib/websocket.ts(755,34): error TS2339: Property 'origin' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
-lib/websocket.ts(759,10): error TS2339: Property 'auth' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
 lib/websocket.ts(772,19): error TS2339: Property '_redirects' does not exist on type 'WebSocket'.
 lib/websocket.ts(773,17): error TS2339: Property '_originalUnixSocket' does not exist on type 'WebSocket'.
 lib/websocket.ts(774,17): error TS2339: Property '_originalSecure' does not exist on type 'WebSocket'.
 lib/websocket.ts(775,17): error TS2339: Property '_originalHostOrSocketPath' does not exist on type 'WebSocket'.
-lib/websocket.ts(779,42): error TS2339: Property 'headers' does not exist on type 'object'.
-lib/websocket.ts(789,19): error TS2339: Property 'headers' does not exist on type 'object'.
 lib/websocket.ts(794,21): error TS2339: Property '_originalUnixSocket' does not exist on type 'WebSocket'.
 lib/websocket.ts(795,43): error TS2339: Property '_originalHostOrSocketPath' does not exist on type 'WebSocket'.
 lib/websocket.ts(797,21): error TS2339: Property '_originalUnixSocket' does not exist on type 'WebSocket'.
 lib/websocket.ts(799,40): error TS2339: Property '_originalHostOrSocketPath' does not exist on type 'WebSocket'.
 lib/websocket.ts(801,37): error TS2339: Property '_originalSecure' does not exist on type 'WebSocket'.
-lib/websocket.ts(806,21): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
-lib/websocket.ts(807,21): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
-lib/websocket.ts(809,38): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
-lib/websocket.ts(811,14): error TS2339: Property 'auth' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
-lib/websocket.ts(820,14): error TS2339: Property 'auth' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
-lib/websocket.ts(820,31): error TS2339: Property 'headers' does not exist on type 'object'.
-lib/websocket.ts(821,15): error TS2339: Property 'headers' does not exist on type 'object'.
-lib/websocket.ts(822,37): error TS2339: Property 'auth' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
 lib/websocket.ts(825,21): error TS2339: Property '_req' does not exist on type 'WebSocket'.
 lib/websocket.ts(827,19): error TS2339: Property '_redirects' does not exist on type 'WebSocket'.
 lib/websocket.ts(840,21): error TS2339: Property '_req' does not exist on type 'WebSocket'.
@@ -664,10 +630,9 @@ lib/websocket.ts(900,44): error TS2339: Property 'CONNECTING' does not exist on 
 lib/websocket.ts(902,21): error TS2339: Property '_req' does not exist on type 'WebSocket'.
 lib/websocket.ts(936,31): error TS2551: Property '_protocol' does not exist on type 'WebSocket'. Did you mean 'protocol'?
 lib/websocket.ts(978,17): error TS2551: Property '_extensions' does not exist on type 'WebSocket'. Did you mean 'extensions'?
-lib/websocket.ts(983,26): error TS2339: Property 'generateMask' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; protocolVersion: number; maxPayload: number; skipUTF8Validation: boolean; perMessageDeflate: boolean; followRedirects: boolean; maxRedirects: number; }'.
 lib/websocket.ts(1000,13): error TS2551: Property '_readyState' does not exist on type 'WebSocket'. Did you mean 'readyState'?
 lib/websocket.ts(1000,37): error TS2339: Property 'CLOSING' does not exist on type 'typeof WebSocket'.
-lib/websocket.ts(1012,30): error TS2304: Cannot find name 'netConnectOptions'.
+lib/websocket.ts(1012,30): error TS2304: Cannot find name 'ConnectOptions'.
 lib/websocket.ts(1043,56): error TS2304: Cannot find name 'Stream'.
 lib/websocket.ts(1043,74): error TS2304: Cannot find name 'Message'.
 lib/websocket.ts(1044,13): error TS2551: Property '_readyState' does not exist on type 'WebSocket'. Did you mean 'readyState'?
@@ -675,10 +640,6 @@ lib/websocket.ts(1044,37): error TS2339: Property 'CLOSING' does not exist on ty
 lib/websocket.ts(1089,19): error TS2339: Property '_socket' does not exist on type 'WebSocket'.
 lib/websocket.ts(1089,38): error TS2339: Property '_sender' does not exist on type 'WebSocket'.
 lib/websocket.ts(1090,20): error TS2551: Property '_bufferedAmount' does not exist on type 'WebSocket'. Did you mean 'bufferedAmount'?
-lib/websocket.ts(1109,35): error TS2304: Cannot find name 'Code'.
-lib/websocket.ts(1109,50): error TS2304: Cannot find name 'Reason'.
-lib/websocket.ts(1199,31): error TS2304: Cannot find name 'Pong'.
-lib/websocket.ts(1210,10): error TS2339: Property 'resume' does not exist on type 'ReadableStream<any>'.
 lib/websocket.ts(1225,37): error TS2339: Property 'CLOSING' does not exist on type 'typeof WebSocket'.
 lib/websocket.ts(1284,37): error TS2339: Property 'CLOSING' does not exist on type 'typeof WebSocket'.
 lib/websocket.ts(1301,39): error TS2339: Property 'CLOSING' does not exist on type 'typeof WebSocket'.

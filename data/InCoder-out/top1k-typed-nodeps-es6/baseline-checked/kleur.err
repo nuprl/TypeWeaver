@@ -3,7 +3,7 @@ bench/colors.ts(2,18): error TS2307: Cannot find module 'ansi-colors' or its cor
 bench/colors.ts(3,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
 bench/colors.ts(4,20): error TS2307: Cannot find module '../colors' or its corresponding type declarations.
 bench/colors.ts(5,19): error TS2307: Cannot find module '../index' or its corresponding type declarations.
-bench/colors.ts(60,23): error TS2304: Cannot find name 'Lib'.
+bench/colors.ts(60,23): error TS2304: Cannot find name 'Library'.
 bench/dryrun.ts(1,19): error TS2307: Cannot find module 'chalk' or its corresponding type declarations.
 bench/dryrun.ts(2,18): error TS2307: Cannot find module 'ansi-colors' or its corresponding type declarations.
 bench/dryrun.ts(3,20): error TS2307: Cannot find module '../colors' or its corresponding type declarations.
@@ -12,20 +12,8 @@ bench/load.ts(2,19): error TS2307: Cannot find module 'chalk' or its correspondi
 bench/load.ts(6,19): error TS2307: Cannot find module '../index' or its corresponding type declarations.
 bench/load.ts(10,20): error TS2307: Cannot find module '../colors' or its corresponding type declarations.
 bench/load.ts(14,19): error TS2307: Cannot find module 'ansi-colors' or its corresponding type declarations.
-build/index.ts(6,29): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
-    Argument of type 'File' is not assignable to parameter of type 'PathOrFileDescriptor'.
-      Type 'File' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 96 more.
-  Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string; } | BufferEncoding): string', gave the following error.
-    Argument of type 'File' is not assignable to parameter of type 'PathOrFileDescriptor'.
-  Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string; })): string | Buffer', gave the following error.
-    Argument of type 'File' is not assignable to parameter of type 'PathOrFileDescriptor'.
-build/index.ts(7,2): error TS2322: Type 'string' is not assignable to type 'Buffer & string'.
-  Type 'string' is not assignable to type 'Buffer'.
-build/index.ts(8,2): error TS2322: Type 'string' is not assignable to type 'Buffer & string'.
-build/index.ts(9,2): error TS2322: Type 'string' is not assignable to type 'Buffer & string'.
 build/index.ts(10,19): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'PathOrFileDescriptor'.
   Type 'Function' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 96 more.
-build/index.ts(13,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'File'.
-build/index.ts(14,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'File'.
+build/index.ts(13,24): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
+build/index.ts(14,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
 

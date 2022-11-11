@@ -41,7 +41,7 @@ module.exports.match = mimeMatch
  * @public
  */
 
-function typeis (value: any,  types_: Array<string>) {
+function typeis (value: any,  types_: Array<any>) {
   var i
   var types = types_
 
@@ -90,7 +90,7 @@ function typeis (value: any,  types_: Array<string>) {
  * @public
  */
 
-function hasbody (req: Request) {
+function hasbody (req: express.Request) {
   return req.headers['transfer-encoding'] !== undefined ||
     !isNaN(req.headers['content-length'])
 }
@@ -160,7 +160,7 @@ function typeofrequest (req: Request,  types_: Array<string>) {
  * @public
  */
 
-function normalize (type: ring) {
+function normalize (type: ring | Function) {
   if (typeof type !== 'string') {
     // invalid type
     return false
@@ -194,7 +194,7 @@ function normalize (type: ring) {
  * @public
  */
 
-function mimeMatch (expected: RegExp,  actual: RegExp) {
+function mimeMatch (expected: any,  actual: any) {
   // invalid type
   if (expected === false) {
     return false

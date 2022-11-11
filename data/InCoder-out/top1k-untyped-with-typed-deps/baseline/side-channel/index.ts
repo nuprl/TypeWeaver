@@ -20,7 +20,7 @@ var $mapHas = callBound('Map.prototype.has', true);
 *
 * That node is also moved to the head of the list, so that if it's accessed again we don't need to traverse the whole list. By doing so, all the recently used nodes can be accessed relatively quickly.
 */
-var listGetNode = function (list: List<T>,  key: T) { // eslint-disable-line consistent-return
+var listGetNode = function (list: any,  key: any) { // eslint-disable-line consistent-return
 	for (var prev = list, curr; (curr = prev.next) !== null; prev = curr) {
 		if (curr.key === key) {
 			prev.next = curr.next;
@@ -31,11 +31,11 @@ var listGetNode = function (list: List<T>,  key: T) { // eslint-disable-line con
 	}
 };
 
-var listGet = function (objects: ListNode<any>,  key: any) {
+var listGet = function (objects: any[],  key: any) {
 	var node = listGetNode(objects, key);
 	return node && node.value;
 };
-var listSet = function (objects: Object[],  key: any,  value: any) {
+var listSet = function (objects: any[],  key: any,  value: any) {
 	var node = listGetNode(objects, key);
 	if (node) {
 		node.value = value;
@@ -48,7 +48,7 @@ var listSet = function (objects: Object[],  key: any,  value: any) {
 		};
 	}
 };
-var listHas = function (objects: istNode<any>,  key: any) {
+var listHas = function (objects: ny[],  key: tring | number) {
 	return !!listGetNode(objects, key);
 };
 
@@ -57,12 +57,12 @@ module.exports = function getSideChannel() {
 	var $m;
 	var $o;
 	var channel = {
-		assert: function (key: string | symbol) {
+		assert: function (key: any) {
 			if (!channel.has(key)) {
 				throw new $TypeError('Side channel does not contain ' + inspect(key));
 			}
 		},
-		get: function (key: string | number) { // eslint-disable-line consistent-return
+		get: function (key: any) { // eslint-disable-line consistent-return
 			if ($WeakMap && key && (typeof key === 'object' || typeof key === 'function')) {
 				if ($wm) {
 					return $weakMapGet($wm, key);

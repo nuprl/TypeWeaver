@@ -18,7 +18,7 @@ function getConnectionName(host: String,  port: Int) {
   return name
 }    
 
-function ForeverAgent(options: ForeverAgent.Option) {
+function ForeverAgent(options: AgentOptions) {
   var self = this
   self.options = options || {}
   self.requests = {}
@@ -26,7 +26,7 @@ function ForeverAgent(options: ForeverAgent.Option) {
   self.freeSockets = {}
   self.maxSockets = self.options.maxSockets || Agent.defaultMaxSockets
   self.minSockets = self.options.minSockets || ForeverAgent.defaultMinSockets
-  self.on('free', function(socket: Socket,  host: Host,  port: number) {
+  self.on('free', function(socket: Socket,  host: String,  port: Int) {
     var name = getConnectionName(host, port)
 
     if (self.requests[name] && self.requests[name].length) {
@@ -58,7 +58,7 @@ ForeverAgent.defaultMinSockets = 5
 
 ForeverAgent.prototype.createConnection = net.createConnection
 ForeverAgent.prototype.addRequestNoreuse = Agent.prototype.addRequest
-ForeverAgent.prototype.addRequest = function(req: Request,  host: Host,  port: number) {
+ForeverAgent.prototype.addRequest = function(req: http.IncomingMessage,  host: http.Server,  port: number) {
   var name = getConnectionName(host, port)
   
   if (typeof host !== 'string') {
@@ -78,7 +78,7 @@ ForeverAgent.prototype.addRequest = function(req: Request,  host: Host,  port: n
   }
 }
 
-ForeverAgent.prototype.removeSocket = function(s: string,  name: string,  host: number,  port: number) {
+ForeverAgent.prototype.removeSocket = function(s: string,  name: string,  host: string | null,  port: string | null) {
   if (this.sockets[name]) {
     var index = this.sockets[name].indexOf(s)
     if (index !== -1) {
@@ -107,7 +107,7 @@ ForeverAgent.prototype.removeSocket = function(s: string,  name: string,  host: 
   }
 }
 
-function ForeverAgentSSL (options: ForeverAgentOptions) {
+function ForeverAgentSSL (options: any) {
   ForeverAgent.call(this, options)
 }
 util.inherits(ForeverAgentSSL, ForeverAgent)

@@ -27,7 +27,7 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *
  * async.auto({
  *     dep1: async.retryable(3, getFromFlakyService),
- *     process: ["dep1", async.retryable(3, function (results: any[],  cb: Function) {
+ *     process: ["dep1", async.retryable(3, function (results: any,  cb: Function) {
  *         maybeProcessData(results.dep1, cb);
  *     })]
  * }, callback);

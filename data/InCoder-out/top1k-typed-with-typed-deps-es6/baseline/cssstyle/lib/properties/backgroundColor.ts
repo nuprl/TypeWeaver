@@ -16,7 +16,7 @@ var parse = function parse(v: any) {
   return undefined;
 };
 
-export const isValid = function isValid(v: string) {
+export const isValid = function isValid(v: ny) {
   return parse(v) !== undefined;
 };
 

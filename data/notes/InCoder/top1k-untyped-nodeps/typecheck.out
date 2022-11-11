@@ -1,8 +1,8 @@
 Source directory: .
 Dataset: top1k-untyped-nodeps
-Type checking with: /mnt/data/mhyee/not-type-inference/tools/node_modules/typescript/bin/tsc
-Input directory: /mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-untyped-nodeps/baseline
-Output directory: /mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-untyped-nodeps/baseline-checked
+Type checking with: /work/arjunguha-research-group/mhyee/not-type-inference/tools/node_modules/typescript/bin/tsc
+Input directory: /work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-untyped-nodeps/baseline
+Output directory: /work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-untyped-nodeps/baseline-checked
 Found 100 packages
 [1/100] @gar_promisify ... [FAIL]
 [2/100] @humanwhocodes_object-schema ... [FAIL]
@@ -21,7 +21,7 @@ Found 100 packages
 [15/100] aws-sign2 ... [FAIL]
 [16/100] buffer-equal-constant-time ... [FAIL]
 [17/100] builtin-status-codes ... [ OK ]
-[18/100] cli-width ... [ OK ]
+[18/100] cli-width ... [FAIL]
 [19/100] code-point-at ... [ OK ]
 [20/100] console-browserify ... [FAIL]
 [21/100] console-control-strings ... [FAIL]
@@ -47,21 +47,21 @@ Found 100 packages
 [41/100] has-unicode ... [ OK ]
 [42/100] infer-owner ... [ OK ]
 [43/100] is-accessor-descriptor ... [ OK ]
-[44/100] is-arrayish ... [ OK ]
+[44/100] is-arrayish ... [FAIL]
 [45/100] is-descriptor ... [ OK ]
 [46/100] is-extglob ... [ OK ]
-[47/100] is-map ... [ OK ]
+[47/100] is-map ... [FAIL]
 [48/100] is-negative-zero ... [ OK ]
 [49/100] is-potential-custom-element-name ... [ OK ]
 [50/100] is-primitive ... [FAIL]
 [51/100] is-set ... [FAIL]
-[52/100] is-weakmap ... [ OK ]
+[52/100] is-weakmap ... [FAIL]
 [53/100] json-parse-even-better-errors ... [FAIL]
 [54/100] json-stable-stringify-without-jsonify ... [FAIL]
 [55/100] map-cache ... [FAIL]
 [56/100] mdn-data ... [ OK ]
 [57/100] minimalistic-crypto-utils ... [FAIL]
-[58/100] mixin-deep ... [ OK ]
+[58/100] mixin-deep ... [FAIL]
 [59/100] nan ... [FAIL]
 [60/100] node-domexception ... [FAIL]
 [61/100] node-modules-regexp ... [ OK ]
@@ -87,7 +87,7 @@ Found 100 packages
 [81/100] snapdragon-capture ... [FAIL]
 [82/100] snapdragon-node ... [FAIL]
 [83/100] source-map-url ... [FAIL]
-[84/100] stealthy-require ... [FAIL]
+[84/100] stealthy-require ... [ OK ]
 [85/100] strip-eof ... [FAIL]
 [86/100] to-arraybuffer ... [FAIL]
 [87/100] toidentifier ... [FAIL]
@@ -104,7 +104,7 @@ Found 100 packages
 [98/100] whatwg-fetch ... [FAIL]
 [99/100] which-module ... [ OK ]
 [100/100] wrappy ... [FAIL]
-Number of successes: 30
-Number of fails: 70
+Number of successes: 26
+Number of fails: 74
 Number of skips: 0
-Time for type checking: 0:01:01
+Time for type checking: 0:00:31

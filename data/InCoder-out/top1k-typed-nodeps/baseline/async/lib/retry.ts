@@ -87,7 +87,7 @@ function constant(value: any) {
  * async.auto({
  *     users: api.getUsers.bind(api),
  *     payments: async.retryable(3, api.getPayments.bind(api))
- * }, function(err: Error,  results: any) {
+ * }, function(err: MongoError,  results: any) {
  *     // do something with the results
  * });
  *
@@ -95,7 +95,7 @@ function constant(value: any) {
 const DEFAULT_TIMES = 5;
 const DEFAULT_INTERVAL = 0;
 
-export default function retry(opts: RetryOptions,  task: Task,  callback: Function) {
+export default function retry(opts: RetryOptions,  task: Task,  callback: Callback<Task>) {
     var options = {
         times: DEFAULT_TIMES,
         intervalFunc: constant(DEFAULT_INTERVAL)
@@ -133,7 +133,7 @@ export default function retry(opts: RetryOptions,  task: Task,  callback: Functi
     return callback[PROMISE_SYMBOL]
 }
 
-function parseTimes(acc: number,  t: number) {
+function parseTimes(acc: any,  t: any) {
     if (typeof t === 'object') {
         acc.times = +t.times || DEFAULT_TIMES;
 

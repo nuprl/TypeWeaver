@@ -19,7 +19,7 @@ for (const model of Object.keys(convert)) {
 
 const limiters = {};
 
-function Color(object: Object,  model: Model) {
+function Color(object: Color,  model: ColorModel) {
 	if (!(this instanceof Color)) {
 		return new Color(object, model);
 	}
@@ -442,7 +442,7 @@ function roundToPlace(places: number) {
 	};
 }
 
-function getset(model: Model,  channel: Channel,  modifier: Modifier) {
+function getset(model: any,  channel: any,  modifier: any) {
 	model = Array.isArray(model) ? model : [model];
 
 	for (const m of model) {
@@ -483,7 +483,7 @@ function assertArray(value: any) {
 	return Array.isArray(value) ? value : [value];
 }
 
-function zeroArray(array: Array,  length: number) {
+function zeroArray(array: Uint8Array,  length: number) {
 	for (let i = 0; i < length; i++) {
 		if (typeof array[i] !== 'number') {
 			array[i] = 0;

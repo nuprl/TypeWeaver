@@ -20,7 +20,7 @@ if (!Object.keys) {
 		'propertyIsEnumerable',
 		'constructor'
 	];
-	var equalsConstructorPrototype = function (o: Object) {
+	var equalsConstructorPrototype = function (o: any) {
 		var ctor = o.constructor;
 		return ctor && ctor.prototype === o;
 	};
@@ -66,7 +66,7 @@ if (!Object.keys) {
 		}
 		return false;
 	}());
-	var equalsConstructorPrototypeIfNotBuggy = function (o: Object) {
+	var equalsConstructorPrototypeIfNotBuggy = function (o: any) {
 		if (typeof window === 'undefined' || !hasAutomationEqualityBug) {
 			return equalsConstructorPrototype(o);
 		}

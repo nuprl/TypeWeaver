@@ -4,7 +4,7 @@ const fs = require('../fs')
 const path = require('path')
 const util = require('util')
 
-function getStats (src: Buffer,  dest: Buffer,  opts: Stats) {
+function getStats (src: fs.Stats,  dest: fs.Stats,  opts: any) {
   const statFunc = opts.dereference
     ? (file) => fs.stat(file, { bigint: true })
     : (file) => fs.lstat(file, { bigint: true })
@@ -17,7 +17,7 @@ function getStats (src: Buffer,  dest: Buffer,  opts: Stats) {
   ]).then(([srcStat, destStat]) => ({ srcStat, destStat }))
 }
 
-function getStatsSync (src: fs.ReadStream,  dest: fs.WriteStream,  opts: fs.WriteStreamOptions) {
+function getStatsSync (src: fs.Stats,  dest: fs.Stats,  opts: any) {
   let destStat
   const statFunc = opts.dereference
     ? (file) => fs.statSync(file, { bigint: true })
@@ -32,7 +32,7 @@ function getStatsSync (src: fs.ReadStream,  dest: fs.WriteStream,  opts: fs.Writ
   return { srcStat, destStat }
 }
 
-function checkPaths (src: string | Buffer,  dest: string | Buffer,  funcName: string,  opts: any,  cb: Function) {
+function checkPaths (src: any,  dest: any,  funcName: any,  opts: any,  cb: any) {
   util.callbackify(getStats)(src, dest, opts, (err, stats) => {
     if (err) return cb(err)
     const { srcStat, destStat } = stats
@@ -63,7 +63,7 @@ function checkPaths (src: string | Buffer,  dest: string | Buffer,  funcName: st
   })
 }
 
-function checkPathsSync (src: string | Buffer,  dest: string | Buffer,  funcName: string,  opts: any) {
+function checkPathsSync (src: Path,  dest: Path,  funcName: Function,  opts: Object) {
   const { srcStat, destStat } = getStatsSync(src, dest, opts)
 
   if (destStat) {
@@ -95,7 +95,7 @@ function checkPathsSync (src: string | Buffer,  dest: string | Buffer,  funcName
 // It works for all file types including symlinks since it
 // checks the src and dest inodes. It starts from the deepest
 // parent and stops once it reaches the src parent or the root path.
-function checkParentPaths (src: any,  srcStat: any,  dest: any,  funcName: any,  cb: Function) {
+function checkParentPaths (src: fs.Stats,  srcStat: fs.Stats,  dest: fs.Stats,  funcName: funcName,  cb: cb) {
   const srcParent = path.resolve(path.dirname(src))
   const destParent = path.resolve(path.dirname(dest))
   if (destParent === srcParent || destParent === path.parse(destParent).root) return cb()
@@ -111,7 +111,7 @@ function checkParentPaths (src: any,  srcStat: any,  dest: any,  funcName: any, 
   })
 }
 
-function checkParentPathsSync (src: fs.Stats,  srcStat: fs.Stats,  dest: fs.Stats,  funcName: string) {
+function checkParentPathsSync (src: fs.Stats,  srcStat: fs.Stats,  dest: fs.Stats,  funcName: funcName) {
   const srcParent = path.resolve(path.dirname(src))
   const destParent = path.resolve(path.dirname(dest))
   if (destParent === srcParent || destParent === path.parse(destParent).root) return
@@ -134,7 +134,7 @@ function areIdentical (srcStat: Stat,  destStat: Stat) {
 
 // return true if dest is a subdir of src, otherwise false.
 // It only checks the path strings.
-function isSrcSubdir (src: Path,  dest: Path) {
+function isSrcSubdir (src: URI,  dest: URI) {
   const srcArr = path.resolve(src).split(path.sep).filter(i => i)
   const destArr = path.resolve(dest).split(path.sep).filter(i => i)
   return srcArr.reduce((acc, cur, i) => acc && destArr[i] === cur, true)

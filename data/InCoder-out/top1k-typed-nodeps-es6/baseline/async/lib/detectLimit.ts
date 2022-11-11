@@ -25,7 +25,7 @@ import awaitify from './internal/awaitify.js'
  * (err, result).
  * @returns {Promise} a promise, if a callback is omitted
  */
-function detectLimit(coll: Collection,  limit: number,  iteratee: Iteratee,  callback: Callback) {
+function detectLimit(coll: Collection,  limit: number,  iteratee: Function,  callback: Function) {
     return createTester(bool => bool, (res, item) => item)(eachOfLimit(limit), coll, iteratee, callback)
 }
 export default awaitify(detectLimit, 4)

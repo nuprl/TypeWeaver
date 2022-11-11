@@ -85,7 +85,7 @@ export default class DLL {
     }
 }
 
-function setInitial(dll: number,  node: Node) {
+function setInitial(dll: Float32Array,  node: Node) {
     dll.length = 1;
     dll.head = dll.tail = node;
 }

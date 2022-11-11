@@ -43,7 +43,7 @@ function apply(styleElement: HTMLElement,  options: any,  obj: any) {
   options.styleTagTransform(css, styleElement, options.options);
 }
 
-function removeStyleElement(styleElement: HTMLStyleElement) {
+function removeStyleElement(styleElement: HTMLElement) {
   // istanbul ignore if
   if (styleElement.parentNode === null) {
     return false;

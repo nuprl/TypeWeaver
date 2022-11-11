@@ -1,4 +1,4 @@
-export default function(fp: String,  stripTrailing: Boolean) {
+export default function(fp: any,  stripTrailing: boolean) {
   fp = fp.replace(/[\\\/]+/g, '/');
   fp = fp.replace(/^\.\//g, '');
   if (stripTrailing === false) {

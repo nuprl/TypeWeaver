@@ -1,4 +1,4 @@
-(function (global: any,  undefined: any) {
+(function (global: typeof global,  undefined: typeof undefined) {
     "use strict";
 
     if (global.setImmediate) {
@@ -54,7 +54,7 @@
         }
     }
 
-    function runIfPresent(handle: Function) {
+    function runIfPresent(handle: Handle) {
         // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
         // So if we're currently running a task, we'll need to delay this invocation.
         if (currentlyRunningATask) {
@@ -128,7 +128,7 @@
             runIfPresent(handle);
         };
 
-        registerImmediate = function(handle: number) {
+        registerImmediate = function(handle: any) {
             channel.port2.postMessage(handle);
         };
     }
@@ -150,7 +150,7 @@
     }
 
     function installSetTimeoutImplementation() {
-        registerImmediate = function(handle: Function) {
+        registerImmediate = function(handle: Handle) {
             setTimeout(runIfPresent, 0, handle);
         };
     }

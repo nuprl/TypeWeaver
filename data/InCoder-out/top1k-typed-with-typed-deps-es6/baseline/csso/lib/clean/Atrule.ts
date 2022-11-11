@@ -1,7 +1,7 @@
 import { keyword as resolveKeyword } from 'css-tree';
 import { hasNoChildren } from './utils.js';
 
-export default function cleanAtrule(node: Atrule,  item: AtruleItem,  list: AtruleList) {
+export default function cleanAtrule(node: CssNode,  item: CssNode,  list: CssNode[]) {
     if (node.block) {
         // otherwise removed at-rule don't prevent @import for removal
         if (this.stylesheet !== null) {
@@ -37,7 +37,7 @@ export default function cleanAtrule(node: Atrule,  item: AtruleItem,  list: Atru
 
             // if there are some rules that not an @import or @charset before @import
             // remove it
-            list.prevUntil(item.prev, function(rule: Rule) {
+            list.prevUntil(item.prev, function(rule: Atrule) {
                 if (rule.type === 'Atrule') {
                     if (rule.name === 'import' || rule.name === 'charset') {
                         return;

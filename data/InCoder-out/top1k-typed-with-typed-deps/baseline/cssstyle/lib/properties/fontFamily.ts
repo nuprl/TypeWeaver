@@ -22,7 +22,7 @@ module.exports.isValid = function isValid(v: any) {
 };
 
 module.exports.definition = {
-  set: function(v: any) {
+  set: function(v: string | string[]) {
     this._setProperty('font-family', v);
   },
   get: function() {

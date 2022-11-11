@@ -7,13 +7,13 @@
 
 var fs = require('fs')
 
-module.exports = function writeDatabaseSync (fileName: string | Buffer,  obj: any) {
+module.exports = function writeDatabaseSync (fileName: any,  obj: any) {
   var fd = fs.openSync(fileName, 'w')
   var keys = Object.keys(obj).sort()
 
   fs.writeSync(fd, '{\n')
 
-  keys.forEach(function (key: any,  i: number,  arr: Array<any>) {
+  keys.forEach(function (key: any,  i: any,  arr: any[]) {
     fs.writeSync(fd, '  ' + JSON.stringify(key) + ': {')
 
     var end = endLine.apply(this, arguments)
@@ -26,7 +26,7 @@ module.exports = function writeDatabaseSync (fileName: string | Buffer,  obj: an
     }
 
     fs.writeSync(fd, '\n')
-    keys.forEach(function (key: any,  i: number,  arr: Array<any>) {
+    keys.forEach(function (key: any,  i: any,  arr: any[]) {
       var end = endLine.apply(this, arguments)
       var val = data[key]
 
@@ -47,7 +47,7 @@ module.exports = function writeDatabaseSync (fileName: string | Buffer,  obj: an
   fs.closeSync(fd)
 }
 
-function endLine (key: number,  i: number,  arr: Array<any>) {
+function endLine (key: number,  i: number,  arr: number[]) {
   var comma = i + 1 === arr.length
     ? ''
     : ','

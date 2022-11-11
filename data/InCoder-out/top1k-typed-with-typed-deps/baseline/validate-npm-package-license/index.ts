@@ -10,11 +10,11 @@ var genericWarning = (
 
 var fileReferenceRE = /^SEE LICEN[CS]E IN (.+)$/;
 
-function startsWith(prefix: string | RegExp,  string: string | string[]) {
+function startsWith(prefix: string | RegExp,  string: string | RegExp) {
   return string.slice(0, prefix.length) === prefix;
 }
 
-function usesLicenseRef(ast: ts.Node) {
+function usesLicenseRef(ast: Object) {
   if (ast.hasOwnProperty('license')) {
     var license = ast.license;
     return (

@@ -1,7 +1,7 @@
 import breakLoop from './breakLoop.js'
 
 // for async generators
-export default function asyncEachOfLimit(generator: AsyncGenerator,  limit: number,  iteratee: Function,  callback: Function) {
+export default function asyncEachOfLimit(generator: AsyncGeneratorFunction,  limit: number,  iteratee: Function,  callback: Function) {
     let done = false
     let canceled = false
     let awaiting = false

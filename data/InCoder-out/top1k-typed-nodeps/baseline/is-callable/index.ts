@@ -72,7 +72,7 @@ if (typeof document === 'object') {
 }
 
 module.exports = reflectApply
-	? function isCallable(value: any) {
+	? function isCallable(value: DDA) {
 		if (isDDA(value)) { return true; }
 		if (!value) { return false; }
 		if (typeof value !== 'function' && typeof value !== 'object') { return false; }
@@ -84,7 +84,7 @@ module.exports = reflectApply
 		}
 		return !isES6ClassFn(value);
 	}
-	: function isCallable(value: any) {
+	: function isCallable(value: DDA) {
 		if (isDDA(value)) { return true; }
 		if (!value) { return false; }
 		if (typeof value !== 'function' && typeof value !== 'object') { return false; }

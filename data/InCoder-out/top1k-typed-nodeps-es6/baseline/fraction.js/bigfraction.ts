@@ -37,7 +37,7 @@
  *
  */
 
-(function(root: any) {
+(function(root: Node) {
 
   "use strict";
 
@@ -294,7 +294,7 @@
     P["d"] = d < C_ZERO ? -d : d;
   };
 
-  function modpow(b: number,  e: number,  m: number) {
+  function modpow(b: BigInt,  e: BigInt,  m: BigInt) {
 
     let r = C_ONE;
     for (; e > C_ZERO; b = (b * b) % m, e >>= C_ONE) {
@@ -527,7 +527,7 @@
      *
      * Ex: new Fraction(5,8).gcd(3,7) => 1/56
      */
-    "gcd": function(a: any,  b: any) {
+    "gcd": function(a: number,  b: number) {
 
       parse(a, b);
 
@@ -541,7 +541,7 @@
      *
      * Ex: new Fraction(5,8).lcm(3,7) => 15
      */
-    "lcm": function(a: any,  b: any) {
+    "lcm": function(a: number,  b: number) {
 
       parse(a, b);
 
@@ -567,7 +567,7 @@
      *
      * Ex: new Fraction(-1,2).pow(-3) => -8
      */
-    "pow": function(a: any,  b: any) {
+    "pow": function(a: number,  b: number) {
 
       parse(a, b);
 
@@ -632,7 +632,7 @@
      *
      * Ex: new Fraction(19.6).equals([98, 5]);
      **/
-    "equals": function(a: any,  b: any) {
+    "equals": function(a: number,  b: number) {
 
       parse(a, b);
       return this["s"] * this["n"] * P["d"] === P["s"] * P["n"] * this["d"]; // Same as compare() === 0
@@ -643,7 +643,7 @@
      *
      * Ex: new Fraction(19.6).equals([98, 5]);
      **/
-    "compare": function(a: any,  b: any) {
+    "compare": function(a: number,  b: number) {
 
       parse(a, b);
       let t = (this["s"] * this["n"] * P["d"] - P["s"] * P["n"] * this["d"]);
@@ -713,7 +713,7 @@
      *
      * Ex: new Fraction(19.6).divisible(1.5);
      */
-    "divisible": function(a: any,  b: any) {
+    "divisible": function(a: number,  b: number) {
 
       parse(a, b);
       return !(!(P["n"] * this["d"]) || ((this["n"] * P["d"]) % (P["n"] * this["d"])));
@@ -788,7 +788,7 @@
      *
      * Ex: new Fraction("1.'3'").toFraction() => "4 1/3"
      **/
-    'toFraction': function(excludeWhole: number) {
+    'toFraction': function(excludeWhole: Boolean) {
 
       let n = this["n"];
       let d = this["d"];
@@ -816,7 +816,7 @@
      *
      * Ex: new Fraction("1.'3'").toLatex() => "\frac{4}{3}"
      **/
-    'toLatex': function(excludeWhole: number) {
+    'toLatex': function(excludeWhole: Boolean) {
 
       let n = this["n"];
       let d = this["d"];

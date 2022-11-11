@@ -4,14 +4,14 @@ import finalPropName from "../css/finalPropName.js";
 
 import "../css.js";
 
-function Tween( elem: Element,  options: TweenOptions,  prop: string | number | boolean,  end: number | boolean,  easing : string | Function) {
+function Tween( elem: elem,  options: TweenOptions,  prop: prop,  end: end,  easing : easing) {
 	return new Tween.prototype.init( elem, options, prop, end, easing );
 }
 jQuery.Tween = Tween;
 
 Tween.prototype = {
 	constructor: Tween,
-	init: function( elem: HTMLElement,  options: any,  prop: string,  end: boolean,  easing: string,  unit : string) {
+	init: function( elem: elem,  options: options,  prop: prop,  end: end,  easing: easing,  unit : unit) {
 		this.elem = elem;
 		this.prop = prop;
 		this.easing = easing || jQuery.easing._default;
@@ -57,7 +57,7 @@ Tween.prototype.init.prototype = Tween.prototype;
 
 Tween.propHooks = {
 	_default: {
-		get: function( tween : Tween) {
+		get: function( tween : tweens.Tween) {
 			var result;
 
 			// Use a property on the element directly when it is not a DOM element,
@@ -76,7 +76,7 @@ Tween.propHooks = {
 			// Empty strings, null, undefined and "auto" are converted to 0.
 			return !result || result === "auto" ? 0 : result;
 		},
-		set: function( tween : Tween) {
+		set: function( tween : tween) {
 
 			// Use step hook for back compat.
 			// Use cssHook if its there.
@@ -95,7 +95,7 @@ Tween.propHooks = {
 };
 
 jQuery.easing = {
-	linear: function( p : String) {
+	linear: function( p : number) {
 		return p;
 	},
 	swing: function( p : number) {

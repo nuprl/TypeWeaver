@@ -6,7 +6,7 @@
  * @param {Array} [array=[]] The array to copy values to.
  * @returns {Array} Returns `array`.
  */
-function copyArray(source: Array,  array: Array) {
+function copyArray(source: ArrayLike<number>,  array: ArrayLike<number>) {
   let index = -1
   const length = source.length
 

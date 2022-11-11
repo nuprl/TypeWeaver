@@ -31,6 +31,7 @@ benchmark/code/switch.ts(102,19): error TS2339: Property 'return' does not exist
 benchmark/code/switch.ts(103,19): error TS2339: Property 'next' does not exist on type 'unknown'.
 benchmark/index.ts(4,19): error TS2307: Cannot find module 'benchmarked' or its corresponding type declarations.
 benchmark/index.ts(5,19): error TS2307: Cannot find module 'write' or its corresponding type declarations.
+benchmark/index.ts(11,25): error TS2304: Cannot find name 'Stats'.
 browser.ts(2,3): error TS1258: A default export must be at the top level of a file or module declaration.
 browser.ts(3,17): error TS2304: Cannot find name 'define'.
 browser.ts(3,38): error TS2304: Cannot find name 'define'.
@@ -48,22 +49,18 @@ browser.ts(61,12): error TS2678: Type '"[object Map Iterator]"' is not comparabl
 browser.ts(62,12): error TS2678: Type '"[object Set Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 browser.ts(63,12): error TS2678: Type '"[object String Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 browser.ts(64,12): error TS2678: Type '"[object Array Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
-browser.ts(81,48): error TS2339: Property 'message' does not exist on type 'unknown'.
-browser.ts(81,114): error TS2339: Property 'stackTraceLimit' does not exist on type 'Function'.
 browser.ts(104,23): error TS2339: Property 'throw' does not exist on type 'unknown'.
 browser.ts(105,21): error TS2339: Property 'return' does not exist on type 'unknown'.
 browser.ts(106,21): error TS2339: Property 'next' does not exist on type 'unknown'.
-browser.ts(109,29): error TS2304: Cannot find name 'mixed'.
+browser.ts(111,22): error TS2339: Property 'length' does not exist on type 'unknown'.
+browser.ts(111,56): error TS2339: Property 'callee' does not exist on type 'unknown'.
 index.ts(13,12): error TS2554: Expected 2 arguments, but got 1.
 index.ts(56,10): error TS2678: Type '"[object Object]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 index.ts(58,10): error TS2678: Type '"[object Map Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 index.ts(59,10): error TS2678: Type '"[object Set Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 index.ts(60,10): error TS2678: Type '"[object String Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 index.ts(61,10): error TS2678: Type '"[object Array Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
-index.ts(78,46): error TS2339: Property 'message' does not exist on type 'unknown'.
-index.ts(78,112): error TS2339: Property 'stackTraceLimit' does not exist on type 'Function'.
 index.ts(101,21): error TS2339: Property 'throw' does not exist on type 'unknown'.
 index.ts(102,19): error TS2339: Property 'return' does not exist on type 'unknown'.
 index.ts(103,19): error TS2339: Property 'next' does not exist on type 'unknown'.
-index.ts(106,27): error TS2304: Cannot find name 'mixed'.
 

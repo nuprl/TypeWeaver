@@ -2,7 +2,7 @@
 
 import coerceToSafeInteger from '../safe-integer/coerce';
 
-export default function (value: any) {
+export default function (value: number) {
 	value = coerceToSafeInteger(value);
 	if (!value) return value;
 	if (value < 0) return null;

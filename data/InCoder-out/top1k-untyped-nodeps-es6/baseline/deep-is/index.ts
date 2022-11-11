@@ -8,7 +8,7 @@ var Object_keys = typeof Object.keys === 'function'
     }
 ;
 
-var deepEqual = function (actual: umber,  expected: number) {
+var deepEqual = function (actual: ny,  expected: y) {
   // enforce Object.is +0 !== -0
   if (actual === 0 && expected === 0) {
     return areZerosEqual(actual, expected);
@@ -41,15 +41,15 @@ var deepEqual = function (actual: umber,  expected: number) {
 
 export default deepEqual;
 
-function isUndefinedOrNull(value: unknown) {
+function isUndefinedOrNull(value: any) {
   return value === null || value === undefined;
 }
 
-function isArguments(object: Object) {
+function isArguments(object: unknown) {
   return Object.prototype.toString.call(object) == '[object Arguments]';
 }
 
-function isNumberNaN(value: mixed) {
+function isNumberNaN(value: number) {
   // NaN === NaN -> false
   return typeof value == 'number' && value !== value;
 }

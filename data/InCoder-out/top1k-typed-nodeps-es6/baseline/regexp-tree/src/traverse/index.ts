@@ -24,12 +24,12 @@ import NodePath from './node-path';
  *   - `post`(node, parent, prop, index) - a hook called on node exit
  *   - `skipProperty(prop)` - a predicated whether a property should be skipped
  */
-function astTraverse(root: AST,  options = {}: TraverseOptions) {
+function astTraverse(root: ASTNode,  options = {}: TraverseOptions) {
   const pre = options.pre;
   const post = options.post;
   const skipProperty = options.skipProperty;
 
-  function visit(node: ASTNode,  parent: ASTNode,  prop: Property,  idx: number) {
+  function visit(node: ASTNode,  parent: ASTNode,  prop: ASTNode,  idx: number) {
     if (!node || typeof node.type !== 'string') {
       return;
     }
@@ -160,7 +160,7 @@ export default {
       }
     });
 
-    function getPathFor(node: Node,  parent: Node,  prop: Property,  index: number) {
+    function getPathFor(node: Node,  parent: Node,  prop: string | number,  index: number) {
       const parentPath = NodePath.getForNode(parent);
       const nodePath = NodePath.getForNode(
         node,

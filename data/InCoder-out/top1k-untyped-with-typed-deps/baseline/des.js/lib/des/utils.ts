@@ -1,6 +1,6 @@
 'use strict';
 
-exports.readUInt32BE = function readUInt32BE(bytes: Uint8Array,  off: number) {
+exports.readUInt32BE = function readUInt32BE(bytes: Buffer,  off: number) {
   var res =  (bytes[0 + off] << 24) |
              (bytes[1 + off] << 16) |
              (bytes[2 + off] << 8) |
@@ -8,7 +8,7 @@ exports.readUInt32BE = function readUInt32BE(bytes: Uint8Array,  off: number) {
   return res >>> 0;
 };
 
-exports.writeUInt32BE = function writeUInt32BE(bytes: number[],  value: number,  off: number) {
+exports.writeUInt32BE = function writeUInt32BE(bytes: Buffer,  value: number,  off: number) {
   bytes[0 + off] = value >>> 24;
   bytes[1 + off] = (value >>> 16) & 0xff;
   bytes[2 + off] = (value >>> 8) & 0xff;

@@ -18,7 +18,7 @@
     typed = require('./typed');
     utility = require('./utility');
 
-    function sliceSource(source: ArrayLike<number>,  index: number,  last: number) {
+    function sliceSource(source: Source,  index: number,  last: number) {
         return source.slice(index, last);
     }
 
@@ -28,7 +28,7 @@
             return func.call(obj, name);
         };
     }());
-    function shallowCopy(obj: any) {
+    function shallowCopy(obj: Object) {
         var ret = {}, key;
         for (key in obj) {
             if (obj.hasOwnProperty(key)) {
@@ -44,36 +44,36 @@
             (ch >= 0x30  /* '0' */ && ch <= 0x39  /* '9' */);
     }
 
-    function isParamTitle(title: string | string[]) {
+    function isParamTitle(title: Title) {
         return title === 'param' || title === 'argument' || title === 'arg';
     }
 
-    function isReturnTitle(title: string | null) {
+    function isReturnTitle(title: Title) {
         return title === 'return' || title === 'returns';
     }
 
-    function isProperty(title: string | undefined) {
+    function isProperty(title: Title) {
         return title === 'property' || title === 'prop';
     }
 
-    function isNameParameterRequired(title: string | undefined) {
+    function isNameParameterRequired(title: Title) {
         return isParamTitle(title) || isProperty(title) ||
             title === 'alias' || title === 'this' || title === 'mixes' || title === 'requires';
     }
 
-    function isAllowedName(title: string | undefined) {
+    function isAllowedName(title: Title) {
         return isNameParameterRequired(title) || title === 'const' || title === 'constant';
     }
 
-    function isAllowedNested(title: string | undefined) {
+    function isAllowedNested(title: Title) {
         return isProperty(title) || isParamTitle(title);
     }
 
-    function isAllowedOptional(title: string | undefined) {
+    function isAllowedOptional(title: Title) {
         return isProperty(title) || isParamTitle(title);
     }
 
-    function isTypeParameterRequired(title: string | undefined) {
+    function isTypeParameterRequired(title: ts.Node) {
         return isParamTitle(title) || isReturnTitle(title) ||
             title === 'define' || title === 'enum' ||
             title === 'implements' || title === 'this' ||
@@ -82,7 +82,7 @@
 
     // Consider deprecation instead using 'isTypeParameterRequired' and 'Rules' declaration to pick when a type is optional/required
     // This would require changes to 'parseType'
-    function isAllowedType(title: string | undefined) {
+    function isAllowedType(title: Title) {
         return isTypeParameterRequired(title) || title === 'throws' || title === 'const' || title === 'constant' ||
             title === 'namespace' || title === 'member' || title === 'var' || title === 'module' ||
             title === 'constructor' || title === 'class' || title === 'extends' || title === 'augments' ||
@@ -117,7 +117,7 @@
      * @param {number} unwrappedIndex The index of a character in the unwrapped string
      * @returns {number} The index of the corresponding character in the original wrapped string
      */
-    function convertUnwrappedCommentIndex(originalSource: Source,  unwrappedIndex: Index) {
+    function convertUnwrappedCommentIndex(originalSource: SourceMapSource,  unwrappedIndex: number) {
         var replacedSource = originalSource.replace(/^\/\*\*?/, '');
         var numSkippedChars = 0;
         var matcher = new RegExp(STAR_MATCHER, 'g');
@@ -193,7 +193,7 @@
         // { { ok: string } }
         //
         // therefore, scanning type expression with balancing braces.
-        function parseType(title: string | null,  last: string | null,  addRange: Range) {
+        function parseType(title: String,  last: Int,  addRange: Boolean) {
             var ch, brace, type, startIndex, direct = false;
 
 
@@ -271,7 +271,7 @@
             }
         }
 
-        function parseName(last: any,  allowBrackets: boolean,  allowNestedParams: boolean) {
+        function parseName(last: number,  allowBrackets: boolean,  allowNestedParams: boolean) {
             var name = '',
                 useBrackets,
                 insideString;
@@ -468,7 +468,7 @@
             return true;
         };
 
-        TagParser.prototype._parseNamePath = function (optional: any) {
+        TagParser.prototype._parseNamePath = function (optional: Boolean) {
             var name;
             name = parseName(this._last, sloppy && isAllowedOptional(this._title), true);
             if (!name) {
@@ -800,7 +800,7 @@
         // Parse JSDoc
         //
 
-        function scanJSDocDescription(preserveWhitespace: boolean) {
+        function scanJSDocDescription(preserveWhitespace: Boolean) {
             var description = '', ch, atAllowed;
 
             atAllowed = true;
@@ -823,7 +823,7 @@
             return preserveWhitespace ? description : description.trim();
         }
 
-        function parse(comment: Comment,  options: ParseOptions) {
+        function parse(comment: Comment,  options: Options) {
             var tags = [], tag, description, interestingTags, i, iz;
 
             if (options === undefined) {

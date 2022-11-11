@@ -25,7 +25,7 @@ import mime from '../src/custom-suffix.json';
 Object.keys(mime).forEach(function (suffix: string) {
   var s = mime[suffix]
 
-  Object.keys(db).forEach(function (type: tring) {
+  Object.keys(db).forEach(function (type: ny) {
     if (type.slice(-suffix.length) !== suffix) {
       return
     }
@@ -42,7 +42,7 @@ require('./lib/write-db')('db.json', db)
  * Add mime data to the db, marked as a given source.
  */
 function addData (db: any,  mime: any,  source: any) {
-  Object.keys(mime).forEach(function (key: string | number) {
+  Object.keys(mime).forEach(function (key: any) {
     var data = mime[key]
     var type = key.toLowerCase()
     var obj = db[type] = db[type] || createTypeEntry(source)
@@ -101,7 +101,7 @@ function createTypeEntry (source: Source) {
 /**
  * Set a value on an object, if not already set.
  */
-function setValue (obj: any,  prop: string | number | boolean,  value: any) {
+function setValue (obj: any,  prop: any,  value: any) {
   if (value !== undefined && obj[prop] === undefined) {
     obj[prop] = value
   }

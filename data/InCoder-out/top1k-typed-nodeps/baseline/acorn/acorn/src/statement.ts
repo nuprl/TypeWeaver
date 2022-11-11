@@ -79,7 +79,7 @@ pp.isAsyncFunction = function() {
 // `if (foo) /blah/.exec(foo)`, where looking at the previous token
 // does not help.
 
-pp.parseStatement = function(context: any,  topLevel: number,  exports: any) {
+pp.parseStatement = function(context: any,  topLevel: any,  exports: any) {
   let starttype = this.type, node = this.startNode(), kind
 
   if (this.isLet(context)) {
@@ -254,7 +254,7 @@ pp.parseForStatement = function(node: Node) {
   return this.parseFor(node, init)
 }
 
-pp.parseFunctionStatement = function(node: Node,  isAsync: boolean,  declarationPosition: number) {
+pp.parseFunctionStatement = function(node: Node,  isAsync: Boolean,  declarationPosition: number) {
   this.next()
   return this.parseFunction(node, FUNC_STATEMENT | (declarationPosition ? 0 : FUNC_HANGING_STATEMENT), false, isAsync)
 }
@@ -335,7 +335,7 @@ pp.parseThrowStatement = function(node: Node) {
 
 const empty = []
 
-pp.parseTryStatement = function(node: Block) {
+pp.parseTryStatement = function(node: Node) {
   this.next()
   node.block = this.parseBlock()
   node.handler = null
@@ -392,7 +392,7 @@ pp.parseEmptyStatement = function(node: Node) {
   return this.finishNode(node, "EmptyStatement")
 }
 
-pp.parseLabeledStatement = function(node: Node,  maybeName: any,  expr: Expression,  context: any) {
+pp.parseLabeledStatement = function(node: Node,  maybeName: Name,  expr: Expression,  context: Expression) {
   for (let label of this.labels)
     if (label.name === maybeName)
       this.raise(expr.start, "Label '" + maybeName + "' is already declared")
@@ -422,7 +422,7 @@ pp.parseExpressionStatement = function(node: Node,  expr: Expression) {
 // strict"` declarations when `allowStrict` is true (used for
 // function bodies).
 
-pp.parseBlock = function(createNewLexicalScope = true: LexicalScope,  node = this.startNode(: any), exitStrict) {
+pp.parseBlock = function(createNewLexicalScope = true: Boolean,  node = this.startNode(: Node), exitStrict) {
   node.body = []
   this.expect(tt.braceL)
   if (createNewLexicalScope) this.enterScope(0)
@@ -440,7 +440,7 @@ pp.parseBlock = function(createNewLexicalScope = true: LexicalScope,  node = thi
 // `parseStatement` will already have parsed the init statement or
 // expression.
 
-pp.parseFor = function(node: Node,  init: any) {
+pp.parseFor = function(node: Node,  init: Expression) {
   node.init = init
   this.expect(tt.semi)
   node.test = this.type === tt.semi ? null : this.parseExpression()
@@ -456,7 +456,7 @@ pp.parseFor = function(node: Node,  init: any) {
 // Parse a `for`/`in` and `for`/`of` loop, which are almost
 // same from parser's perspective.
 
-pp.parseForIn = function(node: ts.Node,  init: ts.Expression) {
+pp.parseForIn = function(node: Node,  init: Expression) {
   const isForIn = this.type === tt._in
   this.next()
 
@@ -489,7 +489,7 @@ pp.parseForIn = function(node: ts.Node,  init: ts.Expression) {
 
 // Parse a list of variable declarations.
 
-pp.parseVar = function(node: ts.Node,  isFor: ts.boolean,  kind: ts.SyntaxKind) {
+pp.parseVar = function(node: Node,  isFor: Node,  kind: Node) {
   node.declarations = []
   node.kind = kind
   for (;;) {
@@ -510,7 +510,7 @@ pp.parseVar = function(node: ts.Node,  isFor: ts.boolean,  kind: ts.SyntaxKind) 
   return node
 }
 
-pp.parseVarId = function(decl: ts.Declaration,  kind: ts.SyntaxKind) {
+pp.parseVarId = function(decl: ts.VariableDeclaration,  kind: ts.SyntaxKind) {
   decl.id = this.parseBindingAtom()
   this.checkLValPattern(decl.id, kind === "var" ? BIND_VAR : BIND_LEXICAL, false)
 }
@@ -521,7 +521,7 @@ const FUNC_STATEMENT = 1, FUNC_HANGING_STATEMENT = 2, FUNC_NULLABLE_ID = 4
 // `statement & FUNC_STATEMENT`).
 
 // Remove `allowExpressionBody` for 7.0.0, as it is only called with false
-pp.parseFunction = function(node: Node,  statement: Statement,  allowExpressionBody: boolean,  isAsync: boolean,  forInit: Function) {
+pp.parseFunction = function(node: Node,  statement: Statement,  allowExpressionBody: boolean,  isAsync: boolean,  forInit: boolean) {
   this.initFunction(node)
   if (this.options.ecmaVersion >= 9 || this.options.ecmaVersion >= 6 && !isAsync) {
     if (this.type === tt.star && (statement & FUNC_HANGING_STATEMENT))
@@ -568,7 +568,7 @@ pp.parseFunctionParams = function(node: Node) {
 // Parse a class declaration or literal (depending on the
 // `isStatement` parameter).
 
-pp.parseClass = function(node: Node,  isStatement: any) {
+pp.parseClass = function(node: Node,  isStatement: Boolean) {
   this.next()
 
   // ecma-262 14.6 Class Definitions
@@ -685,7 +685,7 @@ pp.isClassElementNameStart = function() {
   )
 }
 
-pp.parseClassElementName = function(element: Element) {
+pp.parseClassElementName = function(element: Node) {
   if (this.type === tt.privateId) {
     if (this.value === "constructor") {
       this.raise(this.start, "Classes can't have an element named '#constructor'")
@@ -697,7 +697,7 @@ pp.parseClassElementName = function(element: Element) {
   }
 }
 
-pp.parseClassMethod = function(method: Function,  isGenerator: Boolean,  isAsync: Boolean,  allowsDirectSuper: Boolean) {
+pp.parseClassMethod = function(method: any,  isGenerator: any,  isAsync: any,  allowsDirectSuper: any) {
   // Check key and flags
   const key = method.key
   if (method.kind === "constructor") {
@@ -798,7 +798,7 @@ pp.exitClassBody = function() {
   }
 }
 
-function isPrivateNameConflicted(privateNameMap: Map<string, string>,  element: Element) {
+function isPrivateNameConflicted(privateNameMap: PrivateNameMap,  element: Element) {
   const name = element.key.name
   const curr = privateNameMap[name]
 
@@ -824,7 +824,7 @@ function isPrivateNameConflicted(privateNameMap: Map<string, string>,  element: 
   }
 }
 
-function checkKeyName(node: Object,  name: String) {
+function checkKeyName(node: ASTNode,  name: ASTNode) {
   const {computed, key} = node
   return !computed && (
     key.type === "Identifier" && key.name === name ||
@@ -834,7 +834,7 @@ function checkKeyName(node: Object,  name: String) {
 
 // Parses module export declaration.
 
-pp.parseExport = function(node: Node,  exports: boolean) {
+pp.parseExport = function(node: Node,  exports: ExportsType) {
   this.next()
   // export * from '...'
   if (this.eat(tt.star)) {
@@ -912,7 +912,7 @@ pp.checkExport = function(exports: any,  name: any,  pos: any) {
   exports[name] = true
 }
 
-pp.checkPatternExport = function(exports: any,  pat: RegExp) {
+pp.checkPatternExport = function(exports: any,  pat: Pattern) {
   let type = pat.type
   if (type === "Identifier")
     this.checkExport(exports, pat, pat.start)
@@ -1044,7 +1044,7 @@ pp.parseModuleExportName = function() {
 }
 
 // Set `ExpressionStatement#directive` property for directive prologues.
-pp.adaptDirectivePrologue = function(statements: any) {
+pp.adaptDirectivePrologue = function(statements: Statement[]) {
   for (let i = 0; i < statements.length && this.isDirectiveCandidate(statements[i]); ++i) {
     statements[i].directive = statements[i].expression.raw.slice(1, -1)
   }

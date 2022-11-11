@@ -85,7 +85,7 @@ if (isWindows) {
   var splitRootRe = /^[\/]*/;
 }
 
-export const realpathSync = function realpathSync(p: string | Buffer,  cache: any) {
+export const realpathSync = function realpathSync(p: string | Buffer,  cache: string | null | undefined) {
   // make p is absolute
   p = pathModule.resolve(p);
 
@@ -181,7 +181,7 @@ export const realpathSync = function realpathSync(p: string | Buffer,  cache: an
   return p;
 };
 
-export const realpath = function realpath(p: tring | Buffer,  cache: Cache,  cb: Function) {
+export const realpath = function realpath(p: tring | Buffer,  cache: tring | Buffer,  cb: Function) {
   if (typeof cb !== 'function') {
     cb = maybeCallback(cache);
     cache = null;
@@ -281,14 +281,14 @@ export const realpath = function realpath(p: tring | Buffer,  cache: Cache,  cb:
     fs.stat(base, function(err: Error) {
       if (err) return cb(err);
 
-      fs.readlink(base, function(err: Error,  target: any) {
+      fs.readlink(base, function(err: Error,  target: Target) {
         if (!isWindows) seenLinks[id] = target;
         gotTarget(err, target);
       });
     });
   }
 
-  function gotTarget(err: Error,  target: Target,  base: Base) {
+  function gotTarget(err: Error,  target: Target,  base: Target) {
     if (err) return cb(err);
 
     var resolvedLink = pathModule.resolve(previous, target);
@@ -296,7 +296,7 @@ export const realpath = function realpath(p: tring | Buffer,  cache: Cache,  cb:
     gotResolvedLink(resolvedLink);
   }
 
-  function gotResolvedLink(resolvedLink: Link) {
+  function gotResolvedLink(resolvedLink: ResolvedLink) {
     // resolve the link, then start over
     p = pathModule.resolve(resolvedLink, p.slice(pos));
     start();

@@ -1,7 +1,7 @@
 import isArrayLike from './isArrayLike.js'
 import getIterator from './getIterator.js'
 
-function createArrayIterator(coll: ArrayLike) {
+function createArrayIterator(coll: Iterable<any>) {
     var i = -1;
     var len = coll.length;
     return function next() {
@@ -9,7 +9,7 @@ function createArrayIterator(coll: ArrayLike) {
     }
 }
 
-function createES2015Iterator(iterator: Iterator) {
+function createES2015Iterator(iterator: Iterator<any>) {
     var i = -1;
     return function next() {
         var item = iterator.next();
@@ -33,7 +33,7 @@ function createObjectIterator(obj: any) {
     };
 }
 
-export default function createIterator(coll: any) {
+export default function createIterator(coll: Iterable<any>) {
     if (isArrayLike(coll)) {
         return createArrayIterator(coll);
     }

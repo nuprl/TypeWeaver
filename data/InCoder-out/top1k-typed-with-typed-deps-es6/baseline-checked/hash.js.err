@@ -1,88 +1,71 @@
-lib/hash/common.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
-lib/hash/common.ts(20,51): error TS2304: Cannot find name 'Message'.
-lib/hash/common.ts(20,66): error TS2304: Cannot find name 'Enc'.
-lib/hash/common.ts(47,51): error TS2304: Cannot find name 'Encoding'.
-lib/hash/hmac.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
-lib/hash/hmac.ts(6,21): error TS2304: Cannot find name 'Hash'.
-lib/hash/hmac.ts(6,33): error TS2304: Cannot find name 'Key'.
-lib/hash/hmac.ts(6,44): error TS2304: Cannot find name 'Encoding'.
+lib/hash/common.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
+lib/hash/hmac.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/hmac.ts(8,12): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/hash/hmac.ts(27,9): error TS2339: Property 'push' does not exist on type 'string | string[]'.
-  Property 'push' does not exist on type 'string'.
-lib/hash/hmac.ts(30,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/hash/hmac.ts(30,5): error TS2542: Index signature in type 'string | string[]' only permits reading.
-lib/hash/hmac.ts(35,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/hash/hmac.ts(35,5): error TS2542: Index signature in type 'string | string[]' only permits reading.
-lib/hash/hmac.ts(39,60): error TS2304: Cannot find name 'Encoding'.
-lib/hash/hmac.ts(44,46): error TS2304: Cannot find name 'Encoding'.
-lib/hash/ripemd.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/hmac.ts(19,43): error TS2304: Cannot find name 'Key'.
+lib/hash/hmac.ts(44,46): error TS2304: Cannot find name 'BinaryEncoder'.
+lib/hash/ripemd.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/ripemd.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
 lib/hash/ripemd.ts(14,12): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/hash/ripemd.ts(29,52): error TS2304: Cannot find name 'Message'.
-lib/hash/ripemd.ts(70,52): error TS2304: Cannot find name 'Encoding'.
-lib/hash/sha/1.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/sha/1.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/sha/1.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
-lib/hash/sha/1.ts(5,8): error TS1192: Module '"lib/hash/sha/common"' has no default export.
+lib/hash/sha/1.ts(5,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/sha/common"' has no default export.
 lib/hash/sha/1.ts(20,12): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/hash/sha/1.ts(37,48): error TS2304: Cannot find name 'Message'.
-lib/hash/sha/1.ts(69,47): error TS2304: Cannot find name 'Encoding'.
-lib/hash/sha/224.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/sha/224.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/sha/224.ts(8,12): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/hash/sha/224.ts(23,49): error TS2304: Cannot find name 'Encoding'.
-lib/hash/sha/256.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/sha/256.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/sha/256.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
-lib/hash/sha/256.ts(5,8): error TS1192: Module '"lib/hash/sha/common"' has no default export.
+lib/hash/sha/256.ts(5,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/sha/common"' has no default export.
 lib/hash/sha/256.ts(41,12): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/hash/sha/256.ts(59,50): error TS2304: Cannot find name 'Message'.
-lib/hash/sha/256.ts(100,49): error TS2304: Cannot find name 'Encoding'.
-lib/hash/sha/384.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/sha/384.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/sha/384.ts(8,12): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/hash/sha/384.ts(29,49): error TS2304: Cannot find name 'Encoding'.
-lib/hash/sha/512.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/sha/512.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/sha/512.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
 lib/hash/sha/512.ts(66,12): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/hash/sha/512.ts(89,62): error TS2304: Cannot find name 'Message'.
-lib/hash/sha/512.ts(118,50): error TS2304: Cannot find name 'Message'.
+lib/hash/sha/512.ts(118,50): error TS2552: Cannot find name 'Block'. Did you mean 'Lock'?
 lib/hash/sha/512.ts(146,45): error TS2554: Expected 5 arguments, but got 6.
 lib/hash/sha/512.ts(168,42): error TS2554: Expected 5 arguments, but got 6.
-lib/hash/sha/512.ts(209,49): error TS2304: Cannot find name 'Encoding'.
-lib/hash/sha/512.ts(244,24): error TS2304: Cannot find name 'X64Word'.
-lib/hash/sha/512.ts(244,38): error TS2304: Cannot find name 'X64Word'.
-lib/hash/sha/512.ts(255,24): error TS2304: Cannot find name 'X64Word'.
-lib/hash/sha/512.ts(255,38): error TS2304: Cannot find name 'X64Word'.
-lib/hash/sha/512.ts(266,24): error TS2304: Cannot find name 'X64Word'.
-lib/hash/sha/512.ts(266,38): error TS2304: Cannot find name 'X64Word'.
-lib/hash/sha/512.ts(277,24): error TS2304: Cannot find name 'X64Word'.
-lib/hash/sha/512.ts(277,38): error TS2304: Cannot find name 'X64Word'.
-lib/hash/sha/512.ts(288,24): error TS2304: Cannot find name 'X64Word'.
-lib/hash/sha/512.ts(288,38): error TS2304: Cannot find name 'X64Word'.
-lib/hash/sha/512.ts(299,24): error TS2304: Cannot find name 'X64Word'.
-lib/hash/sha/512.ts(299,38): error TS2304: Cannot find name 'X64Word'.
-lib/hash/sha/512.ts(310,24): error TS2304: Cannot find name 'X64Word'.
-lib/hash/sha/512.ts(310,38): error TS2304: Cannot find name 'X64Word'.
-lib/hash/sha/512.ts(321,24): error TS2304: Cannot find name 'X64Word'.
-lib/hash/sha/512.ts(321,38): error TS2304: Cannot find name 'X64Word'.
-lib/hash/sha/common.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
-lib/hash/utils.ts(8,31): error TS2304: Cannot find name 'Message'.
-lib/hash/utils.ts(18,23): error TS2304: Cannot find name 'Message'.
-lib/hash/utils.ts(18,38): error TS2304: Cannot find name 'Encoding'.
-lib/hash/utils.ts(68,18): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-lib/hash/utils.ts(82,40): error TS2304: Cannot find name 'Endian'.
-lib/hash/utils.ts(84,27): error TS2339: Property 'length' does not exist on type 'number'.
-lib/hash/utils.ts(95,12): error TS2339: Property 'length' does not exist on type 'number'.
-lib/hash/utils.ts(103,12): error TS2339: Property 'length' does not exist on type 'number'.
-lib/hash/utils.ts(105,17): error TS2339: Property 'length' does not exist on type 'number'.
-lib/hash/utils.ts(107,17): error TS2339: Property 'length' does not exist on type 'number'.
-lib/hash/utils.ts(109,17): error TS2339: Property 'length' does not exist on type 'number'.
-lib/hash/utils.ts(111,17): error TS2339: Property 'length' does not exist on type 'number'.
-lib/hash/utils.ts(113,17): error TS2339: Property 'length' does not exist on type 'number'.
-lib/hash/utils.ts(115,17): error TS2339: Property 'length' does not exist on type 'number'.
+lib/hash/sha/common.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
+lib/hash/utils.ts(68,18): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Uint8Array'.
+lib/hash/utils.ts(86,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/hash/utils.ts(88,18): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Uint8Array'.
 lib/hash/utils.ts(128,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
-lib/hash/utils.ts(138,40): error TS2304: Cannot find name 'Endian'.
-lib/hash/utils.ts(263,24): error TS2304: Cannot find name 'Word64'.
-lib/hash/utils.ts(263,37): error TS2304: Cannot find name 'Word64'.
-lib/hash/utils.ts(263,51): error TS2304: Cannot find name 'Word64'.
-lib/hash/utils.ts(274,23): error TS2304: Cannot find name 'Word64'.
-lib/hash/utils.ts(274,36): error TS2304: Cannot find name 'Word64'.
-lib/hash/utils.ts(274,50): error TS2304: Cannot find name 'Word64'.
+lib/hash/utils.ts(139,27): error TS2339: Property 'length' does not exist on type 'number'.
+lib/hash/utils.ts(140,34): error TS2339: Property 'length' does not exist on type 'number'.
+lib/hash/utils.ts(142,9): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/hash/utils.ts(212,25): error TS2749: 'ah' refers to a value, but is being used as a type here. Did you mean 'typeof ah'?
+lib/hash/utils.ts(212,34): error TS2749: 'al' refers to a value, but is being used as a type here. Did you mean 'typeof al'?
+lib/hash/utils.ts(212,43): error TS2749: 'bh' refers to a value, but is being used as a type here. Did you mean 'typeof bh'?
+lib/hash/utils.ts(212,52): error TS2749: 'bl' refers to a value, but is being used as a type here. Did you mean 'typeof bl'?
+lib/hash/utils.ts(212,61): error TS2749: 'ch' refers to a value, but is being used as a type here. Did you mean 'typeof ch'?
+lib/hash/utils.ts(212,70): error TS2749: 'cl' refers to a value, but is being used as a type here. Did you mean 'typeof cl'?
+lib/hash/utils.ts(212,79): error TS2749: 'dh' refers to a value, but is being used as a type here. Did you mean 'typeof dh'?
+lib/hash/utils.ts(212,88): error TS2749: 'dl' refers to a value, but is being used as a type here. Did you mean 'typeof dl'?
+lib/hash/utils.ts(227,25): error TS2749: 'ah' refers to a value, but is being used as a type here. Did you mean 'typeof ah'?
+lib/hash/utils.ts(227,34): error TS2749: 'al' refers to a value, but is being used as a type here. Did you mean 'typeof al'?
+lib/hash/utils.ts(227,43): error TS2749: 'bh' refers to a value, but is being used as a type here. Did you mean 'typeof bh'?
+lib/hash/utils.ts(227,52): error TS2749: 'bl' refers to a value, but is being used as a type here. Did you mean 'typeof bl'?
+lib/hash/utils.ts(227,61): error TS2749: 'ch' refers to a value, but is being used as a type here. Did you mean 'typeof ch'?
+lib/hash/utils.ts(227,70): error TS2749: 'cl' refers to a value, but is being used as a type here. Did you mean 'typeof cl'?
+lib/hash/utils.ts(227,79): error TS2749: 'dh' refers to a value, but is being used as a type here. Did you mean 'typeof dh'?
+lib/hash/utils.ts(227,88): error TS2749: 'dl' refers to a value, but is being used as a type here. Did you mean 'typeof dl'?
+lib/hash/utils.ts(233,25): error TS2749: 'ah' refers to a value, but is being used as a type here. Did you mean 'typeof ah'?
+lib/hash/utils.ts(233,34): error TS2749: 'al' refers to a value, but is being used as a type here. Did you mean 'typeof al'?
+lib/hash/utils.ts(233,43): error TS2749: 'bh' refers to a value, but is being used as a type here. Did you mean 'typeof bh'?
+lib/hash/utils.ts(233,52): error TS2749: 'bl' refers to a value, but is being used as a type here. Did you mean 'typeof bl'?
+lib/hash/utils.ts(233,61): error TS2749: 'ch' refers to a value, but is being used as a type here. Did you mean 'typeof ch'?
+lib/hash/utils.ts(233,70): error TS2749: 'cl' refers to a value, but is being used as a type here. Did you mean 'typeof cl'?
+lib/hash/utils.ts(233,79): error TS2749: 'dh' refers to a value, but is being used as a type here. Did you mean 'typeof dh'?
+lib/hash/utils.ts(233,88): error TS2749: 'dl' refers to a value, but is being used as a type here. Did you mean 'typeof dl'?
+lib/hash/utils.ts(233,97): error TS2749: 'eh' refers to a value, but is being used as a type here. Did you mean 'typeof eh'?
+lib/hash/utils.ts(233,106): error TS2749: 'el' refers to a value, but is being used as a type here. Did you mean 'typeof el'?
+lib/hash/utils.ts(250,25): error TS2749: 'ah' refers to a value, but is being used as a type here. Did you mean 'typeof ah'?
+lib/hash/utils.ts(250,34): error TS2749: 'al' refers to a value, but is being used as a type here. Did you mean 'typeof al'?
+lib/hash/utils.ts(250,43): error TS2749: 'bh' refers to a value, but is being used as a type here. Did you mean 'typeof bh'?
+lib/hash/utils.ts(250,52): error TS2749: 'bl' refers to a value, but is being used as a type here. Did you mean 'typeof bl'?
+lib/hash/utils.ts(250,61): error TS2749: 'ch' refers to a value, but is being used as a type here. Did you mean 'typeof ch'?
+lib/hash/utils.ts(250,70): error TS2749: 'cl' refers to a value, but is being used as a type here. Did you mean 'typeof cl'?
+lib/hash/utils.ts(250,79): error TS2749: 'dh' refers to a value, but is being used as a type here. Did you mean 'typeof dh'?
+lib/hash/utils.ts(250,88): error TS2749: 'dl' refers to a value, but is being used as a type here. Did you mean 'typeof dl'?
+lib/hash/utils.ts(250,97): error TS2749: 'eh' refers to a value, but is being used as a type here. Did you mean 'typeof eh'?
+lib/hash/utils.ts(250,106): error TS2749: 'el' refers to a value, but is being used as a type here. Did you mean 'typeof el'?
 

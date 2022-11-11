@@ -1,12 +1,12 @@
 'use strict';
 
 
-function isNothing(subject: unknown) {
+function isNothing(subject: Subject) {
   return (typeof subject === 'undefined') || (subject === null);
 }
 
 
-function isObject(subject: any) {
+function isObject(subject: unknown) {
   return (typeof subject === 'object') && (subject !== null);
 }
 

@@ -17,7 +17,7 @@
     throw new Error('Whoops!');
   }
 
-  let promise = new Promise(function(resolve: Function,  reject: Function){
+  let promise = new Promise(function(resolve: resolve,  reject: reject){
     throws();
   });
 

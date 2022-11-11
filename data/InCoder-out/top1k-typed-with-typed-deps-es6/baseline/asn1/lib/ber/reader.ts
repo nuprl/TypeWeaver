@@ -125,7 +125,7 @@ Reader.prototype.readLength = function (offset: number) {
  *
  * @return {Number} the sequence's tag.
  */
-Reader.prototype.readSequence = function (tag: any) {
+Reader.prototype.readSequence = function (tag: Tag) {
   var seq = this.peek();
   if (seq === null)
     return null;
@@ -157,7 +157,7 @@ Reader.prototype.readEnumeration = function () {
 };
 
 
-Reader.prototype.readString = function (tag: ASN1.Tag,  retbuf: Buffer) {
+Reader.prototype.readString = function (tag: ASN1.Octe,  retbuf: Buffer) {
   if (!tag)
     tag = ASN1.OctetString;
 
@@ -188,7 +188,7 @@ Reader.prototype.readString = function (tag: ASN1.Tag,  retbuf: Buffer) {
   return retbuf ? str : str.toString('utf8');
 };
 
-Reader.prototype.readOID = function (tag: any) {
+Reader.prototype.readOID = function (tag: ASN1.OID) {
   if (!tag)
     tag = ASN1.OID;
 
@@ -218,7 +218,7 @@ Reader.prototype.readOID = function (tag: any) {
 };
 
 
-Reader.prototype._readTag = function (tag: any) {
+Reader.prototype._readTag = function (tag: ag) {
   assert.ok(tag !== undefined);
 
   var b = this.peek();

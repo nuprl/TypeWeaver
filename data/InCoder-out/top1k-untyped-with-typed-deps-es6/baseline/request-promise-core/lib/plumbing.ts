@@ -7,7 +7,7 @@ import isString from 'lodash/isString';
 import isUndefined from 'lodash/isUndefined';
 
 
-export default function (options: IOptions) {
+export default function (options: any) {
 
     var errorText = 'Please verify options'; // For better minification because this string is repeating
 
@@ -42,7 +42,7 @@ export default function (options: IOptions) {
         });
 
         self._rp_callbackOrig = requestOptions.callback;
-        requestOptions.callback = self.callback = function RP$callback(err: Error,  response: Object,  body: Object) {
+        requestOptions.callback = self.callback = function RP$callback(err: Error,  response: Response,  body: RP$Body) {
             plumbing.callback.call(self, err, response, body);
         };
 
@@ -60,12 +60,12 @@ export default function (options: IOptions) {
     };
 
     plumbing.defaultTransformations = {
-        HEAD: function (body: any,  response: Response,  resolveWithFullResponse: any) {
+        HEAD: function (body: any,  response: any,  resolveWithFullResponse: any) {
             return resolveWithFullResponse ? response : response.headers;
         }
     };
 
-    plumbing.callback = function (err: any,  response: any,  body: any) {
+    plumbing.callback = function (err: Error,  response: Response,  body: any) {
 
         var self = this;
 
@@ -93,7 +93,7 @@ export default function (options: IOptions) {
                 (new PromiseImpl(function (resolve: Function) {
                     resolve(self._rp_options.transform(body, response, self._rp_options.resolveWithFullResponse)); // transform may return a Promise
                 }))
-                    .then(function (transformedResponse: Response) {
+                    .then(function (transformedResponse: HttpResponse<any>) {
                         self._rp_reject(new errors.StatusCodeError(response.statusCode, body, self._rp_options, transformedResponse));
                     })
                     .catch(function (transformErr: Error) {
@@ -111,7 +111,7 @@ export default function (options: IOptions) {
                 (new PromiseImpl(function (resolve: Function) {
                     resolve(self._rp_options.transform(body, response, self._rp_options.resolveWithFullResponse)); // transform may return a Promise
                 }))
-                    .then(function (transformedResponse: Response) {
+                    .then(function (transformedResponse: HttpResponse<any>) {
                         self._rp_resolve(transformedResponse);
                     })
                     .catch(function (transformErr: Error) {
@@ -132,7 +132,7 @@ export default function (options: IOptions) {
 
     };
 
-    plumbing.exposePromiseMethod = function (exposeTo: Function,  bindTo: Function,  promisePropertyKey: Function,  methodToExpose: Function,  exposeAs: String) {
+    plumbing.exposePromiseMethod = function (exposeTo: Object,  bindTo: Object,  promisePropertyKey: Object,  methodToExpose: Function,  exposeAs: String) {
 
         exposeAs = exposeAs || methodToExpose;
 
@@ -147,7 +147,7 @@ export default function (options: IOptions) {
 
     };
 
-    plumbing.exposePromise = function (exposeTo: Function,  bindTo: Function,  promisePropertyKey: Function,  exposeAs: Function) {
+    plumbing.exposePromise = function (exposeTo: Object,  bindTo: Object,  promisePropertyKey: Object,  exposeAs: String) {
 
         exposeAs = exposeAs || 'promise';
 

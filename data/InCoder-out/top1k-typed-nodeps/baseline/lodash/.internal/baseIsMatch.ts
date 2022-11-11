@@ -15,7 +15,7 @@ const COMPARE_UNORDERED_FLAG = 2
  * @param {Function} [customizer] The function to customize comparisons.
  * @returns {boolean} Returns `true` if `object` is a match, else `false`.
  */
-function baseIsMatch(object: Object,  source: Object,  matchData: Object,  customizer: Function) {
+function baseIsMatch(object: Object,  source: Object,  matchData: Object,  customizer: matchCustomizer) {
   let index = matchData.length
   const length = index
   const noCustomizer = !customizer

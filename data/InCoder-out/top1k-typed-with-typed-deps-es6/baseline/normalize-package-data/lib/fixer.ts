@@ -43,7 +43,7 @@ export default {
   },
 
   fixTypos: function (data: any) {
-    Object.keys(typos.topLevel).forEach(function (d: any) {
+    Object.keys(typos.topLevel).forEach(function (d: Date) {
       if (Object.prototype.hasOwnProperty.call(data, d)) {
         this.warn('typo', d, typos.topLevel[d])
       }
@@ -59,7 +59,7 @@ export default {
       delete data.scripts
       return
     }
-    Object.keys(data.scripts).forEach(function (k: yof) {
+    Object.keys(data.scripts).forEach(function (k: y) {
       if (typeof data.scripts[k] !== 'string') {
         this.warn('nonStringScript')
         delete data.scripts[k]
@@ -121,7 +121,7 @@ export default {
       this.warn('nonArrayBundleDependencies')
       delete data[bd]
     } else if (data[bd]) {
-      data[bd] = data[bd].filter(function (filtered: Array<any>) {
+      data[bd] = data[bd].filter(function (filtered: any) {
         if (!filtered || typeof filtered !== 'string') {
           this.warn('nonStringBundleDependency', filtered)
           return false
@@ -139,12 +139,12 @@ export default {
     }
   },
 
-  fixDependencies: function (data: any,  strict: boolean) {
+  fixDependencies: function (data: any,  strict: Boolean) {
     objectifyDeps(data, this.warn)
     addOptionalDepsToDeps(data, this.warn)
     this.fixBundleDependenciesField(data)
 
-    ;['dependencies', 'devDependencies'].forEach(function (deps: string[]) {
+    ;['dependencies', 'devDependencies'].forEach(function (deps: any) {
       if (!(deps in data)) {
         return
       }
@@ -341,7 +341,7 @@ export default {
   },
 };
 
-function isValidScopedPackageName (spec: ScopedPackageSpec) {
+function isValidScopedPackageName (spec: PackageSpecifier) {
   if (spec.charAt(0) !== '@') {
     return false
   }
@@ -361,7 +361,7 @@ function isCorrectlyEncodedName (spec: Spec) {
     spec === encodeURIComponent(spec)
 }
 
-function ensureValidName (name: string | undefined,  strict: boolean | undefined,  allowLegacyCase: boolean | undefined) {
+function ensureValidName (name: string,  strict: boolean | undefined,  allowLegacyCase: boolean | undefined) {
   if (name.charAt(0) === '.' ||
       !(isValidScopedPackageName(name) || isCorrectlyEncodedName(name)) ||
       (strict && (!allowLegacyCase) && name !== name.toLowerCase()) ||
@@ -371,7 +371,7 @@ function ensureValidName (name: string | undefined,  strict: boolean | undefined
   }
 }
 
-function modifyPeople (data: People,  fn: Function) {
+function modifyPeople (data: any,  fn: Function) {
   if (data.author) {
     data.author = fn(data.author)
   }['maintainers', 'contributors'].forEach(function (set: Set<string>) {
@@ -383,7 +383,7 @@ function modifyPeople (data: People,  fn: Function) {
   return data
 }
 
-function unParsePerson (person: erson) {
+function unParsePerson (person: tring | any) {
   if (typeof person === 'string') {
     return person
   }
@@ -395,7 +395,7 @@ function unParsePerson (person: erson) {
   return name + wrappedEmail + wrappedUrl
 }
 
-function parsePerson (person: ring | Person) {
+function parsePerson (person: ring | undefined) {
   if (typeof person !== 'string') {
     return person
   }
@@ -427,7 +427,7 @@ function addOptionalDepsToDeps (data: any,  warn: Function) {
   data.dependencies = d
 }
 
-function depObjectify (deps: any[],  type: string,  warn: Function) {
+function depObjectify (deps: Array<Object>,  type: string,  warn: Function) {
   if (!deps) {
     return {}
   }
@@ -441,7 +441,7 @@ function depObjectify (deps: any[],  type: string,  warn: Function) {
   var o = {}
   deps.filter(function (d: ny) {
     return typeof d === 'string'
-  }).forEach(function (d: any) {
+  }).forEach(function (d: string) {
     d = d.trim().split(/(:?[@\s><=])/)
     var dn = d.shift()
     var dv = d.join('')
@@ -452,7 +452,7 @@ function depObjectify (deps: any[],  type: string,  warn: Function) {
   return o
 }
 
-function objectifyDeps (data: any,  warn: Function) {
+function objectifyDeps (data: any,  warn: any) {
   depTypes.forEach(function (type: string) {
     if (!data[type]) {
       return
@@ -461,11 +461,11 @@ function objectifyDeps (data: any,  warn: Function) {
   })
 }
 
-function bugsTypos (bugs: boolean,  warn: boolean) {
+function bugsTypos (bugs: Array<Object>,  warn: Function) {
   if (!bugs) {
     return
   }
-  Object.keys(bugs).forEach(function (k: any) {
+  Object.keys(bugs).forEach(function (k: number) {
     if (typos.bugs[k]) {
       warn('typo', k, typos.bugs[k], 'bugs')
       bugs[typos.bugs[k]] = bugs[k]

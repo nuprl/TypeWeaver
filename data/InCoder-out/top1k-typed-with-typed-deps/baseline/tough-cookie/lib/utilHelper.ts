@@ -13,16 +13,16 @@ function lookupCustomInspectSymbol() {
 }
 
 // for older node environments
-function tryReadingCustomSymbolFromUtilInspect(options: InspectorUtils.CustomSymbol) {
+function tryReadingCustomSymbolFromUtilInspect(options: any) {
   const _requireUtil = options.requireUtil || requireUtil;
   const util = _requireUtil();
   return util ? util.inspect.custom : null;
 }
 
-exports.getUtilInspect = function getUtilInspect(fallback: Function,  options = {}: Object) {
+exports.getUtilInspect = function getUtilInspect(fallback: any,  options = {}: GetUtilInspectOption) {
   const _requireUtil = options.requireUtil || requireUtil;
   const util = _requireUtil();
-  return function inspect(value: any,  showHidden: boolean,  depth: number) {
+  return function inspect(value: any,  showHidden: any,  depth: number) {
     return util ? util.inspect(value, showHidden, depth) : fallback(value);
   };
 };

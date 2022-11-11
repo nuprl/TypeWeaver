@@ -22,7 +22,7 @@ import stringSize from './.internal/stringSize.js'
  * pad('abc', 2)
  * // => 'abc'
  */
-function pad(string: any,  length: number,  chars: string) {
+function pad(string: string,  length: number,  chars: string) {
   const strLength = length ? stringSize(string) : 0
   if (!length || strLength >= length) {
     return (string || '')

@@ -1,7 +1,7 @@
 'use strict'
 import MurmurHash3 from 'imurmurhash';
 
-export default function (uniq: number) {
+export default function (uniq: string | string[]) {
   if (uniq) {
     var hash = new MurmurHash3(uniq)
     return ('00000000' + hash.result().toString(16)).slice(-8)

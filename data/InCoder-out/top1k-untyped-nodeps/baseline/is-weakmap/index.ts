@@ -23,7 +23,7 @@ if (!exported && !$mapHas) {
 	};
 }
 
-module.exports = exported || function isWeakMap(x: Object) {
+module.exports = exported || function isWeakMap(x: ny) {
 	if (!x || typeof x !== 'object') {
 		return false;
 	}

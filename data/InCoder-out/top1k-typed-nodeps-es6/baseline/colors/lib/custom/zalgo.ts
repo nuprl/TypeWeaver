@@ -1,5 +1,5 @@
 // please no
-module['exports'] = function zalgo(text: ring,  options: ZalgoOptions) {
+module['exports'] = function zalgo(text: any,  options: any) {
   text = text || '   he is here   ';
   var soul = {
     'up': [
@@ -40,7 +40,7 @@ module['exports'] = function zalgo(text: ring,  options: ZalgoOptions) {
   };
   var all = [].concat(soul.up, soul.down, soul.mid);
 
-  function randomNumber(range: number) {
+  function randomNumber(range: number[]) {
     var r = Math.floor(Math.random() * range);
     return r;
   }
@@ -54,7 +54,7 @@ module['exports'] = function zalgo(text: ring,  options: ZalgoOptions) {
   }
 
 
-  function heComes(text: String,  options: Object) {
+  function heComes(text: String,  options: any) {
     var result = '';
     var counts;
     var l;

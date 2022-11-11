@@ -2,7 +2,7 @@
 
 const propertyToValueAliases = require('./data/mappings.js');
 
-const matchPropertyValue = function(property: Property,  value: any) {
+const matchPropertyValue = function(property: any,  value: any) {
 	const aliasToValue = propertyToValueAliases.get(property);
 	if (!aliasToValue) {
 		throw new Error(`Unknown property \`${ property }\`.`);

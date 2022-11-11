@@ -14,7 +14,7 @@ import path from 'path';
 
 // Replace {{variable}} in `s` with the template data in `d`.
 function renderTemplate(s: string,  d: any) {
-    return s.replace(/{{([a-zA-Z]+)}}/g, function onMatch(match: Match,  key: string | number) {
+    return s.replace(/{{([a-zA-Z]+)}}/g, function onMatch(match: Match,  key: Key) {
         return Object.prototype.hasOwnProperty.call(d, key) ? d[key] : match;
     });
 }
@@ -27,7 +27,7 @@ function shallowCopy(obj: any) {
         return obj;
     }
     var copy = {};
-    Object.keys(obj).forEach(function onK(k: K) {
+    Object.keys(obj).forEach(function onK(k: any) {
         copy[k] = obj[k];
     });
     return copy;
@@ -89,22 +89,22 @@ function textwrap(s: string,  width: number) {
  *   but not have to do silly things like `opt["dry-run"]` to access the
  *   parsed results.
  */
-function optionKeyFromName(name: keyof T) {
+function optionKeyFromName(name: string) {
     return name.replace(/-/g, '_');
 }
 
 // ---- Option types
 
-function parseBool(option: any,  optstr: string | string[],  arg: string | string[]) {
+function parseBool(option: Option,  optstr: OptionString,  arg: OptionValue) {
     return Boolean(arg);
 }
 
-function parseString(option: any,  optstr: string | string[],  arg: any) {
+function parseString(option: Option,  optstr: OptionString,  arg: OptionValue) {
     assert.string(arg, 'arg');
     return arg;
 }
 
-function parseNumber(option: Option,  optstr: Option,  arg: Option) {
+function parseNumber(option: Option,  optstr: OptionString,  arg: OptionValue) {
     assert.string(arg, 'arg');
     var num = Number(arg);
     if (isNaN(num)) {
@@ -115,7 +115,7 @@ function parseNumber(option: Option,  optstr: Option,  arg: Option) {
     return num;
 }
 
-function parseInteger(option: any,  optstr: string | number,  arg: string | number) {
+function parseInteger(option: Option,  optstr: OptionString,  arg: OptionValue) {
     assert.string(arg, 'arg');
     var num = Number(arg);
     if (!/^[0-9-]+$/.test(arg) || isNaN(num)) {
@@ -126,7 +126,7 @@ function parseInteger(option: any,  optstr: string | number,  arg: string | numb
     return num;
 }
 
-function parsePositiveInteger(option: Option,  optstr: Option,  arg: Option) {
+function parsePositiveInteger(option: Option,  optstr: OptionString,  arg: OptionValue) {
     assert.string(arg, 'arg');
     var num = Number(arg);
     if (!/^[0-9]+$/.test(arg) || isNaN(num) || num === 0) {
@@ -147,7 +147,7 @@ function parsePositiveInteger(option: Option,  optstr: Option,  arg: Option) {
  *      2014-03-28T18:35:01
  *      2014-03-28
  */
-function parseDate(option: DateOption,  optstr: DateOption,  arg: DateOption) {
+function parseDate(option: Option,  optstr: OptionString,  arg: Arg) {
     assert.string(arg, 'arg');
     var date;
     if (/^\d+$/.test(arg)) {
@@ -270,7 +270,7 @@ function Parser(config: Config) {
     this.allowUnknown =
         config.allowUnknown !== undefined ? config.allowUnknown : false;
 
-    this.options = config.options.map(function onOpt(o: IOption) {
+    this.options = config.options.map(function onOpt(o: Option) {
         return shallowCopy(o);
     });
     this.optionFromName = {};
@@ -322,7 +322,7 @@ function Parser(config: Config) {
             );
         }
         o.key = optionKeyFromName(o.names[0]);
-        o.names.forEach(function onName(n: String) {
+        o.names.forEach(function onName(n: number) {
             if (self.optionFromName[n]) {
                 throw new Error(
                     format(
@@ -335,7 +335,7 @@ function Parser(config: Config) {
             }
             self.optionFromName[n] = o;
         });
-        env.forEach(function onName(n: string | number) {
+        env.forEach(function onName(n: any) {
             if (self.optionFromEnv[n]) {
                 throw new Error(
                     format(
@@ -369,7 +369,7 @@ Parser.prototype.optionTakesArg = function optionTakesArg(option: Option) {
  *      remaining args from `argv`) and `_order` (gives the order that
  *      options were specified).
  */
-Parser.prototype.parse = function parse(inputs: any) {
+Parser.prototype.parse = function parse(inputs: string[]) {
     var self = this;
 
     // Old API was `parse([argv, [slice]])`
@@ -390,7 +390,7 @@ Parser.prototype.parse = function parse(inputs: any) {
     var opts = {};
     var _order = [];
 
-    function addOpt(option: any,  optstr: string,  key: any,  val: any,  from: any) {
+    function addOpt(option: Option,  optstr: OptionString,  key: OptionKey,  val: OptionValue,  from: OptionValue) {
         var type = optionTypes[option.type];
         var parsedVal = type.parseArg(option, optstr, val);
         if (type.array) {
@@ -554,7 +554,7 @@ Parser.prototype.parse = function parse(inputs: any) {
     _args = _args.concat(args.slice(i));
 
     // Parse environment.
-    Object.keys(this.optionFromEnv).forEach(function onEnvname(envname: string) {
+    Object.keys(this.optionFromEnv).forEach(function onEnvname(envname: any) {
         var val = env[envname];
         if (val === undefined) {
             return;
@@ -576,7 +576,7 @@ Parser.prototype.parse = function parse(inputs: any) {
     });
 
     // Apply default values.
-    this.options.forEach(function onOpt(o: IOption) {
+    this.options.forEach(function onOpt(o: Option) {
         if (opts[o.key] === undefined) {
             if (o.default !== undefined) {
                 opts[o.key] = o.default;
@@ -622,7 +622,7 @@ Parser.prototype.parse = function parse(inputs: any) {
  *        bounds.
  * @returns {String}
  */
-Parser.prototype.help = function help(config: any) {
+Parser.prototype.help = function help(config: Config) {
     config = config || {};
     assert.object(config, 'config');
 
@@ -666,7 +666,7 @@ Parser.prototype.help = function help(config: any) {
         var line = '';
         var names = o.names.slice();
         if (nameSort === 'length') {
-            names.sort(function onCmp(a: any,  b: any) {
+            names.sort(function onCmp(a: number[],  b: number[]) {
                 if (a.length < b.length) {
                     return -1;
                 } else if (b.length < a.length) {
@@ -676,7 +676,7 @@ Parser.prototype.help = function help(config: any) {
                 }
             });
         }
-        names.forEach(function onName(name: string,  i: number) {
+        names.forEach(function onName(name: String,  i: Int) {
             if (i > 0) {
                 line += ', ';
             }
@@ -782,7 +782,7 @@ Parser.prototype.help = function help(config: any) {
             );
         } else {
             // Do not wrap help description, but indent newlines appropriately.
-            var helpLines = help.split('\n').filter(function onLine(ln: LineNumber) {
+            var helpLines = help.split('\n').filter(function onLine(ln: number) {
                 return ln.length;
             });
             if (helpEnv !== '') {
@@ -888,7 +888,7 @@ function bashCompletionSpecFromOptions(args: string[]) {
     var shortopts = [];
     var longopts = [];
     var optargs = [];
-    (args.options || []).forEach(function onOpt(o: IOption) {
+    (args.options || []).forEach(function onOpt(o: Option) {
         if (o.group !== undefined && o.group !== null) {
             // Skip group headers.
             return;
@@ -899,7 +899,7 @@ function bashCompletionSpecFromOptions(args: string[]) {
         if (optType.takesArg) {
             var completionType =
                 o.completionType || optType.completionType || o.type;
-            optNames.forEach(function onOptName(optName: any) {
+            optNames.forEach(function onOptName(optName: String) {
                 if (optName.length === 1) {
                     if (includeHidden || !o.hidden) {
                         shortopts.push('-' + optName);
@@ -915,7 +915,7 @@ function bashCompletionSpecFromOptions(args: string[]) {
                 }
             });
         } else {
-            optNames.forEach(function onOptName(optName: any) {
+            optNames.forEach(function onOptName(optName: String) {
                 if (includeHidden || !o.hidden) {
                     if (optName.length === 1) {
                         shortopts.push('-' + optName);
@@ -1033,7 +1033,7 @@ function parse(config_: Config) {
  *        "bool" type.
  *      - helpArg {String} Required iff `takesArg === true`. The string to
  *        show in generated help for options of this type.
- *      - parseArg {Function} Require. `function (option: Option,  optstr: OptionString,  arg: OptionValue)` parser
+ *      - parseArg {Function} Require. `function (option: Option,  optstr: OptionString,  arg: Arg)` parser
  *        that takes a string argument and returns an instance of the
  *        appropriate type, or throws an error if the arg is invalid.
  *      - array {Boolean} Optional. Set to true if this is an 'arrayOf' type
@@ -1064,7 +1064,7 @@ function addOptionType(optionType: OptionType) {
     };
 }
 
-function getOptionType(name: any) {
+function getOptionType(name: string) {
     assert.string(name, 'name');
     return optionTypes[name];
 }
@@ -1078,7 +1078,7 @@ function getOptionType(name: any) {
  *      > synopsisFromOpt({name: 'file', type: 'string', helpArg: 'FILE'});
  *      '[ --file=FILE ]'
  */
-function synopsisFromOpt(o: any) {
+function synopsisFromOpt(o: Opt.I) {
     assert.object(o, 'o');
 
     if (Object.prototype.hasOwnProperty.call(o, 'group')) {
@@ -1090,7 +1090,7 @@ function synopsisFromOpt(o: any) {
     var type = getOptionType(o.type);
     var helpArg = o.helpArg || (type && type.helpArg) || 'ARG';
     var parts = [];
-    names.forEach(function onName(name: string) {
+    names.forEach(function onName(name: String) {
         var part = (name.length === 1 ? '-' : '--') + name;
         if (type && type.takesArg) {
             part += name.length === 1 ? ' ' + helpArg : '=' + helpArg;

@@ -36,7 +36,7 @@ const reComboMark = RegExp(rsCombo, 'g')
  * deburr('déjà vu')
  * // => 'deja vu'
  */
-function deburr(string: any) {
+function deburr(string: string | null | undefined) {
   return string && string.replace(reLatin, deburrLetter).replace(reComboMark, '')
 }
 

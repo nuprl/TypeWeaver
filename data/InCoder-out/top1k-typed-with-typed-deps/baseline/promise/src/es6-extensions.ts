@@ -21,7 +21,7 @@ function valuePromise(value: any) {
   p._value = value;
   return p;
 }
-Promise.resolve = function (value: any) {
+Promise.resolve = function (value: PromiseLike<T>) {
   if (value instanceof Promise) return value;
 
   if (value === null) return NULL;
@@ -38,7 +38,7 @@ Promise.resolve = function (value: any) {
         return new Promise(then.bind(value));
       }
     } catch (ex) {
-      return new Promise(function (resolve: Function,  reject: Function) {
+      return new Promise(function (resolve: any,  reject: any) {
         reject(ex);
       });
     }
@@ -58,10 +58,10 @@ var iterableToArray = function (iterable: Iterable<any>) {
   return Array.prototype.slice.call(iterable);
 }
 
-Promise.all = function (arr: Iterable<any>) {
+Promise.all = function (arr: Array<any>) {
   var args = iterableToArray(arr);
 
-  return new Promise(function (resolve: Function,  reject: Function) {
+  return new Promise(function (resolve: any,  reject: any) {
     if (args.length === 0) return resolve([]);
     var remaining = args.length;
     function res(i: number,  val: number) {
@@ -98,7 +98,7 @@ Promise.all = function (arr: Iterable<any>) {
   });
 };
 
-function onSettledFulfill(value: Promise<any>) {
+function onSettledFulfill(value: R) {
   return { status: 'fulfilled', value: value };
 }
 function onSettledReject(reason: any) {
@@ -128,7 +128,7 @@ Promise.reject = function (value: any) {
 };
 
 Promise.race = function (values: any[]) {
-  return new Promise(function (resolve: Function,  reject: Function) {
+  return new Promise(function (resolve: any,  reject: any) {
     iterableToArray(values).forEach(function(value: any){
       Promise.resolve(value).then(resolve, reject);
     });

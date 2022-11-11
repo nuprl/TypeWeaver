@@ -6,7 +6,7 @@ import path from 'path';
 import mkdir from '../mkdirs';
 import { pathExists } from '../path-exists';
 
-function outputFile (file: string | Buffer,  data: any,  encoding: string | null,  callback: Function) {
+function outputFile (file: File,  data: any,  encoding: any,  callback: Function) {
   if (typeof encoding === 'function') {
     callback = encoding
     encoding = 'utf8'

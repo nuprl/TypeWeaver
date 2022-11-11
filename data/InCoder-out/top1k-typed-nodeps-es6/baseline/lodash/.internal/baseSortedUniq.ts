@@ -8,7 +8,7 @@ import eq from '../eq.js'
  * @param {Function} [iteratee] The iteratee invoked per element.
  * @returns {Array} Returns the new duplicate free array.
  */
-function baseSortedUniq(array: Array<T>,  iteratee: Iteratee<T>) {
+function baseSortedUniq(array: Array<T>,  iteratee: ValueOnlyIteratee) {
   let seen
   let index = -1
   let resIndex = 0

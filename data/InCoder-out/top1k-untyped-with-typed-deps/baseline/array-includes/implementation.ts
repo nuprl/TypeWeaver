@@ -14,7 +14,7 @@ var $charAt = callBound('String.prototype.charAt');
 var $indexOf = GetIntrinsic('%Array.prototype.indexOf%'); // TODO: use callBind.apply without breaking IE 8
 var $max = GetIntrinsic('%Math.max%');
 
-module.exports = function includes(searchElement: Element) {
+module.exports = function includes(searchElement: T) {
 	var fromIndex = arguments.length > 1 ? ToIntegerOrInfinity(arguments[1]) : 0;
 	if ($indexOf && !$isNaN(searchElement) && $isFinite(fromIndex) && typeof searchElement !== 'undefined') {
 		return $indexOf.apply(this, arguments) > -1;

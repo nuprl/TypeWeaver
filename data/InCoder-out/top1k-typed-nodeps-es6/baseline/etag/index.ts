@@ -68,7 +68,7 @@ function entitytag (entity: Entity) {
  * @public
  */
 
-function etag (entity: Object,  options: Object) {
+function etag (entity: any,  options: any) {
   if (entity == null) {
     throw new TypeError('argument entity is required')
   }

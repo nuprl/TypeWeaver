@@ -1,20 +1,49 @@
-Gruntfile.ts(1,34): error TS2749: 'grunt' refers to a value, but is being used as a type here. Did you mean 'typeof grunt'?
-regenerate.ts(49,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+Gruntfile.ts(1,34): error TS2304: Cannot find name 'Grunt'.
+regenerate.ts(189,20): error TS2365: Operator '+' cannot be applied to types 'Date' and 'number'.
+regenerate.ts(194,46): error TS2365: Operator '+' cannot be applied to types 'Date' and 'number'.
+regenerate.ts(213,19): error TS2365: Operator '+' cannot be applied to types 'Date' and 'number'.
+regenerate.ts(324,4): error TS2365: Operator '<' cannot be applied to types 'Date' and 'number'.
+regenerate.ts(324,24): error TS2365: Operator '>' cannot be applied to types 'Date' and 'number'.
+regenerate.ts(325,4): error TS2365: Operator '<' cannot be applied to types 'Date' and 'number'.
+regenerate.ts(325,22): error TS2365: Operator '>' cannot be applied to types 'Date' and 'number'.
+regenerate.ts(344,18): error TS2365: Operator '+' cannot be applied to types 'Date' and 'number'.
+regenerate.ts(360,30): error TS2365: Operator '<=' cannot be applied to types 'number' and 'Date'.
+regenerate.ts(381,22): error TS2365: Operator '+' cannot be applied to types 'Date' and 'number'.
+regenerate.ts(388,39): error TS2365: Operator '+' cannot be applied to types 'Date' and 'number'.
+regenerate.ts(392,56): error TS2365: Operator '+' cannot be applied to types 'Date' and 'number'.
+regenerate.ts(405,23): error TS2365: Operator '+' cannot be applied to types 'Date' and 'number'.
+regenerate.ts(412,36): error TS2365: Operator '+' cannot be applied to types 'Date' and 'number'.
+regenerate.ts(415,23): error TS2365: Operator '+' cannot be applied to types 'Date' and 'number'.
+regenerate.ts(424,26): error TS2365: Operator '+' cannot be applied to types 'Date' and 'number'.
 regenerate.ts(467,35): error TS2304: Cannot find name 'ny'.
 regenerate.ts(501,4): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 regenerate.ts(508,4): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 regenerate.ts(575,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 regenerate.ts(579,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+regenerate.ts(600,23): error TS2339: Property 'length' does not exist on type 'Symbol'.
+regenerate.ts(601,22): error TS2339: Property 'charCodeAt' does not exist on type 'Symbol'.
+regenerate.ts(609,20): error TS2339: Property 'charCodeAt' does not exist on type 'Symbol'.
+regenerate.ts(832,7): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Date'.
+regenerate.ts(882,8): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Date'.
+regenerate.ts(983,68): error TS2304: Cannot find name 'SurrogateMapping'.
+regenerate.ts(985,57): error TS2304: Cannot find name 'SurrogateMapping'.
 regenerate.ts(1062,11): error TS2350: Only a void function can be called with the 'new' keyword.
 regenerate.ts(1062,11): error TS2554: Expected 1 arguments, but got 0.
 regenerate.ts(1065,13): error TS2339: Property 'version' does not exist on type '(value: any) => any'.
 regenerate.ts(1076,48): error TS2339: Property 'data' does not exist on type '{}'.
-regenerate.ts(1083,35): error TS2304: Cannot find name 'IItem'.
+regenerate.ts(1083,35): error TS2304: Cannot find name 'T'.
 regenerate.ts(1101,51): error TS2339: Property 'data' does not exist on type '{}'.
-regenerate.ts(1108,35): error TS2304: Cannot find name 'IItem'.
+regenerate.ts(1108,35): error TS2304: Cannot find name 'T'.
+regenerate.ts(1122,49): error TS2345: Argument of type 'Date' is not assignable to parameter of type 'Symbol'.
+  Type 'Date' is missing the following properties from type 'Symbol': description, [Symbol.toStringTag]
+regenerate.ts(1123,45): error TS2345: Argument of type 'Date' is not assignable to parameter of type 'Symbol'.
+regenerate.ts(1129,69): error TS2345: Argument of type 'Date' is not assignable to parameter of type 'Symbol'.
+regenerate.ts(1130,63): error TS2345: Argument of type 'Date' is not assignable to parameter of type 'Symbol'.
 regenerate.ts(1143,26): error TS2339: Property 'data' does not exist on type '{}'.
+regenerate.ts(1151,57): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Symbol'.
 regenerate.ts(1155,14): error TS2350: Only a void function can be called with the 'new' keyword.
 regenerate.ts(1155,14): error TS2554: Expected 1 arguments, but got 0.
+regenerate.ts(1159,33): error TS2304: Cannot find name 'ICharacterContribution'.
 regenerate.ts(1176,20): error TS2339: Property 'indexOf' does not exist on type 'number'.
 regenerate.ts(1180,27): error TS2769: No overload matches this call.
   Overload 1 of 3, '(pattern: string | RegExp, flags?: string): RegExp', gave the following error.

@@ -15,7 +15,7 @@ import stew from 'broccoli-stew';
 const env = stew.env;
 const map = stew.map;
 
-export default function (app: Application) {
+export default function (app: App) {
   const lib = funnel('lib', { destDir: 'lib' });
 
   const testDir = funnel('test', { destDir: 'test' });
@@ -90,7 +90,7 @@ export default function (app: Application) {
     content => content.replace(/VERSION_PLACEHOLDER_STRING/, version())
   );
 
-  function concatAs(tree: Tree,  outputFile: File) {
+  function concatAs(tree: Tree,  outputFile: OutputFile) {
     return concat(merge([tree, header]), {
       headerFiles: ['config/versionTemplate.txt'],
       inputFiles: ['rsvp.js'],
@@ -98,7 +98,7 @@ export default function (app: Application) {
     });
   }
 
-  function production(dist: any,  header: any) {
+  function production(dist: Distribution,  header: Header) {
     let result;
     env('production', () => {
       result = uglify(concatAs(dist, 'rsvp.min.js'), {
@@ -112,7 +112,7 @@ export default function (app: Application) {
     return result;
   }
 
-  function development(dist: string | Buffer,  header: string | Buffer) {
+  function development(dist: any,  header: any) {
     return concatAs(dist, 'rsvp.js');
   }
 

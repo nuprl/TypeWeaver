@@ -1,4 +1,4 @@
-export function parsePatch(uniDiff: UniDiff,  options = {}: PatchOptions) {
+export function parsePatch(uniDiff: Diff,  options = {}: PatchOptions) {
   let diffstr = uniDiff.split(/\r\n|[\n\v\f\r\x85]/),
       delimiters = uniDiff.match(/\r\n|[\n\v\f\r\x85]/g) || [],
       list = [],

@@ -2,7 +2,7 @@
 
 const webpack = require("webpack");
 
-module.exports = function (config: Config) {
+module.exports = function (config: ng.IAngularConfiguration) {
   config.set({
     basePath: "",
     files: ["./test/browser.js"],

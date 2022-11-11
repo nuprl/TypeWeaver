@@ -9,11 +9,11 @@ var isModern = (
   typeof Buffer.from === 'function'
 )
 
-function isArrayBuffer (input: any) {
+function isArrayBuffer (input: Buffer) {
   return toString.call(input).slice(8, -1) === 'ArrayBuffer'
 }
 
-function fromArrayBuffer (obj: ArrayBufferView,  byteOffset: number,  length: number) {
+function fromArrayBuffer (obj: ArrayBuffer,  byteOffset: number,  length: number) {
   byteOffset >>>= 0
 
   var maxLength = obj.byteLength - byteOffset
@@ -37,7 +37,7 @@ function fromArrayBuffer (obj: ArrayBufferView,  byteOffset: number,  length: nu
     : new Buffer(new Uint8Array(obj.slice(byteOffset, byteOffset + length)))
 }
 
-function fromString (string: string | Buffer,  encoding: string | null) {
+function fromString (string: string | Buffer | DataView,  encoding: BufferEncoding) {
   if (typeof encoding !== 'string' || encoding === '') {
     encoding = 'utf8'
   }
@@ -51,7 +51,7 @@ function fromString (string: string | Buffer,  encoding: string | null) {
     : new Buffer(string, encoding)
 }
 
-function bufferFrom (value: any,  encodingOrOffset: number,  length: number) {
+function bufferFrom (value: ArrayBuffer | ArrayBufferView,  encodingOrOffset: number,  length: number) {
   if (typeof value === 'number') {
     throw new TypeError('"value" argument must not be a number')
   }

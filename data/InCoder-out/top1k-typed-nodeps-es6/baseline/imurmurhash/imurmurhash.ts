@@ -18,7 +18,7 @@
     // @param {string} key A UTF-16 or ASCII string
     // @param {number} seed An optional positive integer
     // @return {object} A MurmurHash3 object for incremental hashing
-    function MurmurHash3(key: number,  seed: number) {
+    function MurmurHash3(key: Uint8Array,  seed: Uint8Array) {
         var m = this instanceof MurmurHash3 ? this : cache;
         m.reset(seed)
         if (typeof key === 'string' && key.length > 0) {

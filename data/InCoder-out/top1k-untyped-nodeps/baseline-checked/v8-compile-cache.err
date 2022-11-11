@@ -49,17 +49,20 @@ v8-compile-cache.ts(102,12): error TS2339: Property '_storedMap' does not exist 
 v8-compile-cache.ts(104,10): error TS2339: Property '_dirty' does not exist on type 'FileSystemBlobStore'.
 v8-compile-cache.ts(105,10): error TS2339: Property '_memoryBlobs' does not exist on type 'FileSystemBlobStore'.
 v8-compile-cache.ts(106,10): error TS2339: Property '_invalidationKeys' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache.ts(116,14): error TS2538: Type 'Buffer' cannot be used as an index type.
 v8-compile-cache.ts(120,40): error TS2339: Property '_memoryBlobs' does not exist on type 'FileSystemBlobStore'.
 v8-compile-cache.ts(121,27): error TS2339: Property '_memoryBlobs' does not exist on type 'FileSystemBlobStore'.
 v8-compile-cache.ts(122,36): error TS2339: Property '_invalidationKeys' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache.ts(123,12): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Buffer'.
 v8-compile-cache.ts(126,40): error TS2339: Property '_storedMap' does not exist on type 'FileSystemBlobStore'.
 v8-compile-cache.ts(128,28): error TS2339: Property '_storedMap' does not exist on type 'FileSystemBlobStore'.
 v8-compile-cache.ts(129,27): error TS2339: Property '_storedBlob' does not exist on type 'FileSystemBlobStore'.
+v8-compile-cache.ts(130,12): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Buffer'.
 v8-compile-cache.ts(143,10): error TS2551: Property '_cacheStore' does not exist on type 'NativeCompileCache'. Did you mean 'setCacheStore'?
 v8-compile-cache.ts(144,10): error TS2339: Property '_previousModuleCompile' does not exist on type 'NativeCompileCache'.
 v8-compile-cache.ts(148,10): error TS2551: Property '_cacheStore' does not exist on type 'NativeCompileCache'. Did you mean 'setCacheStore'?
 v8-compile-cache.ts(154,10): error TS2339: Property '_previousModuleCompile' does not exist on type 'NativeCompileCache'.
-v8-compile-cache.ts(163,52): error TS2304: Cannot find name 'RequestOptions'.
+v8-compile-cache.ts(163,52): error TS2304: Cannot find name 'RequestOptionsArgs'.
 v8-compile-cache.ts(197,38): error TS2339: Property '_previousModuleCompile' does not exist on type 'NativeCompileCache'.
 v8-compile-cache.ts(234,8): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
 v8-compile-cache.ts(238,23): error TS2551: Property '_cacheStore' does not exist on type 'NativeCompileCache'. Did you mean 'setCacheStore'?

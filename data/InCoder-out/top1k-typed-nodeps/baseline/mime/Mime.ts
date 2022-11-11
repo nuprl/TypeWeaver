@@ -36,7 +36,7 @@ function Mime() {
  * @param map (Object) type definitions
  * @param force (Boolean) if true, force overriding of existing definitions
  */
-Mime.prototype.define = function(typeMap: Object,  force: Boolean) {
+Mime.prototype.define = function(typeMap: TypeMap,  force: Boolean) {
   for (let type in typeMap) {
     let extensions = typeMap[type].map(function(t: any) {
       return t.toLowerCase();
@@ -75,7 +75,7 @@ Mime.prototype.define = function(typeMap: Object,  force: Boolean) {
 /**
  * Lookup a mime type based on extension
  */
-Mime.prototype.getType = function(path: Path) {
+Mime.prototype.getType = function(path: String) {
   path = String(path);
   let last = path.replace(/^.*[/\\]/, '').toLowerCase();
   let ext = last.replace(/^.*\./, '').toLowerCase();

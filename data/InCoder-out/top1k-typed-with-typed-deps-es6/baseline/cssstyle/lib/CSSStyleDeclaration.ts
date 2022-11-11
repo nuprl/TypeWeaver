@@ -14,7 +14,7 @@ import getBasicPropertyDescriptor from './utils/getBasicPropertyDescriptor';
  * @constructor
  * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration
  */
-var CSSStyleDeclaration = function CSSStyleDeclaration(onChangeCallback: Function) {
+var CSSStyleDeclaration = function CSSStyleDeclaration(onChangeCallback: any) {
   this._values = {};
   this._importants = {};
   this._length = 0;
@@ -48,7 +48,7 @@ CSSStyleDeclaration.prototype = {
    * @param {string} [priority=null] "important" or null
    * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration-setProperty
    */
-  setProperty: function(name: any,  value: any,  priority: number) {
+  setProperty: function(name: String,  value: String,  priority: Number) {
     if (value === undefined) {
       return;
     }
@@ -69,7 +69,7 @@ CSSStyleDeclaration.prototype = {
     this[lowercaseName] = value;
     this._importants[lowercaseName] = priority;
   },
-  _setProperty: function(name: any,  value: any,  priority: number) {
+  _setProperty: function(name: String,  value: String,  priority: Number) {
     if (value === undefined) {
       return;
     }
@@ -129,7 +129,7 @@ CSSStyleDeclaration.prototype = {
    *
    * @param {String} name
    */
-  getPropertyPriority: function(name: any) {
+  getPropertyPriority: function(name: String) {
     return this._importants[name] || '';
   },
 

@@ -1,7 +1,7 @@
 // Copyright 2014 Simon Lydell
 // X11 (“MIT”) Licensed. (See LICENSE.)
 
-void (function(root: any,  factory: Function) {
+void (function(root: any,  factory: any) {
   if (typeof define === "function" && define.amd) {
     define(factory)
   } else if (typeof exports === "object") {
@@ -31,7 +31,7 @@ void (function(root: any,  factory: Function) {
     regex: regex,
     _innerRegex: innerRegex,
 
-    getFrom: function(code: RegExp) {
+    getFrom: function(code: any) {
       var match = code.match(regex)
       return (match ? match[1] || match[2] || "" : null)
     },
@@ -40,11 +40,11 @@ void (function(root: any,  factory: Function) {
       return regex.test(code)
     },
 
-    removeFrom: function(code: Code) {
+    removeFrom: function(code: any) {
       return code.replace(regex, "")
     },
 
-    insertBefore: function(code: RegExp,  string: String) {
+    insertBefore: function(code: any,  string: any) {
       var match = code.match(regex)
       if (match) {
         return code.slice(0, match.index) + string + code.slice(match.index)

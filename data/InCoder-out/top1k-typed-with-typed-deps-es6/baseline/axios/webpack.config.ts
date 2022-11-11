@@ -2,7 +2,7 @@ import TerserPlugin from 'terser-webpack-plugin';
 import webpack from 'webpack';
 var config = {};
 
-function generateConfig(name: string | undefined) {
+function generateConfig(name: string) {
   var compress = name.indexOf('min') > -1;
   var config = {
     entry: './index.js',

@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function diff(arr: Array,  arrays: Array) {
+module.exports = function diff(arr: number[][],  arrays: number[][]) {
   arrays = [].concat.apply([], [].slice.call(arguments, 1));
   var len = arrays.length;
   for (var i = 0; i < len; i++) {

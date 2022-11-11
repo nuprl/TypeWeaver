@@ -23,7 +23,7 @@ const copyProperty = (to, from, property, ignoreNonConfigurable) => {
 // `Object.defineProperty()` throws if the property exists, is not configurable and either:
 // - one its descriptors is changed
 // - it is non-writable and its value is changed
-const canCopyProperty = function (toDescriptor: IPropertyDescriptor,  fromDescriptor: IPropertyDescriptor) {
+const canCopyProperty = function (toDescriptor: Descriptor,  fromDescriptor: Descriptor) {
 	return toDescriptor === undefined || toDescriptor.configurable || (
 		toDescriptor.writable === fromDescriptor.writable &&
 		toDescriptor.enumerable === fromDescriptor.enumerable &&
@@ -57,7 +57,7 @@ const changeToString = (to, from, name) => {
 	Object.defineProperty(to, 'toString', {...toStringDescriptor, value: newToString});
 };
 
-export default function mimicFunction(to: Function,  from: Function,  {ignoreNonConfigurable = false} = {}: IOption<any>) {
+export default function mimicFunction(to: Function,  from: Function,  {ignoreNonConfigurable = false} = {}: To) {
 	const {name} = to;
 
 	for (const property of Reflect.ownKeys(from)) {

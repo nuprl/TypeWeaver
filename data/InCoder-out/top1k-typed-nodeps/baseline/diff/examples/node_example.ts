@@ -6,7 +6,7 @@ var other = 'beep boob blah';
 
 var diff = Diff.diffChars(one, other);
 
-diff.forEach(function(part: number){
+diff.forEach(function(part: Part){
   // green for additions, red for deletions
   // grey for common parts
   var color = part.added ? 'green' :

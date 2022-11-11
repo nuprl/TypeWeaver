@@ -7,7 +7,7 @@ import { pathExists } from '../path-exists';
 import { utimesMillis } from '../util/utimes';
 import stat from '../util/stat';
 
-function copy (src: any,  dest: any,  opts: any,  cb: Function) {
+function copy (src: Buffer,  dest: Buffer,  opts: Object,  cb: Function) {
   if (typeof opts === 'function' && !cb) {
     cb = opts
     opts = {}
@@ -41,7 +41,7 @@ function copy (src: any,  dest: any,  opts: any,  cb: Function) {
   })
 }
 
-function checkParentDir (destStat: fs.Stats,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: any,  cb: Function) {
+function checkParentDir (destStat: fs.Stats,  src: fs.Stats,  dest: fs.Stats,  opts: any,  cb: Function) {
   const destParent = path.dirname(dest)
   pathExists(destParent, (err, dirExists) => {
     if (err) return cb(err)
@@ -53,19 +53,19 @@ function checkParentDir (destStat: fs.Stats,  src: fs.ReadStream,  dest: fs.Writ
   })
 }
 
-function handleFilter (onInclude: Function,  destStat: Stat,  src: Stat,  dest: Stat,  opts: StatOpts,  cb: Function) {
+function handleFilter (onInclude: any,  destStat: any,  src: any,  dest: any,  opts: any,  cb: any) {
   Promise.resolve(opts.filter(src, dest)).then(include => {
     if (include) return onInclude(destStat, src, dest, opts, cb)
     return cb()
   }, error => cb(error))
 }
 
-function startCopy (destStat: Stats,  src: Buffer,  dest: Buffer,  opts: Object,  cb: Function) {
+function startCopy (destStat: fs.Stats,  src: fs.Stats,  dest: fs.Stats,  opts: any,  cb: Function) {
   if (opts.filter) return handleFilter(getStats, destStat, src, dest, opts, cb)
   return getStats(destStat, src, dest, opts, cb)
 }
 
-function getStats (destStat: Stats,  src: Stats,  dest: Stats,  opts: Stats.Options,  cb: Function) {
+function getStats (destStat: Stats,  src: Stats,  dest: Stats,  opts: Stats,  cb: Stats) {
   const stat = opts.dereference ? fs.stat : fs.lstat
   stat(src, (err, srcStat) => {
     if (err) return cb(err)
@@ -81,12 +81,12 @@ function getStats (destStat: Stats,  src: Stats,  dest: Stats,  opts: Stats.Opti
   })
 }
 
-function onFile (srcStat: fs.Stats,  destStat: fs.Stats,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: any,  cb: Function) {
+function onFile (srcStat: fs.Stat,  destStat: fs.Stat,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: any,  cb: Function) {
   if (!destStat) return copyFile(srcStat, src, dest, opts, cb)
   return mayCopyFile(srcStat, src, dest, opts, cb)
 }
 
-function mayCopyFile (srcStat: fs.Stats,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: fs.WriteStreamOption,  cb: Function) {
+function mayCopyFile (srcStat: fs.Stats,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: any,  cb: Function) {
   if (opts.overwrite) {
     fs.unlink(dest, err => {
       if (err) return cb(err)
@@ -105,7 +105,7 @@ function copyFile (srcStat: fs.Stats,  src: fs.ReadStream,  dest: fs.WriteStream
   })
 }
 
-function handleTimestampsAndMode (srcMode: number,  src: number,  dest: number,  cb: Function) {
+function handleTimestampsAndMode (srcMode: Mode,  src: Date,  dest: Date,  cb: Function) {
   // Make sure the file is writable before setting the timestamp
   // otherwise open fails with EPERM when invoked with 'r+'
   // (through utimes call)
@@ -122,7 +122,7 @@ function fileIsNotWritable (srcMode: number) {
   return (srcMode & 0o200) === 0
 }
 
-function makeFileWritable (dest: fs.WriteStream,  srcMode: number,  cb: Function) {
+function makeFileWritable (dest: fs.WriteStream,  srcMode: number,  cb: number) {
   return setDestMode(dest, srcMode | 0o200, cb)
 }
 
@@ -137,7 +137,7 @@ function setDestMode (dest: number,  srcMode: number,  cb: Function) {
   return fs.chmod(dest, srcMode, cb)
 }
 
-function setDestTimestamps (src: number,  dest: number,  cb: Function) {
+function setDestTimestamps (src: Date,  dest: Date,  cb: Function) {
   // The initial srcStat.atime cannot be trusted
   // because it is modified by the read(2) system call
   // (See https://nodejs.org/api/fs.html#fs_stat_time_values)
@@ -147,12 +147,12 @@ function setDestTimestamps (src: number,  dest: number,  cb: Function) {
   })
 }
 
-function onDir (srcStat: Stats,  destStat: Stats,  src: fs.ReadStream,  dest: fs.WriteStream,  opts: any,  cb: Function) {
+function onDir (srcStat: fs.Stat,  destStat: fs.Stat,  src: fs.DirEntry,  dest: fs.DirEntry,  opts: fs.OpenOptions,  cb: fs.FileCallback) {
   if (!destStat) return mkDirAndCopy(srcStat.mode, src, dest, opts, cb)
   return copyDir(src, dest, opts, cb)
 }
 
-function mkDirAndCopy (srcMode: number,  src: string | Buffer,  dest: string | Buffer,  opts: any,  cb: Function) {
+function mkDirAndCopy (srcMode: number,  src: fs.Path,  dest: fs.Path,  opts: fs.CreateOpts,  cb: fs.StatCallback) {
   fs.mkdir(dest, err => {
     if (err) return cb(err)
     copyDir(src, dest, opts, err => {
@@ -162,20 +162,20 @@ function mkDirAndCopy (srcMode: number,  src: string | Buffer,  dest: string | B
   })
 }
 
-function copyDir (src: any,  dest: any,  opts: any,  cb: Function) {
+function copyDir (src: fs.DirEntry,  dest: fs.DirEntry,  opts: any,  cb: Function) {
   fs.readdir(src, (err, items) => {
     if (err) return cb(err)
     return copyDirItems(items, src, dest, opts, cb)
   })
 }
 
-function copyDirItems (items: Array<any>,  src: Array<any>,  dest: Array<any>,  opts: any,  cb: Function) {
+function copyDirItems (items: string[],  src: fs.PathLike,  dest: fs.PathLike,  opts: fs.OpenOptions,  cb: fs.OpenCallback) {
   const item = items.pop()
   if (!item) return cb()
   return copyDirItem(items, item, src, dest, opts, cb)
 }
 
-function copyDirItem (items: any[],  item: any,  src: any,  dest: any,  opts: any,  cb: Function) {
+function copyDirItem (items: any[],  item: any,  src: any,  dest: any,  opts: any,  cb: any) {
   const srcItem = path.join(src, item)
   const destItem = path.join(dest, item)
   stat.checkPaths(srcItem, destItem, 'copy', opts, (err, stats) => {
@@ -188,7 +188,7 @@ function copyDirItem (items: any[],  item: any,  src: any,  dest: any,  opts: an
   })
 }
 
-function onLink (destStat: Stats,  src: Stats,  dest: Stats,  opts: Stats.Options,  cb: Function) {
+function onLink (destStat: Stats,  src: Stats,  dest: Stats,  opts: any,  cb: Stats) {
   fs.readlink(src, (err, resolvedSrc) => {
     if (err) return cb(err)
     if (opts.dereference) {

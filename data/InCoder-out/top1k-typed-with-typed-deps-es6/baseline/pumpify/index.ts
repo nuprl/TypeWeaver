@@ -2,12 +2,12 @@ import pump from 'pump';
 import inherits from 'inherits';
 import Duplexify from 'duplexify';
 
-var toArray = function(args: any) {
+var toArray = function(args: Array<any>) {
   if (!args.length) return []
   return Array.isArray(args[0]) ? args[0] : Array.prototype.slice.call(args)
 }
 
-var define = function(opts: PumpifyOptions) {
+var define = function(opts: Options) {
   var Pumpify = function() {
     var streams = toArray(arguments)
     if (!(this instanceof Pumpify)) return new Pumpify(streams)

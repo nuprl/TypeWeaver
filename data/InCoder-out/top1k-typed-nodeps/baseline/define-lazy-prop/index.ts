@@ -1,4 +1,4 @@
-export default function defineLazyProperty(object: Object,  propertyName: PropertyName,  valueGetter: ValueGetter) {
+export default function defineLazyProperty(object: any,  propertyName: any,  valueGetter: any) {
 	const define = value => Object.defineProperty(object, propertyName, {value, enumerable: true, writable: true});
 
 	Object.defineProperty(object, propertyName, {

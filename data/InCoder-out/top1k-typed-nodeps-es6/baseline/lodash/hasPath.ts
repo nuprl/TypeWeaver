@@ -27,7 +27,7 @@ const hasOwnProperty = Object.prototype.hasOwnProperty
  * hasPath(object, ['a', 'b'])
  * // => true
  */
-function hasPath(object: Object,  path: Array<string>) {
+function hasPath(object: any,  path: any) {
   path = castPath(path, object)
 
   let index = -1

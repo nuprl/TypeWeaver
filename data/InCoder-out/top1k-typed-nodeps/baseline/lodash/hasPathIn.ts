@@ -24,7 +24,7 @@ import toKey from './.internal/toKey.js'
  * hasPathIn(object, ['a', 'b'])
  * // => true
  */
-function hasPathIn(object: Object,  path: Array<string>) {
+function hasPathIn(object: object,  path: Array<string>) {
   path = castPath(path, object)
 
   let index = -1

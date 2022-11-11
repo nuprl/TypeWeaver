@@ -11,7 +11,8 @@ lib/portfinder.ts(156,100): error TS2339: Property 'code' does not exist on type
 lib/portfinder.ts(172,15): error TS2339: Property 'code' does not exist on type 'Error'.
 lib/portfinder.ts(172,47): error TS2339: Property 'code' does not exist on type 'Error'.
 lib/portfinder.ts(224,50): error TS2304: Cannot find name 'ny'.
-lib/portfinder.ts(249,60): error TS2304: Cannot find name 'IOptions'.
+lib/portfinder.ts(232,40): error TS2749: 'resolve' refers to a value, but is being used as a type here. Did you mean 'typeof resolve'?
+lib/portfinder.ts(232,58): error TS2749: 'reject' refers to a value, but is being used as a type here. Did you mean 'typeof reject'?
 lib/portfinder.ts(269,6): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'AsyncResultArrayCallback<unknown, Error>'.
   Type 'Function' provides no match for the signature '(err?: Error, results?: unknown[]): void'.
 lib/portfinder.ts(285,45): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.

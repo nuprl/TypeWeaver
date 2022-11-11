@@ -5,7 +5,7 @@
  * @param {string | RegExp} b
  * @param {string} str
  */
-function balanced (a: number,  b: number,  str: number) {
+function balanced (a: number,  b: number,  str: string) {
   if (a instanceof RegExp) a = maybeMatch(a, str)
   if (b instanceof RegExp) b = maybeMatch(b, str)
 
@@ -26,7 +26,7 @@ function balanced (a: number,  b: number,  str: number) {
  * @param {RegExp} reg
  * @param {string} str
  */
-function maybeMatch (reg: RegExp,  str: string | string[]) {
+function maybeMatch (reg: RegExp,  str: string | RegExp) {
   const m = str.match(reg)
   return m ? m[0] : null
 }
@@ -38,7 +38,7 @@ balanced.range = range
  * @param {string} b
  * @param {string} str
  */
-function range (a: number,  b: number,  str: number) {
+function range (a: number,  b: number,  str: string) {
   let begs, beg, left, right, result
   let ai = str.indexOf(a)
   let bi = str.indexOf(b, ai + 1)

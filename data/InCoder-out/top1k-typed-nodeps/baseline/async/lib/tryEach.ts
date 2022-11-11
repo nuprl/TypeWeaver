@@ -40,7 +40,7 @@ import awaitify from './internal/awaitify.js'
  * });
  *
  */
-function tryEach(tasks: Array<Function>,  callback: Function) {
+function tryEach(tasks: Task[],  callback: Function) {
     var error = null;
     var result;
     return eachSeries(tasks, (task, taskCb) => {

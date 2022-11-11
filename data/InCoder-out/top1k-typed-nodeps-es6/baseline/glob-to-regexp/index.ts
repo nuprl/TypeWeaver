@@ -1,4 +1,4 @@
-export default function (glob: ring | string[],  opts: { cwd: string }) {
+export default function (glob: ring | string[],  opts: ring | string[]) {
   if (typeof glob !== 'string') {
     throw new TypeError('Expected a string');
   }

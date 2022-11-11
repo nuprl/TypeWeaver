@@ -55,7 +55,7 @@ fs.readdirSync(SAMPLES_DIRECTORY).sort().forEach(function (sample: Sample) {
   });
 
 
-  IMPLS.forEach(function (impl: IAsyncTestAdapter) {
+  IMPLS.forEach(function (impl: TestInterface) {
     suite.add(impl.name, {
 
       onCycle: function onCycle(event: CycleEvent) {
@@ -85,7 +85,7 @@ function select(patterns: string[]) {
 
   if (!(patterns instanceof Array)) patterns = [ patterns ];
 
-  function checkName(name: string | null) {
+  function checkName(name: any) {
     return patterns.length === 0 || patterns.some(function (regexp: RegExp) {
       return regexp.test(name);
     });
@@ -99,7 +99,7 @@ function select(patterns: string[]) {
 }
 
 
-function run(files: string[]) {
+function run(files: File[]) {
   var selected = select(files);
 
   if (selected.length > 0) {
@@ -111,7 +111,7 @@ function run(files: string[]) {
     console.log("There isn't any sample matches any of these patterns: %s", util.inspect(files));
   }
 
-  selected.forEach(function (sample: TestSample) {
+  selected.forEach(function (sample: Sample) {
     sample.suite.run();
   });
 }

@@ -4,7 +4,7 @@ if (typeof setImmediate !== 'function' && typeof async === 'object') {
 }
 
 $(function initSearchBar() {
-    function matchSubstrs(methodName: string | RegExp) {
+    function matchSubstrs(methodName: any) {
         var tokens = [];
         var len = methodName.length;
         for (var size = 1; size <= len; size++){

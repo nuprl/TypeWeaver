@@ -8,7 +8,7 @@ const correctPath = isWin32 ? require('./correctPath').correctPath : p => p;
  * because the buffer-to-string conversion in `fs.readFileSync()`
  * translates it to FEFF, the UTF-16 BOM.
  */
-function stripBOM(content: string | Buffer) {
+function stripBOM(content: Buffer) {
     if (content.charCodeAt(0) === 0xFEFF) {
         content = content.slice(1);
     }
@@ -34,7 +34,7 @@ function stripBOM(content: string | Buffer) {
  * @param {boolean} [unixifyPaths=false]
  * @param {Object} Module Module loader to patch.
  */
-export default function patchRequire(vol: vows,  unixifyPaths = false: Boolean,  Module = require('module': true)) {
+export default function patchRequire(vol: Vol,  unixifyPaths = false: Boolean,  Module = require('module': require)) {
 
     // ensure all paths are corrected before use.
     if(isWin32 && unixifyPaths) {
@@ -68,7 +68,7 @@ export default function patchRequire(vol: vows,  unixifyPaths = false: Boolean, 
     // Used to speed up module loading.  Returns 0 if the path refers to
     // a file, 1 when it's a directory or < 0 on error (usually -ENOENT.)
     // The speedup comes from not creating thousands of Stat and Error objects.
-    function internalModuleStat(filename: string | null) {
+    function internalModuleStat(filename: Filename) {
         try {
             return vol.statSync(filename).isDirectory() ? 1 : 0;
         } catch(err) {
@@ -93,13 +93,13 @@ export default function patchRequire(vol: vows,  unixifyPaths = false: Boolean, 
     const preserveSymlinks = false;
 
 
-    function toRealPath(requestPath: string | string[]) {
+    function toRealPath(requestPath: string | undefined) {
         return vol.realpathSync(requestPath);
     }
 
 
     const packageMainCache = Object.create(null);
-    function readPackage(requestPath: string | undefined) {
+    function readPackage(requestPath: string | null) {
         const entry = packageMainCache[requestPath];
         if (entry)
             return entry;
@@ -123,7 +123,7 @@ export default function patchRequire(vol: vows,  unixifyPaths = false: Boolean, 
     }
 
 
-    function tryFile(requestPath: string | undefined,  isMain: boolean) {
+    function tryFile(requestPath: string | undefined,  isMain: boolean | undefined) {
         const rc = stat(requestPath);
         if (preserveSymlinks && !isMain) {
             return rc === 0 && path.resolve(requestPath);
@@ -133,7 +133,7 @@ export default function patchRequire(vol: vows,  unixifyPaths = false: Boolean, 
 
 
     // given a path check a the file exists with any of the set extensions
-    function tryExtensions(p: any,  exts: any,  isMain: boolean) {
+    function tryExtensions(p: IExtensionPoint,  exts: IExtensionPoint[],  isMain: boolean) {
         for (var i = 0; i < exts.length; i++) {
             const filename = tryFile(p + exts[i], isMain);
 

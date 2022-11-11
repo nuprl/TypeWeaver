@@ -29,18 +29,18 @@ var url = 'https://www.w3.org/Style/CSS/all-properties.en.json';
 
 console.log('Downloading CSS properties...');
 
-function toCamelCase(propName: string | string[]) {
-  return propName.replace(/-([a-z])/g, function(g: Array<string>) {
+function toCamelCase(propName: any) {
+  return propName.replace(/-([a-z])/g, function(g: any) {
     return g[1].toUpperCase();
   });
 }
 
-request(url, function(error: any,  response: any,  body: any) {
+request(url, function(error: Error,  response: Response,  body: Body) {
   if (!error && response.statusCode === 200) {
     var allCSSProperties = JSON.parse(body);
 
     // Filter out all properties newer than Working Draft
-    var workingDraftAndOlderProperties = allCSSProperties.filter(function(cssProp: CSSProperty) {
+    var workingDraftAndOlderProperties = allCSSProperties.filter(function(cssProp: CssProp) {
       // TODO: --* css Needs additional logic to this module, so filter it out for now
       return cssProp.status !== 'ED' && cssProp.status !== 'FPWD' && cssProp.property !== '--*';
     });
@@ -48,7 +48,7 @@ request(url, function(error: any,  response: any,  body: any) {
     // Remove duplicates, there can be many properties in different states of standard
     // and add only property names to the list
     var CSSpropertyNames = [];
-    workingDraftAndOlderProperties.forEach(function(cssProp: CSSProperty) {
+    workingDraftAndOlderProperties.forEach(function(cssProp: CssProp) {
       const camelCaseName = toCamelCase(cssProp.property);
 
       if (CSSpropertyNames.indexOf(camelCaseName) === -1) {

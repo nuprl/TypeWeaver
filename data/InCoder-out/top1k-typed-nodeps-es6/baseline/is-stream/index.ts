@@ -18,12 +18,12 @@ export function isReadableStream(stream: NodeJS.ReadableStream) {
 		&& typeof stream._readableState === 'object';
 }
 
-export function isDuplexStream(stream: WritableStream) {
+export function isDuplexStream(stream: NodeJS.ReadableStream) {
 	return isWritableStream(stream)
 		&& isReadableStream(stream);
 }
 
-export function isTransformStream(stream: NodeJS.ReadableStream) {
+export function isTransformStream(stream: TransformStream) {
 	return isDuplexStream(stream)
 		&& typeof stream._transform === 'function';
 }

@@ -30,7 +30,7 @@ import baseIsEqual from './.internal/baseIsEqual.js'
  * isEqualWith(array, other, customizer)
  * // => true
  */
-function isEqualWith(value: any,  other: any,  customizer: any) {
+function isEqualWith(value: any,  other: any,  customizer: IsEqualCustomizer) {
   customizer = typeof customizer === 'function' ? customizer : undefined
   const result = customizer ? customizer(value, other) : undefined
   return result === undefined ? baseIsEqual(value, other, undefined, customizer) : !!result

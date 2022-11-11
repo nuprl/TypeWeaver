@@ -31,7 +31,7 @@ function isModifiedGlobal(variable: Variable) {
  * @param {Node} node A node to check.
  * @returns {boolean} `true` if the node is passed through.
  */
-function isPassThrough(node: Node) {
+function isPassThrough(node: ASTNode) {
     const parent = node.parent
 
     switch (parent && parent.type) {
@@ -445,6 +445,6 @@ ReferenceTracker.ESM = ESM
  * @param {number} index The index of the name.
  * @returns {boolean} `false` if it's default.
  */
-function exceptDefault(name: string | symbol,  index: number) {
+function exceptDefault(name: any,  index: any) {
     return !(index === 1 && name === "default")
 }

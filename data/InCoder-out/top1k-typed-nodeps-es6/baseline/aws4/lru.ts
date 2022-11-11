@@ -74,7 +74,7 @@ DoublyLinkedList.prototype.pop = function() {
   return lastNode
 }
 
-DoublyLinkedList.prototype.remove = function(node: Node) {
+DoublyLinkedList.prototype.remove = function(node: AST.Node) {
   if (this.firstNode == node) {
     this.firstNode = node.next
   } else if (node.prev != null) {

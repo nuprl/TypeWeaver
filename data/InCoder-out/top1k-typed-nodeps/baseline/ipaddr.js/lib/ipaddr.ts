@@ -30,7 +30,7 @@
     };
 
     // Expand :: in an IPv6 address or address part consisting of `parts` groups.
-    function expandIPv6 (string: IPv6,  parts: string[]) {
+    function expandIPv6 (string: string | Buffer | DataView,  parts: number[]) {
         // More than one '::' means invalid adddress
         if (string.indexOf('::') !== string.lastIndexOf('::')) {
             return null;
@@ -104,7 +104,7 @@
     }
 
     // A generic CIDR (Classless Inter-Domain Routing) RFC1518 range matcher.
-    function matchCIDR (first: CIDR,  second: CIDR,  partSize: number,  cidrBits: number) {
+    function matchCIDR (first: number,  second: number,  partSize: number,  cidrBits: number) {
         if (first.length !== second.length) {
             throw new Error('ipaddr: cannot match CIDR for objects with different lengths');
         }
@@ -129,7 +129,7 @@
         return true;
     }
 
-    function parseIntAuto (string: number) {
+    function parseIntAuto (string: string | number) {
         // Hexadedimal base 16 (0x#)
         if (hexRegex.test(string)) {
             return parseInt(string, 16);
@@ -216,7 +216,7 @@
         };
 
         // Checks if this address matches other one within given CIDR range.
-        IPv4.prototype.match = function (other: CIDRRange,  cidrRange: CIDRRange) {
+        IPv4.prototype.match = function (other: IPAddressRange,  cidrRange: CIDRRange) {
             let ref;
             if (cidrRange === undefined) {
                 ref = other;
@@ -323,7 +323,7 @@
     };
 
     // Checks if a given string is formatted like IPv4 address.
-    ipaddr.IPv4.isIPv4 = function (string: string) {
+    ipaddr.IPv4.isIPv4 = function (string: tring | null) {
         return this.parser(string) !== null;
     };
 
@@ -370,7 +370,7 @@
 
     // Tries to parse and validate a string with IPv4 address.
     // Throws an error if it fails.
-    ipaddr.IPv4.parse = function (string: string | string[]) {
+    ipaddr.IPv4.parse = function (string: string | undefined) {
         const parts = this.parser(string);
 
         if (parts === null) {
@@ -381,7 +381,7 @@
     };
 
     // Parses the string as an IPv4 Address with CIDR Notation.
-    ipaddr.IPv4.parseCIDR = function (string: any) {
+    ipaddr.IPv4.parseCIDR = function (string: string | RegExp) {
         let match;
 
         if ((match = string.match(/^(.+)\/(\d+)$/))) {
@@ -565,7 +565,7 @@
         };
 
         // Checks if this address matches other one within given CIDR range.
-        IPv6.prototype.match = function (other: CIDRRange,  cidrRange: CIDRRange) {
+        IPv6.prototype.match = function (other: IPAddressOrRange,  cidrRange: CIDRRange) {
             let ref;
 
             if (cidrRange === undefined) {
@@ -766,7 +766,7 @@
     };
 
     // Checks if a given string is formatted like IPv6 address.
-    ipaddr.IPv6.isIPv6 = function (string: string) {
+    ipaddr.IPv6.isIPv6 = function (string: tring | null) {
         return this.parser(string) !== null;
     };
 
@@ -812,7 +812,7 @@
 
     // Tries to parse and validate a string with IPv6 address.
     // Throws an error if it fails.
-    ipaddr.IPv6.parse = function (string: string | Buffer) {
+    ipaddr.IPv6.parse = function (string: string | number) {
         const addr = this.parser(string);
 
         if (addr.parts === null) {
@@ -822,7 +822,7 @@
         return new this(addr.parts, addr.zoneId);
     };
 
-    ipaddr.IPv6.parseCIDR = function (string: string | RegExp) {
+    ipaddr.IPv6.parseCIDR = function (string: any) {
         let maskLength, match, parsed;
 
         if ((match = string.match(/^(.+)\/(\d+)$/))) {
@@ -924,7 +924,7 @@
 
     // Attempts to parse an IP Address, first through IPv6 then IPv4.
     // Throws an error if it could not be parsed.
-    ipaddr.parse = function (string: IPv6) {
+    ipaddr.parse = function (string: string | number) {
         if (ipaddr.IPv6.isValid(string)) {
             return ipaddr.IPv6.parse(string);
         } else if (ipaddr.IPv4.isValid(string)) {
@@ -962,7 +962,7 @@
     // An utility function to ease named range matching. See examples below.
     // rangeList can contain both IPv4 and IPv6 subnet entries and will not throw errors
     // on matching IPv4 addresses to IPv6 ranges or vice versa.
-    ipaddr.subnetMatch = function (address: string,  rangeList: RangeList,  defaultName: string) {
+    ipaddr.subnetMatch = function (address: string,  rangeList: Range[],  defaultName: string | undefined) {
         let i, rangeName, rangeSubnets, subnet;
 
         if (defaultName === undefined || defaultName === null) {

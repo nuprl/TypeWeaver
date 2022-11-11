@@ -44,7 +44,7 @@ var fieldContentRegExp = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/;
  * @public
  */
 
-function parse(str: ring | Buffer,  options: ParseOptions) {
+function parse(str: ring | Buffer | Uint8Array,  options: any) {
   if (typeof str !== 'string') {
     throw new TypeError('argument str must be a string');
   }
@@ -108,7 +108,7 @@ function parse(str: ring | Buffer,  options: ParseOptions) {
  * @public
  */
 
-function serialize(name: String,  val: Any,  options: Any) {
+function serialize(name: String,  val: any,  options: any) {
   var opt = options || {};
   var enc = opt.encode || encode;
 
@@ -224,7 +224,7 @@ function serialize(name: String,  val: Any,  options: Any) {
  * @returns {string}
  */
 
-function decode (str: tring | Buffer) {
+function decode (str: ny) {
   return str.indexOf('%') !== -1
     ? decodeURIComponent(str)
     : str
@@ -261,7 +261,7 @@ function isDate (val: any) {
  * @private
  */
 
-function tryDecode(str: Uint8Array,  decode: Function) {
+function tryDecode(str: any,  decode: any) {
   try {
     return decode(str);
   } catch (e) {

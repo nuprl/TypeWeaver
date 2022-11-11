@@ -24,7 +24,7 @@ const nativeParseInt = root.parseInt
  * parseInt('08')
  * // => 8
  */
-function parseInt(string: number,  radix: number) {
+function parseInt(string: any,  radix: number) {
   if (radix == null) {
     radix = 0
   } else if (radix) {

@@ -31,25 +31,25 @@ import awaitify from './internal/awaitify.js'
  *             callback(null, count);
  *         }, 1000);
  *     },
- *     function (err: Error,  n: number) {
+ *     function (err: any,  n: number) {
  *         // 5 seconds have passed, n = 5
  *     }
  * );
  */
-function whilst(test: Function,  iteratee: Function,  callback: Function) {
+function whilst(test: any,  iteratee: Function,  callback: Function) {
     callback = onlyOnce(callback);
     var _fn = wrapAsync(iteratee);
     var _test = wrapAsync(test);
     var results = [];
 
-    function next(err: rror | null,  ...rest: rray<any>) {
+    function next(err: rror,  ...rest: ny[]) {
         if (err) return callback(err);
         results = rest;
         if (err === false) return;
         _test(check);
     }
 
-    function check(err: Error,  truth: boolean) {
+    function check(err: Error,  truth: any) {
         if (err) return callback(err);
         if (err === false) return;
         if (!truth) return callback(null, ...results);

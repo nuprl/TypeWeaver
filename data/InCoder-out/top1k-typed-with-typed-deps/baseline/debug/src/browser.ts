@@ -194,7 +194,7 @@ exports.log = console.debug || console.log || (() => {});
  * @param {String} namespaces
  * @api private
  */
-function save(namespaces: any) {
+function save(namespaces: URI[]) {
 	try {
 		if (namespaces) {
 			exports.storage.setItem('debug', namespaces);

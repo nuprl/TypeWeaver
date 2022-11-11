@@ -82,7 +82,7 @@ Parser.acorn = {
 //
 // [api]: https://developer.mozilla.org/en-US/docs/SpiderMonkey/Parser_API
 
-export function parse(input: string | Buffer,  options: ParseOptions) {
+export function parse(input: string | Readable,  options: ParseOptions) {
   return Parser.parse(input, options)
 }
 
@@ -90,13 +90,13 @@ export function parse(input: string | Buffer,  options: ParseOptions) {
 // offset in a string. Useful for parsing mixed-language formats
 // that embed JavaScript expressions.
 
-export function parseExpressionAt(input: ParseNode,  pos: number,  options: ParseOptions) {
+export function parseExpressionAt(input: ParserInput,  pos: number,  options: ParseOptions) {
   return Parser.parseExpressionAt(input, pos, options)
 }
 
 // Acorn is organized as a tokenizer and a recursive-descent parser.
 // The `tokenizer` export provides an interface to the tokenizer.
 
-export function tokenizer(input: string | string[],  options: ITokenizerOptions) {
+export function tokenizer(input: string | string[],  options: TokenizeOptions) {
   return Parser.tokenizer(input, options)
 }

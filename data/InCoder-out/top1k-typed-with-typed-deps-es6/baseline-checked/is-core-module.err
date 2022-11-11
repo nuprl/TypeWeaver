@@ -1,10 +1,10 @@
-index.ts(5,37): error TS2304: Cannot find name 'Specifier'.
-index.ts(5,60): error TS2304: Cannot find name 'Specifier'.
-index.ts(29,25): error TS2339: Property 'split' does not exist on type 'Range'.
-index.ts(41,46): error TS2694: Namespace 'NodeJS' has no exported member 'Version'.
+index.ts(6,26): error TS2339: Property 'split' does not exist on type 'Node'.
+index.ts(7,24): error TS2339: Property 'split' does not exist on type 'Node'.
+index.ts(29,25): error TS2339: Property 'split' does not exist on type 'number[]'.
+index.ts(34,26): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Node'.
 index.ts(55,38): error TS2339: Property 'length' does not exist on type 'never'.
-index.ts(56,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Range'.
-index.ts(62,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Range'.
+index.ts(56,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+index.ts(62,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 index.ts(65,18): error TS2732: Cannot find module './core.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
-index.ts(68,54): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'string | boolean'.
+index.ts(68,54): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'number'.
 

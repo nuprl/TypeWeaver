@@ -25,7 +25,7 @@ import basePullAt from './.internal/basePullAt.js'
  * console.log(evens)
  * // => [2, 4]
  */
-function remove(array: Array,  predicate: Function) {
+function remove(array: ArrayLike<any>,  predicate: Function) {
   const result = []
   if (!(array != null && array.length)) {
     return result

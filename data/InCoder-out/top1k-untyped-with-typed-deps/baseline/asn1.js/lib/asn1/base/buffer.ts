@@ -81,14 +81,14 @@ DecoderBuffer.prototype.skip = function skip(bytes: number,  fail: Function) {
   return res;
 };
 
-DecoderBuffer.prototype.raw = function raw(save: boolean) {
+DecoderBuffer.prototype.raw = function raw(save: Save) {
   return this.base.slice(save ? save.offset : this.offset, this.length);
 };
 
-function EncoderBuffer(value: any,  reporter: Reporter) {
+function EncoderBuffer(value: Buffer,  reporter: Reporter) {
   if (Array.isArray(value)) {
     this.length = 0;
-    this.value = value.map(function(item: EncoderBuffer) {
+    this.value = value.map(function(item: any) {
       if (!EncoderBuffer.isEncoderBuffer(item))
         item = new EncoderBuffer(item, reporter);
       this.length += item.length;
@@ -111,7 +111,7 @@ function EncoderBuffer(value: any,  reporter: Reporter) {
 }
 exports.EncoderBuffer = EncoderBuffer;
 
-EncoderBuffer.isEncoderBuffer = function isEncoderBuffer(data: Uint8Array) {
+EncoderBuffer.isEncoderBuffer = function isEncoderBuffer(data: Buffer) {
   if (data instanceof EncoderBuffer) {
     return true;
   }
@@ -125,7 +125,7 @@ EncoderBuffer.isEncoderBuffer = function isEncoderBuffer(data: Uint8Array) {
   return isCompatible;
 };
 
-EncoderBuffer.prototype.join = function join(out: Uint8Array,  offset: number) {
+EncoderBuffer.prototype.join = function join(out: Buffer,  offset: number) {
   if (!out)
     out = Buffer.alloc(this.length);
   if (!offset)
@@ -135,7 +135,7 @@ EncoderBuffer.prototype.join = function join(out: Uint8Array,  offset: number) {
     return out;
 
   if (Array.isArray(this.value)) {
-    this.value.forEach(function(item: Item) {
+    this.value.forEach(function(item: Array<any>) {
       item.join(out, offset);
       offset += item.length;
     });

@@ -11,7 +11,7 @@ var encodingFamilies = [
     {
         // Windows code pages http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/ (+932, 936, 949, 950)
         encodings: [874, 1250, 1251, 1252, 1253, 1254, 1255, 1256, 1257, 1258],
-        convert: function(cp: Position) {
+        convert: function(cp: CP) {
             return {
                 name: "windows-"+cp,
                 aliases: ["win"+cp, "cp"+cp, ""+cp],
@@ -58,8 +58,8 @@ var encodingFamilies = [
 var encodings = {};
 
 // Add all encodings from encodingFamilies.
-encodingFamilies.forEach(function(family: Encoding){
-    family.encodings.forEach(function(encoding: Encoding){
+encodingFamilies.forEach(function(family: FontFamily){
+    family.encodings.forEach(function(encoding: String){
         if (family.convert)
             encoding = family.convert(encoding);
 
@@ -72,7 +72,7 @@ encodingFamilies.forEach(function(family: Encoding){
         };
 
         if (encoding.aliases)
-            encoding.aliases.forEach(function(alias: Alias){
+            encoding.aliases.forEach(function(alias: any){
                 encodings[alias] = encodingName;
             });
     });
@@ -84,7 +84,7 @@ fs.writeFileSync(path.join(__dirname, "..", destFileName),
     "module.exports = "+JSON.stringify(encodings, undefined, "  "));
 
 
-function generateCharsString(encoding: Encoding) {
+function generateCharsString(encoding: number) {
     console.log("Generate encoding for " + encoding);
     var iconvToUtf8 = new Iconv(encoding, "UTF-8");
     var iconvFromUtf8 = new Iconv("UTF-8", encoding);
@@ -122,7 +122,7 @@ function generateCharsString(encoding: Encoding) {
     }
 
     if (containsDiacritics.length > 0)
-        console.log("Contains Diacritics: ", containsDiacritics.map(function(d: any) {return d.toString(16)})+"");
+        console.log("Contains Diacritics: ", containsDiacritics.map(function(d: Date) {return d.toString(16)})+"");
 
     // Check if the first half is standard and cut it if it is.
     var asciiString = '\x00\x01\x02\x03\x04\x05\x06\x07\x08\t\n\x0b\x0c\r\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f'+

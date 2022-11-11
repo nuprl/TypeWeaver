@@ -2,7 +2,7 @@ const ip = exports;
 import { Buffer } from 'buffer';
 import os from 'os';
 
-ip.toBuffer = function (ip: IP,  buff: Buff,  offset: number) {
+ip.toBuffer = function (ip: number,  buff: Buffer,  offset: number) {
   offset = ~~offset;
 
   let result;
@@ -85,11 +85,11 @@ ip.toString = function (buff: Buffer,  offset: number,  length: number) {
 const ipv4Regex = /^(\d{1,3}\.){3,3}\d{1,3}$/;
 const ipv6Regex = /^(::)?(((\d{1,3}\.){3}(\d{1,3}){1})?([0-9a-f]){0,4}:{0,2}){1,8}(::)?$/i;
 
-ip.isV4Format = function (ip: IPv4Address) {
+ip.isV4Format = function (ip: string | RegExp) {
   return ipv4Regex.test(ip);
 };
 
-ip.isV6Format = function (ip: string) {
+ip.isV6Format = function (ip: IPv6) {
   return ipv6Regex.test(ip);
 };
 
@@ -103,7 +103,7 @@ function _normalizeFamily(family: number) {
   return family ? family.toLowerCase() : 'ipv4';
 }
 
-ip.fromPrefixLen = function (prefixlen: number,  family: string) {
+ip.fromPrefixLen = function (prefixlen: number,  family: number) {
   if (prefixlen > 32) {
     family = 'ipv6';
   } else {
@@ -168,7 +168,7 @@ ip.mask = function (addr: Buffer,  mask: Buffer) {
   return ip.toString(result);
 };
 
-ip.cidr = function (cidrString: CIDR) {
+ip.cidr = function (cidrString: string | CIDR) {
   const cidrParts = cidrString.split('/');
 
   const addr = cidrParts[0];
@@ -222,7 +222,7 @@ ip.subnet = function (addr: number,  mask: number) {
   };
 };
 
-ip.cidrSubnet = function (cidrString: CIDR) {
+ip.cidrSubnet = function (cidrString: string | CIDR) {
   const cidrParts = cidrString.split('/');
 
   const addr = cidrParts[0];
@@ -305,7 +305,7 @@ ip.isEqual = function (a: Buffer,  b: Buffer) {
   return true;
 };
 
-ip.isPrivate = function (addr: IPv6Address) {
+ip.isPrivate = function (addr: number) {
   return /^(::f{4}:)?10\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$/i
     .test(addr)
     || /^(::f{4}:)?192\.168\.([0-9]{1,3})\.([0-9]{1,3})$/i.test(addr)
@@ -323,7 +323,7 @@ ip.isPublic = function (addr: P) {
   return !ip.isPrivate(addr);
 };
 
-ip.isLoopback = function (addr: IPv6Address) {
+ip.isLoopback = function (addr: number) {
   return /^(::f{4}:)?127\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})/
     .test(addr)
     || /^fe80::1$/.test(addr)
@@ -359,7 +359,7 @@ ip.loopback = function (family: string) {
 //   * 'private': the first private ip address of family.
 //   * undefined: First address with `ipv4` or loopback address `127.0.0.1`.
 //
-ip.address = function (name: String,  family: String) {
+ip.address = function (name: string,  family: string) {
   const interfaces = os.networkInterfaces();
 
   //

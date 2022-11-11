@@ -17,7 +17,7 @@ import baseSum from './.internal/baseSum.js'
  * sumBy(objects, ({ n }) => n)
  * // => 20
  */
-function sumBy(array: Array<T>,  iteratee: Function) {
+function sumBy(array: number[],  iteratee: Function) {
   return (array != null && array.length)
     ? baseSum(array, iteratee)
     : 0

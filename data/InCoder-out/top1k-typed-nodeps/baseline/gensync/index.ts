@@ -12,7 +12,7 @@ const GENSYNC_RACE_NONEMPTY = "GENSYNC_RACE_NONEMPTY";
 const GENSYNC_ERRBACK_NO_CALLBACK = "GENSYNC_ERRBACK_NO_CALLBACK";
 
 module.exports = Object.assign(
-  function gensync(optsOrFn: Function) {
+  function gensync(optsOrFn: OptionsOrFn) {
     let genFn = optsOrFn;
     if (typeof optsOrFn !== "function") {
       genFn = newGenerator(optsOrFn);
@@ -26,11 +26,11 @@ module.exports = Object.assign(
     all: buildOperation({
       name: "all",
       arity: 1,
-      sync: function(args: any) {
+      sync: function(args: any[]) {
         const items = Array.from(args[0]);
         return items.map(item => evaluateSync(item));
       },
-      async: function(args: any,  resolve: Function,  reject: Function) {
+      async: function(args: any[],  resolve: Function,  reject: Function) {
         const items = Array.from(args[0]);
 
         if (items.length === 0) {
@@ -57,7 +57,7 @@ module.exports = Object.assign(
     race: buildOperation({
       name: "race",
       arity: 1,
-      sync: function(args: any) {
+      sync: function(args: any[]) {
         const items = Array.from(args[0]);
         if (items.length === 0) {
           throw makeError("Must race at least 1 item", GENSYNC_RACE_NONEMPTY);
@@ -65,7 +65,7 @@ module.exports = Object.assign(
 
         return evaluateSync(items[0]);
       },
-      async: function(args: any,  resolve: Function,  reject: Function) {
+      async: function(args: any[],  resolve: Function,  reject: Function) {
         const items = Array.from(args[0]);
         if (items.length === 0) {
           throw makeError("Must race at least 1 item", GENSYNC_RACE_NONEMPTY);
@@ -116,7 +116,7 @@ function makeFunctionAPI(genFn: Function) {
   return fns;
 }
 
-function assertTypeof(type: any,  name: any,  value: any,  allowUndefined: boolean) {
+function assertTypeof(type: string,  name: string,  value: any,  allowUndefined: boolean) {
   if (
     typeof value === type ||
     (allowUndefined && typeof value === "undefined")
@@ -133,7 +133,7 @@ function assertTypeof(type: any,  name: any,  value: any,  allowUndefined: boole
 
   throw makeError(msg, GENSYNC_OPTIONS_ERROR);
 }
-function makeError(msg: string | Error,  code: number) {
+function makeError(msg: any,  code: number) {
   return Object.assign(new Error(msg), { code });
 }
 
@@ -141,7 +141,7 @@ function makeError(msg: string | Error,  code: number) {
  * Given an options object, return a new generator that dispatches the
  * correct handler based on sync or async execution.
  */
-function newGenerator({ name: any,  arity: number,  sync: boolean,  async: boolean,  errback }: IRequestOptions) {
+function newGenerator({ name: name,  arity: arity,  sync: sync,  async: async,  errback }: SyncCallback) {
   assertTypeof("string", "name", name, true /* allowUndefined */);
   assertTypeof("number", "arity", arity, true /* allowUndefined */);
   assertTypeof("function", "sync", sync);
@@ -178,10 +178,10 @@ function newGenerator({ name: any,  arity: number,  sync: boolean,  async: boole
   return buildOperation({
     name,
     arity,
-    sync: function(args: any) {
+    sync: function(args: Array<any>) {
       return sync.apply(this, args);
     },
-    async: function(args: any,  resolve: Function,  reject: Function) {
+    async: function(args: any[],  resolve: Function,  reject: Function) {
       if (async) {
         async.apply(this, args).then(resolve, reject);
       } else if (errback) {
@@ -196,13 +196,13 @@ function newGenerator({ name: any,  arity: number,  sync: boolean,  async: boole
   });
 }
 
-function wrapGenerator(genFn: Function) {
+function wrapGenerator(genFn: GeneratorFunction) {
   return setFunctionMetadata(genFn.name, genFn.length, function(...args: any[]) {
     return genFn.apply(this, args);
   });
 }
 
-function buildOperation({ name: operationName,  arity: arity,  sync: sync,  async }: Function) {
+function buildOperation({ name: name,  arity: arity,  sync: sync,  async }: SyncOrAsyncOptions) {
   return setFunctionMetadata(name, arity, function*(...args) {
     const resume = yield GENSYNC_START;
     if (!resume) {
@@ -246,7 +246,7 @@ function buildOperation({ name: operationName,  arity: arity,  sync: sync,  asyn
   });
 }
 
-function evaluateSync(gen: Generator) {
+function evaluateSync(gen: GeneratorFunction) {
   let value;
   while (!({ value } = gen.next()).done) {
     assertStart(value, gen);
@@ -254,7 +254,7 @@ function evaluateSync(gen: Generator) {
   return value;
 }
 
-function evaluateAsync(gen: Generator,  resolve: Function,  reject: Function) {
+function evaluateAsync(gen: any,  resolve: any,  reject: any) {
   (function step() {
     try {
       let value;
@@ -291,7 +291,7 @@ function evaluateAsync(gen: Generator,  resolve: Function,  reject: Function) {
   })();
 }
 
-function assertStart(value: any,  gen: Function) {
+function assertStart(value: any,  gen: number) {
   if (value === GENSYNC_START) return;
 
   throwError(
@@ -304,7 +304,7 @@ function assertStart(value: any,  gen: Function) {
     )
   );
 }
-function assertSuspend({ value: suspend,  done }: Suspend,  gen: Generator) {
+function assertSuspend({ value: suspend,  done }: SuspendAssertion,  gen: Generator<any>) {
   if (!done && value === GENSYNC_SUSPEND) return;
 
   throwError(
@@ -329,7 +329,7 @@ function throwError(gen: Generator,  err: Error) {
   throw err;
 }
 
-function isIterable(value: ixed) {
+function isIterable(value: nknown) {
   return (
     !!value &&
     (typeof value === "object" || typeof value === "function") &&
@@ -337,7 +337,7 @@ function isIterable(value: ixed) {
   );
 }
 
-function setFunctionMetadata(name: any,  arity: number,  fn: Function) {
+function setFunctionMetadata(name: string,  arity: number,  fn: Function) {
   if (typeof name === "string") {
     // This should always work on the supported Node versions, but for the
     // sake of users that are compiling to older versions, we check for

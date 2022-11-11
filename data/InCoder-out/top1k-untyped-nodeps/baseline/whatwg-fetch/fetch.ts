@@ -22,7 +22,7 @@ var support = {
   arrayBuffer: 'ArrayBuffer' in global
 }
 
-function isDataView(obj: Object) {
+function isDataView(obj: unknown) {
   return obj && DataView.prototype.isPrototypeOf(obj)
 }
 
@@ -46,7 +46,7 @@ if (support.arrayBuffer) {
     }
 }
 
-function normalizeName(name: any) {
+function normalizeName(name: ring | undefined) {
   if (typeof name !== 'string') {
     name = String(name)
   }
@@ -56,7 +56,7 @@ function normalizeName(name: any) {
   return name.toLowerCase()
 }
 
-function normalizeValue(value: any) {
+function normalizeValue(value: ring | number) {
   if (typeof value !== 'string') {
     value = String(value)
   }
@@ -64,7 +64,7 @@ function normalizeValue(value: any) {
 }
 
 // Build a destructive iterator for the value list
-function iteratorFor(items: Array<any>) {
+function iteratorFor(items: Iterable<any>) {
   var iterator = {
     next: function() {
       var value = items.shift()
@@ -81,7 +81,7 @@ function iteratorFor(items: Array<any>) {
   return iterator
 }
 
-export function Headers(headers: Headers) {
+export function Headers(headers: HeadersArg) {
   this.map = {}
 
   if (headers instanceof Headers) {
@@ -99,27 +99,27 @@ export function Headers(headers: Headers) {
   }
 }
 
-Headers.prototype.append = function(name: String,  value: any) {
+Headers.prototype.append = function(name: String,  value: String) {
   name = normalizeName(name)
   value = normalizeValue(value)
   var oldValue = this.map[name]
   this.map[name] = oldValue ? oldValue + ', ' + value : value
 }
 
-Headers.prototype['delete'] = function(name: any) {
+Headers.prototype['delete'] = function(name: String) {
   delete this.map[normalizeName(name)]
 }
 
-Headers.prototype.get = function(name: any) {
+Headers.prototype.get = function(name: String) {
   name = normalizeName(name)
   return this.has(name) ? this.map[name] : null
 }
 
-Headers.prototype.has = function(name: any) {
+Headers.prototype.has = function(name: String) {
   return this.map.hasOwnProperty(normalizeName(name))
 }
 
-Headers.prototype.set = function(name: any,  value: any) {
+Headers.prototype.set = function(name: String,  value: String) {
   this.map[normalizeName(name)] = normalizeValue(value)
 }
 
@@ -159,7 +159,7 @@ if (support.iterable) {
   Headers.prototype[Symbol.iterator] = Headers.prototype.entries
 }
 
-function consumed(body: Node) {
+function consumed(body: Body) {
   if (body.bodyUsed) {
     return Promise.reject(new TypeError('Already read'))
   }
@@ -167,7 +167,7 @@ function consumed(body: Node) {
 }
 
 function fileReaderReady(reader: FileReader) {
-  return new Promise(function(resolve: Function,  reject: Function) {
+  return new Promise(function(resolve: resolve,  reject: reject) {
     reader.onload = function() {
       resolve(reader.result)
     }
@@ -331,12 +331,12 @@ function Body() {
 // HTTP methods whose capitalization should be normalized
 var methods = ['DELETE', 'GET', 'HEAD', 'OPTIONS', 'POST', 'PUT']
 
-function normalizeMethod(method: Method) {
+function normalizeMethod(method: string | Function) {
   var upcased = method.toUpperCase()
   return methods.indexOf(upcased) > -1 ? upcased : method
 }
 
-export function Request(input: RequestInput,  options: RequestOptions) {
+export function Request(input: RequestInput,  options: RequestInit) {
   if (!(this instanceof Request)) {
     throw new TypeError('Please use the "new" operator, this DOM object constructor cannot be called as a function.')
   }
@@ -403,7 +403,7 @@ Request.prototype.clone = function() {
   return new Request(this, {body: this._bodyInit})
 }
 
-function decode(body: Blob) {
+function decode(body: Buffer) {
   var form = new FormData()
   body
     .trim()
@@ -429,10 +429,10 @@ function parseHeaders(rawHeaders: string) {
   // https://github.com/zloirock/core-js/issues/751
   preProcessedHeaders
     .split('\r')
-    .map(function(header: any) {
+    .map(function(header: Header) {
       return header.indexOf('\n') === 0 ? header.substr(1, header.length) : header
     })
-    .forEach(function(line: Line) {
+    .forEach(function(line: String) {
       var parts = line.split(':')
       var key = parts.shift().trim()
       if (key) {
@@ -445,7 +445,7 @@ function parseHeaders(rawHeaders: string) {
 
 Body.call(Request.prototype)
 
-export function Response(bodyInit: Object,  options: Object) {
+export function Response(bodyInit: any,  options: any) {
   if (!(this instanceof Response)) {
     throw new TypeError('Please use the "new" operator, this DOM object constructor cannot be called as a function.')
   }
@@ -503,8 +503,8 @@ try {
   DOMException.prototype.constructor = DOMException
 }
 
-export function fetch(input: any,  init: any) {
-  return new Promise(function(resolve: Function,  reject: Function) {
+export function fetch(input: RequestInfo,  init: RequestInit) {
+  return new Promise(function(resolve: resolve,  reject: reject) {
     var request = new Request(input, init)
 
     if (request.signal && request.signal.aborted) {
@@ -577,7 +577,7 @@ export function fetch(input: any,  init: any) {
     }
 
     if (init && typeof init.headers === 'object' && !(init.headers instanceof Headers)) {
-      Object.getOwnPropertyNames(init.headers).forEach(function(name: any) {
+      Object.getOwnPropertyNames(init.headers).forEach(function(name: String) {
         xhr.setRequestHeader(name, normalizeValue(init.headers[name]))
       })
     } else {

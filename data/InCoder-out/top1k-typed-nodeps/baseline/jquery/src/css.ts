@@ -31,7 +31,7 @@ var
 		fontWeight: "400"
 	};
 
-function setPositiveNumber( _elem: Element,  value: number,  subtract : number) {
+function setPositiveNumber( _elem: any,  value: number,  subtract : boolean) {
 
 	// Any relative (+/-) values have already been
 	// normalized at this point
@@ -43,7 +43,7 @@ function setPositiveNumber( _elem: Element,  value: number,  subtract : number) 
 		value;
 }
 
-function boxModelAdjustment( elem: HTMLElement,  dimension: number,  box: Element,  isBorderBox: boolean,  styles: any,  computedVal : any) {
+function boxModelAdjustment( elem: HTMLElement,  dimension: number,  box: Box,  isBorderBox: boolean,  styles: any,  computedVal : any) {
 	var i = dimension === "width" ? 1 : 0,
 		extra = 0,
 		delta = 0;
@@ -111,7 +111,7 @@ function boxModelAdjustment( elem: HTMLElement,  dimension: number,  box: Elemen
 	return delta;
 }
 
-function getWidthOrHeight( elem: Element,  dimension: string,  extra : number) {
+function getWidthOrHeight( elem: Element | Window | Document,  dimension: Dimension,  extra : any) {
 
 	// Start with computed style
 	var styles = getStyles( elem ),
@@ -193,7 +193,7 @@ jQuery.extend( {
 	cssHooks: {},
 
 	// Get and set the style property on a DOM Node
-	style: function( elem: Element,  name: string,  value: any,  extra : any) {
+	style: function( elem: Element,  name: String,  value: String,  extra : Object) {
 
 		// Don't set styles on text and comment nodes
 		if ( !elem || elem.nodeType === 3 || elem.nodeType === 8 || !elem.style ) {
@@ -269,7 +269,7 @@ jQuery.extend( {
 		}
 	},
 
-	css: function( elem: Element,  name: string,  extra: any,  styles : any) {
+	css: function( elem: Element,  name: String,  extra: Object,  styles : String) {
 		var val, num, hooks,
 			origName = cssCamelCase( name ),
 			isCustomProp = rcustomProp.test( name );
@@ -309,9 +309,9 @@ jQuery.extend( {
 	}
 } );
 
-jQuery.each( [ "height", "width" ], function( _i: number,  dimension : string) {
+jQuery.each( [ "height", "width" ], function( _i: Int,  dimension : String) {
 	jQuery.cssHooks[ dimension ] = {
-		get: function( elem: Element,  computed: boolean,  extra : boolean) {
+		get: function( elem: elem,  computed: computed,  extra : extra) {
 			if ( computed ) {
 
 				// Certain elements can have dimension info if we invisibly show them
@@ -332,7 +332,7 @@ jQuery.each( [ "height", "width" ], function( _i: number,  dimension : string) {
 			}
 		},
 
-		set: function( elem: Element,  value: any,  extra : any) {
+		set: function( elem: any,  value: any,  extra : any) {
 			var matches,
 				styles = getStyles( elem ),
 
@@ -367,7 +367,7 @@ jQuery.each( {
 	margin: "",
 	padding: "",
 	border: "Width"
-}, function( prefix: string,  suffix : string) {
+}, function( prefix: jQuery.cssHooks.page,  suffix : jQuery.cssHooks.border) {
 	jQuery.cssHooks[ prefix + suffix ] = {
 		expand: function( value : any) {
 			var i = 0,
@@ -391,8 +391,8 @@ jQuery.each( {
 } );
 
 jQuery.fn.extend( {
-	css: function( name: string,  value : any) {
-		return access( this, function( elem: HTMLElement,  name: string,  value : any) {
+	css: function( name: String,  value : String) {
+		return access( this, function( elem: Element,  name: String,  value : String) {
 			var styles, len,
 				map = {},
 				i = 0;

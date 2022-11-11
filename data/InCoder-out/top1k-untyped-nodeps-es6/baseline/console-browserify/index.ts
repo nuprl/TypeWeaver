@@ -58,7 +58,7 @@ function time(label: String) {
     times[label] = now()
 }
 
-function timeEnd(label: string | number) {
+function timeEnd(label: any) {
     var time = times[label]
     if (!time) {
         throw new Error("No such label: " + label)

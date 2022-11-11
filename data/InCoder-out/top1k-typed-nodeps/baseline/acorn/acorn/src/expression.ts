@@ -30,7 +30,7 @@ const pp = Parser.prototype
 // either with each other or with an init property — and in
 // strict mode, init properties are also not allowed to be repeated.
 
-pp.checkPropClash = function(prop: any,  propHash: any,  refDestructuringErrors: any) {
+pp.checkPropClash = function(prop: PropType<any>,  propHash: PropType<any>,  refDestructuringErrors: boolean) {
   if (this.options.ecmaVersion >= 9 && prop.type === "SpreadElement")
     return
   if (this.options.ecmaVersion >= 6 && (prop.computed || prop.method || prop.shorthand))
@@ -93,7 +93,7 @@ pp.checkPropClash = function(prop: any,  propHash: any,  refDestructuringErrors:
 // and object pattern might appear (so it's possible to raise
 // delayed syntax error at correct position).
 
-pp.parseExpression = function(forInit: any,  refDestructuringErrors: boolean) {
+pp.parseExpression = function(forInit: forInit,  refDestructuringErrors: refDestructuring) {
   let startPos = this.start, startLoc = this.startLoc
   let expr = this.parseMaybeAssign(forInit, refDestructuringErrors)
   if (this.type === tt.comma) {
@@ -108,7 +108,7 @@ pp.parseExpression = function(forInit: any,  refDestructuringErrors: boolean) {
 // Parse an assignment expression. This includes applications of
 // operators like `+=`.
 
-pp.parseMaybeAssign = function(forInit: boolean,  refDestructuringErrors: boolean,  afterLeftParse: Function) {
+pp.parseMaybeAssign = function(forInit: forInit,  refDestructuringErrors: refDestructuring,  afterLeftParse: afterLeftParse) {
   if (this.isContextual("yield")) {
     if (this.inGenerator) return this.parseYield(forInit)
     // The tokenizer will assume an expression is allowed after
@@ -163,7 +163,7 @@ pp.parseMaybeAssign = function(forInit: boolean,  refDestructuringErrors: boolea
 
 // Parse a ternary conditional (`?:`) operator.
 
-pp.parseMaybeConditional = function(forInit: any,  refDestructuringErrors: boolean) {
+pp.parseMaybeConditional = function(forInit: forInit,  refDestructuringErrors: refDestructuring) {
   let startPos = this.start, startLoc = this.startLoc
   let expr = this.parseExprOps(forInit, refDestructuringErrors)
   if (this.checkExpressionErrors(refDestructuringErrors)) return expr
@@ -180,7 +180,7 @@ pp.parseMaybeConditional = function(forInit: any,  refDestructuringErrors: boole
 
 // Start the precedence parser.
 
-pp.parseExprOps = function(forInit: any,  refDestructuringErrors: boolean) {
+pp.parseExprOps = function(forInit: forInit,  refDestructuringErrors: refDestructuring) {
   let startPos = this.start, startLoc = this.startLoc
   let expr = this.parseMaybeUnary(refDestructuringErrors, false, false, forInit)
   if (this.checkExpressionErrors(refDestructuringErrors)) return expr
@@ -229,7 +229,7 @@ pp.buildBinary = function(startPos: number,  startLoc: number,  left: number,  r
 
 // Parse unary operators, both prefix and postfix.
 
-pp.parseMaybeUnary = function(refDestructuringErrors: boolean,  sawUnary: boolean,  incDec: boolean,  forInit: boolean) {
+pp.parseMaybeUnary = function(refDestructuringErrors: boolean,  sawUnary: boolean,  incDec: number,  forInit: number) {
   let startPos = this.start, startLoc = this.startLoc, expr
   if (this.isContextual("await") && this.canAwait) {
     expr = this.parseAwait(forInit)
@@ -278,7 +278,7 @@ pp.parseMaybeUnary = function(refDestructuringErrors: boolean,  sawUnary: boolea
   }
 }
 
-function isPrivateFieldAccess(node: Node) {
+function isPrivateFieldAccess(node: ts.Node) {
   return (
     node.type === "MemberExpression" && node.property.type === "PrivateIdentifier" ||
     node.type === "ChainExpression" && isPrivateFieldAccess(node.expression)
@@ -287,7 +287,7 @@ function isPrivateFieldAccess(node: Node) {
 
 // Parse call, dot, and `[]`-subscript expressions.
 
-pp.parseExprSubscripts = function(refDestructuringErrors: boolean,  forInit: boolean) {
+pp.parseExprSubscripts = function(refDestructuringErrors: any[],  forInit: any) {
   let startPos = this.start, startLoc = this.startLoc
   let expr = this.parseExprAtom(refDestructuringErrors, forInit)
   if (expr.type === "ArrowFunctionExpression" && this.input.slice(this.lastTokStart, this.lastTokEnd) !== ")")
@@ -301,7 +301,7 @@ pp.parseExprSubscripts = function(refDestructuringErrors: boolean,  forInit: boo
   return result
 }
 
-pp.parseSubscripts = function(base: any,  startPos: number,  startLoc: number,  noCalls: boolean,  forInit: boolean) {
+pp.parseSubscripts = function(base: AST,  startPos: number,  startLoc: Position,  noCalls: boolean,  forInit: boolean) {
   let maybeAsyncArrow = this.options.ecmaVersion >= 8 && base.type === "Identifier" && base.name === "async" &&
       this.lastTokEnd === base.end && !this.canInsertSemicolon() && base.end - base.start === 5 &&
       this.potentialArrowAt === base.start
@@ -324,7 +324,7 @@ pp.parseSubscripts = function(base: any,  startPos: number,  startLoc: number,  
   }
 }
 
-pp.parseSubscript = function(base: any,  startPos: number,  startLoc: number,  noCalls: boolean,  maybeAsyncArrow: any,  optionalChained: any,  forInit: boolean) {
+pp.parseSubscript = function(base: AST,  startPos: number,  startLoc: Position,  noCalls: boolean,  maybeAsyncArrow: boolean,  optionalChained: boolean,  forInit: boolean) {
   let optionalSupported = this.options.ecmaVersion >= 11
   let optional = optionalSupported && this.eat(tt.questionDot)
   if (noCalls && optional) this.raise(this.lastTokStart, "Optional chaining cannot appear in the callee of new expressions")
@@ -390,7 +390,7 @@ pp.parseSubscript = function(base: any,  startPos: number,  startLoc: number,  n
 // `new`, or an expression wrapped in punctuation like `()`, `[]`,
 // or `{}`.
 
-pp.parseExprAtom = function(refDestructuringErrors: boolean,  forInit: boolean) {
+pp.parseExprAtom = function(refDestructuringErrors: any[],  forInit: any) {
   // If a division operator appears in an expression position, the
   // tokenizer got confused, and we force it to read a regexp instead.
   if (this.type === tt.slash) this.readRegexp()
@@ -571,7 +571,7 @@ pp.parseParenExpression = function() {
   return val
 }
 
-pp.parseParenAndDistinguishExpression = function(canBeArrow: CanBeArrow,  forInit: ForInit) {
+pp.parseParenAndDistinguishExpression = function(canBeArrow: Boolean,  forInit: Boolean) {
   let startPos = this.start, startLoc = this.startLoc, val, allowTrailingComma = this.options.ecmaVersion >= 8
   if (this.options.ecmaVersion >= 6) {
     this.next()
@@ -637,7 +637,7 @@ pp.parseParenItem = function(item: Item) {
   return item
 }
 
-pp.parseParenArrowList = function(startPos: number,  startLoc: number,  exprList: ASTList,  forInit: Boolean) {
+pp.parseParenArrowList = function(startPos: number,  startLoc: number,  exprList: Expression[],  forInit: ForInitExpression) {
   return this.parseArrowExpression(this.startNodeAt(startPos, startLoc), exprList, false, forInit)
 }
 
@@ -677,7 +677,7 @@ pp.parseNew = function() {
 
 // Parse template expression.
 
-pp.parseTemplateElement = function({isTagged}: ISyntaxNode) {
+pp.parseTemplateElement = function({isTagged}: TaggedNode) {
   let elem = this.startNode()
   if (this.type === tt.invalidTemplate) {
     if (!isTagged) {
@@ -723,7 +723,7 @@ pp.isAsyncProp = function(prop: Property) {
 
 // Parse an object literal or binding pattern.
 
-pp.parseObj = function(isPattern: any,  refDestructuringErrors: any) {
+pp.parseObj = function(isPattern: Boolean,  refDestructuringErrors: Boolean) {
   let node = this.startNode(), first = true, propHash = {}
   node.properties = []
   this.next()
@@ -740,7 +740,7 @@ pp.parseObj = function(isPattern: any,  refDestructuringErrors: any) {
   return this.finishNode(node, isPattern ? "ObjectPattern" : "ObjectExpression")
 }
 
-pp.parseProperty = function(isPattern: any,  refDestructuringErrors: any) {
+pp.parseProperty = function(isPattern: Boolean,  refDestructuringErrors: Boolean) {
   let prop = this.startNode(), isGenerator, isAsync, startPos, startLoc
   if (this.options.ecmaVersion >= 9 && this.eat(tt.ellipsis)) {
     if (isPattern) {
@@ -782,7 +782,7 @@ pp.parseProperty = function(isPattern: any,  refDestructuringErrors: any) {
   return this.finishNode(prop, "Property")
 }
 
-pp.parsePropertyValue = function(prop: Property,  isPattern: boolean,  isGenerator: boolean,  isAsync: boolean,  startPos: number,  startLoc: number,  refDestructuringErrors: boolean,  containsEsc: boolean) {
+pp.parsePropertyValue = function(prop: Property,  isPattern: Boolean,  isGenerator: Boolean,  isAsync: Boolean,  startPos: Position,  startLoc: Position,  refDestructuringErrors: boolean,  containsEsc: boolean) {
   if ((isGenerator || isAsync) && this.type === tt.colon)
     this.unexpected()
 
@@ -848,7 +848,7 @@ pp.parsePropertyName = function(prop: Property) {
 
 // Initialize empty function node.
 
-pp.initFunction = function(node: Node) {
+pp.initFunction = function(node: ASTNode) {
   node.id = null
   if (this.options.ecmaVersion >= 6) node.generator = node.expression = false
   if (this.options.ecmaVersion >= 8) node.async = false
@@ -856,7 +856,7 @@ pp.initFunction = function(node: Node) {
 
 // Parse object or class method.
 
-pp.parseMethod = function(isGenerator: any,  isAsync: any,  allowDirectSuper: boolean) {
+pp.parseMethod = function(isGenerator: isGenerator,  isAsync: isAsync,  allowDirectSuper: allowDirectSuper) {
   let node = this.startNode(), oldYieldPos = this.yieldPos, oldAwaitPos = this.awaitPos, oldAwaitIdentPos = this.awaitIdentPos
 
   this.initFunction(node)
@@ -883,7 +883,7 @@ pp.parseMethod = function(isGenerator: any,  isAsync: any,  allowDirectSuper: bo
 
 // Parse arrow function expression with given parameters.
 
-pp.parseArrowExpression = function(node: Node,  params: any,  isAsync: boolean,  forInit: boolean) {
+pp.parseArrowExpression = function(node: AST.Node,  params: AST.Node[],  isAsync: AST.Node,  forInit: AST.Node) {
   let oldYieldPos = this.yieldPos, oldAwaitPos = this.awaitPos, oldAwaitIdentPos = this.awaitIdentPos
 
   this.enterScope(functionFlags(isAsync, false) | SCOPE_ARROW)
@@ -905,7 +905,7 @@ pp.parseArrowExpression = function(node: Node,  params: any,  isAsync: boolean, 
 
 // Parse function body and check parameters.
 
-pp.parseFunctionBody = function(node: Node,  isArrowFunction: boolean,  isMethod: boolean,  forInit: any) {
+pp.parseFunctionBody = function(node: Node,  isArrowFunction: Node,  isMethod: Node,  forInit: Node) {
   let isExpression = isArrowFunction && this.type !== tt.braceL
   let oldStrict = this.strict, useStrict = false
 
@@ -942,7 +942,7 @@ pp.parseFunctionBody = function(node: Node,  isArrowFunction: boolean,  isMethod
   this.exitScope()
 }
 
-pp.isSimpleParamList = function(params: any) {
+pp.isSimpleParamList = function(params: any[]) {
   for (let param of params)
     if (param.type !== "Identifier") return false
   return true
@@ -951,7 +951,7 @@ pp.isSimpleParamList = function(params: any) {
 // Checks function params for various disallowed patterns such as using "eval"
 // or "arguments" and duplicate parameters.
 
-pp.checkParams = function(node: Node,  allowDuplicates: boolean) {
+pp.checkParams = function(node: AST.Node,  allowDuplicates: boolean) {
   let nameHash = Object.create(null)
   for (let param of node.params)
     this.checkLValInnerPattern(param, BIND_VAR, allowDuplicates ? null : nameHash)
@@ -963,7 +963,7 @@ pp.checkParams = function(node: Node,  allowDuplicates: boolean) {
 // nothing in between them to be parsed as `null` (which is needed
 // for array literals).
 
-pp.parseExprList = function(close: any,  allowTrailingComma: boolean | undefined,  allowEmpty: boolean | undefined,  refDestructuringErrors: true) {
+pp.parseExprList = function(close: close,  allowTrailingComma: allowTrailingCom,  allowEmpty: allowEmpty,  refDestructuringErrors: true) {
   let elts = [], first = true
   while (!this.eat(close)) {
     if (!first) {
@@ -986,7 +986,7 @@ pp.parseExprList = function(close: any,  allowTrailingComma: boolean | undefined
   return elts
 }
 
-pp.checkUnreserved = function({start: start,  end: end,  name}: IRange) {
+pp.checkUnreserved = function({start: start,  end: end,  name}: Object) {
   if (this.inGenerator && name === "yield")
     this.raiseRecoverable(start, "Cannot use 'yield' as identifier inside a generator")
   if (this.inAsync && name === "await")
@@ -1011,7 +1011,7 @@ pp.checkUnreserved = function({start: start,  end: end,  name}: IRange) {
 // when parsing properties), it will also convert keywords into
 // identifiers.
 
-pp.parseIdent = function(liberal: any,  isBinding: boolean) {
+pp.parseIdent = function(liberal: Boolean,  isBinding: Boolean) {
   let node = this.startNode()
   if (this.type === tt.name) {
     node.name = this.value
@@ -1061,7 +1061,7 @@ pp.parsePrivateIdent = function() {
 
 // Parses yield expression inside generator.
 
-pp.parseYield = function(forInit: any) {
+pp.parseYield = function(forInit: ForInit) {
   if (!this.yieldPos) this.yieldPos = this.start
 
   let node = this.startNode()
@@ -1076,7 +1076,7 @@ pp.parseYield = function(forInit: any) {
   return this.finishNode(node, "YieldExpression")
 }
 
-pp.parseAwait = function(forInit: any) {
+pp.parseAwait = function(forInit: ForInit) {
   if (!this.awaitPos) this.awaitPos = this.start
 
   let node = this.startNode()

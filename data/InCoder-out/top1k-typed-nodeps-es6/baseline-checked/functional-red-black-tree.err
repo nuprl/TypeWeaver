@@ -1,29 +1,25 @@
-rbtree.ts(8,24): error TS2304: Cannot find name 'Color'.
-rbtree.ts(8,37): error TS2304: Cannot find name 'Key'.
-rbtree.ts(8,50): error TS2304: Cannot find name 'Value'.
-rbtree.ts(8,64): error TS2749: 'RBNode' refers to a value, but is being used as a type here. Did you mean 'typeof RBNode'?
-rbtree.ts(8,80): error TS2749: 'RBNode' refers to a value, but is being used as a type here. Did you mean 'typeof RBNode'?
 rbtree.ts(18,26): error TS2339: Property '_color' does not exist on type 'Node'.
 rbtree.ts(18,39): error TS2339: Property 'key' does not exist on type 'Node'.
 rbtree.ts(18,49): error TS2339: Property 'value' does not exist on type 'Node'.
 rbtree.ts(18,61): error TS2339: Property 'left' does not exist on type 'Node'.
 rbtree.ts(18,72): error TS2339: Property 'right' does not exist on type 'Node'.
 rbtree.ts(18,84): error TS2339: Property '_count' does not exist on type 'Node'.
-rbtree.ts(22,33): error TS2339: Property 'key' does not exist on type 'HTMLElement'.
-rbtree.ts(22,43): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
-rbtree.ts(22,55): error TS2339: Property 'left' does not exist on type 'HTMLElement'.
-rbtree.ts(22,66): error TS2339: Property 'right' does not exist on type 'HTMLElement'.
-rbtree.ts(22,78): error TS2339: Property '_count' does not exist on type 'HTMLElement'.
+rbtree.ts(21,25): error TS2304: Cannot find name 'Color'.
+rbtree.ts(22,33): error TS2339: Property 'key' does not exist on type 'Node'.
+rbtree.ts(22,43): error TS2339: Property 'value' does not exist on type 'Node'.
+rbtree.ts(22,55): error TS2339: Property 'left' does not exist on type 'Node'.
+rbtree.ts(22,66): error TS2339: Property 'right' does not exist on type 'Node'.
+rbtree.ts(22,78): error TS2339: Property '_count' does not exist on type 'Node'.
 rbtree.ts(26,8): error TS2339: Property '_count' does not exist on type 'Node'.
 rbtree.ts(26,27): error TS2339: Property 'left' does not exist on type 'Node'.
 rbtree.ts(26,39): error TS2339: Property 'left' does not exist on type 'Node'.
 rbtree.ts(26,64): error TS2339: Property 'right' does not exist on type 'Node'.
 rbtree.ts(26,77): error TS2339: Property 'right' does not exist on type 'Node'.
-rbtree.ts(29,44): error TS2304: Cannot find name 'RedBlackNode'.
-rbtree.ts(108,30): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-rbtree.ts(136,30): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-rbtree.ts(169,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-rbtree.ts(197,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+rbtree.ts(29,32): error TS2503: Cannot find namespace 'RedBlackTree'.
+rbtree.ts(29,61): error TS2304: Cannot find name 'RedBlackTreeNode'.
+rbtree.ts(67,30): error TS2304: Cannot find name 'K'.
+rbtree.ts(67,41): error TS2304: Cannot find name 'V'.
+rbtree.ts(84,27): error TS2345: Argument of type 'number' is not assignable to parameter of type 'null'.
 rbtree.ts(233,29): error TS2304: Cannot find name 'VisitFull'.
 rbtree.ts(234,11): error TS2339: Property 'left' does not exist on type 'Node'.
 rbtree.ts(235,37): error TS2339: Property 'left' does not exist on type 'Node'.
@@ -33,27 +29,19 @@ rbtree.ts(240,11): error TS2339: Property 'right' does not exist on type 'Node'.
 rbtree.ts(241,36): error TS2339: Property 'right' does not exist on type 'Node'.
 rbtree.ts(247,11): error TS2349: This expression is not callable.
   Type 'Number' has no call signatures.
-rbtree.ts(247,28): error TS2339: Property 'key' does not exist on type 'Node'.
-rbtree.ts(249,13): error TS2339: Property 'left' does not exist on type 'Node'.
-rbtree.ts(250,52): error TS2339: Property 'left' does not exist on type 'Node'.
-rbtree.ts(253,24): error TS2339: Property 'key' does not exist on type 'Node'.
-rbtree.ts(253,34): error TS2339: Property 'value' does not exist on type 'Node'.
-rbtree.ts(256,11): error TS2339: Property 'right' does not exist on type 'Node'.
-rbtree.ts(257,49): error TS2339: Property 'right' does not exist on type 'Node'.
-rbtree.ts(262,22): error TS2304: Cannot find name 'Lo'.
-rbtree.ts(262,31): error TS2304: Cannot find name 'Hi'.
-rbtree.ts(262,45): error TS2304: Cannot find name 'Compare'.
-rbtree.ts(262,62): error TS2304: Cannot find name 'Visit'.
-rbtree.ts(263,28): error TS2339: Property 'key' does not exist on type 'Node'.
-rbtree.ts(264,28): error TS2339: Property 'key' does not exist on type 'Node'.
-rbtree.ts(267,13): error TS2339: Property 'left' does not exist on type 'Node'.
-rbtree.ts(268,48): error TS2339: Property 'left' does not exist on type 'Node'.
-rbtree.ts(272,22): error TS2339: Property 'key' does not exist on type 'Node'.
-rbtree.ts(272,32): error TS2339: Property 'value' does not exist on type 'Node'.
-rbtree.ts(276,20): error TS2339: Property 'right' does not exist on type 'Node'.
-rbtree.ts(277,49): error TS2339: Property 'right' does not exist on type 'Node'.
-rbtree.ts(494,37): error TS2749: 'RedBlackTree' refers to a value, but is being used as a type here. Did you mean 'typeof RedBlackTree'?
-rbtree.ts(494,59): error TS2304: Cannot find name 'Stack'.
+rbtree.ts(247,28): error TS2339: Property 'key' does not exist on type 'HTMLElement'.
+rbtree.ts(249,13): error TS2339: Property 'left' does not exist on type 'HTMLElement'.
+rbtree.ts(250,52): error TS2339: Property 'left' does not exist on type 'HTMLElement'.
+rbtree.ts(253,24): error TS2339: Property 'key' does not exist on type 'HTMLElement'.
+rbtree.ts(253,34): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+rbtree.ts(256,11): error TS2339: Property 'right' does not exist on type 'HTMLElement'.
+rbtree.ts(257,49): error TS2339: Property 'right' does not exist on type 'HTMLElement'.
+rbtree.ts(362,26): error TS2304: Cannot find name 'Key'.
+rbtree.ts(383,26): error TS2304: Cannot find name 'Key'.
+rbtree.ts(404,26): error TS2304: Cannot find name 'Key'.
+rbtree.ts(425,26): error TS2304: Cannot find name 'Key'.
+rbtree.ts(447,28): error TS2304: Cannot find name 'Key'.
+rbtree.ts(476,27): error TS2304: Cannot find name 'Key'.
 rbtree.ts(526,5): error TS2339: Property 'key' does not exist on type 'Node'.
 rbtree.ts(526,13): error TS2339: Property 'key' does not exist on type 'Node'.
 rbtree.ts(527,5): error TS2339: Property 'value' does not exist on type 'Node'.
@@ -66,26 +54,5 @@ rbtree.ts(530,5): error TS2339: Property '_color' does not exist on type 'Node'.
 rbtree.ts(530,16): error TS2339: Property '_color' does not exist on type 'Node'.
 rbtree.ts(531,5): error TS2339: Property '_count' does not exist on type 'Node'.
 rbtree.ts(531,16): error TS2339: Property '_count' does not exist on type 'Node'.
-rbtree.ts(563,17): error TS2339: Property 'left' does not exist on type 'number[]'.
-rbtree.ts(564,16): error TS2339: Property 'left' does not exist on type 'number[]'.
-rbtree.ts(566,16): error TS2339: Property 'right' does not exist on type 'number[]'.
-rbtree.ts(588,17): error TS2339: Property 'left' does not exist on type 'number[]'.
-rbtree.ts(589,16): error TS2339: Property 'left' does not exist on type 'number[]'.
-rbtree.ts(591,16): error TS2339: Property 'right' does not exist on type 'number[]'.
-rbtree.ts(601,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-rbtree.ts(605,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-rbtree.ts(619,17): error TS2339: Property 'left' does not exist on type 'number[]'.
-rbtree.ts(620,16): error TS2339: Property 'left' does not exist on type 'number[]'.
-rbtree.ts(622,16): error TS2339: Property 'right' does not exist on type 'number[]'.
-rbtree.ts(652,17): error TS2339: Property 'right' does not exist on type 'number[]'.
-rbtree.ts(653,16): error TS2339: Property 'right' does not exist on type 'number[]'.
-rbtree.ts(655,16): error TS2339: Property 'left' does not exist on type 'number[]'.
-rbtree.ts(677,17): error TS2339: Property 'right' does not exist on type 'number[]'.
-rbtree.ts(678,16): error TS2339: Property 'right' does not exist on type 'number[]'.
-rbtree.ts(680,16): error TS2339: Property 'left' does not exist on type 'number[]'.
-rbtree.ts(690,28): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-rbtree.ts(694,28): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-rbtree.ts(708,17): error TS2339: Property 'right' does not exist on type 'number[]'.
-rbtree.ts(709,16): error TS2339: Property 'right' does not exist on type 'number[]'.
-rbtree.ts(711,16): error TS2339: Property 'left' does not exist on type 'number[]'.
+rbtree.ts(535,32): error TS2304: Cannot find name 'Stack'.
 

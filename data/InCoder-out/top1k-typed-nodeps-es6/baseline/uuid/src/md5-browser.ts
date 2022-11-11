@@ -18,7 +18,7 @@
  * Distributed under the BSD License
  * See http://pajhome.org.uk/crypt/md5 for more info.
  */
-function md5(bytes: uffer) {
+function md5(bytes: tring | Uint8Array) {
   if (typeof bytes === 'string') {
     const msg = unescape(encodeURIComponent(bytes)); // UTF8 escape
 
@@ -194,7 +194,7 @@ function bitRotateLeft(num: number,  cnt: number) {
 /*
  * These functions implement the four basic operations the algorithm uses.
  */
-function md5cmn(q: Uint8Array,  a: Uint8Array,  b: Uint8Array,  x: Uint8Array,  s: Uint8Array,  t: Uint8Array) {
+function md5cmn(q: number,  a: number,  b: number,  x: number,  s: number,  t: number) {
   return safeAdd(bitRotateLeft(safeAdd(safeAdd(a, q), safeAdd(x, t)), s), b);
 }
 

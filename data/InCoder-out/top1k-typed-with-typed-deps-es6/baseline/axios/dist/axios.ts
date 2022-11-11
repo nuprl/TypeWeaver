@@ -1,5 +1,5 @@
 // axios v1.0.0-alpha.1 Copyright (c) 2022 Matt Zabriskie
-(function (global: any,  factory: Function) {
+(function (global: any,  factory: any) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.axios = factory());
@@ -37,7 +37,7 @@
    * @param {Object} val The value to test
    * @returns {boolean} True if value is an Array, otherwise false
    */
-  function isArray(val: any) {
+  function isArray(val: unknown) {
     return Array.isArray(val);
   }
 
@@ -47,7 +47,7 @@
    * @param {Object} val The value to test
    * @returns {boolean} True if the value is undefined, otherwise false
    */
-  function isUndefined(val: any) {
+  function isUndefined(val: unknown) {
     return typeof val === 'undefined';
   }
 
@@ -94,7 +94,7 @@
    * @param {Object} val The value to test
    * @returns {boolean} True if value is a String, otherwise false
    */
-  function isString(val: string) {
+  function isString(val: nknown) {
     return typeof val === 'string';
   }
 
@@ -104,7 +104,7 @@
    * @param {Object} val The value to test
    * @returns {boolean} True if value is a Number, otherwise false
    */
-  function isNumber(val: any) {
+  function isNumber(val: unknown) {
     return typeof val === 'number';
   }
 
@@ -114,7 +114,7 @@
    * @param {Object} val The value to test
    * @returns {boolean} True if value is an Object, otherwise false
    */
-  function isObject(val: mixed) {
+  function isObject(val: any) {
     return val !== null && typeof val === 'object';
   }
 
@@ -124,7 +124,7 @@
    * @param {Object} val The value to test
    * @return {boolean} True if value is a plain Object, otherwise false
    */
-  function isPlainObject(val: ixed) {
+  function isPlainObject(val: nknown) {
     if (kindOf(val) !== 'object') {
       return false;
     }
@@ -175,7 +175,7 @@
    * @param {Object} val The value to test
    * @returns {boolean} True if value is a Function, otherwise false
    */
-  function isFunction(val: any) {
+  function isFunction(val: unknown) {
     return toString.call(val) === '[object Function]';
   }
 
@@ -185,7 +185,7 @@
    * @param {Object} val The value to test
    * @returns {boolean} True if value is a Stream, otherwise false
    */
-  function isStream(val: any) {
+  function isStream(val: unknown) {
     return isObject(val) && isFunction(val.pipe);
   }
 
@@ -218,7 +218,7 @@
    * @param {String} str The String to trim
    * @returns {String} The String freed of excess whitespace
    */
-  function trim(str: string | string[]) {
+  function trim(str: string | null) {
     return str.trim ? str.trim() : str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
   }
 
@@ -306,7 +306,7 @@
    * @param {Object} obj1 Object to merge
    * @returns {Object} Result of all merge properties
    */
-  function merge(/* obj1: ny,  obj2: y,  obj3: any,  ... */: bject) {
+  function merge(/* obj1: bject,  obj2: ject,  obj3: ect,  ... */: bject[]) {
     var result = {};
     function assignValue(val: any,  key: any) {
       if (isPlainObject(result[key]) && isPlainObject(val)) {
@@ -334,7 +334,7 @@
    * @param {Object} thisArg The object to bind function to
    * @return {Object} The resulting value of object a
    */
-  function extend(a: any,  b: any,  thisArg: any) {
+  function extend(a: Object,  b: Object,  thisArg: Object) {
     forEach(b, function assignValue(val: any,  key: any) {
       if (thisArg && typeof val === 'function') {
         a[key] = bind(val, thisArg);
@@ -351,7 +351,7 @@
    * @param {string} content with BOM
    * @return {string} content value without BOM
    */
-  function stripBOM(content: string | Buffer) {
+  function stripBOM(content: Buffer) {
     if (content.charCodeAt(0) === 0xFEFF) {
       content = content.slice(1);
     }
@@ -366,7 +366,7 @@
    * @param {object} [descriptors]
    */
 
-  function inherits(constructor: Function,  superConstructor: Function,  props: Object,  descriptors: Object) {
+  function inherits(constructor: Function,  superConstructor: Function,  props: Object,  descriptors: Array) {
     constructor.prototype = Object.create(superConstructor.prototype, descriptors);
     constructor.prototype.constructor = constructor;
     props && Object.assign(constructor.prototype, props);
@@ -381,7 +381,7 @@
    * @returns {Object}
    */
 
-  function toFlatObject(sourceObj: any,  destObj: any,  filter: Function,  propFilter: Function) {
+  function toFlatObject(sourceObj: Object,  destObj: Object,  filter: Function,  propFilter: Function) {
     var props;
     var i;
     var prop;
@@ -414,7 +414,7 @@
    * @param {Number} [position= 0]
    * @returns {boolean}
    */
-  function endsWith(str: string | undefined,  searchString: string | undefined,  position: number) {
+  function endsWith(str: any,  searchString: any,  position: any) {
     str = String(str);
     if (position === undefined || position > str.length) {
       position = str.length;
@@ -443,14 +443,14 @@
   }
 
   // eslint-disable-next-line func-names
-  var isTypedArray = (function(TypedArray: ArrayBufferView) {
+  var isTypedArray = (function(TypedArray: TypedArrayConstructor) {
     // eslint-disable-next-line func-names
     return function(thing: Thing) {
       return TypedArray && thing instanceof TypedArray;
     };
   })(typeof Uint8Array !== 'undefined' && Object.getPrototypeOf(Uint8Array));
 
-  function forEachEntry(obj: Object,  fn: Function) {
+  function forEachEntry(obj: any,  fn: Function) {
     var generator = obj && obj[Symbol.iterator];
 
     var iterator = generator.call(obj);
@@ -463,7 +463,7 @@
     }
   }
 
-  function matchAll(regExp: RegExp,  str: String) {
+  function matchAll(regExp: RegExp,  str: string) {
     var matches;
     var arr = [];
 
@@ -476,8 +476,8 @@
 
   var isHTMLForm = kindOfTest('HTMLFormElement');
 
-  var hasOwnProperty = (function resolver(_hasOwnProperty: Function) {
-    return function(obj: any,  prop: string | symbol) {
+  var hasOwnProperty = (function resolver(_hasOwnProperty: any) {
+    return function(obj: any,  prop: any) {
       return _hasOwnProperty.call(obj, prop);
     };
   })(Object.prototype.hasOwnProperty);
@@ -529,7 +529,7 @@
    * @param {Object} [response] The response.
    * @returns {Error} The created error.
    */
-  function AxiosError(message: string | Error,  code: number,  config: AxiosRequestConfig,  request: AxiosRequest,  response: AxiosResponse) {
+  function AxiosError(message: string | Error,  code: number,  config: AxiosRequestConfig,  request: AxiosRequestConfig,  response: AxiosResponse) {
     Error.call(this);
 
     if (Error.captureStackTrace) {
@@ -585,7 +585,7 @@
     'ERR_NOT_SUPPORT',
     'ERR_INVALID_URL'
   // eslint-disable-next-line func-names
-  ].forEach(function(code: any) {
+  ].forEach(function(code: number) {
     descriptors[code] = {value: code};
   });
 
@@ -593,7 +593,7 @@
   Object.defineProperty(prototype$1, 'isAxiosError', {value: true});
 
   // eslint-disable-next-line func-names
-  AxiosError.from = function(error: Error,  code: number,  config: any,  request: any,  response: any,  customProps: any) {
+  AxiosError.from = function(error: Error,  code: number,  config: Config,  request: Request,  response: Response,  customProps: Object) {
     var axiosError = Object.create(prototype$1);
 
     utils.toFlatObject(error, axiosError, function filter(obj: ny) {
@@ -619,15 +619,15 @@
   // eslint-disable-next-line strict
   var FormData$1 = browser$1;
 
-  function isVisitable(thing: any) {
+  function isVisitable(thing: Thing) {
     return utils.isPlainObject(thing) || utils.isArray(thing);
   }
 
-  function removeBrackets(key: string | number) {
+  function removeBrackets(key: Key) {
     return utils.endsWith(key, '[]') ? key.slice(0, -2) : key;
   }
 
-  function renderKey(path: Array<string>,  key: any,  dots: boolean) {
+  function renderKey(path: Array<string>,  key: string | number,  dots: boolean) {
     if (!path) return key;
     return path.concat(key).map(function each(token: Token,  i: number) {
       // eslint-disable-next-line no-param-reassign
@@ -636,11 +636,11 @@
     }).join(dots ? '.' : '');
   }
 
-  function isFlatArray(arr: Array<any>) {
+  function isFlatArray(arr: number[]) {
     return utils.isArray(arr) && !arr.some(isVisitable);
   }
 
-  var predicates = utils.toFlatObject(utils, {}, null, function filter(prop: any) {
+  var predicates = utils.toFlatObject(utils, {}, null, function filter(prop: PropertyKey) {
     return /^is[A-Z]/.test(prop);
   });
 
@@ -673,7 +673,7 @@
       metaTokens: true,
       dots: false,
       indexes: false
-    }, false, function defined(option: any,  source: any) {
+    }, false, function defined(option: Option,  source: Source) {
       // eslint-disable-next-line no-eq-null,eqeqeq
       return !utils.isUndefined(source[option]);
     });
@@ -760,7 +760,7 @@
       isVisitable: isVisitable
     });
 
-    function build(value: any,  path: Array<string | number> | string) {
+    function build(value: any,  path: any) {
       if (utils.isUndefined(value)) return;
 
       if (stack.indexOf(value) !== -1) {
@@ -769,7 +769,7 @@
 
       stack.push(value);
 
-      utils.forEach(value, function each(el: HTMLElement,  key: any) {
+      utils.forEach(value, function each(el: HTMLElement,  key: string | number) {
         var result = !utils.isUndefined(el) && visitor.call(
           formData, el, utils.isString(key) ? key.trim() : key, path, exposedHelpers
         );
@@ -793,7 +793,7 @@
 
   var toFormData_1 = toFormData;
 
-  function encode$1(str: string | number) {
+  function encode$1(str: any) {
     var charMap = {
       '!': '%21',
       "'": '%27',
@@ -803,12 +803,12 @@
       '%20': '+',
       '%00': '\x00'
     };
-    return encodeURIComponent(str).replace(/[!'\(\)~]|%20|%00/g, function replacer(match: RegExpExecArray) {
+    return encodeURIComponent(str).replace(/[!'\(\)~]|%20|%00/g, function replacer(match: RegExp) {
       return charMap[match];
     });
   }
 
-  function AxiosURLSearchParams(params: Object,  options: Object) {
+  function AxiosURLSearchParams(params: URLSearchParams | string,  options: any) {
     this._pairs = [];
 
     params && toFormData_1(params, this, options);
@@ -816,7 +816,7 @@
 
   var prototype = AxiosURLSearchParams.prototype;
 
-  prototype.append = function append(name: String,  value: Any) {
+  prototype.append = function append(name: String,  value: String) {
     this._pairs.push([name, value]);
   };
 
@@ -825,7 +825,7 @@
       return encoder.call(this, value, encode$1);
     } : encode$1;
 
-    return this._pairs.map(function each(pair: Pair) {
+    return this._pairs.map(function each(pair: Array<any>) {
       return _encode(pair[0]) + '=' + _encode(pair[1]);
     }, '').join('&');
   };
@@ -850,7 +850,7 @@
    * @param {?object} options
    * @returns {string} The formatted url
    */
-  var buildURL = function buildURL(url: String,  params: Object,  options: Object) {
+  var buildURL = function buildURL(url: any,  params: any,  options: any) {
     /*eslint no-param-reassign:0*/
     if (!params) {
       return url;
@@ -926,7 +926,7 @@
    * @param {Function} fn The function to call for each interceptor
    */
   InterceptorManager.prototype.forEach = function forEach(fn: Function) {
-    utils.forEach(this.handlers, function forEachHandler(h: unction) {
+    utils.forEach(this.handlers, function forEachHandler(h: andler) {
       if (h !== null) {
         fn(h);
       }
@@ -935,7 +935,7 @@
 
   var InterceptorManager_1 = InterceptorManager;
 
-  var normalizeHeaderName = function normalizeHeaderName(headers: Headers,  normalizedName: string | null) {
+  var normalizeHeaderName = function normalizeHeaderName(headers: any,  normalizedName: any) {
     utils.forEach(headers, function processHeader(value: any,  name: any) {
       if (name !== normalizedName && name.toUpperCase() === normalizedName.toUpperCase()) {
         headers[normalizedName] = value;
@@ -979,7 +979,7 @@
     }, options));
   };
 
-  function parsePropPath(name: string | string[]) {
+  function parsePropPath(name: string | undefined) {
     // foo[x][y][z]
     // foo.x.y.z
     // foo-x-y-z
@@ -1003,7 +1003,7 @@
   }
 
   function formDataToJSON(formData: FormData) {
-    function buildPath(path: Array<any>,  value: any,  target: any,  index: number) {
+    function buildPath(path: any,  value: any,  target: any,  index: any) {
       var name = path[index++];
       var isNumericKey = Number.isFinite(+name);
       var isLast = index >= path.length;
@@ -1035,7 +1035,7 @@
     if (utils.isFormData(formData) && utils.isFunction(formData.entries)) {
       var obj = {};
 
-      utils.forEachEntry(formData, function(name: any,  value: any) {
+      utils.forEachEntry(formData, function(name: String,  value: String) {
         buildPath(parsePropPath(name), value, obj, 0);
       });
 
@@ -1075,7 +1075,7 @@
     // Standard browser envs support document.cookie
       (function standardBrowserEnv() {
         return {
-          write: function write(name: any,  value: any,  expires: number,  path: any,  domain: any,  secure: boolean) {
+          write: function write(name: any,  value: any,  expires: any,  path: any,  domain: any,  secure: any) {
             var cookie = [];
             cookie.push(name + '=' + encodeURIComponent(value));
 
@@ -1098,12 +1098,12 @@
             document.cookie = cookie.join('; ');
           },
 
-          read: function read(name: string | symbol) {
+          read: function read(name: String) {
             var match = document.cookie.match(new RegExp('(^|;\\s*)(' + name + ')=([^;]*)'));
             return (match ? decodeURIComponent(match[3]) : null);
           },
 
-          remove: function remove(name: string | symbol) {
+          remove: function remove(name: String) {
             this.write(name, '', Date.now() - 86400000);
           }
         };
@@ -1125,7 +1125,7 @@
    * @param {string} url The URL to test
    * @returns {boolean} True if the specified URL is absolute, otherwise false
    */
-  var isAbsoluteURL = function isAbsoluteURL(url: URL) {
+  var isAbsoluteURL = function isAbsoluteURL(url: string | null | undefined) {
     // A URL is considered absolute if it begins with "<scheme>://" or "//" (protocol-relative URL).
     // RFC 3986 defines scheme name as a sequence of characters beginning with a letter and followed
     // by any combination of letters, digits, plus, period, or hyphen.
@@ -1154,7 +1154,7 @@
    * @param {string} requestedURL Absolute or relative URL to combine
    * @returns {string} The combined full path
    */
-  var buildFullPath = function buildFullPath(baseURL: URL,  requestedURL: URL) {
+  var buildFullPath = function buildFullPath(baseURL: any,  requestedURL: any) {
     if (baseURL && !isAbsoluteURL(requestedURL)) {
       return combineURLs(baseURL, requestedURL);
     }
@@ -1183,7 +1183,7 @@
    * @param {String} headers Headers needing to be parsed
    * @returns {Object} Headers parsed into an object
    */
-  var parseHeaders = function parseHeaders(headers: string) {
+  var parseHeaders = function parseHeaders(headers: any) {
     var parsed = {};
     var key;
     var val;
@@ -1191,7 +1191,7 @@
 
     if (!headers) { return parsed; }
 
-    utils.forEach(headers.split('\n'), function parser(line: Line) {
+    utils.forEach(headers.split('\n'), function parser(line: String) {
       i = line.indexOf(':');
       key = utils.trim(line.slice(0, i)).toLowerCase();
       val = utils.trim(line.slice(i + 1));
@@ -1227,7 +1227,7 @@
         * @param {String} url The URL to be parsed
         * @returns {Object}
         */
-        function resolveURL(url: string | URL) {
+        function resolveURL(url: string | null | undefined) {
           var href = url;
 
           if (msie) {
@@ -1261,7 +1261,7 @@
         * @param {String} requestURL The URL to test
         * @returns {boolean} True if URL shares the same origin, otherwise false
         */
-        return function isURLSameOrigin(requestURL: URL) {
+        return function isURLSameOrigin(requestURL: string | RequestInfo) {
           var parsed = (utils.isString(requestURL)) ? resolveURL(requestURL) : requestURL;
           return (parsed.protocol === originURL.protocol &&
               parsed.host === originURL.host);
@@ -1284,7 +1284,7 @@
    * @param {Object=} config The config.
    * @param {Object=} request The request.
    */
-  function CanceledError(message: string | Error,  config: RequestConfig,  request: Request) {
+  function CanceledError(message: any,  config: any,  request: any) {
     // eslint-disable-next-line no-eq-null,eqeqeq
     AxiosError_1.call(this, message == null ? 'canceled' : message, AxiosError_1.ERR_CANCELED, config, request);
     this.name = 'CanceledError';
@@ -1301,7 +1301,7 @@
     return match && match[1] || '';
   };
 
-  var xhr = function xhrAdapter(config: XhrConfig) {
+  var xhr = function xhrAdapter(config: RequestConfig) {
     return new Promise(function dispatchXhrRequest(resolve: Function,  reject: Function) {
       var requestData = config.data;
       var requestHeaders = config.headers;
@@ -1357,7 +1357,7 @@
         settle(function _resolve(value: any) {
           resolve(value);
           done();
-        }, function _reject(err: Error) {
+        }, function _reject(err: any) {
           reject(err);
           done();
         }, response);
@@ -1478,7 +1478,7 @@
       if (config.cancelToken || config.signal) {
         // Handle cancellation
         // eslint-disable-next-line func-names
-        onCanceled = function(cancel: Cancelable) {
+        onCanceled = function(cancel: CancelableRequest) {
           if (!request) {
             return;
           }
@@ -1514,7 +1514,7 @@
     'Content-Type': 'application/x-www-form-urlencoded'
   };
 
-  function setContentTypeIfUnset(headers: HttpHeaders,  value: string | null | undefined) {
+  function setContentTypeIfUnset(headers: any,  value: any) {
     if (!utils.isUndefined(headers) && utils.isUndefined(headers['Content-Type'])) {
       headers['Content-Type'] = value;
     }
@@ -1532,7 +1532,7 @@
     return adapter;
   }
 
-  function stringifySafely(rawValue: any,  parser: Function,  encoder: Function) {
+  function stringifySafely(rawValue: any,  parser: JsonParser,  encoder: JsonEncoder) {
     if (utils.isString(rawValue)) {
       try {
         (parser || JSON.parse)(rawValue);
@@ -1672,7 +1672,7 @@
     defaults.headers[method] = {};
   });
 
-  utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method: Function) {
+  utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method: Method) {
     defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
   });
 
@@ -1697,14 +1697,14 @@
     return data;
   };
 
-  var isCancel = function isCancel(value: ancel) {
+  var isCancel = function isCancel(value: ny) {
     return !!(value && value.__CANCEL__);
   };
 
   /**
    * Throws a `CanceledError` if cancellation has been requested.
    */
-  function throwIfCancellationRequested(config: Config) {
+  function throwIfCancellationRequested(config: RequestConfig) {
     if (config.cancelToken) {
       config.cancelToken.throwIfRequested();
     }
@@ -1747,14 +1747,14 @@
 
     utils.forEach(
       ['delete', 'get', 'head', 'post', 'put', 'patch', 'common'],
-      function cleanHeaderConfig(method: Method) {
+      function cleanHeaderConfig(method: HttpMethod) {
         delete config.headers[method];
       }
     );
 
     var adapter = config.adapter || defaults_1.adapter;
 
-    return adapter(config).then(function onAdapterResolution(response: AdapterResolutionResponse) {
+    return adapter(config).then(function onAdapterResolution(response: Response) {
       throwIfCancellationRequested(config);
 
       // Transform response data
@@ -1767,7 +1767,7 @@
       );
 
       return response;
-    }, function onAdapterRejection(reason: Cancel) {
+    }, function onAdapterRejection(reason: any) {
       if (!isCancel(reason)) {
         throwIfCancellationRequested(config);
 
@@ -1895,7 +1895,7 @@
 
   // eslint-disable-next-line func-names
   ['object', 'boolean', 'number', 'function', 'string', 'symbol'].forEach(function(type: string,  i: number) {
-    validators$1[type] = function validator(thing: Thing) {
+    validators$1[type] = function validator(thing: any) {
       return typeof thing === type || 'a' + (i < 1 ? 'n ' : ' ') + type;
     };
   });
@@ -1909,13 +1909,13 @@
    * @param {string?} message - some message with additional info
    * @returns {function}
    */
-  validators$1.transitional = function transitional(validator: ValidatorFn,  version: number,  message: string) {
-    function formatMessage(opt: IFormat,  desc: string | Node) {
+  validators$1.transitional = function transitional(validator: ValidatorFn,  version: Version,  message: Message) {
+    function formatMessage(opt: Option,  desc: Option) {
       return '[Axios v' + VERSION + '] Transitional option \'' + opt + '\'' + desc + (message ? '. ' + message : '');
     }
 
     // eslint-disable-next-line func-names
-    return function(value: any,  opt: Object,  opts: Object) {
+    return function(value: any,  opt: ValidationOptions,  opts: ValidationOptions) {
       if (validator === false) {
         throw new AxiosError_1(
           formatMessage(opt, ' has been removed' + (version ? ' in ' + version : '')),
@@ -1945,7 +1945,7 @@
    * @param {boolean?} allowUnknown
    */
 
-  function assertOptions(options: any,  schema: Schema,  allowUnknown: boolean) {
+  function assertOptions(options: any,  schema: any,  allowUnknown: any) {
     if (typeof options !== 'object') {
       throw new AxiosError_1('options must be an object', AxiosError_1.ERR_BAD_OPTION_VALUE);
     }
@@ -1979,7 +1979,7 @@
    *
    * @param {Object} instanceConfig The default config for the instance
    */
-  function Axios(instanceConfig: AxiosInstanceConfig) {
+  function Axios(instanceConfig: AxiosRequestConfig) {
     this.defaults = instanceConfig;
     this.interceptors = {
       request: new InterceptorManager_1(),
@@ -1993,7 +1993,7 @@
    * @param {String|Object} configOrUrl The config specific for this request (merged with this.defaults)
    * @param {?Object} config
    */
-  Axios.prototype.request = function request(configOrUrl: RequestConfigOrUrl,  config: RequestConfig) {
+  Axios.prototype.request = function request(configOrUrl: any,  config: any) {
     /*eslint no-param-reassign:0*/
     // Allow for axios('example/url'[, config]) a la fetch API
     if (typeof configOrUrl === 'string') {
@@ -2093,7 +2093,7 @@
   // Provide aliases for supported request methods
   utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData(method: Function) {
     /*eslint func-names:0*/
-    Axios.prototype[method] = function(url: URL,  config: Config) {
+    Axios.prototype[method] = function(url: URL,  config: any) {
       return this.request(mergeConfig(config || {}, {
         method: method,
         url: url,
@@ -2102,11 +2102,11 @@
     };
   });
 
-  utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method: Function) {
+  utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method: any) {
     /*eslint func-names:0*/
 
-    function generateHTTPMethod(isForm: boolean) {
-      return function httpMethod(url: string,  data: any,  config: any) {
+    function generateHTTPMethod(isForm: any) {
+      return function httpMethod(url: any,  data: any,  config: any) {
         return this.request(mergeConfig(config || {}, {
           method: method,
           headers: isForm ? {
@@ -2131,14 +2131,14 @@
    * @class
    * @param {Function} executor The executor function.
    */
-  function CancelToken(executor: AsyncExecutor) {
+  function CancelToken(executor: Executor) {
     if (typeof executor !== 'function') {
       throw new TypeError('executor must be a function.');
     }
 
     var resolvePromise;
 
-    this.promise = new Promise(function promiseExecutor(resolve: Function) {
+    this.promise = new Promise(function promiseExecutor(resolve: any) {
       resolvePromise = resolve;
     });
 
@@ -2272,7 +2272,7 @@
    * @param {*} payload The value to test
    * @returns {boolean} True if the payload is an error thrown by Axios, otherwise false
    */
-  var isAxiosError = function isAxiosError(payload: AxiosError) {
+  var isAxiosError = function isAxiosError(payload: any) {
     return utils.isObject(payload) && (payload.isAxiosError === true);
   };
 
@@ -2293,7 +2293,7 @@
     utils.extend(instance, context);
 
     // Factory for creating new instances
-    instance.create = function create(instanceConfig: IInstanceConfig) {
+    instance.create = function create(instanceConfig: InstanceConfig) {
       return createInstance(mergeConfig(defaultConfig, instanceConfig));
     };
 
@@ -2320,7 +2320,7 @@
   axios.Cancel = axios.CanceledError;
 
   // Expose all/spread
-  axios.all = function all(promises: Array<Promise<any>>) {
+  axios.all = function all(promises: Promise<any>[]) {
     return Promise.all(promises);
   };
   axios.spread = spread;

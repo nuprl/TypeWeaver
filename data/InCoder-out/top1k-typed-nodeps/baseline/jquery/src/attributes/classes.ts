@@ -8,7 +8,7 @@ function getClass( elem : Element) {
 	return elem.getAttribute && elem.getAttribute( "class" ) || "";
 }
 
-function classesToArray( value : any) {
+function classesToArray( value : Array<any>) {
 	if ( Array.isArray( value ) ) {
 		return value;
 	}
@@ -19,11 +19,11 @@ function classesToArray( value : any) {
 }
 
 jQuery.fn.extend( {
-	addClass: function( value : any) {
+	addClass: function( value : Object) {
 		var classNames, cur, curValue, className, i, finalValue;
 
 		if ( typeof value === "function" ) {
-			return this.each( function( j : number) {
+			return this.each( function( j : Int) {
 				jQuery( this ).addClass( value.call( this, j, getClass( this ) ) );
 			} );
 		}
@@ -55,11 +55,11 @@ jQuery.fn.extend( {
 		return this;
 	},
 
-	removeClass: function( value : any) {
+	removeClass: function( value : Object) {
 		var classNames, cur, curValue, className, i, finalValue;
 
 		if ( typeof value === "function" ) {
-			return this.each( function( j : number) {
+			return this.each( function( j : Int) {
 				jQuery( this ).removeClass( value.call( this, j, getClass( this ) ) );
 			} );
 		}
@@ -103,7 +103,7 @@ jQuery.fn.extend( {
 		var classNames, className, i, self;
 
 		if ( typeof value === "function" ) {
-			return this.each( function( i : index) {
+			return this.each( function( i : integer) {
 				jQuery( this ).toggleClass(
 					value.call( this, i, getClass( this ), stateVal ),
 					stateVal
@@ -139,7 +139,7 @@ jQuery.fn.extend( {
 		return this;
 	},
 
-	hasClass: function( selector : string) {
+	hasClass: function( selector : String) {
 		var className, elem,
 			i = 0;
 

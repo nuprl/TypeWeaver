@@ -1,9 +1,9 @@
 'use strict';
 
-export default function diff(arr: Array,  arrays: Array) {
+export default function diff(arr: number[][],  arrays: number[][]) {
   arrays = [].concat.apply([], [].slice.call(arguments, 1));
 
-  arrays.forEach(function(value: any) {
+  arrays.forEach(function(value: T) {
     var idx = arr.indexOf(value);
     while (idx !== -1) {
       arr.splice(idx, 1);

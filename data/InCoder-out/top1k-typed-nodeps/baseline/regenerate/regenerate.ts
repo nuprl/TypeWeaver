@@ -46,7 +46,7 @@
 		return destination;
 	};
 
-	var forEach = function(array: Array,  callback: Function) {
+	var forEach = function(array: any,  callback: Function) {
 		var index = -1;
 		var length = array.length;
 		while (++index < length) {
@@ -153,7 +153,7 @@
 		return data;
 	};
 
-	var dataRemoveRange = function(data: any,  rangeStart: number,  rangeEnd: number) {
+	var dataRemoveRange = function(data: any,  rangeStart: Date,  rangeEnd: Date) {
 		if (rangeEnd < rangeStart) {
 			throw Error(ERRORS.rangeOrder);
 		}
@@ -316,7 +316,7 @@
 		return data;
 	};
 
-	var dataAddRange = function(data: any,  rangeStart: number,  rangeEnd: number) {
+	var dataAddRange = function(data: any,  rangeStart: Date,  rangeEnd: Date) {
 		if (rangeEnd < rangeStart) {
 			throw Error(ERRORS.rangeOrder);
 		}
@@ -449,7 +449,7 @@
 		return false;
 	};
 
-	var dataIntersection = function(data: Uint8Array,  codePoints: number[]) {
+	var dataIntersection = function(data: DataView,  codePoints: number[]) {
 		var index = 0;
 		var length = codePoints.length;
 		var codePoint;
@@ -473,7 +473,7 @@
 		return data.length == 2 && data[0] + 1 == data[1];
 	};
 
-	var dataToArray = function(data: any) {
+	var dataToArray = function(data: any[]) {
 		// Iterate over the data per `(start, end)` pair.
 		var index = 0;
 		var start;
@@ -596,7 +596,7 @@
 		return '\\u{' + codePoint.toString(16).toUpperCase() + '}';
 	};
 
-	var symbolToCodePoint = function(symbol: any) {
+	var symbolToCodePoint = function(symbol: Symbol) {
 		var length = symbol.length;
 		var first = symbol.charCodeAt(0);
 		var second;
@@ -614,7 +614,7 @@
 		return first;
 	};
 
-	var createBMPCharacterClasses = function(data: any) {
+	var createBMPCharacterClasses = function(data: any[]) {
 		// Iterate over the data per `(start, end)` pair.
 		var result = '';
 		var index = 0;
@@ -639,7 +639,7 @@
 		return '[' + result + ']';
 	};
 
-	var createUnicodeCharacterClasses = function(data: any) {
+	var createUnicodeCharacterClasses = function(data: any[]) {
 		// Iterate over the data per `(start, end)` pair.
 		var result = '';
 		var index = 0;
@@ -664,7 +664,7 @@
 		return '[' + result + ']';
 	};
 
-	var splitAtBMP = function(data: any) {
+	var splitAtBMP = function(data: any[]) {
 		// Iterate over the data per `(start, end)` pair.
 		var loneHighSurrogates = [];
 		var loneLowSurrogates = [];
@@ -791,7 +791,7 @@
 		};
 	};
 
-	var optimizeSurrogateMappings = function(surrogateMappings: Array<number>) {
+	var optimizeSurrogateMappings = function(surrogateMappings: any) {
 		var result = [];
 		var tmpLow = [];
 		var addLow = false;
@@ -850,7 +850,7 @@
 		return optimizeByLowSurrogates(result);
 	};
 
-	var optimizeByLowSurrogates = function(surrogateMappings: Array<number>) {
+	var optimizeByLowSurrogates = function(surrogateMappings: any[]) {
 		if (surrogateMappings.length == 1) {
 			return surrogateMappings;
 		}
@@ -980,9 +980,9 @@
 		return optimizeSurrogateMappings(surrogateMappings);
 	};
 
-	var createSurrogateCharacterClasses = function(surrogateMappings: Array<number>) {
+	var createSurrogateCharacterClasses = function(surrogateMappings: SurrogateMapping[]) {
 		var result = [];
-		forEach(surrogateMappings, function(surrogateMapping: number) {
+		forEach(surrogateMappings, function(surrogateMapping: SurrogateMapping) {
 			var highSurrogates = surrogateMapping[0];
 			var lowSurrogates = surrogateMapping[1];
 			result.push(
@@ -1080,7 +1080,7 @@
 				value = slice.call(arguments);
 			}
 			if (isArray(value)) {
-				forEach(value, function(item: IItem) {
+				forEach(value, function(item: T) {
 					$this.add(item);
 				});
 				return $this;
@@ -1105,7 +1105,7 @@
 				value = slice.call(arguments);
 			}
 			if (isArray(value)) {
-				forEach(value, function(item: IItem) {
+				forEach(value, function(item: T) {
 					$this.remove(item);
 				});
 				return $this;
@@ -1116,7 +1116,7 @@
 			);
 			return $this;
 		},
-		'addRange': function(start: number,  end: number) {
+		'addRange': function(start: Date,  end: Date) {
 			var $this = this;
 			$this.data = dataAddRange($this.data,
 				isNumber(start) ? start : symbolToCodePoint(start),
@@ -1124,7 +1124,7 @@
 			);
 			return $this;
 		},
-		'removeRange': function(start: number,  end: number) {
+		'removeRange': function(start: Date,  end: Date) {
 			var $this = this;
 			var startCodePoint = isNumber(start) ? start : symbolToCodePoint(start);
 			var endCodePoint = isNumber(end) ? end : symbolToCodePoint(end);
@@ -1156,7 +1156,7 @@
 			set.data = this.data.slice(0);
 			return set;
 		},
-		'toString': function(options: any) {
+		'toString': function(options: ICharacterContribution) {
 			var result = createCharacterClassesFromData(
 				this.data,
 				options ? options.bmpOnly : false,

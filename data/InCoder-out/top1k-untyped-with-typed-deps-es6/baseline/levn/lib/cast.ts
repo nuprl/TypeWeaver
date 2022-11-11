@@ -66,7 +66,7 @@
         };
       }
     },
-    NaN: function(it: number){
+    NaN: function(it: any){
       if (it === 'NaN') {
         return {
           type: 'Just',
@@ -161,14 +161,14 @@
         of: {}
       }, options);
     },
-    String: function(it: IIterator){
+    String: function(it: any){
       var replace, that;
       if (toString$.call(it).slice(8, -1) !== 'String') {
         return {
           type: 'Nothing'
         };
       }
-      replace = function(value: any,  quote: boolean){
+      replace = function(value: any,  quote: string | number){
         return value.replace(/\\([^u]|u[0-9a-fA-F]{4})/g, function(all: any,  escaped: any){
           switch (escaped[0]) {
           case quote:
@@ -210,7 +210,7 @@
       }
     }
   };
-  function castArray(node: ASTNode,  type: Type,  options: any){
+  function castArray(node: Node,  type: Type,  options: Options){
     var typeOf, element;
     if (toString$.call(node).slice(8, -1) !== 'Array') {
       return {
@@ -230,7 +230,7 @@
       }())
     };
   }
-  function castTuple(node: ASTNode,  type: Type,  options: TypeCastOptions){
+  function castTuple(node: Node,  type: Type,  options: Options){
     var result, i, i$, ref$, len$, types, cast;
     if (toString$.call(node).slice(8, -1) !== 'Array') {
       return {
@@ -258,7 +258,7 @@
       };
     }
   }
-  function castFields(node: FieldNode,  type: TypeNode,  options: TypeOptions){
+  function castFields(node: AST.Field,  type: Type,  options: any){
     var typeOf, key, value;
     if (toString$.call(node).slice(8, -1) !== 'Object') {
       return {
@@ -282,7 +282,7 @@
       }())
     };
   }
-  function typeCast(node: ASTNode,  typeObj: Type,  options: TypeCastOptions){
+  function typeCast(node: Node,  typeObj: Type,  options: Options){
     var type, structure, castFunc, ref$;
     type = typeObj.type, structure = typeObj.structure;
     if (type) {
@@ -302,7 +302,7 @@
       }
     }
   }
-  function typesCast(node: ASTNode,  types: ASTNodeType[],  options: ITypeCastOptions){
+  function typesCast(node: Node,  types: Type[],  options: Options){
     var i$, len$, type, ref$, valueType, value;
     for (i$ = 0, len$ = types.length; i$ < len$; ++i$) {
       type = types[i$];
@@ -319,7 +319,7 @@
     throw new Error("Value " + JSON.stringify(node) + " does not type check against " + JSON.stringify(types) + ".");
   }
 
-  export default function(node: Node,  types: string[],  options: IOptions){
+  export default function(node: AST.Node,  types: AST.Node[],  options: AST.NodeOptions){
     if (!options.explicit && types.length === 1 && types[0].type === 'String') {
       return node;
     }

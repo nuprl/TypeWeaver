@@ -5,7 +5,7 @@
 
 "use strict";
 
-module.exports = function getInnerRequest(resolver: RequestResolver,  request: Request) {
+module.exports = function getInnerRequest(resolver: Resolver,  request: Request) {
 	if (
 		typeof request.__innerRequest === "string" &&
 		request.__innerRequest_request === request.request &&

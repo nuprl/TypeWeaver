@@ -10,7 +10,7 @@ import "../selector.js";
 /**
  * Load a url into a page
  */
-jQuery.fn.load = function( url: string,  params: any,  callback : Function) {
+jQuery.fn.load = function( url: String,  params: Object,  callback : Function) {
 	var selector, type, response,
 		self = this,
 		off = url.indexOf( " " );
@@ -60,7 +60,7 @@ jQuery.fn.load = function( url: string,  params: any,  callback : Function) {
 		// If the request succeeds, this function gets "data", "status", "jqXHR"
 		// but they are ignored because response was set above.
 		// If it fails, this function gets "jqXHR", "status", "error"
-		} ).always( callback && function( jqXHR: JQueryXHR,  status : number) {
+		} ).always( callback && function( jqXHR: jqXHR,  status : string) {
 			self.each( function() {
 				callback.apply( this, response || [ jqXHR.responseText, status, jqXHR ] );
 			} );

@@ -5,7 +5,7 @@
  * Released under the MIT License.
  */
 
-module.exports = function(path: ring,  stripTrailing: boolean) {
+module.exports = function(path: ring | Buffer,  stripTrailing: boolean) {
   if (typeof path !== 'string') {
     throw new TypeError('expected path to be a string');
   }

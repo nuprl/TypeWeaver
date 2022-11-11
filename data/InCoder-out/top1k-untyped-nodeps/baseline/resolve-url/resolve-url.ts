@@ -1,7 +1,7 @@
 // Copyright 2014 Simon Lydell
 // X11 (“MIT”) Licensed. (See LICENSE.)
 
-void (function(root: any,  factory: Function) {
+void (function(root: any,  factory: any) {
   if (typeof define === "function" && define.amd) {
     define(factory)
   } else if (typeof exports === "object") {

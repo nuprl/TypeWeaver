@@ -29,7 +29,7 @@ const pp = Parser.prototype
 
 // Move to the next token
 
-pp.next = function(ignoreEscapeSequenceInKeyword: boolean) {
+pp.next = function(ignoreEscapeSequenceInKeyword: Boolean) {
   if (!ignoreEscapeSequenceInKeyword && this.type.keyword && this.containsEsc)
     this.raiseRecoverable(this.start, "Escape sequence in keyword " + this.type.keyword)
   if (this.options.onToken)
@@ -171,7 +171,7 @@ pp.skipSpace = function() {
 // the token, so that the next one's `start` will point at the
 // right position.
 
-pp.finishToken = function(type: string,  val: number) {
+pp.finishToken = function(type: string,  val: any) {
   this.end = this.pos
   if (this.options.locations) this.endLoc = this.curPosition()
   let prevType = this.type
@@ -401,7 +401,7 @@ pp.getTokenFromCode = function(code: number) {
   this.raise(this.pos, "Unexpected character '" + codePointToString(code) + "'")
 }
 
-pp.finishOp = function(type: string,  size: number) {
+pp.finishOp = function(type: number,  size: number) {
   let str = this.input.slice(this.pos, this.pos + size)
   this.pos += size
   return this.finishToken(type, str)
@@ -449,7 +449,7 @@ pp.readRegexp = function() {
 // were read, the integer value otherwise. When `len` is given, this
 // will return `null` unless the integer has exactly `len` digits.
 
-pp.readInt = function(radix: number,  len: number,  maybeLegacyOctalNumericLiteral: number) {
+pp.readInt = function(radix: number,  len: number,  maybeLegacyOctalNumericLiteral: boolean) {
   // `len` is used for character escape sequences. In that case, disallow separators.
   const allowSeparators = this.options.ecmaVersion >= 12 && len === undefined
 
@@ -517,7 +517,7 @@ pp.readRadixNumber = function(radix: number) {
 
 // Read an integer, octal integer, or floating-point number.
 
-pp.readNumber = function(startsWithDot: Function) {
+pp.readNumber = function(startsWithDot: Boolean) {
   let start = this.pos
   if (!startsWithDot && this.readInt(10, undefined, true) === null) this.raise(start, "Invalid number")
   let octal = this.pos - start >= 2 && this.input.charCodeAt(start) === 48
@@ -687,7 +687,7 @@ pp.readInvalidTemplateToken = function() {
 
 // Used to read escaped characters
 
-pp.readEscapedChar = function(inTemplate: Template) {
+pp.readEscapedChar = function(inTemplate: TemplateStringsArray) {
   let ch = this.input.charCodeAt(++this.pos)
   ++this.pos
   switch (ch) {

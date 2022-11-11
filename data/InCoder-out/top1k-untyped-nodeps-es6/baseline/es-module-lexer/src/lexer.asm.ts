@@ -16,7 +16,7 @@ const copy = new Uint8Array(new Uint16Array([1]).buffer)[0] === 1 ? function (sr
 const words = 'xportmportlassetafromsyncunctionssertvoyiedelecontininstantybreareturdebuggeawaithrwhileforifcatcfinallels';
 
 let source, name;
-export function parse (_source: Source,  _name = '@': any) {
+export function parse (_source: any,  _name = '@': any) {
   source = _source;
   name = _name;
   // 2 bytes per string code point

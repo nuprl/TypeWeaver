@@ -16,7 +16,7 @@ function forEach (arr: Array,  fn: Function) {
     }
 }
 
-function duplex(writer: Stream,  reader: Stream) {
+function duplex(writer: Writable,  reader: Readable) {
     var stream = new Stream()
     var ended = false
 
@@ -40,7 +40,7 @@ function duplex(writer: Stream,  reader: Stream) {
 
     return stream
 
-    function proxyWriter(methodName: string | symbol) {
+    function proxyWriter(methodName: String) {
         stream[methodName] = method
 
         function method() {
@@ -48,7 +48,7 @@ function duplex(writer: Stream,  reader: Stream) {
         }
     }
 
-    function proxyReader(methodName: string | symbol) {
+    function proxyReader(methodName: any) {
         stream[methodName] = method
 
         function method() {
@@ -61,7 +61,7 @@ function duplex(writer: Stream,  reader: Stream) {
         }
     }
 
-    function proxyStream(methodName: string | symbol) {
+    function proxyStream(methodName: any) {
         reader.on(methodName, reemit)
 
         function reemit() {

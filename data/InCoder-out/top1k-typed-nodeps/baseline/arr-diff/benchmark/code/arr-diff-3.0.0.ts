@@ -3,7 +3,7 @@
 var flatten = require('arr-flatten');
 var slice = [].slice;
 
-module.exports = function(arr: Array,  arrays: Array) {
+module.exports = function(arr: number[],  arrays: number[][]) {
   arrays = flatten(slice.call(arguments, 1));
   var len = arrays.length;
   for (var i = 0; i < len; i++) {

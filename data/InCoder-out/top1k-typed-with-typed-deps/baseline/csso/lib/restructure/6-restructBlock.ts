@@ -71,7 +71,7 @@ const NEEDLESS_TABLE = {
     'list-style-image': ['list-style']
 };
 
-function getPropertyFingerprint(propertyName: PropertyName,  declaration: Declaration,  fingerprints: FingerprintList) {
+function getPropertyFingerprint(propertyName: PropertyName,  declaration: PropertyDeclaration,  fingerprints: Fingerprint[]) {
     const realName = resolveProperty(propertyName).basename;
 
     if (realName === 'background') {
@@ -217,10 +217,10 @@ function needless(props: any,  declaration: any,  fingerprints: any) {
     }
 }
 
-function processRule(rule: Rule,  item: Item,  list: List,  props: Props,  fingerprints: Fingerprints) {
+function processRule(rule: Rule,  item: Item,  list: Item[],  props: Props,  fingerprints: Fingerprint[]) {
     const declarations = rule.block.children;
 
-    declarations.forEachRight(function(declaration: ts.Declaration,  declarationItem: ts.DeclarationItem) {
+    declarations.forEachRight(function(declaration: Declaration,  declarationItem: DeclarationItem) {
         const { property } = declaration;
         const fingerprint = getPropertyFingerprint(property, declaration, fingerprints);
         const prev = props[fingerprint];
@@ -275,7 +275,7 @@ function processRule(rule: Rule,  item: Item,  list: List,  props: Props,  finge
     }
 }
 
-export default function restructBlock(ast: BlockStatement) {
+export default function restructBlock(ast: Block) {
     const stylesheetMap = {};
     const fingerprints = Object.create(null);
 

@@ -1,6 +1,6 @@
 "use strict";
 
-export default function( grunt : grunt) {
+export default function( grunt : grunt.IGrun) {
 	function readOptionalJSON( filepath : string) {
 		var stripJSONComments = require( "strip-json-comments" ),
 			data = {};

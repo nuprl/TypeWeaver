@@ -5,7 +5,7 @@
  * @param {string} string The string to convert.
  * @returns {Array} Returns the converted array.
  */
-function asciiToArray(string: any) {
+function asciiToArray(string: string | Uint8Array) {
   return string.split('')
 }
 

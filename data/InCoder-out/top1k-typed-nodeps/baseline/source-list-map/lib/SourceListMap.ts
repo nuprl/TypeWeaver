@@ -33,7 +33,7 @@ class SourceListMap {
 		} else if(generatedCode.getMappings && generatedCode.getGeneratedCode) {
 			this.children.push(generatedCode);
 		} else if(generatedCode.children) {
-			generatedCode.children.forEach(function(sln: ISLN) {
+			generatedCode.children.forEach(function(sln: ISyntaxNode) {
 				this.children.push(sln);
 			}, this);
 		} else {
@@ -53,7 +53,7 @@ class SourceListMap {
 		} else if(generatedCode.getMappings && generatedCode.getGeneratedCode) {
 			this.children.unshift(generatedCode);
 		} else if(generatedCode.children) {
-			generatedCode.children.slice().reverse().forEach(function(sln: Sln) {
+			generatedCode.children.slice().reverse().forEach(function(sln: ISyntaxNode) {
 				this.children.unshift(sln);
 			}, this);
 		} else {
@@ -63,13 +63,13 @@ class SourceListMap {
 
 	mapGeneratedCode(fn) {
 		const normalizedNodes = [];
-		this.children.forEach(function(sln: Sln) {
+		this.children.forEach(function(sln: ISyntaxNode) {
 			sln.getNormalizedNodes().forEach(function(newNode: Node) {
 				normalizedNodes.push(newNode);
 			});
 		});
 		const optimizedNodes = [];
-		normalizedNodes.forEach(function(sln: ISyntaxList) {
+		normalizedNodes.forEach(function(sln: ISyntaxNode) {
 			sln = sln.mapGeneratedCode(fn);
 			if(optimizedNodes.length === 0) {
 				optimizedNodes.push(sln);
@@ -87,7 +87,7 @@ class SourceListMap {
 	};
 
 	toString() {
-		return this.children.map(function(sln: ISLN) {
+		return this.children.map(function(sln: ISyntaxNode) {
 			return sln.getGeneratedCode();
 		}).join("");
 	};
@@ -97,7 +97,7 @@ class SourceListMap {
 		const source = this.children.map(function(sln: ISyntaxNode) {
 			return sln.getGeneratedCode();
 		}).join("");
-		const mappings = this.children.map(function(sln: Sln) {
+		const mappings = this.children.map(function(sln: ISyntaxNode) {
 			return sln.getMappings(mappingsContext);
 		}).join("");
 		const arrays = mappingsContext.getArrays();

@@ -28,8 +28,8 @@ lineDiff.tokenize = function(value: any) {
   return retLines;
 };
 
-export function diffLines(oldStr: string | null,  newStr: string | null,  callback: Function) { return lineDiff.diff(oldStr, newStr, callback); }
-export function diffTrimmedLines(oldStr: string | undefined,  newStr: string | undefined,  callback: Function) {
+export function diffLines(oldStr: string | string[],  newStr: string | string[],  callback: Function) { return lineDiff.diff(oldStr, newStr, callback); }
+export function diffTrimmedLines(oldStr: string | string[],  newStr: string | string[],  callback: Function) {
   let options = generateOptions(callback, {ignoreWhitespace: true});
   return lineDiff.diff(oldStr, newStr, options);
 }

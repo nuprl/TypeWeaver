@@ -1,29 +1,43 @@
 lib/ip.ts(2,9): error TS2451: Cannot redeclare block-scoped variable 'Buffer'.
-lib/ip.ts(5,29): error TS2304: Cannot find name 'IP'.
-lib/ip.ts(5,40): error TS2304: Cannot find name 'Buff'.
+lib/ip.ts(5,44): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
+lib/ip.ts(12,8): error TS2339: Property 'split' does not exist on type 'number'.
+lib/ip.ts(16,25): error TS2339: Property 'split' does not exist on type 'number'.
 lib/ip.ts(61,31): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 lib/ip.ts(71,5): error TS2322: Type 'string' is not assignable to type 'any[]'.
 lib/ip.ts(77,5): error TS2322: Type 'string' is not assignable to type 'any[]'.
 lib/ip.ts(78,21): error TS2339: Property 'replace' does not exist on type 'any[]'.
 lib/ip.ts(79,21): error TS2339: Property 'replace' does not exist on type 'any[]'.
-lib/ip.ts(88,31): error TS2304: Cannot find name 'IPv4Address'.
+lib/ip.ts(89,25): error TS2345: Argument of type 'string | RegExp' is not assignable to parameter of type 'string'.
+  Type 'RegExp' is not assignable to type 'string'.
+lib/ip.ts(92,31): error TS2304: Cannot find name 'IPv6'.
 lib/ip.ts(103,26): error TS2339: Property 'toLowerCase' does not exist on type 'number'.
-lib/ip.ts(110,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/ip.ts(108,5): error TS2322: Type 'string' is not assignable to type 'number'.
+lib/ip.ts(114,7): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/ip.ts(132,27): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 lib/ip.ts(132,42): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
-lib/ip.ts(171,33): error TS2304: Cannot find name 'CIDR'.
-lib/ip.ts(225,39): error TS2304: Cannot find name 'CIDR'.
+lib/ip.ts(171,42): error TS2304: Cannot find name 'CIDR'.
+lib/ip.ts(225,48): error TS2304: Cannot find name 'CIDR'.
 lib/ip.ts(238,26): error TS2304: Cannot find name 'IP'.
 lib/ip.ts(246,22): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 lib/ip.ts(246,34): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 lib/ip.ts(274,27): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 lib/ip.ts(274,39): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
-lib/ip.ts(308,32): error TS2304: Cannot find name 'IPv6Address'.
+lib/ip.ts(310,11): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/ip.ts(311,65): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/ip.ts(313,13): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/ip.ts(314,74): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/ip.ts(315,65): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/ip.ts(316,35): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/ip.ts(317,23): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/ip.ts(318,21): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/ip.ts(319,20): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 lib/ip.ts(322,31): error TS2304: Cannot find name 'P'.
-lib/ip.ts(326,33): error TS2304: Cannot find name 'IPv6Address'.
+lib/ip.ts(328,11): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/ip.ts(329,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/ip.ts(330,21): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/ip.ts(331,20): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 lib/ip.ts(338,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-lib/ip.ts(368,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
-lib/ip.ts(375,28): error TS2538: Type 'String' cannot be used as an index type.
+lib/ip.ts(368,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/ip.ts(408,27): error TS2304: Cannot find name 'IP'.
 ../../../../node_modules/@types/assert-plus/index.d.ts(14,32): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 ../../../../node_modules/@types/assert-plus/index.d.ts(38,36): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?

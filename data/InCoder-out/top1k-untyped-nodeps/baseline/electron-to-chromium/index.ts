@@ -3,17 +3,17 @@ var fullVersions = require('./full-versions');
 var chromiumVersions = require('./chromium-versions');
 var fullChromiumVersions = require('./full-chromium-versions');
 
-var electronToChromium = function (query: QueryString) {
+var electronToChromium = function (query: Query) {
   var number = getQueryString(query);
   return number.split('.').length > 2 ? fullVersions[number] : versions[number] || undefined;
 };
 
-var chromiumToElectron = function (query: QueryString) {
+var chromiumToElectron = function (query: Query) {
   var number = getQueryString(query);
   return number.split('.').length > 2 ? fullChromiumVersions[number] : chromiumVersions[number] || undefined;
 };
 
-var electronToBrowserList = function (query: QueryString) {
+var electronToBrowserList = function (query: Query) {
   var number = getQueryString(query);
   return versions[number] ? "Chrome >= " + versions[number] : undefined;
 };

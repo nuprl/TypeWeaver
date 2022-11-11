@@ -74,7 +74,7 @@ function isErrorResponse(response: Response) {
     return errorStatusCodes.has(response.status);
 }
 
-function parseCacheControl(header: any) {
+function parseCacheControl(header: string | undefined) {
     const cc = {};
     if (!header) return cc;
 

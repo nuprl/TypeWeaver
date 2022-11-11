@@ -1,8 +1,8 @@
 Source directory: .
 Dataset: top1k-typed-with-typed-deps-es6
-Type checking with: /mnt/data/mhyee/not-type-inference/tools/node_modules/typescript/bin/tsc
-Input directory: /mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps-es6/baseline
-Output directory: /mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps-es6/baseline-checked
+Type checking with: /work/arjunguha-research-group/mhyee/not-type-inference/tools/node_modules/typescript/bin/tsc
+Input directory: /work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps-es6/baseline
+Output directory: /work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-with-typed-deps-es6/baseline-checked
 Found 77 packages
 [1/77] @sinonjs_commons ... [FAIL]
 [2/77] accepts ... [FAIL]
@@ -67,7 +67,7 @@ Found 77 packages
 [61/77] serialize-javascript ... [FAIL]
 [62/77] serve-static ... [FAIL]
 [63/77] stream-each ... [FAIL]
-[64/77] strip-indent ... [FAIL]
+[64/77] strip-indent ... [ OK ]
 [65/77] through2 ... [FAIL]
 [66/77] tmp ... [FAIL]
 [67/77] to-regex-range ... [FAIL]
@@ -81,7 +81,7 @@ Found 77 packages
 [75/77] whatwg-url ... [FAIL]
 [76/77] which ... [ OK ]
 [77/77] write-file-atomic ... [FAIL]
-Number of successes: 9
-Number of fails: 68
+Number of successes: 10
+Number of fails: 67
 Number of skips: 0
-Time for type checking: 0:00:47
+Time for type checking: 0:00:25

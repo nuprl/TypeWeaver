@@ -6,7 +6,7 @@
  * @param {Function} string The `toString` result.
  * @returns {Function} Returns `func`.
  */
-function setToString(func: Function,  string: any) {
+function setToString(func: Function,  string: string | Function) {
   return Object.defineProperty(func, 'toString', {
     'configurable': true,
     'enumerable': false,

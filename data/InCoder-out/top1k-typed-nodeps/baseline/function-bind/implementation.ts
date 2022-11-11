@@ -7,7 +7,7 @@ var slice = Array.prototype.slice;
 var toStr = Object.prototype.toString;
 var funcType = '[object Function]';
 
-module.exports = function bind(that: any) {
+module.exports = function bind(that: Function) {
     var target = this;
     if (typeof target !== 'function' || toStr.call(target) !== funcType) {
         throw new TypeError(ERROR_MESSAGE + target);
@@ -39,7 +39,7 @@ module.exports = function bind(that: any) {
         boundArgs.push('$' + i);
     }
 
-    bound = Function('binder', 'return function (' + boundArgs.join(': any, ': type) + '){ return binder.apply(this,arguments); }')(binder);
+    bound = Function('binder', 'return function (' + boundArgs.join(': any, ': any) + '){ return binder.apply(this,arguments); }')(binder);
 
     if (target.prototype) {
         var Empty = function Empty() {};

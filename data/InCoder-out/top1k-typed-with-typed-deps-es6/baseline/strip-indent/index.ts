@@ -1,6 +1,6 @@
 import minIndent from 'min-indent';
 
-export default function stripIndent(string: string | string[]) {
+export default function stripIndent(string: string | null) {
 	const indent = minIndent(string);
 
 	if (indent === 0) {

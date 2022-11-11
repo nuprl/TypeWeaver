@@ -17,7 +17,7 @@ import isSymbol from './isSymbol.js'
  * maxBy(objects, ({ n }) => n)
  * // => { 'n': 2 }
  */
-function maxBy(array: Array,  iteratee: Function) {
+function maxBy(array: number[],  iteratee: any) {
   let result
   if (array == null) {
     return result

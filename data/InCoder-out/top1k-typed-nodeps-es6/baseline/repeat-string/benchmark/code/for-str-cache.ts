@@ -3,7 +3,7 @@
 var res = '';
 var cache;
 
-export default function repeat(str: String,  count: Int) {
+export default function repeat(str: any,  count: number) {
   var max = (str.length * count);
   var i = 0;
 

@@ -8,7 +8,7 @@
 
   // Could use `inherits` module, but don't want to move from single file
   // architecture yet.
-  function inherits (ctor: any,  superCtor: any) {
+  function inherits (ctor: Function,  superCtor: Function) {
     ctor.super_ = superCtor;
     var TempCtor = function () {};
     TempCtor.prototype = superCtor.prototype;
@@ -18,7 +18,7 @@
 
   // BN
 
-  function BN (number: number,  base: number,  endian: number) {
+  function BN (number: BigInteger,  base: number,  endian: number) {
     if (BN.isBN(number)) {
       return number;
     }
@@ -58,7 +58,7 @@
   } catch (e) {
   }
 
-  BN.isBN = function isBN (num: any) {
+  BN.isBN = function isBN (num: BN) {
     if (num instanceof BN) {
       return true;
     }
@@ -183,7 +183,7 @@
     return this._strip();
   };
 
-  function parseHex4Bits (string: Uint8Array,  index: number) {
+  function parseHex4Bits (string: any,  index: any) {
     var c = string.charCodeAt(index);
     // '0' - '9'
     if (c >= 48 && c <= 57) {
@@ -199,7 +199,7 @@
     }
   }
 
-  function parseHexByte (string: number,  lowerBound: number,  index: number) {
+  function parseHexByte (string: any,  lowerBound: number,  index: number) {
     var r = parseHex4Bits(string, index);
     if (index - 1 >= lowerBound) {
       r |= parseHex4Bits(string, index - 1) << 4;
@@ -250,7 +250,7 @@
     this._strip();
   };
 
-  function parseBase (str: number,  start: number,  end: number,  mul: number) {
+  function parseBase (str: any,  start: number,  end: number,  mul: number) {
     var r = 0;
     var b = 0;
     var len = Math.min(str.length, end);
@@ -324,7 +324,7 @@
     this._strip();
   };
 
-  BN.prototype.copy = function copy (dest: WordArray) {
+  BN.prototype.copy = function copy (dest: Buffer) {
     dest.words = new Array(this.length);
     for (var i = 0; i < this.length; i++) {
       dest.words[i] = this.words[i];
@@ -334,14 +334,14 @@
     dest.red = this.red;
   };
 
-  function move (dest: WordArray,  src: WordArray) {
+  function move (dest: Buffer,  src: Buffer) {
     dest.words = src.words;
     dest.length = src.length;
     dest.negative = src.negative;
     dest.red = src.red;
   }
 
-  BN.prototype._move = function _move (dest: IMove) {
+  BN.prototype._move = function _move (dest: any) {
     move(dest, this);
   };
 
@@ -554,7 +554,7 @@
   };
 
   if (Buffer) {
-    BN.prototype.toBuffer = function toBuffer (endian: number,  length: number) {
+    BN.prototype.toBuffer = function toBuffer (endian: BufferEncoding | null,  length: number) {
       return this.toArrayLike(Buffer, endian, length);
     };
   }
@@ -563,7 +563,7 @@
     return this.toArrayLike(Array, endian, length);
   };
 
-  var allocate = function allocate (ArrayType: number,  size: number) {
+  var allocate = function allocate (ArrayType: any,  size: number) {
     if (ArrayType.allocUnsafe) {
       return ArrayType.allocUnsafe(size);
     }
@@ -584,7 +584,7 @@
     return res;
   };
 
-  BN.prototype._toArrayLikeLE = function _toArrayLikeLE (res: Uint8Array,  byteLength: number) {
+  BN.prototype._toArrayLikeLE = function _toArrayLikeLE (res: any,  byteLength: number) {
     var position = 0;
     var carry = 0;
 
@@ -620,7 +620,7 @@
     }
   };
 
-  BN.prototype._toArrayLikeBE = function _toArrayLikeBE (res: Uint8Array,  byteLength: number) {
+  BN.prototype._toArrayLikeBE = function _toArrayLikeBE (res: Buffer[],  byteLength: number) {
     var position = res.length - 1;
     var carry = 0;
 
@@ -719,7 +719,7 @@
     return (this.length - 1) * 26 + hi;
   };
 
-  function toBitArray (num: number) {
+  function toBitArray (num: BigInteger) {
     var w = new Array(num.bitLength());
 
     for (var bit = 0; bit < w.length; bit++) {
@@ -1014,7 +1014,7 @@
   };
 
   // Subtract `num` from `this` in-place
-  BN.prototype.isub = function isub (num: number) {
+  BN.prototype.isub = function isub (num: BigNumber) {
     // this - (-num) = this + num
     if (num.negative !== 0) {
       num.negative = 0;
@@ -1080,11 +1080,11 @@
   };
 
   // Subtract `num` from `this`
-  BN.prototype.sub = function sub (num: number) {
+  BN.prototype.sub = function sub (num: BigNumber) {
     return this.clone().isub(num);
   };
 
-  function smallMulTo (self: this,  num: BigInt,  out: BigInt) {
+  function smallMulTo (self: BigInt,  num: BigInt,  out: BigInt) {
     out.negative = num.negative ^ self.negative;
     var len = (self.length + num.length) | 0;
     out.length = len;
@@ -1128,7 +1128,7 @@
   // TODO(indutny): it may be reasonable to omit it for users who don't need
   // to work with 256-bit numbers, otherwise it gives 20% improvement for 256-bit
   // multiplication (like elliptic secp256k1).
-  var comb10MulTo = function comb10MulTo (self: this,  num: number,  out: number) {
+  var comb10MulTo = function comb10MulTo (self: bigint,  num: bigint,  out: bigint) {
     var a = self.words;
     var b = num.words;
     var o = out.words;
@@ -1706,7 +1706,7 @@
     comb10MulTo = smallMulTo;
   }
 
-  function bigMulTo (self: Big,  num: Big,  out: Big) {
+  function bigMulTo (self: bigInt,  num: bigInt,  out: bigInt) {
     out.negative = num.negative ^ self.negative;
     out.length = self.length + num.length;
 
@@ -1747,14 +1747,14 @@
     return out._strip();
   }
 
-  function jumboMulTo (self: this,  num: number,  out: number) {
+  function jumboMulTo (self: BigNumber,  num: BigNumber,  out: BigNumber) {
     // Temporary disable, see https://github.com/indutny/bn.js/issues/211
     // var fftm = new FFTM();
     // return fftm.mulp(self, num, out);
     return bigMulTo(self, num, out);
   }
 
-  BN.prototype.mulTo = function mulTo (num: number,  out: number) {
+  BN.prototype.mulTo = function mulTo (num: number,  out: BigInteger) {
     var res;
     var len = this.length + num.length;
     if (this.length === 10 && num.length === 10) {
@@ -1803,14 +1803,14 @@
 
   // Performs "tweedling" phase, therefore 'emulating'
   // behaviour of the recursive algorithm
-  FFTM.prototype.permute = function permute (rbt: RBT<N>,  rws: any,  iws: any,  rtws: any,  itws: any,  N: number) {
+  FFTM.prototype.permute = function permute (rbt: RBT,  rws: RWS,  iws: IWS,  rtws: RTWS,  itws: ITWS,  N: N) {
     for (var i = 0; i < N; i++) {
       rtws[i] = rws[rbt[i]];
       itws[i] = iws[rbt[i]];
     }
   };
 
-  FFTM.prototype.transform = function transform (rws: number[][],  iws: number[][],  rtws: number[][],  itws: number[][],  N: number,  rbt: number[][]) {
+  FFTM.prototype.transform = function transform (rws: number,  iws: number,  rtws: number,  itws: number,  N: number,  rbt: number) {
     this.permute(rbt, rws, iws, rtws, itws, N);
 
     for (var s = 1; s < N; s <<= 1) {
@@ -1864,7 +1864,7 @@
     return 1 << i + 1 + odd;
   };
 
-  FFTM.prototype.conjugate = function conjugate (rws: Float32Array,  iws: Float32Array,  N: number) {
+  FFTM.prototype.conjugate = function conjugate (rws: ArrayLike<number>,  iws: ArrayLike<number>,  N: number) {
     if (N <= 1) return;
 
     for (var i = 0; i < N / 2; i++) {
@@ -1899,7 +1899,7 @@
     return ws;
   };
 
-  FFTM.prototype.convert13b = function convert13b (ws: string,  len: number,  rws: string,  N: number) {
+  FFTM.prototype.convert13b = function convert13b (ws: number,  len: number,  rws: number,  N: number) {
     var carry = 0;
     for (var i = 0; i < len; i++) {
       carry = carry + (ws[i] | 0);
@@ -1967,21 +1967,21 @@
   };
 
   // Multiply `this` by `num`
-  BN.prototype.mul = function mul (num: BN) {
+  BN.prototype.mul = function mul (num: BigNumber) {
     var out = new BN(null);
     out.words = new Array(this.length + num.length);
     return this.mulTo(num, out);
   };
 
   // Multiply employing FFT
-  BN.prototype.mulf = function mulf (num: BN) {
+  BN.prototype.mulf = function mulf (num: BigInteger) {
     var out = new BN(null);
     out.words = new Array(this.length + num.length);
     return jumboMulTo(this, num, out);
   };
 
   // In-place Multiplication
-  BN.prototype.imul = function imul (num: number) {
+  BN.prototype.imul = function imul (num: BigNumber) {
     return this.clone().mulTo(num, this);
   };
 
@@ -2012,7 +2012,7 @@
     return isNegNum ? this.ineg() : this;
   };
 
-  BN.prototype.muln = function muln (num: number) {
+  BN.prototype.muln = function muln (num: BigNumber) {
     return this.clone().imuln(num);
   };
 
@@ -2153,7 +2153,7 @@
     return this._strip();
   };
 
-  BN.prototype.ishrn = function ishrn (bits: number[],  hint: number,  extended: number) {
+  BN.prototype.ishrn = function ishrn (bits: number,  hint: number,  extended: number) {
     // TODO(indutny): implement me
     assert(this.negative === 0);
     return this.iushrn(bits, hint, extended);
@@ -2293,11 +2293,11 @@
     return this._strip();
   };
 
-  BN.prototype.addn = function addn (num: number) {
+  BN.prototype.addn = function addn (num: BigNumber) {
     return this.clone().iaddn(num);
   };
 
-  BN.prototype.subn = function subn (num: number) {
+  BN.prototype.subn = function subn (num: BigNumber) {
     return this.clone().isubn(num);
   };
 
@@ -2311,7 +2311,7 @@
     return this.clone().iabs();
   };
 
-  BN.prototype._ishlnsubmul = function _ishlnsubmul (num: number,  mul: number,  shift: number) {
+  BN.prototype._ishlnsubmul = function _ishlnsubmul (num: BigInt,  mul: BigInt,  shift: BigInt) {
     var len = num.length + shift;
     var i;
 
@@ -2425,7 +2425,7 @@
   //       to `div` to request div only, or be absent to
   //       request both div & mod
   //       2) `positive` is true if unsigned mod is requested
-  BN.prototype.divmod = function divmod (num: BigNumber,  mode: number,  positive: boolean) {
+  BN.prototype.divmod = function divmod (num: BigInt,  mode: BigInt,  positive: BigInt) {
     assert(!num.isZero());
 
     if (this.isZero()) {
@@ -2521,21 +2521,21 @@
   };
 
   // Find `this` / `num`
-  BN.prototype.div = function div (num: number) {
+  BN.prototype.div = function div (num: BigInteger) {
     return this.divmod(num, 'div', false).div;
   };
 
   // Find `this` % `num`
-  BN.prototype.mod = function mod (num: umber) {
+  BN.prototype.mod = function mod (num: igInteger) {
     return this.divmod(num, 'mod', false).mod;
   };
 
-  BN.prototype.umod = function umod (num: umber) {
+  BN.prototype.umod = function umod (num: igInteger) {
     return this.divmod(num, 'mod', true).mod;
   };
 
   // Find Round(`this` / `num`)
-  BN.prototype.divRound = function divRound (num: number) {
+  BN.prototype.divRound = function divRound (num: BigInt) {
     var dm = this.divmod(num);
 
     // Fast case - exact division
@@ -2570,7 +2570,7 @@
   };
 
   // WARNING: DEPRECATED
-  BN.prototype.modn = function modn (num: number) {
+  BN.prototype.modn = function modn (num: BigInteger) {
     return this.modrn(num);
   };
 
@@ -2592,7 +2592,7 @@
     return isNegNum ? this.ineg() : this;
   };
 
-  BN.prototype.divn = function divn (num: number) {
+  BN.prototype.divn = function divn (num: BigNumber) {
     return this.clone().idivn(num);
   };
 
@@ -2678,7 +2678,7 @@
   // This is reduced incarnation of the binary EEA
   // above, designated to invert members of the
   // _prime_ fields F(p) at a maximal speed
-  BN.prototype._invmp = function _invmp (p: number[]) {
+  BN.prototype._invmp = function _invmp (p: BigInteger) {
     assert(p.negative === 0);
     assert(!p.isZero());
 
@@ -2744,7 +2744,7 @@
     return res;
   };
 
-  BN.prototype.gcd = function gcd (num: BigNumber) {
+  BN.prototype.gcd = function gcd (num: BigInteger) {
     if (this.isZero()) return num.abs();
     if (num.isZero()) return this.abs();
 
@@ -2784,7 +2784,7 @@
   };
 
   // Invert number in the field F(num)
-  BN.prototype.invm = function invm (num: Big) {
+  BN.prototype.invm = function invm (num: BigInteger) {
     return this.egcd(num).a.umod(num);
   };
 
@@ -2895,35 +2895,35 @@
     return res;
   };
 
-  BN.prototype.gtn = function gtn (num: number) {
+  BN.prototype.gtn = function gtn (num: BigNumber) {
     return this.cmpn(num) === 1;
   };
 
-  BN.prototype.gt = function gt (num: number) {
+  BN.prototype.gt = function gt (num: BigNumber) {
     return this.cmp(num) === 1;
   };
 
-  BN.prototype.gten = function gten (num: number) {
+  BN.prototype.gten = function gten (num: BigInt) {
     return this.cmpn(num) >= 0;
   };
 
-  BN.prototype.gte = function gte (num: number) {
+  BN.prototype.gte = function gte (num: BigInt) {
     return this.cmp(num) >= 0;
   };
 
-  BN.prototype.ltn = function ltn (num: number) {
+  BN.prototype.ltn = function ltn (num: BigNumber) {
     return this.cmpn(num) === -1;
   };
 
-  BN.prototype.lt = function lt (num: number) {
+  BN.prototype.lt = function lt (num: BigInt) {
     return this.cmp(num) === -1;
   };
 
-  BN.prototype.lten = function lten (num: number) {
+  BN.prototype.lten = function lten (num: BigNumber) {
     return this.cmpn(num) <= 0;
   };
 
-  BN.prototype.lte = function lte (num: number) {
+  BN.prototype.lte = function lte (num: BigInt) {
     return this.cmp(num) <= 0;
   };
 
@@ -2931,7 +2931,7 @@
     return this.cmpn(num) === 0;
   };
 
-  BN.prototype.eq = function eq (num: number) {
+  BN.prototype.eq = function eq (num: BigNumber) {
     return this.cmp(num) === 0;
   };
 
@@ -2959,17 +2959,17 @@
     return this;
   };
 
-  BN.prototype.forceRed = function forceRed (ctx: CanvasRenderingContext2D) {
+  BN.prototype.forceRed = function forceRed (ctx: Context) {
     assert(!this.red, 'Already a number in reduction context');
     return this._forceRed(ctx);
   };
 
-  BN.prototype.redAdd = function redAdd (num: number) {
+  BN.prototype.redAdd = function redAdd (num: BigInteger) {
     assert(this.red, 'redAdd works only with red numbers');
     return this.red.add(this, num);
   };
 
-  BN.prototype.redIAdd = function redIAdd (num: number) {
+  BN.prototype.redIAdd = function redIAdd (num: BigInteger) {
     assert(this.red, 'redIAdd works only with red numbers');
     return this.red.iadd(this, num);
   };
@@ -2979,7 +2979,7 @@
     return this.red.sub(this, num);
   };
 
-  BN.prototype.redISub = function redISub (num: number) {
+  BN.prototype.redISub = function redISub (num: BigNumber) {
     assert(this.red, 'redISub works only with red numbers');
     return this.red.isub(this, num);
   };
@@ -2989,13 +2989,13 @@
     return this.red.shl(this, num);
   };
 
-  BN.prototype.redMul = function redMul (num: number) {
+  BN.prototype.redMul = function redMul (num: BigInteger) {
     assert(this.red, 'redMul works only with red numbers');
     this.red._verify2(this, num);
     return this.red.mul(this, num);
   };
 
-  BN.prototype.redIMul = function redIMul (num: number) {
+  BN.prototype.redIMul = function redIMul (num: BigInteger) {
     assert(this.red, 'redMul works only with red numbers');
     this.red._verify2(this, num);
     return this.red.imul(this, num);
@@ -3033,7 +3033,7 @@
     return this.red.neg(this);
   };
 
-  BN.prototype.redPow = function redPow (num: number) {
+  BN.prototype.redPow = function redPow (num: BigNumber) {
     assert(this.red && !num.red, 'redPow(normalNum)');
     this.red._verify1(this);
     return this.red.pow(this, num);
@@ -3048,7 +3048,7 @@
   };
 
   // Pseudo-Mersenne prime
-  function MPrime (name: String,  p: Int) {
+  function MPrime (name: String,  p: BigInt) {
     // P = 2 ^ N - K
     this.name = name;
     this.p = new BN(p, 16);
@@ -3096,11 +3096,11 @@
     return r;
   };
 
-  MPrime.prototype.split = function split (input: IArrayLike<number>,  out: any) {
+  MPrime.prototype.split = function split (input: Buffer,  out: Buffer) {
     input.iushrn(this.n, 0, out);
   };
 
-  MPrime.prototype.imulK = function imulK (num: BigNumber) {
+  MPrime.prototype.imulK = function imulK (num: BigInt) {
     return num.imul(this.k);
   };
 
@@ -3112,7 +3112,7 @@
   }
   inherits(K256, MPrime);
 
-  K256.prototype.split = function split (input: Uint8Array,  output: Uint8Array) {
+  K256.prototype.split = function split (input: number,  output: number) {
     // 256 = 9 * 26 + 22
     var mask = 0x3fffff;
 
@@ -3146,7 +3146,7 @@
     }
   };
 
-  K256.prototype.imulK = function imulK (num: number) {
+  K256.prototype.imulK = function imulK (num: BigInteger) {
     // K = 0x1000003d1 = [ 0x40, 0x3d1 ]
     num.words[num.length] = 0;
     num.words[num.length + 1] = 0;
@@ -3196,7 +3196,7 @@
   }
   inherits(P25519, MPrime);
 
-  P25519.prototype.imulK = function imulK (num: number) {
+  P25519.prototype.imulK = function imulK (num: BigInteger) {
     // K = 0x13
     var carry = 0;
     for (var i = 0; i < num.length; i++) {
@@ -3214,7 +3214,7 @@
   };
 
   // Exported mostly for testing purposes, use plain name instead
-  BN._prime = function prime (name: string | number) {
+  BN._prime = function prime (name: String) {
     // Cached version of prime
     if (primes[name]) return primes[name];
 
@@ -3238,7 +3238,7 @@
   //
   // Base reduction engine
   //
-  function Red (m: umber) {
+  function Red (m: any) {
     if (typeof m === 'string') {
       var prime = BN._prime(m);
       this.m = prime.p;
@@ -3255,20 +3255,20 @@
     assert(a.red, 'red works only with red numbers');
   };
 
-  Red.prototype._verify2 = function _verify2 (a: any,  b: any) {
+  Red.prototype._verify2 = function _verify2 (a: number,  b: number) {
     assert((a.negative | b.negative) === 0, 'red works only with positives');
     assert(a.red && a.red === b.red,
       'red works only with red numbers');
   };
 
-  Red.prototype.imod = function imod (a: number) {
+  Red.prototype.imod = function imod (a: BigInt) {
     if (this.prime) return this.prime.ireduce(a)._forceRed(this);
 
     move(a, a.umod(this.m)._forceRed(this));
     return a;
   };
 
-  Red.prototype.neg = function neg (a: Big) {
+  Red.prototype.neg = function neg (a: BigInt) {
     if (a.isZero()) {
       return a.clone();
     }
@@ -3286,7 +3286,7 @@
     return res._forceRed(this);
   };
 
-  Red.prototype.iadd = function iadd (a: number,  b: number) {
+  Red.prototype.iadd = function iadd (a: BigInt,  b: BigInt) {
     this._verify2(a, b);
 
     var res = a.iadd(b);
@@ -3296,7 +3296,7 @@
     return res;
   };
 
-  Red.prototype.sub = function sub (a: any,  b: any) {
+  Red.prototype.sub = function sub (a: number,  b: number) {
     this._verify2(a, b);
 
     var res = a.sub(b);
@@ -3306,7 +3306,7 @@
     return res._forceRed(this);
   };
 
-  Red.prototype.isub = function isub (a: number,  b: number) {
+  Red.prototype.isub = function isub (a: BigInt,  b: BigInt) {
     this._verify2(a, b);
 
     var res = a.isub(b);
@@ -3316,7 +3316,7 @@
     return res;
   };
 
-  Red.prototype.shl = function shl (a: number,  num: number) {
+  Red.prototype.shl = function shl (a: BigInt,  num: BigInt) {
     this._verify1(a);
     return this.imod(a.ushln(num));
   };
@@ -3326,20 +3326,20 @@
     return this.imod(a.imul(b));
   };
 
-  Red.prototype.mul = function mul (a: number,  b: number) {
+  Red.prototype.mul = function mul (a: BigInt,  b: BigInt) {
     this._verify2(a, b);
     return this.imod(a.mul(b));
   };
 
-  Red.prototype.isqr = function isqr (a: BigNumber) {
+  Red.prototype.isqr = function isqr (a: BigInt) {
     return this.imul(a, a.clone());
   };
 
-  Red.prototype.sqr = function sqr (a: number) {
+  Red.prototype.sqr = function sqr (a: BigInteger) {
     return this.mul(a, a);
   };
 
-  Red.prototype.sqrt = function sqrt (a: Big) {
+  Red.prototype.sqrt = function sqrt (a: BigInteger) {
     if (a.isZero()) return a.clone();
 
     var mod3 = this.m.andln(3);
@@ -3396,7 +3396,7 @@
     return r;
   };
 
-  Red.prototype.invm = function invm (a: Big) {
+  Red.prototype.invm = function invm (a: BigInteger) {
     var inv = a._invmp(this.m);
     if (inv.negative !== 0) {
       inv.negative = 0;
@@ -3454,13 +3454,13 @@
     return res;
   };
 
-  Red.prototype.convertTo = function convertTo (num: Big) {
+  Red.prototype.convertTo = function convertTo (num: BigInteger) {
     var r = num.umod(this.m);
 
     return r === num ? r.clone() : r;
   };
 
-  Red.prototype.convertFrom = function convertFrom (num: number) {
+  Red.prototype.convertFrom = function convertFrom (num: BigNumber) {
     var res = num.clone();
     res.red = null;
     return res;
@@ -3470,11 +3470,11 @@
   // Montgomery method engine
   //
 
-  BN.mont = function mont (num: Mont) {
+  BN.mont = function mont (num: number) {
     return new Mont(num);
   };
 
-  function Mont (m: Mont) {
+  function Mont (m: BN) {
     Red.call(this, m);
 
     this.shift = this.m.bitLength();
@@ -3502,7 +3502,7 @@
     return r;
   };
 
-  Mont.prototype.imul = function imul (a: BigNumber,  b: BigNumber) {
+  Mont.prototype.imul = function imul (a: BigInteger,  b: BigInteger) {
     if (a.isZero() || b.isZero()) {
       a.words[0] = 0;
       a.length = 1;
@@ -3539,7 +3539,7 @@
     return res._forceRed(this);
   };
 
-  Mont.prototype.invm = function invm (a: Matrix) {
+  Mont.prototype.invm = function invm (a: number) {
     // (AR)^-1 * R^2 = (A^-1 * R^-1) * R^2 = A^-1 * R
     var res = this.imod(a._invmp(this.m).mul(this.r2));
     return res._forceRed(this);

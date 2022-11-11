@@ -16,7 +16,7 @@ const DATA_URL_PATTERN = /^(?:([^;]+);)?(?:[^;]+;)?(base64|),([\s\S]*)$/;
  *
  * @returns {Buffer|Blob}
  */
-export default function fromDataURI(uri: string | Blob,  asBlob: boolean,  options: IImageBitmapOptions) {
+export default function fromDataURI(uri: Blob | string | Uint8Array,  asBlob: Blob | boolean,  options: BlobPropertyBag) {
   const _Blob = options && options.Blob || platform.classes.Blob;
   const protocol = parseProtocol(uri);
 

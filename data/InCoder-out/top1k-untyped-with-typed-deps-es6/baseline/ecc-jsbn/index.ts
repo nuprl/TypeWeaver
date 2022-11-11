@@ -10,7 +10,7 @@ function unstupid(hex: number,  len: number) {
   return hex.length >= len ? hex : unstupid("0" + hex, len);
 }
 
-export const ECKey = function(curve: Curve,  key: Key,  isPublic: Boolean) {
+export const ECKey = function(curve: Curve,  key: Curve.Point,  isPublic: Curve.Point) {
   var priv;
   var c = curve();
   var n = c.getN();
@@ -48,7 +48,7 @@ export const ECKey = function(curve: Curve,  key: Key,  isPublic: Boolean) {
       unstupid(priv.toString(16), bytes * 2),
       "hex"
     );
-    this.deriveSharedSecret = function(key: any) {
+    this.deriveSharedSecret = function(key: ny) {
       if (!key || !key.P) return false;
       var S = key.P.multiply(priv);
       return Buffer.from(

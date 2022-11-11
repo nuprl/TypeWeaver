@@ -20,7 +20,7 @@ if (typeof Symbol === 'function' && typeof Symbol.for === 'function') {
 
 function noop () {}
 
-function publishQueue(context: Context,  queue: Queue) {
+function publishQueue(context: any,  queue: any) {
   Object.defineProperty(context, gracefulQueue, {
     get: function() {
       return queue
@@ -48,7 +48,7 @@ if (!fs[gracefulQueue]) {
   // to retry() whenever a close happens *anywhere* in the program.
   // This is essential when multiple graceful-fs instances are
   // in play at the same time.
-  fs.close = (function (fs$close: Function) {
+  fs.close = (function (fs$close: any) {
     function close (fd: number,  cb: Function) {
       return fs$close.call(fs, fd, function (err: Error) {
         // This function uses the graceful-fs shared queue
@@ -67,7 +67,7 @@ if (!fs[gracefulQueue]) {
     return close
   })(fs.close)
 
-  fs.closeSync = (function (fs$closeSync: typeof closeSync) {
+  fs.closeSync = (function (fs$closeSync: typeof fs.closeSync) {
     function closeSync (fd: number) {
       // This function uses the graceful-fs shared queue
       fs$closeSync.apply(fs, arguments)
@@ -98,7 +98,7 @@ if (process.env.TEST_GRACEFUL_FS_GLOBAL_PATCH && !fs.__patched) {
   fs.__patched = true;
 }
 
-function patch (fs: NodeJS.ReadWrite) {
+function patch (fs: any) {
   // Everything that references the open() function needs to be in here
   polyfills(fs)
   fs.gracefulify = patch
@@ -113,7 +113,7 @@ function patch (fs: NodeJS.ReadWrite) {
 
     return go$readFile(path, options, cb)
 
-    function go$readFile (path: string | Buffer,  options: any,  cb: Function,  startTime: number) {
+    function go$readFile (path: path$Path,  options: any,  cb: cb,  startTime: startTime) {
       return fs$readFile(path, options, function (err: Error) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$readFile, [path, options, cb], err, startTime || Date.now(), Date.now()])
@@ -127,13 +127,13 @@ function patch (fs: NodeJS.ReadWrite) {
 
   var fs$writeFile = fs.writeFile
   fs.writeFile = writeFile
-  function writeFile (path: string | Buffer,  data: string | Buffer,  options: any,  cb: Function) {
+  function writeFile (path: string,  data: any,  options: any,  cb: Function) {
     if (typeof options === 'function')
       cb = options, options = null
 
     return go$writeFile(path, data, options, cb)
 
-    function go$writeFile (path: string | Buffer,  data: string | Buffer,  options: any,  cb: Function,  startTime: number) {
+    function go$writeFile (path: string,  data: Buffer,  options: Object,  cb: Function,  startTime: Date) {
       return fs$writeFile(path, data, options, function (err: Error) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$writeFile, [path, data, options, cb], err, startTime || Date.now(), Date.now()])
@@ -148,13 +148,13 @@ function patch (fs: NodeJS.ReadWrite) {
   var fs$appendFile = fs.appendFile
   if (fs$appendFile)
     fs.appendFile = appendFile
-  function appendFile (path: string | Buffer,  data: string | Buffer,  options: any,  cb: Function) {
+  function appendFile (path: string,  data: Buffer,  options: any,  cb: Function) {
     if (typeof options === 'function')
       cb = options, options = null
 
     return go$appendFile(path, data, options, cb)
 
-    function go$appendFile (path: string | Buffer,  data: string | Buffer,  options: any,  cb: Function,  startTime: number) {
+    function go$appendFile (path: string,  data: Buffer,  options: Object,  cb: Function,  startTime: Date) {
       return fs$appendFile(path, data, options, function (err: Error) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$appendFile, [path, data, options, cb], err, startTime || Date.now(), Date.now()])
@@ -176,7 +176,7 @@ function patch (fs: NodeJS.ReadWrite) {
     }
     return go$copyFile(src, dest, flags, cb)
 
-    function go$copyFile (src: any,  dest: any,  flags: any,  cb: Function,  startTime: number) {
+    function go$copyFile (src: fs.Stats,  dest: fs.Stats,  flags: number,  cb: Function,  startTime: number) {
       return fs$copyFile(src, dest, flags, function (err: Error) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$copyFile, [src, dest, flags, cb], err, startTime || Date.now(), Date.now()])
@@ -191,17 +191,17 @@ function patch (fs: NodeJS.ReadWrite) {
   var fs$readdir = fs.readdir
   fs.readdir = readdir
   var noReaddirOptionVersions = /^v[0-5]\./
-  function readdir (path: String,  options: Object,  cb: Function) {
+  function readdir (path: string | Buffer,  options: ReaddirOptions,  cb: Callback<Stats>) {
     if (typeof options === 'function')
       cb = options, options = null
 
     var go$readdir = noReaddirOptionVersions.test(process.version)
-      ? function go$readdir (path: string,  options: any,  cb: Function,  startTime: number) {
+      ? function go$readdir (path: string | Buffer,  options: ReaddirOptions,  cb: ReaddirCallback,  startTime: number) {
         return fs$readdir(path, fs$readdirCallback(
           path, options, cb, startTime
         ))
       }
-      : function go$readdir (path: string,  options: any,  cb: Function,  startTime: number) {
+      : function go$readdir (path: string | Buffer,  options: ReaddirOptions,  cb: ReaddirCallback,  startTime: number) {
         return fs$readdir(path, options, fs$readdirCallback(
           path, options, cb, startTime
         ))
@@ -209,7 +209,7 @@ function patch (fs: NodeJS.ReadWrite) {
 
     return go$readdir(path, options, cb)
 
-    function fs$readdirCallback (path: String,  options: fs$ReaddirOption,  cb: fs$ReaddirCallback,  startTime: 15774889) {
+    function fs$readdirCallback (path: fs.PathLike,  options: fs.StatOptions,  cb: Function,  startTime: Date) {
       return function (err: Error,  files: string[]) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([
@@ -252,7 +252,7 @@ function patch (fs: NodeJS.ReadWrite) {
     get: function () {
       return ReadStream
     },
-    set: function (val: any) {
+    set: function (val: ReadStream) {
       ReadStream = val
     },
     enumerable: true,
@@ -262,7 +262,7 @@ function patch (fs: NodeJS.ReadWrite) {
     get: function () {
       return WriteStream
     },
-    set: function (val: any) {
+    set: function (val: WriteStream) {
       WriteStream = val
     },
     enumerable: true,
@@ -316,7 +316,7 @@ function patch (fs: NodeJS.ReadWrite) {
     })
   }
 
-  function WriteStream (path: Path,  options: WriteStreamOptions) {
+  function WriteStream (path: string | Buffer,  options: WriteStreamOptions) {
     if (this instanceof WriteStream)
       return fs$WriteStream.apply(this, arguments), this
     else
@@ -336,23 +336,23 @@ function patch (fs: NodeJS.ReadWrite) {
     })
   }
 
-  function createReadStream (path: string | Buffer,  options: any) {
+  function createReadStream (path: string | Buffer,  options: ReadStreamOptions) {
     return new fs.ReadStream(path, options)
   }
 
-  function createWriteStream (path: string | Buffer,  options: any) {
+  function createWriteStream (path: string | Buffer,  options: WriteStreamOptions) {
     return new fs.WriteStream(path, options)
   }
 
   var fs$open = fs.open
   fs.open = open
-  function open (path: String,  flags: String,  mode: String,  cb: Function) {
+  function open (path: string | Buffer,  flags: number,  mode: number,  cb: Function) {
     if (typeof mode === 'function')
       cb = mode, mode = null
 
     return go$open(path, flags, mode, cb)
 
-    function go$open (path: String,  flags: number,  mode: number,  cb: Function,  startTime: number) {
+    function go$open (path: String,  flags: String,  mode: Number,  cb: Function,  startTime: Date) {
       return fs$open(path, flags, mode, function (err: Error,  fd: number) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$open, [path, flags, mode, cb], err, startTime || Date.now(), Date.now()])
@@ -367,7 +367,7 @@ function patch (fs: NodeJS.ReadWrite) {
   return fs
 }
 
-function enqueue (elem: Element) {
+function enqueue (elem: Array<any>) {
   debug('ENQUEUE', elem[0].name, elem[1])
   fs[gracefulQueue].push(elem)
   retry()

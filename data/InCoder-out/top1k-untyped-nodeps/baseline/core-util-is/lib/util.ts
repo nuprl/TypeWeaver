@@ -22,7 +22,7 @@
 // NOTE: These type checking functions intentionally don't use `instanceof`
 // because it is fragile and can be easily faked with `Object.create()`.
 
-function isArray(arg: any) {
+function isArray(arg: unknown) {
   if (Array.isArray) {
     return Array.isArray(arg);
   }
@@ -30,12 +30,12 @@ function isArray(arg: any) {
 }
 exports.isArray = isArray;
 
-function isBoolean(arg: mixed) {
+function isBoolean(arg: unknown) {
   return typeof arg === 'boolean';
 }
 exports.isBoolean = isBoolean;
 
-function isNull(arg: mixed) {
+function isNull(arg: any) {
   return arg === null;
 }
 exports.isNull = isNull;
@@ -45,12 +45,12 @@ function isNullOrUndefined(arg: unknown) {
 }
 exports.isNullOrUndefined = isNullOrUndefined;
 
-function isNumber(arg: any) {
+function isNumber(arg: unknown) {
   return typeof arg === 'number';
 }
 exports.isNumber = isNumber;
 
-function isString(arg: any) {
+function isString(arg: nknown) {
   return typeof arg === 'string';
 }
 exports.isString = isString;
@@ -60,7 +60,7 @@ function isSymbol(arg: nknown) {
 }
 exports.isSymbol = isSymbol;
 
-function isUndefined(arg: mixed) {
+function isUndefined(arg: unknown) {
   return arg === void 0;
 }
 exports.isUndefined = isUndefined;
@@ -70,12 +70,12 @@ function isRegExp(re: RegExp) {
 }
 exports.isRegExp = isRegExp;
 
-function isObject(arg: mixed) {
+function isObject(arg: unknown) {
   return typeof arg === 'object' && arg !== null;
 }
 exports.isObject = isObject;
 
-function isDate(d: any) {
+function isDate(d: Date) {
   return objectToString(d) === '[object Date]';
 }
 exports.isDate = isDate;
@@ -85,12 +85,12 @@ function isError(e: any) {
 }
 exports.isError = isError;
 
-function isFunction(arg: any) {
+function isFunction(arg: unknown) {
   return typeof arg === 'function';
 }
 exports.isFunction = isFunction;
 
-function isPrimitive(arg: mixed) {
+function isPrimitive(arg: unknown) {
   return arg === null ||
          typeof arg === 'boolean' ||
          typeof arg === 'number' ||
@@ -102,6 +102,6 @@ exports.isPrimitive = isPrimitive;
 
 exports.isBuffer = require('buffer').Buffer.isBuffer;
 
-function objectToString(o: Object) {
+function objectToString(o: object) {
   return Object.prototype.toString.call(o);
 }

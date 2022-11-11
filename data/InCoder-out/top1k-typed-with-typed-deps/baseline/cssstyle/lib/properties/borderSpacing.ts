@@ -30,7 +30,7 @@ var parse = function parse(v: any) {
 };
 
 module.exports.definition = {
-  set: function(v: any) {
+  set: function(v: number) {
     this._setProperty('border-spacing', parse(v));
   },
   get: function() {

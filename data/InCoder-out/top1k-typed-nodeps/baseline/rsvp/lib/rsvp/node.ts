@@ -5,7 +5,7 @@ import {
   reject,
 } from './-internal';
 
-function makeObject(_: Object,  argumentNames: Array<string>) {
+function makeObject(_: any,  argumentNames: any[]) {
   let obj = {};
 
   for (let i = 0; i < argumentNames.length; i++) {
@@ -16,7 +16,7 @@ function makeObject(_: Object,  argumentNames: Array<string>) {
   return obj;
 }
 
-function arrayResult(_: number) {
+function arrayResult(_: ArrayLike<any>) {
   let length = _.length;
   let args = new Array(length - 1);
 
@@ -27,7 +27,7 @@ function arrayResult(_: number) {
   return args;
 }
 
-function wrapThenable(then: Thenable<any>,  promise: Promise<any>) {
+function wrapThenable(then: Thenable,  promise: Promise<any>) {
   return {
     then(onFulFillment, onRejection) {
       return then.call(promise, onFulFillment, onRejection);
@@ -44,7 +44,7 @@ function wrapThenable(then: Thenable<any>,  promise: Promise<any>) {
   ```javascript
   let fs = require('fs');
 
-  fs.readFile('myfile.txt', function(err: any,  data: any){
+  fs.readFile('myfile.txt', function(err: Error,  data: any){
     if (err) return handleError(err);
     handleData(data);
   });
@@ -88,7 +88,7 @@ function wrapThenable(then: Thenable<any>,  promise: Promise<any>) {
   ```javascript
   let request = denodeify(require('request'), ['res', 'body']);
 
-  request('http://example.com').then(function(result: any) {
+  request('http://example.com').then(function(result: Response) {
     // result.res
     // result.body
   });
@@ -121,7 +121,7 @@ function wrapThenable(then: Thenable<any>,  promise: Promise<any>) {
   ```javascript
   let fs = require('fs');
 
-  fs.readFile('myfile.txt', function(err: ny,  data: ny){
+  fs.readFile('myfile.txt', function(err: rror,  data: ny){
     if (err) { ... } // Handle error
     fs.writeFile('myfile2.txt', data, function(err: rror){
       if (err) { ... } // Handle error
@@ -162,7 +162,7 @@ function wrapThenable(then: Thenable<any>,  promise: Promise<any>) {
   values.
   @return {Function} a function that wraps `nodeFunc` to return a `Promise`
 */
-export default function denodeify(nodeFunc: Function,  options: Object) {
+export default function denodeify(nodeFunc: Function,  options: any) {
   let fn = function() {
     let l = arguments.length;
     let args = new Array(l + 1);
@@ -198,7 +198,7 @@ export default function denodeify(nodeFunc: Function,  options: Object) {
 
     let promise = new Promise(noop);
 
-    args[l] = function(err: Error,  val: Object) {
+    args[l] = function(err: Error,  val: number) {
       if (err) {
         reject(promise, err);
       } else if (options === undefined) {
@@ -224,7 +224,7 @@ export default function denodeify(nodeFunc: Function,  options: Object) {
   return fn;
 }
 
-function handleValueInput(promise: Promise,  args: any[],  nodeFunc: Function,  self: any) {
+function handleValueInput(promise: Promise<any>,  args: any[],  nodeFunc: NodeFunc,  self: any) {
   try {
     nodeFunc.apply(self, args);
   } catch (error) {

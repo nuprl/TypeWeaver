@@ -22,11 +22,11 @@ const specialSchemes = {
 
 const failure = Symbol("failure");
 
-function countSymbols(str: string | number) {
+function countSymbols(str: string | string[]) {
   return [...str].length;
 }
 
-function at(input: Array,  idx: number) {
+function at(input: number[],  idx: number) {
   const c = input[idx];
   return isNaN(c) ? undefined : String.fromCodePoint(c);
 }
@@ -44,19 +44,19 @@ function isWindowsDriveLetterCodePoints(cp1: number,  cp2: number) {
   return infra.isASCIIAlpha(cp1) && (cp2 === p(":") || cp2 === p("|"));
 }
 
-function isWindowsDriveLetterString(string: string | undefined) {
+function isWindowsDriveLetterString(string: string | null | undefined) {
   return string.length === 2 && infra.isASCIIAlpha(string.codePointAt(0)) && (string[1] === ":" || string[1] === "|");
 }
 
-function isNormalizedWindowsDriveLetterString(string: string | undefined) {
+function isNormalizedWindowsDriveLetterString(string: string | null | undefined) {
   return string.length === 2 && infra.isASCIIAlpha(string.codePointAt(0)) && string[1] === ":";
 }
 
-function containsForbiddenHostCodePoint(string: string | null) {
+function containsForbiddenHostCodePoint(string: string | null | undefined) {
   return string.search(/\u0000|\u0009|\u000A|\u000D|\u0020|#|\/|:|<|>|\?|@|\[|\\|\]|\^|\|/u) !== -1;
 }
 
-function containsForbiddenDomainCodePoint(string: number) {
+function containsForbiddenDomainCodePoint(string: string | null | undefined) {
   return containsForbiddenHostCodePoint(string) || string.search(/[\u0000-\u001F]|%|\u007F/u) !== -1;
 }
 
@@ -64,19 +64,19 @@ function isSpecialScheme(scheme: string | null) {
   return specialSchemes[scheme] !== undefined;
 }
 
-function isSpecial(url: URL) {
+function isSpecial(url: URI) {
   return isSpecialScheme(url.scheme);
 }
 
-function isNotSpecial(url: RL) {
+function isNotSpecial(url: RI) {
   return !isSpecialScheme(url.scheme);
 }
 
-function defaultPort(scheme: string | undefined) {
+function defaultPort(scheme: string | null | undefined) {
   return specialSchemes[scheme];
 }
 
-function parseIPv4Number(input: string | null) {
+function parseIPv4Number(input: string | number) {
   if (input === "") {
     return failure;
   }
@@ -152,7 +152,7 @@ function parseIPv4(input: string | number) {
   return ipv4;
 }
 
-function serializeIPv4(address: string) {
+function serializeIPv4(address: IPv4) {
   let output = "";
   let n = address;
 
@@ -167,7 +167,7 @@ function serializeIPv4(address: string) {
   return output;
 }
 
-function parseIPv6(input: string | Buffer) {
+function parseIPv6(input: Buffer) {
   const address = [0, 0, 0, 0, 0, 0, 0, 0];
   let pieceIndex = 0;
   let compress = null;
@@ -296,7 +296,7 @@ function parseIPv6(input: string | Buffer) {
   return address;
 }
 
-function serializeIPv6(address: string) {
+function serializeIPv6(address: IPv6) {
   let output = "";
   const compress = findLongestZeroSequence(address);
   let ignore0 = false;
@@ -325,7 +325,7 @@ function serializeIPv6(address: string) {
   return output;
 }
 
-function parseHost(input: string | null,  isNotSpecialArg = false: boolean | undefined) {
+function parseHost(input: string | null | undefined,  isNotSpecialArg = false: isNotSpecialArg) {
   if (input[0] === "[") {
     if (input[input.length - 1] !== "]") {
       return failure;
@@ -376,7 +376,7 @@ function endsInANumber(input: string | number) {
   return false;
 }
 
-function parseOpaqueHost(input: string | null) {
+function parseOpaqueHost(input: OpaqueHost) {
   if (containsForbiddenHostCodePoint(input)) {
     return failure;
   }
@@ -415,7 +415,7 @@ function findLongestZeroSequence(arr: number[]) {
   return maxIdx;
 }
 
-function serializeHost(host: Host) {
+function serializeHost(host: number) {
   if (typeof host === "number") {
     return serializeIPv4(host);
   }
@@ -450,7 +450,7 @@ function trimTabAndNewline(url: URL) {
   return url.replace(/\u0009|\u000A|\u000D/ug, "");
 }
 
-function shortenPath(url: URL) {
+function shortenPath(url: Url) {
   const { path } = url;
   if (path.length === 0) {
     return;
@@ -474,11 +474,11 @@ function hasAnOpaquePath(url: URL) {
   return typeof url.path === "string";
 }
 
-function isNormalizedWindowsDriveLetter(string: string | undefined) {
+function isNormalizedWindowsDriveLetter(string: string | null | undefined) {
   return /^[A-Za-z]:$/u.test(string);
 }
 
-function URLStateMachine(input: URLStateMachineInput,  base: URLStateMachineBase,  encodingOverride: encodingOverride,  url: url,  stateOverride: stateOverride) {
+function URLStateMachine(input: URLInput,  base: URLBase,  encodingOverride: EncodingOverride,  url: URL,  stateOverride: StateOverride) {
   this.pointer = 0;
   this.input = input;
   this.base = base || null;
@@ -537,7 +537,7 @@ function URLStateMachine(input: URLStateMachineInput,  base: URLStateMachineBase
   }
 }
 
-URLStateMachine.prototype["parse scheme start"] = function parseSchemeStart(c: number,  cStr: number) {
+URLStateMachine.prototype["parse scheme start"] = function parseSchemeStart(c: char,  cStr: char[]) {
   if (infra.isASCIIAlpha(c)) {
     this.buffer += cStr.toLowerCase();
     this.state = "scheme";
@@ -552,7 +552,7 @@ URLStateMachine.prototype["parse scheme start"] = function parseSchemeStart(c: n
   return true;
 };
 
-URLStateMachine.prototype["parse scheme"] = function parseScheme(c: CodeMirror.StringStream,  cStr: CodeMirror.StringStream) {
+URLStateMachine.prototype["parse scheme"] = function parseScheme(c: Char,  cStr: Char) {
   if (infra.isASCIIAlphanumeric(c) || c === p("+") || c === p("-") || c === p(".")) {
     this.buffer += cStr.toLowerCase();
   } else if (c === p(":")) {
@@ -609,7 +609,7 @@ URLStateMachine.prototype["parse scheme"] = function parseScheme(c: CodeMirror.S
   return true;
 };
 
-URLStateMachine.prototype["parse no scheme"] = function parseNoScheme(c: ParseContext) {
+URLStateMachine.prototype["parse no scheme"] = function parseNoScheme(c: Char) {
   if (this.base === null || (hasAnOpaquePath(this.base) && c !== p("#"))) {
     return failure;
   } else if (hasAnOpaquePath(this.base) && c === p("#")) {
@@ -629,7 +629,7 @@ URLStateMachine.prototype["parse no scheme"] = function parseNoScheme(c: ParseCo
   return true;
 };
 
-URLStateMachine.prototype["parse special relative or authority"] = function parseSpecialRelativeOrAuthority(c: ParseContext) {
+URLStateMachine.prototype["parse special relative or authority"] = function parseSpecialRelativeOrAuthority(c: number) {
   if (c === p("/") && this.input[this.pointer + 1] === p("/")) {
     this.state = "special authority ignore slashes";
     ++this.pointer;
@@ -642,7 +642,7 @@ URLStateMachine.prototype["parse special relative or authority"] = function pars
   return true;
 };
 
-URLStateMachine.prototype["parse path or authority"] = function parsePathOrAuthority(c: Character) {
+URLStateMachine.prototype["parse path or authority"] = function parsePathOrAuthority(c: number) {
   if (c === p("/")) {
     this.state = "authority";
   } else {
@@ -653,7 +653,7 @@ URLStateMachine.prototype["parse path or authority"] = function parsePathOrAutho
   return true;
 };
 
-URLStateMachine.prototype["parse relative"] = function parseRelative(c: ParseContext) {
+URLStateMachine.prototype["parse relative"] = function parseRelative(c: number) {
   this.url.scheme = this.base.scheme;
   if (c === p("/")) {
     this.state = "relative slash";
@@ -684,7 +684,7 @@ URLStateMachine.prototype["parse relative"] = function parseRelative(c: ParseCon
   return true;
 };
 
-URLStateMachine.prototype["parse relative slash"] = function parseRelativeSlash(c: ParseContext) {
+URLStateMachine.prototype["parse relative slash"] = function parseRelativeSlash(c: number) {
   if (isSpecial(this.url) && (c === p("/") || c === p("\\"))) {
     if (c === p("\\")) {
       this.parseError = true;
@@ -704,7 +704,7 @@ URLStateMachine.prototype["parse relative slash"] = function parseRelativeSlash(
   return true;
 };
 
-URLStateMachine.prototype["parse special authority slashes"] = function parseSpecialAuthoritySlashes(c: number) {
+URLStateMachine.prototype["parse special authority slashes"] = function parseSpecialAuthoritySlashes(c: Char) {
   if (c === p("/") && this.input[this.pointer + 1] === p("/")) {
     this.state = "special authority ignore slashes";
     ++this.pointer;
@@ -717,7 +717,7 @@ URLStateMachine.prototype["parse special authority slashes"] = function parseSpe
   return true;
 };
 
-URLStateMachine.prototype["parse special authority ignore slashes"] = function parseSpecialAuthorityIgnoreSlashes(c: number) {
+URLStateMachine.prototype["parse special authority ignore slashes"] = function parseSpecialAuthorityIgnoreSlashes(c: Char) {
   if (c !== p("/") && c !== p("\\")) {
     this.state = "authority";
     --this.pointer;
@@ -728,7 +728,7 @@ URLStateMachine.prototype["parse special authority ignore slashes"] = function p
   return true;
 };
 
-URLStateMachine.prototype["parse authority"] = function parseAuthority(c: char,  cStr: char) {
+URLStateMachine.prototype["parse authority"] = function parseAuthority(c: number,  cStr: number) {
   if (c === p("@")) {
     this.parseError = true;
     if (this.atFlag) {
@@ -770,7 +770,7 @@ URLStateMachine.prototype["parse authority"] = function parseAuthority(c: char, 
 };
 
 URLStateMachine.prototype["parse hostname"] =
-URLStateMachine.prototype["parse host"] = function parseHostName(c: char,  cStr: char) {
+URLStateMachine.prototype["parse host"] = function parseHostName(c: number,  cStr: number) {
   if (this.stateOverride && this.url.scheme === "file") {
     --this.pointer;
     this.state = "file host";
@@ -857,7 +857,7 @@ URLStateMachine.prototype["parse port"] = function parsePort(c: number,  cStr: n
 
 const fileOtherwiseCodePoints = new Set([p("/"), p("\\"), p("?"), p("#")]);
 
-function startsWithWindowsDriveLetter(input: string | null,  pointer: number) {
+function startsWithWindowsDriveLetter(input: string | null | undefined,  pointer: Pointer | null | undefined) {
   const length = input.length - pointer;
   return length >= 2 &&
     isWindowsDriveLetterCodePoints(input[pointer], input[pointer + 1]) &&
@@ -903,7 +903,7 @@ URLStateMachine.prototype["parse file"] = function parseFile(c: ParseContext) {
   return true;
 };
 
-URLStateMachine.prototype["parse file slash"] = function parseFileSlash(c: number) {
+URLStateMachine.prototype["parse file slash"] = function parseFileSlash(c: Char) {
   if (c === p("/") || c === p("\\")) {
     if (c === p("\\")) {
       this.parseError = true;
@@ -924,7 +924,7 @@ URLStateMachine.prototype["parse file slash"] = function parseFileSlash(c: numbe
   return true;
 };
 
-URLStateMachine.prototype["parse file host"] = function parseFileHost(c: CodeMirror.Editor,  cStr: string | null) {
+URLStateMachine.prototype["parse file host"] = function parseFileHost(c: number,  cStr: number) {
   if (isNaN(c) || c === p("/") || c === p("\\") || c === p("?") || c === p("#")) {
     --this.pointer;
     if (!this.stateOverride && isWindowsDriveLetterString(this.buffer)) {
@@ -960,7 +960,7 @@ URLStateMachine.prototype["parse file host"] = function parseFileHost(c: CodeMir
   return true;
 };
 
-URLStateMachine.prototype["parse path start"] = function parsePathStart(c: number) {
+URLStateMachine.prototype["parse path start"] = function parsePathStart(c: Char) {
   if (isSpecial(this.url)) {
     if (c === p("\\")) {
       this.parseError = true;
@@ -988,7 +988,7 @@ URLStateMachine.prototype["parse path start"] = function parsePathStart(c: numbe
   return true;
 };
 
-URLStateMachine.prototype["parse path"] = function parsePath(c: ParseContext) {
+URLStateMachine.prototype["parse path"] = function parsePath(c: number) {
   if (isNaN(c) || c === p("/") || (isSpecial(this.url) && c === p("\\")) ||
       (!this.stateOverride && (c === p("?") || c === p("#")))) {
     if (isSpecial(this.url) && c === p("\\")) {
@@ -1033,7 +1033,7 @@ URLStateMachine.prototype["parse path"] = function parsePath(c: ParseContext) {
   return true;
 };
 
-URLStateMachine.prototype["parse opaque path"] = function parseOpaquePath(c: any) {
+URLStateMachine.prototype["parse opaque path"] = function parseOpaquePath(c: ParseContext) {
   if (c === p("?")) {
     this.url.query = "";
     this.state = "query";
@@ -1060,7 +1060,7 @@ URLStateMachine.prototype["parse opaque path"] = function parseOpaquePath(c: any
   return true;
 };
 
-URLStateMachine.prototype["parse query"] = function parseQuery(c: CodeMirror.StringStream,  cStr: CodeMirror.StringStream) {
+URLStateMachine.prototype["parse query"] = function parseQuery(c: CharCode,  cStr: CharCode[]) {
   if (!isSpecial(this.url) || this.url.scheme === "ws" || this.url.scheme === "wss") {
     this.encodingOverride = "utf-8";
   }
@@ -1105,7 +1105,7 @@ URLStateMachine.prototype["parse fragment"] = function parseFragment(c: number) 
   return true;
 };
 
-function serializeURL(url: URL,  excludeFragment: Boolean) {
+function serializeURL(url: any,  excludeFragment: boolean) {
   let output = `${url.scheme}:`;
   if (url.host !== null) {
     output += "//";
@@ -1141,7 +1141,7 @@ function serializeURL(url: URL,  excludeFragment: Boolean) {
   return output;
 }
 
-function serializeOrigin(tuple: Tuple) {
+function serializeOrigin(tuple: Origin) {
   let result = `${tuple.scheme}://`;
   result += serializeHost(tuple.host);
 
@@ -1152,7 +1152,7 @@ function serializeOrigin(tuple: Tuple) {
   return result;
 }
 
-function serializePath(url: URL) {
+function serializePath(url: Url) {
   if (hasAnOpaquePath(url)) {
     return url.path;
   }

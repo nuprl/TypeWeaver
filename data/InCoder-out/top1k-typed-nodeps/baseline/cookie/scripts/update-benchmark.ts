@@ -9,7 +9,7 @@ var url = require('url')
 
 var BENCH_COOKIES_FILE = path.join(__dirname, '..', 'benchmark', 'parse-top.json')
 
-getAllCookies(topSites.slice(0, 20), function (err: Error,  cookies: any) {
+getAllCookies(topSites.slice(0, 20), function (err: Error,  cookies: string[]) {
   if (err) throw err
   var str = '{\n' +
     Object.keys(cookies).sort().map(function (key: any) {
@@ -19,7 +19,7 @@ getAllCookies(topSites.slice(0, 20), function (err: Error,  cookies: any) {
   fs.writeFileSync(BENCH_COOKIES_FILE, str)
 })
 
-function get (href: string | string[],  callback: Function) {
+function get (href: string | null | undefined,  callback: RequestCallback) {
   var protocol = url.parse(href, false, true).protocol
   var proto = protocol === 'https:' ? https : http
 
@@ -39,7 +39,7 @@ function getAllCookies (sites: string[],  callback: Function) {
   var wait = sites.length
 
   sites.forEach(function (site: Site) {
-    getCookies(site, function (err: Error,  cookies: any) {
+    getCookies(site, function (err: any,  cookies: any) {
       if (!err && cookies.length) {
         all[site.rootDomain] = cookies.map(obfuscate).join('; ')
       }
@@ -50,16 +50,16 @@ function getAllCookies (sites: string[],  callback: Function) {
   })
 }
 
-function getCookies (site: string | null,  callback: Function) {
+function getCookies (site: Site,  callback: Function) {
   var href = url.format({ hostname: site.rootDomain, protocol: 'http' })
   get(href, function (err: Error,  res: Response) {
     if (err) return callback(err)
-    var cookies = (res.headers['set-cookie'] || []).map(function (c: string) { return c.split(';')[0] })
+    var cookies = (res.headers['set-cookie'] || []).map(function (c: any) { return c.split(';')[0] })
     callback(null, cookies)
   })
 }
 
-function obfuscate (str: string | Buffer) {
+function obfuscate (str: any) {
   return str
     .replace(/%[0-9a-f]{2}/gi, function () { return '%__' })
     .replace(/[a-z]/g, function () { return 'l' })

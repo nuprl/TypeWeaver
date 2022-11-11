@@ -55,32 +55,63 @@ ipaddr.min.ts(1,11680): error TS2345: Argument of type '(Window & typeof globalT
   Type 'Window & typeof globalThis' is not assignable to type 'number'.
 ipaddr.min.ts(1,11707): error TS2322: Type '{}' is not assignable to type 'Window & typeof globalThis'.
   Type '{}' is missing the following properties from type 'Window': clientInformation, closed, customElements, devicePixelRatio, and 193 more.
-lib/ipaddr.ts(33,34): error TS2304: Cannot find name 'IPv6'.
-lib/ipaddr.ts(65,13): error TS2365: Operator '>' cannot be applied to types 'number' and 'string[]'.
+lib/ipaddr.ts(35,20): error TS2339: Property 'indexOf' does not exist on type 'string | DataView | Buffer'.
+  Property 'indexOf' does not exist on type 'DataView'.
+lib/ipaddr.ts(35,45): error TS2339: Property 'lastIndexOf' does not exist on type 'string | DataView | Buffer'.
+  Property 'lastIndexOf' does not exist on type 'DataView'.
+lib/ipaddr.ts(41,30): error TS2339: Property 'match' does not exist on type 'string | DataView | Buffer'.
+  Property 'match' does not exist on type 'DataView'.
+lib/ipaddr.ts(47,29): error TS2339: Property 'replace' does not exist on type 'string | DataView | Buffer'.
+  Property 'replace' does not exist on type 'DataView'.
+lib/ipaddr.ts(51,36): error TS2339: Property 'indexOf' does not exist on type 'string | DataView | Buffer'.
+  Property 'indexOf' does not exist on type 'DataView'.
+lib/ipaddr.ts(56,20): error TS2339: Property 'substr' does not exist on type 'string | DataView | Buffer'.
+  Property 'substr' does not exist on type 'DataView'.
+lib/ipaddr.ts(60,20): error TS2339: Property 'substr' does not exist on type 'string | DataView | Buffer'.
+  Property 'substr' does not exist on type 'DataView'.
+lib/ipaddr.ts(65,13): error TS2365: Operator '>' cannot be applied to types 'number' and 'number[]'.
 lib/ipaddr.ts(70,28): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ipaddr.ts(107,32): error TS2304: Cannot find name 'CIDR'.
-lib/ipaddr.ts(107,47): error TS2304: Cannot find name 'CIDR'.
-lib/ipaddr.ts(134,27): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-lib/ipaddr.ts(135,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-lib/ipaddr.ts(141,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-lib/ipaddr.ts(142,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-lib/ipaddr.ts(147,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/ipaddr.ts(77,25): error TS2339: Property 'replace' does not exist on type 'string | DataView | Buffer'.
+  Property 'replace' does not exist on type 'DataView'.
+lib/ipaddr.ts(82,29): error TS2339: Property 'slice' does not exist on type 'string | DataView | Buffer'.
+  Property 'slice' does not exist on type 'DataView'.
+lib/ipaddr.ts(85,27): error TS2339: Property 'length' does not exist on type 'string | DataView | Buffer'.
+  Property 'length' does not exist on type 'DataView'.
+lib/ipaddr.ts(86,29): error TS2339: Property 'slice' does not exist on type 'string | DataView | Buffer'.
+  Property 'slice' does not exist on type 'DataView'.
+lib/ipaddr.ts(90,32): error TS2339: Property 'split' does not exist on type 'string | DataView | Buffer'.
+  Property 'split' does not exist on type 'DataView'.
+lib/ipaddr.ts(108,19): error TS2339: Property 'length' does not exist on type 'number'.
+lib/ipaddr.ts(108,37): error TS2339: Property 'length' does not exist on type 'number'.
+lib/ipaddr.ts(134,27): error TS2345: Argument of type 'string | number' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
+lib/ipaddr.ts(135,29): error TS2345: Argument of type 'string | number' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
+lib/ipaddr.ts(141,29): error TS2345: Argument of type 'string | number' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
+lib/ipaddr.ts(142,29): error TS2345: Argument of type 'string | number' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
+lib/ipaddr.ts(147,25): error TS2345: Argument of type 'string | number' is not assignable to parameter of type 'string'.
+  Type 'number' is not assignable to type 'string'.
 lib/ipaddr.ts(151,21): error TS2339: Property 'length' does not exist on type 'number'.
 lib/ipaddr.ts(152,13): error TS2322: Type 'string' is not assignable to type 'number'.
 lib/ipaddr.ts(161,12): error TS2339: Property 'IPv4' does not exist on type '{}'.
 lib/ipaddr.ts(165,32): error TS2552: Cannot find name 'umber'. Did you mean 'number'?
-lib/ipaddr.ts(219,49): error TS2304: Cannot find name 'CIDRRange'.
-lib/ipaddr.ts(219,72): error TS2304: Cannot find name 'CIDRRange'.
+lib/ipaddr.ts(219,49): error TS2304: Cannot find name 'IPAddressRange'.
+lib/ipaddr.ts(219,77): error TS2304: Cannot find name 'CIDRRange'.
 lib/ipaddr.ts(278,27): error TS2339: Property 'subnetMatch' does not exist on type '{}'.
 lib/ipaddr.ts(288,27): error TS2339: Property 'IPv6' does not exist on type '{}'.
 lib/ipaddr.ts(305,12): error TS2339: Property 'IPv4' does not exist on type '{}'.
 lib/ipaddr.ts(326,12): error TS2339: Property 'IPv4' does not exist on type '{}'.
+lib/ipaddr.ts(326,44): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
 lib/ipaddr.ts(331,12): error TS2339: Property 'IPv4' does not exist on type '{}'.
 lib/ipaddr.ts(341,12): error TS2339: Property 'IPv4' does not exist on type '{}'.
 lib/ipaddr.ts(342,20): error TS2339: Property 'IPv4' does not exist on type '{}'.
 lib/ipaddr.ts(350,12): error TS2339: Property 'IPv4' does not exist on type '{}'.
 lib/ipaddr.ts(373,12): error TS2339: Property 'IPv4' does not exist on type '{}'.
 lib/ipaddr.ts(384,12): error TS2339: Property 'IPv4' does not exist on type '{}'.
+lib/ipaddr.ts(387,29): error TS2339: Property 'match' does not exist on type 'string | RegExp'.
+  Property 'match' does not exist on type 'RegExp'.
 lib/ipaddr.ts(406,12): error TS2339: Property 'IPv4' does not exist on type '{}'.
 lib/ipaddr.ts(478,12): error TS2339: Property 'IPv4' does not exist on type '{}'.
 lib/ipaddr.ts(479,27): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
@@ -103,21 +134,20 @@ lib/ipaddr.ts(551,19): error TS2554: Expected 2 arguments, but got 1.
 lib/ipaddr.ts(552,23): error TS2554: Expected 2 arguments, but got 1.
 lib/ipaddr.ts(553,26): error TS2554: Expected 2 arguments, but got 1.
 lib/ipaddr.ts(554,23): error TS2554: Expected 2 arguments, but got 1.
-lib/ipaddr.ts(568,49): error TS2304: Cannot find name 'CIDRRange'.
-lib/ipaddr.ts(568,72): error TS2304: Cannot find name 'CIDRRange'.
+lib/ipaddr.ts(568,49): error TS2304: Cannot find name 'IPAddressOrRange'.
+lib/ipaddr.ts(568,79): error TS2304: Cannot find name 'CIDRRange'.
 lib/ipaddr.ts(637,27): error TS2339: Property 'subnetMatch' does not exist on type '{}'.
 lib/ipaddr.ts(686,31): error TS2339: Property 'IPv4' does not exist on type '{}'.
 lib/ipaddr.ts(749,12): error TS2339: Property 'IPv6' does not exist on type '{}'.
 lib/ipaddr.ts(769,12): error TS2339: Property 'IPv6' does not exist on type '{}'.
+lib/ipaddr.ts(769,44): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
 lib/ipaddr.ts(774,12): error TS2339: Property 'IPv6' does not exist on type '{}'.
 lib/ipaddr.ts(792,12): error TS2339: Property 'IPv6' does not exist on type '{}'.
 lib/ipaddr.ts(815,12): error TS2339: Property 'IPv6' does not exist on type '{}'.
 lib/ipaddr.ts(825,12): error TS2339: Property 'IPv6' does not exist on type '{}'.
-lib/ipaddr.ts(828,29): error TS2339: Property 'match' does not exist on type 'string | RegExp'.
-  Property 'match' does not exist on type 'RegExp'.
 lib/ipaddr.ts(845,12): error TS2339: Property 'IPv6' does not exist on type '{}'.
-lib/ipaddr.ts(852,39): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string[]'.
-lib/ipaddr.ts(856,63): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string[]'.
+lib/ipaddr.ts(852,39): error TS2345: Argument of type 'number' is not assignable to parameter of type 'number[]'.
+lib/ipaddr.ts(856,63): error TS2345: Argument of type 'number' is not assignable to parameter of type 'number[]'.
 lib/ipaddr.ts(884,12): error TS2339: Property 'IPv6' does not exist on type '{}'.
 lib/ipaddr.ts(885,27): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 lib/ipaddr.ts(907,12): error TS2339: Property 'fromByteArray' does not exist on type '{}'.
@@ -127,7 +157,6 @@ lib/ipaddr.ts(920,12): error TS2339: Property 'isValid' does not exist on type '
 lib/ipaddr.ts(921,23): error TS2339: Property 'IPv6' does not exist on type '{}'.
 lib/ipaddr.ts(921,54): error TS2339: Property 'IPv4' does not exist on type '{}'.
 lib/ipaddr.ts(927,12): error TS2339: Property 'parse' does not exist on type '{}'.
-lib/ipaddr.ts(927,38): error TS2304: Cannot find name 'IPv6'.
 lib/ipaddr.ts(928,20): error TS2339: Property 'IPv6' does not exist on type '{}'.
 lib/ipaddr.ts(929,27): error TS2339: Property 'IPv6' does not exist on type '{}'.
 lib/ipaddr.ts(930,27): error TS2339: Property 'IPv4' does not exist on type '{}'.
@@ -137,7 +166,6 @@ lib/ipaddr.ts(941,27): error TS2339: Property 'IPv6' does not exist on type '{}'
 lib/ipaddr.ts(944,31): error TS2339: Property 'IPv4' does not exist on type '{}'.
 lib/ipaddr.ts(952,12): error TS2339: Property 'process' does not exist on type '{}'.
 lib/ipaddr.ts(965,12): error TS2339: Property 'subnetMatch' does not exist on type '{}'.
-lib/ipaddr.ts(965,65): error TS2304: Cannot find name 'RangeList'.
 lib/ipaddr.ts(982,33): error TS2339: Property 'kind' does not exist on type 'string'.
 lib/ipaddr.ts(994,9): error TS1258: A default export must be at the top level of a file or module declaration.
 

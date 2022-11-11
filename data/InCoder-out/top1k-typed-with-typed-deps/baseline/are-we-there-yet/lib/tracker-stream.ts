@@ -13,8 +13,8 @@ var TrackerStream = module.exports = function (name: String,  size: Number,  opt
 }
 util.inherits(TrackerStream, stream.Transform)
 
-function delegateChange (trackerStream: TrackerStream) {
-  return function (name: any,  completion: Function,  tracker: any) {
+function delegateChange (trackerStream: Stream) {
+  return function (name: String,  completion: Function,  tracker: Tracker) {
     trackerStream.emit('change', name, completion, trackerStream)
   }
 }

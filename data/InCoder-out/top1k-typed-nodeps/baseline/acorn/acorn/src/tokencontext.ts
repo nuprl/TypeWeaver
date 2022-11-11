@@ -81,7 +81,7 @@ pp.updateContext = function(prevType: any) {
 
 // Used to handle egde cases when token context could not be inferred correctly during tokenization phase
 
-pp.overrideContext = function(tokenCtx: ontext) {
+pp.overrideContext = function(tokenCtx: okenCtx) {
   if (this.curContext() !== tokenCtx) {
     this.context[this.context.length - 1] = tokenCtx
   }
@@ -140,7 +140,7 @@ tt.backQuote.updateContext = function() {
   this.exprAllowed = false
 }
 
-tt.star.updateContext = function(prevType: tt.Type) {
+tt.star.updateContext = function(prevType: tt.Token) {
   if (prevType === tt._function) {
     let index = this.context.length - 1
     if (this.context[index] === types.f_expr)

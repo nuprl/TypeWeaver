@@ -1,4 +1,4 @@
-export default function benchmark(uuid: UUID,  Benchmark: Benchmark) {
+export default function benchmark(uuid: uuid,  Benchmark: Benchmark) {
   console.log('Starting. Tests take ~1 minute to run ...');
 
   function testParseAndStringify() {

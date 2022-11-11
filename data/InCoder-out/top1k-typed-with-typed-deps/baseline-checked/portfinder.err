@@ -8,7 +8,8 @@ lib/portfinder.ts(156,100): error TS2339: Property 'code' does not exist on type
 lib/portfinder.ts(172,15): error TS2339: Property 'code' does not exist on type 'Error'.
 lib/portfinder.ts(172,47): error TS2339: Property 'code' does not exist on type 'Error'.
 lib/portfinder.ts(221,45): error TS2304: Cannot find name 'ny'.
-lib/portfinder.ts(246,55): error TS2304: Cannot find name 'IOptions'.
+lib/portfinder.ts(229,40): error TS2749: 'resolve' refers to a value, but is being used as a type here. Did you mean 'typeof resolve'?
+lib/portfinder.ts(229,58): error TS2749: 'reject' refers to a value, but is being used as a type here. Did you mean 'typeof reject'?
 lib/portfinder.ts(282,45): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 lib/portfinder.ts(295,17): error TS2339: Property 'code' does not exist on type 'Error'.
 lib/portfinder.ts(317,38): error TS2304: Cannot find name 'Dir'.

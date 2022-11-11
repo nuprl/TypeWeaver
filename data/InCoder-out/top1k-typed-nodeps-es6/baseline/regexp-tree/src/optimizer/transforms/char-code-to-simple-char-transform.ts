@@ -54,7 +54,7 @@ export default {
  * @param classRange
  * @returns {boolean}
  */
-function isSimpleRange(classRange: Range) {
+function isSimpleRange(classRange: ClassRange) {
   const {from, to} = classRange;
   return (
     from.codePoint >= DIGIT_0_CP && from.codePoint <= DIGIT_9_CP &&
@@ -78,7 +78,7 @@ function isPrintableASCIIChar(codePoint: number) {
   return codePoint >= 0x20 && codePoint <= 0x7e;
 }
 
-function needsEscape(symbol: Symbol,  parentType: TypeOf<any>) {
+function needsEscape(symbol: Symbol,  parentType: Type) {
   if (parentType === 'ClassRange' || parentType === 'CharacterClass') {
     return /[\]\\^-]/.test(symbol);
   }

@@ -48,8 +48,8 @@ import mapValuesLimit from './mapValuesLimit.js'
  * };
  *
  * // asynchronous function that returns the file size in bytes
- * function getFileSizeInBytes(file: File,  key: string | null,  callback: Function) {
- *     fs.stat(file, function(err: Error,  stat: fs.Stat) {
+ * function getFileSizeInBytes(file: File,  key: any,  callback: Function) {
+ *     fs.stat(file, function(err: Error,  stat: fs.Stats) {
  *         if (err) {
  *             return callback(err);
  *         }

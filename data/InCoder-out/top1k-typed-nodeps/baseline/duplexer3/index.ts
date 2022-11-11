@@ -66,6 +66,6 @@ DuplexWrapper.prototype._read = function () {
 	}
 };
 
-export default function duplexer(options: DuplexOptions,  writable: Writable,  readable: false) {
+export default function duplexer(options: DuplexOptions,  writable: Writable,  readable: any) {
 	return new DuplexWrapper(options, writable, readable);
 }

@@ -68,7 +68,7 @@ class Axios {
 
     defaultHeaders && utils.forEach(
       ['delete', 'get', 'head', 'post', 'put', 'patch', 'common'],
-      function cleanHeaderConfig(method: Method) {
+      function cleanHeaderConfig(method: HttpMethod) {
         delete config.headers[method];
       }
     );
@@ -155,7 +155,7 @@ class Axios {
 // Provide aliases for supported request methods
 utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData(method: Function) {
   /*eslint func-names:0*/
-  Axios.prototype[method] = function(url: URL,  config: Config) {
+  Axios.prototype[method] = function(url: URL,  config: any) {
     return this.request(mergeConfig(config || {}, {
       method,
       url,
@@ -164,11 +164,11 @@ utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData
   };
 });
 
-utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method: Function) {
+utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method: Method) {
   /*eslint func-names:0*/
 
-  function generateHTTPMethod(isForm: boolean) {
-    return function httpMethod(url: string,  data: any,  config: any) {
+  function generateHTTPMethod(isForm: any) {
+    return function httpMethod(url: any,  data: any,  config: any) {
       return this.request(mergeConfig(config || {}, {
         method,
         headers: isForm ? {

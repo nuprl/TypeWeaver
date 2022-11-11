@@ -38,7 +38,7 @@ import awaitify from './internal/awaitify.js'
  *     // the result will be equal to 'two' as it finishes earlier
  * });
  */
-function race(tasks: Array<Function>,  callback: Function) {
+function race(tasks: Task[],  callback: Function) {
     callback = once(callback);
     if (!Array.isArray(tasks)) return callback(new TypeError('First argument to race must be an array of functions'));
     if (!tasks.length) return callback();

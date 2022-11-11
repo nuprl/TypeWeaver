@@ -33,7 +33,7 @@ jQuery.fn.extend( {
 
 		valueIsFunction = typeof value === "function";
 
-		return this.each( function( i : nt) {
+		return this.each( function( i : any) {
 			var val;
 
 			if ( this.nodeType !== 1 ) {
@@ -72,7 +72,7 @@ jQuery.fn.extend( {
 jQuery.extend( {
 	valHooks: {
 		select: {
-			get: function( elem : HTMLElement) {
+			get: function( elem : elem.ownerDocument) {
 				var value, option, i,
 					options = elem.options,
 					index = elem.selectedIndex,
@@ -114,7 +114,7 @@ jQuery.extend( {
 				return values;
 			},
 
-			set: function( elem: Element,  value : string) {
+			set: function( elem: any,  value : any) {
 				var optionSet, option,
 					options = elem.options,
 					values = jQuery.makeArray( value ),
@@ -142,7 +142,7 @@ jQuery.extend( {
 
 if ( isIE ) {
 	jQuery.valHooks.option = {
-		get: function( elem : HTMLElement) {
+		get: function( elem : elem.ownerDocument) {
 
 			var val = elem.getAttribute( "value" );
 			return val != null ?
@@ -160,7 +160,7 @@ if ( isIE ) {
 // Radios and checkboxes getter/setter
 jQuery.each( [ "radio", "checkbox" ], function() {
 	jQuery.valHooks[ this ] = {
-		set: function( elem: Element,  value : string) {
+		set: function( elem: any,  value : any) {
 			if ( Array.isArray( value ) ) {
 				return ( elem.checked = jQuery.inArray( jQuery( elem ).val(), value ) > -1 );
 			}

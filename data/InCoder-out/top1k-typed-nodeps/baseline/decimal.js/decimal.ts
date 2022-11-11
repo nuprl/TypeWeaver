@@ -1,4 +1,4 @@
-;(function (globalScope: any) {
+;(function (globalScope: Scope) {
   'use strict';
 
 
@@ -465,7 +465,7 @@
    * `precision` significant digits using rounding mode `rounding`.
    *
    */
-  P.dividedBy = P.div = function (y: number) {
+  P.dividedBy = P.div = function (y: BigNumber) {
     return divide(this, new this.constructor(y));
   };
 
@@ -1644,7 +1644,7 @@
    * [z] {boolean|number} Whether to count integer-part trailing zeros: true, false, 1 or 0.
    *
    */
-  P.precision = P.sd = function (z: number) {
+  P.precision = P.sd = function (z: BigNumber) {
     var k,
       x = this;
 
@@ -2149,7 +2149,7 @@
    * 'toNearest() rounding mode out of range: {rm}'
    *
    */
-  P.toNearest = function (y: number,  rm: number) {
+  P.toNearest = function (y: any,  rm: number) {
     var x = this,
       Ctor = x.constructor;
 
@@ -2376,7 +2376,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toPrecision = function (sd: Date,  rm: RegExp) {
+  P.toPrecision = function (sd: any,  rm: any) {
     var str,
       x = this,
       Ctor = x.constructor;
@@ -2610,7 +2610,7 @@
   // Convert string of `baseIn` to an array of numbers of `baseOut`.
   // Eg. convertBase('255', 10, 16) returns [15, 15].
   // Eg. convertBase('ff', 16, 10) returns [2, 5, 5].
-  function convertBase(str: number,  baseIn: number,  baseOut: number) {
+  function convertBase(str: any,  baseIn: number,  baseOut: number) {
     var j,
       arr = [0],
       arrL,
@@ -2638,7 +2638,7 @@
    * |x| < pi/2
    *
    */
-  function cosine(Ctor: Function,  x: number) {
+  function cosine(Ctor: any,  x: number) {
     var k, len, y;
 
     if (x.isZero()) return x;
@@ -3153,7 +3153,7 @@
   }
 
 
-  function getLn10(Ctor: Function,  sd: number,  pr: number) {
+  function getLn10(Ctor: any,  sd: any,  pr: any) {
     if (sd > LN10_PRECISION) {
 
       // Reset global state in case the exception is caught.
@@ -3165,7 +3165,7 @@
   }
 
 
-  function getPi(Ctor: any,  sd: number,  rm: number) {
+  function getPi(Ctor: any,  sd: any,  rm: any) {
     if (sd > PI_PRECISION) throw Error(precisionLimitExceeded);
     return finalise(new Ctor(PI), sd, rm, true);
   }
@@ -3248,7 +3248,7 @@
   /*
    * Handle `max` and `min`. `ltgt` is 'lt' or 'gt'.
    */
-  function maxOrMin(Ctor: Function,  args: Array<any>,  ltgt: number) {
+  function maxOrMin(Ctor: any,  args: any[],  ltgt: number) {
     var y,
       x = new Ctor(args[0]),
       i = 0;
@@ -3596,7 +3596,7 @@
   /*
    * Parse the value of a new Decimal `x` from a string `str`, which is not a decimal value.
    */
-  function parseOther(x: string,  str: any) {
+  function parseOther(x: any,  str: any) {
     var base, Ctor, divisor, i, isFloat, len, p, xd, xe;
 
     if (str.indexOf('_') > -1) {
@@ -3676,7 +3676,7 @@
    * |x| < pi/2
    *
    */
-  function sine(Ctor: any,  x: number) {
+  function sine(Ctor: any,  x: any) {
     var k,
       len = x.d.length;
 
@@ -3710,7 +3710,7 @@
 
 
   // Calculate Taylor series for `cos`, `cosh`, `sin` and `sinh`.
-  function taylorSeries(Ctor: Function,  n: number,  x: number,  y: number,  isHyperbolic: boolean) {
+  function taylorSeries(Ctor: any,  n: number,  x: number,  y: number,  isHyperbolic: boolean) {
     var j, t, u, x2,
       i = 1,
       pr = Ctor.precision,
@@ -3754,7 +3754,7 @@
 
 
   // Return the absolute value of `x` reduced to less than or equal to half pi.
-  function toLessThanHalfPi(Ctor: Math,  x: number) {
+  function toLessThanHalfPi(Ctor: Float32Array,  x: number) {
     var t,
       isNeg = x.s < 0,
       pi = getPi(Ctor, Ctor.precision, 1),
@@ -3925,7 +3925,7 @@
 
 
   // Does not strip trailing zeros.
-  function truncate(arr: Array,  len: number) {
+  function truncate(arr: number[],  len: number) {
     if (arr.length > len) {
       arr.length = len;
       return true;
@@ -3987,7 +3987,7 @@
    * x {number|string|Decimal}
    *
    */
-  function abs(x: number) {
+  function abs(x: BigNumber) {
     return new this(x).abs();
   }
 
@@ -4010,7 +4010,7 @@
    * x {number|string|Decimal} A value in radians.
    *
    */
-  function acosh(x: number) {
+  function acosh(x: BigNumber) {
     return new this(x).acosh();
   }
 
@@ -4023,7 +4023,7 @@
    * y {number|string|Decimal}
    *
    */
-  function add(x: number,  y: number) {
+  function add(x: BigInteger,  y: BigInteger) {
     return new this(x).plus(y);
   }
 
@@ -4035,7 +4035,7 @@
    * x {number|string|Decimal}
    *
    */
-  function asin(x: number) {
+  function asin(x: BigNumber) {
     return new this(x).asin();
   }
 
@@ -4047,7 +4047,7 @@
    * x {number|string|Decimal} A value in radians.
    *
    */
-  function asinh(x: number) {
+  function asinh(x: BigNumber) {
     return new this(x).asinh();
   }
 
@@ -4059,7 +4059,7 @@
    * x {number|string|Decimal}
    *
    */
-  function atan(x: number) {
+  function atan(x: this) {
     return new this(x).atan();
   }
 
@@ -4071,7 +4071,7 @@
    * x {number|string|Decimal} A value in radians.
    *
    */
-  function atanh(x: number) {
+  function atanh(x: BigNumber) {
     return new this(x).atanh();
   }
 
@@ -4152,7 +4152,7 @@
    * x {number|string|Decimal}
    *
    */
-  function cbrt(x: number) {
+  function cbrt(x: BigNumber) {
     return new this(x).cbrt();
   }
 
@@ -4163,7 +4163,7 @@
    * x {number|string|Decimal}
    *
    */
-  function ceil(x: number) {
+  function ceil(x: BigNumber) {
     return finalise(x = new this(x), x.e + 1, 2);
   }
 
@@ -4262,7 +4262,7 @@
    * x {number|string|Decimal} A value in radians.
    *
    */
-  function cosh(x: number) {
+  function cosh(x: BigNumber) {
     return new this(x).cosh();
   }
 
@@ -4272,7 +4272,7 @@
    * constructor.
    *
    */
-  function clone(obj: Object) {
+  function clone(obj: any) {
     var i, p, ps;
 
     /*
@@ -4464,7 +4464,7 @@
    * y {number|string|Decimal}
    *
    */
-  function div(x: number,  y: number) {
+  function div(x: BigInt,  y: BigInt) {
     return new this(x).div(y);
   }
 
@@ -4476,7 +4476,7 @@
    * x {number|string|Decimal} The power to which to raise the base of the natural log.
    *
    */
-  function exp(x: number) {
+  function exp(x: BigNumber) {
     return new this(x).exp();
   }
 
@@ -4487,7 +4487,7 @@
    * x {number|string|Decimal}
    *
    */
-  function floor(x: this) {
+  function floor(x: BigInt) {
     return finalise(x = new this(x), x.e + 1, 3);
   }
 
@@ -4531,7 +4531,7 @@
    * otherwise return false.
    *
    */
-  function isDecimalInstance(obj: Object) {
+  function isDecimalInstance(obj: any) {
     return obj instanceof Decimal || obj && obj.toStringTag === tag || false;
   }
 
@@ -4543,7 +4543,7 @@
    * x {number|string|Decimal}
    *
    */
-  function ln(x: number) {
+  function ln(x: BigNumber) {
     return new this(x).ln();
   }
 
@@ -4570,7 +4570,7 @@
    * x {number|string|Decimal}
    *
    */
-  function log2(x: number) {
+  function log2(x: BigNumber) {
     return new this(x).log(2);
   }
 
@@ -4582,7 +4582,7 @@
    * x {number|string|Decimal}
    *
    */
-  function log10(x: number) {
+  function log10(x: BigNumber) {
     return new this(x).log(10);
   }
 
@@ -4617,7 +4617,7 @@
    * y {number|string|Decimal}
    *
    */
-  function mod(x: number,  y: number) {
+  function mod(x: BigInteger,  y: BigInteger) {
     return new this(x).mod(y);
   }
 
@@ -4630,7 +4630,7 @@
    * y {number|string|Decimal}
    *
    */
-  function mul(x: number,  y: number) {
+  function mul(x: BigInteger,  y: BigInteger) {
     return new this(x).mul(y);
   }
 
@@ -4777,7 +4777,7 @@
    * x {number|string|Decimal}
    *
    */
-  function sign(x: number) {
+  function sign(x: BigNumber) {
     x = new this(x);
     return x.d ? (x.d[0] ? x.s : 0 * x.s) : x.s || NaN;
   }
@@ -4814,7 +4814,7 @@
    * x {number|string|Decimal}
    *
    */
-  function sqrt(x: number) {
+  function sqrt(x: BigNumber) {
     return new this(x).sqrt();
   }
 
@@ -4827,7 +4827,7 @@
    * y {number|string|Decimal}
    *
    */
-  function sub(x: this,  y: this) {
+  function sub(x: BigInteger,  y: BigInteger) {
     return new this(x).sub(y);
   }
 
@@ -4861,7 +4861,7 @@
    * x {number|string|Decimal} A value in radians.
    *
    */
-  function tan(x: number) {
+  function tan(x: this) {
     return new this(x).tan();
   }
 
@@ -4873,7 +4873,7 @@
    * x {number|string|Decimal} A value in radians.
    *
    */
-  function tanh(x: number) {
+  function tanh(x: Tensor) {
     return new this(x).tanh();
   }
 
@@ -4884,7 +4884,7 @@
    * x {number|string|Decimal}
    *
    */
-  function trunc(x: this) {
+  function trunc(x: BigInt) {
     return finalise(x = new this(x), x.e + 1, 1);
   }
 

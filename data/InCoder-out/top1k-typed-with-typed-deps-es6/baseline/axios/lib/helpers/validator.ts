@@ -7,7 +7,7 @@ const validators = {};
 
 // eslint-disable-next-line func-names
 ['object', 'boolean', 'number', 'function', 'string', 'symbol'].forEach((type, i) => {
-  validators[type] = function validator(thing: Thing) {
+  validators[type] = function validator(thing: any) {
     return typeof thing === type || 'a' + (i < 1 ? 'n ' : ' ') + type;
   };
 });
@@ -23,8 +23,8 @@ const deprecatedWarnings = {};
  *
  * @returns {function}
  */
-validators.transitional = function transitional(validator: ValidatorFn,  version: number,  message: string) {
-  function formatMessage(opt: IFormat,  desc: string | Node) {
+validators.transitional = function transitional(validator: ValidatorFn,  version: Version,  message: Message) {
+  function formatMessage(opt: Option,  desc: Option) {
     return '[Axios v' + VERSION + '] Transitional option \'' + opt + '\'' + desc + (message ? '. ' + message : '');
   }
 
@@ -62,7 +62,7 @@ validators.transitional = function transitional(validator: ValidatorFn,  version
  * @returns {object}
  */
 
-function assertOptions(options: any,  schema: Schema,  allowUnknown: boolean) {
+function assertOptions(options: any,  schema: any,  allowUnknown: any) {
   if (typeof options !== 'object') {
     throw new AxiosError('options must be an object', AxiosError.ERR_BAD_OPTION_VALUE);
   }

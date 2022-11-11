@@ -12,6 +12,6 @@ import Promise from './promise';
   Useful for tooling.
   @return {Promise} a promise rejected with the given `reason`.
 */
-export default function reject(reason: any,  label: string | Function) {
+export default function reject(reason: any,  label: any) {
   return Promise.reject(reason, label);
 }

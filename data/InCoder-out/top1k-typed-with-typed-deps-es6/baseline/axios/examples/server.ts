@@ -58,15 +58,15 @@ function sendResponse(res: Response,  statusCode: number,  body: any) {
   res.end();
 }
 
-function send200(res: Response,  body: Object) {
+function send200(res: Response,  body: any) {
   sendResponse(res, 200, body || '<h1>OK</h1>');
 }
 
-function send404(res: Response,  body: Object) {
+function send404(res: Response,  body: any) {
   sendResponse(res, 404, body || '<h1>Not Found</h1>');
 }
 
-function pipeFileToResponse(res: Response,  file: File,  type: string) {
+function pipeFileToResponse(res: Response,  file: any,  type: string) {
   if (type) {
     res.writeHead(200, {
       'Content-Type': type
@@ -78,7 +78,7 @@ function pipeFileToResponse(res: Response,  file: File,  type: string) {
 
 dirs = listDirs(__dirname);
 
-server = http.createServer(function (req: express.Request,  res: express.Response) {
+server = http.createServer(function (req: Request,  res: Response) {
   let url = req.url;
 
   // Process axios itself

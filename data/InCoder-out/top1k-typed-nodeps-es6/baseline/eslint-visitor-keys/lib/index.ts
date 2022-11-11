@@ -20,7 +20,7 @@ const KEY_BLACKLIST = new Set([
  * @param {string} key The key to check.
  * @returns {boolean} `true` if the key should be used.
  */
-function filterKey(key: any) {
+function filterKey(key: Key) {
     return !KEY_BLACKLIST.has(key) && key[0] !== "_";
 }
 

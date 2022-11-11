@@ -1,7 +1,7 @@
-module['exports'] = function(colors: Array<string>) {
+module['exports'] = function(colors: Color[]) {
   // RoY G BiV
   var rainbowColors = ['red', 'yellow', 'green', 'blue', 'magenta'];
-  return function(letter: any,  i: mber,  exploded: Array<any>) {
+  return function(letter: ar,  i: mber,  exploded: ploded) {
     if (letter === ' ') {
       return letter;
     } else {

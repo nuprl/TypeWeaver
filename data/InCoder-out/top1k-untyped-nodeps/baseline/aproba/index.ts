@@ -22,7 +22,7 @@ function addSchema (schema: Schema,  arity: number) {
   if (group.indexOf(schema) === -1) group.push(schema)
 }
 
-function validate (rawSchemas: RawSchema[],  args: Args) {
+function validate (rawSchemas: any,  args: any) {
   if (arguments.length !== 2) throw wrongNumberOfArgs(['SA'], arguments.length)
   if (!rawSchemas) throw missingRequiredArg(0, 'rawSchemas')
   if (!args) throw missingRequiredArg(1, 'args')
@@ -79,7 +79,7 @@ function invalidType (num: number,  expectedTypes: string[],  value: any) {
     englishList(expectedTypes) + ' but got ' + valueType)
 }
 
-function englishList (list: List) {
+function englishList (list: Array<any>) {
   return list.join(', ').replace(/, ([^,]+)$/, ' or $1')
 }
 
@@ -96,7 +96,7 @@ function moreThanOneError (schema: Schema) {
     'Only one error type per argument signature is allowed, more than one found in "' + schema + '"')
 }
 
-function newException (code: number,  msg: string | Error) {
+function newException (code: number,  msg: string) {
   const err = new Error(msg)
   err.code = code
   /* istanbul ignore else */

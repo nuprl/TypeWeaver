@@ -43,7 +43,7 @@ function gobbleHex (str: string | number) {
 
 const CONTAINS_ESCAPE = /\\/;
 
-export default function unesc (str: string | undefined) {
+export default function unesc (str: any) {
     let needToProcess = CONTAINS_ESCAPE.test(str);
     if (!needToProcess) {
         return str;

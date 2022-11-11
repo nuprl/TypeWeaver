@@ -30,7 +30,7 @@ export default fresh;
  * @public
  */
 
-function fresh (reqHeaders: any,  resHeaders: any) {
+function fresh (reqHeaders: http.Header,  resHeaders: http.Header) {
   // fields
   var modifiedSince = reqHeaders['if-modified-since']
   var noneMatch = reqHeaders['if-none-match']
@@ -91,7 +91,7 @@ function fresh (reqHeaders: any,  resHeaders: any) {
  * @private
  */
 
-function parseHttpDate (date: Date) {
+function parseHttpDate (date: string | Date) {
   var timestamp = date && Date.parse(date)
 
   // istanbul ignore next: guard against date.js Date.parse patching
@@ -107,7 +107,7 @@ function parseHttpDate (date: Date) {
  * @private
  */
 
-function parseTokenList (str: string | string[]) {
+function parseTokenList (str: any) {
   var end = 0
   var list = []
   var start = 0

@@ -6,7 +6,7 @@ var core = require('../'),
     isObjectLike = require('lodash/isObjectLike');
 
 
-module.exports = function (options: IOptions) {
+module.exports = function (options: any) {
 
     var errorText = 'Please verify options'; // For better minification because this string is repeating
 
@@ -39,7 +39,7 @@ module.exports = function (options: IOptions) {
         constructorMixin: options.constructorMixin
     });
 
-    return function (requestOptions: RequestOptionsArg) {
+    return function (requestOptions: RequestOptions) {
 
         var self = {};
 

@@ -73,7 +73,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function detect(coll: Collection,  iteratee: Function,  callback: Function) {
+function detect(coll: Iterable<any>,  iteratee: Function,  callback: Function) {
     return createTester(bool => bool, (res, item) => item)(eachOf, coll, iteratee, callback)
 }
 export default awaitify(detect, 3)

@@ -28,7 +28,7 @@ var simpleMediaTypeRegExp = /^\s*([^\s\/;]+)\/([^;\s]+)\s*(?:;(.*))?$/;
  * @private
  */
 
-function parseAccept(accept: Array<string>) {
+function parseAccept(accept: string | string[]) {
   var accepts = splitMediaTypes(accept);
 
   for (var i = 0, j = 0; i < accepts.length; i++) {
@@ -50,7 +50,7 @@ function parseAccept(accept: Array<string>) {
  * @private
  */
 
-function parseMediaType(str: any,  i: number) {
+function parseMediaType(str: any,  i: any) {
   var match = simpleMediaTypeRegExp.exec(str);
   if (!match) return null;
 
@@ -115,7 +115,7 @@ function getMediaTypePriority(type: string,  accepted: MediaType[],  index: numb
  * @private
  */
 
-function specify(type: string,  spec: Function,  index: number) {
+function specify(type: string,  spec: Object,  index: number) {
   var p = parseMediaType(type);
   var s = 0;
 
@@ -137,7 +137,7 @@ function specify(type: string,  spec: Function,  index: number) {
 
   var keys = Object.keys(spec.params);
   if (keys.length > 0) {
-    if (keys.every(function (k: K) {
+    if (keys.every(function (k: Key) {
       return spec.params[k] == '*' || (spec.params[k] || '').toLowerCase() == (p.params[k] || '').toLowerCase();
     })) {
       s |= 1
@@ -159,7 +159,7 @@ function specify(type: string,  spec: Function,  index: number) {
  * @public
  */
 
-function preferredMediaTypes(accept: MediaType[],  provided: MediaType[]) {
+function preferredMediaTypes(accept: string | string[],  provided: string | string[]) {
   // RFC 2616 sec 14.2: no header = */*
   var accepts = parseAccept(accept === undefined ? '*/*' : accept || '');
 
@@ -176,7 +176,7 @@ function preferredMediaTypes(accept: MediaType[],  provided: MediaType[]) {
   });
 
   // sorted list of accepted types
-  return priorities.filter(isQuality).sort(compareSpecs).map(function getType(priority: Priority) {
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getType(priority: number) {
     return provided[priorities.indexOf(priority)];
   });
 }
@@ -186,7 +186,7 @@ function preferredMediaTypes(accept: MediaType[],  provided: MediaType[]) {
  * @private
  */
 
-function compareSpecs(a: any,  b: any) {
+function compareSpecs(a: ISpec,  b: ISpec) {
   return (b.q - a.q) || (b.s - a.s) || (a.o - b.o) || (a.i - b.i) || 0;
 }
 
@@ -204,7 +204,7 @@ function getFullType(spec: Spec) {
  * @private
  */
 
-function isQuality(spec: Quality) {
+function isQuality(spec: Spec) {
   return spec.q > 0;
 }
 
@@ -213,7 +213,7 @@ function isQuality(spec: Quality) {
  * @private
  */
 
-function quoteCount(string: string | number) {
+function quoteCount(string: string | null) {
   var count = 0;
   var index = 0;
 

@@ -45,7 +45,7 @@ module.exports = function(obj: any,  sep: any,  eq: any,  name: any) {
   }
 
   if (typeof obj === 'object') {
-    return map(objectKeys(obj), function(k: K) {
+    return map(objectKeys(obj), function(k: number) {
       var ks = encodeURIComponent(stringifyPrimitive(k)) + eq;
       if (isArray(obj[k])) {
         return map(obj[k], function(v: any) {
@@ -63,11 +63,11 @@ module.exports = function(obj: any,  sep: any,  eq: any,  name: any) {
          encodeURIComponent(stringifyPrimitive(obj));
 };
 
-var isArray = Array.isArray || function (xs: Observable<number>) {
+var isArray = Array.isArray || function (xs: $xs$) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-function map (xs: Iterable<any>,  f: Function) {
+function map (xs: ArrayLike<any>,  f: any) {
   if (xs.map) return xs.map(f);
   var res = [];
   for (var i = 0; i < xs.length; i++) {

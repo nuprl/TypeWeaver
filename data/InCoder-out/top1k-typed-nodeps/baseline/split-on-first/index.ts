@@ -1,4 +1,4 @@
-export default function splitOnFirst(string: string | RegExp,  separator: RegExp) {
+export default function splitOnFirst(string: string | null | undefined,  separator: string | null | undefined) {
 	if (!(typeof string === 'string' && typeof separator === 'string')) {
 		throw new TypeError('Expected the arguments to be of type `string`');
 	}

@@ -2,13 +2,13 @@ var path = require('path');
 var crypto = require('crypto');
 
 module.exports = {
-  createFromFile: function (filePath: Path,  useChecksum: boolean) {
+  createFromFile: function (filePath: string | Buffer,  useChecksum: boolean | undefined) {
     var fname = path.basename(filePath);
     var dir = path.dirname(filePath);
     return this.create(fname, dir, useChecksum);
   },
 
-  create: function (cacheId: number,  _path: string | string[],  useChecksum: boolean) {
+  create: function (cacheId: number,  _path: number,  useChecksum: number) {
     var fs = require('fs');
     var flatCache = require('flat-cache');
     var cache = flatCache.load(cacheId, _path);
@@ -17,7 +17,7 @@ module.exports = {
     var removeNotFoundFiles = function removeNotFoundFiles() {
       const cachedEntries = cache.keys();
       // remove not found entries
-      cachedEntries.forEach(function remover(fPath: string | null) {
+      cachedEntries.forEach(function remover(fPath: string | Buffer) {
         try {
           fs.statSync(fPath);
         } catch (err) {
@@ -66,7 +66,7 @@ module.exports = {
        * @param  {Array} files the files to analyze and compare to the previous seen files
        * @return {[type]}       [description]
        */
-      analyzeFiles: function (files: any[]) {
+      analyzeFiles: function (files: string[]) {
         var me = this;
         files = files || [];
 
@@ -107,7 +107,7 @@ module.exports = {
         return this._getFileDescriptorUsingMtimeAndSize(file, fstat);
       },
 
-      _getFileDescriptorUsingMtimeAndSize: function (file: File,  fstat: fs.Stat) {
+      _getFileDescriptorUsingMtimeAndSize: function (file: File,  fstat: Stats) {
         var meta = cache.getKey(file);
         var cacheExists = !!meta;
 
@@ -170,16 +170,16 @@ module.exports = {
        * @param files {Array} the array of files to compare against the ones in the cache
        * @returns {Array}
        */
-      getUpdatedFiles: function (files: any[]) {
+      getUpdatedFiles: function (files: string[]) {
         var me = this;
         files = files || [];
 
         return me
           .normalizeEntries(files)
-          .filter(function (entry: Entry) {
+          .filter(function (entry: FileSystemEntry) {
             return entry.changed;
           })
-          .map(function (entry: Entry) {
+          .map(function (entry: any) {
             return entry.key;
           });
       },
@@ -209,7 +209,7 @@ module.exports = {
        * @method removeEntry
        * @param entryName
        */
-      removeEntry: function (entryName: EntryName) {
+      removeEntry: function (entryName: any) {
         delete normalizedEntries[entryName];
         cache.removeKey(entryName);
       },
@@ -267,7 +267,7 @@ module.exports = {
 
         var me = this;
 
-        keys.forEach(function (entryName: string | symbol) {
+        keys.forEach(function (entryName: any) {
           var cacheEntry = entries[entryName];
 
           try {

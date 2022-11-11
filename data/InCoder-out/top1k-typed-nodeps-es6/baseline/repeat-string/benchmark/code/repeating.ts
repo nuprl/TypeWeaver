@@ -2,6 +2,6 @@
 
 import repeating from 'repeating';
 
-export default function(str: number,  num: number) {
+export default function(str: any,  num: number) {
   return repeating(num, str);
 };

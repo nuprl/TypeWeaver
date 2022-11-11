@@ -5,7 +5,7 @@ import inherits from 'inherits';
 import Cipher from './cipher';
 import DES from './des';
 
-function EDEState(type: string,  key: number) {
+function EDEState(type: number,  key: number) {
   assert.equal(key.length, 24, 'Invalid key length');
 
   var k1 = key.slice(0, 8);
@@ -27,7 +27,7 @@ function EDEState(type: string,  key: number) {
   }
 }
 
-function EDE(options: any) {
+function EDE(options: CipherCCMOption) {
   Cipher.call(this, options);
 
   var state = new EDEState(this.type, this.options.key);
@@ -37,7 +37,7 @@ inherits(EDE, Cipher);
 
 export default EDE;
 
-EDE.create = function create(options: EDEOptions) {
+EDE.create = function create(options: EDEOption) {
   return new EDE(options);
 };
 

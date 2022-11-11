@@ -62,7 +62,7 @@ MapCache.prototype.set = function mapSet(key: ny,  value: ny) {
  * @api public
  */
 
-MapCache.prototype.get = function mapGet(key: any) {
+MapCache.prototype.get = function mapGet(key: K) {
   return key === '__proto__' ? undefined : this.__data__[key];
 };
 
@@ -95,6 +95,6 @@ MapCache.prototype.has = function mapHas(key: any) {
  * @api public
  */
 
-MapCache.prototype.del = function mapDelete(key: string | symbol) {
+MapCache.prototype.del = function mapDelete(key: any) {
   return this.has(key) && delete this.__data__[key];
 };

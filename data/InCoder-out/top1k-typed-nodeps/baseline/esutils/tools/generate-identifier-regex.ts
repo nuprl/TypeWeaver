@@ -7,7 +7,7 @@ const regenerate = require('regenerate');
 const version = '9.0.0';
 
 // Set up a shorthand function to import Unicode data.
-const get = function(what: any) {
+const get = function(what: number) {
     return require('unicode-' + version + '/' + what + '/code-points');
 };
 

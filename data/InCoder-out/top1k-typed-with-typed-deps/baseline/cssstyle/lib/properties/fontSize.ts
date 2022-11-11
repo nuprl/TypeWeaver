@@ -27,7 +27,7 @@ function parse(v: any) {
 }
 
 module.exports.definition = {
-  set: function(v: any) {
+  set: function(v: string | number) {
     this._setProperty('font-size', parse(v));
   },
   get: function() {

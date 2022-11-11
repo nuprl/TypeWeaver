@@ -18,15 +18,15 @@ function assign(target: any,  source: any) {
     return target;
 }
 
-function clearCache(requireCache: boolean) {
-    forEach(requireCache, function (resolvedPath: ResolvedPath) {
+function clearCache(requireCache: Boolean) {
+    forEach(requireCache, function (resolvedPath: string | undefined) {
         if (!isNative.test(resolvedPath)) {
             delete requireCache[resolvedPath];
         }
     });
 }
 
-module.exports = function (requireCache: any,  callback: Function,  callbackForModulesToKeep: Function,  module: Module) {
+module.exports = function (requireCache: any,  callback: any,  callbackForModulesToKeep: any,  module: any) {
 
     var originalCache = assign({}, requireCache);
     clearCache(requireCache);
@@ -39,7 +39,7 @@ module.exports = function (requireCache: any,  callback: Function,  callbackForM
 
         // Lists the cache entries made by callbackForModulesToKeep()
         var modulesToKeep = [];
-        forEach(requireCache, function (key: string | symbol) {
+        forEach(requireCache, function (key: any) {
             modulesToKeep.push(key);
         });
 

@@ -1,22 +1,22 @@
 import defaultIsMergeableObject from 'is-mergeable-object';
 
-function emptyTarget(val: any) {
+function emptyTarget(val: ny) {
 	return Array.isArray(val) ? [] : {}
 }
 
-function cloneUnlessOtherwiseSpecified(value: any,  options: IOptions) {
+function cloneUnlessOtherwiseSpecified(value: any,  options: any) {
 	return (options.clone !== false && options.isMergeableObject(value))
 		? deepmerge(emptyTarget(value), value, options)
 		: value
 }
 
-function defaultArrayMerge(target: Array<any>,  source: Array<any>,  options: any) {
-	return target.concat(source).map(function(element: HTMLElement) {
+function defaultArrayMerge(target: ArrayLike<T>,  source: ArrayLike<T>,  options: Object) {
+	return target.concat(source).map(function(element: Element) {
 		return cloneUnlessOtherwiseSpecified(element, options)
 	})
 }
 
-function getMergeFunction(key: string | symbol,  options: IOptions) {
+function getMergeFunction(key: any,  options: any) {
 	if (!options.customMerge) {
 		return deepmerge
 	}
@@ -26,17 +26,17 @@ function getMergeFunction(key: string | symbol,  options: IOptions) {
 
 function getEnumerableOwnPropertySymbols(target: Object) {
 	return Object.getOwnPropertySymbols
-		? Object.getOwnPropertySymbols(target).filter(function(symbol: symbol) {
+		? Object.getOwnPropertySymbols(target).filter(function(symbol: any) {
 			return target.propertyIsEnumerable(symbol)
 		})
 		: []
 }
 
-function getKeys(target: Object) {
+function getKeys(target: any) {
 	return Object.keys(target).concat(getEnumerableOwnPropertySymbols(target))
 }
 
-function propertyIsOnObject(object: Object,  property: Property) {
+function propertyIsOnObject(object: any,  property: string | symbol) {
 	try {
 		return property in object
 	} catch(_) {
@@ -51,14 +51,14 @@ function propertyIsUnsafe(target: Object,  key: PropertyKey) {
 			&& Object.propertyIsEnumerable.call(target, key)) // and also unsafe if they're nonenumerable.
 }
 
-function mergeObject(target: any,  source: any,  options: any) {
+function mergeObject(target: Object,  source: Object,  options: Object) {
 	var destination = {}
 	if (options.isMergeableObject(target)) {
 		getKeys(target).forEach(function(key: any) {
 			destination[key] = cloneUnlessOtherwiseSpecified(target[key], options)
 		})
 	}
-	getKeys(source).forEach(function(key: PropertyKey) {
+	getKeys(source).forEach(function(key: any) {
 		if (propertyIsUnsafe(target, key)) {
 			return
 		}
@@ -93,7 +93,7 @@ function deepmerge(target: any,  source: any,  options: any) {
 	}
 }
 
-deepmerge.all = function deepmergeAll(array: Array,  options: Object) {
+deepmerge.all = function deepmergeAll(array: Array<any>,  options: DeepMergeOptions) {
 	if (!Array.isArray(array)) {
 		throw new Error('first argument should be an array')
 	}

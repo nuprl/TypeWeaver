@@ -13,7 +13,7 @@ function normalizeOpts(options: any) {
     return defaultOpts;
   }
 
-  Object.keys(defaultOpts).forEach(function (key: string | number) {
+  Object.keys(defaultOpts).forEach(function (key: any) {
     if (!options[key]) {
       options[key] = defaultOpts[key];
     }
@@ -22,7 +22,7 @@ function normalizeOpts(options: any) {
   return options;
 }
 
-function cliWidth(options: any) {
+function cliWidth(options: CliWidthOptions) {
   const opts = normalizeOpts(options);
 
   if (opts.output.getWindowSize) {

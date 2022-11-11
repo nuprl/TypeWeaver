@@ -11,7 +11,7 @@ function resolveYamlBoolean(data: any) {
          (max === 5 && (data === 'false' || data === 'False' || data === 'FALSE'));
 }
 
-function constructYamlBoolean(data: any) {
+function constructYamlBoolean(data: string | boolean) {
   return data === 'true' ||
          data === 'True' ||
          data === 'TRUE';

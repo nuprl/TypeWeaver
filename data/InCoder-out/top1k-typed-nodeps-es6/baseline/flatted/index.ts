@@ -1,7 +1,7 @@
 self.Flatted = (function (exports: any) {
   'use strict';
 
-  function _typeof(obj: mixed) {
+  function _typeof(obj: any) {
     "@babel/helpers - typeof";
 
     return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj: any) {
@@ -30,11 +30,11 @@ self.Flatted = (function (exports: any) {
     return value instanceof Primitive ? Primitive(value) : value;
   };
 
-  var Primitives = function Primitives(_: Object,  value: any) {
+  var Primitives = function Primitives(_: PrimitivesBuilder,  value: Primitive) {
     return _typeof(value) === primitive ? new Primitive(value) : value;
   };
 
-  var revive = function revive(input: any,  parsed: any,  output: any,  $: ng.IParseService) {
+  var revive = function revive(input: any,  parsed: any,  output: any,  $: any) {
     var lazy = [];
 
     for (var ke = keys(output), length = ke.length, y = 0; y < length; y++) {
@@ -71,7 +71,7 @@ self.Flatted = (function (exports: any) {
     return index;
   };
 
-  var parse = function parse(text: string | string[],  reviver: Reviver) {
+  var parse = function parse(text: any,  reviver: any) {
     var input = $parse(text, Primitives).map(primitives);
     var value = input[0];
     var $ = reviver || noop;

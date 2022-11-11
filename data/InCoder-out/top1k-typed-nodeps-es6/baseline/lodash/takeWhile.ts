@@ -21,7 +21,7 @@ import baseWhile from './.internal/baseWhile.js'
  * takeWhile(users, ({ active }) => active)
  * // => objects for ['barney', 'fred']
  */
-function takeWhile(array: Array,  predicate: Function) {
+function takeWhile(array: ReadonlyArray<any>,  predicate: Predicate<T>) {
   return (array != null && array.length)
     ? baseWhile(array, predicate)
     : []

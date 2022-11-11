@@ -40,7 +40,7 @@ function isModuleDotExports(node: ts.Node) {
     t.isIdentifier(node.property, { name: 'exports' })
   );
 }
-function isRequire(node: ts.Node,  filename: ts.SourceFile) {
+function isRequire(node: Node,  filename: string | null) {
   if (
     t.isCallExpression(node) &&
     t.isIdentifier(node.callee, { name: 'require' }) &&
@@ -84,7 +84,7 @@ property_files.map(function(property: Property) {
 var externalDependencies = [];
 var parsedFiles = [];
 var addedFiles = {};
-function addFile(filename: string | string[],  dependencyPath: string | string[]) {
+function addFile(filename: string,  dependencyPath: string | string[]) {
   if (dependencyPath.indexOf(filename) !== -1) {
     throw new Error(
       'Circular dependency: ' +
@@ -108,7 +108,7 @@ function addFile(filename: string | string[],  dependencyPath: string | string[]
   }
   addedFiles[filename] = true;
 }
-Object.keys(parsedFilesByPath).forEach(function(filename: any) {
+Object.keys(parsedFilesByPath).forEach(function(filename: String) {
   addFile(filename, []);
 });
 // Step 3: add files to output
@@ -134,7 +134,7 @@ externalDependencies.forEach(function(filename: any,  i: number) {
     ])
   );
 });
-function getRequireValue(node: ts.Node,  file: ts.SourceFile) {
+function getRequireValue(node: Node,  file: Node) {
   var r, e;
   // replace require("./foo").bar with the named export from foo
   if (
@@ -233,7 +233,7 @@ parsedFiles.forEach(function(file: File) {
     },
   });
   var defaultExports = t.objectExpression(
-    Object.keys(namedExports).map(function(name: any) {
+    Object.keys(namedExports).map(function(name: String) {
       return t.objectProperty(t.identifier(name), namedExports[name]);
     })
   );
@@ -244,7 +244,7 @@ parsedFiles.forEach(function(file: File) {
   statements.push(
     t.variableDeclaration(
       'var',
-      Object.keys(namedExports).map(function(name: any) {
+      Object.keys(namedExports).map(function(name: String) {
         return t.variableDeclarator(namedExports[name]);
       })
     )

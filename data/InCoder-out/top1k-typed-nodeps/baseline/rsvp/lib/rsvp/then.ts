@@ -9,7 +9,7 @@ import {
   invokeCallback
 } from './-internal';
 
-export default function then(onFulfillment: Function,  onRejection: Function,  label: String) {
+export default function then(onFulfillment: any,  onRejection: any,  label: any) {
   let parent = this;
   let state = parent._state;
 

@@ -9,7 +9,7 @@ var Pledge = function() {
 
 Pledge.QUEUE_SIZE = 4;
 
-Pledge.all = function(list: Array<any>) {
+Pledge.all = function(list: List<String>) {
   var pledge  = new Pledge(),
       pending = list.length,
       n       = pending;

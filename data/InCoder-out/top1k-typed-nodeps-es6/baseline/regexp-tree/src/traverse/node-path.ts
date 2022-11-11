@@ -382,7 +382,7 @@ NodePath.initRegistry();
 NodePath.traversingIndexStack = [];
 
 // Helper function used to skip `loc` in JSON operations.
-function jsonSkipLoc(prop: keyof Json,  value: Json) {
+function jsonSkipLoc(prop: any,  value: any) {
   if (prop === 'loc') {
     return undefined;
   }

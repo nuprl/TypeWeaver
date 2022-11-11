@@ -7,7 +7,7 @@ var cwd = process.cwd()
 
 runScripts(fs.readdirSync(__dirname))
 
-function runScripts (fileNames: string) {
+function runScripts (fileNames: string[]) {
   var fileName = fileNames.shift()
 
   if (!fileName) return

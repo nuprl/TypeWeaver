@@ -1,4 +1,4 @@
-export default function indentString(string: string | string[],  count = 1: number,  options = {}: ject) {
+export default function indentString(string: string | number,  count = 1: number,  options = {}: ring) {
 	const {
 		indent = ' ',
 		includeEmptyLines = false

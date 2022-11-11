@@ -8,7 +8,7 @@ export default function (obj: any,  opts: any) {
 
     var cmp = opts.cmp && (function (f: Function) {
         return function (node: Node) {
-            return function (a: any,  b: any) {
+            return function (a: number,  b: number) {
                 var aobj = { key: a, value: node[a] };
                 var bobj = { key: b, value: node[b] };
                 return f(aobj, bobj);
@@ -17,7 +17,7 @@ export default function (obj: any,  opts: any) {
     })(opts.cmp);
 
     var seen = [];
-    return (function stringify (parent: any,  key: any,  node: any,  level: number) {
+    return (function stringify (parent: ASTElement,  key: ASTExpression,  node: ASTText,  level: number) {
         var indent = space ? ('\n' + new Array(level + 1).join(space)) : '';
         var colonSeparator = space ? ': ' : ':';
 

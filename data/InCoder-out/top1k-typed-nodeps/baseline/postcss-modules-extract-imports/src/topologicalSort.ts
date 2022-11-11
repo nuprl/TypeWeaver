@@ -14,7 +14,7 @@ function createError(node: Node,  graph: Graph) {
   return er;
 }
 
-function walkGraph(node: GraphNode,  graph: Graph,  state: State,  result: Result,  strict: Boolean) {
+function walkGraph(node: Node,  graph: Graph,  state: State,  result: Result,  strict: Boolean) {
   if (state[node] === PERMANENT_MARKER) {
     return;
   }
@@ -45,7 +45,7 @@ function walkGraph(node: GraphNode,  graph: Graph,  state: State,  result: Resul
   result.push(node);
 }
 
-function topologicalSort(graph: Graph,  strict: boolean) {
+function topologicalSort(graph: Graph<V, E>,  strict: Boolean) {
   const result = [];
   const state = {};
 

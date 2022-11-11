@@ -3,7 +3,7 @@
 import { parseMeasurement } from '../parsers';
 
 export const definition = {
-  set: function(v: number) {
+  set: function(v: string | number) {
     this._setProperty('top', parseMeasurement(v));
   },
   get: function() {

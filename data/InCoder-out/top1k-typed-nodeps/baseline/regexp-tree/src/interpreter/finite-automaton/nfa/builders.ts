@@ -20,7 +20,7 @@ const {EPSILON} = require('../special-symbols');
  *
  * [in] --c--> [out]
  */
-function char(c: char) {
+function char(c: number) {
   const inState = new NFAState();
   const outState = new NFAState({
     accepting: true,
@@ -51,7 +51,7 @@ function e() {
  *
  * [in-a] --a--> [out-a] --ε--> [in-b] --b--> [out-b]
  */
-function altPair(first: OutgoingPair,  second: OutgoingPair) {
+function altPair(first: Pair,  second: Pair) {
   first.out.accepting = false;
   second.out.accepting = true;
 
@@ -65,7 +65,7 @@ function altPair(first: OutgoingPair,  second: OutgoingPair) {
  *
  * Creates a alteration NFA for (at least) two NFA-fragments.
  */
-function alt(first: ny,  ...fragments: ragment[]) {
+function alt(first: ST,  ...fragments: T[]) {
   for (let fragment of fragments) {
     first = altPair(first, fragment);
   }
@@ -100,7 +100,7 @@ function orPair(first: NFAState,  second: NFAState) {
  *
  * Creates a disjunction NFA for (at least) two NFA-fragments.
  */
-function or(first: ny,  ...fragments: ragment[]) {
+function or(first: xpression,  ...fragments: pression[]) {
   for (let fragment of fragments) {
     first = orPair(first, fragment);
   }
@@ -136,7 +136,7 @@ function repExplicit(fragment: NFAState) {
  * Optimized Kleene-star: just adds ε-transitions from
  * input to the output, and back.
  */
-function rep(fragment: Fragment) {
+function rep(fragment: string | RegExp) {
   fragment.in.addTransition(EPSILON, fragment.out);
   fragment.out.addTransition(EPSILON, fragment.in);
   return fragment;

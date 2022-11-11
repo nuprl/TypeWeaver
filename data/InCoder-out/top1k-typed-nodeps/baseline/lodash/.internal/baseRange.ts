@@ -9,7 +9,7 @@
  * @param {boolean} [fromRight] Specify iterating from right to left.
  * @returns {Array} Returns the range of numbers.
  */
-function baseRange(start: number,  end: number,  step: number,  fromRight: boolean) {
+function baseRange(start: number,  end: number,  step: number,  fromRight: number) {
   let index = -1
   let length = Math.max(Math.ceil((end - start) / (step || 1)), 0)
   const result = new Array(length)

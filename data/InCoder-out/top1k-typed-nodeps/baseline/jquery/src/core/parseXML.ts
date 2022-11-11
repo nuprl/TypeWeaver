@@ -17,7 +17,7 @@ jQuery.parseXML = function( data : any) {
 	if ( !xml || parserErrorElem ) {
 		jQuery.error( "Invalid XML: " + (
 			parserErrorElem ?
-				jQuery.map( parserErrorElem.childNodes, function( el : HTMLElement) {
+				jQuery.map( parserErrorElem.childNodes, function( el : any) {
 					return el.textContent;
 				} ).join( "\n" ) :
 				data

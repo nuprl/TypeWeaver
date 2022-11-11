@@ -634,7 +634,7 @@ module.exports = WebSocket;
  *     not to skip UTF-8 validation for text and close messages
  * @private
  */
-function initAsClient(websocket: WebSocket,  address: string,  protocols: string,  options: object) {
+function initAsClient(websocket: WebSocket,  address: string,  protocols: string[],  options: any) {
   const opts = {
     protocolVersion: protocolVersions[1],
     maxPayload: 100 * 1024 * 1024,
@@ -1010,7 +1010,7 @@ function emitErrorAndClose(websocket: WebSocket,  err: Error) {
  * @return {net.Socket} The newly created socket used to start the connection
  * @private
  */
-function netConnect(options: netConnectOptions) {
+function netConnect(options: ConnectOptions) {
   options.path = options.socketPath;
   return net.connect(options);
 }
@@ -1022,7 +1022,7 @@ function netConnect(options: netConnectOptions) {
  * @return {tls.TLSSocket} The newly created socket used to start the connection
  * @private
  */
-function tlsConnect(options: tls.ConnectionOptions) {
+function tlsConnect(options: any) {
   options.path = undefined;
 
   if (!options.servername && options.servername !== '') {
@@ -1107,7 +1107,7 @@ function sendAfterClose(websocket: WebSocket,  data: any,  cb: Function) {
  * @param {Buffer} reason The reason for closing
  * @private
  */
-function receiverOnConclude(code: Code,  reason: Reason) {
+function receiverOnConclude(code: number,  reason: any) {
   const websocket = this[kWebSocket];
 
   websocket._closeFrameReceived = true;
@@ -1197,7 +1197,7 @@ function receiverOnPing(data: any) {
  * @param {Buffer} data The data included in the pong frame
  * @private
  */
-function receiverOnPong(data: Pong) {
+function receiverOnPong(data: Buffer) {
   this[kWebSocket].emit('pong', data);
 }
 
@@ -1207,7 +1207,7 @@ function receiverOnPong(data: Pong) {
  * @param {Readable} stream The readable stream
  * @private
  */
-function resume(stream: ReadableStream) {
+function resume(stream: Readable) {
   stream.resume();
 }
 

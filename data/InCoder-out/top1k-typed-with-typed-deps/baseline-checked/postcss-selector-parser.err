@@ -3,13 +3,14 @@ src/index.ts(8,15): error TS2339: Property '__esModule' does not exist on type '
 src/parser.ts(34,29): error TS2304: Cannot find name 'Token'.
 src/parser.ts(41,27): error TS2304: Cannot find name 'Token'.
 src/parser.ts(62,33): error TS2304: Cannot find name 'Token'.
-src/parser.ts(71,42): error TS2503: Cannot find namespace 'ts'.
-src/parser.ts(71,63): error TS2503: Cannot find namespace 'ts'.
-src/parser.ts(84,22): error TS2538: Type 'String' cannot be used as an index type.
-src/parser.ts(90,14): error TS2538: Type 'String' cannot be used as an index type.
+src/parser.ts(71,42): error TS2304: Cannot find name 'Token'.
+src/parser.ts(71,60): error TS2304: Cannot find name 'Token'.
+src/parser.ts(84,22): error TS2538: Type 'Object' cannot be used as an index type.
+src/parser.ts(90,14): error TS2538: Type 'Object' cannot be used as an index type.
 src/parser.ts(91,18): error TS2339: Property 'raws' does not exist on type 'Object'.
 src/parser.ts(92,18): error TS2339: Property 'raws' does not exist on type 'Object'.
-src/parser.ts(98,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/parser.ts(98,34): error TS2304: Cannot find name 'T'.
+src/parser.ts(98,45): error TS2304: Cannot find name 'T'.
 src/parser.ts(117,14): error TS2339: Property 'rule' does not exist on type 'Parser'.
 src/parser.ts(118,14): error TS2339: Property 'options' does not exist on type 'Parser'.
 src/parser.ts(119,14): error TS2339: Property 'position' does not exist on type 'Parser'.
@@ -237,10 +238,7 @@ src/processor.ts(80,63): error TS2339: Property 'root' does not exist on type 'u
 src/processor.ts(102,63): error TS2339: Property 'transform' does not exist on type 'unknown'.
 src/processor.ts(125,38): error TS2339: Property 'string' does not exist on type 'unknown'.
 src/processor.ts(125,55): error TS2339: Property 'root' does not exist on type 'unknown'.
-src/selectors/attribute.ts(24,23): error TS2339: Property 'match' does not exist on type 'string | number'.
-  Property 'match' does not exist on type 'number'.
-src/selectors/attribute.ts(29,23): error TS2345: Argument of type 'string | number' is not assignable to parameter of type 'string'.
-  Type 'number' is not assignable to type 'string'.
+src/selectors/attribute.ts(40,48): error TS2304: Cannot find name 'Options'.
 src/selectors/attribute.ts(66,14): error TS2339: Property 'type' does not exist on type 'Attribute'.
 src/selectors/attribute.ts(67,14): error TS2339: Property 'raws' does not exist on type 'Attribute'.
 src/selectors/attribute.ts(67,26): error TS2339: Property 'raws' does not exist on type 'Attribute'.
@@ -278,13 +276,13 @@ src/selectors/attribute.ts(297,31): error TS2339: Property 'raws' does not exist
 src/selectors/attribute.ts(297,51): error TS2339: Property 'raws' does not exist on type 'Attribute'.
 src/selectors/attribute.ts(362,26): error TS2339: Property 'insensitive' does not exist on type 'Attribute'.
 src/selectors/attribute.ts(375,18): error TS2339: Property 'operator' does not exist on type 'Attribute'.
-src/selectors/attribute.ts(381,35): error TS2339: Property 'before' does not exist on type 'string[]'.
+src/selectors/attribute.ts(381,35): error TS2339: Property 'before' does not exist on type 'number'.
 src/selectors/attribute.ts(382,31): error TS2339: Property 'spaces' does not exist on type 'Attribute'.
 src/selectors/attribute.ts(382,52): error TS2339: Property 'spaces' does not exist on type 'Attribute'.
-src/selectors/attribute.ts(384,32): error TS2339: Property 'before' does not exist on type 'string[]'.
+src/selectors/attribute.ts(384,32): error TS2339: Property 'before' does not exist on type 'number'.
 src/selectors/attribute.ts(399,5): error TS2464: A computed property name must be of type 'string', 'number', 'symbol', or 'any'.
-src/selectors/attribute.ts(403,26): error TS2339: Property 'before' does not exist on type 'string[]'.
-src/selectors/attribute.ts(403,58): error TS2339: Property 'after' does not exist on type 'string[]'.
+src/selectors/attribute.ts(403,26): error TS2339: Property 'before' does not exist on type 'number'.
+src/selectors/attribute.ts(403,58): error TS2339: Property 'after' does not exist on type 'number'.
 src/selectors/className.ts(9,14): error TS2339: Property 'type' does not exist on type 'ClassName'.
 src/selectors/className.ts(10,14): error TS2339: Property '_constructed' does not exist on type 'ClassName'.
 src/selectors/className.ts(14,18): error TS2339: Property '_constructed' does not exist on type 'ClassName'.
@@ -424,9 +422,8 @@ src/tokenize.ts(130,20): error TS2339: Property 'safe' does not exist on type 's
   Property 'safe' does not exist on type 'string'.
 src/tokenize.ts(134,25): error TS2339: Property 'error' does not exist on type 'string | string[]'.
   Property 'error' does not exist on type 'string'.
-src/tokenize.ts(243,41): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
-src/util/ensureObject.ts(1,44): error TS2552: Cannot find name 'bject'. Did you mean 'object'?
-src/util/ensureObject.ts(1,62): error TS2304: Cannot find name 'ny'.
+src/util/ensureObject.ts(1,44): error TS2304: Cannot find name 'ny'.
+src/util/ensureObject.ts(1,59): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
 src/util/getProp.ts(1,39): error TS2304: Cannot find name 'ny'.
 src/util/getProp.ts(1,54): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
 src/util/unesc.ts(10,23): error TS2339: Property 'toLowerCase' does not exist on type 'string | number'.

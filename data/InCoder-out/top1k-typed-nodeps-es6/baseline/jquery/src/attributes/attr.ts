@@ -7,11 +7,11 @@ import isIE from "../var/isIE.js";
 import "../selector.js";
 
 jQuery.fn.extend( {
-	attr: function( name: string,  value : any) {
+	attr: function( name: String,  value : String) {
 		return access( this, jQuery.attr, name, value, arguments.length > 1 );
 	},
 
-	removeAttr: function( name : string) {
+	removeAttr: function( name : String) {
 		return this.each( function() {
 			jQuery.removeAttr( this, name );
 		} );
@@ -19,7 +19,7 @@ jQuery.fn.extend( {
 } );
 
 jQuery.extend( {
-	attr: function( elem: Element,  name: string,  value : any) {
+	attr: function( elem: Element,  name: String,  value : String) {
 		var ret, hooks,
 			nType = elem.nodeType;
 
@@ -66,7 +66,7 @@ jQuery.extend( {
 
 	attrHooks: {},
 
-	removeAttr: function( elem: Element,  value : string) {
+	removeAttr: function( elem: any,  value : any) {
 		var name,
 			i = 0,
 
@@ -86,7 +86,7 @@ jQuery.extend( {
 // An input loses its value after becoming a radio
 if ( isIE ) {
 	jQuery.attrHooks.type = {
-		set: function( elem: Element,  value : string) {
+		set: function( elem: any,  value : any) {
 			if ( value === "radio" && nodeName( elem, "input" ) ) {
 				var val = elem.value;
 				elem.setAttribute( "type", value );
@@ -101,7 +101,7 @@ if ( isIE ) {
 
 jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( _i: number,  name : string) {
 	jQuery.attrHooks[ name ] = {
-		get: function( elem : Element) {
+		get: function( elem : elem.ownerDocument) {
 			var ret,
 				isXML = jQuery.isXMLDoc( elem ),
 				lowercaseName = name.toLowerCase();
@@ -114,7 +114,7 @@ jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( _i: number
 			return ret;
 		},
 
-		set: function( elem: Element,  value: string,  name : string) {
+		set: function( elem: any,  value: any,  name : string) {
 			if ( value === false ) {
 
 				// Remove boolean attributes when set to false

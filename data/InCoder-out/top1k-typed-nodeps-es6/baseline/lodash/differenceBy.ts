@@ -23,7 +23,7 @@ import last from './last.js'
  * differenceBy([2.1, 1.2], [2.3, 3.4], Math.floor)
  * // => [1.2]
  */
-function differenceBy(array: rray<T>,  ...values: rray<any>) {
+function differenceBy(array: eadonlyArray<any>,  ...values: ny[]) {
   let iteratee = last(values)
   if (isArrayLikeObject(iteratee)) {
     iteratee = undefined

@@ -35,7 +35,7 @@ var instance = {
         offer    = [],
         index    = {};
 
-    this._inOrder.forEach(function(ext: Ext) {
+    this._inOrder.forEach(function(ext: Extension) {
       var session = ext.createClientSession();
       if (!session) return;
 
@@ -57,7 +57,7 @@ var instance = {
     return offer.length > 0 ? offer.join(', ') : null;
   },
 
-  activate: function(header: any) {
+  activate: function(header: Header) {
     var responses = Parser.parseHeader(header),
         sessions  = [];
 
@@ -88,7 +88,7 @@ var instance = {
     this._pipeline = new Pipeline(sessions);
   },
 
-  generateResponse: function(header: any) {
+  generateResponse: function(header: ResponseHeader) {
     var sessions = [],
         response = [],
         offers   = Parser.parseHeader(header);
@@ -111,7 +111,7 @@ var instance = {
     return response.length > 0 ? response.join(', ') : null;
   },
 
-  validFrameRsv: function(frame: Phaser.Frame) {
+  validFrameRsv: function(frame: Frame) {
     var allowed = { rsv1: false, rsv2: false, rsv3: false },
         ext;
 
@@ -129,15 +129,15 @@ var instance = {
            (allowed.rsv3 || !frame.rsv3);
   },
 
-  processIncomingMessage: function(message: any,  callback: Function,  context: Object) {
+  processIncomingMessage: function(message: any,  callback: any,  context: any) {
     this._pipeline.processIncomingMessage(message, callback, context);
   },
 
-  processOutgoingMessage: function(message: any,  callback: Function,  context: Object) {
+  processOutgoingMessage: function(message: any,  callback: any,  context: any) {
     this._pipeline.processOutgoingMessage(message, callback, context);
   },
 
-  close: function(callback: Function,  context: Object) {
+  close: function(callback: Function,  context: any) {
     if (!this._pipeline) return callback.call(context);
     this._pipeline.close(callback, context);
   },

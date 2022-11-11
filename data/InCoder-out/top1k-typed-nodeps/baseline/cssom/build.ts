@@ -8,7 +8,7 @@ function readFile(path: Path) {
 	return FS.readFileSync(abs_path, "utf8");
 }
 
-function stripCommonJS(text: string | string[]) {
+function stripCommonJS(text: Text) {
 	return text.replace(/\/\/\.CommonJS(?:.|\n)*?\/\/\/CommonJS/g, "");
 }
 
@@ -17,7 +17,7 @@ var index_file = readFile("index.js");
 
 (function(){
 	var exports = {};
-	function require(path: string | string[]) {
+	function require(path: any) {
 		var text = readFile(path + ".js");
 		files.push(stripCommonJS(text).trimLeft());
 		return {};

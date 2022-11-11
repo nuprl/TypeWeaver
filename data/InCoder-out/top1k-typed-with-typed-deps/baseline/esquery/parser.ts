@@ -3,7 +3,7 @@
  *
  * http://pegjs.org/
  */
-(function(root: any,  factory: Function) {
+(function(root: any,  factory: any) {
   if (typeof define === "function" && define.amd) {
     define([], factory);
   } else if (typeof module === "object" && module.exports) {
@@ -12,13 +12,13 @@
 })(this, function() {
   "use strict";
 
-  function peg$subclass(child: peg$SyntaxElement,  parent: peg$SyntaxElement) {
+  function peg$subclass(child: AST_Dot,  parent: AST_Dot) {
     function ctor() { this.constructor = child; }
     ctor.prototype = parent.prototype;
     child.prototype = new ctor();
   }
 
-  function peg$SyntaxError(message: any,  expected: peg$SyntaxError,  found: peg$FAILED,  location: peg$computeLocation) {
+  function peg$SyntaxError(message: any,  expected: any,  found: any,  location: any) {
     this.message  = message;
     this.expected = expected;
     this.found    = found;
@@ -34,11 +34,11 @@
 
   peg$SyntaxError.buildMessage = function(expected: any,  found: any) {
     var DESCRIBE_EXPECTATION_FNS = {
-          literal: function(expectation: Expectation) {
+          literal: function(expectation: any) {
             return "\"" + literalEscape(expectation.text) + "\"";
           },
 
-          "class": function(expectation: Expectation) {
+          "class": function(expectation: any) {
             var escapedParts = "",
                 i;
 
@@ -51,7 +51,7 @@
             return "[" + (expectation.inverted ? "^" : "") + escapedParts + "]";
           },
 
-          any: function(expectation: Expectation) {
+          any: function(expectation: any) {
             return "any character";
           },
 
@@ -98,7 +98,7 @@
       return DESCRIBE_EXPECTATION_FNS[expectation.type](expectation);
     }
 
-    function describeExpected(expected: Array<string>) {
+    function describeExpected(expected: ExpectedAssertion) {
       var descriptions = new Array(expected.length),
           i, j;
 
@@ -132,14 +132,14 @@
       }
     }
 
-    function describeFound(found: Found) {
+    function describeFound(found: any) {
       return found ? "\"" + literalEscape(found) + "\"" : "end of input";
     }
 
     return "Expected " + describeExpected(expected) + " but " + describeFound(found) + " found.";
   };
 
-  function peg$parse(input: peg$any,  options: peg$parseOption) {
+  function peg$parse(input: string | Buffer | DataView,  options: any) {
     options = options !== void 0 ? options : {};
 
     var peg$FAILED = {},
@@ -155,7 +155,7 @@
         peg$c3 = peg$literalExpectation(" ", false),
         peg$c4 = /^[^ [\],():#!=><~+.]/,
         peg$c5 = peg$classExpectation([" ", "[", "]", ",", "(", ")", ":", "#", "!", "=", ">", "<", "~", "+", "."], true, false),
-        peg$c6 = function(i: number) { return i.join(''); },
+        peg$c6 = function(i: Array<string>) { return i.join(''); },
         peg$c7 = ">",
         peg$c8 = peg$literalExpectation(">", false),
         peg$c9 = function() { return 'child'; },
@@ -168,17 +168,17 @@
         peg$c16 = function() { return 'descendant'; },
         peg$c17 = ",",
         peg$c18 = peg$literalExpectation(",", false),
-        peg$c19 = function(s: string,  ss: string) {
+        peg$c19 = function(s: String,  ss: String) {
           return [s].concat(ss.map(function (s: string) { return s[3]; }));
         },
-        peg$c20 = function(a: any,  ops: any) {
-            return ops.reduce(function (memo: number,  rhs: number) {
+        peg$c20 = function(a: any,  ops: any[]) {
+            return ops.reduce(function (memo: any,  rhs: any) {
               return { type: rhs[0], left: memo, right: rhs[1] };
             }, a);
           },
         peg$c21 = "!",
         peg$c22 = peg$literalExpectation("!", false),
-        peg$c23 = function(subject: Subject,  as: String) {
+        peg$c23 = function(subject: any,  as: any) {
             const b = as.length === 1 ? as[0] : { type: 'compound', selectors: as };
             if(subject) b.subject = true;
             return b;
@@ -206,10 +206,10 @@
         peg$c44 = function(a: any,  as: any) {
             return [].concat.apply([a], as).join('');
           },
-        peg$c45 = function(name: any,  op: any,  value: any) {
+        peg$c45 = function(name: String,  op: String,  value: String) {
               return { type: 'attribute', name: name, operator: op, value: value };
             },
-        peg$c46 = function(name: string) { return { type: 'attribute', name: name }; },
+        peg$c46 = function(name: any) { return { type: 'attribute', name: name }; },
         peg$c47 = "\"",
         peg$c48 = peg$literalExpectation("\"", false),
         peg$c49 = /^[^\\"]/,
@@ -218,7 +218,7 @@
         peg$c52 = peg$literalExpectation("\\", false),
         peg$c53 = peg$anyExpectation(),
         peg$c54 = function(a: number,  b: number) { return a + b; },
-        peg$c55 = function(d: any) {
+        peg$c55 = function(d: Date) {
                 return { type: 'literal', value: strUnescape(d.join('')) };
               },
         peg$c56 = "'",
@@ -227,7 +227,7 @@
         peg$c59 = peg$classExpectation(["\\", "'"], true, false),
         peg$c60 = /^[0-9]/,
         peg$c61 = peg$classExpectation([["0", "9"]], false, false),
-        peg$c62 = function(a: any,  b: any) {
+        peg$c62 = function(a: number,  b: number) {
                 // Can use `a.flat().join('')` once supported
                 const leadingDecimals = a ? [].concat.apply([], a).join('') : '';
                 return { type: 'literal', value: parseFloat(leadingDecimals + b.join('')) };
@@ -246,21 +246,21 @@
         peg$c74 = peg$literalExpectation("/", false),
         peg$c75 = /^[^\/]/,
         peg$c76 = peg$classExpectation(["/"], true, false),
-        peg$c77 = function(d: any,  flgs: any) { return {
+        peg$c77 = function(d: Date,  flgs: Date[]) { return {
               type: 'regexp', value: new RegExp(d.join(''), flgs ? flgs.join('') : '') };
             },
-        peg$c78 = function(i: number,  is: IServiceProvider) {
-          return { type: 'field', name: is.reduce(function(memo: number[],  p: number[]){ return memo + p[0] + p[1]; }, i)};
+        peg$c78 = function(i: number,  is: number) {
+          return { type: 'field', name: is.reduce(function(memo: number,  p: number[]){ return memo + p[0] + p[1]; }, i)};
         },
         peg$c79 = ":not(",
         peg$c80 = peg$literalExpectation(":not(", false),
-        peg$c81 = function(ss: string) { return { type: 'not', selectors: ss }; },
+        peg$c81 = function(ss: Selector[]) { return { type: 'not', selectors: ss }; },
         peg$c82 = ":matches(",
         peg$c83 = peg$literalExpectation(":matches(", false),
-        peg$c84 = function(ss: tring) { return { type: 'matches', selectors: ss }; },
+        peg$c84 = function(ss: tring[]) { return { type: 'matches', selectors: ss }; },
         peg$c85 = ":has(",
         peg$c86 = peg$literalExpectation(":has(", false),
-        peg$c87 = function(ss: string) { return { type: 'has', selectors: ss }; },
+        peg$c87 = function(ss: Selector[]) { return { type: 'has', selectors: ss }; },
         peg$c88 = ":first-child",
         peg$c89 = peg$literalExpectation(":first-child", false),
         peg$c90 = function() { return nth(1); },
@@ -285,7 +285,7 @@
         peg$c109 = peg$literalExpectation("function", true),
         peg$c110 = "pattern",
         peg$c111 = peg$literalExpectation("pattern", true),
-        peg$c112 = function(c: ClassDeclaration) {
+        peg$c112 = function(c: ClassName) {
           return { type: 'class', name: c };
         },
 
@@ -316,7 +316,7 @@
       return peg$computeLocation(peg$savedPos, peg$currPos);
     }
 
-    function expected(description: string | null,  location: Location) {
+    function expected(description: any,  location: any) {
       location = location !== void 0 ? location : peg$computeLocation(peg$savedPos, peg$currPos)
 
       throw peg$buildStructuredError(
@@ -326,17 +326,17 @@
       );
     }
 
-    function error(message: any,  location: Location) {
+    function error(message: any,  location: any) {
       location = location !== void 0 ? location : peg$computeLocation(peg$savedPos, peg$currPos)
 
       throw peg$buildSimpleError(message, location);
     }
 
-    function peg$literalExpectation(text: any,  ignoreCase: boolean) {
+    function peg$literalExpectation(text: String,  ignoreCase: Boolean) {
       return { type: "literal", text: text, ignoreCase: ignoreCase };
     }
 
-    function peg$classExpectation(parts: Array<string>,  inverted: any,  ignoreCase: boolean) {
+    function peg$classExpectation(parts: Array<any>,  inverted: Boolean,  ignoreCase: Boolean) {
       return { type: "class", parts: parts, inverted: inverted, ignoreCase: ignoreCase };
     }
 
@@ -352,7 +352,7 @@
       return { type: "other", description: description };
     }
 
-    function peg$computePosDetails(pos: peg$startPos) {
+    function peg$computePosDetails(pos: number) {
       var details = peg$posDetailsCache[pos], p;
 
       if (details) {
@@ -385,7 +385,7 @@
       }
     }
 
-    function peg$computeLocation(startPos: peg$pos,  endPos: peg$pos) {
+    function peg$computeLocation(startPos: Position,  endPos: Position) {
       var startPosDetails = peg$computePosDetails(startPos),
           endPosDetails   = peg$computePosDetails(endPos);
 
@@ -403,7 +403,7 @@
       };
     }
 
-    function peg$fail(expected: any) {
+    function peg$fail(expected: string | number) {
       if (peg$currPos < peg$maxFailPos) { return; }
 
       if (peg$currPos > peg$maxFailPos) {
@@ -414,11 +414,11 @@
       peg$maxFailExpected.push(expected);
     }
 
-    function peg$buildSimpleError(message: any,  location: peg$loc) {
+    function peg$buildSimpleError(message: string | Error,  location: peg$Syntax) {
       return new peg$SyntaxError(message, null, null, location);
     }
 
-    function peg$buildStructuredError(expected: any,  found: any,  location: Location) {
+    function peg$buildStructuredError(expected: any,  found: any,  location: any) {
       return new peg$SyntaxError(
         peg$SyntaxError.buildMessage(expected, found),
         expected,

@@ -14,7 +14,7 @@ import compareAscending from './compareAscending.js'
  * @param {(string|function)[]} orders The order to sort by for each property.
  * @returns {number} Returns the sort order indicator for `object`.
  */
-function compareMultiple(object: any,  other: any,  orders: string[]) {
+function compareMultiple(object: any,  other: any,  orders: any[]) {
   let index = -1
   const objCriteria = object.criteria
   const othCriteria = other.criteria

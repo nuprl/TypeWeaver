@@ -7,7 +7,7 @@ var preservedScriptAttributes = {
 	noModule: true
 };
 
-function DOMEval( code: number,  node: Node | Document,  doc : Document) {
+function DOMEval( code: String,  node: HTMLElement,  doc : Document) {
 	doc = doc || document;
 
 	var i,

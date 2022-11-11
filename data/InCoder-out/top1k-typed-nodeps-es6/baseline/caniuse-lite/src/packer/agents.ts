@@ -8,7 +8,7 @@ import invertObj from '../util/invertObj';
 
 const browsers = invertObj(browsersData)
 
-function relevantKeys(agents: Agent[],  versions: Version[],  fullAgents: FullAgent[]) {
+function relevantKeys(agents: Agent[],  versions: Version[],  fullAgents: Agent[]) {
   let versionsInverted = invertObj(versions)
 
   return fromEntries(

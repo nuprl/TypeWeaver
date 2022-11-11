@@ -4,7 +4,7 @@ import * as utils from './utils.js';
 
 const { parse, generate, compress } = syntax;
 
-function debugOutput(name: string,  options: DebugOptions,  startTime: number,  data: any) {
+function debugOutput(name: string,  options: any,  startTime: number,  data: any) {
     if (options.debug) {
         console.error(`## ${name} done in %d ms\n`, Date.now() - startTime);
     }
@@ -15,7 +15,7 @@ function debugOutput(name: string,  options: DebugOptions,  startTime: number,  
 function createDefaultLogger(level: LogLevel) {
     let lastDebug;
 
-    return function logger(title: string,  ast: AST) {
+    return function logger(title: any,  ast: any) {
         let line = title;
 
         if (ast) {
@@ -38,7 +38,7 @@ function createDefaultLogger(level: LogLevel) {
     };
 }
 
-function buildCompressOptions(options: any) {
+function buildCompressOptions(options: CompressOptions) {
     options = { ...options };
 
     if (typeof options.logger !== 'function' && options.debug) {
@@ -48,7 +48,7 @@ function buildCompressOptions(options: any) {
     return options;
 }
 
-function runHandler(ast: AST,  options: CompilerOptions,  handlers: HandlerFn) {
+function runHandler(ast: AST,  options: CompilerOptions,  handlers: HandlerInfo[]) {
     if (!Array.isArray(handlers)) {
         handlers = [handlers];
     }
@@ -56,7 +56,7 @@ function runHandler(ast: AST,  options: CompilerOptions,  handlers: HandlerFn) {
     handlers.forEach(fn => fn(ast, options));
 }
 
-function minify(context: Object,  source: Object,  options: Object) {
+function minify(context: SourceMapConsumer.Context,  source: SourceMapConsumer.Source,  options: Object) {
     options = options || {};
 
     const filename = options.filename || '<unknown>';
@@ -110,11 +110,11 @@ function minify(context: Object,  source: Object,  options: Object) {
     return result;
 }
 
-function minifyStylesheet(source: string | string[],  options: MinifyOptions) {
+function minifyStylesheet(source: SourceMapSource,  options: OutputOptions) {
     return minify('stylesheet', source, options);
 }
 
-function minifyBlock(source: string | Buffer,  options: MinifyOptions) {
+function minifyBlock(source: SourceMapSource,  options: MinifyOptions) {
     return minify('declarationList', source, options);
 }
 

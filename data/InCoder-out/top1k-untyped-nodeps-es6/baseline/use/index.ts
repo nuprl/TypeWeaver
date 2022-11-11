@@ -31,7 +31,7 @@ export default function base(app: Application,  options: any) {
    * var use = require('use');
    *
    * // define a plugin
-   * function foo(app: Application) {
+   * function foo(app: express.Application) {
    *   // do stuff
    * }
    *
@@ -92,7 +92,7 @@ export default function base(app: Application,  options: any) {
    * `fns` array to be called by the `run` method.
    */
 
-  function use(type: string,  fn: Function,  options: any) {
+  function use(type: string,  fn: Function,  options: Object) {
     var offset = 1;
 
     if (typeof type === 'string' || Array.isArray(type)) {
@@ -142,7 +142,7 @@ export default function base(app: Application,  options: any) {
   return app;
 };
 
-function isObject(val: mixed) {
+function isObject(val: any) {
   return val && typeof val === 'object' && !Array.isArray(val);
 }
 

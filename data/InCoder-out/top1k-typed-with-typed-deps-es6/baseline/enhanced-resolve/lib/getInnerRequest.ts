@@ -5,7 +5,7 @@
 
 "use strict";
 
-export default function getInnerRequest(resolver: RequestResolver,  request: Request) {
+export default function getInnerRequest(resolver: Resolver,  request: Request) {
 	if (
 		typeof request.__innerRequest === "string" &&
 		request.__innerRequest_request === request.request &&

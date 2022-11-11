@@ -345,7 +345,7 @@ export default EventSource;
 util.inherits(EventSource, events.EventEmitter)
 EventSource.prototype.constructor = EventSource; // make stacktraces readable
 
-['open', 'error', 'message'].forEach(function (method: Function) {
+['open', 'error', 'message'].forEach(function (method: any) {
   Object.defineProperty(EventSource.prototype, 'on' + method, {
     /**
      * Returns the current listener
@@ -402,7 +402,7 @@ EventSource.prototype.close = function () {
  * @see http://dev.w3.org/html5/websockets/#the-websocket-interface
  * @api public
  */
-EventSource.prototype.addEventListener = function addEventListener (type: string,  listener: Function) {
+EventSource.prototype.addEventListener = function addEventListener (type: string,  listener: EventListenerOrEventListenerObject) {
   if (typeof listener === 'function') {
     // store a reference so we can return the original function again
     listener._listener = listener
@@ -434,7 +434,7 @@ EventSource.prototype.dispatchEvent = function dispatchEvent (event: Event) {
  * @see http://dev.w3.org/html5/websockets/#the-websocket-interface
  * @api public
  */
-EventSource.prototype.removeEventListener = function removeEventListener (type: string,  listener: Function) {
+EventSource.prototype.removeEventListener = function removeEventListener (type: string,  listener: EventListenerOrEventListenerObject) {
   if (typeof listener === 'function') {
     listener._listener = undefined
     this.removeListener(type, listener)
@@ -464,7 +464,7 @@ function Event (type: string,  optionalProperties: Object) {
  * @see http://www.w3.org/TR/webmessaging/#event-definitions
  * @api private
  */
-function MessageEvent (type: string,  eventInitDict: Object) {
+function MessageEvent (type: string,  eventInitDict: EventInit) {
   Object.defineProperty(this, 'type', { writable: false, value: type, enumerable: true })
   for (var f in eventInitDict) {
     if (eventInitDict.hasOwnProperty(f)) {
@@ -480,7 +480,7 @@ function MessageEvent (type: string,  eventInitDict: Object) {
  * @return {Object} a new object of headers
  * @api private
  */
-function removeUnsafeHeaders (headers: Array<string>) {
+function removeUnsafeHeaders (headers: any) {
   var safe = {}
   for (var key in headers) {
     if (reUnsafeHeader.test(key)) {

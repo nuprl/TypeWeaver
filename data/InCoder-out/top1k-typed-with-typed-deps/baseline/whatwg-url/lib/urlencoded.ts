@@ -7,7 +7,7 @@ function p(char: number) {
 }
 
 // https://url.spec.whatwg.org/#concept-urlencoded-parser
-function parseUrlencoded(input: string | Uint8Array) {
+function parseUrlencoded(input: any) {
   const sequences = strictlySplitByteSequence(input, p("&"));
   const output = [];
   for (const bytes of sequences) {
@@ -38,12 +38,12 @@ function parseUrlencoded(input: string | Uint8Array) {
 }
 
 // https://url.spec.whatwg.org/#concept-urlencoded-string-parser
-function parseUrlencodedString(input: string | Uint8Array) {
+function parseUrlencodedString(input: any) {
   return parseUrlencoded(utf8Encode(input));
 }
 
 // https://url.spec.whatwg.org/#concept-urlencoded-serializer
-function serializeUrlencoded(tuples: any,  encodingOverride = undefined: any) {
+function serializeUrlencoded(tuples: any[],  encodingOverride = undefined: string) {
   let encoding = "utf-8";
   if (encodingOverride !== undefined) {
     // TODO "get the output encoding", i.e. handle encoding labels vs. names.
@@ -91,7 +91,7 @@ function strictlySplitByteSequence(buf: Uint8Array,  cp: number) {
   return list;
 }
 
-function replaceByteInByteSequence(buf: Buffer,  from: number,  to: number) {
+function replaceByteInByteSequence(buf: Uint8Array,  from: number,  to: number) {
   let i = buf.indexOf(from);
   while (i >= 0) {
     buf[i] = to;

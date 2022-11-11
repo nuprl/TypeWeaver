@@ -4,7 +4,7 @@ import { browsers } from './browsers';
 import { browserVersions as versions } from './browserVersions';
 import agentsData from '../../data/agents';
 
-function unpackBrowserVersions(versionsData: Array<string>) {
+function unpackBrowserVersions(versionsData: any) {
   return Object.keys(versionsData).reduce((usage, version) => {
     usage[versions[version]] = versionsData[version]
     return usage

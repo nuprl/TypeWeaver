@@ -12,7 +12,7 @@ function win32SplitPath(filename: string | Buffer) {
   return splitWindowsRe.exec(filename).slice(1);
 }
 
-win32.parse = function(pathString: any) {
+win32.parse = function(pathString: ring | string[]) {
   if (typeof pathString !== 'string') {
     throw new TypeError(
         "Parameter 'pathString' must be a string, not " + typeof pathString
@@ -40,12 +40,12 @@ var splitPathRe =
 var posix = {};
 
 
-function posixSplitPath(filename: string | undefined) {
+function posixSplitPath(filename: string | Buffer) {
   return splitPathRe.exec(filename).slice(1);
 }
 
 
-posix.parse = function(pathString: any) {
+posix.parse = function(pathString: ring | string[]) {
   if (typeof pathString !== 'string') {
     throw new TypeError(
         "Parameter 'pathString' must be a string, not " + typeof pathString

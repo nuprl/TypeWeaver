@@ -2,7 +2,7 @@
 
 var unique = require('array-unique');
 
-module.exports = function union(init: Array<any>) {
+module.exports = function union(init: Array<T>) {
   var len = arguments.length, i = 0;
 
   while (++i < len) {

@@ -9,7 +9,7 @@ import utils from '../utils.js';
  *
  * @returns An array of strings.
  */
-function parsePropPath(name: string | number) {
+function parsePropPath(name: string | undefined) {
   // foo[x][y][z]
   // foo.x.y.z
   // foo-x-y-z
@@ -47,7 +47,7 @@ function arrayToObject(arr: Array<any>) {
  * @returns {Object<string, any> | null} The converted object.
  */
 function formDataToJSON(formData: FormData) {
-  function buildPath(path: Array<any>,  value: any,  target: any,  index: number) {
+  function buildPath(path: any,  value: any,  target: any,  index: any) {
     let name = path[index++];
     const isNumericKey = Number.isFinite(+name);
     const isLast = index >= path.length;

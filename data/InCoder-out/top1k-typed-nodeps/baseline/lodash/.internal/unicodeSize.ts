@@ -36,7 +36,7 @@ const reUnicode = RegExp(`${rsFitz}(?=${rsFitz})|${rsSymbol + rsSeq}`, 'g')
  * @param {string} string The string inspect.
  * @returns {number} Returns the string size.
  */
-function unicodeSize(string: string | number) {
+function unicodeSize(string: string | Buffer | DataView) {
   let result = reUnicode.lastIndex = 0
   while (reUnicode.test(string)) {
     ++result

@@ -8,13 +8,13 @@ var DEFAULTS = {
   control: 0
 }
 
-export default function wcwidth(str: string | number) {
+export default function wcwidth(str: string | Buffer) {
   return wcswidth(str, DEFAULTS)
 };
 
-export const config = function(opts: any) {
+export const config = function(opts: Options) {
   opts = defaults(opts || {}, DEFAULTS)
-  return function wcwidth(str: string | number) {
+  return function wcwidth(str: string | Buffer | DataView) {
     return wcswidth(str, opts)
   }
 };
@@ -43,7 +43,7 @@ export const config = function(opts: any) {
  *  This implementation assumes that characters are encoded in ISO 10646.
 */
 
-function wcswidth(str: string | number,  opts: { width: number; }) {
+function wcswidth(str: any,  opts: any) {
   if (typeof str !== 'string') return wcwidth(str, opts)
 
   var s = 0
@@ -56,7 +56,7 @@ function wcswidth(str: string | number,  opts: { width: number; }) {
   return s
 }
 
-function wcwidth(ucs: string,  opts: any) {
+function wcwidth(ucs: string,  opts: wcwidth.Options) {
   // test for 8-bit control characters
   if (ucs === 0) return opts.nul
   if (ucs < 32 || (ucs >= 0x7f && ucs < 0xa0)) return opts.control
@@ -81,7 +81,7 @@ function wcwidth(ucs: string,  opts: any) {
         (ucs >= 0x30000 && ucs <= 0x3fffd)));
 }
 
-function bisearch(ucs: Array<number>) {
+function bisearch(ucs: string) {
   var min = 0
   var max = combining.length - 1
   var mid

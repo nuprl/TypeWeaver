@@ -5,7 +5,7 @@ import "./manipulation.js"; // clone
 import "./traversing.js"; // parent, contents
 
 jQuery.fn.extend( {
-	wrapAll: function( html : String) {
+	wrapAll: function( html : any) {
 		var wrap;
 
 		if ( this[ 0 ] ) {
@@ -34,9 +34,9 @@ jQuery.fn.extend( {
 		return this;
 	},
 
-	wrapInner: function( html : string) {
+	wrapInner: function( html : any) {
 		if ( typeof html === "function" ) {
-			return this.each( function( i : arguments) {
+			return this.each( function( i : any) {
 				jQuery( this ).wrapInner( html.call( this, i ) );
 			} );
 		}
@@ -57,7 +57,7 @@ jQuery.fn.extend( {
 	wrap: function( html : string) {
 		var htmlIsFunction = typeof html === "function";
 
-		return this.each( function( i : number) {
+		return this.each( function( i : Int) {
 			jQuery( this ).wrapAll( htmlIsFunction ? html.call( this, i ) : html );
 		} );
 	},

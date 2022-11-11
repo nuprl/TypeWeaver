@@ -7,7 +7,7 @@ var getPrototypeOf;
 if (typeof Object.getPrototypeOf === "function") {
 	getPrototypeOf = Object.getPrototypeOf;
 } else if ({}.__proto__ === Object.prototype) {
-	getPrototypeOf = function (object: Object) { return object.__proto__; };
+	getPrototypeOf = function (object: any) { return object.__proto__; };
 }
 
 export default function (value: any) {

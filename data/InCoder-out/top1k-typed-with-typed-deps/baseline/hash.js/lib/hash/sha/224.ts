@@ -20,7 +20,7 @@ SHA224.outSize = 224;
 SHA224.hmacStrength = 192;
 SHA224.padLength = 64;
 
-SHA224.prototype._digest = function digest(enc: Encoding) {
+SHA224.prototype._digest = function digest(enc: BufferEncoding) {
   // Just truncate output
   if (enc === 'hex')
     return utils.toHex32(this.h.slice(0, 7), 'big');

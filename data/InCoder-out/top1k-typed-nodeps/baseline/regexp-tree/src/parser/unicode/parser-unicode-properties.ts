@@ -269,7 +269,7 @@ const SCRIPT_VALUE_TO_ALIASES = {
 
 const SCRIPT_VALUE_ALIASES_TO_VALUE = inverseMap(SCRIPT_VALUE_TO_ALIASES);
 
-function inverseMap(data: Object) {
+function inverseMap(data: any) {
   const inverse = {};
 
   for (let name in data) {
@@ -289,7 +289,7 @@ function inverseMap(data: Object) {
   return inverse;
 }
 
-function isValidName(name: string) {
+function isValidName(name: any) {
   return (
     NON_BINARY_PROP_NAMES_TO_ALIASES.hasOwnProperty(name) ||
     NON_BINARY_ALIASES_TO_PROP_NAMES.hasOwnProperty(name) ||
@@ -298,7 +298,7 @@ function isValidName(name: string) {
   );
 }
 
-function isValidValue(name: keyof T,  value: T) {
+function isValidValue(name: any,  value: any) {
   if (isGeneralCategoryName(name)) {
     return isGeneralCategoryValue(value);
   }
@@ -310,18 +310,18 @@ function isValidValue(name: keyof T,  value: T) {
   return false;
 }
 
-function isAlias(name: string) {
+function isAlias(name: Node) {
   return (
     NON_BINARY_ALIASES_TO_PROP_NAMES.hasOwnProperty(name) ||
     BINARY_ALIASES_TO_PROP_NAMES.hasOwnProperty(name)
   );
 }
 
-function isGeneralCategoryName(name: string) {
+function isGeneralCategoryName(name: any) {
   return name === 'General_Category' || name == 'gc';
 }
 
-function isScriptCategoryName(name: string) {
+function isScriptCategoryName(name: string | undefined) {
   return (
     name === 'Script' ||
     name === 'Script_Extensions' ||
@@ -330,7 +330,7 @@ function isScriptCategoryName(name: string) {
   );
 }
 
-function isGeneralCategoryValue(value: CategoryValue) {
+function isGeneralCategoryValue(value: number) {
   return (
     GENERAL_CATEGORY_VALUE_TO_ALIASES.hasOwnProperty(value) ||
     GENERAL_CATEGORY_VALUE_ALIASES_TO_VALUES.hasOwnProperty(value)
@@ -351,7 +351,7 @@ function isBinaryPropertyName(name: any) {
   );
 }
 
-function getCanonicalName(name: string | null) {
+function getCanonicalName(name: ts.Identifier) {
   if (NON_BINARY_ALIASES_TO_PROP_NAMES.hasOwnProperty(name)) {
     return NON_BINARY_ALIASES_TO_PROP_NAMES[name];
   }

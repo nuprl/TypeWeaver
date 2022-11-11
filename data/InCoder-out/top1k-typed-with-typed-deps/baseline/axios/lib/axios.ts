@@ -33,7 +33,7 @@ function createInstance(defaultConfig: Config) {
   utils.extend(instance, context, {allOwnKeys: true});
 
   // Factory for creating new instances
-  instance.create = function create(instanceConfig: IInstanceConfig) {
+  instance.create = function create(instanceConfig: InstanceConfig) {
     return createInstance(mergeConfig(defaultConfig, instanceConfig));
   };
 
@@ -60,7 +60,7 @@ axios.AxiosError = AxiosError;
 axios.Cancel = axios.CanceledError;
 
 // Expose all/spread
-axios.all = function all(promises: Array<Promise<any>>) {
+axios.all = function all(promises: Promise<any>[]) {
   return Promise.all(promises);
 };
 

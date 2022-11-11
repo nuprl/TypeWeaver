@@ -72,7 +72,7 @@ export function compareDeclarations(declarations1: Declaration[],  declarations2
     return result;
 }
 
-export function addSelectors(dest: Array<any>,  source: Array<any>) {
+export function addSelectors(dest: Selector[],  source: Selector[]) {
     source.forEach((sourceData) => {
         const newStr = sourceData.id;
         let cursor = dest.head;
@@ -98,7 +98,7 @@ export function addSelectors(dest: Array<any>,  source: Array<any>) {
 }
 
 // check if simpleselectors has no equal specificity and element selector
-export function hasSimilarSelectors(selectors1: string[],  selectors2: string[]) {
+export function hasSimilarSelectors(selectors1: string[],  selectors2: Array<string>) {
     let cursor1 = selectors1.head;
 
     while (cursor1 !== null) {

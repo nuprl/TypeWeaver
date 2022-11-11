@@ -28,7 +28,7 @@ Object.defineProperty(CSSOM.CSSImportRule.prototype, "cssText", {
     var mediaText = this.media.mediaText;
     return "@import url(" + this.href + ")" + (mediaText ? " " + mediaText : "") + ";";
   },
-  set: function(cssText: CSSStyleDeclaration) {
+  set: function(cssText: String) {
     var i = 0;
 
     /**

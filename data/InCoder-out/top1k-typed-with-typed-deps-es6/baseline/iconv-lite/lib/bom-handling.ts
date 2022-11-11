@@ -26,7 +26,7 @@ PrependBOMWrapper.prototype.end = function() {
 
 export const StripBOM = StripBOMWrapper;
 
-function StripBOMWrapper(decoder: Decoder,  options: IDecodeOptions) {
+function StripBOMWrapper(decoder: Decoder,  options: DecoderOptions) {
     this.decoder = decoder;
     this.pass = false;
     this.options = options || {};

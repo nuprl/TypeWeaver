@@ -71,15 +71,15 @@ Zlib.prototype.close = function () {
   this.dictionary = null
 }
 
-Zlib.prototype.write = function (flush: number,  input: Uint8Array,  in_off: number,  in_len: number,  out: number,  out_off: number,  out_len: number) {
+Zlib.prototype.write = function (flush: FlushFunc,  input: InputFunc,  in_off: in_off_t,  in_len: in_len_t,  out: out_t,  out_off: out_off_t,  out_len: out_len_t) {
   return this._write(true, flush, input, in_off, in_len, out, out_off, out_len)
 }
 
-Zlib.prototype.writeSync = function (flush: number,  input: Uint8Array,  in_off: number,  in_len: number,  out: number,  out_off: number,  out_len: number) {
+Zlib.prototype.writeSync = function (flush: FlushFunc,  input: InputFunc,  in_off: in_off_t,  in_len: in_len_t,  out: out_t,  out_off: out_off_t,  out_len: out_len_t) {
   return this._write(false, flush, input, in_off, in_len, out, out_off, out_len)
 }
 
-Zlib.prototype._write = function (async: AsyncTestCompleter,  flush: number,  input: number,  in_off: number,  in_len: number,  out: number,  out_off: number,  out_len: number) {
+Zlib.prototype._write = function (async: any,  flush: any,  input: any,  in_off: any,  in_len: any,  out: any,  out_off: any,  out_len: any) {
   assert.equal(arguments.length, 8)
 
   assert(this.init_done, 'write before init')
@@ -286,7 +286,7 @@ Zlib.prototype._after = function () {
   }
 }
 
-Zlib.prototype._error = function (message: any) {
+Zlib.prototype._error = function (message: Buffer) {
   if (this.strm.msg) {
     message = this.strm.msg
   }

@@ -9,7 +9,7 @@ const SourceNode = require("./SourceNode");
 const CodeNode = require("./CodeNode");
 const SourceListMap = require("./SourceListMap");
 
-module.exports = function fromStringWithSourceMap(code: string | SourceMap,  map: SourceMap) {
+module.exports = function fromStringWithSourceMap(code: string | null | undefined,  map: SourceMap) {
 	const sources = map.sources;
 	const sourcesContent = map.sourcesContent;
 	const mappings = map.mappings.split(";");
@@ -19,7 +19,7 @@ module.exports = function fromStringWithSourceMap(code: string | SourceMap,  map
 	let currentLine = 1;
 	let currentSourceIdx = 0;
 	let currentSourceNodeLine;
-	function addCode(generatedCode: Code) {
+	function addCode(generatedCode: GeneratedCode) {
 		if(currentNode && currentNode instanceof CodeNode) {
 			currentNode.addGeneratedCode(generatedCode);
 		} else if(currentNode && currentNode instanceof SourceNode && !generatedCode.trim()) {
@@ -30,7 +30,7 @@ module.exports = function fromStringWithSourceMap(code: string | SourceMap,  map
 			nodes.push(currentNode);
 		}
 	}
-	function addSource(generatedCode: SourceCode,  source: Source,  originalSource: OriginalSource,  linePosition: LinePosition) {
+	function addSource(generatedCode: SourceCode,  source: SourceCode,  originalSource: SourceCode,  linePosition: number) {
 		if(currentNode && currentNode instanceof SourceNode &&
 			currentNode.source === source &&
 			currentSourceNodeLine === linePosition
@@ -43,7 +43,7 @@ module.exports = function fromStringWithSourceMap(code: string | SourceMap,  map
 			nodes.push(currentNode);
 		}
 	}
-	mappings.forEach(function(mapping: string,  idx: number) {
+	mappings.forEach(function(mapping: IInplaceReplaceSupport,  idx: number) {
 		let line = lines[idx];
 		if(typeof line === 'undefined') return;
 		if(idx !== lines.length - 1) line += "\n";
@@ -65,7 +65,7 @@ module.exports = function fromStringWithSourceMap(code: string | SourceMap,  map
 		addCode(lines.slice(idx).join("\n"));
 	}
 	return new SourceListMap(nodes);
-	function processMapping(mapping: string,  line: number,  ignore: number) {
+	function processMapping(mapping: Mapping,  line: Line,  ignore: Ignore) {
 		if(mapping.rest && mapping.rest[0] !== ",") {
 			base64VLQ.decode(mapping.rest, mapping);
 		}

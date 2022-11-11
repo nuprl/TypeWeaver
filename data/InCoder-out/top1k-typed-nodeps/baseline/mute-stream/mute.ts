@@ -4,7 +4,7 @@ module.exports = MuteStream
 
 // var out = new MuteStream(process.stdout)
 // argument auto-pipes
-function MuteStream (opts: any) {
+function MuteStream (opts: MuteStreamOpts) {
   Stream.apply(this)
   opts = opts || {}
   this.writable = this.readable = true
@@ -41,7 +41,7 @@ Object.defineProperty(MuteStream.prototype, '_onpipe', {
   configurable: true
 })
 
-function onPipe (src: any) {
+function onPipe (src: Readable) {
   this._src = src
 }
 
@@ -60,7 +60,7 @@ function getIsTTY () {
 }
 
 // basically just get replace the getter/setter with a regular value
-function setIsTTY (isTTY: any) {
+function setIsTTY (isTTY: Boolean) {
   Object.defineProperty(this, 'isTTY', {
     value: isTTY,
     enumerable: true,
@@ -84,7 +84,7 @@ Object.defineProperty(MuteStream.prototype, 'columns', {
   }, enumerable: true, configurable: true })
 
 
-MuteStream.prototype.pipe = function (dest: any,  options: any) {
+MuteStream.prototype.pipe = function (dest: WritableStream,  options: any) {
   this._dest = dest
   return Stream.prototype.pipe.call(this, dest, options)
 }
@@ -121,7 +121,7 @@ MuteStream.prototype.write = function (c: number) {
   this.emit('data', c)
 }
 
-MuteStream.prototype.end = function (c: boolean) {
+MuteStream.prototype.end = function (c: number) {
   if (this.muted) {
     if (c && this.replace) {
       c = c.toString().replace(/./g, this.replace)

@@ -7,7 +7,7 @@ import { Buffer } from 'safer-buffer';
 export const utf7 = Utf7Codec;
 
 export const unicode11utf7 = 'utf7'; // Alias UNICODE-1-1-UTF-7
-function Utf7Codec(codecOptions: IconvCodecOption,  iconv: Iconv) {
+function Utf7Codec(codecOptions: CodecOptions,  iconv: Iconv) {
     this.iconv = iconv;
 }
 
@@ -20,14 +20,14 @@ Utf7Codec.prototype.bomAware = true;
 
 var nonDirectChars = /[^A-Za-z0-9'\(\),-\.\/:\? \n\r\t]+/g;
 
-function Utf7Encoder(options: IconvEncodingOptions,  codec: IconvCodec) {
+function Utf7Encoder(options: Utf7EncoderOption,  codec: Encoder) {
     this.iconv = codec.iconv;
 }
 
-Utf7Encoder.prototype.write = function(str: number) {
+Utf7Encoder.prototype.write = function(str: String) {
     // Naive implementation.
     // Non-direct chars are encoded as "+<base64>-"; single "+" char is encoded as "+-".
-    return Buffer.from(str.replace(nonDirectChars, function(chunk: hunk) {
+    return Buffer.from(str.replace(nonDirectChars, function(chunk: tring | Buffer) {
         return "+" + (chunk === '+' ? '' : 
             this.iconv.encode(chunk, 'utf16-be').toString('base64').replace(/=+$/, '')) 
             + "-";
@@ -40,7 +40,7 @@ Utf7Encoder.prototype.end = function() {
 
 // -- Decoding
 
-function Utf7Decoder(options: IconvOptions,  codec: IconvCodec) {
+function Utf7Decoder(options: Utf7DecoderOption,  codec: Codec) {
     this.iconv = codec.iconv;
     this.inBase64 = false;
     this.base64Accum = '';
@@ -132,7 +132,7 @@ Utf7Decoder.prototype.end = function() {
 
 export const utf7imap = Utf7IMAPCodec;
 
-function Utf7IMAPCodec(codecOptions: IMAPCodecOption,  iconv: Iconv) {
+function Utf7IMAPCodec(codecOptions: CodecOptions,  iconv: Iconv) {
     this.iconv = iconv;
 }
 
@@ -143,14 +143,14 @@ Utf7IMAPCodec.prototype.bomAware = true;
 
 // -- Encoding
 
-function Utf7IMAPEncoder(options: Utf7IMAP,  codec: IMAPCodec) {
+function Utf7IMAPEncoder(options: any,  codec: Utf7Codec) {
     this.iconv = codec.iconv;
     this.inBase64 = false;
     this.base64Accum = Buffer.alloc(6);
     this.base64AccumIdx = 0;
 }
 
-Utf7IMAPEncoder.prototype.write = function(str: any) {
+Utf7IMAPEncoder.prototype.write = function(str: String) {
     var inBase64 = this.inBase64,
         base64Accum = this.base64Accum,
         base64AccumIdx = this.base64AccumIdx,
@@ -217,7 +217,7 @@ Utf7IMAPEncoder.prototype.end = function() {
 
 // -- Decoding
 
-function Utf7IMAPDecoder(options: IMAPOptions,  codec: IMAPCodec) {
+function Utf7IMAPDecoder(options: Utf7IMAP,  codec: Codec) {
     this.iconv = codec.iconv;
     this.inBase64 = false;
     this.base64Accum = '';

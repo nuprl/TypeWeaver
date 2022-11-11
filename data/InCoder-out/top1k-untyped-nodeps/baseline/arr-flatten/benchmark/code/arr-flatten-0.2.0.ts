@@ -2,7 +2,7 @@ module.exports = function (arr: Array<any>) {
   return flatten(arr, []);
 };
 
-function flatten(arr: Array,  res: Array) {
+function flatten(arr: number[],  res: number[]) {
   var len = arr.length;
   var num = 0;
 

@@ -11,7 +11,7 @@ module.exports = ReadableSerial;
  * @param   {function} callback - invoked when all elements processed
  * @returns {stream.Readable#}
  */
-function ReadableSerial(list: ReadableStream<any>,  iterator: Function,  callback: Function)
+function ReadableSerial(list: ReadableList,  iterator: Iterator,  callback: Function)
 {
   if (!(this instanceof ReadableSerial))
   {

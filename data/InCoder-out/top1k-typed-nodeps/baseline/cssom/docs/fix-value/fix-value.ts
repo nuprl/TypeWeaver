@@ -13,7 +13,7 @@ input.oninput = function() {
     doStuff();
 };
 
-function fixCssValue(value: string | number) {
+function fixCssValue(value: any) {
     let length = value.length;
     let parenthesisUnclosedCount = 0;
 

@@ -4,7 +4,7 @@ import clean from './clean/index.js';
 import replace from './replace/index.js';
 import restructure from './restructure/index.js';
 
-function readChunk(input: Node,  specialComments: boolean) {
+function readChunk(input: NodeJS.ReadableStream,  specialComments: boolean) {
     const children = new List();
     let nonSpaceTokenInBuffer = false;
     let protectedComment;
@@ -43,7 +43,7 @@ function readChunk(input: Node,  specialComments: boolean) {
     };
 }
 
-function compressChunk(ast: AST,  firstAtrulesAllowed: number,  num: number,  options: number) {
+function compressChunk(ast: Ast,  firstAtrulesAllowed: number,  num: number,  options: string) {
     options.logger(`Compress block #${num}`, null, true);
 
     let seed = 1;
@@ -79,7 +79,7 @@ function compressChunk(ast: AST,  firstAtrulesAllowed: number,  num: number,  op
     return ast;
 }
 
-function getCommentsOption(options: CommentsOption) {
+function getCommentsOption(options: Options) {
     let comments = 'comments' in options ? options.comments : 'exclamation';
 
     if (typeof comments === 'boolean') {
@@ -91,7 +91,7 @@ function getCommentsOption(options: CommentsOption) {
     return comments;
 }
 
-function getRestructureOption(options: any) {
+function getRestructureOption(options: Options) {
     if ('restructure' in options) {
         return options.restructure;
     }

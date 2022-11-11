@@ -9,7 +9,7 @@
 
 const typeOf = require('kind-of');
 
-module.exports = function has(val: mixed) {
+module.exports = function has(val: any) {
   switch (typeOf(val)) {
     case 'boolean':
     case 'date':

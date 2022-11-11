@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 
-export default function( grunt : Grunt) {
+export default function( grunt : grunt.IGrun) {
 	var config = grunt.config( "uglify.all.files" );
 	grunt.registerTask( "remove_map_comment", function() {
 		var minLoc = grunt.config.process( Object.keys( config )[ 0 ] );

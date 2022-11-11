@@ -66,21 +66,21 @@ function dataAttr( elem: Element,  key: string,  data : any) {
 }
 
 jQuery.extend( {
-	hasData: function( elem : Element) {
+	hasData: function( elem : elem.ownerDocument) {
 		return dataUser.hasData( elem ) || dataPriv.hasData( elem );
 	},
 
-	data: function( elem: Element,  name: string,  data : any) {
+	data: function( elem: Element,  name: String,  data : Object) {
 		return dataUser.access( elem, name, data );
 	},
 
-	removeData: function( elem: Element,  name : string) {
+	removeData: function( elem: any,  name : string) {
 		dataUser.remove( elem, name );
 	},
 
 	// TODO: Now that all calls to _data and _removeData have been replaced
 	// with direct calls to dataPriv methods, these can be deprecated.
-	_data: function( elem: Element,  name: string,  data : any) {
+	_data: function( elem: Element,  name: String,  data : Object) {
 		return dataPriv.access( elem, name, data );
 	},
 
@@ -128,7 +128,7 @@ jQuery.fn.extend( {
 			} );
 		}
 
-		return access( this, function( value : any) {
+		return access( this, function( value : Object) {
 			var data;
 
 			// The calling jQuery object (element matches) is not empty
@@ -165,7 +165,7 @@ jQuery.fn.extend( {
 		}, null, value, arguments.length > 1, null, true );
 	},
 
-	removeData: function( key : String) {
+	removeData: function( key : any) {
 		return this.each( function() {
 			dataUser.remove( this, key );
 		} );

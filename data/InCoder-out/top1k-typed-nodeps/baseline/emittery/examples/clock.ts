@@ -44,7 +44,7 @@ class Clock extends Emittery {
 	}
 }
 
-function onTick({duration}: Object) {
+function onTick({duration}: TimerEvent) {
 	console.log(Math.floor(duration / 1000));
 
 	if (duration >= 6000) {

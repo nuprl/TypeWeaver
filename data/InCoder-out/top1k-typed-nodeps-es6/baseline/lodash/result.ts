@@ -28,7 +28,7 @@ import toKey from './.internal/toKey.js'
  * result(object, 'a[0].b.c3', () => 'default')
  * // => 'default'
  */
-function result(object: any,  path: any,  defaultValue: any) {
+function result(object: any,  path: string | any,  defaultValue: any) {
   path = castPath(path, object)
 
   let index = -1

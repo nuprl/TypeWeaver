@@ -12,7 +12,7 @@
     VERSION = require('../package.json').version;
     exports.VERSION = VERSION;
 
-    function DoctrineError(message: any) {
+    function DoctrineError(message: string | Error) {
         this.name = 'DoctrineError';
         this.message = message;
     }

@@ -1,6 +1,6 @@
 import clone from 'clone';
 
-export default function(options: Object,  defaults: Object) {
+export default function(options: any,  defaults: any) {
   options = options || {};
 
   Object.keys(defaults).forEach(function(key: any) {

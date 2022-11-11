@@ -15,7 +15,7 @@ import isObjectLike from '../isObjectLike.js'
  * @param {Object} [stack] Tracks traversed `value` and `other` objects.
  * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
  */
-function baseIsEqual(value: any,  other: any,  bitmask: number,  customizer: Function,  stack: Array) {
+function baseIsEqual(value: any,  other: any,  bitmask: number,  customizer: customizer,  stack: stack) {
   if (value === other) {
     return true
   }

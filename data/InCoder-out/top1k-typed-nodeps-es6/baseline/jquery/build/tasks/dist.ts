@@ -1,6 +1,6 @@
 "use strict";
 
-export default function( grunt : grunt) {
+export default function( grunt : grunt.IGrun) {
 	var	fs = require( "fs" ),
 		filename = grunt.option( "filename" ),
 		distpaths = [

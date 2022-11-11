@@ -243,7 +243,7 @@ function toHex(value: number) {
     return value.length === 1 ? '0' + value : value;
 }
 
-function parseFunctionArgs(functionArgs: CursorArgs,  count: number,  rgb: number) {
+function parseFunctionArgs(functionArgs: functionArgs,  count: functionArgs.length,  rgb: rgb) {
     let cursor = functionArgs.head;
     let args = [];
     let wasValue = false;
@@ -353,7 +353,7 @@ function parseFunctionArgs(functionArgs: CursorArgs,  count: number,  rgb: numbe
     });
 }
 
-export function compressFunction(node: Function,  item: Function) {
+export function compressFunction(node: Node,  item: Item) {
     let functionName = node.name;
     let args;
 
@@ -445,7 +445,7 @@ export function compressFunction(node: Function,  item: Function) {
     }
 }
 
-export function compressIdent(node: ts.Node,  item: ts.Identifier) {
+export function compressIdent(node: Node,  item: Node) {
     if (this.declaration === null) {
         return;
     }

@@ -10,7 +10,7 @@ var URL = 'https://www.iana.org/assignments/http-status-codes/http-status-codes-
 var HEADERS = { 'User-Agent': 'nodejs/' + process.version + ' (' + process.platform + ', npm:statuses)' }
 
 https.get(URL, { headers: HEADERS }, function onResponse (res: Response) {
-  toArray(res.pipe(parser()), function (err: Error,  rows: any) {
+  toArray(res.pipe(parser()), function (err: Error,  rows: any[]) {
     if (err) throw err
 
     var codes = {}
@@ -37,8 +37,8 @@ https.get(URL, { headers: HEADERS }, function onResponse (res: Response) {
   })
 })
 
-function generateRowMapper (headers: Array<string>) {
-  return function reduceRows (obj: bject,  val: number,  index: number) {
+function generateRowMapper (headers: string[]) {
+  return function reduceRows (obj: ny,  val: ny,  index: number) {
     if (val !== '') {
       obj[headers[index]] = val
     }
@@ -48,7 +48,7 @@ function generateRowMapper (headers: Array<string>) {
 }
 
 function normalizeHeader (val: string | string[]) {
-  return val.substr(0, 1).toLowerCase() + val.substr(1).replace(/ (.)/, function (s: string,  c: string) {
+  return val.substr(0, 1).toLowerCase() + val.substr(1).replace(/ (.)/, function (s: string,  c: number) {
     return c.toUpperCase()
   })
 }

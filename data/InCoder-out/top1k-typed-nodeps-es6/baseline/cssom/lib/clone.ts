@@ -20,7 +20,7 @@ var CSSOM = {
  * @nosideeffects
  * @return {CSSOM.CSSStyleSheet}
  */
-CSSOM.clone = function clone(stylesheet: StyleSheet) {
+CSSOM.clone = function clone(stylesheet: CSSStyleSheet) {
 
 	var cloned = new CSSOM.CSSStyleSheet();
 

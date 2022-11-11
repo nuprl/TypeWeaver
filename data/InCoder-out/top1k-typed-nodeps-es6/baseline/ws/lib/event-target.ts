@@ -190,7 +190,7 @@ const EventTarget = {
     let wrapper;
 
     if (type === 'message') {
-      wrapper = function onMessage(data: MessageEventData,  isBinary: boolean) {
+      wrapper = function onMessage(data: any,  isBinary: boolean) {
         const event = new MessageEvent('message', {
           data: isBinary ? data : data.toString()
         });
@@ -199,7 +199,7 @@ const EventTarget = {
         listener.call(this, event);
       };
     } else if (type === 'close') {
-      wrapper = function onClose(code: number,  message: string | Error) {
+      wrapper = function onClose(code: number,  message: string) {
         const event = new CloseEvent('close', {
           code,
           reason: message.toString(),

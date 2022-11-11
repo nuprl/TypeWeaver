@@ -155,7 +155,7 @@ exports.valueType = function valueType(val: any) {
   }
 };
 
-exports.parseInteger = function parseInteger(val: string | number) {
+exports.parseInteger = function parseInteger(val: any) {
   var type = exports.valueType(val);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
     return val;
@@ -166,7 +166,7 @@ exports.parseInteger = function parseInteger(val: string | number) {
   return String(parseInt(val, 10));
 };
 
-exports.parseNumber = function parseNumber(val: string | number) {
+exports.parseNumber = function parseNumber(val: any) {
   var type = exports.valueType(val);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
     return val;
@@ -177,7 +177,7 @@ exports.parseNumber = function parseNumber(val: string | number) {
   return String(parseFloat(val));
 };
 
-exports.parseLength = function parseLength(val: number) {
+exports.parseLength = function parseLength(val: string | number) {
   if (val === 0 || val === '0') {
     return '0px';
   }
@@ -191,7 +191,7 @@ exports.parseLength = function parseLength(val: number) {
   return val;
 };
 
-exports.parsePercent = function parsePercent(val: number) {
+exports.parsePercent = function parsePercent(val: any) {
   if (val === 0 || val === '0') {
     return '0%';
   }
@@ -219,7 +219,7 @@ exports.parseMeasurement = function parseMeasurement(val: string | number) {
   return exports.parsePercent(val);
 };
 
-exports.parseUrl = function parseUrl(val: string | number) {
+exports.parseUrl = function parseUrl(val: any) {
   var type = exports.valueType(val);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
     return val;
@@ -258,7 +258,7 @@ exports.parseUrl = function parseUrl(val: string | number) {
   return 'url(' + str + ')';
 };
 
-exports.parseString = function parseString(val: string | number) {
+exports.parseString = function parseString(val: any) {
   var type = exports.valueType(val);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
     return val;
@@ -285,7 +285,7 @@ exports.parseString = function parseString(val: string | number) {
   return val;
 };
 
-exports.parseColor = function parseColor(val: string | number) {
+exports.parseColor = function parseColor(val: any) {
   var type = exports.valueType(val);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
     return val;
@@ -404,7 +404,7 @@ exports.parseColor = function parseColor(val: string | number) {
   return undefined;
 };
 
-exports.parseAngle = function parseAngle(val: string | number) {
+exports.parseAngle = function parseAngle(val: any) {
   var type = exports.valueType(val);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
     return val;
@@ -429,7 +429,7 @@ exports.parseAngle = function parseAngle(val: string | number) {
   return flt + 'deg';
 };
 
-exports.parseKeyword = function parseKeyword(val: string | number,  valid_keywords: string[]) {
+exports.parseKeyword = function parseKeyword(val: any,  valid_keywords: string[]) {
   var type = exports.valueType(val);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
     return val;
@@ -468,7 +468,7 @@ var is_space = /\s/;
 var opening_deliminators = ['"', "'", '('];
 var closing_deliminators = ['"', "'", ')'];
 // this splits on whitespace, but keeps quoted and parened parts together
-var getParts = function(str: any) {
+var getParts = function(str: String) {
   var deliminator_stack = [];
   var length = str.length;
   var i;
@@ -521,7 +521,7 @@ exports.shorthandParser = function parse(v: any,  shorthand_for: any) {
   var obj = {};
   var type = exports.valueType(v);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
-    Object.keys(shorthand_for).forEach(function(property: Property) {
+    Object.keys(shorthand_for).forEach(function(property: any) {
       obj[property] = '';
     });
     return obj;
@@ -556,14 +556,14 @@ exports.shorthandParser = function parse(v: any,  shorthand_for: any) {
   return obj;
 };
 
-exports.shorthandSetter = function(property: Property,  shorthand_for: Property) {
+exports.shorthandSetter = function(property: property,  shorthand_for: shorthand) {
   return function(v: any) {
     var obj = exports.shorthandParser(v, shorthand_for);
     if (obj === undefined) {
       return;
     }
     //console.log('shorthandSetter for:', property, 'obj:', obj);
-    Object.keys(obj).forEach(function(subprop: Property) {
+    Object.keys(obj).forEach(function(subprop: SubProp) {
       // in case subprop is an implicit property, this will clear
       // *its* subpropertiesX
       var camel = dashedToCamelCase(subprop);
@@ -576,7 +576,7 @@ exports.shorthandSetter = function(property: Property,  shorthand_for: Property)
         this._values[subprop] = obj[subprop];
       }
     }, this);
-    Object.keys(shorthand_for).forEach(function(subprop: string | symbol) {
+    Object.keys(shorthand_for).forEach(function(subprop: any) {
       if (!obj.hasOwnProperty(subprop)) {
         this.removeProperty(subprop);
         delete this._values[subprop];
@@ -594,7 +594,7 @@ exports.shorthandSetter = function(property: Property,  shorthand_for: Property)
   };
 };
 
-exports.shorthandGetter = function(property: Property,  shorthand_for: Property) {
+exports.shorthandGetter = function(property: property,  shorthand_for: shorthand) {
   return function() {
     if (this._values[property] !== undefined) {
       return this.getPropertyValue(property);
@@ -615,14 +615,14 @@ exports.shorthandGetter = function(property: Property,  shorthand_for: Property)
 // if two, the first applies to the top and bottom, and the second to left and right
 // if three, the first applies to the top, the second to left and right, the third bottom
 // if four, top, right, bottom, left
-exports.implicitSetter = function(property_before: any,  property_after: any,  isValid: Function,  parser: Function) {
+exports.implicitSetter = function(property_before: any,  property_after: any,  isValid: any,  parser: any) {
   property_after = property_after || '';
   if (property_after !== '') {
     property_after = '-' + property_after;
   }
   var part_names = ['top', 'right', 'bottom', 'left'];
 
-  return function(v: any) {
+  return function(v: number) {
     if (typeof v === 'number') {
       v = v.toString();
     }
@@ -643,7 +643,7 @@ exports.implicitSetter = function(property_before: any,  property_after: any,  i
       return undefined;
     }
 
-    parts = parts.map(function(part: any) {
+    parts = parts.map(function(part: Part) {
       return parser(part);
     });
     this._setProperty(property_before + property_after, parts.join(' '));
@@ -674,11 +674,11 @@ exports.implicitSetter = function(property_before: any,  property_after: any,  i
 //  sub-parts are set.  If so, it sets the shorthand version and removes
 //  the individual parts from the cssText.
 //
-exports.subImplicitSetter = function(prefix: String,  part: String,  isValid: Function,  parser: Function) {
+exports.subImplicitSetter = function(prefix: prefix,  part: part,  isValid: isValid,  parser: parser) {
   var property = prefix + '-' + part;
   var subparts = [prefix + '-top', prefix + '-right', prefix + '-bottom', prefix + '-left'];
 
-  return function(v: any) {
+  return function(v: number) {
     if (typeof v === 'number') {
       v = v.toString();
     }
@@ -711,7 +711,7 @@ exports.subImplicitSetter = function(prefix: String,  part: String,  isValid: Fu
 var camel_to_dashed = /[A-Z]/g;
 var first_segment = /^\([^-]\)-/;
 var vendor_prefixes = ['o', 'moz', 'ms', 'webkit'];
-exports.camelToDashed = function(camel_case: any) {
+exports.camelToDashed = function(camel_case: camel_case) {
   var match;
   var dashed = camel_case.replace(camel_to_dashed, '-$&').toLowerCase();
   match = dashed.match(first_segment);

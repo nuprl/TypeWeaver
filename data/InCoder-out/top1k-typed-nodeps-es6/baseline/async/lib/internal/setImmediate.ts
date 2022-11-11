@@ -8,7 +8,7 @@ export function fallback(fn: Function) {
     setTimeout(fn, 0);
 }
 
-export function wrap(defer: Deferred) {
+export function wrap(defer: Deferred<R>) {
     return (fn, ...args) => defer(() => fn(...args));
 }
 

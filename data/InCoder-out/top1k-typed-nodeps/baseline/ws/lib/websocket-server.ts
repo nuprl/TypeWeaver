@@ -483,7 +483,7 @@ function socketOnError() {
  * @param {Object} [headers] Additional HTTP response headers
  * @private
  */
-function abortHandshake(socket: Socket,  code: number,  message: string | Error,  headers: Headers | string) {
+function abortHandshake(socket: Socket,  code: number,  message: any,  headers: any) {
   //
   // The socket is writable unless the user destroyed or ended it before calling
   // `server.handleUpgrade()` or in the `verifyClient` function, which is a user

@@ -5,7 +5,7 @@ var ensureCallable = function (fn: Function) {
 	return fn;
 };
 
-var byObserver = function (Observer: Observer<T>) {
+var byObserver = function (Observer: Observer) {
 	var node = document.createTextNode(''), queue, currentQueue, bit = 0, i = 0;
 	new Observer(function () {
 		var callback;
@@ -52,7 +52,7 @@ export default function () {
 
 	// queueMicrotask
 	if (typeof queueMicrotask === "function") {
-		return function (cb: Function) { queueMicrotask(ensureCallable(cb)); };
+		return function (cb: Callback<void>) { queueMicrotask(ensureCallable(cb)); };
 	}
 
 	// MutationObserver
@@ -64,12 +64,12 @@ export default function () {
 	// W3C Draft
 	// http://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html
 	if (typeof setImmediate === 'function') {
-		return function (cb: Function) { setImmediate(ensureCallable(cb)); };
+		return function (cb: Callback<void>) { setImmediate(ensureCallable(cb)); };
 	}
 
 	// Wide available standard
 	if ((typeof setTimeout === 'function') || (typeof setTimeout === 'object')) {
-		return function (cb: Function) { setTimeout(ensureCallable(cb), 0); };
+		return function (cb: Callback<void>) { setTimeout(ensureCallable(cb), 0); };
 	}
 
 	return null;

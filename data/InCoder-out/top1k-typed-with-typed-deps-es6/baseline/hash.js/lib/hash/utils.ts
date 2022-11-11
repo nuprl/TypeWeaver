@@ -5,7 +5,7 @@ import inherits from 'inherits';
 
 exports.inherits = inherits;
 
-function isSurrogatePair(msg: Message,  i: number) {
+function isSurrogatePair(msg: any,  i: number) {
   if ((msg.charCodeAt(i) & 0xFC00) !== 0xD800) {
     return false;
   }
@@ -15,7 +15,7 @@ function isSurrogatePair(msg: Message,  i: number) {
   return (msg.charCodeAt(i + 1) & 0xFC00) === 0xDC00;
 }
 
-function toArray(msg: Message,  enc: Encoding) {
+function toArray(msg: any,  enc: any) {
   if (Array.isArray(msg))
     return msg.slice();
   if (!msg)
@@ -79,7 +79,7 @@ function htonl(w: number) {
 }
 exports.htonl = htonl;
 
-function toHex32(msg: number,  endian: Endian) {
+function toHex32(msg: Buffer,  endian: number) {
   var res = '';
   for (var i = 0; i < msg.length; i++) {
     var w = msg[i];
@@ -91,7 +91,7 @@ function toHex32(msg: number,  endian: Endian) {
 }
 exports.toHex32 = toHex32;
 
-function zero2(word: number) {
+function zero2(word: Uint8Array) {
   if (word.length === 1)
     return '0' + word;
   else
@@ -99,7 +99,7 @@ function zero2(word: number) {
 }
 exports.zero2 = zero2;
 
-function zero8(word: number) {
+function zero8(word: Uint8Array) {
   if (word.length === 7)
     return '0' + word;
   else if (word.length === 6)
@@ -119,7 +119,7 @@ function zero8(word: number) {
 }
 exports.zero8 = zero8;
 
-function join32(msg: Buffer,  start: number,  end: number,  endian: number) {
+function join32(msg: ArrayBufferView,  start: number,  end: number,  endian: number) {
   var len = end - start;
   assert(len % 4 === 0);
   var res = new Array(len / 4);
@@ -135,7 +135,7 @@ function join32(msg: Buffer,  start: number,  end: number,  endian: number) {
 }
 exports.join32 = join32;
 
-function split32(msg: Buffer,  endian: Endian) {
+function split32(msg: number,  endian: number) {
   var res = new Array(msg.length * 4);
   for (var i = 0, k = 0; i < msg.length; i++, k += 4) {
     var m = msg[i];
@@ -185,7 +185,7 @@ function sum32_5(a: number,  b: number,  c: number,  d: number,  e: number) {
 }
 exports.sum32_5 = sum32_5;
 
-function sum64(buf: Uint8Array,  pos: number,  ah: number,  al: number) {
+function sum64(buf: Buffer,  pos: number,  ah: number,  al: number) {
   var bh = buf[pos];
   var bl = buf[pos + 1];
 
@@ -209,7 +209,7 @@ function sum64_lo(ah: number,  al: number,  bh: number,  bl: number) {
 }
 exports.sum64_lo = sum64_lo;
 
-function sum64_4_hi(ah: number,  al: number,  bh: number,  bl: number,  ch: number,  cl: number,  dh: number,  dl: number) {
+function sum64_4_hi(ah: ah,  al: al,  bh: bh,  bl: bl,  ch: ch,  cl: cl,  dh: dh,  dl: dl) {
   var carry = 0;
   var lo = al;
   lo = (lo + bl) >>> 0;
@@ -224,13 +224,13 @@ function sum64_4_hi(ah: number,  al: number,  bh: number,  bl: number,  ch: numb
 }
 exports.sum64_4_hi = sum64_4_hi;
 
-function sum64_4_lo(ah: number,  al: number,  bh: number,  bl: number,  ch: number,  cl: number,  dh: number,  dl: number) {
+function sum64_4_lo(ah: ah,  al: al,  bh: bh,  bl: bl,  ch: ch,  cl: cl,  dh: dh,  dl: dl) {
   var lo = al + bl + cl + dl;
   return lo >>> 0;
 }
 exports.sum64_4_lo = sum64_4_lo;
 
-function sum64_5_hi(ah: number,  al: number,  bh: number,  bl: number,  ch: number,  cl: number,  dh: number,  dl: number,  eh: number,  el: number) {
+function sum64_5_hi(ah: ah,  al: al,  bh: bh,  bl: bl,  ch: ch,  cl: cl,  dh: dh,  dl: dl,  eh: eh,  el: el) {
   var carry = 0;
   var lo = al;
   lo = (lo + bl) >>> 0;
@@ -247,7 +247,7 @@ function sum64_5_hi(ah: number,  al: number,  bh: number,  bl: number,  ch: numb
 }
 exports.sum64_5_hi = sum64_5_hi;
 
-function sum64_5_lo(ah: number,  al: number,  bh: number,  bl: number,  ch: number,  cl: number,  dh: number,  dl: number,  eh: number,  el: number) {
+function sum64_5_lo(ah: ah,  al: al,  bh: bh,  bl: bl,  ch: ch,  cl: cl,  dh: dh,  dl: dl,  eh: eh,  el: el) {
   var lo = al + bl + cl + dl + el;
 
   return lo >>> 0;
@@ -260,7 +260,7 @@ function rotr64_hi(ah: number,  al: number,  num: number) {
 }
 exports.rotr64_hi = rotr64_hi;
 
-function rotr64_lo(ah: Word64,  al: Word64,  num: Word64) {
+function rotr64_lo(ah: number,  al: number,  num: number) {
   var r = (ah << (32 - num)) | (al >>> num);
   return r >>> 0;
 }
@@ -271,7 +271,7 @@ function shr64_hi(ah: number,  al: number,  num: number) {
 }
 exports.shr64_hi = shr64_hi;
 
-function shr64_lo(ah: Word64,  al: Word64,  num: Word64) {
+function shr64_lo(ah: number,  al: number,  num: number) {
   var r = (ah << (32 - num)) | (al >>> num);
   return r >>> 0;
 }

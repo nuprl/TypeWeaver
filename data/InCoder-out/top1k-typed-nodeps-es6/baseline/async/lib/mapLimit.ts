@@ -22,7 +22,7 @@ import awaitify from './internal/awaitify.js'
  * transformed items from the `coll`. Invoked with (err, results).
  * @returns {Promise} a promise, if no callback is passed
  */
-function mapLimit (coll: Collection,  limit: number,  iteratee: Function,  callback: Function) {
+function mapLimit (coll: AsyncIterable<any>,  limit: number,  iteratee: any,  callback: Function) {
     return _map(eachOfLimit(limit), coll, iteratee, callback)
 }
 export default awaitify(mapLimit, 4);

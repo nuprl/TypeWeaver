@@ -8,11 +8,11 @@ var rfocusable = /^(?:input|select|textarea|button)$/i,
 	rclickable = /^(?:a|area)$/i;
 
 jQuery.fn.extend( {
-	prop: function( name: string,  value : any) {
+	prop: function( name: String,  value : String) {
 		return access( this, jQuery.prop, name, value, arguments.length > 1 );
 	},
 
-	removeProp: function( name : string) {
+	removeProp: function( name : String) {
 		return this.each( function() {
 			delete this[ jQuery.propFix[ name ] || name ];
 		} );
@@ -20,7 +20,7 @@ jQuery.fn.extend( {
 } );
 
 jQuery.extend( {
-	prop: function( elem: Element,  name: string,  value : any) {
+	prop: function( elem: Element,  name: String,  value : String) {
 		var ret, hooks,
 			nType = elem.nodeType;
 
@@ -54,7 +54,7 @@ jQuery.extend( {
 
 	propHooks: {
 		tabIndex: {
-			get: function( elem : Element) {
+			get: function( elem : elem.ownerDocument) {
 
 				// Support: IE <=9 - 11+
 				// elem.tabIndex doesn't always return the
@@ -94,7 +94,7 @@ jQuery.extend( {
 // is disabled for this code since it considers such accessions noop.
 if ( isIE ) {
 	jQuery.propHooks.selected = {
-		get: function( elem : HTMLElement) {
+		get: function( elem : any) {
 
 			var parent = elem.parentNode;
 			if ( parent && parent.parentNode ) {
@@ -103,7 +103,7 @@ if ( isIE ) {
 			}
 			return null;
 		},
-		set: function( elem : HTMLElement) {
+		set: function( elem : any) {
 
 
 			var parent = elem.parentNode;

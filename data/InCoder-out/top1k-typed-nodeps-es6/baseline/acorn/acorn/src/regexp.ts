@@ -208,7 +208,7 @@ pp.regexp_eatTerm = function(state: State) {
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-annexB-Assertion
-pp.regexp_eatAssertion = function(state: ImmersiveState) {
+pp.regexp_eatAssertion = function(state: State) {
   const start = state.pos
   state.lastAssertionIsQuantifiable = false
 
@@ -246,7 +246,7 @@ pp.regexp_eatAssertion = function(state: ImmersiveState) {
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-Quantifier
-pp.regexp_eatQuantifier = function(state: State,  noError = false: Boolean) {
+pp.regexp_eatQuantifier = function(state: State,  noError = false: State) {
   if (this.regexp_eatQuantifierPrefix(state, noError)) {
     state.eat(0x3F /* ? */)
     return true
@@ -299,7 +299,7 @@ pp.regexp_eatAtom = function(state: State) {
     this.regexp_eatCapturingGroup(state)
   )
 }
-pp.regexp_eatReverseSolidusAtomEscape = function(state: ImmersiveState) {
+pp.regexp_eatReverseSolidusAtomEscape = function(state: State) {
   const start = state.pos
   if (state.eat(0x5C /* \ */)) {
     if (this.regexp_eatAtomEscape(state)) {
@@ -309,7 +309,7 @@ pp.regexp_eatReverseSolidusAtomEscape = function(state: ImmersiveState) {
   }
   return false
 }
-pp.regexp_eatUncapturingGroup = function(state: ImmersiveState) {
+pp.regexp_eatUncapturingGroup = function(state: State) {
   const start = state.pos
   if (state.eat(0x28 /* ( */)) {
     if (state.eat(0x3F /* ? */) && state.eat(0x3A /* : */)) {
@@ -362,7 +362,7 @@ pp.regexp_eatInvalidBracedQuantifier = function(state: State) {
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-SyntaxCharacter
-pp.regexp_eatSyntaxCharacter = function(state: any) {
+pp.regexp_eatSyntaxCharacter = function(state: State) {
   const ch = state.current()
   if (isSyntaxCharacter(ch)) {
     state.lastIntValue = ch
@@ -463,7 +463,7 @@ pp.regexp_eatRegExpIdentifierName = function(state: State) {
 //   `$`
 //   `_`
 //   `\` RegExpUnicodeEscapeSequence[+U]
-pp.regexp_eatRegExpIdentifierStart = function(state: ImmersiveState) {
+pp.regexp_eatRegExpIdentifierStart = function(state: State) {
   const start = state.pos
   const forceU = this.options.ecmaVersion >= 11
   let ch = state.current(forceU)
@@ -491,7 +491,7 @@ function isRegExpIdentifierStart(ch: number) {
 //   `\` RegExpUnicodeEscapeSequence[+U]
 //   <ZWNJ>
 //   <ZWJ>
-pp.regexp_eatRegExpIdentifierPart = function(state: ImmersiveState) {
+pp.regexp_eatRegExpIdentifierPart = function(state: State) {
   const start = state.pos
   const forceU = this.options.ecmaVersion >= 11
   let ch = state.current(forceU)
@@ -513,7 +513,7 @@ function isRegExpIdentifierPart(ch: number) {
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-annexB-AtomEscape
-pp.regexp_eatAtomEscape = function(state: any) {
+pp.regexp_eatAtomEscape = function(state: State) {
   if (
     this.regexp_eatBackReference(state) ||
     this.regexp_eatCharacterClassEscape(state) ||
@@ -531,7 +531,7 @@ pp.regexp_eatAtomEscape = function(state: any) {
   }
   return false
 }
-pp.regexp_eatBackReference = function(state: ImmersiveState) {
+pp.regexp_eatBackReference = function(state: State) {
   const start = state.pos
   if (this.regexp_eatDecimalEscape(state)) {
     const n = state.lastIntValue
@@ -572,7 +572,7 @@ pp.regexp_eatCharacterEscape = function(state: State) {
     this.regexp_eatIdentityEscape(state)
   )
 }
-pp.regexp_eatCControlLetter = function(state: ImmersiveState) {
+pp.regexp_eatCControlLetter = function(state: State) {
   const start = state.pos
   if (state.eat(0x63 /* c */)) {
     if (this.regexp_eatControlLetter(state)) {
@@ -592,7 +592,7 @@ pp.regexp_eatZero = function(state: State) {
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-ControlEscape
-pp.regexp_eatControlEscape = function(state: any) {
+pp.regexp_eatControlEscape = function(state: State) {
   const ch = state.current()
   if (ch === 0x74 /* t */) {
     state.lastIntValue = 0x09 /* \t */
@@ -623,7 +623,7 @@ pp.regexp_eatControlEscape = function(state: any) {
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-ControlLetter
-pp.regexp_eatControlLetter = function(state: any) {
+pp.regexp_eatControlLetter = function(state: State) {
   const ch = state.current()
   if (isControlLetter(ch)) {
     state.lastIntValue = ch % 0x20
@@ -640,7 +640,7 @@ function isControlLetter(ch: number) {
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-RegExpUnicodeEscapeSequence
-pp.regexp_eatRegExpUnicodeEscapeSequence = function(state: State,  forceU = false: ForceU) {
+pp.regexp_eatRegExpUnicodeEscapeSequence = function(state: State,  forceU = false: Boolean) {
   const start = state.pos
   const switchU = forceU || state.switchU
 
@@ -784,7 +784,7 @@ pp.regexp_eatUnicodePropertyValueExpression = function(state: State) {
   }
   return false
 }
-pp.regexp_validateUnicodePropertyNameAndValue = function(state: State,  name: string,  value: any) {
+pp.regexp_validateUnicodePropertyNameAndValue = function(state: any,  name: any,  value: any) {
   if (!hasOwn(state.unicodeProperties.nonBinary, name))
     state.raise("Invalid property name")
   if (!state.unicodeProperties.nonBinary[name].test(value))
@@ -921,7 +921,7 @@ pp.regexp_eatClassEscape = function(state: State) {
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-annexB-ClassControlLetter
-pp.regexp_eatClassControlLetter = function(state: any) {
+pp.regexp_eatClassControlLetter = function(state: State) {
   const ch = state.current()
   if (isDecimalDigit(ch) || ch === 0x5F /* _ */) {
     state.lastIntValue = ch % 0x20
@@ -932,7 +932,7 @@ pp.regexp_eatClassControlLetter = function(state: any) {
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-HexEscapeSequence
-pp.regexp_eatHexEscapeSequence = function(state: ImmersiveState) {
+pp.regexp_eatHexEscapeSequence = function(state: State) {
   const start = state.pos
   if (state.eat(0x78 /* x */)) {
     if (this.regexp_eatFixedHexDigits(state, 2)) {
@@ -1010,7 +1010,7 @@ pp.regexp_eatLegacyOctalEscapeSequence = function(state: State) {
 }
 
 // https://www.ecma-international.org/ecma-262/8.0/#prod-OctalDigit
-pp.regexp_eatOctalDigit = function(state: any) {
+pp.regexp_eatOctalDigit = function(state: State) {
   const ch = state.current()
   if (isOctalDigit(ch)) {
     state.lastIntValue = ch - 0x30 /* 0 */

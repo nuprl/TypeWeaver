@@ -8,7 +8,7 @@
  * @param {Function} comparer The function to define sort order.
  * @returns {Array} Returns `array`.
  */
-function baseSortBy(array: Array,  comparer: Function) {
+function baseSortBy(array: Array<any>,  comparer: any) {
   let { length } = array
 
   array.sort(comparer)

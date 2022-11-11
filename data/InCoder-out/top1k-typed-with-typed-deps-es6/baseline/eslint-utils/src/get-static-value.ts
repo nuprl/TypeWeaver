@@ -117,7 +117,7 @@ const callPassThrough = new Set([
  * @param {object} object The object to get.
  * @param {string|number|symbol} name The property name to get.
  */
-function getPropertyDescriptor(object: any,  name: PropertyKey) {
+function getPropertyDescriptor(object: Object,  name: string | symbol) {
     let x = object
     while ((typeof x === "object" || typeof x === "function") && x !== null) {
         const d = Object.getOwnPropertyDescriptor(x, name)
@@ -134,7 +134,7 @@ function getPropertyDescriptor(object: any,  name: PropertyKey) {
  * @param {object} object The object to check.
  * @param {string|number|symbol} name The property name to check.
  */
-function isGetter(object: any,  name: PropertyName) {
+function isGetter(object: any,  name: any) {
     const d = getPropertyDescriptor(object, name)
     return d != null && d.get != null
 }
@@ -145,7 +145,7 @@ function isGetter(object: any,  name: PropertyName) {
  * @param {Scope|undefined} initialScope The initial scope to find variables.
  * @returns {any[]|null} The value list if all nodes are constant. Otherwise, null.
  */
-function getElementValues(nodeList: any,  initialScope: any) {
+function getElementValues(nodeList: NodeList,  initialScope: Scope) {
     const valueList = []
 
     for (let i = 0; i < nodeList.length; ++i) {
@@ -534,7 +534,7 @@ function getStaticValueR(node: StaticValueNode,  initialScope: Scope) {
  * @param {Scope} [initialScope] The scope to start finding variable. Optional. If the node is a computed property node and this scope was given, this checks the computed property name by the `getStringIfConstant` function with the scope, and returns the value of it.
  * @returns {{value:any}|{value:undefined,optional?:true}|null} The static value of the property name of the node, or `null`.
  */
-function getStaticPropertyNameValue(node: PropertyAccessExpression,  initialScope: initialScope) {
+function getStaticPropertyNameValue(node: any,  initialScope: any) {
     const nameNode = node.type === "Property" ? node.key : node.property
 
     if (node.computed) {
@@ -561,7 +561,7 @@ function getStaticPropertyNameValue(node: PropertyAccessExpression,  initialScop
  * @param {Scope} [initialScope] The scope to start finding variable. Optional. If this scope was given, this tries to resolve identifier references which are in the given node as much as possible.
  * @returns {{value:any}|{value:undefined,optional?:true}|null} The static value of the node, or `null`.
  */
-export function getStaticValue(node: StaticNode,  initialScope = null: Scope) {
+export function getStaticValue(node: ASTNode,  initialScope = null: Scope) {
     try {
         return getStaticValueR(node, initialScope)
     } catch (_error) {

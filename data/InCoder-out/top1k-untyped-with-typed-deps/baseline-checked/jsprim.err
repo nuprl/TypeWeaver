@@ -1,21 +1,20 @@
-lib/jsprim-jsv.ts(12,40): error TS2304: Cannot find name 'JSVSchema'.
-lib/jsprim-jsv.ts(12,59): error TS2304: Cannot find name 'JSVInput'.
 lib/jsprim-jsv.ts(46,5): error TS2339: Property 'jsv_details' does not exist on type 'Error'.
-lib/jsprim.ts(157,14): error TS2339: Property 'indexOf' does not exist on type 'string | number'.
+lib/jsprim.ts(157,14): error TS2339: Property 'indexOf' does not exist on type 'string | number | symbol'.
   Property 'indexOf' does not exist on type 'number'.
-lib/jsprim.ts(161,17): error TS2339: Property 'substr' does not exist on type 'string | number'.
+lib/jsprim.ts(161,17): error TS2339: Property 'substr' does not exist on type 'string | number | symbol'.
   Property 'substr' does not exist on type 'number'.
-lib/jsprim.ts(165,32): error TS2339: Property 'substr' does not exist on type 'string | number'.
+lib/jsprim.ts(165,32): error TS2339: Property 'substr' does not exist on type 'string | number | symbol'.
   Property 'substr' does not exist on type 'number'.
-lib/jsprim.ts(227,14): error TS2339: Property 'substr' does not exist on type 'string | RegExp'.
-  Property 'substr' does not exist on type 'RegExp'.
-lib/jsprim.ts(227,31): error TS2339: Property 'length' does not exist on type 'string | RegExp'.
-  Property 'length' does not exist on type 'RegExp'.
-lib/jsprim.ts(332,28): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
+lib/jsprim.ts(176,29): error TS2345: Argument of type 'undefined[]' is not assignable to parameter of type 'number'.
+lib/jsprim.ts(185,16): error TS2339: Property 'slice' does not exist on type 'number'.
+lib/jsprim.ts(197,16): error TS2339: Property 'slice' does not exist on type 'number'.
+lib/jsprim.ts(332,28): error TS2304: Cannot find name 'ny'.
 lib/jsprim.ts(342,13): error TS2554: Expected 3 arguments, but got 2.
 lib/jsprim.ts(529,39): error TS2304: Cannot find name 'JsonObjectSchema'.
 lib/jsprim.ts(529,65): error TS2304: Cannot find name 'JsonObject'.
-lib/jsprim.ts(681,22): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'number'.
-lib/jsprim.ts(704,27): error TS2345: Argument of type 'string | string[]' is not assignable to parameter of type 'string'.
-  Type 'string[]' is not assignable to type 'string'.
+lib/jsprim.ts(590,15): error TS2345: Argument of type 'number' is not assignable to parameter of type 'number[]'.
+lib/jsprim.ts(591,15): error TS2345: Argument of type 'number' is not assignable to parameter of type 'number[]'.
+lib/jsprim.ts(611,27): error TS2304: Cannot find name 'hrtime_t'.
+lib/jsprim.ts(677,15): error TS2345: Argument of type 'number' is not assignable to parameter of type 'number[]'.
+lib/jsprim.ts(681,26): error TS2345: Argument of type 'number' is not assignable to parameter of type 'number[]'.
 

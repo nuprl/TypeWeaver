@@ -14,7 +14,7 @@ const internal = new WeakMap()
  * @param {number} index The location of the character to check.
  * @returns {boolean} `true` if the character is escaped.
  */
-function isEscaped(str: string | number,  index: number) {
+function isEscaped(str: string | RegExp,  index: number) {
     let escaped = false
     for (let i = index - 1; i >= 0 && str.charCodeAt(i) === 0x5c; --i) {
         escaped = !escaped
@@ -29,7 +29,7 @@ function isEscaped(str: string | number,  index: number) {
  * @param {string} replacement The new substring to replace each matched part.
  * @returns {string} The replaced string.
  */
-function replaceS(matcher: RegExp,  str: string | string,  replacement: string) {
+function replaceS(matcher: RegExpMatchArray,  str: string,  replacement: string) {
     const chunks = []
     let index = 0
 
@@ -77,7 +77,7 @@ function replaceS(matcher: RegExp,  str: string | string,  replacement: string) 
  * @param {(...strs[])=>string} replace The function to replace each matched part.
  * @returns {string} The replaced string.
  */
-function replaceF(matcher: RegExp,  str: string,  replace: Function) {
+function replaceF(matcher: RegExp,  str: string,  replace: string) {
     const chunks = []
     let index = 0
 

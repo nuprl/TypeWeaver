@@ -17,13 +17,13 @@ var $mapHas = $Map ? Map.prototype.has : null;
 var $setHas = $Set ? Set.prototype.has : null;
 if (!exported && !$setHas) {
 	// eslint-disable-next-line no-unused-vars
-	exported = function isSet(x: Set) {
+	exported = function isSet(x: any) {
 		// `Set` does not have a `has` method
 		return false;
 	};
 }
 
-export default exported || function isSet(x: any) {
+export default exported || function isSet(x: ny) {
 	if (!x || typeof x !== 'object') {
 		return false;
 	}

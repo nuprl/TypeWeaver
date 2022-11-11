@@ -111,7 +111,7 @@ class FileSystemBlobStore {
     const newMap = {};
     let offset = 0;
 
-    function push(key: any,  invalidationKey: any,  buffer: Buffer) {
+    function push(key: Buffer,  invalidationKey: Buffer,  buffer: Buffer) {
       buffers.push(buffer);
       newMap[key] = [invalidationKey, offset, offset + buffer.length];
       offset += buffer.length;
@@ -152,15 +152,15 @@ class NativeCompileCache {
     const self = this;
     const hasRequireResolvePaths = typeof require.resolve.paths === 'function';
     this._previousModuleCompile = Module.prototype._compile;
-    Module.prototype._compile = function(content: any,  filename: string | null) {
+    Module.prototype._compile = function(content: String,  filename: String) {
       const mod = this;
 
-      function require(id: string) {
+      function require(id: any) {
         return mod.require(id);
       }
 
       // https://github.com/nodejs/node/blob/v10.15.3/lib/internal/modules/cjs/helpers.js#L28
-      function resolve(request: Request,  options: RequestOptions) {
+      function resolve(request: Request,  options: RequestOptionsArgs) {
         return Module._resolveFilename(request, mod, false, options);
       }
       require.resolve = resolve;
@@ -269,7 +269,7 @@ class NativeCompileCache {
 // https://github.com/zertosh/slash-escape/blob/e7ebb99/slash-escape.js
 //------------------------------------------------------------------------------
 
-function mkdirpSync(p_: string | null) {
+function mkdirpSync(p_: string | Buffer) {
   _mkdirpSync(path.resolve(p_), 0o777);
 }
 
@@ -291,7 +291,7 @@ function _mkdirpSync(p: string | Buffer,  mode: number) {
   }
 }
 
-function slashEscape(str: string | undefined) {
+function slashEscape(str: string | null) {
   const ESCAPE_LOOKUP = {
     '\\': 'zB',
     ':': 'zC',

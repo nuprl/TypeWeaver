@@ -88,7 +88,7 @@ module.exports = (list, options) => {
 
   let lastIdentifiers = modulesToDom(list, options);
 
-  return function update(newList: List) {
+  return function update(newList: Array<any>) {
     newList = newList || [];
 
     for (let i = 0; i < lastIdentifiers.length; i++) {

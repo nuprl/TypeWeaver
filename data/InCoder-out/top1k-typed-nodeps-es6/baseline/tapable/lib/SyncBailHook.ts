@@ -37,7 +37,7 @@ const COMPILE = function(options: any) {
 	return factory.create(options);
 };
 
-function SyncBailHook(args = []: Array<any>,  name = undefined: string | symbol) {
+function SyncBailHook(args = []: Array<any>,  name = undefined: any) {
 	const hook = new Hook(args, name);
 	hook.constructor = SyncBailHook;
 	hook.tapAsync = TAP_ASYNC;

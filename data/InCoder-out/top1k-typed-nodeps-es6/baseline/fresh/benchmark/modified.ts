@@ -31,7 +31,7 @@ suite.on('start', function onCycle (event: Event) {
   process.stdout.write('  modified\n\n')
 })
 
-suite.on('cycle', function onCycle (event: Event) {
+suite.on('cycle', function onCycle (event: BenchmarkEvent) {
   benchmarks.add(event.target)
 })
 

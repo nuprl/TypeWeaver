@@ -9,7 +9,7 @@ function inherits (fn: Function,  sup: Function) {
 
 // create a new export function, used by both the main export and
 // the .ctor export, contains common logic for dealing with arguments
-function through2 (construct: Function) {
+function through2 (construct: Construct) {
   return (options, transform, flush) => {
     if (typeof options === 'function') {
       flush = transform
@@ -46,7 +46,7 @@ const make = through2((options, transform, flush) => {
 // make me a reusable prototype that I can `new`, or implicitly `new`
 // with a constructor call
 const ctor = through2((options, transform, flush) => {
-  function Through2 (override: Through) {
+  function Through2 (override: Through2Override) {
     if (!(this instanceof Through2)) {
       return new Through2(override)
     }
@@ -66,7 +66,7 @@ const ctor = through2((options, transform, flush) => {
   return Through2
 })
 
-const obj = through2(function (options: any,  transform: any,  flush: Function) {
+const obj = through2(function (options: any,  transform: any,  flush: any) {
   const t2 = new Transform(Object.assign({ objectMode: true, highWaterMark: 16 }, options))
 
   t2._transform = transform

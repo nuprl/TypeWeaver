@@ -1,6 +1,6 @@
 export default shift;
 
-function shift (stream: Readable) {
+function shift (stream: BufferStream) {
   var rs = stream._readableState
   if (!rs) return null
   return (rs.objectMode || typeof stream._duplexState === 'number') ? stream.read() : stream.read(getStateLength(rs))

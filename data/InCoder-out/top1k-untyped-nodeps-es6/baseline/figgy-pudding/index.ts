@@ -89,13 +89,13 @@ try {
   }
 } catch (e) {}
 
-function BadKeyError (key: string | number) {
+function BadKeyError (key: any) {
   throw Object.assign(new Error(
     `invalid config key requested: ${key}`
   ), {code: 'EBADKEY'})
 }
 
-function pudGet (pud: Pure,  key: any,  validate: Function) {
+function pudGet (pud: any,  key: any,  validate: any) {
   let spec = pud.__specs[key]
   if (validate && !spec && (!pud.__opts.other || !pud.__opts.other(key))) {
     BadKeyError(key)
@@ -176,7 +176,7 @@ const proxyHandler = {
 
 export default figgyPudding;
 function figgyPudding (specs: any,  opts: any) {
-  function factory (...providers: any) {
+  function factory (...providers: Provider[]) {
     return new Proxy(new FiggyPudding(
       specs,
       opts,
@@ -186,12 +186,12 @@ function figgyPudding (specs: any,  opts: any) {
   return factory
 }
 
-function reverse (arr: Array<any>) {
+function reverse (arr: number[]) {
   const ret = []
   arr.forEach(x => ret.unshift(x))
   return ret
 }
 
-function entries (obj: Object) {
+function entries (obj: any) {
   return Object.keys(obj).map(k => [k, obj[k]])
 }

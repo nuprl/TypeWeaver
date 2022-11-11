@@ -10,7 +10,7 @@ import hasIn from '../hasIn.js'
  * @param {string[]} paths The property paths to pick.
  * @returns {Object} Returns the new object.
  */
-function basePick(object: Object,  paths: Array<string>) {
+function basePick(object: any,  paths: Array<string>) {
   return basePickBy(object, paths, (value, path) => hasIn(object, path))
 }
 

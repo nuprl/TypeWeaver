@@ -45,7 +45,7 @@ function Stream() {
   EE.call(this);
 }
 
-Stream.prototype.pipe = function(dest: any,  options: any) {
+Stream.prototype.pipe = function(dest: Buffer,  options: Object) {
   var source = this;
 
   function ondata(chunk: Buffer) {

@@ -9,7 +9,7 @@
 
 import typeOf from 'kind-of';
 
-export default function has(val: mixed) {
+export default function has(val: any) {
   switch (typeOf(val)) {
     case 'boolean':
     case 'date':

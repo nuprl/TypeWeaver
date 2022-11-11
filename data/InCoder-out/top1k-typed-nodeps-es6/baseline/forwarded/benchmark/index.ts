@@ -43,7 +43,7 @@ suite.add({
   fn: 'var addrs = forwarded(req5)'
 })
 
-suite.on('cycle', function onCycle (event: Event) {
+suite.on('cycle', function onCycle (event: BenchmarkEvent) {
   benchmarks.add(event.target)
 })
 

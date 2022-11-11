@@ -3,7 +3,7 @@
  * used to emulate Prototype up/down/previous/next methods
  */
 
-(function(D: D){
+(function(D: DataSet){
 
   // TODO: all of this needs tests
   var match = D.match, select = D.select, root = document.documentElement,
@@ -42,7 +42,7 @@
    * @param {String | Number} expr CSS expression or an index
    * @return {HTMLElement | null}
    */
-  function up(element: HTMLElement,  expr: Function) {
+  function up(element: Element,  expr: Expression) {
     return walkElements(parentElement, element, expr);
   }
   /**
@@ -60,7 +60,7 @@
    * @param {String | Number} expr CSS expression or an index
    * @return {HTMLElement | null}
    */
-  function previous(element: Element,  expr: Expression) {
+  function previous(element: any,  expr: any) {
     return walkElements(previousElement, element, expr);
   }
   /**
@@ -69,7 +69,7 @@
    * @param {String | Number} expr CSS expression or an index
    * @return {HTMLElement | null}
    */
-  function down(element: HTMLElement,  expr: Function) {
+  function down(element: any,  expr: any) {
     var isIndex = typeof expr == 'number', descendants, index, descendant;
     if (expr === null) {
       element = element.firstChild;

@@ -6,13 +6,13 @@ var YAMLException = require('./exception');
 var Type          = require('./type');
 
 
-function compileList(schema: Schema,  name: string | undefined) {
+function compileList(schema: Schema,  name: Schema.Types.Name) {
   var result = [];
 
-  schema[name].forEach(function (currentType: Type) {
+  schema[name].forEach(function (currentType: any) {
     var newIndex = result.length;
 
-    result.forEach(function (previousType: any,  previousIndex: number) {
+    result.forEach(function (previousType: any,  previousIndex: any) {
       if (previousType.tag === currentType.tag &&
           previousType.kind === currentType.kind &&
           previousType.multi === currentType.multi) {
@@ -28,7 +28,7 @@ function compileList(schema: Schema,  name: string | undefined) {
 }
 
 
-function compileMap(/* lists... */: Array<any>) {
+function compileMap(/* lists... */: Array<Array<any>>) {
   var result = {
         scalar: {},
         sequence: {},
@@ -42,7 +42,7 @@ function compileMap(/* lists... */: Array<any>) {
         }
       }, index, length;
 
-  function collectType(type: Type) {
+  function collectType(type: TypeNode) {
     if (type.multi) {
       result.multi[type.kind].push(type);
       result.multi['fallback'].push(type);
@@ -63,7 +63,7 @@ function Schema(definition: SchemaDefinition) {
 }
 
 
-Schema.prototype.extend = function extend(definition: any) {
+Schema.prototype.extend = function extend(definition: Object) {
   var implicit = [];
   var explicit = [];
 

@@ -82,7 +82,7 @@ function format (obj: ny) {
  * @public
  */
 
-function test (string: any) {
+function test (string: string | RegExp) {
   if (!string) {
     throw new TypeError('argument string is required')
   }
@@ -102,7 +102,7 @@ function test (string: any) {
  * @public
  */
 
-function parse (string: any) {
+function parse (string: string | null) {
   if (!string) {
     throw new TypeError('argument string is required')
   }

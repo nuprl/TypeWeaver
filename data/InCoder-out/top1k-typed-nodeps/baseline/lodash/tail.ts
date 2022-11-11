@@ -10,7 +10,7 @@
  * tail([1, 2, 3])
  * // => [2, 3]
  */
-function tail(array: Array<T>) {
+function tail(array: number[]) {
   const length = array == null ? 0 : array.length
   if (!length) {
     return []

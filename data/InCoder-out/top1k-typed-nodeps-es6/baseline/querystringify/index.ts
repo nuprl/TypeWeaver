@@ -10,7 +10,7 @@ var has = Object.prototype.hasOwnProperty
  * @returns {String|Null} The decoded string.
  * @api private
  */
-function decode(input: Buffer) {
+function decode(input: Uint8Array) {
   try {
     return decodeURIComponent(input.replace(/\+/g, ' '));
   } catch (e) {
@@ -25,7 +25,7 @@ function decode(input: Buffer) {
  * @returns {String|Null} The encoded string.
  * @api private
  */
-function encode(input: any) {
+function encode(input: Uint8Array) {
   try {
     return encodeURIComponent(input);
   } catch (e) {
@@ -40,7 +40,7 @@ function encode(input: any) {
  * @returns {Object}
  * @api public
  */
-function querystring(query: Object) {
+function querystring(query: string | string[]) {
   var parser = /([^=?#&]+)=?([^&]*)/g
     , result = {}
     , part;
@@ -72,7 +72,7 @@ function querystring(query: Object) {
  * @returns {String}
  * @api public
  */
-function querystringify(obj: any,  prefix: string) {
+function querystringify(obj: any,  prefix: string | null) {
   prefix = prefix || '';
 
   var pairs = []

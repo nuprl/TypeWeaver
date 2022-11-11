@@ -6,7 +6,7 @@ import parseHeaders from '../helpers/parseHeaders.js';
 const $internals = Symbol('internals');
 const $defaults = Symbol('defaults');
 
-function normalizeHeader(header: Header) {
+function normalizeHeader(header: string | undefined) {
   return header && String(header).trim().toLowerCase();
 }
 
@@ -18,7 +18,7 @@ function normalizeValue(value: any) {
   return String(value);
 }
 
-function parseTokens(str: string | number) {
+function parseTokens(str: string | null) {
   const tokens = Object.create(null);
   const tokensRE = /([^\s,;=]+)\s*(?:=\s*([^,;]+))?/g;
   let match;
@@ -66,7 +66,7 @@ function buildAccessors(obj: any,  header: any) {
   });
 }
 
-function findKey(obj: Object,  key: string | symbol) {
+function findKey(obj: any,  key: string | number | symbol) {
   key = key.toLowerCase();
   const keys = Object.keys(obj);
   let i = keys.length;
@@ -80,16 +80,16 @@ function findKey(obj: Object,  key: string | symbol) {
   return null;
 }
 
-function AxiosHeaders(headers: any,  defaults: any) {
+function AxiosHeaders(headers: Object,  defaults: Object) {
   headers && this.set(headers);
   this[$defaults] = defaults || null;
 }
 
 Object.assign(AxiosHeaders.prototype, {
-  set: function(header: any,  valueOrRewrite: any,  rewrite: Function) {
+  set: function(header: Header,  valueOrRewrite: any,  rewrite: Function) {
     const self = this;
 
-    function setHeader(_value: any,  _header: any,  _rewrite: Function) {
+    function setHeader(_value: string | string[],  _header: string | string[],  _rewrite: string | string[]) {
       const lHeader = normalizeHeader(_header);
 
       if (!lHeader) {
@@ -122,7 +122,7 @@ Object.assign(AxiosHeaders.prototype, {
     return this;
   },
 
-  get: function(header: any,  parser: Parser) {
+  get: function(header: Header,  parser: Parser) {
     header = normalizeHeader(header);
 
     if (!header) return undefined;
@@ -152,7 +152,7 @@ Object.assign(AxiosHeaders.prototype, {
     }
   },
 
-  has: function(header: any,  matcher: RegExp) {
+  has: function(header: Header,  matcher: Matcher) {
     header = normalizeHeader(header);
 
     if (header) {
@@ -164,7 +164,7 @@ Object.assign(AxiosHeaders.prototype, {
     return false;
   },
 
-  delete: function(header: any,  matcher: RegExp) {
+  delete: function(header: Header,  matcher: RegExp) {
     const self = this;
     let deleted = false;
 
@@ -243,7 +243,7 @@ Object.assign(AxiosHeaders, {
     return thing instanceof this ? thing : new this(thing);
   },
 
-  accessor: function(header: any) {
+  accessor: function(header: Header) {
     const internals = this[$internals] = (this[$internals] = {
       accessors: {}
     });

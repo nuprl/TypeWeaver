@@ -7,7 +7,7 @@ import { removeSync } from '../remove';
 import { mkdirpSync } from '../mkdirs';
 import stat from '../util/stat';
 
-function moveSync (src: number,  dest: number,  opts: MoveOptions) {
+function moveSync (src: fs.Stats,  dest: fs.Stats,  opts: MoveOpts) {
   opts = opts || {}
   const overwrite = opts.overwrite || opts.clobber || false
 
@@ -17,13 +17,13 @@ function moveSync (src: number,  dest: number,  opts: MoveOptions) {
   return doRename(src, dest, overwrite, isChangingCase)
 }
 
-function isParentRoot (dest: Path) {
+function isParentRoot (dest: any) {
   const parent = path.dirname(dest)
   const parsedPath = path.parse(parent)
   return parsedPath.root === parent
 }
 
-function doRename (src: any,  dest: any,  overwrite: boolean,  isChangingCase: boolean) {
+function doRename (src: Path,  dest: Path,  overwrite: Boolean,  isChangingCase: Boolean) {
   if (isChangingCase) return rename(src, dest, overwrite)
   if (overwrite) {
     removeSync(dest)
@@ -33,7 +33,7 @@ function doRename (src: any,  dest: any,  overwrite: boolean,  isChangingCase: b
   return rename(src, dest, overwrite)
 }
 
-function rename (src: String,  dest: String,  overwrite: Boolean) {
+function rename (src: Path,  dest: Path,  overwrite: Boolean) {
   try {
     fs.renameSync(src, dest)
   } catch (err) {
@@ -42,7 +42,7 @@ function rename (src: String,  dest: String,  overwrite: Boolean) {
   }
 }
 
-function moveAcrossDevice (src: number,  dest: number,  overwrite: number) {
+function moveAcrossDevice (src: number,  dest: number,  overwrite: boolean) {
   const opts = {
     overwrite,
     errorOnExist: true

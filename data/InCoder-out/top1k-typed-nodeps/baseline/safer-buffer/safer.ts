@@ -25,7 +25,7 @@ for (key in Buffer) {
 safer.Buffer.prototype = Buffer.prototype
 
 if (!Safer.from || Safer.from === Uint8Array.from) {
-  Safer.from = function (value: any,  encodingOrOffset: number,  length: number) {
+  Safer.from = function (value: any,  encodingOrOffset: any,  length: number) {
     if (typeof value === 'number') {
       throw new TypeError('The "value" argument must not be of type number. Received type ' + typeof value)
     }

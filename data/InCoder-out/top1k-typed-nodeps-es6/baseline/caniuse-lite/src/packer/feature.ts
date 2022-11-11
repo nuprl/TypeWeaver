@@ -28,7 +28,7 @@ const getContents = getContentsFactory(base)
 const requireCall = moduleName =>
   t.callExpression(t.identifier('require'), [t.stringLiteral(moduleName)])
 
-function featureIndex(features: Feature[]) {
+function featureIndex(features: Array<Feature>) {
   let index = t.objectExpression(
     features.map(({ name }) =>
       t.objectProperty(t.stringLiteral(name), requireCall(`./features/${name}`))

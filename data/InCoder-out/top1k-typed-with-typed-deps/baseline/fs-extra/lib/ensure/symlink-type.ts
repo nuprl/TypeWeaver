@@ -2,7 +2,7 @@
 
 const fs = require('graceful-fs')
 
-function symlinkType (srcpath: string,  type: string,  callback: Function) {
+function symlinkType (srcpath: Path,  type: string,  callback: Function) {
   callback = (typeof type === 'function') ? type : callback
   type = (typeof type === 'function') ? false : type
   if (type) return callback(null, type)
@@ -13,7 +13,7 @@ function symlinkType (srcpath: string,  type: string,  callback: Function) {
   })
 }
 
-function symlinkTypeSync (srcpath: string | Buffer,  type: string) {
+function symlinkTypeSync (srcpath: string | Buffer,  type: string | number) {
   let stats
 
   if (type) return type

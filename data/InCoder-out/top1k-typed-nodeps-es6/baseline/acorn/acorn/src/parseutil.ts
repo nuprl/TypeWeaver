@@ -47,13 +47,13 @@ pp.eat = function(type: string) {
 
 // Tests whether parsed token is a contextual keyword.
 
-pp.isContextual = function(name: any) {
+pp.isContextual = function(name: String) {
   return this.type === tt.name && this.value === name && !this.containsEsc
 }
 
 // Consumes contextual keyword if possible.
 
-pp.eatContextual = function(name: any) {
+pp.eatContextual = function(name: Name) {
   if (!this.isContextual(name)) return false
   this.next()
   return true
@@ -61,7 +61,7 @@ pp.eatContextual = function(name: any) {
 
 // Asserts that following token is given contextual keyword.
 
-pp.expectContextual = function(name: any) {
+pp.expectContextual = function(name: String) {
   if (!this.eatContextual(name)) this.unexpected()
 }
 
@@ -88,7 +88,7 @@ pp.semicolon = function() {
   if (!this.eat(tt.semi) && !this.insertSemicolon()) this.unexpected()
 }
 
-pp.afterTrailingComma = function(tokType: TokenType,  notNext: boolean) {
+pp.afterTrailingComma = function(tokType: number,  notNext: number) {
   if (this.type === tokType) {
     if (this.options.onTrailingComma)
       this.options.onTrailingComma(this.lastTokStart, this.lastTokStartLoc)
@@ -101,13 +101,13 @@ pp.afterTrailingComma = function(tokType: TokenType,  notNext: boolean) {
 // Expect a token of a given type. If found, consume it, otherwise,
 // raise an unexpected token error.
 
-pp.expect = function(type: string) {
+pp.expect = function(type: TokenType) {
   this.eat(type) || this.unexpected()
 }
 
 // Raise an unexpected token error.
 
-pp.unexpected = function(pos: number) {
+pp.unexpected = function(pos: Position) {
   this.raise(pos != null ? pos : this.start, "Unexpected token")
 }
 
@@ -122,7 +122,7 @@ export class DestructuringErrors {
   }
 }
 
-pp.checkPatternErrors = function(refDestructuringErrors: boolean,  isAssign: boolean | undefined) {
+pp.checkPatternErrors = function(refDestructuringErrors: any[],  isAssign: any) {
   if (!refDestructuringErrors) return
   if (refDestructuringErrors.trailingComma > -1)
     this.raiseRecoverable(refDestructuringErrors.trailingComma, "Comma is not permitted after the rest element")
@@ -130,7 +130,7 @@ pp.checkPatternErrors = function(refDestructuringErrors: boolean,  isAssign: boo
   if (parens > -1) this.raiseRecoverable(parens, isAssign ? "Assigning to rvalue" : "Parenthesized pattern")
 }
 
-pp.checkExpressionErrors = function(refDestructuringErrors: boolean,  andThrow: boolean) {
+pp.checkExpressionErrors = function(refDestructuringErrors: any,  andThrow: any) {
   if (!refDestructuringErrors) return false
   let {shorthandAssign, doubleProto} = refDestructuringErrors
   if (!andThrow) return shorthandAssign >= 0 || doubleProto >= 0

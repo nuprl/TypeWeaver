@@ -2,19 +2,19 @@
 (function(){
   var reject, special, tokenRegex;
   reject = require('prelude-ls').reject;
-  function consumeOp(tokens: string,  op: Token){
+  function consumeOp(tokens: Token[],  op: Op){
     if (tokens[0] === op) {
       return tokens.shift();
     } else {
       throw new Error("Expected '" + op + "', but got '" + tokens[0] + "' instead in " + JSON.stringify(tokens) + ".");
     }
   }
-  function maybeConsumeOp(tokens: Token[],  op: Token){
+  function maybeConsumeOp(tokens: Token[],  op: Operator){
     if (tokens[0] === op) {
       return tokens.shift();
     }
   }
-  function consumeList(tokens: Array<string>,  arg$: Array<any>,  hasDelimiters: boolean){
+  function consumeList(tokens: Token[],  arg$: Token[],  hasDelimiters: boolean){
     var open, close, result, untilTest;
     open = arg$[0], close = arg$[1];
     if (hasDelimiters) {
@@ -31,13 +31,13 @@
     }
     return result;
   }
-  function consumeArray(tokens: Array<string>,  hasDelimiters: boolean){
+  function consumeArray(tokens: Token[],  hasDelimiters: boolean){
     return consumeList(tokens, ['[', ']'], hasDelimiters);
   }
-  function consumeTuple(tokens: Array<string>,  hasDelimiters: boolean){
+  function consumeTuple(tokens: Token[],  hasDelimiters: boolean){
     return consumeList(tokens, ['(', ')'], hasDelimiters);
   }
-  function consumeFields(tokens: TokenStream,  hasDelimiters: boolean){
+  function consumeFields(tokens: Token[],  hasDelimiters: boolean){
     var result, untilTest, key;
     if (hasDelimiters) {
       consumeOp(tokens, '{');
@@ -64,7 +64,7 @@
     }
     return out;
   }
-  function consumeElement(tokens: any[],  untilTest: Function){
+  function consumeElement(tokens: Token[],  untilTest: Token){
     switch (tokens[0]) {
     case '[':
       return consumeArray(tokens, true);
@@ -76,7 +76,7 @@
       return consumeValue(tokens, untilTest);
     }
   }
-  function consumeTopLevel(tokens: TokenStream,  types: Type[],  options: Options){
+  function consumeTopLevel(tokens: Token[],  types: Token[],  options: Options){
     var ref$, type, structure, origTokens, result, finalResult, x$, y$;
     ref$ = types[0], type = ref$.type, structure = ref$.structure;
     origTokens = tokens.concat();
@@ -96,7 +96,7 @@
   }
   special = /\[\]\(\)}{:,/.source;
   tokenRegex = RegExp('("(?:\\\\"|[^"])*")|(\'(?:\\\\\'|[^\'])*\')|(/(?:\\\\/|[^/])*/[a-zA-Z]*)|(#.*#)|([' + special + '])|([^\\s' + special + '](?:\\s*[^\\s' + special + ']+)*)|\\s*');
-  module.exports = function(types: Array,  string: String,  options: Object){
+  module.exports = function(types: string[],  string: string,  options: any){
     var tokens, node;
     options == null && (options = {});
     if (!options.explicit && types.length === 1 && types[0].type === 'String') {

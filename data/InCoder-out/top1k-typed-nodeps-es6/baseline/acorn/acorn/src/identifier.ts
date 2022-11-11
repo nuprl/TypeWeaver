@@ -41,7 +41,7 @@ const nonASCIIidentifier = new RegExp("[" + nonASCIIidentifierStartChars + nonAS
 // This has a complexity linear to the value of the code. The
 // assumption is that looking up astral identifier characters is
 // rare.
-function isInAstralSet(code: number,  set: number) {
+function isInAstralSet(code: number,  set: number[]) {
   let pos = 0x10000
   for (let i = 0; i < set.length; i += 2) {
     pos += set[i]

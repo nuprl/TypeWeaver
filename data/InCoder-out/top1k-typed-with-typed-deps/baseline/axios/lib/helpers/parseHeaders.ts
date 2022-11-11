@@ -31,7 +31,7 @@ export default rawHeaders => {
   let val;
   let i;
 
-  rawHeaders && rawHeaders.split('\n').forEach(function parser(line: Line) {
+  rawHeaders && rawHeaders.split('\n').forEach(function parser(line: String) {
     i = line.indexOf(':');
     key = line.substring(0, i).trim().toLowerCase();
     val = line.substring(i + 1).trim();

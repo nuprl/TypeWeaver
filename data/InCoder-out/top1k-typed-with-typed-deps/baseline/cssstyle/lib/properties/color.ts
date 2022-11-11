@@ -3,7 +3,7 @@
 var parseColor = require('../parsers').parseColor;
 
 module.exports.definition = {
-  set: function(v: any) {
+  set: function(v: string | number) {
     this._setProperty('color', parseColor(v));
   },
   get: function() {

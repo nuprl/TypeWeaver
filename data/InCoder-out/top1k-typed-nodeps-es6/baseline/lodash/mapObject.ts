@@ -16,7 +16,7 @@
  * map({ 'a': 4, 'b': 8 }, square)
  * // => [16, 64] (iteration order is not guaranteed)
  */
-function mapObject(object: Object,  iteratee: Function) {
+function mapObject(object: Object,  iteratee: any) {
   const props = Object.keys(object)
   const result = new Array(props.length)
 

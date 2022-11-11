@@ -2,13 +2,10 @@ example.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'Node'.
 example.ts(2,22): error TS2554: Expected 0 arguments, but got 1.
 example.ts(3,22): error TS2554: Expected 0 arguments, but got 2.
 index.ts(20,7): error TS2300: Duplicate identifier 'Node'.
-index.ts(27,14): error TS2345: Argument of type 'this' is not assignable to parameter of type 'Node'.
-  Type 'Node' is missing the following properties from type 'Node': baseURI, childNodes, firstChild, isConnected, and 46 more.
 index.ts(29,12): error TS2339: Property 'type' does not exist on type 'Node'.
 index.ts(31,14): error TS2339: Property 'value' does not exist on type 'Node'.
 index.ts(51,16): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
-index.ts(70,11): error TS2345: Argument of type 'this' is not assignable to parameter of type 'Node'.
 index.ts(92,27): error TS2339: Property 'isNode' does not exist on type 'Function'.
 index.ts(93,18): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
@@ -43,13 +40,13 @@ index.ts(229,44): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(230,47): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(231,30): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(232,25): error TS2339: Property 'nodes' does not exist on type 'Node'.
-index.ts(240,18): error TS2345: Argument of type 'this' is not assignable to parameter of type 'Node'.
 index.ts(260,26): error TS2339: Property 'isNode' does not exist on type 'Function'.
 index.ts(261,33): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(261,48): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(285,31): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(285,46): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(304,19): error TS2345: Argument of type 'this' is not assignable to parameter of type 'Node'.
+  Type 'Node' is missing the following properties from type 'Node': baseURI, childNodes, firstChild, isConnected, and 46 more.
 index.ts(324,20): error TS2345: Argument of type 'this' is not assignable to parameter of type 'Node'.
 index.ts(343,17): error TS2339: Property 'parent' does not exist on type 'Node'.
 index.ts(343,33): error TS2339: Property 'parent' does not exist on type 'Node'.
@@ -68,8 +65,6 @@ index.ts(505,45): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(505,56): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(526,17): error TS2339: Property 'parent' does not exist on type 'Node'.
 index.ts(526,31): error TS2339: Property 'parent' does not exist on type 'Node'.
-index.ts(555,39): error TS2345: Argument of type 'string | Error' is not assignable to parameter of type 'string'.
-  Type 'Error' is not assignable to type 'string'.
 index.ts(567,15): error TS2339: Property 'isNode' does not exist on type '{ new (): Node; prototype: Node; readonly ATTRIBUTE_NODE: number; readonly CDATA_SECTION_NODE: number; readonly COMMENT_NODE: number; readonly DOCUMENT_FRAGMENT_NODE: number; ... 13 more ...; readonly TEXT_NODE: number; }'.
 index.ts(569,27): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(573,18): error TS2339: Property 'value' does not exist on type 'Node'.
@@ -80,8 +75,10 @@ index.ts(594,19): error TS2339: Property 'type' does not exist on type 'Node'.
 index.ts(596,19): error TS2339: Property 'test' does not exist on type 'string'.
 index.ts(596,29): error TS2339: Property 'type' does not exist on type 'Node'.
 index.ts(599,18): error TS2339: Property 'isType' does not exist on type 'Node'.
-index.ts(610,24): error TS2304: Cannot find name 'mixed'.
-index.ts(629,37): error TS2304: Cannot find name 'Token'.
+index.ts(629,23): error TS2304: Cannot find name 'ASTNode'.
+index.ts(629,40): error TS2304: Cannot find name 'Token'.
+index.ts(629,55): error TS2304: Cannot find name 'ASTNode'.
+index.ts(644,34): error TS2367: This condition will always return 'false' since the types 'Function' and 'boolean' have no overlap.
 index.ts(652,13): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(654,26): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(655,22): error TS2339: Property 'nodes' does not exist on type 'Node'.
@@ -92,7 +89,8 @@ index.ts(659,42): error TS2554: Expected 0 arguments, but got 3.
 index.ts(659,47): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(663,7): error TS2554: Expected 2 arguments, but got 1.
 index.ts(665,10): error TS2339: Property 'size' does not exist on type 'Node'.
-index.ts(691,15): error TS2339: Property 'nodes' does not exist on type 'Node'.
+index.ts(689,22): error TS2304: Cannot find name 'ASTNode'.
+index.ts(694,36): error TS2304: Cannot find name 'VisitCallback'.
 index.ts(695,8): error TS2339: Property 'nodes' does not exist on type 'Node'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(10040,11): error TS2300: Duplicate identifier 'Node'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(10040,11): error TS2451: Cannot redeclare block-scoped variable 'Node'.

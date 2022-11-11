@@ -4,7 +4,7 @@
   VERSION = '0.4.0';
   parseType = require('./parse-type');
   parsedTypeCheck = require('./check');
-  typeCheck = function(type: string,  input: any,  options: any){
+  typeCheck = function(type: type,  input: input,  options: options){
     return parsedTypeCheck(parseType(type), input, options);
   };
 

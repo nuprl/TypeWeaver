@@ -1,4 +1,4 @@
-(function(root: any) {
+(function(root: Node) {
 	'use strict';
 
 	var CSSOM = root.CSSOM = {};

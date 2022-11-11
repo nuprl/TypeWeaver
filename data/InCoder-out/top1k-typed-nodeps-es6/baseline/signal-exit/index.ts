@@ -4,7 +4,7 @@
 // grab a reference to node's real process object right away
 var process = global.process
 
-const processOk = function (process: any) {
+const processOk = function (process: NodeJS.Process) {
   return process &&
     typeof process === 'object' &&
     typeof process.removeListener === 'function' &&
@@ -51,7 +51,7 @@ if (!processOk(process)) {
     emitter.infinite = true
   }
 
-  module.exports = function (cb: Function,  opts: Object) {
+  module.exports = function (cb: Function,  opts: any) {
     /* istanbul ignore if */
     if (!processOk(global.process)) {
       return function () {}
@@ -96,7 +96,7 @@ if (!processOk(process)) {
   }
   module.exports.unload = unload
 
-  var emit = function emit (event: string | symbol,  code: number,  signal: number) {
+  var emit = function emit (event: EventEmitter,  code: number,  signal: number) {
     /* istanbul ignore if */
     if (emitter.emitted[event]) {
       return

@@ -8,7 +8,7 @@
  * @param {boolean} [fromRight] Specify iterating from right to left.
  * @returns {number} Returns the index of the matched value, else `-1`.
  */
-function baseFindIndex(array: ArrayLike<number>,  predicate: Predicate<number>,  fromIndex: number,  fromRight: number) {
+function baseFindIndex(array: Array<T>,  predicate: ListIterator<T, boolean>,  fromIndex: number,  fromRight: boolean) {
   const { length } = array
   let index = fromIndex + (fromRight ? 1 : -1)
 

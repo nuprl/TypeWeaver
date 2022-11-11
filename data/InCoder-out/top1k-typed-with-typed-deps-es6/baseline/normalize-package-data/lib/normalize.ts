@@ -17,7 +17,7 @@ var thingsToFix = fieldsToFix.map(function (fieldName: any) {
 // thingsToFix = (ucFirst(name) + "Field" for name in fieldsToFix)
 thingsToFix = thingsToFix.concat(otherThingsToFix)
 
-function normalize (data: any,  warn: boolean,  strict: boolean) {
+function normalize (data: any,  warn: any,  strict: any) {
   if (warn === true) {
     warn = null
     strict = true
@@ -37,12 +37,12 @@ function normalize (data: any,  warn: boolean,  strict: boolean) {
   fixer.warn = function () {
     warn(makeWarning.apply(null, arguments))
   }
-  thingsToFix.forEach(function (thingName: string | undefined) {
+  thingsToFix.forEach(function (thingName: any) {
     fixer['fix' + ucFirst(thingName)](data, strict)
   })
   data._id = data.name + '@' + data.version
 }
 
-function ucFirst (string: string | string[]) {
+function ucFirst (string: string) {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }

@@ -22,7 +22,7 @@ function negate(f: Function) {
  * @param {string} value - The value to check.
  * @returns {boolean} `true` if the token is a PunctuatorToken with the given value.
  */
-function isPunctuatorTokenWithValue(token: ISyntaxToken,  value: string) {
+function isPunctuatorTokenWithValue(token: Token,  value: Token) {
     return token.type === "Punctuator" && token.value === value
 }
 
@@ -40,7 +40,7 @@ export function isArrowToken(token: Token) {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is a comma token.
  */
-export function isCommaToken(token: ts.Token) {
+export function isCommaToken(token: Token) {
     return isPunctuatorTokenWithValue(token, ",")
 }
 
@@ -49,7 +49,7 @@ export function isCommaToken(token: ts.Token) {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is a semicolon token.
  */
-export function isSemicolonToken(token: ts.Token) {
+export function isSemicolonToken(token: Token) {
     return isPunctuatorTokenWithValue(token, ";")
 }
 
@@ -58,7 +58,7 @@ export function isSemicolonToken(token: ts.Token) {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is a colon token.
  */
-export function isColonToken(token: ISyntaxToken) {
+export function isColonToken(token: Token) {
     return isPunctuatorTokenWithValue(token, ":")
 }
 
@@ -67,7 +67,7 @@ export function isColonToken(token: ISyntaxToken) {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is an opening parenthesis token.
  */
-export function isOpeningParenToken(token: ts.Token) {
+export function isOpeningParenToken(token: Token) {
     return isPunctuatorTokenWithValue(token, "(")
 }
 
@@ -76,7 +76,7 @@ export function isOpeningParenToken(token: ts.Token) {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is a closing parenthesis token.
  */
-export function isClosingParenToken(token: ts.Token) {
+export function isClosingParenToken(token: Token) {
     return isPunctuatorTokenWithValue(token, ")")
 }
 
@@ -85,7 +85,7 @@ export function isClosingParenToken(token: ts.Token) {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is an opening square bracket token.
  */
-export function isOpeningBracketToken(token: ts.Token) {
+export function isOpeningBracketToken(token: Token) {
     return isPunctuatorTokenWithValue(token, "[")
 }
 
@@ -94,7 +94,7 @@ export function isOpeningBracketToken(token: ts.Token) {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is a closing square bracket token.
  */
-export function isClosingBracketToken(token: ts.Token) {
+export function isClosingBracketToken(token: Token) {
     return isPunctuatorTokenWithValue(token, "]")
 }
 
@@ -103,7 +103,7 @@ export function isClosingBracketToken(token: ts.Token) {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is an opening brace token.
  */
-export function isOpeningBraceToken(token: ts.Token) {
+export function isOpeningBraceToken(token: Token) {
     return isPunctuatorTokenWithValue(token, "{")
 }
 
@@ -112,7 +112,7 @@ export function isOpeningBraceToken(token: ts.Token) {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is a closing brace token.
  */
-export function isClosingBraceToken(token: ts.Token) {
+export function isClosingBraceToken(token: Token) {
     return isPunctuatorTokenWithValue(token, "}")
 }
 
@@ -121,7 +121,7 @@ export function isClosingBraceToken(token: ts.Token) {
  * @param {Token} token - The token to check.
  * @returns {boolean} `true` if the token is a comment token.
  */
-export function isCommentToken(token: ts.Token) {
+export function isCommentToken(token: Token) {
     return ["Block", "Line", "Shebang"].includes(token.type)
 }
 

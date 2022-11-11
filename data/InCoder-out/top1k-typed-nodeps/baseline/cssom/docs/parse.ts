@@ -1,10 +1,10 @@
 if (!Array.isArray) {
-	Array.isArray = function(array: Array<any>) {
+	Array.isArray = function(array: any) {
 		return {}.toString.call(array) === '[object Array]';
 	};
 }
 
-function byId(id: any) {
+function byId(id: string) {
 	return document.getElementById(id);
 }
 

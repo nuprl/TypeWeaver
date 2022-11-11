@@ -19,7 +19,7 @@ import awaitify from './internal/awaitify.js'
  * functions have finished, or an error occurs. Invoked with (err).
  * @returns {Promise} a promise, if a callback is omitted
  */
-function eachOfSeries(coll: Collection,  iteratee: Function,  callback: Function) {
+function eachOfSeries(coll: Iterable<any>,  iteratee: Function,  callback: Function) {
     return eachOfLimit(coll, 1, iteratee, callback)
 }
 export default awaitify(eachOfSeries, 3);

@@ -17,7 +17,7 @@ module.exports = depd
  * Create deprecate for namespace in caller.
  */
 
-function depd (namespace: any) {
+function depd (namespace: string | boolean) {
   if (!namespace) {
     throw new TypeError('argument namespace is required')
   }
@@ -45,7 +45,7 @@ function depd (namespace: any) {
  * validation.
  */
 
-function wrapfunction (fn: unction,  message: string) {
+function wrapfunction (fn: unction,  message: ny) {
   if (typeof fn !== 'function') {
     throw new TypeError('argument fn must be a function')
   }
@@ -60,7 +60,7 @@ function wrapfunction (fn: unction,  message: string) {
  * validation.
  */
 
-function wrapproperty (obj: any,  prop: string | symbol,  message: string | symbol) {
+function wrapproperty (obj: any,  prop: any,  message: any) {
   if (!obj || (typeof obj !== 'object' && typeof obj !== 'function')) {
     throw new TypeError('argument obj must be object')
   }

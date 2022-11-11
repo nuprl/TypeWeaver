@@ -68,7 +68,7 @@ function getTokenSource (token: Token) {
     );
 }
 
-function getTokenSourceSpan (startToken: ts.Token,  endToken: ts.Token) {
+function getTokenSourceSpan (startToken: Token,  endToken: Token) {
     if (!startToken) {
         return undefined;
     }
@@ -80,7 +80,7 @@ function getTokenSourceSpan (startToken: ts.Token,  endToken: ts.Token) {
     );
 }
 
-function unescapeProp (node: Object,  prop: String) {
+function unescapeProp (node: Object,  prop: Object) {
     let value = node[prop];
     if (typeof value !== "string") {
         return;
@@ -95,7 +95,7 @@ function unescapeProp (node: Object,  prop: String) {
     return node;
 }
 
-function indexesOf (array: Array,  item: Object) {
+function indexesOf (array: Array<T>,  item: T) {
     let i = -1;
     const indexes = [];
 

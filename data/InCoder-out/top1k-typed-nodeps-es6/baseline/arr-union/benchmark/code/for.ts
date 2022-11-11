@@ -2,7 +2,7 @@
 
 import unique from 'array-unique';
 
-export default function union(init: Array<any>) {
+export default function union(init: Array<T>) {
   var arr = [].slice.call(arguments, 1);
   var len = arr.length;
 

@@ -52,7 +52,7 @@ suite.on('start', function onCycle (event: Event) {
   process.stdout.write('  Parsing URL ' + JSON.stringify(global.url) + '\n\n')
 })
 
-suite.on('cycle', function onCycle (event: Event) {
+suite.on('cycle', function onCycle (event: BenchmarkEvent) {
   benchmarks.add(event.target)
 })
 
@@ -62,7 +62,7 @@ suite.on('complete', function onComplete () {
 
 suite.run({ async: false })
 
-function createReq (url: any) {
+function createReq (url: URL) {
   return {
     url: url
   }

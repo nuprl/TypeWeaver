@@ -19,7 +19,7 @@ var fruits = [
     'strawberry',
     'banana'
 ];
-function parseFruit(option: Option,  optstr: Option,  arg: Option) {
+function parseFruit(option: Option<String>,  optstr: Option<String>,  arg: Option<String>) {
     if (fruits.indexOf(arg) === -1) {
         throw new Error(format('arg for "%s" is not a known fruit: "%s"',
             optstr, arg));

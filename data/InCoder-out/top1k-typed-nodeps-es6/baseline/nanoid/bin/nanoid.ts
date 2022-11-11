@@ -2,11 +2,11 @@
 
 import { nanoid, customAlphabet } from '../index.js'
 
-function print(msg: string | NodeJS.Writable) {
+function print(msg: any) {
   process.stdout.write(msg + '\n')
 }
 
-function error(msg: string | Error) {
+function error(msg: any) {
   process.stderr.write(msg + '\n')
   process.exit(1)
 }

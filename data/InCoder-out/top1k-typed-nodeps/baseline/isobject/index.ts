@@ -5,6 +5,6 @@
  * Released under the MIT License.
  */
 
-export default function isObject(val: mixed) {
+export default function isObject(val: any) {
   return val != null && typeof val === 'object' && Array.isArray(val) === false;
 };

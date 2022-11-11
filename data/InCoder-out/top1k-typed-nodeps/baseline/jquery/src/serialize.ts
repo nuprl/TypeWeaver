@@ -12,13 +12,13 @@ var
 	rsubmitterTypes = /^(?:submit|button|image|reset|file)$/i,
 	rsubmittable = /^(?:input|select|textarea|keygen)/i;
 
-function buildParams( prefix: string,  obj: any,  traditional: boolean,  add : boolean) {
+function buildParams( prefix: string,  obj: Object,  traditional: boolean,  add : boolean) {
 	var name;
 
 	if ( Array.isArray( obj ) ) {
 
 		// Serialize array item.
-		jQuery.each( obj, function( i: number,  v : string) {
+		jQuery.each( obj, function( i: number,  v : any) {
 			if ( traditional || rbracket.test( prefix ) ) {
 
 				// Treat each array item as a scalar.
@@ -52,7 +52,7 @@ function buildParams( prefix: string,  obj: any,  traditional: boolean,  add : b
 
 // Serialize an array of form elements or a set of
 // key/values into a query string
-jQuery.param = function( a: Array,  traditional : Boolean) {
+jQuery.param = function( a: any,  traditional : boolean) {
 	var prefix,
 		s = [],
 		add = function( key: any,  valueOrFunction : any) {
@@ -108,7 +108,7 @@ jQuery.fn.extend( {
 			return this.name && !jQuery( this ).is( ":disabled" ) &&
 				rsubmittable.test( this.nodeName ) && !rsubmitterTypes.test( type ) &&
 				( this.checked || !rcheckableType.test( type ) );
-		} ).map( function( _i: number,  elem : HTMLElement) {
+		} ).map( function( _i: Int,  elem : Element) {
 			var val = jQuery( this ).val();
 
 			if ( val == null ) {
@@ -116,7 +116,7 @@ jQuery.fn.extend( {
 			}
 
 			if ( Array.isArray( val ) ) {
-				return jQuery.map( val, function( val : string) {
+				return jQuery.map( val, function( val : any) {
 					return { name: elem.name, value: val.replace( rCRLF, "\r\n" ) };
 				} );
 			}

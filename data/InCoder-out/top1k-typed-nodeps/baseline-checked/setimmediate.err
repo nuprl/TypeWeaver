@@ -1,14 +1,15 @@
 setImmediate.ts(1,2): error TS2554: Expected 2 arguments, but got 1.
+setImmediate.ts(1,12): error TS2502: 'global' is referenced directly or indirectly in its own type annotation.
+setImmediate.ts(1,36): error TS2502: 'undefined' is referenced directly or indirectly in its own type annotation.
 setImmediate.ts(35,24): error TS2304: Cannot find name 'Task'.
-setImmediate.ts(65,38): error TS2538: Type 'Function' cannot be used as an index type.
-setImmediate.ts(71,36): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'number'.
+setImmediate.ts(57,35): error TS2304: Cannot find name 'Handle'.
 setImmediate.ts(79,46): error TS2304: Cannot find name 'Handle'.
 setImmediate.ts(106,23): error TS2339: Property 'source' does not exist on type 'Event'.
 setImmediate.ts(107,30): error TS2339: Property 'data' does not exist on type 'Event'.
 setImmediate.ts(108,23): error TS2339: Property 'data' does not exist on type 'Event'.
-setImmediate.ts(109,30): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 setImmediate.ts(109,37): error TS2339: Property 'data' does not exist on type 'Event'.
 setImmediate.ts(119,46): error TS2304: Cannot find name 'Handle'.
 setImmediate.ts(127,32): error TS2339: Property 'data' does not exist on type 'Event'.
 setImmediate.ts(138,46): error TS2304: Cannot find name 'Handle'.
+setImmediate.ts(153,46): error TS2304: Cannot find name 'Handle'.
 

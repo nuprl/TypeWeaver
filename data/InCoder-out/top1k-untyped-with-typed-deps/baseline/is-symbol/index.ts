@@ -6,7 +6,7 @@ var hasSymbols = require('has-symbols')();
 if (hasSymbols) {
 	var symToStr = Symbol.prototype.toString;
 	var symStringRegex = /^Symbol\(.*\)$/;
-	var isSymbolObject = function isRealSymbolObject(value: unknown) {
+	var isSymbolObject = function isRealSymbolObject(value: any) {
 		if (typeof value.valueOf() !== 'symbol') {
 			return false;
 		}

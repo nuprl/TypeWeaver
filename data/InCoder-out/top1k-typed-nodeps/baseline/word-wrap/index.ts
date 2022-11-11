@@ -5,7 +5,7 @@
  * Released under the MIT License.
  */
 
-module.exports = function(str: any,  options: any) {
+module.exports = function(str: String,  options: Object) {
   options = options || {};
   if (str == null) {
     return str;
@@ -28,7 +28,7 @@ module.exports = function(str: any,  options: any) {
 
   var re = new RegExp(regexString, 'g');
   var lines = str.match(re) || [];
-  var result = indent + lines.map(function(line: Line) {
+  var result = indent + lines.map(function(line: String) {
     if (line.slice(-1) === '\n') {
       line = line.slice(0, line.length - 1);
     }

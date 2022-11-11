@@ -1,6 +1,6 @@
 import validate from './validate.js';
 
-function parse(uuid: string | null) {
+function parse(uuid: string | Uint8Array) {
   if (!validate(uuid)) {
     throw TypeError('Invalid UUID');
   }

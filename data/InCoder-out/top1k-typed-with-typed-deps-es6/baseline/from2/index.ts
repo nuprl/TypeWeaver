@@ -22,7 +22,7 @@ function toFunction(list: Array<any>) {
   }
 }
 
-function from2(opts: any,  read: Function) {
+function from2(opts: Readonly<Options>,  read: Readonly<Read>) {
   if (typeof opts !== 'object' || Array.isArray(opts)) {
     read = opts
     opts = {}
@@ -33,7 +33,7 @@ function from2(opts: any,  read: Function) {
   return rs
 }
 
-function ctor(opts: any,  read: Function) {
+function ctor(opts: any,  read: any) {
   if (typeof opts === 'function') {
     read = opts
     opts = {}
@@ -42,7 +42,7 @@ function ctor(opts: any,  read: Function) {
   opts = defaults(opts)
 
   inherits(Class, Readable)
-  function Class(override: Function) {
+  function Class(override: ClassOverride) {
     if (!(this instanceof Class)) return new Class(override)
     this._reading = false
     this._callback = check
@@ -82,7 +82,7 @@ function ctor(opts: any,  read: Function) {
   return Class
 }
 
-function obj(opts: any,  read: Function) {
+function obj(opts: Options,  read: Read) {
   if (typeof opts === 'function' || Array.isArray(opts)) {
     read = opts
     opts = {}

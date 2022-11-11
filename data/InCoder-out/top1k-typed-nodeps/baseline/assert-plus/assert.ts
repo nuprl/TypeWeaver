@@ -51,22 +51,22 @@ var types = {
         check: function (arg: ny) { return typeof (arg) === 'string'; }
     },
     object: {
-        check: function (arg: any) {
+        check: function (arg: number) {
             return typeof (arg) === 'object' && arg !== null;
         }
     },
     number: {
-        check: function (arg: any) {
+        check: function (arg: number) {
             return typeof (arg) === 'number' && !isNaN(arg);
         }
     },
     finite: {
-        check: function (arg: any) {
+        check: function (arg: number) {
             return typeof (arg) === 'number' && !isNaN(arg) && isFinite(arg);
         }
     },
     buffer: {
-        check: function (arg: any) { return Buffer.isBuffer(arg); },
+        check: function (arg: Buffer) { return Buffer.isBuffer(arg); },
         operator: 'Buffer.isBuffer'
     },
     array: {
@@ -89,14 +89,14 @@ var types = {
         actual: _getClass
     },
     uuid: {
-        check: function (arg: any) {
+        check: function (arg: number) {
             return typeof (arg) === 'string' && UUID_REGEXP.test(arg);
         },
         operator: 'isUUID'
     }
 };
 
-function _setExports(ndebug: number) {
+function _setExports(ndebug: Ndebug) {
     var keys = Object.keys(types);
     var out;
 
@@ -152,7 +152,7 @@ function _setExports(ndebug: number) {
         }
         var type = types[k];
         var expected = '[' + k + ']';
-        out[name] = function (arg: any,  msg: string | string[]) {
+        out[name] = function (arg: any,  msg: any) {
             if (!Array.isArray(arg)) {
                 _toss(msg, expected, type.operator, arg, type.actual);
             }

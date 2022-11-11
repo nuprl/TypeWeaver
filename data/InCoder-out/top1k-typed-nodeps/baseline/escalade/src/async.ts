@@ -5,7 +5,7 @@ import { promisify } from 'util';
 const toStats = promisify(stat);
 const toRead = promisify(readdir);
 
-export default async function (start: number,  callback: Function) {
+export default async function (start: string | Buffer,  callback: Function) {
 	let dir = resolve('.', start);
 	let tmp, stats = await toStats(dir);
 

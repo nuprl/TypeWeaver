@@ -1,4 +1,4 @@
-export default function(node: Block) {
+export default function(node: CssNode) {
     node.block.children.forEach((rule) => {
         rule.prelude.children.forEach((simpleselector) => {
             simpleselector.children.forEach((data, item) => {

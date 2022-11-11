@@ -50,11 +50,11 @@ wordDiff.tokenize = function(value: any) {
   return tokens;
 };
 
-export function diffWords(oldStr: string | undefined,  newStr: string | undefined,  options: IOptions) {
+export function diffWords(oldStr: string | string[],  newStr: string | string[],  options: string) {
   options = generateOptions(options, {ignoreWhitespace: true});
   return wordDiff.diff(oldStr, newStr, options);
 }
 
-export function diffWordsWithSpace(oldStr: string | undefined,  newStr: string | undefined,  options: { words: true }) {
+export function diffWordsWithSpace(oldStr: string | string[],  newStr: string | string[],  options: DiffOptions) {
   return wordDiff.diff(oldStr, newStr, options);
 }

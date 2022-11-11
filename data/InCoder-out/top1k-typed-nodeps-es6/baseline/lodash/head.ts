@@ -15,7 +15,7 @@
  * head([])
  * // => undefined
  */
-function head(array: rrayLike) {
+function head(array: rrayLike<number>) {
   return (array != null && array.length)
     ? array[0]
     : undefined

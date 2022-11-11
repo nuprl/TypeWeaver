@@ -1,4 +1,4 @@
-module.exports = function(grunt: grunt) {
+module.exports = function(grunt: Grunt) {
 
 	grunt.initConfig({
 		'shell': {

@@ -15,7 +15,7 @@ function constructYamlNull() {
   return null;
 }
 
-function isNull(object: mixed) {
+function isNull(object: unknown) {
   return object === null;
 }
 

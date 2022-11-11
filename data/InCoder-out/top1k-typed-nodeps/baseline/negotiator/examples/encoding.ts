@@ -11,7 +11,7 @@
     identity: 'Hello World'
   };
 
-  gbuf.gzip(messages.identity, function(zipped: Array<Buffer>) {
+  gbuf.gzip(messages.identity, function(zipped: Zipped) {
     var availableEncodings, key, server, val;
     messages.gzip = zipped;
     availableEncodings = (function() {
@@ -24,7 +24,7 @@
       return _results;
     })();
     console.log(availableEncodings);
-    server = http.createServer(function(req: Request,  res: Response) {
+    server = http.createServer(function(req: express.Request,  res: express.Response) {
       var encoding, negotiator;
       negotiator = new Negotiator(req);
       console.log("Accept-Encoding: " + req.headers['accept-encoding']);

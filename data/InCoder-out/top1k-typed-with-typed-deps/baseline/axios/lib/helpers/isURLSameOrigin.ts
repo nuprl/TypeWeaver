@@ -18,7 +18,7 @@ export default platform.isStandardBrowserEnv ?
     * @param {String} url The URL to be parsed
     * @returns {Object}
     */
-    function resolveURL(url: string | URL) {
+    function resolveURL(url: string | null | undefined) {
       let href = url;
 
       if (msie) {
@@ -52,7 +52,7 @@ export default platform.isStandardBrowserEnv ?
     * @param {String} requestURL The URL to test
     * @returns {boolean} True if URL shares the same origin, otherwise false
     */
-    return function isURLSameOrigin(requestURL: URL) {
+    return function isURLSameOrigin(requestURL: string | RequestInfo) {
       const parsed = (utils.isString(requestURL)) ? resolveURL(requestURL) : requestURL;
       return (parsed.protocol === originURL.protocol &&
           parsed.host === originURL.host);

@@ -1,4 +1,4 @@
-export default function (req: Request,  res: Response) {
+export default function (req: http.IncomingMessage,  res: http.ServerResponse) {
   
   req.on('data', function (chunk: Buffer) {
   });

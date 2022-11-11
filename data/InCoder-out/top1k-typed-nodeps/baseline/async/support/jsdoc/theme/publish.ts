@@ -21,7 +21,7 @@ let view;
 
 let outdir = path.normalize(env.opts.destination);
 
-function find(spec: any) {
+function find(spec: Spec) {
     return helper.find(data, spec);
 }
 
@@ -29,11 +29,11 @@ function tutoriallink(tutorial: Tutorial) {
     return helper.toTutorial(tutorial, null, { tag: 'em', classname: 'disabled', prefix: 'Tutorial: ' });
 }
 
-function getAncestorLinks(doclet: Document) {
+function getAncestorLinks(doclet: Doclet) {
     return helper.getAncestorLinks(data, doclet);
 }
 
-function hashToLink(doclet: Document,  hash: Hash) {
+function hashToLink(doclet: Doclet,  hash: number) {
     if ( !/^(#.+)/.test(hash) ) { return hash; }
 
     let url = helper.createLink(doclet);
@@ -80,7 +80,7 @@ function getSignatureAttributes(item: IItem) {
     return attributes;
 }
 
-function updateItemName(item: Item) {
+function updateItemName(item: IItem) {
     const attributes = getSignatureAttributes(item);
     let itemName = item.name || '';
 
@@ -96,7 +96,7 @@ function updateItemName(item: Item) {
     return itemName;
 }
 
-function addParamAttributes(params: ParamAttribute[]) {
+function addParamAttributes(params: any[]) {
     return params.filter(param => {
         return param.name && param.name.indexOf('.') === -1;
     }).map(updateItemName);
@@ -124,7 +124,7 @@ function buildAttribsString(attribs: any) {
     return attribsString;
 }
 
-function addNonParamAttributes(items: Array<any>) {
+function addNonParamAttributes(items: any[]) {
     let types = [];
 
     items.forEach(item => {
@@ -134,7 +134,7 @@ function addNonParamAttributes(items: Array<any>) {
     return types;
 }
 
-function addSignatureParams(f: Function) {
+function addSignatureParams(f: SignatureDeclaration) {
     const params = f.params ? addParamAttributes(f.params) : [];
     f.signature = util.format( '%s(%s)', (f.signature || ''), params.join(', ') );
 }
@@ -178,14 +178,14 @@ function addSignatureTypes(f: Function) {
         (types.length ? ' :' + types.join('|') : '') + '</span>';
 }
 
-function addAttribs(f: Function) {
+function addAttribs(f: Flow) {
     const attribs = helper.getAttribs(f);
     const attribsString = buildAttribsString(attribs);
 
     f.attribs = util.format('<span class="type-signature">%s</span>', attribsString);
 }
 
-function shortenPaths(files: string[],  commonPrefix: number) {
+function shortenPaths(files: string[],  commonPrefix: string | null) {
     Object.keys(files).forEach(file => {
         files[file].shortened = files[file].resolved.replace(commonPrefix, '')
             // always use forward slashes
@@ -195,7 +195,7 @@ function shortenPaths(files: string[],  commonPrefix: number) {
     return files;
 }
 
-function getPathFromDoclet(doclet: Doc) {
+function getPathFromDoclet(doclet: Doclet) {
     if (!doclet.meta) {
         return null;
     }
@@ -205,7 +205,7 @@ function getPathFromDoclet(doclet: Doc) {
         doclet.meta.filename;
 }
 
-function generate(type: string,  title: string | undefined,  docs: string,  filename: undefined,  resolveLinks: true) {
+function generate(type: string,  title: string,  docs: string,  filename: string,  resolveLinks: boolean) {
     resolveLinks = resolveLinks === false ? false : true;
 
     const docData = {
@@ -224,7 +224,7 @@ function generate(type: string,  title: string | undefined,  docs: string,  file
     fs.writeFileSync(outpath, html, 'utf8');
 }
 
-function generateSourceFiles(sourceFiles: SourceFile[],  encoding: SourceFileEncoding) {
+function generateSourceFiles(sourceFiles: SourceFile[],  encoding: string | null) {
     encoding = encoding || 'utf8';
     const sourceFilenames = [];
     Object.keys(sourceFiles).forEach(file => {
@@ -259,7 +259,7 @@ function generateSourceFiles(sourceFiles: SourceFile[],  encoding: SourceFileEnc
  * check.
  * @param {Array.<module:jsdoc/doclet.Doclet>} modules - The array of module doclets to search.
  */
-function attachModuleSymbols(doclets: any,  modules: any) {
+function attachModuleSymbols(doclets: Doclet[],  modules: Module[]) {
     const symbols = {};
 
     // build a lookup table
@@ -289,7 +289,7 @@ function attachModuleSymbols(doclets: any,  modules: any) {
     });
 }
 
-function buildMemberNav(items: any[],  itemHeading: string,  itemsSeen: number,  linktoFn: Function) {
+function buildMemberNav(items: string[],  itemHeading: string,  itemsSeen: number,  linktoFn: Function) {
     let nav = '';
 
     if (items && items.length) {
@@ -350,7 +350,7 @@ function linktoExternal(longName: String,  name: String) {
  * @param {array<object>} members.interfaces
  * @return {string} The HTML for the navigation sidebar.
  */
-function buildNav(members: Array<NavMember>) {
+function buildNav(members: Member[]) {
     let nav = '<h2><a href="index.html">Home</a></h2>';
     const seen = {};
     const seenTutorials = {};
@@ -413,7 +413,7 @@ function sortStrs(strArr: Array<string>) {
     @param {Array<String>} methodNames - A list of method names
     @param {Array<String>} sourceFilenames - A list of source filenames
  */
-function writeSearchData(methodNames: Array<string>,  sourceFilenames: Array<string>) {
+function writeSearchData(methodNames: string[],  sourceFilenames: string[]) {
     const dataDir = path.join(outdir, 'data');
     fsExtra.mkdirsSync(dataDir);
     fsExtra.writeJsonSync(path.join(dataDir, 'methodNames.json'), sortStrs(methodNames), 'utf8');

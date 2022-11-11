@@ -4,7 +4,7 @@ import getStyles from "./var/getStyles.js";
 import rcustomProp from "./var/rcustomProp.js";
 import rtrim from "../var/rtrim.js";
 
-function curCSS( elem: Element,  name: string,  computed : boolean) {
+function curCSS( elem: Element,  name: String,  computed : Boolean) {
 	var ret,
 		isCustomProp = rcustomProp.test( name );
 

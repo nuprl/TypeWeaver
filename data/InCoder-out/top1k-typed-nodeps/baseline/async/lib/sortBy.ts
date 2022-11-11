@@ -30,7 +30,7 @@ import awaitify from './internal/awaitify.js'
  *
  * // asynchronous function that returns the file size in bytes
  * function getFileSizeInBytes(file: File,  callback: Function) {
- *     fs.stat(file, function(err: Error,  stat: fs.Stat) {
+ *     fs.stat(file, function(err: Error,  stat: fs.Stats) {
  *         if (err) {
  *             return callback(err);
  *         }
@@ -57,7 +57,7 @@ import awaitify from './internal/awaitify.js'
  *
  * // ascending order
  * async.sortBy(['mediumfile.txt','smallfile.txt','bigfile.txt'], function(file: File,  callback: Function) {
- *     getFileSizeInBytes(file, function(getFileSizeErr: FileSizeErr,  fileSize: number) {
+ *     getFileSizeInBytes(file, function(getFileSizeErr: getFileSizeErr,  fileSize: fileSize) {
  *         if (getFileSizeErr) return callback(getFileSizeErr);
  *         callback(null, fileSize);
  *     });
@@ -75,7 +75,7 @@ import awaitify from './internal/awaitify.js'
  *
  * // descending order
  * async.sortBy(['bigfile.txt','mediumfile.txt','smallfile.txt'], function(file: File,  callback: Function) {
- *     getFileSizeInBytes(file, function(getFileSizeErr: FileSizeErr,  fileSize: number) {
+ *     getFileSizeInBytes(file, function(getFileSizeErr: getFileSizeErr,  fileSize: fileSize) {
  *         if (getFileSizeErr) {
  *             return callback(getFileSizeErr);
  *         }
@@ -152,7 +152,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function sortBy (coll: Function,  iteratee: Function,  callback: Function) {
+function sortBy (coll: Collection,  iteratee: Function,  callback: Function) {
     var _iteratee = wrapAsync(iteratee);
     return map(coll, (x, iterCb) => {
         _iteratee(x, (err, criteria) => {
@@ -164,7 +164,7 @@ function sortBy (coll: Function,  iteratee: Function,  callback: Function) {
         callback(null, results.sort(comparator).map(v => v.value));
     });
 
-    function comparator(left: T,  right: T) {
+    function comparator(left: any,  right: any) {
         var a = left.criteria, b = right.criteria;
         return a < b ? -1 : a > b ? 1 : 0;
     }

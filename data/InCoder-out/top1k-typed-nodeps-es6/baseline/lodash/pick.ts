@@ -15,7 +15,7 @@ import basePick from './.internal/basePick.js'
  * pick(object, ['a', 'c'])
  * // => { 'a': 1, 'c': 3 }
  */
-function pick(object: bject,  ...paths: tring[]) {
+function pick(object: ny,  ...paths: tring[]) {
   return object == null ? {} : basePick(object, paths)
 }
 

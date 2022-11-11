@@ -7,7 +7,7 @@ function App(name: String) {
   use(this);
 }
 
-App.prototype.create = function(name: any) {
+App.prototype.create = function(name: String) {
   return new App(name);
 };
 

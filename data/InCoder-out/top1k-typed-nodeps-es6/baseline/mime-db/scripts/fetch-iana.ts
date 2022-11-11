@@ -65,14 +65,14 @@ co(function * () {
   // gather extension frequency
   var exts = Object.create(null)
   results.forEach(function (result: any) {
-    (result.extensions || []).forEach(function (ext: string | string[]) {
+    (result.extensions || []).forEach(function (ext: any) {
       exts[ext] = (exts[ext] || 0) + 1
     })
   })
 
   // construct json map
   var json = Object.create(null)
-  results.forEach(function (result: IFileResult) {
+  results.forEach(function (result: any) {
     var mime = result.mime
 
     if (mime in json) {
@@ -103,7 +103,7 @@ co(function * () {
   writedb('src/iana-types.json', json)
 }).then()
 
-function addTemplateData (data: any,  options: any) {
+function addTemplateData (data: TemplateData,  options: TemplateOptions) {
   var opts = options || {}
 
   if (!data.template) {
@@ -168,7 +168,7 @@ function addTemplateData (data: any,  options: any) {
   }
 }
 
-function extractIntendedUsage (body: Function) {
+function extractIntendedUsage (body: Body) {
   var match = INTENDED_USAGE_REGEXP.exec(body)
 
   return match
@@ -176,7 +176,7 @@ function extractIntendedUsage (body: Function) {
     : undefined
 }
 
-function extractTemplateMime (body: TemplateStringsArray) {
+function extractTemplateMime (body: Buffer) {
   var type = mimeTypeLineRegExp.exec(body)
   var subtype = MIME_SUBTYPE_LINE_REGEXP.exec(body)
 
@@ -203,7 +203,7 @@ function extractTemplateMime (body: TemplateStringsArray) {
   return (type + '/' + subtype).toLowerCase()
 }
 
-function extractTemplateCharset (body: TemplateStringsArray) {
+function extractTemplateCharset (body: Buffer) {
   if (!MIME_TYPE_HAS_CHARSET_PARAMETER_REGEXP.test(body)) {
     return undefined
   }
@@ -215,7 +215,7 @@ function extractTemplateCharset (body: TemplateStringsArray) {
     : undefined
 }
 
-function extractTemplateExtensions (body: Template) {
+function extractTemplateExtensions (body: Buffer) {
   var match = EXTENSIONS_REGEXP.exec(body) || extensionsQuotedRegExp.exec(body)
 
   if (!match) {
@@ -226,7 +226,7 @@ function extractTemplateExtensions (body: Template) {
     .slice(1)
     .filter(Boolean)
     .map(function (ext: Extension) { return ext.toLowerCase() })
-    .filter(function (ext: tring | string[]) { return ext !== 'none' })
+    .filter(function (ext: xtension) { return ext !== 'none' })
 
   return exts.length === 0
     ? undefined
@@ -270,7 +270,7 @@ function * get (type, options) {
     data.notes = nameMatch[2] || nameMatch[3]
 
     // add reference sources
-    parseReferences(data.reference).forEach(function (url: URL) {
+    parseReferences(data.reference).forEach(function (url: any) {
       addSource(data, url)
     })
 
@@ -283,7 +283,7 @@ function * getTemplateBody (res) {
   var lines = body.split(/\r?\n/)
   var slurp = false
 
-  return lines.reduce(function (lines: ring[],  line: Line) {
+  return lines.reduce(function (lines: ring[],  line: ring) {
     line = line.replace(/=20$/, ' ')
 
     var prev = (lines[lines.length - 1] || '')
@@ -320,7 +320,7 @@ function addSource (data: any,  url: any) {
   }
 }
 
-function appendToLine (line: Line,  str: string | string[]) {
+function appendToLine (line: String,  str: String) {
   var trimmed = line.trimRight()
   var append = trimmed.slice(-1) === '-'
     ? str.trimLeft()
@@ -332,8 +332,8 @@ function concat (a: Array,  b: Array) {
   return a.concat(b.filter(Boolean))
 }
 
-function generateRowMapper (headers: Array<string>) {
-  return function reduceRows (obj: bject,  val: number,  index: number) {
+function generateRowMapper (headers: string[]) {
+  return function reduceRows (obj: ny,  val: ny,  index: number) {
     if (val !== '') {
       obj[headers[index]] = val
     }
@@ -385,13 +385,13 @@ function mimeEql (mime1: string,  mime2: string) {
 }
 
 function normalizeHeader (val: string | string[]) {
-  return val.slice(0, 1).toLowerCase() + val.slice(1).replace(/ (.)/, function (s: string,  c: string) {
+  return val.slice(0, 1).toLowerCase() + val.slice(1).replace(/ (.)/, function (s: string,  c: number) {
     return c.toUpperCase()
   })
 }
 
 function parseReferences (reference: Reference) {
-  return getUrlReferences(reference).concat(getRfcReferences(reference).map(function (rfc: Rfc) {
+  return getUrlReferences(reference).concat(getRfcReferences(reference).map(function (rfc: number) {
     return 'https://tools.ietf.org/rfc/' + rfc.toLowerCase() + '.txt'
   }))
 }

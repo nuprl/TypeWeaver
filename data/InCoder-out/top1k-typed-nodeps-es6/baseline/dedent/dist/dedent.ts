@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 export const default = dedent;
-function dedent(strings: string[]) {
+function dedent(strings: TemplateStringsArray) {
   // $FlowFixMe: Flow doesn't undestand .raw
   var raw = typeof strings === "string" ? [strings] : strings.raw;
 
@@ -42,7 +42,7 @@ function dedent(strings: string[]) {
   if (mindent !== null) {
     (function () {
       var m = mindent; // appease Flow
-      result = lines.map(function (l: rray<string>) {
+      result = lines.map(function (l: ny) {
         return l[0] === " " ? l.slice(m) : l;
       }).join("\n");
     })();

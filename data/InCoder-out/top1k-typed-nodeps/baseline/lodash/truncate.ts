@@ -50,7 +50,7 @@ const reFlags = /\w*$/
  * })
  * // => 'hi-diddly-ho there, neig [...]'
  */
-function truncate(string: string | number,  options: TruncateOptions) {
+function truncate(string: string | number,  options: TruncateOptions | undefined) {
   let separator
   let length = DEFAULT_TRUNC_LENGTH
   let omission = DEFAULT_TRUNC_OMISSION

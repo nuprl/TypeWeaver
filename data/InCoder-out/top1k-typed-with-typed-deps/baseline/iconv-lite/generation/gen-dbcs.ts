@@ -17,7 +17,7 @@ async.parallel({
     // First, parse all files.
     for (var enc in data) {
         var dbcs = {};
-        utils.parseText(data[enc]).map(function(a: number[]) {
+        utils.parseText(data[enc]).map(function(a: any) {
             var dbcsCode = parseInt(a[0]);
             var unicode = parseInt(a[1]);
             if (!isNaN(unicode))

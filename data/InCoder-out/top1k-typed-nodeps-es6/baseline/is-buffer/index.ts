@@ -5,7 +5,7 @@
  * @license  MIT
  */
 
-export default function isBuffer (obj: mixed) {
+export default function isBuffer (obj: Buffer) {
   return obj != null && obj.constructor != null &&
     typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
 };

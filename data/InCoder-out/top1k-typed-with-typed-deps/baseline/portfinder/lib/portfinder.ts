@@ -21,7 +21,7 @@ var debugTestPort = debug('portfinder:testPort'),
 
 var internals = {};
 
-internals.testPort = function(options: any,  callback: Function) {
+internals.testPort = function(options: any,  callback: any) {
   if (!callback) {
     callback = options;
     options = {};
@@ -120,7 +120,7 @@ exports.basePath = '/tmp/portfinder'
 // #### @callback {function} Continuation to respond to when complete.
 // Responds with a unbound port on the current machine.
 //
-exports.getPort = function (options: any,  callback: Function) {
+exports.getPort = function (options: any,  callback: any) {
   if (!callback) {
     callback = options;
     options = {};
@@ -214,7 +214,7 @@ exports.getPort = function (options: any,  callback: Function) {
 };
 
 //
-// ### function getPortPromise (options: IOptions)
+// ### function getPortPromise (options: PortOptions)
 // #### @options {Object} Settings to use when finding the necessary port
 // Responds a promise to an unbound port on the current machine.
 //
@@ -226,7 +226,7 @@ exports.getPortPromise = function (options: ny) {
   if (!options) {
     options = {};
   }
-  return new Promise(function(resolve: Function,  reject: Function) {
+  return new Promise(function(resolve: resolve,  reject: reject) {
     exports.getPort(options, function(err: Error,  port: number) {
       if (err) {
         return reject(err);
@@ -243,7 +243,7 @@ exports.getPortPromise = function (options: ny) {
 // #### @callback {function} Continuation to respond to when complete.
 // Responds with an array of unbound ports on the current machine.
 //
-exports.getPorts = function (count: number,  options: IOptions,  callback: Function) {
+exports.getPorts = function (count: number,  options: any,  callback: Function) {
   if (!callback) {
     callback = options;
     options = {};
@@ -273,7 +273,7 @@ exports.getPorts = function (count: number,  options: IOptions,  callback: Funct
 // Responds with a unbound socket using the specified directory and base
 // name on the current machine.
 //
-exports.getSocket = function (options: any,  callback: Function) {
+exports.getSocket = function (options: any,  callback: any) {
   if (!callback) {
     callback = options;
     options = {};

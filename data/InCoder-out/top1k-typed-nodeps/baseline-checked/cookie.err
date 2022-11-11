@@ -1,22 +1,18 @@
-benchmark/index.ts(17,28): error TS2339: Property 'shift' does not exist on type 'string'.
 benchmark/parse-top.ts(7,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'top' must be of type 'Window', but here has type 'any'.
 benchmark/parse-top.ts(17,44): error TS2304: Cannot find name 'main'.
+benchmark/parse-top.ts(29,44): error TS2304: Cannot find name 'BenchmarkEvent'.
 benchmark/parse-top.ts(39,10): error TS2393: Duplicate function implementation.
+benchmark/parse.ts(56,44): error TS2304: Cannot find name 'BenchmarkEvent'.
 benchmark/parse.ts(66,10): error TS2393: Duplicate function implementation.
 index.ts(47,21): error TS2304: Cannot find name 'ring'.
-index.ts(47,46): error TS2304: Cannot find name 'ParseOptions'.
-index.ts(86,28): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Uint8Array'.
-index.ts(111,40): error TS2304: Cannot find name 'Any'.
-index.ts(111,55): error TS2304: Cannot find name 'Any'.
 index.ts(119,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-index.ts(227,23): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
+index.ts(227,23): error TS2304: Cannot find name 'ny'.
+scripts/update-benchmark.ts(22,59): error TS2304: Cannot find name 'RequestCallback'.
 scripts/update-benchmark.ts(29,23): error TS2339: Property 'location' does not exist on type 'Headers'.
 scripts/update-benchmark.ts(29,39): error TS2339: Property 'statusCode' does not exist on type 'Response'.
 scripts/update-benchmark.ts(29,64): error TS2339: Property 'statusCode' does not exist on type 'Response'.
 scripts/update-benchmark.ts(30,43): error TS2339: Property 'location' does not exist on type 'Headers'.
 scripts/update-benchmark.ts(41,33): error TS2304: Cannot find name 'Site'.
-scripts/update-benchmark.ts(54,42): error TS2339: Property 'rootDomain' does not exist on type 'string'.
-scripts/update-benchmark.ts(64,6): error TS2339: Property 'replace' does not exist on type 'string | Buffer'.
-  Property 'replace' does not exist on type 'Buffer'.
+scripts/update-benchmark.ts(53,28): error TS2304: Cannot find name 'Site'.
 

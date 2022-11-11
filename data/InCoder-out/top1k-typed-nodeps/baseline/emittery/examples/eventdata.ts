@@ -4,7 +4,7 @@ import Emittery from '../index.js';
 const myEmitter = new Emittery();
 
 // Does not provide a context either.
-myEmitter.on('event', function ({a: any,  b}: unction,  ...arguments_: rray<any>) {
+myEmitter.on('event', function ({a: any,  b}: ny,  ...arguments_: ny[]) {
 	console.log(a, b, arguments_, this);
 });
 

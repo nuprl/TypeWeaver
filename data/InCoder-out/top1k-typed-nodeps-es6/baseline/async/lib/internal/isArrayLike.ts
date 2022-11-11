@@ -1,4 +1,4 @@
-export default function isArrayLike(value: any) {
+export default function isArrayLike(value: unknown) {
     return value &&
         typeof value.length === 'number' &&
         value.length >= 0 &&

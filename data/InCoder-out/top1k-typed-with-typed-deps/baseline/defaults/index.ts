@@ -1,6 +1,6 @@
 var clone = require('clone');
 
-module.exports = function(options: Object,  defaults: Object) {
+module.exports = function(options: any,  defaults: any) {
   options = options || {};
 
   Object.keys(defaults).forEach(function(key: any) {

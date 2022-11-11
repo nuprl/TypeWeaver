@@ -76,7 +76,7 @@ function cleanUnused(selectorList: SelectorList,  usageData: UsageData) {
     return selectorList.children.isEmpty;
 }
 
-export default function cleanRule(node: Rule,  item: RuleItem,  list: RuleList,  options: RuleOptions) {
+export default function cleanRule(node: CssNode,  item: CssNode,  list: CssNode[],  options: CssNodeOptions) {
     if (hasNoChildren(node.prelude) || hasNoChildren(node.block)) {
         list.remove(item);
         return;

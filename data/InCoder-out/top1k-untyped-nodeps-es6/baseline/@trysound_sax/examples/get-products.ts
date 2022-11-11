@@ -10,7 +10,7 @@ import util from 'util';
 import http from 'http';
 
 fs.readFile(xmlFile, function (er: Error,  d: any) {
-  http.createServer(function (req: Request,  res: Response) {
+  http.createServer(function (req: any,  res: any) {
     if (er) throw er
     var xmlstr = d.toString('utf8')
 

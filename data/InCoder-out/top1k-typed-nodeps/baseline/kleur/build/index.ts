@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-function transform(file: File,  next: Function) {
+function transform(file: any,  next: Function) {
 	console.log('convert "%s" ~> "%s"', file, next);
 
 	let code = fs.readFileSync(file, 'utf8');

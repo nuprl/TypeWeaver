@@ -35,7 +35,7 @@ var FIELD_NAME_REGEXP = /^[!#$%&'*+\-.^_`|~0-9A-Za-z]+$/
  * @public
  */
 
-function append (header: any,  field: any) {
+function append (header: Header,  field: Field) {
   if (typeof header !== 'string') {
     throw new TypeError('header argument is required')
   }
@@ -93,7 +93,7 @@ function append (header: any,  field: any) {
  * @private
  */
 
-function parse (header: any) {
+function parse (header: Buffer) {
   var end = 0
   var list = []
   var start = 0
@@ -130,7 +130,7 @@ function parse (header: any) {
  * @public
  */
 
-function vary (res: number,  field: number) {
+function vary (res: any,  field: any) {
   if (!res || !res.getHeader || !res.setHeader) {
     // quack quack
     throw new TypeError('res argument is required')

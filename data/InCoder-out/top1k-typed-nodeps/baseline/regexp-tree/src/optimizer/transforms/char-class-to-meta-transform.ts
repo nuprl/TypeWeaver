@@ -50,7 +50,7 @@ function rewriteNumberRanges(path: NodePath) {
  * Thus, the ranges may go in any order, and other symbols/ranges
  * are kept untouched, e.g. [a-z_\dA-Z$] -> [\w$]
  */
-function rewriteWordRanges(path: Path,  hasIFlag: boolean,  hasUFlag: boolean) {
+function rewriteWordRanges(path: SVGPathData,  hasIFlag: boolean,  hasUFlag: boolean) {
   const {node} = path;
 
   let numberPath = null;
@@ -187,7 +187,7 @@ function isChar(node: ode,  value: ny,  kind = 'simple': oolean) {
   return node.type === 'Char' && node.value === value && node.kind === kind;
 }
 
-function isMetaChar(node: Node,  value: any) {
+function isMetaChar(node: Node,  value: number) {
   return isChar(node, value, 'meta');
 }
 
@@ -199,7 +199,7 @@ function isLowerCaseRange(node: Node) {
   );
 }
 
-function isUpperCaseRange(node: Node) {
+function isUpperCaseRange(node: TextRange) {
   return (
     node.type === 'ClassRange' &&
     node.from.value === 'A' &&

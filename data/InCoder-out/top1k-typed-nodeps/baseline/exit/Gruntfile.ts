@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(grunt: grunt) {
+module.exports = function(grunt: Grunt) {
 
   // Project configuration.
   grunt.initConfig({

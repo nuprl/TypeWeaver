@@ -227,7 +227,7 @@ Emitter.prototype.off;
  * Remove all instances of the given `fn` from listeners.
  */
 
-function removeListeners(fn: Function,  listeners: Function) {
+function removeListeners(fn: Function,  listeners: Listener[]) {
   for (let i = 0; i < listeners.length; i++) {
     const listener = listeners[i];
     if (listener === fn || listener.fn === fn) {
@@ -241,7 +241,7 @@ function removeListeners(fn: Function,  listeners: Function) {
  * Mixin emitter properties.
  */
 
-function mixin(target: any) {
+function mixin(target: Object) {
   if (!target) target = {};
   const emitter = new Emitter();
   copy(target, emitter, Object.getOwnPropertyNames(Emitter.prototype));
@@ -249,7 +249,7 @@ function mixin(target: any) {
   return target;
 }
 
-function copy(target: any,  provider: any,  keys: any) {
+function copy(target: any,  provider: any,  keys: any[]) {
   for (const key of keys) {
     if (typeof provider[key] === 'function') {
       define(target, key, provider[key].bind(provider));

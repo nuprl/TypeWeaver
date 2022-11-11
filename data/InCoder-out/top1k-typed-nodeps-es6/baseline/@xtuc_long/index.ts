@@ -92,7 +92,7 @@ Object.defineProperty(Long.prototype, "__isLong__", { value: true });
  * @returns {boolean}
  * @inner
  */
-function isLong(obj: Object) {
+function isLong(obj: Long) {
   return (obj && obj["__isLong__"]) === true;
 }
 
@@ -243,7 +243,7 @@ var pow_dbl = Math.pow; // Used 4 times (4*8 to 15+4)
  * @returns {!Long}
  * @inner
  */
-function fromString(str: any,  unsigned: boolean,  radix: number) {
+function fromString(str: string | number,  unsigned: boolean,  radix: number) {
   if (str.length === 0)
     throw Error('empty string');
   if (typeof unsigned === 'number') {
@@ -664,7 +664,7 @@ LongPrototype.eq = LongPrototype.equals;
  * @param {!Long|number|string} other Other value
  * @returns {boolean}
  */
-LongPrototype.notEquals = function notEquals(other: T) {
+LongPrototype.notEquals = function notEquals(other: alueValidator) {
   return !this.eq(/* validates */ other);
 };
 
@@ -690,7 +690,7 @@ LongPrototype.ne = LongPrototype.notEquals;
  * @param {!Long|number|string} other Other value
  * @returns {boolean}
  */
-LongPrototype.lessThan = function lessThan(other: number) {
+LongPrototype.lessThan = function lessThan(other: BigNumber) {
   return this.comp(/* validates */ other) < 0;
 };
 
@@ -708,7 +708,7 @@ LongPrototype.lt = LongPrototype.lessThan;
  * @param {!Long|number|string} other Other value
  * @returns {boolean}
  */
-LongPrototype.lessThanOrEqual = function lessThanOrEqual(other: number) {
+LongPrototype.lessThanOrEqual = function lessThanOrEqual(other: BigNumber) {
   return this.comp(/* validates */ other) <= 0;
 };
 
@@ -734,7 +734,7 @@ LongPrototype.le = LongPrototype.lessThanOrEqual;
  * @param {!Long|number|string} other Other value
  * @returns {boolean}
  */
-LongPrototype.greaterThan = function greaterThan(other: number) {
+LongPrototype.greaterThan = function greaterThan(other: BigNumber) {
   return this.comp(/* validates */ other) > 0;
 };
 
@@ -752,7 +752,7 @@ LongPrototype.gt = LongPrototype.greaterThan;
  * @param {!Long|number|string} other Other value
  * @returns {boolean}
  */
-LongPrototype.greaterThanOrEqual = function greaterThanOrEqual(other: number) {
+LongPrototype.greaterThanOrEqual = function greaterThanOrEqual(other: BigNumber) {
   return this.comp(/* validates */ other) >= 0;
 };
 
@@ -867,7 +867,7 @@ LongPrototype.add = function add(addend: Long) {
  * @param {!Long|number|string} subtrahend Subtrahend
  * @returns {!Long} Difference
  */
-LongPrototype.subtract = function subtract(subtrahend: Long) {
+LongPrototype.subtract = function subtract(subtrahend: Long | number) {
   if (!isLong(subtrahend))
     subtrahend = fromValue(subtrahend);
   return this.add(subtrahend.neg());
@@ -887,7 +887,7 @@ LongPrototype.sub = LongPrototype.subtract;
  * @param {!Long|number|string} multiplier Multiplier
  * @returns {!Long} Product
  */
-LongPrototype.multiply = function multiply(multiplier: number) {
+LongPrototype.multiply = function multiply(multiplier: BigInteger) {
   if (this.isZero())
     return this;
   if (!isLong(multiplier))
@@ -973,7 +973,7 @@ LongPrototype.mul = LongPrototype.multiply;
  * @param {!Long|number|string} divisor Divisor
  * @returns {!Long} Quotient
  */
-LongPrototype.divide = function divide(divisor: Long) {
+LongPrototype.divide = function divide(divisor: Long | number) {
   if (!isLong(divisor))
     divisor = fromValue(divisor);
   if (divisor.isZero())
@@ -1094,7 +1094,7 @@ LongPrototype.div = LongPrototype.divide;
  * @param {!Long|number|string} divisor Divisor
  * @returns {!Long} Remainder
  */
-LongPrototype.modulo = function modulo(divisor: Long) {
+LongPrototype.modulo = function modulo(divisor: Long | number) {
   if (!isLong(divisor))
     divisor = fromValue(divisor);
 
@@ -1189,7 +1189,7 @@ LongPrototype.and = function and(other: Long) {
  * @param {!Long|number|string} other Other Long
  * @returns {!Long}
  */
-LongPrototype.or = function or(other: Long) {
+LongPrototype.or = function or(other: Long | number) {
   if (!isLong(other))
     other = fromValue(other);
   return fromBits(this.low | other.low, this.high | other.high, this.unsigned);
@@ -1201,7 +1201,7 @@ LongPrototype.or = function or(other: Long) {
  * @param {!Long|number|string} other Other Long
  * @returns {!Long}
  */
-LongPrototype.xor = function xor(other: Long) {
+LongPrototype.xor = function xor(other: Long | number) {
   if (!isLong(other))
     other = fromValue(other);
   return fromBits(this.low ^ other.low, this.high ^ other.high, this.unsigned);
@@ -1369,7 +1369,7 @@ LongPrototype.toUnsigned = function toUnsigned() {
  * @this {!Long}
  * @returns {!Array.<number>} Byte representation
  */
-LongPrototype.toBytes = function toBytes(le: Long) {
+LongPrototype.toBytes = function toBytes(le: number) {
   return le ? this.toBytesLE() : this.toBytesBE();
 };
 
@@ -1420,7 +1420,7 @@ LongPrototype.toBytesBE = function toBytesBE() {
  * @param {boolean=} le Whether little or big endian, defaults to big endian
  * @returns {Long} The corresponding Long value
  */
-Long.fromBytes = function fromBytes(bytes: Uint8Array,  unsigned: boolean,  le: number) {
+Long.fromBytes = function fromBytes(bytes: ByteArray,  unsigned: boolean,  le: number) {
   return le ? Long.fromBytesLE(bytes, unsigned) : Long.fromBytesBE(bytes, unsigned);
 };
 
@@ -1430,7 +1430,7 @@ Long.fromBytes = function fromBytes(bytes: Uint8Array,  unsigned: boolean,  le: 
  * @param {boolean=} unsigned Whether unsigned or not, defaults to signed
  * @returns {Long} The corresponding Long value
  */
-Long.fromBytesLE = function fromBytesLE(bytes: Uint8Array,  unsigned: boolean) {
+Long.fromBytesLE = function fromBytesLE(bytes: Buffer,  unsigned: boolean) {
   return new Long(
     bytes[0] |
     bytes[1] << 8 |
@@ -1450,7 +1450,7 @@ Long.fromBytesLE = function fromBytesLE(bytes: Uint8Array,  unsigned: boolean) {
  * @param {boolean=} unsigned Whether unsigned or not, defaults to signed
  * @returns {Long} The corresponding Long value
  */
-Long.fromBytesBE = function fromBytesBE(bytes: Uint8Array,  unsigned: number) {
+Long.fromBytesBE = function fromBytesBE(bytes: Bytes,  unsigned: Boolean) {
   return new Long(
     bytes[4] << 24 |
     bytes[5] << 16 |

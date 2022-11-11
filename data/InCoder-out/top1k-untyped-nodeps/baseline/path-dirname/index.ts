@@ -3,13 +3,13 @@
 var path = require('path');
 var inspect = require('util').inspect;
 
-function assertPath(path: ring | string[]) {
+function assertPath(path: ring | undefined) {
   if (typeof path !== 'string') {
     throw new TypeError('Path must be a string. Received ' + inspect(path));
   }
 }
 
-function posix(path: string | null) {
+function posix(path: string | Buffer) {
   assertPath(path);
   if (path.length === 0)
     return '.';

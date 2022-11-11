@@ -24,7 +24,7 @@ import awaitify from './internal/awaitify.js'
  * tests. Invoked with (err, result).
  * @returns {Promise} a promise, if no callback provided
  */
-function someLimit(coll: Collection,  limit: number,  iteratee: Iteratee,  callback: Callback) {
+function someLimit(coll: Collection,  limit: number,  iteratee: Function,  callback: Function) {
     return createTester(Boolean, res => res)(eachOfLimit(limit), coll, iteratee, callback)
 }
 export default awaitify(someLimit, 4);

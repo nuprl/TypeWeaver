@@ -1,7 +1,7 @@
 /**
  * Determines whether an object can have data
  */
-export default function( owner : any) {
+export default function( owner : Object) {
 
 	// Accepts only:
 	//  - Node

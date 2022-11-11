@@ -42,7 +42,7 @@ let __;
  */
 let __loc;
 
-function yyloc(start: number,  end: number) {
+function yyloc(start: Position,  end: Position) {
   if (!yy.options.captureLocations) {
     return null;
   }
@@ -898,7 +898,7 @@ yyparse.onShift = token => {
 /**
  * Extracts ranges from the range string.
  */
-function getRange(text: Text) {
+function getRange(text: TextEditor) {
   const range = text.match(/\d+/g).map(Number);
 
   if (Number.isFinite(range[1]) && range[1] < range[0]) {
@@ -974,7 +974,7 @@ function UnicodeProperty(matched: RegExpExecArray,  loc: number) {
 /**
  * Creates a character node.
  */
-function Char(value: number,  kind: number,  loc: Location) {
+function Char(value: number,  kind: CharKind,  loc: SourceLocation) {
   let symbol;
   let codePoint;
 
@@ -1089,7 +1089,7 @@ function checkFlags(flags: number) {
  * Parses patterns like \1, \2, etc. either as a backreference
  * to a group, or a deciaml char code.
  */
-function GroupRefOrDecChar(text: string | number,  textLoc: number) {
+function GroupRefOrDecChar(text: Text,  textLoc: TextLoc) {
   const reference = Number(text.slice(1));
 
   if (reference > 0 && reference <= capturingGroupsCount) {
@@ -1114,7 +1114,7 @@ const ucpReAnywhere = /\\u\{[0-9a-fA-F]{1,}\}/; // matches anywhere in string
 /**
  * Validates Unicode group name.
  */
-function validateUnicodeGroupName(name: string | null,  state: State) {
+function validateUnicodeGroupName(name: string | undefined,  state: State) {
   const isUnicodeName = ucpReAnywhere.test(name);
   const isUnicodeState = (state === 'u' || state === 'xu' || state === 'u_class');
 
@@ -1149,7 +1149,7 @@ function validateUnicodeGroupName(name: string | null,  state: State) {
 const uidRe = /\\u(?:([dD][89aAbB][0-9a-fA-F]{2})\\u([dD][c-fC-F][0-9a-fA-F]{2})|([dD][89aAbB][0-9a-fA-F]{2})|([dD][c-fC-F][0-9a-fA-F]{2})|([0-9a-ce-fA-CE-F][0-9a-fA-F]{3}|[dD][0-7][0-9a-fA-F]{2})|\{(0*(?:[0-9a-fA-F]{1,5}|10[0-9a-fA-F]{4}))\})/;
 
 function decodeUnicodeGroupName(name: number) {
-  return name.replace(new RegExp(uidRe, 'g'), function (_: TrailingSurro,  leadSurrogate: any,  trailSurrogate: any,  leadSurrogateOnly: boolean,  trailSurrogateOnly: boolean,  nonSurrogate: number,  codePoint: number) {
+  return name.replace(new RegExp(uidRe, 'g'), function (_: String,  leadSurrogate: Char,  trailSurrogate: Char,  leadSurrogateOnly: Char,  trailSurrogateOnly: Char,  nonSurrogate: Char,  codePoint: Int) {
     if (leadSurrogate) {
       return String.fromCodePoint(parseInt(leadSurrogate, 16), parseInt(trailSurrogate, 16));
     }
@@ -1176,7 +1176,7 @@ function decodeUnicodeGroupName(name: number) {
  * to a named capturing group (if it presents), or parses it
  * as a list of char: `\k`, `<`, `f`, etc.
  */
-function NamedGroupRefOrChars(text: string | NamedGroupRefOr,  textLoc: TextLocation) {
+function NamedGroupRefOrChars(text: IChars,  textLoc: TextLocation) {
   const referenceRaw = text.slice(3, -1);
   const reference = decodeUnicodeGroupName(referenceRaw);
 
@@ -1274,7 +1274,7 @@ function NamedGroupRefOrChars(text: string | NamedGroupRefOr,  textLoc: TextLoca
 /**
  * Creates an AST node with a location.
  */
-function Node(node: Node,  loc: Location) {
+function Node(node: Node,  loc: SourceLocation) {
   if (yy.options.captureLocations) {
     node.loc = {
       source: parsingString.slice(loc.startOffset, loc.endOffset),
@@ -1296,7 +1296,7 @@ function Node(node: Node,  loc: Location) {
 /**
  * Creates location node.
  */
-function loc(start: number,  end: number) {
+function loc(start: Position,  end: Position) {
   if (!yy.options.captureLocations) {
     return null;
   }
@@ -1327,7 +1327,7 @@ function unexpectedEndOfInput() {
   parseError(`Unexpected end of input.`);
 }
 
-function parseError(message: string | SyntaxError) {
+function parseError(message: string | Error) {
   throw new SyntaxError(message);
 }
 

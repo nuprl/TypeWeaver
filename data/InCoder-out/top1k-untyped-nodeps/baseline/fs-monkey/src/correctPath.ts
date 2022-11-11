@@ -7,7 +7,7 @@ const isWin = process.platform === 'win32';
  * Copyright (c) darsain.
  * Released under the ISC License.
  */
-function removeTrailingSeparator(str: string | null) {
+function removeTrailingSeparator(str: string | undefined) {
 	let i = str.length - 1;
 	if (i < 2) {
 		return str;
@@ -18,7 +18,7 @@ function removeTrailingSeparator(str: string | null) {
 	return str.substr(0, i + 1);
 }
 
-function isSeparator(str: number,  i: number) {
+function isSeparator(str: string | number,  i: number) {
     let char = str[i];
     return i > 0 && (char === '/' || (isWin && char === '\\'));
 }
@@ -59,6 +59,6 @@ export function unixify(filepath: string | Buffer,  stripTrailing = true: boolea
 /*
 * Corrects a windows path to unix format (including \\?\c:...)
 */
-export function correctPath(filepath: string | string[]) {
+export function correctPath(filepath: string | Buffer) {
     return unixify(filepath.replace(/^\\\\\?\\.:\\/,'\\'));
 }

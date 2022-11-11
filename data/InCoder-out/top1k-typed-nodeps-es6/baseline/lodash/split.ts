@@ -23,7 +23,7 @@ const MAX_ARRAY_LENGTH = 4294967295
  * split('a-b-c', '-', 2)
  * // => ['a', 'b']
  */
-function split(string: string | RegExp,  separator: string | RegExp,  limit: number) {
+function split(string: any,  separator: RegExp,  limit: number) {
   limit = limit === undefined ? MAX_ARRAY_LENGTH : limit >>> 0
   if (!limit) {
     return []

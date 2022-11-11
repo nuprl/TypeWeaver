@@ -6,10 +6,10 @@
 import { inspect } from 'util';
 
 
-export default function sub(pattern: egExp,  ...values: rray<any>) {
+export default function sub(pattern: egExp,  ...values: ny[]) {
     let regex = /%(?:(%)|(-)?(\*)?(?:\((\w+)\))?([A-Za-z]))/g
 
-    let result = pattern.replace(regex, function (_: Expr,  is_literal: Expr,  is_left_align: Expr,  is_padded: Expr,  name: Expr,  format: Expr) {
+    let result = pattern.replace(regex, function (_: TokenStream,  is_literal: TokenStream,  is_left_align: TokenStream,  is_padded: TokenStream,  name: TokenStream,  format: TokenStream) {
         if (is_literal) return '%'
 
         let padded_count = 0

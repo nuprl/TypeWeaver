@@ -150,7 +150,7 @@ function parseDigits(token: Token,  minDigits: number,  maxDigits: number,  trai
   return parseInt(token.substr(0, count), 10);
 }
 
-function parseTime(token: any) {
+function parseTime(token: string | number) {
   const parts = token.split(":");
   const result = [0, 0, 0];
 
@@ -179,7 +179,7 @@ function parseTime(token: any) {
   return result;
 }
 
-function parseMonth(token: any) {
+function parseMonth(token: Token) {
   token = String(token)
     .substr(0, 3)
     .toLowerCase();
@@ -190,7 +190,7 @@ function parseMonth(token: any) {
 /*
  * RFC6265 S5.1.1 date parser (see RFC for full grammar)
  */
-function parseDate(str: string | null) {
+function parseDate(str: string | undefined) {
   if (!str) {
     return;
   }
@@ -343,7 +343,7 @@ function canonicalDomain(str: string | null) {
 }
 
 // S5.1.3 Domain Matching
-function domainMatch(str: Domain,  domStr: Domain,  canonicalize: Boolean) {
+function domainMatch(str: string | RegExp,  domStr: string | RegExp,  canonicalize: boolean) {
   if (str == null || domStr == null) {
     return null;
   }
@@ -437,7 +437,7 @@ function trimTerminator(str: string | null) {
   return str;
 }
 
-function parseCookiePair(cookiePair: CookiePair,  looseMode: boolean) {
+function parseCookiePair(cookiePair: string | string[],  looseMode: boolean | undefined) {
   cookiePair = trimTerminator(cookiePair);
   validators.validate(validators.isString(cookiePair), cookiePair);
 
@@ -475,7 +475,7 @@ function parseCookiePair(cookiePair: CookiePair,  looseMode: boolean) {
   return c;
 }
 
-function parse(str: string | number,  options: ParseOptions) {
+function parse(str: string | string[],  options: ParseOptions) {
   if (!options || typeof options !== "object") {
     options = {};
   }
@@ -645,7 +645,7 @@ function parse(str: string | number,  options: ParseOptions) {
  * @param cookie
  * @returns boolean
  */
-function isSecurePrefixConditionMet(cookie: Cookie) {
+function isSecurePrefixConditionMet(cookie: ICookie) {
   validators.validate(validators.isObject(cookie), cookie);
   return !cookie.key.startsWith("__Secure-") || cookie.secure;
 }
@@ -661,7 +661,7 @@ function isSecurePrefixConditionMet(cookie: Cookie) {
  * @param cookie
  * @returns boolean
  */
-function isHostPrefixConditionMet(cookie: Cookie) {
+function isHostPrefixConditionMet(cookie: ICookie) {
   validators.validate(validators.isObject(cookie));
   return (
     !cookie.key.startsWith("__Host-") ||
@@ -673,7 +673,7 @@ function isHostPrefixConditionMet(cookie: Cookie) {
 }
 
 // avoid the V8 deoptimization monster!
-function jsonParse(str: string | Object) {
+function jsonParse(str: string | number) {
   let obj;
   try {
     obj = JSON.parse(str);
@@ -683,7 +683,7 @@ function jsonParse(str: string | Object) {
   return obj;
 }
 
-function fromJSON(str: string | any) {
+function fromJSON(str: string | null) {
   if (!str || validators.isEmptyString(str)) {
     return null;
   }
@@ -758,7 +758,7 @@ function cookieCompare(a: any,  b: any) {
 
 // Gives the permutation of all possible pathMatch()es of a given path. The
 // array is in longest-to-shortest order.  Handy for indexing.
-function permutePath(path: Array<string>) {
+function permutePath(path: Path) {
   validators.validate(validators.isString(path));
   if (path === "/") {
     return ["/"];
@@ -776,7 +776,7 @@ function permutePath(path: Array<string>) {
   return permutations;
 }
 
-function getCookieContext(url: any) {
+function getCookieContext(url: string | Object) {
   if (url instanceof Object) {
     return url;
   }
@@ -1272,7 +1272,7 @@ class CookieJar {
     const store = this.store;
 
     if (!store.updateCookie) {
-      store.updateCookie = function(oldCookie: any,  newCookie: any,  cb: Function) {
+      store.updateCookie = function(oldCookie: Cookie,  newCookie: Cookie,  cb: Function) {
         this.putCookie(newCookie, cb);
       };
     }
@@ -1438,7 +1438,7 @@ class CookieJar {
   getCookieString(...args) {
     const cb = args.pop();
     validators.validate(validators.isFunction(cb), cb);
-    const next = function(err: Error,  cookies: any) {
+    const next = function(err: Error,  cookies: Cookie[]) {
       if (err) {
         cb(err);
       } else {
@@ -1458,7 +1458,7 @@ class CookieJar {
   getSetCookieStrings(...args) {
     const cb = args.pop();
     validators.validate(validators.isFunction(cb), cb);
-    const next = function(err: Error,  cookies: any) {
+    const next = function(err: Error,  cookies: Cookie[]) {
       if (err) {
         cb(err);
       } else {

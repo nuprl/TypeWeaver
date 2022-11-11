@@ -1,6 +1,6 @@
 import crypto from 'crypto';
 
-function sha (key: CryptoKey,  body: Buffer,  algorithm: Algorithm) {
+function sha (key: Buffer,  body: Buffer,  algorithm: number) {
   return crypto.createHmac(algorithm, key).update(body).digest('base64')
 }
 
@@ -8,7 +8,7 @@ function rsa (key: Buffer,  body: Buffer) {
   return crypto.createSign('RSA-SHA1').update(body).sign(key, 'base64')
 }
 
-function rfc3986 (str: string | string[]) {
+function rfc3986 (str: any) {
   return encodeURIComponent(str)
     .replace(/!/g,'%21')
     .replace(/\*/g,'%2A')
@@ -55,7 +55,7 @@ function generateBase (httpMethod: HttpMethod,  base_uri: Uri,  params: any) {
   // 2.  The parameters are sorted by name, using ascending byte value
   //     ordering.  If two or more parameters share the same name, they
   //     are sorted by their value.
-  .sort(function (a: any,  b: any) {
+  .sort(function (a: number,  b: number) {
     return compare(a[0], b[0]) || compare(a[1], b[1])
   })
   // 3.  The name of each parameter is concatenated to its corresponding
@@ -86,7 +86,7 @@ function hmacsign (httpMethod: any,  base_uri: any,  params: any,  consumer_secr
   return sha(key, base, 'sha1')
 }
 
-function hmacsign256 (httpMethod: any,  base_uri: any,  params: any,  consumer_secret: any,  token_secret: any) {
+function hmacsign256 (httpMethod: HttpMethod,  base_uri: Uri,  params: any,  consumer_secret: any,  token_secret: any) {
   var base = generateBase(httpMethod, base_uri, params)
   var key = [
     consumer_secret || '',
@@ -112,7 +112,7 @@ function plaintext (consumer_secret: String,  token_secret: String) {
   return key
 }
 
-function sign (signMethod: SignMethod,  httpMethod: HttpMethod,  base_uri: Uri,  params: Dictionary,  consumer_secret: String,  token_secret: String) {
+function sign (signMethod: signMethod,  httpMethod: httpMethod,  base_uri: base_uri,  params: params,  consumer_secret: consumer_secret,  token_secret: token_secret) {
   var method
   var skipArgs = 1
 

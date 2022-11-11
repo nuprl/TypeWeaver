@@ -13,7 +13,7 @@ async.parallel({
 }, errTo(console.log, function(data: any) {
 
     var features = {};
-    utils.parseText(data.data, ";").map(function(a: number[]) {
+    utils.parseText(data.data, ";").map(function(a: number) {
         var ch = parseInt(a[0], 16);
         var combiningClass = parseInt(a[3], 10) || 0;
         var decompStr = a[5].trim();
@@ -79,15 +79,15 @@ async.parallel({
     function f(ch: number) { return features[ch] || {combiningClass: 0}; }
     function hex(ch: number) { return (+ch).toString(16);}
 
-    function decompose(ch: any,  canonical: boolean) {
+    function decompose(ch: number,  canonical: number) {
         var feat = f(ch);
         if (feat.decomp && (feat.canonical || !canonical)) {
-            return [].concat.apply([], feat.decomp.map(function(c: CharCode) {return decompose(c, canonical)}));
+            return [].concat.apply([], feat.decomp.map(function(c: any) {return decompose(c, canonical)}));
         } else return [ch];
     }
     /*
     for (var ch in features) {
-        [true, false].map(function(can: Cancellable) {
+        [true, false].map(function(can: Can) {
             var arr = decompose(ch, can);
             for (var i = 0; i < arr.length-1; i++)
                 if (f(arr[i]).combiningClass > f(arr[i+1]).combiningClass)

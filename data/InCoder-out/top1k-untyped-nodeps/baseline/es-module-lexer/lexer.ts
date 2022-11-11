@@ -20,7 +20,7 @@ function addImport (ss: string,  s: string,  e: number,  d: number) {
   return impt;
 }
 
-function addExport (s: string,  e: ExportEntry,  ls: boolean,  le: ExportEntry[]) {
+function addExport (s: string,  e: number,  ls: number,  le: number) {
   exports.push({
     s,
     e,
@@ -31,7 +31,7 @@ function addExport (s: string,  e: ExportEntry,  ls: boolean,  le: ExportEntry[]
   });
 }
 
-function readName (impt: mpt) {
+function readName (impt: Import) {
   let { d, s } = impt;
   if (d !== -1)
     s++;
@@ -39,7 +39,7 @@ function readName (impt: mpt) {
 }
 
 // Note: parsing is based on the _assumption_ that the source is already valid
-export function parse (_source: Source,  _name: TokenName) {
+export function parse (_source: any,  _name: any) {
   openTokenDepth = 0;
   curDynamicImport = null;
   templateDepth = -1;
@@ -657,7 +657,7 @@ function readImportString (ss: string,  ch: number) {
   impt.se = pos + 1;
 }
 
-function commentWhitespace (br: Node) {
+function commentWhitespace (br: number) {
   let ch;
   do {
     ch = source.charCodeAt(pos);
@@ -694,7 +694,7 @@ function templateString () {
   syntaxError();
 }
 
-function blockComment (br: BlockComment) {
+function blockComment (br: number) {
   pos++;
   while (pos++ < end) {
     const ch = source.charCodeAt(pos);
@@ -715,7 +715,7 @@ function lineComment () {
   }
 }
 
-function stringLiteral (quote: any) {
+function stringLiteral (quote: string | undefined) {
   while (pos++ < end) {
     let ch = source.charCodeAt(pos);
     if (ch === quote)
@@ -759,7 +759,7 @@ function regularExpression () {
   syntaxError();
 }
 
-function readToWsOrPunctuator (ch: any) {
+function readToWsOrPunctuator (ch: number) {
   do {
     if (isBrOrWs(ch) || isPunctuator(ch))
       return ch;
@@ -773,11 +773,11 @@ function isBr (c: number) {
   return c === 13/*\r*/ || c === 10/*\n*/;
 }
 
-function isWsNotBr (c: number) {
+function isWsNotBr (c: Char) {
   return c === 9 || c === 11 || c === 12 || c === 32 || c === 160;
 }
 
-function isBrOrWs (c: Character) {
+function isBrOrWs (c: number) {
   return c > 8 && c < 14 || c === 32 || c === 160;
 }
 
@@ -785,7 +785,7 @@ function isBrOrWsOrPunctuatorNotDot (c: number) {
   return c > 8 && c < 14 || c === 32 || c === 160 || isPunctuator(c) && c !== 46/*.*/;
 }
 
-function keywordStart (pos: number) {
+function keywordStart (pos: Position) {
   return pos === 0 || isBrOrWsOrPunctuatorNotDot(source.charCodeAt(pos - 1));
 }
 

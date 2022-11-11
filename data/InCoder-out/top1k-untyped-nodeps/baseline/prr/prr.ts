@@ -5,7 +5,7 @@
   * License: MIT
   */
 
-(function (name: any,  context: any,  definition: any) {
+(function (name: String,  context: Context,  definition: Definition) {
   if (typeof module != 'undefined' && module.exports)
     module.exports = definition()
   else
@@ -25,7 +25,7 @@
     , makeOptions = function (value: any,  options: any) {
         var oo = typeof options == 'object'
           , os = !oo && typeof options == 'string'
-          , op = function (p: ring | number) {
+          , op = function (p: y) {
               return oo
                 ? !!options[p]
                 : os

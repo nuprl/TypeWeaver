@@ -6,7 +6,7 @@ import isFunction from 'lodash/isFunction';
 import isObjectLike from 'lodash/isObjectLike';
 
 
-export default function (options: IOptions) {
+export default function (options: any) {
 
     var errorText = 'Please verify options'; // For better minification because this string is repeating
 

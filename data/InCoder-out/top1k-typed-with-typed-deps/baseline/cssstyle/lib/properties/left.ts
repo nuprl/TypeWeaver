@@ -3,7 +3,7 @@
 var parseMeasurement = require('../parsers').parseMeasurement;
 
 module.exports.definition = {
-  set: function(v: any) {
+  set: function(v: string | number) {
     this._setProperty('left', parseMeasurement(v));
   },
   get: function() {

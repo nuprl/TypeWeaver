@@ -15,13 +15,13 @@ import {
   ```javascript
   import Promise from 'rsvp';
 
-  let promise1 = new Promise(function(resolve: Function,  reject: Function){
+  let promise1 = new Promise(function(resolve: resolve,  reject: reject){
     setTimeout(function(){
       resolve('promise 1');
     }, 200);
   });
 
-  let promise2 = new Promise(function(resolve: Function,  reject: Function){
+  let promise2 = new Promise(function(resolve: resolve,  reject: reject){
     setTimeout(function(){
       resolve('promise 2');
     }, 100);
@@ -42,19 +42,19 @@ import {
   ```javascript
   import Promise from 'rsvp';
 
-  let promise1 = new Promise(function(resolve: Function,  reject: Function){
+  let promise1 = new Promise(function(resolve: resolve,  reject: reject){
     setTimeout(function(){
       resolve('promise 1');
     }, 200);
   });
 
-  let promise2 = new Promise(function(resolve: Function,  reject: Function){
+  let promise2 = new Promise(function(resolve: resolve,  reject: reject){
     setTimeout(function(){
       reject(new Error('promise 2'));
     }, 100);
   });
 
-  Promise.race([promise1, promise2]).then(function(result: IPromise<any>){
+  Promise.race([promise1, promise2]).then(function(result: any){
     // Code here never runs
   }, function(reason: Error){
     // reason.message === 'promise 2' because promise 2 became rejected before

@@ -14,7 +14,7 @@ function utimesMillis (path: Path,  atime: number,  mtime: number,  callback: Fu
   })
 }
 
-function utimesMillisSync (path: PathLike,  atime: number,  mtime: number) {
+function utimesMillisSync (path: string | Buffer,  atime: number,  mtime: number) {
   const fd = fs.openSync(path, 'r+')
   fs.futimesSync(fd, atime, mtime)
   return fs.closeSync(fd)

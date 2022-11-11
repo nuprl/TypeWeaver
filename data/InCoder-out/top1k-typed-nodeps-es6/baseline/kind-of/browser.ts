@@ -72,12 +72,12 @@
     return typeof val.constructor === 'function' ? val.constructor.name : null;
   }
 
-  function isArray(val: any) {
+  function isArray(val: unknown) {
     if (Array.isArray) return Array.isArray(val);
     return val instanceof Array;
   }
 
-  function isError(val: unknown) {
+  function isError(val: any) {
     return val instanceof Error || (typeof val.message === 'string' && val.constructor && typeof val.constructor.stackTraceLimit === 'number');
   }
 
@@ -96,7 +96,7 @@
       && typeof val.global === 'boolean';
   }
 
-  function isGeneratorFn(name: string | symbol,  val: unknown) {
+  function isGeneratorFn(name: string | Function,  val: any) {
     return ctorName(name) === 'GeneratorFunction';
   }
 
@@ -106,7 +106,7 @@
       && typeof val.next === 'function';
   }
 
-  function isArguments(val: mixed) {
+  function isArguments(val: unknown) {
     try {
       if (typeof val.length === 'number' && typeof val.callee === 'function') {
         return true;

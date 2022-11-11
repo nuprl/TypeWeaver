@@ -40,7 +40,7 @@ import {
   @return {Promise} a promise that will become fulfilled with the given
   `value`
 */
-export default function resolve(object: any,  label: string | Function) {
+export default function resolve(object: any,  label: any) {
   /*jshint validthis:true */
   let Constructor = this;
 

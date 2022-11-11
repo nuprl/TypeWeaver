@@ -20,7 +20,7 @@
  * assign({ 'a': 1 }, toPlainObject(new Foo))
  * // => { 'a': 1, 'b': 2, 'c': 3 }
  */
-function toPlainObject(value: any) {
+function toPlainObject(value: mixed) {
   value = Object(value)
   const result = {}
   for (const key in value) {

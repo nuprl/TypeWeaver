@@ -39,8 +39,8 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *
  * // asynchronous function that returns the file size, transformed to human-readable format
  * // e.g. 1024 bytes = 1KB, 1234 bytes = 1.21 KB, 1048576 bytes = 1MB, etc.
- * function transformFileSize(acc: number,  value: number,  key: any,  callback: Function) {
- *     fs.stat(value, function(err: Error,  stat: fs.Stat) {
+ * function transformFileSize(acc: number,  value: number,  key: number,  callback: Function) {
+ *     fs.stat(value, function(err: Error,  stat: fs.Stats) {
  *         if (err) {
  *             return callback(err);
  *         }
@@ -96,8 +96,8 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *
  * // asynchronous function that returns the file size, transformed to human-readable format
  * // e.g. 1024 bytes = 1KB, 1234 bytes = 1.21 KB, 1048576 bytes = 1MB, etc.
- * function transformFileSize(acc: number,  value: number,  key: any,  callback: Function) {
- *     fs.stat(value, function(err: Error,  stat: fs.Stat) {
+ * function transformFileSize(acc: number,  value: number,  key: number,  callback: Function) {
+ *     fs.stat(value, function(err: Error,  stat: fs.Stats) {
  *         if (err) {
  *             return callback(err);
  *         }
@@ -138,7 +138,7 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  * }
  *
  */
-export default function transform (coll: Collection,  accumulator: any,  iteratee: any,  callback: Function) {
+export default function transform (coll: Collection,  accumulator: any,  iteratee: Function,  callback: Function) {
     if (arguments.length <= 3 && typeof accumulator === 'function') {
         callback = iteratee;
         iteratee = accumulator;

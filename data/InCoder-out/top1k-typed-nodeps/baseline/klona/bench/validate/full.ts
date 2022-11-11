@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-module.exports = function (input: any,  copy: boolean) {
+module.exports = function (input: any,  copy: any) {
 	// assert.deepStrictEqual(copy, input, 'initial copy');
 
 	// RegExp

@@ -23,7 +23,7 @@ const COMPILE = function(options: any) {
 	return factory.create(options);
 };
 
-function AsyncParallelHook(args = []: Array<any>,  name = undefined: string | null) {
+function AsyncParallelHook(args = []: Array<any>,  name = undefined: any) {
 	const hook = new Hook(args, name);
 	hook.constructor = AsyncParallelHook;
 	hook.compile = COMPILE;

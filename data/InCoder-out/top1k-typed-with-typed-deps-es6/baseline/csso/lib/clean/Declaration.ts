@@ -1,6 +1,6 @@
 import { property } from 'css-tree';
 
-export default function cleanDeclartion(node: ts.Node,  item: ts.DeclarationItem,  list: ts.DeclarationList) {
+export default function cleanDeclartion(node: ASTDeclaration,  item: ASTDeclaration,  list: ASTList) {
     if (node.value.children && node.value.children.isEmpty) {
         list.remove(item);
         return;

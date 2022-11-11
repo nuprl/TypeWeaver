@@ -27,7 +27,7 @@
 
     var code = require('./code');
 
-    function isStrictModeReservedWordES6(id: number) {
+    function isStrictModeReservedWordES6(id: Identifier) {
         switch (id) {
         case 'implements':
         case 'interface':
@@ -43,7 +43,7 @@
         }
     }
 
-    function isKeywordES5(id: number,  strict: boolean) {
+    function isKeywordES5(id: Identifier,  strict: Boolean) {
         // yield should not be treated as keyword under non-strict mode.
         if (!strict && id === 'yield') {
             return false;
@@ -51,7 +51,7 @@
         return isKeywordES6(id, strict);
     }
 
-    function isKeywordES6(id: number,  strict: boolean) {
+    function isKeywordES6(id: Identifier,  strict: Boolean) {
         if (strict && isStrictModeReservedWordES6(id)) {
             return true;
         }
@@ -82,11 +82,11 @@
         }
     }
 
-    function isReservedWordES5(id: number,  strict: boolean) {
+    function isReservedWordES5(id: Identifier,  strict: Boolean) {
         return id === 'null' || id === 'true' || id === 'false' || isKeywordES5(id, strict);
     }
 
-    function isReservedWordES6(id: number,  strict: boolean) {
+    function isReservedWordES6(id: Identifier,  strict: Boolean) {
         return id === 'null' || id === 'true' || id === 'false' || isKeywordES6(id, strict);
     }
 
@@ -94,7 +94,7 @@
         return id === 'eval' || id === 'arguments';
     }
 
-    function isIdentifierNameES5(id: IdentifierName) {
+    function isIdentifierNameES5(id: Identifier) {
         var i, iz, ch;
 
         if (id.length === 0) { return false; }
@@ -117,7 +117,7 @@
         return (lead - 0xD800) * 0x400 + (trail - 0xDC00) + 0x10000;
     }
 
-    function isIdentifierNameES6(id: IdentifierName) {
+    function isIdentifierNameES6(id: Identifier) {
         var i, iz, ch, lowCh, check;
 
         if (id.length === 0) { return false; }
@@ -142,11 +142,11 @@
         return true;
     }
 
-    function isIdentifierES5(id: Identifier,  strict: boolean) {
+    function isIdentifierES5(id: Identifier,  strict: Boolean) {
         return isIdentifierNameES5(id) && !isReservedWordES5(id, strict);
     }
 
-    function isIdentifierES6(id: Identifier,  strict: boolean) {
+    function isIdentifierES6(id: Identifier,  strict: Boolean) {
         return isIdentifierNameES6(id) && !isReservedWordES6(id, strict);
     }
 

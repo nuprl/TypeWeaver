@@ -8,7 +8,7 @@ const path = require('path')
 
 // https://github.com/nodejs/node/issues/8987
 // https://github.com/libuv/libuv/pull/1088
-module.exports.checkPath = function checkPath (pth: string | string[]) {
+module.exports.checkPath = function checkPath (pth: Path) {
   if (process.platform === 'win32') {
     const pathHasInvalidWinCharacters = /[<>:"|?*]/.test(pth.replace(path.parse(pth).root, ''))
 

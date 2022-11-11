@@ -1,7 +1,7 @@
 'use strict';
 
 
-function RequestError(cause: Error,  options: RequestOptions,  response: any) {
+function RequestError(cause: any,  options: any,  response: any) {
 
     this.name = 'RequestError';
     this.message = String(cause);
@@ -37,7 +37,7 @@ StatusCodeError.prototype = Object.create(Error.prototype);
 StatusCodeError.prototype.constructor = StatusCodeError;
 
 
-function TransformError(cause: Error,  options: TransformOptions,  response: Response) {
+function TransformError(cause: any,  options: any,  response: any) {
 
     this.name = 'TransformError';
     this.message = String(cause);

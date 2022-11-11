@@ -13,7 +13,7 @@ function encode(integer: number) {
   return result
 }
 
-function decode(base62: ase62) {
+function decode(base62: umber) {
   return sum(
     base62
       .split('')

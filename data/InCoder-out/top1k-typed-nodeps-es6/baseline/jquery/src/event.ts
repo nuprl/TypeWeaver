@@ -31,7 +31,7 @@ function expectSync( elem: Element,  type : string) {
 	return ( elem === document.activeElement ) === ( type === "focus" );
 }
 
-function on( elem: Element,  types: string,  selector: string,  data: any,  fn: Function,  one : Boolean) {
+function on( elem: Element,  types: Array,  selector: String,  data: Object,  fn: Function,  one : Boolean) {
 	var origFn, type;
 
 	// Types can be a map of types/handlers
@@ -77,7 +77,7 @@ function on( elem: Element,  types: string,  selector: string,  data: any,  fn: 
 
 	if ( one === 1 ) {
 		origFn = fn;
-		fn = function( event : MouseEvent) {
+		fn = function( event : Event) {
 
 			// Can use an empty set, since event contains the info
 			jQuery().off( event );
@@ -98,7 +98,7 @@ function on( elem: Element,  types: string,  selector: string,  data: any,  fn: 
  */
 jQuery.event = {
 
-	add: function( elem: Element,  types: Array<String>,  handler: Function,  data: Object,  selector : Function) {
+	add: function( elem: Element,  types: Array,  handler: Function,  data: Object,  selector : String) {
 
 		var handleObjIn, eventHandle, tmp,
 			events, t, handleObj,
@@ -210,7 +210,7 @@ jQuery.event = {
 	},
 
 	// Detach an event or set of events from an element
-	remove: function( elem: Element,  types: Array<string>,  handler: Function,  selector: String,  mappedTypes : Array) {
+	remove: function( elem: this,  types: any,  handler: Function,  selector: String,  mappedTypes : String[]) {
 
 		var j, origCount, tmp,
 			events, t, handleObj,
@@ -283,7 +283,7 @@ jQuery.event = {
 		}
 	},
 
-	dispatch: function( nativeEvent : any) {
+	dispatch: function( nativeEvent : NativeEvent) {
 
 		var i, j, ret, matched, handleObj, handlerQueue,
 			args = new Array( arguments.length ),
@@ -351,7 +351,7 @@ jQuery.event = {
 		return event.result;
 	},
 
-	handlers: function( event: JQueryEventObject,  handlers : any[]) {
+	handlers: function( event: $.Event,  handlers : Array< Function >) {
 		var i, handleObj, sel, matchedHandlers, matchedSelectors,
 			handlerQueue = [],
 			delegateCount = handlers.delegateCount,
@@ -405,7 +405,7 @@ jQuery.event = {
 		return handlerQueue;
 	},
 
-	addProp: function( name: string,  hook : Function) {
+	addProp: function( name: string,  hook : Hook) {
 		Object.defineProperty( jQuery.Event.prototype, name, {
 			enumerable: true,
 			configurable: true,
@@ -484,7 +484,7 @@ jQuery.event = {
 
 			// For cross-browser consistency, suppress native .click() on links
 			// Also prevent it if we're currently inside a leveraged native-event stack
-			_default: function( event : MouseEvent) {
+			_default: function( event : DOMEvent) {
 				var target = event.target;
 				return rcheckableType.test( target.type ) &&
 					target.click && nodeName( target, "input" ) &&
@@ -494,7 +494,7 @@ jQuery.event = {
 		},
 
 		beforeunload: {
-			postDispatch: function( event : jQuery.Event) {
+			postDispatch: function( event : Event) {
 
 				// Support: Chrome <=73+
 				// Chrome doesn't alert on `event.preventDefault()`
@@ -525,7 +525,7 @@ function leverageNative( el: HTMLElement,  type: string,  expectSync : boolean) 
 	dataPriv.set( el, type, false );
 	jQuery.event.add( el, type, {
 		namespace: false,
-		handler: function( event : JQueryEventObject) {
+		handler: function( event : Event) {
 			var notAsync, result,
 				saved = dataPriv.get( this, type );
 
@@ -600,7 +600,7 @@ function leverageNative( el: HTMLElement,  type: string,  expectSync : boolean) 
 	} );
 }
 
-jQuery.removeEvent = function( elem: Element,  type: string,  handle : string) {
+jQuery.removeEvent = function( elem: any,  type: any,  handle : any) {
 
 	// This "if" is needed for plain objects
 	if ( elem.removeEventListener ) {
@@ -608,7 +608,7 @@ jQuery.removeEvent = function( elem: Element,  type: string,  handle : string) {
 	}
 };
 
-jQuery.Event = function( src: string,  props : any) {
+jQuery.Event = function( src: any,  props : any) {
 
 	// Allow instantiation without the 'new' keyword
 	if ( !( this instanceof jQuery.Event ) ) {
@@ -748,7 +748,7 @@ jQuery.each( { focus: "focusin", blur: "focusout" }, function( type: any,  deleg
 
 		// Suppress native focus or blur if we're currently inside
 		// a leveraged native-event stack
-		_default: function( event : jQuery.Event) {
+		_default: function( event : SyntheticEvent) {
 			return dataPriv.get( event.target, type );
 		},
 
@@ -764,12 +764,12 @@ jQuery.each( {
 	mouseleave: "mouseout",
 	pointerenter: "pointerover",
 	pointerleave: "pointerout"
-}, function( orig: any,  fix : any) {
+}, function( orig: jQuery.Event,  fix : jQuery.Event) {
 	jQuery.event.special[ orig ] = {
 		delegateType: fix,
 		bindType: fix,
 
-		handle: function( event : jQuery.Event) {
+		handle: function( event : Event) {
 			var ret,
 				target = this,
 				related = event.relatedTarget,
@@ -789,13 +789,13 @@ jQuery.each( {
 
 jQuery.fn.extend( {
 
-	on: function( types: Array,  selector: String,  data: Object,  fn : Function) {
+	on: function( types: Array,  selector: Array,  data: Array,  fn : Function) {
 		return on( this, types, selector, data, fn );
 	},
-	one: function( types: Array,  selector: String,  data: Object,  fn : Function) {
+	one: function( types: Array,  selector: Array,  data: Array,  fn : Function) {
 		return on( this, types, selector, data, fn, 1 );
 	},
-	off: function( types: types,  selector: selector,  fn : fn) {
+	off: function( types: Array,  selector: String,  fn : Function) {
 		var handleObj, type;
 		if ( types && types.preventDefault && types.handleObj ) {
 

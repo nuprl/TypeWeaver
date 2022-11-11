@@ -5,7 +5,7 @@ var toStr = Object.prototype.toString;
 var defineProperty = Object.defineProperty;
 var gOPD = Object.getOwnPropertyDescriptor;
 
-var isArray = function isArray(arr: ArrayLike) {
+var isArray = function isArray(arr: unknown) {
 	if (typeof Array.isArray === 'function') {
 		return Array.isArray(arr);
 	}
@@ -13,7 +13,7 @@ var isArray = function isArray(arr: ArrayLike) {
 	return toStr.call(arr) === '[object Array]';
 };
 
-var isPlainObject = function isPlainObject(obj: Object) {
+var isPlainObject = function isPlainObject(obj: object) {
 	if (!obj || toStr.call(obj) !== '[object Object]') {
 		return false;
 	}

@@ -110,7 +110,7 @@
    * keys and one which is capable of safely using proxies as keys. See
    * comments below about HostWeakMap and DoubleWeakMap for details.
    *
-   * This function (which is a global: any,  not exposed to guests: any) marks a
+   * This function (which is a global: window.foo,  not exposed to guests: any) marks a
    * WeakMap as permitted to do what is necessary to index all host
    * objects, at the cost of making it unsafe for proxies.
    *
@@ -226,7 +226,7 @@
       }).join('') + '___';
   }
 
-  function isNotHiddenName(name: tring) {
+  function isNotHiddenName(name: ame) {
     return !(
         name.substr(0, HIDDEN_NAME_PREFIX.length) == HIDDEN_NAME_PREFIX &&
         name.substr(name.length - 3) === '___');
@@ -245,7 +245,7 @@
    * without providing built-in ES6 WeakMaps.
    */
   defProp(Object, 'getOwnPropertyNames', {
-    value: function fakeGetOwnPropertyNames(obj: Object) {
+    value: function fakeGetOwnPropertyNames(obj: any) {
       return gopn(obj).filter(isNotHiddenName);
     }
   });
@@ -257,7 +257,7 @@
   if ('getPropertyNames' in Object) {
     var originalGetPropertyNames = Object.getPropertyNames;
     defProp(Object, 'getPropertyNames', {
-      value: function fakeGetPropertyNames(obj: Object) {
+      value: function fakeGetPropertyNames(obj: any) {
         return originalGetPropertyNames(obj).filter(isNotHiddenName);
       }
     });
@@ -302,7 +302,7 @@
    * force leaky map stored in the weak map, losing all the advantages
    * of weakness for these.
    */
-  function getHiddenRecord(key: tring | number) {
+  function getHiddenRecord(key: bject) {
     if (key !== Object(key)) {
       throw new TypeError('Not an object: ' + key);
     }
@@ -368,21 +368,21 @@
   (function(){
     var oldFreeze = Object.freeze;
     defProp(Object, 'freeze', {
-      value: function identifyingFreeze(obj: Object) {
+      value: function identifyingFreeze(obj: any) {
         getHiddenRecord(obj);
         return oldFreeze(obj);
       }
     });
     var oldSeal = Object.seal;
     defProp(Object, 'seal', {
-      value: function identifyingSeal(obj: Object) {
+      value: function identifyingSeal(obj: any) {
         getHiddenRecord(obj);
         return oldSeal(obj);
       }
     });
     var oldPreventExtensions = Object.preventExtensions;
     defProp(Object, 'preventExtensions', {
-      value: function identifyingPreventExtensions(obj: Object) {
+      value: function identifyingPreventExtensions(obj: any) {
         getHiddenRecord(obj);
         return oldPreventExtensions(obj);
       }
@@ -429,7 +429,7 @@
       }
     }
 
-    function has___(key: string | symbol) {
+    function has___(key: any) {
       var hiddenRecord = getHiddenRecord(key);
       if (hiddenRecord) {
         return id in hiddenRecord;
@@ -462,7 +462,7 @@
       return this;
     }
 
-    function delete___(key: string | symbol) {
+    function delete___(key: any) {
       var hiddenRecord = getHiddenRecord(key);
       var index, lastIndex;
       if (hiddenRecord) {
@@ -523,7 +523,7 @@
       /**
        * Is there a value associated with key in this WeakMap?
        */
-      value: function has(key: string | symbol) {
+      value: function has(key: K) {
         return this.has___(key);
       },
       writable: true,
@@ -555,7 +555,7 @@
        * absent, whereas this {@code delete} method returns false if
        * the association was already absent.
        */
-      value: function remove(key: string | number) {
+      value: function remove(key: K) {
         return this.delete___(key);
       },
       writable: true,
@@ -609,7 +609,7 @@
           }
         }
 
-        function dhas(key: string | symbol) {
+        function dhas(key: any) {
           return hmap.has(key) || (omap ? omap.has___(key) : false);
         }
 
@@ -624,7 +624,7 @@
             return this;
           };
         } else {
-          dset = function(key: any,  value: any) {
+          dset = function(key: key,  value: value) {
             if (enableSwitching) {
               try {
                 hmap.set(key, value);
@@ -639,7 +639,7 @@
           };
         }
 
-        function ddelete(key: tring | symbol) {
+        function ddelete(key: ny) {
           var result = !!hmap['delete'](key);
           if (omap) { return omap.delete___(key) || result; }
           return result;

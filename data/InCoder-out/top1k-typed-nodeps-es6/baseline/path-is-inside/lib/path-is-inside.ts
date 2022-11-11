@@ -2,7 +2,7 @@
 
 import path from 'path';
 
-export default function (thePath: Path,  potentialParent: any) {
+export default function (thePath: any,  potentialParent: any) {
     // For inside-directory checking, we want to allow trailing slashes, so normalize.
     thePath = stripTrailingSep(thePath);
     potentialParent = stripTrailingSep(potentialParent);
@@ -20,7 +20,7 @@ export default function (thePath: Path,  potentialParent: any) {
 		);
 };
 
-function stripTrailingSep(thePath: string | string[]) {
+function stripTrailingSep(thePath: string | undefined) {
     if (thePath[thePath.length - 1] === path.sep) {
         return thePath.slice(0, -1);
     }

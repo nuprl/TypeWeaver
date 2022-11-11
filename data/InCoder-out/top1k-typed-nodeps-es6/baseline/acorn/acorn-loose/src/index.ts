@@ -40,6 +40,6 @@ export {isDummy} from "./parseutil.js"
 
 defaultOptions.tabSize = 4
 
-export function parse(input: string | Buffer,  options: ParseOptions) {
+export function parse(input: string | Readable,  options: ParseOptions) {
   return LooseParser.parse(input, options)
 }

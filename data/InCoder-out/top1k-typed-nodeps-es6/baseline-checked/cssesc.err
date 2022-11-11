@@ -1,4 +1,4 @@
-Gruntfile.ts(1,32): error TS2749: 'grunt' refers to a value, but is being used as a type here. Did you mean 'typeof grunt'?
+Gruntfile.ts(1,32): error TS2304: Cannot find name 'Grunt'.
 coverage/prettify.ts(1,8): error TS2339: Property 'PR_SHOULD_USE_CONTINUATION' does not exist on type 'Window & typeof globalThis'.
 coverage/prettify.ts(1,6196): error TS2339: Property 'decorations' does not exist on type '{ sourceCode: any; basePos: any; }'.
 coverage/prettify.ts(1,11501): error TS2403: Subsequent variable declarations must have the same type.  Variable 'W' must be of type 'any', but here has type 'number'.
@@ -34,20 +34,14 @@ coverage/prettify.ts(1,17380): error TS2304: Cannot find name 'PR'.
 coverage/prettify.ts(1,17477): error TS2304: Cannot find name 'PR'.
 coverage/prettify.ts(1,17500): error TS2304: Cannot find name 'PR'.
 coverage/prettify.ts(1,17526): error TS2304: Cannot find name 'PR'.
-cssesc.ts(26,34): error TS2339: Property 'options' does not exist on type '(string: string | Buffer, options: { encoding?: string; }) => string'.
-cssesc.ts(27,14): error TS2339: Property 'quotes' does not exist on type '{ encoding?: string; }'.
-cssesc.ts(27,44): error TS2339: Property 'quotes' does not exist on type '{ encoding?: string; }'.
-cssesc.ts(28,11): error TS2339: Property 'quotes' does not exist on type '{ encoding?: string; }'.
-cssesc.ts(30,22): error TS2339: Property 'quotes' does not exist on type '{ encoding?: string; }'.
-cssesc.ts(31,29): error TS2339: Property 'isIdentifier' does not exist on type '{ encoding?: string; }'.
-cssesc.ts(33,25): error TS2339: Property 'charAt' does not exist on type 'string | Buffer'.
-  Property 'charAt' does not exist on type 'Buffer'.
-cssesc.ts(38,26): error TS2339: Property 'charAt' does not exist on type 'string | Buffer'.
-  Property 'charAt' does not exist on type 'Buffer'.
-cssesc.ts(45,24): error TS2339: Property 'charCodeAt' does not exist on type 'string | Buffer'.
-  Property 'charCodeAt' does not exist on type 'Buffer'.
-cssesc.ts(57,16): error TS2339: Property 'escapeEverything' does not exist on type '{ encoding?: string; }'.
-cssesc.ts(94,31): error TS2339: Property 'wrap' does not exist on type '{ encoding?: string; }'.
-cssesc.ts(101,8): error TS2339: Property 'options' does not exist on type '(string: string | Buffer, options: { encoding?: string; }) => string'.
-cssesc.ts(108,8): error TS2339: Property 'version' does not exist on type '(string: string | Buffer, options: { encoding?: string; }) => string'.
+cssesc.ts(26,34): error TS2339: Property 'options' does not exist on type '(string: any, options: any) => string'.
+cssesc.ts(101,8): error TS2339: Property 'options' does not exist on type '(string: any, options: any) => string'.
+cssesc.ts(108,8): error TS2339: Property 'version' does not exist on type '(string: any, options: any) => string'.
+src/cssesc.ts(96,48): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '($0: number, $1: number, $2: number) => any' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
+      Types of parameters '$0' and 'substring' are incompatible.
+        Type 'string' is not assignable to type 'number'.
+src/cssesc.ts(97,16): error TS2339: Property 'length' does not exist on type 'number'.
+src/cssesc.ts(102,10): error TS2365: Operator '+' cannot be applied to types 'string | number' and 'number'.
 

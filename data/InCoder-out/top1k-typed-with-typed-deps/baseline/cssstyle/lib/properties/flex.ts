@@ -17,7 +17,7 @@ module.exports.isValid = function isValid(v: any) {
 };
 
 module.exports.definition = {
-  set: function(v: any) {
+  set: function(v: ny) {
     var normalizedValue = String(v)
       .trim()
       .toLowerCase();

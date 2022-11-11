@@ -103,7 +103,7 @@ function hasattr(object: any,  name: any) {
     return Object.prototype.hasOwnProperty.call(object, name)
 }
 
-function getattr(object: any,  name: any,  value: any) {
+function getattr(object: any,  name: string | number,  value: any) {
     return hasattr(object, name) ? object[name] : value
 }
 
@@ -116,7 +116,7 @@ function setdefault(object: any,  name: any,  value: any) {
     return object[name]
 }
 
-function delattr(object: any,  name: string) {
+function delattr(object: any,  name: any) {
     delete object[name]
 }
 
@@ -137,7 +137,7 @@ function range(from: number,  to: number,  step=1: number) {
     return result
 }
 
-function splitlines(str: string | string[],  keepends = false: boolean) {
+function splitlines(str: string | null | undefined,  keepends = false: boolean | undefined) {
     let result
     if (!keepends) {
         result = str.split(/\r\n|[\n\r\v\f\x1c\x1d\x1e\x85\u2028\u2029]/)
@@ -152,13 +152,13 @@ function splitlines(str: string | string[],  keepends = false: boolean) {
     return result
 }
 
-function _string_lstrip(string: string | undefined,  prefix_chars: string) {
+function _string_lstrip(string: string | null | undefined,  prefix_chars: string) {
     let idx = 0
     while (idx < string.length && prefix_chars.includes(string[idx])) idx++
     return idx ? string.slice(idx) : string
 }
 
-function _string_split(string: string | string[],  sep: string | RegExp,  maxsplit: number) {
+function _string_split(string: any,  sep: any,  maxsplit: number) {
     let result = string.split(sep)
     if (result.length > maxsplit) {
         result = result.slice(0, maxsplit).concat([ result.slice(maxsplit).join(sep) ])
@@ -166,7 +166,7 @@ function _string_split(string: string | string[],  sep: string | RegExp,  maxspl
     return result
 }
 
-function _array_equal(array1: ArrayLike<number>,  array2: ArrayLike<number>) {
+function _array_equal(array1: any,  array2: any) {
     if (array1.length !== array2.length) return false
     for (let i = 0; i < array1.length; i++) {
         if (array1[i] !== array2[i]) return false
@@ -174,7 +174,7 @@ function _array_equal(array1: ArrayLike<number>,  array2: ArrayLike<number>) {
     return true
 }
 
-function _array_remove(array: Array,  item: Object) {
+function _array_remove(array: ArrayLike,  item: any) {
     let idx = array.indexOf(item)
     if (idx === -1) throw new TypeError(sub('%r not in list', item))
     array.splice(idx, 1)
@@ -183,7 +183,7 @@ function _array_remove(array: Array,  item: Object) {
 // normalize choices to array;
 // this isn't required in python because `in` and `map` operators work with anything,
 // but in js dealing with multiple types here is too clunky
-function _choices_to_array(choices: Choice[]) {
+function _choices_to_array(choices: ChoiceGroup) {
     if (choices === undefined) {
         return []
     } else if (Array.isArray(choices)) {
@@ -198,7 +198,7 @@ function _choices_to_array(choices: Choice[]) {
 }
 
 // decorator that allows a class to be called without new
-function _callable(cls: any) {
+function _callable(cls: Class<any>) {
     let result = { // object is needed for inferred class name
         [cls.name]: function (...args: any[]) {
             let this_class = new.target === result || !new.target
@@ -231,14 +231,14 @@ function _camelcase_alias(_class: any) {
     return _class
 }
 
-function _to_legacy_name(key: any) {
+function _to_legacy_name(key: Key) {
     key = key.replace(/\w_[a-z]/g, s => s[0] + s[2].toUpperCase())
     if (key === 'default') key = 'defaultValue'
     if (key === 'const') key = 'constant'
     return key
 }
 
-function _to_new_name(key: any) {
+function _to_new_name(key: Key) {
     if (key === 'defaultValue') key = 'default'
     if (key === 'constant') key = 'const'
     key = key.replace(/[A-Z]/g, c => '_' + c.toLowerCase())
@@ -247,7 +247,7 @@ function _to_new_name(key: any) {
 
 // parse options
 let no_default = Symbol('no_default_value')
-function _parse_opts(args: any,  descriptor: any) {
+function _parse_opts(args: Array<string>,  descriptor: Descriptor) {
     function get_name() {
         let stack = new Error().stack.split('\n')
             .map(x => x.match(/^    at (.*) \(.*\)$/))
@@ -367,7 +367,7 @@ function _parse_opts(args: any,  descriptor: any) {
 }
 
 let _deprecations = {}
-function deprecate(id: number,  string: string) {
+function deprecate(id: ID,  string: string) {
     _deprecations[id] = _deprecations[id] || util.deprecate(() => {}, string)
     _deprecations[id]()
 }
@@ -376,7 +376,7 @@ function deprecate(id: number,  string: string) {
 // =============================
 // Utility functions and classes
 // =============================
-function _AttributeHolder(cls = Object: Object) {
+function _AttributeHolder(cls = Object: null) {
     /*
      *  Abstract base class that provides __repr__.
      *
@@ -1116,7 +1116,7 @@ const MetavarTypeHelpFormatter = _camelcase_alias(_callable(class MetavarTypeHel
 // =====================
 // Options and Arguments
 // =====================
-function _get_action_name(argument: ActionArgument) {
+function _get_action_name(argument: Argument) {
     if (argument === undefined) {
         return undefined
     } else if (argument.option_strings.length) {
@@ -2600,20 +2600,20 @@ const ArgumentParser = _camelcase_alias(_callable(class ArgumentParser extends _
         this._subparsers = undefined
 
         // register types
-        function identity(string: string | number) {
+        function identity(string: string | null | undefined) {
             return string
         }
         this.register('type', undefined, identity)
         this.register('type', null, identity)
         this.register('type', 'auto', identity)
-        this.register('type', 'int', function (x: string) {
+        this.register('type', 'int', function (x: any) {
             let result = Number(x)
             if (!Number.isInteger(result)) {
                 throw new TypeError(sub('could not convert string to int: %r', x))
             }
             return result
         })
-        this.register('type', 'float', function (x: string) {
+        this.register('type', 'float', function (x: any) {
             let result = Number(x)
             if (isNaN(result)) {
                 throw new TypeError(sub('could not convert string to float: %r', x))

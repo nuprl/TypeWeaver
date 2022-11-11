@@ -18,7 +18,7 @@ import slice from './slice.js'
  * sampleSize([1, 2, 3], 4)
  * // => [2, 3, 1]
  */
-function sampleSize(array: rray,  n: umber) {
+function sampleSize(array: rrayLike<number>,  n: number) {
   n = n == null ? 1 : n
   const length = array == null ? 0 : array.length
   if (!length || n < 1) {

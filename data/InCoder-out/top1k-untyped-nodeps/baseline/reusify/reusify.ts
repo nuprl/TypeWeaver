@@ -1,6 +1,6 @@
 'use strict'
 
-function reusify (Constructor: Function) {
+function reusify (Constructor: any) {
   var head = new Constructor()
   var tail = head
 

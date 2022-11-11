@@ -93,7 +93,7 @@ function ctorName(val: any) {
   return val.constructor ? val.constructor.name : null;
 }
 
-function isGeneratorFn(val: unknown) {
+function isGeneratorFn(val: any) {
   return ctorName(val) === 'GeneratorFunction';
 }
 

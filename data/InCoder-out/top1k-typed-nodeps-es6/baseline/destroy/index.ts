@@ -33,7 +33,7 @@ export default destroy;
  * @public
  */
 
-function destroy (stream: Stream,  suppress: boolean) {
+function destroy (stream: NodeJS.ReadableStream,  suppress: boolean) {
   if (isFsReadStream(stream)) {
     destroyReadStream(stream)
   } else if (isZlibStream(stream)) {
@@ -57,7 +57,7 @@ function destroy (stream: Stream,  suppress: boolean) {
  * @private
  */
 
-function destroyReadStream (stream: Readable) {
+function destroyReadStream (stream: ReadStream) {
   stream.destroy()
 
   if (typeof stream.close === 'function') {
@@ -152,7 +152,7 @@ function hasDestroy (stream: Stream) {
  * @private
  */
 
-function isEventEmitter (val: any) {
+function isEventEmitter (val: unknown) {
   return val instanceof EventEmitter
 }
 

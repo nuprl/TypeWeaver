@@ -39,7 +39,7 @@ Growly.prototype.getLabels = function() {
  * @api public
  */
 
-Growly.prototype.setHost = function(host: String,  port: Number) {
+Growly.prototype.setHost = function(host: String,  port: Int) {
     this.host = host;
     this.port = port;
 };
@@ -72,7 +72,7 @@ Growly.prototype.setHost = function(host: String,  port: Number) {
  * @api public
  */
 
-Growly.prototype.register = function(appname: String,  appicon: String,  notifications: String,  callback: Function) {
+Growly.prototype.register = function(appname: appname,  appicon: appicon,  notifications: notifications,  callback: callback) {
     var gntp;
 
     if (typeof appicon === 'object') {
@@ -142,7 +142,7 @@ Growly.prototype.register = function(appname: String,  appicon: String,  notific
  * @api public
  */
 
-Growly.prototype.notify = function(text: String,  opts: Object,  callback: Function) {
+Growly.prototype.notify = function(text: text,  opts: opts,  callback: callback) {
     var self = this,
         gntp;
 

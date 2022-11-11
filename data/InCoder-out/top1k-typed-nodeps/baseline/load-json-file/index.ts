@@ -13,12 +13,12 @@ const parse = (buffer, {beforeParse, reviver} = {}) => {
 	return JSON.parse(data, reviver);
 };
 
-export async function loadJsonFile(filePath: string | string[],  options: ILoadJsonFileOption) {
+export async function loadJsonFile(filePath: string | ArrayBuffer,  options: LoadJsonFileOptions) {
 	const buffer = await readFile(filePath);
 	return parse(buffer, options);
 }
 
-export function loadJsonFileSync(filePath: string | string[],  options: any) {
+export function loadJsonFileSync(filePath: string | Buffer,  options: JsonFileOptions) {
 	const buffer = readFileSync(filePath);
 	return parse(buffer, options);
 }

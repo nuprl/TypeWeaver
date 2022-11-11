@@ -74,7 +74,7 @@ export default {
     Registers a callback to be executed when `eventName` is triggered
 
     ```javascript
-    object.on('event', function(eventInfo: EventInfo){
+    object.on('event', function(eventInfo: any){
       // handle the event
     });
 

@@ -7,7 +7,7 @@ export const isValid = function isValid(v: any) {
 };
 
 export const definition = {
-  set: function(v: any) {
+  set: function(v: string | string[]) {
     this._setProperty('font-variant', v);
   },
   get: function() {

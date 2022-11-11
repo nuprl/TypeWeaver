@@ -10,7 +10,7 @@ through.through = through
 
 //create a readable writable stream.
 
-function through (write: Function,  end: Function,  opts: Object) {
+function through (write: WriteFunction,  end: EndFunction,  opts: any) {
   write = write || function (data: any) { this.queue(data) }
   end = end || function () { this.queue(null) }
 

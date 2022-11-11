@@ -9,7 +9,7 @@
  * @param  {string} msg
  * @returns {Function}
  */
-export const wrap = function(func: Function,  msg: String) {
+export const wrap = function(func: Function,  msg: any) {
     var wrapped = function() {
         printWarning(msg);
         return func.apply(this, arguments);

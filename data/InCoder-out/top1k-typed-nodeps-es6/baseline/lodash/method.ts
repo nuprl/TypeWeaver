@@ -22,7 +22,7 @@ import invoke from './invoke.js'
  * map(objects, method(['a', 'b']))
  * // => [2, 1]
  */
-function method(path: string | RegExp,  args: any[]) {
+function method(path: any,  args: any) {
   return (object) => invoke(object, path, args)
 }
 

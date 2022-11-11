@@ -46,7 +46,7 @@ exports.timeouts = function(options: any) {
   return timeouts;
 };
 
-exports.createTimeout = function(attempt: number,  opts: any) {
+exports.createTimeout = function(attempt: any,  opts: any) {
   var random = (opts.randomize)
     ? (Math.random() + 1)
     : 1;
@@ -76,7 +76,7 @@ exports.wrap = function(obj: any,  options: any,  methods: any) {
     var method   = methods[i];
     var original = obj[method];
 
-    obj[method] = function retryWrapper(original: Function) {
+    obj[method] = function retryWrapper(original: any) {
       var op       = exports.operation(options);
       var args     = Array.prototype.slice.call(arguments, 1);
       var callback = args.pop();

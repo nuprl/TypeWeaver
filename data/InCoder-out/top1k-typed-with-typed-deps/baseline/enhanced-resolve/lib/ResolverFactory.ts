@@ -56,7 +56,7 @@ const UseFilePlugin = require("./UseFilePlugin");
  * @property {(AliasOptions | AliasOptionEntry[])=} fallback A list of module alias configurations or an object which maps key to value, applied only after modules option
  * @property {ExtensionAliasOptions=} extensionAlias An object which maps extension to extension aliases
  * @property {(string | string[])[]=} aliasFields A list of alias fields in description files
- * @property {(function(ResolveRequest: Request): boolean)=} cachePredicate A function which decides whether a request should be cached or not. An object is passed with at least `path` and `request` properties.
+ * @property {(function(ResolveRequest: ResolveRequest): boolean)=} cachePredicate A function which decides whether a request should be cached or not. An object is passed with at least `path` and `request` properties.
  * @property {boolean=} cacheWithContext Whether or not the unsafeCache should include request context as part of the cache key.
  * @property {string[]=} descriptionFiles A list of description files to read from
  * @property {string[]=} conditionNames A list of exports field condition names.
@@ -88,7 +88,7 @@ const UseFilePlugin = require("./UseFilePlugin");
  * @property {AliasOptionEntry[]} fallback
  * @property {Set<string | string[]>} aliasFields
  * @property {ExtensionAliasOption[]} extensionAlias
- * @property {(function(ResolveRequest: Request): boolean)} cachePredicate
+ * @property {(function(ResolveRequest: ResolveRequest): boolean)} cachePredicate
  * @property {boolean} cacheWithContext
  * @property {Set<string>} conditionNames A list of exports field condition names.
  * @property {string[]} descriptionFiles
@@ -117,7 +117,7 @@ const UseFilePlugin = require("./UseFilePlugin");
  * @param {PnpApi | null=} option option
  * @returns {PnpApi | null} processed option
  */
-function processPnpApiOption(option: PnpApiOption) {
+function processPnpApiOption(option: Option) {
 	if (
 		option === undefined &&
 		/** @type {NodeJS.ProcessVersions & {pnp: string}} */ versions.pnp
@@ -153,7 +153,7 @@ function normalizeAlias(alias: Alias) {
  * @param {UserResolveOptions} options input options
  * @returns {ResolveOptions} output options
  */
-function createOptions(options: any) {
+function createOptions(options: IOption[]) {
 	const mainFieldsSet = new Set(options.mainFields || ["main"]);
 	const mainFields = [];
 
@@ -251,7 +251,7 @@ function createOptions(options: any) {
  * @param {UserResolveOptions} options resolve options
  * @returns {Resolver} created resolver
  */
-exports.createResolver = function (options: IOptions) {
+exports.createResolver = function (options: any) {
 	const normalizedOptions = createOptions(options);
 
 	const {
@@ -661,7 +661,7 @@ exports.createResolver = function (options: IOptions) {
  * @param {function(string: any): boolean} filter predicate
  * @returns {Array<string | string[]>} merge result
  */
-function mergeFilteredToArray(array: Array,  filter: Function) {
+function mergeFilteredToArray(array: any,  filter: Function) {
 	/** @type {Array<string | string[]>} */
 	const result = [];
 	const set = new Set(array);

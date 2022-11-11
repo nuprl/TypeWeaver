@@ -5,7 +5,7 @@ const os = require('os')
 const LINE = /(?:^|^)\s*(?:export\s+)?([\w.-]+)(?:\s*=\s*?|:\s+?)(\s*'(?:\\'|[^'])*'|\s*"(?:\\"|[^"])*"|\s*`(?:\\`|[^`])*`|[^#\r\n]+)?\s*(?:#.*)?(?:$|$)/mg
 
 // Parser src into an Object
-function parse (src: string | Buffer) {
+function parse (src: any) {
   const obj = {}
 
   // Convert buffer to string
@@ -47,7 +47,7 @@ function _log (message: any) {
   console.log(`[dotenv][DEBUG] ${message}`)
 }
 
-function _resolveHome (envPath: Path) {
+function _resolveHome (envPath: string | null) {
   return envPath[0] === '~' ? path.join(os.homedir(), envPath.slice(1)) : envPath
 }
 

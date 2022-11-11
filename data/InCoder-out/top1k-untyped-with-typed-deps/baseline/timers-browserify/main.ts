@@ -12,7 +12,7 @@ exports.setInterval = function() {
   return new Timeout(apply.call(setInterval, scope, arguments), clearInterval);
 };
 exports.clearTimeout =
-exports.clearInterval = function(timeout: NodeJS.Timeout) {
+exports.clearInterval = function(timeout: Timeout) {
   if (timeout) {
     timeout.close();
   }
@@ -28,17 +28,17 @@ Timeout.prototype.close = function() {
 };
 
 // Does not start the time, just sets up the members needed.
-exports.enroll = function(item: Item,  msecs: number) {
+exports.enroll = function(item: any,  msecs: number) {
   clearTimeout(item._idleTimeoutId);
   item._idleTimeout = msecs;
 };
 
-exports.unenroll = function(item: Item) {
+exports.unenroll = function(item: TimerItem) {
   clearTimeout(item._idleTimeoutId);
   item._idleTimeout = -1;
 };
 
-exports._unrefActive = exports.active = function(item: Item) {
+exports._unrefActive = exports.active = function(item: TimerItem) {
   clearTimeout(item._idleTimeoutId);
 
   var msecs = item._idleTimeout;

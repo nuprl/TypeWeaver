@@ -18,7 +18,7 @@ var version = "@VERSION",
 	rhtmlSuffix = /HTML$/i,
 
 	// Define a local copy of jQuery
-	jQuery = function( selector: string,  context : any) {
+	jQuery = function( selector: Selector,  context : Context) {
 
 		// The jQuery object is actually just the init constructor 'enhanced'
 		// Need init if jQuery is called (just allow error to be thrown if not included)
@@ -41,7 +41,7 @@ jQuery.fn = jQuery.prototype = {
 
 	// Get the Nth element in the matched element set OR
 	// Get the whole matched element set as a clean array
-	get: function( num : int) {
+	get: function( num : number) {
 
 		// Return all the elements in a clean array
 		if ( num == null ) {
@@ -54,7 +54,7 @@ jQuery.fn = jQuery.prototype = {
 
 	// Take an array of elements and push it onto the stack
 	// (returning the new matched element set)
-	pushStack: function( elems : jQuery) {
+	pushStack: function( elems : Array) {
 
 		// Build a new jQuery matched element set
 		var ret = jQuery.merge( this.constructor(), elems );
@@ -67,12 +67,12 @@ jQuery.fn = jQuery.prototype = {
 	},
 
 	// Execute a callback for every element in the matched set.
-	each: function( callback : any) {
+	each: function( callback : Function) {
 		return jQuery.each( this, callback );
 	},
 
 	map: function( callback : Function) {
-		return this.pushStack( jQuery.map( this, function( elem: Element,  i : number) {
+		return this.pushStack( jQuery.map( this, function( elem: any,  i : number) {
 			return callback.call( elem, i, elem );
 		} ) );
 	},
@@ -90,13 +90,13 @@ jQuery.fn = jQuery.prototype = {
 	},
 
 	even: function() {
-		return this.pushStack( jQuery.grep( this, function( _elem: Element,  i : number) {
+		return this.pushStack( jQuery.grep( this, function( _elem: elem,  i : i) {
 			return ( i + 1 ) % 2;
 		} ) );
 	},
 
 	odd: function() {
-		return this.pushStack( jQuery.grep( this, function( _elem: Element,  i : number) {
+		return this.pushStack( jQuery.grep( this, function( _elem: elem,  i : index) {
 			return i % 2;
 		} ) );
 	},
@@ -198,7 +198,7 @@ jQuery.extend( {
 
 	noop: function() {},
 
-	isPlainObject: function( obj : any) {
+	isPlainObject: function( obj : Object) {
 		var proto, Ctor;
 
 		// Detect obvious negatives
@@ -230,11 +230,11 @@ jQuery.extend( {
 
 	// Evaluates a script in a provided context; falls back to the global one
 	// if not specified.
-	globalEval: function( code: number,  options: any,  doc : any) {
+	globalEval: function( code: number,  options: string,  doc : string) {
 		DOMEval( code, { nonce: options && options.nonce }, doc );
 	},
 
-	each: function( obj: any,  callback : any) {
+	each: function( obj: any,  callback : Function) {
 		var length, i = 0;
 
 		if ( isArrayLike( obj ) ) {
@@ -257,7 +257,7 @@ jQuery.extend( {
 
 
 	// Retrieve the text value of an array of DOM nodes
-	text: function( elem : Element) {
+	text: function( elem : Node) {
 		var node,
 			ret = "",
 			i = 0,
@@ -284,7 +284,7 @@ jQuery.extend( {
 
 
 	// results is for internal usage only
-	makeArray: function( arr: Array,  results : Array) {
+	makeArray: function( arr: ArrayLike<any>,  results : any[]) {
 		var ret = results || [];
 
 		if ( arr != null ) {
@@ -301,11 +301,11 @@ jQuery.extend( {
 		return ret;
 	},
 
-	inArray: function( elem: Element,  arr: Array,  i : number) {
+	inArray: function( elem: elem,  arr: arr,  i : i) {
 		return arr == null ? -1 : indexOf.call( arr, elem, i );
 	},
 
-	isXMLDoc: function( elem : Element) {
+	isXMLDoc: function( elem : elem.ownerDocument) {
 		var namespace = elem && elem.namespaceURI,
 			docElem = elem && ( elem.ownerDocument || elem ).documentElement;
 
@@ -314,7 +314,7 @@ jQuery.extend( {
 		return !rhtmlSuffix.test( namespace || docElem && docElem.nodeName || "HTML" );
 	},
 
-	merge: function( first: RegExp,  second : RegExp) {
+	merge: function( first: any,  second : any) {
 		var len = +second.length,
 			j = 0,
 			i = first.length;
@@ -328,7 +328,7 @@ jQuery.extend( {
 		return first;
 	},
 
-	grep: function( elems: Array,  callback: Function,  invert : Boolean) {
+	grep: function( elems: Array,  callback: Function,  invert : boolean) {
 		var callbackInverse,
 			matches = [],
 			i = 0,
@@ -348,7 +348,7 @@ jQuery.extend( {
 	},
 
 	// arg is for internal usage only
-	map: function( elems: Array,  callback: Function,  arg : any) {
+	map: function( elems: Array,  callback: Function,  arg : Object) {
 		var length, value,
 			i = 0,
 			ret = [];

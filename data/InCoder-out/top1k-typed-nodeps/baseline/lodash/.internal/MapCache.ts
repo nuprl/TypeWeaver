@@ -9,7 +9,7 @@ import Hash from './Hash.js'
  * @param {string} key The reference key.
  * @returns {*} Returns the map data.
  */
-function getMapData({ __data__ }: Object,  key: string | number) {
+function getMapData({ __data__ }: Object,  key: any) {
   const data = __data__
   return isKeyable(key)
     ? data[typeof key === 'string' ? 'string' : 'hash']

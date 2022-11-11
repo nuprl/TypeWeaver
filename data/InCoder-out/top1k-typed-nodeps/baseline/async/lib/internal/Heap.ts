@@ -104,7 +104,7 @@ function parent(i: number) {
     return ((i+1)>>1)-1;
 }
 
-function smaller(x: umber,  y: mber) {
+function smaller(x: riority,  y: riority) {
     if (x.priority !== y.priority) {
         return x.priority < y.priority;
     }

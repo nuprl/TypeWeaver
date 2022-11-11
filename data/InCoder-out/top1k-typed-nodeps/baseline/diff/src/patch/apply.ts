@@ -1,7 +1,7 @@
 import {parsePatch} from './parse';
 import distanceIterator from '../util/distance-iterator';
 
-export function applyPatch(source: any,  uniDiff: any,  options = {}: PatchOptions) {
+export function applyPatch(source: Source,  uniDiff: Diff,  options = {}: PatchOptions) {
   if (typeof uniDiff === 'string') {
     uniDiff = parsePatch(uniDiff);
   }
@@ -31,7 +31,7 @@ export function applyPatch(source: any,  uniDiff: any,  options = {}: PatchOptio
   /**
    * Checks if the hunk exactly fits on the provided location
    */
-  function hunkFits(hunk: CodeMirror.Hunk,  toPos: CodeMirror.Pos) {
+  function hunkFits(hunk: DiffHunk,  toPos: number) {
     for (let j = 0; j < hunk.lines.length; j++) {
       let line = hunk.lines[j],
           operation = (line.length > 0 ? line[0] : ' '),
@@ -129,7 +129,7 @@ export function applyPatch(source: any,  uniDiff: any,  options = {}: PatchOptio
 }
 
 // Wrapper that supports multiple file patches via callbacks.
-export function applyPatches(uniDiff: Diff,  options: PatchOptions) {
+export function applyPatches(uniDiff: Diff,  options: any) {
   if (typeof uniDiff === 'string') {
     uniDiff = parsePatch(uniDiff);
   }
@@ -141,7 +141,7 @@ export function applyPatches(uniDiff: Diff,  options: PatchOptions) {
       return options.complete();
     }
 
-    options.loadFile(index, function(err: any,  data: any) {
+    options.loadFile(index, function(err: Error,  data: any) {
       if (err) {
         return options.complete(err);
       }

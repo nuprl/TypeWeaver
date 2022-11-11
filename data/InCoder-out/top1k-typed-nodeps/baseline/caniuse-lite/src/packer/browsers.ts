@@ -7,7 +7,7 @@ const stringifyObject = require('../lib/stringifyObject')
 const { encode } = require('../lib/base62')
 const fromEntries = require('../util/fromEntries')
 
-function getBrowsers({ data }: IGetBrowsersRequest) {
+function getBrowsers({ data }: GetBrowsersResponse) {
   let feature = Object.keys(data)[0]
   let browsers = Object.keys(data[feature].stats)
 

@@ -43,7 +43,7 @@ var gPO = (typeof Reflect === 'function' ? Reflect.getPrototypeOf : Object.getPr
         : null
 );
 
-function addNumericSeparator(num: number,  str: number) {
+function addNumericSeparator(num: number,  str: string | number) {
     if (
         num === Infinity
         || num === -Infinity
@@ -69,7 +69,7 @@ var utilInspect = require('./util.inspect');
 var inspectCustom = utilInspect.custom;
 var inspectSymbol = isSymbol(inspectCustom) ? inspectCustom : null;
 
-module.exports = function inspect_(obj: any,  options: any,  depth: number,  seen: number) {
+module.exports = function inspect_(obj: any,  options: any,  depth: number,  seen: Set<any>) {
     var opts = options || {};
 
     if (has(opts, 'quoteStyle') && (opts.quoteStyle !== 'single' && opts.quoteStyle !== 'double')) {
@@ -140,7 +140,7 @@ module.exports = function inspect_(obj: any,  options: any,  depth: number,  see
         return '[Circular]';
     }
 
-    function inspect(value: any,  from: any,  noIndent: boolean) {
+    function inspect(value: any,  from: any,  noIndent: boolean | undefined) {
         if (from) {
             seen = $arrSlice.call(seen);
             seen.push(from);
@@ -251,7 +251,7 @@ module.exports = function inspect_(obj: any,  options: any,  depth: number,  see
     return String(obj);
 };
 
-function wrapQuotes(s: string,  defaultStyle: Style,  opts: any) {
+function wrapQuotes(s: string,  defaultStyle: QuoteStyle,  opts: QuoteOptions) {
     var quoteChar = (opts.quoteStyle || defaultStyle) === 'double' ? '"' : "'";
     return quoteChar + s + quoteChar;
 }
@@ -260,16 +260,16 @@ function quote(s: string) {
     return $replace.call(String(s), /"/g, '&quot;');
 }
 
-function isArray(obj: unknown) { return toStr(obj) === '[object Array]' && (!toStringTag || !(typeof obj === 'object' && toStringTag in obj)); }
+function isArray(obj: any) { return toStr(obj) === '[object Array]' && (!toStringTag || !(typeof obj === 'object' && toStringTag in obj)); }
 function isDate(obj: any) { return toStr(obj) === '[object Date]' && (!toStringTag || !(typeof obj === 'object' && toStringTag in obj)); }
-function isRegExp(obj: any) { return toStr(obj) === '[object RegExp]' && (!toStringTag || !(typeof obj === 'object' && toStringTag in obj)); }
+function isRegExp(obj: unknown) { return toStr(obj) === '[object RegExp]' && (!toStringTag || !(typeof obj === 'object' && toStringTag in obj)); }
 function isError(obj: unknown) { return toStr(obj) === '[object Error]' && (!toStringTag || !(typeof obj === 'object' && toStringTag in obj)); }
 function isString(obj: unknown) { return toStr(obj) === '[object String]' && (!toStringTag || !(typeof obj === 'object' && toStringTag in obj)); }
 function isNumber(obj: any) { return toStr(obj) === '[object Number]' && (!toStringTag || !(typeof obj === 'object' && toStringTag in obj)); }
 function isBoolean(obj: any) { return toStr(obj) === '[object Boolean]' && (!toStringTag || !(typeof obj === 'object' && toStringTag in obj)); }
 
 // Symbol and BigInt do have Symbol.toStringTag by spec, so that can't be used to eliminate false positives
-function isSymbol(obj: unknown) {
+function isSymbol(obj: any) {
     if (hasShammedSymbols) {
         return obj && typeof obj === 'object' && obj instanceof Symbol;
     }
@@ -286,7 +286,7 @@ function isSymbol(obj: unknown) {
     return false;
 }
 
-function isBigInt(obj: any) {
+function isBigInt(obj: bigint) {
     if (!obj || typeof obj !== 'object' || !bigIntValueOf) {
         return false;
     }
@@ -302,7 +302,7 @@ function has(obj: any,  key: any) {
     return hasOwn.call(obj, key);
 }
 
-function toStr(obj: any) {
+function toStr(obj: object) {
     return objectToString.call(obj);
 }
 
@@ -353,7 +353,7 @@ function isWeakMap(x: any) {
     return false;
 }
 
-function isWeakRef(x: any) {
+function isWeakRef(x: unknown) {
     if (!weakRefDeref || !x || typeof x !== 'object') {
         return false;
     }
@@ -404,7 +404,7 @@ function isElement(x: any) {
     return typeof x.nodeName === 'string' && typeof x.getAttribute === 'function';
 }
 
-function inspectString(str: any,  opts: any) {
+function inspectString(str: any,  opts: InspectOptions) {
     if (str.length > opts.maxStringLength) {
         var remaining = str.length - opts.maxStringLength;
         var trailer = '... ' + remaining + ' more character' + (remaining > 1 ? 's' : '');
@@ -428,7 +428,7 @@ function lowbyte(c: number) {
     return '\\x' + (n < 0x10 ? '0' : '') + $toUpperCase.call(n.toString(16));
 }
 
-function markBoxed(str: string | Object) {
+function markBoxed(str: string | number) {
     return 'Object(' + str + ')';
 }
 
@@ -436,12 +436,12 @@ function weakCollectionOf(type: ing) {
     return type + ' { ? }';
 }
 
-function collectionOf(type: string,  size: number,  entries: any,  indent: number) {
+function collectionOf(type: string,  size: number,  entries: Array<any>,  indent: number) {
     var joinedEntries = indent ? indentedJoin(entries, indent) : $join.call(entries, ', ');
     return type + ' (' + size + ') {' + joinedEntries + '}';
 }
 
-function singleLineValues(xs: string[]) {
+function singleLineValues(xs: any[]) {
     for (var i = 0; i < xs.length; i++) {
         if (indexOf(xs[i], '\n') >= 0) {
             return false;
@@ -450,7 +450,7 @@ function singleLineValues(xs: string[]) {
     return true;
 }
 
-function getIndent(opts: IndentOptions,  depth: number) {
+function getIndent(opts: Indent.Options,  depth: number) {
     var baseIndent;
     if (opts.indent === '\t') {
         baseIndent = '\t';
@@ -465,13 +465,13 @@ function getIndent(opts: IndentOptions,  depth: number) {
     };
 }
 
-function indentedJoin(xs: string[],  indent: number) {
+function indentedJoin(xs: Array<any>,  indent: number) {
     if (xs.length === 0) { return ''; }
     var lineJoiner = '\n' + indent.prev + indent.base;
     return lineJoiner + $join.call(xs, ',' + lineJoiner) + '\n' + indent.prev;
 }
 
-function arrObjKeys(obj: any,  inspect: Function) {
+function arrObjKeys(obj: any,  inspect: any) {
     var isArr = isArray(obj);
     var xs = [];
     if (isArr) {

@@ -39,7 +39,7 @@ var WriteAfterEndError = createErrorType(
 );
 
 // An HTTP(S) request that can be redirected
-function RedirectableRequest(options: RequestOptions,  responseCallback: Function) {
+function RedirectableRequest(options: RequestOptions,  responseCallback: ResponseCallback<any>) {
   // Initialize the request
   Writable.call(this);
   this._sanitizeOptions(options);
@@ -73,7 +73,7 @@ RedirectableRequest.prototype.abort = function () {
 };
 
 // Writes buffered data to the current native request
-RedirectableRequest.prototype.write = function (data: any,  encoding: any,  callback: Function) {
+RedirectableRequest.prototype.write = function (data: any,  encoding: any,  callback: any) {
   // Writing is not allowed if end has been called
   if (this._ending) {
     throw new WriteAfterEndError();
@@ -110,7 +110,7 @@ RedirectableRequest.prototype.write = function (data: any,  encoding: any,  call
 };
 
 // Ends the current native request
-RedirectableRequest.prototype.end = function (data: any,  encoding: any,  callback: Function) {
+RedirectableRequest.prototype.end = function (data: any,  encoding: any,  callback: any) {
   // Shift parameters if necessary
   if (isFunction(data)) {
     callback = data;
@@ -138,7 +138,7 @@ RedirectableRequest.prototype.end = function (data: any,  encoding: any,  callba
 };
 
 // Sets a header value on the current native request
-RedirectableRequest.prototype.setHeader = function (name: String,  value: Any) {
+RedirectableRequest.prototype.setHeader = function (name: String,  value: String) {
   this._options.headers[name] = value;
   this._currentRequest.setHeader(name, value);
 };
@@ -218,7 +218,7 @@ RedirectableRequest.prototype.setTimeout = function (msecs: number,  callback: F
 [
   "flushHeaders", "getHeader",
   "setNoDelay", "setSocketKeepAlive",
-].forEach(function (method: Function) {
+].forEach(function (method: any) {
   RedirectableRequest.prototype[method] = function (a: any,  b: any) {
     return this._currentRequest[method](a, b);
   };
@@ -464,7 +464,7 @@ RedirectableRequest.prototype._processResponse = function (response: Response) {
 };
 
 // Wraps the key/value object of protocols with redirect functionality
-function wrap(protocols: Array<string>) {
+function wrap(protocols: string[]) {
   // Default settings
   var exports = {
     maxRedirects: 21,
@@ -479,7 +479,7 @@ function wrap(protocols: Array<string>) {
     var wrappedProtocol = exports[scheme] = Object.create(nativeProtocol);
 
     // Executes a request, following redirects
-    function request(input: RequestOptions,  options: RequestOptionsCallback,  callback: RequestCallback) {
+    function request(input: Request,  options: RequestOptionsArgs,  callback: RequestCallback) {
       // Parse parameters
       if (isString(input)) {
         var parsed;
@@ -562,7 +562,7 @@ function urlToOptions(urlObject: UrlObject) {
   return options;
 }
 
-function removeMatchingHeaders(regex: RegExp,  headers: Array<string>) {
+function removeMatchingHeaders(regex: RegExp,  headers: string[]) {
   var lastValue;
   for (var header in headers) {
     if (regex.test(header)) {
@@ -574,9 +574,9 @@ function removeMatchingHeaders(regex: RegExp,  headers: Array<string>) {
     undefined : String(lastValue).trim();
 }
 
-function createErrorType(code: number,  message: string,  baseClass: string) {
+function createErrorType(code: number,  message: string,  baseClass: Error) {
   // Create constructor
-  function CustomError(properties: Object) {
+  function CustomError(properties: any) {
     Error.captureStackTrace(this, this.constructor);
     Object.assign(this, properties || {});
     this.code = code;
@@ -598,7 +598,7 @@ function abortRequest(request: Request) {
   request.abort();
 }
 
-function isSubdomain(subdomain: Domain,  domain: Domain) {
+function isSubdomain(subdomain: string | null | undefined,  domain: string | null | undefined) {
   assert(isString(subdomain) && isString(domain));
   var dot = subdomain.length - domain.length - 1;
   return dot > 0 && subdomain[dot] === "." && subdomain.endsWith(domain);
@@ -608,7 +608,7 @@ function isString(value: any) {
   return typeof value === "string" || value instanceof String;
 }
 
-function isFunction(value: mixed) {
+function isFunction(value: unknown) {
   return typeof value === "function";
 }
 

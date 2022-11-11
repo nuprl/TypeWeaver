@@ -1,7 +1,4 @@
-index.ts(32,19): error TS2339: Property 'indexOf' does not exist on type 'never'.
-index.ts(39,17): error TS2339: Property 'slice' does not exist on type 'never'.
 index.ts(43,10): error TS2339: Property 'type' does not exist on type 'any[]'.
-index.ts(43,21): error TS2339: Property 'slice' does not exist on type 'never'.
 index.ts(93,47): error TS2345: Argument of type '(a: Range, b: Range) => number' is not assignable to parameter of type '(a: { start: any; end: any; index: number; }, b: { start: any; end: any; index: number; }) => number'.
   Types of parameters 'a' and 'a' are incompatible.
     Type '{ start: any; end: any; index: number; }' is not assignable to type 'Range'.
@@ -14,8 +11,8 @@ index.ts(128,18): error TS2339: Property 'start' does not exist on type 'Range'.
 index.ts(129,16): error TS2339: Property 'end' does not exist on type 'Range'.
 index.ts(141,18): error TS2339: Property 'start' does not exist on type 'Range'.
 index.ts(142,16): error TS2339: Property 'end' does not exist on type 'Range'.
-index.ts(151,31): error TS2304: Cannot find name 'RangeIndex'.
-index.ts(151,47): error TS2304: Cannot find name 'RangeIndex'.
+index.ts(151,31): error TS2304: Cannot find name 'IndexRange'.
+index.ts(151,47): error TS2304: Cannot find name 'IndexRange'.
 index.ts(161,12): error TS2339: Property 'start' does not exist on type 'Range'.
 index.ts(161,22): error TS2339: Property 'start' does not exist on type 'Range'.
 

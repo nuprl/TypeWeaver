@@ -11,7 +11,7 @@ empty list will be returned. A validation error will have two properties:
 "property" which indicates which property had the error
 "message" which indicates what the error was
  */
-(function (root: any,  factory: Function) {
+(function (root: any,  factory: any) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define([], function () {
@@ -73,7 +73,7 @@ var validate = exports._validate = function(/*Any*/instance: any, /*Object*/sche
 	}
 	var errors = [];
 	// validate a value against a property definition
-	function checkProp(value: any,  schema: Schema,  path: Array<string>, i: number){
+	function checkProp(value: any,  schema: any,  path: any[], i: any){
 
 		var l;
 		path += path ? typeof i == 'number' ? '[' + i + ']' : typeof i == 'undefined' ? '' : '.' + i : i;
@@ -199,7 +199,7 @@ var validate = exports._validate = function(/*Any*/instance: any, /*Object*/sche
 		return null;
 	}
 	// validate an object against a schema
-	function checkObj(instance: any, objTypeDef: any, path: Array<any>, additionalProp: any){
+	function checkObj(instance: any, objTypeDef: any, path: any[], additionalProp: any){
 
 		if(typeof objTypeDef =='object'){
 			if(typeof instance != 'object' || instance instanceof Array){
@@ -258,7 +258,7 @@ var validate = exports._validate = function(/*Any*/instance: any, /*Object*/sche
 	}
 	return {valid:!errors.length,errors:errors};
 };
-exports.mustBeValid = function(result: Object){
+exports.mustBeValid = function(result: any){
 	//	summary:
 	//		This checks to ensure that the result is valid and will throw an appropriate error message if it is not
 	// result: the result returned from checkPropertyChange or validate

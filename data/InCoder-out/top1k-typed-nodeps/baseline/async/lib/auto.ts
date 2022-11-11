@@ -55,12 +55,12 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *         // this is run at the same time as getting the data
  *         callback(null, 'folder');
  *     },
- *     write_file: ['get_data', 'make_folder', function(results: any,  callback: Function) {
+ *     write_file: ['get_data', 'make_folder', function(results: any,  callback: any) {
  *         // once there is some data and the directory exists,
  *         // write the data to a file in the directory
  *         callback(null, 'filename');
  *     }],
- *     email_link: ['write_file', function(results: any,  callback: Function) {
+ *     email_link: ['write_file', function(results: any,  callback: any) {
  *         // once the file is written let's email a link to it...
  *         callback(null, {'file':results.write_file, 'email':'user@example.com'});
  *     }]
@@ -90,12 +90,12 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *         // this is run at the same time as getting the data
  *         callback(null, 'folder');
  *     },
- *     write_file: ['get_data', 'make_folder', function(results: any,  callback: Function) {
+ *     write_file: ['get_data', 'make_folder', function(results: any,  callback: any) {
  *         // once there is some data and the directory exists,
  *         // write the data to a file in the directory
  *         callback(null, 'filename');
  *     }],
- *     email_link: ['write_file', function(results: any,  callback: Function) {
+ *     email_link: ['write_file', function(results: any,  callback: any) {
  *         // once the file is written let's email a link to it...
  *         callback(null, {'file':results.write_file, 'email':'user@example.com'});
  *     }]
@@ -124,12 +124,12 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *                 // this is run at the same time as getting the data
  *                 callback(null, 'folder');
  *             },
- *             write_file: ['get_data', 'make_folder', function(results: any,  callback: Function) {
+ *             write_file: ['get_data', 'make_folder', function(results: any,  callback: any) {
  *                 // once there is some data and the directory exists,
  *                 // write the data to a file in the directory
  *                 callback(null, 'filename');
  *             }],
- *             email_link: ['write_file', function(results: any,  callback: Function) {
+ *             email_link: ['write_file', function(results: any,  callback: any) {
  *                 // once the file is written let's email a link to it...
  *                 callback(null, {'file':results.write_file, 'email':'user@example.com'});
  *             }]
@@ -148,7 +148,7 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  * }
  *
  */
-export default function auto(tasks: Array<Function>,  concurrency: number,  callback: Function) {
+export default function auto(tasks: Task[],  concurrency: number,  callback: Function) {
     if (typeof concurrency !== 'number') {
         // concurrency is optional, shift the args.
         callback = concurrency;
@@ -214,7 +214,7 @@ export default function auto(tasks: Array<Function>,  concurrency: number,  call
     checkForDeadlocks();
     processQueue();
 
-    function enqueueTask(key: any,  task: Function) {
+    function enqueueTask(key: any,  task: Task) {
         readyTasks.push(() => runTask(key, task));
     }
 
@@ -230,7 +230,7 @@ export default function auto(tasks: Array<Function>,  concurrency: number,  call
 
     }
 
-    function addListener(taskName: any,  fn: Function) {
+    function addListener(taskName: any,  fn: any) {
         var taskListeners = listeners[taskName];
         if (!taskListeners) {
             taskListeners = listeners[taskName] = [];
@@ -246,7 +246,7 @@ export default function auto(tasks: Array<Function>,  concurrency: number,  call
     }
 
 
-    function runTask(key: TaskKey,  task: Task) {
+    function runTask(key: string | Task,  task: Task) {
         if (hasError) return;
 
         var taskCallback = onlyOnce((err, ...result) => {

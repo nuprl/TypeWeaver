@@ -8,7 +8,7 @@ export const isArray = Array.isArray || ((obj) => (
   toString.call(obj) === "[object Array]"
 ))
 
-export function wordsRegexp(words: string) {
+export function wordsRegexp(words: string[]) {
   return new RegExp("^(?:" + words.replace(/ /g, "|") + ")$")
 }
 

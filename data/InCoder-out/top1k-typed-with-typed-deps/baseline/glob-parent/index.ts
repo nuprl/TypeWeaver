@@ -13,7 +13,7 @@ var escaped = /\\([!*?|[\](){}])/g;
  * @param {Object} opts
  * @param {boolean} [opts.flipBackslashes=true]
  */
-module.exports = function globParent(str: string | string[],  opts: GlobOptions) {
+module.exports = function globParent(str: string | Buffer,  opts: any) {
   var options = Object.assign({ flipBackslashes: true }, opts);
 
   // flip windows path separators

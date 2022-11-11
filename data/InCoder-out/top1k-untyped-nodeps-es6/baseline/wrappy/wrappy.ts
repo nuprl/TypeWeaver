@@ -11,7 +11,7 @@ function wrappy (fn: Function,  cb: Function) {
   if (typeof fn !== 'function')
     throw new TypeError('need wrapper function')
 
-  Object.keys(fn).forEach(function (k: keyof T) {
+  Object.keys(fn).forEach(function (k: any) {
     wrapper[k] = fn[k]
   })
 

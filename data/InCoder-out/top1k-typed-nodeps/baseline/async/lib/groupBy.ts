@@ -36,7 +36,7 @@ import groupByLimit from './groupByLimit.js'
  *
  * // asynchronous function that detects file type as none, file, or directory
  * function detectFile(file: File,  callback: Function) {
- *     fs.stat(file, function(err: Error,  stat: fs.Stat) {
+ *     fs.stat(file, function(err: Error,  stat: fs.Stats) {
  *         if (err) {
  *             return callback(null, 'none');
  *         }

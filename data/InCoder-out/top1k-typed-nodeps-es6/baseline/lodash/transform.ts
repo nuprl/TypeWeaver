@@ -33,7 +33,7 @@ import isTypedArray from './isTypedArray.js'
  * }, {})
  * // => { '1': ['a', 'c'], '2': ['b'] }
  */
-function transform(object: Object,  iteratee: Function,  accumulator: Object) {
+function transform(object: Object,  iteratee: Function,  accumulator: Function) {
   const isArr = Array.isArray(object)
   const isArrLike = isArr || isBuffer(object) || isTypedArray(object)
 

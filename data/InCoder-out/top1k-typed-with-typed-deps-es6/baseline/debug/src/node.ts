@@ -165,7 +165,7 @@ function useColors() {
  * @api public
  */
 
-function formatArgs(args: any) {
+function formatArgs(args: any[]) {
 	const {namespace: name, useColors} = this;
 
 	if (useColors) {
@@ -201,7 +201,7 @@ function log(...args: any[]) {
  * @param {String} namespaces
  * @api private
  */
-function save(namespaces: any) {
+function save(namespaces: Array<string>) {
 	if (namespaces) {
 		process.env.DEBUG = namespaces;
 	} else {

@@ -1,7 +1,7 @@
 'use strict';
 
 export const definition = {
-  set: function(v: any) {
+  set: function(v: number) {
     this._setProperty('float', v);
   },
   get: function() {

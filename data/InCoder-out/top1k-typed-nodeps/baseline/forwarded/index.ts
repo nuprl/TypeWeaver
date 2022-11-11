@@ -21,7 +21,7 @@ module.exports = forwarded
  * @public
  */
 
-function forwarded (req: express.Request) {
+function forwarded (req: Request) {
   if (!req) {
     throw new TypeError('argument req is required')
   }
@@ -43,7 +43,7 @@ function forwarded (req: express.Request) {
  * @private
  */
 
-function getSocketAddr (req: Request) {
+function getSocketAddr (req: express.Request) {
   return req.socket
     ? req.socket.remoteAddress
     : req.connection.remoteAddress

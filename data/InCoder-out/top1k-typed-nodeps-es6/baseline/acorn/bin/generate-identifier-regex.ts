@@ -11,7 +11,7 @@ let last = -1
 const cont = [0x200c, 0x200d].concat(require(unicodeVersion + "/Binary_Property/ID_Continue/code-points.js")
   .filter(ch => ch > 0x7f && search(start, ch, last + 1) === -1))
 
-function search(arr: number[],  ch: number,  starting: boolean) {
+function search(arr: number[],  ch: number,  starting: number) {
   for (let i = starting; arr[i] <= ch && i < arr.length; last = i++)
     if (arr[i] === ch) return i
   return -1
@@ -49,7 +49,7 @@ const nonASCIIidentifierChars = "export default \"" + contData.nonASCII + "\""
 
 const comment = "// This file was generated. Do not modify manually!"
 
-function writeGeneratedFile(filename: Path,  content: any) {
+function writeGeneratedFile(filename: string,  content: any) {
   fs.writeFileSync(path.resolve("./acorn/src/generated", filename + ".js"), comment + "\n" + content + "\n", "utf8")
 }
 

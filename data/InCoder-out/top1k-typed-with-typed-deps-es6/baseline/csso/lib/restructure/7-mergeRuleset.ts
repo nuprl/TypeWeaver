@@ -13,13 +13,13 @@ import { unsafeToSkipNode, isEqualDeclarations} from './utils.js';
     b { ... }
 */
 
-function processRule(node: RuleNode,  item: RuleItem,  list: ListNode) {
+function processRule(node: CssNode,  item: CssNode,  list: CssNode[]) {
     const selectors = node.prelude.children;
     const declarations = node.block.children;
     const nodeCompareMarker = selectors.first.compareMarker;
     const skippedCompareMarkers = {};
 
-    list.nextUntil(item.next, function(next: any,  nextItem: any) {
+    list.nextUntil(item.next, function(next: RulesetCallBack,  nextItem: RulesetCallBack) {
         // skip non-ruleset node if safe
         if (next.type !== 'Rule') {
             return unsafeToSkipNode.call(selectors, next);
@@ -78,7 +78,7 @@ function processRule(node: RuleNode,  item: RuleItem,  list: ListNode) {
     });
 }
 
-export default function mergeRule(ast: Rule) {
+export default function mergeRule(ast: AST) {
     walk(ast, {
         visit: 'Rule',
         enter: processRule

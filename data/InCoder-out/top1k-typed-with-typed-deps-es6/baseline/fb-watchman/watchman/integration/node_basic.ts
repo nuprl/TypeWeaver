@@ -18,7 +18,7 @@ client.on('error', function(error: Error) {
   assert.fail(error, null, 'unexpected error');
 });
 
-client.command(['version'], function(error: any,  resp: any) {
+client.command(['version'], function(error: Error,  resp: Response) {
   assert.equal(error, null, 'no errors');
   console.log('Talking to watchman version', resp.version);
   client.end();

@@ -14,7 +14,7 @@
  * some([null, 0, 'yes', false], Boolean)
  * // => true
  */
-function some(array: Array,  predicate: Function) {
+function some(array: Array<T>,  predicate: Predicate<T>) {
   let index = -1
   const length = array == null ? 0 : array.length
 

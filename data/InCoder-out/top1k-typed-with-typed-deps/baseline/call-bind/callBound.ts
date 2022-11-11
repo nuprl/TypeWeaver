@@ -6,7 +6,7 @@ var callBind = require('./');
 
 var $indexOf = callBind(GetIntrinsic('String.prototype.indexOf'));
 
-module.exports = function callBoundIntrinsic(name: string | symbol,  allowMissing: boolean | undefined) {
+module.exports = function callBoundIntrinsic(name: String,  allowMissing: Boolean) {
 	var intrinsic = GetIntrinsic(name, !!allowMissing);
 	if (typeof intrinsic === 'function' && $indexOf(name, '.prototype.') > -1) {
 		return callBind(intrinsic);

@@ -26,7 +26,7 @@
         return sprintf_format(sprintf_parse(key), arguments)
     }
 
-    function vsprintf(fmt: any,  argv: Array<any>) {
+    function vsprintf(fmt: any,  argv: any) {
         return sprintf.apply(null, [fmt].concat(argv || []))
     }
 
@@ -141,7 +141,7 @@
 
     var sprintf_cache = Object.create(null)
 
-    function sprintf_parse(fmt: string | RegExp) {
+    function sprintf_parse(fmt: any) {
         if (sprintf_cache[fmt]) {
             return sprintf_cache[fmt]
         }

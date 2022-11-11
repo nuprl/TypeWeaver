@@ -21,7 +21,7 @@ import wrapAsync from './internal/wrapAsync.js'
  * @example
  *
  * function myFunction(foo: number,  callback: Function) {
- *     doAsyncTask(foo, function(err: any,  data: any) {
+ *     doAsyncTask(foo, function(err: Error,  data: any) {
  *         // handle errors
  *         if (err) return callback(err);
  *
@@ -42,7 +42,7 @@ import wrapAsync from './internal/wrapAsync.js'
  *     // else `err` will be an Error with the code 'ETIMEDOUT'
  * });
  */
-export default function timeout(asyncFn: Function,  milliseconds: number,  info: Function) {
+export default function timeout(asyncFn: any,  milliseconds: number,  info: any) {
     var fn = wrapAsync(asyncFn);
 
     return initialParams((args, callback) => {

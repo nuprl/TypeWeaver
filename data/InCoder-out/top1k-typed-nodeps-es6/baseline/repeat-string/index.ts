@@ -38,7 +38,7 @@ export default repeat;
  * @api public
  */
 
-function repeat(str: ring | number,  num: number) {
+function repeat(str: y,  num: mber) {
   if (typeof str !== 'string') {
     throw new TypeError('expected a string');
   }

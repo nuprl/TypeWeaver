@@ -42,7 +42,7 @@ function H(x: number) {
 }
 
 // Get the gradient of f(x)
-function grad(x: number) {
+function grad(x: Tensor) {
 
   return [
   new Fraction(x[0]).mul(x[0]).add(x[1]),
@@ -51,7 +51,7 @@ function grad(x: number) {
 }
 
 // A simple matrix multiplication helper
-function matrMult(m: Matr3D,  v: Matr3D) {
+function matrMult(m: Matr,  v: Vec) {
 
   return [
   new Fraction(m[0]).mul(v[0]).add(new Fraction(m[1]).mul(v[1])),
@@ -60,7 +60,7 @@ function matrMult(m: Matr3D,  v: Matr3D) {
 }
 
 // A simple vector subtraction helper
-function vecSub(a: Fraction,  b: Fraction) {
+function vecSub(a: Fraction[],  b: Fraction[]) {
 
   return [
   new Fraction(a[0]).sub(b[0]),
@@ -69,7 +69,7 @@ function vecSub(a: Fraction,  b: Fraction) {
 }
 
 // Main function, gets a vector and the actual index
-function run(V: V,  j: number) {
+function run(V: Vector,  j: Int) {
 
   var t = H(V);
   //console.log("H(X)");

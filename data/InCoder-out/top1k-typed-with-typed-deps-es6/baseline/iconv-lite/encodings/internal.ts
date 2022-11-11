@@ -89,11 +89,11 @@ InternalEncoder.prototype.end = function() {
 //------------------------------------------------------------------------------
 // Except base64 encoder, which must keep its state.
 
-function InternalEncoderBase64(options: InternalEncoderOptions,  codec: Codec) {
+function InternalEncoderBase64(options: InternalEncoderOptions,  codec: InternalCodec) {
     this.prevStr = '';
 }
 
-InternalEncoderBase64.prototype.write = function(str: String) {
+InternalEncoderBase64.prototype.write = function(str: any) {
     str = this.prevStr + str;
     var completeQuads = str.length - (str.length % 4);
     this.prevStr = str.slice(completeQuads);
@@ -110,10 +110,10 @@ InternalEncoderBase64.prototype.end = function() {
 //------------------------------------------------------------------------------
 // CESU-8 encoder is also special.
 
-function InternalEncoderCesu8(options: InternalEncoderOptions,  codec: InternalCodec) {
+function InternalEncoderCesu8(options: InternalEncoderOptions,  codec: InternalEncoderCesu) {
 }
 
-InternalEncoderCesu8.prototype.write = function(str: string | number) {
+InternalEncoderCesu8.prototype.write = function(str: any) {
     var buf = Buffer.alloc(str.length * 3), bufIdx = 0;
     for (var i = 0; i < str.length; i++) {
         var charCode = str.charCodeAt(i);

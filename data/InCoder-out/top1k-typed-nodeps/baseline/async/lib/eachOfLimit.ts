@@ -23,7 +23,7 @@ import awaitify from './internal/awaitify.js'
  * `iteratee` functions have finished, or an error occurs. Invoked with (err).
  * @returns {Promise} a promise, if a callback is omitted
  */
-function eachOfLimit(coll: Collection,  limit: number,  iteratee: Function,  callback: Function) {
+function eachOfLimit(coll: AsyncIterable<any>,  limit: number,  iteratee: any,  callback: Function) {
     return _eachOfLimit(limit)(coll, wrapAsync(iteratee), callback);
 }
 

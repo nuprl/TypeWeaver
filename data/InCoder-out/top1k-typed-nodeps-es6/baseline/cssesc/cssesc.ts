@@ -3,7 +3,7 @@
 
 var object = {};
 var hasOwnProperty = object.hasOwnProperty;
-var merge = function merge(options: object,  defaults: object) {
+var merge = function merge(options: any,  defaults: any) {
 	if (!options) {
 		return defaults;
 	}
@@ -22,7 +22,7 @@ var regexAlwaysEscape = /['"\\]/;
 var regexExcessiveSpaces = /(^|\\+)?(\\[A-F0-9]{1,6})\x20(?![a-fA-F0-9\x20])/g;
 
 // https://mathiasbynens.be/notes/css-escapes#css
-var cssesc = function cssesc(string: string | Buffer,  options: { encoding?: string }) {
+var cssesc = function cssesc(string: any,  options: any) {
 	options = merge(options, cssesc.options);
 	if (options.quotes != 'single' && options.quotes != 'double') {
 		options.quotes = 'single';

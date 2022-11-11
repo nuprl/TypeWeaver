@@ -4,7 +4,7 @@ import TrackerBase from './tracker-base.js';
 import Tracker from './tracker.js';
 import TrackerStream from './tracker-stream.js';
 
-var TrackerGroup = function (name: any) {
+var TrackerGroup = function (name: String) {
   TrackerBase.call(this, name)
   this.parentGroup = null
   this.trackers = []
@@ -17,8 +17,8 @@ var TrackerGroup = function (name: any) {
 export default TrackerGroup;
 util.inherits(TrackerGroup, TrackerBase)
 
-function bubbleChange (trackerGroup: TrackerGroup) {
-  return function (name: any,  completed: any,  tracker: any) {
+function bubbleChange (trackerGroup: any) {
+  return function (name: string,  completed: boolean,  tracker: Tracker) {
     trackerGroup.completion[tracker.id] = completed
     if (trackerGroup.finished) {
       return
@@ -76,15 +76,15 @@ TrackerGroup.prototype.completed = function () {
   return completed
 }
 
-TrackerGroup.prototype.newGroup = function (name: String,  weight: Float) {
+TrackerGroup.prototype.newGroup = function (name: String,  weight: Number) {
   return this.addUnit(new TrackerGroup(name), weight)
 }
 
-TrackerGroup.prototype.newItem = function (name: String,  todo: Todo,  weight: Number) {
+TrackerGroup.prototype.newItem = function (name: string,  todo: Todo,  weight: number) {
   return this.addUnit(new Tracker(name, todo), weight)
 }
 
-TrackerGroup.prototype.newStream = function (name: String,  todo: Todo,  weight: Number) {
+TrackerGroup.prototype.newStream = function (name: string,  todo: Todo,  weight: number) {
   return this.addUnit(new TrackerStream(name, todo), weight)
 }
 
@@ -106,7 +106,7 @@ TrackerGroup.prototype.debug = function (depth: number) {
   depth = depth || 0
   var indent = depth ? buffer.slice(0, depth) : ''
   var output = indent + (this.name || 'top') + ': ' + this.completed() + '\n'
-  this.trackers.forEach(function (tracker: Tracker) {
+  this.trackers.forEach(function (tracker: TrackerGroup) {
     if (tracker instanceof TrackerGroup) {
       output += tracker.debug(depth + 1)
     } else {

@@ -21,7 +21,7 @@ const mixinDeep = (target, ...rest) => {
   return target;
 };
 
-function mixin(target: any,  val: any,  key: any) {
+function mixin(target: Object,  val: Object,  key: String) {
   let obj = target[key];
   if (isObject(val) && isObject(obj)) {
     mixinDeep(obj, val);

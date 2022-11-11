@@ -1,7 +1,7 @@
 import process from 'node:process';
 import path from 'node:path';
 
-export default function isPathCwd(path_: string | undefined) {
+export default function isPathCwd(path_: string | Buffer) {
 	let cwd = process.cwd();
 
 	path_ = path.resolve(path_);

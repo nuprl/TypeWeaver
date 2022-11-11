@@ -14,9 +14,9 @@ Object.defineProperty(exports, '_vendors', {
 exports.name = null
 exports.isPR = null
 
-vendors.forEach(function (vendor: string | undefined) {
+vendors.forEach(function (vendor: Vendor) {
   const envs = Array.isArray(vendor.env) ? vendor.env : [vendor.env]
-  const isCI = envs.every(function (obj: Object) {
+  const isCI = envs.every(function (obj: any) {
     return checkEnv(obj)
   })
 
@@ -39,7 +39,7 @@ vendors.forEach(function (vendor: string | undefined) {
         exports.isPR = vendor.pr.env in env && env[vendor.pr.env] !== vendor.pr.ne
       } else if ('any' in vendor.pr) {
         // "pr": { "any": ["ghprbPullId", "CHANGE_ID"] }
-        exports.isPR = vendor.pr.any.some(function (key: tring | symbol) {
+        exports.isPR = vendor.pr.any.some(function (key: ny) {
           return !!env[key]
         })
       } else {

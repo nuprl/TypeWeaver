@@ -34,7 +34,7 @@ import reflect from './reflect.js'
  *
  * async.parallel(async.reflectAll(tasks),
  * // optional callback
- * function(err: Error,  results: any) {
+ * function(err: MongoError,  results: any) {
  *     // values
  *     // results[0].value = 'one'
  *     // results[1].error = Error('bad stuff happened')
@@ -60,14 +60,14 @@ import reflect from './reflect.js'
  *
  * async.parallel(async.reflectAll(tasks),
  * // optional callback
- * function(err: Error,  results: any) {
+ * function(err: MongoError,  results: any) {
  *     // values
  *     // results.one.value = 'one'
  *     // results.two.error = 'two'
  *     // results.three.value = 'three'
  * });
  */
-export default function reflectAll(tasks: Array<Function>) {
+export default function reflectAll(tasks: Task[]) {
     var results;
     if (Array.isArray(tasks)) {
         results = tasks.map(reflect);

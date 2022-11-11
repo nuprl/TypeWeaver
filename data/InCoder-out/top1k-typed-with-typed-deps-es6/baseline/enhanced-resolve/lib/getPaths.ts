@@ -27,7 +27,7 @@ export default function getPaths(path: Path) {
 	};
 };
 
-export const basename = function basename(path: Path) {
+export const basename = function basename(path: string | Buffer) {
 	const i = path.lastIndexOf("/"),
 		j = path.lastIndexOf("\\");
 	const p = i < 0 ? j : j < 0 ? i : i < j ? j : i;

@@ -3,7 +3,7 @@
 import { stringify } from 'jsonfile/utils';
 import { outputFile } from '../output-file';
 
-async function outputJson (file: string | Buffer,  data: any,  options = {}: OutputJsonOptions) {
+async function outputJson (file: File,  data: any,  options = {}: JsonOutputOptions) {
   const str = stringify(data, options)
 
   await outputFile(file, str, options)

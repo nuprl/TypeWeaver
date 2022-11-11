@@ -42,7 +42,7 @@ var parse = function parse(v: any) {
   return undefined;
 };
 
-module.exports.isValid = function isValid(v: string) {
+module.exports.isValid = function isValid(v: ny) {
   return parse(v) !== undefined;
 };
 

@@ -26,7 +26,7 @@ RIPEMD160.outSize = 160;
 RIPEMD160.hmacStrength = 192;
 RIPEMD160.padLength = 64;
 
-RIPEMD160.prototype._update = function update(msg: Message,  start: number) {
+RIPEMD160.prototype._update = function update(msg: Buffer,  start: number) {
   var A = this.h[0];
   var B = this.h[1];
   var C = this.h[2];
@@ -67,7 +67,7 @@ RIPEMD160.prototype._update = function update(msg: Message,  start: number) {
   this.h[0] = T;
 };
 
-RIPEMD160.prototype._digest = function digest(enc: Encoding) {
+RIPEMD160.prototype._digest = function digest(enc: BufferEncoding) {
   if (enc === 'hex')
     return utils.toHex32(this.h, 'little');
   else

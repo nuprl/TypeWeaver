@@ -5,7 +5,7 @@ import isCallable from 'is-callable';
 var toStr = Object.prototype.toString;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
-var forEachArray = function forEachArray(array: ArrayLike<any>,  iterator: Function,  receiver: Object) {
+var forEachArray = function forEachArray(array: ArrayLike<any>,  iterator: Iterator<any>,  receiver: any) {
     for (var i = 0, len = array.length; i < len; i++) {
         if (hasOwnProperty.call(array, i)) {
             if (receiver == null) {
@@ -17,7 +17,7 @@ var forEachArray = function forEachArray(array: ArrayLike<any>,  iterator: Funct
     }
 };
 
-var forEachString = function forEachString(string: string | null | undefined,  iterator: Function,  receiver: Object) {
+var forEachString = function forEachString(string: string | null | undefined,  iterator: any,  receiver: any) {
     for (var i = 0, len = string.length; i < len; i++) {
         // no such thing as a sparse string.
         if (receiver == null) {
@@ -28,7 +28,7 @@ var forEachString = function forEachString(string: string | null | undefined,  i
     }
 };
 
-var forEachObject = function forEachObject(object: Object,  iterator: Function,  receiver: Object) {
+var forEachObject = function forEachObject(object: Object,  iterator: ObjectIterator,  receiver: Object | null) {
     for (var k in object) {
         if (hasOwnProperty.call(object, k)) {
             if (receiver == null) {
@@ -40,7 +40,7 @@ var forEachObject = function forEachObject(object: Object,  iterator: Function, 
     }
 };
 
-var forEach = function forEach(list: List<T>,  iterator: ListIterator<T>,  thisArg: ListIterator<T>) {
+var forEach = function forEach(list: Array<T>,  iterator: any,  thisArg: any) {
     if (!isCallable(iterator)) {
         throw new TypeError('iterator must be a function');
     }

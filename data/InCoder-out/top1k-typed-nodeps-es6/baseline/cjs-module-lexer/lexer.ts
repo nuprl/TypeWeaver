@@ -37,7 +37,7 @@ const Import = 0;
 const ExportAssign = 1;
 const ExportStar = 2;
 
-function parseCJS (source: Source,  name = '@': any) {
+function parseCJS (source: Source,  name = '@': string) {
   resetState();
   try {
     parseSource(source);
@@ -52,7 +52,7 @@ function parseCJS (source: Source,  name = '@': any) {
   return result;
 }
 
-function decode (str: string | Buffer) {
+function decode (str: any) {
   if (str[0] === '"' || str[0] === '\'') {
     try {
       const decoded = (0, eval)(str);
@@ -82,7 +82,7 @@ function decode (str: string | Buffer) {
   }
 }
 
-function parseSource (cjsSource: string | Source) {
+function parseSource (cjsSource: Source) {
   source = cjsSource;
   pos = -1;
   end = source.length - 1;
@@ -328,7 +328,7 @@ function tryParseObjectHasOwnProperty (it_id: number) {
   return true;
 }
 
-function tryParseObjectDefineOrKeys (keys: Array<string | number>) {
+function tryParseObjectDefineOrKeys (keys: string[]) {
   pos += 6;
   let revertPos = pos - 1;
   let ch = commentWhitespace();
@@ -869,7 +869,7 @@ function tryParseModuleExportsDotAssign () {
   pos = revertPos;
 }
 
-function tryParseExportsDotAssign (assign: any) {
+function tryParseExportsDotAssign (assign: ExportsDotAssign) {
   pos += 7;
   const revertPos = pos - 1;
   let ch = commentWhitespace();
@@ -928,7 +928,7 @@ function tryParseExportsDotAssign (assign: any) {
   pos = revertPos;
 }
 
-function tryParseRequire (requireType: string | string[]) {
+function tryParseRequire (requireType: NodeTypes.Require) {
   // require('...')
   const revertPos = pos;
   if (source.startsWith('equire', pos + 1)) {
@@ -1080,7 +1080,7 @@ const astralIdentifierCodes = [509,0,227,0,150,4,294,9,1368,2,2,1,6,3,41,2,5,0,1
 // This has a complexity linear to the value of the code. The
 // assumption is that looking up astral identifier characters is
 // rare.
-function isInAstralSet(code: number,  set: number) {
+function isInAstralSet(code: number,  set: number[]) {
   let pos = 0x10000
   for (let i = 0; i < set.length; i += 2) {
     pos += set[i]
@@ -1245,7 +1245,7 @@ function lineComment () {
   }
 }
 
-function stringLiteral (quote: any) {
+function stringLiteral (quote: string | undefined) {
   while (pos++ < end) {
     let ch = source.charCodeAt(pos);
     if (ch === quote)
@@ -1295,7 +1295,7 @@ function isBr (c: number) {
   return c === 13/*\r*/ || c === 10/*\n*/;
 }
 
-function isBrOrWs (c: Character) {
+function isBrOrWs (c: number) {
   return c > 8 && c < 14 || c === 32 || c === 160;
 }
 
@@ -1303,7 +1303,7 @@ function isBrOrWsOrPunctuatorNotDot (c: number) {
   return c > 8 && c < 14 || c === 32 || c === 160 || isPunctuator(c) && c !== 46/*.*/;
 }
 
-function keywordStart (pos: number) {
+function keywordStart (pos: Position) {
   return pos === 0 || isBrOrWsOrPunctuatorNotDot(source.charCodeAt(pos - 1));
 }
 

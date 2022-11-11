@@ -10,7 +10,7 @@ const replaceText = (function replaceText() {
 })();
 
 /* istanbul ignore next  */
-function apply(styleElement: HTMLElement,  index: number,  remove: boolean,  obj: HTMLElement) {
+function apply(styleElement: any,  index: number,  remove: boolean,  obj: object) {
   let css;
 
   if (remove) {

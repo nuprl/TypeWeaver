@@ -1,4 +1,4 @@
-export default function ensureObject (obj: bject,  ...props: ny[]) {
+export default function ensureObject (obj: ny,  ...props: tring[]) {
     while (props.length > 0) {
         const prop = props.shift();
 

@@ -3,7 +3,7 @@ import { EventEmitter } from 'events';
 import util from 'util';
 
 var trackerId = 0
-var TrackerBase = function (name: any) {
+var TrackerBase = function (name: String) {
   EventEmitter.call(this)
   this.id = ++trackerId
   this.name = name

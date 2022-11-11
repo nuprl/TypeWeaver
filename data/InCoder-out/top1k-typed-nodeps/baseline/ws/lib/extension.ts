@@ -24,7 +24,7 @@ function push(dest: any,  name: any,  elem: any) {
  * @return {Object} The parsed object
  * @public
  */
-function parse(header: Header) {
+function parse(header: Buffer) {
   const offers = Object.create(null);
   let params = Object.create(null);
   let mustUnescape = false;
@@ -176,7 +176,7 @@ function parse(header: Header) {
  * @return {String} A string representing the given object
  * @public
  */
-function format(extensions: Extension[]) {
+function format(extensions: Record<string, any>) {
   return Object.keys(extensions)
     .map((extension) => {
       let configurations = extensions[extension];

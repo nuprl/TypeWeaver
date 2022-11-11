@@ -27,7 +27,7 @@ import isObjectLike from './isObjectLike.js'
  * isPlainObject(Object.create(null))
  * // => true
  */
-function isPlainObject(value: any) {
+function isPlainObject(value: unknown) {
   if (!isObjectLike(value) || getTag(value) != '[object Object]') {
     return false
   }

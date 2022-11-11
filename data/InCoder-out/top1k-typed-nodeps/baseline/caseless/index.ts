@@ -1,7 +1,7 @@
-function Caseless (dict: Object) {
+function Caseless (dict: Dict) {
   this.dict = dict || {}
 }
-Caseless.prototype.set = function (name: any,  value: any,  clobber: boolean) {
+Caseless.prototype.set = function (name: name,  value: value,  clobber: clobber) {
   if (typeof name === 'object') {
     for (var i in name) {
       this.set(i, name[i], value)
@@ -15,7 +15,7 @@ Caseless.prototype.set = function (name: any,  value: any,  clobber: boolean) {
     return has
   }
 }
-Caseless.prototype.has = function (name: any) {
+Caseless.prototype.has = function (name: String) {
   var keys = Object.keys(this.dict)
     , name = name.toLowerCase()
     ;
@@ -24,7 +24,7 @@ Caseless.prototype.has = function (name: any) {
   }
   return false
 }
-Caseless.prototype.get = function (name: any) {
+Caseless.prototype.get = function (name: String) {
   name = name.toLowerCase()
   var result, _key
   var headers = this.dict
@@ -34,14 +34,14 @@ Caseless.prototype.get = function (name: any) {
   })
   return result
 }
-Caseless.prototype.swap = function (name: any) {
+Caseless.prototype.swap = function (name: String) {
   var has = this.has(name)
   if (has === name) return
   if (!has) throw new Error('There is no header than matches "'+name+'"')
   this.dict[name] = this.dict[has]
   delete this.dict[has]
 }
-Caseless.prototype.del = function (name: any) {
+Caseless.prototype.del = function (name: String) {
   name = String(name).toLowerCase()
   var deleted = false
   var changed = 0
@@ -55,20 +55,20 @@ Caseless.prototype.del = function (name: any) {
   return changed === 0 ? true : deleted
 }
 
-module.exports = function (dict: Caseless) {return new Caseless(dict)}
+module.exports = function (dict: Dict) {return new Caseless(dict)}
 module.exports.httpify = function (resp: Response,  headers: Headers) {
   var c = new Caseless(headers)
   resp.setHeader = function (key: any,  value: any,  clobber: boolean) {
     if (typeof value === 'undefined') return
     return c.set(key, value, clobber)
   }
-  resp.hasHeader = function (key: K) {
+  resp.hasHeader = function (key: any) {
     return c.has(key)
   }
   resp.getHeader = function (key: any) {
     return c.get(key)
   }
-  resp.removeHeader = function (key: String) {
+  resp.removeHeader = function (key: any) {
     return c.del(key)
   }
   resp.headers = c.dict

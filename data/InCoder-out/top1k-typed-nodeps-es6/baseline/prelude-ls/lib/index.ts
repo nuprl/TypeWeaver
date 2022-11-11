@@ -165,7 +165,7 @@ prelude.VERSION = '1.2.1';
 export default prelude;
 function curry$(f: Function,  bound: Function){
   var context,
-  _curry = function(args: ny[]) {
+  _curry = function(args: rray<any>) {
     return f.length > 1 ? function(){
       var params = args ? args.concat() : [];
       context = bound ? context || this : this;

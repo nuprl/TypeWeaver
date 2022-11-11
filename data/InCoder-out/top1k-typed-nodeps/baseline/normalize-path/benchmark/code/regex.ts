@@ -1,4 +1,4 @@
-module.exports = function(fp: String,  stripTrailing: Boolean) {
+module.exports = function(fp: any,  stripTrailing: boolean) {
   fp = fp.replace(/[\\\/]+/g, '/');
   fp = fp.replace(/^\.\//g, '');
   if (stripTrailing === false) {

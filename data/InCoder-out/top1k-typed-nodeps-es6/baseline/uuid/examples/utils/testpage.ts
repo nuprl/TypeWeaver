@@ -11,7 +11,7 @@ export default function test(callback: Function) {
   );
   document.body.appendChild(style);
 
-  function addTest(title: string | undefined,  result: TestResult) {
+  function addTest(title: String,  result: Boolean) {
     // join() result if it's  array-like
     if (result instanceof Uint8Array || Array.isArray(result)) {
       result = Array.prototype.join.apply(result);

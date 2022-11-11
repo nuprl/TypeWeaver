@@ -11,17 +11,17 @@ examples/clock.ts(37,23): error TS2339: Property 'timer' does not exist on type 
 examples/clock.ts(40,8): error TS2339: Property 'startedAt' does not exist on type 'Clock'.
 examples/clock.ts(41,8): error TS2339: Property 'timer' does not exist on type 'Clock'.
 examples/clock.ts(43,8): error TS2554: Expected 2 arguments, but got 1.
-examples/clock.ts(47,18): error TS2339: Property 'duration' does not exist on type 'Object'.
+examples/clock.ts(47,29): error TS2304: Cannot find name 'TimerEvent'.
 examples/emit.ts(16,11): error TS2554: Expected 2 arguments, but got 1.
-examples/eventdata.ts(7,47): error TS2552: Cannot find name 'unction'. Did you mean 'Function'?
-examples/eventdata.ts(7,72): error TS2552: Cannot find name 'rray'. Did you mean 'Array'?
+examples/eventdata.ts(7,47): error TS2304: Cannot find name 'ny'.
+examples/eventdata.ts(7,67): error TS2304: Cannot find name 'ny'.
 examples/eventdata.ts(8,14): error TS2304: Cannot find name 'a'.
 examples/eventdata.ts(12,45): error TS2554: Expected 2 arguments, but got 4.
-index.ts(60,29): error TS2304: Cannot find name 'IEventEmitter'.
+index.ts(19,35): error TS2304: Cannot find name 'Listener'.
+index.ts(34,38): error TS2304: Cannot find name 'Instance'.
+index.ts(34,60): error TS2304: Cannot find name 'EventName'.
 index.ts(102,6): error TS2322: Type '(value: unknown) => void' is not assignable to type '() => void'.
 index.ts(165,33): error TS2304: Cannot find name 'EventEmitter'.
-index.ts(165,59): error TS2304: Cannot find name 'MetaEventName'.
-index.ts(165,86): error TS2304: Cannot find name 'EventData'.
 index.ts(226,14): error TS2339: Property 'DEBUG' does not exist on type '{}'.
 index.ts(226,42): error TS2339: Property 'DEBUG' does not exist on type '{}'.
 index.ts(240,8): error TS2339: Property 'debug' does not exist on type 'Emittery'.
@@ -35,10 +35,5 @@ index.ts(268,9): error TS2339: Property 'debug' does not exist on type 'Emittery
 index.ts(268,33): error TS2339: Property 'debug' does not exist on type 'Emittery'.
 index.ts(330,11): error TS2339: Property 'off' does not exist on type 'Promise<unknown>'.
 index.ts(415,10): error TS2554: Expected 2 arguments, but got 1.
-index.ts(434,36): error TS2345: Argument of type 'string | number | symbol' is not assignable to parameter of type 'string | symbol'.
-  Type 'number' is not assignable to type 'string | symbol'.
-index.ts(439,41): error TS2345: Argument of type 'this' is not assignable to parameter of type 'EventTarget'.
-  Type 'Emittery' is missing the following properties from type 'EventTarget': addEventListener, dispatchEvent, removeEventListener
-index.ts(475,27): error TS2345: Argument of type 'this' is not assignable to parameter of type 'EventTarget'.
 index.ts(476,9): error TS2554: Expected 2 arguments, but got 1.
 

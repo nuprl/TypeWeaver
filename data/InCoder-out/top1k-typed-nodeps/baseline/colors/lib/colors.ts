@@ -75,14 +75,14 @@ var stylize = colors.stylize = function stylize(str: any,  style: any) {
 };
 
 var matchOperatorsRe = /[|\\{}()[\]^$+*?.]/g;
-var escapeStringRegexp = function(str: any) {
+var escapeStringRegexp = function(str: ring | number) {
   if (typeof str !== 'string') {
     throw new TypeError('Expected a string');
   }
   return str.replace(matchOperatorsRe, '\\$&');
 };
 
-function build(_styles: Styles) {
+function build(_styles: Styles<any>) {
   var builder = function builder() {
     return applyStyle.apply(builder, arguments);
   };
@@ -96,7 +96,7 @@ function build(_styles: Styles) {
 var styles = (function() {
   var ret = {};
   ansiStyles.grey = ansiStyles.gray;
-  Object.keys(ansiStyles).forEach(function(key: keyof ansiStyles) {
+  Object.keys(ansiStyles).forEach(function(key: any) {
     ansiStyles[key].closeRe =
       new RegExp(escapeStringRegexp(ansiStyles[key].close), 'g');
     ret[key] = {
@@ -113,7 +113,7 @@ var proto = defineProps(function colors() {}, styles);
 function applyStyle() {
   var args = Array.prototype.slice.call(arguments);
 
-  var str = args.map(function(arg: any) {
+  var str = args.map(function(arg: number) {
     // Use weak equality check so we can colorize null/undefined in safe mode
     if (arg != null && arg.constructor === String) {
       return arg;
@@ -157,7 +157,7 @@ colors.setTheme = function(theme: heme) {
   }
   for (var style in theme) {
     (function(style: any) {
-      colors[style] = function(str: string | string[]) {
+      colors[style] = function(str: any) {
         if (typeof theme[style] === 'object') {
           var out = str;
           for (var i in theme[style]) {
@@ -173,7 +173,7 @@ colors.setTheme = function(theme: heme) {
 
 function init() {
   var ret = {};
-  Object.keys(styles).forEach(function(name: any) {
+  Object.keys(styles).forEach(function(name: String) {
     ret[name] = {
       get: function() {
         return build([name]);
@@ -183,7 +183,7 @@ function init() {
   return ret;
 }
 
-var sequencer = function sequencer(map: Object,  str: String) {
+var sequencer = function sequencer(map: Map,  str: any) {
   var exploded = str.split('');
   exploded = exploded.map(map);
   return exploded.join('');
@@ -201,8 +201,8 @@ colors.maps.rainbow = require('./maps/rainbow')(colors);
 colors.maps.random = require('./maps/random')(colors);
 
 for (var map in colors.maps) {
-  (function(map: any) {
-    colors[map] = function(str: string | number) {
+  (function(map: number) {
+    colors[map] = function(str: any) {
       return sequencer(colors.maps[map], str);
     };
   })(map);

@@ -3,30 +3,30 @@ index.ts(4,9): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'
 index.ts(10,14): error TS2339: Property 'length' does not exist on type 'number'.
 index.ts(10,45): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 index.ts(13,33): error TS2304: Cannot find name 'Curve'.
-index.ts(13,46): error TS2304: Cannot find name 'Key'.
+index.ts(13,46): error TS2503: Cannot find namespace 'Curve'.
+index.ts(13,70): error TS2503: Cannot find namespace 'Curve'.
 index.ts(34,35): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
+index.ts(51,45): error TS2304: Cannot find name 'ny'.
 lib/ec.ts(9,9): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'.
-lib/ec.ts(32,28): error TS2304: Cannot find name 'FeFp'.
-lib/ec.ts(46,52): error TS2339: Property 'toBigInteger' does not exist on type 'number'.
+lib/ec.ts(32,28): error TS2304: Cannot find name 'feFp'.
+lib/ec.ts(46,52): error TS2339: Property 'toBigInteger' does not exist on type 'Uint8Array'.
 lib/ec.ts(49,26): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
 lib/ec.ts(56,26): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
-lib/ec.ts(70,23): error TS2339: Property 'toBigInteger' does not exist on type 'BigInt'.
+lib/ec.ts(70,23): error TS2339: Property 'toBigInteger' does not exist on type 'Uint8Array'.
 lib/ec.ts(83,15): error TS2339: Property 'shiftLeft' does not exist on type 'number'.
-lib/ec.ts(94,27): error TS2749: 'ECCurveFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECCurveFp'?
+lib/ec.ts(94,27): error TS2304: Cannot find name 'CurveFp'.
 lib/ec.ts(127,31): error TS2304: Cannot find name 'PointFp'.
-lib/ec.ts(162,9): error TS2339: Property 'isInfinity' does not exist on type 'number'.
-lib/ec.ts(165,13): error TS2339: Property 'y' does not exist on type 'number'.
-lib/ec.ts(168,48): error TS2339: Property 'z' does not exist on type 'number'.
-lib/ec.ts(171,13): error TS2339: Property 'x' does not exist on type 'number'.
-lib/ec.ts(174,48): error TS2339: Property 'z' does not exist on type 'number'.
-lib/ec.ts(187,14): error TS2339: Property 'x' does not exist on type 'number'.
-lib/ec.ts(188,14): error TS2339: Property 'y' does not exist on type 'number'.
-lib/ec.ts(198,17): error TS2339: Property 'z' does not exist on type 'number'.
-lib/ec.ts(208,17): error TS2339: Property 'z' does not exist on type 'number'.
-lib/ec.ts(214,17): error TS2339: Property 'z' does not exist on type 'number'.
-lib/ec.ts(280,9): error TS2339: Property 'signum' does not exist on type 'number'.
-lib/ec.ts(283,13): error TS2339: Property 'multiply' does not exist on type 'number'.
-lib/ec.ts(293,18): error TS2339: Property 'testBit' does not exist on type 'number'.
+lib/ec.ts(162,9): error TS2339: Property 'isInfinity' does not exist on type 'Uint8Array'.
+lib/ec.ts(165,13): error TS2339: Property 'y' does not exist on type 'Uint8Array'.
+lib/ec.ts(168,48): error TS2339: Property 'z' does not exist on type 'Uint8Array'.
+lib/ec.ts(171,13): error TS2339: Property 'x' does not exist on type 'Uint8Array'.
+lib/ec.ts(174,48): error TS2339: Property 'z' does not exist on type 'Uint8Array'.
+lib/ec.ts(187,14): error TS2339: Property 'x' does not exist on type 'Uint8Array'.
+lib/ec.ts(188,14): error TS2339: Property 'y' does not exist on type 'Uint8Array'.
+lib/ec.ts(198,17): error TS2339: Property 'z' does not exist on type 'Uint8Array'.
+lib/ec.ts(208,17): error TS2339: Property 'z' does not exist on type 'Uint8Array'.
+lib/ec.ts(214,17): error TS2339: Property 'z' does not exist on type 'Uint8Array'.
+lib/ec.ts(278,29): error TS2304: Cannot find name 'BigNumber'.
 lib/ec.ts(306,9): error TS2339: Property 'bitLength' does not exist on type 'number'.
 lib/ec.ts(306,25): error TS2339: Property 'bitLength' does not exist on type 'number'.
 lib/ec.ts(306,44): error TS2339: Property 'bitLength' does not exist on type 'number'.
@@ -41,25 +41,27 @@ lib/ec.ts(376,39): error TS2345: Argument of type 'Uint8Array' is not assignable
 lib/ec.ts(383,35): error TS2304: Cannot find name 'Point'.
 lib/ec.ts(438,14): error TS2554: Expected 4 arguments, but got 3.
 lib/ec.ts(446,14): error TS2554: Expected 4 arguments, but got 3.
-lib/ec.ts(492,51): error TS2304: Cannot find name 'BigNumber'.
-lib/ec.ts(492,67): error TS2304: Cannot find name 'BigNumber'.
-lib/ec.ts(495,52): error TS2552: Cannot find name 'umber'. Did you mean 'number'?
-lib/ec.ts(572,13): error TS2339: Property 'bitLength' does not exist on type 'number'.
-lib/ec.ts(573,13): error TS2339: Property 'getLowestSetBit' does not exist on type 'number'.
-lib/ec.ts(584,11): error TS2339: Property 'testBit' does not exist on type 'number'.
-lib/ec.ts(587,30): error TS2339: Property 'multiply' does not exist on type 'number'.
-lib/ec.ts(587,54): error TS2339: Property 'multiply' does not exist on type 'number'.
-lib/ec.ts(588,30): error TS2339: Property 'multiply' does not exist on type 'number'.
-lib/ec.ts(592,30): error TS2339: Property 'multiply' does not exist on type 'number'.
-lib/ec.ts(592,54): error TS2339: Property 'multiply' does not exist on type 'number'.
-lib/ec.ts(600,26): error TS2339: Property 'multiply' does not exist on type 'number'.
-lib/ec.ts(600,50): error TS2339: Property 'multiply' does not exist on type 'number'.
+lib/ec.ts(458,9): error TS2339: Property 'isInfinity' does not exist on type 'Uint8Array'.
+lib/ec.ts(460,6): error TS2339: Property 'getX' does not exist on type 'Uint8Array'.
+lib/ec.ts(469,8): error TS2339: Property 'getY' does not exist on type 'Uint8Array'.
+lib/ec.ts(493,28): error TS2339: Property 'multiply' does not exist on type 'Uint8Array'.
+lib/ec.ts(495,52): error TS2304: Cannot find name 'umber'.
+lib/ec.ts(572,13): error TS2551: Property 'bitLength' does not exist on type 'Uint8Array'. Did you mean 'byteLength'?
+lib/ec.ts(573,13): error TS2339: Property 'getLowestSetBit' does not exist on type 'Uint8Array'.
+lib/ec.ts(584,11): error TS2339: Property 'testBit' does not exist on type 'Uint8Array'.
+lib/ec.ts(587,30): error TS2339: Property 'multiply' does not exist on type 'Uint8Array'.
+lib/ec.ts(587,54): error TS2339: Property 'multiply' does not exist on type 'Uint8Array'.
+lib/ec.ts(588,30): error TS2339: Property 'multiply' does not exist on type 'Uint8Array'.
+lib/ec.ts(592,30): error TS2339: Property 'multiply' does not exist on type 'Uint8Array'.
+lib/ec.ts(592,54): error TS2339: Property 'multiply' does not exist on type 'Uint8Array'.
+lib/ec.ts(600,26): error TS2339: Property 'multiply' does not exist on type 'Uint8Array'.
+lib/ec.ts(600,50): error TS2339: Property 'multiply' does not exist on type 'Uint8Array'.
 lib/sec.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'.
 lib/sec.ts(6,7): error TS2300: Duplicate identifier 'ECCurveFp'.
-lib/sec.ts(12,32): error TS2304: Cannot find name 'ECCurve'.
-lib/sec.ts(12,45): error TS2304: Cannot find name 'ECPoint'.
-lib/sec.ts(12,58): error TS2304: Cannot find name 'ECPoint'.
-lib/sec.ts(12,71): error TS2304: Cannot find name 'ECPoint'.
+lib/sec.ts(12,32): error TS2304: Cannot find name 'Curve'.
+lib/sec.ts(12,43): error TS2304: Cannot find name 'Point'.
+lib/sec.ts(12,54): error TS2304: Cannot find name 'Point'.
+lib/sec.ts(12,65): error TS2304: Cannot find name 'Point'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18084,13): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(18107,6): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'.
 

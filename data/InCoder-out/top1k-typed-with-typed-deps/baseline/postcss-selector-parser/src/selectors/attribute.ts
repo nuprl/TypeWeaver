@@ -17,7 +17,7 @@ const warnOfDeprecatedQuotedAssignment = deprecate(() => {},
 const warnOfDeprecatedConstructor = deprecate(() => {},
     "Constructing an Attribute selector with a value without specifying quoteMark is deprecated. Note: The value should be unescaped now.");
 
-export function unescapeValue (value: string | number) {
+export function unescapeValue (value: any) {
     let deprecatedUsage = false;
     let quoteMark = null;
     let unescaped = value;
@@ -37,7 +37,7 @@ export function unescapeValue (value: string | number) {
     };
 }
 
-function handleDeprecatedContructorOpts (opts: any) {
+function handleDeprecatedContructorOpts (opts: Options) {
     if (opts.quoteMark !== undefined) {
         return opts;
     }
@@ -399,6 +399,6 @@ const CSSESC_QUOTE_OPTIONS = {
     [null]: {isIdentifier: true},
 };
 
-function defaultAttrConcat (attrValue: any,  attrSpaces: Array<string>) {
+function defaultAttrConcat (attrValue: any,  attrSpaces: number) {
     return `${attrSpaces.before}${attrValue}${attrSpaces.after}`;
 }

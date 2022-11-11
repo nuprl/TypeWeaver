@@ -7,7 +7,7 @@ import stringifyObject from '../lib/stringifyObject';
 import { encode } from '../lib/base62';
 import fromEntries from '../util/fromEntries';
 
-function getBrowsers({ data }: IGetBrowsersRequest) {
+function getBrowsers({ data }: GetBrowsersResponse) {
   let feature = Object.keys(data)[0]
   let browsers = Object.keys(data[feature].stats)
 

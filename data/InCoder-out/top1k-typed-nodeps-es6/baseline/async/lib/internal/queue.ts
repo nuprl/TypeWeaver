@@ -52,7 +52,7 @@ export default function queue(worker: Worker,  concurrency: number,  payload: an
         q.started = true;
 
         var res, rej;
-        function promiseCallback (err: ny,  ...args: ny[]) {
+        function promiseCallback (err: rror,  ...args: ny[]) {
             // we don't care about the error, let the global error handler
             // deal with it
             if (err) return rejectOnError ? rej(err) : res()
@@ -88,7 +88,7 @@ export default function queue(worker: Worker,  concurrency: number,  payload: an
         }
     }
 
-    function _createCB(tasks: rray<Function>) {
+    function _createCB(tasks: rray<any>) {
         return function (err: rror,  ...args: ny[]) {
             numRunning -= 1;
 
@@ -120,7 +120,7 @@ export default function queue(worker: Worker,  concurrency: number,  payload: an
         };
     }
 
-    function _maybeDrain(data: any) {
+    function _maybeDrain(data: Buffer) {
         if (data.length === 0 && q.idle()) {
             // call drain immediately if there are no tasks
             setImmediate(() => trigger('drain'));

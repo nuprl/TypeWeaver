@@ -5,20 +5,20 @@ var Watchpack = require("../");
 
 var folder = path.join(__dirname, "folder");
 
-function startWatcher(name: any,  files: any,  folders: any) {
+function startWatcher(name: String,  files: String,  folders: String) {
 	var w = new Watchpack({
 		aggregateTimeout: 3000
 	});
 
-	w.on("change", function(file: File,  mtime: number) {
+	w.on("change", function(file: FileEntry,  mtime: Date) {
 		console.log(name, "change", path.relative(folder, file), mtime);
 	});
 
-	w.on("aggregated", function(changes: any) {
+	w.on("aggregated", function(changes: Change[]) {
 		var times = w.getTimes();
-		console.log(name, "aggregated", Array.from(changes, function(file: File) {
+		console.log(name, "aggregated", Array.from(changes, function(file: URI) {
 			return path.relative(folder, file);
-		}), Object.keys(times).reduce(function(obj: any,  file: File) {
+		}), Object.keys(times).reduce(function(obj: any,  file: any) {
 			obj[path.relative(folder, file)] = times[file];
 			return obj
 		}, {}));

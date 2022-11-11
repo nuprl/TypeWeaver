@@ -11,7 +11,7 @@ Data.uid = 1;
 
 Data.prototype = {
 
-	cache: function( owner : any) {
+	cache: function( owner : Object) {
 
 		// Check if the owner object already has a cache
 		var value = owner[ this.expando ];
@@ -63,7 +63,7 @@ Data.prototype = {
 		}
 		return cache;
 	},
-	get: function( owner: ny,  key : tring) {
+	get: function( owner: ny,  key : ny) {
 		return key === undefined ?
 			this.cache( owner ) :
 
@@ -101,7 +101,7 @@ Data.prototype = {
 		// return the expected data based on which path was taken[*]
 		return value !== undefined ? value : key;
 	},
-	remove: function( owner: any,  key : string) {
+	remove: function( owner: any,  key : any) {
 		var i,
 			cache = owner[ this.expando ];
 

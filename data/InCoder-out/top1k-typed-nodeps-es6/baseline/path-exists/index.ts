@@ -9,7 +9,7 @@ export async function pathExists(path: Path) {
 	}
 }
 
-export function pathExistsSync(path: Path) {
+export function pathExistsSync(path: string | Buffer) {
 	try {
 		fs.accessSync(path);
 		return true;

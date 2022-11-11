@@ -28,7 +28,7 @@ var simpleEncodingRegExp = /^\s*([^\s;]+)\s*(?:;(.*))?$/;
  * @private
  */
 
-function parseAcceptEncoding(accept: any) {
+function parseAcceptEncoding(accept: string | null) {
   var accepts = accept.split(',');
   var hasIdentity = false;
   var minQuality = 1;
@@ -66,7 +66,7 @@ function parseAcceptEncoding(accept: any) {
  * @private
  */
 
-function parseEncoding(str: string | Buffer,  i: number) {
+function parseEncoding(str: any,  i: any) {
   var match = simpleEncodingRegExp.exec(str);
   if (!match) return null;
 
@@ -95,7 +95,7 @@ function parseEncoding(str: string | Buffer,  i: number) {
  * @private
  */
 
-function getEncodingPriority(encoding: Encoding,  accepted: Encoding[],  index: number) {
+function getEncodingPriority(encoding: Encoding,  accepted: EncodingPriority,  index: 1) {
   var priority = {o: -1, q: 0, s: 0};
 
   for (var i = 0; i < accepted.length; i++) {
@@ -135,7 +135,7 @@ function specify(encoding: number,  spec: number,  index: number) {
  * @public
  */
 
-function preferredEncodings(accept: Accept,  provided: ProvidedEncoding[]) {
+function preferredEncodings(accept: string | string[],  provided: string | string[]) {
   var accepts = parseAcceptEncoding(accept || '');
 
   if (!provided) {
@@ -161,7 +161,7 @@ function preferredEncodings(accept: Accept,  provided: ProvidedEncoding[]) {
  * @private
  */
 
-function compareSpecs(a: any,  b: any) {
+function compareSpecs(a: ISpec,  b: ISpec) {
   return (b.q - a.q) || (b.s - a.s) || (a.o - b.o) || (a.i - b.i) || 0;
 }
 
@@ -170,7 +170,7 @@ function compareSpecs(a: any,  b: any) {
  * @private
  */
 
-function getFullEncoding(spec: EncodingSpec) {
+function getFullEncoding(spec: Encoding) {
   return spec.encoding;
 }
 
@@ -179,6 +179,6 @@ function getFullEncoding(spec: EncodingSpec) {
  * @private
  */
 
-function isQuality(spec: Quality) {
+function isQuality(spec: Spec) {
   return spec.q > 0;
 }

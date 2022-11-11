@@ -18,7 +18,7 @@ client.on('error', function(error: Error) {
   console.error('Error while talking to watchman: ', error);
 });
 
-client.capabilityCheck({required:['relative_root']}, function (error: any,  resp: Response) {
+client.capabilityCheck({required:['relative_root']}, function (error: Error,  resp: Response) {
   if (error) {
     console.error('Error checking capabilities:', error);
     return;
@@ -27,7 +27,7 @@ client.capabilityCheck({required:['relative_root']}, function (error: any,  resp
 });
 
 // Example of the error case
-client.command(['invalid-command-never-will-work'], function(error: any,  resp: any) {
+client.command(['invalid-command-never-will-work'], function(error: Error,  resp: Response) {
   if (error) {
     console.error('failed to subscribe: ', error);
     return;
@@ -36,7 +36,7 @@ client.command(['invalid-command-never-will-work'], function(error: any,  resp: 
 
 // Initiate a watch.  You can repeatedly ask to watch the same dir without
 // error; Watchman will re-use an existing watch.
-client.command(['watch-project', process.cwd()], function(error: any,  resp: any) {
+client.command(['watch-project', process.cwd()], function(error: Error,  resp: Response) {
   if (error) {
     console.error('Error initiating watch:', error);
     return;
@@ -80,7 +80,7 @@ client.command(['watch-project', process.cwd()], function(error: any,  resp: any
       // Which fields we're interested in
       fields: ["name", "size", "exists", "type"]
     }],
-    function(error: any,  resp: any) {
+    function(error: Error,  resp: Response) {
       if (error) {
         // Probably an error in the subscription criteria
         console.error('failed to subscribe: ', error);
@@ -123,7 +123,7 @@ client.command(['watch-project', process.cwd()], function(error: any,  resp: any
 
   // Here's an example of just subscribing for notifications after the
   // current point in time
-  client.command(['clock', root], function(error: any,  resp: any) {
+  client.command(['clock', root], function(error: Error,  resp: Response) {
     if (error) {
       console.error('Failed to query clock:', error);
       return;
@@ -143,7 +143,7 @@ client.command(['watch-project', process.cwd()], function(error: any,  resp: any
         fields: ["name"],
         since: resp.clock // time constraint
       }],
-      function(error: any,  resp: any) {
+      function(error: Error,  resp: Response) {
         if (error) {
           console.error('failed to subscribe: ', error);
           return;

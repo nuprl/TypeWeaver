@@ -3,7 +3,7 @@ import {parsePatch} from './parse';
 
 import {arrayEqual, arrayStartsWith} from '../util/array';
 
-export function calcLineCount(hunk: TextHunk) {
+export function calcLineCount(hunk: DiffHunk) {
   const {oldLines, newLines} = calcOldNewLineCount(hunk.lines);
 
   if (oldLines !== undefined) {
@@ -19,7 +19,7 @@ export function calcLineCount(hunk: TextHunk) {
   }
 }
 
-export function merge(mine: number,  theirs: number,  base: number) {
+export function merge(mine: any,  theirs: any,  base: any) {
   mine = loadPatch(mine, base);
   theirs = loadPatch(theirs, base);
 
@@ -95,7 +95,7 @@ export function merge(mine: number,  theirs: number,  base: number) {
   return ret;
 }
 
-function loadPatch(param: tring | string[],  base: string | string[]) {
+function loadPatch(param: tring | Object,  base: Object) {
   if (typeof param === 'string') {
     if ((/^@@/m).test(param) || ((/^Index:/m).test(param))) {
       return parsePatch(param)[0];
@@ -123,12 +123,12 @@ function selectField(index: number,  mine: number,  theirs: number) {
   }
 }
 
-function hunkBefore(test: Function,  check: Function) {
+function hunkBefore(test: Test,  check: Check) {
   return test.oldStart < check.oldStart
     && (test.oldStart + test.oldLines) < check.oldStart;
 }
 
-function cloneHunk(hunk: ICodeEditorHunk,  offset: number) {
+function cloneHunk(hunk: IUndoHunk,  offset: number) {
   return {
     oldStart: hunk.oldStart, oldLines: hunk.oldLines,
     newStart: hunk.newStart + offset, newLines: hunk.newLines,
@@ -136,7 +136,7 @@ function cloneHunk(hunk: ICodeEditorHunk,  offset: number) {
   };
 }
 
-function mergeLines(hunk: LinesHunk,  mineOffset: number,  mineLines: string[],  theirOffset: number,  theirLines: number) {
+function mergeLines(hunk: DiffHunk,  mineOffset: number,  mineLines: number,  theirOffset: number,  theirLines: number) {
   // This will generally result in a conflicted hunk, but there are cases where the context
   // is the only overlap where we can successfully merge the content here.
   let mine = {offset: mineOffset, lines: mineLines, index: 0},
@@ -185,7 +185,7 @@ function mergeLines(hunk: LinesHunk,  mineOffset: number,  mineLines: string[], 
   calcLineCount(hunk);
 }
 
-function mutualChange(hunk: IChange,  mine: IChange,  their: IChange) {
+function mutualChange(hunk: DiffHunk,  mine: DiffLine,  their: DiffLine) {
   let myChanges = collectChange(mine),
       theirChanges = collectChange(their);
 
@@ -208,7 +208,7 @@ function mutualChange(hunk: IChange,  mine: IChange,  their: IChange) {
   conflict(hunk, myChanges, theirChanges);
 }
 
-function removal(hunk: ICodeHunk,  mine: ICodeHunk,  their: ICodeHunk,  swap: ICodeHunk) {
+function removal(hunk: DiffHunk,  mine: DiffLine,  their: DiffLine,  swap: DiffLine[]) {
   let myChanges = collectChange(mine),
       theirChanges = collectContext(their, myChanges);
   if (theirChanges.merged) {
@@ -218,7 +218,7 @@ function removal(hunk: ICodeHunk,  mine: ICodeHunk,  their: ICodeHunk,  swap: IC
   }
 }
 
-function conflict(hunk: ICodeHunk,  mine: ICodeHunk,  their: ICodeHunk) {
+function conflict(hunk: DiffHunk,  mine: DiffLine,  their: DiffLine) {
   hunk.conflict = true;
   hunk.lines.push({
     conflict: true,
@@ -227,14 +227,14 @@ function conflict(hunk: ICodeHunk,  mine: ICodeHunk,  their: ICodeHunk) {
   });
 }
 
-function insertLeading(hunk: Line,  insert: number,  their: Line) {
+function insertLeading(hunk: IUndoable,  insert: number,  their: number) {
   while (insert.offset < their.offset && insert.index < insert.lines.length) {
     let line = insert.lines[insert.index++];
     hunk.lines.push(line);
     insert.offset++;
   }
 }
-function insertTrailing(hunk: TextHunk,  insert: TextInsertion) {
+function insertTrailing(hunk: DiffLineHunk,  insert: DiffLineInsert) {
   while (insert.index < insert.lines.length) {
     let line = insert.lines[insert.index++];
     hunk.lines.push(line);
@@ -326,7 +326,7 @@ function allRemoves(changes: Change[]) {
     return prev && change[0] === '-';
   }, true);
 }
-function skipRemoveSuperset(state: State,  removeChanges: boolean,  delta: number) {
+function skipRemoveSuperset(state: State,  removeChanges: RemoveChanges,  delta: delta) {
   for (let i = 0; i < delta; i++) {
     let changeContent = removeChanges[removeChanges.length - delta + i].substr(1);
     if (state.lines[state.index + i] !== ' ' + changeContent) {
@@ -338,11 +338,11 @@ function skipRemoveSuperset(state: State,  removeChanges: boolean,  delta: numbe
   return true;
 }
 
-function calcOldNewLineCount(lines: string) {
+function calcOldNewLineCount(lines: string[]) {
   let oldLines = 0;
   let newLines = 0;
 
-  lines.forEach(function(line: ne) {
+  lines.forEach(function(line: any) {
     if (typeof line !== 'string') {
       let myCount = calcOldNewLineCount(line.mine);
       let theirCount = calcOldNewLineCount(line.theirs);

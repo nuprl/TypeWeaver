@@ -2,6 +2,7 @@ index.ts(17,19): error TS2339: Property 'syscall' does not exist on type 'Error'
 index.ts(18,8): error TS2339: Property 'code' does not exist on type 'Error'.
 index.ts(19,8): error TS2339: Property 'code' does not exist on type 'Error'.
 index.ts(20,8): error TS2339: Property 'code' does not exist on type 'Error'.
+index.ts(24,60): error TS2304: Cannot find name 'Callback'.
 old.ts(53,19): error TS2551: Property 'throwDeprecation' does not exist on type 'Process'. Did you mean 'traceDeprecation'?
 old.ts(55,25): error TS2339: Property 'noDeprecation' does not exist on type 'Process'.
 old.ts(92,18): error TS2538: Type 'Buffer' cannot be used as an index type.
@@ -9,13 +10,15 @@ old.ts(112,30): error TS2345: Argument of type 'string | Buffer' is not assignab
   Type 'Buffer' is not assignable to type 'string'.
 old.ts(131,34): error TS2345: Argument of type 'string | Buffer' is not assignable to parameter of type 'string'.
   Type 'Buffer' is not assignable to type 'string'.
+old.ts(150,20): error TS2542: Index signature in type 'String' only permits reading.
+old.ts(169,18): error TS2542: Index signature in type 'String' only permits reading.
 old.ts(178,20): error TS2538: Type 'Buffer' cannot be used as an index type.
 old.ts(184,41): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
-old.ts(186,24): error TS2345: Argument of type 'Cache' is not assignable to parameter of type 'Function'.
-  Type 'Cache' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+old.ts(184,65): error TS2552: Cannot find name 'tring'. Did you mean 'string'?
 old.ts(262,39): error TS2503: Cannot find namespace 'fs'.
+old.ts(284,55): error TS2304: Cannot find name 'Target'.
 old.ts(286,9): error TS2554: Expected 3 arguments, but got 2.
 old.ts(291,43): error TS2304: Cannot find name 'Target'.
-old.ts(291,58): error TS2304: Cannot find name 'Base'.
-old.ts(299,42): error TS2304: Cannot find name 'Link'.
+old.ts(291,58): error TS2304: Cannot find name 'Target'.
+old.ts(299,42): error TS2304: Cannot find name 'ResolvedLink'.
 

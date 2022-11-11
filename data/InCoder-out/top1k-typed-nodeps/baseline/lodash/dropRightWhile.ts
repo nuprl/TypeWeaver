@@ -21,7 +21,7 @@ import baseWhile from './.internal/baseWhile.js'
  * dropRightWhile(users, ({ active }) => active)
  * // => objects for ['barney']
  */
-function dropRightWhile(array: Array,  predicate: Function) {
+function dropRightWhile(array: ReadonlyArray<any>,  predicate: Predicate<any>) {
   return (array != null && array.length)
     ? baseWhile(array, predicate, true, true)
     : []

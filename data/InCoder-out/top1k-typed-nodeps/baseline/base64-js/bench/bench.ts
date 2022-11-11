@@ -16,7 +16,7 @@ suite
   .add('base64.byteLength() (encode)', function () {
     const len = base64.byteLength(data) // eslint-disable-line no-unused-vars
   })
-  .on('error', function (event: Event) {
+  .on('error', function (event: ErrorEvent) {
     console.error(event.target.error.stack)
   })
   .on('cycle', function (event: Event) {

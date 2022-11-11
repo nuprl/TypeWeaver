@@ -26,7 +26,7 @@ import baseUnset from './.internal/baseUnset.js'
  * console.log(object)
  * // => { 'a': [{ 'b': {} }] }
  */
-function unset(object: any,  path: Array<string | number> | string) {
+function unset(object: any,  path: string | any[]) {
   return object == null ? true : baseUnset(object, path)
 }
 

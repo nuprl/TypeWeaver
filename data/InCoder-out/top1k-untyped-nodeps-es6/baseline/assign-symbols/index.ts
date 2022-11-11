@@ -32,6 +32,6 @@ export default (target, ...args) => {
   return target;
 };
 
-function isObject(val: mixed) {
+function isObject(val: any) {
   return typeof val === 'function' || toString.call(val) === '[object Object]' || Array.isArray(val);
 }

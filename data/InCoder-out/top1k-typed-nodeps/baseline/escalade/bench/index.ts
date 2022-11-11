@@ -17,11 +17,11 @@ const contenders = {
 	'escalade/sync': x => sync(file, filter(x)),
 }
 
-function pad(str: ring | number) {
+function pad(str: ring | undefined | null) {
 	return str + ' '.repeat(16 - str.length);
 }
 
-async function runner(target: Function,  expects: any[]) {
+async function runner(target: any,  expects: any[]) {
 	console.log(`\nValidation (target = "${target}"): `);
 	for (const name of Object.keys(contenders)) {
 		try {

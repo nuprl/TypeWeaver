@@ -6,7 +6,7 @@ var EXP = "E".charCodeAt(0);
 
 // Check if three code points would start a number
 // https://www.w3.org/TR/css-syntax-3/#starts-with-a-number
-function likeNumber(value: number) {
+function likeNumber(value: any) {
   var code = value.charCodeAt(0);
   var nextCode;
 

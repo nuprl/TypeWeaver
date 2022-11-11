@@ -20,7 +20,7 @@ const files = fs.readdirSync('test/samples')
 	});
 
 Promise.resolve().then(async () => {
-	function timeRun (code: number) {
+	function timeRun (code: string | Function) {
 		const start = process.hrtime.bigint();
 		const parsed = parse(code);
 		const end = process.hrtime.bigint();

@@ -1,4 +1,4 @@
-export default function compressFont(node: Node) {
+export default function compressFont(node: CssNode) {
     const list = node.children;
 
     list.forEachRight(function(node: Node,  item: Item) {

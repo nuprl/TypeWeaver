@@ -27,7 +27,7 @@ Functor.prototype.call = function(error: Error,  message: String,  callback: Fun
     return this._flushQueue();
   }
 
-  var handler = function(err: Error,  msg: String) {
+  var handler = function(err: any,  msg: any) {
     if (!(called ^ (called = true))) return;
 
     if (err) {

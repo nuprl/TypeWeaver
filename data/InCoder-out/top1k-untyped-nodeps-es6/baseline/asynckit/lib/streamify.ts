@@ -13,7 +13,7 @@ export default {
  * @param   {function} iterator - function to wrap
  * @returns {function} - wrapped function
  */
-function wrapIterator(iterator: Iterator)
+function wrapIterator(iterator: AsyncIterator<any>)
 {
   var stream = this;
 
@@ -53,7 +53,7 @@ function wrapCallback(callback: Function)
 {
   var stream = this;
 
-  var wrapped = function(error: any,  result: any)
+  var wrapped = function(error: Error,  result: Result)
   {
     return finisher.call(stream, error, result, callback);
   };
@@ -71,11 +71,11 @@ function wrapCallback(callback: Function)
  * @param   {number|string} key - iteration key
  * @returns {function} wrapped callback
  */
-function wrapIteratorCallback(callback: Function,  key: any)
+function wrapIteratorCallback(callback: Function,  key: string | symbol)
 {
   var stream = this;
 
-  return function(error: Error,  output: Buffer)
+  return function(error: Error,  output: Output)
   {
     // don't repeat yourself
     if (!(key in stream.jobs))
@@ -99,7 +99,7 @@ function wrapIteratorCallback(callback: Function,  key: any)
  * @param {mixed} output - iterator output
  * @param {function} callback - callback that expects iterator results
  */
-function streamer(error: Error,  output: Stream,  callback: Function)
+function streamer(error: Error,  output: Output,  callback: Output)
 {
   if (error && !this.error)
   {

@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 
-export default function( grunt : Grunt) {
+export default function( grunt : grunt.IGrun) {
 	grunt.registerTask( "qunit_fixture", function() {
 		var dest = "./test/data/qunit-fixture.js";
 		fs.writeFileSync(

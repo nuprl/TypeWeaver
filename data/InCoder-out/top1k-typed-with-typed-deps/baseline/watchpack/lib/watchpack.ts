@@ -13,7 +13,7 @@ const watchEventSource = require("./watchEventSource");
 const EMPTY_ARRAY = [];
 const EMPTY_OPTIONS = {};
 
-function addWatchersToSet(watchers: Set<any>,  set: Set<any>) {
+function addWatchersToSet(watchers: Watcher[],  set: Set<Watcher>) {
 	for (const ww of watchers) {
 		const w = ww.watcher;
 		if (!set.has(w.directoryWatcher)) {

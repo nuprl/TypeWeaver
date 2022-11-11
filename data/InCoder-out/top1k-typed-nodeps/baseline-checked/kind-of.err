@@ -1,10 +1,8 @@
 benchmark/code/kind-of.ts(1,5): error TS2300: Duplicate identifier 'typeOf'.
 benchmark/code/lib-type-of.ts(5,5): error TS2300: Duplicate identifier 'toString'.
 benchmark/code/lib-type-of.ts(14,10): error TS2300: Duplicate identifier 'typeOf'.
-benchmark/code/lib-type-of.ts(14,10): error TS2393: Duplicate function implementation.
 benchmark/code/lib-typeof.ts(5,5): error TS2300: Duplicate identifier 'toString'.
 benchmark/code/lib-typeof.ts(14,10): error TS2300: Duplicate identifier 'typeOf'.
-benchmark/code/lib-typeof.ts(14,10): error TS2393: Duplicate function implementation.
 benchmark/code/lib-typeof.ts(20,5): error TS2322: Type 'string' is not assignable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 benchmark/code/regex-exec.ts(3,39): error TS2304: Cannot find name 'mixed'.
 benchmark/code/regex-replace.ts(3,39): error TS2304: Cannot find name 'mixed'.
@@ -41,6 +39,7 @@ benchmark/code/switch.ts(101,21): error TS2339: Property 'throw' does not exist 
 benchmark/code/switch.ts(102,19): error TS2339: Property 'return' does not exist on type 'unknown'.
 benchmark/code/switch.ts(103,19): error TS2339: Property 'next' does not exist on type 'unknown'.
 benchmark/code/switch.ts(111,10): error TS2393: Duplicate function implementation.
+benchmark/index.ts(11,25): error TS2304: Cannot find name 'Stats'.
 browser.ts(1,117): error TS2304: Cannot find name 'define'.
 browser.ts(1,138): error TS2304: Cannot find name 'define'.
 browser.ts(1,150): error TS2304: Cannot find name 'define'.
@@ -56,12 +55,9 @@ browser.ts(59,10): error TS2678: Type '"[object Map Iterator]"' is not comparabl
 browser.ts(60,10): error TS2678: Type '"[object Set Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 browser.ts(61,10): error TS2678: Type '"[object String Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 browser.ts(62,10): error TS2678: Type '"[object Array Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
-browser.ts(79,46): error TS2339: Property 'message' does not exist on type 'unknown'.
-browser.ts(79,112): error TS2339: Property 'stackTraceLimit' does not exist on type 'Function'.
 browser.ts(102,21): error TS2339: Property 'throw' does not exist on type 'unknown'.
 browser.ts(103,19): error TS2339: Property 'return' does not exist on type 'unknown'.
 browser.ts(104,19): error TS2339: Property 'next' does not exist on type 'unknown'.
-browser.ts(107,27): error TS2304: Cannot find name 'mixed'.
 index.ts(1,5): error TS2300: Duplicate identifier 'toString'.
 index.ts(56,10): error TS2678: Type '"[object Object]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 index.ts(58,10): error TS2678: Type '"[object Map Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
@@ -69,14 +65,11 @@ index.ts(59,10): error TS2678: Type '"[object Set Iterator]"' is not comparable 
 index.ts(60,10): error TS2678: Type '"[object String Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 index.ts(61,10): error TS2678: Type '"[object Array Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 index.ts(68,10): error TS2393: Duplicate function implementation.
-index.ts(78,46): error TS2339: Property 'message' does not exist on type 'unknown'.
-index.ts(78,112): error TS2339: Property 'stackTraceLimit' does not exist on type 'Function'.
 index.ts(96,10): error TS2393: Duplicate function implementation.
 index.ts(100,10): error TS2393: Duplicate function implementation.
 index.ts(101,21): error TS2339: Property 'throw' does not exist on type 'unknown'.
 index.ts(102,19): error TS2339: Property 'return' does not exist on type 'unknown'.
 index.ts(103,19): error TS2339: Property 'next' does not exist on type 'unknown'.
-index.ts(106,27): error TS2304: Cannot find name 'mixed'.
 index.ts(124,10): error TS2393: Duplicate function implementation.
 ../../../../../tools/node_modules/typescript/lib/lib.dom.d.ts(17783,18): error TS2300: Duplicate identifier 'toString'.
 

@@ -1,6 +1,8 @@
+mute.ts(7,28): error TS2304: Cannot find name 'MuteStreamOpts'.
 mute.ts(8,3): error TS2684: The 'this' context of type 'typeof internal' is not assignable to method's 'this' of type 'Function'.
   Types of property 'once' are incompatible.
     Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
+mute.ts(44,23): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
 mute.ts(103,11): error TS2339: Property 'match' does not exist on type 'number'.
 mute.ts(104,12): error TS2339: Property 'indexOf' does not exist on type 'number'.
 mute.ts(105,15): error TS2339: Property 'substr' does not exist on type 'number'.
@@ -8,7 +10,7 @@ mute.ts(106,15): error TS2339: Property 'replace' does not exist on type 'number
 mute.ts(113,13): error TS2339: Property 'indexOf' does not exist on type 'number'.
 mute.ts(116,15): error TS2339: Property 'substr' does not exist on type 'number'.
 mute.ts(118,7): error TS2322: Type 'string' is not assignable to type 'number'.
-mute.ts(127,7): error TS2322: Type 'string' is not assignable to type 'boolean'.
+mute.ts(127,7): error TS2322: Type 'string' is not assignable to type 'number'.
 mute.ts(139,14): error TS2538: Type 'Function' cannot be used as an index type.
 mute.ts(139,21): error TS2538: Type 'Function' cannot be used as an index type.
 mute.ts(140,14): error TS2538: Type 'Function' cannot be used as an index type.

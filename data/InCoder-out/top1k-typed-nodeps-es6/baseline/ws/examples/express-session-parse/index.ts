@@ -57,7 +57,7 @@ const server = http.createServer(app);
 //
 const wss = new WebSocketServer({ clientTracking: false, noServer: true });
 
-server.on('upgrade', function (request: Request,  socket: Socket,  head: Head) {
+server.on('upgrade', function (request: Request,  socket: Socket,  head: Buffer) {
   console.log('Parsing session from request...');
 
   sessionParser(request, {}, () => {
@@ -69,13 +69,13 @@ server.on('upgrade', function (request: Request,  socket: Socket,  head: Head) {
 
     console.log('Session is parsed!');
 
-    wss.handleUpgrade(request, socket, head, function (ws: WebSocket) {
+    wss.handleUpgrade(request, socket, head, function (ws: any) {
       wss.emit('connection', ws, request);
     });
   });
 });
 
-wss.on('connection', function (ws: Websocket,  request: Request) {
+wss.on('connection', function (ws: any,  request: any) {
   const userId = request.session.userId;
 
   map.set(userId, ws);

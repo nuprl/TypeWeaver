@@ -34,7 +34,7 @@ BaseError.prototype.toString = function() {
  * @param String  The default message string.
  * @param Object  The default data object, merged with per instance data.
  */
-function makeError(name: string,  defaultMessage: string | Error,  defaultData: string | Error) {
+function makeError(name: string,  defaultMessage: string,  defaultData: any) {
   defaultMessage = tmpl(defaultMessage || '')
   defaultData = defaultData || {}
   if (defaultData.proto && !(defaultData.proto instanceof BaseError))

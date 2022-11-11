@@ -15,7 +15,7 @@ import baseSortedIndex from './.internal/baseSortedIndex.js'
  * sortedIndex([30, 50], 40)
  * // => 1
  */
-function sortedIndex(array: Array<T>,  value: T) {
+function sortedIndex(array: ArrayLike<number>,  value: number) {
   return baseSortedIndex(array, value)
 }
 

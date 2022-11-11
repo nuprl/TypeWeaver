@@ -18,7 +18,7 @@ const symlinkTypeSync = _symlinkType.symlinkTypeSync
 import { pathExists } from '../path-exists';
 import { areIdentical } from '../util/stat';
 
-function createSymlink (srcpath: string,  dstpath: string,  type: string,  callback: Function) {
+function createSymlink (srcpath: any,  dstpath: any,  type: any,  callback: any) {
   callback = (typeof type === 'function') ? type : callback
   type = (typeof type === 'function') ? false : type
 
@@ -35,7 +35,7 @@ function createSymlink (srcpath: string,  dstpath: string,  type: string,  callb
   })
 }
 
-function _createSymlink (srcpath: string,  dstpath: string,  type: string,  callback: Function) {
+function _createSymlink (srcpath: Path,  dstpath: Path,  type: string,  callback: Function) {
   symlinkPaths(srcpath, dstpath, (err, relative) => {
     if (err) return callback(err)
     srcpath = relative.toDst
@@ -54,7 +54,7 @@ function _createSymlink (srcpath: string,  dstpath: string,  type: string,  call
   })
 }
 
-function createSymlinkSync (srcpath: string,  dstpath: string,  type: string) {
+function createSymlinkSync (srcpath: string | Buffer,  dstpath: string | Buffer,  type: string) {
   let stats
   try {
     stats = fs.lstatSync(dstpath)

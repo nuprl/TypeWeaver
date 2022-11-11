@@ -24,7 +24,7 @@ export default rangeParser;
  * @public
  */
 
-function rangeParser (size: number,  str: number,  options: any) {
+function rangeParser (size: number,  str: string | number,  options: any) {
   if (typeof str !== 'string') {
     throw new TypeError('argument str must be a string')
   }
@@ -148,7 +148,7 @@ function mapWithoutIndex (range: Range) {
  * @private
  */
 
-function sortByRangeIndex (a: RangeIndex,  b: RangeIndex) {
+function sortByRangeIndex (a: IndexRange,  b: IndexRange) {
   return a.index - b.index
 }
 

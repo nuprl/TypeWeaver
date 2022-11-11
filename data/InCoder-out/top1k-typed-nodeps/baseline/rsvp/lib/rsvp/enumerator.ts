@@ -120,7 +120,7 @@ export default class Enumerator {
   }
 }
 
-export function setSettledResult(state: SettledResult<T>,  i: number,  value: T) {
+export function setSettledResult(state: any,  i: any,  value: any) {
   this._remaining--;
   if (state === FULFILLED) {
     this._result[i] = {

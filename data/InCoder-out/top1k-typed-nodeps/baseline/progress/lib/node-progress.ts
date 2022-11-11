@@ -114,7 +114,7 @@ ProgressBar.prototype.tick = function(len: umber,  tokens: rray){
  * @api public
  */
 
-ProgressBar.prototype.render = function (tokens: string[],  force: boolean) {
+ProgressBar.prototype.render = function (tokens: Token[],  force: boolean) {
   force = force !== undefined ? force : false;
   if (tokens) this.tokens = tokens;
 
@@ -192,7 +192,7 @@ ProgressBar.prototype.render = function (tokens: string[],  force: boolean) {
  * @api public
  */
 
-ProgressBar.prototype.update = function (ratio: number,  tokens: string[]) {
+ProgressBar.prototype.update = function (ratio: number,  tokens: Token[]) {
   var goal = Math.floor(ratio * this.total);
   var delta = goal - this.curr;
 

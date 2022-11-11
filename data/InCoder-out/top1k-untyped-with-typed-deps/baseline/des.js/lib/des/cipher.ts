@@ -2,7 +2,7 @@
 
 var assert = require('minimalistic-assert');
 
-function Cipher(options: CipherOptions) {
+function Cipher(options: CipherConstructorOptions) {
   this.options = options;
 
   this.type = this.options.type;
@@ -18,7 +18,7 @@ Cipher.prototype._init = function _init() {
   // Might be overrided
 };
 
-Cipher.prototype.update = function update(data: any) {
+Cipher.prototype.update = function update(data: any[]) {
   if (data.length === 0)
     return [];
 
@@ -28,7 +28,7 @@ Cipher.prototype.update = function update(data: any) {
     return this._updateEncrypt(data);
 };
 
-Cipher.prototype._buffer = function _buffer(data: Buffer,  off: number) {
+Cipher.prototype._buffer = function _buffer(data: Uint8Array,  off: number) {
   // Append data to buffer
   var min = Math.min(this.buffer.length - this.bufferOff, data.length - off);
   for (var i = 0; i < min; i++)
@@ -39,7 +39,7 @@ Cipher.prototype._buffer = function _buffer(data: Buffer,  off: number) {
   return min;
 };
 
-Cipher.prototype._flushBuffer = function _flushBuffer(out: Buffer,  off: number) {
+Cipher.prototype._flushBuffer = function _flushBuffer(out: Buffer[],  off: number) {
   this._update(this.buffer, 0, out, off);
   this.bufferOff = 0;
   return this.blockSize;

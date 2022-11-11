@@ -35,7 +35,7 @@ import baseOrderBy from './.internal/baseOrderBy.js'
  * ])
  *
  */
-function orderBy(collection: Array<T>,  iteratees: any,  orders: any) {
+function orderBy(collection: Collection,  iteratees: Array<Function>,  orders: Array<string>) {
   if (collection == null) {
     return []
   }

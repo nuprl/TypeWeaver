@@ -34,7 +34,7 @@ SHA1.outSize = 160;
 SHA1.hmacStrength = 80;
 SHA1.padLength = 64;
 
-SHA1.prototype._update = function _update(msg: Message,  start: number) {
+SHA1.prototype._update = function _update(msg: any,  start: number) {
   var W = this.W;
 
   for (var i = 0; i < 16; i++)
@@ -66,7 +66,7 @@ SHA1.prototype._update = function _update(msg: Message,  start: number) {
   this.h[4] = sum32(this.h[4], e);
 };
 
-SHA1.prototype._digest = function digest(enc: Encoding) {
+SHA1.prototype._digest = function digest(enc: BufferEncoding) {
   if (enc === 'hex')
     return utils.toHex32(this.h, 'big');
   else

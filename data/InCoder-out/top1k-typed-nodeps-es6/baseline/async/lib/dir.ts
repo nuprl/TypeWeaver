@@ -19,7 +19,7 @@ import consoleFunc from './internal/consoleFunc.js'
  * @example
  *
  * // in a module
- * var hello = function(name: any,  callback: Function) {
+ * var hello = function(name: String,  callback: Function) {
  *     setTimeout(function() {
  *         callback(null, {hello: name});
  *     }, 1000);

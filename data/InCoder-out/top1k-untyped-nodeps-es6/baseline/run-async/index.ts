@@ -1,6 +1,6 @@
 'use strict';
 
-function isPromise(obj: Promise) {
+function isPromise(obj: unknown) {
   return !!obj && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function';
 }
 
@@ -23,7 +23,7 @@ var runAsync = function (func: Function,  cb: Function) {
 
     var args = arguments;
 
-    var promise = new Promise(function (resolve: Function,  reject: Function) {
+    var promise = new Promise(function (resolve: any,  reject: any) {
       var resolved = false;
       const wrappedResolve = function (value: any) {
         if (resolved) {
@@ -53,7 +53,7 @@ var runAsync = function (func: Function,  cb: Function) {
             return function() {};
           }
           if (callbackConflict) {
-            console.warn('Run-async wrapped function (async: AsyncCallback) returned a promise.\nCalls to async() callback can have unexpected results.');
+            console.warn('Run-async wrapped function (async: Async<any>) returned a promise.\nCalls to async() callback can have unexpected results.');
           }
           usingCallback = true;
           return function (err: Error,  value: any) {
@@ -68,7 +68,7 @@ var runAsync = function (func: Function,  cb: Function) {
 
       if (usingCallback) {
         if (isPromise(answer)) {
-          console.warn('Run-async wrapped function (sync: Sync) returned a promise but async() callback must be executed to resolve.');
+          console.warn('Run-async wrapped function (sync: any) returned a promise but async() callback must be executed to resolve.');
         }
       } else {
         if (isPromise(answer)) {

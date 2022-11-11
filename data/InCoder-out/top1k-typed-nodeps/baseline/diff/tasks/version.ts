@@ -1,6 +1,6 @@
 var semver = require('semver');
 
-module.exports = function(grunt: grunt) {
+module.exports = function(grunt: Grunt) {
   grunt.registerTask('version', 'Updates the current release version', function() {
     var done = this.async(),
         pkg = grunt.config('pkg'),

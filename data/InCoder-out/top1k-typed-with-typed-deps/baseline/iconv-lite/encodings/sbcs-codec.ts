@@ -5,7 +5,7 @@ var Buffer = require("safer-buffer").Buffer;
 // correspond to encoded bytes (if 128 - then lower half is ASCII). 
 
 exports._sbcs = SBCSCodec;
-function SBCSCodec(codecOptions: SBCSCodecOption,  iconv: Iconv) {
+function SBCSCodec(codecOptions: CodecOptions,  iconv: Iconv) {
     if (!codecOptions)
         throw new Error("SBCS codec is called without the data.")
     
@@ -35,7 +35,7 @@ SBCSCodec.prototype.encoder = SBCSEncoder;
 SBCSCodec.prototype.decoder = SBCSDecoder;
 
 
-function SBCSEncoder(options: SBCOptions,  codec: SBCCodec) {
+function SBCSEncoder(options: any,  codec: any) {
     this.encodeBuf = codec.encodeBuf;
 }
 
@@ -51,7 +51,7 @@ SBCSEncoder.prototype.end = function() {
 }
 
 
-function SBCSDecoder(options: SBCSOptions,  codec: SBCSCodec) {
+function SBCSDecoder(options: DecoderOptions,  codec: Codec) {
     this.decodeBuf = codec.decodeBuf;
 }
 

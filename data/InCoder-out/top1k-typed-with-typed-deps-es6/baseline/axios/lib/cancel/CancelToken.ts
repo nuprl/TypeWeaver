@@ -17,7 +17,7 @@ class CancelToken {
 
     let resolvePromise;
 
-    this.promise = new Promise(function promiseExecutor(resolve: Function) {
+    this.promise = new Promise(function promiseExecutor(resolve: any) {
       resolvePromise = resolve;
     });
 

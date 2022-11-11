@@ -10,10 +10,10 @@ const cycle = (e, nl) => {
   if (nl) cursor.write('\n');
 };
 
-function bench(name: string | undefined) {
+function bench(name: string) {
   const suite = new Suite()
     .on('start', () => console.log(`# ${name}`))
-    .on('complete', function(e: Error) {
+    .on('complete', function(e: Event) {
       const fastest = this.filter('fastest').map('name').toString();
       console.log(`fastest is '${fastest}'`);
       console.log();

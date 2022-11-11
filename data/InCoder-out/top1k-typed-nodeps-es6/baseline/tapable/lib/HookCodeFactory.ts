@@ -231,7 +231,7 @@ class HookCodeFactory {
 			case "async":
 				let cbCode = "";
 				if (onResult)
-					cbCode += `(function(_err${tapIndex}: Error,  _result${tapIndex}: Result) {\n`;
+					cbCode += `(function(_err${tapIndex}: $,  _result${tapIndex}: $) {\n`;
 				else cbCode += `(function(_err${tapIndex}: Error) {\n`;
 				cbCode += `if(_err${tapIndex}) {\n`;
 				cbCode += onError(`_err${tapIndex}`);
@@ -256,7 +256,7 @@ class HookCodeFactory {
 				})});\n`;
 				code += `if (!_promise${tapIndex} || !_promise${tapIndex}.then)\n`;
 				code += `  throw new Error('Tap function (tapPromise: omise<any>) did not return promise (returned ' + _promise${tapIndex} + ')');\n`;
-				code += `_promise${tapIndex}.then((function(_result${tapIndex}: $) {\n`;
+				code += `_promise${tapIndex}.then((function(_result${tapIndex}: Result) {\n`;
 				code += `_hasResult${tapIndex} = true;\n`;
 				if (onResult) {
 					code += onResult(`_result${tapIndex}`);

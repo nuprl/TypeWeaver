@@ -6,7 +6,7 @@ apply = curry$(function(f: Function,  list: Array<any>){
 curry = function(f: Function){
   return curry$(f);
 };
-flip = curry$(function(f: Function,  x: any,  y: any){
+flip = curry$(function(f: Function,  x: number,  y: number){
   return f(y, x);
 });
 fix = function(f: Function){
@@ -58,7 +58,7 @@ export default {
 
 function curry$(f: Function,  bound: Function){
   var context,
-  _curry = function(args: ny[]) {
+  _curry = function(args: rray<any>) {
     return f.length > 1 ? function(){
       var params = args ? args.concat() : [];
       context = bound ? context || this : this;

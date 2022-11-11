@@ -2,43 +2,47 @@ examples/example.ts(15,15): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 examples/example.ts(21,2): error TS2554: Expected 0 arguments, but got 1.
 examples/get-products.ts(34,39): error TS2304: Cannot find name 'g'.
-examples/get-products.ts(51,11): error TS2339: Property 'writeHead' does not exist on type 'Response'.
-examples/get-products.ts(52,11): error TS2339: Property 'end' does not exist on type 'Response'.
-examples/hello-world.ts(2,7): error TS2339: Property 'writeHead' does not exist on type 'Response'.
-examples/hello-world.ts(3,7): error TS2339: Property 'end' does not exist on type 'Response'.
+examples/hello-world.ts(1,45): error TS2503: Cannot find namespace 'express'.
+examples/hello-world.ts(1,68): error TS2503: Cannot find namespace 'express'.
 examples/pretty-print.ts(19,38): error TS2304: Cannot find name 'Tag'.
+examples/pretty-print.ts(33,9): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string | Buffer'.
+  Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
 examples/pretty-print.ts(36,39): error TS2304: Cannot find name 'Tag'.
 examples/pretty-print.ts(64,10): error TS2384: Overload signatures must all be ambient or non-ambient.
-lib/sax.ts(1,18): error TS2304: Cannot find name 'SAX'.
-lib/sax.ts(2,49): error TS2304: Cannot find name 'SAXParserOptions'.
-lib/sax.ts(2,76): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/sax.ts(45,46): error TS2304: Cannot find name 'SAXParserOptions'.
+lib/sax.ts(1,18): error TS2503: Cannot find namespace 'sax'.
+lib/sax.ts(2,49): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+lib/sax.ts(2,66): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/sax.ts(45,46): error TS2304: Cannot find name 'Options'.
 lib/sax.ts(47,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sax.ts(62,22): error TS2339: Property 'BEGIN' does not exist on type 'number'.
 lib/sax.ts(79,5): error TS2554: Expected 3 arguments, but got 2.
-lib/sax.ts(99,39): error TS2304: Cannot find name 'Parser'.
+lib/sax.ts(99,39): error TS2304: Cannot find name 'BufferParser'.
 lib/sax.ts(125,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Error'.
 lib/sax.ts(135,34): error TS2304: Cannot find name 'Parser'.
 lib/sax.ts(141,34): error TS2304: Cannot find name 'Parser'.
 lib/sax.ts(168,53): error TS2304: Cannot find name 'ent'.
-lib/sax.ts(172,49): error TS2304: Cannot find name 'StreamOptions'.
+lib/sax.ts(172,49): error TS2304: Cannot find name 'Options'.
 lib/sax.ts(173,12): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/sax.ts(176,46): error TS2304: Cannot find name 'SAXOptions'.
+lib/sax.ts(176,46): error TS2304: Cannot find name 'Options'.
 lib/sax.ts(178,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sax.ts(183,20): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sax.ts(287,12): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/sax.ts(287,25): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/sax.ts(287,39): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/sax.ts(287,53): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/sax.ts(291,12): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/sax.ts(291,25): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
+lib/sax.ts(295,12): error TS2367: This condition will always return 'false' since the types 'number' and 'string' have no overlap.
 lib/sax.ts(302,29): error TS2304: Cannot find name 'egExp'.
-lib/sax.ts(302,40): error TS2304: Cannot find name 'ny'.
+lib/sax.ts(302,40): error TS2304: Cannot find name 'gExp'.
 lib/sax.ts(623,26): error TS2304: Cannot find name 'Parser'.
 lib/sax.ts(627,30): error TS2304: Cannot find name 'Parser'.
 lib/sax.ts(627,49): error TS2304: Cannot find name 'NodeType'.
 lib/sax.ts(632,31): error TS2304: Cannot find name 'Parser'.
 lib/sax.ts(634,39): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Event'.
-lib/sax.ts(639,13): error TS2339: Property 'trim' does not exist on type 'Object'.
-lib/sax.ts(640,13): error TS2339: Property 'normalize' does not exist on type 'Object'.
+lib/sax.ts(638,27): error TS2304: Cannot find name 'TextOpt'.
+lib/sax.ts(639,31): error TS2339: Property 'trim' does not exist on type 'Text'.
+lib/sax.ts(640,36): error TS2339: Property 'replace' does not exist on type 'Text'.
 lib/sax.ts(644,27): error TS2304: Cannot find name 'Parser'.
 lib/sax.ts(647,7): error TS2322: Type 'string' is not assignable to type 'Error'.
 lib/sax.ts(651,20): error TS2345: Argument of type 'Error' is not assignable to parameter of type 'string'.
@@ -56,11 +60,9 @@ lib/sax.ts(677,21): error TS2345: Argument of type 'string | Error' is not assig
 lib/sax.ts(681,28): error TS2304: Cannot find name 'Parser'.
 lib/sax.ts(688,11): error TS2339: Property 'ns' does not exist on type '{ name: any; attributes: {}; }'.
 lib/sax.ts(709,28): error TS2304: Cannot find name 'Parser'.
-lib/sax.ts(721,41): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
 lib/sax.ts(761,29): error TS2304: Cannot find name 'Parser'.
 lib/sax.ts(767,16): error TS2554: Expected 2 arguments, but got 1.
 lib/sax.ts(780,50): error TS2304: Cannot find name 'Parser'.
-lib/sax.ts(795,36): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
 lib/sax.ts(829,26): error TS2339: Property 'SCRIPT' does not exist on type 'number'.
 lib/sax.ts(831,26): error TS2339: Property 'TEXT' does not exist on type 'number'.
 lib/sax.ts(840,30): error TS2304: Cannot find name 'Parser'.
@@ -71,20 +73,17 @@ lib/sax.ts(899,37): error TS2345: Argument of type '(p: number) => void' is not 
   Types of parameters 'p' and 'value' are incompatible.
     Type 'string' is not assignable to type 'number'.
 lib/sax.ts(908,22): error TS2339: Property 'TEXT' does not exist on type 'number'.
-lib/sax.ts(911,33): error TS2304: Cannot find name 'Parser'.
 lib/sax.ts(944,37): error TS2304: Cannot find name 'Parser'.
+lib/sax.ts(944,49): error TS2304: Cannot find name 'Char'.
 lib/sax.ts(946,24): error TS2339: Property 'OPEN_WAKA' does not exist on type 'number'.
 lib/sax.ts(953,24): error TS2339: Property 'TEXT' does not exist on type 'number'.
-lib/sax.ts(959,19): error TS2339: Property 'length' does not exist on type 'number'.
-lib/sax.ts(960,22): error TS2339: Property 'charAt' does not exist on type 'number'.
+lib/sax.ts(960,22): error TS2339: Property 'charAt' does not exist on type 'Buffer'.
 lib/sax.ts(972,9): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Error'.
 lib/sax.ts(978,7): error TS2322: Type 'string' is not assignable to type 'Buffer'.
-lib/sax.ts(983,18): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'number'.
 lib/sax.ts(1001,16): error TS2339: Property 'BEGIN' does not exist on type 'number'.
 lib/sax.ts(1002,28): error TS2339: Property 'BEGIN_WHITESPACE' does not exist on type 'number'.
 lib/sax.ts(1009,16): error TS2339: Property 'BEGIN_WHITESPACE' does not exist on type 'number'.
 lib/sax.ts(1013,16): error TS2339: Property 'TEXT' does not exist on type 'number'.
-lib/sax.ts(1017,26): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'number'.
 lib/sax.ts(1028,38): error TS2339: Property 'substring' does not exist on type 'Buffer'.
 lib/sax.ts(1031,30): error TS2339: Property 'OPEN_WAKA' does not exist on type 'number'.
 lib/sax.ts(1034,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
@@ -107,17 +106,20 @@ lib/sax.ts(1094,30): error TS2339: Property 'CDATA' does not exist on type 'numb
 lib/sax.ts(1098,30): error TS2339: Property 'COMMENT' does not exist on type 'number'.
 lib/sax.ts(1102,30): error TS2339: Property 'DOCTYPE' does not exist on type 'number'.
 lib/sax.ts(1112,30): error TS2339: Property 'TEXT' does not exist on type 'number'.
+lib/sax.ts(1113,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1114,30): error TS2339: Property 'SGML_DECL_QUOTED' does not exist on type 'number'.
 lib/sax.ts(1121,16): error TS2339: Property 'SGML_DECL_QUOTED' does not exist on type 'number'.
 lib/sax.ts(1123,30): error TS2339: Property 'SGML_DECL' does not exist on type 'number'.
 lib/sax.ts(1129,16): error TS2339: Property 'DOCTYPE' does not exist on type 'number'.
 lib/sax.ts(1131,30): error TS2339: Property 'TEXT' does not exist on type 'number'.
 lib/sax.ts(1137,32): error TS2339: Property 'DOCTYPE_DTD' does not exist on type 'number'.
+lib/sax.ts(1138,32): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1139,32): error TS2339: Property 'DOCTYPE_QUOTED' does not exist on type 'number'.
 lib/sax.ts(1145,16): error TS2339: Property 'DOCTYPE_QUOTED' does not exist on type 'number'.
 lib/sax.ts(1149,30): error TS2339: Property 'DOCTYPE' does not exist on type 'number'.
 lib/sax.ts(1153,16): error TS2339: Property 'DOCTYPE_DTD' does not exist on type 'number'.
 lib/sax.ts(1156,30): error TS2339: Property 'DOCTYPE' does not exist on type 'number'.
+lib/sax.ts(1157,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1158,30): error TS2339: Property 'DOCTYPE_DTD_QUOTED' does not exist on type 'number'.
 lib/sax.ts(1163,16): error TS2339: Property 'DOCTYPE_DTD_QUOTED' does not exist on type 'number'.
 lib/sax.ts(1166,30): error TS2339: Property 'DOCTYPE_DTD' does not exist on type 'number'.
@@ -173,6 +175,7 @@ lib/sax.ts(1352,32): error TS2339: Property 'ATTRIB_NAME' does not exist on type
 lib/sax.ts(1355,32): error TS2339: Property 'ATTRIB' does not exist on type 'number'.
 lib/sax.ts(1360,16): error TS2339: Property 'ATTRIB_VALUE' does not exist on type 'number'.
 lib/sax.ts(1361,28): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/sax.ts(1363,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1365,30): error TS2339: Property 'ATTRIB_VALUE_QUOTED' does not exist on type 'number'.
 lib/sax.ts(1368,30): error TS2339: Property 'ATTRIB_VALUE_UNQUOTED' does not exist on type 'number'.
 lib/sax.ts(1373,16): error TS2339: Property 'ATTRIB_VALUE_QUOTED' does not exist on type 'number'.
@@ -185,6 +188,7 @@ lib/sax.ts(1391,13): error TS2554: Expected 2 arguments, but got 1.
 lib/sax.ts(1393,30): error TS2339: Property 'OPEN_TAG_SLASH' does not exist on type 'number'.
 lib/sax.ts(1398,30): error TS2339: Property 'ATTRIB_NAME' does not exist on type 'number'.
 lib/sax.ts(1404,16): error TS2339: Property 'ATTRIB_VALUE_UNQUOTED' does not exist on type 'number'.
+lib/sax.ts(1405,28): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sax.ts(1407,32): error TS2339: Property 'ATTRIB_VALUE_ENTITY_U' does not exist on type 'number'.
 lib/sax.ts(1415,13): error TS2554: Expected 2 arguments, but got 1.
 lib/sax.ts(1417,30): error TS2339: Property 'ATTRIB' does not exist on type 'number'.

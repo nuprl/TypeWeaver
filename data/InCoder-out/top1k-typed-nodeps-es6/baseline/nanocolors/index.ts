@@ -19,7 +19,7 @@ export let isColorSupported =
 
 let nope = s => String(s)
 
-function color(open: Function,  close: Function,  closeRegexp: RegExp,  restore = open: RegExp) {
+function color(open: OpenType,  close: CloseType,  closeRegexp: RegExp,  restore = open: open) {
   function func(s: tring) {
     if (!s || !s.length) {
       if (s === '') {
@@ -45,7 +45,7 @@ let regexp22 = /\x1b\[22m/g
 let regexp39 = /\x1b\[39m/g
 let regexp49 = /\x1b\[49m/g
 
-export function createColors(enabled = isColorSupported: any) {
+export function createColors(enabled = isColorSupported: boolean) {
   if (enabled) {
     return {
       isColorSupported: true,

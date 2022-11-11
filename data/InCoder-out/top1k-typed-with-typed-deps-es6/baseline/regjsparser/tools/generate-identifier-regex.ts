@@ -6,7 +6,7 @@ import regenerate from 'regenerate';
 var version = '11.0.0'; // note: also update `package.json` when this changes
 
 // Shorthand function
-var get = function(what: any) {
+var get = function(what: number) {
   return require('unicode-' + version + '/' + what + '/code-points');
 };
 

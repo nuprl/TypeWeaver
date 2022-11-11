@@ -6,7 +6,7 @@ import { isArrowToken, isOpeningParenToken } from "./token-predicate"
  * @param {SourceCode} sourceCode - The source code object to get tokens.
  * @returns {Token} `(` token.
  */
-function getOpeningParenOfParams(node: ts.Node,  sourceCode: ts.SourceCode) {
+function getOpeningParenOfParams(node: ts.Node,  sourceCode: ts.SourceFile) {
     return node.id
         ? sourceCode.getTokenAfter(node.id, isOpeningParenToken)
         : sourceCode.getFirstToken(node, isOpeningParenToken)
@@ -18,7 +18,7 @@ function getOpeningParenOfParams(node: ts.Node,  sourceCode: ts.SourceCode) {
  * @param {SourceCode} sourceCode - The source code object to get tokens.
  * @returns {string} The location of the function node for reporting.
  */
-export function getFunctionHeadLocation(node: ts.Node,  sourceCode: ts.SourceCode) {
+export function getFunctionHeadLocation(node: Node,  sourceCode: SourceCode) {
     const parent = node.parent
     let start = null
     let end = null

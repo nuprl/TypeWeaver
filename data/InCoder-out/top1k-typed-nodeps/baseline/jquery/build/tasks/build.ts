@@ -6,7 +6,7 @@
 
 "use strict";
 
-module.exports = function( grunt : Grunt) {
+module.exports = function( grunt : grunt.IGrun) {
 	const fs = require( "fs" );
 	const path = require( "path" );
 	const rollup = require( "rollup" );
@@ -15,7 +15,7 @@ module.exports = function( grunt : Grunt) {
 	const Insight = require( "insight" );
 	const pkg = require( "../../package.json" );
 	const srcFolder = path.resolve( `${ __dirname }/../../src` );
-	const read = function( fileName : string) {
+	const read = function( fileName : String) {
 		return grunt.file.read( `${ srcFolder }/${ fileName }` );
 	};
 
@@ -94,7 +94,7 @@ module.exports = function( grunt : Grunt) {
 			const excludeList = ( list, prepend ) => {
 				if ( list ) {
 					prepend = prepend ? `${ prepend }/` : "";
-					list.forEach( function( module : string) {
+					list.forEach( function( module : any) {
 
 						// Exclude var modules as well
 						if ( module === "var" ) {

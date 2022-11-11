@@ -11,7 +11,7 @@ export const
     SCOPE_CLASS_STATIC_BLOCK = 256,
     SCOPE_VAR = SCOPE_TOP | SCOPE_FUNCTION | SCOPE_CLASS_STATIC_BLOCK
 
-export function functionFlags(async: AsyncGeneratorFunction,  generator: AsyncGeneratorFunction) {
+export function functionFlags(async: async,  generator: generator) {
   return SCOPE_FUNCTION | (async ? SCOPE_ASYNC : 0) | (generator ? SCOPE_GENERATOR : 0)
 }
 

@@ -37,7 +37,7 @@ function enable(options: any) {
       delete rejections[promise._rejectionId];
     }
   };
-  Promise._onReject = function (promise: Promise,  err: Error) {
+  Promise._onReject = function (promise: Promise<any>,  err: Error) {
     if (promise._deferredState === 0) { // not yet handled
       promise._rejectionId = id++;
       rejections[promise._rejectionId] = {
@@ -101,13 +101,13 @@ function enable(options: any) {
 function logError(id: number,  error: Error) {
   console.warn('Possible Unhandled Promise Rejection (id: ' + id + '):');
   var errStr = (error && (error.stack || error)) + '';
-  errStr.split('\n').forEach(function (line: mber) {
+  errStr.split('\n').forEach(function (line: any) {
     console.warn('  ' + line);
   });
 }
 
 function matchWhitelist(error: Error,  list: Array<string>) {
-  return list.some(function (cls: any) {
+  return list.some(function (cls: Class<any>) {
     return error instanceof cls;
   });
 }

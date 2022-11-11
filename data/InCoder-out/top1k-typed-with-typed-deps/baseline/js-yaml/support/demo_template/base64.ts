@@ -58,7 +58,7 @@ if (window.console) {
 
 // internal helpers //////////////////////////////////////////////////////////
 
-function utf8Encode(str: string | Buffer) {
+function utf8Encode(str: any) {
   var bytes = [], offset = 0, length, char;
 
   str = encodeURI(str);
@@ -105,7 +105,7 @@ function utf8Decode(bytes: Uint8Array) {
 
 // public api ////////////////////////////////////////////////////////////////
 
-function encode(str: string | Buffer) {
+function encode(str: any) {
   var result = '',
       bytes = utf8Encode(str),
       length = bytes.length,
@@ -136,7 +136,7 @@ function encode(str: string | Buffer) {
   return result;
 }
 
-function decode(data: Uint8Array) {
+function decode(data: Buffer) {
   var value, code, idx = 0,
       bytes = [],
       leftbits = 0, // number of bits decoded, but yet to be appended

@@ -32,7 +32,7 @@ function App() {
 }
 util.inherits(Factory, App);
 
-App.prototype.collection = function(name: any) {
+App.prototype.collection = function(name: String) {
   var collection = this.collections[name] = new Collection();
   this.run(collection);
   return collection;

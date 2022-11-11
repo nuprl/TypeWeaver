@@ -20,7 +20,7 @@ lp.checkLVal = function(expr: Expression) {
   }
 }
 
-lp.parseExpression = function(noIn: number) {
+lp.parseExpression = function(noIn: Boolean) {
   let start = this.storeCurrentPos()
   let expr = this.parseMaybeAssign(noIn)
   if (this.tok.type === tt.comma) {
@@ -69,7 +69,7 @@ lp.parseMaybeAssign = function(noIn: Boolean) {
   return left
 }
 
-lp.parseMaybeConditional = function(noIn: number) {
+lp.parseMaybeConditional = function(noIn: Boolean) {
   let start = this.storeCurrentPos()
   let expr = this.parseExprOps(noIn)
   if (this.eat(tt.question)) {
@@ -82,7 +82,7 @@ lp.parseMaybeConditional = function(noIn: number) {
   return expr
 }
 
-lp.parseExprOps = function(noIn: number) {
+lp.parseExprOps = function(noIn: Boolean) {
   let start = this.storeCurrentPos()
   let indent = this.curIndent, line = this.curLineStart
   return this.parseExprOp(this.parseMaybeUnary(false), start, -1, noIn, indent, line)
@@ -110,7 +110,7 @@ lp.parseExprOp = function(left: number,  start: number,  minPrec: number,  noIn:
   return left
 }
 
-lp.parseMaybeUnary = function(sawUnary: UnaryExpression) {
+lp.parseMaybeUnary = function(sawUnary: sawUnary) {
   let start = this.storeCurrentPos(), expr
   if (this.options.ecmaVersion >= 8 && this.toks.isContextual("await") &&
       (this.inAsync || (this.toks.inModule && this.options.ecmaVersion >= 13) ||
@@ -161,7 +161,7 @@ lp.parseExprSubscripts = function() {
   return this.parseSubscripts(this.parseExprAtom(), start, false, this.curIndent, this.curLineStart)
 }
 
-lp.parseSubscripts = function(base: any,  start: number,  noCalls: boolean,  startIndent: number,  line: number) {
+lp.parseSubscripts = function(base: Base,  start: number,  noCalls: number,  startIndent: number,  line: number) {
   const optionalSupported = this.options.ecmaVersion >= 11
   let optionalChained = false
   for (;;) {
@@ -546,7 +546,7 @@ lp.initFunction = function(node: Node) {
 // Convert existing expression atom to assignable pattern
 // if possible.
 
-lp.toAssignable = function(node: Node,  binding: Binding) {
+lp.toAssignable = function(node: AST.Node,  binding: AST.Binding) {
   if (!node || node.type === "Identifier" || (node.type === "MemberExpression" && !binding)) {
     // Okay
   } else if (node.type === "ParenthesizedExpression") {
@@ -574,7 +574,7 @@ lp.toAssignable = function(node: Node,  binding: Binding) {
   return node
 }
 
-lp.toAssignableList = function(exprList: ExpressionList,  binding: Binding) {
+lp.toAssignableList = function(exprList: Expression[],  binding: Binding) {
   for (let expr of exprList)
     this.toAssignable(expr, binding)
   return exprList
@@ -585,7 +585,7 @@ lp.parseFunctionParams = function(params: any) {
   return this.toAssignableList(params, true)
 }
 
-lp.parseMethod = function(isGenerator: any,  isAsync: any) {
+lp.parseMethod = function(isGenerator: isGenerator,  isAsync: isAsync) {
   let node = this.startNode(), oldInAsync = this.inAsync, oldInGenerator = this.inGenerator, oldInFunction = this.inFunction
   this.initFunction(node)
   if (this.options.ecmaVersion >= 6)
@@ -604,7 +604,7 @@ lp.parseMethod = function(isGenerator: any,  isAsync: any) {
   return this.finishNode(node, "FunctionExpression")
 }
 
-lp.parseArrowExpression = function(node: Node,  params: any,  isAsync: boolean) {
+lp.parseArrowExpression = function(node: AST.Node,  params: AST.Node[],  isAsync: AST.Node) {
   let oldInAsync = this.inAsync, oldInGenerator = this.inGenerator, oldInFunction = this.inFunction
   this.initFunction(node)
   if (this.options.ecmaVersion >= 8)
@@ -626,7 +626,7 @@ lp.parseArrowExpression = function(node: Node,  params: any,  isAsync: boolean) 
   return this.finishNode(node, "ArrowFunctionExpression")
 }
 
-lp.parseExprList = function(close: Function,  allowEmpty: Boolean) {
+lp.parseExprList = function(close: closeCb,  allowEmpty: allowEmptyCb) {
   this.pushCx()
   let indent = this.curIndent, line = this.curLineStart, elts = []
   this.next() // Opening bracket

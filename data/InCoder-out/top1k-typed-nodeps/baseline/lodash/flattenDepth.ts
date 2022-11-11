@@ -19,7 +19,7 @@ import baseFlatten from './.internal/baseFlatten.js'
  * flattenDepth(array, 2)
  * // => [1, 2, 3, [4], 5]
  */
-function flattenDepth(array: number[],  depth: number) {
+function flattenDepth(array: any,  depth: number) {
   const length = array == null ? 0 : array.length
   if (!length) {
     return []

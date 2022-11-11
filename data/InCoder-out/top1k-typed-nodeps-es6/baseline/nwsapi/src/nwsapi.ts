@@ -28,7 +28,7 @@
     global.NW.Dom = factory(global, Export);
   }
 
-})(this, function Factory(global: Global,  Export: Export) {
+})(this, function Factory(global: Window,  Export: Function) {
 
   var version = 'nwsapi-2.2.2',
 
@@ -193,7 +193,7 @@
     },
 
   concatList =
-    function(list: List,  nodes: List) {
+    function(list: NodeList,  nodes: Node[]) {
       var i = -1, l = nodes.length;
       while (l--) { list[list.length] = nodes[++i]; }
       return list;
@@ -223,7 +223,7 @@
 
   // check context for mixed content
   hasMixedCaseTagNames =
-    function(context: Element) {
+    function(context: Document) {
       var ns, api = 'getElementsByTagNameNS';
 
       // current host context (ownerDocument)
@@ -237,7 +237,7 @@
     },
 
   switchContext =
-    function(context: Document,  force: Boolean) {
+    function(context: Document,  force: any) {
       var oldDoc = doc;
       doc = context.ownerDocument || context;
       if (force || oldDoc !== doc) {
@@ -293,10 +293,10 @@
   // convert escape sequence in a CSS string or identifier
   // to javascript string with javascript escape sequences
   convertEscapes =
-    function(str: any) {
+    function(str: ny) {
       return REX.HasEscapes.test(str) ?
         str.replace(REX.FixEscapes,
-          function(substring: number,  p1: number,  p2: number) {
+          function(substring: String,  p1: String,  p2: String) {
             // unescaped " or '
             return p2 ? '\\' + p2 :
               // javascript strings are UTF-16 encoded
@@ -312,10 +312,10 @@
   // convert escape sequence in a CSS string or identifier
   // to javascript string with characters representations
   unescapeIdentifier =
-    function(str: any) {
+    function(str: ny) {
       return REX.HasEscapes.test(str) ?
         str.replace(REX.FixEscapes,
-          function(substring: number,  p1: number,  p2: number) {
+          function(substring: String,  p1: String,  p2: String) {
             // unescaped " or '
             return p2 ? p2 :
               // javascript strings are UTF-16 encoded
@@ -358,7 +358,7 @@
 
   // context agnostic getElementById
   byId =
-    function(id: number,  context: any) {
+    function(id: String,  context: Object) {
       var e, nodes, api = method['#'];
 
       // duplicates id allowed
@@ -384,7 +384,7 @@
 
   // context agnostic getElementsByTagName
   byTag =
-    function(tag: any,  context: any) {
+    function(tag: api.tag,  context: api.context) {
       var e, nodes, api = method['*'];
       // DOCUMENT_NODE (9) & ELEMENT_NODE (1)
       if (api in context) {
@@ -409,7 +409,7 @@
 
   // context agnostic getElementsByClassName
   byClass =
-    function(cls: any,  context: any) {
+    function(cls: Class<any>,  context: any) {
       var e, nodes, api = method['.'], reCls;
       // DOCUMENT_NODE (9) & ELEMENT_NODE (1)
       if (api in context) {
@@ -447,7 +447,7 @@
   // fast resolver for the :nth-child() and :nth-last-child() pseudo-classes
   nthElement = (function() {
     var idx = 0, len = 0, set = 0, parent = undefined, parents = Array(), nodes = Array();
-    return function(element: HTMLElement,  dir: Direction) {
+    return function(element: any,  dir: AnimationDirection) {
       // ensure caches are emptied after each run, invoking with dir = 2
       if (dir == 2) {
         idx = 0; len = 0; set = 0; nodes.length = 0;
@@ -490,7 +490,7 @@
   // fast resolver for the :nth-of-type() and :nth-last-of-type() pseudo-classes
   nthOfType = (function() {
     var idx = 0, len = 0, set = 0, parent = undefined, parents = Array(), nodes = Array();
-    return function(element: HTMLElement,  dir: Direction) {
+    return function(element: any,  dir: AnimationDirection) {
       // ensure caches are emptied after each run, invoking with dir = 2
       if (dir == 2) {
         idx = 0; len = 0; set = 0; nodes.length = 0;
@@ -544,7 +544,7 @@
 
   // configure the engine to use special handling
   configure =
-    function(option: any,  clear: boolean) {
+    function(option: Option,  clear: Boolean) {
       if (typeof option == 'string') { return !!Config[option]; }
       if (typeof option != 'object') { return Config; }
       for (var i in option) {
@@ -561,7 +561,7 @@
 
   // centralized error and exceptions handling
   emit =
-    function(message: Error,  proto: Object) {
+    function(message: any,  proto: any) {
       var err;
       if (Config.VERBOSITY) {
         if (proto) {
@@ -700,7 +700,7 @@
       Patterns.attribute = RegExp('^(?:' + attrmatcher + ')(.*)');
     },
 
-  F_INIT = '"use strict";return function Resolver(c: any, f: any, x: any, r: any)',
+  F_INIT = '"use strict";return function Resolver(c: Context, f: Function, x: X, r: Resolver)',
 
   S_HEAD = 'var e,n,o,j=r.length-1,k=-1',
   M_HEAD = 'var e,n,o',
@@ -726,7 +726,7 @@
   // compile groups or single selector strings into
   // executable functions for matching or selecting
   compile =
-    function(selector: any,  mode: any,  callback: Function) {
+    function(selector: String,  mode: String,  callback: Function) {
       var factory, token, head = '', loop = '', macro = '', source = '', vars = '';
 
       // 'mode' can be boolean or null
@@ -777,7 +777,7 @@
 
   // build conditional code to check components of selector strings
   compileSelector =
-    function(expression: any,  source: any,  mode: any,  callback: Function) {
+    function(expression: Expression,  source: Source,  mode: Mode,  callback: Function) {
 
       // N is the negation pseudo-class flag
       // D is the default inverted negation flag
@@ -1328,7 +1328,7 @@
 
   // replace ':scope' pseudo-class with element references
   makeref =
-    function(selectors: Array<string>,  element: HTMLElement) {
+    function(selectors: String,  element: Element) {
       return selectors.replace(/:scope/ig,
         element.localName +
         (element.id ? '#' + element.id : '') +
@@ -1337,7 +1337,7 @@
 
   // equivalent of w3c 'closest' method
   ancestor =
-    function _closest(selectors: string,  element: HTMLElement,  callback: Function) {
+    function _closest(selectors: string[],  element: Element,  callback: Function) {
 
       if ((/:scope/i).test(selectors)) {
         selectors = makeref(selectors, element);
@@ -1351,14 +1351,14 @@
     },
 
   match_assert =
-    function(f: Function,  element: Element,  callback: Function) {
+    function(f: Function,  element: any,  callback: Function) {
       for (var i = 0, l = f.length, r = false; l > i; ++i)
         f[i](element, callback, null, false) && (r = true);
       return r;
     },
 
   match_collect =
-    function(selectors: Array<string>,  callback: Function) {
+    function(selectors: string[],  callback: Function) {
       for (var i = 0, l = selectors.length, f = [ ]; l > i; ++i)
         f[i] = compile(selectors[i], false, callback);
       return { factory: f };
@@ -1366,7 +1366,7 @@
 
   // equivalent of w3c 'matches' method
   match =
-    function _matches(selectors: Array<string>,  element: HTMLElement,  callback: Function) {
+    function _matches(selectors: string[],  element: HTMLElement,  callback: Function) {
 
       var expressions, parsed;
 
@@ -1428,7 +1428,7 @@
       }
       return select(selectors, context,
         typeof callback == 'function' ?
-        function firstMatch(element: HTMLElement) {
+        function firstMatch(element: any) {
           callback(element);
           return false;
         } :
@@ -1440,7 +1440,7 @@
 
   // equivalent of w3c 'querySelectorAll' method
   select =
-    function _querySelectorAll(selectors: string,  context: HTMLElement,  callback: Function) {
+    function _querySelectorAll(selectors: string[],  context: Document,  callback: Document.ElementCallback) {
 
       var expressions, nodes = [ ], parsed, resolver;
 
@@ -1530,7 +1530,7 @@
 
   // optimize selectors avoiding duplicated checks
   optimize =
-    function(selector: CssSelector,  token: CssToken) {
+    function(selector: Selector,  token: Token) {
       var index = token.index,
       length = token[1].length + token[2].length;
       return selector.slice(0, index) +
@@ -1541,7 +1541,7 @@
 
   // prepare factory resolvers and closure collections
   collect =
-    function(selectors: any,  context: any,  callback: Function) {
+    function(selectors: string[],  context: any,  callback: Function) {
 
       var i, l, seen = { }, token = ['', '*', '*'], optimized = selectors,
       factory = [ ], htmlset = [ ], nodeset = [ ], results = [ ], type;
@@ -1752,7 +1752,7 @@
 
     // register a new selector combinator symbol and its related function resolver
     registerCombinator:
-      function(combinator: Function,  resolver: Function) {
+      function(combinator: combinator,  resolver: resolver) {
         var i = 0, l = combinator.length, symbol;
         for (; l > i; ++i) {
           if (combinator[i] != '=') {
@@ -1791,7 +1791,7 @@
 
     // register a new selector symbol and its related function resolver
     registerSelector:
-      function(name: String,  rexp: RegExp,  func: Function) {
+      function(name: name,  rexp: rexp,  func: func) {
         Selectors[name] || (Selectors[name] = {
           Expression: rexp,
           Callback: func

@@ -32,7 +32,7 @@ const COMPILE = function(options: any) {
 	return factory.create(options);
 };
 
-function SyncHook(args = []: Array<any>,  name = undefined: string | null) {
+function SyncHook(args = []: Array<any>,  name = undefined: any) {
 	const hook = new Hook(args, name);
 	hook.constructor = SyncHook;
 	hook.tapAsync = TAP_ASYNC;

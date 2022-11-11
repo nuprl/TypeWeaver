@@ -4,7 +4,7 @@
  *  Copyright (c) 2022 Michael Mclaughlin
  *  https://github.com/MikeMcl/big.js/LICENCE.md
  */
-;(function (GLOBAL: any) {
+;(function (GLOBAL: typeof GLOBAL) {
   'use strict';
   var Big,
 
@@ -85,7 +85,7 @@
      *
      * n {number|string|Big} A numeric value.
      */
-    function Big(n: number) {
+    function Big(n: Big) {
       var x = this;
 
       // Enable constructor usage without new.
@@ -193,7 +193,7 @@
    * rm {number} Rounding mode: 0 (down), 1 (half-up), 2 (half-even) or 3 (up).
    * [more] {boolean} Whether the result of division was truncated.
    */
-  function round(x: number,  sd: number,  rm: number,  more: number) {
+  function round(x: BigInt,  sd: BigInt,  rm: BigInt,  more: BigInt) {
     var xc = x.c;
 
     if (rm === UNDEFINED) rm = x.constructor.RM;
@@ -258,7 +258,7 @@
    * Return a string representing the value of Big x in normal or exponential notation.
    * Handles P.toExponential, P.toFixed, P.toJSON, P.toPrecision, P.toString and P.valueOf.
    */
-  function stringify(x: number,  doExponential: boolean,  isNonzero: boolean) {
+  function stringify(x: BigInt,  doExponential: Boolean,  isNonzero: Boolean) {
     var e = x.e,
       s = x.c.join(''),
       n = s.length;
@@ -303,7 +303,7 @@
    *       -1 if the value of this Big is less than the value of Big y, or
    *        0 if they have the same value.
    */
-  P.cmp = function (y: number) {
+  P.cmp = function (y: BigNumber) {
     var isneg,
       x = this,
       xc = x.c,
@@ -645,7 +645,7 @@
   /*
    * Return a new Big whose value is the value of this Big plus the value of Big y.
    */
-  P.plus = P.add = function (y: number) {
+  P.plus = P.add = function (y: T) {
     var e, k, t,
       x = this,
       Big = x.constructor;
@@ -910,7 +910,7 @@
    * dp? {number} Decimal places: integer, 0 to MAX_DP inclusive.
    * rm? {number} Rounding mode: 0 (down), 1 (half-up), 2 (half-even) or 3 (up).
    */
-  P.toExponential = function (dp: number,  rm: number) {
+  P.toExponential = function (dp: Date,  rm: Date) {
     var x = this,
       n = x.c[0];
 
@@ -936,7 +936,7 @@
    * (-0).toFixed(0) is '0', but (-0.1).toFixed(0) is '-0'.
    * (-0).toFixed(1) is '0.0', but (-0.01).toFixed(1) is '-0.0'.
    */
-  P.toFixed = function (dp: number,  rm: number) {
+  P.toFixed = function (dp: Date,  rm: Date) {
     var x = this,
       n = x.c[0];
 
@@ -988,7 +988,7 @@
    * sd {number} Significant digits: integer, 1 to MAX_DP inclusive.
    * rm? {number} Rounding mode: 0 (down), 1 (half-up), 2 (half-even) or 3 (up).
    */
-  P.toPrecision = function (sd: Big,  rm: Big) {
+  P.toPrecision = function (sd: any,  rm: any) {
     var x = this,
       Big = x.constructor,
       n = x.c[0];

@@ -27,7 +27,7 @@ function getLine(buffer: Buffer,  lineStart: number,  lineEnd: number,  position
 }
 
 
-function padStart(string: any,  max: number) {
+function padStart(string: string,  max: number) {
   return common.repeat(' ', max - string.length) + string;
 }
 

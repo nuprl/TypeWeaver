@@ -1,5 +1,5 @@
 // A simple implementation of make-array
-function makeArray (subject: Array) {
+function makeArray (subject: Array<any>) {
   return Array.isArray(subject)
     ? subject
     : [subject]

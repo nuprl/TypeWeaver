@@ -25,7 +25,7 @@ exports.typeDefs =
     Date: { type: Date, validate: validateDate },
   }
 
-function nopt (types: Array<string>,  shorthands: Array<string>,  args: Array<any>,  slice: number) {
+function nopt (types: Array<string>,  shorthands: Array<string>,  args: Array<any>,  slice: Array<number>) {
   args = args || process.argv
   types = types || {}
   shorthands = shorthands || {}
@@ -171,7 +171,7 @@ function validatePath (data: any,  k: any,  val: any) {
   return true
 }
 
-function validateNumber (data: any,  k: any,  val: number) {
+function validateNumber (data: any,  k: any,  val: any) {
   debug('validate Number %j %j %j', k, val, isNaN(val))
   if (isNaN(val)) {
     return false
@@ -179,7 +179,7 @@ function validateNumber (data: any,  k: any,  val: number) {
   data[k] = +val
 }
 
-function validateDate (data: Date,  k: keyof Date,  val: Date) {
+function validateDate (data: Date,  k: number,  val: number) {
   var s = Date.parse(val)
   debug('validate Date %j %j %j', k, val, s)
   if (isNaN(s)) {
@@ -215,7 +215,7 @@ function validateUrl (data: any,  k: any,  val: any) {
   data[k] = val.href
 }
 
-function validateStream (data: any,  k: any,  val: any) {
+function validateStream (data: Buffer,  k: number,  val: number) {
   if (!(val instanceof Stream)) {
     return false
   }
@@ -294,7 +294,7 @@ function validate (data: any,  k: any,  val: any,  type: any,  typeDefs: any) {
   return ok
 }
 
-function parse (args: any[],  data: any,  remain: any,  types: any,  shorthands: any) {
+function parse (args: string[],  data: any,  remain: number,  types: any[],  shorthands: any[]) {
   debug('parse', args, data, remain)
 
   var abbrevs = abbrev(Object.keys(types))
@@ -449,7 +449,7 @@ function parse (args: any[],  data: any,  remain: any,  types: any,  shorthands:
   }
 }
 
-function resolveShort (arg: number,  shorthands: string[],  shortAbbr: number,  abbrevs: string[]) {
+function resolveShort (arg: number,  shorthands: number[],  shortAbbr: number[],  abbrevs: string[]) {
   // handle single-char shorthands glommed together, like
   // npm ls -glp, but only if there is one dash, and only if
   // all of the chars are single-char shorthands, and it's
@@ -476,7 +476,7 @@ function resolveShort (arg: number,  shorthands: string[],  shortAbbr: number,  
   if (!singles) {
     singles = Object.keys(shorthands).filter(function (s: string) {
       return s.length === 1
-    }).reduce(function (l: any,  r: any) {
+    }).reduce(function (l: Object,  r: Object) {
       l[r] = true
       return l
     }, {})
@@ -484,14 +484,14 @@ function resolveShort (arg: number,  shorthands: string[],  shortAbbr: number,  
     debug('shorthand singles', singles)
   }
 
-  var chrs = arg.split('').filter(function (c: any) {
+  var chrs = arg.split('').filter(function (c: number) {
     return singles[c]
   })
 
   if (chrs.join('') === arg) {
-    return chrs.map(function (c: any) {
+    return chrs.map(function (c: number) {
       return shorthands[c]
-    }).reduce(function (l: List,  r: List) {
+    }).reduce(function (l: ArrayLike<any>,  r: ArrayLike<any>) {
       return l.concat(r)
     }, [])
   }

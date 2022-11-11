@@ -1,26 +1,18 @@
-index.ts(12,50): error TS2304: Cannot find name 'IExecFileOptions'.
-index.ts(12,73): error TS2304: Cannot find name 'IExecFileCallback'.
-index.ts(51,28): error TS2339: Property 'ignoreErrors' does not exist on type 'Object'.
-mode.ts(6,50): error TS2304: Cannot find name 'IExecFileOptions'.
-mode.ts(6,73): error TS2304: Cannot find name 'IExecFileCallback'.
+index.ts(37,14): error TS2339: Property 'code' does not exist on type 'Error'.
+index.ts(39,9): error TS2322: Type 'boolean' is not assignable to type 'number'.
+index.ts(46,22): error TS2304: Cannot find name 'Path'.
+index.ts(46,38): error TS2304: Cannot find name 'Options'.
 mode.ts(7,48): error TS2724: '"fs"' has no exported member named 'Stat'. Did you mean 'stat'?
-mode.ts(13,32): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-      Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-mode.ts(16,27): error TS2304: Cannot find name 'Stats'.
-mode.ts(16,44): error TS2304: Cannot find name 'StatOptions'.
-mode.ts(20,30): error TS2724: '"fs"' has no exported member named 'Stat'. Did you mean 'stat'?
-windows.ts(6,59): error TS2304: Cannot find name 'IPathOptions'.
-windows.ts(20,19): error TS2339: Property 'substr' does not exist on type 'string | string[]'.
-  Property 'substr' does not exist on type 'string[]'.
+mode.ts(12,22): error TS2304: Cannot find name 'Path'.
+mode.ts(12,38): error TS2304: Cannot find name 'Options'.
+mode.ts(16,27): error TS2304: Cannot find name 'Stat'.
+mode.ts(16,43): error TS2304: Cannot find name 'Options'.
+windows.ts(6,30): error TS2304: Cannot find name 'Path'.
+windows.ts(6,46): error TS2304: Cannot find name 'Options'.
 windows.ts(27,27): error TS2304: Cannot find name 'Stats'.
 windows.ts(27,41): error TS2304: Cannot find name 'Path'.
-windows.ts(27,57): error TS2503: Cannot find namespace 'Stats'.
-windows.ts(34,50): error TS2304: Cannot find name 'IExecFileOptions'.
-windows.ts(34,73): error TS2304: Cannot find name 'IExecFileCallback'.
+windows.ts(27,57): error TS2304: Cannot find name 'Options'.
 windows.ts(35,48): error TS2724: '"fs"' has no exported member named 'Stat'. Did you mean 'stat'?
-windows.ts(41,32): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'PathLike'.
+windows.ts(40,22): error TS2304: Cannot find name 'Path'.
+windows.ts(40,38): error TS2304: Cannot find name 'Options'.
 

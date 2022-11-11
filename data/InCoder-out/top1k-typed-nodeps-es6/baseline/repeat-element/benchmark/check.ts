@@ -17,7 +17,7 @@ glob.sync(__dirname + '/code/*.js').forEach(function (fp: number) {
   let name = path.basename(fp, path.extname(fp));
   let problems = [];
 
-  fixtures.forEach(function (fixture: ComponentFixture<any>,  idx: number) {
+  fixtures.forEach(function (fixture: any,  idx: number) {
     let answer = fn.apply(fn, fixture).length;
 
     if (answer !== expected[idx]) {

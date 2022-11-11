@@ -24,14 +24,14 @@
 
 'use strict';
 
-function assertPath(path: ring | string[]) {
+function assertPath(path: ring | undefined) {
   if (typeof path !== 'string') {
     throw new TypeError('Path must be a string. Received ' + JSON.stringify(path));
   }
 }
 
 // Resolves . and .. elements in a path with directory names
-function normalizeStringPosix(path: string | undefined,  allowAboveRoot: boolean | undefined) {
+function normalizeStringPosix(path: string | Buffer,  allowAboveRoot: string | boolean) {
   var res = '';
   var lastSegmentLength = 0;
   var lastSlash = -1;
@@ -154,7 +154,7 @@ var posix = {
     }
   },
 
-  normalize: function normalize(path: Path) {
+  normalize: function normalize(path: string | Buffer) {
     assertPath(path);
 
     if (path.length === 0) return '.';
@@ -172,7 +172,7 @@ var posix = {
     return path;
   },
 
-  isAbsolute: function isAbsolute(path: Path) {
+  isAbsolute: function isAbsolute(path: string | Buffer) {
     assertPath(path);
     return path.length > 0 && path.charCodeAt(0) === 47 /*/*/;
   },
@@ -286,11 +286,11 @@ var posix = {
     }
   },
 
-  _makeLong: function _makeLong(path: string | number) {
+  _makeLong: function _makeLong(path: any) {
     return path;
   },
 
-  dirname: function dirname(path: Path) {
+  dirname: function dirname(path: PathString) {
     assertPath(path);
     if (path.length === 0) return '.';
     var code = path.charCodeAt(0);
@@ -315,7 +315,7 @@ var posix = {
     return path.slice(0, end);
   },
 
-  basename: function basename(path: Path,  ext: any) {
+  basename: function basename(path: PathLike,  ext: string | null | undefined) {
     if (ext !== undefined && typeof ext !== 'string') throw new TypeError('"ext" argument must be a string');
     assertPath(path);
 
@@ -435,14 +435,14 @@ var posix = {
     return path.slice(startDot, end);
   },
 
-  format: function format(pathObject: Object) {
+  format: function format(pathObject: PathObject) {
     if (pathObject === null || typeof pathObject !== 'object') {
       throw new TypeError('The "pathObject" argument must be of type Object. Received type ' + typeof pathObject);
     }
     return _format('/', pathObject);
   },
 
-  parse: function parse(path: Path) {
+  parse: function parse(path: string | string[]) {
     assertPath(path);
 
     var ret = { root: '', dir: '', base: '', ext: '', name: '' };

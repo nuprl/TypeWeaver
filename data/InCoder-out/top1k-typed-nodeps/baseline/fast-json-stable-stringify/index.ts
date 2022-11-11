@@ -7,7 +7,7 @@ module.exports = function (data: any,  opts: any) {
 
     var cmp = opts.cmp && (function (f: Function) {
         return function (node: Node) {
-            return function (a: any,  b: any) {
+            return function (a: number,  b: number) {
                 var aobj = { key: a, value: node[a] };
                 var bobj = { key: b, value: node[b] };
                 return f(aobj, bobj);

@@ -17,11 +17,11 @@ module.exports.descending = descending;
  * @param   {function} callback - invoked when all elements processed
  * @returns {function} - jobs terminator
  */
-function serialOrdered(list: ArrayLike<any>,  iterator: Function,  sortMethod: Function,  callback: Function)
+function serialOrdered(list: Array,  iterator: Function,  sortMethod: Function,  callback: Function)
 {
   var state = initState(list, sortMethod);
 
-  iterate(list, iterator, state, function iteratorHandler(error: any,  result: any)
+  iterate(list, iterator, state, function iteratorHandler(error: Error,  result: any)
   {
     if (error)
     {

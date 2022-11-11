@@ -2,7 +2,7 @@
 (function(){
   var identifierRegex, tokenRegex;
   identifierRegex = /[\$\w]+/;
-  function peek(tokens: Array<any>){
+  function peek(tokens: Token[]){
     var token;
     token = tokens[0];
     if (token == null) {
@@ -10,7 +10,7 @@
     }
     return token;
   }
-  function consumeIdent(tokens: Array<string>){
+  function consumeIdent(tokens: Token[]){
     var token;
     token = peek(tokens);
     if (!identifierRegex.test(token)) {
@@ -18,7 +18,7 @@
     }
     return tokens.shift();
   }
-  function consumeOp(tokens: TokenStream,  op: Token){
+  function consumeOp(tokens: Token[],  op: Operator){
     var token;
     token = peek(tokens);
     if (token !== op) {
@@ -26,7 +26,7 @@
     }
     return tokens.shift();
   }
-  function maybeConsumeOp(tokens: Token[],  op: Token){
+  function maybeConsumeOp(tokens: Token[],  op: Operator){
     var token;
     token = tokens[0];
     if (token === op) {
@@ -35,7 +35,7 @@
       return null;
     }
   }
-  function consumeArray(tokens: Array<string>){
+  function consumeArray(tokens: Token[]){
     var types;
     consumeOp(tokens, '[');
     if (peek(tokens) === ']') {
@@ -48,7 +48,7 @@
       of: types
     };
   }
-  function consumeTuple(tokens: Array<string>){
+  function consumeTuple(tokens: Token[]){
     var components;
     components = [];
     consumeOp(tokens, '(');
@@ -68,7 +68,7 @@
       of: components
     };
   }
-  function consumeFields(tokens: TokenStream){
+  function consumeFields(tokens: Token[]){
     var fields, subset, ref$, key, types;
     fields = {};
     consumeOp(tokens, '{');
@@ -99,7 +99,7 @@
     types = consumeTypes(tokens);
     return [key, types];
   }
-  function maybeConsumeStructure(tokens: Array<any>){
+  function maybeConsumeStructure(tokens: Token[]){
     switch (tokens[0]) {
     case '[':
       return consumeArray(tokens);
@@ -109,7 +109,7 @@
       return consumeFields(tokens);
     }
   }
-  function consumeType(tokens: Array<string>){
+  function consumeType(tokens: Token[]){
     var token, wildcard, type, structure;
     token = peek(tokens);
     wildcard = token === '*';
@@ -133,7 +133,7 @@
       return structure;
     }
   }
-  function consumeTypes(tokens: Array<string>){
+  function consumeTypes(tokens: Token[]){
     var lookahead, types, typesSoFar, typeObj, type, structure;
     if ('::' === peek(tokens)) {
       throw new Error("No comment before comment separator '::' found.");
@@ -175,7 +175,7 @@
   }
   tokenRegex = RegExp('\\.\\.\\.|::|->|' + identifierRegex.source + '|\\S', 'g');
 
-  export default function(input: any){
+  export default function(input: TokenStream){
     var tokens, e;
     if (!input.length) {
       throw new Error('No type specified.');
@@ -192,7 +192,7 @@
     }
   };
 
-  function in$(x: any,  xs: Array<any>){
+  function in$(x: any,  xs: any[]){
     var i = -1, l = xs.length >>> 0;
     while (++i < l) if (x === xs[i]) return true;
     return false;

@@ -11,7 +11,7 @@ import { format } from 'util';
 import dashdash from '../lib/dashdash';
 
 
-function parseIntGteZero(option: number,  optstr: number,  arg: number) {
+function parseIntGteZero(option: Option,  optstr: OptionString,  arg: Arg) {
     var num = Number(arg);
     if (!/^[0-9]+$/.test(arg) || isNaN(num)) {
         throw new Error(format('arg for "%s" is not an integer >=0: "%s"',

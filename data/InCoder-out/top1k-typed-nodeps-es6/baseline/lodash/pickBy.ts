@@ -18,7 +18,7 @@ import getAllKeysIn from './.internal/getAllKeysIn.js'
  * pickBy(object, isNumber)
  * // => { 'a': 1, 'c': 3 }
  */
-function pickBy(object: Object,  predicate: Function) {
+function pickBy(object: any,  predicate: Function) {
   if (object == null) {
     return {}
   }

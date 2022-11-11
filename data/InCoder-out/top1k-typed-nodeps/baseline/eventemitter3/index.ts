@@ -55,7 +55,7 @@ function EE(fn: Function,  context: Object,  once: Boolean) {
  * @returns {EventEmitter}
  * @private
  */
-function addListener(emitter: EventEmitter,  event: string | symbol,  fn: Function,  context: Object,  once: Boolean) {
+function addListener(emitter: EventEmitter,  event: string | symbol,  fn: Function,  context: Object | null,  once: boolean | undefined) {
   if (typeof fn !== 'function') {
     throw new TypeError('The listener must be a function');
   }
@@ -163,7 +163,7 @@ EventEmitter.prototype.listenerCount = function listenerCount(event: Event) {
  * @returns {Boolean} `true` if the event had listeners, else `false`.
  * @public
  */
-EventEmitter.prototype.emit = function emit(event: Event,  a1: any,  a2: any,  a3: any,  a4: any,  a5: any) {
+EventEmitter.prototype.emit = function emit(event: string | symbol,  a1: any,  a2: any,  a3: any,  a4: any,  a5: any) {
   var evt = prefix ? prefix + event : event;
 
   if (!this._events[evt]) return false;
@@ -224,7 +224,7 @@ EventEmitter.prototype.emit = function emit(event: Event,  a1: any,  a2: any,  a
  * @returns {EventEmitter} `this`.
  * @public
  */
-EventEmitter.prototype.on = function on(event: Event,  fn: Function,  context: Object) {
+EventEmitter.prototype.on = function on(event: string | symbol,  fn: Function,  context: Object) {
   return addListener(this, event, fn, context, false);
 };
 
@@ -237,7 +237,7 @@ EventEmitter.prototype.on = function on(event: Event,  fn: Function,  context: O
  * @returns {EventEmitter} `this`.
  * @public
  */
-EventEmitter.prototype.once = function once(event: Event,  fn: Function,  context: Object) {
+EventEmitter.prototype.once = function once(event: string | symbol,  fn: Function,  context: Object) {
   return addListener(this, event, fn, context, true);
 };
 
@@ -251,7 +251,7 @@ EventEmitter.prototype.once = function once(event: Event,  fn: Function,  contex
  * @returns {EventEmitter} `this`.
  * @public
  */
-EventEmitter.prototype.removeListener = function removeListener(event: Event,  fn: Function,  context: Object,  once: Boolean) {
+EventEmitter.prototype.removeListener = function removeListener(event: string | symbol,  fn: Function,  context: Object | null,  once: boolean | undefined) {
   var evt = prefix ? prefix + event : event;
 
   if (!this._events[evt]) return this;
@@ -298,7 +298,7 @@ EventEmitter.prototype.removeListener = function removeListener(event: Event,  f
  * @returns {EventEmitter} `this`.
  * @public
  */
-EventEmitter.prototype.removeAllListeners = function removeAllListeners(event: string | symbol) {
+EventEmitter.prototype.removeAllListeners = function removeAllListeners(event: Event) {
   var evt;
 
   if (event) {

@@ -20,7 +20,7 @@ lib/MappingsContext.ts(23,8): error TS2339: Property 'sourcesIndices' does not e
 lib/MappingsContext.ts(24,8): error TS2339: Property 'sourcesContent' does not exist on type 'MappingsContext'.
 lib/MappingsContext.ts(26,9): error TS2339: Property 'hasSourceContent' does not exist on type 'MappingsContext'.
 lib/MappingsContext.ts(34,26): error TS2339: Property 'sourcesContent' does not exist on type 'MappingsContext'.
-lib/SingleLineNode.ts(7,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
+lib/SingleLineNode.ts(7,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
 lib/SingleLineNode.ts(16,8): error TS2339: Property 'generatedCode' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(17,8): error TS2339: Property 'originalSource' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(18,8): error TS2339: Property 'source' does not exist on type 'SingleLineNode'.
@@ -68,7 +68,7 @@ lib/SourceListMap.ts(29,10): error TS2339: Property 'children' does not exist on
 lib/SourceListMap.ts(29,24): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(31,10): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(34,9): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
-lib/SourceListMap.ts(36,49): error TS2304: Cannot find name 'ISLN'.
+lib/SourceListMap.ts(36,49): error TS2304: Cannot find name 'ISyntaxNode'.
 lib/SourceListMap.ts(47,10): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(47,27): error TS2554: Expected 4 arguments, but got 3.
 lib/SourceListMap.ts(48,19): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
@@ -78,19 +78,19 @@ lib/SourceListMap.ts(49,10): error TS2339: Property 'children' does not exist on
 lib/SourceListMap.ts(49,24): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(51,10): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(54,9): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
-lib/SourceListMap.ts(56,67): error TS2304: Cannot find name 'Sln'.
+lib/SourceListMap.ts(56,67): error TS2304: Cannot find name 'ISyntaxNode'.
 lib/SourceListMap.ts(66,8): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
-lib/SourceListMap.ts(66,39): error TS2304: Cannot find name 'Sln'.
-lib/SourceListMap.ts(72,41): error TS2304: Cannot find name 'ISyntaxList'.
+lib/SourceListMap.ts(66,39): error TS2304: Cannot find name 'ISyntaxNode'.
+lib/SourceListMap.ts(72,41): error TS2304: Cannot find name 'ISyntaxNode'.
 lib/SourceListMap.ts(86,10): error TS2554: Expected 3 arguments, but got 1.
 lib/SourceListMap.ts(90,15): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
-lib/SourceListMap.ts(90,42): error TS2304: Cannot find name 'ISLN'.
+lib/SourceListMap.ts(90,42): error TS2304: Cannot find name 'ISyntaxNode'.
 lib/SourceListMap.ts(97,23): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(97,50): error TS2304: Cannot find name 'ISyntaxNode'.
 lib/SourceListMap.ts(100,25): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
-lib/SourceListMap.ts(100,52): error TS2304: Cannot find name 'Sln'.
+lib/SourceListMap.ts(100,52): error TS2304: Cannot find name 'ISyntaxNode'.
 lib/SourceListMap.ts(110,37): error TS2339: Property 'hasSourceContent' does not exist on type 'MappingsContext'.
-lib/SourceNode.ts(7,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
+lib/SourceNode.ts(7,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
 lib/SourceNode.ts(16,8): error TS2339: Property 'generatedCode' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(17,8): error TS2339: Property 'originalSource' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(18,8): error TS2339: Property 'source' does not exist on type 'SourceNode'.
@@ -137,40 +137,17 @@ lib/base64-vlq.ts(45,12): error TS2345: Argument of type '(ch: number, index: nu
 lib/base64-vlq.ts(54,8): error TS2339: Property 'encode' does not exist on type '{}'.
 lib/base64-vlq.ts(64,8): error TS2339: Property 'decode' does not exist on type '{}'.
 lib/base64-vlq.ts(139,23): error TS2339: Property 'encode' does not exist on type '{}'.
-lib/base64-vlq.ts(151,21): error TS2339: Property 'length' does not exist on type 'number'.
 lib/base64-vlq.ts(160,20): error TS2339: Property 'decode' does not exist on type '{}'.
-lib/base64-vlq.ts(160,32): error TS2339: Property 'charAt' does not exist on type 'number'.
-lib/base64-vlq.ts(167,13): error TS2339: Property 'value' does not exist on type 'number'.
-lib/base64-vlq.ts(168,13): error TS2339: Property 'rest' does not exist on type 'number'.
-lib/base64-vlq.ts(168,25): error TS2339: Property 'slice' does not exist on type 'number'.
-lib/fromStringWithSourceMap.ts(7,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
-lib/fromStringWithSourceMap.ts(12,64): error TS2304: Cannot find name 'SourceMap'.
-lib/fromStringWithSourceMap.ts(12,81): error TS2304: Cannot find name 'SourceMap'.
-lib/fromStringWithSourceMap.ts(22,34): error TS2304: Cannot find name 'Code'.
-lib/fromStringWithSourceMap.ts(33,36): error TS2304: Cannot find name 'SourceCode'.
-lib/fromStringWithSourceMap.ts(33,57): error TS2304: Cannot find name 'Source'.
-lib/fromStringWithSourceMap.ts(33,82): error TS2304: Cannot find name 'OriginalSource'.
-lib/fromStringWithSourceMap.ts(33,113): error TS2304: Cannot find name 'LinePosition'.
+lib/fromStringWithSourceMap.ts(7,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
+lib/fromStringWithSourceMap.ts(12,88): error TS2304: Cannot find name 'SourceMap'.
+lib/fromStringWithSourceMap.ts(22,34): error TS2304: Cannot find name 'GeneratedCode'.
+lib/fromStringWithSourceMap.ts(33,36): error TS2552: Cannot find name 'SourceCode'. Did you mean 'SourceNode'?
+lib/fromStringWithSourceMap.ts(33,57): error TS2304: Cannot find name 'SourceCode'.
+lib/fromStringWithSourceMap.ts(33,86): error TS2304: Cannot find name 'SourceCode'.
 lib/fromStringWithSourceMap.ts(35,16): error TS2339: Property 'source' does not exist on type 'SourceNode'.
-lib/fromStringWithSourceMap.ts(52,3): error TS2322: Type '{ value: number; rest: string; }' is not assignable to type 'string'.
-lib/fromStringWithSourceMap.ts(54,17): error TS2339: Property 'rest' does not exist on type 'string'.
-lib/fromStringWithSourceMap.ts(55,46): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
+lib/fromStringWithSourceMap.ts(46,37): error TS2304: Cannot find name 'IInplaceReplaceSupport'.
 lib/fromStringWithSourceMap.ts(67,9): error TS2554: Expected 3 arguments, but got 1.
-lib/fromStringWithSourceMap.ts(69,14): error TS2339: Property 'rest' does not exist on type 'string'.
-lib/fromStringWithSourceMap.ts(69,30): error TS2339: Property 'rest' does not exist on type 'string'.
-lib/fromStringWithSourceMap.ts(70,29): error TS2339: Property 'rest' does not exist on type 'string'.
-lib/fromStringWithSourceMap.ts(72,15): error TS2339: Property 'rest' does not exist on type 'string'.
-lib/fromStringWithSourceMap.ts(74,14): error TS2339: Property 'rest' does not exist on type 'string'.
-lib/fromStringWithSourceMap.ts(75,12): error TS2339: Property 'rest' does not exist on type 'string'.
-lib/fromStringWithSourceMap.ts(75,27): error TS2339: Property 'rest' does not exist on type 'string'.
-lib/fromStringWithSourceMap.ts(79,28): error TS2339: Property 'rest' does not exist on type 'string'.
-lib/fromStringWithSourceMap.ts(80,29): error TS2339: Property 'value' does not exist on type 'string'.
-lib/fromStringWithSourceMap.ts(84,14): error TS2339: Property 'rest' does not exist on type 'string'.
-lib/fromStringWithSourceMap.ts(84,30): error TS2339: Property 'rest' does not exist on type 'string'.
-lib/fromStringWithSourceMap.ts(85,29): error TS2339: Property 'rest' does not exist on type 'string'.
-lib/fromStringWithSourceMap.ts(86,27): error TS2339: Property 'value' does not exist on type 'string'.
-lib/fromStringWithSourceMap.ts(92,14): error TS2339: Property 'rest' does not exist on type 'string'.
-lib/fromStringWithSourceMap.ts(93,25): error TS2339: Property 'rest' does not exist on type 'string'.
-lib/fromStringWithSourceMap.ts(94,12): error TS2339: Property 'rest' does not exist on type 'string'.
-lib/fromStringWithSourceMap.ts(94,46): error TS2339: Property 'rest' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(68,35): error TS2304: Cannot find name 'Mapping'.
+lib/fromStringWithSourceMap.ts(68,51): error TS2304: Cannot find name 'Line'.
+lib/fromStringWithSourceMap.ts(68,66): error TS2304: Cannot find name 'Ignore'.
 

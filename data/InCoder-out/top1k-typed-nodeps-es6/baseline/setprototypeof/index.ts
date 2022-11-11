@@ -3,7 +3,7 @@
 /* eslint no-proto: 0 */
 export default Object.setPrototypeOf || ({ __proto__: [] } instanceof Array ? setProtoOf : mixinProperties);
 
-function setProtoOf (obj: any,  proto: Object) {
+function setProtoOf (obj: Object,  proto: Object) {
   obj.__proto__ = proto
   return obj
 }

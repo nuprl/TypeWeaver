@@ -2,25 +2,25 @@ var path = require('path');
 
 // We only register on the final extension (like `.js`) due to https://github.com/joyent/node/blob/v0.12.0/lib/module.js#L353
 // However, we use these matchers to apply the transform only if the full extension matches
-function endsInJsx(filename: any) {
+function endsInJsx(filename: string | undefined) {
   return filename.endsWith('.jsx');
 }
-function endsInTs(filename: any) {
+function endsInTs(filename: string | undefined) {
   return filename.endsWith('.ts');
 }
-function endsInTsx(filename: any) {
+function endsInTsx(filename: string | undefined) {
   return filename.endsWith('.tsx');
 }
-function endsInBabelJs(filename: any) {
+function endsInBabelJs(filename: string | null) {
   return filename.endsWith('.babel.js');
 }
-function endsInBabelJsx(filename: string | undefined) {
+function endsInBabelJsx(filename: string | null) {
   return filename.endsWith('.babel.jsx');
 }
-function endsInBabelTs(filename: any) {
+function endsInBabelTs(filename: string | null) {
   return filename.endsWith('.babel.ts');
 }
-function endsInBabelTsx(filename: string | undefined) {
+function endsInBabelTsx(filename: string | null) {
   return filename.endsWith('.babel.tsx');
 }
 function endsInEsbuildJs(filename: string | undefined) {
@@ -35,19 +35,19 @@ function endsInEsbuildTs(filename: string | undefined) {
 function endsInEsbuildTsx(filename: string | undefined) {
   return filename.endsWith('.esbuild.tsx');
 }
-function endsInSucraseJs(filename: string | undefined) {
+function endsInSucraseJs(filename: string | null) {
   return filename.endsWith('.sucrase.js');
 }
-function endsInSucraseJsx(filename: string | undefined) {
+function endsInSucraseJsx(filename: string | null) {
   return filename.endsWith('.sucrase.jsx');
 }
-function endsInSucraseTs(filename: string | undefined) {
+function endsInSucraseTs(filename: string | Buffer) {
   return filename.endsWith('.sucrase.ts');
 }
-function endsInSucraseTsx(filename: string | undefined) {
+function endsInSucraseTsx(filename: string | Buffer) {
   return filename.endsWith('.sucrase.tsx');
 }
-function endsInSwcJs(filename: string | undefined) {
+function endsInSwcJs(filename: string | Buffer) {
   return filename.endsWith('.swc.js');
 }
 function endsInSwcJsx(filename: string | undefined) {
@@ -56,7 +56,7 @@ function endsInSwcJsx(filename: string | undefined) {
 function endsInSwcTs(filename: string | undefined) {
   return filename.endsWith('.swc.ts');
 }
-function endsInSwcTsx(filename: string | undefined) {
+function endsInSwcTsx(filename: string | Buffer) {
   return filename.endsWith('.swc.tsx');
 }
 
@@ -70,7 +70,7 @@ function isNodeModules(file: File) {
 var extensions = {
   '.babel.js': {
     module: '@babel/register',
-    register: function (hook: Hook,  config: Config) {
+    register: function (hook: Hook,  config: HookConfig) {
       config = config || {
         rootMode: 'upward-optional',
         overrides: [{ only: [endsInBabelJs], presets: ['@babel/preset-env'] }],
@@ -81,7 +81,7 @@ var extensions = {
   },
   '.babel.jsx': {
     module: '@babel/register',
-    register: function (hook: Hook,  config: Config) {
+    register: function (hook: Hook,  config: HookConfig) {
       config = config || {
         rootMode: 'upward-optional',
         overrides: [
@@ -98,7 +98,7 @@ var extensions = {
   '.babel.ts': [
     {
       module: '@babel/register',
-      register: function (hook: Hook,  config: Config) {
+      register: function (hook: Hook,  config: any) {
         config = config || {
           rootMode: 'upward-optional',
           overrides: [
@@ -115,7 +115,7 @@ var extensions = {
   ],
   '.babel.tsx': {
     module: '@babel/register',
-    register: function (hook: Hook,  config: Config) {
+    register: function (hook: Hook,  config: HookConfig) {
       config = config || {
         rootMode: 'upward-optional',
         overrides: [
@@ -201,7 +201,7 @@ var extensions = {
   '.jsx': [
     {
       module: '@babel/register',
-      register: function (hook: Hook,  config: Config) {
+      register: function (hook: Hook,  config: any) {
         config = config || {
           rootMode: 'upward-optional',
           overrides: [
@@ -225,7 +225,7 @@ var extensions = {
   '.node': null,
   '.sucrase.js': {
     module: 'sucrase/dist/register',
-    register: function (hook: Hook,  config: Config) {
+    register: function (hook: Hook,  config: HookConfig) {
       config = config || {
         matcher: endsInSucraseJs,
       };
@@ -235,7 +235,7 @@ var extensions = {
   },
   '.sucrase.jsx': {
     module: 'sucrase/dist/register',
-    register: function (hook: Hook,  config: Config) {
+    register: function (hook: Hook,  config: HookConfig) {
       config = config || {
         matcher: endsInSucraseJsx,
       };
@@ -245,7 +245,7 @@ var extensions = {
   },
   '.sucrase.ts': {
     module: 'sucrase/dist/register',
-    register: function (hook: Hook,  config: Config) {
+    register: function (hook: Hook,  config: HookConfig) {
       config = config || {
         matcher: endsInSucraseTs,
       };
@@ -255,7 +255,7 @@ var extensions = {
   },
   '.sucrase.tsx': {
     module: 'sucrase/dist/register',
-    register: function (hook: Hook,  config: Config) {
+    register: function (hook: Hook,  config: HookConfig) {
       config = config || {
         matcher: endsInSucraseTsx,
       };
@@ -265,7 +265,7 @@ var extensions = {
   },
   '.swc.js': {
     module: '@swc/register',
-    register: function (hook: Hook,  config: Config) {
+    register: function (hook: Hook,  config: HookConfig) {
       config = config || {
         only: [endsInSwcJs],
         ignore: [isNodeModules],
@@ -288,7 +288,7 @@ var extensions = {
   },
   '.swc.jsx': {
     module: '@swc/register',
-    register: function (hook: Hook,  config: Config) {
+    register: function (hook: Hook,  config: HookConfig) {
       config = config || {
         only: [endsInSwcJsx],
         ignore: [isNodeModules],
@@ -312,7 +312,7 @@ var extensions = {
   },
   '.swc.ts': {
     module: '@swc/register',
-    register: function (hook: Hook,  config: Config) {
+    register: function (hook: Hook,  config: HookConfig) {
       config = config || {
         only: [endsInSwcTs],
         ignore: [isNodeModules],
@@ -335,7 +335,7 @@ var extensions = {
   },
   '.swc.tsx': {
     module: '@swc/register',
-    register: function (hook: Hook,  config: Config) {
+    register: function (hook: Hook,  config: HookConfig) {
       config = config || {
         only: [endsInSwcTsx],
         ignore: [isNodeModules],
@@ -368,7 +368,7 @@ var extensions = {
     'sucrase/register/ts',
     {
       module: '@babel/register',
-      register: function (hook: Hook,  config: Config) {
+      register: function (hook: Hook,  config: any) {
         config = config || {
           rootMode: 'upward-optional',
           overrides: [
@@ -403,7 +403,7 @@ var extensions = {
     },
     {
       module: '@swc/register',
-      register: function (hook: Hook,  config: Config) {
+      register: function (hook: Hook,  config: any) {
         config = config || {
           only: [endsInTs],
           ignore: [isNodeModules],
@@ -431,7 +431,7 @@ var extensions = {
     'sucrase/register/tsx',
     {
       module: '@babel/register',
-      register: function (hook: Hook,  config: Config) {
+      register: function (hook: Hook,  config: any) {
         config = config || {
           rootMode: 'upward-optional',
           overrides: [
@@ -476,7 +476,7 @@ var extensions = {
     },
     {
       module: '@swc/register',
-      register: function (hook: Hook,  config: Config) {
+      register: function (hook: Hook,  config: any) {
         config = config || {
           only: [endsInTsx],
           ignore: [isNodeModules],
@@ -535,7 +535,7 @@ var jsVariantExtensions = [
 
 module.exports = {
   extensions: extensions,
-  jsVariants: jsVariantExtensions.reduce(function (result: any,  ext: string | string[]) {
+  jsVariants: jsVariantExtensions.reduce(function (result: any,  ext: Extension) {
     result[ext] = extensions[ext];
     return result;
   }, {}),

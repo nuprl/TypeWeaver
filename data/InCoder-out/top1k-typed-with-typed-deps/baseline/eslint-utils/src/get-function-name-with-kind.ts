@@ -7,7 +7,7 @@ import { getPropertyName } from "./get-property-name"
  * @returns {string} The name and kind of the function node.
  */
 // eslint-disable-next-line complexity
-export function getFunctionNameWithKind(node: ts.Node,  sourceCode: ts.SourceCode) {
+export function getFunctionNameWithKind(node: FunctionDeclaration|FunctionExpression,  sourceCode: ts.SourceCode) {
     const parent = node.parent
     const tokens = []
     const isObjectMethod = parent.type === "Property" && parent.value === node

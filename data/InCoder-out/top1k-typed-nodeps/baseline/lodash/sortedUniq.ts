@@ -15,7 +15,7 @@ import baseSortedUniq from './.internal/baseSortedUniq.js'
  * sortedUniq([1, 1, 2])
  * // => [1, 2]
  */
-function sortedUniq(array: rray<T>) {
+function sortedUniq(array: rray<any>) {
   return (array != null && array.length)
     ? baseSortedUniq(array)
     : []

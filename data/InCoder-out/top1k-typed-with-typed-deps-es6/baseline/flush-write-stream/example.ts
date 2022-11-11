@@ -10,7 +10,7 @@ ws.write('hello')
 ws.write('world')
 ws.end()
 
-function write (data: any,  enc: number,  cb: Function) {
+function write (data: Buffer,  enc: Encoding,  cb: Function) {
   // i am your normal ._write method
   console.log('writing', data.toString())
   cb()

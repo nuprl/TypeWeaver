@@ -1,12 +1,12 @@
 var stream = require('stream')
 
 
-function isStream (obj: any) {
+function isStream (obj: object) {
   return obj instanceof stream.Stream
 }
 
 
-function isReadable (obj: Object) {
+function isReadable (obj: any) {
   return isStream(obj) && typeof obj._read == 'function' && typeof obj._readableState == 'object'
 }
 
@@ -16,7 +16,7 @@ function isWritable (obj: any) {
 }
 
 
-function isDuplex (obj: mixed) {
+function isDuplex (obj: object) {
   return isReadable(obj) && isWritable(obj)
 }
 

@@ -2,15 +2,15 @@ var once = require('once');
 
 var noop = function() {};
 
-var isRequest = function(stream: Stream) {
+var isRequest = function(stream: Readable) {
 	return stream.setHeader && typeof stream.abort === 'function';
 };
 
-var isChildProcess = function(stream: Stream) {
+var isChildProcess = function(stream: Readable) {
 	return stream.stdio && Array.isArray(stream.stdio) && stream.stdio.length === 3
 };
 
-var eos = function(stream: ReadableStream,  opts: any,  callback: Function) {
+var eos = function(stream: ReadableStream,  opts: ReadableStreamDefaultReadWrite,  callback: callback) {
 	if (typeof opts === 'function') return eos(stream, null, opts);
 	if (!opts) opts = {};
 

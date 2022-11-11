@@ -20,7 +20,7 @@
     } catch (exception) {}
   }());
 
-  function encode(string: string | Uint8Array) {
+  function encode(string: any) {
     // URL-encode some more characters to avoid issues when using permalink URLs in Markdown
     return encodeURIComponent(string).replace(/['()_*]/g, function(character: Character) {
       return '%' + character.charCodeAt().toString(16);

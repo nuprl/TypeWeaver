@@ -11,7 +11,7 @@ module.exports = function (arr: Array<any>) {
   return flat(arr, []);
 };
 
-function flat(arr: Array,  res: Array) {
+function flat(arr: Array<any>,  res: Array<any>) {
   var i = 0, cur;
   var len = arr.length;
   for (; i < len; i++) {

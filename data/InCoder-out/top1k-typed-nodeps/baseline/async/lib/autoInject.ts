@@ -7,7 +7,7 @@ var ARROW_FN_ARGS = /^(?:async\s+)?\(?\s*([^)=]+)\s*\)?(?:\s*=>)/;
 var FN_ARG_SPLIT = /,/;
 var FN_ARG = /(=.+)?(\s*)$/;
 
-function stripComments(string: string | null) {
+function stripComments(string: any) {
     let stripped = '';
     let index = 0;
     let endBlockComment = string.indexOf('*/');
@@ -99,7 +99,7 @@ function parseParams(func: Function) {
  *         // write the data to a file in the directory
  *         callback(null, 'filename');
  *     },
- *     email_link: function(write_file: Function,  callback: Function) {
+ *     email_link: function(write_file: write_file,  callback: callback) {
  *         // once the file is written let's email a link to it...
  *         // write_file contains the filename returned by write_file.
  *         callback(null, {'file':write_file, 'email':'user@example.com'});
@@ -122,7 +122,7 @@ function parseParams(func: Function) {
  *     write_file: ['get_data', 'make_folder', function(get_data: get_data,  make_folder: make_folder,  callback: callback) {
  *         callback(null, 'filename');
  *     }],
- *     email_link: ['write_file', function(write_file: Function,  callback: Function) {
+ *     email_link: ['write_file', function(write_file: write_file,  callback: callback) {
  *         callback(null, {'file':write_file, 'email':'user@example.com'});
  *     }]
  *     //...
@@ -131,7 +131,7 @@ function parseParams(func: Function) {
  *     console.log('email_link = ', results.email_link);
  * });
  */
-export default function autoInject(tasks: any,  callback: Function) {
+export default function autoInject(tasks: TaskMap,  callback: Function) {
     var newTasks = {};
 
     Object.keys(tasks).forEach(key => {
@@ -162,7 +162,7 @@ export default function autoInject(tasks: any,  callback: Function) {
             newTasks[key] = params.concat(newTask);
         }
 
-        function newTask(results: any,  taskCb: Function) {
+        function newTask(results: any,  taskCb: any) {
             var newArgs = params.map(name => results[name])
             newArgs.push(taskCb);
             wrapAsync(taskFn)(...newArgs);

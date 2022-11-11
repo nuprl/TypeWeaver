@@ -5,7 +5,7 @@ import "./deferred.js";
 import "./callbacks.js";
 
 jQuery.extend( {
-	queue: function( elem: Element,  type: string,  data : any) {
+	queue: function( elem: any,  type: string,  data : any) {
 		var queue;
 
 		if ( elem ) {
@@ -24,7 +24,7 @@ jQuery.extend( {
 		}
 	},
 
-	dequeue: function( elem: Element,  type : String) {
+	dequeue: function( elem: any,  type : string) {
 		type = type || "fx";
 
 		var queue = jQuery.queue( elem, type ),
@@ -71,7 +71,7 @@ jQuery.extend( {
 } );
 
 jQuery.fn.extend( {
-	queue: function( type: jQuery.EventType,  data : any) {
+	queue: function( type: any,  data : any) {
 		var setter = 2;
 
 		if ( typeof type !== "string" ) {
@@ -102,13 +102,13 @@ jQuery.fn.extend( {
 			jQuery.dequeue( this, type );
 		} );
 	},
-	clearQueue: function( type : String) {
+	clearQueue: function( type : any) {
 		return this.queue( type || "fx", [] );
 	},
 
 	// Get a promise resolved when queues of a certain type
 	// are emptied (fx is the type by default)
-	promise: function( type: jQuery.Event | true,  obj : any) {
+	promise: function( type: dataType,  obj : obj) {
 		var tmp,
 			count = 1,
 			defer = jQuery.Deferred(),

@@ -5,7 +5,7 @@ var SlowBuffer = require('buffer').SlowBuffer;
 
 module.exports = bufferEq;
 
-function bufferEq(a: any,  b: any) {
+function bufferEq(a: Buffer,  b: Buffer) {
 
   // shortcutting on type is necessary for correctness
   if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {

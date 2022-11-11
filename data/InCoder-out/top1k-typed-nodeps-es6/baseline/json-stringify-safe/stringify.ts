@@ -1,14 +1,14 @@
 export default stringify;
 export const getSerialize = serializer;
 
-function stringify(obj: any,  replacer: Function,  spaces: number,  cycleReplacer: Function) {
+function stringify(obj: any,  replacer: Function,  spaces: number,  cycleReplacer: RegExp) {
   return JSON.stringify(obj, serializer(replacer, cycleReplacer), spaces)
 }
 
-function serializer(replacer: Function,  cycleReplacer: Function) {
+function serializer(replacer: Replacer,  cycleReplacer: CycleReplacer) {
   var stack = [], keys = []
 
-  if (cycleReplacer == null) cycleReplacer = function(key: any,  value: any) {
+  if (cycleReplacer == null) cycleReplacer = function(key: key,  value: value) {
     if (stack[0] === value) return "[Circular ~]"
     return "[Circular ~." + keys.slice(0, stack.indexOf(value)).join(".") + "]"
   }

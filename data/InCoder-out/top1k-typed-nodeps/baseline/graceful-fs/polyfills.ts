@@ -17,7 +17,7 @@ try {
 // This check is needed until node.js 12 is required
 if (typeof process.chdir === 'function') {
   var chdir = process.chdir
-  process.chdir = function (d: any) {
+  process.chdir = function (d: string) {
     cwd = null
     chdir.call(process, d)
   }
@@ -26,7 +26,7 @@ if (typeof process.chdir === 'function') {
 
 module.exports = patch
 
-function patch (fs: NodeJS.ReadWrite) {
+function patch (fs: any) {
   // (re-)implement some things that are known busted or missing.
 
   // lchmod, broken prior to 0.6.2
@@ -72,7 +72,7 @@ function patch (fs: NodeJS.ReadWrite) {
 
   // if lchmod/lchown do not exist, then make them no-ops
   if (fs.chmod && !fs.lchmod) {
-    fs.lchmod = function (path: String,  mode: String,  cb: Function) {
+    fs.lchmod = function (path: String,  mode: number,  cb: Function) {
       if (cb) process.nextTick(cb)
     }
     fs.lchmodSync = function () {}
@@ -95,7 +95,7 @@ function patch (fs: NodeJS.ReadWrite) {
   // contention to be starved of CPU by node, so the contention doesn't resolve.
   if (platform === "win32") {
     fs.rename = typeof fs.rename !== 'function' ? fs.rename
-    : (function (fs$rename: any) {
+    : (function (fs$rename: rename) {
       function rename (from: String,  to: String,  cb: Function) {
         var start = Date.now()
         var backoff = 0;
@@ -125,12 +125,12 @@ function patch (fs: NodeJS.ReadWrite) {
 
   // if read() returns EAGAIN, then just try it again.
   fs.read = typeof fs.read !== 'function' ? fs.read
-  : (function (fs$read: Function) {
-    function read (fd: number,  buffer: Buffer,  offset: number,  length: number,  position: number,  callback_: Function) {
+  : (function (fs$read: any) {
+    function read (fd: number,  buffer: ArrayBuffer,  offset: number,  length: number,  position: number,  callback_: Function) {
       var callback
       if (callback_ && typeof callback_ === 'function') {
         var eagCounter = 0
-        callback = function (er: any,  _: any,  __: any) {
+        callback = function (er: Error,  _: Error,  __: Error) {
           if (er && er.code === 'EAGAIN' && eagCounter < 10) {
             eagCounter ++
             return fs$read.call(fs, fd, buffer, offset, length, position, callback)
@@ -147,7 +147,7 @@ function patch (fs: NodeJS.ReadWrite) {
   })(fs.read)
 
   fs.readSync = typeof fs.readSync !== 'function' ? fs.readSync
-  : (function (fs$readSync: typeof fs$readSync) { return function (fd, buffer, offset, length, position) {
+  : (function (fs$readSync: any) { return function (fd, buffer, offset, length, position) {
     var eagCounter = 0
     while (true) {
       try {
@@ -162,8 +162,8 @@ function patch (fs: NodeJS.ReadWrite) {
     }
   }})(fs.readSync)
 
-  function patchLchmod (fs: NodeJS.TypedArray) {
-    fs.lchmod = function (path: String,  mode: String,  callback: Function) {
+  function patchLchmod (fs: any) {
+    fs.lchmod = function (path: String,  mode: number,  callback: Function) {
       fs.open( path
              , constants.O_WRONLY | constants.O_SYMLINK
              , mode
@@ -182,7 +182,7 @@ function patch (fs: NodeJS.ReadWrite) {
       })
     }
 
-    fs.lchmodSync = function (path: Path,  mode: Mode) {
+    fs.lchmodSync = function (path: Path,  mode: number) {
       var fd = fs.openSync(path, constants.O_WRONLY | constants.O_SYMLINK, mode)
 
       // prefer to return the chmod error, if one occurs,
@@ -205,9 +205,9 @@ function patch (fs: NodeJS.ReadWrite) {
     }
   }
 
-  function patchLutimes (fs: FileSystem) {
+  function patchLutimes (fs: any) {
     if (constants.hasOwnProperty("O_SYMLINK") && fs.futimes) {
-      fs.lutimes = function (path: Path,  at: number,  mt: number,  cb: Function) {
+      fs.lutimes = function (path: String,  at: String,  mt: String,  cb: Function) {
         fs.open(path, constants.O_SYMLINK, function (er: Error,  fd: number) {
           if (er) {
             if (cb) cb(er)
@@ -221,7 +221,7 @@ function patch (fs: NodeJS.ReadWrite) {
         })
       }
 
-      fs.lutimesSync = function (path: Path,  at: Position,  mt: Marker) {
+      fs.lutimesSync = function (path: Path,  at: Position,  mt: Modifiers) {
         var fd = fs.openSync(path, constants.O_SYMLINK)
         var ret
         var threw = true
@@ -246,7 +246,7 @@ function patch (fs: NodeJS.ReadWrite) {
     }
   }
 
-  function chmodFix (orig: number) {
+  function chmodFix (orig: any) {
     if (!orig) return orig
     return function (target: any,  mode: any,  cb: Function) {
       return orig.call(fs, target, mode, function (er: Error) {
@@ -256,9 +256,9 @@ function patch (fs: NodeJS.ReadWrite) {
     }
   }
 
-  function chmodFixSync (orig: number) {
+  function chmodFixSync (orig: fs.Stats) {
     if (!orig) return orig
-    return function (target: any,  mode: any) {
+    return function (target: any,  mode: number) {
       try {
         return orig.call(fs, target, mode)
       } catch (er) {
@@ -268,9 +268,9 @@ function patch (fs: NodeJS.ReadWrite) {
   }
 
 
-  function chownFix (orig: Function) {
+  function chownFix (orig: any) {
     if (!orig) return orig
-    return function (target: any,  uid: number,  gid: number,  cb: Function) {
+    return function (target: fs.Stats,  uid: number,  gid: number,  cb: Function) {
       return orig.call(fs, target, uid, gid, function (er: Error) {
         if (chownErOk(er)) er = null
         if (cb) cb.apply(this, arguments)
@@ -278,7 +278,7 @@ function patch (fs: NodeJS.ReadWrite) {
     }
   }
 
-  function chownFixSync (orig: NodeJS.Errno) {
+  function chownFixSync (orig: any) {
     if (!orig) return orig
     return function (target: any,  uid: number,  gid: number) {
       try {
@@ -289,7 +289,7 @@ function patch (fs: NodeJS.ReadWrite) {
     }
   }
 
-  function statFix (orig: Function) {
+  function statFix (orig: any) {
     if (!orig) return orig
     // Older versions of Node erroneously returned signed integers for
     // uid + gid.
@@ -310,7 +310,7 @@ function patch (fs: NodeJS.ReadWrite) {
     }
   }
 
-  function statFixSync (orig: Stat) {
+  function statFixSync (orig: Stats) {
     if (!orig) return orig
     // Older versions of Node erroneously returned signed integers for
     // uid + gid.

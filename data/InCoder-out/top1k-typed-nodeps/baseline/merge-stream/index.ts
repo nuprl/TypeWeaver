@@ -2,7 +2,7 @@
 
 const { PassThrough } = require('stream');
 
-module.exports = function (/*streams...*/: Array<Stream>) {
+module.exports = function (/*streams...*/: Array<Readable>) {
   var sources = []
   var output  = new PassThrough({objectMode: true})
 
@@ -17,7 +17,7 @@ module.exports = function (/*streams...*/: Array<Stream>) {
 
   return output
 
-  function add (source: Array<any>) {
+  function add (source: Source) {
     if (Array.isArray(source)) {
       source.forEach(add)
       return this
@@ -34,8 +34,8 @@ module.exports = function (/*streams...*/: Array<Stream>) {
     return sources.length == 0;
   }
 
-  function remove (source: any) {
-    sources = sources.filter(function (it: terable<any>) { return it !== source })
+  function remove (source: Source) {
+    sources = sources.filter(function (it: ny) { return it !== source })
     if (!sources.length && output.readable) { output.end() }
   }
 }

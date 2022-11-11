@@ -33,7 +33,7 @@ exports.sign = function(val: any,  secret: any){
  * @api private
  */
 
-exports.unsign = function(input: any,  secret: any){
+exports.unsign = function(input: Buffer,  secret: Buffer){
   if ('string' != typeof input) throw new TypeError("Signed cookie string must be provided.");
   if (null == secret) throw new TypeError("Secret key must be provided.");
   var tentativeValue = input.slice(0, input.lastIndexOf('.')),

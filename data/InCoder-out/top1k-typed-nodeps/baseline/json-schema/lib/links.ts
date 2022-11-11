@@ -2,7 +2,7 @@
  * JSON Schema link handler
  * Licensed under AFL-2.1 OR BSD-3-Clause
  */
-(function (root: any,  factory: Function) {
+(function (root: any,  factory: any) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define([], function () {
@@ -51,8 +51,8 @@ exports.getLink = function(relation: Relation,  instance: Instance,  schema: Sch
 	return linkTemplate && exports.substitute(linkTemplate, instance);
 };
 
-exports.substitute = function(linkTemplate: Template,  instance: IInstance){
-	return linkTemplate.replace(/\{([^\}]*)\}/g, function(t: any,  property: any){
+exports.substitute = function(linkTemplate: LinkTemplate,  instance: Instance){
+	return linkTemplate.replace(/\{([^\}]*)\}/g, function(t: Date,  property: Property){
 			var value = instance[decodeURIComponent(property)];
 			if(value instanceof Array){
 				// the value is an array, it should produce a URI like /Table/(4,5,8) and store.get() should handle that as an array of values

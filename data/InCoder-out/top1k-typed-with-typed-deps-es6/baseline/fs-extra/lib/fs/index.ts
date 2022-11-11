@@ -70,7 +70,7 @@ export const exists = function (filename: string | Buffer,  callback: Function) 
 
 // fs.read(), fs.write(), & fs.writev() need special treatment due to multiple callback args
 
-export const read = function (fd: number,  buffer: Buffer,  offset: number,  length: number,  position: number,  callback: Function) {
+export const read = function (fd: number,  buffer: ArrayBuffer,  offset: number,  length: number,  position: number,  callback: Function) {
   if (typeof callback === 'function') {
     return fs.read(fd, buffer, offset, length, position, callback)
   }

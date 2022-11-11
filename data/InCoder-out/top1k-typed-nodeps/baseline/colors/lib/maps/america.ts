@@ -1,5 +1,5 @@
-module['exports'] = function(colors: Array<string>) {
-  return function(letter: number,  i: number,  exploded: number[]) {
+module['exports'] = function(colors: string[]) {
+  return function(letter: letter,  i: i,  exploded: exploded) {
     if (letter === ' ') return letter;
     switch (i%3) {
       case 0: return colors.red(letter);

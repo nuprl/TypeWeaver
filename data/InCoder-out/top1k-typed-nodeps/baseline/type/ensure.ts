@@ -11,7 +11,7 @@ var assign = function (target: any,  source: any) {
 	}
 };
 
-module.exports = function (validationDatum1/*: alidationDatum,  ...validationDatumN: lidationDatum,  options */: lidationDatum) {
+module.exports = function (validationDatum1/*: alidationDatum,  ...validationDatumN: lidationDatum,  options */: Object) {
 	var validationData = [validationDatum1];
 	var globalOptions;
 	if (arguments.length > 1) {

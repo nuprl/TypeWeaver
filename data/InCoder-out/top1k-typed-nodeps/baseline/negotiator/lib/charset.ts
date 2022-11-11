@@ -50,7 +50,7 @@ function parseAcceptCharset(accept: string | string[]) {
  * @private
  */
 
-function parseCharset(str: string | undefined,  i: number) {
+function parseCharset(str: any,  i: number) {
   var match = simpleCharsetRegExp.exec(str);
   if (!match) return null;
 
@@ -79,7 +79,7 @@ function parseCharset(str: string | undefined,  i: number) {
  * @private
  */
 
-function getCharsetPriority(charset: string | null,  accepted: string | null,  index: number) {
+function getCharsetPriority(charset: number,  accepted: number[],  index: number) {
   var priority = {o: -1, q: 0, s: 0};
 
   for (var i = 0; i < accepted.length; i++) {
@@ -98,7 +98,7 @@ function getCharsetPriority(charset: string | null,  accepted: string | null,  i
  * @private
  */
 
-function specify(charset: number,  spec: number,  index: number) {
+function specify(charset: Charset,  spec: Spec,  index: number) {
   var s = 0;
   if(spec.charset.toLowerCase() === charset.toLowerCase()){
     s |= 1;
@@ -119,7 +119,7 @@ function specify(charset: number,  spec: number,  index: number) {
  * @public
  */
 
-function preferredCharsets(accept: Accept,  provided: ProvidedCharsets) {
+function preferredCharsets(accept: string | string[],  provided: string | string[]) {
   // RFC 2616 sec 14.2: no header = *
   var accepts = parseAcceptCharset(accept === undefined ? '*' : accept || '');
 
@@ -146,7 +146,7 @@ function preferredCharsets(accept: Accept,  provided: ProvidedCharsets) {
  * @private
  */
 
-function compareSpecs(a: any,  b: any) {
+function compareSpecs(a: ISpec,  b: ISpec) {
   return (b.q - a.q) || (b.s - a.s) || (a.o - b.o) || (a.i - b.i) || 0;
 }
 
@@ -155,7 +155,7 @@ function compareSpecs(a: any,  b: any) {
  * @private
  */
 
-function getFullCharset(spec: Spec) {
+function getFullCharset(spec: CharsetSpec) {
   return spec.charset;
 }
 
@@ -164,6 +164,6 @@ function getFullCharset(spec: Spec) {
  * @private
  */
 
-function isQuality(spec: Quality) {
+function isQuality(spec: Spec) {
   return spec.q > 0;
 }

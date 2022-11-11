@@ -4,7 +4,7 @@ var resolveException = require("../lib/resolve-exception")
   , ensureMin        = require("../lib/ensure/min")
   , coerce           = require("./coerce");
 
-module.exports = function (value/*: Object,  options*/: Object) {
+module.exports = function (value/*: Date,  options*/: DateOptions) {
 	var coerced = coerce(value), options = arguments[1];
 	if (coerced !== null) {
 		if (options) {

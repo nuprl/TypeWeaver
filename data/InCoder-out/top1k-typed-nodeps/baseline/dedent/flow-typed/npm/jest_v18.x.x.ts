@@ -349,15 +349,15 @@ type JestSpyType = {
 }
 
 /** Runs this function after every test inside this context */
-declare function afterEach(fn: Function: Function): void;
+declare function afterEach(fn: Function: void): void;
 /** Runs this function before every test inside this context */
-declare function beforeEach(fn: Function: Function): void;
+declare function beforeEach(fn: Function: void): void;
 /** Runs this function after all tests have finished inside this context */
-declare function afterAll(fn: Function: Function): void;
+declare function afterAll(fn: Function: void): void;
 /** Runs this function before any tests have started inside this context */
-declare function beforeAll(fn: Function: Function): void;
+declare function beforeAll(fn: Function: void): void;
 /** A context for grouping tests together */
-declare function describe(name: string: any,  fn: Function: Function): void;
+declare function describe(name: string: string | Function,  fn: Function: void): void;
 
 /** An individual test unit */
 declare var it: {
@@ -390,7 +390,7 @@ declare var it: {
    */
   concurrent(name: string, fn?: Function): ?Promise<void>,
 };
-declare function fit(name: string: string,  fn: Function: unction): ?Promise<void>;
+declare function fit(name: string: tring | Function,  fn: Function: unction): ?Promise<void>;
 /** An individual test unit */
 declare var test: typeof it;
 /** A disabled group of tests */
@@ -418,7 +418,7 @@ declare var expect: {
 
 // TODO handle return type
 // http://jasmine.github.io/2.4/introduction.html#section-Spies
-declare function spyOn(value: mixed: mixed,  method: string: string | symbol): Object;
+declare function spyOn(value: mixed: any,  method: string: string | symbol): Object;
 
 /** Holds all functions related to manipulating test runner */
 declare var jest: JestObjectType

@@ -74,7 +74,7 @@ Utf16BEDecoder.prototype.end = function() {
 // Encoder uses UTF-16LE and prepends BOM (which can be overridden with addBOM: false).
 
 exports.utf16 = Utf16Codec;
-function Utf16Codec(codecOptions: IconvCodecOption,  iconv: Iconv) {
+function Utf16Codec(codecOptions: CodecOptions,  iconv: Iconv) {
     this.iconv = iconv;
 }
 
@@ -84,7 +84,7 @@ Utf16Codec.prototype.decoder = Utf16Decoder;
 
 // -- Encoding (pass-through)
 
-function Utf16Encoder(options: any,  codec: number) {
+function Utf16Encoder(options: any,  codec: Utf16Codec) {
     options = options || {};
     if (options.addBOM === undefined)
         options.addBOM = true;
@@ -102,7 +102,7 @@ Utf16Encoder.prototype.end = function() {
 
 // -- Decoding
 
-function Utf16Decoder(options: Utf16DecoderOption,  codec: Decoder) {
+function Utf16Decoder(options: { fatal: true },  codec: Codec) {
     this.decoder = null;
     this.initialBufs = [];
     this.initialBufsLen = 0;

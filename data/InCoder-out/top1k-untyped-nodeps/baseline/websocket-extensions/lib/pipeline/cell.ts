@@ -3,7 +3,7 @@
 var Functor = require('./functor'),
     Pledge  = require('./pledge');
 
-var Cell = function(tuple: Array<string>) {
+var Cell = function(tuple: Tuple) {
   this._ext     = tuple[0];
   this._session = tuple[1];
 
@@ -13,7 +13,7 @@ var Cell = function(tuple: Array<string>) {
   };
 };
 
-Cell.prototype.pending = function(direction: any) {
+Cell.prototype.pending = function(direction: number) {
   var functor = this._functors[direction];
   if (!functor._stopped) functor.pending += 1;
 };
@@ -32,7 +32,7 @@ Cell.prototype.close = function() {
   return this._closed;
 };
 
-Cell.prototype._exec = function(direction: any,  error: any,  message: any,  callback: Function,  context: Object) {
+Cell.prototype._exec = function(direction: number,  error: Error,  message: string,  callback: Function,  context: Object) {
   this._functors[direction].call(error, message, function(err: Error,  msg: String) {
     if (err) err.message = this._ext.name + ': ' + err.message;
     callback.call(context, err, msg);

@@ -1,4 +1,4 @@
-export function detectNewline(string: any) {
+export function detectNewline(string: ring | Buffer) {
 	if (typeof string !== 'string') {
 		throw new TypeError('Expected a string');
 	}
@@ -15,6 +15,6 @@ export function detectNewline(string: any) {
 	return crlf > lf ? '\r\n' : '\n';
 }
 
-export function detectNewlineGraceful(string: string | null) {
+export function detectNewlineGraceful(string: string | null | undefined) {
 	return (typeof string === 'string' && detectNewline(string)) || '\n';
 }

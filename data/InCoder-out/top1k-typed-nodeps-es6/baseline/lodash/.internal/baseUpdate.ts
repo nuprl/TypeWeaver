@@ -11,7 +11,7 @@ import baseSet from './baseSet.js'
  * @param {Function} [customizer] The function to customize path creation.
  * @returns {Object} Returns `object`.
  */
-function baseUpdate(object: Object,  path: Array<string>,  updater: Function,  customizer: Function) {
+function baseUpdate(object: Object,  path: Array<any>,  updater: Function,  customizer: Function) {
   return baseSet(object, path, updater(baseGet(object, path)), customizer)
 }
 

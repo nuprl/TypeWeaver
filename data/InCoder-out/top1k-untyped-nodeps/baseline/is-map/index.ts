@@ -23,7 +23,7 @@ if (!exported && !$mapHas) {
 	};
 }
 
-module.exports = exported || function isMap(x: Object) {
+module.exports = exported || function isMap(x: ny) {
 	if (!x || typeof x !== 'object') {
 		return false;
 	}

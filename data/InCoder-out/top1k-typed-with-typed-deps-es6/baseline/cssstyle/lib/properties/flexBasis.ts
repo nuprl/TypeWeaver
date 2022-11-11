@@ -12,12 +12,12 @@ function parse(v: any) {
   return parseMeasurement(v);
 }
 
-export const isValid = function isValid(v: string) {
+export const isValid = function isValid(v: ny) {
   return parse(v) !== undefined;
 };
 
 export const definition = {
-  set: function(v: any) {
+  set: function(v: string | number) {
     this._setProperty('flex-basis', parse(v));
   },
   get: function() {

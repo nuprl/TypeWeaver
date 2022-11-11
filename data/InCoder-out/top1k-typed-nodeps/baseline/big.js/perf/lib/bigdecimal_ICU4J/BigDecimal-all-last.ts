@@ -807,7 +807,7 @@ function div(a: number,  b: number) {
 
 BigDecimal.prototype.div = div;
 
-function arraycopy(src: ArrayLike,  srcindex: number,  dest: ArrayLike,  destindex: number,  length: number) {
+function arraycopy(src: ArrayLike<number>,  srcindex: number,  dest: any,  destindex: number,  length: number) {
     var i;
     if (destindex > srcindex) {
         // in case src and dest are equals, but also doesn't hurt
@@ -5112,7 +5112,7 @@ BigDecimal.ONE = BigDecimal.prototype.ONE = new BigDecimal("1");
  /* <sgml> Report a conversion exception. </sgml> */
 
  //--private void bad(char s[]){
- function bad(prefix: any,  s: string) {
+ function bad(prefix: any,  s: any) {
   throw prefix + "Not a number: "+s;
   }
 
@@ -5134,7 +5134,7 @@ BigDecimal.ONE = BigDecimal.prototype.ONE = new BigDecimal("1");
     */
 
  //--private static final byte[] extend(byte inarr[],int newlen){
- function extend(inarr: Uint8Array,  newlen: number) {
+ function extend(inarr: ArrayLike<number>,  newlen: number) {
   //--byte newarr[];
   var newarr;
   if (inarr.length==newlen)
@@ -5182,7 +5182,7 @@ BigDecimal.ONE = BigDecimal.prototype.ONE = new BigDecimal("1");
  // 1999.12.22 -- special case m=-1, also drop 0 special case
 
  //--private static final byte[] byteaddsub(byte a[],int avlen,byte b[],int bvlen,int m,boolean reuse){
- function byteaddsub(a: Uint8Array,  avlen: number,  b: Uint8Array,  bvlen: number,  m: Uint8Array,  reuse: number) {
+ function byteaddsub(a: number,  avlen: number,  b: number,  bvlen: number,  m: number,  reuse: number) {
   //--int alength;
   var alength;
   //--int blength;
@@ -5548,7 +5548,7 @@ BigDecimal.ONE = BigDecimal.prototype.ONE = new BigDecimal("1");
     </sgml> */
 
  //--private static final boolean allzero(byte array[],int start){
- function allzero(array: Array,  start: number) {
+ function allzero(array: number[],  start: number) {
   //--int i=0;
   var i=0;
   if (start<0)
@@ -5579,7 +5579,7 @@ BigDecimal.ONE = BigDecimal.prototype.ONE = new BigDecimal("1");
    */
 
  //--private com.ibm.icu.math.BigDecimal finish(com.ibm.icu.math.MathContext set,boolean strip){
- function finish(set: number,  strip: number) {
+ function finish(set: Set<any>,  strip: number) {
   //--int d=0;
   var d=0;
   //--int i=0;
@@ -5686,16 +5686,16 @@ BigDecimal.ONE = BigDecimal.prototype.ONE = new BigDecimal("1");
   return this;
   }
 
- function isGreaterThan(other: number) {
+ function isGreaterThan(other: BigNumber) {
   return this.compareTo(other) > 0;
  };
- function isLessThan(other: number) {
+ function isLessThan(other: BigInt) {
   return this.compareTo(other) < 0;
  };
  function isGreaterThanOrEqualTo(other: number) {
   return this.compareTo(other) >= 0;
  };
- function isLessThanOrEqualTo(other: number) {
+ function isLessThanOrEqualTo(other: Date) {
   return this.compareTo(other) <= 0;
  };
  function isPositive() {

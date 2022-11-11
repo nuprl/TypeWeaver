@@ -1,5 +1,5 @@
-;(function (sax: SAX) { // wrapper for non-node envs
-  sax.parser = function (strict: boolean,  opt: SAXParserOptions) { return new SAXParser(strict, opt) }
+;(function (sax: sax.SAX) { // wrapper for non-node envs
+  sax.parser = function (strict: Boolean,  opt: Option) { return new SAXParser(strict, opt) }
   sax.SAXParser = SAXParser
   sax.SAXStream = SAXStream
   sax.createStream = createStream
@@ -42,7 +42,7 @@
     'closenamespace'
   ]
 
-  function SAXParser (strict: boolean,  opt: SAXParserOptions) {
+  function SAXParser (strict: Boolean,  opt: Options) {
     if (!(this instanceof SAXParser)) {
       return new SAXParser(strict, opt)
     }
@@ -80,7 +80,7 @@
   }
 
   if (!Object.create) {
-    Object.create = function (o: Object) {
+    Object.create = function (o: any) {
       function F () {}
       F.prototype = o
       var newf = new F()
@@ -96,7 +96,7 @@
     }
   }
 
-  function checkBufferLength (parser: Parser) {
+  function checkBufferLength (parser: BufferParser) {
     var maxAllowed = Math.max(sax.MAX_BUFFER_LENGTH, 10)
     var maxActual = 0
     for (var i = 0, l = buffers.length; i < l; i++) {
@@ -169,11 +169,11 @@
     return ev !== 'error' && ev !== 'end'
   })
 
-  function createStream (strict: boolean,  opt: StreamOptions) {
+  function createStream (strict: Boolean,  opt: Options) {
     return new SAXStream(strict, opt)
   }
 
-  function SAXStream (strict: boolean,  opt: SAXOptions) {
+  function SAXStream (strict: Boolean,  opt: Options) {
     if (!(this instanceof SAXStream)) {
       return new SAXStream(strict, opt)
     }
@@ -205,7 +205,7 @@
         get: function () {
           return me._parser['on' + ev]
         },
-        set: function (h: number) {
+        set: function (h: any) {
           if (!h) {
             me.removeAllListeners(ev)
             me._parser['on' + ev] = h
@@ -287,11 +287,11 @@
     return c === ' ' || c === '\n' || c === '\r' || c === '\t'
   }
 
-  function isQuote (c: any) {
+  function isQuote (c: number) {
     return c === '"' || c === '\''
   }
 
-  function isAttribEnd (c: any) {
+  function isAttribEnd (c: number) {
     return c === '>' || isWhitespace(c)
   }
 
@@ -299,7 +299,7 @@
     return regex.test(c)
   }
 
-  function notMatch (regex: egExp,  c: ny) {
+  function notMatch (regex: egExp,  c: gExp) {
     return !isMatch(regex, c)
   }
 
@@ -635,7 +635,7 @@
     parser.textNode = ''
   }
 
-  function textopts (opt: Object,  text: String) {
+  function textopts (opt: TextOpt,  text: Text) {
     if (opt.trim) text = text.trim()
     if (opt.normalize) text = text.replace(/\s+/g, ' ')
     return text
@@ -691,7 +691,7 @@
     emitNode(parser, 'onopentagstart', tag)
   }
 
-  function qname (name: String,  attribute: String) {
+  function qname (name: String,  attribute: Boolean) {
     var i = name.indexOf(':')
     var qualName = i < 0 ? [ '', name ] : name.split(':')
     var prefix = qualName[0]
@@ -908,7 +908,7 @@
     parser.state = S.TEXT
   }
 
-  function parseEntity (parser: Parser) {
+  function parseEntity (parser: any) {
     var entity = parser.entity
     var entityLC = entity.toLowerCase()
     var num
@@ -941,7 +941,7 @@
     return String.fromCodePoint(num)
   }
 
-  function beginWhiteSpace (parser: Parser,  c: any) {
+  function beginWhiteSpace (parser: Parser,  c: Char) {
     if (c === '<') {
       parser.state = S.OPEN_WAKA
       parser.startTagPosition = parser.position
@@ -954,7 +954,7 @@
     }
   }
 
-  function charAt (chunk: number,  i: number) {
+  function charAt (chunk: Buffer,  i: number) {
     var result = ''
     if (i < chunk.length) {
       result = chunk.charAt(i)

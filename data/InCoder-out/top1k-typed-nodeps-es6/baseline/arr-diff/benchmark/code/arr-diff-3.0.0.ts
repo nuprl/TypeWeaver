@@ -3,7 +3,7 @@
 import flatten from 'arr-flatten';
 var slice = [].slice;
 
-export default function(arr: Array,  arrays: Array) {
+export default function(arr: number[],  arrays: number[][]) {
   arrays = flatten(slice.call(arguments, 1));
   var len = arrays.length;
   for (var i = 0; i < len; i++) {

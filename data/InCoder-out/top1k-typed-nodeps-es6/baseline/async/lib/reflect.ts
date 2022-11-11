@@ -33,7 +33,7 @@ import wrapAsync from './internal/wrapAsync.js'
  *     })
  * ],
  * // optional callback
- * function(err: Error,  results: any) {
+ * function(err: MongoError,  results: any) {
  *     // values
  *     // results[0].value = 'one'
  *     // results[1].error = 'bad stuff happened'

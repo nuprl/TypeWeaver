@@ -2,7 +2,7 @@
 
 import flatten from 'arr-flatten';
 
-export default function diff(arr: Array,  arrays: Array) {
+export default function diff(arr: number[][],  arrays: number[][]) {
   arrays = flatten([].slice.call(arguments, 1));
   var len = arrays.length;
   for (var i = 0; i < len; i++) {

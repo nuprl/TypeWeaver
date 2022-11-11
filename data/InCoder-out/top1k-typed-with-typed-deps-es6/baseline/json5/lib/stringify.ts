@@ -58,7 +58,7 @@ export default function stringify (value: any,  replacer: Function,  space: numb
 
     return serializeProperty('', {'': value})
 
-    function serializeProperty (key: string | number,  holder: any) {
+    function serializeProperty (key: any,  holder: any) {
         let value = holder[key]
         if (value != null) {
             if (typeof value.toJSON5 === 'function') {
@@ -205,7 +205,7 @@ export default function stringify (value: any,  replacer: Function,  space: numb
         return final
     }
 
-    function serializeKey (key: string | number) {
+    function serializeKey (key: string | Uint8Array) {
         if (key.length === 0) {
             return quoteString(key, true)
         }

@@ -1,4 +1,4 @@
-export default function prependHttp(url: string | URL,  {https = true} = {}: URL) {
+export default function prependHttp(url: string | Request,  {https = true} = {}: RequestOptions) {
 	if (typeof url !== 'string') {
 		throw new TypeError(`Expected \`url\` to be of type \`string\`, got \`${typeof url}\``);
 	}

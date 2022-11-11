@@ -37,7 +37,7 @@ function hasPipeDataListeners (stream: Stream) {
  * @public
  */
 
-function unpipe (stream: NodeJS.Readable) {
+function unpipe (stream: NodeJS.ReadableStream) {
   if (!stream) {
     throw new TypeError('argument stream is required')
   }

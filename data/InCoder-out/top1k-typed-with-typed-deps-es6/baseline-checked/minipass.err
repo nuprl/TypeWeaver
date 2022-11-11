@@ -3,10 +3,19 @@ bench/impls/baseline.ts(8,10): error TS2339: Property 'pipeDests' does not exist
 bench/impls/baseline.ts(12,10): error TS2339: Property 'pipeDests' does not exist on type 'BaselineNoOpStream'.
 bench/impls/extend-minipass-current.ts(8,18): error TS2554: Expected 3 arguments, but got 2.
 bench/impls/extend-minipass.ts(1,22): error TS2307: Cannot find module 'minipass' or its corresponding type declarations.
+bench/impls/extend-through2.ts(3,32): error TS2304: Cannot find name 'Options'.
+bench/impls/extend-through2.ts(5,25): error TS2345: Argument of type '(data: Buffer, enc: Buffer, done: Function) => void' is not assignable to parameter of type 'TransformFunction'.
+  Types of parameters 'enc' and 'enc' are incompatible.
+    Type 'string' is not assignable to type 'Buffer'.
+      Type 'string' is not assignable to type 'Buffer'.
 bench/impls/extend-through2.ts(6,3): error TS2304: Cannot find name 's'.
+bench/impls/extend-through2.ts(6,16): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(transform?: TransformFunction, flush?: FlushCallback): Transform', gave the following error.
+    Argument of type '(data: Buffer, enc: Buffer, done: Function) => void' is not assignable to parameter of type 'TransformFunction'.
+  Overload 2 of 2, '(opts?: DuplexOptions, transform?: TransformFunction, flush?: FlushCallback): Transform', gave the following error.
+    Type '(data: Buffer, enc: Buffer, done: Function) => void' has no properties in common with type 'DuplexOptions'.
 bench/impls/extend-through2.ts(8,5): error TS2304: Cannot find name 's'.
 bench/impls/extend-through2.ts(10,10): error TS2304: Cannot find name 's'.
-bench/impls/extend-through2.ts(12,38): error TS2552: Cannot find name 'BufferEncoder'. Did you mean 'BufferEncoding'?
 bench/impls/minipass-current-async.ts(5,13): error TS2339: Property 'async' does not exist on type '{}'.
 bench/impls/push-through.ts(5,10): error TS2339: Property 'dests' does not exist on type 'PushThrough'.
 bench/impls/push-through.ts(6,10): error TS2551: Property 'paused' does not exist on type 'PushThrough'. Did you mean 'pause'?

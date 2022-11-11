@@ -22,7 +22,7 @@ export const isValid = function isValid(v: any) {
 };
 
 export const definition = {
-  set: function(v: any) {
+  set: function(v: number) {
     this._setProperty('font-weight', v);
   },
   get: function() {

@@ -13,7 +13,7 @@ export default function () {
   }
 };
 
-function makeTypoWarning (providedName: string | undefined,  probableName: string | undefined,  field: Field) {
+function makeTypoWarning (providedName: string | undefined,  probableName: string | undefined,  field: Field<any>) {
   if (field) {
     providedName = field + "['" + providedName + "']"
     probableName = field + "['" + probableName + "']"

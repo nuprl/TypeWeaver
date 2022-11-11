@@ -10,7 +10,7 @@ compileModule(yargs.argv, (err) => {
     if (err) throw err;
 })
 
-function compileModule(options: CompilerOptions,  callback: Function) {
+function compileModule(options: CompilerOptions,  callback: CompilerCallback) {
     const {file, output} = options;
     const plugins = [
         pluginModuleExports,

@@ -1,8 +1,8 @@
 Source directory: .
 Dataset: top1k-untyped-with-typed-deps-es6
-Type checking with: /mnt/data/mhyee/not-type-inference/tools/node_modules/typescript/bin/tsc
-Input directory: /mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-untyped-with-typed-deps-es6/baseline
-Output directory: /mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-untyped-with-typed-deps-es6/baseline-checked
+Type checking with: /work/arjunguha-research-group/mhyee/not-type-inference/tools/node_modules/typescript/bin/tsc
+Input directory: /work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-untyped-with-typed-deps-es6/baseline
+Output directory: /work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-untyped-with-typed-deps-es6/baseline-checked
 Found 39 packages
 [1/39] @npmcli_move-file ... [FAIL]
 [2/39] array-includes ... [FAIL]
@@ -17,7 +17,7 @@ Found 39 packages
 [11/39] fs-write-stream-atomic ... [FAIL]
 [12/39] get-symbol-description ... [ OK ]
 [13/39] has-tostringtag ... [ OK ]
-[14/39] has-values ... [FAIL]
+[14/39] has-values ... [ OK ]
 [15/39] is-nan ... [FAIL]
 [16/39] is-symbol ... [FAIL]
 [17/39] is-weakset ... [FAIL]
@@ -43,7 +43,7 @@ Found 39 packages
 [37/39] to-object-path ... [FAIL]
 [38/39] union-value ... [FAIL]
 [39/39] unique-slug ... [FAIL]
-Number of successes: 3
-Number of fails: 36
+Number of successes: 4
+Number of fails: 35
 Number of skips: 0
-Time for type checking: 0:00:24
+Time for type checking: 0:00:12

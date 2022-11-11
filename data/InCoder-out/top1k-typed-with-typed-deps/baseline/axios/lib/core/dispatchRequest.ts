@@ -13,7 +13,7 @@ import AxiosHeaders from '../core/AxiosHeaders.js';
  *
  * @returns {void}
  */
-function throwIfCancellationRequested(config: Config) {
+function throwIfCancellationRequested(config: RequestConfig) {
   if (config.cancelToken) {
     config.cancelToken.throwIfRequested();
   }
@@ -43,7 +43,7 @@ export default function dispatchRequest(config: RequestConfig) {
 
   const adapter = config.adapter || defaults.adapter;
 
-  return adapter(config).then(function onAdapterResolution(response: AdapterResolutionResponse) {
+  return adapter(config).then(function onAdapterResolution(response: Response) {
     throwIfCancellationRequested(config);
 
     // Transform response data
@@ -56,7 +56,7 @@ export default function dispatchRequest(config: RequestConfig) {
     response.headers = AxiosHeaders.from(response.headers);
 
     return response;
-  }, function onAdapterRejection(reason: Cancel) {
+  }, function onAdapterRejection(reason: any) {
     if (!isCancel(reason)) {
       throwIfCancellationRequested(config);
 

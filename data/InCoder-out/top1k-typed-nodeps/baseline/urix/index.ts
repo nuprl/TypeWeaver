@@ -5,7 +5,7 @@
 
 var path = require("path")
 
-function urix(aPath: string | undefined) {
+function urix(aPath: string | Buffer) {
   if (path.sep === "\\") {
     return aPath
       .replace(/\\/g, "/")

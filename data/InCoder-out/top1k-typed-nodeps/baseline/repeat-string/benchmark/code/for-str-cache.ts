@@ -3,7 +3,7 @@
 var res = '';
 var cache;
 
-module.exports = function repeat(str: String,  count: Int) {
+module.exports = function repeat(str: any,  count: number) {
   var max = (str.length * count);
   var i = 0;
 

@@ -7,7 +7,7 @@ import {
     hasSimilarSelectors
 } from './utils.js';
 
-function processRule(node: RuleNode,  item: RuleItem,  list: ListNode) {
+function processRule(node: CssNode,  item: CssNode,  list: CssNode[]) {
     const selectors = node.prelude.children;
     const declarations = node.block.children;
 

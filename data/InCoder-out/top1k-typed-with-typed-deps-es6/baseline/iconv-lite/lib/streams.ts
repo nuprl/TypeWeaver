@@ -4,12 +4,12 @@ import { Buffer } from 'safer-buffer';
 
 // NOTE: Due to 'stream' module being pretty large (~100Kb, significant in browser environments), 
 // we opt to dependency-inject it instead of creating a hard dependency.
-export default function(stream_module: stream_module) {
+export default function(stream_module: StreamModule) {
     var Transform = stream_module.Transform;
 
     // == Encoder stream =======================================================
 
-    function IconvLiteEncoderStream(conv: IconvLite,  options: IconvLiteEncoderOption) {
+    function IconvLiteEncoderStream(conv: IconvLiteEncoder,  options: IconvLiteEncoderOption) {
         this.conv = conv;
         options = options || {};
         options.decodeStrings = false; // We accept only strings, so we don't need to decode them.
@@ -20,7 +20,7 @@ export default function(stream_module: stream_module) {
         constructor: { value: IconvLiteEncoderStream }
     });
 
-    IconvLiteEncoderStream.prototype._transform = function(chunk: Buffer,  encoding: string,  done: Function) {
+    IconvLiteEncoderStream.prototype._transform = function(chunk: Buffer,  encoding: BufferEncoding,  done: Function) {
         if (typeof chunk != 'string')
             return done(new Error("Iconv encoding stream needs strings as its input."));
         try {
@@ -68,7 +68,7 @@ export default function(stream_module: stream_module) {
         constructor: { value: IconvLiteDecoderStream }
     });
 
-    IconvLiteDecoderStream.prototype._transform = function(chunk: Buffer,  encoding: string,  done: Function) {
+    IconvLiteDecoderStream.prototype._transform = function(chunk: Buffer,  encoding: BufferEncoding,  done: Function) {
         if (!Buffer.isBuffer(chunk) && !(chunk instanceof Uint8Array))
             return done(new Error("Iconv decoding stream needs buffers as its input."));
         try {

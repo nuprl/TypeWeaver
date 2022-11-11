@@ -21,7 +21,7 @@ import baseWhile from './.internal/baseWhile.js'
  * takeRightWhile(users, ({ active }) => active)
  * // => objects for ['fred', 'pebbles']
  */
-function takeRightWhile(array: Array,  predicate: Function) {
+function takeRightWhile(array: ReadonlyArray<any>,  predicate: Function) {
   return (array != null && array.length)
     ? baseWhile(array, predicate, false, true)
     : []

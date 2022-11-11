@@ -32,7 +32,7 @@ var TYPE_LINE_REGEXP = /^(?:# )?([\w-]+\/[\w+.-]+)((?:\s+[\w-]+)*)$/gm
  */
 var URL = 'https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types'
 
-get(URL, function onResponse (err: any,  body: Object) {
+get(URL, function onResponse (err: Error,  body: Object) {
   if (err) throw err
 
   var json = {}
@@ -92,7 +92,7 @@ function appendExtensions (obj: any,  extensions: any) {
 /**
  * Get HTTPS resource.
  */
-function get (url: string | URL,  callback: Function) {
+function get (url: string | Request,  callback: RequestCallback) {
   https.get(url, function onResponse (res: esponse) {
     if (res.statusCode !== 200) {
       callback(new Error('got status code ' + res.statusCode + ' from ' + URL))

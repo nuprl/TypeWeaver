@@ -23,7 +23,7 @@ var parse = function(val: any) {
   if (parts.length !== 4) {
     return undefined;
   }
-  var valid = parts.every(function(part: number,  index: number) {
+  var valid = parts.every(function(part: Part,  index: number) {
     var measurement = parseMeasurement(part);
     parts[index] = measurement;
     return measurement !== undefined;

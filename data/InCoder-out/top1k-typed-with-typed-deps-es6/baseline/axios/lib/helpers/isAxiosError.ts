@@ -9,6 +9,6 @@ import utils from './../utils.js';
  *
  * @returns {boolean} True if the payload is an error thrown by Axios, otherwise false
  */
-export default function isAxiosError(payload: AxiosError) {
+export default function isAxiosError(payload: any) {
   return utils.isObject(payload) && (payload.isAxiosError === true);
 }

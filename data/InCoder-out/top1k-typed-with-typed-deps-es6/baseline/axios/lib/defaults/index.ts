@@ -41,7 +41,7 @@ function getDefaultAdapter() {
  *
  * @returns {string} A stringified version of the rawValue.
  */
-function stringifySafely(rawValue: any,  parser: Function,  encoder: Function) {
+function stringifySafely(rawValue: any,  parser: JsonParser,  encoder: JsonEncoder) {
   if (utils.isString(rawValue)) {
     try {
       (parser || JSON.parse)(rawValue);
@@ -178,7 +178,7 @@ utils.forEach(['delete', 'get', 'head'], function forEachMethodNoData(method: Fu
   defaults.headers[method] = {};
 });
 
-utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method: Function) {
+utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method: Method) {
   defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
 });
 

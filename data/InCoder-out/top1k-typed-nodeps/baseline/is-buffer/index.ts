@@ -5,7 +5,7 @@
  * @license  MIT
  */
 
-module.exports = function isBuffer (obj: mixed) {
+module.exports = function isBuffer (obj: Buffer) {
   return obj != null && obj.constructor != null &&
     typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
 }

@@ -3,7 +3,7 @@ const dedent = require("./dedent.js").default;
 
 module.exports = createMacro(prevalMacros);
 
-function prevalMacros({ references: references,  state: state,  babel }: IProps) {
+function prevalMacros({ references: references,  state: state,  babel }: Props) {
   references.default.forEach(referencePath => {
     if (referencePath.parentPath.type === "TaggedTemplateExpression") {
       asTag(referencePath.parentPath.get("quasi"), state, babel);
@@ -19,14 +19,14 @@ function prevalMacros({ references: references,  state: state,  babel }: IProps)
   });
 }
 
-function asTag(quasiPath: NodePath,  { file: { opts: { filename } } }: Object,  babel: Object) {
+function asTag(quasiPath: QuasiPath,  { file: { opts: { filename } } }: {},  babel: false) {
   const string = quasiPath.parentPath.get("quasi").evaluate().value;
   const { types: t } = babel;
 
   quasiPath.parentPath.replaceWith(t.stringLiteral(dedent(string)));
 }
 
-function asFunction(argumentsPaths: Array<string>,  { file: { opts: { filename } } }: babel.transformFileSync,  babel: babel) {
+function asFunction(argumentsPaths: Array<string>,  { file: { opts: { filename } } }: {},  babel: false) {
   const string = argumentsPaths[0].evaluate().value;
   const { types: t } = babel;
 

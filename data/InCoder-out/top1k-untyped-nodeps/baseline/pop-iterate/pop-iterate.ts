@@ -4,7 +4,7 @@ var ArrayIterator = require("./array-iterator");
 var ObjectIterator = require("./object-iterator");
 
 module.exports = iterate;
-function iterate(iterable: Iterable<any>,  start: number,  stop: number,  step: number) {
+function iterate(iterable: any,  start: number,  stop: number,  step: number) {
     if (!iterable) {
         return empty;
     } else if (Array.isArray(iterable)) {

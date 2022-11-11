@@ -5,7 +5,7 @@
  * @param {Object} map The map to convert.
  * @returns {Array} Returns the key-value pairs.
  */
-function mapToArray(map: Map<string, any>) {
+function mapToArray(map: Map<any, any>) {
   let index = -1
   const result = new Array(map.size)
 

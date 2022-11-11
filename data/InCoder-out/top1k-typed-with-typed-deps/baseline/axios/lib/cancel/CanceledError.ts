@@ -12,7 +12,7 @@ import utils from '../utils.js';
  *
  * @returns {CanceledError} The created error.
  */
-function CanceledError(message: string | Error,  config: RequestConfig,  request: Request) {
+function CanceledError(message: any,  config: any,  request: any) {
   // eslint-disable-next-line no-eq-null,eqeqeq
   AxiosError.call(this, message == null ? 'canceled' : message, AxiosError.ERR_CANCELED, config, request);
   this.name = 'CanceledError';

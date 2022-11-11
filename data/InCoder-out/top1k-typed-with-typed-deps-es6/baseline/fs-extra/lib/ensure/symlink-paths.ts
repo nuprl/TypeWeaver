@@ -64,7 +64,7 @@ function symlinkPaths (srcpath: string,  dstpath: string,  callback: Function) {
   }
 }
 
-function symlinkPathsSync (srcpath: string,  dstpath: string) {
+function symlinkPathsSync (srcpath: string | Buffer,  dstpath: string | Buffer) {
   let exists
   if (path.isAbsolute(srcpath)) {
     exists = fs.existsSync(srcpath)

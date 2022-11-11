@@ -4,7 +4,7 @@
  * implementations of `debug()`.
  */
 
-function setup(env: Env) {
+function setup(env: Environment) {
 	createDebug.debug = createDebug;
 	createDebug.default = createDebug;
 	createDebug.coerce = coerce;
@@ -38,7 +38,7 @@ function setup(env: Env) {
 	* @return {Number|String} An ANSI color code for the given namespace
 	* @api private
 	*/
-	function selectColor(namespace: string | undefined) {
+	function selectColor(namespace: ColorNamespace) {
 		let hash = 0;
 
 		for (let i = 0; i < namespace.length; i++) {
@@ -57,7 +57,7 @@ function setup(env: Env) {
 	* @return {Function}
 	* @api public
 	*/
-	function createDebug(namespace: string | undefined) {
+	function createDebug(namespace: string | null) {
 		let prevTime;
 		let enableOverride = null;
 		let namespacesCache;
@@ -146,7 +146,7 @@ function setup(env: Env) {
 		return debug;
 	}
 
-	function extend(namespace: any,  delimiter: string) {
+	function extend(namespace: any,  delimiter: any) {
 		const newDebug = createDebug(this.namespace + (typeof delimiter === 'undefined' ? ':' : delimiter) + namespace);
 		newDebug.log = this.log;
 		return newDebug;
@@ -159,7 +159,7 @@ function setup(env: Env) {
 	* @param {String} namespaces
 	* @api public
 	*/
-	function enable(namespaces: any) {
+	function enable(namespaces: string | string[]) {
 		createDebug.save(namespaces);
 		createDebug.namespaces = namespaces;
 
@@ -208,7 +208,7 @@ function setup(env: Env) {
 	* @return {Boolean}
 	* @api public
 	*/
-	function enabled(name: string) {
+	function enabled(name: any) {
 		if (name[name.length - 1] === '*') {
 			return true;
 		}

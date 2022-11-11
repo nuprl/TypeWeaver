@@ -37,7 +37,7 @@ function percentDecodeBytes(input: Uint8Array) {
 }
 
 // https://url.spec.whatwg.org/#string-percent-decode
-function percentDecodeString(input: string | Uint8Array) {
+function percentDecodeString(input: any) {
   const bytes = utf8Encode(input);
   return percentDecodeBytes(bytes);
 }
@@ -79,7 +79,7 @@ function isUserinfoPercentEncode(c: number) {
 
 // https://url.spec.whatwg.org/#component-percent-encode-set
 const extraComponentPercentEncodeSet = new Set([p("$"), p("%"), p("&"), p("+"), p(",")]);
-function isComponentPercentEncode(c: Component) {
+function isComponentPercentEncode(c: number) {
   return isUserinfoPercentEncode(c) || extraComponentPercentEncodeSet.has(c);
 }
 
@@ -94,7 +94,7 @@ function isURLEncodedPercentEncode(c: number) {
 // Assuming encoding is always utf-8 allows us to trim one of the logic branches. TODO: support encoding.
 // The "-Internal" variant here has code points as JS strings. The external version used by other files has code points
 // as JS numbers, like the rest of the codebase.
-function utf8PercentEncodeCodePointInternal(codePoint: number,  percentEncodePredicate: Predicate<string>) {
+function utf8PercentEncodeCodePointInternal(codePoint: number,  percentEncodePredicate: (n: number) => boolean) {
   const bytes = utf8Encode(codePoint);
   let output = "";
   for (const byte of bytes) {
@@ -109,13 +109,13 @@ function utf8PercentEncodeCodePointInternal(codePoint: number,  percentEncodePre
   return output;
 }
 
-function utf8PercentEncodeCodePoint(codePoint: number,  percentEncodePredicate: Predicate<string>) {
+function utf8PercentEncodeCodePoint(codePoint: number,  percentEncodePredicate: (n: number) => boolean) {
   return utf8PercentEncodeCodePointInternal(String.fromCodePoint(codePoint), percentEncodePredicate);
 }
 
 // https://url.spec.whatwg.org/#string-percent-encode-after-encoding
 // https://url.spec.whatwg.org/#string-utf-8-percent-encode
-function utf8PercentEncodeString(input: string | Uint8Array,  percentEncodePredicate: encodePercent,  spaceAsPlus = false: encodeURIComponent) {
+function utf8PercentEncodeString(input: any,  percentEncodePredicate: _.EscapedPredicate,  spaceAsPlus = false: any) {
   let output = "";
   for (const codePoint of input) {
     if (spaceAsPlus && codePoint === " ") {

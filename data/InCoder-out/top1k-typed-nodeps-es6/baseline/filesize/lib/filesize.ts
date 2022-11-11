@@ -5,13 +5,13 @@
  * @license BSD-3-Clause
  * @version 9.0.11
  */
-(function (global: any,  factory: Function) {
+(function (global: any,  factory: any) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.filesize = factory());
 })(this, (function () { 'use strict';
 
-  function _typeof(obj: mixed) {
+  function _typeof(obj: any) {
     "@babel/helpers - typeof";
 
     return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj: any) {

@@ -31,7 +31,7 @@ for (let type in db) {
       keep = e0.pri >= e1.pri ? e0 : e1;
 
       // Prefix lower-priority extensions with '*'
-      drop.extensions = drop.extensions.map(function(e: ny) {
+      drop.extensions = drop.extensions.map(function(e: xtension) {
         return e === ext ? '*' + e : e;
       });
 
@@ -46,7 +46,7 @@ for (let type in db) {
   });
 }
 
-function writeTypesFile(types: TypeScriptService,  path: Path) {
+function writeTypesFile(types: string,  path: string) {
   fs.writeFileSync(path, 'module.exports = ' + JSON.stringify(types) + ';');
 }
 

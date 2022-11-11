@@ -56,7 +56,7 @@ const handlers = {
   },
 };
 
-function shouldProcess(expression: any,  charset: string | null) {
+function shouldProcess(expression: any,  charset: any) {
   if (!expression) {
     // Abort on empty disjunction part
     return false;

@@ -2,7 +2,7 @@ import nativeModule from 'module';
 import path from 'path';
 import fs from 'fs';
 
-function createRequire (filename: string | string[]) {
+function createRequire (filename: string | Buffer) {
   // Fallback to process.cwd() if no filename passed
   if (!filename) {
     filename = process.cwd()
@@ -28,7 +28,7 @@ function createRequire (filename: string | string[]) {
 }
 
 // Polyfill
-function _createRequire (filename: any) {
+function _createRequire (filename: string | Buffer) {
   const mod = new nativeModule.Module(filename, null)
   mod.filename = filename
   mod.paths = nativeModule.Module._nodeModulePaths(path.dirname(filename))

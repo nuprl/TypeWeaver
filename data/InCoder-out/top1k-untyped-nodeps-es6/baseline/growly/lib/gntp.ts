@@ -12,7 +12,7 @@ var nl = '\r\n';
  * @api private
  */
 
-function GNTP(type: string,  opts: any) {
+function GNTP(type: string,  opts: GNTPOptions) {
     opts = opts || {};
     this.type = type;
     this.host = opts.host || 'localhost';
@@ -51,7 +51,7 @@ GNTP.prototype.parseResp = function(resp: Response) {
     body = resp.slice(1);
 
     parsed.state = head.match(/-(OK|ERROR|CALLBACK)/)[0].slice(1);
-    body.forEach(function(ln: LineNumber) {
+    body.forEach(function(ln: any) {
         ln = ln.split(': ');
         parsed[ln[0]] = ln[1];
     });
@@ -98,7 +98,7 @@ GNTP.prototype.addResource = function(file: File) {
  * @api public
  */
 
-GNTP.prototype.add = function(name: String,  val: any) {
+GNTP.prototype.add = function(name: String,  val: Object) {
     if (val === undefined) 
         return;
 
@@ -154,7 +154,7 @@ GNTP.prototype.send = function(callback: Function) {
     socket.on('connect', function() {
         socket.write(self.request);
 
-        self.resources.forEach(function(res: Response) {
+        self.resources.forEach(function(res: http.ServerResponse) {
             socket.write(res.header);
             socket.write(res.file);
             socket.write(nl + nl);

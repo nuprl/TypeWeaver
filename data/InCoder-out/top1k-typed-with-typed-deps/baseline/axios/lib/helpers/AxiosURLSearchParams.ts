@@ -10,7 +10,7 @@ import toFormData from './toFormData.js';
  *
  * @returns {string} The encoded string.
  */
-function encode(str: string | number) {
+function encode(str: string | Buffer) {
   const charMap = {
     '!': '%21',
     "'": '%27',
@@ -20,7 +20,7 @@ function encode(str: string | number) {
     '%20': '+',
     '%00': '\x00'
   };
-  return encodeURIComponent(str).replace(/[!'()~]|%20|%00/g, function replacer(match: RegExpExecArray) {
+  return encodeURIComponent(str).replace(/[!'()~]|%20|%00/g, function replacer(match: RegExp) {
     return charMap[match];
   });
 }
@@ -33,7 +33,7 @@ function encode(str: string | number) {
  *
  * @returns {void}
  */
-function AxiosURLSearchParams(params: Object,  options: Object) {
+function AxiosURLSearchParams(params: URLSearchParams | string,  options: any) {
   this._pairs = [];
 
   params && toFormData(params, this, options);
@@ -41,7 +41,7 @@ function AxiosURLSearchParams(params: Object,  options: Object) {
 
 const prototype = AxiosURLSearchParams.prototype;
 
-prototype.append = function append(name: String,  value: Any) {
+prototype.append = function append(name: String,  value: String) {
   this._pairs.push([name, value]);
 };
 
@@ -50,7 +50,7 @@ prototype.toString = function toString(encoder: Encoder) {
     return encoder.call(this, value, encode);
   } : encode;
 
-  return this._pairs.map(function each(pair: Pair) {
+  return this._pairs.map(function each(pair: Array<any>) {
     return _encode(pair[0]) + '=' + _encode(pair[1]);
   }, '').join('&');
 };

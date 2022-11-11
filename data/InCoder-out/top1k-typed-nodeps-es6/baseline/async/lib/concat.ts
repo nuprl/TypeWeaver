@@ -95,7 +95,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function concat(coll: Collection,  iteratee: Function,  callback: Function) {
+function concat(coll: Collection,  iteratee: any,  callback: Function) {
     return concatLimit(coll, Infinity, iteratee, callback)
 }
 export default awaitify(concat, 3);

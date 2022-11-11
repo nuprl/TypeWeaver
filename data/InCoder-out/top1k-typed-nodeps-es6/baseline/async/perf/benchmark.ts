@@ -137,7 +137,7 @@ function createSuite(suiteConfig: SuiteConfig) {
     var suite = new Benchmark.Suite();
     var errored = false;
 
-    function addBench(version: number,  versionName: string | undefined) {
+    function addBench(version: Version,  versionName: VersionName) {
         var name = suiteConfig.name + " " + versionName;
 
         try {
@@ -194,7 +194,7 @@ function createSuite(suiteConfig: SuiteConfig) {
 
 }
 
-function requireVersion(tag: any) {
+function requireVersion(tag: Tag) {
     if (tag === "current") {
         return async;
     }
@@ -202,7 +202,7 @@ function requireVersion(tag: any) {
     return require("./versions/" + tag + "/");
 }
 
-function cloneVersion(tag: Tag,  callback: Callback) {
+function cloneVersion(tag: Tag,  callback: Function) {
     if (tag === "current") return callback();
 
     var versionDir = __dirname + "/versions/" + tag;

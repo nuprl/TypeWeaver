@@ -5,23 +5,23 @@ import rneedsContext from "./var/rneedsContext.js";
 import "../selector.js";
 
 // Implement the identical functionality for filter and not
-function winnow( elements: Array,  qualifier: String,  not : Boolean) {
+function winnow( elements: Array<Element>,  qualifier: Qualifier,  not : Qualifier) {
 	if ( typeof qualifier === "function" ) {
-		return jQuery.grep( elements, function( elem: Element,  i : number) {
+		return jQuery.grep( elements, function( elem: any,  i : number) {
 			return !!qualifier.call( elem, i, elem ) !== not;
 		} );
 	}
 
 	// Single element
 	if ( qualifier.nodeType ) {
-		return jQuery.grep( elements, function( elem : lement) {
+		return jQuery.grep( elements, function( elem : any) {
 			return ( elem === qualifier ) !== not;
 		} );
 	}
 
 	// Arraylike of elements (jQuery, arguments, Array)
 	if ( typeof qualifier !== "string" ) {
-		return jQuery.grep( elements, function( elem : Element) {
+		return jQuery.grep( elements, function( elem : elem.ownerDocument) {
 			return ( indexOf.call( qualifier, elem ) > -1 ) !== not;
 		} );
 	}
@@ -30,7 +30,7 @@ function winnow( elements: Array,  qualifier: String,  not : Boolean) {
 	return jQuery.filter( qualifier, elements, not );
 }
 
-jQuery.filter = function( expr: Expr,  elems: NodeList,  not : Expr) {
+jQuery.filter = function( expr: any,  elems: any,  not : boolean) {
 	var elem = elems[ 0 ];
 
 	if ( not ) {
@@ -41,13 +41,13 @@ jQuery.filter = function( expr: Expr,  elems: NodeList,  not : Expr) {
 		return jQuery.find.matchesSelector( elem, expr ) ? [ elem ] : [];
 	}
 
-	return jQuery.find.matches( expr, jQuery.grep( elems, function( elem : Element) {
+	return jQuery.find.matches( expr, jQuery.grep( elems, function( elem : any) {
 		return elem.nodeType === 1;
 	} ) );
 };
 
 jQuery.fn.extend( {
-	find: function( selector : string) {
+	find: function( selector : Selector) {
 		var i, ret,
 			len = this.length,
 			self = this;
@@ -76,7 +76,7 @@ jQuery.fn.extend( {
 	not: function( selector : String) {
 		return this.pushStack( winnow( this, selector || [], true ) );
 	},
-	is: function( selector : tring) {
+	is: function( selector : elector) {
 		return !!winnow(
 			this,
 

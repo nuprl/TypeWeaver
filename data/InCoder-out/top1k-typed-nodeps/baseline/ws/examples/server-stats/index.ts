@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 const server = createServer(app);
 const wss = new WebSocketServer({ server });
 
-wss.on('connection', function (ws: WebSocket) {
+wss.on('connection', function (ws: any) {
   const id = setInterval(function () {
     ws.send(JSON.stringify(process.memoryUsage()), function () {
       //

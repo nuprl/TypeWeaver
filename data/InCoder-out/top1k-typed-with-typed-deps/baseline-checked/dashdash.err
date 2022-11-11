@@ -1,63 +1,76 @@
 examples/custom-option-arrayOfCommaSepString.ts(16,47): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-examples/custom-option-arrayOfCommaSepString.ts(16,64): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-examples/custom-option-arrayOfCommaSepString.ts(16,78): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-examples/custom-option-arrayOfCommaSepString.ts(38,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '{ names: string[]; type: string; }[]'.
+examples/custom-option-arrayOfCommaSepString.ts(16,64): error TS2304: Cannot find name 'OptionString'.
+examples/custom-option-arrayOfCommaSepString.ts(16,84): error TS2304: Cannot find name 'OptionValue'.
+examples/custom-option-arrayOfCommaSepString.ts(18,33): error TS2304: Cannot find name 'Part'.
 examples/custom-option-duration.ts(25,32): error TS2304: Cannot find name 'DurationOption'.
-examples/custom-option-duration.ts(25,57): error TS2304: Cannot find name 'DurationOptionStr'.
-examples/custom-option-duration.ts(25,82): error TS2304: Cannot find name 'DurationArg'.
+examples/custom-option-duration.ts(25,57): error TS2304: Cannot find name 'OptionString'.
+examples/custom-option-duration.ts(25,77): error TS2304: Cannot find name 'OptionValue'.
 examples/custom-option-duration.ts(37,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/custom-option-duration.ts(40,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/custom-option-duration.ts(43,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/custom-option-duration.ts(46,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-examples/custom-option-duration.ts(61,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '{ names: string[]; type: string; }[]'.
 examples/custom-option-fruit.ts(22,29): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-examples/custom-option-fruit.ts(22,46): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-examples/custom-option-fruit.ts(22,60): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-examples/custom-option-intGteZero.ts(16,26): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-examples/custom-option-intGteZero.ts(33,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '{ names: string[]; type: string; }[]'.
-examples/custom-option-time-ago.ts(20,31): error TS2304: Cannot find name 'TimeAgoOption'.
-examples/custom-option-time-ago.ts(20,55): error TS2304: Cannot find name 'TimeAgoOptionStr'.
-examples/custom-option-time-ago.ts(20,79): error TS2304: Cannot find name 'TimeAgoArg'.
+examples/custom-option-fruit.ts(22,54): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+examples/custom-option-fruit.ts(22,76): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+examples/custom-option-fruit.ts(40,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '{ names: string[]; type: string; }[]', but here has type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]'.
+examples/custom-option-intGteZero.ts(14,34): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+examples/custom-option-intGteZero.ts(14,51): error TS2304: Cannot find name 'OptionString'.
+examples/custom-option-intGteZero.ts(14,71): error TS2304: Cannot find name 'Arg'.
+examples/custom-option-time-ago.ts(20,31): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+examples/custom-option-time-ago.ts(20,48): error TS2304: Cannot find name 'OptionString'.
+examples/custom-option-time-ago.ts(20,68): error TS2304: Cannot find name 'OptionValue'.
 examples/custom-option-time-ago.ts(29,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/custom-option-time-ago.ts(32,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/custom-option-time-ago.ts(35,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/custom-option-time-ago.ts(38,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-examples/custom-option-time-ago.ts(65,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '{ names: string[]; type: string; }[]'.
-examples/date.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '{ names: string[]; type: string; }[]'.
-examples/ddcompletion.ts(23,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '({ name: string; type: string; help: string; names?: undefined; helpArg?: undefined; hidden?: undefined; completionType?: undefined; } | { names: string[]; type: string; help: string; name?: undefined; helpArg?: undefined; hidden?: undefined; completionType?: undefined; } | { ...; } | { ...; } | { ...; })[]'.
-examples/foo.ts(11,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '({ name: string; type: string; help: string; names?: undefined; env?: undefined; helpArg?: undefined; } | { names: string[]; type: string; help: string; name?: undefined; env?: undefined; helpArg?: undefined; } | { ...; } | { ...; })[]'.
-examples/hello.ts(9,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '{ names: string[]; type: string; help: string; }[]'.
-examples/help.ts(9,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '{ names: string[]; type: string; help: string; }[]'.
-examples/option-groups.ts(14,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '({ names: string[]; type: string; help: string; env?: undefined; } | { names: string[]; type: string; env: string; help?: undefined; })[]', but here has type '({ names: string[]; type: string; group?: undefined; } | { group: string; names?: undefined; type?: undefined; })[]'.
-lib/dashdash.ts(16,66): error TS2552: Cannot find name 'Match'. Did you mean 'Math'?
-lib/dashdash.ts(29,46): error TS2304: Cannot find name 'K'.
+examples/ddcompletion.ts(23,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '{ names: string[]; type: string; }[]', but here has type '({ name: string; type: string; help: string; names?: undefined; helpArg?: undefined; hidden?: undefined; completionType?: undefined; } | { names: string[]; type: string; help: string; name?: undefined; helpArg?: undefined; hidden?: undefined; completionType?: undefined; } | { ...; } | { ...; } | { ...; })[]'.
+examples/foo.ts(11,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '{ names: string[]; type: string; }[]', but here has type '({ name: string; type: string; help: string; names?: undefined; env?: undefined; helpArg?: undefined; } | { names: string[]; type: string; help: string; name?: undefined; env?: undefined; helpArg?: undefined; } | { ...; } | { ...; })[]'.
+examples/hello.ts(9,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '{ names: string[]; type: string; }[]', but here has type '{ names: string[]; type: string; help: string; }[]'.
+examples/help.ts(9,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '{ names: string[]; type: string; }[]', but here has type '{ names: string[]; type: string; help: string; }[]'.
+examples/option-groups.ts(14,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'options' must be of type '{ names: string[]; type: string; }[]', but here has type '({ names: string[]; type: string; group?: undefined; } | { group: string; names?: undefined; type?: undefined; })[]'.
+lib/dashdash.ts(16,66): error TS2304: Cannot find name 'Match'.
+lib/dashdash.ts(16,79): error TS2304: Cannot find name 'Key'.
 lib/dashdash.ts(64,38): error TS2304: Cannot find name 'Word'.
-lib/dashdash.ts(91,40): error TS2304: Cannot find name 'T'.
-lib/dashdash.ts(92,17): error TS2339: Property 'replace' does not exist on type 'string | number | symbol'.
-  Property 'replace' does not exist on type 'number'.
+lib/dashdash.ts(97,28): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+lib/dashdash.ts(97,45): error TS2304: Cannot find name 'OptionString'.
+lib/dashdash.ts(97,65): error TS2304: Cannot find name 'OptionValue'.
+lib/dashdash.ts(101,30): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+lib/dashdash.ts(101,47): error TS2304: Cannot find name 'OptionString'.
+lib/dashdash.ts(101,67): error TS2304: Cannot find name 'OptionValue'.
 lib/dashdash.ts(106,30): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-lib/dashdash.ts(106,47): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-lib/dashdash.ts(106,61): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-lib/dashdash.ts(120,27): error TS2345: Argument of type 'string | number' is not assignable to parameter of type 'string'.
-  Type 'number' is not assignable to type 'string'.
+lib/dashdash.ts(106,47): error TS2304: Cannot find name 'OptionString'.
+lib/dashdash.ts(106,67): error TS2304: Cannot find name 'OptionValue'.
+lib/dashdash.ts(117,31): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+lib/dashdash.ts(117,48): error TS2304: Cannot find name 'OptionString'.
+lib/dashdash.ts(117,68): error TS2304: Cannot find name 'OptionValue'.
 lib/dashdash.ts(128,39): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-lib/dashdash.ts(128,56): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-lib/dashdash.ts(128,70): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-lib/dashdash.ts(149,28): error TS2304: Cannot find name 'DateOption'.
-lib/dashdash.ts(149,49): error TS2304: Cannot find name 'DateOption'.
-lib/dashdash.ts(149,67): error TS2304: Cannot find name 'DateOption'.
+lib/dashdash.ts(128,56): error TS2304: Cannot find name 'OptionString'.
+lib/dashdash.ts(128,76): error TS2304: Cannot find name 'OptionValue'.
+lib/dashdash.ts(149,28): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+lib/dashdash.ts(149,45): error TS2304: Cannot find name 'OptionString'.
+lib/dashdash.ts(149,65): error TS2304: Cannot find name 'Arg'.
 lib/dashdash.ts(258,25): error TS2304: Cannot find name 'Config'.
-lib/dashdash.ts(272,57): error TS2304: Cannot find name 'IOption'.
-lib/dashdash.ts(325,37): error TS2538: Type 'String' cannot be used as an index type.
-lib/dashdash.ts(330,45): error TS2538: Type 'String' cannot be used as an index type.
-lib/dashdash.ts(335,33): error TS2538: Type 'String' cannot be used as an index type.
+lib/dashdash.ts(272,57): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
 lib/dashdash.ts(353,67): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-lib/dashdash.ts(578,44): error TS2304: Cannot find name 'IOption'.
+lib/dashdash.ts(376,19): error TS2322: Type '{ argv: any[]; slice: any; }' is not assignable to type 'string[]'.
+  Object literal may only specify known properties, and 'argv' does not exist in type 'string[]'.
+lib/dashdash.ts(381,9): error TS2740: Type '{}' is missing the following properties from type 'string[]': length, pop, push, concat, and 29 more.
+lib/dashdash.ts(383,41): error TS2339: Property 'argv' does not exist on type 'string[]'.
+lib/dashdash.ts(385,23): error TS2339: Property 'argv' does not exist on type 'string[]'.
+lib/dashdash.ts(388,22): error TS2339: Property 'env' does not exist on type 'string[]'.
+lib/dashdash.ts(392,29): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+lib/dashdash.ts(392,46): error TS2304: Cannot find name 'OptionString'.
+lib/dashdash.ts(392,66): error TS2304: Cannot find name 'OptionKey'.
+lib/dashdash.ts(392,83): error TS2304: Cannot find name 'OptionValue'.
+lib/dashdash.ts(392,103): error TS2304: Cannot find name 'OptionValue'.
+lib/dashdash.ts(578,44): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
 lib/dashdash.ts(588,10): error TS2339: Property '_order' does not exist on type '{}'.
 lib/dashdash.ts(589,10): error TS2339: Property '_args' does not exist on type '{}'.
+lib/dashdash.ts(624,47): error TS2304: Cannot find name 'Config'.
 lib/dashdash.ts(654,44): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+lib/dashdash.ts(678,57): error TS2304: Cannot find name 'Int'.
 lib/dashdash.ts(705,44): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-lib/dashdash.ts(784,73): error TS2304: Cannot find name 'LineNumber'.
+lib/dashdash.ts(785,27): error TS2339: Property 'length' does not exist on type 'number'.
 lib/dashdash.ts(830,9): error TS2345: Argument of type '{ name: any; specExtra: any; argtypes: any; options: any; }' is not assignable to parameter of type 'string[]'.
   Object literal may only specify known properties, and 'name' does not exist in type 'string[]'.
 lib/dashdash.ts(877,24): error TS2339: Property 'options' does not exist on type 'string[]'.
@@ -68,7 +81,7 @@ lib/dashdash.ts(882,24): error TS2339: Property 'context' does not exist on type
 lib/dashdash.ts(884,14): error TS2339: Property 'includeHidden' does not exist on type 'string[]'.
 lib/dashdash.ts(884,57): error TS2339: Property 'includeHidden' does not exist on type 'string[]'.
 lib/dashdash.ts(890,11): error TS2339: Property 'options' does not exist on type 'string[]'.
-lib/dashdash.ts(890,52): error TS2304: Cannot find name 'IOption'.
+lib/dashdash.ts(890,52): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
 lib/dashdash.ts(942,14): error TS2339: Property 'argtypes' does not exist on type 'string[]'.
 lib/dashdash.ts(947,22): error TS2339: Property 'argtypes' does not exist on type 'string[]'.
 lib/dashdash.ts(974,24): error TS2339: Property 'options' does not exist on type 'string[]'.
@@ -85,4 +98,5 @@ lib/dashdash.ts(989,36): error TS2339: Property 'specExtra' does not exist on ty
 lib/dashdash.ts(999,31): error TS2304: Cannot find name 'ParserConfig'.
 lib/dashdash.ts(1010,25): error TS2304: Cannot find name 'Config'.
 lib/dashdash.ts(1045,36): error TS2304: Cannot find name 'OptionType'.
+lib/dashdash.ts(1080,29): error TS2503: Cannot find namespace 'Opt'.
 

@@ -24,7 +24,7 @@ function bench() {
   return text(table);
 }
 
-function parseSection(str: string | undefined) {
+function parseSection(str: string | null) {
   var lines = str.split('\n').filter(Boolean);
   lines.pop();
 
@@ -39,7 +39,7 @@ function parseSection(str: string | undefined) {
   return createLines(tok, lines);
 }
 
-function createLines(tok: Token,  lines: Array<string>) {
+function createLines(tok: Token,  lines: Line[]) {
   var len = lines.length;
   var idx = -1;
   while (++idx < len) {
@@ -66,7 +66,7 @@ function format(tok: Token,  max: number,  diff: number) {
   return [tok.name.trim(), bar(tok, max, diff).trim(), '(' + tok.val + ' ops/sec)'];
 }
 
-function parseStats(line: any) {
+function parseStats(line: String) {
   var str = line.trim();
   var m = /^([^ ]+) x ([\d,.]+)/.exec(str);
   var tok = {num: 0, val: ''};

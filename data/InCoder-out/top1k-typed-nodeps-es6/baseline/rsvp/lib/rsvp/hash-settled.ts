@@ -99,7 +99,7 @@ HashSettled.prototype._setResultAt = setSettledResult;
 
   let myObject = new MyConstructor();
 
-  hashSettled(myObject).then(function(hash: Hash){
+  hashSettled(myObject).then(function(hash: any){
     // protoProperty will not be present, instead you will just have an
     // object that looks like:
     // {
@@ -122,9 +122,9 @@ HashSettled.prototype._setResultAt = setSettledResult;
   @static
 */
 
-export default function hashSettled(object: Object,  label: any) {
+export default function hashSettled(object: any,  label: any) {
   return Promise.resolve(object, label)
-    .then(function(object: Object) {
+    .then(function(object: any) {
       if (object === null || typeof object !== 'object') {
         throw new TypeError("hashSettled must be called with an object");
       }

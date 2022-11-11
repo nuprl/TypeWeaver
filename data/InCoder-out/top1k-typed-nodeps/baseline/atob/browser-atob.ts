@@ -1,14 +1,14 @@
-(function (w: number) {
+(function (w: Window) {
   "use strict";
 
-  function findBest(atobNative: Function) {
+  function findBest(atobNative: any) {
     // normal window
     if ('function' === typeof atobNative) { return atobNative; }
 
 
     // browserify (web worker)
     if ('function' === typeof Buffer) {
-      return function atobBrowserify(a: ArrayBuffer) {
+      return function atobBrowserify(a: any) {
         //!! Deliberately using an API that's deprecated in node.js because
         //!! this file is for browsers and we expect them to cope with it.
         //!! Discussion: github.com/node-browser-compat/atob/pull/9

@@ -58,7 +58,7 @@
 
     // Build the best logging method possible for this env
     // Wherever possible we want to bind, not wrap, to preserve stack traces
-    function realMethod(methodName: string | symbol) {
+    function realMethod(methodName: String) {
         if (methodName === 'debug') {
             methodName = 'log';
         }
@@ -78,7 +78,7 @@
 
     // These private functions always need `this` to be set properly
 
-    function replaceLoggingMethods(level: Level,  loggerName: LoggerName) {
+    function replaceLoggingMethods(level: LogLevel,  loggerName: LoggerName) {
         /*jshint validthis:true */
         for (var i = 0; i < logMethods.length; i++) {
             var methodName = logMethods[i];
@@ -93,7 +93,7 @@
 
     // In old IE versions, the console isn't present until you first open it.
     // We build realMethod() replacements here that regenerate logging methods
-    function enableLoggingWhenConsoleArrives(methodName: Function,  level: number,  loggerName: string) {
+    function enableLoggingWhenConsoleArrives(methodName: any,  level: any,  loggerName: any) {
         return function () {
             if (typeof console !== undefinedType) {
                 replaceLoggingMethods.call(this, level, loggerName);
@@ -104,7 +104,7 @@
 
     // By default, we use closely bound real methods wherever possible, and
     // otherwise we wait for a console to appear, and then try again.
-    function defaultMethodFactory(methodName: string | symbol,  level: number,  loggerName: string) {
+    function defaultMethodFactory(methodName: any,  level: number,  loggerName: string) {
         /*jshint validthis:true */
         return realMethod(methodName) ||
                enableLoggingWhenConsoleArrives.apply(this, arguments);
@@ -220,7 +220,7 @@
           }
       };
 
-      self.setDefaultLevel = function (level: Level) {
+      self.setDefaultLevel = function (level: number) {
           defaultLevel = level;
           if (!getPersistedLevel()) {
               self.setLevel(level, false);
@@ -232,11 +232,11 @@
           clearPersistedLevel();
       };
 
-      self.enableAll = function(persist: Persist) {
+      self.enableAll = function(persist: Boolean) {
           self.setLevel(self.levels.TRACE, persist);
       };
 
-      self.disableAll = function(persist: Persist) {
+      self.disableAll = function(persist: Boolean) {
           self.setLevel(self.levels.SILENT, persist);
       };
 
@@ -257,7 +257,7 @@
     var defaultLogger = new Logger();
 
     var _loggersByName = {};
-    defaultLogger.getLogger = function getLogger(name: string | Function) {
+    defaultLogger.getLogger = function getLogger(name: LoggerName) {
         if ((typeof name !== "symbol" && typeof name !== "string") || name === "") {
           throw new TypeError("You must supply a name when creating a logger.");
         }

@@ -1,7 +1,7 @@
 //! stable.js 0.1.8, https://github.com/Two-Screen/stable
 //! © 2018 Angry Bytes and contributors. MIT licensed.
 
-(function (global: any,  factory: Function) {
+(function (global: any,  factory: any) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
   (global.stable = factory());
@@ -10,11 +10,11 @@
   // A stable array sort, because `Array#sort()` is not guaranteed stable.
   // This is an implementation of merge sort, without recursion.
 
-  var stable = function (arr: Array,  comp: Function) {
+  var stable = function (arr: ArrayLike<number>,  comp: any) {
     return exec(arr.slice(), comp)
   };
 
-  stable.inplace = function (arr: Array,  comp: Function) {
+  stable.inplace = function (arr: ArrayLike<number>,  comp: any) {
     var result = exec(arr, comp);
 
     // This simply copies back if the result isn't in the original array,
@@ -28,7 +28,7 @@
 
   // Execute the sort using the input array and a second buffer as work space.
   // Returns one of those two, containing the final result.
-  function exec(arr: rray,  comp: Function) {
+  function exec(arr: rray<any>,  comp: Function) {
     if (typeof(comp) !== 'function') {
       comp = function (a: any,  b: any) {
         return String(a).localeCompare(b)
@@ -57,7 +57,7 @@
   }
 
   // Run a single pass with the given chunk size.
-  var pass = function (arr: Array,  comp: Function,  chk: Function,  result: Array) {
+  var pass = function (arr: any,  comp: any,  chk: any,  result: any) {
     var len = arr.length;
     var i = 0;
     // Step size / double chunk size.

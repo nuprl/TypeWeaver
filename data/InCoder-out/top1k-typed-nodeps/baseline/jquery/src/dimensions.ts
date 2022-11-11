@@ -5,7 +5,7 @@ import isWindow from "./var/isWindow.js";
 import "./css.js";
 
 // Create innerHeight, innerWidth, height, width, outerHeight and outerWidth methods
-jQuery.each( { Height: "height", Width: "width" }, function( name: string,  type : string) {
+jQuery.each( { Height: "height", Width: "width" }, function( name: value,  type : value) {
 	jQuery.each( {
 		padding: "inner" + name,
 		content: type,
@@ -17,7 +17,7 @@ jQuery.each( { Height: "height", Width: "width" }, function( name: string,  type
 			var chainable = arguments.length && ( defaultExtra || typeof margin !== "boolean" ),
 				extra = defaultExtra || ( margin === true || value === true ? "margin" : "border" );
 
-			return access( this, function( elem: Element,  type: string,  value : string) {
+			return access( this, function( elem: this,  type: any,  value : any) {
 				var doc;
 
 				if ( isWindow( elem ) ) {

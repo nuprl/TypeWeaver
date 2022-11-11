@@ -115,7 +115,7 @@ module.exports._flush = function(lastTime: number,  code: number) {
           }
           throw e;
         });
-      })).then(function(results: Array<any>) {
+      })).then(function(results: any[]) {
         if (firstRejected) {
           throw firstRejected;
         }

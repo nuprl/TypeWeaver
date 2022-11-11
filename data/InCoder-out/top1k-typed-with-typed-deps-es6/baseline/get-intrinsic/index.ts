@@ -7,7 +7,7 @@ var $Function = Function;
 var $TypeError = TypeError;
 
 // eslint-disable-next-line consistent-return
-var getEvalledConstructor = function (expressionSyntax: ExpressionSyntax) {
+var getEvalledConstructor = function (expressionSyntax: ISyntax) {
 	try {
 		return $Function('"use strict"; return (' + expressionSyntax + ').constructor;')();
 	} catch (e) {}
@@ -208,7 +208,7 @@ var $exec = bind.call(Function.call, RegExp.prototype.exec);
 /* adapted from https://github.com/lodash/lodash/blob/4.17.15/dist/lodash.js#L6735-L6744 */
 var rePropName = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g;
 var reEscapeChar = /\\(\\)?/g;/** Used to match backslashes in property paths. */
-var stringToPath = function stringToPath(string: any) {
+var stringToPath = function stringToPath(string: string | string[]) {
 	var first = $strSlice(string, 0, 1);
 	var last = $strSlice(string, -1);
 	if (first === '%' && last !== '%') {
@@ -217,14 +217,14 @@ var stringToPath = function stringToPath(string: any) {
 		throw new $SyntaxError('invalid intrinsic syntax, expected opening `%`');
 	}
 	var result = [];
-	$replace(string, rePropName, function (match: RegExpExecArray,  number: number,  quote: RegExpExecArray,  subString: RegExpExecArray) {
+	$replace(string, rePropName, function (match: RegExpExecArray,  number: number,  quote: number,  subString: number) {
 		result[result.length] = quote ? $replace(subString, reEscapeChar, '$1') : number || match;
 	});
 	return result;
 };
 /* end adaptation */
 
-var getBaseIntrinsic = function getBaseIntrinsic(name: string | symbol,  allowMissing: boolean | undefined) {
+var getBaseIntrinsic = function getBaseIntrinsic(name: any,  allowMissing: any) {
 	var intrinsicName = name;
 	var alias;
 	if (hasOwn(LEGACY_ALIASES, intrinsicName)) {
@@ -251,7 +251,7 @@ var getBaseIntrinsic = function getBaseIntrinsic(name: string | symbol,  allowMi
 	throw new $SyntaxError('intrinsic ' + name + ' does not exist!');
 };
 
-export default function GetIntrinsic(name: string | symbol,  allowMissing: boolean | undefined) {
+export default function GetIntrinsic(name: string | undefined,  allowMissing: boolean | undefined) {
 	if (typeof name !== 'string' || name.length === 0) {
 		throw new $TypeError('intrinsic name must be a non-empty string');
 	}

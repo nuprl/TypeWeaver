@@ -6,11 +6,11 @@ const inherits = require('inherits');
 
 const api = exports;
 
-api.define = function define(name: Entity,  body: Function) {
+api.define = function define(name: Entity,  body: Entity) {
   return new Entity(name, body);
 };
 
-function Entity(name: String,  body: String) {
+function Entity(name: String,  body: EntityBody) {
   this.name = name;
   this.body = body;
 
@@ -18,7 +18,7 @@ function Entity(name: String,  body: String) {
   this.encoders = {};
 }
 
-Entity.prototype._createNamed = function createNamed(Base: Function) {
+Entity.prototype._createNamed = function createNamed(Base: any) {
   const name = this.name;
 
   function Generated(entity: Entity) {
@@ -32,7 +32,7 @@ Entity.prototype._createNamed = function createNamed(Base: Function) {
   return new Generated(this);
 };
 
-Entity.prototype._getDecoder = function _getDecoder(enc: Encoding) {
+Entity.prototype._getDecoder = function _getDecoder(enc: BufferEncoding) {
   enc = enc || 'der';
   // Lazily create decoder
   if (!this.decoders.hasOwnProperty(enc))
@@ -40,11 +40,11 @@ Entity.prototype._getDecoder = function _getDecoder(enc: Encoding) {
   return this.decoders[enc];
 };
 
-Entity.prototype.decode = function decode(data: Uint8Array,  enc: Encoding,  options: DecodeOptions) {
+Entity.prototype.decode = function decode(data: Buffer,  enc: Encoding,  options: DecodingOptions) {
   return this._getDecoder(enc).decode(data, options);
 };
 
-Entity.prototype._getEncoder = function _getEncoder(enc: Encoding) {
+Entity.prototype._getEncoder = function _getEncoder(enc: BufferEncoding) {
   enc = enc || 'der';
   // Lazily create encoder
   if (!this.encoders.hasOwnProperty(enc))
@@ -52,6 +52,6 @@ Entity.prototype._getEncoder = function _getEncoder(enc: Encoding) {
   return this.encoders[enc];
 };
 
-Entity.prototype.encode = function encode(data: any,  enc: Encoding,  /* internal */ reporter: Reporter) {
+Entity.prototype.encode = function encode(data: Buffer,  enc: Buffer,  /* internal */ reporter: Buffer) {
   return this._getEncoder(enc).encode(data, reporter);
 };

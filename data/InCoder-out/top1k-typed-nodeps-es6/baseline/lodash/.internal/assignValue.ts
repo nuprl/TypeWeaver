@@ -12,7 +12,7 @@ const hasOwnProperty = Object.prototype.hasOwnProperty
  * @param {string} key The key of the property to assign.
  * @param {*} value The value to assign.
  */
-function assignValue(object: Object,  key: String,  value: any) {
+function assignValue(object: any,  key: any,  value: any) {
   const objValue = object[key]
 
   if (!(hasOwnProperty.call(object, key) && eq(objValue, value))) {

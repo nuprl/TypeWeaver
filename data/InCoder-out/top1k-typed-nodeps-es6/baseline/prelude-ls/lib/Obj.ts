@@ -23,7 +23,7 @@ pairsToObj = function(object: any){
   }
   return resultObj$;
 };
-objToPairs = function(object: Object){
+objToPairs = function(object: any){
   var key, value, results$ = [];
   for (key in object) {
     value = object[key];
@@ -31,7 +31,7 @@ objToPairs = function(object: Object){
   }
   return results$;
 };
-listsToObj = curry$(function(keys: Array<any>,  values: Array<any>){
+listsToObj = curry$(function(keys: Array,  values: Array){
   var i$, len$, i, key, resultObj$ = {};
   for (i$ = 0, len$ = keys.length; i$ < len$; ++i$) {
     i = i$;
@@ -40,7 +40,7 @@ listsToObj = curry$(function(keys: Array<any>,  values: Array<any>){
   }
   return resultObj$;
 });
-objToLists = function(object: Object){
+objToLists = function(object: any){
   var keys, values, key, value;
   keys = [];
   values = [];
@@ -51,7 +51,7 @@ objToLists = function(object: Object){
   }
   return [keys, values];
 };
-empty = function(object: Object){
+empty = function(object: any){
   var x;
   for (x in object) {
     return false;
@@ -143,7 +143,7 @@ export default {
 
 function curry$(f: Function,  bound: Function){
   var context,
-  _curry = function(args: ny[]) {
+  _curry = function(args: rray<any>) {
     return f.length > 1 ? function(){
       var params = args ? args.concat() : [];
       context = bound ? context || this : this;

@@ -33,11 +33,11 @@
         return typeof node === 'object' && typeof node.type === 'string';
     }
 
-    function isProperty(nodeType: NodeType,  key: PropertyKey) {
+    function isProperty(nodeType: SyntaxKind,  key: SyntaxKind) {
         return (nodeType === estraverse.Syntax.ObjectExpression || nodeType === estraverse.Syntax.ObjectPattern) && key === 'properties';
     }
 
-    function Visitor(visitor: Visitor,  options: VisitorOptions) {
+    function Visitor(visitor: VisitorT,  options: VisitorOptions) {
         options = options || {};
 
         this.__visitor = visitor ||  this;
@@ -92,7 +92,7 @@
     };
 
     /* Dispatching node. */
-    Visitor.prototype.visit = function (node: Node) {
+    Visitor.prototype.visit = function (node: AST.Node) {
         var type;
 
         if (node == null) {
@@ -109,7 +109,7 @@
 
     exports.version = require('./package.json').version;
     exports.Visitor = Visitor;
-    exports.visit = function (node: Node,  visitor: Visitor,  options: VisitorOptions) {
+    exports.visit = function (node: Node,  visitor: Visitor,  options: any) {
         var v = new Visitor(visitor, options);
         v.visit(node);
     };

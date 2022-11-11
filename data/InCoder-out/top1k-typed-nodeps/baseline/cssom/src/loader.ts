@@ -4,7 +4,7 @@
 
 var exports = {};
 
-function require(path: string | string[]) {
+function require(path: string | RegExp) {
 	path = path.replace(/^\.\//, '');
 	if (!exports[path]) {
 		window.console && console.warn(path, 'is missing. Most likely just a mutual inclusion.');

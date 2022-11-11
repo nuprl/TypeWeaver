@@ -3,7 +3,7 @@ isexe.sync = sync
 
 var fs = require('fs')
 
-function checkPathExt (path: string | string[],  options: IPathOptions) {
+function checkPathExt (path: Path,  options: Options) {
   var pathext = options.pathExt !== undefined ?
     options.pathExt : process.env.PATHEXT
 
@@ -24,19 +24,19 @@ function checkPathExt (path: string | string[],  options: IPathOptions) {
   return false
 }
 
-function checkStat (stat: Stats,  path: Path,  options: Stats.Options) {
+function checkStat (stat: Stats,  path: Path,  options: Options) {
   if (!stat.isSymbolicLink() && !stat.isFile()) {
     return false
   }
   return checkPathExt(path, options)
 }
 
-function isexe (path: string | Buffer,  options: IExecFileOptions,  cb: IExecFileCallback) {
+function isexe (path: string | Buffer,  options: any,  cb: Function) {
   fs.stat(path, function (er: Error,  stat: fs.Stat) {
     cb(er, er ? false : checkStat(stat, path, options))
   })
 }
 
-function sync (path: String,  options: Object) {
+function sync (path: Path,  options: Options) {
   return checkStat(fs.statSync(path), path, options)
 }

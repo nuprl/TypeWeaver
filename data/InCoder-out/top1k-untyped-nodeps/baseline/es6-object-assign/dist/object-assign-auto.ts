@@ -3,7 +3,7 @@
 
 require('./index').polyfill();
 
-},{"./index":2}],2:[function(require: any, module: any, exports: any){
+},{"./index":2}],2:[function(require: require, module: module, exports: exports){
 /**
  * Code refactored from Mozilla Developer Network:
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign

@@ -27,7 +27,7 @@ import isIndex from './.internal/isIndex.js'
  * console.log(pulled)
  * // => ['b', 'd']
  */
-function pullAt(array: rray<T>,  ...indexes: rray<number>) {
+function pullAt(array: rray<T>,  ...indexes: umber[]) {
   const length = array == null ? 0 : array.length
   const result = baseAt(array, indexes)
 

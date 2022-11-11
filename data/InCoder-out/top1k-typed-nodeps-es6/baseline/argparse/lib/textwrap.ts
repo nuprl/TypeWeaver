@@ -348,7 +348,7 @@ class TextWrapper {
 
 // -- Convenience interface ---------------------------------------------
 
-function wrap(text: String,  options = {}: Object) {
+function wrap(text: string | string[],  options = {}: WrapOptions) {
     /*
      *  Wrap a single paragraph of text, returning a list of wrapped lines.
      *
@@ -364,7 +364,7 @@ function wrap(text: String,  options = {}: Object) {
     return w.wrap(text)
 }
 
-function fill(text: String,  options = {}: Object) {
+function fill(text: string | string[],  options = {}: FillOptions) {
     /*
      *  Fill a single paragraph of text, returning a new string.
      *
@@ -384,7 +384,7 @@ function fill(text: String,  options = {}: Object) {
 let _whitespace_only_re = /^[ \t]+$/mg
 let _leading_whitespace_re = /(^[ \t]*)(?:[^ \t\n])/mg
 
-function dedent(text: string | undefined) {
+function dedent(text: string | null | undefined) {
     /*
      *  Remove any common leading whitespace from every line in `text`.
      *

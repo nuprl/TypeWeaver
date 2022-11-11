@@ -1,12 +1,13 @@
-index.ts(83,18): error TS2339: Property '_readableState' does not exist on type 'ReadableStream'.
+index.ts(70,28): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
 index.ts(117,47): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
-index.ts(128,33): error TS2749: 'Stream' refers to a value, but is being used as a type here. Did you mean 'typeof Stream'?
-index.ts(128,53): error TS2304: Cannot find name 'StreamOptions'.
 index.ts(131,18): error TS2339: Property '_readableState' does not exist on type 'never'.
 index.ts(131,44): error TS2339: Property 'pipe' does not exist on type 'never'.
 index.ts(132,25): error TS2339: Property 'pipe' does not exist on type 'never'.
-index.ts(134,18): error TS2339: Property '_readableState' does not exist on type 'Stream[]'.
-index.ts(134,45): error TS2339: Property 'pause' does not exist on type 'Stream[]'.
-index.ts(134,63): error TS2339: Property 'pipe' does not exist on type 'Stream[]'.
-index.ts(137,13): error TS2339: Property 'pause' does not exist on type 'Stream[]'.
+index.ts(134,18): error TS2339: Property '_readableState' does not exist on type 'MediaStream[]'.
+index.ts(134,45): error TS2339: Property 'pause' does not exist on type 'MediaStream[]'.
+index.ts(134,63): error TS2339: Property 'pipe' does not exist on type 'MediaStream[]'.
+index.ts(137,13): error TS2339: Property 'pause' does not exist on type 'MediaStream[]'.
+index.ts(140,7): error TS2740: Type 'MediaStream[]' is missing the following properties from type 'MediaStream': active, id, onaddtrack, onremovetrack, and 10 more.
+index.ts(140,33): error TS2345: Argument of type 'MediaStream' is not assignable to parameter of type 'MediaStream[]'.
+  Type 'MediaStream' is missing the following properties from type 'MediaStream[]': length, pop, push, concat, and 29 more.
 

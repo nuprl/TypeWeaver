@@ -8,7 +8,7 @@ const mkdirp = require('../mkdirs').mkdirp
 const pathExists = require('../path-exists').pathExists
 const stat = require('../util/stat')
 
-function move (src: Buffer,  dest: Buffer,  opts: Object,  cb: Function) {
+function move (src: any,  dest: any,  opts: any,  cb: Function) {
   if (typeof opts === 'function') {
     cb = opts
     opts = {}
@@ -32,13 +32,13 @@ function move (src: Buffer,  dest: Buffer,  opts: Object,  cb: Function) {
   })
 }
 
-function isParentRoot (dest: Path) {
+function isParentRoot (dest: any) {
   const parent = path.dirname(dest)
   const parsedPath = path.parse(parent)
   return parsedPath.root === parent
 }
 
-function doRename (src: String,  dest: String,  overwrite: Boolean,  isChangingCase: Boolean,  cb: Function) {
+function doRename (src: fs.PathLike,  dest: fs.PathLike,  overwrite: boolean,  isChangingCase: boolean,  cb: Function) {
   if (isChangingCase) return rename(src, dest, overwrite, cb)
   if (overwrite) {
     return remove(dest, err => {
@@ -53,7 +53,7 @@ function doRename (src: String,  dest: String,  overwrite: Boolean,  isChangingC
   })
 }
 
-function rename (src: String,  dest: String,  overwrite: Boolean,  cb: Function) {
+function rename (src: any,  dest: any,  overwrite: any,  cb: Function) {
   fs.rename(src, dest, err => {
     if (!err) return cb()
     if (err.code !== 'EXDEV') return cb(err)
@@ -61,7 +61,7 @@ function rename (src: String,  dest: String,  overwrite: Boolean,  cb: Function)
   })
 }
 
-function moveAcrossDevice (src: any,  dest: any,  overwrite: boolean | null,  cb: Function) {
+function moveAcrossDevice (src: number,  dest: number,  overwrite: boolean,  cb: Function) {
   const opts = {
     overwrite,
     errorOnExist: true

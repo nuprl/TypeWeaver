@@ -5,7 +5,7 @@
  * Released under the MIT License.
  */
 
-export default function(path: ring,  stripTrailing: boolean) {
+export default function(path: ring | Buffer,  stripTrailing: boolean) {
   if (typeof path !== 'string') {
     throw new TypeError('expected path to be a string');
   }

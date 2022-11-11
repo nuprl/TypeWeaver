@@ -18,7 +18,7 @@ jQuery.ajaxSetup( {
 } );
 
 // Detect, normalize options and install callbacks for jsonp requests
-jQuery.ajaxPrefilter( "jsonp", function( s: string,  originalSettings: any,  jqXHR : jqXHR) {
+jQuery.ajaxPrefilter( "jsonp", function( s: string,  originalSettings: jqXHR,  jqXHR : jqXHR) {
 
 	var callbackName, overwritten, responseContainer,
 		jsonProp = s.jsonp !== false && ( rjsonp.test( s.url ) ?

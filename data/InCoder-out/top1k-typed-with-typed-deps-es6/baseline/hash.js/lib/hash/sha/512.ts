@@ -86,7 +86,7 @@ SHA512.outSize = 512;
 SHA512.hmacStrength = 192;
 SHA512.padLength = 128;
 
-SHA512.prototype._prepareBlock = function _prepareBlock(msg: Message,  start: number) {
+SHA512.prototype._prepareBlock = function _prepareBlock(msg: any,  start: number) {
   var W = this.W;
 
   // 32 x 32bit words
@@ -115,7 +115,7 @@ SHA512.prototype._prepareBlock = function _prepareBlock(msg: Message,  start: nu
   }
 };
 
-SHA512.prototype._update = function _update(msg: Message,  start: number) {
+SHA512.prototype._update = function _update(msg: Block,  start: number) {
   this._prepareBlock(msg, start);
 
   var W = this.W;
@@ -206,7 +206,7 @@ SHA512.prototype._update = function _update(msg: Message,  start: number) {
   sum64(this.h, 14, hh, hl);
 };
 
-SHA512.prototype._digest = function digest(enc: Encoding) {
+SHA512.prototype._digest = function digest(enc: BufferEncoding) {
   if (enc === 'hex')
     return utils.toHex32(this.h, 'big');
   else
@@ -241,7 +241,7 @@ function maj64_lo(xh: number,  xl: number,  yh: number,  yl: number,  zh: number
   return r;
 }
 
-function s0_512_hi(xh: X64Word,  xl: X64Word) {
+function s0_512_hi(xh: number,  xl: number) {
   var c0_hi = rotr64_hi(xh, xl, 28);
   var c1_hi = rotr64_hi(xl, xh, 2);  // 34
   var c2_hi = rotr64_hi(xl, xh, 7);  // 39
@@ -252,7 +252,7 @@ function s0_512_hi(xh: X64Word,  xl: X64Word) {
   return r;
 }
 
-function s0_512_lo(xh: X64Word,  xl: X64Word) {
+function s0_512_lo(xh: number,  xl: number) {
   var c0_lo = rotr64_lo(xh, xl, 28);
   var c1_lo = rotr64_lo(xl, xh, 2);  // 34
   var c2_lo = rotr64_lo(xl, xh, 7);  // 39
@@ -263,7 +263,7 @@ function s0_512_lo(xh: X64Word,  xl: X64Word) {
   return r;
 }
 
-function s1_512_hi(xh: X64Word,  xl: X64Word) {
+function s1_512_hi(xh: number,  xl: number) {
   var c0_hi = rotr64_hi(xh, xl, 14);
   var c1_hi = rotr64_hi(xh, xl, 18);
   var c2_hi = rotr64_hi(xl, xh, 9);  // 41
@@ -274,7 +274,7 @@ function s1_512_hi(xh: X64Word,  xl: X64Word) {
   return r;
 }
 
-function s1_512_lo(xh: X64Word,  xl: X64Word) {
+function s1_512_lo(xh: number,  xl: number) {
   var c0_lo = rotr64_lo(xh, xl, 14);
   var c1_lo = rotr64_lo(xh, xl, 18);
   var c2_lo = rotr64_lo(xl, xh, 9);  // 41
@@ -285,7 +285,7 @@ function s1_512_lo(xh: X64Word,  xl: X64Word) {
   return r;
 }
 
-function g0_512_hi(xh: X64Word,  xl: X64Word) {
+function g0_512_hi(xh: number,  xl: number) {
   var c0_hi = rotr64_hi(xh, xl, 1);
   var c1_hi = rotr64_hi(xh, xl, 8);
   var c2_hi = shr64_hi(xh, xl, 7);
@@ -296,7 +296,7 @@ function g0_512_hi(xh: X64Word,  xl: X64Word) {
   return r;
 }
 
-function g0_512_lo(xh: X64Word,  xl: X64Word) {
+function g0_512_lo(xh: number,  xl: number) {
   var c0_lo = rotr64_lo(xh, xl, 1);
   var c1_lo = rotr64_lo(xh, xl, 8);
   var c2_lo = shr64_lo(xh, xl, 7);
@@ -307,7 +307,7 @@ function g0_512_lo(xh: X64Word,  xl: X64Word) {
   return r;
 }
 
-function g1_512_hi(xh: X64Word,  xl: X64Word) {
+function g1_512_hi(xh: number,  xl: number) {
   var c0_hi = rotr64_hi(xh, xl, 19);
   var c1_hi = rotr64_hi(xl, xh, 29);  // 61
   var c2_hi = shr64_hi(xh, xl, 6);
@@ -318,7 +318,7 @@ function g1_512_hi(xh: X64Word,  xl: X64Word) {
   return r;
 }
 
-function g1_512_lo(xh: X64Word,  xl: X64Word) {
+function g1_512_lo(xh: number,  xl: number) {
   var c0_lo = rotr64_lo(xh, xl, 19);
   var c1_lo = rotr64_lo(xl, xh, 29);  // 61
   var c2_lo = shr64_lo(xh, xl, 6);

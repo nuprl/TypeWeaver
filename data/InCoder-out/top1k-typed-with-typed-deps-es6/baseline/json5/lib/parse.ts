@@ -10,7 +10,7 @@ let token
 let key
 let root
 
-export default function parse (text: String,  reviver: any) {
+export default function parse (text: any,  reviver: any) {
     source = String(text)
     parseState = 'start'
     stack = []
@@ -39,7 +39,7 @@ export default function parse (text: String,  reviver: any) {
     return root
 };
 
-function internalize (holder: any,  name: any,  reviver: Function) {
+function internalize (holder: any,  name: any,  reviver: any) {
     const value = holder[name]
     if (value != null && typeof value === 'object') {
         for (const key in value) {
@@ -1016,11 +1016,11 @@ function pop () {
 // }
 
 // This code is unreachable.
-// function invalidLexState (state: LexerState) {
+// function invalidLexState (state: number) {
 //     return new Error(`JSON5: invalid lex state '${state}'`)
 // }
 
-function invalidChar (c: any) {
+function invalidChar (c: Char) {
     if (c === undefined) {
         return syntaxError(`JSON5: invalid end of input at ${line}:${column}`)
     }
@@ -1047,7 +1047,7 @@ function invalidIdentifier () {
     return syntaxError(`JSON5: invalid identifier character at ${line}:${column}`)
 }
 
-function separatorChar (c: number) {
+function separatorChar (c: char) {
     console.warn(`JSON5: '${formatChar(c)}' in strings is not valid ECMAScript; consider escaping`)
 }
 
@@ -1079,7 +1079,7 @@ function formatChar (c: number) {
     return c
 }
 
-function syntaxError (message: string | Error) {
+function syntaxError (message: any) {
     const err = new SyntaxError(message)
     err.lineNumber = line
     err.columnNumber = column

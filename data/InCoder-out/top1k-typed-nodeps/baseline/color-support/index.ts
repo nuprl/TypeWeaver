@@ -12,7 +12,7 @@ function hasNone (obj: any,  options: any) {
   return obj
 }
 
-function hasBasic (obj: Object) {
+function hasBasic (obj: any) {
   obj.hasBasic = true
   obj.has256 = false
   obj.has16m = false
@@ -20,7 +20,7 @@ function hasBasic (obj: Object) {
   return obj
 }
 
-function has256 (obj: Object) {
+function has256 (obj: any) {
   obj.hasBasic = true
   obj.has256 = true
   obj.has16m = false
@@ -28,7 +28,7 @@ function has256 (obj: Object) {
   return obj
 }
 
-function has16m (obj: Object) {
+function has16m (obj: any) {
   obj.hasBasic = true
   obj.has256 = true
   obj.has16m = true

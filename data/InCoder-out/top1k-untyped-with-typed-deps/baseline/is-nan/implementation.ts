@@ -2,6 +2,6 @@
 
 /* http://www.ecma-international.org/ecma-262/6.0/#sec-number.isnan */
 
-module.exports = function isNaN(value: ixed) {
+module.exports = function isNaN(value: umber) {
 	return value !== value;
 };

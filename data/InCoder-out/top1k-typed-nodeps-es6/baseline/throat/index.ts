@@ -15,7 +15,7 @@ function throatInternal(size: number) {
       queue.push(new Delayed(resolve, fn, self, args));
     }).then(runDelayed);
   }
-  function runDelayed(d: DelayedTask) {
+  function runDelayed(d: Delayed) {
     try {
       return Promise.resolve(d.fn.apply(d.self, d.args)).then(
         onFulfill,
@@ -25,7 +25,7 @@ function throatInternal(size: number) {
       onReject(ex);
     }
   }
-  function onFulfill(result: Promise<any>) {
+  function onFulfill(result: R) {
     release();
     return result;
   }
@@ -96,7 +96,7 @@ export default function throat(size: number,  fn: Function) {
 
 export const default = module.exports;
 
-function Delayed(resolve: Function,  fn: Function,  self: Object,  args: Array) {
+function Delayed(resolve: IResolve,  fn: IResolve,  self: any,  args: any[]) {
   this.resolve = resolve;
   this.fn = fn;
   this.self = self || null;

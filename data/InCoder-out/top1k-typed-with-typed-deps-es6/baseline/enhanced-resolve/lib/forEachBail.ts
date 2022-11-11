@@ -5,7 +5,7 @@
 
 "use strict";
 
-export default function forEachBail(array: Array,  iterator: Function,  callback: Function) {
+export default function forEachBail(array: ArrayLike<any>,  iterator: Function,  callback: Function) {
 	if (array.length === 0) return callback();
 
 	let i = 0;

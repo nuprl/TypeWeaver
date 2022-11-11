@@ -65,7 +65,7 @@ export default {
  * @param {Object} b - Right Char or ClassRange node
  * @returns {number}
  */
-function sortCharClass(a: SortValue,  b: SortValue) {
+function sortCharClass(a: CharClass,  b: CharClass) {
   const aValue = getSortValue(a);
   const bValue = getSortValue(b);
 
@@ -92,7 +92,7 @@ function sortCharClass(a: SortValue,  b: SortValue) {
  * @param {Object} expression - Char or ClassRange node
  * @returns {number}
  */
-function getSortValue(expression: SortExpression) {
+function getSortValue(expression: Expression) {
   if (expression.type === 'Char') {
     if (expression.value === '-') {
       return Infinity;
@@ -115,7 +115,7 @@ function getSortValue(expression: SortExpression) {
  * @param {?string} value
  * @returns {boolean}
  */
-function isMeta(expression: Expression,  value = null: Expression) {
+function isMeta(expression: AST.Expression,  value = null: AST.Expression) {
   return (
     expression.type === 'Char' &&
     expression.kind === 'meta' &&
@@ -127,7 +127,7 @@ function isMeta(expression: Expression,  value = null: Expression) {
  * @param {Object} expression - Char or ClassRange node
  * @returns {boolean}
  */
-function isControl(expression: Expression) {
+function isControl(expression: AST.Expression) {
   return expression.type === 'Char' && expression.kind === 'control';
 }
 
@@ -137,7 +137,7 @@ function isControl(expression: Expression) {
  * @param {boolean} hasIUFlags
  * @returns {boolean}
  */
-function fitsInMetas(expression: Expression,  metas: Metas,  hasIUFlags: hasIUFlags) {
+function fitsInMetas(expression: Expression,  metas: Expression,  hasIUFlags: boolean) {
   for (let i = 0; i < metas.length; i++) {
     if (fitsInMeta(expression, metas[i], hasIUFlags)) {
       return true;
@@ -152,7 +152,7 @@ function fitsInMetas(expression: Expression,  metas: Metas,  hasIUFlags: hasIUFl
  * @param {boolean} hasIUFlags
  * @returns {boolean}
  */
-function fitsInMeta(expression: Expression,  meta: Meta,  hasIUFlags: boolean) {
+function fitsInMeta(expression: Expression,  meta: Expression,  hasIUFlags: boolean) {
   if (expression.type === 'ClassRange') {
     return (
       fitsInMeta(expression.from, meta, hasIUFlags) &&
@@ -262,7 +262,7 @@ function fitsInMetaW(expression: Expression,  hasIUFlags: boolean) {
  * @param {Object} classRange - Char or ClassRange node
  * @returns {boolean}
  */
-function combinesWithPrecedingClassRange(expression: ts.Expression,  classRange: ts.ClassRange) {
+function combinesWithPrecedingClassRange(expression: Expression,  classRange: ClassRange) {
   if (classRange && classRange.type === 'ClassRange') {
     if (fitsInClassRange(expression, classRange)) {
       // [a-gc] -> [a-g]
@@ -301,7 +301,7 @@ function combinesWithPrecedingClassRange(expression: ts.Expression,  classRange:
  * @param {Object} classRange - Char or ClassRange node
  * @returns {boolean}
  */
-function combinesWithFollowingClassRange(expression: ts.Expression,  classRange: ts.ClassRange) {
+function combinesWithFollowingClassRange(expression: Expression,  classRange: ClassRange) {
   if (classRange && classRange.type === 'ClassRange') {
     // Considering the elements were ordered alphabetically,
     // there is only one case to handle
@@ -346,7 +346,7 @@ function fitsInClassRange(expression: Expression,  classRange: ClassRange) {
  * @param {Object[]} expressions - expressions in CharClass
  * @returns {number} - Number of characters combined with expression
  */
-function charCombinesWithPrecedingChars(expression: Expression,  index: number,  expressions: Expression[]) {
+function charCombinesWithPrecedingChars(expression: IExpression,  index: number,  expressions: any[]) {
   // We only want \w chars or char codes to keep readability
   if (!isMetaWCharOrCode(expression)) {
     return 0;
@@ -377,7 +377,7 @@ function charCombinesWithPrecedingChars(expression: Expression,  index: number, 
   return 0;
 }
 
-function isMetaWCharOrCode(expression: Expression) {
+function isMetaWCharOrCode(expression: AST.Expression) {
   return (
     expression &&
     expression.type === 'Char' &&

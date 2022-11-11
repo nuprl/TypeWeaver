@@ -25,7 +25,7 @@ function merge(from: any,  to: any) {
   assert.equal(typeof (to), 'object');
 
   var keys = Object.getOwnPropertyNames(from);
-  keys.forEach(function (key: string | number) {
+  keys.forEach(function (key: any) {
     if (to[key])
       return;
 
@@ -71,7 +71,7 @@ Writer.prototype.writeByte = function (b: umber) {
 };
 
 
-Writer.prototype.writeInt = function (i: umber,  tag: string) {
+Writer.prototype.writeInt = function (i: umber,  tag: ny) {
   if (typeof (i) !== 'number')
     throw new TypeError('argument must be a Number');
   if (typeof (tag) !== 'number')
@@ -106,7 +106,7 @@ Writer.prototype.writeNull = function () {
 };
 
 
-Writer.prototype.writeEnumeration = function (i: umber,  tag: string) {
+Writer.prototype.writeEnumeration = function (i: umber,  tag: ny) {
   if (typeof (i) !== 'number')
     throw new TypeError('argument must be a Number');
   if (typeof (tag) !== 'number')
@@ -116,7 +116,7 @@ Writer.prototype.writeEnumeration = function (i: umber,  tag: string) {
 };
 
 
-Writer.prototype.writeBoolean = function (b: oolean,  tag: string) {
+Writer.prototype.writeBoolean = function (b: oolean,  tag: ny) {
   if (typeof (b) !== 'boolean')
     throw new TypeError('argument must be a Boolean');
   if (typeof (tag) !== 'number')
@@ -129,7 +129,7 @@ Writer.prototype.writeBoolean = function (b: oolean,  tag: string) {
 };
 
 
-Writer.prototype.writeString = function (s: ring,  tag: mber) {
+Writer.prototype.writeString = function (s: ring,  tag: g) {
   if (typeof (s) !== 'string')
     throw new TypeError('argument must be a string (was: ' + typeof (s) + ')');
   if (typeof (tag) !== 'number')
@@ -171,7 +171,7 @@ Writer.prototype.writeStringArray = function (strings: string[]) {
 };
 
 // This is really to solve DER cases, but whatever for now
-Writer.prototype.writeOID = function (s: ring,  tag: mber) {
+Writer.prototype.writeOID = function (s: ring,  tag: g) {
   if (typeof (s) !== 'string')
     throw new TypeError('argument must be a string');
   if (typeof (tag) !== 'number')
@@ -180,7 +180,7 @@ Writer.prototype.writeOID = function (s: ring,  tag: mber) {
   if (!/^([0-9]+\.){3,}[0-9]+$/.test(s))
     throw new Error('argument is not a valid OID string');
 
-  function encodeOctet(bytes: Uint8Array,  octet: number) {
+  function encodeOctet(bytes: number,  octet: number) {
     if (octet < 128) {
         bytes.push(octet);
     } else if (octet < 16384) {
@@ -285,7 +285,7 @@ Writer.prototype.endSequence = function () {
 };
 
 
-Writer.prototype._shift = function (start: umber,  len: umber,  shift: number) {
+Writer.prototype._shift = function (start: umber,  len: number,  shift: number) {
   assert.ok(start !== undefined);
   assert.ok(len !== undefined);
   assert.ok(shift);

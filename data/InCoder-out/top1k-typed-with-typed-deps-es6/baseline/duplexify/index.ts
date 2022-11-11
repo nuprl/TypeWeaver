@@ -7,23 +7,23 @@ var SIGNAL_FLUSH = (Buffer.from && Buffer.from !== Uint8Array.from)
   ? Buffer.from([0])
   : new Buffer([0])
 
-var onuncork = function(self: Coroutine,  fn: Function) {
+var onuncork = function(self: EventEmitter,  fn: Function) {
   if (self._corked) self.once('uncork', fn)
   else fn()
 }
 
-var autoDestroy = function (self: this,  err: Error) {
+var autoDestroy = function (self: any,  err: Error) {
   if (self._autoDestroy) self.destroy(err)
 }
 
-var destroyer = function(self: IAsyncEnumerable,  end: IAsyncEnumerator) {
+var destroyer = function(self: any,  end: number) {
   return function(err: Error) {
     if (err) autoDestroy(self, err.message === 'premature close' ? null : err)
     else if (end && !self._ended) self.end()
   }
 }
 
-var end = function(ws: Websocket,  fn: Function) {
+var end = function(ws: WebSocket,  fn: Function) {
   if (!ws) return fn()
   if (ws._writableState && ws._writableState.finished) return fn()
   if (ws._writableState) return ws.end(fn)
@@ -37,7 +37,7 @@ var toStreams2 = function(rs: ResultSet) {
   return new (stream.Readable)({objectMode:true, highWaterMark:16}).wrap(rs)
 }
 
-var Duplexify = function(writable: any,  readable: any,  opts: any) {
+var Duplexify = function(writable: Writable,  readable: Readable,  opts: Object) {
   if (!(this instanceof Duplexify)) return new Duplexify(writable, readable, opts)
   stream.Duplex.call(this, opts)
 
@@ -64,7 +64,7 @@ var Duplexify = function(writable: any,  readable: any,  opts: any) {
 
 inherits(Duplexify, stream.Duplex)
 
-Duplexify.obj = function(writable: any,  readable: any,  opts: any) {
+Duplexify.obj = function(writable: Writable,  readable: Readable,  opts: Object) {
   if (!opts) opts = {}
   opts.objectMode = true
   opts.highWaterMark = 16
@@ -203,7 +203,7 @@ Duplexify.prototype._destroy = function(err: Error) {
   this.emit('close')
 }
 
-Duplexify.prototype._write = function(data: any,  enc: any,  cb: Function) {
+Duplexify.prototype._write = function(data: Buffer,  enc: Buffer,  cb: Function) {
   if (this.destroyed) return
   if (this._corked) return onuncork(this, this._write.bind(this, data, enc, cb))
   if (data === SIGNAL_FLUSH) return this._finish(cb)

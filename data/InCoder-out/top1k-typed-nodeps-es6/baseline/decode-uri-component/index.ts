@@ -3,7 +3,7 @@ var token = '%[a-f0-9]{2}';
 var singleMatcher = new RegExp(token, 'gi');
 var multiMatcher = new RegExp('(' + token + ')+', 'gi');
 
-function decodeComponents(components: number[],  split: number) {
+function decodeComponents(components: string,  split: RegExp) {
 	try {
 		// Try to decode the entire string first
 		return decodeURIComponent(components.join(''));
@@ -24,7 +24,7 @@ function decodeComponents(components: number[],  split: number) {
 	return Array.prototype.concat.call([], decodeComponents(left), decodeComponents(right));
 }
 
-function decode(input: string | Uint8Array) {
+function decode(input: URIComponent) {
 	try {
 		return decodeURIComponent(input);
 	} catch (err) {
@@ -40,7 +40,7 @@ function decode(input: string | Uint8Array) {
 	}
 }
 
-function customDecodeURIComponent(input: string | Uint8Array) {
+function customDecodeURIComponent(input: URIComponent) {
 	// Keep track of all the replacements and prefill the map with the `BOM`
 	var replaceMap = {
 		'%FE%FF': '\uFFFD\uFFFD',
@@ -77,7 +77,7 @@ function customDecodeURIComponent(input: string | Uint8Array) {
 	return input;
 }
 
-export default function (encodedURI: any) {
+export default function (encodedURI: I) {
 	if (typeof encodedURI !== 'string') {
 		throw new TypeError('Expected `encodedURI` to be of type `string`, got `' + typeof encodedURI + '`');
 	}

@@ -21,7 +21,7 @@ import isArrayLikeObject from './isArrayLikeObject.js'
  * difference([2, 1], [2, 3])
  * // => [1]
  */
-function difference(array: rray<T>,  ...values: []) {
+function difference(array: rrayLike<number>,  ...values: rayLike<number>) {
   return isArrayLikeObject(array)
     ? baseDifference(array, baseFlatten(values, 1, isArrayLikeObject, true))
     : []

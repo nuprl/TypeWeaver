@@ -72,19 +72,13 @@ index.ts(64,31): error TS2469: The '+' operator cannot be applied to type 'symbo
 index.ts(80,30): error TS2709: Cannot use namespace 'EventEmitter' as a type.
 index.ts(131,31): error TS2538: Type 'Event' cannot be used as an index type.
 index.ts(152,32): error TS2538: Type 'Event' cannot be used as an index type.
-index.ts(169,21): error TS2538: Type 'Event' cannot be used as an index type.
-index.ts(171,32): error TS2538: Type 'Event' cannot be used as an index type.
-index.ts(228,28): error TS2345: Argument of type 'Event' is not assignable to parameter of type 'string | symbol'.
-index.ts(241,28): error TS2345: Argument of type 'Event' is not assignable to parameter of type 'string | symbol'.
-index.ts(257,21): error TS2538: Type 'Event' cannot be used as an index type.
-index.ts(259,22): error TS2345: Argument of type 'string | Event' is not assignable to parameter of type 'Event'.
+index.ts(167,31): error TS2469: The '+' operator cannot be applied to type 'symbol'.
+index.ts(255,31): error TS2469: The '+' operator cannot be applied to type 'symbol'.
+index.ts(259,22): error TS2345: Argument of type 'string | symbol' is not assignable to parameter of type 'Event'.
   Type 'string' is not assignable to type 'Event'.
-index.ts(263,32): error TS2538: Type 'Event' cannot be used as an index type.
-index.ts(271,24): error TS2345: Argument of type 'string | Event' is not assignable to parameter of type 'Event'.
+index.ts(271,24): error TS2345: Argument of type 'string | symbol' is not assignable to parameter of type 'Event'.
   Type 'string' is not assignable to type 'Event'.
-index.ts(287,37): error TS2538: Type 'Event' cannot be used as an index type.
-index.ts(288,27): error TS2345: Argument of type 'string | Event' is not assignable to parameter of type 'Event'.
+index.ts(288,27): error TS2345: Argument of type 'string | symbol' is not assignable to parameter of type 'Event'.
   Type 'string' is not assignable to type 'Event'.
-index.ts(305,29): error TS2469: The '+' operator cannot be applied to type 'symbol'.
 index.ts(335,3): error TS1258: A default export must be at the top level of a file or module declaration.
 

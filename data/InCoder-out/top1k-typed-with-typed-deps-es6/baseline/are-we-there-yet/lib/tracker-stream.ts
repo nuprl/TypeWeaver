@@ -14,8 +14,8 @@ var TrackerStream = function (name: String,  size: Number,  options: Object) {
 export default TrackerStream;
 util.inherits(TrackerStream, stream.Transform)
 
-function delegateChange (trackerStream: TrackerStream) {
-  return function (name: any,  completion: Function,  tracker: any) {
+function delegateChange (trackerStream: Stream) {
+  return function (name: String,  completion: Function,  tracker: Tracker) {
     trackerStream.emit('change', name, completion, trackerStream)
   }
 }

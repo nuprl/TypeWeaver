@@ -19,7 +19,7 @@ const knownProperties = [
 	'url',
 ];
 
-export default function mimicResponse(fromStream: NodeJS.ReadableStream,  toStream: NodeJS.WritableStream) {
+export default function mimicResponse(fromStream: Response,  toStream: Response) {
 	if (toStream._readableState.autoDestroy) {
 		throw new Error('The second stream must have the `autoDestroy` option set to `false`');
 	}

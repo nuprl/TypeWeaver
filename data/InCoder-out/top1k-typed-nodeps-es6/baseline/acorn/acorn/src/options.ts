@@ -134,8 +134,8 @@ export function getOptions(opts: any) {
   return options
 }
 
-function pushComment(options: CommentOptions,  array: Array<Comment>) {
-  return function(block: BlockStatement,  text: string,  start: number,  end: number,  startLoc: number,  endLoc: number) {
+function pushComment(options: CommentOptions,  array: Comment[]) {
+  return function(block: Blockly.BlockSvg,  text: Blockly.FieldTextInput,  start: Blockly.FieldTextInput,  end: Blockly.FieldTextInput,  startLoc: Blockly.FieldTextInput,  endLoc: Blockly.FieldTextInput) {
     let comment = {
       type: block ? "Block" : "Line",
       value: text,

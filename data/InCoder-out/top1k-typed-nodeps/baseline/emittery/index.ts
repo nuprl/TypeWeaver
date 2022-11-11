@@ -16,13 +16,13 @@ function assertEventName(eventName: string | symbol) {
 	}
 }
 
-function assertListener(listener: Function) {
+function assertListener(listener: Listener) {
 	if (typeof listener !== 'function') {
 		throw new TypeError('listener must be a function');
 	}
 }
 
-function getListeners(instance: any,  eventName: string | symbol) {
+function getListeners(instance: any,  eventName: any) {
 	const events = eventsMap.get(instance);
 	if (!events.has(eventName)) {
 		return;
@@ -31,7 +31,7 @@ function getListeners(instance: any,  eventName: string | symbol) {
 	return events.get(eventName);
 }
 
-function getEventProducers(instance: EventTarget,  eventName: string | symbol) {
+function getEventProducers(instance: Instance,  eventName: EventName) {
 	const key = typeof eventName === 'string' || typeof eventName === 'symbol' || typeof eventName === 'number' ? eventName : anyProducer;
 	const producers = producersMap.get(instance);
 	if (!producers.has(key)) {
@@ -57,7 +57,7 @@ function enqueueProducers(instance: any,  eventName: any,  eventData: any) {
 	}
 }
 
-function iterator(instance: IEventEmitter,  eventNames: string[]) {
+function iterator(instance: any,  eventNames: string[]) {
 	eventNames = Array.isArray(eventNames) ? eventNames : [eventNames];
 
 	let isFinished = false;
@@ -138,7 +138,7 @@ function iterator(instance: IEventEmitter,  eventNames: string[]) {
 	};
 }
 
-function defaultMethodNamesOrAssert(methodNames: Array<string>) {
+function defaultMethodNamesOrAssert(methodNames: string[]) {
 	if (methodNames === undefined) {
 		return allEmitteryMethods;
 	}
@@ -162,7 +162,7 @@ function defaultMethodNamesOrAssert(methodNames: Array<string>) {
 
 const isMetaEvent = eventName => eventName === listenerAdded || eventName === listenerRemoved;
 
-function emitMetaEvent(emitter: EventEmitter,  eventName: MetaEventName,  eventData: EventData) {
+function emitMetaEvent(emitter: EventEmitter,  eventName: string | symbol,  eventData: any) {
 	if (isMetaEvent(eventName)) {
 		try {
 			canEmitMetaEvents = true;

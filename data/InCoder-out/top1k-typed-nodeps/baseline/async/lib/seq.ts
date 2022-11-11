@@ -30,7 +30,7 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *         function(user: User,  fn: Function) {
  *             user.getCats(fn);      // 'getCats' has signature (callback(err, data))
  *         }
- *     )(req.session.user_id, function (err: Error,  cats: Array<Cat>) {
+ *     )(req.session.user_id, function (err: Error,  cats: Cat[]) {
  *         if (err) {
  *             console.error(err);
  *             response.json({ status: 'error', message: err.message });

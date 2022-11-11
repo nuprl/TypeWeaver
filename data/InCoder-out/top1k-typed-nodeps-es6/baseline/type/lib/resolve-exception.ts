@@ -3,7 +3,7 @@
 import isValue from '../value/is';
 import resolveErrorMessage from './resolve-error-message';
 
-export default function (value: any,  defaultMessage: string | string[],  inputOptions: InputOptions) {
+export default function (value: any,  defaultMessage: any,  inputOptions: any) {
 	if (inputOptions && !isValue(value)) {
 		if ("default" in inputOptions) return inputOptions["default"];
 		if (inputOptions.isOptional) return null;

@@ -7,7 +7,7 @@ var SIGNAL_FLUSH =(Buffer.from && Buffer.from !== Uint8Array.from)
 
 module.exports = WriteStream
 
-function WriteStream (opts: WriteStreamOptions,  write: WriteStreamWrite,  flush: FlushStreamWrite) {
+function WriteStream (opts: WriteOpts,  write: WriteFunction,  flush: FlushFunction) {
   if (!(this instanceof WriteStream)) return new WriteStream(opts, write, flush)
 
   if (typeof opts === 'function') {

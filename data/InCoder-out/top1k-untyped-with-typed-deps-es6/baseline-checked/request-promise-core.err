@@ -1,8 +1,6 @@
 configure/request-next.ts(3,18): error TS2307: Cannot find module '../' or its corresponding type declarations.
-configure/request-next.ts(9,35): error TS2304: Cannot find name 'IOptions'.
-configure/request-next.ts(42,38): error TS2304: Cannot find name 'RequestOptionsArg'.
+configure/request-next.ts(42,38): error TS2304: Cannot find name 'RequestOptions'.
 configure/request2.ts(3,18): error TS2307: Cannot find module '../' or its corresponding type declarations.
-configure/request2.ts(9,35): error TS2304: Cannot find name 'IOptions'.
 configure/request2.ts(36,90): error TS2304: Cannot find name 'RequestOptions'.
 gulpfile.ts(3,18): error TS2307: Cannot find module 'gulp' or its corresponding type declarations.
 gulpfile.ts(4,25): error TS2307: Cannot find module 'run-sequence' or its corresponding type declarations.
@@ -12,30 +10,32 @@ gulpfile.ts(7,19): error TS2307: Cannot find module 'chalk' or its corresponding
 gulpfile.ts(9,23): error TS2307: Cannot find module 'gulp-coveralls' or its corresponding type declarations.
 gulpfile.ts(10,20): error TS2307: Cannot find module 'gulp-eslint' or its corresponding type declarations.
 gulpfile.ts(12,18): error TS2307: Cannot find module 'chai' or its corresponding type declarations.
-gulpfile.ts(65,46): error TS2304: Cannot find name 'DoneFn'.
-gulpfile.ts(105,45): error TS2304: Cannot find name 'MochaDone'.
-gulpfile.ts(109,33): error TS2304: Cannot find name 'DoneFn'.
-gulpfile.ts(113,40): error TS2304: Cannot find name 'DoneFn'.
-lib/errors.ts(4,47): error TS2304: Cannot find name 'RequestOptions'.
-lib/errors.ts(40,49): error TS2304: Cannot find name 'TransformOptions'.
-lib/plumbing.ts(10,35): error TS2304: Cannot find name 'IOptions'.
+gulpfile.ts(46,39): error TS2304: Cannot find name 'Done'.
+gulpfile.ts(65,46): error TS2304: Cannot find name 'Done'.
+gulpfile.ts(105,45): error TS2304: Cannot find name 'Done'.
+gulpfile.ts(109,33): error TS2304: Cannot find name 'Done'.
+gulpfile.ts(113,40): error TS2304: Cannot find name 'Done'.
 lib/plumbing.ts(32,14): error TS2339: Property 'init' does not exist on type '{}'.
 lib/plumbing.ts(32,47): error TS2304: Cannot find name 'RequestOptions'.
+lib/plumbing.ts(45,112): error TS2304: Cannot find name 'RP$Body'.
 lib/plumbing.ts(46,22): error TS2339: Property 'callback' does not exist on type '{}'.
 lib/plumbing.ts(53,73): error TS2339: Property 'defaultTransformations' does not exist on type '{}'.
 lib/plumbing.ts(62,14): error TS2339: Property 'defaultTransformations' does not exist on type '{}'.
 lib/plumbing.ts(68,14): error TS2339: Property 'callback' does not exist on type '{}'.
+lib/plumbing.ts(83,53): error TS2339: Property 'statusCode' does not exist on type 'Response'.
+lib/plumbing.ts(96,58): error TS2304: Cannot find name 'HttpResponse'.
+lib/plumbing.ts(97,77): error TS2339: Property 'statusCode' does not exist on type 'Response'.
+lib/plumbing.ts(104,69): error TS2339: Property 'statusCode' does not exist on type 'Response'.
+lib/plumbing.ts(114,58): error TS2304: Cannot find name 'HttpResponse'.
 lib/plumbing.ts(135,14): error TS2339: Property 'exposePromiseMethod' does not exist on type '{}'.
 lib/plumbing.ts(137,9): error TS2322: Type 'Function | String' is not assignable to type 'String'.
   Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/plumbing.ts(139,13): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
 lib/plumbing.ts(143,18): error TS2538: Type 'String' cannot be used as an index type.
-lib/plumbing.ts(145,25): error TS2538: Type 'Function' cannot be used as an index type.
-lib/plumbing.ts(145,72): error TS2538: Type 'Function' cannot be used as an index type.
+lib/plumbing.ts(145,25): error TS2538: Type 'Object' cannot be used as an index type.
+lib/plumbing.ts(145,72): error TS2538: Type 'Object' cannot be used as an index type.
 lib/plumbing.ts(150,14): error TS2339: Property 'exposePromise' does not exist on type '{}'.
-lib/plumbing.ts(152,9): error TS2322: Type 'Function | "promise"' is not assignable to type 'Function'.
-  Type 'string' is not assignable to type 'Function'.
 lib/plumbing.ts(154,13): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
-lib/plumbing.ts(158,18): error TS2538: Type 'Function' cannot be used as an index type.
-lib/plumbing.ts(160,25): error TS2538: Type 'Function' cannot be used as an index type.
+lib/plumbing.ts(158,18): error TS2538: Type 'String' cannot be used as an index type.
+lib/plumbing.ts(160,25): error TS2538: Type 'Object' cannot be used as an index type.
 

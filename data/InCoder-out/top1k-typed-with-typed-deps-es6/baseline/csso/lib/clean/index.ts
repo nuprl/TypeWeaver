@@ -17,7 +17,7 @@ const handlers = {
     WhiteSpace
 };
 
-export default function(ast: AST,  options: any) {
+export default function(ast: AST,  options: ParseOptions) {
     walk(ast, {
         leave(node, item, list) {
             if (handlers.hasOwnProperty(node.type)) {

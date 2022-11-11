@@ -10,8 +10,9 @@ lib/links.ts(25,87): error TS2304: Cannot find name 'Schema'.
 lib/links.ts(38,52): error TS2304: Cannot find name 'Link'.
 lib/links.ts(48,24): error TS2339: Property 'cacheLinks' does not exist on type '{}'.
 lib/links.ts(56,5): error TS1184: Modifiers cannot appear here.
-lib/links.ts(56,54): error TS2304: Cannot find name 'Template'.
-lib/links.ts(56,75): error TS2304: Cannot find name 'IInstance'.
+lib/links.ts(56,54): error TS2304: Cannot find name 'LinkTemplate'.
+lib/links.ts(56,79): error TS2304: Cannot find name 'Instance'.
+lib/links.ts(57,83): error TS2304: Cannot find name 'Property'.
 lib/validate.ts(15,16): error TS2304: Cannot find name 'define'.
 lib/validate.ts(15,41): error TS2304: Cannot find name 'define'.
 lib/validate.ts(17,9): error TS2304: Cannot find name 'define'.
@@ -24,17 +25,10 @@ lib/validate.ts(64,34): error TS2554: Expected 2 arguments, but got 3.
 lib/validate.ts(66,5): error TS2300: Duplicate identifier 'validate'.
 lib/validate.ts(66,24): error TS2339: Property '_validate' does not exist on type '(instance: any, schema: Object) => any'.
 lib/validate.ts(71,27): error TS2304: Cannot find name 'Schema'.
-lib/validate.ts(76,42): error TS2304: Cannot find name 'Schema'.
-lib/validate.ts(79,3): error TS2365: Operator '+=' cannot be applied to types 'string[]' and 'string | number'.
 lib/validate.ts(110,8): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 lib/validate.ts(123,6): error TS2554: Expected 4 arguments, but got 3.
-lib/validate.ts(222,35): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-lib/validate.ts(245,41): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-lib/validate.ts(248,63): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-lib/validate.ts(254,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'string[]'.
-lib/validate.ts(257,39): error TS2345: Argument of type 'string' is not assignable to parameter of type 'string[]'.
+lib/validate.ts(254,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+lib/validate.ts(257,39): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 lib/validate.ts(261,9): error TS2339: Property 'mustBeValid' does not exist on type '(instance: any, schema: Object) => any'.
-lib/validate.ts(265,13): error TS2339: Property 'valid' does not exist on type 'Object'.
-lib/validate.ts(266,30): error TS2339: Property 'errors' does not exist on type 'Object'.
 lib/validate.ts(266,57): error TS2304: Cannot find name 'ror'.
 

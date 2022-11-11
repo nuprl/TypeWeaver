@@ -32,11 +32,11 @@ import awaitify from './internal/awaitify.js'
  *         // arg1 now equals 'one' and arg2 now equals 'two'
  *         callback(null, 'three');
  *     },
- *     function(arg1: any,  callback: Function) {
+ *     function(arg1: any,  callback: any) {
  *         // arg1 now equals 'three'
  *         callback(null, 'done');
  *     }
- * ], function (err: Error,  result: Result) {
+ * ], function (err: Error,  result: string | boolean) {
  *     // result now equals 'done'
  * });
  *
@@ -45,7 +45,7 @@ import awaitify from './internal/awaitify.js'
  *     myFirstFunction,
  *     mySecondFunction,
  *     myLastFunction,
- * ], function (err: Error,  result: Result) {
+ * ], function (err: Error,  result: string | boolean) {
  *     // result now equals 'done'
  * });
  * function myFirstFunction(callback: Function) {
@@ -55,18 +55,18 @@ import awaitify from './internal/awaitify.js'
  *     // arg1 now equals 'one' and arg2 now equals 'two'
  *     callback(null, 'three');
  * }
- * function myLastFunction(arg1: any,  callback: Function) {
+ * function myLastFunction(arg1: number,  callback: Function) {
  *     // arg1 now equals 'three'
  *     callback(null, 'done');
  * }
  */
-function waterfall (tasks: Array<Function>,  callback: Function) {
+function waterfall (tasks: Task[],  callback: Function) {
     callback = once(callback);
     if (!Array.isArray(tasks)) return callback(new Error('First argument to waterfall must be an array of functions'));
     if (!tasks.length) return callback();
     var taskIndex = 0;
 
-    function nextTask(args: any) {
+    function nextTask(args: any[]) {
         var task = wrapAsync(tasks[taskIndex++]);
         task(...args, onlyOnce(next));
     }

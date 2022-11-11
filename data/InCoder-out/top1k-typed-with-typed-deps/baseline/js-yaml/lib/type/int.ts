@@ -103,7 +103,7 @@ function resolveYamlInteger(data: any) {
   return true;
 }
 
-function constructYamlInteger(data: any) {
+function constructYamlInteger(data: number) {
   var value = data, sign = 1, ch;
 
   if (value.indexOf('_') !== -1) {
@@ -129,7 +129,7 @@ function constructYamlInteger(data: any) {
   return sign * parseInt(value, 10);
 }
 
-function isInteger(object: Object) {
+function isInteger(object: any) {
   return (Object.prototype.toString.call(object)) === '[object Number]' &&
          (object % 1 === 0 && !common.isNegativeZero(object));
 }

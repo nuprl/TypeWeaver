@@ -25,7 +25,7 @@ function generateIndex(done: Function) {
     })
 }
 
-function loadAliases (cb: Function) {
+function loadAliases (cb: CallbackFunction) {
     const aliases = {}
     fs.readFileSync(path.join(__dirname, 'aliases.txt'), 'utf8')
         .split('\n')
@@ -47,7 +47,7 @@ function readEntries (cb: Function) {
     })
 }
 
-function renderTemplate(entries: TemplateEntry[],  aliases: TemplateAlias[],  template: TemplateRef) {
+function renderTemplate(entries: any[],  aliases: any[],  template: any) {
     return template
         .replace(
             `/*__imports__*/`,

@@ -85,7 +85,7 @@ function applyPreCheerioFixes(data: any) {
 }
 
 
-function scrollSpyFix($page: JQuery,  $nav: JQuery) {
+function scrollSpyFix($page: number,  $nav: number) {
     // move everything into one big ul (for Bootstrap scroll-spy)
     var $ul = $nav.children('ul');
     $ul.addClass('nav').addClass('methods');
@@ -110,7 +110,7 @@ function scrollSpyFix($page: JQuery,  $nav: JQuery) {
     });
 }
 
-function fixToc(file: File,  $page: Page,  moduleFiles: ModuleFile[]) {
+function fixToc(file: File,  $page: JQuery,  moduleFiles: string[]) {
     // remove `async` listing from toc
     $page.find('a[href="'+mainModuleFile+'"]').parent().remove();
 
@@ -187,7 +187,7 @@ fs.readdir(docsDir, (readErr, files) => {
         async.asyncify(() => {
             HTMLFiles.push(docFilename)
         }),
-        function(callback: Function) {
+        function(callback: Callback<any>) {
             fixModuleLinks(HTMLFiles, callback);
         }
     ], (err) => {

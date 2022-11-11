@@ -40,7 +40,7 @@ function createFile (file: File,  callback: Function) {
   })
 }
 
-function createFileSync (file: string | Buffer) {
+function createFileSync (file: File) {
   let stats
   try {
     stats = fs.statSync(file)

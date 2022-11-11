@@ -29,7 +29,7 @@ function findexRefresh () {
   findex = 0;
 }
 
-function add (op: any,  obj: any) {
+function add (op: String,  obj: Object) {
   benchmarks.push({
     name: op,
     start: function start () {
@@ -37,7 +37,7 @@ function add (op: any,  obj: any) {
 
       console.log('Benchmarking: ' + op);
 
-      Object.keys(obj).forEach(function (name: string | null) {
+      Object.keys(obj).forEach(function (name: any) {
         if (name === 'BigInt' && typeof BigInt === 'undefined') {
           return;
         }
@@ -84,7 +84,7 @@ function start () {
     .filter(function (b: any) {
       return re.test(b.name);
     })
-    .forEach(function (b: any) {
+    .forEach(function (b: AnimationBuilder) {
       b.start();
     });
 }
@@ -168,10 +168,10 @@ while (fixtures.length < 25) {
 }
 
 add('create-10', {
-  'bn.js': function (fixture: ElementRef) {
+  'bn.js': function (fixture: BNFixture) {
     new bn(fixture.a10base, 10);
   },
-  BigInt: function (fixture: BigInt) {
+  BigInt: function (fixture: BigIntFixture) {
     BigInt(fixture.a10base);
   },
   bignum: function (fixture: BignumFixture) {
@@ -180,100 +180,100 @@ add('create-10', {
   bigi: function (fixture: Bigi) {
     new bigi(fixture.a10base, 10);
   },
-  yaffle: function (fixture: BigInteger) {
+  yaffle: function (fixture: BigIntegerFixture) {
     new BigInteger(fixture.a10base, 10);
   },
-  'silentmatt-biginteger': function (fixture: ComponentFixture) {
+  'silentmatt-biginteger': function (fixture: any) {
     SilentMattBigInteger.parse(fixture.a10base, 10);
   }
 });
 
 add('create-hex', {
-  'bn.js': function (fixture: any) {
+  'bn.js': function (fixture: BNFixture) {
     new bn(fixture.a16base, 16);
   },
   bignum: function (fixture: BignumFixture) {
     new bignum(fixture.a16base, 16);
   },
-  bigi: function (fixture: Bigi) {
+  bigi: function (fixture: bigi) {
     new bigi(fixture.a16base, 16);
   },
-  sjcl: function (fixture: any) {
+  sjcl: function (fixture: sjcl.test.Fixture) {
     new sjcl(fixture.a16base);
   },
-  yaffle: function (fixture: BigInteger) {
+  yaffle: function (fixture: BigIntegerFixture) {
     new BigInteger(fixture.a16base, 16);
   },
-  'silentmatt-biginteger': function (fixture: ComponentFixture) {
+  'silentmatt-biginteger': function (fixture: any) {
     SilentMattBigInteger.parse(fixture.a16base, 16);
   }
 });
 
 add('toString-10', {
-  'bn.js': function (fixture: ComponentFixture) {
+  'bn.js': function (fixture: ComponentFixture<any>) {
     fixture.a1.toString(10);
   },
-  BigInt: function (fixture: ComponentFixture) {
+  BigInt: function (fixture: Fixture<any>) {
     fixture.a2.toString(10);
   },
-  bignum: function (fixture: ComponentFixture) {
+  bignum: function (fixture: Fixture<any>) {
     fixture.a3.toString(10);
   },
-  bigi: function (fixture: ComponentFixture) {
+  bigi: function (fixture: Fixture<any>) {
     fixture.a4.toString(10);
   },
-  yaffle: function (fixture: ComponentFixture) {
+  yaffle: function (fixture: any) {
     fixture.a6.toString(10);
   },
-  'silentmatt-biginteger': function (fixture: ComponentFixture) {
+  'silentmatt-biginteger': function (fixture: any) {
     fixture.a7.toString(10);
   }
 });
 
 add('toString-hex', {
-  'bn.js': function (fixture: ComponentFixture) {
+  'bn.js': function (fixture: Fixture<any>) {
     fixture.a1.toString(16);
   },
-  BigInt: function (fixture: ComponentFixture) {
+  BigInt: function (fixture: Fixture<any>) {
     fixture.a2.toString(16);
   },
-  bignum: function (fixture: ComponentFixture<any>) {
+  bignum: function (fixture: Fixture<any>) {
     fixture.a3.toString(16);
   },
-  bigi: function (fixture: ComponentFixture) {
+  bigi: function (fixture: Fixture<any>) {
     fixture.a4.toString(16);
   },
-  sjcl: function (fixture: ComponentFixture<any>) {
+  sjcl: function (fixture: Fixture<any>) {
     fixture.a5.toString(16);
   },
-  yaffle: function (fixture: ComponentFixture) {
+  yaffle: function (fixture: Fixture) {
     fixture.a6.toString(16);
   },
-  'silentmatt-biginteger': function (fixture: ComponentFixture) {
+  'silentmatt-biginteger': function (fixture: any) {
     fixture.a7.toString(16);
   }
 });
 
 add('add', {
-  'bn.js': function (fixture: ComponentFixture) {
+  'bn.js': function (fixture: Fixture) {
     fixture.a1.add(fixture.b1);
   },
-  BigInt: function (fixture: ComponentFixture) {
+  BigInt: function (fixture: any) {
     fixture.a2 + fixture.b2;
   },
-  bignum: function (fixture: ComponentFixture<any>) {
+  bignum: function (fixture: Fixture) {
     fixture.a3.add(fixture.b3);
   },
-  bigi: function (fixture: ComponentFixture<any>) {
+  bigi: function (fixture: Fixture) {
     fixture.a4.add(fixture.b4);
   },
-  sjcl: function (fixture: ComponentFixture<any>) {
+  sjcl: function (fixture: Fixture) {
     fixture.a5.add(fixture.b5);
   },
-  yaffle: function (fixture: ComponentFixture<any>) {
+  yaffle: function (fixture: Fixture) {
     fixture.a6.add(fixture.b6);
   },
-  'silentmatt-biginteger': function (fixture: ComponentFixture) {
+  'silentmatt-biginteger': function (fixture: Fixture) {
     fixture.a7.add(fixture.a7);
   }
 });
@@ -282,19 +282,19 @@ add('sub', {
   'bn.js': function (fixture: B) {
     fixture.b1.sub(fixture.a1);
   },
-  BigInt: function (fixture: ComponentFixture<any>) {
+  BigInt: function (fixture: ComponentFixture<Component>) {
     fixture.a2 - fixture.b2;
   },
   bignum: function (fixture: B3Fixture) {
     fixture.b3.sub(fixture.a3);
   },
-  bigi: function (fixture: BatmanFixture) {
+  bigi: function (fixture: BBoxFixture) {
     fixture.b4.subtract(fixture.a4);
   },
   sjcl: function (fixture: B5Fixture) {
     fixture.b5.sub(fixture.a5);
   },
-  yaffle: function (fixture: B6Fixture) {
+  yaffle: function (fixture: B6) {
     fixture.b6.subtract(fixture.a6);
   },
   'silentmatt-biginteger': function (fixture: B7Fixture) {
@@ -303,40 +303,40 @@ add('sub', {
 });
 
 add('mul', {
-  'bn.js': function (fixture: TestFixture) {
+  'bn.js': function (fixture: Fixture) {
     fixture.a1.mul(fixture.b1);
   },
-  'bn.js[FFT]': function (fixture: TestFixture) {
+  'bn.js[FFT]': function (fixture: Fixture) {
     fixture.a1.mulf(fixture.b1);
   },
-  BigInt: function (fixture: ComponentFixture) {
+  BigInt: function (fixture: Fixture<number>) {
     fixture.a2 * fixture.b2;
   },
-  bignum: function (fixture: TestFixture) {
+  bignum: function (fixture: Fixture) {
     fixture.a3.mul(fixture.b3);
   },
   bigi: function (fixture: Fixture) {
     fixture.a4.multiply(fixture.b4);
   },
-  sjcl: function (fixture: B5Fixture) {
+  sjcl: function (fixture: Fixture) {
     fixture.a5.mul(fixture.b5);
   },
-  yaffle: function (fixture: TestFixture) {
+  yaffle: function (fixture: Fixture) {
     fixture.a6.multiply(fixture.b6);
   },
-  'silentmatt-biginteger': function (fixture: ComponentFixture) {
+  'silentmatt-biginteger': function (fixture: any) {
     fixture.a7.multiply(fixture.b7);
   }
 });
 
 add('mul-jumbo', {
-  'bn.js': function (fixture: fixtures.Fixture) {
+  'bn.js': function (fixture: Fixture) {
     fixture.a1j.mul(fixture.b1j);
   },
-  'bn.js[FFT]': function (fixture: fixtures.fixture) {
+  'bn.js[FFT]': function (fixture: Fixture) {
     fixture.a1j.mulf(fixture.b1j);
   },
-  BigInt: function (fixture: any) {
+  BigInt: function (fixture: Fixture) {
     fixture.a2j * fixture.b2j;
   },
   bignum: function (fixture: Fixture) {
@@ -345,13 +345,13 @@ add('mul-jumbo', {
   bigi: function (fixture: Fixture) {
     fixture.a4j.multiply(fixture.b4j);
   },
-  sjcl: function (fixture: fixtures.Fixture) {
+  sjcl: function (fixture: Fixture<number>) {
     fixture.a5j.mul(fixture.b5j);
   },
   yaffle: function (fixture: Fixture) {
     fixture.a6j.multiply(fixture.b6j);
   },
-  'silentmatt-biginteger': function (fixture: Fixture) {
+  'silentmatt-biginteger': function (fixture: A7) {
     fixture.a7j.multiply(fixture.b7j);
   }
 });
@@ -360,67 +360,67 @@ add('sqr', {
   'bn.js': function (fixture: Fixture) {
     fixture.a1.mul(fixture.a1);
   },
-  BigInt: function (fixture: ComponentFixture) {
+  BigInt: function (fixture: Fixture<number>) {
     fixture.a2 * fixture.a2;
   },
   bignum: function (fixture: Fixture) {
     fixture.a3.mul(fixture.a3);
   },
-  bigi: function (fixture: ComponentFixture) {
+  bigi: function (fixture: Fixture) {
     fixture.a4.square();
   },
   sjcl: function (fixture: Fixture) {
     fixture.a5.mul(fixture.a5);
   },
-  yaffle: function (fixture: ComponentFixture) {
+  yaffle: function (fixture: Fixture) {
     fixture.a6.multiply(fixture.a6);
   },
-  'silentmatt-biginteger': function (fixture: ComponentFixture) {
+  'silentmatt-biginteger': function (fixture: Fixture) {
     fixture.a7.multiply(fixture.a7);
   }
 });
 
 add('div', {
-  'bn.js': function (fixture: ComponentFixture) {
+  'bn.js': function (fixture: ComponentFixture<any>) {
     fixture.as1.div(fixture.a1);
   },
-  BigInt: function (fixture: ComponentFixture) {
+  BigInt: function (fixture: ComponentFixture<Component>) {
     fixture.as2 / fixture.a2;
   },
-  bignum: function (fixture: ComponentFixture) {
+  bignum: function (fixture: A3Fixture) {
     fixture.as3.div(fixture.a3);
   },
-  bigi: function (fixture: Fixture) {
+  bigi: function (fixture: A4) {
     fixture.as4.divide(fixture.a4);
   },
-  yaffle: function (fixture: TestFixture) {
+  yaffle: function (fixture: A6) {
     fixture.as6.divide(fixture.a6);
   },
-  'silentmatt-biginteger': function (fixture: ComponentFixture) {
+  'silentmatt-biginteger': function (fixture: A7) {
     fixture.as7.divide(fixture.a7);
   }
 });
 
 add('mod', {
-  'bn.js': function (fixture: TestFixture) {
+  'bn.js': function (fixture: Fixture<any>) {
     fixture.as1.mod(fixture.a1);
   },
-  BigInt: function (fixture: ComponentFixture) {
+  BigInt: function (fixture: ComponentFixture<Component>) {
     fixture.as2 / fixture.a2;
   },
   bignum: function (fixture: A3Fixture) {
     fixture.as3.mod(fixture.a3);
   },
-  bigi: function (fixture: Fixture) {
+  bigi: function (fixture: A4) {
     fixture.as4.mod(fixture.a4);
   },
-  yaffle: function (fixture: ComponentFixture) {
+  yaffle: function (fixture: any) {
     var remainder = fixture.as6.remainder(fixture.a6);
     return remainder.compareTo(BigInteger.ZERO) < 0
       ? remainder.add(fixture.a6)
       : remainder;
   },
-  'silentmatt-biginteger': function (fixture: ComponentFixture) {
+  'silentmatt-biginteger': function (fixture: any) {
     var remainder = fixture.as7.remainder(fixture.a7);
     return remainder.compare(BigInteger.ZERO) < 0
       ? remainder.add(fixture.a7)
@@ -429,10 +429,10 @@ add('mod', {
 });
 
 add('mul-mod k256', {
-  'bn.js': function (fixture: ComponentFixture) {
+  'bn.js': function (fixture: Fixture) {
     fixture.am1.redSqr();
   },
-  sjcl: function (fixture: any) {
+  sjcl: function (fixture: Fixture) {
     fixture.am5.square().fullReduce();
   }
 });
@@ -453,13 +453,13 @@ add('pow k256', {
   'bn.js': function (fixture: Fixture) {
     fixture.am1.redPow(fixture.pow1);
   },
-  bignum: function (fixture: TestFixture) {
+  bignum: function (fixture: A3Fixture) {
     fixture.a3.powm(fixture.a3, prime1);
   }
 });
 
 add('invm k256', {
-  'bn.js': function (fixture: ComponentFixture) {
+  'bn.js': function (fixture: Fixture) {
     fixture.am1.redInvm();
   },
   sjcl: function (fixture: any) {
@@ -468,10 +468,10 @@ add('invm k256', {
 });
 
 add('gcd', {
-  'bn.js': function (fixture: TestFixture) {
+  'bn.js': function (fixture: Fixture<number>) {
     fixture.a1.gcd(fixture.b1);
   },
-  bigi: function (fixture: TestFixture) {
+  bigi: function (fixture: Fixture) {
     fixture.a4.gcd(fixture.b4);
   }
 });

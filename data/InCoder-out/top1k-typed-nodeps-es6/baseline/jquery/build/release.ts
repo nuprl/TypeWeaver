@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 
-export default function( Release : Release.default) {
+export default function( Release : ReleaseType) {
 
 	const distFiles = [
 		"dist/jquery.js",

@@ -1,8 +1,8 @@
 Source directory: .
 Dataset: top1k-untyped-with-typed-deps
-Type checking with: /mnt/data/mhyee/not-type-inference/tools/node_modules/typescript/bin/tsc
-Input directory: /mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-untyped-with-typed-deps/baseline
-Output directory: /mnt/data/mhyee/not-type-inference/data/InCoder-out/top1k-untyped-with-typed-deps/baseline-checked
+Type checking with: /work/arjunguha-research-group/mhyee/not-type-inference/tools/node_modules/typescript/bin/tsc
+Input directory: /work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-untyped-with-typed-deps/baseline
+Output directory: /work/arjunguha-research-group/mhyee/not-type-inference/data/InCoder-out/top1k-untyped-with-typed-deps/baseline-checked
 Found 39 packages
 [1/39] @npmcli_move-file ... [FAIL]
 [2/39] array-includes ... [FAIL]
@@ -17,10 +17,10 @@ Found 39 packages
 [11/39] fs-write-stream-atomic ... [FAIL]
 [12/39] get-symbol-description ... [ OK ]
 [13/39] has-tostringtag ... [ OK ]
-[14/39] has-values ... [FAIL]
+[14/39] has-values ... [ OK ]
 [15/39] is-nan ... [FAIL]
 [16/39] is-symbol ... [FAIL]
-[17/39] is-weakset ... [ OK ]
+[17/39] is-weakset ... [FAIL]
 [18/39] jsprim ... [FAIL]
 [19/39] levn ... [FAIL]
 [20/39] makeerror ... [FAIL]
@@ -36,14 +36,14 @@ Found 39 packages
 [30/39] side-channel ... [FAIL]
 [31/39] snapdragon-util ... [FAIL]
 [32/39] source-map-resolve ... [FAIL]
-[33/39] stream-browserify ... [ OK ]
+[33/39] stream-browserify ... [FAIL]
 [34/39] string.prototype.trimend ... [ OK ]
 [35/39] string.prototype.trimstart ... [ OK ]
 [36/39] timers-browserify ... [FAIL]
 [37/39] to-object-path ... [FAIL]
 [38/39] union-value ... [FAIL]
 [39/39] unique-slug ... [ OK ]
-Number of successes: 10
-Number of fails: 29
+Number of successes: 9
+Number of fails: 30
 Number of skips: 0
-Time for type checking: 0:00:25
+Time for type checking: 0:00:12

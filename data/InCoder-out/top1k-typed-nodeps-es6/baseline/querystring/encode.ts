@@ -45,7 +45,7 @@ export default function(obj: any,  sep: any,  eq: any,  name: any) {
   }
 
   if (typeof obj === 'object') {
-    return Object.keys(obj).map(function(k: K) {
+    return Object.keys(obj).map(function(k: number) {
       var ks = encodeURIComponent(stringifyPrimitive(k)) + eq;
       if (Array.isArray(obj[k])) {
         return obj[k].map(function(v: any) {

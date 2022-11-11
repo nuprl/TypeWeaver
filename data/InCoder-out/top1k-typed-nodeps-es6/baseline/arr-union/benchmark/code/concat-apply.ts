@@ -2,6 +2,6 @@
 
 import unique from 'array-unique';
 
-export default function union(arr: Array<any>) {
+export default function union(arr: number[]) {
   return unique([].concat.apply([], arguments));
 };

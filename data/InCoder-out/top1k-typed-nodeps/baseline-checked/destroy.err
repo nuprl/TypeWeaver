@@ -1,5 +1,5 @@
-index.ts(35,27): error TS2749: 'Stream' refers to a value, but is being used as a type here. Did you mean 'typeof Stream'?
-index.ts(59,37): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
+index.ts(41,12): error TS2339: Property 'destroy' does not exist on type 'ReadableStream'.
+index.ts(59,37): error TS2749: 'ReadStream' refers to a value, but is being used as a type here. Did you mean 'typeof ReadStream'?
 index.ts(79,14): error TS2339: Property '_hadError' does not exist on type 'ReadableStream'.
 index.ts(80,23): error TS2339: Property '_binding' does not exist on type 'ReadableStream'.
 index.ts(89,10): error TS2339: Property 'close' does not exist on type 'ReadableStream'.

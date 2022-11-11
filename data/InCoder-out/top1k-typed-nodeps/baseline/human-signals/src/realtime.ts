@@ -4,7 +4,7 @@ export const getRealtimeSignals = function () {
   return Array.from({ length }, getRealtimeSignal)
 }
 
-const getRealtimeSignal = function (value: any,  index: number) {
+const getRealtimeSignal = function (value: number,  index: number) {
   return {
     name: `SIGRT${index + 1}`,
     number: SIGRTMIN + index,

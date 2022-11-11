@@ -1,6 +1,6 @@
 const {toString} = Object.prototype;
 
-export default function isGeneratorFunction(value: any) {
+export default function isGeneratorFunction(value: unknown) {
 	if (typeof value !== 'function') {
 		return false;
 	}

@@ -10,7 +10,7 @@
 const valueOf = Symbol.prototype.valueOf;
 import typeOf from 'kind-of';
 
-function clone(val: any,  deep: boolean) {
+function clone(val: any,  deep: Boolean) {
   switch (typeOf(val)) {
     case 'array':
       return val.slice();
@@ -61,7 +61,7 @@ function cloneArrayBuffer(val: ArrayBuffer) {
   return res;
 }
 
-function cloneTypedArray(val: any,  deep: boolean) {
+function cloneTypedArray(val: TypedArray,  deep: Boolean) {
   return new val.constructor(val.buffer, val.byteOffset, val.length);
 }
 

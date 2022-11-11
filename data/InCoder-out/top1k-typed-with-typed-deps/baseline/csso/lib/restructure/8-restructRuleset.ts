@@ -6,7 +6,7 @@ import {
     addSelectors
 } from './utils.js';
 
-function calcSelectorLength(list: Array<string>) {
+function calcSelectorLength(list: SelectorList) {
     return list.reduce((res, data) => res + data.id.length + 1, 0) - 1;
 }
 
@@ -23,7 +23,7 @@ function calcDeclarationsLength(tokens: Token[]) {
     );
 }
 
-function processRule(node: RuleNode,  item: RuleItem,  list: ListNode) {
+function processRule(node: CssNode,  item: CssNode,  list: CssNode[]) {
     const avoidRulesMerge = this.block !== null ? this.block.avoidRulesMerge : false;
     const selectors = node.prelude.children;
     const block = node.block;

@@ -18,7 +18,7 @@ function filterArray(eachfn: Function,  arr: Array,  iteratee: Function,  callba
     });
 }
 
-function filterGeneric(eachfn: Function,  coll: Array,  iteratee: Function,  callback: Function) {
+function filterGeneric(eachfn: Function,  coll: any,  iteratee: Function,  callback: Function) {
     var results = [];
     eachfn(coll, (x, index, iterCb) => {
         iteratee(x, (err, v) => {
@@ -36,7 +36,7 @@ function filterGeneric(eachfn: Function,  coll: Array,  iteratee: Function,  cal
     });
 }
 
-export default function _filter(eachfn: Function,  coll: Array,  iteratee: Function,  callback: Function) {
+export default function _filter(eachfn: Function,  coll: Iterable,  iteratee: Function,  callback: Function) {
     var filter = isArrayLike(coll) ? filterArray : filterGeneric;
     return filter(eachfn, coll, wrapAsync(iteratee), callback);
 }

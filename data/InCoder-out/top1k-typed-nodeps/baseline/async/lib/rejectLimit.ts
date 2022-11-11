@@ -21,7 +21,7 @@ import awaitify from './internal/awaitify.js'
  * `iteratee` functions have finished. Invoked with (err, results).
  * @returns {Promise} a promise, if no callback is passed
  */
-function rejectLimit (coll: Collection,  limit: number,  iteratee: Function,  callback: Function) {
+function rejectLimit (coll: Collection,  limit: number,  iteratee: any,  callback: Function) {
     return _reject(eachOfLimit(limit), coll, iteratee, callback)
 }
 export default awaitify(rejectLimit, 4);

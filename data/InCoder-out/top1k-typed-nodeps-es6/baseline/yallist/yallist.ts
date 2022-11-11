@@ -4,7 +4,7 @@ export default Yallist;
 Yallist.Node = Node
 Yallist.create = Yallist
 
-function Yallist (list: Yallist) {
+function Yallist (list: Array) {
   var self = this
   if (!(self instanceof Yallist)) {
     self = new Yallist()
@@ -15,7 +15,7 @@ function Yallist (list: Yallist) {
   self.length = 0
 
   if (list && typeof list.forEach === 'function') {
-    list.forEach(function (item: Item) {
+    list.forEach(function (item: any) {
       self.push(item)
     })
   } else if (arguments.length > 0) {
@@ -320,7 +320,7 @@ Yallist.prototype.sliceReverse = function (from: number,  to: number) {
   return ret
 }
 
-Yallist.prototype.splice = function (start: umber,  deleteCount: umber,  ...nodes: rray<any>) {
+Yallist.prototype.splice = function (start: umber,  deleteCount: umber,  ...nodes: ny[]) {
   if (start > this.length) {
     start = this.length - 1
   }
@@ -364,7 +364,7 @@ Yallist.prototype.reverse = function () {
   return this
 }
 
-function insert (self: IListView,  node: Node,  value: any) {
+function insert (self: TreeNodeCollection,  node: TreeNode,  value: any) {
   var inserted = node === self.head ?
     new Node(value, null, node, self) :
     new Node(value, node, node.next, self)
@@ -381,7 +381,7 @@ function insert (self: IListView,  node: Node,  value: any) {
   return inserted
 }
 
-function push (self: any,  item: any) {
+function push (self: any,  item: number) {
   self.tail = new Node(item, self.tail, null, self)
   if (!self.head) {
     self.head = self.tail
@@ -389,7 +389,7 @@ function push (self: any,  item: any) {
   self.length++
 }
 
-function unshift (self: IList,  item: T) {
+function unshift (self: Array,  item: Array) {
   self.head = new Node(item, null, self.head, self)
   if (!self.tail) {
     self.tail = self.head
@@ -397,7 +397,7 @@ function unshift (self: IList,  item: T) {
   self.length++
 }
 
-function Node (value: any,  prev: Node,  next: Node,  list: List<T>) {
+function Node (value: any,  prev: Node,  next: Node,  list: Node[]) {
   if (!(this instanceof Node)) {
     return new Node(value, prev, next, list)
   }

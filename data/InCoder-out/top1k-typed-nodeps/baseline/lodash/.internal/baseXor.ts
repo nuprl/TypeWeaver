@@ -12,7 +12,7 @@ import baseUniq from './baseUniq.js'
  * @param {Function} [comparator] The comparator invoked per element.
  * @returns {Array} Returns the new array of values.
  */
-function baseXor(arrays: Array<Array>,  iteratee: Function,  comparator: Function) {
+function baseXor(arrays: Array<any>,  iteratee: any,  comparator: Function) {
   const length = arrays.length
   if (length < 2) {
     return length ? baseUniq(arrays[0]) : []

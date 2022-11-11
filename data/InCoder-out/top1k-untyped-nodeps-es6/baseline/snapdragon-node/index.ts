@@ -551,15 +551,15 @@ class Node {
  * Simplified assertion. Throws an error is `value` is not true.
  */
 
-function assert(value: any,  message: string | Error) {
+function assert(value: any,  message: any) {
   if (value !== true) throw new Error(message);
 }
 
-function expect(value: any,  name: string) {
+function expect(value: any,  name: any) {
   assert(value, 'expected ' + name + ' to be an instance of Node');
 }
 
-function hasOwn(obj: any,  prop: string | symbol) {
+function hasOwn(obj: any,  prop: string | number) {
   return Object.hasOwnProperty.call(obj, prop);
 }
 
@@ -607,7 +607,7 @@ function isType(node: Node,  type: string) {
   }
 }
 
-function isObject(val: mixed) {
+function isObject(val: unknown) {
   return typeOf(val) === 'object';
 }
 
@@ -626,7 +626,7 @@ function typeOf(val: any) {
  * assign `token` properties to `node`
  */
 
-function assign(node: Node,  token: Token,  clone: boolean) {
+function assign(node: ASTNode,  token: Token,  clone: ASTNode) {
   copy(node, token, clone);
   ensureNodes(node, clone);
 
@@ -635,7 +635,7 @@ function assign(node: Node,  token: Token,  clone: boolean) {
   }
 }
 
-function copy(receiver: any,  provider: any,  clone: boolean) {
+function copy(receiver: any,  provider: any,  clone: Function) {
   const descriptors = Object.getOwnPropertyDescriptors(provider);
   for (const key in descriptors) {
     if (key === 'constructor' || key in receiver) continue;
@@ -686,12 +686,12 @@ function cloneDeep(value: any) {
   }
 }
 
-function visit(node: Node,  fn: Function) {
+function visit(node: ASTNode,  fn: Function) {
   fn(node);
   return node.nodes ? mapVisit(node, fn) : node;
 }
 
-function mapVisit(node: Node,  fn: Function) {
+function mapVisit(node: Node,  fn: VisitCallback) {
   node.nodes.forEach(n => visit(n, fn));
   return node;
 }

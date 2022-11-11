@@ -20,7 +20,7 @@
  * startsWith('abc', 'b', 1)
  * // => true
  */
-function startsWith(string: string | RegExp,  target: string | RegExp,  position: number) {
+function startsWith(string: string,  target: string | RegExp,  position: number) {
   const { length } = string
   position = position == null ? 0 : position
   if (position < 0) {

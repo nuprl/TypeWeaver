@@ -3,7 +3,7 @@
 var resolveException = require("../lib/resolve-exception")
   , is               = require("./is");
 
-module.exports = function (value/*: Object,  options*/: Object) {
+module.exports = function (value/*: Date,  options*/: DateOptions) {
 	if (is(value, arguments[1])) return value;
 	var options = arguments[1];
 	var errorMessage =

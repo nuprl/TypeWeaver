@@ -38,7 +38,7 @@ import awaitify from './internal/awaitify.js'
  * const withMissingFileList = ['dir1/file1.txt', 'dir4/file2.txt'];
  *
  * // asynchronous function that deletes a file
- * const deleteFile = function(file: File,  callback: Function) {
+ * const deleteFile = function(file: fs.Stats,  callback: Function) {
  *     fs.unlink(file, callback);
  * };
  *

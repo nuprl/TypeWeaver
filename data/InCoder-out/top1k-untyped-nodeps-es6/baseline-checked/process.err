@@ -1,15 +1,6 @@
-browser.ts(68,29): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(timeoutId: string | number | Timeout): void', gave the following error.
-    Argument of type 'Function' is not assignable to parameter of type 'string | number | Timeout'.
-  Overload 2 of 2, '(id?: number): void', gave the following error.
-    Argument of type 'Function' is not assignable to parameter of type 'number'.
-browser.ts(73,29): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(timeoutId: string | number | Timeout): void', gave the following error.
-    Argument of type 'Function' is not assignable to parameter of type 'string | number | Timeout'.
-  Overload 2 of 2, '(id?: number): void', gave the following error.
-    Argument of type 'Function' is not assignable to parameter of type 'number'.
+browser.ts(65,34): error TS2304: Cannot find name 'TimeoutMarker'.
 browser.ts(136,9): error TS2339: Property 'nextTick' does not exist on type '{}'.
-browser.ts(150,44): error TS2304: Cannot find name 'T'.
+browser.ts(150,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser.ts(157,9): error TS2339: Property 'title' does not exist on type '{}'.
 browser.ts(158,9): error TS2339: Property 'browser' does not exist on type '{}'.
 browser.ts(159,9): error TS2339: Property 'env' does not exist on type '{}'.
@@ -29,6 +20,6 @@ browser.ts(176,9): error TS2339: Property 'listeners' does not exist on type '{}
 browser.ts(178,9): error TS2339: Property 'binding' does not exist on type '{}'.
 browser.ts(182,9): error TS2339: Property 'cwd' does not exist on type '{}'.
 browser.ts(183,9): error TS2339: Property 'chdir' does not exist on type '{}'.
-browser.ts(183,32): error TS2304: Cannot find name 'Dir'.
+browser.ts(183,32): error TS2304: Cannot find name 'Directory'.
 browser.ts(186,9): error TS2339: Property 'umask' does not exist on type '{}'.
 

@@ -3,7 +3,7 @@
 import utils from './utils';
 import assert from 'minimalistic-assert';
 
-function Hmac(hash: Hash,  key: Key,  enc: Encoding) {
+function Hmac(hash: any,  key: any,  enc: any) {
   if (!(this instanceof Hmac))
     return new Hmac(hash, key, enc);
   this.Hash = hash;
@@ -16,7 +16,7 @@ function Hmac(hash: Hash,  key: Key,  enc: Encoding) {
 }
 export default Hmac;
 
-Hmac.prototype._init = function init(key: string | Array<string>) {
+Hmac.prototype._init = function init(key: Key) {
   // Shorten key, if needed
   if (key.length > this.blockSize)
     key = new this.Hash().update(key).digest();
@@ -36,12 +36,12 @@ Hmac.prototype._init = function init(key: string | Array<string>) {
   this.outer = new this.Hash().update(key);
 };
 
-Hmac.prototype.update = function update(msg: Buffer,  enc: Encoding) {
+Hmac.prototype.update = function update(msg: Buffer,  enc: Buffer) {
   this.inner.update(msg, enc);
   return this;
 };
 
-Hmac.prototype.digest = function digest(enc: Encoding) {
+Hmac.prototype.digest = function digest(enc: BinaryEncoder) {
   this.outer.update(this.inner.digest());
   return this.outer.digest(enc);
 };

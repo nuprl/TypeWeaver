@@ -87,7 +87,7 @@ lp.readToken = function() {
   }
 }
 
-lp.resetTo = function(pos: number) {
+lp.resetTo = function(pos: Position) {
   this.toks.pos = pos
   this.toks.containsEsc = false
   let ch = this.input.charAt(pos - 1)

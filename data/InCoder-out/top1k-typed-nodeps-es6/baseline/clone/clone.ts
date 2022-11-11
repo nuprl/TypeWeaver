@@ -1,7 +1,7 @@
 var clone = (function() {
 'use strict';
 
-function _instanceof(obj: Object,  type: Function) {
+function _instanceof(obj: any,  type: any) {
   return type != null && obj instanceof type;
 }
 
@@ -49,7 +49,7 @@ try {
  *    should be cloned as well. Non-enumerable properties on the prototype
  *    chain will be ignored. (optional - false by default)
 */
-function clone(parent: any,  circular: boolean,  depth: number,  prototype: Object,  includeNonEnumerable: false) {
+function clone(parent: Object,  circular: Boolean,  depth: Number,  prototype: Object,  includeNonEnumerable: false) {
   if (typeof circular === 'object') {
     depth = circular.depth;
     prototype = circular.prototype;
@@ -89,7 +89,7 @@ function clone(parent: any,  circular: boolean,  depth: number,  prototype: Obje
     } else if (_instanceof(parent, nativeSet)) {
       child = new nativeSet();
     } else if (_instanceof(parent, nativePromise)) {
-      child = new nativePromise(function (resolve: Function,  reject: Function) {
+      child = new nativePromise(function (resolve: any,  reject: any) {
         parent.then(function(value: any) {
           resolve(_clone(value, depth - 1));
         }, function(err: Error) {
@@ -228,12 +228,12 @@ clone.clonePrototype = function clonePrototype(parent: any) {
 
 // private utility functions
 
-function __objToStr(o: Object) {
+function __objToStr(o: object) {
   return Object.prototype.toString.call(o);
 }
 clone.__objToStr = __objToStr;
 
-function __isDate(o: any) {
+function __isDate(o: Object) {
   return typeof o === 'object' && __objToStr(o) === '[object Date]';
 }
 clone.__isDate = __isDate;
@@ -243,7 +243,7 @@ function __isArray(o: any) {
 }
 clone.__isArray = __isArray;
 
-function __isRegExp(o: any) {
+function __isRegExp(o: object) {
   return typeof o === 'object' && __objToStr(o) === '[object RegExp]';
 }
 clone.__isRegExp = __isRegExp;

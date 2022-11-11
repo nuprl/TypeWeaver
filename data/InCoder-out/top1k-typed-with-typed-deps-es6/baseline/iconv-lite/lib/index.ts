@@ -14,7 +14,7 @@ iconv.defaultCharUnicode = '�';
 iconv.defaultCharSingleByte = '?';
 
 // Public API.
-iconv.encode = function encode(str: string | Buffer,  encoding: string | null,  options: any) {
+iconv.encode = function encode(str: any,  encoding: any,  options: any) {
     str = "" + (str || ""); // Ensure string.
 
     var encoder = iconv.getEncoder(encoding, options);
@@ -25,7 +25,7 @@ iconv.encode = function encode(str: string | Buffer,  encoding: string | null,  
     return (trail && trail.length > 0) ? Buffer.concat([res, trail]) : res;
 }
 
-iconv.decode = function decode(buf: Buffer,  encoding: Encoding,  options: { stream: boolean }) {
+iconv.decode = function decode(buf: Buffer,  encoding: BufferEncoding,  options: any) {
     if (typeof buf === 'string') {
         if (!iconv.skipDecodeWarning) {
             console.error('Iconv-lite warning: decode()-ing strings is deprecated. Refer to https://github.com/ashtuchkin/iconv-lite/wiki/Use-Buffers-when-decoding');
@@ -43,7 +43,7 @@ iconv.decode = function decode(buf: Buffer,  encoding: Encoding,  options: { str
     return trail ? (res + trail) : res;
 }
 
-iconv.encodingExists = function encodingExists(enc: string | null) {
+iconv.encodingExists = function encodingExists(enc: Encoding) {
     try {
         iconv.getCodec(enc);
         return true;
@@ -58,7 +58,7 @@ iconv.fromEncoding = iconv.decode;
 
 // Search for a codec in iconv.encodings. Cache codec data in iconv._codecDataCache.
 iconv._codecDataCache = {};
-iconv.getCodec = function getCodec(encoding: string | null) {
+iconv.getCodec = function getCodec(encoding: Encoding) {
     if (!iconv.encodings)
         iconv.encodings = require("../encodings"); // Lazy load all encoding definitions.
     
@@ -106,7 +106,7 @@ iconv.getCodec = function getCodec(encoding: string | null) {
     }
 }
 
-iconv._canonicalizeEncoding = function(encoding: Encoding) {
+iconv._canonicalizeEncoding = function(encoding: BufferEncoding) {
     // Canonicalize encoding name: strip all non-alphanumeric chars and appended year.
     return (''+encoding).toLowerCase().replace(/:\d{4}$|[^0-9a-z]/g, "");
 }
@@ -121,7 +121,7 @@ iconv.getEncoder = function getEncoder(encoding: Encoding,  options: EncodingOpt
     return encoder;
 }
 
-iconv.getDecoder = function getDecoder(encoding: string | null,  options: any) {
+iconv.getDecoder = function getDecoder(encoding: BufferEncoding,  options: DecoderOptions) {
     var codec = iconv.getCodec(encoding),
         decoder = new codec.decoder(options, codec);
 
@@ -148,11 +148,11 @@ iconv.enableStreamingAPI = function enableStreamingAPI(stream_module: StreamModu
     iconv.IconvLiteDecoderStream = streams.IconvLiteDecoderStream;
 
     // Streaming API.
-    iconv.encodeStream = function encodeStream(encoding: stream.Encoding,  options: stream.WritableOptions) {
+    iconv.encodeStream = function encodeStream(encoding: Encoding,  options: EncodingOptions) {
         return new iconv.IconvLiteEncoderStream(iconv.getEncoder(encoding, options), options);
     }
 
-    iconv.decodeStream = function decodeStream(encoding: stream.Encoding,  options: stream.DecodeOptions) {
+    iconv.decodeStream = function decodeStream(encoding: string | null,  options: DecodeStreamOptions) {
         return new iconv.IconvLiteDecoderStream(iconv.getDecoder(encoding, options), options);
     }
 

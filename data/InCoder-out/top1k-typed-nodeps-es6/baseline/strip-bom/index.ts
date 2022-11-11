@@ -1,4 +1,4 @@
-export default function stripBom(string: ring | null) {
+export default function stripBom(string: ring | Buffer) {
 	if (typeof string !== 'string') {
 		throw new TypeError(`Expected a string, got ${typeof string}`);
 	}

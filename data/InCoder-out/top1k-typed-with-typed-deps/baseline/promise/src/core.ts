@@ -23,7 +23,7 @@ function noop() {}
 // extract them to here.
 var LAST_ERROR = null;
 var IS_ERROR = {};
-function getThen(obj: Promise) {
+function getThen(obj: PromiseLike<any>) {
   try {
     return obj.then;
   } catch (ex) {
@@ -40,7 +40,7 @@ function tryCallOne(fn: Function,  a: any) {
     return IS_ERROR;
   }
 }
-function tryCallTwo(fn: Function,  a: number,  b: number) {
+function tryCallTwo(fn: Function,  a: any,  b: any) {
   try {
     fn(a, b);
   } catch (ex) {
@@ -69,7 +69,7 @@ Promise._onHandle = null;
 Promise._onReject = null;
 Promise._noop = noop;
 
-Promise.prototype.then = function(onFulfilled: Function,  onRejected: Function) {
+Promise.prototype.then = function(onFulfilled: any,  onRejected: any) {
   if (this.constructor !== Promise) {
     return safeThen(this, onFulfilled, onRejected);
   }
@@ -78,14 +78,14 @@ Promise.prototype.then = function(onFulfilled: Function,  onRejected: Function) 
   return res;
 };
 
-function safeThen(self: Promise<T>,  onFulfilled: () => void,  onRejected: any) {
-  return new self.constructor(function (resolve: Function,  reject: Function) {
+function safeThen(self: Task<T>,  onFulfilled: any,  onRejected: any) {
+  return new self.constructor(function (resolve: any,  reject: any) {
     var res = new Promise(noop);
     res.then(resolve, reject);
     handle(self, new Handler(onFulfilled, onRejected, res));
   });
 }
-function handle(self: IAsyncDisposable,  deferred: IDisposable) {
+function handle(self: any,  deferred: Deferred<any>) {
   while (self._state === 3) {
     self = self._value;
   }
@@ -109,7 +109,7 @@ function handle(self: IAsyncDisposable,  deferred: IDisposable) {
   handleResolved(self, deferred);
 }
 
-function handleResolved(self: Promise,  deferred: Promise<any>) {
+function handleResolved(self: any,  deferred: Deferred<any>) {
   asap(function() {
     var cb = self._state === 1 ? deferred.onFulfilled : deferred.onRejected;
     if (cb === null) {
@@ -128,7 +128,7 @@ function handleResolved(self: Promise,  deferred: Promise<any>) {
     }
   });
 }
-function resolve(self: IPropertyDescriptor,  newValue: any) {
+function resolve(self: any,  newValue: any) {
   // Promise Resolution Procedure: https://github.com/promises-aplus/promises-spec#the-promise-resolution-procedure
   if (newValue === self) {
     return reject(
@@ -162,7 +162,7 @@ function resolve(self: IPropertyDescriptor,  newValue: any) {
   finale(self);
 }
 
-function reject(self: IPromise<T>,  newValue: T) {
+function reject(self: Promise<any>,  newValue: any) {
   self._state = 2;
   self._value = newValue;
   if (Promise._onReject) {
@@ -170,7 +170,7 @@ function reject(self: IPromise<T>,  newValue: T) {
   }
   finale(self);
 }
-function finale(self: IAsyncDisposable) {
+function finale(self: Task) {
   if (self._deferredState === 1) {
     handle(self, self._deferreds);
     self._deferreds = null;
@@ -183,7 +183,7 @@ function finale(self: IAsyncDisposable) {
   }
 }
 
-function Handler(onFulfilled: Function,  onRejected: Function,  promise: Promise){
+function Handler(onFulfilled: onFulfilled,  onRejected: onRejected,  promise: promise){
   this.onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : null;
   this.onRejected = typeof onRejected === 'function' ? onRejected : null;
   this.promise = promise;
@@ -195,13 +195,13 @@ function Handler(onFulfilled: Function,  onRejected: Function,  promise: Promise
  *
  * Makes no guarantees about asynchrony.
  */
-function doResolve(fn: Function,  promise: Promise) {
+function doResolve(fn: any,  promise: Promise<any>) {
   var done = false;
   var res = tryCallTwo(fn, function (value: any) {
     if (done) return;
     done = true;
     resolve(promise, value);
-  }, function (reason: Error) {
+  }, function (reason: any) {
     if (done) return;
     done = true;
     reject(promise, reason);

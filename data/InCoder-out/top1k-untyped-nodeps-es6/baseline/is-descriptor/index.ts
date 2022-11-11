@@ -30,10 +30,10 @@ export default (obj, key, checkProto) => {
   return false;
 };
 
-function isDataDesc(keys: Array<string>) {
+function isDataDesc(keys: string[]) {
   return keys.every(k => dataDesc.has(k));
 }
 
-function isAccessorDesc(keys: Array<string>) {
+function isAccessorDesc(keys: any[]) {
   return keys.every(k => accDesc.has(k));
 }

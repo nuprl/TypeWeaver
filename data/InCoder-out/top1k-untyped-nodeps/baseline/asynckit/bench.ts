@@ -19,7 +19,7 @@ for (var z = 1; z < 100; z++)
 suite
 // add tests
 
-.add('async.map', function(deferred: Q.Deferred)
+.add('async.map', function(deferred: Q.Promise)
 {
   var total = 0;
 
