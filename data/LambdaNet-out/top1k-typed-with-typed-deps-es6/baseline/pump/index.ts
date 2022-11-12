@@ -19,7 +19,7 @@ var isRequest: Function = function (stream: Array) {
   return stream.setHeader && isFn(stream.abort)
 }
 
-var destroyer: Function = function (stream: String, reading: Number, writing: String, callback: Function) {
+var destroyer: Function = function (stream: String, reading: String, writing: String, callback: Function) {
   callback = once(callback)
 
   var closed: Boolean = false
@@ -65,7 +65,7 @@ var pump: Function = function () {
 
   var error: Object
   var destroys: Array = streams.map(function (stream: Array, i: Number) {
-    var reading: Number = i < streams.length - 1
+    var reading: Boolean = i < streams.length - 1
     var writing: Boolean = i > 0
     return destroyer(stream, reading, writing, function (err: Number) {
       if (!error) error = err

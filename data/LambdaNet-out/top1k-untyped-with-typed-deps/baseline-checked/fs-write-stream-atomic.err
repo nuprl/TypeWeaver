@@ -12,11 +12,19 @@ index.ts(45,43): error TS2339: Property 'chown' does not exist on type 'Function
 index.ts(49,28): error TS2339: Property 'WriteStream' does not exist on type 'String'.
 index.ts(63,19): error TS2339: Property 'prototype' does not exist on type 'Object'.
 index.ts(74,17): error TS2339: Property 'emit' does not exist on type 'Request'.
-index.ts(78,36): error TS2314: Generic type 'Record' requires 2 type argument(s).
+index.ts(80,21): error TS2339: Property '__atomicClosed' does not exist on type 'HTMLDivElement'.
+index.ts(81,17): error TS2339: Property '__atomicClosed' does not exist on type 'HTMLDivElement'.
+index.ts(82,21): error TS2339: Property '__atomicChown' does not exist on type 'HTMLDivElement'.
+index.ts(83,37): error TS2339: Property '__atomicChown' does not exist on type 'HTMLDivElement'.
+index.ts(84,37): error TS2339: Property '__atomicChown' does not exist on type 'HTMLDivElement'.
 index.ts(85,17): error TS2339: Property 'chown' does not exist on type 'String'.
+index.ts(85,35): error TS2339: Property '__atomicTmp' does not exist on type 'HTMLDivElement'.
 index.ts(91,30): error TS2304: Cannot find name 'Void'.
 index.ts(92,8): error TS2339: Property 'rename' does not exist on type 'String'.
+index.ts(92,27): error TS2339: Property '__atomicTmp' does not exist on type 'HTMLDivElement'.
+index.ts(92,52): error TS2339: Property '__atomicTarget' does not exist on type 'HTMLDivElement'.
 index.ts(95,44): error TS2304: Cannot find name 'Void'.
+index.ts(96,21): error TS2339: Property '__isWin' does not exist on type 'HTMLDivElement'.
 index.ts(97,13): error TS2339: Property 'syscall' does not exist on type 'Object'.
 index.ts(97,28): error TS2339: Property 'syscall' does not exist on type 'Object'.
 index.ts(98,13): error TS2339: Property 'code' does not exist on type 'Object'.
@@ -33,7 +41,9 @@ index.ts(108,37): error TS2339: Property 'createHash' does not exist on type 'Cr
 index.ts(109,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(109,40): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
 index.ts(111,8): error TS2339: Property 'createReadStream' does not exist on type 'String'.
+index.ts(111,37): error TS2339: Property '__atomicTmp' does not exist on type 'HTMLDivElement'.
 index.ts(115,8): error TS2339: Property 'createReadStream' does not exist on type 'String'.
+index.ts(115,37): error TS2339: Property '__atomicTarget' does not exist on type 'HTMLDivElement'.
 index.ts(120,32): error TS2304: Cannot find name 'Void'.
 index.ts(123,15): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
   Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
@@ -43,8 +53,12 @@ index.ts(130,16): error TS2554: Expected 1 arguments, but got 0.
 index.ts(132,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 index.ts(137,37): error TS2304: Cannot find name 'Void'.
 index.ts(138,8): error TS2551: Property 'unlink' does not exist on type 'String'. Did you mean 'link'?
+index.ts(138,27): error TS2339: Property '__atomicTmp' does not exist on type 'HTMLDivElement'.
+index.ts(140,21): error TS2339: Property 'emit' does not exist on type 'HTMLDivElement'.
+index.ts(141,21): error TS2339: Property 'emit' does not exist on type 'HTMLDivElement'.
 index.ts(148,20): error TS2304: Cannot find name 'Void'.
 index.ts(151,14): error TS2339: Property 'prototype' does not exist on type 'Object'.
+index.ts(157,19): error TS2339: Property 'emit' does not exist on type 'HTMLDivElement'.
 index.ts(165,17): error TS2339: Property 'emit' does not exist on type 'Request'.
 index.ts(166,17): error TS2339: Property '__atomicClosed' does not exist on type 'Request'.
 index.ts(167,17): error TS2339: Property 'emit' does not exist on type 'Request'.

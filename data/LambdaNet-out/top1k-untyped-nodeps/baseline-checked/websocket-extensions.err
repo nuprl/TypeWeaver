@@ -41,10 +41,6 @@ lib/parser.ts(96,23): error TS2538: Type 'String' cannot be used as an index typ
 lib/pipeline/cell.ts(3,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/pipeline/cell.ts(4,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/pipeline/cell.ts(6,38): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/pipeline/cell.ts(11,19): error TS2351: This expression is not constructable.
-  Type 'Function' has no construct signatures.
-lib/pipeline/cell.ts(12,19): error TS2351: This expression is not constructable.
-  Type 'Function' has no construct signatures.
 lib/pipeline/cell.ts(16,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/pipeline/cell.ts(18,16): error TS2339: Property '_stopped' does not exist on type 'Object'.
 lib/pipeline/cell.ts(18,34): error TS2339: Property 'pending' does not exist on type 'Object'.
@@ -54,8 +50,6 @@ lib/pipeline/cell.ts(44,12): error TS2314: Generic type 'Array<T>' requires 1 ty
 lib/pipeline/cell.ts(45,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/pipeline/functor.ts(3,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/pipeline/functor.ts(5,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/pipeline/functor.ts(8,42): error TS2339: Property 'QUEUE_SIZE' does not exist on type 'Function'.
-lib/pipeline/functor.ts(13,9): error TS2339: Property 'QUEUE_SIZE' does not exist on type 'Function'.
 lib/pipeline/functor.ts(24,14): error TS2339: Property 'error' does not exist on type 'Object'.
 lib/pipeline/functor.ts(25,12): error TS2339: Property 'done' does not exist on type 'Object'.
 lib/pipeline/functor.ts(31,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -72,6 +66,8 @@ lib/pipeline/index.ts(3,11): error TS2314: Generic type 'Array<T>' requires 1 ty
 lib/pipeline/index.ts(4,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/pipeline/index.ts(6,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/pipeline/index.ts(7,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/pipeline/index.ts(7,70): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
 lib/pipeline/index.ts(16,81): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/pipeline/index.ts(24,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/pipeline/index.ts(24,70): error TS2339: Property 'close' does not exist on type 'String'.

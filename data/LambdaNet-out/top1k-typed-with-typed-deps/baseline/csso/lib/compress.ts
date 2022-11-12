@@ -99,7 +99,7 @@ function getRestructureOption(options: Object): Boolean {
     return 'restructuring' in options ? options.restructuring : true;
 }
 
-function wrapBlock(block: Object): String {
+function wrapBlock(block: Object): TRBL {
     return new List().appendData({
         type: 'Rule',
         loc: null,
@@ -120,7 +120,7 @@ function wrapBlock(block: Object): String {
     });
 }
 
-export default function compress(ast: Object, options: Object): Object {
+export default function compress(ast: TRBL, options: TRBL): Object {
     ast = ast || { type: 'StyleSheet', loc: null, children: new List() };
     options = options || {};
 
@@ -134,7 +134,7 @@ export default function compress(ast: Object, options: Object): Object {
     let specialComments: Boolean = getCommentsOption(options);
     let firstAtrulesAllowed: Boolean = true;
     let input: HTMLInputElement;
-    let chunk: Object;
+    let chunk: TRBL;
     let chunkNum: Number = 1;
     let chunkChildren: Object;
 

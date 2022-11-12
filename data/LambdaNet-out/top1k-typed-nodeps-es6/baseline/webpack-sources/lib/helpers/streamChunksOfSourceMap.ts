@@ -186,7 +186,7 @@ const streamChunksOfSourceMapLinesFull: Function = (
 		_generatedColumn: Number,
 		sourceIndex: String,
 		originalLine: OriginalSource,
-		originalColumn: OriginalSource,
+		originalColumn: String,
 		_nameIndex: String
 	) => {
 		if (
@@ -280,7 +280,7 @@ const streamChunksOfSourceMapFinal: Function = (
 		generatedColumn: Number,
 		sourceIndex: Number,
 		originalLine: OriginalSource,
-		originalColumn: OriginalSource,
+		originalColumn: String,
 		nameIndex: String
 	) => {
 		if (
@@ -343,7 +343,7 @@ const streamChunksOfSourceMapLinesFinal: Function = (
 		_generatedColumn: Number,
 		sourceIndex: Number,
 		originalLine: OriginalSource,
-		originalColumn: OriginalSource,
+		originalColumn: String,
 		_nameIndex: String
 	) => {
 		if (

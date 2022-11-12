@@ -19,7 +19,7 @@ browser.ts(61,49): error TS2314: Generic type 'Array<T>' requires 1 type argumen
 browser.ts(62,3): error TS2322: Type 'Number | "utf8"' is not assignable to type 'Number'.
   Type 'string' is not assignable to type 'Number'.
 browser.ts(64,31): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'BufferEncoding'.
-browser.ts(67,30): error TS2339: Property 'mul' does not exist on type 'Object'.
+browser.ts(67,30): error TS2339: Property 'mul' does not exist on type 'HTMLElement'.
 browser.ts(72,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser.ts(80,10): error TS2554: Expected 3 arguments, but got 2.
 browser.ts(84,10): error TS2554: Expected 3 arguments, but got 2.
@@ -27,11 +27,10 @@ browser.ts(87,46): error TS2314: Generic type 'Array<T>' requires 1 type argumen
 browser.ts(88,3): error TS2322: Type 'Number | "utf8"' is not assignable to type 'Number'.
   Type 'string' is not assignable to type 'Number'.
 browser.ts(90,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'BufferEncoding'.
+browser.ts(96,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser.ts(97,3): error TS2322: Type 'Number | "utf8"' is not assignable to type 'Number'.
   Type 'string' is not assignable to type 'Number'.
-browser.ts(99,5): error TS2740: Type 'Buffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 37 more.
-browser.ts(99,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+browser.ts(99,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'BufferEncoding'.
 browser.ts(103,26): error TS2554: Expected 0 arguments, but got 1.
 browser.ts(109,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser.ts(113,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

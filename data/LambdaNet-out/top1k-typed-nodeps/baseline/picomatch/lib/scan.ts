@@ -47,7 +47,7 @@ const depth: Function = (token: Object) => {
  */
 
 const scan: Function = (input: Array, options: Object) => {
-  const opts: HTMLElement = options || {};
+  const opts: Object = options || {};
 
   const length: Number = input.length - 1;
   const scanToEnd: Number = opts.parts === true || opts.scanToEnd === true;

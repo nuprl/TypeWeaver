@@ -163,7 +163,7 @@ class ObjectSchema {
             throw new Error("merge() requires at least two arguments.");
         }
 
-        if (objects.some((object: Array) => (object == null || typeof object !== "object"))) {
+        if (objects.some((object: Object) => (object == null || typeof object !== "object"))) {
             throw new Error("All arguments must be objects.");
         }
 
@@ -205,7 +205,7 @@ class ObjectSchema {
             }
 
             // validate existing keys
-            const strategy: ObjectSchema = this[strategies].get(key);
+            const strategy: HTMLElement = this[strategies].get(key);
 
             // first check to see if any other keys are required
             if (Array.isArray(strategy.requires)) {

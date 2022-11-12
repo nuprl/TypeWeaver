@@ -241,7 +241,7 @@ function load(): Object {
  * @api private
  */
 
-function localstorage(): Array {
+function localstorage(): String {
 	try {
 		// TVMLKit (Apple TV JS Runtime) does not have a window object, just localStorage in the global context
 		// The Browser also has localStorage in the global context.

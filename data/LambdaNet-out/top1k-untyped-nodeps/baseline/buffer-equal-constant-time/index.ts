@@ -34,7 +34,7 @@ bufferEq.install = function() {
 };
 
 var origBufEqual: Number = Buffer.prototype.equal;
-var origSlowBufEqual: Function = SlowBuffer.prototype.equal;
+var origSlowBufEqual: Boolean = SlowBuffer.prototype.equal;
 bufferEq.restore = function() {
   Buffer.prototype.equal = origBufEqual;
   SlowBuffer.prototype.equal = origSlowBufEqual;

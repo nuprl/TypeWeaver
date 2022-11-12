@@ -78,7 +78,7 @@ class RegExpTree {
    * Facade wrapper for RegExp `exec` method.
    */
   exec(string) {
-    const result: Object = this._re.exec(string);
+    const result: TransformResult = this._re.exec(string);
 
     if (!this._groups || !result) {
       return result;

@@ -55,7 +55,7 @@ function listToDisjunction(list: Array): Array {
  * {2,} -> {3,}
  * {2,3} -> {3,4}
  */
-function increaseQuantifierByOne(quantifier: Object): Promise {
+function increaseQuantifierByOne(quantifier: Object): Void {
   if (quantifier.kind === '*') {
 
     quantifier.kind = '+';

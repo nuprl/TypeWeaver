@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import Emittery from '../index.js';
 
-const myEmitter: Clock = new Emittery();
+const myEmitter: HTMLElement = new Emittery();
 
 // Register listener
 myEmitter.on('event', () => {

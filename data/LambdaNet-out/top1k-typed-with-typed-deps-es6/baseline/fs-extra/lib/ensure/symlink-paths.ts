@@ -26,7 +26,7 @@ import { pathExists } from '../path-exists';
  * the ability to pass in `relative to current working direcotry` paths.
  */
 
-function symlinkPaths (srcpath: Array, dstpath: String, callback: Function): Number {
+function symlinkPaths (srcpath: Array, dstpath: String, callback: Function): String {
   if (path.isAbsolute(srcpath)) {
     return fs.lstat(srcpath, (err: Map) => {
       if (err) {
@@ -64,7 +64,7 @@ function symlinkPaths (srcpath: Array, dstpath: String, callback: Function): Num
   }
 }
 
-function symlinkPathsSync (srcpath: Array, dstpath: String): Object {
+function symlinkPathsSync (srcpath: String, dstpath: String): Object {
   let exists: Number
   if (path.isAbsolute(srcpath)) {
     exists = fs.existsSync(srcpath)

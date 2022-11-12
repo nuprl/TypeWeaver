@@ -128,7 +128,7 @@ function hunkBefore(test: String, check: Object): Boolean {
     && (test.oldStart + test.oldLines) < check.oldStart;
 }
 
-function cloneHunk(hunk: Object, offset: String): Object {
+function cloneHunk(hunk: Object, offset: Number): Object {
   return {
     oldStart: hunk.oldStart, oldLines: hunk.oldLines,
     newStart: hunk.newStart + offset, newLines: hunk.newLines,

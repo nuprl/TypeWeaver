@@ -56,7 +56,7 @@ function runHandler(ast: String, options: Object, handlers: Array): Void {
     handlers.forEach((fn: Function) => fn(ast, options));
 }
 
-function minify(context: Number, source: String, options: Object): Object {
+function minify(context: Number, source: String, options: TRBL): Object {
     options = options || {};
 
     const filename: String = options.filename || '<unknown>';
@@ -110,7 +110,7 @@ function minify(context: Number, source: String, options: Object): Object {
     return result;
 }
 
-function minifyStylesheet(source: String, options: Object): Promise {
+function minifyStylesheet(source: String, options: Object): TRBL {
     return minify('stylesheet', source, options);
 }
 

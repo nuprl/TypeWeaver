@@ -234,7 +234,7 @@ class Resolver {
 		/** @type {string | false | undefined} */
 		let result: Resolver = undefined;
 		let sync: Boolean = false;
-		this.resolve(context, path, request, {}, (e: Resolver, r: String) => {
+		this.resolve(context, path, request, {}, (e: String, r: String) => {
 			err = e;
 			result = r;
 			sync = true;
@@ -331,7 +331,7 @@ class Resolver {
 					missingDependencies: resolveContext.missingDependencies,
 					stack: resolveContext.stack
 				},
-				(err: Resolver, result: Number) => {
+				(err: Function, result: Number) => {
 					if (err) return callback(err);
 
 					if (yieldCalled || (result && yield_)) return finishYield(result);
@@ -355,7 +355,7 @@ class Resolver {
 					missingDependencies: resolveContext.missingDependencies,
 					stack: resolveContext.stack
 				},
-				(err: Resolver, result: Number) => {
+				(err: Function, result: Number) => {
 					if (err) return callback(err);
 
 					if (yieldCalled || (result && yield_)) return finishYield(result);
@@ -377,7 +377,7 @@ class Resolver {
 							yield: yield_,
 							stack: resolveContext.stack
 						},
-						(err: Resolver, result: Boolean) => {
+						(err: Function, result: Boolean) => {
 							if (err) return callback(err);
 
 							// In a case that there is a race condition and yield will be called

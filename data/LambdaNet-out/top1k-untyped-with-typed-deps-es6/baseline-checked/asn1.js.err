@@ -4,8 +4,8 @@ lib/asn1.ts(8,6): error TS2339: Property 'base' does not exist on type 'HTMLElem
 lib/asn1.ts(9,6): error TS2551: Property 'constants' does not exist on type 'HTMLElement'. Did you mean 'contains'?
 lib/asn1.ts(10,6): error TS2339: Property 'decoders' does not exist on type 'HTMLElement'.
 lib/asn1.ts(11,6): error TS2339: Property 'encoders' does not exist on type 'HTMLElement'.
-lib/asn1/api.ts(3,22): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-with-typed-deps-es6/baseline/asn1.js/lib/asn1/encoders/index.ts' is not a module.
-lib/asn1/api.ts(4,22): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-with-typed-deps-es6/baseline/asn1.js/lib/asn1/decoders/index.ts' is not a module.
+lib/asn1/api.ts(3,22): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-with-typed-deps-es6/baseline/asn1.js/lib/asn1/encoders/index.ts' is not a module.
+lib/asn1/api.ts(4,22): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-with-typed-deps-es6/baseline/asn1.js/lib/asn1/decoders/index.ts' is not a module.
 lib/asn1/api.ts(9,5): error TS2339: Property 'define' does not exist on type 'RegExp'.
 lib/asn1/api.ts(10,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/asn1/api.ts(13,48): error TS2304: Cannot find name 'Void'.
@@ -41,7 +41,7 @@ lib/asn1/base/buffer.ts(73,22): error TS2350: Only a void function can be called
 lib/asn1/base/buffer.ts(73,22): error TS2554: Expected 2 arguments, but got 1.
 lib/asn1/base/buffer.ts(84,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/base/buffer.ts(85,38): error TS2339: Property 'offset' does not exist on type 'Object'.
-lib/asn1/base/buffer.ts(88,58): error TS2304: Cannot find name 'Void'.
+lib/asn1/base/buffer.ts(88,58): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/asn1/base/buffer.ts(91,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/base/buffer.ts(93,16): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/asn1/base/buffer.ts(99,23): error TS2339: Property 'error' does not exist on type 'Object'.
@@ -113,6 +113,7 @@ lib/asn1/base/node.ts(151,18): error TS2538: Type 'String' cannot be used as an 
 lib/asn1/base/node.ts(151,51): error TS2304: Cannot find name 'Void'.
 lib/asn1/base/node.ts(153,72): error TS2339: Property 'enc' does not exist on type 'Function'.
 lib/asn1/base/node.ts(162,18): error TS2538: Type 'Number' cannot be used as an index type.
+lib/asn1/base/node.ts(164,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/base/node.ts(166,18): error TS2339: Property 'tag' does not exist on type 'Object'.
 lib/asn1/base/node.ts(167,11): error TS2339: Property 'tag' does not exist on type 'Object'.
 lib/asn1/base/node.ts(179,16): error TS2339: Property 'use' does not exist on type 'HTMLElement'.
@@ -137,10 +138,10 @@ lib/asn1/base/node.ts(265,16): error TS2339: Property 'use' does not exist on ty
 lib/asn1/base/node.ts(266,3): error TS2322: Type 'Number' is not assignable to type '(other: Node) => boolean'.
   Type 'Number' provides no match for the signature '(other: Node): boolean'.
 lib/asn1/base/node.ts(279,13): error TS2339: Property 'parent' does not exist on type 'Object'.
-lib/asn1/base/node.ts(280,18): error TS2339: Property 'wrapResult' does not exist on type 'Object'.
+lib/asn1/base/node.ts(280,18): error TS2339: Property 'wrapResult' does not exist on type 'Function'.
 lib/asn1/base/node.ts(280,35): error TS2339: Property 'children' does not exist on type 'Object'.
 lib/asn1/base/node.ts(286,13): error TS2339: Property 'key' does not exist on type 'Object'.
-lib/asn1/base/node.ts(287,21): error TS2339: Property 'enterKey' does not exist on type 'Object'.
+lib/asn1/base/node.ts(287,21): error TS2339: Property 'enterKey' does not exist on type 'Function'.
 lib/asn1/base/node.ts(287,36): error TS2339: Property 'key' does not exist on type 'Object'.
 lib/asn1/base/node.ts(290,13): error TS2339: Property 'optional' does not exist on type 'Object'.
 lib/asn1/base/node.ts(292,15): error TS2339: Property 'explicit' does not exist on type 'Object'.
@@ -150,48 +151,48 @@ lib/asn1/base/node.ts(295,19): error TS2339: Property 'implicit' does not exist 
 lib/asn1/base/node.ts(296,20): error TS2339: Property 'tag' does not exist on type 'Object'.
 lib/asn1/base/node.ts(297,19): error TS2339: Property 'tag' does not exist on type 'Object'.
 lib/asn1/base/node.ts(299,32): error TS2339: Property 'any' does not exist on type 'Object'.
-lib/asn1/base/node.ts(301,34): error TS2339: Property 'save' does not exist on type 'Object'.
+lib/asn1/base/node.ts(301,34): error TS2339: Property 'save' does not exist on type 'Function'.
 lib/asn1/base/node.ts(303,19): error TS2339: Property 'choice' does not exist on type 'Object'.
 lib/asn1/base/node.ts(304,37): error TS2339: Property 'tag' does not exist on type 'Object'.
-lib/asn1/base/node.ts(311,13): error TS2339: Property 'restore' does not exist on type 'Object'.
+lib/asn1/base/node.ts(311,13): error TS2339: Property 'restore' does not exist on type 'Function'.
 lib/asn1/base/node.ts(313,49): error TS2339: Property 'any' does not exist on type 'Object'.
-lib/asn1/base/node.ts(315,17): error TS2339: Property 'isError' does not exist on type 'Object'.
+lib/asn1/base/node.ts(315,17): error TS2339: Property 'isError' does not exist on type 'Function'.
 lib/asn1/base/node.ts(322,13): error TS2339: Property 'obj' does not exist on type 'Object'.
-lib/asn1/base/node.ts(323,21): error TS2339: Property 'enterObject' does not exist on type 'Object'.
+lib/asn1/base/node.ts(323,21): error TS2339: Property 'enterObject' does not exist on type 'Function'.
 lib/asn1/base/node.ts(327,15): error TS2339: Property 'explicit' does not exist on type 'Object'.
 lib/asn1/base/node.ts(328,61): error TS2339: Property 'explicit' does not exist on type 'Object'.
-lib/asn1/base/node.ts(329,17): error TS2339: Property 'isError' does not exist on type 'Object'.
+lib/asn1/base/node.ts(329,17): error TS2339: Property 'isError' does not exist on type 'Function'.
 lib/asn1/base/node.ts(330,9): error TS2322: Type 'String' is not assignable to type 'Boolean'.
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'string' is not assignable to type 'boolean'.
-lib/asn1/base/node.ts(334,33): error TS2339: Property 'offset' does not exist on type 'Object'.
+lib/asn1/base/node.ts(331,7): error TS2740: Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+lib/asn1/base/node.ts(334,33): error TS2339: Property 'offset' does not exist on type 'Function'.
 lib/asn1/base/node.ts(337,15): error TS2339: Property 'use' does not exist on type 'Object'.
 lib/asn1/base/node.ts(337,37): error TS2339: Property 'choice' does not exist on type 'Object'.
 lib/asn1/base/node.ts(339,17): error TS2339: Property 'any' does not exist on type 'Object'.
-lib/asn1/base/node.ts(340,22): error TS2339: Property 'save' does not exist on type 'Object'.
+lib/asn1/base/node.ts(340,22): error TS2339: Property 'save' does not exist on type 'Function'.
 lib/asn1/base/node.ts(343,15): error TS2339: Property 'implicit' does not exist on type 'Object'.
 lib/asn1/base/node.ts(343,41): error TS2339: Property 'implicit' does not exist on type 'Object'.
 lib/asn1/base/node.ts(343,58): error TS2339: Property 'tag' does not exist on type 'Object'.
 lib/asn1/base/node.ts(344,15): error TS2339: Property 'any' does not exist on type 'Object'.
-lib/asn1/base/node.ts(346,17): error TS2339: Property 'isError' does not exist on type 'Object'.
+lib/asn1/base/node.ts(346,17): error TS2339: Property 'isError' does not exist on type 'Function'.
 lib/asn1/base/node.ts(347,9): error TS2322: Type 'String' is not assignable to type 'Boolean'.
 lib/asn1/base/node.ts(349,17): error TS2339: Property 'any' does not exist on type 'Object'.
-lib/asn1/base/node.ts(350,24): error TS2339: Property 'raw' does not exist on type 'Object'.
+lib/asn1/base/node.ts(350,24): error TS2339: Property 'raw' does not exist on type 'Function'.
+lib/asn1/base/node.ts(352,9): error TS2322: Type 'String' is not assignable to type 'Function'.
 lib/asn1/base/node.ts(355,28): error TS2339: Property 'track' does not exist on type 'Object'.
 lib/asn1/base/node.ts(355,43): error TS2339: Property 'tag' does not exist on type 'Object'.
 lib/asn1/base/node.ts(356,15): error TS2339: Property 'track' does not exist on type 'Object'.
-lib/asn1/base/node.ts(356,27): error TS2339: Property 'path' does not exist on type 'Object'.
-lib/asn1/base/node.ts(356,48): error TS2339: Property 'length' does not exist on type 'Object'.
+lib/asn1/base/node.ts(356,27): error TS2339: Property 'path' does not exist on type 'Function'.
 lib/asn1/base/node.ts(358,28): error TS2339: Property 'track' does not exist on type 'Object'.
 lib/asn1/base/node.ts(358,43): error TS2339: Property 'tag' does not exist on type 'Object'.
 lib/asn1/base/node.ts(359,15): error TS2339: Property 'track' does not exist on type 'Object'.
-lib/asn1/base/node.ts(359,27): error TS2339: Property 'path' does not exist on type 'Object'.
-lib/asn1/base/node.ts(359,41): error TS2339: Property 'offset' does not exist on type 'Object'.
-lib/asn1/base/node.ts(359,55): error TS2339: Property 'length' does not exist on type 'Object'.
+lib/asn1/base/node.ts(359,27): error TS2339: Property 'path' does not exist on type 'Function'.
+lib/asn1/base/node.ts(359,41): error TS2339: Property 'offset' does not exist on type 'Function'.
 lib/asn1/base/node.ts(362,15): error TS2339: Property 'any' does not exist on type 'Object'.
 lib/asn1/base/node.ts(364,22): error TS2339: Property 'choice' does not exist on type 'Object'.
 lib/asn1/base/node.ts(365,42): error TS2339: Property 'tag' does not exist on type 'Object'.
-lib/asn1/base/node.ts(370,15): error TS2339: Property 'isError' does not exist on type 'Object'.
+lib/asn1/base/node.ts(370,15): error TS2339: Property 'isError' does not exist on type 'Function'.
 lib/asn1/base/node.ts(371,7): error TS2322: Type 'String' is not assignable to type 'Boolean'.
 lib/asn1/base/node.ts(374,16): error TS2339: Property 'any' does not exist on type 'Object'.
 lib/asn1/base/node.ts(374,29): error TS2339: Property 'choice' does not exist on type 'Object'.
@@ -203,13 +204,13 @@ lib/asn1/base/node.ts(383,15): error TS2339: Property 'contains' does not exist 
 lib/asn1/base/node.ts(383,34): error TS2339: Property 'tag' does not exist on type 'Object'.
 lib/asn1/base/node.ts(383,60): error TS2339: Property 'tag' does not exist on type 'Object'.
 lib/asn1/base/node.ts(385,35): error TS2339: Property 'contains' does not exist on type 'Object'.
-lib/asn1/base/node.ts(385,51): error TS2339: Property '_reporterState' does not exist on type 'Object'.
+lib/asn1/base/node.ts(385,51): error TS2339: Property '_reporterState' does not exist on type 'Function'.
 lib/asn1/base/node.ts(391,13): error TS2339: Property 'obj' does not exist on type 'Object'.
-lib/asn1/base/node.ts(392,20): error TS2339: Property 'leaveObject' does not exist on type 'Object'.
+lib/asn1/base/node.ts(392,20): error TS2339: Property 'leaveObject' does not exist on type 'Function'.
 lib/asn1/base/node.ts(395,13): error TS2339: Property 'key' does not exist on type 'Object'.
-lib/asn1/base/node.ts(396,11): error TS2339: Property 'leaveKey' does not exist on type 'Object'.
+lib/asn1/base/node.ts(396,11): error TS2339: Property 'leaveKey' does not exist on type 'Function'.
 lib/asn1/base/node.ts(396,35): error TS2339: Property 'key' does not exist on type 'Object'.
-lib/asn1/base/node.ts(398,11): error TS2339: Property 'exitKey' does not exist on type 'Object'.
+lib/asn1/base/node.ts(398,11): error TS2339: Property 'exitKey' does not exist on type 'Function'.
 lib/asn1/base/node.ts(400,3): error TS2322: Type 'String' is not assignable to type 'Boolean'.
 lib/asn1/base/node.ts(406,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/asn1/base/node.ts(406,24): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
@@ -375,7 +376,7 @@ lib/asn1/constants/index.ts(14,31): error TS2538: Type 'Number' cannot be used a
 lib/asn1/constants/index.ts(15,9): error TS2538: Type 'String' cannot be used as an index type.
 lib/asn1/constants/index.ts(21,11): error TS2339: Property 'der' does not exist on type 'RegExp'.
 lib/asn1/decoders/der.ts(5,10): error TS2459: Module '"../base/buffer"' declares 'DecoderBuffer' locally, but it is not exported.
-lib/asn1/decoders/der.ts(9,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-with-typed-deps-es6/baseline/asn1.js/lib/asn1/constants/der"' has no default export.
+lib/asn1/decoders/der.ts(9,8): error TS1192: Module '"lib/asn1/constants/der"' has no default export.
 lib/asn1/decoders/der.ts(11,38): error TS2304: Cannot find name 'Void'.
 lib/asn1/decoders/der.ts(13,22): error TS2339: Property 'name' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(17,15): error TS2350: Only a void function can be called with the 'new' keyword.
@@ -402,6 +403,8 @@ lib/asn1/decoders/der.ts(55,14): error TS2339: Property 'isError' does not exist
 lib/asn1/decoders/der.ts(56,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'Object' is not assignable to type 'boolean'.
+lib/asn1/decoders/der.ts(58,34): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/asn1/decoders/der.ts(59,16): error TS2339: Property 'primitive' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(63,14): error TS2339: Property 'isError' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(64,5): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
@@ -423,6 +426,8 @@ lib/asn1/decoders/der.ts(89,88): error TS2314: Generic type 'Array<T>' requires 
 lib/asn1/decoders/der.ts(91,38): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/asn1/decoders/der.ts(92,16): error TS2339: Property 'isError' does not exist on type 'Object'.
+lib/asn1/decoders/der.ts(94,38): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/asn1/decoders/der.ts(94,50): error TS2339: Property 'primitive' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(95,16): error TS2339: Property 'isError' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(99,13): error TS2339: Property 'primitive' does not exist on type 'Object'.
@@ -522,10 +527,14 @@ lib/asn1/decoders/der.ts(289,14): error TS2362: The left-hand side of an arithme
 lib/asn1/decoders/der.ts(292,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/decoders/der.ts(297,5): error TS2322: Type '{ cls: String; primitive: Number; tag: Number; tagStr: String; }' is not assignable to type 'Number'.
   Object literal may only specify known properties, and 'cls' does not exist in type 'Number'.
-lib/asn1/decoders/der.ts(304,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/asn1/decoders/der.ts(305,25): error TS2339: Property 'readUInt8' does not exist on type 'HTMLElement'.
+lib/asn1/decoders/der.ts(306,11): error TS2339: Property 'isError' does not exist on type 'HTMLElement'.
 lib/asn1/decoders/der.ts(314,8): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/decoders/der.ts(320,23): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/asn1/decoders/der.ts(322,16): error TS2339: Property 'error' does not exist on type 'HTMLElement'.
 lib/asn1/decoders/der.ts(326,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/asn1/decoders/der.ts(327,27): error TS2339: Property 'readUInt8' does not exist on type 'HTMLElement'.
+lib/asn1/decoders/der.ts(328,13): error TS2339: Property 'isError' does not exist on type 'HTMLElement'.
 lib/asn1/decoders/der.ts(330,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/decoders/der.ts(330,12): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/decoders/index.ts(5,10): error TS2339: Property 'der' does not exist on type 'HTMLElement'.
@@ -536,7 +545,7 @@ lib/asn1/decoders/pem.ts(15,16): error TS2314: Generic type 'Array<T>' requires 
 lib/asn1/decoders/pem.ts(17,33): error TS2339: Property 'label' does not exist on type 'Object'.
 lib/asn1/decoders/pem.ts(44,38): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/asn1/decoders/pem.ts(48,9): error TS2740: Type 'Buffer' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-lib/asn1/encoders/der.ts(8,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-with-typed-deps-es6/baseline/asn1.js/lib/asn1/constants/der"' has no default export.
+lib/asn1/encoders/der.ts(8,8): error TS1192: Module '"lib/asn1/constants/der"' has no default export.
 lib/asn1/encoders/der.ts(10,38): error TS2304: Cannot find name 'Void'.
 lib/asn1/encoders/der.ts(12,22): error TS2339: Property 'name' does not exist on type 'Object'.
 lib/asn1/encoders/der.ts(16,15): error TS2350: Only a void function can be called with the 'new' keyword.

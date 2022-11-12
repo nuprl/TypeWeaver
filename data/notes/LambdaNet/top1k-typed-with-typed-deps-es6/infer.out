@@ -1,8 +1,8 @@
 Source directory: .
 Dataset: top1k-typed-with-typed-deps-es6
-Inferring types with LambdaNet: /mnt/data/mhyee/not-type-inference/LambdaNet
-Input directory: /mnt/data/mhyee/not-type-inference/data/original/top1k-typed-with-typed-deps-es6
-Output directory: /mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/predictions
+Inferring types with LambdaNet: /work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet
+Input directory: /work/arjunguha-research-group/mhyee/not-type-inference/data/original/top1k-typed-with-typed-deps-es6
+Output directory: /work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/predictions
 Found 85 packages
 [1/85] @sinonjs_commons ... [ OK ]
 [2/85] accepts ... [ OK ]
@@ -17,7 +17,7 @@ Found 85 packages
 [11/85] color-convert ... [ OK ]
 [12/85] color-string ... [ OK ]
 [13/85] compressible ... [ OK ]
-[14/85] csso ... [ OK ]
+[14/85] csso ... [FAIL]
 [15/85] cssstyle ... [ OK ]
 [16/85] dashdash ... [ OK ]
 [17/85] debug ... [ OK ]
@@ -89,7 +89,7 @@ Found 85 packages
 [83/85] whatwg-url ... [ OK ]
 [84/85] which ... [ OK ]
 [85/85] write-file-atomic ... [FAIL]
-Number of successes: 70
-Number of fails: 15
+Number of successes: 69
+Number of fails: 16
 Number of skips: 0
-Time for type inference: 0:13:46
+Time for type inference: 0:36:11

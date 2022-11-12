@@ -15,7 +15,7 @@ lib/hash.ts(14,6): error TS2339: Property 'sha512' does not exist on type 'HTMLE
 lib/hash.ts(14,20): error TS2339: Property 'sha' does not exist on type 'HTMLElement'.
 lib/hash.ts(15,6): error TS2339: Property 'ripemd160' does not exist on type 'HTMLElement'.
 lib/hash.ts(15,23): error TS2339: Property 'ripemd' does not exist on type 'HTMLElement'.
-lib/hash/common.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/common.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/common.ts(6,23): error TS2304: Cannot find name 'Void'.
 lib/hash/common.ts(20,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/hash/common.ts(35,43): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -31,13 +31,13 @@ lib/hash/common.ts(78,16): error TS2362: The left-hand side of an arithmetic ope
 lib/hash/common.ts(79,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/common.ts(80,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/common.ts(81,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/hash/hmac.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/hmac.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/hmac.ts(8,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/hash/hmac.ts(10,25): error TS2339: Property 'blockSize' does not exist on type 'Object'.
 lib/hash/hmac.ts(11,23): error TS2339: Property 'outSize' does not exist on type 'Object'.
 lib/hash/hmac.ts(19,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/hash/hmac.ts(19,51): error TS2304: Cannot find name 'Void'.
-lib/hash/ripemd.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/ripemd.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/ripemd.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
 lib/hash/ripemd.ts(14,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/hash/ripemd.ts(29,76): error TS2304: Cannot find name 'Void'.
@@ -61,7 +61,6 @@ lib/hash/ripemd.ts(65,15): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 lib/hash/ripemd.ts(66,15): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-lib/hash/ripemd.ts(71,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/hash/ripemd.ts(79,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/ripemd.ts(79,16): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/ripemd.ts(79,20): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -79,9 +78,9 @@ lib/hash/ripemd.ts(116,8): error TS2314: Generic type 'Promise<T>' requires 1 ty
 lib/hash/ripemd.ts(124,9): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/hash/ripemd.ts(132,8): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/hash/ripemd.ts(140,9): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/hash/sha/1.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/sha/1.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/sha/1.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
-lib/hash/sha/1.ts(5,8): error TS1192: Module '"lib/hash/sha/common"' has no default export.
+lib/hash/sha/1.ts(5,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/sha/common"' has no default export.
 lib/hash/sha/1.ts(13,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/hash/sha/1.ts(20,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/hash/sha/1.ts(37,72): error TS2304: Cannot find name 'Void'.
@@ -97,13 +96,11 @@ lib/hash/sha/1.ts(65,15): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 lib/hash/sha/1.ts(66,15): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-lib/hash/sha/1.ts(70,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/hash/sha/224.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/sha/224.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/sha/224.ts(8,12): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/hash/sha/224.ts(25,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/hash/sha/256.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/sha/256.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/sha/256.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
-lib/hash/sha/256.ts(5,8): error TS1192: Module '"lib/hash/sha/common"' has no default export.
+lib/hash/sha/256.ts(5,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/sha/common"' has no default export.
 lib/hash/sha/256.ts(20,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/hash/sha/256.ts(41,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/hash/sha/256.ts(59,74): error TS2304: Cannot find name 'Void'.
@@ -131,11 +128,9 @@ lib/hash/sha/256.ts(96,15): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 lib/hash/sha/256.ts(97,15): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-lib/hash/sha/256.ts(101,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/hash/sha/384.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/sha/384.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/sha/384.ts(8,12): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/hash/sha/384.ts(30,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/hash/sha/512.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/sha/512.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/sha/512.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
 lib/hash/sha/512.ts(21,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/hash/sha/512.ts(66,12): error TS2350: Only a void function can be called with the 'new' keyword.
@@ -145,7 +140,7 @@ lib/hash/sha/512.ts(95,16): error TS2339: Property 'length' does not exist on ty
 lib/hash/sha/512.ts(96,9): error TS2740: Type 'Number' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/hash/sha/512.ts(97,9): error TS2322: Type 'Number' is not assignable to type 'Function'.
 lib/hash/sha/512.ts(100,9): error TS2322: Type 'Number' is not assignable to type 'Function'.
-lib/hash/sha/512.ts(101,9): error TS2322: Type 'Number' is not assignable to type 'String'.
+lib/hash/sha/512.ts(101,9): error TS2322: Type 'Number' is not assignable to type 'Function'.
 lib/hash/sha/512.ts(118,74): error TS2304: Cannot find name 'Void'.
 lib/hash/sha/512.ts(121,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/hash/sha/512.ts(142,9): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
@@ -154,10 +149,10 @@ lib/hash/sha/512.ts(144,37): error TS2345: Argument of type 'String' is not assi
   Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 lib/hash/sha/512.ts(145,9): error TS2322: Type 'Number' is not assignable to type 'Function'.
 lib/hash/sha/512.ts(145,37): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
-lib/hash/sha/512.ts(146,9): error TS2322: Type 'Number' is not assignable to type 'String'.
-lib/hash/sha/512.ts(146,53): error TS2554: Expected 5 arguments, but got 6.
-lib/hash/sha/512.ts(147,9): error TS2322: Type 'Number' is not assignable to type 'String'.
-lib/hash/sha/512.ts(147,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+lib/hash/sha/512.ts(146,9): error TS2322: Type 'Number' is not assignable to type 'Function'.
+lib/hash/sha/512.ts(146,55): error TS2554: Expected 5 arguments, but got 6.
+lib/hash/sha/512.ts(147,9): error TS2322: Type 'Number' is not assignable to type 'Function'.
+lib/hash/sha/512.ts(147,35): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 lib/hash/sha/512.ts(166,5): error TS2322: Type 'Number' is not assignable to type 'String'.
 lib/hash/sha/512.ts(166,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 lib/hash/sha/512.ts(167,5): error TS2322: Type 'Number' is not assignable to type 'String'.
@@ -183,7 +178,6 @@ lib/hash/sha/512.ts(205,3): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 lib/hash/sha/512.ts(206,3): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-lib/hash/sha/512.ts(210,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/hash/sha/512.ts(217,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/sha/512.ts(217,25): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/sha/512.ts(217,40): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -278,7 +272,7 @@ lib/hash/sha/512.ts(326,19): error TS2362: The left-hand side of an arithmetic o
 lib/hash/sha/512.ts(326,27): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/sha/512.ts(326,35): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/sha/512.ts(328,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lib/hash/sha/common.ts(3,8): error TS1192: Module '"lib/hash/utils"' has no default export.
+lib/hash/sha/common.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/sha/common.ts(7,7): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 lib/hash/sha/common.ts(8,5): error TS2322: Type 'Number' is not assignable to type 'String'.
 lib/hash/sha/common.ts(8,17): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
@@ -415,7 +409,7 @@ lib/hash/utils.ts(195,7): error TS2365: Operator '+' cannot be applied to types 
 lib/hash/utils.ts(200,21): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 lib/hash/utils.ts(201,20): error TS2365: Operator '+' cannot be applied to types 'number' and 'String'.
 lib/hash/utils.ts(202,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/hash/utils.ts(207,20): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
+lib/hash/utils.ts(207,20): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 lib/hash/utils.ts(208,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/utils.ts(214,7): error TS2322: Type 'String' is not assignable to type 'Number'.
 lib/hash/utils.ts(215,9): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.
@@ -441,8 +435,9 @@ lib/hash/utils.ts(239,12): error TS2365: Operator '<' cannot be applied to types
 lib/hash/utils.ts(240,9): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.
 lib/hash/utils.ts(241,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/hash/utils.ts(241,12): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
-lib/hash/utils.ts(242,9): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
+lib/hash/utils.ts(242,9): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.
 lib/hash/utils.ts(243,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
+lib/hash/utils.ts(243,12): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
 lib/hash/utils.ts(245,20): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 lib/hash/utils.ts(246,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/utils.ts(251,20): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.

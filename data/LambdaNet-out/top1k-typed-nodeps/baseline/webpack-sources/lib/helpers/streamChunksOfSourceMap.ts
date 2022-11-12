@@ -280,7 +280,7 @@ const streamChunksOfSourceMapFinal: Function = (
 		generatedColumn: Number,
 		sourceIndex: Number,
 		originalLine: OriginalSource,
-		originalColumn: OriginalSource,
+		originalColumn: String,
 		nameIndex: String
 	) => {
 		if (
@@ -373,7 +373,7 @@ module.exports = (
 	onChunk: String,
 	onSource: String,
 	onName: String,
-	finalSource: CachedSource,
+	finalSource: Source,
 	columns: Boolean
 ) => {
 	if (columns) {

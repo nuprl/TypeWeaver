@@ -1,4 +1,4 @@
-examples/example.ts(4,17): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/@trysound_sax/lib/sax.ts' is not a module.
+examples/example.ts(4,17): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/@trysound_sax/lib/sax.ts' is not a module.
 examples/example.ts(15,7): error TS2339: Property 'onend' does not exist on type 'Object'.
 examples/example.ts(15,15): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
@@ -9,9 +9,9 @@ examples/example.ts(24,31): error TS2345: Argument of type 'Number' is not assig
 examples/example.ts(25,22): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 examples/example.ts(27,16): error TS2339: Property 'close' does not exist on type 'Object'.
-examples/get-products.ts(4,17): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/@trysound_sax/lib/sax.ts' is not a module.
+examples/get-products.ts(4,17): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/@trysound_sax/lib/sax.ts' is not a module.
 examples/get-products.ts(12,13): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-  Type 'String' is not assignable to type 'Buffer'.
+  Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
 examples/get-products.ts(13,21): error TS2769: No overload matches this call.
   Overload 1 of 2, '(requestListener?: RequestListener<typeof IncomingMessage, typeof ServerResponse>): Server<typeof IncomingMessage, typeof ServerResponse>', gave the following error.
     Argument of type '(req: Function, res: any) => void' is not assignable to parameter of type 'RequestListener<typeof IncomingMessage, typeof ServerResponse>'.
@@ -40,7 +40,7 @@ examples/get-products.ts(47,34): error TS2339: Property 'children' does not exis
 examples/get-products.ts(50,12): error TS2339: Property 'onend' does not exist on type 'HTMLElement'.
 examples/get-products.ts(57,12): error TS2339: Property 'write' does not exist on type 'HTMLElement'.
 examples/hello-world.ts(1,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/pretty-print.ts(1,17): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/@trysound_sax/lib/sax.ts' is not a module.
+examples/pretty-print.ts(1,17): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/@trysound_sax/lib/sax.ts' is not a module.
 examples/pretty-print.ts(9,9): error TS2339: Property 'tabstop' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(10,9): error TS2339: Property 'level' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(11,9): error TS2339: Property 'indent' does not exist on type 'HTMLElement'.
@@ -57,7 +57,7 @@ examples/pretty-print.ts(47,9): error TS2339: Property 'on' does not exist on ty
 examples/pretty-print.ts(52,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 examples/pretty-print.ts(62,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/pretty-print.ts(62,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-  Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
+  Type 'String' is not assignable to type 'Buffer'.
 examples/pretty-print.ts(64,29): error TS2304: Cannot find name 'Void'.
 examples/pretty-print.ts(65,29): error TS2769: No overload matches this call.
   Overload 1 of 2, '(buffer: string | Uint8Array, cb?: (err?: Error) => void): boolean', gave the following error.

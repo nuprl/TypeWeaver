@@ -155,7 +155,7 @@ unfoldr = curry$(function(f: Function, b: String){
   }
   return result;
 });
-concat = function(xss: Number){
+concat = function(xss: String){
   return [].concat.apply([], xss);
 };
 concatMap = curry$(function(f: Function, xs: Function){
@@ -570,7 +570,7 @@ at = curry$(function(n: String, xs: Array){
     return xs[n];
   }
 });
-elemIndex = curry$(function(el: Boolean, xs: Array){
+elemIndex = curry$(function(el: String, xs: Array){
   var i$: Number, len$: Function, i: Number, x: String;
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
     i = i$;
@@ -580,7 +580,7 @@ elemIndex = curry$(function(el: Boolean, xs: Array){
     }
   }
 });
-elemIndices = curry$(function(el: Boolean, xs: Array){
+elemIndices = curry$(function(el: String, xs: Array){
   var i$: Number, len$: Function, i: Number, x: String, results$: Array = [];
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
     i = i$;

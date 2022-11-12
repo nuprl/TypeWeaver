@@ -22,7 +22,7 @@ var regexAlwaysEscape: RegExp = /['"\\]/;
 var regexExcessiveSpaces: RegExp = /(^|\\+)?(\\[A-F0-9]{1,6})\x20(?![a-fA-F0-9\x20])/g;
 
 // https://mathiasbynens.be/notes/css-escapes#css
-var cssesc: Element = function cssesc(string: String, options: Object): String {
+var cssesc: HTMLElement = function cssesc(string: String, options: Object): String {
 	options = merge(options, cssesc.options);
 	if (options.quotes != 'single' && options.quotes != 'double') {
 		options.quotes = 'single';

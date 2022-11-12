@@ -136,7 +136,7 @@ export function __values(o: Array): Object {
 export function __read(o: Object, n: Number): Array {
     var m: Function = typeof Symbol === "function" && o[Symbol.iterator];
     if (!m) return o;
-    var i: Object = m.call(o), r: Object, ar: Array = [], e: Map;
+    var i: Object = m.call(o), r: Object, ar: Array = [], e: Object;
     try {
         while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
     }
@@ -202,8 +202,8 @@ export function __asyncValues(o: Object): Promise {
     if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
     var m: Function = o[Symbol.asyncIterator], i: Object;
     return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
-    function verb(n: String): Void { i[n] = o[n] && function (v: Object) { return new Promise(function (resolve: String, reject: String) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
-    function settle(resolve: Function, reject: String, d: Boolean, v: Function): Void { Promise.resolve(v).then(function(v: String) { resolve({ value: v, done: d }); }, reject); }
+    function verb(n: String): Void { i[n] = o[n] && function (v: Object) { return new Promise(function (resolve: Array, reject: String) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+    function settle(resolve: Function, reject: String, d: Boolean, v: Array): Void { Promise.resolve(v).then(function(v: String) { resolve({ value: v, done: d }); }, reject); }
 }
 
 export function __makeTemplateObject(cooked: Object, raw: String): Object {

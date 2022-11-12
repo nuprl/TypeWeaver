@@ -10,6 +10,7 @@ build/unicode.ts(26,10): error TS2345: Argument of type 'String' is not assignab
 build/unicode.ts(37,35): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 build/unicode.ts(39,20): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
+  Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
 build/unicode.ts(40,18): error TS2769: No overload matches this call.
   Overload 1 of 3, '(path: PathLike, options?: Mode | (MakeDirectoryOptions & { recursive?: false; })): void', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathLike'.
@@ -17,13 +18,13 @@ build/unicode.ts(40,18): error TS2769: No overload matches this call.
     Argument of type 'String' is not assignable to parameter of type 'PathLike'.
 build/unicode.ts(50,80): error TS2538: Type 'String' cannot be used as an index type.
 build/unicode.ts(52,18): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
+  Type 'String' is not assignable to type 'Buffer'.
 lib/cli.ts(4,17): error TS2732: Cannot find module '../package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 lib/cli.ts(9,10): error TS2339: Property 'version' does not exist on type 'Object'.
 lib/cli.ts(11,17): error TS2339: Property 'help' does not exist on type 'Object'.
 lib/cli.ts(14,37): error TS2339: Property 'defaults' does not exist on type 'Object'.
 lib/cli.ts(16,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cli.ts(18,42): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-  Type 'String' is not assignable to type 'Buffer'.
 lib/cli.ts(25,9): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
 lib/cli.ts(30,18): error TS2339: Property 'space' does not exist on type 'Object'.
 lib/cli.ts(30,40): error TS2339: Property 'space' does not exist on type 'Object'.
@@ -311,7 +312,6 @@ lib/register.ts(5,1): error TS2322: Type '(module: String, filename: String) => 
 lib/register.ts(6,45): error TS2769: No overload matches this call.
   Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-      Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
   Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string; } | BufferEncoding): string', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
   Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string; })): string | Buffer', gave the following error.
@@ -374,7 +374,7 @@ lib/stringify.ts(234,13): error TS2322: Type 'String' is not assignable to type 
 lib/stringify.ts(235,18): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 lib/stringify.ts(237,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/stringify.ts(258,9): error TS2322: Type 'Number' is not assignable to type 'String'.
-lib/util.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/json5/lib/unicode"' has no default export.
+lib/util.ts(1,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/json5/lib/unicode"' has no default export.
 rollup.config.ts(1,21): error TS2307: Cannot find module 'rollup-plugin-node-resolve' or its corresponding type declarations.
 rollup.config.ts(2,22): error TS2307: Cannot find module 'rollup-plugin-commonjs' or its corresponding type declarations.
 rollup.config.ts(3,19): error TS2307: Cannot find module 'rollup-plugin-buble' or its corresponding type declarations.

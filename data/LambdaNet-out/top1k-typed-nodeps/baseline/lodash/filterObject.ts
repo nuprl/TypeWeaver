@@ -23,7 +23,7 @@ function filterObject(object: Object, predicate: Function): Array {
   const result: Array = []
 
   Object.keys(object).forEach((key: String) => {
-    const value: Stack = object[key]
+    const value: String = object[key]
     if (predicate(value, key, object)) {
       result.push(value)
     }

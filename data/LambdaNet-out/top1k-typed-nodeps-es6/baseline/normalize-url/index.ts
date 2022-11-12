@@ -2,7 +2,7 @@
 const DATA_URL_DEFAULT_MIME_TYPE: String = 'text/plain';
 const DATA_URL_DEFAULT_CHARSET: String = 'us-ascii';
 
-const testParameter: Function = (name: String, filters: Array) => filters.some((filter: String) => filter instanceof RegExp ? filter.test(name) : filter === name);
+const testParameter: Function = (name: String, filters: Array) => filters.some((filter: Object) => filter instanceof RegExp ? filter.test(name) : filter === name);
 
 const normalizeDataURL: Function = (urlString: String, {stripHash}) => {
 	const match = /^data:(?<type>[^,]*?),(?<data>[^#]*?)(?:#(?<hash>.*))?$/.exec(urlString);

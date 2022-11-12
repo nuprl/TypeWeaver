@@ -9,9 +9,9 @@ estraverse.ts(68,21): error TS2365: Operator '+' cannot be applied to types 'Num
 estraverse.ts(69,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 estraverse.ts(69,24): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 estraverse.ts(232,5): error TS2739: Type '{}' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-estraverse.ts(233,5): error TS2739: Type '{}' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+estraverse.ts(233,5): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 estraverse.ts(234,5): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-estraverse.ts(242,54): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
+estraverse.ts(242,54): error TS2304: Cannot find name 'Void'.
 estraverse.ts(247,67): error TS2304: Cannot find name 'Void'.
 estraverse.ts(261,80): error TS2304: Cannot find name 'Void'.
 estraverse.ts(268,28): error TS2304: Cannot find name 'Void'.
@@ -56,7 +56,7 @@ estraverse.ts(439,46): error TS2339: Property 'leave' does not exist on type 'Ob
 estraverse.ts(441,47): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
 estraverse.ts(449,46): error TS2339: Property 'enter' does not exist on type 'Object'.
 estraverse.ts(451,47): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
-estraverse.ts(458,46): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
+estraverse.ts(458,46): error TS2367: This condition will always return 'false' since the types 'String' and 'Function' have no overlap.
 estraverse.ts(463,33): error TS2339: Property 'type' does not exist on type 'Object'.
 estraverse.ts(464,42): error TS2538: Type 'String' cannot be used as an index type.
 estraverse.ts(474,25): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -93,6 +93,7 @@ estraverse.ts(565,63): error TS2345: Argument of type 'Object' is not assignable
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 estraverse.ts(572,17): error TS2367: This condition will always return 'false' since the types 'HTMLElement' and 'Function' have no overlap.
 estraverse.ts(575,49): error TS2339: Property 'leave' does not exist on type 'Object'.
+estraverse.ts(579,65): error TS2367: This condition will always return 'true' since the types 'Number' and 'Function' have no overlap.
 estraverse.ts(579,84): error TS2367: This condition will always return 'true' since the types 'Number' and 'String' have no overlap.
 estraverse.ts(581,29): error TS2339: Property 'ref' does not exist on type 'HTMLElement'.
 estraverse.ts(584,48): error TS2367: This condition will always return 'false' since the types 'Number' and 'String' have no overlap.
@@ -100,6 +101,7 @@ estraverse.ts(585,32): error TS2345: Argument of type 'HTMLElement' is not assig
   Type 'HTMLElement' is missing the following properties from type 'HTMLInputElement': accept, align, alt, autocomplete, and 52 more.
 estraverse.ts(589,34): error TS2339: Property 'root' does not exist on type 'Object'.
 estraverse.ts(594,45): error TS2339: Property 'enter' does not exist on type 'Object'.
+estraverse.ts(598,61): error TS2367: This condition will always return 'true' since the types 'Number' and 'Function' have no overlap.
 estraverse.ts(598,80): error TS2367: This condition will always return 'true' since the types 'Number' and 'String' have no overlap.
 estraverse.ts(600,25): error TS2339: Property 'ref' does not exist on type 'HTMLElement'.
 estraverse.ts(601,25): error TS2339: Property 'node' does not exist on type 'HTMLElement'.
@@ -108,6 +110,7 @@ estraverse.ts(605,28): error TS2345: Argument of type 'HTMLElement' is not assig
 estraverse.ts(606,25): error TS2339: Property 'node' does not exist on type 'HTMLElement'.
 estraverse.ts(610,30): error TS2339: Property 'root' does not exist on type 'Object'.
 estraverse.ts(614,28): error TS2339: Property 'node' does not exist on type 'HTMLElement'.
+estraverse.ts(622,42): error TS2367: This condition will always return 'false' since the types 'Number' and 'Function' have no overlap.
 estraverse.ts(626,29): error TS2339: Property 'type' does not exist on type 'Object'.
 estraverse.ts(626,45): error TS2339: Property 'wrap' does not exist on type 'HTMLElement'.
 estraverse.ts(627,38): error TS2538: Type 'String' cannot be used as an index type.
@@ -206,14 +209,10 @@ estraverse.ts(800,13): error TS2339: Property 'Controller' does not exist on typ
 estraverse.ts(801,13): error TS2339: Property 'cloneEnvironment' does not exist on type 'String'.
 estraverse.ts(801,59): error TS2345: Argument of type '{}' is not assignable to parameter of type 'String'.
   Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+gulpfile.ts(27,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 gulpfile.ts(33,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 gulpfile.ts(34,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 gulpfile.ts(35,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 gulpfile.ts(51,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-gulpfile.ts(53,17): error TS2339: Property 'src' does not exist on type 'String'.
-gulpfile.ts(57,20): error TS2339: Property 'dest' does not exist on type 'String'.
 gulpfile.ts(59,19): error TS2339: Property 'commit' does not exist on type 'String'.
-gulpfile.ts(68,6): error TS2339: Property 'task' does not exist on type 'String'.
-gulpfile.ts(69,6): error TS2339: Property 'task' does not exist on type 'String'.
-gulpfile.ts(70,6): error TS2339: Property 'task' does not exist on type 'String'.
 

@@ -1,7 +1,7 @@
 exports = module.exports = stringify
 exports.getSerialize = serializer
 
-function stringify(obj: Function, replacer: String, spaces: Function, cycleReplacer: Number): String {
+function stringify(obj: Function, replacer: String, spaces: Function, cycleReplacer: String): String {
   return JSON.stringify(obj, serializer(replacer, cycleReplacer), spaces)
 }
 

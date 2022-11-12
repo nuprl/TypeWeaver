@@ -1,11 +1,7 @@
 example.ts(4,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-example.ts(5,6): error TS2339: Property 'captureExit' does not exist on type 'Function'.
-example.ts(8,6): error TS2339: Property 'onExit' does not exist on type 'Function'.
 index.ts(1,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(4,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(22,11): error TS2367: This condition will always return 'false' since the types 'Number' and 'String' have no overlap.
-index.ts(49,5): error TS2322: Type 'Function' is not assignable to type '(code?: number) => never'.
-  Type 'Function' provides no match for the signature '(code?: number): never'.
 index.ts(63,3): error TS2322: Type '(code: Number) => any' is not assignable to type '(code?: number) => never'.
   Type 'any' is not assignable to type 'never'.
 index.ts(84,7): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.

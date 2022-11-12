@@ -4,9 +4,11 @@ lib/AsyncParallelBailHook.ts(67,7): error TS2740: Type 'AsyncParallelBailHookCod
 lib/AsyncParallelBailHook.ts(67,23): error TS2554: Expected 1 arguments, but got 0.
 lib/AsyncParallelBailHook.ts(70,10): error TS2339: Property 'setup' does not exist on type 'Hook'.
 lib/AsyncParallelBailHook.ts(71,17): error TS2339: Property 'create' does not exist on type 'Hook'.
-lib/AsyncParallelBailHook.ts(74,32): error TS2322: Type 'undefined[]' is not assignable to type 'String'.
+lib/AsyncParallelBailHook.ts(74,32): error TS2740: Type 'undefined[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 lib/AsyncParallelBailHook.ts(75,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'any[]'.
+  Type 'String' is missing the following properties from type 'any[]': pop, push, join, reverse, and 21 more.
 lib/AsyncParallelBailHook.ts(77,2): error TS2322: Type 'Function' is not assignable to type '(options: any) => void'.
+  Type 'Function' provides no match for the signature '(options: any): void'.
 lib/AsyncParallelBailHook.ts(78,7): error TS2339: Property '_call' does not exist on type 'Hook'.
 lib/AsyncParallelBailHook.ts(79,7): error TS2339: Property 'call' does not exist on type 'Hook'.
 lib/AsyncParallelHook.ts(12,32): error TS2345: Argument of type '{ onError: (i: any, err: any, done: any, doneBreak: any) => any; onDone: any; }' is not assignable to parameter of type '{ onError: any; onResult: any; onDone: any; rethrowIfPossible: any; onTap?: (i: any, run: any) => any; }'.
@@ -204,7 +206,9 @@ lib/SyncBailHook.ts(37,17): error TS2339: Property 'create' does not exist on ty
 lib/SyncBailHook.ts(40,23): error TS2322: Type 'undefined[]' is not assignable to type 'String'.
 lib/SyncBailHook.ts(41,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'any[]'.
 lib/SyncBailHook.ts(43,2): error TS2322: Type 'Function' is not assignable to type '(options: any, fn: any) => void'.
+  Type 'Function' provides no match for the signature '(options: any, fn: any): void'.
 lib/SyncBailHook.ts(44,2): error TS2322: Type 'Function' is not assignable to type '(options: any, fn: any) => void'.
+  Type 'Function' provides no match for the signature '(options: any, fn: any): void'.
 lib/SyncBailHook.ts(45,2): error TS2322: Type 'Function' is not assignable to type '(options: any) => void'.
 lib/SyncHook.ts(12,30): error TS2345: Argument of type '{ onError: (i: any, err: any) => any; onDone: any; rethrowIfPossible: any; }' is not assignable to parameter of type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }'.
   Type '{ onError: (i: any, err: any) => any; onDone: any; rethrowIfPossible: any; }' is missing the following properties from type '{ onError: any; onResult: any; resultReturns: any; onDone: any; doneReturns: any; rethrowIfPossible: any; }': onResult, resultReturns, doneReturns
@@ -212,15 +216,11 @@ lib/SyncHook.ts(20,7): error TS2740: Type 'SyncHookCodeFactory' is missing the f
 lib/SyncHook.ts(20,23): error TS2554: Expected 1 arguments, but got 0.
 lib/SyncHook.ts(31,10): error TS2339: Property 'setup' does not exist on type 'Hook'.
 lib/SyncHook.ts(32,17): error TS2339: Property 'create' does not exist on type 'Hook'.
-lib/SyncHook.ts(35,19): error TS2740: Type 'undefined[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
+lib/SyncHook.ts(35,19): error TS2322: Type 'undefined[]' is not assignable to type 'String'.
 lib/SyncHook.ts(36,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'any[]'.
-  Type 'String' is missing the following properties from type 'any[]': pop, push, join, reverse, and 21 more.
 lib/SyncHook.ts(38,2): error TS2322: Type 'Function' is not assignable to type '(options: any, fn: any) => void'.
-  Type 'Function' provides no match for the signature '(options: any, fn: any): void'.
 lib/SyncHook.ts(39,2): error TS2322: Type 'Function' is not assignable to type '(options: any, fn: any) => void'.
-  Type 'Function' provides no match for the signature '(options: any, fn: any): void'.
 lib/SyncHook.ts(40,2): error TS2322: Type 'Function' is not assignable to type '(options: any) => void'.
-  Type 'Function' provides no match for the signature '(options: any): void'.
 lib/SyncLoopHook.ts(20,7): error TS2740: Type 'SyncLoopHookCodeFactory' is missing the following properties from type 'Hook': compile, _createCall, _tap, tap, and 8 more.
 lib/SyncLoopHook.ts(20,23): error TS2554: Expected 1 arguments, but got 0.
 lib/SyncLoopHook.ts(31,10): error TS2339: Property 'setup' does not exist on type 'Hook'.

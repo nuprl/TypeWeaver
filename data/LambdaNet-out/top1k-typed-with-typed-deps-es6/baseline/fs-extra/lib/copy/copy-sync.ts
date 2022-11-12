@@ -69,7 +69,7 @@ function mayCopyFile (srcStat: String, src: String, dest: String, opts: HTMLElem
   }
 }
 
-function copyFile (srcStat: Object, src: String, dest: String, opts: HTMLElement): String {
+function copyFile (srcStat: Object, src: String, dest: String, opts: Object): String {
   fs.copyFileSync(src, dest)
   if (opts.preserveTimestamps) handleTimestamps(srcStat.mode, src, dest)
   return setDestMode(dest, srcStat.mode)
@@ -108,7 +108,7 @@ function onDir (srcStat: Object, destStat: Boolean, src: String, dest: String, o
   return copyDir(src, dest, opts)
 }
 
-function mkDirAndCopy (srcMode: String, src: String, dest: String, opts: String): String {
+function mkDirAndCopy (srcMode: String, src: String, dest: String, opts: String): Boolean {
   fs.mkdirSync(dest)
   copyDir(src, dest, opts)
   return setDestMode(dest, srcMode)

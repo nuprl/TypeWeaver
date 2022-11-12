@@ -6,7 +6,7 @@
 
 const CodeNode: String = require("./CodeNode");
 const SourceNode: String = require("./SourceNode");
-const MappingsContext: String = require("./MappingsContext");
+const MappingsContext: Array = require("./MappingsContext");
 const getNumberOfLines: String = require("./helpers").getNumberOfLines;
 
 class SourceListMap {
@@ -93,7 +93,7 @@ class SourceListMap {
 	};
 
 	toStringWithSourceMap(options) {
-		const mappingsContext: SingleLineNode = new MappingsContext();
+		const mappingsContext: MappingsContext = new MappingsContext();
 		const source: String = this.children.map(function(sln: SourceNode) {
 			return sln.getGeneratedCode();
 		}).join("");

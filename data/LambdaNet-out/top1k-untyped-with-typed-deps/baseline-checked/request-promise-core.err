@@ -81,9 +81,9 @@ gulpfile.ts(115,5): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 gulpfile.ts(118,6): error TS2339: Property 'task' does not exist on type 'HTMLElement'.
 gulpfile.ts(119,17): error TS2339: Property 'src' does not exist on type 'HTMLElement'.
-lib/errors.ts(4,74): error TS2304: Cannot find name 'Void'.
+lib/errors.ts(4,76): error TS2304: Cannot find name 'Void'.
 lib/errors.ts(22,96): error TS2304: Cannot find name 'Void'.
-lib/errors.ts(40,76): error TS2304: Cannot find name 'Void'.
+lib/errors.ts(40,78): error TS2304: Cannot find name 'Void'.
 lib/plumbing.ts(15,29): error TS2769: No overload matches this call.
   Overload 1 of 2, '(message?: string): TypeError', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -102,7 +102,6 @@ lib/plumbing.ts(32,47): error TS2304: Cannot find name 'ChildProcess'.
 lib/plumbing.ts(36,14): error TS2339: Property '_rp_promise' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(36,32): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
-lib/plumbing.ts(36,79): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/plumbing.ts(37,18): error TS2339: Property '_rp_resolve' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(38,18): error TS2339: Property '_rp_reject' does not exist on type 'HTMLElement'.
 lib/plumbing.ts(44,14): error TS2339: Property '_rp_callbackOrig' does not exist on type 'HTMLElement'.

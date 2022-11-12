@@ -11,8 +11,11 @@ examples/clock.ts(37,23): error TS2339: Property 'timer' does not exist on type 
 examples/clock.ts(40,8): error TS2339: Property 'startedAt' does not exist on type 'Clock'.
 examples/clock.ts(41,8): error TS2339: Property 'timer' does not exist on type 'Clock'.
 examples/clock.ts(43,8): error TS2554: Expected 2 arguments, but got 1.
-examples/emit.ts(4,18): error TS2552: Cannot find name 'Clock'. Did you mean 'Lock'?
-examples/emitonce.ts(4,7): error TS2740: Type 'Emittery' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+examples/emit.ts(4,7): error TS2740: Type 'Emittery' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+examples/emit.ts(7,11): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
+examples/emit.ts(11,11): error TS2339: Property 'onAny' does not exist on type 'HTMLElement'.
+examples/emit.ts(16,11): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
+examples/emitonce.ts(4,7): error TS2322: Type 'Emittery' is not assignable to type 'HTMLElement'.
 examples/emitonce.ts(8,58): error TS2551: Property 'once' does not exist on type 'HTMLElement'. Did you mean 'nonce'?
 examples/emitonce.ts(12,11): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 examples/emitonce.ts(13,11): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.

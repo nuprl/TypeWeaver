@@ -78,7 +78,7 @@ module['exports'] = function() {
           });
         } else {
           var themePropApplicator: Function = function(str: Number) {
-            var ret: Number = str || this;
+            var ret: String = str || this;
             for (var t = 0; t < theme[prop].length; t++) {
               ret = colors[theme[prop][t]](ret);
             }

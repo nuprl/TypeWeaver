@@ -15,6 +15,6 @@ import createCaseFirst from './.internal/createCaseFirst.js'
  * lowerFirst('FRED')
  * // => 'fRED'
  */
-const lowerFirst: Hash = createCaseFirst('toLowerCase')
+const lowerFirst: Array = createCaseFirst('toLowerCase')
 
 export default lowerFirst

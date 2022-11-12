@@ -263,12 +263,10 @@ parser.ts(1010,44): error TS2345: Argument of type 'RegExp' is not assignable to
 parser.ts(1011,13): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(1019,26): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
-parser.ts(1021,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'Object' is not assignable to type 'boolean'.
+parser.ts(1021,9): error TS2322: Type 'Object' is not assignable to type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(1022,42): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 parser.ts(1024,51): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
-parser.ts(1026,9): error TS2322: Type 'String' is not assignable to type 'Boolean'.
 parser.ts(1026,56): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 parser.ts(1040,26): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 parser.ts(1050,16): error TS2554: Expected 4 arguments, but got 3.
@@ -319,8 +317,9 @@ parser.ts(1273,42): error TS2314: Generic type 'Array<T>' requires 1 type argume
 parser.ts(1281,9): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(1302,9): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(1306,9): error TS2322: Type 'String' is not assignable to type 'Boolean'.
-parser.ts(1311,7): error TS2322: Type 'Object' is not assignable to type 'Boolean'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+parser.ts(1311,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'Object' is not assignable to type 'boolean'.
 parser.ts(1331,26): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'HTMLElement'.
 parser.ts(1336,11): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(1339,9): error TS2322: Type 'Object' is not assignable to type 'String'.
@@ -339,8 +338,6 @@ parser.ts(1451,9): error TS2554: Expected 4 arguments, but got 2.
 parser.ts(1460,47): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 parser.ts(1463,9): error TS2554: Expected 4 arguments, but got 2.
 parser.ts(1472,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-parser.ts(1481,13): error TS2322: Type 'Object' is not assignable to type 'Function'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(1484,11): error TS2554: Expected 4 arguments, but got 3.
 parser.ts(1497,11): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?

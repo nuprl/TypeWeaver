@@ -34,7 +34,7 @@ const extractICSS: Function = (css: Function, removeRules: Boolean = true, mode:
     }
   }
 
-  function addExports(node: Object): Void {
+  function addExports(node: Map): Void {
     Object.assign(icssExports, getDeclsObject(node));
     if (removeRules) {
       node.remove();

@@ -15,7 +15,7 @@
  *  http://javascript.nwbox.com/nwsapi/nwsapi.js
  */
 
-(function Export(global: Object, factory: Function): Void {
+(function Export(global: HTMLElement, factory: Function): Void {
 
   'use strict';
 
@@ -296,7 +296,7 @@
     function(str: String) {
       return REX.HasEscapes.test(str) ?
         str.replace(REX.FixEscapes,
-          function(substring: Number, p1: String, p2: Number) {
+          function(substring: Number, p1: Number, p2: Number) {
             // unescaped " or '
             return p2 ? '\\' + p2 :
               // javascript strings are UTF-16 encoded
@@ -1638,7 +1638,7 @@
 
       if (all) {
         document.addEventListener('load', function(e: HTMLElement) {
-          var c: String, d: HTMLElement, r: HTMLElement, s: HTMLElement, t: HTMLElement = e.target;
+          var c: Number, d: HTMLElement, r: HTMLElement, s: HTMLElement, t: HTMLElement = e.target;
           if (/iframe/i.test(t.localName)) {
             c = '(' + Export + ')(this, ' + Factory + ');'; d = t.contentDocument;
             s = d.createElement('script'); s.textContent = c + 'NW.Dom.install()';

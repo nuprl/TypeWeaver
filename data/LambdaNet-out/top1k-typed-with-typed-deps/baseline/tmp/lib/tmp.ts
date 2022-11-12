@@ -135,12 +135,12 @@ function file(options: Object, callback: Function): Void {
     if (err) return cb(err);
 
     // create and open the file
-    fs.open(name, CREATE_FLAGS, opts.mode || FILE_MODE, function _fileCreated(err: Function, fd: Number): Number {
+    fs.open(name, CREATE_FLAGS, opts.mode || FILE_MODE, function _fileCreated(err: Function, fd: Number): String {
       /* istanbu ignore else */
       if (err) return cb(err);
 
       if (opts.discardDescriptor) {
-        return fs.close(fd, function _discardCallback(possibleErr: Array): Void {
+        return fs.close(fd, function _discardCallback(possibleErr: Array): Promise {
           // the chance of getting an error on close here is rather low and might occur in the most edgiest cases only
           return cb(possibleErr, name, undefined, _prepareTmpFileRemoveCallback(name, -1, opts, false));
         });
@@ -200,7 +200,7 @@ function dir(options: Object, callback: Function): Void {
     if (err) return cb(err);
 
     // create the directory
-    fs.mkdir(name, opts.mode || DIR_MODE, function _dirCreated(err: Function): Void {
+    fs.mkdir(name, opts.mode || DIR_MODE, function _dirCreated(err: Function): Promise {
       /* istanbul ignore else */
       if (err) return cb(err);
 
@@ -625,7 +625,7 @@ function _isENOENT(error: Object): Boolean {
  * @param {string} code
  * @private
  */
-function _isExpectedError(error: Object, errno: Object, code: String): Boolean {
+function _isExpectedError(error: Object, errno: Array, code: String): Boolean {
   return IS_WIN32 ? error.code === code : error.code === code && error.errno === errno;
 }
 

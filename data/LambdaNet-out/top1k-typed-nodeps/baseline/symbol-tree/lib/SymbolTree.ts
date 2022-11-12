@@ -183,7 +183,7 @@ class SymbolTree {
          * @return {?Object}
          */
         preceding(object, options) {
-                const treeRoot: SymbolTree = options && options.root;
+                const treeRoot: String = options && options.root;
 
                 if (object === treeRoot) {
                         return null;
@@ -218,7 +218,7 @@ class SymbolTree {
          * @return {?Object}
          */
         following(object, options) {
-                const treeRoot: SymbolTree = options && options.root;
+                const treeRoot: String = options && options.root;
                 const skipChildren: Boolean = options && options.skipChildren;
 
                 const firstChild: Boolean = !skipChildren && this._node(object).firstChild;
@@ -471,7 +471,7 @@ class SymbolTree {
          * @return {Number} The number of preceding siblings, or -1 if the object has no parent
          */
         index(child) {
-                const childNode: SymbolTree = this._node(child);
+                const childNode: Object = this._node(child);
                 const parentNode: SymbolTree = this._node(childNode.parent);
 
                 if (!parentNode) {
@@ -623,7 +623,7 @@ class SymbolTree {
                 }
 
                 // indexes within the common ancestor
-                const leftIndex: String  = this.index(reverseArrayIndex(leftAncestors, commonAncestorIndex + 1));
+                const leftIndex: Number  = this.index(reverseArrayIndex(leftAncestors, commonAncestorIndex + 1));
                 const rightIndex: Number = this.index(reverseArrayIndex(rightAncestors, commonAncestorIndex + 1));
 
                 return rightIndex < leftIndex

@@ -57,7 +57,7 @@ suite.on('complete', function onComplete (): Void {
 suite.run({ async: false })
 
 function getbuffer (size: String): Array {
-  var buffer: Array = Buffer.alloc(size)
+  var buffer: Promise = Buffer.alloc(size)
   var rng: Object = seedrandom('body ' + size)
 
   for (var i = 0; i < buffer.length; i++) {

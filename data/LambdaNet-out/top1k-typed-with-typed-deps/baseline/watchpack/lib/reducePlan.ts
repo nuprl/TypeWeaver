@@ -100,7 +100,7 @@ module.exports = (plan: Array, limit: Number) => {
 			parent.entries -= reduction;
 			parent = parent.parent;
 		}
-		const queue: HTMLElement = new Set(bestNode.children);
+		const queue: Error = new Set(bestNode.children);
 		for (const node of queue) {
 			node.active = false;
 			node.entries = 0;
@@ -114,7 +114,7 @@ module.exports = (plan: Array, limit: Number) => {
 	for (const rootNode of treeMap.values()) {
 		if (!rootNode.active) continue;
 		const map: Map = new Map();
-		const queue: HTMLElement = new Set([rootNode]);
+		const queue: Error = new Set([rootNode]);
 		for (const node of queue) {
 			if (node.active && node !== rootNode) continue;
 			if (node.value) {

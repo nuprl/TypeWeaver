@@ -12,7 +12,7 @@ var CSSOM: String = {
  * @see http://dev.w3.org/csswg/cssom/#cssimportrule
  * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSImportRule
  */
-CSSOM.CSSImportRule = function CSSImportRule(): Promise {
+CSSOM.CSSImportRule = function CSSImportRule(): Void {
 	CSSOM.CSSRule.call(this);
 	this.href = "";
 	this.media = new CSSOM.MediaList();

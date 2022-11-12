@@ -265,7 +265,7 @@ function resolve(relative: String, base: String): String {
  * @param {Boolean|Function} [parser] Parser for the query string.
  * @private
  */
-function Url(address: String, location: Object, parser: Function): String {
+function Url(address: Array, location: Object, parser: Function): String {
   if (!(this instanceof Url)) {
     return new Url(address, location, parser);
   }

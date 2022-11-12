@@ -1,4 +1,3 @@
-index.ts(7,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(19,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(25,71): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -23,6 +22,10 @@ index.ts(83,58): error TS2339: Property 'locale' does not exist on type 'Object'
 index.ts(86,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(90,18): error TS2339: Property 'pascalCase' does not exist on type 'Object'.
+index.ts(99,24): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'Object' is not assignable to parameter of type 'string | RegExp'.
+      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(100,18): error TS2339: Property 'preserveConsecutiveUppercase' does not exist on type 'Object'.
 index.ts(102,14): error TS2339: Property 'pascalCase' does not exist on type 'Object'.
 

@@ -32,7 +32,7 @@ function required(): Void {
 required();
 
 function synth(): Void {
-  var client: HTMLElement = new watchman.Client();
+  var client: Element = new watchman.Client();
 
   resp = client._synthesizeCapabilityCheck({version: '1.0'},
       ['will-never-exist'], []);

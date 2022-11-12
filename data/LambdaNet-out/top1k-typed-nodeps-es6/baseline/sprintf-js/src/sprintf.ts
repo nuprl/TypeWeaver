@@ -26,7 +26,7 @@
         return sprintf_format(sprintf_parse(key), arguments)
     }
 
-    function vsprintf(fmt: Function, argv: String): Promise {
+    function vsprintf(fmt: String, argv: Number): Promise {
         return sprintf.apply(null, [fmt].concat(argv || []))
     }
 

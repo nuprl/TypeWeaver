@@ -208,7 +208,7 @@ function mutualChange(hunk: Object, mine: String, their: String): Void {
   conflict(hunk, myChanges, theirChanges);
 }
 
-function removal(hunk: Object, mine: String, their: String, swap: Boolean): Void {
+function removal(hunk: Object, mine: Function, their: String, swap: Boolean): Void {
   let myChanges: Function = collectChange(mine),
       theirChanges: Object = collectContext(their, myChanges);
   if (theirChanges.merged) {

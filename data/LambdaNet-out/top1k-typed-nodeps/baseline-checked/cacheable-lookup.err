@@ -32,9 +32,9 @@ benchmark.ts(54,52): error TS2769: No overload matches this call.
       Type 'Number' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 benchmark.ts(56,8): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 source/index.ts(14,7): error TS2322: Type 'typeof kCacheableLookupCreateConnection' is not assignable to type 'String'.
-source/index.ts(15,7): error TS2322: Type 'typeof kCacheableLookupInstance' is not assignable to type 'String'.
+source/index.ts(15,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 source/index.ts(16,7): error TS2322: Type 'typeof kExpires' is not assignable to type 'String'.
-source/index.ts(20,39): error TS2749: 'CacheableLookup' refers to a value, but is being used as a type here. Did you mean 'typeof CacheableLookup'?
+source/index.ts(21,30): error TS2339: Property 'createConnection' does not exist on type 'Object'.
 source/index.ts(26,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 source/index.ts(41,40): error TS2339: Property 'networkInterfaces' does not exist on type 'String'.
 source/index.ts(42,23): error TS2488: Type 'unknown' must have a '[Symbol.iterator]()' method that returns an iterator.
@@ -141,14 +141,11 @@ source/index.ts(395,13): error TS2339: Property '_removalTimeout' does not exist
 source/index.ts(396,10): error TS2339: Property '_removalTimeout' does not exist on type 'CacheableLookup'.
 source/index.ts(404,7): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
 source/index.ts(408,9): error TS2538: Type 'String' cannot be used as an index type.
-source/index.ts(409,9): error TS2538: Type 'String' cannot be used as an index type.
 source/index.ts(413,13): error TS2339: Property 'lookup' does not exist on type 'Object'.
 source/index.ts(416,17): error TS2538: Type 'String' cannot be used as an index type.
 source/index.ts(423,13): error TS2538: Type 'String' cannot be used as an index type.
-source/index.ts(424,14): error TS2538: Type 'String' cannot be used as an index type.
 source/index.ts(428,35): error TS2538: Type 'String' cannot be used as an index type.
 source/index.ts(430,17): error TS2538: Type 'String' cannot be used as an index type.
-source/index.ts(431,17): error TS2538: Type 'String' cannot be used as an index type.
 source/index.ts(436,10): error TS2339: Property '_iface' does not exist on type 'CacheableLookup'.
 source/index.ts(438,8): error TS2339: Property '_iface' does not exist on type 'CacheableLookup'.
 source/index.ts(440,29): error TS2339: Property '_iface' does not exist on type 'CacheableLookup'.

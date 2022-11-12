@@ -130,7 +130,7 @@ class HookCodeFactory {
 						((result: String) => {
 							let code: String = "";
 							for (let i = 0; i < this.options.interceptors.length; i++) {
-								const interceptor: Hook = this.options.interceptors[i];
+								const interceptor: HTMLElement = this.options.interceptors[i];
 								if (interceptor.result) {
 									code += `${this.getInterceptor(i)}.result(${result});\n`;
 								}

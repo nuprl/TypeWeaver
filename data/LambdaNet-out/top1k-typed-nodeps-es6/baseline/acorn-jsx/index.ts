@@ -13,7 +13,7 @@ function getJsxTokens(acorn: HTMLElement): Object {
   acorn = acorn.Parser.acorn || acorn;
   let acornJsx: Object = acornJsxMap.get(acorn);
   if (!acornJsx) {
-    const tt: HTMLElement = acorn.tokTypes;
+    const tt: HTMLInputElement = acorn.tokTypes;
     const TokContext: Object = acorn.TokContext;
     const TokenType: Function = acorn.TokenType;
     const tc_oTag: String = new TokContext('<tag', false);
@@ -92,9 +92,9 @@ Object.defineProperty(module.exports, "tokTypes", {
 
 function plugin(options: Object, Parser: Object): Object {
   const acorn: HTMLElement = Parser.acorn || require("acorn");
-  const acornJsx: HTMLElement = getJsxTokens(acorn);
-  const tt: Object = acorn.tokTypes;
-  const tok: Function = acornJsx.tokTypes;
+  const acornJsx: Object = getJsxTokens(acorn);
+  const tt: HTMLInputElement = acorn.tokTypes;
+  const tok: Object = acornJsx.tokTypes;
   const tokContexts: Function = acorn.tokContexts;
   const tc_oTag: String = acornJsx.tokContexts.tc_oTag;
   const tc_cTag: String = acornJsx.tokContexts.tc_cTag;

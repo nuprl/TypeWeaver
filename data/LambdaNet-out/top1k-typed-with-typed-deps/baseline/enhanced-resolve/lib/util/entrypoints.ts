@@ -321,7 +321,7 @@ function findMatch(request: String, treeRoot: Object): Array {
 
 		if (node.children === null) return lastFolderMatch;
 
-		const newNode: Resolver = node.children.get(folder);
+		const newNode: CacheBackend = node.children.get(folder);
 
 		if (!newNode) {
 			return lastFolderMatch;
@@ -368,7 +368,7 @@ function isConditionalMapping(mapping: Number): Boolean {
  */
 function directMapping(
 	remainingRequest: String,
-	subpathMapping: String,
+	subpathMapping: Function,
 	mappingTarget: Array,
 	conditionNames: Function,
 	assert: String
@@ -630,7 +630,7 @@ function buildExportsFieldPathTree(field: Array): Resolver {
  * @param {ImportsField} field imports field
  * @returns {PathTreeNode} root
  */
-function buildImportsFieldPathTree(field: Object): Array {
+function buildImportsFieldPathTree(field: Object): Resolver {
 	const root: String = createNode();
 
 	const keys: Array = Object.keys(field);

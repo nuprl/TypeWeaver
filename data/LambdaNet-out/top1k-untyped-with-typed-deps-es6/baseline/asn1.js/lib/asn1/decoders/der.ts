@@ -268,7 +268,7 @@ DERNode.prototype._use = function use(entity: Function, obj: String): Object {
 
 // Utility methods
 
-function derDecodeTag(buf: HTMLElement, fail: String): Number {
+function derDecodeTag(buf: HTMLElement, fail: Number): Number {
   let tag: Number = buf.readUInt8(fail);
   if (buf.isError(tag))
     return tag;
@@ -301,7 +301,7 @@ function derDecodeTag(buf: HTMLElement, fail: String): Number {
   };
 }
 
-function derDecodeLen(buf: Array, primitive: Boolean, fail: String): Number {
+function derDecodeLen(buf: HTMLElement, primitive: Boolean, fail: String): Number {
   let len: Number = buf.readUInt8(fail);
   if (buf.isError(len))
     return len;

@@ -21,7 +21,7 @@ import flow from './flow.js'
  * addSquare(1, 2)
  * // => 9
  */
-function flowRight(...funcs): Stack {
+function flowRight(...funcs): Promise {
   return flow(...funcs.reverse())
 }
 

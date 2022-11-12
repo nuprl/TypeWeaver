@@ -178,7 +178,7 @@ var __createBinding: Function;
     __read = function (o: Object, n: Number) {
         var m: Function = typeof Symbol === "function" && o[Symbol.iterator];
         if (!m) return o;
-        var i: Object = m.call(o), r: Object, ar: Array = [], e: Map;
+        var i: Object = m.call(o), r: Object, ar: Array = [], e: Object;
         try {
             while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
         }
@@ -244,8 +244,8 @@ var __createBinding: Function;
         if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
         var m: Function = o[Symbol.asyncIterator], i: Object;
         return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
-        function verb(n: String): Void { i[n] = o[n] && function (v: Object) { return new Promise(function (resolve: String, reject: String) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
-        function settle(resolve: Function, reject: String, d: Boolean, v: Function): Void { Promise.resolve(v).then(function(v: String) { resolve({ value: v, done: d }); }, reject); }
+        function verb(n: String): Void { i[n] = o[n] && function (v: Object) { return new Promise(function (resolve: Array, reject: String) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+        function settle(resolve: Function, reject: String, d: Boolean, v: Array): Void { Promise.resolve(v).then(function(v: String) { resolve({ value: v, done: d }); }, reject); }
     };
 
     __makeTemplateObject = function (cooked: Object, raw: String) {
@@ -271,7 +271,7 @@ var __createBinding: Function;
         return (mod && mod.__esModule) ? mod : { "default": mod };
     };
 
-    __classPrivateFieldGet = function (receiver: String, state: Map, kind: Number, f: Object) {
+    __classPrivateFieldGet = function (receiver: String, state: Object, kind: Number, f: Object) {
         if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
         if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
         return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);

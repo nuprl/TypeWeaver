@@ -699,7 +699,7 @@ function fromJSON(str: Array): Object {
     obj = str;
   }
 
-  const c: Object = new Cookie();
+  const c: Store = new Cookie();
   for (let i = 0; i < Cookie.serializableProperties.length; i++) {
     const prop: String = Cookie.serializableProperties[i];
     if (obj[prop] === undefined || obj[prop] === cookieDefaults[prop]) {
@@ -729,7 +729,7 @@ function fromJSON(str: Array): Object {
  *     creation-times."
  */
 
-function cookieCompare(a: Object, b: Object): Boolean {
+function cookieCompare(a: Cookie, b: Object): Boolean {
   validators.validate(validators.isObject(a), a);
   validators.validate(validators.isObject(b), b);
   let cmp: Number = 0;
@@ -1411,7 +1411,7 @@ class CookieJar {
       host,
       allPaths ? null : path,
       this.allowSpecialUseDomain,
-      (err: String, cookies: Array) => {
+      (err: Cookie, cookies: Array) => {
         if (err) {
           return cb(err);
         }
@@ -1545,7 +1545,7 @@ class CookieJar {
     }
     cookies = cookies.slice(); // do not modify the original
 
-    const putNext: Function = (err: String) => {
+    const putNext: Function = (err: Cookie) => {
       if (err) {
         return cb(err);
       }
@@ -1577,7 +1577,7 @@ class CookieJar {
       newStore = null;
     }
 
-    this.serialize((err: String, serialized: Array) => {
+    this.serialize((err: Cookie, serialized: Array) => {
       if (err) {
         return cb(err);
       }
@@ -1611,7 +1611,7 @@ class CookieJar {
       return store.removeAllCookies(cb);
     }
 
-    store.getAllCookies((err: String, cookies: Array) => {
+    store.getAllCookies((err: Cookie, cookies: Array) => {
       if (err) {
         return cb(err);
       }
@@ -1635,7 +1635,7 @@ class CookieJar {
         }
       }
 
-      cookies.forEach((cookie: Cookie) => {
+      cookies.forEach((cookie: CookieJar) => {
         store.removeCookie(
           cookie.domain,
           cookie.path,

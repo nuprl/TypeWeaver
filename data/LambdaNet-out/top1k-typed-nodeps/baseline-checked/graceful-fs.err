@@ -11,11 +11,11 @@
 .github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
 clone.ts(6,14): error TS2339: Property '__proto__' does not exist on type 'Object'.
 clone.ts(9,10): error TS2300: Duplicate identifier 'clone'.
-clone.ts(11,5): error TS2322: Type 'String' is not assignable to type 'Function'.
+clone.ts(11,5): error TS2740: Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 clone.ts(19,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 clone.ts(19,75): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
-clone.ts(22,3): error TS2322: Type 'Object' is not assignable to type 'Function'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+clone.ts(22,3): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 graceful-fs.ts(3,5): error TS2300: Duplicate identifier 'legacy'.
 graceful-fs.ts(4,5): error TS2300: Duplicate identifier 'clone'.
 graceful-fs.ts(14,3): error TS2322: Type 'symbol' is not assignable to type 'String'.
@@ -29,12 +29,10 @@ graceful-fs.ts(37,26): error TS2339: Property 'format' does not exist on type 'S
 graceful-fs.ts(43,9): error TS2538: Type 'String' cannot be used as an index type.
 graceful-fs.ts(45,30): error TS2538: Type 'String' cannot be used as an index type.
 graceful-fs.ts(46,16): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
-  Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 graceful-fs.ts(52,6): error TS2339: Property 'close' does not exist on type 'String'.
 graceful-fs.ts(65,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 graceful-fs.ts(69,9): error TS2339: Property 'close' does not exist on type 'String'.
 graceful-fs.ts(71,6): error TS2339: Property 'closeSync' does not exist on type 'String'.
-graceful-fs.ts(71,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 graceful-fs.ts(72,40): error TS2304: Cannot find name 'Void'.
 graceful-fs.ts(78,38): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 graceful-fs.ts(82,9): error TS2339: Property 'closeSync' does not exist on type 'String'.
@@ -44,6 +42,12 @@ graceful-fs.ts(92,13): error TS2538: Type 'String' cannot be used as an index ty
 graceful-fs.ts(93,16): error TS2345: Argument of type 'typeof globalThis' is not assignable to parameter of type 'Function'.
   Type 'typeof globalThis' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 graceful-fs.ts(93,27): error TS2538: Type 'String' cannot be used as an index type.
+graceful-fs.ts(96,24): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(fs: String): Void', gave the following error.
+    Argument of type 'Function' is not assignable to parameter of type 'String'.
+      Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+  Overload 2 of 2, '(fs: String): String', gave the following error.
+    Argument of type 'Function' is not assignable to parameter of type 'String'.
 graceful-fs.ts(97,54): error TS2339: Property '__patched' does not exist on type 'String'.
 graceful-fs.ts(99,8): error TS2339: Property '__patched' does not exist on type 'String'.
 graceful-fs.ts(102,10): error TS2393: Duplicate function implementation.
@@ -52,7 +56,7 @@ graceful-fs.ts(107,6): error TS2339: Property 'createReadStream' does not exist 
 graceful-fs.ts(108,6): error TS2339: Property 'createWriteStream' does not exist on type 'String'.
 graceful-fs.ts(109,32): error TS2339: Property 'readFile' does not exist on type 'String'.
 graceful-fs.ts(110,6): error TS2339: Property 'readFile' does not exist on type 'String'.
-graceful-fs.ts(113,7): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+graceful-fs.ts(113,7): error TS2322: Type 'Function' is not assignable to type 'String'.
 graceful-fs.ts(115,5): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 graceful-fs.ts(115,12): error TS2554: Expected 4 arguments, but got 3.
 graceful-fs.ts(118,14): error TS2349: This expression is not callable.
@@ -87,7 +91,6 @@ graceful-fs.ts(193,6): error TS2339: Property 'readdir' does not exist on type '
 graceful-fs.ts(195,69): error TS2304: Cannot find name 'Void'.
 graceful-fs.ts(202,17): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 graceful-fs.ts(207,17): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 graceful-fs.ts(214,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

@@ -26,8 +26,6 @@ lib/asn1/base/buffer.ts(5,7): error TS2451: Cannot redeclare block-scoped variab
 lib/asn1/base/buffer.ts(7,58): error TS2304: Cannot find name 'Void'.
 lib/asn1/base/buffer.ts(8,12): error TS2339: Property 'call' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(9,15): error TS2339: Property 'isBuffer' does not exist on type 'HTMLElement'.
-lib/asn1/base/buffer.ts(21,15): error TS2339: Property 'isDecoderBuffer' does not exist on type 'Object'.
-lib/asn1/base/buffer.ts(22,23): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 lib/asn1/base/buffer.ts(28,12): error TS2339: Property 'isBuffer' does not exist on type 'HTMLElement'.
 lib/asn1/base/buffer.ts(28,26): error TS2339: Property 'base' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(30,17): error TS2339: Property 'offset' does not exist on type 'Object'.
@@ -38,41 +36,30 @@ lib/asn1/base/buffer.ts(34,17): error TS2339: Property 'isEmpty' does not exist 
 lib/asn1/base/buffer.ts(35,17): error TS2339: Property 'readUInt8' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(36,17): error TS2339: Property 'skip' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(37,17): error TS2339: Property 'raw' does not exist on type 'Object'.
-lib/asn1/base/buffer.ts(42,15): error TS2339: Property 'prototype' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(43,52): error TS2339: Property 'prototype' does not exist on type 'Object'.
-lib/asn1/base/buffer.ts(46,15): error TS2339: Property 'prototype' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(46,67): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/base/buffer.ts(48,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/asn1/base/buffer.ts(48,26): error TS2351: This expression is not constructable.
-  Type 'Object' has no construct signatures.
+lib/asn1/base/buffer.ts(48,22): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/asn1/base/buffer.ts(48,22): error TS2554: Expected 2 arguments, but got 1.
 lib/asn1/base/buffer.ts(49,21): error TS2339: Property 'offset' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(52,22): error TS2339: Property 'offset' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(53,12): error TS2339: Property 'prototype' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(53,46): error TS2339: Property 'reporter' does not exist on type 'Object'.
-lib/asn1/base/buffer.ts(58,15): error TS2339: Property 'prototype' does not exist on type 'Object'.
-lib/asn1/base/buffer.ts(62,15): error TS2339: Property 'prototype' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(62,71): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/asn1/base/buffer.ts(69,15): error TS2339: Property 'prototype' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(69,76): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/base/buffer.ts(73,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/asn1/base/buffer.ts(73,26): error TS2351: This expression is not constructable.
-  Type 'Object' has no construct signatures.
-lib/asn1/base/buffer.ts(84,15): error TS2339: Property 'prototype' does not exist on type 'Object'.
+lib/asn1/base/buffer.ts(73,22): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/asn1/base/buffer.ts(73,22): error TS2554: Expected 2 arguments, but got 1.
 lib/asn1/base/buffer.ts(84,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/base/buffer.ts(85,38): error TS2339: Property 'offset' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(88,58): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/asn1/base/buffer.ts(91,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/asn1/base/buffer.ts(92,26): error TS2339: Property 'isEncoderBuffer' does not exist on type 'Object'.
-lib/asn1/base/buffer.ts(93,20): error TS2351: This expression is not constructable.
-  Type 'Object' has no construct signatures.
+lib/asn1/base/buffer.ts(93,16): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/asn1/base/buffer.ts(99,23): error TS2339: Property 'error' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(104,26): error TS2339: Property 'byteLength' does not exist on type 'HTMLElement'.
 lib/asn1/base/buffer.ts(105,21): error TS2339: Property 'isBuffer' does not exist on type 'HTMLElement'.
 lib/asn1/base/buffer.ts(109,21): error TS2339: Property 'error' does not exist on type 'Object'.
-lib/asn1/base/buffer.ts(114,15): error TS2339: Property 'isEncoderBuffer' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(114,64): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/asn1/base/buffer.ts(115,23): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
-lib/asn1/base/buffer.ts(128,15): error TS2339: Property 'prototype' does not exist on type 'Object'.
 lib/asn1/base/buffer.ts(130,18): error TS2339: Property 'alloc' does not exist on type 'HTMLElement'.
 lib/asn1/base/buffer.ts(138,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/base/buffer.ts(144,11): error TS2538: Type 'Number' cannot be used as an index type.
@@ -87,7 +74,7 @@ lib/asn1/base/node.ts(9,13): error TS2314: Generic type 'Array<T>' requires 1 ty
 lib/asn1/base/node.ts(17,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/base/node.ts(23,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/base/node.ts(32,10): error TS2300: Duplicate identifier 'Node'.
-lib/asn1/base/node.ts(32,61): error TS2304: Cannot find name 'Void'.
+lib/asn1/base/node.ts(32,59): error TS2304: Cannot find name 'Void'.
 lib/asn1/base/node.ts(36,9): error TS2339: Property 'name' does not exist on type 'Object'.
 lib/asn1/base/node.ts(37,9): error TS2339: Property 'enc' does not exist on type 'Object'.
 lib/asn1/base/node.ts(39,9): error TS2339: Property 'parent' does not exist on type 'Object'.
@@ -248,8 +235,8 @@ lib/asn1/base/node.ts(378,15): error TS2339: Property '_decode' does not exist o
 lib/asn1/base/node.ts(383,15): error TS2339: Property 'contains' does not exist on type 'Object'.
 lib/asn1/base/node.ts(383,34): error TS2339: Property 'tag' does not exist on type 'Object'.
 lib/asn1/base/node.ts(383,60): error TS2339: Property 'tag' does not exist on type 'Object'.
-lib/asn1/base/node.ts(384,32): error TS2351: This expression is not constructable.
-  Type 'Object' has no construct signatures.
+lib/asn1/base/node.ts(384,28): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/asn1/base/node.ts(384,28): error TS2554: Expected 2 arguments, but got 1.
 lib/asn1/base/node.ts(385,35): error TS2339: Property 'contains' does not exist on type 'Object'.
 lib/asn1/base/node.ts(385,51): error TS2339: Property '_reporterState' does not exist on type 'Function'.
 lib/asn1/base/node.ts(391,13): error TS2339: Property 'obj' does not exist on type 'Object'.
@@ -305,8 +292,10 @@ lib/asn1/base/node.ts(459,17): error TS2339: Property 'isError' does not exist o
 lib/asn1/base/node.ts(465,13): error TS2339: Property 'restore' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(472,18): error TS2339: Property 'error' does not exist on type 'HTMLElement'.
 lib/asn1/base/node.ts(481,16): error TS2339: Property '_createEncoderBuffer' does not exist on type 'Node'.
-lib/asn1/base/node.ts(482,14): error TS2351: This expression is not constructable.
-  Type 'Object' has no construct signatures.
+lib/asn1/base/node.ts(482,10): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/asn1/base/node.ts(482,28): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/asn1/base/node.ts(485,16): error TS2339: Property '_encode' does not exist on type 'Node'.
 lib/asn1/base/node.ts(500,16): error TS2339: Property '_encodeValue' does not exist on type 'Node'.
 lib/asn1/base/node.ts(500,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -457,9 +446,7 @@ lib/asn1/decoders/der.ts(18,15): error TS2350: Only a void function can be calle
 lib/asn1/decoders/der.ts(18,15): error TS2554: Expected 1 arguments, but got 0.
 lib/asn1/decoders/der.ts(19,26): error TS2339: Property 'body' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(23,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/asn1/decoders/der.ts(24,22): error TS2339: Property 'isDecoderBuffer' does not exist on type 'Object'.
-lib/asn1/decoders/der.ts(25,16): error TS2351: This expression is not constructable.
-  Type 'Object' has no construct signatures.
+lib/asn1/decoders/der.ts(25,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/asn1/decoders/der.ts(33,10): error TS2393: Duplicate function implementation.
 lib/asn1/decoders/der.ts(33,35): error TS2304: Cannot find name 'Void'.
 lib/asn1/decoders/der.ts(39,14): error TS2339: Property 'isEmpty' does not exist on type 'Object'.
@@ -500,7 +487,6 @@ lib/asn1/decoders/der.ts(85,16): error TS2339: Property 'offset' does not exist 
 lib/asn1/decoders/der.ts(85,31): error TS2339: Property 'offset' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(86,10): error TS2339: Property 'restore' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(87,17): error TS2339: Property 'skip' does not exist on type 'Object'.
-lib/asn1/decoders/der.ts(90,88): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/decoders/der.ts(92,38): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/asn1/decoders/der.ts(93,16): error TS2339: Property 'isError' does not exist on type 'Object'.
@@ -585,7 +571,6 @@ lib/asn1/decoders/der.ts(259,31): error TS2554: Expected 0 arguments, but got 1.
 lib/asn1/decoders/der.ts(267,17): error TS2339: Property '_getDecoder' does not exist on type 'Function'.
 lib/asn1/decoders/der.ts(273,25): error TS2339: Property 'readUInt8' does not exist on type 'HTMLElement'.
 lib/asn1/decoders/der.ts(274,11): error TS2339: Property 'isError' does not exist on type 'HTMLElement'.
-lib/asn1/decoders/der.ts(277,27): error TS2339: Property 'tagClass' does not exist on type 'HTMLElement'.
 lib/asn1/decoders/der.ts(277,36): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/decoders/der.ts(278,9): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 lib/asn1/decoders/der.ts(278,30): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -597,7 +582,6 @@ lib/asn1/decoders/der.ts(289,7): error TS2362: The left-hand side of an arithmet
 lib/asn1/decoders/der.ts(290,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/decoders/der.ts(290,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/decoders/der.ts(293,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/asn1/decoders/der.ts(295,30): error TS2339: Property 'tag' does not exist on type 'HTMLElement'.
 lib/asn1/decoders/der.ts(298,5): error TS2322: Type '{ cls: String; primitive: Number; tag: Number; tagStr: String; }' is not assignable to type 'Number'.
   Object literal may only specify known properties, and 'cls' does not exist in type 'Number'.
 lib/asn1/decoders/der.ts(306,25): error TS2339: Property 'readUInt8' does not exist on type 'HTMLElement'.
@@ -720,13 +704,10 @@ lib/asn1/encoders/der.ts(274,7): error TS2367: This condition will always return
 lib/asn1/encoders/der.ts(275,5): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/asn1/encoders/der.ts(276,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/asn1/encoders/der.ts(277,5): error TS2322: Type 'string' is not assignable to type 'Number'.
-lib/asn1/encoders/der.ts(279,11): error TS2551: Property 'tagByName' does not exist on type 'HTMLElement'. Did you mean 'tagName'?
-lib/asn1/encoders/der.ts(280,15): error TS2551: Property 'tagByName' does not exist on type 'HTMLElement'. Did you mean 'tagName'?
 lib/asn1/encoders/der.ts(284,21): error TS2339: Property 'error' does not exist on type 'Object'.
 lib/asn1/encoders/der.ts(287,21): error TS2339: Property 'error' does not exist on type 'Object'.
 lib/asn1/encoders/der.ts(290,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/asn1/encoders/der.ts(292,3): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/asn1/encoders/der.ts(292,15): error TS2339: Property 'tagClassByName' does not exist on type 'HTMLElement'.
 lib/asn1/encoders/index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'encoders'.
 lib/asn1/encoders/index.ts(5,10): error TS2339: Property 'der' does not exist on type 'Object'.
 lib/asn1/encoders/index.ts(6,10): error TS2339: Property 'pem' does not exist on type 'Object'.
@@ -790,8 +771,7 @@ rfc/5280/index.ts(54,42): error TS2339: Property 'define' does not exist on type
 rfc/5280/index.ts(60,9): error TS2339: Property 'AlgorithmIdentifier' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(66,34): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(73,9): error TS2339: Property 'Certificate' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(86,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-rfc/5280/index.ts(86,36): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
+rfc/5280/index.ts(86,37): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(100,9): error TS2339: Property 'TBSCertificate' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(103,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/5280/index.ts(103,29): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
@@ -907,7 +887,8 @@ rfc/5280/index.ts(635,39): error TS2339: Property 'define' does not exist on typ
 rfc/5280/index.ts(641,9): error TS2339: Property 'BasicConstraints' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(646,38): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(652,9): error TS2339: Property 'NameConstraints' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(655,38): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
+rfc/5280/index.ts(655,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+rfc/5280/index.ts(655,37): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(658,9): error TS2339: Property 'GeneralSubtrees' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(664,37): error TS2339: Property 'define' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(671,9): error TS2339: Property 'GeneralSubtree' does not exist on type 'HTMLElement'.

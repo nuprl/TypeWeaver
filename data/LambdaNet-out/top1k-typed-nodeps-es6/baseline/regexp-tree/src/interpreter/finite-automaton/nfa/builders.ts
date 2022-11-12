@@ -38,7 +38,7 @@ function char(c: String): State {
  *
  * [in] --ε--> [out]
  */
-function e(): State {
+function e(): String {
   return char(EPSILON);
 }
 
@@ -64,7 +64,7 @@ function altPair(first: Writer, second: Writer): DFA {
  *
  * Creates a alteration NFA for (at least) two NFA-fragments.
  */
-function alt(first: State, ...fragments): State {
+function alt(first: DFA, ...fragments): String {
   for (let fragment of fragments) {
     first = altPair(first, fragment);
   }
@@ -99,7 +99,7 @@ function orPair(first: Writer, second: Writer): DFA {
  *
  * Creates a disjunction NFA for (at least) two NFA-fragments.
  */
-function or(first: State, ...fragments): State {
+function or(first: DFA, ...fragments): State {
   for (let fragment of fragments) {
     first = orPair(first, fragment);
   }

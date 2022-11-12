@@ -44,7 +44,7 @@ BlockHash.prototype.update = function update(msg: Array, enc: Function): Object 
   return this;
 };
 
-BlockHash.prototype.digest = function digest(enc: String): String {
+BlockHash.prototype.digest = function digest(enc: Function): String {
   this.update(this._pad());
   assert(this.pending === null);
 

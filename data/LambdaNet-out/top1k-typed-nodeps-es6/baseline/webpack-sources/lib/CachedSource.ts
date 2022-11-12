@@ -9,7 +9,7 @@ import streamChunksOfSourceMap from './helpers/streamChunksOfSourceMap';
 import streamChunksOfRawSource from './helpers/streamChunksOfRawSource';
 import streamAndGetSourceAndMap from './helpers/streamAndGetSourceAndMap';
 
-const mapToBufferedMap: Function = (map: SourceMapSource) => {
+const mapToBufferedMap: Function = (map: Function) => {
 	if (typeof map !== "object" || !map) return map;
 	const bufferedMap: Object = Object.assign({}, map);
 	if (map.mappings) {
@@ -141,7 +141,7 @@ class CachedSource extends Source {
 		if (this._cachedBuffer !== undefined) {
 			return (this._cachedSize = this._cachedBuffer.length);
 		}
-		const source: Source = this._getCachedSource();
+		const source: ReplaceSource = this._getCachedSource();
 		if (source !== undefined) {
 			return (this._cachedSize = Buffer.byteLength(source));
 		}
@@ -159,14 +159,14 @@ class CachedSource extends Source {
 			return { source: this.source(), map };
 		}
 		// Look for a cached source
-		let source: Source = this._getCachedSource();
+		let source: String = this._getCachedSource();
 		// Compute the map
-		let map: String;
+		let map: Function;
 		if (source !== undefined) {
 			map = this.original().map(options);
 		} else {
 			// Compute the source and map together.
-			const sourceAndMap: SourceMapSource = this.original().sourceAndMap(options);
+			const sourceAndMap: Source = this.original().sourceAndMap(options);
 			source = sourceAndMap.source;
 			map = sourceAndMap.map;
 			this._cachedSource = source;

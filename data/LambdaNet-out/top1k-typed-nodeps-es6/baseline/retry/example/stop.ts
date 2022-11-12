@@ -11,7 +11,7 @@ function attemptAsyncOperation(someInput: Element, cb: Function): Void {
   var operation: HTMLElement = retry.operation(opts);
 
   operation.attempt(function(currentAttempt: Boolean) {
-    failingAsyncOperation(someInput, function(err: Error, result: Array) {
+    failingAsyncOperation(someInput, function(err: Promise, result: Array) {
 
       if (err && err.message === 'A fatal error') {
         operation.stop();

@@ -40,7 +40,7 @@ Entity.prototype._getDecoder = function _getDecoder(enc: String): Object {
   return this.decoders[enc];
 };
 
-Entity.prototype.decode = function decode(data: Object, enc: String, options: Object): String {
+Entity.prototype.decode = function decode(data: Object, enc: Function, options: Object): String {
   return this._getDecoder(enc).decode(data, options);
 };
 
@@ -52,6 +52,6 @@ Entity.prototype._getEncoder = function _getEncoder(enc: String): Object {
   return this.encoders[enc];
 };
 
-Entity.prototype.encode = function encode(data: Object, enc: String, /* internal */ reporter: String): String {
+Entity.prototype.encode = function encode(data: Object, enc: Function, /* internal */ reporter: String): String {
   return this._getEncoder(enc).encode(data, reporter);
 };

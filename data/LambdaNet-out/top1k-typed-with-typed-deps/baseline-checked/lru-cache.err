@@ -195,17 +195,15 @@ index.ts(534,16): error TS2314: Generic type 'Array<T>' requires 1 type argument
 index.ts(536,32): error TS2339: Property 'keyList' does not exist on type 'LRUCache'.
 index.ts(537,32): error TS2339: Property 'valList' does not exist on type 'LRUCache'.
 index.ts(539,13): error TS2339: Property '__staleWhileFetching' does not exist on type 'LRUCache'.
-index.ts(541,33): error TS2322: Type '{ value: String; }' is not assignable to type 'LRUCache'.
-  Object literal may only specify known properties, but 'value' does not exist in type 'LRUCache'. Did you mean to write 'values'?
 index.ts(542,16): error TS2339: Property 'ttls' does not exist on type 'LRUCache'.
-index.ts(543,15): error TS2339: Property 'ttl' does not exist on type 'LRUCache'.
+index.ts(543,15): error TS2339: Property 'ttl' does not exist on type 'Object'.
 index.ts(543,26): error TS2339: Property 'ttls' does not exist on type 'LRUCache'.
 index.ts(546,34): error TS2339: Property 'now' does not exist on type 'Number'.
 index.ts(546,47): error TS2339: Property 'starts' does not exist on type 'LRUCache'.
-index.ts(547,15): error TS2339: Property 'start' does not exist on type 'LRUCache'.
+index.ts(547,15): error TS2339: Property 'start' does not exist on type 'Object'.
 index.ts(547,47): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(549,16): error TS2339: Property 'sizes' does not exist on type 'LRUCache'.
-index.ts(550,15): error TS2339: Property 'size' does not exist on type 'LRUCache'.
+index.ts(550,15): error TS2339: Property 'size' does not exist on type 'Object'.
 index.ts(550,27): error TS2339: Property 'sizes' does not exist on type 'LRUCache'.
 index.ts(565,28): error TS2339: Property 'now' does not exist on type 'Number'.
 index.ts(565,36): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.

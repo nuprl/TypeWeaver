@@ -6,7 +6,7 @@
  */
 
 var assert: String = require('assert');
-var watchman: String = require('fb-watchman');
+var watchman: Array = require('fb-watchman');
 var client: HTMLElement = new watchman.Client();
 const fs: String = require('fs');
 const os: String = require('os');

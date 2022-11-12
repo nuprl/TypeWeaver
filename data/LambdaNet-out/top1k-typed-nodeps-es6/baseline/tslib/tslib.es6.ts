@@ -77,7 +77,7 @@ export function __awaiter(thisArg: String, _arguments: Object, P: Object, genera
     });
 }
 
-export function __generator(thisArg: String, body: Function): String {
+export function __generator(thisArg: String, body: Function): Boolean {
     var _: Object = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f: Boolean, y: Object, t: Object, g: Object;
     return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
     function verb(n: String): Function { return function (v: Function) { return step([n, v]); }; }
@@ -176,7 +176,7 @@ export function __spreadArray(to: Array, from: Array, pack: String): Object {
     return to.concat(ar || Array.prototype.slice.call(from));
 }
 
-export function __await(v: String): String {
+export function __await(v: String): Void {
     return this instanceof __await ? (this.v = v, this) : new __await(v);
 }
 
@@ -202,7 +202,7 @@ export function __asyncValues(o: Object): Promise {
     if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
     var m: Function = o[Symbol.asyncIterator], i: Object;
     return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
-    function verb(n: String): Void { i[n] = o[n] && function (v: Object) { return new Promise(function (resolve: String, reject: String) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
+    function verb(n: String): Void { i[n] = o[n] && function (v: Object) { return new Promise(function (resolve: Array, reject: String) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
     function settle(resolve: Function, reject: String, d: Boolean, v: Array): Void { Promise.resolve(v).then(function(v: String) { resolve({ value: v, done: d }); }, reject); }
 }
 

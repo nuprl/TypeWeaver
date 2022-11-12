@@ -362,7 +362,7 @@ function Zlib(opts: HTMLElement, mode: String): Void {
 
   var self: HTMLElement = this;
   this._hadError = false;
-  this._handle.onerror = function(message: String, errno: Object) {
+  this._handle.onerror = function(message: String, errno: Array) {
     // there is no way to cleanly recover.
     // continuing only obscures problems.
     _close(self);

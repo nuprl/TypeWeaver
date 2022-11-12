@@ -43,12 +43,11 @@ lib/serialize.ts(104,35): error TS2339: Property 'data' does not exist on type '
 lib/serialize.ts(114,33): error TS2339: Property 'documentElement' does not exist on type 'Object'.
 lib/serialize.ts(118,28): error TS2339: Property 'childNodes' does not exist on type 'Object'.
 lib/serialize.ts(119,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
-lib/serialize.ts(123,7): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'String'.
-  Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+lib/serialize.ts(123,7): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Function'.
+  Type 'Boolean' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/serialize.ts(138,28): error TS2339: Property 'childNodes' does not exist on type 'Object'.
 lib/serialize.ts(139,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
-lib/serialize.ts(143,7): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+lib/serialize.ts(143,7): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Function'.
 lib/serialize.ts(151,48): error TS2339: Property 'data' does not exist on type 'Object'.
 lib/serialize.ts(155,15): error TS2339: Property 'data' does not exist on type 'Object'.
 lib/serialize.ts(162,48): error TS2339: Property 'data' does not exist on type 'Object'.
@@ -59,7 +58,7 @@ lib/serialize.ts(188,9): error TS2322: Type 'String' is not assignable to type '
 lib/serialize.ts(194,9): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/serialize.ts(195,7): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
 lib/serialize.ts(204,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
-lib/serialize.ts(220,9): error TS2322: Type 'Number' is not assignable to type 'String'.
+lib/serialize.ts(220,9): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/serialize.ts(221,11): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/serialize.ts(223,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
 lib/serialize.ts(226,62): error TS2339: Property 'prefixIndex' does not exist on type 'HTMLElement'.
@@ -85,14 +84,14 @@ lib/serialize.ts(307,16): error TS2339: Property 'nodeType' does not exist on ty
 lib/serialize.ts(310,9): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-lib/serialize.ts(321,9): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Boolean'.
+lib/serialize.ts(321,9): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Boolean'.
   The types returned by 'valueOf()' are incompatible between these types.
-    Type 'string' is not assignable to type 'boolean'.
-lib/serialize.ts(325,59): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Boolean'.
-lib/serialize.ts(327,56): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Boolean'.
-lib/serialize.ts(333,9): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-lib/serialize.ts(341,9): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Boolean'.
+    Type 'Object' is not assignable to type 'boolean'.
+lib/serialize.ts(325,59): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Boolean'.
+lib/serialize.ts(327,56): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Boolean'.
+lib/serialize.ts(333,9): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Boolean'.
+lib/serialize.ts(341,9): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Boolean'.
 lib/serialize.ts(345,9): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-lib/serialize.ts(362,59): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
+lib/serialize.ts(362,59): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Function'.
 

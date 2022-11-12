@@ -255,7 +255,7 @@ if (module.hot) {
 `;
 }
 
-function getLinkHmrCode(esModule: Boolean, loaderContext: Number, request: String): Array {
+function getLinkHmrCode(esModule: Boolean, loaderContext: Number, request: String): String {
   const modulePath: String = stringifyRequest(loaderContext, `!!${request}`);
 
   return `
@@ -361,7 +361,7 @@ function getExportLazyStyleCode(esModule: Boolean, loaderContext: Number, reques
     : "module.exports = exported;";
 }
 
-function getSetAttributesCode(esModule: Boolean, loaderContext: String, options: Object): Array {
+function getSetAttributesCode(esModule: Boolean, loaderContext: String, options: Object): String {
   let modulePath: String;
 
   if (typeof options.attributes !== "undefined") {

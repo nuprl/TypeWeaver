@@ -5,7 +5,7 @@ var callBind: Function = require('call-bind');
 
 var implementation: String = require('./implementation');
 var getPolyfill: Function = require('./polyfill');
-var shim: Array = require('./shim');
+var shim: String = require('./shim');
 
 var polyfill: Function = callBind.apply(getPolyfill());
 // eslint-disable-next-line no-unused-vars

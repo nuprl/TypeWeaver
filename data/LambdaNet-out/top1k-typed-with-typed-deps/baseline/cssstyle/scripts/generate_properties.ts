@@ -41,7 +41,7 @@ function isModuleDotExports(node: Object): Boolean {
     t.isIdentifier(node.property, { name: 'exports' })
   );
 }
-function isRequire(node: HTMLElement, filename: String): Boolean {
+function isRequire(node: Object, filename: String): Boolean {
   if (
     t.isCallExpression(node) &&
     t.isIdentifier(node.callee, { name: 'require' }) &&
@@ -254,7 +254,7 @@ parsedFiles.forEach(function(file: Object) {
 });
 var propertyDefinitions: Array = [];
 parsedFiles.forEach(function(file: Object) {
-  var dashed: String = camelToDashed(file.property);
+  var dashed: Number = camelToDashed(file.property);
   propertyDefinitions.push(
     t.objectProperty(
       t.identifier(file.property),

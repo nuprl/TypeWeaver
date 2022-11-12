@@ -354,7 +354,7 @@ lib/tmp.ts(138,38): error TS2339: Property 'mode' does not exist on type 'Object
 lib/tmp.ts(142,16): error TS2339: Property 'discardDescriptor' does not exist on type 'Object'.
 lib/tmp.ts(143,19): error TS2339: Property 'close' does not exist on type 'String'.
 lib/tmp.ts(143,68): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/tmp.ts(143,76): error TS2304: Cannot find name 'Void'.
+lib/tmp.ts(143,76): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/tmp.ts(145,87): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 lib/tmp.ts(150,57): error TS2339: Property 'discardDescriptor' does not exist on type 'Object'.
 lib/tmp.ts(150,83): error TS2339: Property 'detachDescriptor' does not exist on type 'Object'.
@@ -373,7 +373,7 @@ lib/tmp.ts(191,52): error TS2304: Cannot find name 'Void'.
 lib/tmp.ts(194,11): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/tmp.ts(198,72): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/tmp.ts(203,8): error TS2339: Property 'mkdir' does not exist on type 'String'.
-lib/tmp.ts(203,80): error TS2304: Cannot find name 'Void'.
+lib/tmp.ts(203,80): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/tmp.ts(207,63): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
 lib/tmp.ts(221,20): error TS2554: Expected 2 arguments, but got 1.
 lib/tmp.ts(222,11): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
@@ -486,6 +486,7 @@ lib/tmp.ts(583,51): error TS2345: Argument of type 'String' is not assignable to
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/tmp.ts(587,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/tmp.ts(628,49): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/tmp.ts(629,27): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/tmp.ts(629,49): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/tmp.ts(629,72): error TS2339: Property 'errno' does not exist on type 'Object'.

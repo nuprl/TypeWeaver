@@ -16,7 +16,6 @@ implementation.ts(23,13): error TS2314: Generic type 'Array<T>' requires 1 type 
 implementation.ts(26,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 implementation.ts(39,34): error TS2538: Type 'String' cannot be used as an index type.
 implementation.ts(40,8): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(8,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 polyfill.ts(3,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 polyfill.ts(14,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 shim.ts(11,34): error TS2367: This condition will always return 'true' since the types '{ <T extends {}, U>(target: T, source: U): T & U; <T extends {}, U, V>(target: T, source1: U, source2: V): T & U & V; <T extends {}, U, V, W>(target: T, source1: U, source2: V, source3: W): T & ... 2 more ... & W; (target: object, ...sources: any[]): any; }' and 'String' have no overlap.

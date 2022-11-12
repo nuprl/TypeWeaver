@@ -95,7 +95,7 @@ function optionKeyFromName(name: String): String {
 
 // ---- Option types
 
-function parseBool(option: String, optstr: Function, arg: Boolean): Boolean {
+function parseBool(option: String, optstr: Array, arg: Boolean): Boolean {
     return Boolean(arg);
 }
 

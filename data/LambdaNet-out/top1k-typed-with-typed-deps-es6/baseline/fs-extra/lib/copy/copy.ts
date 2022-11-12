@@ -133,15 +133,15 @@ function setDestTimestampsAndMode (srcMode: String, src: String, dest: String, c
   })
 }
 
-function setDestMode (dest: String, srcMode: String, cb: String): Boolean {
+function setDestMode (dest: String, srcMode: String, cb: String): Number {
   return fs.chmod(dest, srcMode, cb)
 }
 
-function setDestTimestamps (src: String, dest: String, cb: Function): Void {
+function setDestTimestamps (src: String, dest: Number, cb: Function): Void {
   // The initial srcStat.atime cannot be trusted
   // because it is modified by the read(2) system call
   // (See https://nodejs.org/api/fs.html#fs_stat_time_values)
-  fs.stat(src, (err: Boolean, updatedSrcStat: Object) => {
+  fs.stat(src, (err: String, updatedSrcStat: Object) => {
     if (err) return cb(err)
     return utimesMillis(dest, updatedSrcStat.atime, updatedSrcStat.mtime, cb)
   })

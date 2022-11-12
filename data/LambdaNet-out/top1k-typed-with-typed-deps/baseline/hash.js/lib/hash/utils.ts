@@ -203,7 +203,7 @@ function sum64_hi(ah: String, al: Number, bh: Number, bl: Number): Number {
 }
 exports.sum64_hi = sum64_hi;
 
-function sum64_lo(ah: Function, al: Number, bh: Function, bl: String): Number {
+function sum64_lo(ah: Function, al: String, bh: Function, bl: String): Number {
   var lo: String = al + bl;
   return lo >>> 0;
 }

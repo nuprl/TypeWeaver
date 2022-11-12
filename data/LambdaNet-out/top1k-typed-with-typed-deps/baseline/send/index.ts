@@ -782,7 +782,7 @@ SendStream.prototype.sendIndex = function sendIndex (path: String): Void {
  * @api private
  */
 
-SendStream.prototype.stream = function stream (path: String, options: Function): Void {
+SendStream.prototype.stream = function stream (path: String, options: String): Void {
   var self: HTMLElement = this
   var res: Function = this.res
 

@@ -220,7 +220,7 @@ Client.prototype.connect = function() {
   });
 }
 
-Client.prototype.command = function(args: String, done: Function) {
+Client.prototype.command = function(args: Array, done: Function) {
   done = done || function() {};
 
   // Queue up the command
@@ -291,7 +291,7 @@ Client.prototype._synthesizeCapabilityCheck = function(
 Client.prototype.capabilityCheck = function(caps: Object, done: Function) {
   var optional: Number = caps.optional || [];
   var required: String = caps.required || [];
-  var self: Array = this;
+  var self: HTMLElement = this;
   this.command(['version', {
       optional: optional,
       required: required

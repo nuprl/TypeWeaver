@@ -8,7 +8,7 @@ const fs: String = require("fs");
 const path: String = require("path");
 
 // macOS, Linux, and Windows all rely on these errors
-const EXPECTED_ERRORS: HTMLElement = new Set(["EINVAL", "ENOENT"]);
+const EXPECTED_ERRORS: Error = new Set(["EINVAL", "ENOENT"]);
 
 // On Windows there is also this error in some cases
 if (process.platform === "win32") EXPECTED_ERRORS.add("UNKNOWN");
@@ -58,7 +58,7 @@ class LinkResolver {
 			let result: Array;
 			if (linkResolved.length > 1 && parentResolved.length > 1) {
 				// when both contain links we need to duplicate them with a Set
-				const resultSet: HTMLElement = new Set(linkResolved);
+				const resultSet: Error = new Set(linkResolved);
 				// add the link
 				resultSet.add(realFile);
 				// add all symlinks of the parent

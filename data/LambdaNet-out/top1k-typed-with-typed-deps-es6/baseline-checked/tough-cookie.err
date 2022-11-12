@@ -1,8 +1,8 @@
-lib/cookie.ts(34,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/tough-cookie/lib/pubsuffix-psl"' has no default export.
-lib/cookie.ts(35,23): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/tough-cookie/lib/store.ts' is not a module.
+lib/cookie.ts(34,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/tough-cookie/lib/pubsuffix-psl"' has no default export.
+lib/cookie.ts(35,23): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/tough-cookie/lib/store.ts' is not a module.
 lib/cookie.ts(36,10): error TS2459: Module '"./memstore"' declares 'MemoryCookieStore' locally, but it is not exported.
-lib/cookie.ts(37,27): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/tough-cookie/lib/pathMatch.ts' is not a module.
-lib/cookie.ts(38,24): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/tough-cookie/lib/validators.ts' is not a module.
+lib/cookie.ts(37,27): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/tough-cookie/lib/pathMatch.ts' is not a module.
+lib/cookie.ts(38,24): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/tough-cookie/lib/validators.ts' is not a module.
 lib/cookie.ts(52,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(84,9): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/cookie.ts(85,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
@@ -49,7 +49,8 @@ lib/cookie.ts(390,31): error TS2345: Argument of type 'String' is not assignable
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/cookie.ts(408,21): error TS2339: Property 'substr' does not exist on type 'Number'.
 lib/cookie.ts(414,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/cookie.ts(418,35): error TS2339: Property 'lastIndexOf' does not exist on type 'Number'.
+lib/cookie.ts(418,36): error TS2339: Property 'lastIndexOf' does not exist on type 'Number'.
+lib/cookie.ts(419,7): error TS2367: This condition will always return 'false' since the types 'Boolean' and 'number' have no overlap.
 lib/cookie.ts(425,15): error TS2339: Property 'slice' does not exist on type 'Number'.
 lib/cookie.ts(428,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(433,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
@@ -309,10 +310,10 @@ lib/cookie.ts(1403,30): error TS2551: Property 'domain' does not exist on type '
 lib/cookie.ts(1403,40): error TS2339: Property 'path' does not exist on type 'Cookie'.
 lib/cookie.ts(1403,48): error TS2339: Property 'key' does not exist on type 'Cookie'.
 lib/cookie.ts(1413,12): error TS2339: Property 'allowSpecialUseDomain' does not exist on type 'CookieJar'.
-lib/cookie.ts(1414,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/cookie.ts(1414,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(1427,15): error TS2740: Type 'Date' is missing the following properties from type 'HTMLInputElement': accept, align, alt, autocomplete, and 333 more.
-lib/cookie.ts(1441,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/cookie.ts(1461,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/cookie.ts(1441,62): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/cookie.ts(1461,62): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(1479,29): error TS2339: Property 'store' does not exist on type 'CookieJar'.
 lib/cookie.ts(1495,36): error TS2339: Property 'rejectPublicSuffixes' does not exist on type 'CookieJar'.
 lib/cookie.ts(1496,31): error TS2339: Property 'enableLooseMode' does not exist on type 'CookieJar'.
@@ -321,7 +322,7 @@ lib/cookie.ts(1498,56): error TS2339: Property 'prefixSecurity' does not exist o
 lib/cookie.ts(1506,14): error TS2339: Property 'store' does not exist on type 'CookieJar'.
 lib/cookie.ts(1507,21): error TS2339: Property 'store' does not exist on type 'CookieJar'.
 lib/cookie.ts(1517,10): error TS2339: Property 'store' does not exist on type 'CookieJar'.
-lib/cookie.ts(1517,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/cookie.ts(1517,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(1522,18): error TS2339: Property 'cookies' does not exist on type 'Object'.
 lib/cookie.ts(1524,9): error TS2322: Type 'Object' is not assignable to type 'Cookie'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -335,13 +336,13 @@ lib/cookie.ts(1580,46): error TS2314: Generic type 'Array<T>' requires 1 type ar
 lib/cookie.ts(1590,19): error TS2551: Property '_cloneSync' does not exist on type 'CookieJar'. Did you mean 'cloneSync'?
 lib/cookie.ts(1597,17): error TS2551: Property '_cloneSync' does not exist on type 'CookieJar'. Did you mean 'cloneSync'?
 lib/cookie.ts(1602,31): error TS2339: Property 'store' does not exist on type 'CookieJar'.
-lib/cookie.ts(1614,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/cookie.ts(1614,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(1624,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(1626,51): error TS2304: Cannot find name 'Void'.
 lib/cookie.ts(1631,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/cookie.ts(1640,18): error TS2551: Property 'domain' does not exist on type 'Cookie'. Did you mean 'cdomain'?
-lib/cookie.ts(1641,18): error TS2339: Property 'path' does not exist on type 'Cookie'.
-lib/cookie.ts(1642,18): error TS2339: Property 'key' does not exist on type 'Cookie'.
+lib/cookie.ts(1640,18): error TS2339: Property 'domain' does not exist on type 'CookieJar'.
+lib/cookie.ts(1641,18): error TS2339: Property 'path' does not exist on type 'CookieJar'.
+lib/cookie.ts(1642,18): error TS2339: Property 'key' does not exist on type 'CookieJar'.
 lib/cookie.ts(1669,7): error TS2345: Argument of type '{ rejectPublicSuffixes: any; looseMode: any; allowSpecialUseDomain: any; prefixSecurity: any; }' is not assignable to parameter of type '{ rejectPublicSuffixes: boolean; }'.
   Object literal may only specify known properties, and 'looseMode' does not exist in type '{ rejectPublicSuffixes: boolean; }'.
 lib/cookie.ts(1685,40): error TS2339: Property 'rejectPublicSuffixes' does not exist on type 'Object'.
@@ -352,9 +353,9 @@ lib/cookie.ts(1700,11): error TS2339: Property 'fromJSON' does not exist on type
 lib/cookie.ts(1712,23): error TS2538: Type 'String' cannot be used as an index type.
 lib/cookie.ts(1712,64): error TS2538: Type 'String' cannot be used as an index type.
 lib/cookie.ts(1726,10): error TS2538: Type 'String' cannot be used as an index type.
-lib/memstore.ts(33,23): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/tough-cookie/lib/store.ts' is not a module.
+lib/memstore.ts(33,23): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/tough-cookie/lib/store.ts' is not a module.
 lib/memstore.ts(34,10): error TS2459: Module '"./permuteDomain"' declares 'permuteDomain' locally, but it is not exported.
-lib/memstore.ts(35,27): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/tough-cookie/lib/pathMatch.ts' is not a module.
+lib/memstore.ts(35,27): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/tough-cookie/lib/pathMatch.ts' is not a module.
 lib/memstore.ts(41,10): error TS2339: Property 'synchronous' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(42,10): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(43,42): error TS2349: This expression is not callable.
@@ -421,9 +422,11 @@ lib/memstore.ts(231,38): error TS2538: Type 'String' cannot be used as an index 
 lib/memstore.ts(233,9): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
 lib/pathMatch.ts(42,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/permuteDomain.ts(32,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/tough-cookie/lib/pubsuffix-psl"' has no default export.
-lib/permuteDomain.ts(37,72): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/permuteDomain.ts(32,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/tough-cookie/lib/pubsuffix-psl"' has no default export.
+lib/permuteDomain.ts(37,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/permuteDomain.ts(37,71): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/permuteDomain.ts(38,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/permuteDomain.ts(54,17): error TS2304: Cannot find name 'Cookie'.
 lib/permuteDomain.ts(55,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/permuteDomain.ts(57,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/pubsuffix-psl.ts(35,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

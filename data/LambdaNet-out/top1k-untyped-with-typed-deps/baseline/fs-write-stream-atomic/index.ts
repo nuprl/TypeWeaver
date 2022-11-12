@@ -75,7 +75,7 @@ function handleOpen (writeStream: Request): Function {
   }
 }
 
-function handleClose (writeStream: Record): Function {
+function handleClose (writeStream: HTMLDivElement): Function {
   return function () {
     if (writeStream.__atomicClosed) return
     writeStream.__atomicClosed = true
@@ -160,7 +160,7 @@ function handleClose (writeStream: Record): Function {
 }
 
 function handleError (writeStream: Request): Function {
-  return function (er: String) {
+  return function (er: Function) {
     cleanupSync()
     writeStream.emit('error', er)
     writeStream.__atomicClosed = true

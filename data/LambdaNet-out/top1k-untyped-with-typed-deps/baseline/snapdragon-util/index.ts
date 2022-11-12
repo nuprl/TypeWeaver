@@ -1025,7 +1025,7 @@ utils.lastNode = function(node: Map) {
  * @api public
  */
 
-utils.arrayify = function(value: Array) {
+utils.arrayify = function(value: String) {
   if (typeof value === 'string' && value !== '') {
     return [value];
   }

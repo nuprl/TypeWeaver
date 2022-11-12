@@ -198,7 +198,7 @@ function baseClone(value: Array, bitmask: Number, customizer: Function, key: Str
   }
   // Check for circular references and return its corresponding clone.
   stack || (stack = new Stack)
-  const stacked: Stack = stack.get(value)
+  const stacked: String = stack.get(value)
   if (stacked) {
     return stacked
   }
@@ -226,7 +226,7 @@ function baseClone(value: Array, bitmask: Number, customizer: Function, key: Str
     ? (isFlat ? getAllKeysIn : getAllKeys)
     : (isFlat ? keysIn : keys)
 
-  const props: Hash = isArr ? undefined : keysFunc(value)
+  const props: Object = isArr ? undefined : keysFunc(value)
   arrayEach(props || value, (subValue: String, key: String) => {
     if (props) {
       key = subValue

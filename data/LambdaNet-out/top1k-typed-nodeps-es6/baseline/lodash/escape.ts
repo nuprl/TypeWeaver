@@ -40,7 +40,7 @@ const reHasUnescapedHtml: Number = RegExp(reUnescapedHtml.source)
  */
 function escape(string: String): String {
   return (string && reHasUnescapedHtml.test(string))
-    ? string.replace(reUnescapedHtml, (chr: String) => htmlEscapes[chr])
+    ? string.replace(reUnescapedHtml, (chr: Array) => htmlEscapes[chr])
     : (string || '')
 }
 

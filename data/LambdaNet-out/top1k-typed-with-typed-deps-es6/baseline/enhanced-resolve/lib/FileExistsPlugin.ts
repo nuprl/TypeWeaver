@@ -30,7 +30,7 @@ export default class FileExistsPlugin {
 			.tapAsync("FileExistsPlugin", (request: Object, resolveContext: Object, callback: Function) => {
 				const file: Number = request.path;
 				if (!file) return callback();
-				fs.stat(file, (err: Resolver, stat: String) => {
+				fs.stat(file, (err: String, stat: String) => {
 					if (err || !stat) {
 						if (resolveContext.missingDependencies)
 							resolveContext.missingDependencies.add(file);

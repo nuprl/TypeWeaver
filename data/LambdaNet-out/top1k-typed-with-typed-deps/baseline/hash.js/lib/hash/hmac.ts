@@ -36,12 +36,12 @@ Hmac.prototype._init = function init(key: Array): Void {
   this.outer = new this.Hash().update(key);
 };
 
-Hmac.prototype.update = function update(msg: String, enc: Function): Object {
+Hmac.prototype.update = function update(msg: String, enc: String): Object {
   this.inner.update(msg, enc);
   return this;
 };
 
-Hmac.prototype.digest = function digest(enc: Function): String {
+Hmac.prototype.digest = function digest(enc: String): String {
   this.outer.update(this.inner.digest());
   return this.outer.digest(enc);
 };

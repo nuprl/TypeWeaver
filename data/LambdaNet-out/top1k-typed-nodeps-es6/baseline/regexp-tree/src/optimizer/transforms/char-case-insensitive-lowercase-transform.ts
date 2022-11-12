@@ -96,8 +96,8 @@ function displaySymbolAsValue(symbol: String, node: NodePath): String {
  * @returns {{lead: string, trail: string}}
  */
 function getSurrogatePairFromCodePoint(codePoint: Number): Object {
-  const lead: Number = Math.floor((codePoint - 0x10000) / 0x400) + 0xd800;
-  const trail: Number = (codePoint - 0x10000) % 0x400 + 0xdc00;
+  const lead: String = Math.floor((codePoint - 0x10000) / 0x400) + 0xd800;
+  const trail: String = (codePoint - 0x10000) % 0x400 + 0xdc00;
   return {
     lead: lead.toString(16),
     trail: trail.toString(16)

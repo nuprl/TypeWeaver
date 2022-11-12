@@ -597,7 +597,7 @@ rfc5280.PolicyQualifierId = PolicyQualifierId;
 // PolicyMappings ::= SEQUENCE SIZE (1..MAX) OF SEQUENCE {
 //      issuerDomainPolicy      CertPolicyId,
 //      subjectDomainPolicy     CertPolicyId }
-const PolicyMappings: String = asn1.define('PolicyMappings', function() {
+const PolicyMappings: Number = asn1.define('PolicyMappings', function() {
   this.seqof(PolicyMapping);
 });
 rfc5280.PolicyMappings = PolicyMappings;

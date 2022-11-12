@@ -1,4 +1,4 @@
-let fastProto: Object = null;
+let fastProto: Function = null;
 
 // Creates an object with permanently fast properties in V8. See Toon Verwaest's
 // post https://medium.com/@tverwaes/setting-up-prototypes-in-v8-ec9c9491dfe2#5f62

@@ -131,7 +131,7 @@ function serializeDocumentFragment(
   node: Object,
   namespace: String,
   prefixMap: String,
-  requireWellFormed: Number,
+  requireWellFormed: Boolean,
   refs: String
 ): String {
   let markup: String = "";
@@ -172,7 +172,7 @@ function serializeComment(node: Object, namespace: String, prefixMap: String, re
   return `<!--${node.data}-->`;
 }
 
-function serializeElement(node: HTMLElement, namespace: String, prefixMap: String, requireWellFormed: String, refs: HTMLElement): String {
+function serializeElement(node: HTMLElement, namespace: String, prefixMap: String, requireWellFormed: Number, refs: HTMLElement): String {
   if (
     requireWellFormed &&
     (node.localName.includes(":") || !xnv.name(node.localName))
@@ -303,7 +303,7 @@ function serializeCDATASection(node: Object): String {
 /**
  * @param {{prefixIndex: number}} refs
  */
-function xmlSerialization(node: Object, namespace: String, prefixMap: String, requireWellFormed: String, refs: String): String {
+function xmlSerialization(node: Object, namespace: String, prefixMap: String, requireWellFormed: Function, refs: String): String {
   switch (node.nodeType) {
     case NODE_TYPES.ELEMENT_NODE:
       return serializeElement(

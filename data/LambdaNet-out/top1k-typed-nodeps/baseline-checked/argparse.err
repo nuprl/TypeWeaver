@@ -249,8 +249,8 @@ argparse.ts(1045,115): error TS2507: Type 'Object' is not a constructor function
 argparse.ts(1059,100): error TS2507: Type 'Boolean' is not a constructor function type.
 argparse.ts(1073,7): error TS2322: Type 'String' is not assignable to type 'Number'.
 argparse.ts(1073,118): error TS2507: Type 'Object' is not a constructor function type.
-argparse.ts(1097,7): error TS2322: Type 'String' is not assignable to type 'Boolean'.
-argparse.ts(1097,109): error TS2507: Type 'Object' is not a constructor function type.
+argparse.ts(1097,7): error TS2322: Type 'String' is not assignable to type 'Number'.
+argparse.ts(1097,108): error TS2507: Type 'Object' is not a constructor function type.
 argparse.ts(1119,51): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 argparse.ts(1122,25): error TS2339: Property 'option_strings' does not exist on type 'HTMLElement'.
 argparse.ts(1123,25): error TS2339: Property 'option_strings' does not exist on type 'HTMLElement'.
@@ -743,7 +743,11 @@ lib/textwrap.ts(297,76): error TS2339: Property 'placeholder' does not exist on 
 lib/textwrap.ts(301,50): error TS2339: Property 'placeholder' does not exist on type 'TextWrapper'.
 lib/textwrap.ts(351,52): error TS2304: Cannot find name 'Void'.
 lib/textwrap.ts(362,11): error TS2339: Property 'width' does not exist on type 'Object'.
+lib/textwrap.ts(363,9): error TS2740: Type 'TextWrapper' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+lib/textwrap.ts(364,14): error TS2339: Property 'wrap' does not exist on type 'String'.
 lib/textwrap.ts(377,11): error TS2339: Property 'width' does not exist on type 'Object'.
+lib/textwrap.ts(378,9): error TS2322: Type 'TextWrapper' is not assignable to type 'String'.
+lib/textwrap.ts(379,14): error TS2339: Property 'fill' does not exist on type 'String'.
 lib/textwrap.ts(403,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/textwrap.ts(405,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 

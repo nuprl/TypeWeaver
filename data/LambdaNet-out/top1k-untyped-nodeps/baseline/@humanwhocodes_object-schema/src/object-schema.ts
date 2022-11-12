@@ -204,7 +204,7 @@ class ObjectSchema {
             }
 
             // validate existing keys
-            const strategy: ObjectSchema = this[strategies].get(key);
+            const strategy: HTMLElement = this[strategies].get(key);
 
             // first check to see if any other keys are required
             if (Array.isArray(strategy.requires)) {

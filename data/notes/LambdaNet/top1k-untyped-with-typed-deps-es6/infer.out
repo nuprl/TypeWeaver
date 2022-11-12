@@ -1,8 +1,8 @@
 Source directory: .
 Dataset: top1k-untyped-with-typed-deps-es6
-Inferring types with LambdaNet: /mnt/data/mhyee/not-type-inference/LambdaNet
-Input directory: /mnt/data/mhyee/not-type-inference/data/original/top1k-untyped-with-typed-deps-es6
-Output directory: /mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-with-typed-deps-es6/predictions
+Inferring types with LambdaNet: /work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet
+Input directory: /work/arjunguha-research-group/mhyee/not-type-inference/data/original/top1k-untyped-with-typed-deps-es6
+Output directory: /work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-with-typed-deps-es6/predictions
 Found 40 packages
 [1/40] @npmcli_move-file ... [FAIL]
 [2/40] array-includes ... [ OK ]
@@ -31,8 +31,8 @@ Found 40 packages
 [25/40] object.assign ... [ OK ]
 [26/40] object.entries ... [ OK ]
 [27/40] object.values ... [ OK ]
-[28/40] regenerate-unicode-properties ... [ OK ]
-[29/40] request-promise-core ... [ OK ]
+[28/40] regenerate-unicode-properties ... [FAIL]
+[29/40] request-promise-core ... [FAIL]
 [30/40] shallow-clone ... [FAIL]
 [31/40] side-channel ... [ OK ]
 [32/40] snapdragon-util ... [ OK ]
@@ -44,7 +44,7 @@ Found 40 packages
 [38/40] to-object-path ... [FAIL]
 [39/40] union-value ... [ OK ]
 [40/40] unique-slug ... [FAIL]
-Number of successes: 35
-Number of fails: 5
+Number of successes: 33
+Number of fails: 7
 Number of skips: 0
-Time for type inference: 0:06:56
+Time for type inference: 0:16:47

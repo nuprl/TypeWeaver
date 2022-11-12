@@ -331,7 +331,7 @@ lib/tmp.ts(36,23): error TS2339: Property 'ENOENT' does not exist on type 'Objec
 lib/tmp.ts(36,36): error TS2339: Property 'os' does not exist on type 'Object'.
 lib/tmp.ts(44,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/tmp.ts(47,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/tmp.ts(48,3): error TS2322: Type '(path: string, options?: Options) => void' is not assignable to type 'String'.
+lib/tmp.ts(48,3): error TS2322: Type '(path: string, options?: Options) => void' is not assignable to type 'Number'.
 lib/tmp.ts(59,56): error TS2304: Cannot find name 'Void'.
 lib/tmp.ts(71,28): error TS2339: Property 'tries' does not exist on type 'HTMLElement'.
 lib/tmp.ts(72,31): error TS2304: Cannot find name 'Void'.
@@ -354,7 +354,7 @@ lib/tmp.ts(144,9): error TS2322: Type 'void' is not assignable to type 'String'.
 lib/tmp.ts(144,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/tmp.ts(144,68): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/tmp.ts(144,76): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/tmp.ts(144,76): error TS2304: Cannot find name 'Void'.
 lib/tmp.ts(146,87): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 lib/tmp.ts(151,57): error TS2339: Property 'discardDescriptor' does not exist on type 'Object'.
 lib/tmp.ts(151,83): error TS2339: Property 'detachDescriptor' does not exist on type 'Object'.
@@ -419,7 +419,7 @@ lib/tmp.ts(322,85): error TS2345: Argument of type 'String' is not assignable to
 lib/tmp.ts(323,13): error TS2339: Property 'keep' does not exist on type 'HTMLElement'.
 lib/tmp.ts(350,13): error TS2322: Type 'Boolean | ((next: Object) => Boolean)' is not assignable to type 'Number'.
   Type 'Boolean' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-lib/tmp.ts(356,55): error TS2367: This condition will always return 'false' since the types 'Function' and 'String' have no overlap.
+lib/tmp.ts(356,55): error TS2367: This condition will always return 'false' since the types 'Function' and 'Number' have no overlap.
 lib/tmp.ts(370,31): error TS2304: Cannot find name 'Void'.
 lib/tmp.ts(395,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/tmp.ts(400,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
@@ -452,11 +452,8 @@ lib/tmp.ts(505,11): error TS2339: Property 'tmpdir' does not exist on type 'HTML
 lib/tmp.ts(507,34): error TS2339: Property 'tmpdir' does not exist on type 'HTMLElement'.
 lib/tmp.ts(510,29): error TS2339: Property 'name' does not exist on type 'HTMLElement'.
 lib/tmp.ts(511,31): error TS2339: Property 'name' does not exist on type 'HTMLElement'.
-lib/tmp.ts(511,45): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-lib/tmp.ts(514,43): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 lib/tmp.ts(516,29): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
 lib/tmp.ts(517,31): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
-lib/tmp.ts(517,53): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 lib/tmp.ts(518,18): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
 lib/tmp.ts(519,59): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
 lib/tmp.ts(522,29): error TS2339: Property 'tries' does not exist on type 'HTMLElement'.
@@ -474,13 +471,13 @@ lib/tmp.ts(529,11): error TS2339: Property 'discardDescriptor' does not exist on
 lib/tmp.ts(529,41): error TS2339: Property 'discardDescriptor' does not exist on type 'HTMLElement'.
 lib/tmp.ts(530,11): error TS2339: Property 'unsafeCleanup' does not exist on type 'HTMLElement'.
 lib/tmp.ts(530,37): error TS2339: Property 'unsafeCleanup' does not exist on type 'HTMLElement'.
-lib/tmp.ts(533,64): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
-lib/tmp.ts(533,98): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+lib/tmp.ts(533,64): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/tmp.ts(534,11): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
 lib/tmp.ts(534,43): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
-lib/tmp.ts(534,81): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
+lib/tmp.ts(534,81): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/tmp.ts(534,110): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
-lib/tmp.ts(534,120): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 lib/tmp.ts(536,11): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
 lib/tmp.ts(536,39): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
 lib/tmp.ts(536,98): error TS2339: Property 'template' does not exist on type 'HTMLElement'.
@@ -512,8 +509,7 @@ lib/tmp.ts(584,51): error TS2345: Argument of type 'String' is not assignable to
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/tmp.ts(588,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/tmp.ts(599,34): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Boolean'.
-lib/tmp.ts(608,34): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Boolean'.
+lib/tmp.ts(629,49): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/tmp.ts(630,27): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/tmp.ts(630,49): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/tmp.ts(630,72): error TS2339: Property 'errno' does not exist on type 'Object'.

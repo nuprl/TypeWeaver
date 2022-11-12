@@ -116,7 +116,7 @@ export const pc1: Function = function pc1(inL: Number, inR: Number, out: Object,
   out[off + 1] = outR >>> 0;
 };
 
-export const r28shl: String = function r28shl(num: Number, shift: Number): Number {
+export const r28shl: Function = function r28shl(num: Number, shift: Number): Number {
   return ((num << shift) & 0xfffffff) | (num >>> (28 - shift));
 };
 

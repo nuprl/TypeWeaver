@@ -248,7 +248,7 @@ const jsesc: Function = (argument: Array, options: HTMLElement) => {
 	}
 
 	const regex: String = options.escapeEverything ? escapeEverythingRegex : escapeNonAsciiRegex;
-	result = argument.replace(regex, (char: String, pair: String, lone: String, quoteChar: Number, index: Number, string: String) => {
+	result = argument.replace(regex, (char: String, pair: String, lone: String, quoteChar: Number, index: String, string: String) => {
 		if (pair) {
 			if (options.minimal) return pair;
 			const first: Number = pair.charCodeAt(0);

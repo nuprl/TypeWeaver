@@ -182,7 +182,7 @@ function patch (fs: String): Void {
       })
     }
 
-    fs.lchmodSync = function (path: String, mode: Number) {
+    fs.lchmodSync = function (path: String, mode: String) {
       var fd: Number = fs.openSync(path, constants.O_WRONLY | constants.O_SYMLINK, mode)
 
       // prefer to return the chmod error, if one occurs,
@@ -207,21 +207,21 @@ function patch (fs: String): Void {
 
   function patchLutimes (fs: String): Void {
     if (constants.hasOwnProperty("O_SYMLINK") && fs.futimes) {
-      fs.lutimes = function (path: String, at: String, mt: String, cb: Function) {
-        fs.open(path, constants.O_SYMLINK, function (er: Number, fd: String) {
+      fs.lutimes = function (path: String, at: String, mt: Function, cb: Function) {
+        fs.open(path, constants.O_SYMLINK, function (er: String, fd: String) {
           if (er) {
             if (cb) cb(er)
             return
           }
           fs.futimes(fd, at, mt, function (er: String) {
-            fs.close(fd, function (er2: Number) {
+            fs.close(fd, function (er2: Boolean) {
               if (cb) cb(er || er2)
             })
           })
         })
       }
 
-      fs.lutimesSync = function (path: String, at: String, mt: String) {
+      fs.lutimesSync = function (path: String, at: String, mt: Function) {
         var fd: Number = fs.openSync(path, constants.O_SYMLINK)
         var ret: Number
         var threw: Boolean = true

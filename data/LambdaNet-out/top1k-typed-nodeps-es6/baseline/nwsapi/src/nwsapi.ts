@@ -32,7 +32,7 @@
 
   var version: String = 'nwsapi-2.2.2',
 
-  doc: Function = global.document,
+  doc: String = global.document,
   root: String = doc.documentElement,
   slice: Function = Array.prototype.slice,
 
@@ -139,7 +139,7 @@
   },
 
   NAMESPACE: String,
-  QUIRKS_MODE: Number,
+  QUIRKS_MODE: Function,
   HTML_DOCUMENT: Element,
 
   ATTR_STD_OPS: Object = {
@@ -296,7 +296,7 @@
     function(str: String) {
       return REX.HasEscapes.test(str) ?
         str.replace(REX.FixEscapes,
-          function(substring: Number, p1: String, p2: Number) {
+          function(substring: Number, p1: Number, p2: Number) {
             // unescaped " or '
             return p2 ? '\\' + p2 :
               // javascript strings are UTF-16 encoded
@@ -315,7 +315,7 @@
     function(str: String) {
       return REX.HasEscapes.test(str) ?
         str.replace(REX.FixEscapes,
-          function(substring: Number, p1: String, p2: Boolean) {
+          function(substring: Number, p1: Number, p2: Boolean) {
             // unescaped " or '
             return p2 ? p2 :
               // javascript strings are UTF-16 encoded

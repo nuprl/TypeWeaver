@@ -8,11 +8,11 @@
 import streamChunksOfRawSource from './streamChunksOfRawSource';
 import streamChunksOfSourceMap from './streamChunksOfSourceMap';
 
-export default (source: OriginalSource, options: Object, onChunk: String, onSource: String, onName: String) => {
+export default (source: Source, options: Object, onChunk: String, onSource: String, onName: String) => {
 	if (typeof source.streamChunks === "function") {
 		return source.streamChunks(options, onChunk, onSource, onName);
 	} else {
-		const sourceAndMap: SourceMapSource = source.sourceAndMap(options);
+		const sourceAndMap: Source = source.sourceAndMap(options);
 		if (sourceAndMap.map) {
 			return streamChunksOfSourceMap(
 				sourceAndMap.source,

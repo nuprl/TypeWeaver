@@ -11,7 +11,7 @@ var assign: Function = function (target: Object, source: Object) {
 	}
 };
 
-export default function (validationDatum1: Array/*, ...validationDatumN, options */) {
+export default function (validationDatum1: String/*, ...validationDatumN, options */) {
 	var validationData: Array = [validationDatum1];
 	var globalOptions: Object;
 	if (arguments.length > 1) {

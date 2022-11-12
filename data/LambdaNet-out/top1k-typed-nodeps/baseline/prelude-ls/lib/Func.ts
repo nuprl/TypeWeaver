@@ -34,7 +34,7 @@ memoize = function(f: Object){
     }
     args = res$;
     key = (function(){
-      var i$: Number, ref$: Object, len$: Function, results$: Array = [];
+      var i$: Number, ref$: Object, len$: Boolean, results$: Array = [];
       for (i$ = 0, len$ = (ref$ = args).length; i$ < len$; ++i$) {
         arg = ref$[i$];
         results$.push(arg + toString$.call(arg).slice(8, -1));

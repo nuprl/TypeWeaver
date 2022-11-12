@@ -30,22 +30,22 @@ Failure occurred at line 17: class Event {
   }
 }
 Error message: Debug Failure. Unhandled declaration kind! GetAccessor for { flags: Property|GetAccessor|Assignment; declarations: GetAccessor,CallExpression }
-Parsing failed for file: /mnt/data/mhyee/not-type-inference/data/original/top1k-typed-nodeps/ws/lib/event-target.js
+Parsing failed for file: /work/arjunguha-research-group/mhyee/not-type-inference/data/original/top1k-typed-nodeps/ws/lib/event-target.js
 
-/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:36169
+/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:36169
                 return ts.Debug.fail("Unhandled declaration kind! " + ts.Debug.showSyntaxKind(declaration) + " for " + ts.Debug.showSymbol(symbol));
                                 ^
 Error: Debug Failure. Unhandled declaration kind! GetAccessor for { flags: Property|GetAccessor|Assignment; declarations: GetAccessor,CallExpression }
-    at getTypeOfVariableOrParameterOrPropertyWorker (/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:36169:33)
-    at getTypeOfVariableOrParameterOrProperty (/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:36068:28)
-    at getTypeOfSymbol (/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:36377:24)
-    at getTypeOfNode (/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:58069:24)
-    at Object.getTypeAtLocation (/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:31257:31)
-    at inferRetType (/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/parsing.ts:802:54)
-    at parseFunction (/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/parsing.ts:813:23)
-    at /mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/parsing.ts:1027:33
-    at handleError (/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/parsing.ts:1435:12)
-    at rec (/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/parsing.ts:863:14)
+    at getTypeOfVariableOrParameterOrPropertyWorker (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:36169:33)
+    at getTypeOfVariableOrParameterOrProperty (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:36068:28)
+    at getTypeOfSymbol (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:36377:24)
+    at getTypeOfNode (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:58069:24)
+    at Object.getTypeAtLocation (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:31257:31)
+    at inferRetType (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/parsing.ts:802:54)
+    at parseFunction (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/parsing.ts:813:23)
+    at /work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/parsing.ts:1027:33
+    at handleError (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/parsing.ts:1435:12)
+    at rec (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/parsing.ts:863:14)
 
 	at ammonite.ops.Shellout$.executeStream(Shellout.scala:101)
 	at ammonite.ops.Shellout$.$anonfun$$percent$percent$1(Shellout.scala:15)
@@ -71,4 +71,4 @@ Error: Debug Failure. Unhandled declaration kind! GetAccessor for { flags: Prope
 	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
 	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)

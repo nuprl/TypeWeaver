@@ -490,7 +490,7 @@ browser/type-check.ts(1183,11): error TS2554: Expected 2 arguments, but got 1.
 browser/type-check.ts(1184,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 browser/type-check.ts(1191,11): error TS2322: Type '(x: number) => number' is not assignable to type 'Number'.
-browser/type-check.ts(1192,13): error TS2322: Type '(x: String) => boolean' is not assignable to type 'Boolean'.
+browser/type-check.ts(1192,13): error TS2322: Type '(x: Number) => boolean' is not assignable to type 'Boolean'.
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'Object' is not assignable to type 'boolean'.
 browser/type-check.ts(1196,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.

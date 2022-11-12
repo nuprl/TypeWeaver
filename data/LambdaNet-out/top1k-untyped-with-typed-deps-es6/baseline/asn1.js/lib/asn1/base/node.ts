@@ -161,7 +161,7 @@ overrided.forEach(function(method: String) {
 tags.forEach(function(tag: Number) {
   Node.prototype[tag] = function _tagMethod(): Object {
     const state: Object = this._baseState;
-    const args: String = Array.prototype.slice.call(arguments);
+    const args: Array = Array.prototype.slice.call(arguments);
 
     assert(state.tag === null);
     state.tag = tag;
@@ -272,7 +272,7 @@ Node.prototype.contains = function contains(item: Number): Object {
 // Decoding
 //
 
-Node.prototype._decode = function decode(input: Object, options: Object): Boolean {
+Node.prototype._decode = function decode(input: Function, options: Object): Boolean {
   const state: Object = this._baseState;
 
   // Decode root node

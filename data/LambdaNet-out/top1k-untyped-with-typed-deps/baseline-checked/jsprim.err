@@ -5,13 +5,13 @@ lib/jsprim-jsv.ts(24,13): error TS2339: Property 'ok' does not exist on type 'St
 lib/jsprim-jsv.ts(24,23): error TS2339: Property 'errors' does not exist on type 'HTMLElement'.
 lib/jsprim-jsv.ts(25,29): error TS2339: Property 'errors' does not exist on type 'HTMLElement'.
 lib/jsprim-jsv.ts(37,3): error TS2322: Type 'string' is not assignable to type 'Number'.
-lib/jsprim-jsv.ts(45,6): error TS2740: Type 'Error' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-lib/jsprim-jsv.ts(45,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+lib/jsprim-jsv.ts(45,6): error TS2740: Type 'Error' is missing the following properties from type 'HTMLCanvasElement': height, width, captureStream, getContext, and 283 more.
+lib/jsprim-jsv.ts(45,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/jsprim-jsv.ts(46,5): error TS2339: Property 'jsv_details' does not exist on type 'HTMLElement'.
+lib/jsprim-jsv.ts(46,5): error TS2339: Property 'jsv_details' does not exist on type 'HTMLCanvasElement'.
 lib/jsprim.ts(5,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'mod_assert' must be of type 'String', but here has type 'HTMLElement'.
+lib/jsprim.ts(9,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/jsprim.ts(10,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/jsprim.ts(52,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/jsprim.ts(54,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/jsprim.ts(57,17): error TS2538: Type 'String' cannot be used as an index type.
 lib/jsprim.ts(62,7): error TS2538: Type 'String' cannot be used as an index type.
@@ -65,6 +65,7 @@ lib/jsprim.ts(213,10): error TS2314: Generic type 'Array<T>' requires 1 type arg
 lib/jsprim.ts(217,22): error TS2538: Type 'String' cannot be used as an index type.
 lib/jsprim.ts(217,28): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/jsprim.ts(217,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/jsprim.ts(225,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/jsprim.ts(230,40): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/jsprim.ts(236,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/jsprim.ts(239,3): error TS2740: Type 'Date' is missing the following properties from type 'HTMLDivElement': align, addEventListener, removeEventListener, accessKey, and 278 more.
@@ -79,6 +80,7 @@ lib/jsprim.ts(243,44): error TS2339: Property 'getUTCSeconds' does not exist on 
 lib/jsprim.ts(244,8): error TS2339: Property 'getUTCMilliseconds' does not exist on type 'HTMLDivElement'.
 lib/jsprim.ts(247,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/jsprim.ts(250,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/jsprim.ts(253,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/jsprim.ts(254,25): error TS2339: Property 'sprintf' does not exist on type 'String'.
 lib/jsprim.ts(255,24): error TS2339: Property 'getUTCDay' does not exist on type 'HTMLElement'.
 lib/jsprim.ts(255,43): error TS2339: Property 'getUTCDate' does not exist on type 'HTMLElement'.
@@ -184,7 +186,6 @@ lib/jsprim.ts(555,46): error TS2345: Argument of type 'Number' is not assignable
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/jsprim.ts(555,49): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/jsprim.ts(555,53): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/jsprim.ts(560,34): error TS2339: Property 'VError' does not exist on type 'String'.
 lib/jsprim.ts(561,5): error TS2339: Property 'jsv_details' does not exist on type 'Object'.
 lib/jsprim.ts(565,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/jsprim.ts(567,13): error TS2339: Property 'ok' does not exist on type 'String'.

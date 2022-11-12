@@ -211,7 +211,7 @@ var sTable: Object = [
   0, 15, 6, 12, 10, 9, 13, 0, 15, 3, 3, 5, 5, 6, 8, 11
 ];
 
-exports.substitute = function substitute(inL: String, inR: String): Number {
+exports.substitute = function substitute(inL: String, inR: Number): Number {
   var out: Number = 0;
   for (var i = 0; i < 4; i++) {
     var b: Number = (inL >>> (18 - i * 6)) & 0x3f;

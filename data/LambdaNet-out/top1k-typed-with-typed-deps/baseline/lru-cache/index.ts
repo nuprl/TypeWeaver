@@ -538,7 +538,7 @@ class LRUCache {
       const value: String = this.isBackgroundFetch(v)
         ? v.__staleWhileFetching
         : v
-      const entry: LRUCache = { value }
+      const entry: Object = { value }
       if (this.ttls) {
         entry.ttl = this.ttls[i]
         // always dump the start relative to a portable timestamp

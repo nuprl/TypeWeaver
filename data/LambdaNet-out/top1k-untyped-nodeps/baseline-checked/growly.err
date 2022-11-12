@@ -1,9 +1,5 @@
 example/bakery.ts(1,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 example/bakery.ts(3,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-example/bakery.ts(10,8): error TS2339: Property 'register' does not exist on type 'String'.
-example/bakery.ts(16,12): error TS2339: Property 'notify' does not exist on type 'String'.
-example/bakery.ts(18,12): error TS2339: Property 'notify' does not exist on type 'String'.
-example/simple.ts(3,8): error TS2339: Property 'notify' does not exist on type 'String'.
 lib/gntp.ts(2,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'String'.
 lib/gntp.ts(15,10): error TS2300: Duplicate identifier 'GNTP'.
 lib/gntp.ts(15,44): error TS2304: Cannot find name 'Void'.
@@ -36,7 +32,6 @@ lib/gntp.ts(159,30): error TS2339: Property 'file' does not exist on type 'Objec
 lib/gntp.ts(160,20): error TS2339: Property 'write' does not exist on type 'HTMLInputElement'.
 lib/gntp.ts(160,26): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 lib/gntp.ts(164,12): error TS2339: Property 'on' does not exist on type 'HTMLInputElement'.
-lib/gntp.ts(164,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/gntp.ts(168,46): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 lib/gntp.ts(170,21): error TS2339: Property 'parseResp' does not exist on type 'HTMLElement'.
 lib/gntp.ts(174,18): error TS2339: Property 'state' does not exist on type 'String'.
@@ -56,8 +51,10 @@ lib/growly.ts(1,5): error TS2300: Duplicate identifier 'GNTP'.
 lib/growly.ts(1,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/growly.ts(9,20): error TS2304: Cannot find name 'Void'.
 lib/growly.ts(30,22): error TS2339: Property 'label' does not exist on type 'Object'.
-lib/growly.ts(75,64): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/growly.ts(75,86): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/growly.ts(75,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/growly.ts(75,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/growly.ts(75,85): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/growly.ts(98,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/growly.ts(99,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 lib/growly.ts(100,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 lib/growly.ts(101,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
@@ -75,6 +72,7 @@ lib/growly.ts(109,45): error TS2339: Property 'icon' does not exist on type 'Obj
 lib/growly.ts(110,14): error TS2339: Property 'newline' does not exist on type 'HTMLElement'.
 lib/growly.ts(113,10): error TS2339: Property 'send' does not exist on type 'HTMLElement'.
 lib/growly.ts(146,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/growly.ts(165,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/growly.ts(166,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 lib/growly.ts(167,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 lib/growly.ts(167,40): error TS2339: Property 'label' does not exist on type 'Object'.

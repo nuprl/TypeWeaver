@@ -39,7 +39,7 @@ function feFpToBigInteger(): Number {
   return this.x;
 }
 
-function feFpNegate(): Promise {
+function feFpNegate(): Object {
   return new ECFieldElementFp(this.q, this.x.negate().mod(this.q));
 }
 
@@ -47,7 +47,7 @@ function feFpAdd(b: Object): Promise {
   return new ECFieldElementFp(this.q, this.x.add(b.toBigInteger()).mod(this.q));
 }
 
-function feFpSubtract(b: Object): Object {
+function feFpSubtract(b: Object): Promise {
   return new ECFieldElementFp(
     this.q,
     this.x.subtract(b.toBigInteger()).mod(this.q)

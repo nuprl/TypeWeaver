@@ -90,7 +90,7 @@ export default function serialize(obj: String, options: Object): String {
         // If the value is an object w/ a toJSON method, toJSON is called before
         // the replacer runs, so we use this[key] to get the non-toJSONed value.
         var origValue: Array = this[key];
-        var type: String = typeof origValue;
+        var type: Number = typeof origValue;
 
         if (type === 'object') {
             if(origValue instanceof RegExp) {

@@ -22,7 +22,7 @@ import every from './every.js'
  * func(NaN)
  * // => false
  */
-function overEvery(iteratees: String): Function {
+function overEvery(iteratees: Function): Function {
   return function(...args) {
     return every(iteratees, (iteratee: Function) => iteratee.apply(this, args))
   }

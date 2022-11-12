@@ -13,6 +13,6 @@ import Promise from './promise';
   @return {Promise} a promise that will become fulfilled with the given
   `value`
 */
-export default function resolve(value: String, label: String): Promise {
+export default function resolve(value: String, label: String): String {
   return Promise.resolve(value, label);
 }

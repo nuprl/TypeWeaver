@@ -26,6 +26,6 @@ for (let index = 0; index <= inlineCacheCutoff; index++) {
 	FastObject();
 }
 
-export default function toFastproperties(object: Object): Boolean {
+export default function toFastproperties(object: Object): String {
 	return FastObject(object);
 }

@@ -10,7 +10,7 @@ if (!pj.repository && process.env.GITHUB_REPOSITORY) {
   pj.repository = repo
   const json: String = fs.readFileSync(pf, 'utf8')
   const match: Object = json.match(/^\s*\{[\r\n]+([ \t]*)"/)
-  const indent: Minipass = match[1]
+  const indent: Pipe = match[1]
   const output: String = JSON.stringify(pj, null, indent || 2) + '\n'
   fs.writeFileSync(pf, output)
 }

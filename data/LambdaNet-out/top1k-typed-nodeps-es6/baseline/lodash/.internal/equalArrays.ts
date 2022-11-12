@@ -28,7 +28,7 @@ function equalArrays(array: Array, other: Array, bitmask: Number, customizer: Fu
     return false
   }
   // Assume cyclic values are equal.
-  const stacked: Stack = stack.get(array)
+  const stacked: String = stack.get(array)
   if (stacked && stack.get(other)) {
     return stacked == other
   }

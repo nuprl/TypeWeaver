@@ -227,7 +227,7 @@ Emitter.prototype.off;
  * Remove all instances of the given `fn` from listeners.
  */
 
-function removeListeners(fn: String, listeners: Array): String {
+function removeListeners(fn: String, listeners: Array): Emitter {
   for (let i = 0; i < listeners.length; i++) {
     const listener: String = listeners[i];
     if (listener === fn || listener.fn === fn) {

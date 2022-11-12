@@ -29,7 +29,7 @@ function astTraverse(root: String, options: Object = {}): Void {
   const post: Function = options.post;
   const skipProperty: Function = options.skipProperty;
 
-  function visit(node: Function, parent: Object, prop: String, idx: Number): Void {
+  function visit(node: Object, parent: Object, prop: String, idx: Number): Void {
     if (!node || typeof node.type !== 'string') {
       return;
     }

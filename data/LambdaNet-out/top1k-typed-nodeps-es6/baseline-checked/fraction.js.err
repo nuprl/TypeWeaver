@@ -13,7 +13,6 @@ bigfraction.ts(72,16): error TS2363: The right-hand side of an arithmetic operat
 bigfraction.ts(78,9): error TS2367: This condition will always return 'false' since the types 'Number' and 'String' have no overlap.
 bigfraction.ts(83,14): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
 bigfraction.ts(85,9): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
-bigfraction.ts(87,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'Boolean'.
 bigfraction.ts(89,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(89,18): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(90,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -107,7 +106,7 @@ bigfraction.ts(259,19): error TS2538: Type 'Number' cannot be used as an index t
 bigfraction.ts(259,41): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 bigfraction.ts(259,67): error TS2538: Type 'Number' cannot be used as an index type.
 bigfraction.ts(259,89): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-bigfraction.ts(260,11): error TS2322: Type 'Number' is not assignable to type 'String'.
+bigfraction.ts(260,11): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 bigfraction.ts(260,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 bigfraction.ts(261,15): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(261,15): error TS2365: Operator '**' cannot be applied to types 'Number' and 'bigint'.
@@ -158,7 +157,7 @@ bigfraction.ts(315,12): error TS2367: This condition will always return 'false' 
 bigfraction.ts(315,16): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(316,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(316,11): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-bigfraction.ts(320,7): error TS2322: Type 'String' is not assignable to type 'Number'.
+bigfraction.ts(320,7): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 bigfraction.ts(327,23): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(327,31): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(330,27): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -175,14 +174,10 @@ bigfraction.ts(350,29): error TS2363: The right-hand side of an arithmetic opera
 bigfraction.ts(351,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(351,21): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(351,29): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-bigfraction.ts(359,7): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
-bigfraction.ts(361,7): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
 bigfraction.ts(364,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(364,11): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-bigfraction.ts(366,9): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
 bigfraction.ts(367,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(367,11): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-bigfraction.ts(369,9): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
 bigfraction.ts(387,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(388,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 bigfraction.ts(390,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -387,7 +382,7 @@ examples/valueOfPi.ts(18,16): error TS2339: Property 'toFraction' does not exist
 examples/valueOfPi.ts(23,16): error TS2339: Property 'toFraction' does not exist on type 'HTMLElement'.
 examples/valueOfPi.ts(26,14): error TS2339: Property 'toFraction' does not exist on type 'HTMLElement'.
 fraction.min.ts(8,55): error TS2304: Cannot find name 'Void'.
-fraction.min.ts(8,250): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+fraction.min.ts(8,250): error TS2322: Type 'String' is not assignable to type 'Number'.
 fraction.min.ts(8,260): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(8,262): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(8,268): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -507,7 +502,6 @@ fraction.min.ts(11,375): error TS2362: The left-hand side of an arithmetic opera
 fraction.min.ts(11,378): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(11,386): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
 fraction.min.ts(11,438): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 fraction.min.ts(11,470): error TS2339: Property 'd' does not exist on type 'Object'.
 fraction.min.ts(11,474): error TS2339: Property 'n' does not exist on type 'Object'.
 fraction.min.ts(11,486): error TS2339: Property 's' does not exist on type 'Object'.
@@ -707,7 +701,6 @@ fraction.min.ts(19,3): error TS2339: Property 'Fraction' does not exist on type 
 fraction.ts(58,28): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 fraction.ts(61,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(61,16): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(76,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'Boolean'.
 fraction.ts(78,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(78,18): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(79,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -824,14 +817,10 @@ fraction.ts(336,14): error TS2362: The left-hand side of an arithmetic operation
 fraction.ts(336,26): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(337,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(337,26): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(345,7): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
-fraction.ts(347,7): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
 fraction.ts(350,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(350,11): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(352,9): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
 fraction.ts(353,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(353,11): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(355,9): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
 fraction.ts(373,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(374,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(376,7): error TS2322: Type 'Object' is not assignable to type 'String'.

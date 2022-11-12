@@ -2,7 +2,7 @@ index.ts(3,10): error TS2395: Individual declarations in merged declaration 'URL
 index.ts(3,10): error TS2459: Module '"./webidl2js-wrapper"' declares 'URL' locally, but it is not exported.
 index.ts(3,15): error TS2395: Individual declarations in merged declaration 'URLSearchParams' must be all exported or all local.
 index.ts(3,15): error TS2459: Module '"./webidl2js-wrapper"' declares 'URLSearchParams' locally, but it is not exported.
-index.ts(4,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine"' has no default export.
+index.ts(4,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine"' has no default export.
 index.ts(8,1): error TS2448: Block-scoped variable 'URL' used before its declaration.
 index.ts(8,5): error TS2339: Property 'install' does not exist on type 'String'.
 index.ts(9,1): error TS2448: Block-scoped variable 'URLSearchParams' used before its declaration.
@@ -12,7 +12,7 @@ index.ts(11,47): error TS2339: Property 'URL' does not exist on type 'Object'.
 index.ts(12,14): error TS2395: Individual declarations in merged declaration 'URLSearchParams' must be all exported or all local.
 index.ts(12,61): error TS2339: Property 'URLSearchParams' does not exist on type 'Object'.
 index.ts(24,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/URL-impl.ts(2,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine"' has no default export.
+lib/URL-impl.ts(2,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine"' has no default export.
 lib/URL-impl.ts(4,29): error TS2307: Cannot find module './URLSearchParams' or its corresponding type declarations.
 lib/URL-impl.ts(6,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/URL-impl.ts(26,10): error TS2339: Property '_url' does not exist on type 'URLImpl'.
@@ -467,6 +467,7 @@ live-viewer/live-viewer.ts(147,34): error TS2769: No overload matches this call.
   Overload 2 of 2, '(data: string): string', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+live-viewer/live-viewer.ts(148,5): error TS2322: Type 'String' is not assignable to type 'Number'.
 live-viewer/live-viewer.ts(151,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 live-viewer/live-viewer.ts(152,37): error TS2769: No overload matches this call.
   Overload 1 of 2, '(data: string): string', gave the following error.

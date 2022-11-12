@@ -100,6 +100,7 @@ index.ts(264,52): error TS2304: Cannot find name 'Void'.
 scripts/update-benchmark.ts(7,22): error TS2307: Cannot find module 'top-sites' or its corresponding type declarations.
 scripts/update-benchmark.ts(16,73): error TS2538: Type 'String' cannot be used as an index type.
 scripts/update-benchmark.ts(19,20): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
+  Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
 scripts/update-benchmark.ts(22,50): error TS2304: Cannot find name 'Void'.
 scripts/update-benchmark.ts(23,36): error TS2769: No overload matches this call.
   Overload 1 of 4, '(urlString: string, parseQueryString: true, slashesDenoteHost?: boolean): UrlWithParsedQuery', gave the following error.
@@ -133,7 +134,6 @@ scripts/version-history.ts(11,23): error TS2314: Generic type 'Array<T>' require
 scripts/version-history.ts(11,47): error TS2769: No overload matches this call.
   Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-      Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
   Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string; } | BufferEncoding): string', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
   Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string; })): string | Buffer', gave the following error.

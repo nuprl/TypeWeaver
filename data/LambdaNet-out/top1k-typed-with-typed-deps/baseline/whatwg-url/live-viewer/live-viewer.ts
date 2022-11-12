@@ -33,7 +33,7 @@
 
   function update(): Void {
     const browserResult: Array = getBrowserResult();
-    const jsdomResult: Array = getJsdomResult();
+    const jsdomResult: Function = getJsdomResult();
     const mismatchedComponents: Function = getMismatchedComponents(browserResult, jsdomResult);
 
     setResult("browser", browserResult, mismatchedComponents);
@@ -141,7 +141,7 @@
   // btoa / atob don't work on Unicode.
   // This version is a superset of btoa / atob, so it maintains compatibility with older versions of
   // the live viewer which used btoa / atob directly.
-  function encodeToBase64(originalString: String): String {
+  function encodeToBase64(originalString: String): Number {
     const bytes: Array = te.encode(originalString);
     const byteString: String = Array.from(bytes, (byte: String) => String.fromCharCode(byte)).join("");
     const encoded: String = btoa(byteString);

@@ -1,7 +1,10 @@
-getInferredName.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'getInferredName' must be of type 'Function', but here has type 'String'.
+getInferredName.ts(6,2): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+index.ts(12,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'getInferredName' must be of type 'String', but here has type 'Function'.
 index.ts(15,118): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(17,13): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
 index.ts(21,20): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
+index.ts(24,22): error TS2349: This expression is not callable.
+  Type 'String' has no call signatures.
 

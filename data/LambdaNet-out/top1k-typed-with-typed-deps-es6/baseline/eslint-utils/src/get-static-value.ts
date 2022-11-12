@@ -2,7 +2,7 @@
 
 import { findVariable } from "./find-variable"
 
-const globalObject: Array =
+const globalObject: Function =
     typeof globalThis !== "undefined"
         ? globalThis
         : typeof self !== "undefined"
@@ -160,7 +160,7 @@ function getElementValues(nodeList: Array, initialScope: String): Array {
             }
             valueList.push(...argument.value)
         } else {
-            const element: Element = getStaticValueR(elementNode, initialScope)
+            const element: ReferenceTracker = getStaticValueR(elementNode, initialScope)
             if (element == null) {
                 return null
             }

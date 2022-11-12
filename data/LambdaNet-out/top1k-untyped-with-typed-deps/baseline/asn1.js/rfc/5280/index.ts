@@ -83,7 +83,7 @@ rfc5280.Certificate = Certificate;
 //      issuerUniqueID  [1]  IMPLICIT UniqueIdentifier OPTIONAL,
 //      subjectUniqueID [2]  IMPLICIT UniqueIdentifier OPTIONAL,
 //      extensions      [3]  Extensions OPTIONAL
-const TBSCertificate: Array = asn1.define('TBSCertificate', function() {
+const TBSCertificate: String = asn1.define('TBSCertificate', function() {
   this.seq().obj(
     this.key('version').def('v1').explicit(0).use(Version),
     this.key('serialNumber').int(),
@@ -652,7 +652,7 @@ const NameConstraints: String = asn1.define('NameConstraints', function() {
 rfc5280.NameConstraints = NameConstraints;
 
 // GeneralSubtrees ::= SEQUENCE SIZE (1..MAX) OF GeneralSubtree
-const GeneralSubtrees: String = asn1.define('GeneralSubtrees', function() {
+const GeneralSubtrees: Array = asn1.define('GeneralSubtrees', function() {
   this.seqof(GeneralSubtree);
 });
 rfc5280.GeneralSubtrees = GeneralSubtrees;

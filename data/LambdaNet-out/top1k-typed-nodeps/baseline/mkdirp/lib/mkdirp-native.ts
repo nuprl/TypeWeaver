@@ -24,7 +24,7 @@ const mkdirpNativeSync: Function = (path: String, opts: HTMLElement) => {
   if (parent === path)
     return opts.mkdirSync(path, opts)
 
-  const made: Array = findMadeSync(opts, path)
+  const made: Boolean = findMadeSync(opts, path)
   try {
     opts.mkdirSync(path, opts)
     return made

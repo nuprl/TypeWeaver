@@ -19,7 +19,7 @@ jsonDiff.equals = function(left: String, right: String) {
   return Diff.prototype.equals.call(jsonDiff, left.replace(/,([\r\n])/g, '$1'), right.replace(/,([\r\n])/g, '$1'));
 };
 
-export function diffJson(oldObj: String, newObj: Function, options: Object): Boolean { return jsonDiff.diff(oldObj, newObj, options); }
+export function diffJson(oldObj: Function, newObj: Function, options: Object): Boolean { return jsonDiff.diff(oldObj, newObj, options); }
 
 // This function handles the presence of circular references by bailing out when encountering an
 // object that is already on the "stack" of items being processed. Accepts an optional replacer

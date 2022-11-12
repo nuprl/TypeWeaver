@@ -65,7 +65,7 @@ function newEmptyBuffer(length: String): Object {
   return buffer;
 }
 
-function ensureBuffer(input: Function): Array {
+function ensureBuffer(input: Object): Array {
   if (Buffer.isBuffer(input)) {
     return input;
   }
@@ -86,7 +86,7 @@ function ensureBuffer(input: Function): Array {
   }
 }
 
-function bufferizeInt(num: String): HTMLElement {
+function bufferizeInt(num: String): Object {
   var tmp: String = ensureBuffer(4);
   tmp.writeInt32BE(num, 0);
   return tmp;

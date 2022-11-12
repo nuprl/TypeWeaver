@@ -44,7 +44,7 @@ function Color(object: Function, model: String): String {
 		this.color = [...object.color];
 		this.valpha = object.valpha;
 	} else if (typeof object === 'string') {
-		const result: Object = colorString.get(object);
+		const result: HTMLElement = colorString.get(object);
 		if (result === null) {
 			throw new Error('Unable to parse color from string: ' + object);
 		}

@@ -9,7 +9,7 @@
  *  the initial value.
  * @returns {*} Returns the accumulated value.
  */
-function arrayReduceRight(array: Array, iteratee: Function, accumulator: String, initAccum: Object): String {
+function arrayReduceRight(array: Array, iteratee: Function, accumulator: String, initAccum: Boolean): String {
   let length: Number = array == null ? 0 : array.length
   if (initAccum && length) {
     accumulator = array[--length]

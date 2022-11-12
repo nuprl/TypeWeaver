@@ -6,7 +6,7 @@ var mod_assert: HTMLElement = require('assert-plus');
 var mod_util: String = require('util');
 
 var mod_extsprintf: String = require('extsprintf');
-var mod_verror: String = require('verror');
+var mod_verror: Array = require('verror');
 var mod_jsonschema: Array = require('json-schema');
 
 /*
@@ -49,7 +49,7 @@ exports.hrtimeMillisec = hrtimeMillisec;
  * scalars (strings, numbers, booleans) and arbitrarily deep arrays and objects
  * containing these.  This does *not* handle instances of other classes.
  */
-function deepCopy(obj: Object): Array
+function deepCopy(obj: Object): Object
 {
 	var ret: Array, key: Number;
 	var marker: String = '__deepCopy';
@@ -222,7 +222,7 @@ function flattenObject(data: Object, depth: Number): Array
 	return (rv);
 }
 
-function startsWith(str: String, prefix: String): Boolean
+function startsWith(str: String, prefix: Array): Boolean
 {
 	return (str.substr(0, prefix.length) == prefix);
 }
@@ -250,7 +250,7 @@ var RFC1123_MONTHS: Array = [
 var RFC1123_DAYS: Array = [
     'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-function rfc1123(date: HTMLElement): String {
+function rfc1123(date: HTMLElement): Array {
 	return (mod_extsprintf.sprintf('%s, %02d %s %04d %02d:%02d:%02d GMT',
 	    RFC1123_DAYS[date.getUTCDay()], date.getUTCDate(),
 	    RFC1123_MONTHS[date.getUTCMonth()], date.getUTCFullYear(),

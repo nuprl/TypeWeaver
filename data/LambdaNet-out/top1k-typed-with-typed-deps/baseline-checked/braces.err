@@ -114,8 +114,8 @@ lib/expand.ts(33,32): error TS2314: Generic type 'Array<T>' requires 1 type argu
 lib/expand.ts(34,36): error TS2339: Property 'rangeLimit' does not exist on type 'Object'.
 lib/expand.ts(34,75): error TS2339: Property 'rangeLimit' does not exist on type 'Object'.
 lib/expand.ts(37,10): error TS2339: Property 'queue' does not exist on type 'Object'.
-lib/expand.ts(39,9): error TS2322: Type 'Object' is not assignable to type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/expand.ts(39,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/expand.ts(40,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/expand.ts(40,27): error TS2339: Property 'queue' does not exist on type 'Object'.
 lib/expand.ts(42,14): error TS2339: Property 'type' does not exist on type 'String'.
@@ -140,8 +140,8 @@ lib/expand.ts(70,12): error TS2339: Property 'nodes' does not exist on type 'Obj
 lib/expand.ts(74,33): error TS2339: Property 'encloseBrace' does not exist on type 'String'.
 lib/expand.ts(75,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/expand.ts(75,29): error TS2339: Property 'queue' does not exist on type 'Object'.
-lib/expand.ts(76,9): error TS2322: Type 'Object' is not assignable to type 'HTMLElement'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/expand.ts(76,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lib/expand.ts(78,18): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
 lib/expand.ts(78,44): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
 lib/expand.ts(78,69): error TS2551: Property 'parent' does not exist on type 'HTMLElement'. Did you mean 'part'?
@@ -160,13 +160,13 @@ lib/expand.ts(110,16): error TS2339: Property 'flatten' does not exist on type '
 lib/parse.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'stringify'.
 lib/parse.ts(31,7): error TS2451: Cannot redeclare block-scoped variable 'parse'.
 lib/parse.ts(31,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/parse.ts(36,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+lib/parse.ts(36,7): error TS2322: Type 'Object' is not assignable to type 'HTMLElement'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/parse.ts(37,33): error TS2339: Property 'maxLength' does not exist on type 'HTMLElement'.
 lib/parse.ts(37,84): error TS2339: Property 'maxLength' does not exist on type 'HTMLElement'.
 lib/parse.ts(43,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/parse.ts(44,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+lib/parse.ts(44,7): error TS2322: Type 'Object' is not assignable to type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/parse.ts(51,7): error TS2740: Type '{}' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/parse.ts(57,41): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/parse.ts(59,14): error TS2339: Property 'type' does not exist on type 'Object'.

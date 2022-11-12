@@ -16,20 +16,20 @@ Failure occurred at line 3: module.exports = {
 Error message: Debug Failure. False expression.
 Parsing failed for file: lib/index.js
 
-/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:1087
+/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:1087
         Debug.assert(array.length !== 0);
               ^
 Error: Debug Failure. False expression.
-    at Object.first (/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:1087:15)
-    at getArgumentArityError (/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50157:32)
-    at resolveCall (/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50297:41)
-    at resolveCallExpression (/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50583:20)
-    at resolveSignature (/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50874:28)
-    at getResolvedSignature (/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50905:26)
-    at checkCallExpression (/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50992:29)
-    at checkExpressionWorker (/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:53047:28)
-    at checkExpression (/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:52969:38)
-    at checkExpressionCached (/mnt/data/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:52711:38)
+    at Object.first (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:1087:15)
+    at getArgumentArityError (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50157:32)
+    at resolveCall (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50297:41)
+    at resolveCallExpression (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50583:20)
+    at resolveSignature (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50874:28)
+    at getResolvedSignature (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50905:26)
+    at checkCallExpression (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:50992:29)
+    at checkExpressionWorker (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:53047:28)
+    at checkExpression (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:52969:38)
+    at checkExpressionCached (/work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet/scripts/ts/node_modules/typescript/lib/typescript.js:52711:38)
 
 	at ammonite.ops.Shellout$.executeStream(Shellout.scala:101)
 	at ammonite.ops.Shellout$.$anonfun$$percent$percent$1(Shellout.scala:15)
@@ -55,4 +55,4 @@ Error: Debug Failure. False expression.
 	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
 	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)

@@ -52,7 +52,7 @@ class NFAState extends State {
 
     // Else, we get some symbols.
     const symbol: String = string[0];
-    const rest: Array = string.slice(1);
+    const rest: String = string.slice(1);
 
     const symbolTransitions: Array = this.getTransitionsOnSymbol(symbol);
     for (const nextState of symbolTransitions) {

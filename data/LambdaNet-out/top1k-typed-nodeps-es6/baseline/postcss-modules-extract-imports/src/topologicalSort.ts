@@ -1,7 +1,7 @@
 const PERMANENT_MARKER: Number = 2;
 const TEMPORARY_MARKER: Number = 1;
 
-function createError(node: Object, graph: Object): Object {
+function createError(node: Function, graph: Object): Object {
   const er: Error = new Error("Nondeterministic import's order");
 
   const related: Array = graph[node];

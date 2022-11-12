@@ -4,7 +4,7 @@
 
 import mod_assert from 'assert';
 
-var mod_jsv: String;
+var mod_jsv: Number;
 
 /* lazy-loaded because it may not be here */
 

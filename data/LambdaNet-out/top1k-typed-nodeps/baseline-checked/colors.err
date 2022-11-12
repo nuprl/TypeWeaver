@@ -88,7 +88,6 @@ lib/colors.ts(86,50): error TS2314: Generic type 'Promise<T>' requires 1 type ar
 lib/colors.ts(89,11): error TS2551: Property '_styles' does not exist on type 'HTMLElement'. Did you mean 'style'?
 lib/colors.ts(92,11): error TS2339: Property '__proto__' does not exist on type 'HTMLElement'.
 lib/colors.ts(93,3): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-lib/colors.ts(96,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'styles' must be of type 'Object', but here has type 'Function'.
 lib/colors.ts(96,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/colors.ts(98,14): error TS2339: Property 'grey' does not exist on type 'Object'.
@@ -213,6 +212,7 @@ lib/maps/rainbow.ts(8,35): error TS2356: An arithmetic operand must be of type '
 lib/maps/random.ts(2,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/maps/zebra.ts(3,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/maps/zebra.ts(3,42): error TS2339: Property 'inverse' does not exist on type 'Object'.
+lib/styles.ts(26,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'styles' must be of type 'Function', but here has type 'Object'.
 lib/styles.ts(91,27): error TS2538: Type 'String' cannot be used as an index type.
 lib/styles.ts(92,7): error TS2740: Type 'undefined[]' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lib/styles.ts(92,35): error TS2538: Type 'String' cannot be used as an index type.

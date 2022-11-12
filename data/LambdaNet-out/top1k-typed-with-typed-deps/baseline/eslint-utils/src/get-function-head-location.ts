@@ -19,7 +19,7 @@ function getOpeningParenOfParams(node: Object, sourceCode: String): Array {
  * @returns {string} The location of the function node for reporting.
  */
 export function getFunctionHeadLocation(node: Object, sourceCode: String): Object {
-    const parent: Object = node.parent
+    const parent: ReferenceTracker = node.parent
     let start: String = null
     let end: String = null
 

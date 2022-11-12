@@ -6,8 +6,8 @@ const toStats: Function = promisify(stat);
 const toRead: Function = promisify(readdir);
 
 export default async function (start: String, callback: Object) {
-	let dir: Number = resolve('.', start);
-	let tmp: Number, stats: Array = await toStats(dir);
+	let dir: String = resolve('.', start);
+	let tmp: String, stats: Array = await toStats(dir);
 
 	if (!stats.isDirectory()) {
 		dir = dirname(dir);

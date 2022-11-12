@@ -268,7 +268,7 @@ class SymbolTree {
                 const filter: Function  = (options && options.filter) || returnTrue;
                 const thisArg: Number = (options && options.thisArg) || undefined;
 
-                const parentNode: SymbolTreeNode = this._node(parent);
+                const parentNode: String = this._node(parent);
                 let object: Function = parentNode.firstChild;
                 let index: Number = 0;
 
@@ -526,7 +526,7 @@ class SymbolTree {
          * @return {Number}
          */
         childrenCount(parent) {
-                const parentNode: SymbolTreeNode = this._node(parent);
+                const parentNode: String = this._node(parent);
 
                 if (!parentNode.lastChild) {
                         return 0;
@@ -624,7 +624,7 @@ class SymbolTree {
                 }
 
                 // indexes within the common ancestor
-                const leftIndex: String  = this.index(reverseArrayIndex(leftAncestors, commonAncestorIndex + 1));
+                const leftIndex: Number  = this.index(reverseArrayIndex(leftAncestors, commonAncestorIndex + 1));
                 const rightIndex: Number = this.index(reverseArrayIndex(rightAncestors, commonAncestorIndex + 1));
 
                 return rightIndex < leftIndex

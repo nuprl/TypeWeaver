@@ -6,7 +6,7 @@
  */
 
 var assert: String = require('assert');
-var watchman: String = require('fb-watchman');
+var watchman: Array = require('fb-watchman');
 var client: HTMLElement = new watchman.Client();
 
 var t: Number = setTimeout(function () {

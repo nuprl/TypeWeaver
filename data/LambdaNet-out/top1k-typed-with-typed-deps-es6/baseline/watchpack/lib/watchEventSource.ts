@@ -159,7 +159,7 @@ class RecursiveWatcher {
 	}
 
 	remove(watcher) {
-		const subpath: String = this.mapWatcherToPath.get(watcher);
+		const subpath: Watcher = this.mapWatcherToPath.get(watcher);
 		if (!subpath) return;
 		this.mapWatcherToPath.delete(watcher);
 		const set: Map = this.mapPathToWatchers.get(subpath);
@@ -190,14 +190,14 @@ class Watcher extends EventEmitter {
 			pendingWatchers.delete(this);
 			return;
 		}
-		const watcher: RecursiveWatcher = underlyingWatcher.get(this);
+		const watcher: Watcher = underlyingWatcher.get(this);
 		watcher.remove(this);
 		underlyingWatcher.delete(this);
 	}
 }
 
 const createDirectWatcher: Function = (filePath: String) => {
-	const existing: String = directWatchers.get(filePath);
+	const existing: Watcher = directWatchers.get(filePath);
 	if (existing !== undefined) return existing;
 	const w: Watchpack = new DirectWatcher(filePath);
 	directWatchers.set(filePath, w);
@@ -205,7 +205,7 @@ const createDirectWatcher: Function = (filePath: String) => {
 };
 
 const createRecursiveWatcher: Function = (rootPath: String) => {
-	const existing: String = recursiveWatchers.get(rootPath);
+	const existing: Watcher = recursiveWatchers.get(rootPath);
 	if (existing !== undefined) return existing;
 	const w: Watchpack = new RecursiveWatcher(rootPath);
 	recursiveWatchers.set(rootPath, w);
@@ -273,7 +273,7 @@ const execute: Function = () => {
 		} else {
 			const filePaths: Error = new Set(entry.values());
 			if (filePaths.size > 1) {
-				const w: RecursiveWatcher = createRecursiveWatcher(filePath);
+				const w: DirectWatcher = createRecursiveWatcher(filePath);
 				for (const [watcher, watcherPath] of entry) {
 					const old: RecursiveWatcher = underlyingWatcher.get(watcher);
 					if (old === w) continue;
@@ -298,7 +298,7 @@ const execute: Function = () => {
 export const watch: Function = (filePath: String) => {
 	const watcher: Watchpack = new Watcher();
 	// Find an existing watcher
-	const directWatcher: DirectWatcher = directWatchers.get(filePath);
+	const directWatcher: RecursiveWatcher = directWatchers.get(filePath);
 	if (directWatcher !== undefined) {
 		directWatcher.add(watcher);
 		return watcher;

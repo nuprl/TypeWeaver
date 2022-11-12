@@ -11,22 +11,29 @@ Mime.ts(86,46): error TS2538: Type 'String' cannot be used as an index type.
 Mime.ts(93,31): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 cli.ts(6,5): error TS2451: Cannot redeclare block-scoped variable 'mime'.
-cli.ts(6,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 cli.ts(8,5): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 cli.ts(11,19): error TS2339: Property 'version' does not exist on type 'Object'.
 cli.ts(14,19): error TS2339: Property 'name' does not exist on type 'Object'.
 cli.ts(17,19): error TS2339: Property 'name' does not exist on type 'Object'.
 cli.ts(17,38): error TS2339: Property 'description' does not exist on type 'Object'.
+cli.ts(44,32): error TS2339: Property 'getExtension' does not exist on type 'HTMLElement'.
+cli.ts(50,25): error TS2339: Property 'getType' does not exist on type 'HTMLElement'.
 index.ts(3,5): error TS2451: Cannot redeclare block-scoped variable 'Mime'.
 index.ts(3,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(4,18): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(4,27): error TS2554: Expected 0 arguments, but got 2.
 lite.ts(3,5): error TS2451: Cannot redeclare block-scoped variable 'Mime'.
 lite.ts(3,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lite.ts(4,18): error TS2350: Only a void function can be called with the 'new' keyword.
+lite.ts(4,27): error TS2554: Expected 0 arguments, but got 1.
 src/benchmark.ts(3,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/benchmark.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'mime'.
 src/benchmark.ts(4,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/benchmark.ts(5,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/benchmark.ts(9,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/benchmark.ts(9,44): error TS2339: Property '_types' does not exist on type 'HTMLElement'.
 src/benchmark.ts(13,4): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
+src/benchmark.ts(15,12): error TS2339: Property 'getType' does not exist on type 'HTMLElement'.
 src/benchmark.ts(15,31): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/benchmark.ts(21,35): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/benchmark.ts(26,30): error TS2339: Property 'target' does not exist on type 'Object'.

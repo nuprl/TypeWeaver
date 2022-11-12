@@ -181,7 +181,7 @@ class ReaddirpStream extends Readable {
   async _getEntryType(entry) {
     // entry may be undefined, because a warning or an error were emitted
     // and the statsProp is undefined
-    const stats: String = entry && entry[this._statsProp];
+    const stats: Function = entry && entry[this._statsProp];
     if (!stats) {
       return;
     }

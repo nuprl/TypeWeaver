@@ -1,5 +1,6 @@
 lib/LoaderRunner.ts(6,27): error TS2339: Property 'readFile' does not exist on type 'String'.
-lib/LoaderRunner.ts(10,33): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/LoaderRunner.ts(9,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/LoaderRunner.ts(10,33): error TS2554: Expected 0 arguments, but got 1.
 lib/LoaderRunner.ts(25,13): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(25,55): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
@@ -64,10 +65,9 @@ lib/LoaderRunner.ts(173,77): error TS2339: Property 'loaderIndex' does not exist
 lib/LoaderRunner.ts(176,25): error TS2339: Property 'pitchExecuted' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(177,17): error TS2339: Property 'loaderIndex' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(184,18): error TS2339: Property 'cacheable' does not exist on type 'HTMLElement'.
-lib/LoaderRunner.ts(187,41): error TS2339: Property 'pitch' does not exist on type 'HTMLElement'.
+lib/LoaderRunner.ts(187,40): error TS2339: Property 'pitch' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(188,23): error TS2339: Property 'pitchExecuted' does not exist on type 'HTMLElement'.
-lib/LoaderRunner.ts(192,4): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Function'.
-  Type 'Boolean' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+lib/LoaderRunner.ts(192,4): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'Function'.
 lib/LoaderRunner.ts(193,34): error TS2339: Property 'remainingRequest' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(193,66): error TS2339: Property 'previousRequest' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(193,103): error TS2339: Property 'data' does not exist on type 'HTMLElement'.
@@ -132,7 +132,7 @@ lib/LoaderRunner.ts(309,87): error TS2304: Cannot find name 'Void'.
 lib/LoaderRunner.ts(312,16): error TS2339: Property 'getDependencies' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(312,62): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(315,16): error TS2339: Property 'getContextDependencies' does not exist on type 'HTMLElement'.
-lib/LoaderRunner.ts(315,76): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/LoaderRunner.ts(315,76): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(318,16): error TS2339: Property 'getMissingDependencies' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(318,76): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(321,16): error TS2339: Property 'clearDependencies' does not exist on type 'HTMLElement'.

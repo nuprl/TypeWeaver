@@ -216,7 +216,7 @@ var Base62: Object = Encoder.extend({
       "([A-Z])(\\|[A-Z])+\\|([A-Z])": "$1-$3",
       "\\|": ""
     });
-    var pattern: Number = trim.exec(words.map(function(word: Object) {
+    var pattern: Number = trim.exec(words.map(function(word: Array) {
       if (word.toString()) return word.replacement;
       return "";
     }).slice(0, 62).join("|"));
@@ -468,7 +468,7 @@ var Shrinker: HTMLElement = Base.extend({
     var blocks: Array = []; // store program blocks (anything between braces {})
     var total: Number = 0;
     // encoder for program blocks
-    function encodeBlocks($: Function, prefix: String, blockType: String, args: String, block: String): String {
+    function encodeBlocks($: Function, prefix: String, blockType: Number, args: String, block: String): String {
       if (!prefix) prefix = "";
       if (blockType == "function") {
         // decode the function block (THIS IS THE IMPORTANT BIT)

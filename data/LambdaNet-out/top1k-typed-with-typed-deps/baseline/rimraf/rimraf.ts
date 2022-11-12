@@ -180,7 +180,7 @@ const fixWinEPERM: Function = (p: String, options: Object, er: String, cb: Funct
   })
 }
 
-const fixWinEPERMSync: Function = (p: String, options: Object, er: Array) => {
+const fixWinEPERMSync: Function = (p: String, options: Object, er: String) => {
   assert(p)
   assert(options)
 

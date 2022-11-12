@@ -6,7 +6,7 @@ function utimesMillis (path: String, atime: String, mtime: String, callback: Fun
   // if (!HAS_MILLIS_RES) return fs.utimes(path, atime, mtime, callback)
   fs.open(path, 'r+', (err: String, fd: String) => {
     if (err) return callback(err)
-    fs.futimes(fd, atime, mtime, (futimesErr: Function) => {
+    fs.futimes(fd, atime, mtime, (futimesErr: Array) => {
       fs.close(fd, (closeErr: Boolean) => {
         if (callback) callback(futimesErr || closeErr)
       })

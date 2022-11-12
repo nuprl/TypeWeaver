@@ -172,7 +172,6 @@ rbtree.ts(450,14): error TS2314: Generic type 'Array<T>' requires 1 type argumen
 rbtree.ts(455,14): error TS2350: Only a void function can be called with the 'new' keyword.
 rbtree.ts(463,10): error TS2350: Only a void function can be called with the 'new' keyword.
 rbtree.ts(467,7): error TS2339: Property 'remove' does not exist on type 'Object'.
-rbtree.ts(470,17): error TS2339: Property 'remove' does not exist on type 'Object'.
 rbtree.ts(476,7): error TS2339: Property 'get' does not exist on type 'Object'.
 rbtree.ts(478,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rbtree.ts(494,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -371,6 +370,7 @@ rbtree.ts(942,8): error TS2339: Property 'prev' does not exist on type 'Object'.
 rbtree.ts(943,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rbtree.ts(947,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rbtree.ts(966,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+rbtree.ts(994,41): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 rbtree.ts(995,10): error TS2350: Only a void function can be called with the 'new' keyword.
 rbtree.ts(995,27): error TS2345: Argument of type 'String | ((a: Number, b: Number) => Number)' is not assignable to parameter of type 'Function'.
   Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.

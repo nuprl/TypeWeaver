@@ -10,7 +10,7 @@ export default function compressFont(node: Object): Void {
                     value: '700'
                 };
             } else if (node.name === 'normal') {
-                const prev: Object = item.prev;
+                const prev: HTMLElement = item.prev;
 
                 if (prev && prev.data.type === 'Operator' && prev.data.value === '/') {
                     this.remove(prev);

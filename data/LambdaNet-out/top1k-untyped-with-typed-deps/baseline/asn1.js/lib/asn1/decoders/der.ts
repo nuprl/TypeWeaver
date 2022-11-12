@@ -87,7 +87,7 @@ DERNode.prototype._decodeTag = function decodeTag(buffer: Object, tag: Number, a
   return buffer.skip(len, 'Failed to match body of: "' + tag + '"');
 };
 
-DERNode.prototype._skipUntilEnd = function skipUntilEnd(buffer: Object, fail: String): Array {
+DERNode.prototype._skipUntilEnd = function skipUntilEnd(buffer: Object, fail: String): Object {
   for (;;) {
     const tag: Object = derDecodeTag(buffer, fail);
     if (buffer.isError(tag))

@@ -17,7 +17,7 @@ var Int64: Object = require('node-int64');
 var isBigEndian: Boolean = os.endianness() == 'BE';
 
 // Find the next power-of-2 >= size
-function nextPow2(size: String): Number {
+function nextPow2(size: Number): Number {
   return Math.pow(2, Math.ceil(Math.log(size) / Math.LN2));
 }
 
@@ -139,7 +139,7 @@ Accumulator.prototype.peekDouble = function() {
 }
 
 Accumulator.prototype.readDouble = function() {
-  var dval: String = this.peekDouble();
+  var dval: Array = this.peekDouble();
   this.readOffset += 8;
   return dval;
 }
@@ -310,7 +310,7 @@ BunserBuf.prototype.raise = function(reason: Number) {
           this.buf.readOffset, this.buf.readOffset + 32).toJSON()));
 }
 
-BunserBuf.prototype.expectCode = function(expected: Number) {
+BunserBuf.prototype.expectCode = function(expected: String) {
   var code: String = this.buf.readInt(1);
   if (code != expected) {
     this.raise("expected bser opcode " + expected + " but got " + code);

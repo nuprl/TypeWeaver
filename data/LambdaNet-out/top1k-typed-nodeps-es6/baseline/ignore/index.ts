@@ -530,7 +530,7 @@ class Ignore {
       return cache[path] = this._testOne(path, checkUnignored)
     }
 
-    const parent: Ignore = this._t(
+    const parent: Object = this._t(
       slices.join(SLASH) + SLASH,
       cache,
       checkUnignored,

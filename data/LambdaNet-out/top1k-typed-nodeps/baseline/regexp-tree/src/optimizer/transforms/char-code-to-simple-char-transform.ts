@@ -54,7 +54,7 @@ module.exports = {
  * @param classRange
  * @returns {boolean}
  */
-function isSimpleRange(classRange: LeadSurrogateRange): Boolean {
+function isSimpleRange(classRange: NonSurrogateRange): Boolean {
   const {from, to} = classRange;
   return (
     from.codePoint >= DIGIT_0_CP && from.codePoint <= DIGIT_9_CP &&

@@ -46,12 +46,16 @@ fetch.ts(204,27): error TS2314: Generic type 'Array<T>' requires 1 type argument
 fetch.ts(204,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 fetch.ts(209,10): error TS2339: Property 'set' does not exist on type 'Object'.
 fetch.ts(210,17): error TS2339: Property 'buffer' does not exist on type 'Object'.
-fetch.ts(217,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 fetch.ts(234,24): error TS2339: Property 'blob' does not exist on type 'Object'.
 fetch.ts(236,24): error TS2339: Property 'formData' does not exist on type 'Object'.
 fetch.ts(238,24): error TS2339: Property 'searchParams' does not exist on type 'Object'.
 fetch.ts(240,24): error TS2339: Property 'arrayBuffer' does not exist on type 'Object'.
 fetch.ts(240,47): error TS2339: Property 'blob' does not exist on type 'Object'.
+fetch.ts(240,66): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Boolean'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    The types returned by 'valueOf()' are incompatible between these types.
+      Type 'Object' is not assignable to type 'boolean'.
+fetch.ts(241,48): error TS2339: Property 'buffer' does not exist on type 'Object'.
 fetch.ts(244,24): error TS2339: Property 'arrayBuffer' does not exist on type 'Object'.
 fetch.ts(255,26): error TS2339: Property 'searchParams' does not exist on type 'Object'.
 fetch.ts(261,15): error TS2339: Property 'blob' does not exist on type 'Object'.

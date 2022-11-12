@@ -1,5 +1,7 @@
 example/all.ts(4,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 example/all.ts(6,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+example/all.ts(22,5): error TS2339: Property 'self' does not exist on type 'Object'.
+example/circular.ts(5,5): error TS2339: Property 'c' does not exist on type 'Object'.
 example/fn.ts(4,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 example/fn.ts(4,64): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 example/inspect.ts(6,5): error TS2740: Type 'HTMLDivElement' is missing the following properties from type 'HTMLInputElement': accept, alt, autocomplete, capture, and 51 more.

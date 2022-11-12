@@ -39,6 +39,7 @@ index.ts(240,7): error TS2356: An arithmetic operand must be of type 'any', 'num
 index.ts(244,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(249,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 index.ts(249,23): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+index.ts(268,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(270,12): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(274,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(291,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -54,21 +55,14 @@ index.ts(305,49): error TS2339: Property 'protocol' does not exist on type 'Obje
 index.ts(306,23): error TS2339: Property 'rest' does not exist on type 'Object'.
 index.ts(313,15): error TS2339: Property 'protocol' does not exist on type 'Object'.
 index.ts(314,17): error TS2339: Property 'slashesCount' does not exist on type 'Object'.
-index.ts(314,63): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(315,17): error TS2339: Property 'slashes' does not exist on type 'Object'.
 index.ts(316,18): error TS2339: Property 'protocol' does not exist on type 'Object'.
 index.ts(317,19): error TS2339: Property 'slashesCount' does not exist on type 'Object'.
 index.ts(318,24): error TS2339: Property 'protocol' does not exist on type 'String'.
 index.ts(323,35): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(335,11): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(337,7): error TS2322: Type 'number' is not assignable to type 'Function'.
 index.ts(343,15): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(343,39): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'number'.
-index.ts(344,35): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 index.ts(346,15): error TS2538: Type 'String' cannot be used as an index type.
-index.ts(346,36): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'number'.
-index.ts(347,38): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'number'.
 index.ts(350,31): error TS2339: Property 'exec' does not exist on type 'Function'.
 index.ts(351,11): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(352,40): error TS2339: Property 'index' does not exist on type 'Function'.

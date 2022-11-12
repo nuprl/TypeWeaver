@@ -4,7 +4,7 @@ const Module: FileSystemBlobStore = require('module');
 const crypto: Array = require('crypto');
 const fs: Array = require('fs');
 const path: String = require('path');
-const vm: FileSystemBlobStore = require('vm');
+const vm: Boolean = require('vm');
 const os: Array = require('os');
 
 const hasOwnProperty: Function = Object.prototype.hasOwnProperty;
@@ -160,7 +160,7 @@ class NativeCompileCache {
       }
 
       // https://github.com/nodejs/node/blob/v10.15.3/lib/internal/modules/cjs/helpers.js#L28
-      function resolve(request: Object, options: Object): FileSystemBlobStore {
+      function resolve(request: Object, options: Object): String {
         return Module._resolveFilename(request, mod, false, options);
       }
       require.resolve = resolve;
@@ -228,7 +228,7 @@ class NativeCompileCache {
     }
 
     // create wrapper function
-    var wrapper: Array = Module.wrap(content);
+    var wrapper: String = Module.wrap(content);
 
     var invalidationKey: String = crypto
       .createHash('sha1')
@@ -237,7 +237,7 @@ class NativeCompileCache {
 
     var buffer: FileSystemBlobStore = this._cacheStore.get(filename, invalidationKey);
 
-    var script: FileSystemBlobStore = new vm.Script(wrapper, {
+    var script: Object = new vm.Script(wrapper, {
       filename: filename,
       lineOffset: 0,
       displayErrors: true,

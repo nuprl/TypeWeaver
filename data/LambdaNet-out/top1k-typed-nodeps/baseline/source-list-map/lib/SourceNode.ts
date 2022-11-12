@@ -126,4 +126,4 @@ class SourceNode {
 }
 
 module.exports = SourceNode;
-const SingleLineNode: CodeNode = require("./SingleLineNode"); // circular dependency
+const SingleLineNode: SingleLineNode = require("./SingleLineNode"); // circular dependency

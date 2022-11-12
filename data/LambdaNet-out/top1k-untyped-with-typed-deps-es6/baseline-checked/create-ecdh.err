@@ -18,6 +18,8 @@ browser.ts(62,3): error TS2322: Type 'Number | "utf8"' is not assignable to type
   Type 'string' is not assignable to type 'Number'.
 browser.ts(64,31): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'BufferEncoding'.
 browser.ts(67,30): error TS2339: Property 'mul' does not exist on type 'Object'.
+browser.ts(68,33): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 browser.ts(72,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser.ts(80,10): error TS2554: Expected 3 arguments, but got 2.
 browser.ts(84,10): error TS2554: Expected 3 arguments, but got 2.

@@ -19,7 +19,7 @@ var isRequest: Function = function (stream: Array) {
   return stream.setHeader && isFn(stream.abort)
 }
 
-var destroyer: Function = function (stream: String, reading: Number, writing: String, callback: Function) {
+var destroyer: Function = function (stream: String, reading: String, writing: String, callback: Function) {
   callback = once(callback)
 
   var closed: Boolean = false

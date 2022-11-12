@@ -76,7 +76,7 @@ Utf16BEDecoder.prototype.end = function() {
 
 export const utf16: Function = Utf16Codec;
 
-function Utf16Codec(codecOptions: Function, iconv: Function): Void {
+function Utf16Codec(codecOptions: Object, iconv: Function): Void {
     this.iconv = iconv;
 }
 

@@ -507,7 +507,7 @@ LongPrototype.toString = function toString(radix: String): String {
       // We need to change the Long value before it can be negated, so we remove
       // the bottom-most digit in this base and then recurse to do the rest.
       var radixLong: String = fromNumber(radix),
-        div: Array = this.div(radixLong),
+        div: HTMLElement = this.div(radixLong),
         rem1: HTMLElement = div.mul(radixLong).sub(this);
       return div.toString(radix) + rem1.toInt().toString(radix);
     } else
@@ -575,7 +575,7 @@ LongPrototype.getLowBitsUnsigned = function getLowBitsUnsigned(): Boolean {
  * @this {!Long}
  * @returns {number}
  */
-LongPrototype.getNumBitsAbs = function getNumBitsAbs(): Number {
+LongPrototype.getNumBitsAbs = function getNumBitsAbs(): Boolean {
   if (this.isNegative()) // Unsigned Longs are never negative
     return this.eq(MIN_VALUE) ? 64 : this.neg().getNumBitsAbs();
   var val: String = this.high != 0 ? this.high : this.low;
@@ -887,7 +887,7 @@ LongPrototype.sub = LongPrototype.subtract;
  * @param {!Long|number|string} multiplier Multiplier
  * @returns {!Long} Product
  */
-LongPrototype.multiply = function multiply(multiplier: String): Array {
+LongPrototype.multiply = function multiply(multiplier: HTMLElement): Array {
   if (this.isZero())
     return this;
   if (!isLong(multiplier))
@@ -1263,7 +1263,7 @@ LongPrototype.shr = LongPrototype.shiftRight;
  * @param {number|!Long} numBits Number of bits
  * @returns {!Long} Shifted Long
  */
-LongPrototype.shiftRightUnsigned = function shiftRightUnsigned(numBits: Number): Promise {
+LongPrototype.shiftRightUnsigned = function shiftRightUnsigned(numBits: Number): Array {
   if (isLong(numBits)) numBits = numBits.toInt();
   if ((numBits &= 63) === 0) return this;
   if (numBits < 32) return fromBits((this.low >>> numBits) | (this.high << (32 - numBits)), this.high >>> numBits, this.unsigned);

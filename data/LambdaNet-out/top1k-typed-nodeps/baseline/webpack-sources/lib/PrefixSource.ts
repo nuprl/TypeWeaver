@@ -30,7 +30,7 @@ class PrefixSource extends Source {
 	}
 
 	source() {
-		const node: Source = this._source.source();
+		const node: ConcatSource = this._source.source();
 		const prefix: Number = this._prefix;
 		return prefix + node.replace(REPLACE_REGEX, "\n" + prefix);
 	}

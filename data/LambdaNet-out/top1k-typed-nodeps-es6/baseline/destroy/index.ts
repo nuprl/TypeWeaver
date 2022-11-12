@@ -142,7 +142,7 @@ function destroyZlibStream (stream: String): Void {
  * @private
  */
 
-function hasDestroy (stream: Number): Boolean {
+function hasDestroy (stream: String): Boolean {
   return stream instanceof Stream &&
     typeof stream.destroy === 'function'
 }

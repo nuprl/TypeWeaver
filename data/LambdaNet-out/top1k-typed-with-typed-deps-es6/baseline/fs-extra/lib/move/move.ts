@@ -16,7 +16,7 @@ function move (src: String, dest: String, opts: Object, cb: Function): Void {
 
   opts = opts || {}
 
-  const overwrite: String = opts.overwrite || opts.clobber || false
+  const overwrite: Number = opts.overwrite || opts.clobber || false
 
   stat.checkPaths(src, dest, 'move', opts, (err: String, stats: Object) => {
     if (err) return cb(err)
@@ -61,7 +61,7 @@ function rename (src: String, dest: String, overwrite: String, cb: Function): Vo
   })
 }
 
-function moveAcrossDevice (src: String, dest: String, overwrite: Number, cb: Function): Void {
+function moveAcrossDevice (src: String, dest: Number, overwrite: Number, cb: Function): Void {
   const opts: Object = {
     overwrite,
     errorOnExist: true

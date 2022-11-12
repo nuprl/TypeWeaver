@@ -27,7 +27,7 @@ export default function unique(arr: Array): Array {
   return arr;
 };
 
-export const immutable: Function = function uniqueImmutable(arr: Array): Boolean {
+export const immutable: Function = function uniqueImmutable(arr: Array): Number {
   if (!Array.isArray(arr)) {
     throw new TypeError('array-unique expects an array.');
   }

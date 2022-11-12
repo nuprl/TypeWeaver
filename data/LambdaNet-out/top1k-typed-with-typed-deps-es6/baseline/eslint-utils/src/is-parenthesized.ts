@@ -74,7 +74,7 @@ function getParentSyntaxParen(node: Object, sourceCode: PatternMatcher): Array {
  * @returns {boolean} `true` if the node is parenthesized.
  */
 export function isParenthesized(
-    timesOrNode: String,
+    timesOrNode: Number,
     nodeOrSourceCode: String,
     optionalSourceCode: String,
 ): Boolean {

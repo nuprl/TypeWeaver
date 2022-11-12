@@ -12,7 +12,7 @@ java.util.concurrent.ExecutionException: Boxed Error
 	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
 	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
 Caused by: java.lang.Error: Parsing error: Expected ":":50:6, found "windowsCI\""
 	at lambdanet.utils.ProgramParsing$.$anonfun$parseJsonFromFile$2(ProgramParsing.scala:190)
 	at funcdiff.SimpleMath$.withErrorMessage(SimpleMath.scala:483)

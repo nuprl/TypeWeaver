@@ -712,7 +712,7 @@ class Minimatch {
     // lookahead, has to look ALL the way ahead, to the end of
     // the pattern.
     for (let n = negativeLists.length - 1; n > -1; n--) {
-      const nl: Minimatch = negativeLists[n]
+      const nl: Object = negativeLists[n]
 
       const nlBefore: String = re.slice(0, nl.reStart)
       const nlFirst: String = re.slice(nl.reStart, nl.reEnd - 8)

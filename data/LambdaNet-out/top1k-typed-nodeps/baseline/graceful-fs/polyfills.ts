@@ -182,7 +182,7 @@ function patch (fs: String): Void {
       })
     }
 
-    fs.lchmodSync = function (path: String, mode: Number) {
+    fs.lchmodSync = function (path: String, mode: String) {
       var fd: Number = fs.openSync(path, constants.O_WRONLY | constants.O_SYMLINK, mode)
 
       // prefer to return the chmod error, if one occurs,
@@ -213,8 +213,8 @@ function patch (fs: String): Void {
             if (cb) cb(er)
             return
           }
-          fs.futimes(fd, at, mt, function (er: String) {
-            fs.close(fd, function (er2: Number) {
+          fs.futimes(fd, at, mt, function (er: Number) {
+            fs.close(fd, function (er2: Boolean) {
               if (cb) cb(er || er2)
             })
           })

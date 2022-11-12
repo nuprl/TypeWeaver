@@ -1,14 +1,17 @@
-examples/custom-option-arrayOfCommaSepString.ts(12,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'format' must be of type 'Function', but here has type 'Number'.
-examples/custom-option-arrayOfCommaSepString.ts(16,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/custom-option-arrayOfCommaSepString.ts(16,84): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+examples/custom-option-arrayOfCommaSepString.ts(16,85): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/custom-option-arrayOfCommaSepString.ts(18,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+examples/custom-option-arrayOfCommaSepString.ts(21,10): error TS2339: Property 'addOptionType' does not exist on type 'Object'.
+examples/custom-option-arrayOfCommaSepString.ts(28,10): error TS2339: Property 'addOptionType' does not exist on type 'Object'.
 examples/custom-option-arrayOfCommaSepString.ts(38,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/custom-option-arrayOfCommaSepString.ts(44,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'opts' must be of type 'Object', but here has type 'HTMLElement'.
+examples/custom-option-arrayOfCommaSepString.ts(44,38): error TS2339: Property 'parse' does not exist on type 'Object'.
 examples/custom-option-arrayOfCommaSepString.ts(46,41): error TS2339: Property 'basename' does not exist on type 'String'.
-examples/custom-option-arrayOfCommaSepString.ts(50,42): error TS2339: Property 'single' does not exist on type 'Object'.
-examples/custom-option-arrayOfCommaSepString.ts(51,41): error TS2339: Property 'multi' does not exist on type 'Object'.
+examples/custom-option-arrayOfCommaSepString.ts(50,42): error TS2339: Property 'single' does not exist on type 'HTMLElement'.
+examples/custom-option-arrayOfCommaSepString.ts(51,41): error TS2339: Property 'multi' does not exist on type 'HTMLElement'.
+examples/custom-option-duration.ts(20,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'format' must be of type 'Number', but here has type 'Function'.
 examples/custom-option-duration.ts(27,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+examples/custom-option-duration.ts(29,25): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 examples/custom-option-duration.ts(37,13): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 examples/custom-option-duration.ts(37,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/custom-option-duration.ts(40,13): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
@@ -17,28 +20,38 @@ examples/custom-option-duration.ts(43,13): error TS2365: Operator '+=' cannot be
 examples/custom-option-duration.ts(43,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/custom-option-duration.ts(46,13): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 examples/custom-option-duration.ts(46,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+examples/custom-option-duration.ts(53,10): error TS2339: Property 'addOptionType' does not exist on type 'Object'.
 examples/custom-option-duration.ts(61,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/custom-option-duration.ts(66,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'opts' must be of type 'Object', but here has type 'HTMLElement'.
+examples/custom-option-duration.ts(66,38): error TS2339: Property 'parse' does not exist on type 'Object'.
 examples/custom-option-duration.ts(68,41): error TS2339: Property 'basename' does not exist on type 'String'.
-examples/custom-option-duration.ts(72,10): error TS2339: Property 'time' does not exist on type 'Object'.
-examples/custom-option-duration.ts(73,41): error TS2339: Property 'time' does not exist on type 'Object'.
+examples/custom-option-duration.ts(72,10): error TS2339: Property 'time' does not exist on type 'HTMLElement'.
+examples/custom-option-duration.ts(73,41): error TS2339: Property 'time' does not exist on type 'HTMLElement'.
+examples/custom-option-fruit.ts(11,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'format' must be of type 'Number', but here has type 'Function'.
 examples/custom-option-fruit.ts(12,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/custom-option-fruit.ts(15,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+examples/custom-option-fruit.ts(24,25): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+examples/custom-option-fruit.ts(31,10): error TS2339: Property 'addOptionType' does not exist on type 'Object'.
 examples/custom-option-fruit.ts(40,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+examples/custom-option-fruit.ts(49,31): error TS2339: Property 'createParser' does not exist on type 'Object'.
+examples/custom-option-fruit.ts(51,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'opts' must be of type 'HTMLElement', but here has type 'Object'.
 examples/custom-option-fruit.ts(51,31): error TS2339: Property 'parse' does not exist on type 'Object'.
 examples/custom-option-fruit.ts(53,41): error TS2339: Property 'basename' does not exist on type 'String'.
-examples/custom-option-fruit.ts(57,10): error TS2339: Property 'help' does not exist on type 'Object'.
+examples/custom-option-fruit.ts(57,10): error TS2339: Property 'help' does not exist on type 'HTMLElement'.
 examples/custom-option-fruit.ts(58,31): error TS2339: Property 'help' does not exist on type 'Object'.
-examples/custom-option-fruit.ts(68,35): error TS2339: Property 'pie' does not exist on type 'Object'.
+examples/custom-option-fruit.ts(68,35): error TS2339: Property 'pie' does not exist on type 'HTMLElement'.
+examples/custom-option-intGteZero.ts(9,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'format' must be of type 'Number', but here has type 'Function'.
 examples/custom-option-intGteZero.ts(16,26): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 examples/custom-option-intGteZero.ts(16,40): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+examples/custom-option-intGteZero.ts(17,25): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+examples/custom-option-intGteZero.ts(23,10): error TS2339: Property 'addOptionType' does not exist on type 'Object'.
 examples/custom-option-intGteZero.ts(33,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/custom-option-intGteZero.ts(38,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'opts' must be of type 'Object', but here has type 'HTMLElement'.
+examples/custom-option-intGteZero.ts(38,38): error TS2339: Property 'parse' does not exist on type 'Object'.
 examples/custom-option-intGteZero.ts(40,41): error TS2339: Property 'basename' does not exist on type 'String'.
-examples/custom-option-intGteZero.ts(44,10): error TS2339: Property 'num' does not exist on type 'Object'.
-examples/custom-option-intGteZero.ts(45,33): error TS2339: Property 'num' does not exist on type 'Object'.
-examples/custom-option-time-ago.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'format' must be of type 'Function', but here has type 'Number'.
+examples/custom-option-intGteZero.ts(44,10): error TS2339: Property 'num' does not exist on type 'HTMLElement'.
+examples/custom-option-intGteZero.ts(45,33): error TS2339: Property 'num' does not exist on type 'HTMLElement'.
 examples/custom-option-time-ago.ts(22,16): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 examples/custom-option-time-ago.ts(22,42): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
@@ -52,45 +65,60 @@ examples/custom-option-time-ago.ts(38,17): error TS2365: Operator '+=' cannot be
 examples/custom-option-time-ago.ts(38,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/custom-option-time-ago.ts(41,9): error TS2740: Type 'Date' is missing the following properties from type 'HTMLDivElement': align, addEventListener, removeEventListener, accessKey, and 278 more.
 examples/custom-option-time-ago.ts(41,35): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+examples/custom-option-time-ago.ts(44,26): error TS2339: Property 'parseDate' does not exist on type 'Object'.
+examples/custom-option-time-ago.ts(46,29): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+examples/custom-option-time-ago.ts(54,10): error TS2339: Property 'addOptionType' does not exist on type 'Object'.
 examples/custom-option-time-ago.ts(65,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/custom-option-time-ago.ts(70,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'opts' must be of type 'Object', but here has type 'HTMLElement'.
+examples/custom-option-time-ago.ts(70,38): error TS2339: Property 'parse' does not exist on type 'Object'.
 examples/custom-option-time-ago.ts(72,41): error TS2339: Property 'basename' does not exist on type 'String'.
-examples/custom-option-time-ago.ts(76,10): error TS2339: Property 'time' does not exist on type 'Object'.
-examples/custom-option-time-ago.ts(77,47): error TS2339: Property 'time' does not exist on type 'Object'.
+examples/custom-option-time-ago.ts(76,10): error TS2339: Property 'time' does not exist on type 'HTMLElement'.
+examples/custom-option-time-ago.ts(77,47): error TS2339: Property 'time' does not exist on type 'HTMLElement'.
+examples/date.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'dashdash' must be of type 'Object', but here has type 'String'.
 examples/date.ts(8,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/date.ts(14,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'opts' must be of type 'Object', but here has type 'HTMLElement'.
-examples/date.ts(20,10): error TS2339: Property 'start' does not exist on type 'Object'.
-examples/date.ts(21,34): error TS2339: Property 'start' does not exist on type 'Object'.
-examples/date.ts(23,10): error TS2339: Property 'end' does not exist on type 'Object'.
-examples/date.ts(24,32): error TS2339: Property 'end' does not exist on type 'Object'.
+examples/date.ts(14,38): error TS2339: Property 'parse' does not exist on type 'Object'.
+examples/date.ts(20,10): error TS2339: Property 'start' does not exist on type 'HTMLElement'.
+examples/date.ts(21,34): error TS2339: Property 'start' does not exist on type 'HTMLElement'.
+examples/date.ts(23,10): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
+examples/date.ts(24,32): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
 examples/ddcompletion.ts(21,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/ddcompletion.ts(23,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+examples/ddcompletion.ts(70,31): error TS2339: Property 'createParser' does not exist on type 'Object'.
+examples/ddcompletion.ts(72,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'opts' must be of type 'HTMLElement', but here has type 'Object'.
 examples/ddcompletion.ts(72,31): error TS2339: Property 'parse' does not exist on type 'Object'.
-examples/ddcompletion.ts(78,10): error TS2339: Property 'help' does not exist on type 'Object'.
+examples/ddcompletion.ts(78,10): error TS2339: Property 'help' does not exist on type 'HTMLElement'.
 examples/ddcompletion.ts(79,31): error TS2339: Property 'help' does not exist on type 'Object'.
-examples/ddcompletion.ts(84,17): error TS2339: Property 'completion' does not exist on type 'Object'.
+examples/ddcompletion.ts(84,17): error TS2339: Property 'completion' does not exist on type 'HTMLElement'.
 examples/ddcompletion.ts(87,25): error TS2339: Property 'bashCompletion' does not exist on type 'Object'.
-examples/ddcompletion.ts(99,27): error TS2339: Property '_args' does not exist on type 'Object'.
+examples/ddcompletion.ts(99,27): error TS2339: Property '_args' does not exist on type 'HTMLElement'.
 examples/foo.ts(7,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/foo.ts(11,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+examples/foo.ts(49,31): error TS2339: Property 'createParser' does not exist on type 'Object'.
+examples/foo.ts(51,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'opts' must be of type 'HTMLElement', but here has type 'Object'.
 examples/foo.ts(51,31): error TS2339: Property 'parse' does not exist on type 'Object'.
-examples/foo.ts(60,29): error TS2339: Property '_args' does not exist on type 'Object'.
-examples/foo.ts(63,10): error TS2339: Property 'help' does not exist on type 'Object'.
+examples/foo.ts(60,29): error TS2339: Property '_args' does not exist on type 'HTMLElement'.
+examples/foo.ts(63,10): error TS2339: Property 'help' does not exist on type 'HTMLElement'.
 examples/foo.ts(64,31): error TS2339: Property 'help' does not exist on type 'Object'.
+examples/hello.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'dashdash' must be of type 'Object', but here has type 'String'.
 examples/hello.ts(9,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/hello.ts(19,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'opts' must be of type 'Object', but here has type 'HTMLElement'.
-examples/hello.ts(25,10): error TS2339: Property 'verbose' does not exist on type 'Object'.
-examples/hello.ts(27,33): error TS2339: Property '_args' does not exist on type 'Object'.
+examples/hello.ts(19,38): error TS2339: Property 'parse' does not exist on type 'Object'.
+examples/hello.ts(25,10): error TS2339: Property 'verbose' does not exist on type 'HTMLElement'.
+examples/hello.ts(27,33): error TS2339: Property '_args' does not exist on type 'HTMLElement'.
 examples/help.ts(7,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/help.ts(9,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+examples/help.ts(23,31): error TS2339: Property 'createParser' does not exist on type 'Object'.
+examples/help.ts(25,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'opts' must be of type 'HTMLElement', but here has type 'Object'.
 examples/help.ts(25,31): error TS2339: Property 'parse' does not exist on type 'Object'.
-examples/help.ts(32,10): error TS2339: Property 'help' does not exist on type 'Object'.
+examples/help.ts(32,10): error TS2339: Property 'help' does not exist on type 'HTMLElement'.
 examples/help.ts(33,31): error TS2339: Property 'help' does not exist on type 'Object'.
 examples/option-groups.ts(10,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/option-groups.ts(14,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+examples/option-groups.ts(25,31): error TS2339: Property 'createParser' does not exist on type 'Object'.
+examples/option-groups.ts(27,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'opts' must be of type 'HTMLElement', but here has type 'Object'.
 examples/option-groups.ts(27,31): error TS2339: Property 'parse' does not exist on type 'Object'.
-examples/option-groups.ts(33,10): error TS2339: Property 'help' does not exist on type 'Object'.
+examples/option-groups.ts(33,10): error TS2339: Property 'help' does not exist on type 'HTMLElement'.
 examples/option-groups.ts(34,31): error TS2339: Property 'help' does not exist on type 'Object'.
+lib/dashdash.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'format' must be of type 'Number', but here has type 'Function'.
 lib/dashdash.ts(15,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/dashdash.ts(16,88): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/dashdash.ts(17,65): error TS2538: Type 'String' cannot be used as an index type.
@@ -106,20 +134,24 @@ lib/dashdash.ts(62,16): error TS2314: Generic type 'Array<T>' requires 1 type ar
 lib/dashdash.ts(64,47): error TS2304: Cannot find name 'Void'.
 lib/dashdash.ts(67,13): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/dashdash.ts(76,9): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
-lib/dashdash.ts(97,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/dashdash.ts(101,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/dashdash.ts(102,12): error TS2551: Property 'string' does not exist on type 'String'. Did you mean 'toString'?
 lib/dashdash.ts(107,12): error TS2551: Property 'string' does not exist on type 'String'. Did you mean 'toString'?
 lib/dashdash.ts(109,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/dashdash.ts(111,13): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(118,12): error TS2551: Property 'string' does not exist on type 'String'. Did you mean 'toString'?
 lib/dashdash.ts(120,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 lib/dashdash.ts(120,41): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/dashdash.ts(122,13): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(129,12): error TS2551: Property 'string' does not exist on type 'String'. Did you mean 'toString'?
 lib/dashdash.ts(131,26): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 lib/dashdash.ts(131,40): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+lib/dashdash.ts(133,13): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(150,12): error TS2551: Property 'string' does not exist on type 'String'. Did you mean 'toString'?
 lib/dashdash.ts(152,22): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 lib/dashdash.ts(154,9): error TS2322: Type 'Date' is not assignable to type 'HTMLDivElement'.
@@ -131,6 +163,10 @@ lib/dashdash.ts(159,25): error TS2769: No overload matches this call.
       Type 'Number' is missing the following properties from type 'Date': toDateString, toTimeString, toLocaleDateString, toLocaleTimeString, and 37 more.
   Overload 2 of 4, '(value: string | number): Date', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'string | number'.
+lib/dashdash.ts(162,13): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/dashdash.ts(167,13): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(258,39): error TS2304: Cannot find name 'Void'.
 lib/dashdash.ts(259,12): error TS2339: Property 'object' does not exist on type 'String'.
 lib/dashdash.ts(260,12): error TS2339: Property 'arrayOfObject' does not exist on type 'String'.
@@ -147,43 +183,69 @@ lib/dashdash.ts(279,15): error TS2339: Property 'group' does not exist on type '
 lib/dashdash.ts(279,40): error TS2339: Property 'group' does not exist on type 'Object'.
 lib/dashdash.ts(280,20): error TS2339: Property 'optionalString' does not exist on type 'String'.
 lib/dashdash.ts(281,19): error TS2339: Property 'group' does not exist on type 'Object'.
+lib/dashdash.ts(282,17): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(286,16): error TS2339: Property 'ok' does not exist on type 'String'.
 lib/dashdash.ts(287,27): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/dashdash.ts(288,13): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(288,71): error TS2339: Property 'type' does not exist on type 'Object'.
 lib/dashdash.ts(290,16): error TS2339: Property 'optionalString' does not exist on type 'String'.
 lib/dashdash.ts(290,33): error TS2339: Property 'name' does not exist on type 'Object'.
+lib/dashdash.ts(290,39): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(291,16): error TS2339: Property 'optionalArrayOfString' does not exist on type 'String'.
 lib/dashdash.ts(292,15): error TS2339: Property 'names' does not exist on type 'Object'.
+lib/dashdash.ts(293,13): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(295,16): error TS2339: Property 'ok' does not exist on type 'String'.
 lib/dashdash.ts(296,16): error TS2339: Property 'name' does not exist on type 'Object'.
 lib/dashdash.ts(296,26): error TS2339: Property 'names' does not exist on type 'Object'.
 lib/dashdash.ts(296,40): error TS2339: Property 'name' does not exist on type 'Object'.
 lib/dashdash.ts(296,50): error TS2339: Property 'names' does not exist on type 'Object'.
+lib/dashdash.ts(297,13): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(299,16): error TS2339: Property 'optionalString' does not exist on type 'String'.
 lib/dashdash.ts(299,33): error TS2339: Property 'help' does not exist on type 'Object'.
+lib/dashdash.ts(299,39): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(300,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/dashdash.ts(300,28): error TS2339: Property 'env' does not exist on type 'Object'.
 lib/dashdash.ts(304,16): error TS2339: Property 'optionalArrayOfString' does not exist on type 'String'.
+lib/dashdash.ts(304,43): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(305,16): error TS2339: Property 'optionalString' does not exist on type 'String'.
 lib/dashdash.ts(306,15): error TS2339: Property 'helpGroup' does not exist on type 'Object'.
+lib/dashdash.ts(307,13): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(309,16): error TS2339: Property 'optionalBool' does not exist on type 'String'.
 lib/dashdash.ts(310,15): error TS2339: Property 'helpWrap' does not exist on type 'Object'.
+lib/dashdash.ts(311,13): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(313,16): error TS2339: Property 'optionalBool' does not exist on type 'String'.
 lib/dashdash.ts(313,31): error TS2339: Property 'hidden' does not exist on type 'Object'.
+lib/dashdash.ts(313,39): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(315,15): error TS2339: Property 'name' does not exist on type 'Object'.
 lib/dashdash.ts(316,15): error TS2339: Property 'names' does not exist on type 'Object'.
 lib/dashdash.ts(316,26): error TS2339: Property 'name' does not exist on type 'Object'.
 lib/dashdash.ts(318,20): error TS2551: Property 'string' does not exist on type 'String'. Did you mean 'toString'?
 lib/dashdash.ts(319,19): error TS2339: Property 'names' does not exist on type 'Object'.
+lib/dashdash.ts(320,17): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(323,11): error TS2339: Property 'key' does not exist on type 'Object'.
 lib/dashdash.ts(323,37): error TS2339: Property 'names' does not exist on type 'Object'.
 lib/dashdash.ts(324,11): error TS2339: Property 'names' does not exist on type 'Object'.
 lib/dashdash.ts(324,53): error TS2304: Cannot find name 'Void'.
 lib/dashdash.ts(325,22): error TS2339: Property 'optionFromName' does not exist on type 'HTMLElement'.
+lib/dashdash.ts(327,21): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(330,30): error TS2339: Property 'optionFromName' does not exist on type 'HTMLElement'.
 lib/dashdash.ts(335,18): error TS2339: Property 'optionFromName' does not exist on type 'HTMLElement'.
 lib/dashdash.ts(337,49): error TS2304: Cannot find name 'Void'.
 lib/dashdash.ts(338,22): error TS2339: Property 'optionFromEnv' does not exist on type 'HTMLElement'.
+lib/dashdash.ts(340,21): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(343,30): error TS2339: Property 'optionFromEnv' does not exist on type 'HTMLElement'.
 lib/dashdash.ts(348,18): error TS2339: Property 'optionFromEnv' does not exist on type 'HTMLElement'.
 lib/dashdash.ts(354,31): error TS2339: Property 'type' does not exist on type 'Object'.
@@ -215,23 +277,37 @@ lib/dashdash.ts(436,34): error TS2365: Operator '+' cannot be applied to types '
 lib/dashdash.ts(437,38): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/dashdash.ts(439,42): error TS2538: Type 'String' cannot be used as an index type.
+lib/dashdash.ts(442,37): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/dashdash.ts(452,25): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/dashdash.ts(461,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 lib/dashdash.ts(461,56): error TS2339: Property 'key' does not exist on type 'Object'.
-lib/dashdash.ts(461,61): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
+lib/dashdash.ts(463,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 lib/dashdash.ts(463,56): error TS2339: Property 'key' does not exist on type 'Object'.
-lib/dashdash.ts(463,61): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 lib/dashdash.ts(464,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/dashdash.ts(466,25): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/dashdash.ts(474,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 lib/dashdash.ts(475,32): error TS2339: Property 'key' does not exist on type 'Object'.
 lib/dashdash.ts(476,30): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/dashdash.ts(479,21): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/dashdash.ts(489,46): error TS2538: Type 'String' cannot be used as an index type.
+lib/dashdash.ts(501,29): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/dashdash.ts(508,41): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(513,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/dashdash.ts(519,33): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/dashdash.ts(520,46): error TS2538: Type 'String' cannot be used as an index type.
+lib/dashdash.ts(523,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 lib/dashdash.ts(523,55): error TS2339: Property 'key' does not exist on type 'Object'.
-lib/dashdash.ts(523,60): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
+lib/dashdash.ts(525,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 lib/dashdash.ts(525,55): error TS2339: Property 'key' does not exist on type 'Object'.
-lib/dashdash.ts(525,60): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 lib/dashdash.ts(528,25): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/dashdash.ts(530,29): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/dashdash.ts(536,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 lib/dashdash.ts(536,55): error TS2339: Property 'key' does not exist on type 'Object'.
 lib/dashdash.ts(536,65): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/dashdash.ts(537,21): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -242,10 +318,10 @@ lib/dashdash.ts(557,31): error TS2538: Type 'String' cannot be used as an index 
 lib/dashdash.ts(561,35): error TS2339: Property 'optionFromEnv' does not exist on type 'HTMLElement'.
 lib/dashdash.ts(562,25): error TS2339: Property 'key' does not exist on type 'Object'.
 lib/dashdash.ts(565,38): error TS2339: Property 'optionTakesArg' does not exist on type 'HTMLElement'.
+lib/dashdash.ts(567,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 lib/dashdash.ts(567,44): error TS2339: Property 'key' does not exist on type 'Object'.
-lib/dashdash.ts(567,49): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/dashdash.ts(573,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 lib/dashdash.ts(573,44): error TS2339: Property 'key' does not exist on type 'Object'.
-lib/dashdash.ts(573,49): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
 lib/dashdash.ts(578,53): error TS2304: Cannot find name 'Void'.
 lib/dashdash.ts(579,20): error TS2339: Property 'key' does not exist on type 'Object'.
 lib/dashdash.ts(580,19): error TS2339: Property 'default' does not exist on type 'Object'.
@@ -319,9 +395,13 @@ lib/dashdash.ts(712,19): error TS2339: Property 'group' does not exist on type '
 lib/dashdash.ts(719,63): error TS2339: Property 'group' does not exist on type 'Object'.
 lib/dashdash.ts(725,20): error TS2339: Property 'includeDefault' does not exist on type 'HTMLElement'.
 lib/dashdash.ts(726,19): error TS2339: Property 'default' does not exist on type 'Object'.
+lib/dashdash.ts(727,31): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(727,55): error TS2339: Property 'default' does not exist on type 'Object'.
 lib/dashdash.ts(728,26): error TS2339: Property 'type' does not exist on type 'Object'.
 lib/dashdash.ts(728,48): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/dashdash.ts(729,31): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(731,35): error TS2339: Property 'type' does not exist on type 'Object'.
 lib/dashdash.ts(737,16): error TS2339: Property 'help' does not exist on type 'Object'.
 lib/dashdash.ts(737,33): error TS2339: Property 'includeEnv' does not exist on type 'HTMLElement'.
@@ -394,7 +474,15 @@ lib/dashdash.ts(903,45): error TS2339: Property 'hidden' does not exist on type 
 lib/dashdash.ts(910,45): error TS2339: Property 'hidden' does not exist on type 'Object'.
 lib/dashdash.ts(917,67): error TS2304: Cannot find name 'Void'.
 lib/dashdash.ts(918,41): error TS2339: Property 'hidden' does not exist on type 'Object'.
+lib/dashdash.ts(930,9): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/dashdash.ts(937,9): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
+lib/dashdash.ts(940,9): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(942,14): error TS2339: Property 'argtypes' does not exist on type 'Object'.
+lib/dashdash.ts(944,13): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 lib/dashdash.ts(947,22): error TS2339: Property 'argtypes' does not exist on type 'Object'.
 lib/dashdash.ts(973,12): error TS2339: Property 'object' does not exist on type 'String'.
 lib/dashdash.ts(974,12): error TS2339: Property 'object' does not exist on type 'String'.

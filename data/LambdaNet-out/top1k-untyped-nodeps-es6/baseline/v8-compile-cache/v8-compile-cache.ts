@@ -168,7 +168,7 @@ class NativeCompileCache {
       // https://github.com/nodejs/node/blob/v10.15.3/lib/internal/modules/cjs/helpers.js#L37
       // resolve.resolve.paths was added in v8.9.0
       if (hasRequireResolvePaths) {
-        resolve.paths = function paths(request: Object): Void {
+        resolve.paths = function paths(request: Object): Promise {
           return Module._resolveLookupPaths(request, mod, true);
         };
       }
@@ -228,7 +228,7 @@ class NativeCompileCache {
     }
 
     // create wrapper function
-    var wrapper: Array = Module.wrap(content);
+    var wrapper: String = Module.wrap(content);
 
     var invalidationKey: String = crypto
       .createHash('sha1')

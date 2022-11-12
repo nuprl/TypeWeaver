@@ -8,7 +8,7 @@ import cloneArrayBuffer from './cloneArrayBuffer.js'
  * @param {boolean} [isDeep] Specify a deep clone.
  * @returns {Object} Returns the cloned typed array.
  */
-function cloneTypedArray(typedArray: Map, isDeep: Boolean): Hash {
+function cloneTypedArray(typedArray: Map, isDeep: Boolean): Stack {
   const buffer: Stack = isDeep ? cloneArrayBuffer(typedArray.buffer) : typedArray.buffer
   return new typedArray.constructor(buffer, typedArray.byteOffset, typedArray.length)
 }

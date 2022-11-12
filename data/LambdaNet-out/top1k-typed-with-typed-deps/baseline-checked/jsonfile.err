@@ -4,9 +4,9 @@ index.ts(10,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(
 index.ts(10,63): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 index.ts(15,31): error TS2339: Property 'fs' does not exist on type 'Object'.
 index.ts(17,62): error TS2339: Property 'throws' does not exist on type 'Object'.
-index.ts(19,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(19,40): error TS2339: Property 'fromCallback' does not exist on type 'String'.
-index.ts(19,56): error TS2339: Property 'readFile' does not exist on type 'Boolean'.
+index.ts(19,41): error TS2339: Property 'fromCallback' does not exist on type 'String'.
+index.ts(19,57): error TS2339: Property 'readFile' does not exist on type 'Boolean'.
+index.ts(25,22): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
 index.ts(25,46): error TS2339: Property 'reviver' does not exist on type 'Object'.
 index.ts(38,39): error TS2339: Property 'fromPromise' does not exist on type 'String'.
 index.ts(40,61): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -19,14 +19,10 @@ index.ts(52,40): error TS2339: Property 'reviver' does not exist on type 'Object
 index.ts(63,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(63,64): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 index.ts(63,75): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-index.ts(66,33): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'Function'.
-  Type 'Element' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 index.ts(68,22): error TS2339: Property 'fromCallback' does not exist on type 'String'.
 index.ts(68,38): error TS2339: Property 'writeFile' does not exist on type 'Boolean'.
 index.ts(71,40): error TS2339: Property 'fromPromise' does not exist on type 'String'.
 index.ts(74,31): error TS2339: Property 'fs' does not exist on type 'Object'.
-index.ts(76,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
-  Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 index.ts(78,13): error TS2339: Property 'writeFileSync' does not exist on type 'Boolean'.
 utils.ts(1,10): error TS2451: Cannot redeclare block-scoped variable 'stringify'.
 utils.ts(1,84): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.

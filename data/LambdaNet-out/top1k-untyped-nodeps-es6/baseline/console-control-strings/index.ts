@@ -57,7 +57,7 @@ export const hideCursor: String = function hideCursor (): String {
   return prefix + '?25l'
 };
 
-export const showCursor: String = function showCursor (): String {
+export const showCursor: String = function showCursor (): Number {
   return prefix + '?25h'
 };
 

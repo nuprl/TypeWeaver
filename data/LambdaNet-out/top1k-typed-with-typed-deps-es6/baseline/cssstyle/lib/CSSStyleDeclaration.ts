@@ -48,7 +48,7 @@ CSSStyleDeclaration.prototype = {
    * @param {string} [priority=null] "important" or null
    * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration-setProperty
    */
-  setProperty: function(name: String, value: String, priority: String) {
+  setProperty: function(name: String, value: Number, priority: String) {
     if (value === undefined) {
       return;
     }

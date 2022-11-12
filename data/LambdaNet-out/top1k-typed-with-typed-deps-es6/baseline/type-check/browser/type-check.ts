@@ -1153,7 +1153,7 @@ require=(function(){function r(e: Object,n: Object,t: Array): Function{function 
   quot = curry$(function(x: Number, y: Number){
     return ~~(x / y);
   });
-  rem = curry$(function(x$: String, y$: Number){
+  rem = curry$(function(x$: Number, y$: Number){
     return x$ % y$;
   });
   div = curry$(function(x: Number, y: Number){
@@ -1189,13 +1189,13 @@ require=(function(){function r(e: Object,n: Object,t: Array): Function{function 
   round = Math.round;
   ceiling = Math.ceil;
   floor = Math.floor;
-  isItNaN = function(x: String){
+  isItNaN = function(x: Number){
     return x !== x;
   };
-  even = function(x: String){
+  even = function(x: Number){
     return x % 2 === 0;
   };
-  odd = function(x: String){
+  odd = function(x: Number){
     return x % 2 !== 0;
   };
   gcd = curry$(function(x: Number, y: Number){

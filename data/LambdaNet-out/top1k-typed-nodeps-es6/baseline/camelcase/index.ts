@@ -4,7 +4,7 @@ const LEADING_CAPITAL: RegExp = /^[\p{Lu}](?![\p{Lu}])/gu;
 const IDENTIFIER: RegExp = /([\p{Alpha}\p{N}_]|$)/u;
 const SEPARATORS: RegExp = /[_.\- ]+/;
 
-const LEADING_SEPARATORS: Array = new RegExp('^' + SEPARATORS.source);
+const LEADING_SEPARATORS: Object = new RegExp('^' + SEPARATORS.source);
 const SEPARATORS_AND_IDENTIFIER: Object = new RegExp(SEPARATORS.source + IDENTIFIER.source, 'gu');
 const NUMBERS_AND_IDENTIFIER: Object = new RegExp('\\d+' + IDENTIFIER.source, 'gu');
 

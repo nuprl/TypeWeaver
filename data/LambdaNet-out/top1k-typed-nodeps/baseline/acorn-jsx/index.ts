@@ -55,7 +55,7 @@ function getJsxTokens(acorn: HTMLElement): Object {
 
 // Transforms JSX element name to string.
 
-function getQualifiedJSXName(object: Object): String {
+function getQualifiedJSXName(object: Array): String {
   if (!object)
     return object;
 
@@ -92,7 +92,7 @@ Object.defineProperty(module.exports, "tokTypes", {
 
 function plugin(options: Object, Parser: Object): Object {
   const acorn: HTMLElement = Parser.acorn || require("acorn");
-  const acornJsx: Object = getJsxTokens(acorn);
+  const acornJsx: HTMLElement = getJsxTokens(acorn);
   const tt: HTMLInputElement = acorn.tokTypes;
   const tok: Function = acornJsx.tokTypes;
   const tokContexts: Function = acorn.tokContexts;

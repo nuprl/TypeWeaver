@@ -34,7 +34,7 @@ function checkFileInclusion(path: String, filename: String, options: HTMLElement
   );
 }
 
-function requireDirectory(m: HTMLElement, path: String, options: Array): Object {
+function requireDirectory(m: HTMLElement, path: String, options: Object): Object {
   var retval: Object = {};
 
   // path is optional

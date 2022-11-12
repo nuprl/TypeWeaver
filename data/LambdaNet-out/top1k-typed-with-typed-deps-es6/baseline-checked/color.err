@@ -5,10 +5,11 @@ index.ts(31,17): error TS2360: The left-hand side of an 'in' expression must be 
 index.ts(43,23): error TS2339: Property 'model' does not exist on type 'Function'.
 index.ts(44,27): error TS2339: Property 'color' does not exist on type 'Function'.
 index.ts(45,24): error TS2339: Property 'valpha' does not exist on type 'Function'.
-index.ts(52,23): error TS2339: Property 'model' does not exist on type 'Object'.
-index.ts(54,23): error TS2339: Property 'value' does not exist on type 'Object'.
-index.ts(55,31): error TS2339: Property 'value' does not exist on type 'Object'.
-index.ts(55,69): error TS2339: Property 'value' does not exist on type 'Object'.
+index.ts(47,9): error TS2740: Type 'ColorDescriptor' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+index.ts(52,23): error TS2339: Property 'model' does not exist on type 'HTMLElement'.
+index.ts(54,23): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+index.ts(55,31): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+index.ts(55,69): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
 index.ts(59,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(60,36): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?

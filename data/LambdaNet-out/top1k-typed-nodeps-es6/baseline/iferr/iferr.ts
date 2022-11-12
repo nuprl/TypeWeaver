@@ -14,7 +14,7 @@ const throwerr: Object = iferr.bind(null, (err: Function) => { throw err })
 
 // Prints errors when one is passed, or does nothing otherwise
 // ex: Thing.load(123, printerr)
-const printerr: String = iferr((err: Function) => console.error(err), () => {})
+const printerr: Array = iferr((err: Function) => console.error(err), () => {})
 
 module.exports = exports = iferr
 exports.iferr = iferr

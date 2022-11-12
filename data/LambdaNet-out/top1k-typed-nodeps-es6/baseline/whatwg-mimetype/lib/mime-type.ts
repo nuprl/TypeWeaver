@@ -7,7 +7,7 @@ import { asciiLowercase, solelyContainsHTTPTokenCodePoints } from './utils.js';
 export default class MIMEType {
   constructor(string) {
     string = String(string);
-    const result: MIMEType = parse(string);
+    const result: MIMETypeParameters = parse(string);
     if (result === null) {
       throw new Error(`Could not parse MIME type string "${string}"`);
     }

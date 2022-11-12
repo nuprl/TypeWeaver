@@ -12,23 +12,18 @@ bench/colors.ts(21,3): error TS2339: Property 'add' does not exist on type 'HTML
 bench/colors.ts(22,40): error TS2538: Type 'String' cannot be used as an index type.
 bench/colors.ts(25,41): error TS2538: Type 'String' cannot be used as an index type.
 bench/colors.ts(28,41): error TS2538: Type 'String' cannot be used as an index type.
-bench/colors.ts(31,42): error TS2538: Type 'String' cannot be used as an index type.
 bench/colors.ts(37,3): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 bench/colors.ts(38,40): error TS2538: Type 'String' cannot be used as an index type.
 bench/colors.ts(41,41): error TS2538: Type 'String' cannot be used as an index type.
 bench/colors.ts(44,41): error TS2538: Type 'String' cannot be used as an index type.
-bench/colors.ts(47,42): error TS2538: Type 'String' cannot be used as an index type.
-bench/colors.ts(47,60): error TS2554: Expected 0 arguments, but got 1.
-bench/colors.ts(47,67): error TS2339: Property 'underline' does not exist on type 'String'.
-bench/colors.ts(47,84): error TS2551: Property 'italic' does not exist on type 'String'. Did you mean 'italics'?
 bench/colors.ts(53,3): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 bench/colors.ts(53,36): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
-bench/colors.ts(54,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
-  Type 'String' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 276 more.
-bench/colors.ts(55,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
-bench/colors.ts(56,37): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
+bench/colors.ts(54,30): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+bench/colors.ts(55,30): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 bench/colors.ts(61,13): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
 bench/colors.ts(61,30): error TS2339: Property 'white' does not exist on type 'HTMLElement'.
 bench/colors.ts(61,54): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
@@ -83,68 +78,68 @@ bench/colors.ts(61,1119): error TS2339: Property 'red' does not exist on type 'H
 bench/colors.ts(61,1141): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
 bench/dryrun.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'color'.
 bench/dryrun.ts(14,20): error TS2538: Type 'String' cannot be used as an index type.
-bench/dryrun.ts(18,24): error TS2554: Expected 0 arguments, but got 1.
-bench/dryrun.ts(18,30): error TS2339: Property 'cyan' does not exist on type 'String'.
-bench/dryrun.ts(18,53): error TS2339: Property 'cyan' does not exist on type 'String'.
-bench/dryrun.ts(19,24): error TS2554: Expected 0 arguments, but got 1.
-bench/dryrun.ts(19,30): error TS2339: Property 'yellow' does not exist on type 'String'.
-bench/dryrun.ts(19,58): error TS2339: Property 'yellow' does not exist on type 'String'.
-bench/dryrun.ts(20,24): error TS2554: Expected 0 arguments, but got 1.
-bench/dryrun.ts(20,30): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(20,53): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,19): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,38): error TS2339: Property 'white' does not exist on type 'String'.
-bench/dryrun.ts(23,66): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,90): error TS2339: Property 'gray' does not exist on type 'String'.
-bench/dryrun.ts(23,116): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,140): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,164): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,188): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,212): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,236): error TS2339: Property 'blue' does not exist on type 'String'.
-bench/dryrun.ts(23,262): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,286): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,310): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,334): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,357): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,381): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,405): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,429): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,453): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,477): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,501): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,525): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,549): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,573): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,597): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,621): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,645): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,668): error TS2339: Property 'green' does not exist on type 'String'.
-bench/dryrun.ts(23,696): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,720): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,744): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,768): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,792): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,816): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,840): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,864): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,888): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,912): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,936): error TS2339: Property 'magenta' does not exist on type 'String'.
-bench/dryrun.ts(23,964): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,987): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,1011): error TS2339: Property 'cyan' does not exist on type 'String'.
-bench/dryrun.ts(23,1037): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,1061): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,1085): error TS2339: Property 'yellow' does not exist on type 'String'.
-bench/dryrun.ts(23,1115): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,1139): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,1163): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,1187): error TS2339: Property 'blue' does not exist on type 'String'.
-bench/dryrun.ts(23,1213): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,1237): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,1261): error TS2339: Property 'red' does not exist on type 'String'.
-bench/dryrun.ts(23,1285): error TS2339: Property 'red' does not exist on type 'String'.
+bench/dryrun.ts(18,19): error TS2339: Property 'bold' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(18,30): error TS2339: Property 'cyan' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(18,53): error TS2339: Property 'cyan' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(19,19): error TS2339: Property 'bold' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(19,30): error TS2339: Property 'yellow' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(19,58): error TS2339: Property 'yellow' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(20,19): error TS2339: Property 'bold' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(20,30): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(20,53): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,19): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,38): error TS2339: Property 'white' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,66): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,90): error TS2339: Property 'gray' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,116): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,140): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,164): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,188): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,212): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,236): error TS2339: Property 'blue' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,262): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,286): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,310): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,334): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,357): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,381): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,405): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,429): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,453): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,477): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,501): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,525): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,549): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,573): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,597): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,621): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,645): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,668): error TS2339: Property 'green' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,696): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,720): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,744): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,768): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,792): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,816): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,840): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,864): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,888): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,912): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,936): error TS2339: Property 'magenta' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,964): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,987): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,1011): error TS2339: Property 'cyan' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,1037): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,1061): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,1085): error TS2339: Property 'yellow' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,1115): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,1139): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,1163): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,1187): error TS2339: Property 'blue' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,1213): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,1237): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,1261): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
+bench/dryrun.ts(23,1285): error TS2339: Property 'red' does not exist on type 'HTMLElement'.
 bench/load.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'chalk'.
 bench/load.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'kleur'.
 bench/load.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.

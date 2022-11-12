@@ -23,7 +23,7 @@ function makeIndent(depth: String): String {
 	if (depth in makeIndent.cache) {
 		return makeIndent.cache[depth];
 	} else {
-		var result: Number = INDENT;
+		var result: String = INDENT;
 		for (var i = depth; --i;) {
 			result += INDENT;
 		}

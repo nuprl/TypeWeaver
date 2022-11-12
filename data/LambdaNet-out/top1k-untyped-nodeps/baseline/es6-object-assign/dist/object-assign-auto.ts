@@ -26,7 +26,7 @@ function assign(target: Number, firstSource: Function): Object {
     var keysArray: Array = Object.keys(Object(nextSource));
     for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
       var nextKey: String = keysArray[nextIndex];
-      var desc: Function = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+      var desc: String = Object.getOwnPropertyDescriptor(nextSource, nextKey);
       if (desc !== undefined && desc.enumerable) {
         to[nextKey] = nextSource[nextKey];
       }

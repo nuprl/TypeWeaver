@@ -162,7 +162,7 @@ function wrapThenable(then: String, promise: Promise): Object {
   values.
   @return {Function} a function that wraps `nodeFunc` to return a `Promise`
 */
-export default function denodeify(nodeFunc: HTMLElement, options: String): Function {
+export default function denodeify(nodeFunc: Enumerator, options: String): Function {
   let fn: Function = function() {
     let l: Number = arguments.length;
     let args: Object = new Array(l + 1);

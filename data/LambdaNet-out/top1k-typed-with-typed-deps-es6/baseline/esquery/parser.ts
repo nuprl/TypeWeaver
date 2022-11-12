@@ -55,7 +55,7 @@
             return "any character";
           },
 
-          end: function(expectation: Function) {
+          end: function(expectation: String) {
             return "end of input";
           },
 
@@ -167,7 +167,7 @@
         peg$c15: Function = function() { return 'adjacent'; },
         peg$c16: Function = function() { return 'descendant'; },
         peg$c17: String = ",",
-        peg$c18: Function = peg$literalExpectation(",", false),
+        peg$c18: Object = peg$literalExpectation(",", false),
         peg$c19: Function = function(s: String, ss: Array) {
           return [s].concat(ss.map(function (s: Promise) { return s[3]; }));
         },
@@ -185,7 +185,7 @@
           },
         peg$c24: String = "*",
         peg$c25: Function = peg$literalExpectation("*", false),
-        peg$c26: Function = function(a: String) { return { type: 'wildcard', value: a }; },
+        peg$c26: Function = function(a: Array) { return { type: 'wildcard', value: a }; },
         peg$c27: String = "#",
         peg$c28: Function = peg$literalExpectation("#", false),
         peg$c29: Function = function(i: String) { return { type: 'identifier', value: i }; },
@@ -268,7 +268,7 @@
         peg$c92: Function = peg$literalExpectation(":last-child", false),
         peg$c93: Function = function() { return nthLast(1); },
         peg$c94: String = ":nth-child(",
-        peg$c95: Function = peg$literalExpectation(":nth-child(", false),
+        peg$c95: Object = peg$literalExpectation(":nth-child(", false),
         peg$c96: Function = function(n: Array) { return nth(parseInt(n.join(''), 10)); },
         peg$c97: String = ":nth-last-child(",
         peg$c98: Function = peg$literalExpectation(":nth-last-child(", false),
@@ -278,7 +278,7 @@
         peg$c102: String = "statement",
         peg$c103: Function = peg$literalExpectation("statement", true),
         peg$c104: String = "expression",
-        peg$c105: Function = peg$literalExpectation("expression", true),
+        peg$c105: Object = peg$literalExpectation("expression", true),
         peg$c106: String = "declaration",
         peg$c107: Function = peg$literalExpectation("declaration", true),
         peg$c108: String = "function",
@@ -418,7 +418,7 @@
       return new peg$SyntaxError(message, null, null, location);
     }
 
-    function peg$buildStructuredError(expected: String, found: Function, location: Number): String {
+    function peg$buildStructuredError(expected: String, found: String, location: Number): String {
       return new peg$SyntaxError(
         peg$SyntaxError.buildMessage(expected, found),
         expected,
@@ -2244,7 +2244,7 @@
       return s0;
     }
 
-    function peg$parsefirstChild(): Number {
+    function peg$parsefirstChild(): Boolean {
       var s0: Number, s1: String;
 
       var key: String    = peg$currPos * 30 + 25,

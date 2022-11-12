@@ -12,7 +12,7 @@ bench/glob-parent.ts(25,33): error TS2339: Property 'run' does not exist on type
 bench/glob-parent.ts(26,11): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 bench/glob-parent.ts(30,31): error TS2339: Property 'name' does not exist on type 'Object'.
 bench/glob-parent.ts(31,9): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-bench/glob-parent.ts(32,35): error TS2322: Type 'String' is not assignable to type 'Function'.
+bench/glob-parent.ts(32,35): error TS2740: Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 bench/glob-parent.ts(35,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bench/glob-parent.ts(46,1): error TS2554: Expected 2 arguments, but got 1.
 bench/glob-parent.ts(47,4): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
@@ -43,7 +43,7 @@ bench/index.ts(25,46): error TS2345: Argument of type 'String' is not assignable
 bench/index.ts(26,11): error TS2339: Property 'add' does not exist on type 'Object'.
 bench/index.ts(30,29): error TS2339: Property 'name' does not exist on type 'Object'.
 bench/index.ts(31,9): error TS2339: Property 'add' does not exist on type 'Object'.
-bench/index.ts(32,35): error TS2740: Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+bench/index.ts(32,35): error TS2322: Type 'String' is not assignable to type 'Function'.
 bench/index.ts(35,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/extglob-negated.ts(5,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/extglob-negated.ts(15,30): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
@@ -88,7 +88,7 @@ examples/option-onResult.ts(12,1): error TS2349: This expression is not callable
 examples/regex-quantifier.ts(9,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/windows.ts(25,6): error TS2540: Cannot assign to 'sep' because it is a read-only property.
 examples/windows.ts(35,6): error TS2540: Cannot assign to 'sep' because it is a read-only property.
-lib/parse.ts(4,8): error TS1192: Module '"lib/utils"' has no default export.
+lib/parse.ts(4,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/picomatch/lib/utils"' has no default export.
 lib/parse.ts(22,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse.ts(23,22): error TS2339: Property 'expandRange' does not exist on type 'Object'.
 lib/parse.ts(24,20): error TS2339: Property 'expandRange' does not exist on type 'Object'.
@@ -525,9 +525,9 @@ lib/parse.ts(1070,53): error TS2345: Argument of type 'String' is not assignable
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/parse.ts(1084,22): error TS2339: Property 'strictSlashes' does not exist on type 'HTMLElement'.
 lib/parse.ts(1085,5): error TS2322: Type 'string' is not assignable to type 'Number'.
-lib/picomatch.ts(6,8): error TS1192: Module '"lib/utils"' has no default export.
+lib/picomatch.ts(6,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/picomatch/lib/utils"' has no default export.
 lib/picomatch.ts(32,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/picomatch.ts(32,60): error TS2322: Type 'boolean' is not assignable to type 'Number'.
+lib/picomatch.ts(32,62): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 lib/picomatch.ts(34,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/picomatch.ts(54,17): error TS2339: Property 'compileRe' does not exist on type 'Function'.
 lib/picomatch.ts(55,17): error TS2339: Property 'makeRe' does not exist on type 'Function'.
@@ -592,7 +592,7 @@ lib/picomatch.ts(324,36): error TS2339: Property 'flags' does not exist on type 
 lib/picomatch.ts(324,51): error TS2339: Property 'nocase' does not exist on type 'HTMLElement'.
 lib/picomatch.ts(326,28): error TS2339: Property 'debug' does not exist on type 'Object'.
 lib/picomatch.ts(336,11): error TS2339: Property 'constants' does not exist on type 'Function'.
-lib/scan.ts(3,8): error TS1192: Module '"lib/utils"' has no default export.
+lib/scan.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/picomatch/lib/utils"' has no default export.
 lib/scan.ts(6,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_ASTERISK'. Did you mean to use 'import CHAR_ASTERISK from "./constants"' instead?
 lib/scan.ts(7,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_AT'. Did you mean to use 'import CHAR_AT from "./constants"' instead?
 lib/scan.ts(8,3): error TS2614: Module '"./constants"' has no exported member 'CHAR_BACKWARD_SLASH'. Did you mean to use 'import CHAR_BACKWARD_SLASH from "./constants"' instead?

@@ -76,7 +76,7 @@ function generateBase (httpMethod: String, base_uri: String, params: Array): Str
   return base
 }
 
-function hmacsign (httpMethod: String, base_uri: String, params: Function, consumer_secret: Number, token_secret: String): String {
+function hmacsign (httpMethod: String, base_uri: String, params: Function, consumer_secret: Number, token_secret: Number): String {
   var base: String = generateBase(httpMethod, base_uri, params)
   var key: String = [
     consumer_secret || '',

@@ -5,7 +5,7 @@
 
 "use strict";
 
-const basename: Array = require("./getPaths").basename;
+const basename: Function = require("./getPaths").basename;
 
 /** @typedef {import("./Resolver")} Resolver */
 

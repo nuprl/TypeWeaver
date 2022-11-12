@@ -32,7 +32,7 @@ export default class DirectoryExistsPlugin {
 					const fs: Function = resolver.fileSystem;
 					const directory: Number = request.path;
 					if (!directory) return callback();
-					fs.stat(directory, (err: Resolver, stat: Resolver) => {
+					fs.stat(directory, (err: String, stat: Resolver) => {
 						if (err || !stat) {
 							if (resolveContext.missingDependencies)
 								resolveContext.missingDependencies.add(directory);

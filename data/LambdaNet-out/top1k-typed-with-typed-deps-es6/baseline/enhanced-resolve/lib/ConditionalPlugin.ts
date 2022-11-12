@@ -46,7 +46,7 @@ export default class ConditionalPlugin {
 					resolveContext,
 					allowAlternatives
 						? callback
-						: (err: Resolver, result: CachedInputFileSystem) => {
+						: (err: CacheBackend, result: CachedInputFileSystem) => {
 								if (err) return callback(err);
 
 								// Don't allow other alternatives

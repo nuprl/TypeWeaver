@@ -94,11 +94,11 @@ function optionKeyFromName(name: String): String {
 
 // ---- Option types
 
-function parseBool(option: String, optstr: Array, arg: Boolean): Boolean {
+function parseBool(option: String, optstr: Number, arg: Boolean): Boolean {
     return Boolean(arg);
 }
 
-function parseString(option: String, optstr: Array, arg: String): String {
+function parseString(option: String, optstr: Number, arg: String): String {
     assert.string(arg, 'arg');
     return arg;
 }
@@ -389,7 +389,7 @@ Parser.prototype.parse = function parse(inputs: Object): Object {
     var opts: Object = {};
     var _order: Array = [];
 
-    function addOpt(option: Object, optstr: String, key: String, val: Number, from: String): Void {
+    function addOpt(option: Object, optstr: Number, key: String, val: Number, from: String): Void {
         var type: Object = optionTypes[option.type];
         var parsedVal: Array = type.parseArg(option, optstr, val);
         if (type.array) {

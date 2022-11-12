@@ -3,7 +3,7 @@ build/package.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'fs'
 build/package.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 build/package.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'JSON5'.
 build/package.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'pkg'.
-build/package.ts(9,22): error TS2339: Property 'stringify' does not exist on type 'Object'.
+build/package.ts(9,22): error TS2339: Property 'stringify' does not exist on type 'Number'.
 build/package.ts(11,4): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
 build/package.ts(11,23): error TS2339: Property 'resolve' does not exist on type 'String'.
 build/unicode.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
@@ -28,7 +28,7 @@ lib/cli.ts(31,18): error TS2339: Property 'space' does not exist on type 'Object
 lib/cli.ts(31,40): error TS2339: Property 'space' does not exist on type 'Object'.
 lib/cli.ts(32,13): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/cli.ts(34,33): error TS2339: Property 'space' does not exist on type 'Object'.
-lib/cli.ts(39,27): error TS2339: Property 'parse' does not exist on type 'Object'.
+lib/cli.ts(39,27): error TS2339: Property 'parse' does not exist on type 'Number'.
 lib/cli.ts(40,23): error TS2339: Property 'validate' does not exist on type 'Object'.
 lib/cli.ts(41,66): error TS2769: No overload matches this call.
   Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
@@ -312,7 +312,7 @@ lib/parse.ts(1028,64): error TS2345: Argument of type 'Number' is not assignable
 lib/parse.ts(1031,25): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/parse.ts(1046,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/parse.ts(1047,5): error TS2322: Type 'HTMLElement' is not assignable to type 'String'.
-lib/parse.ts(1050,37): error TS2304: Cannot find name 'Void'.
+lib/parse.ts(1050,37): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/parse.ts(1070,22): error TS2538: Type 'String' cannot be used as an index type.
 lib/parse.ts(1071,29): error TS2538: Type 'String' cannot be used as an index type.
 lib/parse.ts(1083,11): error TS2740: Type 'SyntaxError & Error' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
@@ -333,7 +333,7 @@ lib/register.ts(5,1): error TS2322: Type '(module: String, filename: String) => 
     Type 'Module' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/register.ts(6,32): error TS2339: Property 'readFileSync' does not exist on type 'String'.
 lib/register.ts(8,16): error TS2339: Property 'exports' does not exist on type 'String'.
-lib/register.ts(8,32): error TS2339: Property 'parse' does not exist on type 'Object'.
+lib/register.ts(8,32): error TS2339: Property 'parse' does not exist on type 'Number'.
 lib/stringify.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'util'.
 lib/stringify.ts(4,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/stringify.ts(6,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

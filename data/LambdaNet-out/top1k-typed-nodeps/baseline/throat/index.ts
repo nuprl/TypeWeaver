@@ -70,7 +70,7 @@ function lateBound(size: Number): Function {
     return run(fn, this, args);
   };
 }
-module.exports = function throat(size: String, fn: String): String {
+module.exports = function throat(size: Number, fn: String): String {
   if (typeof size === 'function') {
     var temp: String = fn;
     fn = size;

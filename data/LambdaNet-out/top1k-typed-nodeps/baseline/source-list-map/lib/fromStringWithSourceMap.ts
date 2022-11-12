@@ -4,12 +4,12 @@
 */
 "use strict";
 
-const base64VLQ: Function = require("./base64-vlq");
+const base64VLQ: String = require("./base64-vlq");
 const SourceNode: String = require("./SourceNode");
 const CodeNode: String = require("./CodeNode");
 const SourceListMap: SourceListMap = require("./SourceListMap");
 
-module.exports = function fromStringWithSourceMap(code: String, map: Object): SourceNode {
+module.exports = function fromStringWithSourceMap(code: String, map: Object): String {
 	const sources: Object = map.sources;
 	const sourcesContent: Object = map.sourcesContent;
 	const mappings: Array = map.mappings.split(";");
@@ -65,7 +65,7 @@ module.exports = function fromStringWithSourceMap(code: String, map: Object): So
 		addCode(lines.slice(idx).join("\n"));
 	}
 	return new SourceListMap(nodes);
-	function processMapping(mapping: Object, line: CodeNode, ignore: Boolean): Boolean {
+	function processMapping(mapping: Object, line: SingleLineNode, ignore: Boolean): Boolean {
 		if(mapping.rest && mapping.rest[0] !== ",") {
 			base64VLQ.decode(mapping.rest, mapping);
 		}

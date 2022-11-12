@@ -223,7 +223,7 @@
    *
    */
   P.clampedTo = P.clamp = function (min: Object, max: String) {
-    var k: String,
+    var k: Number,
       x: Array = this,
       Ctor: Object = x.constructor;
     min = new Ctor(min);
@@ -653,7 +653,7 @@
       x = taylorSeries(Ctor, 2, x, x, true);
 
       // Reverse argument reduction
-      var sinh2_x: Object,
+      var sinh2_x: Function,
         d5: HTMLElement = new Ctor(5),
         d16: HTMLElement = new Ctor(16),
         d20: String = new Ctor(20);
@@ -1262,7 +1262,7 @@
    *
    */
   P.minus = P.sub = function (y: Object) {
-    var d: Array, e: Number, i: Number, j: Number, k: Number, len: Number, pr: Number, rm: Number, xd: Array, xe: Number, xLTy: Number, yd: Array,
+    var d: Array, e: Number, i: Number, j: Number, k: Number, len: Number, pr: Number, rm: Number, xd: Array, xe: Number, xLTy: Function, yd: Array,
       x: Object = this,
       Ctor: Object = x.constructor;
 
@@ -1947,7 +1947,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toBinary = function (sd: String, rm: String) {
+  P.toBinary = function (sd: Function, rm: Array) {
     return toStringBinary(this, 2, sd, rm);
   };
 
@@ -2128,7 +2128,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toHexadecimal = P.toHex = function (sd: Array, rm: Array) {
+  P.toHexadecimal = P.toHex = function (sd: Function, rm: Array) {
     return toStringBinary(this, 16, sd, rm);
   };
 
@@ -2217,7 +2217,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toOctal = function (sd: String, rm: String) {
+  P.toOctal = function (sd: Function, rm: Array) {
     return toStringBinary(this, 8, sd, rm);
   };
 
@@ -2462,7 +2462,7 @@
   P.valueOf = P.toJSON = function () {
     var x: Object = this,
       Ctor: Object = x.constructor,
-      str: Number = finiteToString(x, x.e <= Ctor.toExpNeg || x.e >= Ctor.toExpPos);
+      str: String = finiteToString(x, x.e <= Ctor.toExpNeg || x.e >= Ctor.toExpPos);
 
     return x.isNeg() ? '-' + str : str;
   };

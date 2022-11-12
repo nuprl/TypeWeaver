@@ -10,7 +10,7 @@ const objectProto: Object = Object.prototype
  */
 function isPrototype(value: String): Boolean {
   const Ctor: Function = value && value.constructor
-  const proto: Number = (typeof Ctor === 'function' && Ctor.prototype) || objectProto
+  const proto: Boolean = (typeof Ctor === 'function' && Ctor.prototype) || objectProto
 
   return value === proto
 }

@@ -1,10 +1,10 @@
 lib/ber/errors.ts(9,5): error TS2322: Type 'String | ""' is not assignable to type 'string'.
   Type 'String' is not assignable to type 'string'.
     'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/ber/index.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'errors' must be of type 'String', but here has type 'Object'.
 lib/ber/index.ts(6,5): error TS2300: Duplicate identifier 'Reader'.
 lib/ber/index.ts(7,5): error TS2300: Duplicate identifier 'Writer'.
-lib/ber/reader.ts(12,42): error TS2339: Property 'newInvalidAsn1Error' does not exist on type 'String'.
+lib/ber/reader.ts(7,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'errors' must be of type 'Object', but here has type 'String'.
+lib/ber/reader.ts(12,42): error TS2339: Property 'newInvalidAsn1Error' does not exist on type 'Object'.
 lib/ber/reader.ts(18,10): error TS2300: Duplicate identifier 'Reader'.
 lib/ber/reader.ts(18,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ber/reader.ts(18,31): error TS2304: Cannot find name 'Void'.
@@ -69,7 +69,8 @@ lib/ber/reader.ts(249,5): error TS2362: The left-hand side of an arithmetic oper
 lib/ber/reader.ts(252,8): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ber/reader.ts(253,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ber/reader.ts(255,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ber/writer.ts(11,42): error TS2339: Property 'newInvalidAsn1Error' does not exist on type 'String'.
+lib/ber/writer.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'errors' must be of type 'Object', but here has type 'String'.
+lib/ber/writer.ts(11,42): error TS2339: Property 'newInvalidAsn1Error' does not exist on type 'Object'.
 lib/ber/writer.ts(22,10): error TS2339: Property 'ok' does not exist on type 'String'.
 lib/ber/writer.ts(23,10): error TS2339: Property 'equal' does not exist on type 'String'.
 lib/ber/writer.ts(24,10): error TS2339: Property 'ok' does not exist on type 'String'.
@@ -86,25 +87,35 @@ lib/ber/writer.ts(44,19): error TS2345: Argument of type 'Object' is not assigna
     Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/ber/writer.ts(46,22): error TS2339: Property 'alloc' does not exist on type 'HTMLElement'.
 lib/ber/writer.ts(46,36): error TS2339: Property 'size' does not exist on type 'Object'.
+lib/ber/writer.ts(56,30): error TS2339: Property 'prototype' does not exist on type 'String'.
 lib/ber/writer.ts(59,13): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
+lib/ber/writer.ts(65,8): error TS2339: Property 'prototype' does not exist on type 'String'.
 lib/ber/writer.ts(65,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ber/writer.ts(74,8): error TS2339: Property 'prototype' does not exist on type 'String'.
 lib/ber/writer.ts(78,16): error TS2339: Property 'Integer' does not exist on type 'Object'.
 lib/ber/writer.ts(84,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ber/writer.ts(89,11): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 lib/ber/writer.ts(91,16): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
 lib/ber/writer.ts(95,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ber/writer.ts(103,8): error TS2339: Property 'prototype' does not exist on type 'String'.
 lib/ber/writer.ts(104,23): error TS2339: Property 'Null' does not exist on type 'Object'.
+lib/ber/writer.ts(109,8): error TS2339: Property 'prototype' does not exist on type 'String'.
 lib/ber/writer.ts(113,16): error TS2339: Property 'Enumeration' does not exist on type 'Object'.
+lib/ber/writer.ts(119,8): error TS2339: Property 'prototype' does not exist on type 'String'.
 lib/ber/writer.ts(123,16): error TS2339: Property 'Boolean' does not exist on type 'Object'.
+lib/ber/writer.ts(132,8): error TS2339: Property 'prototype' does not exist on type 'String'.
 lib/ber/writer.ts(136,16): error TS2339: Property 'OctetString' does not exist on type 'Object'.
 lib/ber/writer.ts(138,28): error TS2339: Property 'byteLength' does not exist on type 'HTMLElement'.
+lib/ber/writer.ts(149,8): error TS2339: Property 'prototype' does not exist on type 'String'.
 lib/ber/writer.ts(149,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ber/writer.ts(152,15): error TS2339: Property 'isBuffer' does not exist on type 'HTMLElement'.
+lib/ber/writer.ts(163,8): error TS2339: Property 'prototype' does not exist on type 'String'.
 lib/ber/writer.ts(163,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ber/writer.ts(164,8): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 lib/ber/writer.ts(167,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ber/writer.ts(174,8): error TS2339: Property 'prototype' does not exist on type 'String'.
 lib/ber/writer.ts(178,16): error TS2339: Property 'OID' does not exist on type 'Object'.
 lib/ber/writer.ts(183,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ber/writer.ts(183,54): error TS2304: Cannot find name 'Void'.
@@ -128,10 +139,13 @@ lib/ber/writer.ts(211,33): error TS2345: Argument of type 'String' is not assign
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/ber/writer.ts(214,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ber/writer.ts(218,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ber/writer.ts(224,8): error TS2339: Property 'prototype' does not exist on type 'String'.
 lib/ber/writer.ts(245,11): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
+lib/ber/writer.ts(249,8): error TS2339: Property 'prototype' does not exist on type 'String'.
 lib/ber/writer.ts(251,16): error TS2339: Property 'Sequence' does not exist on type 'Object'.
 lib/ber/writer.ts(251,32): error TS2551: Property 'Constructor' does not exist on type 'Object'. Did you mean 'constructor'?
+lib/ber/writer.ts(260,8): error TS2339: Property 'prototype' does not exist on type 'String'.
 lib/ber/writer.ts(262,23): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
 lib/ber/writer.ts(263,36): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ber/writer.ts(267,15): error TS2538: Type 'String' cannot be used as an index type.
@@ -149,11 +163,13 @@ lib/ber/writer.ts(280,26): error TS2362: The left-hand side of an arithmetic ope
 lib/ber/writer.ts(281,15): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
 lib/ber/writer.ts(283,11): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
+lib/ber/writer.ts(288,8): error TS2339: Property 'prototype' does not exist on type 'String'.
 lib/ber/writer.ts(289,10): error TS2339: Property 'ok' does not exist on type 'String'.
 lib/ber/writer.ts(290,10): error TS2339: Property 'ok' does not exist on type 'String'.
 lib/ber/writer.ts(291,10): error TS2339: Property 'ok' does not exist on type 'String'.
 lib/ber/writer.ts(293,29): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 lib/ber/writer.ts(293,51): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
+lib/ber/writer.ts(297,8): error TS2339: Property 'prototype' does not exist on type 'String'.
 lib/ber/writer.ts(298,10): error TS2339: Property 'ok' does not exist on type 'String'.
 lib/ber/writer.ts(302,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ber/writer.ts(303,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.

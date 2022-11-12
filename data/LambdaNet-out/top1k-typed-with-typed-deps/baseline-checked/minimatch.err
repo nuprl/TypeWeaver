@@ -13,8 +13,7 @@ benchmark.ts(3,5): error TS2451: Cannot redeclare block-scoped variable 'expand'
 benchmark.ts(4,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark.ts(5,5): error TS2322: Type '[number, number]' is not assignable to type 'Number'.
 benchmark.ts(9,14): error TS2304: Cannot find name 'Void'.
-benchmark.ts(14,10): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-benchmark.ts(14,35): error TS2345: Argument of type 'Number' is not assignable to parameter of type '[number, number]'.
+benchmark.ts(14,34): error TS2345: Argument of type 'Number' is not assignable to parameter of type '[number, number]'.
 minimatch.ts(1,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 minimatch.ts(5,16): error TS2339: Property 'nocomment' does not exist on type 'Object'.
 minimatch.ts(15,11): error TS2339: Property 'sep' does not exist on type 'Object'.

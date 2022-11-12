@@ -5,7 +5,7 @@ examples/backnforth.ts(26,22): error TS2304: Cannot find name 'Void'.
 examples/backnforth.ts(27,7): error TS2339: Property 'tick' does not exist on type 'HTMLElement'.
 examples/backnforth.ts(28,11): error TS2339: Property 'curr' does not exist on type 'HTMLElement'.
 examples/backnforth.ts(29,9): error TS2339: Property 'terminate' does not exist on type 'HTMLElement'.
-examples/colors.ts(12,5): error TS2322: Type 'Timer' is not assignable to type 'Number'.
+examples/colors.ts(12,5): error TS2739: Type 'Timer' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 examples/colors.ts(13,7): error TS2339: Property 'tick' does not exist on type 'Object'.
 examples/colors.ts(14,11): error TS2339: Property 'complete' does not exist on type 'Object'.
 examples/colors.ts(15,19): error TS2769: No overload matches this call.
@@ -81,7 +81,7 @@ examples/formats.ts(75,21): error TS2769: No overload matches this call.
   Overload 2 of 2, '(id?: number): void', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-examples/interrupt.ts(10,5): error TS2739: Type 'Timer' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+examples/interrupt.ts(10,5): error TS2322: Type 'Timer' is not assignable to type 'Number'.
 examples/interrupt.ts(11,9): error TS2339: Property 'tick' does not exist on type 'HTMLElement'.
 examples/interrupt.ts(12,13): error TS2339: Property 'complete' does not exist on type 'HTMLElement'.
 examples/interrupt.ts(13,23): error TS2769: No overload matches this call.

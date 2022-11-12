@@ -103,7 +103,7 @@ function createSync(options: Object): Function {
  * @returns {A & B} merged
  */
 const mergeExports: Function = (obj: Array, exports: Array) => {
-	const descriptors: String = Object.getOwnPropertyDescriptors(exports);
+	const descriptors: Resolver = Object.getOwnPropertyDescriptors(exports);
 	Object.defineProperties(obj, descriptors);
 	return /** @type {A & B} */ (Object.freeze(obj));
 };

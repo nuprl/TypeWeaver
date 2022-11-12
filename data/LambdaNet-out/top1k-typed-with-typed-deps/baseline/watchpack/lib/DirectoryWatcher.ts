@@ -138,9 +138,9 @@ class DirectoryWatcher extends EventEmitter {
 			if (this.nestedWatching) oldDirectory.close();
 			this.directories.delete(itemPath);
 
-			this.forEachWatcher(itemPath, (w: DirectoryWatcher) => w.emit("remove", type));
+			this.forEachWatcher(itemPath, (w: LinkResolver) => w.emit("remove", type));
 			if (!initial) {
-				this.forEachWatcher(this.path, (w: DirectoryWatcher) =>
+				this.forEachWatcher(this.path, (w: LinkResolver) =>
 					w.emit("change", itemPath, null, type, initial)
 				);
 			}
@@ -153,13 +153,13 @@ class DirectoryWatcher extends EventEmitter {
 			const count: Number = this.filesWithoutCase.get(key) - 1;
 			if (count <= 0) {
 				this.filesWithoutCase.delete(key);
-				this.forEachWatcher(itemPath, (w: DirectoryWatcher) => w.emit("remove", type));
+				this.forEachWatcher(itemPath, (w: LinkResolver) => w.emit("remove", type));
 			} else {
 				this.filesWithoutCase.set(key, count);
 			}
 
 			if (!initial) {
-				this.forEachWatcher(this.path, (w: DirectoryWatcher) =>
+				this.forEachWatcher(this.path, (w: LinkResolver) =>
 					w.emit("change", itemPath, null, type, initial)
 				);
 			}
@@ -217,7 +217,7 @@ class DirectoryWatcher extends EventEmitter {
 				}
 			});
 		} else if (!initial) {
-			this.forEachWatcher(filePath, (w: DirectoryWatcher) => w.emit("change", mtime, type));
+			this.forEachWatcher(filePath, (w: LinkResolver) => w.emit("change", mtime, type));
 		}
 		this.forEachWatcher(this.path, (w: Watcher) => {
 			if (!initial || w.checkStartTime(safeTime, initial)) {
@@ -230,7 +230,7 @@ class DirectoryWatcher extends EventEmitter {
 		if (this.ignored(directoryPath)) return;
 		if (directoryPath === this.path) {
 			if (!initial) {
-				this.forEachWatcher(this.path, (w: DirectoryWatcher) =>
+				this.forEachWatcher(this.path, (w: LinkResolver) =>
 					w.emit("change", directoryPath, birthtime, type, initial)
 				);
 			}
@@ -324,7 +324,7 @@ class DirectoryWatcher extends EventEmitter {
 				safeTime = Math.max(safeTime, entry.safeTime);
 			}
 		} else {
-			const entry: DirectoryWatcher = this.files.get(filePath);
+			const entry: Watcher = this.files.get(filePath);
 			if (entry) {
 				fixupEntryAccuracy(entry);
 				safeTime = entry.safeTime;
@@ -517,7 +517,7 @@ class DirectoryWatcher extends EventEmitter {
 					this.doScan(false);
 
 					// directory was created so we emit an event
-					this.forEachWatcher(this.path, (w: DirectoryWatcher) =>
+					this.forEachWatcher(this.path, (w: LinkResolver) =>
 						w.emit("change", this.path, mtime, type, false)
 					);
 				}

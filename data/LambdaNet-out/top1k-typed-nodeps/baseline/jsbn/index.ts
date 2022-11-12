@@ -430,7 +430,7 @@
 
   // (protected) divide this by m, quotient and remainder to q, r (HAC 14.20)
   // r != q, this != m.  q or r may be null.
-  function bnpDivRemTo(m: Object, q: String, r: Function): Void {
+  function bnpDivRemTo(m: HTMLElement, q: String, r: Function): Void {
     var pm: Object = m.abs();
     if (pm.t <= 0) return;
     var pt: HTMLElement = this.abs();
@@ -725,7 +725,7 @@
   }
 
   // (protected) return x s.t. r^x < DV
-  function bnpChunkSize(r: String): Number {
+  function bnpChunkSize(r: Number): Number {
     return Math.floor((Math.LN2 * this.DB) / Math.log(r));
   }
 
@@ -1002,7 +1002,7 @@
   }
 
   // (public) this | (1<<n)
-  function bnSetBit(n: Number): Promise {
+  function bnSetBit(n: Number): Object {
     return this.changeBit(n, op_or);
   }
 
@@ -1093,7 +1093,7 @@
   }
 
   // (public) [this/a,this%a]
-  function bnDivideAndRemainder(a: Array): Array {
+  function bnDivideAndRemainder(a: Function): Array {
     var q: String = nbi(),
       r: String = nbi();
     this.divRemTo(a, q, r);
@@ -1137,13 +1137,13 @@
   NullExp.prototype.sqrTo = nSqrTo;
 
   // (public) this^e
-  function bnPow(e: Array): Object {
+  function bnPow(e: Array): Promise {
     return this.exp(e, new NullExp());
   }
 
   // (protected) r = lower n words of "this * a", a.t <= n
   // "this" should be the larger one if appropriate.
-  function bnpMultiplyLowerTo(a: Object, n: Number, r: Object): Promise {
+  function bnpMultiplyLowerTo(a: Object, n: Number, r: Object): Void {
     var i: Number = Math.min(this.t + a.t, n);
     r.s = 0; // assumes a,this >= 0
     r.t = i;
@@ -1226,7 +1226,7 @@
   Barrett.prototype.sqrTo = barrettSqrTo;
 
   // (public) this^e % m (HAC 14.85)
-  function bnModPow(e: Array, m: Function): Object {
+  function bnModPow(e: Array, m: String): Object {
     var i: Number = e.bitLength(),
       k: Number,
       r: String = nbv(1),
@@ -1581,7 +1581,7 @@
   // (public) test primality with certainty >= 1-.5^t
   function bnIsProbablePrime(t: String): Boolean {
     var i: Number,
-      x: Function = this.abs();
+      x: Object = this.abs();
     if (x.t == 1 && x[0] <= lowprimes[lowprimes.length - 1]) {
       for (i = 0; i < lowprimes.length; ++i)
         if (x[0] == lowprimes[i]) return true;

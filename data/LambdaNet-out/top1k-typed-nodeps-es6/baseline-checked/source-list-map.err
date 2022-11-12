@@ -29,7 +29,7 @@ lib/MappingsContext.ts(26,9): error TS2339: Property 'hasSourceContent' does not
 lib/MappingsContext.ts(31,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/MappingsContext.ts(32,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/MappingsContext.ts(34,26): error TS2339: Property 'sourcesContent' does not exist on type 'MappingsContext'.
-lib/SingleLineNode.ts(7,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
+lib/SingleLineNode.ts(7,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
 lib/SingleLineNode.ts(16,8): error TS2339: Property 'generatedCode' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(17,8): error TS2339: Property 'originalSource' does not exist on type 'SingleLineNode'.
 lib/SingleLineNode.ts(18,8): error TS2339: Property 'source' does not exist on type 'SingleLineNode'.
@@ -99,8 +99,8 @@ lib/SourceListMap.ts(65,26): error TS2314: Generic type 'Array<T>' requires 1 ty
 lib/SourceListMap.ts(66,8): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(71,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/SourceListMap.ts(73,4): error TS2322: Type 'void' is not assignable to type 'SourceNode'.
-lib/SourceListMap.ts(78,11): error TS2322: Type 'false | SourceNode' is not assignable to type 'SourceNode'.
-  Type 'boolean' is not assignable to type 'SourceNode'.
+lib/SourceListMap.ts(78,11): error TS2322: Type 'false | SourceNode' is not assignable to type 'String'.
+  Type 'boolean' is not assignable to type 'String'.
 lib/SourceListMap.ts(86,10): error TS2554: Expected 3 arguments, but got 1.
 lib/SourceListMap.ts(90,15): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(96,26): error TS2304: Cannot find name 'SingleLineNode'.
@@ -108,7 +108,7 @@ lib/SourceListMap.ts(97,31): error TS2339: Property 'children' does not exist on
 lib/SourceListMap.ts(100,33): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(109,21): error TS2339: Property 'sources' does not exist on type 'Object'.
 lib/SourceListMap.ts(110,63): error TS2339: Property 'sourcesContent' does not exist on type 'Object'.
-lib/SourceNode.ts(7,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
+lib/SourceNode.ts(7,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
 lib/SourceNode.ts(16,8): error TS2339: Property 'generatedCode' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(17,8): error TS2339: Property 'originalSource' does not exist on type 'SourceNode'.
 lib/SourceNode.ts(18,8): error TS2339: Property 'source' does not exist on type 'SourceNode'.
@@ -173,11 +173,9 @@ lib/base64-vlq.ts(45,12): error TS2345: Argument of type '(ch: any, index: Strin
 lib/base64-vlq.ts(45,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/base64-vlq.ts(47,18): error TS2538: Type 'String' cannot be used as an index type.
 lib/base64-vlq.ts(54,8): error TS2339: Property 'encode' does not exist on type 'Object'.
-lib/base64-vlq.ts(54,58): error TS2304: Cannot find name 'SourceNode'.
 lib/base64-vlq.ts(55,7): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
 lib/base64-vlq.ts(56,25): error TS2538: Type 'Number' cannot be used as an index type.
 lib/base64-vlq.ts(64,8): error TS2339: Property 'decode' does not exist on type 'Object'.
-lib/base64-vlq.ts(64,56): error TS2304: Cannot find name 'SourceNode'.
 lib/base64-vlq.ts(65,7): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
 lib/base64-vlq.ts(66,25): error TS2538: Type 'Number' cannot be used as an index type.
 lib/base64-vlq.ts(88,29): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -209,7 +207,7 @@ lib/base64-vlq.ts(167,13): error TS2339: Property 'value' does not exist on type
 lib/base64-vlq.ts(168,13): error TS2339: Property 'rest' does not exist on type 'Object'.
 lib/base64-vlq.ts(168,31): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/fromStringWithSourceMap.ts(7,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
+lib/fromStringWithSourceMap.ts(7,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
 lib/fromStringWithSourceMap.ts(12,77): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/fromStringWithSourceMap.ts(13,30): error TS2339: Property 'sources' does not exist on type 'Object'.
 lib/fromStringWithSourceMap.ts(14,37): error TS2339: Property 'sourcesContent' does not exist on type 'Object'.
@@ -225,9 +223,10 @@ lib/fromStringWithSourceMap.ts(35,16): error TS2339: Property 'source' does not 
 lib/fromStringWithSourceMap.ts(39,4): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/fromStringWithSourceMap.ts(42,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/fromStringWithSourceMap.ts(54,17): error TS2339: Property 'rest' does not exist on type 'Object'.
+lib/fromStringWithSourceMap.ts(55,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'CodeNode'.
+  Type 'String' is missing the following properties from type 'CodeNode': clone, getGeneratedCode, getMappings, addGeneratedCode, and 3 more.
 lib/fromStringWithSourceMap.ts(63,4): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/fromStringWithSourceMap.ts(67,9): error TS2554: Expected 3 arguments, but got 1.
-lib/fromStringWithSourceMap.ts(68,49): error TS2304: Cannot find name 'SingleLineNode'.
 lib/fromStringWithSourceMap.ts(69,14): error TS2339: Property 'rest' does not exist on type 'Object'.
 lib/fromStringWithSourceMap.ts(69,30): error TS2339: Property 'rest' does not exist on type 'Object'.
 lib/fromStringWithSourceMap.ts(70,29): error TS2339: Property 'rest' does not exist on type 'Object'.
@@ -245,6 +244,8 @@ lib/fromStringWithSourceMap.ts(92,14): error TS2339: Property 'rest' does not ex
 lib/fromStringWithSourceMap.ts(93,33): error TS2339: Property 'rest' does not exist on type 'Object'.
 lib/fromStringWithSourceMap.ts(94,12): error TS2339: Property 'rest' does not exist on type 'Object'.
 lib/fromStringWithSourceMap.ts(94,46): error TS2339: Property 'rest' does not exist on type 'Object'.
+lib/fromStringWithSourceMap.ts(98,14): error TS2345: Argument of type 'CodeNode' is not assignable to parameter of type 'String'.
+  Type 'CodeNode' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/fromStringWithSourceMap.ts(98,38): error TS2538: Type 'Number' cannot be used as an index type.
 lib/fromStringWithSourceMap.ts(98,89): error TS2538: Type 'Number' cannot be used as an index type.
 lib/helpers.ts(7,14): error TS2322: Type '(str: String) => Number' is not assignable to type 'String'.
@@ -253,5 +254,5 @@ lib/helpers.ts(12,27): error TS2365: Operator '+' cannot be applied to types 'Nu
 lib/helpers.ts(17,14): error TS2322: Type '(str: String) => Number' is not assignable to type 'String'.
 lib/helpers.ts(22,23): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/index.ts(1,29): error TS2749: 'SourceListMap' refers to a value, but is being used as a type here. Did you mean 'typeof SourceListMap'?
-lib/index.ts(3,30): error TS2749: 'CodeNode' refers to a value, but is being used as a type here. Did you mean 'typeof CodeNode'?
+lib/index.ts(3,30): error TS2749: 'SingleLineNode' refers to a value, but is being used as a type here. Did you mean 'typeof SingleLineNode'?
 

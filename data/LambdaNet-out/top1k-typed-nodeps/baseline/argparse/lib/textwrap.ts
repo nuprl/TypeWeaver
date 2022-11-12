@@ -360,7 +360,7 @@ function wrap(text: String, options: Object = {}): Void {
      *  wrapping behaviour.
      */
     let { width = 70, ...kwargs } = options
-    let w: TextWrapper = new TextWrapper(Object.assign({ width }, kwargs))
+    let w: String = new TextWrapper(Object.assign({ width }, kwargs))
     return w.wrap(text)
 }
 
@@ -375,7 +375,7 @@ function fill(text: String, options: Object = {}): String {
      *  available keyword args to customize wrapping behaviour.
      */
     let { width = 70, ...kwargs } = options
-    let w: TextWrapper = new TextWrapper(Object.assign({ width }, kwargs))
+    let w: String = new TextWrapper(Object.assign({ width }, kwargs))
     return w.fill(text)
 }
 

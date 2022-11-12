@@ -30,6 +30,7 @@ index.ts(216,38): error TS2345: Argument of type 'Number' is not assignable to p
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'number' is not assignable to type 'boolean'.
 index.ts(246,69): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(271,7): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 index.ts(271,30): error TS2554: Expected 2 arguments, but got 1.
 index.ts(273,7): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -47,7 +48,6 @@ index.ts(308,5): error TS2322: Type 'String' is not assignable to type 'Boolean'
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'string' is not assignable to type 'boolean'.
 index.ts(308,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 index.ts(310,12): error TS2554: Expected 3 arguments, but got 2.
 index.ts(312,3): error TS2322: Type 'String' is not assignable to type 'Boolean'.
 index.ts(312,23): error TS2339: Property 'low' does not exist on type 'Object'.
@@ -181,25 +181,30 @@ index.ts(873,30): error TS2339: Property 'neg' does not exist on type 'Object'.
 index.ts(882,15): error TS2339: Property 'sub' does not exist on type 'HTMLElement'.
 index.ts(882,35): error TS2339: Property 'subtract' does not exist on type 'HTMLElement'.
 index.ts(890,15): error TS2339: Property 'multiply' does not exist on type 'HTMLElement'.
-index.ts(890,65): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(894,5): error TS2322: Type 'Boolean' is not assignable to type 'String'.
+index.ts(894,5): error TS2740: Type 'Boolean' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 index.ts(894,18): error TS2554: Expected 2 arguments, but got 1.
-index.ts(900,18): error TS2339: Property 'low' does not exist on type 'String'.
-index.ts(901,18): error TS2339: Property 'high' does not exist on type 'String'.
+index.ts(900,18): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
+index.ts(901,18): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(902,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-index.ts(905,18): error TS2339: Property 'isZero' does not exist on type 'String'.
-index.ts(908,23): error TS2339: Property 'isOdd' does not exist on type 'String'.
-index.ts(909,18): error TS2339: Property 'eq' does not exist on type 'String'.
-index.ts(913,20): error TS2339: Property 'isNegative' does not exist on type 'String'.
-index.ts(914,40): error TS2339: Property 'neg' does not exist on type 'String'.
-index.ts(917,25): error TS2339: Property 'isNegative' does not exist on type 'String'.
-index.ts(918,32): error TS2339: Property 'neg' does not exist on type 'String'.
-index.ts(921,41): error TS2339: Property 'lt' does not exist on type 'String'.
-index.ts(922,52): error TS2339: Property 'toNumber' does not exist on type 'String'.
-index.ts(932,32): error TS2339: Property 'high' does not exist on type 'String'.
-index.ts(933,32): error TS2339: Property 'high' does not exist on type 'String'.
-index.ts(934,32): error TS2339: Property 'low' does not exist on type 'String'.
-index.ts(935,32): error TS2339: Property 'low' does not exist on type 'String'.
+index.ts(905,18): error TS2339: Property 'isZero' does not exist on type 'HTMLElement'.
+index.ts(906,5): error TS2322: Type 'Object' is not assignable to type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+index.ts(908,5): error TS2322: Type 'Object' is not assignable to type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+index.ts(908,23): error TS2339: Property 'isOdd' does not exist on type 'HTMLElement'.
+index.ts(909,18): error TS2339: Property 'eq' does not exist on type 'HTMLElement'.
+index.ts(910,5): error TS2322: Type 'Object' is not assignable to type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+index.ts(913,20): error TS2339: Property 'isNegative' does not exist on type 'HTMLElement'.
+index.ts(914,40): error TS2339: Property 'neg' does not exist on type 'HTMLElement'.
+index.ts(917,25): error TS2339: Property 'isNegative' does not exist on type 'HTMLElement'.
+index.ts(918,32): error TS2339: Property 'neg' does not exist on type 'HTMLElement'.
+index.ts(921,41): error TS2339: Property 'lt' does not exist on type 'HTMLElement'.
+index.ts(922,52): error TS2339: Property 'toNumber' does not exist on type 'HTMLElement'.
+index.ts(932,32): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
+index.ts(933,32): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
+index.ts(934,32): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
+index.ts(935,32): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(938,3): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 index.ts(938,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(938,16): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -254,7 +259,7 @@ index.ts(967,15): error TS2339: Property 'mul' does not exist on type 'HTMLEleme
 index.ts(967,35): error TS2339: Property 'multiply' does not exist on type 'HTMLElement'.
 index.ts(976,15): error TS2339: Property 'divide' does not exist on type 'HTMLElement'.
 index.ts(976,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(978,5): error TS2740: Type 'Boolean' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+index.ts(978,5): error TS2322: Type 'Boolean' is not assignable to type 'HTMLElement'.
 index.ts(978,15): error TS2554: Expected 2 arguments, but got 1.
 index.ts(979,15): error TS2339: Property 'isZero' does not exist on type 'HTMLElement'.
 index.ts(989,15): error TS2339: Property 'low' does not exist on type 'HTMLElement'.

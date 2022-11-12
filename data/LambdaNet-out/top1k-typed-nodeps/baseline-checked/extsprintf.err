@@ -1,6 +1,7 @@
 examples/simple.ts(2,28): error TS2339: Property 'sprintf' does not exist on type 'String'.
 examples/simple.ts(4,16): error TS2339: Property 'printf' does not exist on type 'String'.
 examples/simple.ts(5,16): error TS2339: Property 'fprintf' does not exist on type 'String'.
+lib/extsprintf.ts(5,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/extsprintf.ts(6,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/extsprintf.ts(45,6): error TS2740: Type 'RegExp' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lib/extsprintf.ts(45,35): error TS2769: No overload matches this call.
@@ -13,7 +14,6 @@ lib/extsprintf.ts(45,35): error TS2769: No overload matches this call.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/extsprintf.ts(48,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/extsprintf.ts(53,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/extsprintf.ts(68,13): error TS2339: Property 'equal' does not exist on type 'String'.
 lib/extsprintf.ts(71,21): error TS2339: Property 'exec' does not exist on type 'HTMLElement'.
 lib/extsprintf.ts(103,3): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/extsprintf.ts(105,13): error TS2339: Property 'match' does not exist on type 'Element'.
@@ -29,10 +29,6 @@ lib/extsprintf.ts(140,11): error TS2365: Operator '+' cannot be applied to types
 lib/extsprintf.ts(145,4): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
 lib/extsprintf.ts(155,4): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
 lib/extsprintf.ts(164,2): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
-lib/extsprintf.ts(169,13): error TS2339: Property 'equal' does not exist on type 'String'.
-lib/extsprintf.ts(170,13): error TS2339: Property 'equal' does not exist on type 'String'.
-lib/extsprintf.ts(171,13): error TS2339: Property 'equal' does not exist on type 'String'.
-lib/extsprintf.ts(172,13): error TS2339: Property 'equal' does not exist on type 'String'.
 lib/extsprintf.ts(178,22): error TS2304: Cannot find name 'Void'.
 lib/extsprintf.ts(179,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/extsprintf.ts(186,17): error TS2339: Property 'write' does not exist on type 'String'.

@@ -267,7 +267,7 @@ function log (message: String, site: Array): Void {
 function callSiteLocation (callSite: HTMLElement): Array {
   var file: String = callSite.getFileName() || '<anonymous>'
   var line: String = callSite.getLineNumber()
-  var colm: String = callSite.getColumnNumber()
+  var colm: Array = callSite.getColumnNumber()
 
   if (callSite.isEval()) {
     file = callSite.getEvalOrigin() + ', ' + file
@@ -380,7 +380,7 @@ function formatLocation (callSite: Object): String {
 
 function getStack (): Array {
   var limit: Boolean = Error.stackTraceLimit
-  var obj: Object = {}
+  var obj: HTMLElement = {}
   var prep: Object = Error.prepareStackTrace
 
   Error.prepareStackTrace = prepareObjectStackTrace

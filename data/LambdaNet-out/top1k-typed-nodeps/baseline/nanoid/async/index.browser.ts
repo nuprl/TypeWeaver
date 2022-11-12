@@ -39,7 +39,7 @@ export let customAlphabet: Function = (alphabet: Array, defaultSize: Number = 21
   }
 }
 
-export let nanoid: Date = async (size: String = 21) => {
+export let nanoid: Function = async (size: String = 21) => {
   let id: String = ''
   let bytes: Object = crypto.getRandomValues(new Uint8Array(size))
 

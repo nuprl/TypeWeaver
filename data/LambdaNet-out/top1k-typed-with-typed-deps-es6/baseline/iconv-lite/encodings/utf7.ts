@@ -7,7 +7,7 @@ import { Buffer } from 'safer-buffer';
 export const utf7: Function = Utf7Codec;
 
 export const unicode11utf7: String = 'utf7'; // Alias UNICODE-1-1-UTF-7
-function Utf7Codec(codecOptions: Function, iconv: Function): Void {
+function Utf7Codec(codecOptions: Object, iconv: Function): Void {
     this.iconv = iconv;
 }
 
@@ -132,7 +132,7 @@ Utf7Decoder.prototype.end = function() {
 
 export const utf7imap: Function = Utf7IMAPCodec;
 
-function Utf7IMAPCodec(codecOptions: Function, iconv: Function): Void {
+function Utf7IMAPCodec(codecOptions: Object, iconv: Function): Void {
     this.iconv = iconv;
 }
 
@@ -223,7 +223,7 @@ function Utf7IMAPDecoder(options: Object, codec: Object): Void {
     this.base64Accum = '';
 }
 
-var base64IMAPChars: Object = base64Chars.slice();
+var base64IMAPChars: Function = base64Chars.slice();
 base64IMAPChars[','.charCodeAt(0)] = true;
 
 Utf7IMAPDecoder.prototype.write = function(buf: Array) {

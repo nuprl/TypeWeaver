@@ -1,5 +1,5 @@
 build/packer/base2.ts(21,1): error TS2554: Expected 1 arguments, but got 0.
-build/packer/base2.ts(27,5): error TS2322: Type 'Function' is not assignable to type 'String'.
+build/packer/base2.ts(27,5): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 build/packer/base2.ts(27,25): error TS2554: Expected 1 arguments, but got 0.
 build/packer/base2.ts(27,30): error TS2322: Type 'Function' is not assignable to type 'String'.
 build/packer/base2.ts(27,54): error TS2322: Type 'Function' is not assignable to type 'String'.
@@ -185,10 +185,10 @@ build/packer/base2.ts(670,13): error TS2339: Property 'Item' does not exist on t
 build/packer/base2.ts(670,53): error TS2339: Property 'Item' does not exist on type 'Object'.
 build/packer/base2.ts(672,15): error TS2339: Property 'init' does not exist on type 'Object'.
 build/packer/base2.ts(672,27): error TS2339: Property 'init' does not exist on type 'Object'.
-build/packer/base2.ts(691,33): error TS2339: Property 'extend' does not exist on type 'Object'.
+build/packer/base2.ts(691,38): error TS2339: Property 'extend' does not exist on type 'Object'.
 build/packer/base2.ts(701,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build/packer/base2.ts(701,50): error TS2538: Type 'String' cannot be used as an index type.
-build/packer/base2.ts(703,28): error TS2339: Property 'IGNORE' does not exist on type 'Object'.
+build/packer/base2.ts(703,28): error TS2339: Property 'IGNORE' does not exist on type 'HTMLElement'.
 build/packer/base2.ts(704,91): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build/packer/base2.ts(705,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build/packer/base2.ts(707,41): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -207,12 +207,12 @@ build/packer/base2.ts(745,7): error TS2365: Operator '+=' cannot be applied to t
 build/packer/base2.ts(753,5): error TS2554: Expected 4 arguments, but got 3.
 build/packer/base2.ts(756,37): error TS2339: Property 'source' does not exist on type 'Object'.
 build/packer/base2.ts(758,27): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'Function'.
-build/packer/base2.ts(765,53): error TS2339: Property 'IGNORE' does not exist on type 'Object'.
+build/packer/base2.ts(765,53): error TS2339: Property 'IGNORE' does not exist on type 'HTMLElement'.
 build/packer/base2.ts(766,28): error TS2339: Property 'replacement' does not exist on type 'String'.
 build/packer/base2.ts(766,75): error TS2339: Property 'replacement' does not exist on type 'String'.
 build/packer/base2.ts(774,11): error TS2322: Type 'number' is not assignable to type 'String'.
 build/packer/base2.ts(786,11): error TS2322: Type 'Function' is not assignable to type 'String'.
-build/packer/base2.ts(790,28): error TS2339: Property 'count' does not exist on type 'Object'.
+build/packer/base2.ts(790,28): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
 build/packer/base2.ts(792,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 build/packer/base2.ts(802,30): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'Function'.
 build/packer/base2.ts(802,44): error TS2339: Property 'length' does not exist on type 'Boolean'.
@@ -245,8 +245,8 @@ build/packer/base2.ts(856,10): error TS2350: Only a void function can be called 
 build/packer/base2.ts(859,20): error TS2304: Cannot find name 'Void'.
 build/packer/base2.ts(865,48): error TS2304: Cannot find name 'Void'.
 build/packer/base2.ts(866,17): error TS2339: Property 'base' does not exist on type 'Object'.
-build/packer/base2.ts(872,11): error TS2322: Type 'Object' is not assignable to type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+build/packer/base2.ts(872,11): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 build/packer/base2.ts(874,14): error TS2538: Type 'String' cannot be used as an index type.
 build/packer/base2.ts(878,15): error TS2339: Property '__prototyping' does not exist on type 'HTMLElement'.
 build/packer/base2.ts(880,31): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -287,6 +287,7 @@ build/packer/base2.ts(975,21): error TS2345: Argument of type 'Number | ObjectCo
 build/packer/base2.ts(978,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build/packer/base2.ts(979,3): error TS2554: Expected 4 arguments, but got 3.
 build/packer/base2.ts(979,16): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 build/packer/base2.ts(983,3): error TS2554: Expected 4 arguments, but got 2.
 build/packer/base2.ts(985,18): error TS2554: Expected 0 arguments, but got 1.
 build/packer/base2.ts(985,33): error TS2554: Expected 4 arguments, but got 2.
@@ -605,7 +606,6 @@ build/packer/packer.ts(329,15): error TS2362: The left-hand side of an arithmeti
 build/packer/packer.ts(329,50): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 build/packer/packer.ts(329,80): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 build/packer/packer.ts(331,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 build/packer/packer.ts(332,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 build/packer/packer.ts(341,24): error TS2304: Cannot find name 'Base'.
@@ -647,7 +647,7 @@ build/packer/packer.ts(438,23): error TS2365: Operator '+' cannot be applied to 
 build/packer/packer.ts(452,32): error TS2339: Property 'source' does not exist on type 'Object'.
 build/packer/packer.ts(457,9): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-build/packer/packer.ts(459,9): error TS2322: Type 'Object' is not assignable to type 'String'.
+build/packer/packer.ts(459,9): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 build/packer/packer.ts(468,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build/packer/packer.ts(473,11): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
@@ -657,7 +657,7 @@ build/packer/packer.ts(485,32): error TS2345: Argument of type 'String' is not a
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 build/packer/packer.ts(486,33): error TS2769: No overload matches this call.
   The last overload gave the following error.
-    Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
+    Argument of type 'Function' is not assignable to parameter of type 'string | RegExp'.
 build/packer/packer.ts(495,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build/packer/packer.ts(495,28): error TS2304: Cannot find name 'match'.
 build/packer/packer.ts(498,13): error TS2304: Cannot find name 'id'.
@@ -761,8 +761,8 @@ src/modules/nwsapi-traversal.ts(28,19): error TS2339: Property 'nodeType' does n
 src/modules/nwsapi-traversal.ts(30,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/modules/nwsapi-traversal.ts(32,18): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-src/modules/nwsapi-traversal.ts(46,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+src/modules/nwsapi-traversal.ts(46,5): error TS2322: Type 'Object' is not assignable to type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 src/modules/nwsapi-traversal.ts(46,49): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
   Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 src/modules/nwsapi-traversal.ts(55,5): error TS2322: Type 'Object' is not assignable to type 'String'.
@@ -797,8 +797,8 @@ src/nwsapi.ts(27,26): error TS2339: Property 'NW' does not exist on type 'HTMLEl
 src/nwsapi.ts(28,12): error TS2339: Property 'NW' does not exist on type 'HTMLElement'.
 src/nwsapi.ts(31,4): error TS2345: Argument of type 'typeof globalThis' is not assignable to parameter of type 'HTMLElement'.
   Type 'typeof globalThis' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 184 more.
-src/nwsapi.ts(35,26): error TS2339: Property 'document' does not exist on type 'Object'.
-src/nwsapi.ts(36,22): error TS2339: Property 'documentElement' does not exist on type 'Function'.
+src/nwsapi.ts(35,24): error TS2339: Property 'document' does not exist on type 'Object'.
+src/nwsapi.ts(36,22): error TS2339: Property 'documentElement' does not exist on type 'String'.
 src/nwsapi.ts(57,5): error TS2322: Type '{ HasEscapes: RegExp; HexNumbers: RegExp; EscOrQuote: RegExp; RegExpChar: RegExp; TrimSpaces: RegExp; CommaGroup: RegExp; SplitGroup: RegExp; FixEscapes: RegExp; CombineWSP: RegExp; TabCharWSP: RegExp; PseudosWSP: RegExp; }' is not assignable to type 'HTMLInputElement'.
   Object literal may only specify known properties, and 'HasEscapes' does not exist in type 'HTMLInputElement'.
 src/nwsapi.ts(62,44): error TS2339: Property 'square_enc' does not exist on type 'Object'.
@@ -841,13 +841,11 @@ src/nwsapi.ts(230,25): error TS2339: Property 'ownerDocument' does not exist on 
 src/nwsapi.ts(233,20): error TS2339: Property 'documentElement' does not exist on type 'Object'.
 src/nwsapi.ts(236,23): error TS2538: Type 'String' cannot be used as an index type.
 src/nwsapi.ts(236,55): error TS2538: Type 'String' cannot be used as an index type.
-src/nwsapi.ts(241,11): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-src/nwsapi.ts(242,7): error TS2322: Type 'Document | HTMLElement' is not assignable to type 'Function'.
-  Type 'Document' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
-src/nwsapi.ts(243,20): error TS2367: This condition will always return 'true' since the types 'String' and 'Function' have no overlap.
-src/nwsapi.ts(246,20): error TS2339: Property 'documentElement' does not exist on type 'Function'.
-src/nwsapi.ts(248,9): error TS2322: Type 'boolean' is not assignable to type 'Number'.
-src/nwsapi.ts(249,15): error TS2339: Property 'compatMode' does not exist on type 'Function'.
+src/nwsapi.ts(242,7): error TS2322: Type 'Document | HTMLElement' is not assignable to type 'String'.
+  Type 'Document' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
+src/nwsapi.ts(246,20): error TS2339: Property 'documentElement' does not exist on type 'String'.
+src/nwsapi.ts(248,9): error TS2322: Type 'boolean' is not assignable to type 'Function'.
+src/nwsapi.ts(249,15): error TS2339: Property 'compatMode' does not exist on type 'String'.
 src/nwsapi.ts(250,34): error TS2339: Property 'namespaceURI' does not exist on type 'String'.
 src/nwsapi.ts(251,18): error TS2339: Property 'doc' does not exist on type 'Object'.
 src/nwsapi.ts(252,18): error TS2339: Property 'root' does not exist on type 'Object'.
@@ -864,23 +862,21 @@ src/nwsapi.ts(297,18): error TS2339: Property 'HasEscapes' does not exist on typ
 src/nwsapi.ts(298,25): error TS2339: Property 'FixEscapes' does not exist on type 'HTMLInputElement'.
 src/nwsapi.ts(299,11): error TS2769: No overload matches this call.
   The last overload gave the following error.
-    Argument of type '(substring: Number, p1: String, p2: Number) => any' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
+    Argument of type '(substring: Number, p1: Number, p2: Number) => any' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
       Types of parameters 'substring' and 'substring' are incompatible.
         Type 'string' is not assignable to type 'Number'.
 src/nwsapi.ts(303,19): error TS2339: Property 'HexNumbers' does not exist on type 'HTMLInputElement'.
-src/nwsapi.ts(303,67): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+src/nwsapi.ts(303,67): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 src/nwsapi.ts(305,19): error TS2339: Property 'EscOrQuote' does not exist on type 'HTMLInputElement'.
 src/nwsapi.ts(316,18): error TS2339: Property 'HasEscapes' does not exist on type 'HTMLInputElement'.
 src/nwsapi.ts(317,25): error TS2339: Property 'FixEscapes' does not exist on type 'HTMLInputElement'.
 src/nwsapi.ts(318,11): error TS2769: No overload matches this call.
   The last overload gave the following error.
-    Argument of type '(substring: Number, p1: String, p2: Boolean) => any' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
+    Argument of type '(substring: Number, p1: Number, p2: Boolean) => any' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
       Types of parameters 'substring' and 'substring' are incompatible.
         Type 'string' is not assignable to type 'Number'.
 src/nwsapi.ts(322,19): error TS2339: Property 'HexNumbers' does not exist on type 'HTMLInputElement'.
-src/nwsapi.ts(322,70): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+src/nwsapi.ts(322,70): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 src/nwsapi.ts(324,19): error TS2339: Property 'EscOrQuote' does not exist on type 'HTMLInputElement'.
 src/nwsapi.ts(339,47): error TS2339: Property 'HasEscapes' does not exist on type 'HTMLInputElement'.
 src/nwsapi.ts(340,47): error TS2339: Property 'HasEscapes' does not exist on type 'HTMLInputElement'.
@@ -1115,9 +1111,9 @@ src/nwsapi.ts(1072,19): error TS2322: Type 'string' is not assignable to type 'N
 src/nwsapi.ts(1075,19): error TS2322: Type 'string' is not assignable to type 'Number'.
 src/nwsapi.ts(1085,55): error TS2339: Property 'useraction' does not exist on type 'Object'.
 src/nwsapi.ts(1089,19): error TS2322: Type 'string' is not assignable to type 'Number'.
-src/nwsapi.ts(1089,53): error TS2339: Property 'hasFocus' does not exist on type 'Function'.
+src/nwsapi.ts(1089,53): error TS2339: Property 'hasFocus' does not exist on type 'String'.
 src/nwsapi.ts(1094,19): error TS2322: Type 'string' is not assignable to type 'Number'.
-src/nwsapi.ts(1094,53): error TS2339: Property 'hasFocus' does not exist on type 'Function'.
+src/nwsapi.ts(1094,53): error TS2339: Property 'hasFocus' does not exist on type 'String'.
 src/nwsapi.ts(1099,19): error TS2322: Type 'string' is not assignable to type 'Number'.
 src/nwsapi.ts(1104,19): error TS2322: Type 'string | Number' is not assignable to type 'Number'.
   Type 'string' is not assignable to type 'Number'.
@@ -1180,7 +1176,6 @@ src/nwsapi.ts(1424,10): error TS2314: Generic type 'Array<T>' requires 1 type ar
 src/nwsapi.ts(1445,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/nwsapi.ts(1445,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/nwsapi.ts(1445,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/nwsapi.ts(1447,19): error TS2322: Type 'Function' is not assignable to type 'String'.
 src/nwsapi.ts(1450,41): error TS2538: Type 'String' cannot be used as an index type.
 src/nwsapi.ts(1451,24): error TS2339: Property 'context' does not exist on type 'Object'.
 src/nwsapi.ts(1451,56): error TS2339: Property 'callback' does not exist on type 'Object'.

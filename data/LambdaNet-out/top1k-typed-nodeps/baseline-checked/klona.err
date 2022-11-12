@@ -7,6 +7,7 @@ bench/fixtures/full.ts(23,2): error TS2464: A computed property name must be of 
 bench/fixtures/full.ts(24,2): error TS2464: A computed property name must be of type 'string', 'number', 'symbol', or 'any'.
 bench/index.ts(27,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bench/index.ts(31,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+bench/index.ts(35,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bench/index.ts(45,52): error TS2304: Cannot find name 'Void'.
 bench/index.ts(51,37): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
@@ -17,11 +18,9 @@ bench/index.ts(60,25): error TS2538: Type 'String' cannot be used as an index ty
 bench/index.ts(64,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 bench/index.ts(66,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-bench/index.ts(67,24): error TS2339: Property 'target' does not exist on type 'Test'.
+bench/index.ts(67,24): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
 bench/index.ts(71,67): error TS2538: Type 'String' cannot be used as an index type.
-bench/index.ts(91,21): error TS2339: Property 'klona' does not exist on type 'String'.
 bench/index.ts(92,21): error TS2339: Property 'klona' does not exist on type 'String'.
-bench/index.ts(102,21): error TS2339: Property 'klona' does not exist on type 'String'.
 bench/validate/default.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'assert'.
 bench/validate/default.ts(4,9): error TS2339: Property 'deepStrictEqual' does not exist on type 'String'.
 bench/validate/default.ts(7,7): error TS2339: Property 'regexp' does not exist on type 'Object'.

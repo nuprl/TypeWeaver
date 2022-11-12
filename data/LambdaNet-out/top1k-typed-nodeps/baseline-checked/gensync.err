@@ -1,5 +1,5 @@
 index.ts(5,7): error TS2322: Type 'typeof GENSYNC_START' is not assignable to type 'String'.
-index.ts(6,7): error TS2322: Type 'typeof GENSYNC_SUSPEND' is not assignable to type 'Function'.
+index.ts(6,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(16,9): error TS2740: Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 index.ts(18,28): error TS2345: Argument of type 'String' is not assignable to parameter of type '{ name: any; arity: any; sync: any; async: any; errback: any; }'.
   Type 'String' is missing the following properties from type '{ name: any; arity: any; sync: any; async: any; errback: any; }': name, arity, sync, async, errback
@@ -29,7 +29,7 @@ index.ts(147,3): error TS2554: Expected 4 arguments, but got 3.
 index.ts(199,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(200,56): error TS2345: Argument of type '(...args: any[]) => any' is not assignable to parameter of type 'String'.
 index.ts(205,56): error TS2304: Cannot find name 'Void'.
-index.ts(206,43): error TS2345: Argument of type '(...args: any[]) => Generator<Function | String, any, unknown>' is not assignable to parameter of type 'String'.
+index.ts(206,43): error TS2345: Argument of type '(...args: any[]) => Generator<any, any, unknown>' is not assignable to parameter of type 'String'.
 index.ts(251,28): error TS2339: Property 'next' does not exist on type 'Object'.
 index.ts(252,24): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?

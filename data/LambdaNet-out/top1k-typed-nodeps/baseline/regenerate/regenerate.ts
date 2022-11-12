@@ -1066,7 +1066,7 @@
 
 	var proto: Object = regenerate.prototype;
 	extend(proto, {
-		'add': function(value: Array) {
+		'add': function(value: String) {
 			var $this: HTMLElement = this;
 			if (value == null) {
 				return $this;

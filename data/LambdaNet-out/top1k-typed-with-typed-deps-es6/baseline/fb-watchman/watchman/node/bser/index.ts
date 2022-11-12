@@ -18,7 +18,7 @@ import Int64 from 'node-int64';
 var isBigEndian: Boolean = os.endianness() == 'BE';
 
 // Find the next power-of-2 >= size
-function nextPow2(size: Number): Number {
+function nextPow2(size: String): Number {
   return Math.pow(2, Math.ceil(Math.log(size) / Math.LN2));
 }
 
@@ -226,7 +226,7 @@ function BunserBuf(): Void {
 util.inherits(BunserBuf, EE);
 exports.BunserBuf = BunserBuf;
 
-BunserBuf.prototype.append = function(buf: String, synchronous: String) {
+BunserBuf.prototype.append = function(buf: String, synchronous: Number) {
   if (synchronous) {
     this.buf.append(buf);
     return this.process(synchronous);
@@ -311,7 +311,7 @@ BunserBuf.prototype.raise = function(reason: Number) {
           this.buf.readOffset, this.buf.readOffset + 32).toJSON()));
 }
 
-BunserBuf.prototype.expectCode = function(expected: Number) {
+BunserBuf.prototype.expectCode = function(expected: String) {
   var code: String = this.buf.readInt(1);
   if (code != expected) {
     this.raise("expected bser opcode " + expected + " but got " + code);

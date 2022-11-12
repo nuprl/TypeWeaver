@@ -1,13 +1,13 @@
 Source directory: .
 Dataset: top1k-typed-nodeps-es6
-Inferring types with LambdaNet: /mnt/data/mhyee/not-type-inference/LambdaNet
-Input directory: /mnt/data/mhyee/not-type-inference/data/original/top1k-typed-nodeps-es6
-Output directory: /mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/predictions
+Inferring types with LambdaNet: /work/arjunguha-research-group/mhyee/not-type-inference/LambdaNet
+Input directory: /work/arjunguha-research-group/mhyee/not-type-inference/data/original/top1k-typed-nodeps-es6
+Output directory: /work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/predictions
 Found 287 packages
 [1/287] @xtuc_long ... [ OK ]
 [2/287] abab ... [ OK ]
 [3/287] abbrev ... [ OK ]
-[4/287] acorn ... [ OK ]
+[4/287] acorn ... [FAIL]
 [5/287] acorn-jsx ... [ OK ]
 [6/287] ansi-colors ... [ OK ]
 [7/287] ansi-regex ... [ OK ]
@@ -23,7 +23,7 @@ Found 287 packages
 [17/287] assert-plus ... [ OK ]
 [18/287] astral-regex ... [ OK ]
 [19/287] async ... [FAIL]
-[20/287] atob ... [ OK ]
+[20/287] atob ... [FAIL]
 [21/287] aws4 ... [ OK ]
 [22/287] balanced-match ... [ OK ]
 [23/287] base64-js ... [ OK ]
@@ -42,9 +42,9 @@ Found 287 packages
 [36/287] caniuse-lite ... [FAIL]
 [37/287] caseless ... [FAIL]
 [38/287] char-regex ... [FAIL]
-[39/287] chownr ... [ OK ]
-[40/287] ci-info ... [ OK ]
-[41/287] cjs-module-lexer ... [ OK ]
+[39/287] chownr ... [FAIL]
+[40/287] ci-info ... [FAIL]
+[41/287] cjs-module-lexer ... [FAIL]
 [42/287] cli-boxes ... [FAIL]
 [43/287] cli-spinners ... [FAIL]
 [44/287] clone ... [ OK ]
@@ -89,7 +89,7 @@ Found 287 packages
 [83/287] etag ... [ OK ]
 [84/287] eventemitter3 ... [ OK ]
 [85/287] events ... [ OK ]
-[86/287] eventsource ... [ OK ]
+[86/287] eventsource ... [FAIL]
 [87/287] exec-sh ... [ OK ]
 [88/287] exit ... [ OK ]
 [89/287] extend ... [ OK ]
@@ -157,7 +157,7 @@ Found 287 packages
 [151/287] isobject ... [ OK ]
 [152/287] isstream ... [ OK ]
 [153/287] jest-pnp-resolver ... [ OK ]
-[154/287] jquery ... [ OK ]
+[154/287] jquery ... [FAIL]
 [155/287] jsbn ... [ OK ]
 [156/287] jsesc ... [ OK ]
 [157/287] json-buffer ... [ OK ]
@@ -272,7 +272,7 @@ Found 287 packages
 [266/287] to-fast-properties ... [ OK ]
 [267/287] trim-newlines ... [ OK ]
 [268/287] tslib ... [ OK ]
-[269/287] tweetnacl ... [ OK ]
+[269/287] tweetnacl ... [FAIL]
 [270/287] type ... [ OK ]
 [271/287] typedarray-to-buffer ... [ OK ]
 [272/287] universalify ... [ OK ]
@@ -291,7 +291,7 @@ Found 287 packages
 [285/287] yallist ... [ OK ]
 [286/287] yn ... [ OK ]
 [287/287] yocto-queue ... [FAIL]
-Number of successes: 248
-Number of fails: 39
+Number of successes: 240
+Number of fails: 47
 Number of skips: 0
-Time for type inference: 0:56:09
+Time for type inference: 1:57:50

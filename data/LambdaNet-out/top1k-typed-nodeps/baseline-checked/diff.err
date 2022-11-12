@@ -54,22 +54,19 @@ src/diff/base.ts(177,47): error TS2314: Generic type 'Array<T>' requires 1 type 
 src/diff/base.ts(177,65): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/base.ts(177,83): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/base.ts(183,39): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/diff/base.ts(185,20): error TS2551: Property 'removed' does not exist on type 'HTMLElement'. Did you mean 'remove'?
-src/diff/base.ts(186,22): error TS2339: Property 'added' does not exist on type 'HTMLElement'.
+src/diff/base.ts(185,20): error TS2551: Property 'removed' does not exist on type 'HTMLInputElement'. Did you mean 'remove'?
+src/diff/base.ts(186,22): error TS2339: Property 'added' does not exist on type 'HTMLInputElement'.
 src/diff/base.ts(187,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/base.ts(187,71): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
+src/diff/base.ts(187,71): error TS2339: Property 'count' does not exist on type 'HTMLInputElement'.
 src/diff/base.ts(188,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/base.ts(189,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/base.ts(189,43): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.
-src/diff/base.ts(193,19): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
-src/diff/base.ts(195,19): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
-src/diff/base.ts(195,80): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
-src/diff/base.ts(197,27): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
-src/diff/base.ts(200,22): error TS2339: Property 'added' does not exist on type 'HTMLElement'.
-src/diff/base.ts(201,29): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
-src/diff/base.ts(204,17): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
-src/diff/base.ts(204,78): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
-src/diff/base.ts(205,27): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
+src/diff/base.ts(195,80): error TS2339: Property 'count' does not exist on type 'HTMLInputElement'.
+src/diff/base.ts(197,27): error TS2339: Property 'count' does not exist on type 'HTMLInputElement'.
+src/diff/base.ts(200,22): error TS2339: Property 'added' does not exist on type 'HTMLInputElement'.
+src/diff/base.ts(201,29): error TS2339: Property 'count' does not exist on type 'HTMLInputElement'.
+src/diff/base.ts(204,78): error TS2339: Property 'count' does not exist on type 'HTMLInputElement'.
+src/diff/base.ts(205,27): error TS2339: Property 'count' does not exist on type 'HTMLInputElement'.
 src/diff/base.ts(210,38): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/diff/base.ts(211,38): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/diff/base.ts(212,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -89,11 +86,10 @@ src/diff/css.ts(3,31): error TS2350: Only a void function can be called with the
 src/diff/json.ts(7,38): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/json.ts(10,10): error TS2339: Property 'useLongestToken' does not exist on type 'HTMLElement'.
 src/diff/json.ts(12,10): error TS2339: Property 'tokenize' does not exist on type 'HTMLElement'.
-src/diff/json.ts(12,30): error TS2339: Property 'tokenize' does not exist on type 'HTMLElement'.
 src/diff/json.ts(13,10): error TS2339: Property 'castInput' does not exist on type 'HTMLElement'.
 src/diff/json.ts(16,61): error TS2554: Expected 5 arguments, but got 4.
 src/diff/json.ts(18,10): error TS2339: Property 'equals' does not exist on type 'HTMLElement'.
-src/diff/json.ts(22,104): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
+src/diff/json.ts(22,106): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
 src/diff/json.ts(26,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/json.ts(26,75): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/json.ts(36,33): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
@@ -109,13 +105,11 @@ src/diff/json.ts(68,30): error TS2345: Argument of type 'String' is not assignab
 src/diff/json.ts(73,40): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 src/diff/json.ts(75,24): error TS2538: Type 'String' cannot be used as an index type.
 src/diff/json.ts(75,48): error TS2538: Type 'String' cannot be used as an index type.
-src/diff/line.ts(4,38): error TS2350: Only a void function can be called with the 'new' keyword.
-src/diff/line.ts(5,10): error TS2339: Property 'tokenize' does not exist on type 'HTMLElement'.
+src/diff/line.ts(4,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/diff/line.ts(4,32): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/line.ts(6,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/line.ts(7,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/line.ts(31,106): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
 src/diff/line.ts(32,76): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/line.ts(34,19): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
 src/diff/sentence.ts(4,42): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/sentence.ts(5,14): error TS2339: Property 'tokenize' does not exist on type 'HTMLElement'.
 src/diff/sentence.ts(9,114): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
@@ -168,6 +162,7 @@ src/patch/apply.ts(149,11): error TS2740: Type 'Boolean' is missing the followin
 src/patch/apply.ts(149,49): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+src/patch/create.ts(3,83): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/patch/create.ts(7,22): error TS2339: Property 'context' does not exist on type 'Object'.
 src/patch/create.ts(8,13): error TS2339: Property 'context' does not exist on type 'Object'.
 src/patch/create.ts(11,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -200,8 +195,6 @@ src/patch/create.ts(71,24): error TS2362: The left-hand side of an arithmetic op
 src/patch/create.ts(71,24): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
 src/patch/create.ts(71,34): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/patch/create.ts(74,63): error TS2339: Property 'context' does not exist on type 'Object'.
-src/patch/create.ts(76,56): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 src/patch/create.ts(77,56): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 src/patch/create.ts(78,87): error TS2339: Property 'oldLines' does not exist on type 'Object'.
@@ -349,7 +342,7 @@ src/patch/merge.ts(157,26): error TS2345: Argument of type 'Object' is not assig
 src/patch/merge.ts(160,12): error TS2339: Property 'lines' does not exist on type 'Object'.
 src/patch/merge.ts(163,12): error TS2339: Property 'lines' does not exist on type 'Object'.
 src/patch/merge.ts(166,7): error TS2554: Expected 4 arguments, but got 3.
-src/patch/merge.ts(169,21): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+src/patch/merge.ts(169,21): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 src/patch/merge.ts(172,12): error TS2339: Property 'lines' does not exist on type 'Object'.
 src/patch/merge.ts(173,12): error TS2339: Property 'index' does not exist on type 'Object'.
@@ -362,7 +355,7 @@ src/patch/merge.ts(190,21): error TS2314: Generic type 'Array<T>' requires 1 typ
 src/patch/merge.ts(196,12): error TS2339: Property 'lines' does not exist on type 'Object'.
 src/patch/merge.ts(200,12): error TS2339: Property 'lines' does not exist on type 'Object'.
 src/patch/merge.ts(204,10): error TS2339: Property 'lines' does not exist on type 'Object'.
-src/patch/merge.ts(211,77): error TS2304: Cannot find name 'Void'.
+src/patch/merge.ts(211,79): error TS2304: Cannot find name 'Void'.
 src/patch/merge.ts(214,20): error TS2339: Property 'merged' does not exist on type 'Object'.
 src/patch/merge.ts(215,10): error TS2339: Property 'lines' does not exist on type 'Object'.
 src/patch/merge.ts(215,38): error TS2339: Property 'merged' does not exist on type 'Object'.

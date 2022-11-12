@@ -28,10 +28,10 @@ scripts/build.ts(104,34): error TS2538: Type 'String' cannot be used as an index
 scripts/build.ts(105,9): error TS2538: Type 'String' cannot be used as an index type.
 scripts/fetch-apache.ts(33,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'String'.
 scripts/fetch-apache.ts(35,5): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(type: String, options: Object): any', gave the following error.
+  Overload 1 of 3, '(url: String, callback: Function): Void', gave the following error.
     Argument of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }' is not assignable to parameter of type 'String'.
       Type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
-  Overload 2 of 3, '(url: String, callback: Function): Void', gave the following error.
+  Overload 2 of 3, '(type: String, options: Object): any', gave the following error.
     Argument of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }' is not assignable to parameter of type 'String'.
   Overload 3 of 3, '(url: String, callback: Function): Void', gave the following error.
     Argument of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }' is not assignable to parameter of type 'String'.
@@ -199,9 +199,9 @@ scripts/fetch-iana.ts(387,32): error TS2314: Generic type 'Array<T>' requires 1 
 scripts/fetch-iana.ts(393,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/fetch-nginx.ts(31,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'String'.
 scripts/fetch-nginx.ts(33,5): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(type: String, options: Object): any', gave the following error.
+  Overload 1 of 3, '(url: String, callback: Function): Void', gave the following error.
     Argument of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }' is not assignable to parameter of type 'String'.
-  Overload 2 of 3, '(url: String, callback: Function): Void', gave the following error.
+  Overload 2 of 3, '(type: String, options: Object): any', gave the following error.
     Argument of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }' is not assignable to parameter of type 'String'.
   Overload 3 of 3, '(url: String, callback: Function): Void', gave the following error.
     Argument of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }' is not assignable to parameter of type 'String'.

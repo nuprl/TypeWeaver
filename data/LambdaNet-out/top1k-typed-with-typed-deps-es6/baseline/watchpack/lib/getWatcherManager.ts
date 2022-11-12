@@ -45,7 +45,7 @@ const watcherManagers: Error = new WeakMap();
 module.exports = (options: Function) => {
 	const watcherManager: WatcherManager = watcherManagers.get(options);
 	if (watcherManager !== undefined) return watcherManager;
-	const newWatcherManager: DirectoryWatcher = new WatcherManager(options);
+	const newWatcherManager: String = new WatcherManager(options);
 	watcherManagers.set(options, newWatcherManager);
 	return newWatcherManager;
 };

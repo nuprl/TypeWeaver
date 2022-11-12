@@ -10,9 +10,11 @@ index.ts(45,10): error TS2339: Property 'skipKeywords' does not exist on type 'H
 index.ts(67,208): error TS2304: Cannot find name 'Void'.
 index.ts(71,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(73,29): error TS2339: Property 'arrayKeywords' does not exist on type 'HTMLElement'.
-index.ts(75,48): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
+index.ts(75,91): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'string' is not assignable to type 'boolean'.
 index.ts(77,34): error TS2339: Property 'propsKeywords' does not exist on type 'HTMLElement'.
-index.ts(80,51): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
+index.ts(80,112): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Boolean'.
 index.ts(82,34): error TS2339: Property 'keywords' does not exist on type 'HTMLElement'.
 index.ts(82,52): error TS2339: Property 'allKeys' does not exist on type 'Object'.
 index.ts(82,81): error TS2339: Property 'skipKeywords' does not exist on type 'HTMLElement'.

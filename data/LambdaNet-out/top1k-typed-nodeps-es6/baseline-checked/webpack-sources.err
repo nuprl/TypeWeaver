@@ -1,6 +1,9 @@
-lib/CachedSource.ts(12,42): error TS2304: Cannot find name 'SourceMapSource'.
+lib/CachedSource.ts(15,10): error TS2339: Property 'mappings' does not exist on type 'never'.
 lib/CachedSource.ts(16,15): error TS2339: Property 'mappings' does not exist on type 'Object'.
+lib/CachedSource.ts(16,42): error TS2339: Property 'mappings' does not exist on type 'never'.
+lib/CachedSource.ts(18,10): error TS2339: Property 'sourcesContent' does not exist on type 'never'.
 lib/CachedSource.ts(19,15): error TS2339: Property 'sourcesContent' does not exist on type 'Object'.
+lib/CachedSource.ts(19,36): error TS2339: Property 'sourcesContent' does not exist on type 'never'.
 lib/CachedSource.ts(20,40): error TS2769: No overload matches this call.
   Overload 1 of 4, '(arrayBuffer: WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>, byteOffset?: number, length?: number): Buffer', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>'.
@@ -69,13 +72,12 @@ lib/CachedSource.ts(140,51): error TS2339: Property '_cachedSize' does not exist
 lib/CachedSource.ts(141,12): error TS2339: Property '_cachedBuffer' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(142,17): error TS2339: Property '_cachedSize' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(142,36): error TS2339: Property '_cachedBuffer' does not exist on type 'CachedSource'.
+lib/CachedSource.ts(144,17): error TS2304: Cannot find name 'ReplaceSource'.
 lib/CachedSource.ts(146,17): error TS2339: Property '_cachedSize' does not exist on type 'CachedSource'.
-lib/CachedSource.ts(146,49): error TS2345: Argument of type 'Source' is not assignable to parameter of type 'string | ArrayBuffer | SharedArrayBuffer | ArrayBufferView'.
-  Type 'Source' is missing the following properties from type 'BigUint64Array': BYTES_PER_ELEMENT, byteLength, byteOffset, copyWithin, and 25 more.
 lib/CachedSource.ts(148,16): error TS2339: Property '_cachedSize' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(153,35): error TS2339: Property '_cachedMaps' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(157,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/CachedSource.ts(169,24): error TS2304: Cannot find name 'SourceMapSource'.
+lib/CachedSource.ts(170,4): error TS2322: Type '() => void' is not assignable to type 'String'.
 lib/CachedSource.ts(172,9): error TS2339: Property '_cachedSource' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(174,8): error TS2339: Property '_cachedMaps' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(184,9): error TS2339: Property '_cachedMaps' does not exist on type 'CachedSource'.
@@ -132,10 +134,10 @@ lib/ConcatSource.ts(100,12): error TS2339: Property '_children' does not exist o
 lib/ConcatSource.ts(101,16): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(104,22): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/ConcatSource.ts(105,20): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/ConcatSource.ts(106,9): error TS2322: Type 'boolean' is not assignable to type 'Source'.
+lib/ConcatSource.ts(106,22): error TS2304: Cannot find name 'PrefixSource'.
 lib/ConcatSource.ts(109,27): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(110,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ConcatSource.ts(111,10): error TS2322: Type 'undefined[]' is not assignable to type 'String'.
+lib/ConcatSource.ts(111,10): error TS2740: Type 'undefined[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 lib/ConcatSource.ts(117,5): error TS2345: Argument of type '(chunk: Number, generatedLine: Number, generatedColumn: Number, sourceIndex: Number, originalLine: OriginalSource, originalColumn: String, nameIndex: Number) => void' is not assignable to parameter of type 'String'.
 lib/ConcatSource.ts(122,20): error TS2304: Cannot find name 'OriginalSource'.
 lib/ConcatSource.ts(126,27): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
@@ -152,10 +154,7 @@ lib/ConcatSource.ts(235,27): error TS2339: Property '_children' does not exist o
 lib/ConcatSource.ts(241,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ConcatSource.ts(243,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ConcatSource.ts(244,52): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ConcatSource.ts(258,52): error TS2304: Cannot find name 'ReplaceSource'.
-lib/ConcatSource.ts(274,22): error TS2304: Cannot find name 'OriginalSource'.
 lib/ConcatSource.ts(275,25): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-lib/ConcatSource.ts(278,22): error TS2304: Cannot find name 'OriginalSource'.
 lib/ConcatSource.ts(279,25): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 lib/ConcatSource.ts(285,28): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(297,29): error TS2339: Property 'has' does not exist on type 'HTMLElement'.
@@ -178,7 +177,7 @@ lib/OriginalSource.ts(57,9): error TS2339: Property '_value' does not exist on t
 lib/OriginalSource.ts(57,23): error TS2339: Property '_valueAsBuffer' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(59,20): error TS2339: Property '_name' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(59,32): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
-lib/OriginalSource.ts(60,9): error TS2322: Type 'boolean' is not assignable to type 'Source'.
+lib/OriginalSource.ts(60,22): error TS2304: Cannot find name 'PrefixSource'.
 lib/OriginalSource.ts(63,58): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(76,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/OriginalSource.ts(79,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
@@ -201,7 +200,7 @@ lib/PrefixSource.ts(17,8): error TS2551: Property '_source' does not exist on ty
 lib/PrefixSource.ts(21,8): error TS2339: Property '_prefix' does not exist on type 'PrefixSource'.
 lib/PrefixSource.ts(25,15): error TS2339: Property '_prefix' does not exist on type 'PrefixSource'.
 lib/PrefixSource.ts(29,15): error TS2551: Property '_source' does not exist on type 'PrefixSource'. Did you mean 'source'?
-lib/PrefixSource.ts(33,15): error TS2304: Cannot find name 'CachedSource'.
+lib/PrefixSource.ts(33,15): error TS2304: Cannot find name 'ConcatSource'.
 lib/PrefixSource.ts(33,35): error TS2551: Property '_source' does not exist on type 'PrefixSource'. Did you mean 'source'?
 lib/PrefixSource.ts(34,31): error TS2339: Property '_prefix' does not exist on type 'PrefixSource'.
 lib/PrefixSource.ts(49,31): error TS2339: Property '_prefix' does not exist on type 'PrefixSource'.
@@ -278,7 +277,7 @@ lib/ReplaceSource.ts(125,39): error TS2339: Property 'start' does not exist on t
 lib/ReplaceSource.ts(127,29): error TS2339: Property 'end' does not exist on type 'Object'.
 lib/ReplaceSource.ts(127,37): error TS2339: Property 'end' does not exist on type 'Object'.
 lib/ReplaceSource.ts(132,9): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
-lib/ReplaceSource.ts(132,66): error TS2339: Property 'index' does not exist on type 'String'.
+lib/ReplaceSource.ts(132,68): error TS2339: Property 'index' does not exist on type 'Function'.
 lib/ReplaceSource.ts(133,9): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
 lib/ReplaceSource.ts(134,29): error TS2339: Property 'start' does not exist on type 'Object'.
 lib/ReplaceSource.ts(134,39): error TS2339: Property 'start' does not exist on type 'Object'.
@@ -297,10 +296,10 @@ lib/ReplaceSource.ts(159,17): error TS2314: Generic type 'Array<T>' requires 1 t
 lib/ReplaceSource.ts(168,65): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ReplaceSource.ts(171,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
 lib/ReplaceSource.ts(176,9): error TS2551: Property '_source' does not exist on type 'ReplaceSource'. Did you mean 'source'?
-lib/ReplaceSource.ts(178,4): error TS2345: Argument of type '(chunk: any, generatedLine: String, generatedColumn: Number, sourceIndex: Number, originalLine: OriginalSource, originalColumn: Number, nameIndex: String) => void' is not assignable to parameter of type 'String'.
+lib/ReplaceSource.ts(178,4): error TS2345: Argument of type '(chunk: any, generatedLine: Number, generatedColumn: Number, sourceIndex: Number, originalLine: OriginalSource, originalColumn: Number, nameIndex: String) => void' is not assignable to parameter of type 'String'.
 lib/ReplaceSource.ts(179,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ReplaceSource.ts(183,19): error TS2304: Cannot find name 'OriginalSource'.
-lib/ReplaceSource.ts(194,28): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
+lib/ReplaceSource.ts(194,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 lib/ReplaceSource.ts(196,8): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ReplaceSource.ts(199,9): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.
 lib/ReplaceSource.ts(202,8): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -308,11 +307,11 @@ lib/ReplaceSource.ts(212,17): error TS2362: The left-hand side of an arithmetic 
 lib/ReplaceSource.ts(212,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ReplaceSource.ts(221,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.
 lib/ReplaceSource.ts(223,6): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.
-lib/ReplaceSource.ts(224,27): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
+lib/ReplaceSource.ts(224,27): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 lib/ReplaceSource.ts(226,7): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ReplaceSource.ts(226,32): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ReplaceSource.ts(231,6): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.
-lib/ReplaceSource.ts(237,26): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
+lib/ReplaceSource.ts(237,26): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 lib/ReplaceSource.ts(240,31): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ReplaceSource.ts(240,49): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ReplaceSource.ts(241,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -336,13 +335,13 @@ lib/ReplaceSource.ts(324,7): error TS2356: An arithmetic operand must be of type
 lib/ReplaceSource.ts(331,30): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
 lib/ReplaceSource.ts(331,45): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ReplaceSource.ts(331,70): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ReplaceSource.ts(335,28): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
+lib/ReplaceSource.ts(335,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 lib/ReplaceSource.ts(337,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ReplaceSource.ts(340,11): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.
 lib/ReplaceSource.ts(343,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ReplaceSource.ts(343,50): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ReplaceSource.ts(345,34): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ReplaceSource.ts(353,29): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
+lib/ReplaceSource.ts(353,29): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 lib/ReplaceSource.ts(359,32): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 lib/ReplaceSource.ts(362,9): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.
 lib/ReplaceSource.ts(364,8): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.
@@ -350,7 +349,7 @@ lib/ReplaceSource.ts(365,8): error TS2365: Operator '+=' cannot be applied to ty
 lib/ReplaceSource.ts(367,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ReplaceSource.ts(367,34): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ReplaceSource.ts(372,8): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.
-lib/ReplaceSource.ts(380,27): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
+lib/ReplaceSource.ts(380,27): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 lib/ReplaceSource.ts(384,7): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number | Number'.
 lib/ReplaceSource.ts(389,7): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
 lib/ReplaceSource.ts(389,45): error TS2538: Type 'String' cannot be used as an index type.
@@ -368,12 +367,7 @@ lib/SizeOnlySource.ts(22,15): error TS2551: Property '_size' does not exist on t
 lib/SizeOnlySource.ts(29,2): error TS2416: Property 'buffer' in type 'SizeOnlySource' is not assignable to the same property in base type 'Source'.
   Type '() => void' is not assignable to type '() => Buffer'.
     Type 'void' is not assignable to type 'Buffer'.
-lib/Source.ts(13,9): error TS2322: Type 'void' is not assignable to type 'Source'.
-lib/Source.ts(15,22): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(arrayBuffer: WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>, byteOffset?: number, length?: number): Buffer', gave the following error.
-    Argument of type 'Source' is not assignable to parameter of type 'WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>'.
-  Overload 2 of 4, '(str: WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }, encoding?: BufferEncoding): Buffer', gave the following error.
-    Argument of type 'Source' is not assignable to parameter of type 'WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }'.
+lib/Source.ts(13,17): error TS2304: Cannot find name 'ReplaceSource'.
 lib/SourceMapSource.ts(23,8): error TS2339: Property '_valueAsString' does not exist on type 'SourceMapSource'.
 lib/SourceMapSource.ts(24,8): error TS2339: Property '_valueAsBuffer' does not exist on type 'SourceMapSource'.
 lib/SourceMapSource.ts(26,8): error TS2339: Property '_name' does not exist on type 'SourceMapSource'.
@@ -517,7 +511,7 @@ lib/helpers/createMappingsSerializer.ts(196,16): error TS2362: The left-hand sid
 lib/helpers/createMappingsSerializer.ts(196,30): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/helpers/createMappingsSerializer.ts(198,16): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/helpers/createMappingsSerializer.ts(198,31): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/helpers/getFromStreamChunks.ts(10,56): error TS2304: Cannot find name 'OriginalSource'.
+lib/helpers/getFromStreamChunks.ts(10,56): error TS2304: Cannot find name 'Source'.
 lib/helpers/getFromStreamChunks.ts(13,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/helpers/getFromStreamChunks.ts(14,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/helpers/getFromStreamChunks.ts(15,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -591,13 +585,13 @@ lib/helpers/splitIntoPotentialTokens.ts(37,26): error TS2345: Argument of type '
 lib/helpers/streamAndGetSourceAndMap.ts(20,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/helpers/streamAndGetSourceAndMap.ts(21,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/helpers/streamAndGetSourceAndMap.ts(22,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/helpers/streamAndGetSourceAndMap.ts(26,21): error TS2304: Cannot find name 'Source'.
-lib/helpers/streamAndGetSourceAndMap.ts(26,52): error TS2339: Property 'finalSource' does not exist on type 'Object'.
+lib/helpers/streamAndGetSourceAndMap.ts(26,21): error TS2304: Cannot find name 'PrefixSource'.
+lib/helpers/streamAndGetSourceAndMap.ts(26,58): error TS2339: Property 'finalSource' does not exist on type 'Object'.
 lib/helpers/streamAndGetSourceAndMap.ts(30,3): error TS2345: Argument of type '(chunk: Number, generatedLine: Number, generatedColumn: String, sourceIndex: String, originalLine: OriginalSource, originalColumn: String, nameIndex: String) => any' is not assignable to parameter of type 'String'.
 lib/helpers/streamAndGetSourceAndMap.ts(35,18): error TS2304: Cannot find name 'OriginalSource'.
 lib/helpers/streamAndGetSourceAndMap.ts(39,29): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
-lib/helpers/streamChunks.ts(11,25): error TS2304: Cannot find name 'OriginalSource'.
-lib/helpers/streamChunks.ts(15,23): error TS2304: Cannot find name 'SourceMapSource'.
+lib/helpers/streamChunks.ts(11,25): error TS2304: Cannot find name 'Source'.
+lib/helpers/streamChunks.ts(15,23): error TS2304: Cannot find name 'Source'.
 lib/helpers/streamChunks.ts(23,27): error TS2339: Property 'finalSource' does not exist on type 'Object'.
 lib/helpers/streamChunks.ts(24,27): error TS2339: Property 'columns' does not exist on type 'Object'.
 lib/helpers/streamChunks.ts(32,27): error TS2339: Property 'finalSource' does not exist on type 'Object'.
@@ -606,7 +600,7 @@ lib/helpers/streamChunksOfCombinedSourceMap.ts(17,21): error TS2304: Cannot find
 lib/helpers/streamChunksOfCombinedSourceMap.ts(24,21): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/helpers/streamChunksOfCombinedSourceMap.ts(25,19): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/helpers/streamChunksOfCombinedSourceMap.ts(26,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/helpers/streamChunksOfCombinedSourceMap.ts(27,8): error TS2740: Type 'undefined[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(27,8): error TS2322: Type 'undefined[]' is not assignable to type 'String'.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(28,8): error TS2740: Type 'undefined[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(30,8): error TS2322: Type 'undefined[]' is not assignable to type 'String'.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(31,8): error TS2322: Type 'undefined[]' is not assignable to type 'Function'.
@@ -632,7 +626,7 @@ lib/helpers/streamChunksOfCombinedSourceMap.ts(81,25): error TS2314: Generic typ
 lib/helpers/streamChunksOfCombinedSourceMap.ts(83,39): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(83,56): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(85,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/helpers/streamChunksOfCombinedSourceMap.ts(90,31): error TS2304: Cannot find name 'OriginalSource'.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(90,31): error TS2304: Cannot find name 'Source'.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(99,33): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(101,13): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(105,10): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
@@ -649,7 +643,7 @@ lib/helpers/streamChunksOfCombinedSourceMap.ts(142,10): error TS2365: Operator '
 lib/helpers/streamChunksOfCombinedSourceMap.ts(143,40): error TS2538: Type 'String' cannot be used as an index type.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(155,31): error TS2538: Type 'String' cannot be used as an index type.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(161,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/helpers/streamChunksOfCombinedSourceMap.ts(164,31): error TS2304: Cannot find name 'OriginalSource'.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(164,31): error TS2304: Cannot find name 'Source'.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(171,52): error TS2538: Type 'Number' cannot be used as an index type.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(174,33): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(176,13): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
@@ -670,8 +664,7 @@ lib/helpers/streamChunksOfCombinedSourceMap.ts(249,7): error TS2322: Type 'Numbe
 lib/helpers/streamChunksOfCombinedSourceMap.ts(250,24): error TS2538: Type 'Number' cannot be used as an index type.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(253,5): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-lib/helpers/streamChunksOfCombinedSourceMap.ts(273,6): error TS2345: Argument of type '(chunk: SourceMapSource, generatedLine: Number, generatedColumn: String, sourceIndex: String, originalLine: OriginalSource, originalColumn: String, nameIndex: String) => void' is not assignable to parameter of type 'String'.
-lib/helpers/streamChunksOfCombinedSourceMap.ts(274,14): error TS2304: Cannot find name 'SourceMapSource'.
+lib/helpers/streamChunksOfCombinedSourceMap.ts(273,6): error TS2345: Argument of type '(chunk: String, generatedLine: Number, generatedColumn: String, sourceIndex: String, originalLine: OriginalSource, originalColumn: String, nameIndex: String) => void' is not assignable to parameter of type 'String'.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(278,21): error TS2304: Cannot find name 'OriginalSource'.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(288,51): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/helpers/streamChunksOfCombinedSourceMap.ts(289,12): error TS2339: Property 'mappingsData' does not exist on type 'Object'.
@@ -717,7 +710,6 @@ lib/helpers/streamChunksOfSourceMap.ts(148,4): error TS2740: Type 'Number' is mi
 lib/helpers/streamChunksOfSourceMap.ts(161,13): error TS2304: Cannot find name 'SourceMapSource'.
 lib/helpers/streamChunksOfSourceMap.ts(166,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/helpers/streamChunksOfSourceMap.ts(188,17): error TS2304: Cannot find name 'OriginalSource'.
-lib/helpers/streamChunksOfSourceMap.ts(189,19): error TS2304: Cannot find name 'OriginalSource'.
 lib/helpers/streamChunksOfSourceMap.ts(193,4): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
 lib/helpers/streamChunksOfSourceMap.ts(201,5): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
@@ -736,14 +728,12 @@ lib/helpers/streamChunksOfSourceMap.ts(253,13): error TS2304: Cannot find name '
 lib/helpers/streamChunksOfSourceMap.ts(259,10): error TS2339: Property 'generatedLine' does not exist on type 'Object'.
 lib/helpers/streamChunksOfSourceMap.ts(259,36): error TS2339: Property 'generatedColumn' does not exist on type 'Object'.
 lib/helpers/streamChunksOfSourceMap.ts(282,17): error TS2304: Cannot find name 'OriginalSource'.
-lib/helpers/streamChunksOfSourceMap.ts(283,19): error TS2304: Cannot find name 'OriginalSource'.
 lib/helpers/streamChunksOfSourceMap.ts(302,4): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
 lib/helpers/streamChunksOfSourceMap.ts(303,14): error TS2367: This condition will always return 'false' since the types 'Number' and 'Boolean' have no overlap.
 lib/helpers/streamChunksOfSourceMap.ts(314,13): error TS2304: Cannot find name 'SourceMapSource'.
 lib/helpers/streamChunksOfSourceMap.ts(320,10): error TS2339: Property 'generatedLine' does not exist on type 'Object'.
 lib/helpers/streamChunksOfSourceMap.ts(320,25): error TS2339: Property 'generatedColumn' does not exist on type 'Object'.
 lib/helpers/streamChunksOfSourceMap.ts(345,17): error TS2304: Cannot find name 'OriginalSource'.
-lib/helpers/streamChunksOfSourceMap.ts(346,19): error TS2304: Cannot find name 'OriginalSource'.
 lib/helpers/streamChunksOfSourceMap.ts(363,27): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/helpers/streamChunksOfSourceMap.ts(372,13): error TS2304: Cannot find name 'SourceMapSource'.
 lib/helpers/streamChunksOfSourceMap.ts(376,15): error TS2304: Cannot find name 'Source'.

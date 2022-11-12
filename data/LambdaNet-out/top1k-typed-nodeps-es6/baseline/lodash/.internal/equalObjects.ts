@@ -38,7 +38,7 @@ function equalObjects(object: Object, other: Object, bitmask: Number, customizer
     }
   }
   // Assume cyclic values are equal.
-  const stacked: Stack = stack.get(object)
+  const stacked: String = stack.get(object)
   if (stacked && stack.get(other)) {
     return stacked == other
   }

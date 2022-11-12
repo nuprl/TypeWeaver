@@ -220,7 +220,7 @@ Client.prototype.connect = function() {
   });
 }
 
-Client.prototype.command = function(args: String, done: Function) {
+Client.prototype.command = function(args: Array, done: Function) {
   done = done || function() {};
 
   // Queue up the command

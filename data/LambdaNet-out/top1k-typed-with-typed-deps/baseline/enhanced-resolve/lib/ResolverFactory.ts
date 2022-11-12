@@ -6,7 +6,7 @@
 "use strict";
 
 const versions: Object = require("process").versions;
-const Resolver: String = require("./Resolver");
+const Resolver: Array = require("./Resolver");
 const { getType, PathType } = require("./util/path");
 
 const SyncAsyncFileSystemDecorator: String = require("./SyncAsyncFileSystemDecorator");

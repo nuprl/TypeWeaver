@@ -66,7 +66,7 @@ SHA1.prototype._update = function _update(msg: Object, start: Number): Void {
   this.h[4] = sum32(this.h[4], e);
 };
 
-SHA1.prototype._digest = function digest(enc: Number): String {
+SHA1.prototype._digest = function digest(enc: String): String {
   if (enc === 'hex')
     return utils.toHex32(this.h, 'big');
   else

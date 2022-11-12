@@ -55,9 +55,9 @@ lib/readable_parallel.ts(18,12): error TS2350: Only a void function can be calle
 lib/readable_parallel.ts(22,20): error TS2339: Property 'super_' does not exist on type '(list: Object, iterator: Function, callback: Function) => Object'.
 lib/readable_serial.ts(18,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/readable_serial.ts(22,18): error TS2339: Property 'super_' does not exist on type '(list: Object, iterator: Function, callback: Function) => Object'.
-lib/readable_serial_ordered.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/asynckit/serialOrdered"' has no default export.
+lib/readable_serial_ordered.ts(1,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/asynckit/serialOrdered"' has no default export.
 lib/readable_serial_ordered.ts(24,12): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/readable_serial_ordered.ts(28,25): error TS2339: Property 'super_' does not exist on type '(list: Object, iterator: Function, sortMethod: String, callback: Object) => Object'.
+lib/readable_serial_ordered.ts(28,25): error TS2339: Property 'super_' does not exist on type '(list: Object, iterator: Function, sortMethod: String, callback: Function) => Object'.
 lib/state.ts(13,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/state.ts(30,15): error TS2339: Property 'keyedList' does not exist on type 'Object'.
 lib/state.ts(30,69): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -79,7 +79,7 @@ parallel.ts(22,68): error TS2314: Generic type 'Array<T>' requires 1 type argume
 parallel.ts(31,29): error TS2339: Property 'jobs' does not exist on type 'Object'.
 parallel.ts(33,30): error TS2339: Property 'results' does not exist on type 'Object'.
 parallel.ts(38,11): error TS2339: Property 'index' does not exist on type 'Object'.
-serial.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/asynckit/serialOrdered"' has no default export.
+serial.ts(1,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/asynckit/serialOrdered"' has no default export.
 serialOrdered.ts(20,99): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 serialOrdered.ts(22,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
   Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.

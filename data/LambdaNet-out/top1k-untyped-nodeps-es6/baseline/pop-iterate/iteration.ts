@@ -1,7 +1,7 @@
 "use strict";
 
 export default Iteration;
-function Iteration(value: String, done: String, index: String): String {
+function Iteration(value: String, done: String, index: String): Void {
     this.value = value;
     this.done = done;
     this.index = index;

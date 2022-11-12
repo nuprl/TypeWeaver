@@ -29,7 +29,7 @@ const isObject: Function = (val: Number) => val && typeof val === 'object' && !A
  * @api public
  */
 
-const picomatch: Function = (glob: Array, options: String, returnState: Number = false) => {
+const picomatch: Function = (glob: Array, options: Function, returnState: Number = false) => {
   if (Array.isArray(glob)) {
     const fns: Array = glob.map((input: Element) => picomatch(input, options, returnState));
     const arrayMatcher: Function = (str: String) => {

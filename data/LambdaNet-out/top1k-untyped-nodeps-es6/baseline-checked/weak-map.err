@@ -1,4 +1,4 @@
-bench.ts(2,21): error TS2306: File 'weak-map.ts' is not a module.
+bench.ts(2,21): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps-es6/baseline/weak-map/weak-map.ts' is not a module.
 bench.ts(4,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bench.ts(8,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bench.ts(10,1): error TS2582: Cannot find name 'suite'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
@@ -24,8 +24,11 @@ weak-map.ts(159,30): error TS2351: This expression is not constructable.
   Type 'Error' has no construct signatures.
 weak-map.ts(166,9): error TS1258: A default export must be at the top level of a file or module declaration.
 weak-map.ts(172,7): error TS2322: Type '(v: PropertyKey) => boolean' is not assignable to type 'Number'.
-weak-map.ts(220,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 weak-map.ts(221,9): error TS2740: Type 'Uint8Array' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 37 more.
+weak-map.ts(221,38): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'Object' is not assignable to parameter of type 'ArrayBufferLike'.
+      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 weak-map.ts(222,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'ArrayBufferView'.
   Type 'String' is missing the following properties from type 'ArrayBufferView': buffer, byteLength, byteOffset
 weak-map.ts(225,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.

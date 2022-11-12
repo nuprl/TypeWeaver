@@ -223,7 +223,7 @@
    *
    */
   P.clampedTo = P.clamp = function (min: Object, max: String) {
-    var k: Number,
+    var k: String,
       x: Array = this,
       Ctor: Object = x.constructor;
     min = new Ctor(min);
@@ -1262,7 +1262,7 @@
    *
    */
   P.minus = P.sub = function (y: Object) {
-    var d: Array, e: Number, i: Number, j: Number, k: Number, len: Number, pr: Number, rm: Number, xd: Array, xe: Number, xLTy: Object, yd: Array,
+    var d: Array, e: Number, i: Number, j: Number, k: Number, len: Number, pr: Number, rm: Number, xd: Array, xe: Number, xLTy: Function, yd: Array,
       x: Object = this,
       Ctor: Object = x.constructor;
 
@@ -1947,7 +1947,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toBinary = function (sd: Function, rm: Array) {
+  P.toBinary = function (sd: String, rm: Array) {
     return toStringBinary(this, 2, sd, rm);
   };
 
@@ -2058,7 +2058,7 @@
    *
    */
   P.toFraction = function (maxD: Array) {
-    var d: Object, d0: Object, d1: String, d2: Object, e: Number, k: Number, n: Function, n0: Object, n1: Object, pr: Number, q: HTMLElement, r: Array,
+    var d: Object, d0: Object, d1: String, d2: Object, e: Number, k: Number, n: String, n0: Object, n1: Object, pr: Number, q: HTMLElement, r: Array,
       x: Object = this,
       xd: Array = x.d,
       Ctor: Object = x.constructor;
@@ -2128,7 +2128,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toHexadecimal = P.toHex = function (sd: Function, rm: Array) {
+  P.toHexadecimal = P.toHex = function (sd: String, rm: Array) {
     return toStringBinary(this, 16, sd, rm);
   };
 
@@ -2217,7 +2217,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toOctal = function (sd: Function, rm: Array) {
+  P.toOctal = function (sd: String, rm: Array) {
     return toStringBinary(this, 8, sd, rm);
   };
 
@@ -2267,7 +2267,7 @@
    */
   P.toPower = P.pow = function (y: Object) {
     var e: Number, k: Number, pr: Number, r: Object, rm: Number, s: Number,
-      x: Array = this,
+      x: String = this,
       Ctor: Object = x.constructor,
       yn: Number = +(y = new Ctor(y));
 
@@ -2462,7 +2462,7 @@
   P.valueOf = P.toJSON = function () {
     var x: Object = this,
       Ctor: Object = x.constructor,
-      str: Number = finiteToString(x, x.e <= Ctor.toExpNeg || x.e >= Ctor.toExpPos);
+      str: String = finiteToString(x, x.e <= Ctor.toExpNeg || x.e >= Ctor.toExpPos);
 
     return x.isNeg() ? '-' + str : str;
   };
@@ -3746,7 +3746,7 @@
 
 
   // Exponent e must be positive and non-zero.
-  function tinyPow(b: String, e: Number): Number {
+  function tinyPow(b: String, e: Number): String {
     var n: Number = b;
     while (--e) n *= b;
     return n;

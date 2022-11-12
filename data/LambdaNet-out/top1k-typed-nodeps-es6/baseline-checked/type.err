@@ -31,7 +31,6 @@ date/is.ts(14,20): error TS2339: Property 'setFullYear' does not exist on type '
 date/is.ts(23,12): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'number'.
 ensure.ts(6,5): error TS2322: Type '(v: PropertyKey) => boolean' is not assignable to type 'Number'.
 ensure.ts(10,31): error TS2339: Property 'call' does not exist on type 'Number'.
-ensure.ts(14,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 ensure.ts(15,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 ensure.ts(23,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 ensure.ts(23,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -204,7 +203,7 @@ set/is.ts(15,20): error TS2339: Property 'has' does not exist on type 'Object'.
 set/is.ts(16,20): error TS2339: Property 'clear' does not exist on type 'Object'.
 string/coerce.ts(6,30): error TS2322: Type '() => string' is not assignable to type 'String'.
 string/coerce.ts(9,15): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-string/coerce.ts(12,7): error TS2322: Type '() => string' is not assignable to type 'Number'.
+string/coerce.ts(12,31): error TS2322: Type '() => string' is not assignable to type 'String'.
 string/ensure.ts(7,6): error TS2322: Type 'string' is not assignable to type 'Number'.
 string/ensure.ts(11,22): error TS2339: Property 'name' does not exist on type 'Object'.
 thenable/ensure.ts(10,22): error TS2339: Property 'name' does not exist on type 'Object'.

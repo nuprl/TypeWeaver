@@ -222,7 +222,7 @@ function flattenObject(data: Object, depth: Number): Array
 	return (rv);
 }
 
-function startsWith(str: String, prefix: String): Boolean
+function startsWith(str: String, prefix: Array): Boolean
 {
 	return (str.substr(0, prefix.length) == prefix);
 }
@@ -557,7 +557,7 @@ function validateJsonObjectJS(schema: String, input: Element): Object
 		reason = 'unsupported property';
 	}
 
-	var rv: HTMLElement = new mod_verror.VError('property "%s": %s', propname, reason);
+	var rv: Object = new mod_verror.VError('property "%s": %s', propname, reason);
 	rv.jsv_details = error;
 	return (rv);
 }

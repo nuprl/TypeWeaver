@@ -18,7 +18,7 @@ function printResult(type: String, pi: Number, ms: Number): Void {
   console.log();
 }
 
-function runSync(): Void {
+function runSync(): Promise {
   var start: Number = Date.now();
   // Estimate() will execute in the current thread,
   // the next line won't return until it is finished

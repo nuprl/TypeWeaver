@@ -187,7 +187,7 @@ function traverseExtends(declNode: Object, handler: Function): Array {
  * @returns {any[]} The return values of the callback
  */
 function traverseProperties(tsDeclarationNode: Object, handler: Function): Array {
-    const tsPropertySignatures: Boolean = tsDeclarationNode.body.body;
+    const tsPropertySignatures: Array = tsDeclarationNode.body.body;
 
     const ret: Array = [];
 

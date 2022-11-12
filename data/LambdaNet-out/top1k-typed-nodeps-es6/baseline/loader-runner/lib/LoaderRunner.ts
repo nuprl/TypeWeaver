@@ -7,7 +7,7 @@ import fs from 'fs';
 var readFile: String = fs.readFile.bind(fs);
 import loadLoader from './loadLoader';
 
-function utf8BufferToString(buf: Number): String {
+function utf8BufferToString(buf: String): String {
 	var str: String = buf.toString("utf-8");
 	if(str.charCodeAt(0) === 0xFEFF) {
 		return str.slice(1);

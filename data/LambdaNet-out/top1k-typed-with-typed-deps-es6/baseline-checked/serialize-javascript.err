@@ -17,6 +17,13 @@ index.ts(75,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(
 index.ts(82,20): error TS2339: Property 'ignoreFunction' does not exist on type 'Object'.
 index.ts(92,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(92,37): error TS2538: Type 'String' cannot be used as an index type.
+index.ts(93,13): error TS2322: Type 'string' is not assignable to type 'Number'.
+  Type 'string' is not assignable to type 'Number'.
+index.ts(95,13): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+index.ts(124,13): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+index.ts(128,13): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+index.ts(132,13): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+index.ts(136,13): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 index.ts(145,38): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 index.ts(146,68): error TS2339: Property 'name' does not exist on type 'HTMLElement'.

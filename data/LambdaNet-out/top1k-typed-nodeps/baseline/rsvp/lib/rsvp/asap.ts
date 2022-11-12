@@ -30,7 +30,7 @@ function useNextTick(): Function {
 
 // vertx
 let vertxNext: Function;
-function useVertxTimer(): Function {
+function useVertxTimer(): Object {
   if (typeof vertxNext !== 'undefined') {
     return function() {
       vertxNext(flush);
@@ -50,7 +50,7 @@ function useMutationObserver(): Function {
 
 // web worker
 function useMessageChannel(): Function {
-  let channel: Enumerator = new MessageChannel();
+  let channel: HTMLElement = new MessageChannel();
   channel.port1.onmessage = flush;
   return () => channel.port2.postMessage(0);
 }
@@ -77,7 +77,7 @@ function flush(): Void {
 
 function attemptVertex(): Boolean {
   try {
-    const vertx: Enumerator = Function('return this')().require('vertx');
+    const vertx: HTMLElement = Function('return this')().require('vertx');
     vertxNext = vertx.runOnLoop || vertx.runOnContext;
     return useVertxTimer();
   } catch(e) {

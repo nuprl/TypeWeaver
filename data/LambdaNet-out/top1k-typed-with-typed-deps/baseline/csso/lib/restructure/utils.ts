@@ -25,7 +25,7 @@ export function isEqualDeclarations(a: TRBL, b: Object): Boolean {
 }
 
 export function compareDeclarations(declarations1: Function, declarations2: TRBL): TRBL {
-    const result: Object = {
+    const result: TRBL = {
         eq: [],
         ne1: [],
         ne2: [],
@@ -55,7 +55,7 @@ export function compareDeclarations(declarations1: Function, declarations2: TRBL
     }
 
     for (let cursor = declarations2.head; cursor; cursor = cursor.next)  {
-        const data: HTMLElement = cursor.data;
+        const data: TRBL = cursor.data;
 
         if (declarations2hash[data.id]) {
             // when declarations1 has an overriding declaration, this is not a difference

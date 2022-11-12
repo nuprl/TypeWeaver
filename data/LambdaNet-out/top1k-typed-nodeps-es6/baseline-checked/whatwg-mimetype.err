@@ -11,10 +11,13 @@ lib/mime-type-parameters.ts(61,17): error TS2339: Property '_map' does not exist
 lib/mime-type-parameters.ts(65,17): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
 lib/mime-type-parameters.ts(69,17): error TS2339: Property '_map' does not exist on type 'MIMETypeParameters'.
 lib/mime-type.ts(10,11): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'MIMEType': essence, type, subtype, parameters, and 3 more.
+  Type 'Object' is missing the following properties from type 'MIMETypeParameters': size, get, has, set, and 7 more.
 lib/mime-type.ts(15,10): error TS2551: Property '_type' does not exist on type 'MIMEType'. Did you mean 'type'?
+lib/mime-type.ts(15,25): error TS2339: Property 'type' does not exist on type 'MIMETypeParameters'.
 lib/mime-type.ts(16,10): error TS2551: Property '_subtype' does not exist on type 'MIMEType'. Did you mean 'subtype'?
+lib/mime-type.ts(16,28): error TS2339: Property 'subtype' does not exist on type 'MIMETypeParameters'.
 lib/mime-type.ts(17,10): error TS2551: Property '_parameters' does not exist on type 'MIMEType'. Did you mean 'parameters'?
+lib/mime-type.ts(17,54): error TS2339: Property 'parameters' does not exist on type 'MIMETypeParameters'.
 lib/mime-type.ts(33,17): error TS2551: Property '_type' does not exist on type 'MIMEType'. Did you mean 'type'?
 lib/mime-type.ts(46,10): error TS2551: Property '_type' does not exist on type 'MIMEType'. Did you mean 'type'?
 lib/mime-type.ts(50,17): error TS2551: Property '_subtype' does not exist on type 'MIMEType'. Did you mean 'subtype'?

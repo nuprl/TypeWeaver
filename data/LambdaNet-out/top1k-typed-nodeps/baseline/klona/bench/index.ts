@@ -20,7 +20,7 @@ const clonedeep: String = require('clone-deep');
 console.timeEnd('clone-deep');
 
 console.time('deep-copy');
-const deepcopy: String = require('deep-copy');
+const deepcopy: Number = require('deep-copy');
 console.timeEnd('deep-copy');
 
 console.time('klona/full');
@@ -32,7 +32,7 @@ const klona: Array = require('klona');
 console.timeEnd('klona');
 
 console.time('klona/lite');
-const lite: String = require('klona/lite');
+const lite: Array = require('klona/lite');
 console.timeEnd('klona/lite');
 
 console.time('klona/json');
@@ -63,7 +63,7 @@ function runner(name: String, contenders: Object): Void {
 
 	const INPUT: String = require(fixture);
 	console.log('\nBenchmark :: %s', name);
-	const bench: Array = new Suite().on('cycle', (e: Test) => {
+	const bench: Array = new Suite().on('cycle', (e: HTMLElement) => {
 		console.log('  ' + e.target);
 	});
 

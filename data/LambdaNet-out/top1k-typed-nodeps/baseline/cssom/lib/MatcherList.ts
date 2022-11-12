@@ -1,5 +1,5 @@
 //.CommonJS
-var CSSOM: Element = {};
+var CSSOM: HTMLInputElement = {};
 ///CommonJS
 
 

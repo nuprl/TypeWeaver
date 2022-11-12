@@ -6,7 +6,7 @@ var fs: String = require("fs");
 var readFile: String = fs.readFile.bind(fs);
 var loadLoader: Function = require("./loadLoader");
 
-function utf8BufferToString(buf: Number): String {
+function utf8BufferToString(buf: String): Array {
 	var str: String = buf.toString("utf-8");
 	if(str.charCodeAt(0) === 0xFEFF) {
 		return str.slice(1);
@@ -184,7 +184,7 @@ function iteratePitchingLoaders(options: Object, loaderContext: HTMLElement, cal
 			loaderContext.cacheable(false);
 			return callback(err);
 		}
-		var fn: Boolean = currentLoaderObject.pitch;
+		var fn: Number = currentLoaderObject.pitch;
 		currentLoaderObject.pitchExecuted = true;
 		if(!fn) return iteratePitchingLoaders(options, loaderContext, callback);
 
@@ -312,7 +312,7 @@ exports.runLoaders = function runLoaders(options: Object, callback: Function): V
 	loaderContext.getDependencies = function getDependencies(): Array {
 		return fileDependencies.slice();
 	};
-	loaderContext.getContextDependencies = function getContextDependencies(): Array {
+	loaderContext.getContextDependencies = function getContextDependencies(): Promise {
 		return contextDependencies.slice();
 	};
 	loaderContext.getMissingDependencies = function getMissingDependencies(): Array {

@@ -85,7 +85,7 @@ DecoderBuffer.prototype.raw = function raw(save: Object): Array {
   return this.base.slice(save ? save.offset : this.offset, this.length);
 };
 
-function EncoderBuffer(value: String, reporter: Object): Void {
+function EncoderBuffer(value: String, reporter: Object): Promise {
   if (Array.isArray(value)) {
     this.length = 0;
     this.value = value.map(function(item: Array) {

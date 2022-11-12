@@ -1094,7 +1094,7 @@ const ArgumentDefaultsHelpFormatter: Number = _camelcase_alias(_callable(class A
 }))
 
 
-const MetavarTypeHelpFormatter: Boolean = _camelcase_alias(_callable(class MetavarTypeHelpFormatter extends HelpFormatter {
+const MetavarTypeHelpFormatter: Number = _camelcase_alias(_callable(class MetavarTypeHelpFormatter extends HelpFormatter {
     /*
      *  Help message formatter which uses the argument 'type' as the default
      *  metavar value (instead of the argument 'dest')

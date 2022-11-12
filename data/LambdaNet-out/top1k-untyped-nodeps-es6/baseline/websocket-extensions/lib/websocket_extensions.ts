@@ -111,7 +111,7 @@ var instance: Object = {
     return response.length > 0 ? response.join(', ') : null;
   },
 
-  validFrameRsv: function(frame: HTMLDivElement) {
+  validFrameRsv: function(frame: HTMLElement) {
     var allowed: Object = { rsv1: false, rsv2: false, rsv3: false },
         ext: HTMLElement;
 

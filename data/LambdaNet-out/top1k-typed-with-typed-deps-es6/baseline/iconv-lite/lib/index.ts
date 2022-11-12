@@ -136,7 +136,7 @@ iconv.getDecoder = function getDecoder(encoding: String, options: Object): Objec
 // up to 100Kb to the output bundle. To avoid unnecessary code bloat, we don't enable Streaming API in browser by default.
 // If you would like to enable it explicitly, please add the following code to your app:
 // > iconv.enableStreamingAPI(require('stream'));
-iconv.enableStreamingAPI = function enableStreamingAPI(stream_module: Number): Void {
+iconv.enableStreamingAPI = function enableStreamingAPI(stream_module: Boolean): Void {
     if (iconv.supportsStreams)
         return;
 

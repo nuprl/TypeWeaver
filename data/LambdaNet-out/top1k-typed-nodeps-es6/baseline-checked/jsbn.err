@@ -141,7 +141,6 @@ index.ts(288,14): error TS2362: The left-hand side of an arithmetic operation mu
 index.ts(290,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 index.ts(292,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(294,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-index.ts(301,22): error TS2322: Type 'number' is not assignable to type 'Boolean'.
 index.ts(303,7): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
 index.ts(308,48): error TS2304: Cannot find name 'Void'.
 index.ts(310,36): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -275,14 +274,14 @@ index.ts(426,42): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(426,53): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(427,7): error TS2339: Property 's' does not exist on type 'Object'.
 index.ts(428,7): error TS2339: Property 'clamp' does not exist on type 'Object'.
-index.ts(433,65): error TS2304: Cannot find name 'Void'.
-index.ts(434,24): error TS2339: Property 'abs' does not exist on type 'HTMLElement'.
+index.ts(433,60): error TS2304: Cannot find name 'Void'.
+index.ts(434,24): error TS2339: Property 'abs' does not exist on type 'Object'.
 index.ts(435,12): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(437,12): error TS2339: Property 't' does not exist on type 'HTMLElement'.
 index.ts(437,19): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(438,24): error TS2339: Property 'fromInt' does not exist on type 'String'.
 index.ts(445,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(445,21): error TS2339: Property 's' does not exist on type 'HTMLElement'.
+index.ts(445,21): error TS2339: Property 's' does not exist on type 'Object'.
 index.ts(446,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(446,45): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(448,10): error TS2339: Property 'lShiftTo' does not exist on type 'Object'.
@@ -514,7 +513,6 @@ index.ts(994,18): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(994,29): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(998,49): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(999,36): error TS2339: Property 'shiftLeft' does not exist on type 'String'.
-index.ts(1005,33): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(1010,35): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(1015,34): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(1020,44): error TS2304: Cannot find name 'Void'.
@@ -541,7 +539,6 @@ index.ts(1047,18): error TS2356: An arithmetic operand must be of type 'any', 'n
 index.ts(1048,24): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1049,7): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(1050,7): error TS2339: Property 'clamp' does not exist on type 'Object'.
-index.ts(1054,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(1096,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(1104,37): error TS2304: Cannot find name 'Void'.
 index.ts(1105,31): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.

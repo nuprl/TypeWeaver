@@ -10,7 +10,7 @@
  * last([1, 2, 3])
  * // => 3
  */
-function last(array: Array): Stack {
+function last(array: Array): String {
   const length: Number = array == null ? 0 : array.length
   return length ? array[length - 1] : undefined
 }

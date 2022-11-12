@@ -11,5 +11,5 @@ for (var i = 0; i < 1000; i++) {
   if (!(i % 10)) process.stdout.write('.')
 }
 console.log('done')
-var dur: Promise = process.hrtime(start)
+var dur: Object = process.hrtime(start)
 console.log('%s ms', dur[0] * 1e3 + dur[1] / 1e6)

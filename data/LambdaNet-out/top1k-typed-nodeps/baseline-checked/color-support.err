@@ -1,10 +1,10 @@
 bin.ts(2,5): error TS2300: Duplicate identifier 'colorSupport'.
 bin.ts(2,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser.ts(3,10): error TS2393: Duplicate function implementation.
+browser.ts(3,10): error TS2300: Duplicate identifier 'colorSupport'.
 browser.ts(4,3): error TS2322: Type 'Boolean | {}' is not assignable to type 'Boolean'.
   Type '{}' is not assignable to type 'Boolean'.
-    Types of property 'valueOf' are incompatible.
-      Type '() => Object' is not assignable to type '() => boolean'.
+    The types returned by 'valueOf()' are incompatible between these types.
+      Type 'Object' is not assignable to type 'boolean'.
 browser.ts(6,7): error TS2339: Property 'level' does not exist on type 'Boolean'.
 browser.ts(7,7): error TS2339: Property 'hasBasic' does not exist on type 'Boolean'.
 browser.ts(8,7): error TS2339: Property 'has256' does not exist on type 'Boolean'.
@@ -16,8 +16,8 @@ index.ts(7,7): error TS2339: Property 'has256' does not exist on type 'HTMLEleme
 index.ts(8,7): error TS2339: Property 'has16m' does not exist on type 'HTMLElement'.
 index.ts(9,16): error TS2339: Property 'alwaysReturn' does not exist on type 'Object'.
 index.ts(12,3): error TS2322: Type 'HTMLElement' is not assignable to type 'Boolean'.
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'Object' is not assignable to type 'boolean'.
+  Types of property 'valueOf' are incompatible.
+    Type '() => Object' is not assignable to type '() => boolean'.
 index.ts(16,7): error TS2339: Property 'hasBasic' does not exist on type 'HTMLElement'.
 index.ts(17,7): error TS2339: Property 'has256' does not exist on type 'HTMLElement'.
 index.ts(18,7): error TS2339: Property 'has16m' does not exist on type 'HTMLElement'.
@@ -31,7 +31,6 @@ index.ts(33,7): error TS2339: Property 'has256' does not exist on type 'HTMLElem
 index.ts(34,7): error TS2339: Property 'has16m' does not exist on type 'HTMLElement'.
 index.ts(35,7): error TS2339: Property 'level' does not exist on type 'HTMLElement'.
 index.ts(39,10): error TS2300: Duplicate identifier 'colorSupport'.
-index.ts(39,10): error TS2393: Duplicate function implementation.
 index.ts(45,22): error TS2339: Property 'level' does not exist on type 'Object'.
 index.ts(46,21): error TS2339: Property 'level' does not exist on type 'Object'.
 index.ts(48,9): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.

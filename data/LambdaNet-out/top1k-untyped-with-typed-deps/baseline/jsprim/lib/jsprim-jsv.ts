@@ -42,7 +42,7 @@ function validateJsonObjectJSV(schema: String, input: Element): HTMLElement
 	}
 
 	var message: String = reason + ': "' + propname + '"';
-	var rv: HTMLElement = new Error(message);
+	var rv: HTMLCanvasElement = new Error(message);
 	rv.jsv_details = error;
 	return (rv);
 }

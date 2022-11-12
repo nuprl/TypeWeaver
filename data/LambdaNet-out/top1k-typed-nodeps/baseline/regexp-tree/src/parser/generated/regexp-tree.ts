@@ -83,7 +83,7 @@ const productions: Array = [[-1,1,(_1: Object,_1loc: String) => { __loc = yyloc(
 [4,1,(_1: Object,_1loc: String) => { __loc = yyloc(_1loc, _1loc);__ = _1 }],
 [4,3,(_1: String,_2: Function,_3: String,_1loc: String,_2loc: Boolean,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
       // Location for empty disjunction: /|/
-      let _loc: DFA = null;
+      let _loc: String = null;
 
       if (_2loc) {
         _loc = loc(_1loc || _2loc, _3loc || _2loc);
@@ -227,7 +227,7 @@ const productions: Array = [[-1,1,(_1: Object,_1loc: String) => { __loc = yyloc(
      }],
 [14,1,(_1: Object,_1loc: String) => { __loc = yyloc(_1loc, _1loc);__ = _1 }],
 [14,1,(_1: Object,_1loc: String) => { __loc = yyloc(_1loc, _1loc);__ = _1 }],
-[15,3,(_1: Writer,_2: String,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
+[15,3,(_1: HTMLElement,_2: String,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
       const nameRaw: String = String(_1);
       const name: String = decodeUnicodeGroupName(nameRaw);
       if (!yy.options.allowGroupNameDuplicates && namedGroups.hasOwnProperty(name)) {
@@ -245,7 +245,7 @@ const productions: Array = [[-1,1,(_1: Object,_1loc: String) => { __loc = yyloc(
         expression: _2,
       }, __loc);
      }],
-[15,3,(_1: Writer,_2: String,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
+[15,3,(_1: DFA,_2: String,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
       __ = Node({
         type: 'Group',
         capturing: true,
@@ -373,7 +373,7 @@ const lexRules: Array = [[/^#[^\n]+/, function() { /* skip comments */ }],
 [/^\\[ #]/, function() { return 'ESC_CHAR' }],
 [/^\\[\^\$\.\*\+\?\(\)\\\[\]\{\}\|\/]/, function() { return 'ESC_CHAR' }],
 [/^\\[^*?+\[()\\|]/, function() { 
-                                      const s: String = this.getCurrentState();
+                                      const s: Number = this.getCurrentState();
                                       if (s === 'u_class' && yytext === "\\-") {
                                         return 'ESC_CHAR';
                                       }
@@ -864,7 +864,7 @@ let namedGroups: Object = {};
  */
 let parsingString: String = '';
 
-yyparse.onParseBegin = (string: String, lexer: Writer) => {
+yyparse.onParseBegin = (string: String, lexer: Object) => {
   parsingString = string;
   capturingGroupsCount = 0;
   namedGroups = {};
@@ -924,7 +924,7 @@ const unicodeProperties: Function = require('../unicode/parser-unicode-propertie
 /**
  * Unicode property.
  */
-function UnicodeProperty(matched: String, loc: String): DFA {
+function UnicodeProperty(matched: String, loc: String): String {
   const negative: Boolean = matched[1] === 'P';
   const separatorIdx: Number = matched.indexOf('=');
 
@@ -975,7 +975,7 @@ function UnicodeProperty(matched: String, loc: String): DFA {
  * Creates a character node.
  */
 function Char(value: String, kind: String, loc: String): String {
-  let symbol: NodePath;
+  let symbol: String;
   let codePoint: Number;
 
   switch (kind) {
@@ -1149,7 +1149,7 @@ function validateUnicodeGroupName(name: String, state: String): String {
 const uidRe: RegExp = /\\u(?:([dD][89aAbB][0-9a-fA-F]{2})\\u([dD][c-fC-F][0-9a-fA-F]{2})|([dD][89aAbB][0-9a-fA-F]{2})|([dD][c-fC-F][0-9a-fA-F]{2})|([0-9a-ce-fA-CE-F][0-9a-fA-F]{3}|[dD][0-7][0-9a-fA-F]{2})|\{(0*(?:[0-9a-fA-F]{1,5}|10[0-9a-fA-F]{4}))\})/;
 
 function decodeUnicodeGroupName(name: String): String {
-  return name.replace(new RegExp(uidRe, 'g'), function (_: Writer, leadSurrogate: Number, trailSurrogate: Number, leadSurrogateOnly: Number, trailSurrogateOnly: Number, nonSurrogate: Number, codePoint: String) {
+  return name.replace(new RegExp(uidRe, 'g'), function (_: Array, leadSurrogate: Number, trailSurrogate: Number, leadSurrogateOnly: Number, trailSurrogateOnly: Number, nonSurrogate: Number, codePoint: String) {
     if (leadSurrogate) {
       return String.fromCodePoint(parseInt(leadSurrogate, 16), parseInt(trailSurrogate, 16));
     }

@@ -93,7 +93,7 @@ braces.stringify = (input: HTMLElement, options: Object = {}) => {
  * @api public
  */
 
-braces.compile = (input: Element, options: Object = {}) => {
+braces.compile = (input: HTMLElement, options: Object = {}) => {
   if (typeof input === 'string') {
     input = braces.parse(input, options);
   }

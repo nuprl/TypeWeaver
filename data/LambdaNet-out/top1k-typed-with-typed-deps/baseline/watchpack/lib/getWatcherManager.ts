@@ -5,7 +5,7 @@
 "use strict";
 
 const path: String = require("path");
-const DirectoryWatcher: DirectoryWatcher = require("./DirectoryWatcher");
+const DirectoryWatcher: Watcher = require("./DirectoryWatcher");
 
 class WatcherManager {
 	constructor(options) {

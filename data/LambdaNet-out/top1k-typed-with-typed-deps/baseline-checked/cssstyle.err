@@ -1,7 +1,7 @@
+lib/CSSStyleDeclaration.ts(6,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/CSSStyleDeclaration.ts(7,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/CSSStyleDeclaration.ts(8,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/CSSStyleDeclaration.ts(9,28): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/CSSStyleDeclaration.ts(10,7): error TS2403: Subsequent variable declarations must have the same type.  Variable 'dashedToCamelCase' must be of type 'Function', but here has type 'any'.
 lib/CSSStyleDeclaration.ts(17,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'CSSStyleDeclaration' must be of type '{ new (): CSSStyleDeclaration; prototype: CSSStyleDeclaration; }', but here has type 'Function'.
 lib/CSSStyleDeclaration.ts(17,94): error TS2304: Cannot find name 'Void'.
 lib/CSSStyleDeclaration.ts(41,25): error TS2538: Type 'String' cannot be used as an index type.
@@ -32,7 +32,6 @@ lib/CSSStyleDeclaration.ts(176,37): error TS2356: An arithmetic operand must be 
 lib/CSSStyleDeclaration.ts(177,21): error TS2538: Type 'Number' cannot be used as an index type.
 lib/CSSStyleDeclaration.ts(180,13): error TS2367: This condition will always return 'true' since the types 'Number' and 'string' have no overlap.
 lib/CSSStyleDeclaration.ts(181,11): error TS2322: Type 'string' is not assignable to type 'Number'.
-lib/CSSStyleDeclaration.ts(194,27): error TS2339: Property 'parse' does not exist on type 'String'.
 lib/CSSStyleDeclaration.ts(199,43): error TS2339: Property 'length' does not exist on type 'Object'.
 lib/CSSStyleDeclaration.ts(201,38): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/CSSStyleDeclaration.ts(202,26): error TS2538: Type 'Number' cannot be used as an index type.
@@ -114,6 +113,7 @@ lib/parsers.ts(424,5): error TS2365: Operator '+=' cannot be applied to types 'N
 lib/parsers.ts(427,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/parsers.ts(432,75): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parsers.ts(442,42): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/parsers.ts(451,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'dashedToCamelCase' must be of type 'any', but here has type 'Function'.
 lib/parsers.ts(451,52): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/parsers.ts(455,34): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/parsers.ts(468,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -154,65 +154,34 @@ lib/parsers.ts(683,13): error TS2339: Property 'toString' does not exist on type
 lib/parsers.ts(693,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parsers.ts(713,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/properties/azimuth.ts(3,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/properties/azimuth.ts(7,37): error TS2339: Property 'valueType' does not exist on type 'String'.
-lib/properties/azimuth.ts(8,31): error TS2339: Property 'TYPES' does not exist on type 'String'.
-lib/properties/azimuth.ts(9,51): error TS2339: Property 'parseAngle' does not exist on type 'String'.
-lib/properties/azimuth.ts(11,31): error TS2339: Property 'TYPES' does not exist on type 'String'.
 lib/properties/azimuth.ts(12,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/properties/backgroundAttachment.ts(7,13): error TS2339: Property 'valueType' does not exist on type 'String'.
-lib/properties/backgroundAttachment.ts(7,38): error TS2339: Property 'TYPES' does not exist on type 'String'.
 lib/properties/backgroundColor.ts(3,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/properties/backgroundColor.ts(6,32): error TS2339: Property 'parseColor' does not exist on type 'String'.
-lib/properties/backgroundColor.ts(11,13): error TS2339: Property 'valueType' does not exist on type 'String'.
-lib/properties/backgroundColor.ts(11,38): error TS2339: Property 'TYPES' does not exist on type 'String'.
+lib/properties/backgroundColor.ts(5,5): error TS2300: Duplicate identifier 'parse'.
 lib/properties/backgroundColor.ts(19,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/properties/backgroundColor.ts(24,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/properties/backgroundImage.ts(3,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/properties/backgroundImage.ts(6,32): error TS2339: Property 'parseUrl' does not exist on type 'String'.
+lib/properties/backgroundImage.ts(5,5): error TS2300: Duplicate identifier 'parse'.
 lib/properties/backgroundImage.ts(8,5): error TS2322: Type 'Number' is not assignable to type 'String'.
-lib/properties/backgroundImage.ts(11,13): error TS2339: Property 'valueType' does not exist on type 'String'.
-lib/properties/backgroundImage.ts(11,38): error TS2339: Property 'TYPES' does not exist on type 'String'.
 lib/properties/backgroundImage.ts(19,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/properties/backgroundImage.ts(24,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/properties/backgroundPosition.ts(3,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'parsers' must be of type 'String', but here has type 'HTMLElement'.
 lib/properties/backgroundPosition.ts(5,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/properties/backgroundPosition.ts(7,5): error TS2300: Duplicate identifier 'parse'.
 lib/properties/backgroundPosition.ts(11,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/properties/backgroundPosition.ts(17,11): error TS2538: Type 'Number' cannot be used as an index type.
-lib/properties/backgroundPosition.ts(17,28): error TS2339: Property 'valueType' does not exist on type 'String'.
-lib/properties/backgroundPosition.ts(20,30): error TS2339: Property 'TYPES' does not exist on type 'String'.
-lib/properties/backgroundPosition.ts(20,67): error TS2339: Property 'TYPES' does not exist on type 'String'.
-lib/properties/backgroundPosition.ts(23,30): error TS2339: Property 'TYPES' does not exist on type 'String'.
-lib/properties/backgroundPosition.ts(31,27): error TS2339: Property 'TYPES' does not exist on type 'String'.
-lib/properties/backgroundPosition.ts(31,64): error TS2339: Property 'TYPES' does not exist on type 'String'.
-lib/properties/backgroundPosition.ts(32,27): error TS2339: Property 'TYPES' does not exist on type 'String'.
-lib/properties/backgroundPosition.ts(32,64): error TS2339: Property 'TYPES' does not exist on type 'String'.
-lib/properties/backgroundPosition.ts(36,28): error TS2339: Property 'TYPES' does not exist on type 'String'.
-lib/properties/backgroundPosition.ts(36,66): error TS2339: Property 'TYPES' does not exist on type 'String'.
 lib/properties/backgroundPosition.ts(45,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/properties/backgroundPosition.ts(50,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/properties/backgroundRepeat.ts(5,5): error TS2300: Duplicate identifier 'parse'.
-lib/properties/backgroundRepeat.ts(7,13): error TS2339: Property 'valueType' does not exist on type 'String'.
-lib/properties/backgroundRepeat.ts(7,38): error TS2339: Property 'TYPES' does not exist on type 'String'.
 lib/properties/backgroundRepeat.ts(19,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/properties/backgroundRepeat.ts(24,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/properties/border.ts(16,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/properties/borderCollapse.ts(5,5): error TS2300: Duplicate identifier 'parse'.
-lib/properties/borderCollapse.ts(7,13): error TS2339: Property 'valueType' does not exist on type 'String'.
-lib/properties/borderCollapse.ts(7,38): error TS2339: Property 'TYPES' does not exist on type 'String'.
 lib/properties/borderCollapse.ts(18,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/properties/borderColor.ts(11,62): error TS2339: Property 'valueType' does not exist on type 'String'.
-lib/properties/borderColor.ts(11,87): error TS2339: Property 'TYPES' does not exist on type 'String'.
 lib/properties/borderSpacing.ts(9,5): error TS2300: Duplicate identifier 'parse'.
 lib/properties/borderSpacing.ts(13,7): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 lib/properties/borderSpacing.ts(19,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/properties/borderSpacing.ts(24,17): error TS2339: Property 'valueType' does not exist on type 'String'.
-lib/properties/borderSpacing.ts(24,45): error TS2339: Property 'TYPES' does not exist on type 'String'.
 lib/properties/borderSpacing.ts(33,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/properties/borderStyle.ts(6,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/properties/borderWidth.ts(7,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/properties/borderWidth.ts(10,32): error TS2339: Property 'parseLength' does not exist on type 'String'.
-lib/properties/borderWidth.ts(29,32): error TS2339: Property 'parseLength' does not exist on type 'String'.
 lib/properties/clear.ts(5,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/properties/clip.ts(7,5): error TS2300: Duplicate identifier 'parse'.
 lib/properties/clip.ts(22,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -252,52 +221,34 @@ lib/properties/lineHeight.ts(11,20): error TS2339: Property 'NUMBER' does not ex
 lib/properties/lineHeight.ts(12,20): error TS2339: Property 'LENGTH' does not exist on type 'Object'.
 lib/properties/lineHeight.ts(13,20): error TS2339: Property 'PERCENT' does not exist on type 'Object'.
 lib/properties/margin.ts(3,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/properties/margin.ts(4,29): error TS2339: Property 'TYPES' does not exist on type 'String'.
-lib/properties/margin.ts(10,30): error TS2339: Property 'valueType' does not exist on type 'String'.
 lib/properties/margin.ts(12,20): error TS2339: Property 'LENGTH' does not exist on type 'Object'.
 lib/properties/margin.ts(13,20): error TS2339: Property 'PERCENT' does not exist on type 'Object'.
 lib/properties/margin.ts(14,21): error TS2339: Property 'INTEGER' does not exist on type 'Object'.
 lib/properties/margin.ts(14,46): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 lib/properties/margin.ts(19,7): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/properties/margin.ts(20,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/properties/margin.ts(23,18): error TS2339: Property 'parseMeasurement' does not exist on type 'String'.
-lib/properties/margin.ts(26,34): error TS2339: Property 'implicitSetter' does not exist on type 'String'.
-lib/properties/margin.ts(27,34): error TS2339: Property 'implicitSetter' does not exist on type 'String'.
 lib/properties/margin.ts(33,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/properties/marginBottom.ts(7,16): error TS2339: Property 'subImplicitSetter' does not exist on type 'String'.
 lib/properties/marginBottom.ts(7,61): error TS2339: Property 'isValid' does not exist on type 'String'.
 lib/properties/marginBottom.ts(7,77): error TS2339: Property 'parser' does not exist on type 'String'.
-lib/properties/marginLeft.ts(7,16): error TS2339: Property 'subImplicitSetter' does not exist on type 'String'.
 lib/properties/marginLeft.ts(7,59): error TS2339: Property 'isValid' does not exist on type 'String'.
 lib/properties/marginLeft.ts(7,75): error TS2339: Property 'parser' does not exist on type 'String'.
-lib/properties/marginRight.ts(7,16): error TS2339: Property 'subImplicitSetter' does not exist on type 'String'.
 lib/properties/marginRight.ts(7,60): error TS2339: Property 'isValid' does not exist on type 'String'.
 lib/properties/marginRight.ts(7,76): error TS2339: Property 'parser' does not exist on type 'String'.
-lib/properties/marginTop.ts(7,16): error TS2339: Property 'subImplicitSetter' does not exist on type 'String'.
 lib/properties/marginTop.ts(7,58): error TS2339: Property 'isValid' does not exist on type 'String'.
 lib/properties/marginTop.ts(7,74): error TS2339: Property 'parser' does not exist on type 'String'.
 lib/properties/padding.ts(3,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/properties/padding.ts(4,29): error TS2339: Property 'TYPES' does not exist on type 'String'.
-lib/properties/padding.ts(7,30): error TS2339: Property 'valueType' does not exist on type 'String'.
 lib/properties/padding.ts(9,20): error TS2339: Property 'LENGTH' does not exist on type 'Object'.
 lib/properties/padding.ts(10,20): error TS2339: Property 'PERCENT' does not exist on type 'Object'.
 lib/properties/padding.ts(11,21): error TS2339: Property 'INTEGER' does not exist on type 'Object'.
 lib/properties/padding.ts(11,46): error TS2367: This condition will always return 'false' since the types 'String' and 'number' have no overlap.
 lib/properties/padding.ts(15,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/properties/padding.ts(16,18): error TS2339: Property 'parseMeasurement' does not exist on type 'String'.
-lib/properties/padding.ts(19,34): error TS2339: Property 'implicitSetter' does not exist on type 'String'.
-lib/properties/padding.ts(20,34): error TS2339: Property 'implicitSetter' does not exist on type 'String'.
 lib/properties/padding.ts(26,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/properties/paddingBottom.ts(7,16): error TS2339: Property 'subImplicitSetter' does not exist on type 'String'.
 lib/properties/paddingBottom.ts(7,63): error TS2339: Property 'isValid' does not exist on type 'String'.
 lib/properties/paddingBottom.ts(7,80): error TS2339: Property 'parser' does not exist on type 'String'.
-lib/properties/paddingLeft.ts(7,16): error TS2339: Property 'subImplicitSetter' does not exist on type 'String'.
 lib/properties/paddingLeft.ts(7,61): error TS2339: Property 'isValid' does not exist on type 'String'.
 lib/properties/paddingLeft.ts(7,78): error TS2339: Property 'parser' does not exist on type 'String'.
-lib/properties/paddingRight.ts(7,16): error TS2339: Property 'subImplicitSetter' does not exist on type 'String'.
 lib/properties/paddingRight.ts(7,62): error TS2339: Property 'isValid' does not exist on type 'String'.
 lib/properties/paddingRight.ts(7,79): error TS2339: Property 'parser' does not exist on type 'String'.
-lib/properties/paddingTop.ts(7,16): error TS2339: Property 'subImplicitSetter' does not exist on type 'String'.
 lib/properties/paddingTop.ts(7,60): error TS2339: Property 'isValid' does not exist on type 'String'.
 lib/properties/paddingTop.ts(7,77): error TS2339: Property 'parser' does not exist on type 'String'.
 lib/properties/width.ts(5,10): error TS2300: Duplicate identifier 'parse'.
@@ -323,6 +274,8 @@ lib/utils/colorSpace.ts(19,38): error TS2362: The left-hand side of an arithmeti
 lib/utils/colorSpace.ts(20,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/utils/colorSpace.ts(20,43): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/utils/colorSpace.ts(20,64): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+scripts/download_latest_properties.ts(21,5): error TS2451: Cannot redeclare block-scoped variable 'fs'.
+scripts/download_latest_properties.ts(22,5): error TS2451: Cannot redeclare block-scoped variable 'path'.
 scripts/download_latest_properties.ts(26,9): error TS2451: Cannot redeclare block-scoped variable 'camelToDashed'.
 scripts/download_latest_properties.ts(33,52): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 scripts/download_latest_properties.ts(39,26): error TS2339: Property 'statusCode' does not exist on type 'Element'.
@@ -337,7 +290,7 @@ scripts/download_latest_properties.ts(50,27): error TS2314: Generic type 'Array<
 scripts/download_latest_properties.ts(52,57): error TS2339: Property 'property' does not exist on type 'Function'.
 scripts/download_latest_properties.ts(59,31): error TS2339: Property 'createWriteStream' does not exist on type 'String'.
 scripts/download_latest_properties.ts(59,54): error TS2339: Property 'resolve' does not exist on type 'String'.
-scripts/download_latest_properties.ts(63,9): error TS2322: Type 'Date' is not assignable to type 'HTMLInputElement'.
+scripts/download_latest_properties.ts(63,9): error TS2740: Type 'Date' is missing the following properties from type 'HTMLInputElement': accept, align, alt, autocomplete, and 333 more.
 scripts/download_latest_properties.ts(64,14): error TS2339: Property 'write' does not exist on type 'String'.
 scripts/download_latest_properties.ts(66,21): error TS2339: Property 'getMonth' does not exist on type 'HTMLInputElement'.
 scripts/download_latest_properties.ts(66,55): error TS2339: Property 'getDate' does not exist on type 'HTMLInputElement'.
@@ -384,8 +337,6 @@ scripts/generate_implemented_properties.ts(51,9): error TS2339: Property 'identi
 scripts/generate_implemented_properties.ts(56,10): error TS2339: Property 'write' does not exist on type 'String'.
 scripts/generate_implemented_properties.ts(56,27): error TS2339: Property 'program' does not exist on type 'HTMLElement'.
 scripts/generate_implemented_properties.ts(57,10): error TS2339: Property 'end' does not exist on type 'String'.
-scripts/generate_properties.ts(3,5): error TS2451: Cannot redeclare block-scoped variable 'fs'.
-scripts/generate_properties.ts(4,5): error TS2451: Cannot redeclare block-scoped variable 'path'.
 scripts/generate_properties.ts(6,5): error TS2451: Cannot redeclare block-scoped variable 't'.
 scripts/generate_properties.ts(7,5): error TS2451: Cannot redeclare block-scoped variable 'generate'.
 scripts/generate_properties.ts(9,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -401,7 +352,7 @@ scripts/generate_properties.ts(23,30): error TS2314: Generic type 'Array<T>' req
 scripts/generate_properties.ts(26,5): error TS2451: Cannot redeclare block-scoped variable 'out_file'.
 scripts/generate_properties.ts(26,27): error TS2339: Property 'createWriteStream' does not exist on type 'String'.
 scripts/generate_properties.ts(26,50): error TS2339: Property 'resolve' does not exist on type 'String'.
-scripts/generate_properties.ts(29,5): error TS2740: Type 'Date' is missing the following properties from type 'HTMLInputElement': accept, align, alt, autocomplete, and 333 more.
+scripts/generate_properties.ts(29,5): error TS2322: Type 'Date' is not assignable to type 'HTMLInputElement'.
 scripts/generate_properties.ts(30,10): error TS2339: Property 'write' does not exist on type 'String'.
 scripts/generate_properties.ts(32,17): error TS2339: Property 'getMonth' does not exist on type 'HTMLInputElement'.
 scripts/generate_properties.ts(32,51): error TS2339: Property 'getDate' does not exist on type 'HTMLInputElement'.
@@ -414,11 +365,11 @@ scripts/generate_properties.ts(41,7): error TS2339: Property 'isIdentifier' does
 scripts/generate_properties.ts(41,25): error TS2339: Property 'property' does not exist on type 'Object'.
 scripts/generate_properties.ts(46,7): error TS2339: Property 'isCallExpression' does not exist on type 'HTMLElement'.
 scripts/generate_properties.ts(47,7): error TS2339: Property 'isIdentifier' does not exist on type 'HTMLElement'.
-scripts/generate_properties.ts(47,25): error TS2339: Property 'callee' does not exist on type 'HTMLElement'.
-scripts/generate_properties.ts(48,10): error TS2339: Property 'arguments' does not exist on type 'HTMLElement'.
+scripts/generate_properties.ts(47,25): error TS2339: Property 'callee' does not exist on type 'Object'.
+scripts/generate_properties.ts(48,10): error TS2339: Property 'arguments' does not exist on type 'Object'.
 scripts/generate_properties.ts(49,7): error TS2339: Property 'isStringLiteral' does not exist on type 'HTMLElement'.
-scripts/generate_properties.ts(49,28): error TS2339: Property 'arguments' does not exist on type 'HTMLElement'.
-scripts/generate_properties.ts(51,33): error TS2339: Property 'arguments' does not exist on type 'HTMLElement'.
+scripts/generate_properties.ts(49,28): error TS2339: Property 'arguments' does not exist on type 'Object'.
+scripts/generate_properties.ts(51,33): error TS2339: Property 'arguments' does not exist on type 'Object'.
 scripts/generate_properties.ts(53,14): error TS2322: Type '{ relative: String; fullPath: String; }' is not assignable to type 'Boolean'.
   Object literal may only specify known properties, and 'relative' does not exist in type 'Boolean'.
 scripts/generate_properties.ts(62,31): error TS2339: Property 'resolve' does not exist on type 'String'.
@@ -473,9 +424,6 @@ scripts/generate_properties.ts(153,25): error TS2339: Property 'relative' does n
 scripts/generate_properties.ts(153,63): error TS2339: Property 'property' does not exist on type 'Object'.
 scripts/generate_properties.ts(155,14): error TS2339: Property 'namedExports' does not exist on type 'Object'.
 scripts/generate_properties.ts(155,32): error TS2339: Property 'property' does not exist on type 'Object'.
-scripts/generate_properties.ts(158,29): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 scripts/generate_properties.ts(158,40): error TS2339: Property 'filename' does not exist on type 'Object'.
 scripts/generate_properties.ts(159,31): error TS2339: Property 'fullPath' does not exist on type 'Object'.
 scripts/generate_properties.ts(161,28): error TS2339: Property 'relative' does not exist on type 'Object'.

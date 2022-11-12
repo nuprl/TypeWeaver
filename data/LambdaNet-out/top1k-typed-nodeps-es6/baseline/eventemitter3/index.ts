@@ -147,7 +147,7 @@ EventEmitter.prototype.listeners = function listeners(event: String): Array {
  * @returns {Number} The number of listeners.
  * @public
  */
-EventEmitter.prototype.listenerCount = function listenerCount(event: String): Number {
+EventEmitter.prototype.listenerCount = function listenerCount(event: Number): Number {
   var evt: String = prefix ? prefix + event : event
     , listeners: Array = this._events[evt];
 

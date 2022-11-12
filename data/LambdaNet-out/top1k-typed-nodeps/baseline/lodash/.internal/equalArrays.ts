@@ -59,7 +59,7 @@ function equalArrays(array: Array, other: Array, bitmask: Number, customizer: Fu
     }
     // Recursively compare arrays (susceptible to call stack limits).
     if (seen) {
-      if (!some(other, (othValue: String, othIndex: String) => {
+      if (!some(other, (othValue: Number, othIndex: String) => {
         if (!cacheHas(seen, othIndex) &&
           (arrValue === othValue || equalFunc(arrValue, othValue, bitmask, customizer, stack))) {
           return seen.push(othIndex)

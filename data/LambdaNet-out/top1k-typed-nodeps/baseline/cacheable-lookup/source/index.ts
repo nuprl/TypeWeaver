@@ -12,12 +12,12 @@ const {promisify} = require('util');
 const os: String = require('os');
 
 const kCacheableLookupCreateConnection: String = Symbol('cacheableLookupCreateConnection');
-const kCacheableLookupInstance: String = Symbol('cacheableLookupInstance');
+const kCacheableLookupInstance: Array = Symbol('cacheableLookupInstance');
 const kExpires: String = Symbol('expires');
 
 const supportsALL: Boolean = typeof ALL === 'number';
 
-const verifyAgent: Function = (agent: CacheableLookup) => {
+const verifyAgent: Function = (agent: Object) => {
 	if (!(agent && typeof agent.createConnection === 'function')) {
 		throw new Error('Expected an Agent instance as the first argument');
 	}

@@ -145,6 +145,7 @@ lexer.ts(309,39): error TS2345: Argument of type 'String' is not assignable to p
   Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lexer.ts(314,10): error TS2678: Type 'number' is not comparable to type 'String'.
 lexer.ts(315,22): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lexer.ts(315,35): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 lexer.ts(319,10): error TS2678: Type 'number' is not comparable to type 'String'.
 lexer.ts(320,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lexer.ts(321,25): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.

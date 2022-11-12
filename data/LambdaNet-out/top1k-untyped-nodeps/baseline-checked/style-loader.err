@@ -92,7 +92,7 @@ src/runtime/injectStylesIntoStyleTag.ts(85,3): error TS2322: Type 'String | {}' 
 src/runtime/injectStylesIntoStyleTag.ts(89,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/runtime/injectStylesIntoStyleTag.ts(91,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/runtime/injectStylesIntoStyleTag.ts(91,43): error TS2304: Cannot find name 'Void'.
-src/runtime/injectStylesIntoStyleTag.ts(96,13): error TS2322: Type 'Number' is not assignable to type 'String'.
+src/runtime/injectStylesIntoStyleTag.ts(96,13): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/runtime/injectStylesIntoStyleTag.ts(96,50): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 src/runtime/injectStylesIntoStyleTag.ts(101,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/runtime/injectStylesIntoStyleTag.ts(105,13): error TS2322: Type 'Number' is not assignable to type 'String'.
@@ -172,7 +172,6 @@ src/runtime/singletonStyleDomAPI.ts(81,19): error TS2339: Property 'singleton' d
 src/runtime/singletonStyleDomAPI.ts(83,20): error TS2339: Property 'singleton' does not exist on type 'Object'.
 src/runtime/singletonStyleDomAPI.ts(83,40): error TS2339: Property 'insertStyleElement' does not exist on type 'Function'.
 src/runtime/singletonStyleDomAPI.ts(87,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/runtime/singletonStyleDomAPI.ts(90,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 src/runtime/styleDomAPI.ts(2,10): error TS2393: Duplicate function implementation.
 src/runtime/styleDomAPI.ts(2,74): error TS2304: Cannot find name 'Void'.
@@ -199,7 +198,7 @@ src/runtime/styleTagTransform.ts(3,20): error TS2339: Property 'styleSheet' does
 src/runtime/styleTagTransform.ts(4,18): error TS2339: Property 'styleSheet' does not exist on type 'Element'.
 src/runtime/styleTagTransform.ts(10,54): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/utils.ts(3,27): error TS2306: File '/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps/baseline/style-loader/src/runtime/isEqualLocals.ts' is not a module.
+src/utils.ts(3,27): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-untyped-nodeps/baseline/style-loader/src/runtime/isEqualLocals.ts' is not a module.
 src/utils.ts(8,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 src/utils.ts(8,62): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -241,7 +240,6 @@ src/utils.ts(169,38): error TS2339: Property 'insert' does not exist on type 'Ob
 src/utils.ts(172,85): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/utils.ts(174,5): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'HTMLElement'.
 src/utils.ts(184,47): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
-src/utils.ts(258,85): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/utils.ts(259,47): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'HTMLElement'.
 src/utils.ts(288,74): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/utils.ts(290,5): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'HTMLElement'.
@@ -259,7 +257,6 @@ src/utils.ts(341,22): error TS2339: Property 'styleTagTransform' does not exist 
 src/utils.ts(342,46): error TS2339: Property 'styleTagTransform' does not exist on type 'Object'.
 src/utils.ts(347,47): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'HTMLElement'.
 src/utils.ts(356,47): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'HTMLElement'.
-src/utils.ts(364,91): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/utils.ts(367,22): error TS2339: Property 'attributes' does not exist on type 'Object'.
 src/utils.ts(369,15): error TS2339: Property 'attributes' does not exist on type 'Object'.
 src/utils.ts(371,13): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.

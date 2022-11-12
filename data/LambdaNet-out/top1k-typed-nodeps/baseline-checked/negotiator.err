@@ -62,8 +62,8 @@ index.ts(14,5): error TS2300: Duplicate identifier 'preferredMediaTypes'.
 index.ts(32,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/charset.ts(31,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/charset.ts(32,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/charset.ts(35,9): error TS2322: Type 'Object' is not assignable to type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/charset.ts(35,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/charset.ts(54,48): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/charset.ts(60,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -85,7 +85,7 @@ lib/charset.ts(122,54): error TS2314: Generic type 'Array<T>' requires 1 type ar
 lib/charset.ts(122,62): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/charset.ts(124,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/charset.ts(124,43): error TS2345: Argument of type 'Number | "" | "*"' is not assignable to parameter of type 'String'.
-  Type 'Number' is not assignable to type 'String'.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/charset.ts(134,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/charset.ts(134,91): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/charset.ts(149,10): error TS2393: Duplicate function implementation.
@@ -201,8 +201,8 @@ lib/language.ts(177,10): error TS2393: Duplicate function implementation.
 lib/language.ts(178,15): error TS2339: Property 'q' does not exist on type 'Object'.
 lib/mediaType.ts(31,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mediaType.ts(32,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/mediaType.ts(35,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+lib/mediaType.ts(35,9): error TS2322: Type 'Object' is not assignable to type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/mediaType.ts(54,50): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/mediaType.ts(63,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -240,7 +240,7 @@ lib/mediaType.ts(162,56): error TS2314: Generic type 'Array<T>' requires 1 type 
 lib/mediaType.ts(162,64): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mediaType.ts(164,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mediaType.ts(164,36): error TS2345: Argument of type 'Number | "" | "*/*"' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+  Type 'Number' is not assignable to type 'String'.
 lib/mediaType.ts(174,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mediaType.ts(175,5): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?

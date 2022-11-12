@@ -23,7 +23,7 @@ src/index.ts(137,32): error TS2349: This expression is not callable.
 src/index.ts(140,45): error TS2339: Property 'nodes' does not exist on type 'Error'.
 src/index.ts(148,30): error TS2339: Property 'nodes' does not exist on type 'Error'.
 src/topologicalSort.ts(7,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/topologicalSort.ts(7,32): error TS2538: Type 'Function' cannot be used as an index type.
+src/topologicalSort.ts(7,32): error TS2538: Type 'Object' cannot be used as an index type.
 src/topologicalSort.ts(9,36): error TS2538: Type 'Object' cannot be used as an index type.
 src/topologicalSort.ts(12,6): error TS2339: Property 'nodes' does not exist on type 'Error'.
 src/topologicalSort.ts(17,72): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -31,9 +31,6 @@ src/topologicalSort.ts(18,13): error TS2538: Type 'Object' cannot be used as an 
 src/topologicalSort.ts(22,13): error TS2538: Type 'Object' cannot be used as an index type.
 src/topologicalSort.ts(24,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-src/topologicalSort.ts(24,26): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 src/topologicalSort.ts(30,9): error TS2538: Type 'Object' cannot be used as an index type.
 src/topologicalSort.ts(32,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/topologicalSort.ts(32,33): error TS2538: Type 'Object' cannot be used as an index type.

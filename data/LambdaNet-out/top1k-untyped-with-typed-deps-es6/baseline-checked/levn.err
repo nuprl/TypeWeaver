@@ -1,4 +1,6 @@
 lib/cast.ts(41,23): error TS2339: Property 'explicit' does not exist on type 'Object'.
+lib/cast.ts(46,11): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+lib/cast.ts(70,11): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/cast.ts(82,11): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/cast.ts(87,18): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/cast.ts(118,41): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
@@ -22,11 +24,6 @@ lib/cast.ts(148,29): error TS2769: No overload matches this call.
   Overload 3 of 3, '(pattern: string, flags?: string): RegExp', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/cast.ts(172,59): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type '(all: Number, escaped: any) => any' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
-      Types of parameters 'all' and 'substring' are incompatible.
-        Type 'string' is not assignable to type 'Number'.
 lib/cast.ts(172,90): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/cast.ts(220,19): error TS2339: Property 'of' does not exist on type 'Object'.
 lib/cast.ts(224,65): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -49,7 +46,7 @@ lib/cast.ts(285,70): error TS2314: Generic type 'Array<T>' requires 1 type argum
 lib/cast.ts(287,20): error TS2339: Property 'type' does not exist on type 'Object'.
 lib/cast.ts(287,46): error TS2339: Property 'structure' does not exist on type 'Object'.
 lib/cast.ts(289,35): error TS2339: Property 'customTypes' does not exist on type 'Object'.
-lib/cast.ts(289,69): error TS2339: Property 'cast' does not exist on type 'Object'.
+lib/cast.ts(289,69): error TS2339: Property 'cast' does not exist on type 'HTMLElement'.
 lib/cast.ts(289,93): error TS2538: Type 'String' cannot be used as an index type.
 lib/cast.ts(305,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cast.ts(307,39): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
@@ -73,19 +70,19 @@ lib/parse-string.ts(17,45): error TS2314: Generic type 'Promise<T>' requires 1 t
 lib/parse-string.ts(17,79): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse-string.ts(18,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse-string.ts(18,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/parse-string.ts(24,5): error TS2322: Type 'string' is not assignable to type 'Number'.
+lib/parse-string.ts(26,42): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lib/parse-string.ts(27,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 lib/parse-string.ts(30,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lib/parse-string.ts(35,44): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Boolean'.
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'string' is not assignable to type 'boolean'.
 lib/parse-string.ts(38,44): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Boolean'.
 lib/parse-string.ts(40,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/parse-string.ts(43,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
-lib/parse-string.ts(46,5): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/parse-string.ts(49,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 lib/parse-string.ts(50,14): error TS2538: Type 'String' cannot be used as an index type.
+lib/parse-string.ts(50,44): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 lib/parse-string.ts(51,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 lib/parse-string.ts(54,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 lib/parse-string.ts(58,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

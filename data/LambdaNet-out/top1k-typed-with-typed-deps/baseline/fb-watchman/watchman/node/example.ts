@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-var watchman: String = require('fb-watchman');
+var watchman: Array = require('fb-watchman');
 var client: HTMLElement = new watchman.Client();
 
 client.on('end', function() {

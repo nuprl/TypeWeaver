@@ -1,5 +1,5 @@
 //.CommonJS
-var CSSOM: Record = {};
+var CSSOM: Buffer = {};
 ///CommonJS
 
 

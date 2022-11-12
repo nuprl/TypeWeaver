@@ -262,7 +262,7 @@ function fitsInMetaW(expression: Object, hasIUFlags: Boolean): Boolean {
  * @param {Object} classRange - Char or ClassRange node
  * @returns {boolean}
  */
-function combinesWithPrecedingClassRange(expression: Object, classRange: NFAState): Boolean {
+function combinesWithPrecedingClassRange(expression: Object, classRange: Object): Boolean {
   if (classRange && classRange.type === 'ClassRange') {
     if (fitsInClassRange(expression, classRange)) {
       // [a-gc] -> [a-g]
@@ -301,7 +301,7 @@ function combinesWithPrecedingClassRange(expression: Object, classRange: NFAStat
  * @param {Object} classRange - Char or ClassRange node
  * @returns {boolean}
  */
-function combinesWithFollowingClassRange(expression: Object, classRange: LeadSurrogateRange): Boolean {
+function combinesWithFollowingClassRange(expression: Object, classRange: Object): Boolean {
   if (classRange && classRange.type === 'ClassRange') {
     // Considering the elements were ordered alphabetically,
     // there is only one case to handle
@@ -324,7 +324,7 @@ function combinesWithFollowingClassRange(expression: Object, classRange: LeadSur
  * @param {Object} classRange - ClassRange node
  * @returns {boolean}
  */
-function fitsInClassRange(expression: Object, classRange: NFAState): Boolean {
+function fitsInClassRange(expression: Object, classRange: Object): Boolean {
   if (expression.type === 'Char' && isNaN(expression.codePoint)) {
     return false;
   }

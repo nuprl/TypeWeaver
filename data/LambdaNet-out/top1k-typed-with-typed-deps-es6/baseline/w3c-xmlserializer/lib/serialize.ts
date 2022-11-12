@@ -171,7 +171,7 @@ function serializeComment(node: Object, namespace: String, prefixMap: String, re
   return `<!--${node.data}-->`;
 }
 
-function serializeElement(node: HTMLElement, namespace: String, prefixMap: String, requireWellFormed: Number, refs: HTMLElement): String {
+function serializeElement(node: HTMLElement, namespace: String, prefixMap: String, requireWellFormed: String, refs: HTMLElement): String {
   if (
     requireWellFormed &&
     (node.localName.includes(":") || !xnv.name(node.localName))

@@ -297,7 +297,7 @@
   }
 
   // (public) return the number of bits in "this"
-  function bnBitLength(): Boolean {
+  function bnBitLength(): Number {
     if (this.t <= 0) return 0;
     return (
       this.DB * (this.t - 1) + nbits(this[this.t - 1] ^ (this.s & this.DM))
@@ -430,7 +430,7 @@
 
   // (protected) divide this by m, quotient and remainder to q, r (HAC 14.20)
   // r != q, this != m.  q or r may be null.
-  function bnpDivRemTo(m: HTMLElement, q: String, r: Function): Void {
+  function bnpDivRemTo(m: Object, q: String, r: Function): Void {
     var pm: Object = m.abs();
     if (pm.t <= 0) return;
     var pt: HTMLElement = this.abs();
@@ -715,7 +715,7 @@
   }
 
   // (public) return value as byte
-  function bnByteValue(): Boolean {
+  function bnByteValue(): Number {
     return this.t == 0 ? this.s : (this[0] << 24) >> 24;
   }
 
@@ -1002,7 +1002,7 @@
   }
 
   // (public) this | (1<<n)
-  function bnSetBit(n: Number): Promise {
+  function bnSetBit(n: Number): Object {
     return this.changeBit(n, op_or);
   }
 
@@ -1051,7 +1051,7 @@
   }
 
   // (public) this + a
-  function bnAdd(a: Array): String {
+  function bnAdd(a: Function): String {
     var r: String = nbi();
     this.addTo(a, r);
     return r;
@@ -1226,7 +1226,7 @@
   Barrett.prototype.sqrTo = barrettSqrTo;
 
   // (public) this^e % m (HAC 14.85)
-  function bnModPow(e: Array, m: String): Object {
+  function bnModPow(e: Array, m: String): String {
     var i: Number = e.bitLength(),
       k: Number,
       r: String = nbv(1),

@@ -207,7 +207,7 @@ benchmarks/run/hundreds.ts(21,28): error TS2351: This expression is not construc
 benchmarks/run/hundreds.ts(24,29): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
 benchmarks/run/hundreds.ts(27,23): error TS2554: Expected 3 arguments, but got 0.
-benchmarks/run/hundreds.ts(28,16): error TS2403: Subsequent variable declarations must have the same type.  Variable 'i' must be of type 'number', but here has type 'Number'.
+benchmarks/run/hundreds.ts(30,21): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmarks/run/hundreds.ts(31,23): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmarks/run/hundreds.ts(32,8): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmarks/run/hundreds.ts(33,8): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
@@ -217,13 +217,21 @@ benchmarks/run/hundreds.ts(36,9): error TS2339: Property 'on' does not exist on 
 benchmarks/run/hundreds.ts(37,9): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmarks/run/hundreds.ts(38,10): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmarks/run/hundreds.ts(39,12): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
+benchmarks/run/hundreds.ts(46,23): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmarks/run/hundreds.ts(47,9): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
+benchmarks/run/hundreds.ts(50,23): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmarks/run/hundreds.ts(51,9): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
+benchmarks/run/hundreds.ts(54,23): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmarks/run/hundreds.ts(55,9): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
+benchmarks/run/hundreds.ts(58,23): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmarks/run/hundreds.ts(59,12): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
+benchmarks/run/hundreds.ts(62,23): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmarks/run/hundreds.ts(63,10): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
+benchmarks/run/hundreds.ts(66,23): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmarks/run/hundreds.ts(67,8): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
+benchmarks/run/hundreds.ts(70,23): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmarks/run/hundreds.ts(71,8): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
+benchmarks/run/hundreds.ts(74,23): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmarks/run/hundreds.ts(75,8): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 benchmarks/run/hundreds.ts(77,48): error TS2304: Cannot find name 'Void'.
 benchmarks/run/hundreds.ts(78,17): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
@@ -253,6 +261,8 @@ benchmarks/run/listeners.ts(16,28): error TS2351: This expression is not constru
   Type 'Object' has no construct signatures.
 benchmarks/run/listeners.ts(21,5): error TS2339: Property 'setMaxListeners' does not exist on type 'HTMLElement'.
 benchmarks/run/listeners.ts(22,4): error TS2339: Property 'setMaxListeners' does not exist on type 'HTMLElement'.
+benchmarks/run/listeners.ts(24,10): error TS2403: Subsequent variable declarations must have the same type.  Variable 'i' must be of type 'Number', but here has type 'number'.
+benchmarks/run/listeners.ts(24,25): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 benchmarks/run/listeners.ts(25,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmarks/run/listeners.ts(26,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmarks/run/listeners.ts(27,10): error TS2339: Property 'on' does not exist on type 'HTMLElement'.

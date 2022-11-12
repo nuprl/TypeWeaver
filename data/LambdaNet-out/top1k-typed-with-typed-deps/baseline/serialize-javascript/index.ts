@@ -30,7 +30,7 @@ var ESCAPED_CHARS: Object = {
     '\u2029': '\\u2029'
 };
 
-function escapeUnsafeChars(unsafeChar: Number): String {
+function escapeUnsafeChars(unsafeChar: String): String {
     return ESCAPED_CHARS[unsafeChar];
 }
 
@@ -90,7 +90,7 @@ module.exports = function serialize(obj: String, options: Object): String {
         // If the value is an object w/ a toJSON method, toJSON is called before
         // the replacer runs, so we use this[key] to get the non-toJSONed value.
         var origValue: Array = this[key];
-        var type: String = typeof origValue;
+        var type: Number = typeof origValue;
 
         if (type === 'object') {
             if(origValue instanceof RegExp) {

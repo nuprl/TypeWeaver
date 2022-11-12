@@ -231,7 +231,7 @@
     return function fromCodePoint(): String {
       var MAX_SIZE: Number = 0x4000;
       var codeUnits: Array = [];
-      var highSurrogate: Number;
+      var highSurrogate: String;
       var lowSurrogate: String;
       var index: Number = -1;
       var length: Number = arguments.length;
@@ -1014,7 +1014,7 @@
       }
     }
 
-    function parseRegExpUnicodeEscapeSequence(): String {
+    function parseRegExpUnicodeEscapeSequence(): Boolean {
       var res: Object;
       if (res = matchReg(/^u([0-9a-fA-F]{4})/)) {
         // UnicodeEscapeSequence
@@ -1291,7 +1291,7 @@
       return parseHelperClassRanges(atom);
     }
 
-    function parseNonemptyClassRangesNoDash(): String {
+    function parseNonemptyClassRangesNoDash(): Boolean {
       // NonemptyClassRangesNoDash ::
       //      ClassAtom
       //      ClassAtomNoDash NonemptyClassRangesNoDash

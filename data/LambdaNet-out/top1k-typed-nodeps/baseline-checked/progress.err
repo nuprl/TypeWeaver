@@ -10,7 +10,7 @@ examples/backnforth.ts(29,9): error TS2339: Property 'terminate' does not exist 
 examples/colors.ts(4,5): error TS2300: Duplicate identifier 'ProgressBar'.
 examples/colors.ts(4,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/colors.ts(6,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'bar' must be of type 'HTMLElement', but here has type 'Object'.
-examples/colors.ts(12,5): error TS2322: Type 'Timer' is not assignable to type 'Number'.
+examples/colors.ts(12,5): error TS2739: Type 'Timer' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 examples/colors.ts(13,7): error TS2339: Property 'tick' does not exist on type 'HTMLElement'.
 examples/colors.ts(14,11): error TS2339: Property 'complete' does not exist on type 'HTMLElement'.
 examples/colors.ts(15,19): error TS2769: No overload matches this call.
@@ -98,7 +98,7 @@ examples/formats.ts(75,21): error TS2769: No overload matches this call.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 examples/interrupt.ts(7,5): error TS2300: Duplicate identifier 'ProgressBar'.
 examples/interrupt.ts(7,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/interrupt.ts(10,5): error TS2739: Type 'Timer' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+examples/interrupt.ts(10,5): error TS2322: Type 'Timer' is not assignable to type 'Number'.
 examples/interrupt.ts(11,9): error TS2339: Property 'tick' does not exist on type 'HTMLElement'.
 examples/interrupt.ts(12,13): error TS2339: Property 'complete' does not exist on type 'HTMLElement'.
 examples/interrupt.ts(13,23): error TS2769: No overload matches this call.

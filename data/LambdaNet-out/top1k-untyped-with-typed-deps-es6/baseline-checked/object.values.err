@@ -16,4 +16,7 @@ shim.ts(9,3): error TS2322: Type '() => Boolean' is not assignable to type '() =
   Type 'Boolean' is not assignable to type 'boolean'.
     'boolean' is a primitive, but 'Boolean' is a wrapper object. Prefer using 'boolean' when possible.
 shim.ts(10,11): error TS2367: This condition will always return 'true' since the types '{ <T>(o: { [s: string]: T; } | ArrayLike<T>): T[]; (o: {}): any[]; }' and 'String' have no overlap.
+shim.ts(13,2): error TS2322: Type 'String' is not assignable to type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'string' is not assignable to type 'boolean'.
 

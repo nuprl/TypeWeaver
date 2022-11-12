@@ -42,7 +42,7 @@
     'closenamespace'
   ]
 
-  function SAXParser (strict: Number, opt: Number): String {
+  function SAXParser (strict: Number, opt: String): String {
     if (!(this instanceof SAXParser)) {
       return new SAXParser(strict, opt)
     }
@@ -83,7 +83,7 @@
     Object.create = function (o: Array) {
       function F (): Void {}
       F.prototype = o
-      var newf: String = new F()
+      var newf: Array = new F()
       return newf
     }
   }

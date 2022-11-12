@@ -1,4 +1,4 @@
-lib/DirectoryWatcher.ts(10,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/watchpack/lib/watchEventSource"' has no default export.
+lib/DirectoryWatcher.ts(10,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/watchpack/lib/watchEventSource"' has no default export.
 lib/DirectoryWatcher.ts(12,7): error TS2740: Type 'Readonly<{}>' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/DirectoryWatcher.ts(17,7): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/DirectoryWatcher.ts(18,7): error TS2322: Type 'number | boolean' is not assignable to type 'String'.
@@ -117,6 +117,7 @@ lib/DirectoryWatcher.ts(390,9): error TS2339: Property '_activeEvents' does not 
 lib/DirectoryWatcher.ts(392,14): error TS2551: Property 'closed' does not exist on type 'DirectoryWatcher'. Did you mean 'close'?
 lib/DirectoryWatcher.ts(393,10): error TS2339: Property '_activeEvents' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(394,14): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
+  Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
 lib/DirectoryWatcher.ts(394,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/DirectoryWatcher.ts(395,15): error TS2551: Property 'closed' does not exist on type 'DirectoryWatcher'. Did you mean 'close'?
 lib/DirectoryWatcher.ts(396,15): error TS2339: Property '_activeEvents' does not exist on type 'DirectoryWatcher'.
@@ -271,14 +272,13 @@ lib/LinkResolver.ts(45,47): error TS2345: Argument of type 'String' is not assig
 lib/LinkResolver.ts(49,48): error TS2769: No overload matches this call.
   Overload 1 of 3, '(path: PathLike, options?: EncodingOption): string', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-      Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
   Overload 2 of 3, '(path: PathLike, options?: EncodingOption): string | Buffer', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathLike'.
 lib/LinkResolver.ts(52,65): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/LinkResolver.ts(55,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/LinkResolver.ts(58,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/LinkResolver.ts(61,11): error TS2739: Type 'Set<unknown>' is missing the following properties from type 'Error': name, message
+lib/LinkResolver.ts(61,11): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
 lib/LinkResolver.ts(63,15): error TS2339: Property 'add' does not exist on type 'Error'.
 lib/LinkResolver.ts(66,16): error TS2339: Property 'add' does not exist on type 'Error'.
 lib/LinkResolver.ts(68,39): error TS2769: No overload matches this call.
@@ -300,6 +300,7 @@ lib/getWatcherManager.ts(22,10): error TS2551: Property 'directoryWatchers' does
 lib/getWatcherManager.ts(30,9): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/getWatcherManager.ts(40,7): error TS2739: Type 'WeakMap<object, any>' is missing the following properties from type 'Error': name, message
 lib/getWatcherManager.ts(46,57): error TS2339: Property 'get' does not exist on type 'Error'.
+lib/getWatcherManager.ts(48,8): error TS2740: Type 'WatcherManager' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/getWatcherManager.ts(49,18): error TS2339: Property 'set' does not exist on type 'Error'.
 lib/reducePlan.ts(26,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/reducePlan.ts(27,17): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
@@ -322,7 +323,7 @@ lib/reducePlan.ts(98,33): error TS2339: Property 'parent' does not exist on type
 lib/reducePlan.ts(100,11): error TS2339: Property 'entries' does not exist on type 'Object'.
 lib/reducePlan.ts(100,22): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/reducePlan.ts(101,20): error TS2339: Property 'parent' does not exist on type 'Object'.
-lib/reducePlan.ts(103,9): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
+lib/reducePlan.ts(103,9): error TS2739: Type 'Set<unknown>' is missing the following properties from type 'Error': name, message
 lib/reducePlan.ts(103,41): error TS2339: Property 'children' does not exist on type 'Object'.
 lib/reducePlan.ts(104,22): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/reducePlan.ts(108,46): error TS2339: Property 'add' does not exist on type 'Error'.
@@ -377,7 +378,7 @@ lib/watchEventSource.ts(153,10): error TS2322: Type 'Set<unknown>' is not assign
 lib/watchEventSource.ts(154,11): error TS2339: Property 'add' does not exist on type 'Error'.
 lib/watchEventSource.ts(155,9): error TS2339: Property 'mapPathToWatchers' does not exist on type 'RecursiveWatcher'.
 lib/watchEventSource.ts(157,8): error TS2554: Expected 2 arguments, but got 1.
-lib/watchEventSource.ts(162,32): error TS2339: Property 'mapWatcherToPath' does not exist on type 'RecursiveWatcher'.
+lib/watchEventSource.ts(162,33): error TS2339: Property 'mapWatcherToPath' does not exist on type 'RecursiveWatcher'.
 lib/watchEventSource.ts(164,8): error TS2339: Property 'mapWatcherToPath' does not exist on type 'RecursiveWatcher'.
 lib/watchEventSource.ts(165,14): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/watchEventSource.ts(165,25): error TS2339: Property 'mapPathToWatchers' does not exist on type 'RecursiveWatcher'.
@@ -389,6 +390,7 @@ lib/watchEventSource.ts(173,13): error TS2339: Property 'watcher' does not exist
 lib/watchEventSource.ts(173,27): error TS2339: Property 'watcher' does not exist on type 'RecursiveWatcher'.
 lib/watchEventSource.ts(176,54): error TS2339: Property 'rootPath' does not exist on type 'RecursiveWatcher'.
 lib/watchEventSource.ts(183,15): error TS2339: Property 'mapWatcherToPath' does not exist on type 'RecursiveWatcher'.
+lib/watchEventSource.ts(194,11): error TS2339: Property 'remove' does not exist on type 'Watcher'.
 lib/watchEventSource.ts(202,11): error TS2304: Cannot find name 'Watchpack'.
 lib/watchEventSource.ts(210,11): error TS2304: Cannot find name 'Watchpack'.
 lib/watchEventSource.ts(217,13): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
@@ -400,19 +402,21 @@ lib/watchEventSource.ts(261,14): error TS2314: Generic type 'Array<T>' requires 
 lib/watchEventSource.ts(261,38): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/watchEventSource.ts(274,10): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
 lib/watchEventSource.ts(275,18): error TS2339: Property 'size' does not exist on type 'Error'.
+lib/watchEventSource.ts(280,25): error TS2554: Expected 1 arguments, but got 2.
 lib/watchEventSource.ts(284,28): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/watchEventSource.ts(299,17): error TS2304: Cannot find name 'Watchpack'.
+lib/watchEventSource.ts(303,17): error TS2554: Expected 2 arguments, but got 1.
 lib/watchEventSource.ts(306,6): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lib/watchEventSource.ts(313,39): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 lib/watchEventSource.ts(314,7): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
 lib/watchEventSource.ts(315,3): error TS2322: Type 'String' is not assignable to type 'Number'.
 lib/watchpack.ts(7,8): error TS1192: Module '"lib/getWatcherManager"' has no default export.
-lib/watchpack.ts(11,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/watchpack/lib/watchEventSource"' has no default export.
+lib/watchpack.ts(11,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/watchpack/lib/watchEventSource"' has no default export.
 lib/watchpack.ts(13,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/watchpack.ts(14,7): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/watchpack.ts(16,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/watchpack.ts(16,49): error TS2304: Cannot find name 'DirectWatcher'.
-lib/watchpack.ts(16,65): error TS2304: Cannot find name 'Void'.
+lib/watchpack.ts(16,49): error TS2304: Cannot find name 'Watcher'.
+lib/watchpack.ts(16,59): error TS2304: Cannot find name 'Void'.
 lib/watchpack.ts(19,18): error TS2339: Property 'directoryWatcher' does not exist on type 'HTMLElement'.
 lib/watchpack.ts(20,14): error TS2339: Property 'directoryWatcher' does not exist on type 'HTMLElement'.
 lib/watchpack.ts(25,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -428,7 +432,6 @@ lib/watchpack.ts(54,17): error TS2339: Property 'poll' does not exist on type 'O
 lib/watchpack.ts(58,7): error TS2322: Type 'WeakMap<object, any>' is not assignable to type 'Error'.
 lib/watchpack.ts(60,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/watchpack.ts(60,43): error TS2339: Property 'get' does not exist on type 'Error'.
-lib/watchpack.ts(62,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/watchpack.ts(63,17): error TS2339: Property 'set' does not exist on type 'Error'.
 lib/watchpack.ts(69,8): error TS2339: Property 'files' does not exist on type 'WatchpackFileWatcher'.
 lib/watchpack.ts(70,8): error TS2339: Property 'watcher' does not exist on type 'WatchpackFileWatcher'.
@@ -470,7 +473,8 @@ lib/watchpack.ts(167,53): error TS2314: Generic type 'Array<T>' requires 1 type 
 lib/watchpack.ts(181,8): error TS2551: Property 'paused' does not exist on type 'Watchpack'. Did you mean 'pause'?
 lib/watchpack.ts(182,23): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/watchpack.ts(182,34): error TS2339: Property 'fileWatchers' does not exist on type 'Watchpack'.
-lib/watchpack.ts(183,42): error TS2339: Property 'directoryWatchers' does not exist on type 'Watchpack'.
+lib/watchpack.ts(183,28): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+lib/watchpack.ts(183,39): error TS2339: Property 'directoryWatchers' does not exist on type 'Watchpack'.
 lib/watchpack.ts(184,34): error TS2339: Property 'watcherOptions' does not exist on type 'Watchpack'.
 lib/watchpack.ts(186,36): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/watchpack.ts(187,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -482,13 +486,10 @@ lib/watchpack.ts(201,23): error TS2488: Type 'Function' must have a '[Symbol.ite
 lib/watchpack.ts(214,21): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 lib/watchpack.ts(236,23): error TS2488: Type 'Function' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/watchpack.ts(243,19): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
-lib/watchpack.ts(265,26): error TS2488: Type 'Object' must have a '[Symbol.iterator]()' method that returns an iterator.
-lib/watchpack.ts(269,23): error TS2339: Property 'delete' does not exist on type 'Object'.
 lib/watchpack.ts(278,20): error TS2304: Cannot find name 'Watcher'.
 lib/watchpack.ts(278,35): error TS2339: Property 'watcherManager' does not exist on type 'Watchpack'.
 lib/watchpack.ts(284,20): error TS2304: Cannot find name 'Watcher'.
 lib/watchpack.ts(284,35): error TS2339: Property 'watcherManager' does not exist on type 'Watchpack'.
-lib/watchpack.ts(286,24): error TS2339: Property 'set' does not exist on type 'Object'.
 lib/watchpack.ts(293,8): error TS2339: Property '_missing' does not exist on type 'Watchpack'.
 lib/watchpack.ts(294,8): error TS2339: Property 'startTime' does not exist on type 'Watchpack'.
 lib/watchpack.ts(298,8): error TS2551: Property 'paused' does not exist on type 'Watchpack'. Did you mean 'pause'?

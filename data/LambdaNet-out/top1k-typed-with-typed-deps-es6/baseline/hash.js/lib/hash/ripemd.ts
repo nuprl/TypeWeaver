@@ -19,7 +19,7 @@ function RIPEMD160(): String {
   this.endian = 'little';
 }
 utils.inherits(RIPEMD160, BlockHash);
-export const ripemd160: Function = RIPEMD160;
+export const ripemd160: Object = RIPEMD160;
 
 RIPEMD160.blockSize = 512;
 RIPEMD160.outSize = 160;
@@ -67,7 +67,7 @@ RIPEMD160.prototype._update = function update(msg: Object, start: String): Void 
   this.h[0] = T;
 };
 
-RIPEMD160.prototype._digest = function digest(enc: Number): String {
+RIPEMD160.prototype._digest = function digest(enc: String): String {
   if (enc === 'hex')
     return utils.toHex32(this.h, 'little');
   else

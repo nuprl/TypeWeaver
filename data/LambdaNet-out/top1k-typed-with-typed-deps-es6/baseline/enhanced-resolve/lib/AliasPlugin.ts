@@ -104,7 +104,7 @@ export default class AliasPlugin {
 								}
 								return callback();
 							};
-							const stoppingCallback: Function = (err: Resolver, result: ResultPlugin) => {
+							const stoppingCallback: Function = (err: String, result: ResultPlugin) => {
 								if (err) return callback(err);
 
 								if (result) return callback(null, result);

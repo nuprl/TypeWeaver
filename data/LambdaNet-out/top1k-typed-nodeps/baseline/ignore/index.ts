@@ -174,7 +174,7 @@ const REPLACERS: Array = [
     // should not use '*', or it will be replaced by the next replacer
 
     // Check if it is not the last `'/**'`
-    (_: Ignore, index: Number, str: Array) => index + 6 < str.length
+    (_: Function, index: Number, str: Array) => index + 6 < str.length
 
       // case: /**/
       // > A slash followed by two consecutive asterisks then a slash matches
@@ -201,7 +201,7 @@ const REPLACERS: Array = [
 
     // '*.js' matches '.js'
     // '*.js' doesn't match 'abc'
-    (_: Ignore, p1: String) => `${p1}[^\\/]*`
+    (_: Function, p1: String) => `${p1}[^\\/]*`
   ],
 
   [
@@ -267,7 +267,7 @@ const REPLACERS: Array = [
   // trailing wildcard
   [
     /(\^|\\\/)?\\\*$/,
-    (_: Ignore, p1: String) => {
+    (_: Function, p1: String) => {
       const prefix: String = p1
         // '\^':
         // '/*' does not match EMPTY
@@ -530,7 +530,7 @@ class Ignore {
       return cache[path] = this._testOne(path, checkUnignored)
     }
 
-    const parent: Ignore = this._t(
+    const parent: Object = this._t(
       slices.join(SLASH) + SLASH,
       cache,
       checkUnignored,

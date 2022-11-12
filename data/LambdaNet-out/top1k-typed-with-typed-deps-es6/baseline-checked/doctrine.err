@@ -38,7 +38,7 @@ lib/doctrine.ts(177,29): error TS2339: Property 'code' does not exist on type 'H
 lib/doctrine.ts(177,105): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/doctrine.ts(183,34): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
 lib/doctrine.ts(187,17): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lib/doctrine.ts(189,13): error TS2322: Type 'Number' is not assignable to type 'String'.
+lib/doctrine.ts(189,13): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/doctrine.ts(196,76): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/doctrine.ts(202,40): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -329,7 +329,6 @@ lib/typed.ts(482,25): error TS2339: Property 'code' does not exist on type 'HTML
 lib/typed.ts(483,17): error TS2322: Type 'String' is not assignable to type 'Number'.
 lib/typed.ts(492,21): error TS2339: Property 'assert' does not exist on type 'HTMLElement'.
 lib/typed.ts(492,39): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
-  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/typed.ts(493,13): error TS2322: Type 'String' is not assignable to type 'Number'.
 lib/typed.ts(498,53): error TS2304: Cannot find name 'Void'.
 lib/typed.ts(499,17): error TS2339: Property 'assert' does not exist on type 'HTMLElement'.

@@ -150,7 +150,7 @@ Yallist.prototype.shift = function () {
   return res
 }
 
-Yallist.prototype.forEach = function (fn: Function, thisp: String) {
+Yallist.prototype.forEach = function (fn: Function, thisp: Number) {
   thisp = thisp || this
   for (var walker = this.head, i = 0; walker !== null; i++) {
     fn.call(thisp, walker.value, i, this)
@@ -158,7 +158,7 @@ Yallist.prototype.forEach = function (fn: Function, thisp: String) {
   }
 }
 
-Yallist.prototype.forEachReverse = function (fn: Function, thisp: String) {
+Yallist.prototype.forEachReverse = function (fn: Function, thisp: Number) {
   thisp = thisp || this
   for (var walker = this.tail, i = this.length - 1; walker !== null; i--) {
     fn.call(thisp, walker.value, i, this)
@@ -186,7 +186,7 @@ Yallist.prototype.getReverse = function (n: Number) {
   }
 }
 
-Yallist.prototype.map = function (fn: Function, thisp: String) {
+Yallist.prototype.map = function (fn: Function, thisp: Number) {
   thisp = thisp || this
   var res: Array = new Yallist()
   for (var walker = this.head; walker !== null;) {
@@ -196,7 +196,7 @@ Yallist.prototype.map = function (fn: Function, thisp: String) {
   return res
 }
 
-Yallist.prototype.mapReverse = function (fn: Function, thisp: String) {
+Yallist.prototype.mapReverse = function (fn: Function, thisp: Number) {
   thisp = thisp || this
   var res: Array = new Yallist()
   for (var walker = this.tail; walker !== null;) {

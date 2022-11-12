@@ -193,7 +193,7 @@
     return generateClassAtom(min) + '-' + generateClassAtom(max);
   }
 
-  function generateClassAtom(node: Object): Void {
+  function generateClassAtom(node: Object): Promise {
     assertType(node.type, 'anchor|characterClass|characterClassEscape|characterClassRange|dot|value|unicodePropertyEscape|classStrings');
 
     return generate(node);

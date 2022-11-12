@@ -222,7 +222,7 @@ scripts/fetch-nginx.ts(92,13): error TS2339: Property 'statusCode' does not exis
 scripts/fetch-nginx.ts(93,51): error TS2339: Property 'statusCode' does not exist on type 'Object'.
 scripts/lib/write-db.ts(10,76): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 scripts/lib/write-db.ts(11,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-  Type 'String' is not assignable to type 'Buffer'.
+  Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
 scripts/lib/write-db.ts(12,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 scripts/lib/write-db.ts(14,16): error TS2769: No overload matches this call.
   Overload 1 of 2, '(fd: number, buffer: ArrayBufferView, offset?: number, length?: number, position?: number): number', gave the following error.
@@ -294,8 +294,8 @@ scripts/version-history.ts(11,23): error TS2314: Generic type 'Array<T>' require
 scripts/version-history.ts(11,47): error TS2769: No overload matches this call.
   Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
-      Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
-  Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string; } | BufferEncoding): string', gave the following error.
+      Type 'String' is not assignable to type 'Buffer'.
+  Overload 2 of 3, '(path: PathOrFileDescriptor, options: BufferEncoding | { encoding: BufferEncoding; flag?: string; }): string', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.
   Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string; })): string | Buffer', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathOrFileDescriptor'.

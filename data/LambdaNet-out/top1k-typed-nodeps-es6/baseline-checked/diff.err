@@ -27,7 +27,7 @@ karma.conf.ts(61,22): error TS2339: Property 'LOG_INFO' does not exist on type '
 rollup.config.ts(1,19): error TS2307: Cannot find module 'rollup-plugin-babel' or its corresponding type declarations.
 rollup.config.ts(2,17): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 src/convert/dmp.ts(2,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/convert/dmp.ts(2,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/convert/dmp.ts(2,54): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 src/convert/dmp.ts(3,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/convert/dmp.ts(8,16): error TS2339: Property 'added' does not exist on type 'Object'.
 src/convert/dmp.ts(10,23): error TS2339: Property 'removed' does not exist on type 'Object'.
@@ -56,22 +56,19 @@ src/diff/base.ts(177,47): error TS2314: Generic type 'Array<T>' requires 1 type 
 src/diff/base.ts(177,65): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/base.ts(177,83): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/base.ts(183,39): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/diff/base.ts(185,20): error TS2551: Property 'removed' does not exist on type 'HTMLElement'. Did you mean 'remove'?
-src/diff/base.ts(186,22): error TS2339: Property 'added' does not exist on type 'HTMLElement'.
+src/diff/base.ts(185,20): error TS2551: Property 'removed' does not exist on type 'HTMLInputElement'. Did you mean 'remove'?
+src/diff/base.ts(186,22): error TS2339: Property 'added' does not exist on type 'HTMLInputElement'.
 src/diff/base.ts(187,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/base.ts(187,71): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
+src/diff/base.ts(187,71): error TS2339: Property 'count' does not exist on type 'HTMLInputElement'.
 src/diff/base.ts(188,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/base.ts(189,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/base.ts(189,43): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.
-src/diff/base.ts(193,19): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
-src/diff/base.ts(195,19): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
-src/diff/base.ts(195,80): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
-src/diff/base.ts(197,27): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
-src/diff/base.ts(200,22): error TS2339: Property 'added' does not exist on type 'HTMLElement'.
-src/diff/base.ts(201,29): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
-src/diff/base.ts(204,17): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
-src/diff/base.ts(204,78): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
-src/diff/base.ts(205,27): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
+src/diff/base.ts(195,80): error TS2339: Property 'count' does not exist on type 'HTMLInputElement'.
+src/diff/base.ts(197,27): error TS2339: Property 'count' does not exist on type 'HTMLInputElement'.
+src/diff/base.ts(200,22): error TS2339: Property 'added' does not exist on type 'HTMLInputElement'.
+src/diff/base.ts(201,29): error TS2339: Property 'count' does not exist on type 'HTMLInputElement'.
+src/diff/base.ts(204,78): error TS2339: Property 'count' does not exist on type 'HTMLInputElement'.
+src/diff/base.ts(205,27): error TS2339: Property 'count' does not exist on type 'HTMLInputElement'.
 src/diff/base.ts(210,38): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/diff/base.ts(211,38): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/diff/base.ts(212,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -91,7 +88,6 @@ src/diff/css.ts(3,31): error TS2350: Only a void function can be called with the
 src/diff/json.ts(7,38): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/json.ts(10,10): error TS2339: Property 'useLongestToken' does not exist on type 'HTMLElement'.
 src/diff/json.ts(12,10): error TS2339: Property 'tokenize' does not exist on type 'HTMLElement'.
-src/diff/json.ts(12,30): error TS2339: Property 'tokenize' does not exist on type 'HTMLElement'.
 src/diff/json.ts(13,10): error TS2339: Property 'castInput' does not exist on type 'HTMLElement'.
 src/diff/json.ts(16,61): error TS2554: Expected 5 arguments, but got 4.
 src/diff/json.ts(18,10): error TS2339: Property 'equals' does not exist on type 'HTMLElement'.
@@ -111,16 +107,14 @@ src/diff/json.ts(68,30): error TS2345: Argument of type 'String' is not assignab
 src/diff/json.ts(73,40): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 src/diff/json.ts(75,24): error TS2538: Type 'String' cannot be used as an index type.
 src/diff/json.ts(75,48): error TS2538: Type 'String' cannot be used as an index type.
-src/diff/line.ts(4,38): error TS2350: Only a void function can be called with the 'new' keyword.
-src/diff/line.ts(5,10): error TS2339: Property 'tokenize' does not exist on type 'HTMLElement'.
+src/diff/line.ts(4,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/diff/line.ts(4,32): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/line.ts(6,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/line.ts(7,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/line.ts(31,106): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
 src/diff/line.ts(32,76): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/line.ts(34,19): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
 src/diff/sentence.ts(4,42): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/sentence.ts(5,14): error TS2339: Property 'tokenize' does not exist on type 'HTMLElement'.
-src/diff/sentence.ts(9,113): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
+src/diff/sentence.ts(9,114): error TS2339: Property 'diff' does not exist on type 'HTMLElement'.
 src/diff/word.ts(26,38): error TS2350: Only a void function can be called with the 'new' keyword.
 src/diff/word.ts(27,10): error TS2339: Property 'equals' does not exist on type 'HTMLElement'.
 src/diff/word.ts(32,81): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -292,7 +286,6 @@ src/patch/merge.ts(66,40): error TS2339: Property 'hunks' does not exist on type
 src/patch/merge.ts(68,20): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 src/patch/merge.ts(70,11): error TS2339: Property 'hunks' does not exist on type 'Object'.
-src/patch/merge.ts(70,45): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 src/patch/merge.ts(71,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/patch/merge.ts(72,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 src/patch/merge.ts(72,35): error TS2339: Property 'newLines' does not exist on type 'Object'.
@@ -300,7 +293,6 @@ src/patch/merge.ts(72,58): error TS2339: Property 'oldLines' does not exist on t
 src/patch/merge.ts(73,27): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 src/patch/merge.ts(75,11): error TS2339: Property 'hunks' does not exist on type 'Object'.
-src/patch/merge.ts(75,47): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 src/patch/merge.ts(76,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 src/patch/merge.ts(77,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 src/patch/merge.ts(77,35): error TS2339: Property 'newLines' does not exist on type 'Object'.

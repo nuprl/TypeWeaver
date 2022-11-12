@@ -268,7 +268,7 @@ function fromString(str: String, unsigned: Boolean, radix: Number): Array {
 
   // Do several (8) digits each time through the loop, so as to
   // minimize the calls to the very expensive emulated div.
-  var radixToPower: String = fromNumber(pow_dbl(radix, 8));
+  var radixToPower: Number = fromNumber(pow_dbl(radix, 8));
 
   var result: String = ZERO;
   for (var i = 0; i < str.length; i += 8) {
@@ -887,7 +887,7 @@ LongPrototype.sub = LongPrototype.subtract;
  * @param {!Long|number|string} multiplier Multiplier
  * @returns {!Long} Product
  */
-LongPrototype.multiply = function multiply(multiplier: String): Array {
+LongPrototype.multiply = function multiply(multiplier: HTMLElement): String {
   if (this.isZero())
     return this;
   if (!isLong(multiplier))

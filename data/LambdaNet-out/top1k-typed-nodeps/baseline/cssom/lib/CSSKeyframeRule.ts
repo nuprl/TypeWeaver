@@ -1,5 +1,5 @@
 //.CommonJS
-var CSSOM: Element = {
+var CSSOM: HTMLElement = {
 	CSSRule: require("./CSSRule").CSSRule,
 	CSSStyleDeclaration: require('./CSSStyleDeclaration').CSSStyleDeclaration
 };

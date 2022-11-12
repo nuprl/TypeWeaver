@@ -15,7 +15,7 @@
     }
   }
   function consumeList(tokens: Array, arg$: Promise, hasDelimiters: Boolean): Array{
-    var open: Array, close: String, result: Array, untilTest: Number;
+    var open: Array, close: String, result: Array, untilTest: String;
     open = arg$[0], close = arg$[1];
     if (hasDelimiters) {
       consumeOp(tokens, open);
@@ -38,7 +38,7 @@
     return consumeList(tokens, ['(', ')'], hasDelimiters);
   }
   function consumeFields(tokens: Array, hasDelimiters: Boolean): Object{
-    var result: Object, untilTest: Number, key: String;
+    var result: Object, untilTest: String, key: String;
     if (hasDelimiters) {
       consumeOp(tokens, '{');
     }

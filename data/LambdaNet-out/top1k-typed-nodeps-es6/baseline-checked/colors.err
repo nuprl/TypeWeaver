@@ -1,4 +1,4 @@
-examples/normal-usage.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/colors/lib/index"' has no default export.
+examples/normal-usage.ts(1,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/colors/lib/index"' has no default export.
 examples/normal-usage.ts(3,38): error TS2339: Property 'yellow' does not exist on type '"First some yellow text"'.
 examples/normal-usage.ts(5,35): error TS2339: Property 'yellow' does not exist on type '"Underline that text"'.
 examples/normal-usage.ts(7,36): error TS2339: Property 'red' does not exist on type '"Make it bold and red"'.
@@ -41,10 +41,8 @@ lib/colors.ts(51,8): error TS2339: Property 'disable' does not exist on type 'Fu
 lib/colors.ts(52,10): error TS2339: Property 'enabled' does not exist on type 'Function'.
 lib/colors.ts(55,8): error TS2339: Property 'stripColors' does not exist on type 'Function'.
 lib/colors.ts(55,29): error TS2339: Property 'strip' does not exist on type 'Function'.
-lib/colors.ts(60,5): error TS2322: Type '(str: String, style: String) => String' is not assignable to type 'Boolean'.
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'Object' is not assignable to type 'boolean'.
-lib/colors.ts(60,31): error TS2339: Property 'stylize' does not exist on type 'Function'.
+lib/colors.ts(60,5): error TS2322: Type '(str: String, style: String) => String' is not assignable to type 'Number'.
+lib/colors.ts(60,30): error TS2339: Property 'stylize' does not exist on type 'Function'.
 lib/colors.ts(61,15): error TS2339: Property 'enabled' does not exist on type 'Function'.
 lib/colors.ts(65,42): error TS2538: Type 'String' cannot be used as an index type.
 lib/colors.ts(68,19): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
@@ -138,7 +136,7 @@ lib/custom/zalgo.ts(98,37): error TS2538: Type 'String' cannot be used as an ind
 lib/custom/zalgo.ts(99,23): error TS2538: Type 'String' cannot be used as an index type.
 lib/custom/zalgo.ts(100,36): error TS2538: Type 'String' cannot be used as an index type.
 lib/custom/zalgo.ts(100,61): error TS2538: Type 'String' cannot be used as an index type.
-lib/extendStringPrototype.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
+lib/extendStringPrototype.ts(1,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
 lib/extendStringPrototype.ts(8,22): error TS2339: Property '__defineGetter__' does not exist on type 'String'.
 lib/extendStringPrototype.ts(46,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/extendStringPrototype.ts(53,39): error TS2304: Cannot find name 'Void'.
@@ -149,7 +147,7 @@ lib/extendStringPrototype.ts(74,26): error TS2538: Type 'String' cannot be used 
 lib/extendStringPrototype.ts(75,39): error TS2538: Type 'String' cannot be used as an index type.
 lib/extendStringPrototype.ts(82,39): error TS2538: Type 'String' cannot be used as an index type.
 lib/extendStringPrototype.ts(83,34): error TS2538: Type 'String' cannot be used as an index type.
-lib/index.ts(1,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
+lib/index.ts(1,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
 lib/index.ts(23,73): error TS2339: Property 'zalgo' does not exist on type '"testing testing testing testing testing testing testing"'.
 lib/maps/america.ts(4,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/maps/america.ts(5,29): error TS2339: Property 'red' does not exist on type 'Object'.
@@ -205,5 +203,5 @@ lib/system/supports-colors.ts(149,27): error TS2345: Argument of type 'WriteStre
   Type 'WriteStream & { fd: 1; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/system/supports-colors.ts(150,27): error TS2345: Argument of type 'WriteStream & { fd: 2; }' is not assignable to parameter of type 'String'.
   Type 'WriteStream & { fd: 2; }' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-safe.ts(9,8): error TS1192: Module '"/mnt/data/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
+safe.ts(9,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
 

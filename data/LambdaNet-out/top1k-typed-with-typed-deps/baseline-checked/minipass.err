@@ -4,10 +4,10 @@
 .github/workflows/package-json-repo.ts(11,27): error TS2339: Property 'readFileSync' does not exist on type 'String'.
 .github/workflows/package-json-repo.ts(14,51): error TS2769: No overload matches this call.
   Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
-    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
-      Type 'String' is not assignable to type 'string | number'.
+    Argument of type '2 | Pipe' is not assignable to parameter of type 'string | number'.
+      Type 'Pipe' is not assignable to type 'string | number'.
   Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
-    Argument of type 'String | 2' is not assignable to parameter of type 'string | number'.
+    Argument of type '2 | Pipe' is not assignable to parameter of type 'string | number'.
 .github/workflows/package-json-repo.ts(15,6): error TS2339: Property 'writeFileSync' does not exist on type 'String'.
 bench/impls/baseline.ts(4,10): error TS2339: Property 'pipeDests' does not exist on type 'BaselineNoOpStream'.
 bench/impls/baseline.ts(8,10): error TS2339: Property 'pipeDests' does not exist on type 'BaselineNoOpStream'.
@@ -192,7 +192,6 @@ bench/index.ts(288,14): error TS2339: Property 'buffering' does not exist on typ
 bench/index.ts(289,12): error TS2339: Property 'once' does not exist on type 'SlowDest'.
 bench/index.ts(291,41): error TS2339: Property 'emit' does not exist on type 'SlowDest'.
 index.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'EE'.
-index.ts(8,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(10,7): error TS2322: Type 'typeof EOF' is not assignable to type 'Number'.
 index.ts(11,7): error TS2322: Type 'typeof MAYBE_EMIT_END' is not assignable to type 'Number'.
 index.ts(12,7): error TS2322: Type 'typeof EMITTED_END' is not assignable to type 'Number'.
@@ -251,6 +250,8 @@ index.ts(105,12): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(106,10): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(107,10): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(107,26): error TS2538: Type 'Number' cannot be used as an index type.
+index.ts(107,42): error TS2351: This expression is not constructable.
+  Type 'Object' has no construct signatures.
 index.ts(107,50): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(108,10): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(109,10): error TS2538: Type 'Number' cannot be used as an index type.
@@ -271,6 +272,8 @@ index.ts(127,32): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(127,58): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(130,14): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(131,12): error TS2538: Type 'Number' cannot be used as an index type.
+index.ts(131,33): error TS2351: This expression is not constructable.
+  Type 'Object' has no construct signatures.
 index.ts(132,16): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
 index.ts(133,14): error TS2339: Property 'buffer' does not exist on type 'Minipass'.
 index.ts(133,28): error TS2339: Property 'buffer' does not exist on type 'Minipass'.

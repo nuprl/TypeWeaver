@@ -409,7 +409,7 @@ export default class Minipass extends Stream {
   }
 
   on (ev, fn) {
-    const ret: Array = super.on(ev, fn)
+    const ret: Pipe = super.on(ev, fn)
     if (ev === 'data' && !this.pipes.length && !this.flowing)
       this[RESUME]()
     else if (ev === 'readable' && this[BUFFERLENGTH] !== 0)
@@ -480,7 +480,7 @@ export default class Minipass extends Stream {
     }
 
     // Some other unknown event
-    const ret: String = super.emit(ev, data, ...extra)
+    const ret: Number = super.emit(ev, data, ...extra)
     this[MAYBE_EMIT_END]()
     return ret
   }

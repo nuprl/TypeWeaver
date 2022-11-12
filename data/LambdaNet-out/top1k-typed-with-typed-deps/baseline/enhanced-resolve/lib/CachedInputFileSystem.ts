@@ -22,7 +22,7 @@ const dirname: Function = (path: String) => {
 	return path.slice(0, idx);
 };
 
-const runCallbacks: Function = (callbacks: Array, err: Resolver, result: String) => {
+const runCallbacks: Function = (callbacks: Array, err: Array, result: String) => {
 	if (callbacks.length === 1) {
 		callbacks[0](err, result);
 		callbacks.length = 0;
@@ -76,7 +76,7 @@ class OperationMergerBackend {
 						return;
 					}
 					this._activeAsyncOperations.set(path, (callbacks = [callback]));
-					provider(path, (err: Resolver, result: Array) => {
+					provider(path, (err: Function, result: Array) => {
 						this._activeAsyncOperations.delete(path);
 						runCallbacks(callbacks, err, result);
 					});
@@ -190,7 +190,7 @@ class CacheBackend {
 		this._activeAsyncOperations.set(path, (callbacks = [callback]));
 
 		// Run the operation
-		this._provider.call(this._providerContext, path, (err: Resolver, result: String) => {
+		this._provider.call(this._providerContext, path, (err: Function, result: String) => {
 			this._activeAsyncOperations.delete(path);
 			this._storeResult(path, err, result);
 

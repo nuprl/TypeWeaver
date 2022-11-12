@@ -33,7 +33,7 @@ module.exports = function (options: Object) {
 
         var self: HTMLElement = this;
 
-        self._rp_promise = new PromiseImpl(function (resolve: String, reject: Array) {
+        self._rp_promise = new PromiseImpl(function (resolve: String, reject: String) {
             self._rp_resolve = resolve;
             self._rp_reject = reject;
             if (constructorMixin) {

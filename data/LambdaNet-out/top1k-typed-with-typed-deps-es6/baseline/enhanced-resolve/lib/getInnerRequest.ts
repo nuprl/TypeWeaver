@@ -5,7 +5,7 @@
 
 "use strict";
 
-export default function getInnerRequest(resolver: Resolver, request: OperationMergerBackend): Array {
+export default function getInnerRequest(resolver: Resolver, request: Error): Array {
 	if (
 		typeof request.__innerRequest === "string" &&
 		request.__innerRequest_request === request.request &&

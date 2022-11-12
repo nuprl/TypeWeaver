@@ -1,18 +1,15 @@
 watchman/integration/capabilities.ts(9,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/integration/capabilities.ts(11,22): error TS2304: Cannot find name 'Void'.
-watchman/integration/capabilities.ts(12,42): error TS2339: Property 'Client' does not exist on type 'String'.
 watchman/integration/capabilities.ts(13,10): error TS2339: Property 'capabilityCheck' does not exist on type 'HTMLElement'.
 watchman/integration/capabilities.ts(15,16): error TS2339: Property 'equal' does not exist on type 'String'.
 watchman/integration/capabilities.ts(16,16): error TS2339: Property 'equal' does not exist on type 'String'.
 watchman/integration/capabilities.ts(16,27): error TS2339: Property 'capabilities' does not exist on type 'Object'.
 watchman/integration/capabilities.ts(17,16): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
 watchman/integration/capabilities.ts(22,22): error TS2304: Cannot find name 'Void'.
-watchman/integration/capabilities.ts(23,42): error TS2339: Property 'Client' does not exist on type 'String'.
 watchman/integration/capabilities.ts(24,10): error TS2339: Property 'capabilityCheck' does not exist on type 'HTMLElement'.
 watchman/integration/capabilities.ts(26,16): error TS2339: Property 'equal' does not exist on type 'String'.
 watchman/integration/capabilities.ts(28,16): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
 watchman/integration/capabilities.ts(33,19): error TS2304: Cannot find name 'Void'.
-watchman/integration/capabilities.ts(34,42): error TS2339: Property 'Client' does not exist on type 'String'.
 watchman/integration/capabilities.ts(36,3): error TS2304: Cannot find name 'resp'.
 watchman/integration/capabilities.ts(36,17): error TS2339: Property '_synthesizeCapabilityCheck' does not exist on type 'HTMLElement'.
 watchman/integration/capabilities.ts(38,10): error TS2339: Property 'equal' does not exist on type 'String'.
@@ -29,7 +26,7 @@ watchman/integration/capabilities.ts(48,3): error TS2304: Cannot find name 'resp
 watchman/integration/capabilities.ts(48,17): error TS2339: Property '_synthesizeCapabilityCheck' does not exist on type 'HTMLElement'.
 watchman/integration/capabilities.ts(50,10): error TS2339: Property 'equal' does not exist on type 'String'.
 watchman/integration/capabilities.ts(51,45): error TS2304: Cannot find name 'resp'.
-watchman/integration/case.ts(10,40): error TS2339: Property 'Client' does not exist on type 'String'.
+watchman/integration/case.ts(9,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/integration/case.ts(12,7): error TS2451: Cannot redeclare block-scoped variable 'os'.
 watchman/integration/case.ts(15,27): error TS2339: Property 'platform' does not exist on type 'String'.
 watchman/integration/case.ts(16,5): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
@@ -46,7 +43,7 @@ watchman/integration/case.ts(27,14): error TS2339: Property 'equal' does not exi
 watchman/integration/case.ts(29,14): error TS2339: Property 'command' does not exist on type 'HTMLElement'.
 watchman/integration/case.ts(30,16): error TS2339: Property 'equal' does not exist on type 'String'.
 watchman/integration/case.ts(38,16): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
-watchman/integration/node_basic.ts(10,40): error TS2339: Property 'Client' does not exist on type 'String'.
+watchman/integration/node_basic.ts(9,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/integration/node_basic.ts(12,5): error TS2739: Type 'Timeout' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 watchman/integration/node_basic.ts(13,10): error TS2339: Property 'fail' does not exist on type 'String'.
 watchman/integration/node_basic.ts(16,8): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
@@ -63,16 +60,16 @@ watchman/integration/node_basic.ts(24,16): error TS2769: No overload matches thi
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 watchman/node/bser/index.ts(10,5): error TS2451: Cannot redeclare block-scoped variable 'os'.
 watchman/node/bser/index.ts(17,31): error TS2339: Property 'endianness' does not exist on type 'String'.
-watchman/node/bser/index.ts(21,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
+watchman/node/bser/index.ts(21,41): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
+  'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 watchman/node/bser/index.ts(25,41): error TS2304: Cannot find name 'Void'.
 watchman/node/bser/index.ts(26,27): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-watchman/node/bser/index.ts(26,36): error TS2345: Argument of type 'String | 8192' is not assignable to parameter of type 'String'.
-  Type 'number' is not assignable to type 'String'.
+watchman/node/bser/index.ts(26,36): error TS2345: Argument of type 'String | 8192' is not assignable to parameter of type 'Number'.
+  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 watchman/node/bser/index.ts(62,7): error TS2740: Type 'Buffer' is missing the following properties from type 'String': charAt, charCodeAt, concat, localeCompare, and 37 more.
 watchman/node/bser/index.ts(62,34): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-watchman/node/bser/index.ts(62,43): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 watchman/node/bser/index.ts(68,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/bser/index.ts(74,9): error TS2322: Type 'number' is not assignable to type 'String'.
 watchman/node/bser/index.ts(113,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -84,12 +81,12 @@ watchman/node/bser/index.ts(127,23): error TS2359: The right-hand side of an 'in
 watchman/node/bser/index.ts(127,41): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'number'.
 watchman/node/bser/index.ts(128,5): error TS2322: Type 'Object' is not assignable to type 'HTMLElement'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+watchman/node/bser/index.ts(142,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/bser/index.ts(220,23): error TS2304: Cannot find name 'Void'.
 watchman/node/bser/index.ts(222,14): error TS2350: Only a void function can be called with the 'new' keyword.
 watchman/node/bser/index.ts(222,14): error TS2554: Expected 1 arguments, but got 0.
 watchman/node/bser/index.ts(225,6): error TS2339: Property 'inherits' does not exist on type 'String'.
 watchman/node/bser/index.ts(248,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-watchman/node/bser/index.ts(315,7): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 watchman/node/bser/index.ts(323,10): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 watchman/node/bser/index.ts(324,10): error TS2678: Type 'Number' is not comparable to type 'String'.
 watchman/node/bser/index.ts(325,10): error TS2678: Type 'Number' is not comparable to type 'String'.
@@ -170,7 +167,7 @@ watchman/node/bser/index.ts(584,7): error TS2339: Property 'writeOffset' does no
 watchman/node/bser/index.ts(585,7): error TS2339: Property 'writeInt' does not exist on type 'HTMLElement'.
 watchman/node/bser/index.ts(586,7): error TS2339: Property 'writeOffset' does not exist on type 'HTMLElement'.
 watchman/node/bser/index.ts(588,14): error TS2339: Property 'buf' does not exist on type 'HTMLElement'.
-watchman/node/example.ts(9,40): error TS2339: Property 'Client' does not exist on type 'String'.
+watchman/node/example.ts(8,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/example.ts(11,8): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 watchman/node/example.ts(16,8): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 watchman/node/example.ts(20,8): error TS2339: Property 'capabilityCheck' does not exist on type 'HTMLElement'.
@@ -262,6 +259,7 @@ watchman/node/index.ts(209,16): error TS2314: Generic type 'Array<T>' requires 1
 watchman/node/index.ts(212,15): error TS2339: Property 'watchmanResponse' does not exist on type 'Error'.
 watchman/node/index.ts(213,14): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
 watchman/node/index.ts(218,12): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
+watchman/node/index.ts(223,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/index.ts(253,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/index.ts(253,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/index.ts(266,7): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.

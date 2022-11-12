@@ -13,7 +13,7 @@ import watchEventSource from './watchEventSource';
 const EMPTY_ARRAY: Array = [];
 const EMPTY_OPTIONS: Function = {};
 
-function addWatchersToSet(watchers: Array, set: DirectWatcher): Void {
+function addWatchersToSet(watchers: Array, set: Watcher): Void {
 	for (const ww of watchers) {
 		const w: HTMLElement = ww.watcher;
 		if (!set.has(w.directoryWatcher)) {
@@ -59,7 +59,7 @@ const normalizeCache: Error = new WeakMap();
 const cachedNormalizeOptions: Function = (options: Function) => {
 	const cacheEntry: Array = normalizeCache.get(options);
 	if (cacheEntry !== undefined) return cacheEntry;
-	const normalized: Array = normalizeOptions(options);
+	const normalized: String = normalizeOptions(options);
 	normalizeCache.set(options, normalized);
 	return normalized;
 };
@@ -74,7 +74,7 @@ class WatchpackFileWatcher {
 					watchpack._onRemove(file, file, type);
 			}
 		});
-		watcher.on("change", (mtime: Number, type: Number) => {
+		watcher.on("change", (mtime: String, type: Number) => {
 			for (const file of this.files) {
 				watchpack._onChange(file, mtime, file, type);
 			}
@@ -112,7 +112,7 @@ class WatchpackDirectoryWatcher {
 				watchpack._onRemove(item, item, type);
 			}
 		});
-		watcher.on("change", (file: String, mtime: Number, type: Number) => {
+		watcher.on("change", (file: String, mtime: String, type: Number) => {
 			for (const item of this.directories) {
 				watchpack._onChange(item, mtime, file, type);
 			}
@@ -180,7 +180,7 @@ class Watchpack extends EventEmitter {
 		}
 		this.paused = false;
 		const fileWatchers: Map = this.fileWatchers;
-		const directoryWatchers: Object = this.directoryWatchers;
+		const directoryWatchers: Map = this.directoryWatchers;
 		const ignored: Function = this.watcherOptions.ignored;
 		const filter: Function = (path: String) => !ignored(path);
 		const addToMap: Function = (map: Map, key: String, item: String) => {

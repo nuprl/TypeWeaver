@@ -8,7 +8,8 @@ index.ts(31,52): error TS2322: Type '(num: Number) => String' is not assignable 
 index.ts(33,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'Number'.
 index.ts(45,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 index.ts(56,44): error TS2322: Type '() => String' is not assignable to type 'String'.
-index.ts(60,44): error TS2322: Type '() => String' is not assignable to type 'String'.
+index.ts(60,14): error TS2322: Type '() => Number' is not assignable to type 'String'.
+index.ts(61,3): error TS2322: Type 'string' is not assignable to type 'Number'.
 index.ts(115,39): error TS2322: Type '(colorWith: any) => String' is not assignable to type 'String'.
 index.ts(115,57): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(123,14): error TS2538: Type 'String' cannot be used as an index type.

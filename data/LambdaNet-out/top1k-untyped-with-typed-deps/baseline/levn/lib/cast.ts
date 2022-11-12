@@ -283,7 +283,7 @@
     };
   }
   function typeCast(node: Object, typeObj: Object, options: Object): Array{
-    var type: String, structure: String, castFunc: Function, ref$: HTMLElement;
+    var type: String, structure: String, castFunc: Function, ref$: Object;
     type = typeObj.type, structure = typeObj.structure;
     if (type) {
       castFunc = ((ref$ = options.customTypes[type]) != null ? ref$.cast : void 8) || types[type];

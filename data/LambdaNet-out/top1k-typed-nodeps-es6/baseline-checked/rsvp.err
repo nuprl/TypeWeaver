@@ -129,7 +129,9 @@ lib/rsvp/asap.ts(44,27): error TS2351: This expression is not constructable.
 lib/rsvp/asap.ts(45,7): error TS2739: Type 'Text' is missing the following properties from type 'Error': name, message
 lib/rsvp/asap.ts(48,21): error TS2339: Property 'data' does not exist on type 'Error'.
 lib/rsvp/asap.ts(48,44): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/rsvp/asap.ts(53,16): error TS2304: Cannot find name 'Enumerator'.
+lib/rsvp/asap.ts(53,7): error TS2740: Type 'MessageChannel' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+lib/rsvp/asap.ts(54,11): error TS2339: Property 'port1' does not exist on type 'HTMLElement'.
+lib/rsvp/asap.ts(55,24): error TS2339: Property 'port2' does not exist on type 'HTMLElement'.
 lib/rsvp/asap.ts(64,19): error TS2304: Cannot find name 'Void'.
 lib/rsvp/asap.ts(80,18): error TS2304: Cannot find name 'Enumerator'.
 lib/rsvp/asap.ts(82,5): error TS2322: Type 'Function' is not assignable to type 'Boolean'.
@@ -137,7 +139,6 @@ lib/rsvp/asap.ts(82,5): error TS2322: Type 'Function' is not assignable to type 
     Type 'Object' is not assignable to type 'boolean'.
 lib/rsvp/asap.ts(84,5): error TS2322: Type 'Function' is not assignable to type 'Boolean'.
 lib/rsvp/asap.ts(97,3): error TS2322: Type 'Boolean' is not assignable to type 'Function'.
-lib/rsvp/config.ts(9,50): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/rsvp/config.ts(11,12): error TS2538: Type 'String' cannot be used as an index type.
 lib/rsvp/config.ts(13,19): error TS2538: Type 'String' cannot be used as an index type.
 lib/rsvp/defer.ts(37,47): error TS2304: Cannot find name 'Enumerator'.
@@ -155,8 +156,8 @@ lib/rsvp/enumerator.ts(30,10): error TS2339: Property 'length' does not exist on
 lib/rsvp/enumerator.ts(31,10): error TS2339: Property '_remaining' does not exist on type 'Enumerator'.
 lib/rsvp/enumerator.ts(32,10): error TS2339: Property '_result' does not exist on type 'Enumerator'.
 lib/rsvp/enumerator.ts(38,32): error TS2339: Property 'length' does not exist on type 'Enumerator'.
-lib/rsvp/enumerator.ts(39,18): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/rsvp/enumerator.ts(39,33): error TS2339: Property 'promise' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(39,32): error TS2339: Property 'promise' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(41,29): error TS2339: Property '_state' does not exist on type 'String'.
 lib/rsvp/enumerator.ts(48,14): error TS2339: Property '_remaining' does not exist on type 'Enumerator'.
 lib/rsvp/enumerator.ts(49,35): error TS2339: Property '_result' does not exist on type 'Enumerator'.
 lib/rsvp/enumerator.ts(50,20): error TS2339: Property 'promise' does not exist on type 'Enumerator'.
@@ -175,9 +176,11 @@ lib/rsvp/enumerator.ts(75,27): error TS2345: Argument of type 'Object' is not as
 lib/rsvp/enumerator.ts(81,32): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
 lib/rsvp/enumerator.ts(84,28): error TS2339: Property 'resolve' does not exist on type 'Object'.
-lib/rsvp/enumerator.ts(97,18): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-lib/rsvp/enumerator.ts(97,33): error TS2339: Property 'promise' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(97,32): error TS2339: Property 'promise' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(99,17): error TS2339: Property '_state' does not exist on type 'String'.
 lib/rsvp/enumerator.ts(100,16): error TS2339: Property '_abortOnReject' does not exist on type 'Enumerator'.
+lib/rsvp/enumerator.ts(101,16): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Promise'.
+  Type 'String' is missing the following properties from type 'Promise': _onError, catch, finally
 lib/rsvp/enumerator.ts(110,10): error TS2339: Property '_remaining' does not exist on type 'Enumerator'.
 lib/rsvp/enumerator.ts(111,10): error TS2339: Property '_result' does not exist on type 'Enumerator'.
 lib/rsvp/enumerator.ts(117,7): error TS2345: Argument of type '(value: Number) => void' is not assignable to parameter of type 'String'.
@@ -262,6 +265,7 @@ lib/rsvp/node.ts(13,9): error TS2538: Type 'String' cannot be used as an index t
 lib/rsvp/node.ts(19,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/rsvp/node.ts(21,32): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/rsvp/node.ts(33,19): error TS2339: Property 'call' does not exist on type 'String'.
+lib/rsvp/node.ts(165,45): error TS2304: Cannot find name 'Enumerator'.
 lib/rsvp/node.ts(168,34): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/rsvp/node.ts(182,34): error TS2339: Property 'then' does not exist on type 'Object'.
 lib/rsvp/node.ts(184,23): error TS2554: Expected 2 arguments, but got 1.
@@ -315,7 +319,7 @@ lib/rsvp/promise.ts(442,19): error TS2339: Property 'then' does not exist on typ
 lib/rsvp/promise/all.ts(54,62): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/rsvp/promise/all.ts(58,75): error TS2339: Property 'promise' does not exist on type 'Enumerator'.
 lib/rsvp/promise/race.ts(82,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/rsvp/promise/race.ts(82,62): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/rsvp/promise/race.ts(82,62): error TS2304: Cannot find name 'Enumerator'.
 lib/rsvp/promise/race.ts(86,16): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/rsvp/promise/race.ts(86,30): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.

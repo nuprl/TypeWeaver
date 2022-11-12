@@ -75,7 +75,7 @@ class SourceListMap {
 				optimizedNodes.push(sln);
 			} else {
 				const last: SourceNode = optimizedNodes[optimizedNodes.length - 1];
-				const mergedNode: SourceNode = last.merge(sln);
+				const mergedNode: String = last.merge(sln);
 				if(mergedNode) {
 					optimizedNodes[optimizedNodes.length - 1] = mergedNode;
 				} else {

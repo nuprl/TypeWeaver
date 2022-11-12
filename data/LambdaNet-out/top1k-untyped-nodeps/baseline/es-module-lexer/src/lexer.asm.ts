@@ -44,7 +44,7 @@ export function parse (_source: Array, _name: String = '@'): Array {
 
   const imports: Array = [], exports: Array = [];
   while (asm.ri()) {
-    const s: Number = asm.is(), e: Function = asm.ie(), a: Number = asm.ai(), d: Number = asm.id(), ss: Function = asm.ss(), se: Array = asm.se();
+    const s: Number = asm.is(), e: Function = asm.ie(), a: String = asm.ai(), d: Number = asm.id(), ss: Function = asm.ss(), se: Array = asm.se();
     let n: Array;
     if (asm.ip())
       n = readString(d === -1 ? s : s + 1, source.charCodeAt(d === -1 ? s - 1 : s));

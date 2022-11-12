@@ -12,7 +12,7 @@ index.ts(18,33): error TS2345: Argument of type 'Number' is not assignable to pa
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(22,18): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
   Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-index.ts(47,45): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+index.ts(47,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 index.ts(50,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 index.ts(52,5): error TS2322: Type 'String' is not assignable to type '() => string'.
   Type 'String' provides no match for the signature '(): string'.

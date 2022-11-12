@@ -688,7 +688,7 @@ var _RG_BACK_REF: RegExp        = /\\(\d+)/g,
     _RG_LOOKUP: RegExp          = /\$(\d+)/,
     _RG_LOOKUP_SIMPLE: RegExp   = /^\$\d+$/;
 
-var RegGrp: Object = Collection.extend({
+var RegGrp: HTMLElement = Collection.extend({
   constructor: function(values: String, ignoreCase: Boolean) {
     this.base(values);
     this.ignoreCase = !!ignoreCase;
@@ -1383,7 +1383,7 @@ var _TRIM_TIMEZONE: RegExp = /(T[0-9:.]+)$/;
 
 var Date2: HTMLElement = _createObject2(
   Date, 
-  function(yy: String, mm: Number, dd: Number, h: Number, m: String, s: String, ms: Boolean) {
+  function(yy: String, mm: Number, dd: Number, h: Number, m: String, s: String, ms: Number) {
     switch (arguments.length) {
       case 0: return new Date;
       case 1: return typeof yy == "number" ? new Date(yy) : Date2.parse(yy);

@@ -1,5 +1,5 @@
 "use strict";
-var Buffer: HTMLElement = require("safer-buffer").Buffer;
+var Buffer: Object = require("safer-buffer").Buffer;
 
 // Single-byte codec. Needs a 'chars' string parameter that contains 256 or 128 chars that
 // correspond to encoded bytes (if 128 - then lower half is ASCII). 

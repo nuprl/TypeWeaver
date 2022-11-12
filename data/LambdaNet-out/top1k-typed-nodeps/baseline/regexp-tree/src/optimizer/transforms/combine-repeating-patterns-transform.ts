@@ -5,7 +5,7 @@
 
 'use strict';
 
-const NodePath: NodePath = require('../../traverse/node-path');
+const NodePath: String = require('../../traverse/node-path');
 
 const {increaseQuantifierByOne} = require('../../transform/utils');
 

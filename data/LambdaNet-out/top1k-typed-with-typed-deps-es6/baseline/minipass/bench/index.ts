@@ -25,7 +25,7 @@ const main: Function = async () => {
     const a: Array = [__filename]
     for (const i of impls) {
       const res: Minipass = await promiseSpawn(process.execPath, [...a, i], opt)
-        .catch((e: Minipass) => e)
+        .catch((e: Pipe) => e)
       try {
         results[i] = JSON.parse(res.stdout)
       } catch (e) {
@@ -36,7 +36,7 @@ const main: Function = async () => {
     const a: Array = [__filename, impl]
     for (const c of cases) {
       const res: Minipass = await promiseSpawn(process.execPath, [...a, c], opt)
-        .catch((e: Minipass) => e)
+        .catch((e: Pipe) => e)
       try {
         results[c] = JSON.parse(res.stdout)
       } catch (e) {
@@ -47,7 +47,7 @@ const main: Function = async () => {
     const a: Array = [__filename, impl, cse]
     for (const l of pipeLen) {
       const res: Minipass = await promiseSpawn(process.execPath, [...a, l], opt)
-        .catch((e: Minipass) => e)
+        .catch((e: Pipe) => e)
       try {
         results[l] = JSON.parse(res.stdout)
       } catch (e) {
@@ -67,7 +67,7 @@ const main: Function = async () => {
     }
     const typeOpts: Array = type ? [[type, opts[type]]] : Object.entries(opts)
     for (const [name, opt] of typeOpts) {
-      await new Promise((res: Function, rej: String) => {
+      await new Promise((res: Function, rej: Function) => {
         process.stderr.write(`${impl} ${cse} ${len} ${name} ... `)
         const { src, start, dest, dest2 } = setupPipeline(impl, len, cse, opt)
         const end: Function = () => {
