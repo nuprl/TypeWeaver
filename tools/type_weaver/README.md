@@ -8,8 +8,7 @@ LambdaNet outputs in a non-CSV format; we use a modified version of LambdaNet.
 
 ## Setup and build
 
-    npm install
-    tsc index.ts
+    npm i && ../node_modules/.bin/tsc
 
 ## Running
 
