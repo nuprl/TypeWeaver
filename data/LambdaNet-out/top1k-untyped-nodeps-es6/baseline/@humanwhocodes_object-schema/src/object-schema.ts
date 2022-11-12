@@ -163,7 +163,7 @@ class ObjectSchema {
             throw new Error("merge() requires at least two arguments.");
         }
 
-        if (objects.some((object: Object) => (object == null || typeof object !== "object"))) {
+        if (objects.some((object: Array) => (object == null || typeof object !== "object"))) {
             throw new Error("All arguments must be objects.");
         }
 

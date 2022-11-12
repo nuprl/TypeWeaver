@@ -23,7 +23,7 @@ export default class ResultPlugin {
 	apply(resolver) {
 		this.source.tapAsync(
 			"ResultPlugin",
-			(request: ResultPlugin, resolverContext: Resolver, callback: Function) => {
+			(request: AliasPlugin, resolverContext: Resolver, callback: Function) => {
 				const obj: Object = { ...request };
 				if (resolverContext.log)
 					resolverContext.log("reporting result " + obj.path);

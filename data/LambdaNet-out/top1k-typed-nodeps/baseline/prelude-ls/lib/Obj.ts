@@ -16,7 +16,7 @@ keys = function(object: Object){
   return results$;
 };
 pairsToObj = function(object: Array){
-  var i$: Number, len$: Boolean, x: Object, resultObj$: Object = {};
+  var i$: Number, len$: Function, x: Object, resultObj$: Object = {};
   for (i$ = 0, len$ = object.length; i$ < len$; ++i$) {
     x = object[i$];
     resultObj$[x[0]] = x[1];
@@ -32,7 +32,7 @@ objToPairs = function(object: Object){
   return results$;
 };
 listsToObj = curry$(function(keys: Array, values: Object){
-  var i$: Number, len$: Boolean, i: Number, key: String, resultObj$: Object = {};
+  var i$: Number, len$: Function, i: Number, key: String, resultObj$: Object = {};
   for (i$ = 0, len$ = keys.length; i$ < len$; ++i$) {
     i = i$;
     key = keys[i$];

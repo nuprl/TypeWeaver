@@ -16,7 +16,7 @@ export const forward: Function = function forward (num: String): String {
   return prefix + (num || '') + 'C'
 };
 
-export const back: Function = function back (num: String): String {
+export const back: Function = function back (num: Number): String {
   return prefix + (num || '') + 'D'
 };
 
@@ -57,7 +57,7 @@ export const hideCursor: String = function hideCursor (): String {
   return prefix + '?25l'
 };
 
-export const showCursor: String = function showCursor (): Number {
+export const showCursor: String = function showCursor (): String {
   return prefix + '?25h'
 };
 

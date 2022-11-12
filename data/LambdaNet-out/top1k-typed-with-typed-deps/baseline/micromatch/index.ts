@@ -416,7 +416,7 @@ micromatch.scan = (...args) => picomatch.scan(...args);
  * @api public
  */
 
-micromatch.parse = (patterns: String, options: Object) => {
+micromatch.parse = (patterns: String, options: Function) => {
   let res: Array = [];
   for (let pattern of [].concat(patterns || [])) {
     for (let str of braces(String(pattern), options)) {

@@ -19,12 +19,17 @@ pseudomap.ts(28,35): error TS2345: Argument of type '(k: Number) => void' is not
 pseudomap.ts(29,9): error TS2367: This condition will always return 'true' since the types 'Number' and 'string' have no overlap.
 pseudomap.ts(30,33): error TS2538: Type 'Number' cannot be used as an index type.
 pseudomap.ts(30,54): error TS2538: Type 'Number' cannot be used as an index type.
+pseudomap.ts(35,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+pseudomap.ts(39,38): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 pseudomap.ts(40,21): error TS2339: Property 'value' does not exist on type 'Object'.
 pseudomap.ts(43,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+pseudomap.ts(48,38): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 pseudomap.ts(50,27): error TS2339: Property '_index' does not exist on type 'Object'.
 pseudomap.ts(56,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 pseudomap.ts(84,10): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
 pseudomap.ts(87,51): error TS2304: Cannot find name 'Void'.
+pseudomap.ts(97,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 pseudomap.ts(102,52): error TS2304: Cannot find name 'Void'.
 pseudomap.ts(111,8): error TS2339: Property 'size' does not exist on type 'Object'.
 pseudomap.ts(112,15): error TS2350: Only a void function can be called with the 'new' keyword.

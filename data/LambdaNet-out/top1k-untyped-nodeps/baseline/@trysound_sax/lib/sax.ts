@@ -185,7 +185,7 @@
     return c === '"' || c === '\''
   }
 
-  function isAttribEnd (c: Number): Boolean {
+  function isAttribEnd (c: String): Boolean {
     return c === '>' || isWhitespace(c)
   }
 

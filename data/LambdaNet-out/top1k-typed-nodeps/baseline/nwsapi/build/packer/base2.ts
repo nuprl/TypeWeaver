@@ -18,7 +18,7 @@ var base2: Object = {
   namespace: ""
 };
 
-new function(_no_shrink_: String) { ///////////////  BEGIN: CLOSURE  ///////////////
+new function(_no_shrink_: Function) { ///////////////  BEGIN: CLOSURE  ///////////////
 
 // =========================================================================
 // base2/header.js
@@ -1146,7 +1146,7 @@ function _createObject2(Native: Object, constructor: Function, generics: String,
   // Clone native objects and extend them.
 
   // Create a Module that will contain all the new methods.
-  var INative: Function = Module.extend();
+  var INative: Object = Module.extend();
   var id: String = INative.toString().slice(1, -1);
   // http://developer.mozilla.org/en/docs/New_in_JavaScript_1.6#Array_and_String_generics
   forEach.csv(generics, function(name: String) {
@@ -1383,7 +1383,7 @@ var _TRIM_TIMEZONE: RegExp = /(T[0-9:.]+)$/;
 
 var Date2: HTMLElement = _createObject2(
   Date, 
-  function(yy: String, mm: Number, dd: Number, h: Number, m: String, s: String, ms: Boolean) {
+  function(yy: String, mm: Number, dd: Number, h: Number, m: String, s: String, ms: Number) {
     switch (arguments.length) {
       case 0: return new Date;
       case 1: return typeof yy == "number" ? new Date(yy) : Date2.parse(yy);

@@ -4,7 +4,7 @@ const { dirname, resolve } = require('path')
 
 
 const lstat: Function = (path: String) => new Promise((res: Function, rej: Function) =>
-  fs.lstat(path, (er: Number, st: Array) => er ? rej(er) : res(st)))
+  fs.lstat(path, (er: Number, st: Number) => er ? rej(er) : res(st)))
 
 const inferOwner: Function = (path: String) => {
   path = resolve(path)

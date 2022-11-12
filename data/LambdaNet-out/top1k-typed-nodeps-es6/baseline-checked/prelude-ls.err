@@ -368,7 +368,7 @@ browser/prelude-browser-min.ts(12,80): error TS2314: Generic type 'Array<T>' req
 browser/prelude-browser-min.ts(12,89): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(12,130): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(12,139): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser-min.ts(12,198): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/prelude-browser-min.ts(12,178): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(12,207): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(12,216): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser-min.ts(12,225): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -402,8 +402,8 @@ browser/prelude-browser-min.ts(12,861): error TS2554: Expected 2 arguments, but 
 browser/prelude-browser-min.ts(12,909): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 browser/prelude-browser-min.ts(12,916): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
-browser/prelude-browser-min.ts(12,927): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
 browser/prelude-browser-min.ts(12,938): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
+browser/prelude-browser-min.ts(12,949): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
 browser/prelude-browser-min.ts(12,987): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser-min.ts(12,1037): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -1153,7 +1153,7 @@ browser/prelude-browser.ts(800,112): error TS2314: Generic type 'Array<T>' requi
 browser/prelude-browser.ts(800,124): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(800,178): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(800,191): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser.ts(800,268): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/prelude-browser.ts(800,241): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(800,281): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(800,294): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(800,308): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -1188,8 +1188,8 @@ browser/prelude-browser.ts(841,9): error TS2554: Expected 2 arguments, but got 1
 browser/prelude-browser.ts(842,21): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 browser/prelude-browser.ts(844,3): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
-browser/prelude-browser.ts(845,3): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
 browser/prelude-browser.ts(846,3): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
+browser/prelude-browser.ts(847,3): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
 browser/prelude-browser.ts(850,11): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(851,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -1272,7 +1272,7 @@ browser/prelude-browser.ts(1119,15): error TS2339: Property 'join' does not exis
 browser/prelude-browser.ts(1124,3): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 browser/prelude-browser.ts(1124,12): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(1127,28): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-browser/prelude-browser.ts(1128,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
+browser/prelude-browser.ts(1128,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
 browser/prelude-browser.ts(1136,37): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type '(arg$: Function, c: String) => string' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
@@ -1917,7 +1917,7 @@ lib/Num.ts(2,110): error TS2314: Generic type 'Array<T>' requires 1 type argumen
 lib/Num.ts(2,122): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Num.ts(2,176): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Num.ts(2,189): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/Num.ts(2,266): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/Num.ts(2,239): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Num.ts(2,279): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Num.ts(2,292): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Num.ts(2,306): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -1952,8 +1952,8 @@ lib/Num.ts(43,7): error TS2554: Expected 2 arguments, but got 1.
 lib/Num.ts(44,19): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/Num.ts(46,1): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
-lib/Num.ts(47,1): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
 lib/Num.ts(48,1): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
+lib/Num.ts(49,1): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
 lib/Num.ts(52,9): error TS2554: Expected 2 arguments, but got 1.
 lib/Num.ts(53,21): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -2034,7 +2034,7 @@ lib/Str.ts(31,13): error TS2339: Property 'join' does not exist on type 'Object'
 lib/Str.ts(36,1): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 lib/Str.ts(36,10): error TS2554: Expected 2 arguments, but got 1.
 lib/Str.ts(39,26): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/Str.ts(40,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
+lib/Str.ts(40,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
 lib/Str.ts(48,35): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type '(arg$: Function, c: String) => string' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.

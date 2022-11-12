@@ -1,7 +1,7 @@
 export default shift;
 
 function shift (stream: Function): Boolean {
-  var rs: Object = stream._readableState
+  var rs: Date = stream._readableState
   if (!rs) return null
   return (rs.objectMode || typeof stream._duplexState === 'number') ? stream.read() : stream.read(getStateLength(rs))
 }

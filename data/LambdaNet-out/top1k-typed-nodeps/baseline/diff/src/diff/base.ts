@@ -174,14 +174,14 @@ Diff.prototype = {
   }
 };
 
-function buildValues(diff: Array, components: Array, newString: Array, oldString: Array, useLongestToken: Boolean): Object {
+function buildValues(diff: Array, components: Array, newString: Array, oldString: Array, useLongestToken: String): Object {
   let componentPos: Number = 0,
       componentLen: Number = components.length,
       newPos: Number = 0,
       oldPos: Number = 0;
 
   for (; componentPos < componentLen; componentPos++) {
-    let component: HTMLInputElement = components[componentPos];
+    let component: HTMLElement = components[componentPos];
     if (!component.removed) {
       if (!component.added && useLongestToken) {
         let value: Array = newString.slice(newPos, newPos + component.count);

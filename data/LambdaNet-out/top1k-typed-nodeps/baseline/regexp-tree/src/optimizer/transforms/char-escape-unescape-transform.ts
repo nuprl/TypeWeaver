@@ -114,7 +114,7 @@ function preservesOpeningCurlyBraceEscape(index: Number, parent: Object): Boolea
 
   let nbFollowingNumbers: String = consumeNumbers(index + 1, parent);
   let i: String = index + nbFollowingNumbers + 1;
-  let nextSiblingNode: String = i < parent.expressions.length && parent.expressions[i];
+  let nextSiblingNode: NodePath = i < parent.expressions.length && parent.expressions[i];
 
   if (nbFollowingNumbers) {
     // Avoid \{3} turning into {3}
@@ -142,7 +142,7 @@ function preservesClosingCurlyBraceEscape(index: Number, parent: Object): Boolea
 
   let nbPrecedingNumbers: Number = consumeNumbers(index - 1, parent, true);
   let i: Number = index - nbPrecedingNumbers - 1;
-  let previousSiblingNode: String = i >= 0 && parent.expressions[i];
+  let previousSiblingNode: NodePath = i >= 0 && parent.expressions[i];
 
   // Avoid {3\} turning into {3}
   if (nbPrecedingNumbers && isSimpleChar(previousSiblingNode, '{')) {

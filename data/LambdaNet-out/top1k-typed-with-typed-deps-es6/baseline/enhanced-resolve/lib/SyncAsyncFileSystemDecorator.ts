@@ -20,7 +20,7 @@ function SyncAsyncFileSystemDecorator(fs: String): Void {
 	const lstatSync: Function = fs.lstatSync;
 	if (lstatSync) {
 		this.lstat = (arg: String, options: Object, callback: Number) => {
-			let result: CachedInputFileSystem;
+			let result: ResultPlugin;
 			try {
 				result = lstatSync.call(fs, arg);
 			} catch (e) {

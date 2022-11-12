@@ -23,7 +23,7 @@ const INFINITY: Number = 1 / 0
  * flatMapDeep([1, 2], duplicate)
  * // => [1, 1, 2, 2]
  */
-function flatMapDeep(collection: String, iteratee: String): String {
+function flatMapDeep(collection: String, iteratee: Function): String {
   return baseFlatten(map(collection, iteratee), INFINITY)
 }
 

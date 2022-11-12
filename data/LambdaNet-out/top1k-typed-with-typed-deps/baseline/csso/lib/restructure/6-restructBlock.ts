@@ -222,7 +222,7 @@ function processRule(rule: Object, item: String, list: Map, props: Object, finge
 
     declarations.forEachRight(function(declaration: Object, declarationItem: String) {
         const { property } = declaration;
-        const fingerprint: Array = getPropertyFingerprint(property, declaration, fingerprints);
+        const fingerprint: String = getPropertyFingerprint(property, declaration, fingerprints);
         const prev: Object = props[fingerprint];
 
         if (prev && !dontRestructure.has(property)) {

@@ -105,7 +105,7 @@ function patch (fs: Object): Array {
 
   fs.createReadStream = createReadStream
   fs.createWriteStream = createWriteStream
-  var fs$readFile: Object = fs.readFile
+  var fs$readFile: Function = fs.readFile
   fs.readFile = readFile
   function readFile (path: String, options: Function, cb: String): String {
     if (typeof options === 'function')
@@ -336,7 +336,7 @@ function patch (fs: Object): Array {
     })
   }
 
-  function createReadStream (path: String, options: Function): Number {
+  function createReadStream (path: String, options: Function): Boolean {
     return new fs.ReadStream(path, options)
   }
 

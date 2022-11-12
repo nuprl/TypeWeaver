@@ -25,7 +25,7 @@ const main: Function = async () => {
     const a: Array = [__filename]
     for (const i of impls) {
       const res: Pipe = await promiseSpawn(process.execPath, [...a, i], opt)
-        .catch((e: Dest) => e)
+        .catch((e: Array) => e)
       try {
         results[i] = JSON.parse(res.stdout)
       } catch (e) {
@@ -36,7 +36,7 @@ const main: Function = async () => {
     const a: Array = [__filename, impl]
     for (const c of cases) {
       const res: Pipe = await promiseSpawn(process.execPath, [...a, c], opt)
-        .catch((e: Dest) => e)
+        .catch((e: Array) => e)
       try {
         results[c] = JSON.parse(res.stdout)
       } catch (e) {
@@ -47,7 +47,7 @@ const main: Function = async () => {
     const a: Array = [__filename, impl, cse]
     for (const l of pipeLen) {
       const res: Pipe = await promiseSpawn(process.execPath, [...a, l], opt)
-        .catch((e: Dest) => e)
+        .catch((e: Array) => e)
       try {
         results[l] = JSON.parse(res.stdout)
       } catch (e) {
@@ -67,7 +67,7 @@ const main: Function = async () => {
     }
     const typeOpts: Array = type ? [[type, opts[type]]] : Object.entries(opts)
     for (const [name, opt] of typeOpts) {
-      await new Promise((res: Function, rej: Function) => {
+      await new Promise((res: Function, rej: String) => {
         process.stderr.write(`${impl} ${cse} ${len} ${name} ... `)
         const { src, start, dest, dest2 } = setupPipeline(impl, len, cse, opt)
         const end: Function = () => {
@@ -97,7 +97,7 @@ const main: Function = async () => {
         // kick it off!
         const startTime: Number = performance.now()
         src.pipe(start).on('error', rej)
-      }).catch((e: Dest) => results[name] = e)
+      }).catch((e: Function) => results[name] = e)
     }
     fs.writeFileSync(`${dir}/${impl}-${cse}-${len}.json`,
       JSON.stringify(results, 0, 2))

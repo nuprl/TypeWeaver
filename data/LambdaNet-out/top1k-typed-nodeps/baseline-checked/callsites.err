@@ -1,3 +1,4 @@
+index.ts(1,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(3,2): error TS2322: Type '(_: Function, stack: String) => String' is not assignable to type '(err: Error, stackTraces: CallSite[]) => any'.
   Types of parameters '_' and 'err' are incompatible.
     Type 'Error' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.

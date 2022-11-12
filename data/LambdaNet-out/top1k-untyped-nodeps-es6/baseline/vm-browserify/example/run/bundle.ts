@@ -85,7 +85,7 @@
         
         var winKeys: String = Object_keys(win);
 
-        var res: Boolean = wEval.call(win, this.code);
+        var res: Array = wEval.call(win, this.code);
         
         forEach(Object_keys(win), function (key: String) {
             // Avoid copying circular objects like `top` and `window` by only

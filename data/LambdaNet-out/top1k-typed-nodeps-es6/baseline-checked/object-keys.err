@@ -5,7 +5,8 @@ implementation.ts(85,16): error TS2314: Generic type 'Array<T>' requires 1 type 
 index.ts(9,10): error TS2339: Property 'shim' does not exist on type 'String'.
 index.ts(13,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(15,5): error TS2554: Expected 0 arguments, but got 2.
-index.ts(17,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(17,4): error TS2322: Type '(object: Function) => String' is not assignable to type '{ (o: object): string[]; (o: {}): string[]; }'.
+  Type 'String' is missing the following properties from type 'string[]': pop, push, join, reverse, and 21 more.
 index.ts(25,3): error TS2322: Type 'String' is not assignable to type '{ (o: object): string[]; (o: {}): string[]; }'.
   Type 'String' provides no match for the signature '(o: object): string[]'.
 index.ts(27,2): error TS2322: Type 'String | { (o: object): string[]; (o: {}): string[]; }' is not assignable to type 'Boolean'.

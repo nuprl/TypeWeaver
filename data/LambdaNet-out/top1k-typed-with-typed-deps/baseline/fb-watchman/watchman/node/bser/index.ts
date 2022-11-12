@@ -139,7 +139,7 @@ Accumulator.prototype.peekDouble = function() {
 }
 
 Accumulator.prototype.readDouble = function() {
-  var dval: Array = this.peekDouble();
+  var dval: String = this.peekDouble();
   this.readOffset += 8;
   return dval;
 }
@@ -225,7 +225,7 @@ function BunserBuf(): Void {
 util.inherits(BunserBuf, EE);
 exports.BunserBuf = BunserBuf;
 
-BunserBuf.prototype.append = function(buf: String, synchronous: String) {
+BunserBuf.prototype.append = function(buf: String, synchronous: Number) {
   if (synchronous) {
     this.buf.append(buf);
     return this.process(synchronous);
@@ -494,7 +494,7 @@ function dump_int(buf: HTMLElement, val: Number): Void {
   }
 }
 
-function dump_any(buf: Object, val: String): Void {
+function dump_any(buf: Object, val: Number): Void {
   switch (typeof(val)) {
     case 'number':
       // check if it is an integer or a float

@@ -167,6 +167,7 @@ src/interpreter/finite-automaton/nfa/builders.ts(10,10): error TS2614: Module '"
 src/interpreter/finite-automaton/nfa/builders.ts(22,27): error TS2304: Cannot find name 'State'.
 src/interpreter/finite-automaton/nfa/builders.ts(23,18): error TS2304: Cannot find name 'State'.
 src/interpreter/finite-automaton/nfa/builders.ts(24,19): error TS2304: Cannot find name 'State'.
+src/interpreter/finite-automaton/nfa/builders.ts(41,15): error TS2304: Cannot find name 'State'.
 src/interpreter/finite-automaton/nfa/builders.ts(53,50): error TS2304: Cannot find name 'DFA'.
 src/interpreter/finite-automaton/nfa/builders.ts(54,9): error TS2339: Property 'out' does not exist on type 'Writer'.
 src/interpreter/finite-automaton/nfa/builders.ts(55,10): error TS2339: Property 'out' does not exist on type 'Writer'.
@@ -198,12 +199,10 @@ src/interpreter/finite-automaton/nfa/builders.ts(139,12): error TS2339: Property
 src/interpreter/finite-automaton/nfa/builders.ts(139,47): error TS2339: Property 'out' does not exist on type 'Writer'.
 src/interpreter/finite-automaton/nfa/builders.ts(140,12): error TS2339: Property 'out' does not exist on type 'Writer'.
 src/interpreter/finite-automaton/nfa/builders.ts(140,48): error TS2339: Property 'in' does not exist on type 'Writer'.
-src/interpreter/finite-automaton/nfa/builders.ts(148,37): error TS2304: Cannot find name 'DFA'.
-src/interpreter/finite-automaton/nfa/builders.ts(149,12): error TS2339: Property 'out' does not exist on type 'Writer'.
-src/interpreter/finite-automaton/nfa/builders.ts(149,48): error TS2339: Property 'in' does not exist on type 'Writer'.
-src/interpreter/finite-automaton/nfa/builders.ts(157,41): error TS2304: Cannot find name 'DFA'.
-src/interpreter/finite-automaton/nfa/builders.ts(158,12): error TS2339: Property 'in' does not exist on type 'Writer'.
-src/interpreter/finite-automaton/nfa/builders.ts(158,47): error TS2339: Property 'out' does not exist on type 'Writer'.
+src/interpreter/finite-automaton/nfa/builders.ts(148,28): error TS2304: Cannot find name 'DFA'.
+src/interpreter/finite-automaton/nfa/builders.ts(148,34): error TS2304: Cannot find name 'DFA'.
+src/interpreter/finite-automaton/nfa/builders.ts(157,32): error TS2304: Cannot find name 'DFA'.
+src/interpreter/finite-automaton/nfa/builders.ts(157,38): error TS2304: Cannot find name 'DFA'.
 src/interpreter/finite-automaton/nfa/nfa-from-regexp.ts(9,10): error TS2614: Module '"./builders"' has no exported member 'alt'. Did you mean to use 'import alt from "./builders"' instead?
 src/interpreter/finite-automaton/nfa/nfa-from-regexp.ts(9,15): error TS2614: Module '"./builders"' has no exported member 'char'. Did you mean to use 'import char from "./builders"' instead?
 src/interpreter/finite-automaton/nfa/nfa-from-regexp.ts(9,21): error TS2614: Module '"./builders"' has no exported member 'or'. Did you mean to use 'import or from "./builders"' instead?
@@ -282,12 +281,8 @@ src/optimizer/transforms/char-case-insensitive-lowercase-transform.ts(78,59): er
   Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 src/optimizer/transforms/char-case-insensitive-lowercase-transform.ts(81,42): error TS2554: Expected 0 arguments, but got 1.
 src/optimizer/transforms/char-case-insensitive-lowercase-transform.ts(83,47): error TS2554: Expected 0 arguments, but got 1.
-src/optimizer/transforms/char-case-insensitive-lowercase-transform.ts(99,9): error TS2322: Type 'number' is not assignable to type 'String'.
 src/optimizer/transforms/char-case-insensitive-lowercase-transform.ts(99,36): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/optimizer/transforms/char-case-insensitive-lowercase-transform.ts(100,9): error TS2322: Type 'number' is not assignable to type 'String'.
 src/optimizer/transforms/char-case-insensitive-lowercase-transform.ts(100,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-src/optimizer/transforms/char-case-insensitive-lowercase-transform.ts(102,25): error TS2554: Expected 0 arguments, but got 1.
-src/optimizer/transforms/char-case-insensitive-lowercase-transform.ts(103,27): error TS2554: Expected 0 arguments, but got 1.
 src/optimizer/transforms/char-class-classranges-merge-transform.ts(50,32): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/optimizer/transforms/char-class-classranges-merge-transform.ts(51,14): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/optimizer/transforms/char-class-classranges-merge-transform.ts(75,11): error TS2339: Property 'type' does not exist on type 'Object'.
@@ -501,7 +496,7 @@ src/optimizer/transforms/char-escape-unescape-transform.ts(115,7): error TS2322:
 src/optimizer/transforms/char-escape-unescape-transform.ts(115,36): error TS2554: Expected 3 arguments, but got 2.
 src/optimizer/transforms/char-escape-unescape-transform.ts(115,51): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 src/optimizer/transforms/char-escape-unescape-transform.ts(116,19): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.
-src/optimizer/transforms/char-escape-unescape-transform.ts(117,24): error TS2304: Cannot find name 'NFAState'.
+src/optimizer/transforms/char-escape-unescape-transform.ts(117,24): error TS2304: Cannot find name 'NodePath'.
 src/optimizer/transforms/char-escape-unescape-transform.ts(117,46): error TS2339: Property 'expressions' does not exist on type 'Object'.
 src/optimizer/transforms/char-escape-unescape-transform.ts(117,75): error TS2339: Property 'expressions' does not exist on type 'Object'.
 src/optimizer/transforms/char-escape-unescape-transform.ts(121,39): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
@@ -693,17 +688,17 @@ src/parser/generated/regexp-tree.ts(129,40): error TS2322: Type 'Object' is not 
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 src/parser/generated/regexp-tree.ts(130,40): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-src/parser/generated/regexp-tree.ts(131,11): error TS2304: Cannot find name 'DFA'.
-src/parser/generated/regexp-tree.ts(131,87): error TS2322: Type 'Object' is not assignable to type 'Function'.
+src/parser/generated/regexp-tree.ts(131,11): error TS2304: Cannot find name 'NodePath'.
+src/parser/generated/regexp-tree.ts(131,92): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-src/parser/generated/regexp-tree.ts(137,11): error TS2304: Cannot find name 'DFA'.
-src/parser/generated/regexp-tree.ts(137,87): error TS2322: Type 'Object' is not assignable to type 'Function'.
+src/parser/generated/regexp-tree.ts(137,11): error TS2304: Cannot find name 'NodePath'.
+src/parser/generated/regexp-tree.ts(137,92): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-src/parser/generated/regexp-tree.ts(144,11): error TS2304: Cannot find name 'DFA'.
-src/parser/generated/regexp-tree.ts(144,87): error TS2322: Type 'Object' is not assignable to type 'Function'.
+src/parser/generated/regexp-tree.ts(144,11): error TS2304: Cannot find name 'NodePath'.
+src/parser/generated/regexp-tree.ts(144,92): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-src/parser/generated/regexp-tree.ts(150,11): error TS2304: Cannot find name 'DFA'.
-src/parser/generated/regexp-tree.ts(150,87): error TS2322: Type 'Object' is not assignable to type 'Function'.
+src/parser/generated/regexp-tree.ts(150,11): error TS2304: Cannot find name 'NodePath'.
+src/parser/generated/regexp-tree.ts(150,92): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 src/parser/generated/regexp-tree.ts(157,38): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -781,16 +776,16 @@ src/parser/generated/regexp-tree.ts(244,21): error TS2339: Property 'groupNumber
 src/parser/generated/regexp-tree.ts(248,91): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 src/parser/generated/regexp-tree.ts(252,21): error TS2339: Property 'groupNumber' does not exist on type 'Writer'.
-src/parser/generated/regexp-tree.ts(256,12): error TS2304: Cannot find name 'DFA'.
-src/parser/generated/regexp-tree.ts(256,88): error TS2322: Type 'Object' is not assignable to type 'Function'.
+src/parser/generated/regexp-tree.ts(256,12): error TS2304: Cannot find name 'NodePath'.
+src/parser/generated/regexp-tree.ts(256,93): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-src/parser/generated/regexp-tree.ts(263,12): error TS2304: Cannot find name 'DFA'.
-src/parser/generated/regexp-tree.ts(263,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/parser/generated/regexp-tree.ts(263,87): error TS2322: Type 'Object' is not assignable to type 'Function'.
+src/parser/generated/regexp-tree.ts(263,12): error TS2304: Cannot find name 'NodePath'.
+src/parser/generated/regexp-tree.ts(263,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/parser/generated/regexp-tree.ts(263,92): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-src/parser/generated/regexp-tree.ts(270,12): error TS2304: Cannot find name 'DFA'.
-src/parser/generated/regexp-tree.ts(270,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/parser/generated/regexp-tree.ts(270,87): error TS2322: Type 'Object' is not assignable to type 'Function'.
+src/parser/generated/regexp-tree.ts(270,12): error TS2304: Cannot find name 'NodePath'.
+src/parser/generated/regexp-tree.ts(270,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/parser/generated/regexp-tree.ts(270,92): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 src/parser/generated/regexp-tree.ts(277,39): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -858,9 +853,9 @@ src/parser/generated/regexp-tree.ts(867,9): error TS2339: Property 'onParseBegin
 src/parser/generated/regexp-tree.ts(873,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/parser/generated/regexp-tree.ts(873,37): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-src/parser/generated/regexp-tree.ts(876,11): error TS2339: Property 'pushState' does not exist on type 'Writer'.
-src/parser/generated/regexp-tree.ts(879,13): error TS2339: Property 'pushState' does not exist on type 'Writer'.
-src/parser/generated/regexp-tree.ts(882,13): error TS2339: Property 'pushState' does not exist on type 'Writer'.
+src/parser/generated/regexp-tree.ts(876,11): error TS2339: Property 'pushState' does not exist on type 'Object'.
+src/parser/generated/regexp-tree.ts(879,13): error TS2339: Property 'pushState' does not exist on type 'Object'.
+src/parser/generated/regexp-tree.ts(882,13): error TS2339: Property 'pushState' does not exist on type 'Object'.
 src/parser/generated/regexp-tree.ts(890,9): error TS2339: Property 'onShift' does not exist on type 'HTMLElement'.
 src/parser/generated/regexp-tree.ts(891,13): error TS2339: Property 'type' does not exist on type 'Object'.
 src/parser/generated/regexp-tree.ts(891,41): error TS2339: Property 'type' does not exist on type 'Object'.
@@ -881,6 +876,7 @@ src/parser/generated/regexp-tree.ts(931,39): error TS2345: Argument of type 'Num
   Type 'Number' is not assignable to type 'number'.
     'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 src/parser/generated/regexp-tree.ts(952,27): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+src/parser/generated/regexp-tree.ts(978,15): error TS2304: Cannot find name 'NodePath'.
 src/parser/generated/regexp-tree.ts(984,37): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 src/parser/generated/regexp-tree.ts(989,37): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
@@ -1020,7 +1016,7 @@ src/transform/utils.ts(15,45): error TS2314: Generic type 'Array<T>' requires 1 
 src/transform/utils.ts(20,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/transform/utils.ts(38,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/transform/utils.ts(38,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/transform/utils.ts(58,55): error TS2304: Cannot find name 'Void'.
+src/transform/utils.ts(58,55): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 src/transform/utils.ts(59,18): error TS2339: Property 'kind' does not exist on type 'Object'.
 src/transform/utils.ts(61,16): error TS2339: Property 'kind' does not exist on type 'Object'.
 src/transform/utils.ts(63,25): error TS2339: Property 'kind' does not exist on type 'Object'.

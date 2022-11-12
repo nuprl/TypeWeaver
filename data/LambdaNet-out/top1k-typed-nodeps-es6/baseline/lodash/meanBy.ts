@@ -20,7 +20,7 @@ const NAN: Number = 0 / 0
  * meanBy(objects, ({ n }) => n)
  * // => 5
  */
-function meanBy(array: Array, iteratee: Function): Number {
+function meanBy(array: Array, iteratee: String): Number {
   const length: Number = array == null ? 0 : array.length
   return length ? (baseSum(array, iteratee) / length) : NAN
 }

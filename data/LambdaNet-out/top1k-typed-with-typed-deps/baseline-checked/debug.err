@@ -101,8 +101,9 @@ src/node.ts(172,43): error TS2365: Operator '<' cannot be applied to types 'Stri
 src/node.ts(194,2): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 src/node.ts(194,35): error TS2339: Property 'format' does not exist on type 'String'.
 src/node.ts(203,10): error TS2393: Duplicate function implementation.
-src/node.ts(203,38): error TS2304: Cannot find name 'Void'.
-src/node.ts(205,3): error TS2322: Type 'Function' is not assignable to type 'string'.
+src/node.ts(203,36): error TS2304: Cannot find name 'Void'.
+src/node.ts(205,3): error TS2322: Type 'String' is not assignable to type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 src/node.ts(220,10): error TS2393: Duplicate function implementation.
 src/node.ts(231,31): error TS2304: Cannot find name 'Void'.
 src/node.ts(232,8): error TS2339: Property 'inspectOpts' does not exist on type 'Object'.

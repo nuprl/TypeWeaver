@@ -17,7 +17,7 @@ const kExpires: String = Symbol('expires');
 
 const supportsALL: Boolean = typeof ALL === 'number';
 
-const verifyAgent: Function = (agent: Object) => {
+const verifyAgent: Function = (agent: CacheableLookup) => {
 	if (!(agent && typeof agent.createConnection === 'function')) {
 		throw new Error('Expected an Agent instance as the first argument');
 	}
@@ -64,7 +64,7 @@ const isIterable: Function = (map: Object) => {
 };
 
 const ignoreNoResultErrors: Function = (dnsPromise: Promise) => {
-	return dnsPromise.catch((error: HTMLElement) => {
+	return dnsPromise.catch((error: Object) => {
 		if (
 			error.code === 'ENODATA' ||
 			error.code === 'ENOTFOUND' ||

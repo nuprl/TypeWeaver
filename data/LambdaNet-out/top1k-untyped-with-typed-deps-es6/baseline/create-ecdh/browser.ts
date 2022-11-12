@@ -58,7 +58,7 @@ ECDH.prototype.generateKeys = function (enc: String, format: String) {
   return this.getPublicKey(enc, format)
 }
 
-ECDH.prototype.computeSecret = function (other: Array, inenc: Number, enc: Function) {
+ECDH.prototype.computeSecret = function (other: Array, inenc: Number, enc: String) {
   inenc = inenc || 'utf8'
   if (!Buffer.isBuffer(other)) {
     other = new Buffer(other, inenc)
@@ -68,7 +68,7 @@ ECDH.prototype.computeSecret = function (other: Array, inenc: Number, enc: Funct
   return formatReturnValue(out, enc, this.curveType.byteLength)
 }
 
-ECDH.prototype.getPublicKey = function (enc: Function, format: String) {
+ECDH.prototype.getPublicKey = function (enc: String, format: String) {
   var key: Array = this.keys.getPublic(format === 'compressed', true)
   if (format === 'hybrid') {
     if (key[key.length - 1] % 2) {
@@ -80,7 +80,7 @@ ECDH.prototype.getPublicKey = function (enc: Function, format: String) {
   return formatReturnValue(key, enc)
 }
 
-ECDH.prototype.getPrivateKey = function (enc: Function) {
+ECDH.prototype.getPrivateKey = function (enc: String) {
   return formatReturnValue(this.keys.getPrivate(), enc)
 }
 

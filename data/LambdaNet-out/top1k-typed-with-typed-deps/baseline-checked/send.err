@@ -68,8 +68,8 @@ index.ts(290,7): error TS2339: Property 'setHeader' does not exist on type 'HTML
 index.ts(291,7): error TS2339: Property 'end' does not exist on type 'HTMLElement'.
 index.ts(331,27): error TS2339: Property 'headers' does not exist on type 'Object'.
 index.ts(333,28): error TS2339: Property 'getHeader' does not exist on type 'HTMLElement'.
-index.ts(335,14): error TS2367: This condition will always return 'true' since the types 'Number' and 'String' have no overlap.
 index.ts(335,32): error TS2367: This condition will always return 'true' since the types 'Number' and 'string' have no overlap.
+index.ts(335,57): error TS2367: This condition will always return 'true' since the types 'string' and 'Number' have no overlap.
 index.ts(340,51): error TS2339: Property 'headers' does not exist on type 'Object'.
 index.ts(341,14): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.

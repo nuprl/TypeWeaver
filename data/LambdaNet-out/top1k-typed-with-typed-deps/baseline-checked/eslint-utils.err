@@ -1,40 +1,73 @@
 rollup.config.ts(5,24): error TS2307: Cannot find module 'rollup-plugin-sourcemaps' or its corresponding type declarations.
 rollup.config.ts(6,25): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
-src/find-variable.ts(9,75): error TS2304: Cannot find name 'PatternMatcher'.
+src/find-variable.ts(9,75): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/find-variable.ts(16,27): error TS2339: Property 'name' does not exist on type 'String'.
 src/find-variable.ts(17,35): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-src/find-variable.ts(21,25): error TS2304: Cannot find name 'PatternMatcher'.
-src/find-variable.ts(21,48): error TS2339: Property 'set' does not exist on type 'Object'.
+src/find-variable.ts(21,40): error TS2339: Property 'set' does not exist on type 'Object'.
 src/find-variable.ts(25,23): error TS2339: Property 'upper' does not exist on type 'Object'.
 src/get-function-head-location.ts(9,69): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/get-function-head-location.ts(10,17): error TS2339: Property 'id' does not exist on type 'Object'.
 src/get-function-head-location.ts(11,22): error TS2339: Property 'getTokenAfter' does not exist on type 'String'.
 src/get-function-head-location.ts(11,41): error TS2339: Property 'id' does not exist on type 'Object'.
 src/get-function-head-location.ts(12,22): error TS2339: Property 'getFirstToken' does not exist on type 'String'.
-src/get-function-head-location.ts(22,19): error TS2304: Cannot find name 'ReferenceTracker'.
-src/get-function-head-location.ts(22,43): error TS2339: Property 'parent' does not exist on type 'Object'.
+src/get-function-head-location.ts(22,33): error TS2339: Property 'parent' does not exist on type 'Object'.
 src/get-function-head-location.ts(26,14): error TS2339: Property 'type' does not exist on type 'Object'.
 src/get-function-head-location.ts(27,52): error TS2339: Property 'getTokenBefore' does not exist on type 'String'.
 src/get-function-head-location.ts(27,72): error TS2339: Property 'body' does not exist on type 'Object'.
 src/get-function-head-location.ts(29,28): error TS2339: Property 'loc' does not exist on type 'HTMLElement'.
 src/get-function-head-location.ts(30,26): error TS2339: Property 'loc' does not exist on type 'HTMLElement'.
+src/get-function-head-location.ts(32,16): error TS2339: Property 'type' does not exist on type 'Object'.
+src/get-function-head-location.ts(33,16): error TS2339: Property 'type' does not exist on type 'Object'.
+src/get-function-head-location.ts(34,16): error TS2339: Property 'type' does not exist on type 'Object'.
+src/get-function-head-location.ts(36,24): error TS2339: Property 'loc' does not exist on type 'Object'.
 src/get-function-head-location.ts(39,22): error TS2339: Property 'loc' does not exist on type 'Object'.
-src/get-function-name-with-kind.ts(11,19): error TS2304: Cannot find name 'ReferenceTracker'.
-src/get-function-name-with-kind.ts(11,43): error TS2339: Property 'parent' does not exist on type 'Object'.
+src/get-function-name-with-kind.ts(11,38): error TS2339: Property 'parent' does not exist on type 'Object'.
 src/get-function-name-with-kind.ts(12,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/get-function-name-with-kind.ts(13,44): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
+src/get-function-name-with-kind.ts(13,74): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+src/get-function-name-with-kind.ts(15,16): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
+src/get-function-name-with-kind.ts(15,54): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+src/get-function-name-with-kind.ts(17,16): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
+src/get-function-name-with-kind.ts(17,56): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+src/get-function-name-with-kind.ts(21,20): error TS2339: Property 'static' does not exist on type 'HTMLElement'.
+src/get-function-name-with-kind.ts(24,20): error TS2339: Property 'key' does not exist on type 'HTMLElement'.
 src/get-function-name-with-kind.ts(28,14): error TS2339: Property 'async' does not exist on type 'Object'.
 src/get-function-name-with-kind.ts(31,14): error TS2339: Property 'generator' does not exist on type 'Object'.
+src/get-function-name-with-kind.ts(37,20): error TS2339: Property 'kind' does not exist on type 'HTMLElement'.
+src/get-function-name-with-kind.ts(40,20): error TS2339: Property 'kind' does not exist on type 'HTMLElement'.
+src/get-function-name-with-kind.ts(42,27): error TS2339: Property 'kind' does not exist on type 'HTMLElement'.
 src/get-function-name-with-kind.ts(50,18): error TS2339: Property 'type' does not exist on type 'Object'.
+src/get-function-name-with-kind.ts(58,20): error TS2339: Property 'key' does not exist on type 'HTMLElement'.
+src/get-function-name-with-kind.ts(59,36): error TS2339: Property 'key' does not exist on type 'HTMLElement'.
 src/get-function-name-with-kind.ts(61,34): error TS2554: Expected 2 arguments, but got 1.
 src/get-function-name-with-kind.ts(65,52): error TS2339: Property 'getText' does not exist on type 'String'.
+src/get-function-name-with-kind.ts(65,67): error TS2339: Property 'key' does not exist on type 'HTMLElement'.
 src/get-function-name-with-kind.ts(71,21): error TS2339: Property 'id' does not exist on type 'Object'.
 src/get-function-name-with-kind.ts(72,30): error TS2339: Property 'id' does not exist on type 'Object'.
+src/get-function-name-with-kind.ts(74,16): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
+src/get-function-name-with-kind.ts(76,19): error TS2339: Property 'type' does not exist on type 'string'.
+src/get-function-name-with-kind.ts(78,35): error TS2339: Property 'name' does not exist on type 'string'.
+src/get-function-name-with-kind.ts(80,17): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
+src/get-function-name-with-kind.ts(81,20): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
+src/get-function-name-with-kind.ts(82,16): error TS2339: Property 'left' does not exist on type 'HTMLElement'.
+src/get-function-name-with-kind.ts(83,16): error TS2339: Property 'left' does not exist on type 'HTMLElement'.
+src/get-function-name-with-kind.ts(85,32): error TS2339: Property 'left' does not exist on type 'HTMLElement'.
 src/get-innermost-scope.ts(7,72): error TS2304: Cannot find name 'PatternMatcher'.
 src/get-innermost-scope.ts(8,35): error TS2339: Property 'range' does not exist on type 'Object'.
 src/get-innermost-scope.ts(14,40): error TS2339: Property 'childScopes' does not exist on type 'Object'.
-src/get-property-name.ts(9,39): error TS2304: Cannot find name 'ReferenceTracker'.
+src/get-property-name.ts(10,18): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
+src/get-property-name.ts(12,22): error TS2339: Property 'computed' does not exist on type 'HTMLElement'.
+src/get-property-name.ts(13,49): error TS2339: Property 'property' does not exist on type 'HTMLElement'.
+src/get-property-name.ts(15,22): error TS2339: Property 'property' does not exist on type 'HTMLElement'.
+src/get-property-name.ts(18,25): error TS2339: Property 'property' does not exist on type 'HTMLElement'.
+src/get-property-name.ts(23,22): error TS2339: Property 'computed' does not exist on type 'HTMLElement'.
+src/get-property-name.ts(24,49): error TS2339: Property 'key' does not exist on type 'HTMLElement'.
+src/get-property-name.ts(26,22): error TS2339: Property 'key' does not exist on type 'HTMLElement'.
+src/get-property-name.ts(27,36): error TS2339: Property 'key' does not exist on type 'HTMLElement'.
+src/get-property-name.ts(29,22): error TS2339: Property 'key' does not exist on type 'HTMLElement'.
+src/get-property-name.ts(32,25): error TS2339: Property 'key' does not exist on type 'HTMLElement'.
 src/get-static-value.ts(5,7): error TS2322: Type 'typeof globalThis | {}' is not assignable to type 'Function'.
   Type 'typeof globalThis' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 src/get-static-value.ts(16,21): error TS2304: Cannot find name 'PatternMatcher'.
@@ -58,7 +91,7 @@ src/get-static-value.ts(149,22): error TS2314: Generic type 'Array<T>' requires 
 src/get-static-value.ts(156,32): error TS2339: Property 'type' does not exist on type 'Element'.
 src/get-static-value.ts(157,66): error TS2339: Property 'argument' does not exist on type 'Element'.
 src/get-static-value.ts(161,40): error TS2339: Property 'value' does not exist on type 'Object'.
-src/get-static-value.ts(163,28): error TS2304: Cannot find name 'ReferenceTracker'.
+src/get-static-value.ts(167,36): error TS2339: Property 'value' does not exist on type 'Element'.
 src/get-static-value.ts(270,53): error TS2339: Property 'value' does not exist on type 'Object'.
 src/get-static-value.ts(271,41): error TS2339: Property 'has' does not exist on type 'Error'.
 src/get-static-value.ts(274,45): error TS2339: Property 'has' does not exist on type 'Error'.
@@ -254,38 +287,26 @@ src/token-predicate.ts(15,29): error TS2314: Generic type 'Promise<T>' requires 
 src/token-predicate.ts(26,18): error TS2339: Property 'type' does not exist on type 'Object'.
 src/token-predicate.ts(26,49): error TS2339: Property 'value' does not exist on type 'Object'.
 src/token-predicate.ts(35,46): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
-src/token-predicate.ts(44,5): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 src/token-predicate.ts(44,46): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 src/token-predicate.ts(53,46): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
-src/token-predicate.ts(62,5): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 src/token-predicate.ts(62,46): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 src/token-predicate.ts(71,46): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 src/token-predicate.ts(80,46): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
-src/token-predicate.ts(89,5): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 src/token-predicate.ts(89,46): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 src/token-predicate.ts(98,46): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 src/token-predicate.ts(107,46): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
-src/token-predicate.ts(116,5): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 src/token-predicate.ts(116,46): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 src/token-predicate.ts(125,5): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 src/token-predicate.ts(125,56): error TS2339: Property 'type' does not exist on type 'Object'.
-src/token-predicate.ts(128,31): error TS2304: Cannot find name 'PatternMatcher'.
-src/token-predicate.ts(128,55): error TS2345: Argument of type '(token: String) => Boolean' is not assignable to parameter of type 'String'.
-src/token-predicate.ts(129,31): error TS2304: Cannot find name 'PatternMatcher'.
-src/token-predicate.ts(129,55): error TS2345: Argument of type '(token: String) => String' is not assignable to parameter of type 'String'.
+src/token-predicate.ts(128,49): error TS2345: Argument of type '(token: String) => Boolean' is not assignable to parameter of type 'String'.
+src/token-predicate.ts(129,49): error TS2345: Argument of type '(token: String) => Boolean' is not assignable to parameter of type 'String'.
 src/token-predicate.ts(130,53): error TS2345: Argument of type '(token: String) => Boolean' is not assignable to parameter of type 'String'.
-src/token-predicate.ts(131,49): error TS2345: Argument of type '(token: String) => String' is not assignable to parameter of type 'String'.
-src/token-predicate.ts(132,38): error TS2304: Cannot find name 'PatternMatcher'.
-src/token-predicate.ts(132,62): error TS2345: Argument of type '(token: String) => Boolean' is not assignable to parameter of type 'String'.
-src/token-predicate.ts(133,38): error TS2304: Cannot find name 'PatternMatcher'.
-src/token-predicate.ts(133,62): error TS2345: Argument of type '(token: String) => Boolean' is not assignable to parameter of type 'String'.
-src/token-predicate.ts(134,40): error TS2304: Cannot find name 'PatternMatcher'.
-src/token-predicate.ts(134,64): error TS2345: Argument of type '(token: String) => String' is not assignable to parameter of type 'String'.
-src/token-predicate.ts(135,40): error TS2304: Cannot find name 'PatternMatcher'.
-src/token-predicate.ts(135,64): error TS2345: Argument of type '(token: String) => Boolean' is not assignable to parameter of type 'String'.
-src/token-predicate.ts(136,38): error TS2304: Cannot find name 'PatternMatcher'.
-src/token-predicate.ts(136,62): error TS2345: Argument of type '(token: String) => Boolean' is not assignable to parameter of type 'String'.
-src/token-predicate.ts(137,56): error TS2345: Argument of type '(token: String) => String' is not assignable to parameter of type 'String'.
-src/token-predicate.ts(138,33): error TS2304: Cannot find name 'PatternMatcher'.
-src/token-predicate.ts(138,57): error TS2345: Argument of type '(token: Object) => Number' is not assignable to parameter of type 'String'.
+src/token-predicate.ts(131,47): error TS2345: Argument of type '(token: String) => Boolean' is not assignable to parameter of type 'String'.
+src/token-predicate.ts(132,56): error TS2345: Argument of type '(token: String) => Boolean' is not assignable to parameter of type 'String'.
+src/token-predicate.ts(133,56): error TS2345: Argument of type '(token: String) => Boolean' is not assignable to parameter of type 'String'.
+src/token-predicate.ts(134,58): error TS2345: Argument of type '(token: String) => Boolean' is not assignable to parameter of type 'String'.
+src/token-predicate.ts(135,58): error TS2345: Argument of type '(token: String) => Boolean' is not assignable to parameter of type 'String'.
+src/token-predicate.ts(136,54): error TS2345: Argument of type '(token: String) => Boolean' is not assignable to parameter of type 'String'.
+src/token-predicate.ts(137,56): error TS2345: Argument of type '(token: String) => Boolean' is not assignable to parameter of type 'String'.
+src/token-predicate.ts(138,49): error TS2345: Argument of type '(token: Object) => Number' is not assignable to parameter of type 'String'.
 

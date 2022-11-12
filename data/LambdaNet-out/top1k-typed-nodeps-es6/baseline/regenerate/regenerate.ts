@@ -1000,8 +1000,8 @@
 		var result: Array = [];
 
 		var parts: HTMLElement = splitAtBMP(data);
-		var loneHighSurrogates: Number = parts.loneHighSurrogates;
-		var loneLowSurrogates: String = parts.loneLowSurrogates;
+		var loneHighSurrogates: String = parts.loneHighSurrogates;
+		var loneLowSurrogates: Function = parts.loneLowSurrogates;
 		var bmp: String = parts.bmp;
 		var astral: Function = parts.astral;
 		var hasLoneHighSurrogates: Boolean = !dataIsEmpty(loneHighSurrogates);
@@ -1091,7 +1091,7 @@
 			);
 			return $this;
 		},
-		'remove': function(value: Array) {
+		'remove': function(value: Function) {
 			var $this: Object = this;
 			if (value == null) {
 				return $this;
@@ -1152,7 +1152,7 @@
 			);
 		},
 		'clone': function() {
-			var set: Array = new regenerate;
+			var set: Object = new regenerate;
 			set.data = this.data.slice(0);
 			return set;
 		},

@@ -1,5 +1,5 @@
-index.ts(3,37): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-index.ts(19,7): error TS2739: Type 'Set<number>' is missing the following properties from type 'Error': name, message
+index.ts(3,7): error TS2739: Type 'Set<number>' is missing the following properties from type 'Error': name, message
+index.ts(19,7): error TS2322: Type 'Set<number>' is not assignable to type 'Error'.
 index.ts(36,7): error TS2322: Type 'Set<number>' is not assignable to type 'Error'.
 index.ts(64,32): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 index.ts(65,21): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
@@ -57,6 +57,7 @@ index.ts(203,22): error TS2339: Property '_rescc' does not exist on type 'CacheP
 index.ts(204,23): error TS2339: Property '_isShared' does not exist on type 'CachePolicy'.
 index.ts(204,41): error TS2339: Property '_rescc' does not exist on type 'CachePolicy'.
 index.ts(205,22): error TS2339: Property '_rescc' does not exist on type 'CachePolicy'.
+index.ts(207,46): error TS2339: Property 'has' does not exist on type 'Error'.
 index.ts(207,55): error TS2339: Property '_status' does not exist on type 'CachePolicy'.
 index.ts(214,19): error TS2339: Property '_isShared' does not exist on type 'CachePolicy'.
 index.ts(214,37): error TS2339: Property '_rescc' does not exist on type 'CachePolicy'.

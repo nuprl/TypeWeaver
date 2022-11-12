@@ -79,7 +79,7 @@ import {
   @return {Promise} a promise which settles in the same way as the first passed
   promise to settle.
 */
-export default function race(entries: Array, label: String): Enumerator {
+export default function race(entries: Array, label: String): Promise {
   /*jshint validthis:true */
   let Constructor: Object = this;
 

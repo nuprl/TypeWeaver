@@ -63,8 +63,8 @@ class SourceListMap {
 
 	mapGeneratedCode(fn) {
 		const normalizedNodes: Array = [];
-		this.children.forEach(function(sln: SourceNode) {
-			sln.getNormalizedNodes().forEach(function(newNode: SourceNode) {
+		this.children.forEach(function(sln: CodeNode) {
+			sln.getNormalizedNodes().forEach(function(newNode: CodeNode) {
 				normalizedNodes.push(newNode);
 			});
 		});
@@ -74,8 +74,8 @@ class SourceListMap {
 			if(optimizedNodes.length === 0) {
 				optimizedNodes.push(sln);
 			} else {
-				const last: SourceNode = optimizedNodes[optimizedNodes.length - 1];
-				const mergedNode: String = last.merge(sln);
+				const last: SingleLineNode = optimizedNodes[optimizedNodes.length - 1];
+				const mergedNode: CodeNode = last.merge(sln);
 				if(mergedNode) {
 					optimizedNodes[optimizedNodes.length - 1] = mergedNode;
 				} else {
@@ -87,17 +87,17 @@ class SourceListMap {
 	};
 
 	toString() {
-		return this.children.map(function(sln: SourceNode) {
+		return this.children.map(function(sln: SingleLineNode) {
 			return sln.getGeneratedCode();
 		}).join("");
 	};
 
 	toStringWithSourceMap(options) {
 		const mappingsContext: MappingsContext = new MappingsContext();
-		const source: String = this.children.map(function(sln: SourceNode) {
+		const source: String = this.children.map(function(sln: SingleLineNode) {
 			return sln.getGeneratedCode();
 		}).join("");
-		const mappings: String = this.children.map(function(sln: SourceNode) {
+		const mappings: String = this.children.map(function(sln: SingleLineNode) {
 			return sln.getMappings(mappingsContext);
 		}).join("");
 		const arrays: Object = mappingsContext.getArrays();

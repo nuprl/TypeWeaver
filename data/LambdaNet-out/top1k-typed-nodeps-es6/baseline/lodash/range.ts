@@ -39,6 +39,6 @@ import createRange from './.internal/createRange.js'
  * range(0)
  * // => []
  */
-const range: Object = createRange()
+const range: Hash = createRange()
 
 export default range

@@ -405,8 +405,7 @@ lib/Resolver.ts(147,8): error TS2339: Property 'hooks' does not exist on type 'R
 lib/Resolver.ts(185,31): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
 lib/Resolver.ts(187,17): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
 lib/Resolver.ts(218,31): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
-lib/Resolver.ts(238,4): error TS2740: Type 'String' is missing the following properties from type 'Resolver': ensureHook, getHook, resolveSync, resolve, and 6 more.
-lib/Resolver.ts(239,4): error TS2322: Type 'String' is not assignable to type 'Resolver'.
+lib/Resolver.ts(239,4): error TS2740: Type 'String' is missing the following properties from type 'Resolver': ensureHook, getHook, resolveSync, resolve, and 6 more.
 lib/Resolver.ts(296,12): error TS2339: Property 'path' does not exist on type 'Object'.
 lib/Resolver.ts(298,18): error TS2339: Property 'path' does not exist on type 'Object'.
 lib/Resolver.ts(299,15): error TS2339: Property 'query' does not exist on type 'Object'.
@@ -634,8 +633,7 @@ lib/RootsPlugin.ts(22,8): error TS2339: Property 'target' does not exist on type
 lib/RootsPlugin.ts(30,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/RootsPlugin.ts(30,50): error TS2339: Property 'target' does not exist on type 'RootsPlugin'.
 lib/RootsPlugin.ts(33,18): error TS2339: Property 'source' does not exist on type 'RootsPlugin'.
-lib/RootsPlugin.ts(35,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/RootsPlugin.ts(35,32): error TS2339: Property 'request' does not exist on type 'Request'.
+lib/RootsPlugin.ts(35,33): error TS2339: Property 'request' does not exist on type 'Request'.
 lib/RootsPlugin.ts(39,5): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
 lib/RootsPlugin.ts(40,11): error TS2339: Property 'roots' does not exist on type 'RootsPlugin'.
@@ -824,7 +822,7 @@ lib/util/entrypoints.ts(316,33): error TS2339: Property 'children' does not exis
 lib/util/entrypoints.ts(318,40): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/util/entrypoints.ts(322,12): error TS2339: Property 'children' does not exist on type 'Object'.
-lib/util/entrypoints.ts(324,38): error TS2339: Property 'children' does not exist on type 'Object'.
+lib/util/entrypoints.ts(324,34): error TS2339: Property 'children' does not exist on type 'Object'.
 lib/util/entrypoints.ts(331,23): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/util/entrypoints.ts(332,37): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -913,8 +911,7 @@ lib/util/path.ts(124,7): error TS2451: Cannot redeclare block-scoped variable 'n
 lib/util/path.ts(124,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/util/path.ts(144,7): error TS2451: Cannot redeclare block-scoped variable 'join'.
 lib/util/path.ts(173,18): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/util/path.ts(186,22): error TS2339: Property 'get' does not exist on type 'Object'.
-lib/util/path.ts(190,8): error TS2339: Property 'set' does not exist on type 'Object'.
+lib/util/path.ts(182,13): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/util/path.ts(195,7): error TS2451: Cannot redeclare block-scoped variable 'checkImportsExportsFieldTarget'.
 lib/util/path.ts(201,45): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.

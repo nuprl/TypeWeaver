@@ -6,13 +6,13 @@ bench.ts(16,3): error TS2365: Operator '+=' cannot be applied to types 'Number' 
 bench.ts(22,2): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 bench.ts(22,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bench.ts(31,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'String'.
-bench.ts(35,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+bench.ts(35,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bench.ts(37,12): error TS2339: Property 'ifError' does not exist on type 'String'.
 bench.ts(38,12): error TS2339: Property 'equal' does not exist on type 'String'.
 bench.ts(44,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bench.ts(48,12): error TS2339: Property 'parallel' does not exist on type 'String'.
 bench.ts(53,7): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'String'.
-bench.ts(57,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+bench.ts(57,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 bench.ts(59,12): error TS2339: Property 'ifError' does not exist on type 'String'.
 bench.ts(60,12): error TS2339: Property 'equal' does not exist on type 'String'.
 bench.ts(69,25): error TS2339: Property 'target' does not exist on type 'HTMLElement'.
@@ -53,6 +53,7 @@ lib/iterate.ts(25,24): error TS2339: Property 'jobs' does not exist on type 'Obj
 lib/iterate.ts(31,18): error TS2339: Property 'jobs' does not exist on type 'Object'.
 lib/iterate.ts(42,13): error TS2339: Property 'results' does not exist on type 'Object'.
 lib/iterate.ts(46,27): error TS2339: Property 'results' does not exist on type 'Object'.
+lib/iterate.ts(61,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/readable_asynckit.ts(12,10): error TS2300: Duplicate identifier 'ReadableAsyncKit'.
 lib/readable_asynckit.ts(12,30): error TS2304: Cannot find name 'Void'.
 lib/readable_asynckit.ts(14,20): error TS2339: Property 'super_' does not exist on type 'String'.

@@ -25,7 +25,7 @@ karma.conf.ts(61,22): error TS2339: Property 'LOG_INFO' does not exist on type '
 rollup.config.ts(1,19): error TS2307: Cannot find module 'rollup-plugin-babel' or its corresponding type declarations.
 rollup.config.ts(2,17): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 src/convert/dmp.ts(2,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/convert/dmp.ts(2,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+src/convert/dmp.ts(2,54): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 src/convert/dmp.ts(3,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/convert/dmp.ts(8,16): error TS2339: Property 'added' does not exist on type 'Object'.
 src/convert/dmp.ts(10,23): error TS2339: Property 'removed' does not exist on type 'Object'.
@@ -54,19 +54,22 @@ src/diff/base.ts(177,47): error TS2314: Generic type 'Array<T>' requires 1 type 
 src/diff/base.ts(177,65): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/base.ts(177,83): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/base.ts(183,39): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-src/diff/base.ts(185,20): error TS2551: Property 'removed' does not exist on type 'HTMLInputElement'. Did you mean 'remove'?
-src/diff/base.ts(186,22): error TS2339: Property 'added' does not exist on type 'HTMLInputElement'.
+src/diff/base.ts(185,20): error TS2551: Property 'removed' does not exist on type 'HTMLElement'. Did you mean 'remove'?
+src/diff/base.ts(186,22): error TS2339: Property 'added' does not exist on type 'HTMLElement'.
 src/diff/base.ts(187,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-src/diff/base.ts(187,71): error TS2339: Property 'count' does not exist on type 'HTMLInputElement'.
+src/diff/base.ts(187,71): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
 src/diff/base.ts(188,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/base.ts(189,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/diff/base.ts(189,43): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.
-src/diff/base.ts(195,80): error TS2339: Property 'count' does not exist on type 'HTMLInputElement'.
-src/diff/base.ts(197,27): error TS2339: Property 'count' does not exist on type 'HTMLInputElement'.
-src/diff/base.ts(200,22): error TS2339: Property 'added' does not exist on type 'HTMLInputElement'.
-src/diff/base.ts(201,29): error TS2339: Property 'count' does not exist on type 'HTMLInputElement'.
-src/diff/base.ts(204,78): error TS2339: Property 'count' does not exist on type 'HTMLInputElement'.
-src/diff/base.ts(205,27): error TS2339: Property 'count' does not exist on type 'HTMLInputElement'.
+src/diff/base.ts(193,19): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+src/diff/base.ts(195,19): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+src/diff/base.ts(195,80): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
+src/diff/base.ts(197,27): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
+src/diff/base.ts(200,22): error TS2339: Property 'added' does not exist on type 'HTMLElement'.
+src/diff/base.ts(201,29): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
+src/diff/base.ts(204,17): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+src/diff/base.ts(204,78): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
+src/diff/base.ts(205,27): error TS2339: Property 'count' does not exist on type 'HTMLElement'.
 src/diff/base.ts(210,38): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/diff/base.ts(211,38): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/diff/base.ts(212,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -162,7 +165,6 @@ src/patch/apply.ts(149,11): error TS2740: Type 'Boolean' is missing the followin
 src/patch/apply.ts(149,49): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-src/patch/create.ts(3,83): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/patch/create.ts(7,22): error TS2339: Property 'context' does not exist on type 'Object'.
 src/patch/create.ts(8,13): error TS2339: Property 'context' does not exist on type 'Object'.
 src/patch/create.ts(11,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -195,6 +197,8 @@ src/patch/create.ts(71,24): error TS2362: The left-hand side of an arithmetic op
 src/patch/create.ts(71,24): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
 src/patch/create.ts(71,34): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 src/patch/create.ts(74,63): error TS2339: Property 'context' does not exist on type 'Object'.
+src/patch/create.ts(76,56): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 src/patch/create.ts(77,56): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 src/patch/create.ts(78,87): error TS2339: Property 'oldLines' does not exist on type 'Object'.

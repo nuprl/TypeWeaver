@@ -45,7 +45,7 @@ const
 
   // API change in fs.rmdirSync leads to error when passing in a second parameter, e.g. the callback
   FN_RMDIR_SYNC: Array = fs.rmdirSync.bind(fs),
-  FN_RIMRAF_SYNC: Number = rimraf.sync;
+  FN_RIMRAF_SYNC: String = rimraf.sync;
 
 let
   _gracefulCleanup: Boolean = false;
@@ -201,7 +201,7 @@ function dir(options: Object, callback: Function): Void {
     if (err) return cb(err);
 
     // create the directory
-    fs.mkdir(name, opts.mode || DIR_MODE, function _dirCreated(err: Function): Promise {
+    fs.mkdir(name, opts.mode || DIR_MODE, function _dirCreated(err: Function): Void {
       /* istanbul ignore else */
       if (err) return cb(err);
 

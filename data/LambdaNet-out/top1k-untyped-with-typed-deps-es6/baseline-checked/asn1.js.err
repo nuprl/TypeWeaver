@@ -113,7 +113,6 @@ lib/asn1/base/node.ts(151,18): error TS2538: Type 'String' cannot be used as an 
 lib/asn1/base/node.ts(151,51): error TS2304: Cannot find name 'Void'.
 lib/asn1/base/node.ts(153,72): error TS2339: Property 'enc' does not exist on type 'Function'.
 lib/asn1/base/node.ts(162,18): error TS2538: Type 'Number' cannot be used as an index type.
-lib/asn1/base/node.ts(164,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/base/node.ts(166,18): error TS2339: Property 'tag' does not exist on type 'Object'.
 lib/asn1/base/node.ts(167,11): error TS2339: Property 'tag' does not exist on type 'Object'.
 lib/asn1/base/node.ts(179,16): error TS2339: Property 'use' does not exist on type 'HTMLElement'.
@@ -382,7 +381,6 @@ lib/asn1/decoders/der.ts(13,22): error TS2339: Property 'name' does not exist on
 lib/asn1/decoders/der.ts(17,15): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/asn1/decoders/der.ts(17,15): error TS2554: Expected 1 arguments, but got 0.
 lib/asn1/decoders/der.ts(18,26): error TS2339: Property 'body' does not exist on type 'Object'.
-lib/asn1/decoders/der.ts(22,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/decoders/der.ts(32,35): error TS2304: Cannot find name 'Void'.
 lib/asn1/decoders/der.ts(38,14): error TS2339: Property 'isEmpty' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(41,32): error TS2339: Property 'save' does not exist on type 'Object'.
@@ -422,7 +420,6 @@ lib/asn1/decoders/der.ts(84,16): error TS2339: Property 'offset' does not exist 
 lib/asn1/decoders/der.ts(84,31): error TS2339: Property 'offset' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(85,10): error TS2339: Property 'restore' does not exist on type 'Object'.
 lib/asn1/decoders/der.ts(86,17): error TS2339: Property 'skip' does not exist on type 'Object'.
-lib/asn1/decoders/der.ts(89,88): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/asn1/decoders/der.ts(91,38): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/asn1/decoders/der.ts(92,16): error TS2339: Property 'isError' does not exist on type 'Object'.
@@ -649,8 +646,6 @@ lib/asn1/encoders/pem.ts(17,48): error TS2339: Property 'label' does not exist o
 lib/asn1/encoders/pem.ts(20,34): error TS2339: Property 'label' does not exist on type 'Object'.
 rfc/2560/index.ts(3,18): error TS2307: Cannot find module 'asn1.js' or its corresponding type declarations.
 rfc/2560/index.ts(4,21): error TS2307: Cannot find module 'asn1.js-rfc5280' or its corresponding type declarations.
-rfc/2560/index.ts(6,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-rfc/2560/index.ts(14,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/2560/index.ts(34,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/2560/index.ts(43,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/2560/index.ts(56,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -671,7 +666,6 @@ rfc/5280/index.ts(110,9): error TS2339: Property 'Version' does not exist on typ
 rfc/5280/index.ts(121,9): error TS2339: Property 'Validity' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(132,9): error TS2339: Property 'Time' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(143,9): error TS2339: Property 'SubjectPublicKeyInfo' does not exist on type 'HTMLElement'.
-rfc/5280/index.ts(157,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 rfc/5280/index.ts(168,9): error TS2339: Property 'TBSCertList' does not exist on type 'HTMLElement'.
 rfc/5280/index.ts(187,46): error TS2339: Property 'extnID' does not exist on type 'Object'.
 rfc/5280/index.ts(193,9): error TS2339: Property 'Extension' does not exist on type 'HTMLElement'.

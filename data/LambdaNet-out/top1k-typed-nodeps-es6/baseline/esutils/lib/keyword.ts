@@ -90,7 +90,7 @@
         return id === 'null' || id === 'true' || id === 'false' || isKeywordES6(id, strict);
     }
 
-    function isRestrictedWord(id: Number): Boolean {
+    function isRestrictedWord(id: String): Boolean {
         return id === 'eval' || id === 'arguments';
     }
 

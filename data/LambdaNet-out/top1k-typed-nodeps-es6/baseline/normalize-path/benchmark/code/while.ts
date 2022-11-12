@@ -4,7 +4,7 @@ export default function normalize(str: Array, strip: Number): String {
   var prev: Number;
 
   while (++i < len) {
-    var ch: Number = str[i];
+    var ch: String = str[i];
 
     if (i === 0) {
       if (ch === '.' && str[i + 1] === '/') {

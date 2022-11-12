@@ -229,8 +229,8 @@ index.ts(391,19): error TS2356: An arithmetic operand must be of type 'any', 'nu
 index.ts(392,23): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(393,7): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(394,7): error TS2339: Property 'clamp' does not exist on type 'Object'.
-index.ts(399,49): error TS2304: Cannot find name 'Void'.
-index.ts(401,21): error TS2339: Property 'abs' does not exist on type 'Object'.
+index.ts(399,54): error TS2304: Cannot find name 'Void'.
+index.ts(401,21): error TS2339: Property 'abs' does not exist on type 'HTMLElement'.
 index.ts(402,23): error TS2339: Property 't' does not exist on type 'HTMLElement'.
 index.ts(403,7): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(403,17): error TS2339: Property 't' does not exist on type 'Object'.
@@ -244,7 +244,7 @@ index.ts(405,54): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(405,69): error TS2339: Property 't' does not exist on type 'HTMLElement'.
 index.ts(406,7): error TS2339: Property 's' does not exist on type 'Object'.
 index.ts(407,7): error TS2339: Property 'clamp' does not exist on type 'Object'.
-index.ts(408,21): error TS2339: Property 's' does not exist on type 'Object'.
+index.ts(408,21): error TS2339: Property 's' does not exist on type 'HTMLElement'.
 index.ts(408,40): error TS2339: Property 'subTo' does not exist on type 'String'.
 index.ts(412,36): error TS2304: Cannot find name 'Void'.
 index.ts(414,24): error TS2339: Property 't' does not exist on type 'Object'.
@@ -274,14 +274,14 @@ index.ts(426,42): error TS2538: Type 'Number' cannot be used as an index type.
 index.ts(426,53): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(427,7): error TS2339: Property 's' does not exist on type 'Object'.
 index.ts(428,7): error TS2339: Property 'clamp' does not exist on type 'Object'.
-index.ts(433,60): error TS2304: Cannot find name 'Void'.
-index.ts(434,24): error TS2339: Property 'abs' does not exist on type 'Object'.
+index.ts(433,65): error TS2304: Cannot find name 'Void'.
+index.ts(434,24): error TS2339: Property 'abs' does not exist on type 'HTMLElement'.
 index.ts(435,12): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(437,12): error TS2339: Property 't' does not exist on type 'HTMLElement'.
 index.ts(437,19): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(438,24): error TS2339: Property 'fromInt' does not exist on type 'String'.
 index.ts(445,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(445,21): error TS2339: Property 's' does not exist on type 'Object'.
+index.ts(445,21): error TS2339: Property 's' does not exist on type 'HTMLElement'.
 index.ts(446,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(446,45): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(448,10): error TS2339: Property 'lShiftTo' does not exist on type 'Object'.
@@ -329,7 +329,7 @@ index.ts(494,21): error TS2314: Generic type 'Array<T>' requires 1 type argument
 index.ts(497,25): error TS2339: Property 'compareTo' does not exist on type 'Object'.
 index.ts(498,5): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-index.ts(502,32): error TS2304: Cannot find name 'Void'.
+index.ts(502,32): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
 index.ts(506,11): error TS2339: Property 's' does not exist on type 'String'.
 index.ts(506,22): error TS2339: Property 'compareTo' does not exist on type 'String'.
 index.ts(506,55): error TS2339: Property 'mod' does not exist on type 'String'.
@@ -539,6 +539,7 @@ index.ts(1047,18): error TS2356: An arithmetic operand must be of type 'any', 'n
 index.ts(1048,24): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1049,7): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(1050,7): error TS2339: Property 'clamp' does not exist on type 'Object'.
+index.ts(1054,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(1096,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(1104,37): error TS2304: Cannot find name 'Void'.
 index.ts(1105,31): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -555,7 +556,7 @@ index.ts(1130,42): error TS2304: Cannot find name 'Void'.
 index.ts(1131,7): error TS2339: Property 'squareTo' does not exist on type 'String'.
 index.ts(1140,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(1141,24): error TS2350: Only a void function can be called with the 'new' keyword.
-index.ts(1146,65): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+index.ts(1146,65): error TS2304: Cannot find name 'Void'.
 index.ts(1147,41): error TS2339: Property 't' does not exist on type 'Object'.
 index.ts(1147,44): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -620,7 +621,7 @@ index.ts(1218,7): error TS2339: Property 'multiplyTo' does not exist on type 'St
 index.ts(1229,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(1232,23): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 index.ts(1240,20): error TS2350: Only a void function can be called with the 'new' keyword.
-index.ts(1241,16): error TS2339: Property 'isEven' does not exist on type 'String'.
+index.ts(1241,16): error TS2339: Property 'isEven' does not exist on type 'Function'.
 index.ts(1241,30): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(1242,14): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(1247,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.

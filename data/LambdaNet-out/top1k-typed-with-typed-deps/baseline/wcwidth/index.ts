@@ -48,7 +48,7 @@ function wcswidth(str: String, opts: String): Number {
 
   var s: Number = 0
   for (var i = 0; i < str.length; i++) {
-    var n: Number = wcwidth(str.charCodeAt(i), opts)
+    var n: String = wcwidth(str.charCodeAt(i), opts)
     if (n < 0) return -1
     s += n
   }

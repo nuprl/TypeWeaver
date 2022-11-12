@@ -179,10 +179,12 @@ lib/ip.ts(399,14): error TS2339: Property 'isPublic' does not exist on type 'HTM
 lib/ip.ts(399,31): error TS2339: Property 'address' does not exist on type 'HTMLElement'.
 lib/ip.ts(405,27): error TS2339: Property 'loopback' does not exist on type 'HTMLElement'.
 lib/ip.ts(408,4): error TS2339: Property 'toLong' does not exist on type 'HTMLElement'.
+lib/ip.ts(410,25): error TS2345: Argument of type '(octet: Number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
+  Types of parameters 'octet' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'Number'.
 lib/ip.ts(411,5): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ip.ts(412,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
-lib/ip.ts(412,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/ip.ts(412,21): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 lib/ip.ts(414,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ip.ts(417,4): error TS2339: Property 'fromLong' does not exist on type 'HTMLElement'.
 lib/ip.ts(418,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.

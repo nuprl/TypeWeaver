@@ -23,7 +23,7 @@ const create: Function = () => {
 
   const ansi: Function = (style: Object) => {
     let open: Number = style.open = `\u001b[${style.codes[0]}m`;
-    let close: String = style.close = `\u001b[${style.codes[1]}m`;
+    let close: Number = style.close = `\u001b[${style.codes[1]}m`;
     let regex: String = style.regex = new RegExp(`\\u001b\\[${style.codes[1]}m`, 'g');
     style.wrap = (input: String, newline: Boolean) => {
       if (input.includes(close)) input = input.replace(regex, close + open);

@@ -38,7 +38,7 @@ try {
  * @param {boolean=} unsigned Whether unsigned or not, defaults to signed
  * @constructor
  */
-function Long(low: Number, high: Number, unsigned: Boolean): String {
+function Long(low: Number, high: Number, unsigned: Boolean): Void {
 
   /**
    * The low 32 bits as a signed value.
@@ -507,7 +507,7 @@ LongPrototype.toString = function toString(radix: String): String {
       // We need to change the Long value before it can be negated, so we remove
       // the bottom-most digit in this base and then recurse to do the rest.
       var radixLong: String = fromNumber(radix),
-        div: HTMLElement = this.div(radixLong),
+        div: Array = this.div(radixLong),
         rem1: HTMLElement = div.mul(radixLong).sub(this);
       return div.toString(radix) + rem1.toInt().toString(radix);
     } else
@@ -887,7 +887,7 @@ LongPrototype.sub = LongPrototype.subtract;
  * @param {!Long|number|string} multiplier Multiplier
  * @returns {!Long} Product
  */
-LongPrototype.multiply = function multiply(multiplier: HTMLElement): Array {
+LongPrototype.multiply = function multiply(multiplier: String): String {
   if (this.isZero())
     return this;
   if (!isLong(multiplier))

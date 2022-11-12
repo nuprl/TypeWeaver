@@ -13,7 +13,7 @@ import watchEventSource from './watchEventSource';
 const EMPTY_ARRAY: Array = [];
 const EMPTY_OPTIONS: Function = {};
 
-function addWatchersToSet(watchers: Array, set: Watcher): Void {
+function addWatchersToSet(watchers: Array, set: DirectWatcher): Void {
 	for (const ww of watchers) {
 		const w: HTMLElement = ww.watcher;
 		if (!set.has(w.directoryWatcher)) {
@@ -59,7 +59,7 @@ const normalizeCache: Error = new WeakMap();
 const cachedNormalizeOptions: Function = (options: Function) => {
 	const cacheEntry: Array = normalizeCache.get(options);
 	if (cacheEntry !== undefined) return cacheEntry;
-	const normalized: String = normalizeOptions(options);
+	const normalized: Array = normalizeOptions(options);
 	normalizeCache.set(options, normalized);
 	return normalized;
 };

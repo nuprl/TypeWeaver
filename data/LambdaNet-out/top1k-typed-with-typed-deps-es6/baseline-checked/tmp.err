@@ -331,7 +331,7 @@ lib/tmp.ts(36,23): error TS2339: Property 'ENOENT' does not exist on type 'Objec
 lib/tmp.ts(36,36): error TS2339: Property 'os' does not exist on type 'Object'.
 lib/tmp.ts(44,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/tmp.ts(47,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/tmp.ts(48,3): error TS2322: Type '(path: string, options?: Options) => void' is not assignable to type 'Number'.
+lib/tmp.ts(48,3): error TS2322: Type '(path: string, options?: Options) => void' is not assignable to type 'String'.
 lib/tmp.ts(59,56): error TS2304: Cannot find name 'Void'.
 lib/tmp.ts(71,28): error TS2339: Property 'tries' does not exist on type 'HTMLElement'.
 lib/tmp.ts(72,31): error TS2304: Cannot find name 'Void'.
@@ -380,7 +380,7 @@ lib/tmp.ts(204,14): error TS2769: No overload matches this call.
     Argument of type 'String' is not assignable to parameter of type 'PathLike'.
   Overload 3 of 4, '(path: PathLike, options: Mode | MakeDirectoryOptions, callback: (err: ErrnoException, path?: string) => void): void', gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-lib/tmp.ts(204,80): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/tmp.ts(204,80): error TS2304: Cannot find name 'Void'.
 lib/tmp.ts(208,63): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
 lib/tmp.ts(222,20): error TS2554: Expected 2 arguments, but got 1.
 lib/tmp.ts(223,11): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
@@ -419,7 +419,7 @@ lib/tmp.ts(322,85): error TS2345: Argument of type 'String' is not assignable to
 lib/tmp.ts(323,13): error TS2339: Property 'keep' does not exist on type 'HTMLElement'.
 lib/tmp.ts(350,13): error TS2322: Type 'Boolean | ((next: Object) => Boolean)' is not assignable to type 'Number'.
   Type 'Boolean' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-lib/tmp.ts(356,55): error TS2367: This condition will always return 'false' since the types 'Function' and 'Number' have no overlap.
+lib/tmp.ts(356,55): error TS2367: This condition will always return 'false' since the types 'Function' and 'String' have no overlap.
 lib/tmp.ts(370,31): error TS2304: Cannot find name 'Void'.
 lib/tmp.ts(395,12): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/tmp.ts(400,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.

@@ -25,7 +25,7 @@ const handler: Object = {
   }
 }
 
-module.exports = function (thingToPromisify: Function) {
+module.exports = function (thingToPromisify: String) {
   if (typeof thingToPromisify === 'function') {
     return promisify(thingToPromisify)
   }

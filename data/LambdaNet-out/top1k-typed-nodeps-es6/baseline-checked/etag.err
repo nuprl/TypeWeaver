@@ -16,8 +16,9 @@ benchmark/body0-100b.ts(54,7): error TS2339: Property 'on' does not exist on typ
 benchmark/body0-100b.ts(54,46): error TS2304: Cannot find name 'Void'.
 benchmark/body0-100b.ts(58,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 benchmark/body0-100b.ts(60,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/body0-100b.ts(61,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/body0-100b.ts(61,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
+benchmark/body0-100b.ts(61,7): error TS2740: Type 'Buffer' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+benchmark/body0-100b.ts(61,42): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
+benchmark/body0-100b.ts(64,30): error TS2339: Property 'length' does not exist on type 'HTMLElement'.
 benchmark/body1-1kb.ts(6,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
 benchmark/body1-1kb.ts(8,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
 benchmark/body1-1kb.ts(10,24): error TS2307: Cannot find module 'seedrandom' or its corresponding type declarations.
@@ -36,7 +37,7 @@ benchmark/body1-1kb.ts(54,7): error TS2339: Property 'on' does not exist on type
 benchmark/body1-1kb.ts(54,46): error TS2304: Cannot find name 'Void'.
 benchmark/body1-1kb.ts(58,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
 benchmark/body1-1kb.ts(60,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-benchmark/body1-1kb.ts(61,7): error TS2740: Type 'Buffer' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+benchmark/body1-1kb.ts(61,7): error TS2322: Type 'Buffer' is not assignable to type 'HTMLElement'.
 benchmark/body1-1kb.ts(61,42): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
 benchmark/body1-1kb.ts(64,30): error TS2339: Property 'length' does not exist on type 'HTMLElement'.
 benchmark/body2-5kb.ts(6,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.

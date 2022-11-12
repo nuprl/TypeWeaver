@@ -66,7 +66,7 @@ const which: Function = (cmd: String, opt: Array, cb: Function) => {
     resolve(subStep(p, i, 0))
   })
 
-  const subStep: Function = (p: Number, i: String, ii: Number) => new Promise((resolve: Function, reject: Function) => {
+  const subStep: Function = (p: Number, i: Number, ii: Number) => new Promise((resolve: Function, reject: Function) => {
     if (ii === pathExt.length)
       return resolve(step(i + 1))
     const ext: String = pathExt[ii]

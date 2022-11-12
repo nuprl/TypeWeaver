@@ -107,11 +107,11 @@ function getattr(object: Object, name: String, value: String): String {
     return hasattr(object, name) ? object[name] : value
 }
 
-function setattr(object: Object, name: String, value: String): Void {
+function setattr(object: Object, name: String, value: String): TextWrapper {
     object[name] = value
 }
 
-function setdefault(object: Object, name: String, value: String): String {
+function setdefault(object: Object, name: String, value: String): TextWrapper {
     if (!hasattr(object, name)) object[name] = value
     return object[name]
 }
@@ -223,7 +223,7 @@ function _alias(object: Object, from: String, to: String): Void {
 }
 
 // decorator that allows snake_case class methods to be called with camelCase and vice versa
-function _camelcase_alias(_class: Object): String {
+function _camelcase_alias(_class: Object): TextWrapper {
     for (let name of Object.getOwnPropertyNames(_class.prototype)) {
         let camelcase: String = name.replace(/\w_[a-z]/g, (s: Promise) => s[0] + s[2].toUpperCase())
         if (camelcase !== name) _alias(_class.prototype, camelcase, name)
@@ -1094,7 +1094,7 @@ const ArgumentDefaultsHelpFormatter: Number = _camelcase_alias(_callable(class A
 }))
 
 
-const MetavarTypeHelpFormatter: Number = _camelcase_alias(_callable(class MetavarTypeHelpFormatter extends HelpFormatter {
+const MetavarTypeHelpFormatter: Boolean = _camelcase_alias(_callable(class MetavarTypeHelpFormatter extends HelpFormatter {
     /*
      *  Help message formatter which uses the argument 'type' as the default
      *  metavar value (instead of the argument 'dest')
@@ -1116,7 +1116,7 @@ const MetavarTypeHelpFormatter: Number = _camelcase_alias(_callable(class Metava
 // =====================
 // Options and Arguments
 // =====================
-function _get_action_name(argument: HTMLElement): Promise {
+function _get_action_name(argument: TextWrapper): Promise {
     if (argument === undefined) {
         return undefined
     } else if (argument.option_strings.length) {

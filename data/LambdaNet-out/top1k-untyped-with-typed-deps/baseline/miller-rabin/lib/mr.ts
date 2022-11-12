@@ -10,7 +10,7 @@ MillerRabin.create = function create(rand: String): String {
   return new MillerRabin(rand);
 };
 
-MillerRabin.prototype._randbelow = function _randbelow(n: Function): Date {
+MillerRabin.prototype._randbelow = function _randbelow(n: Function): String {
   var len: Number = n.bitLength();
   var min_bytes: Number = Math.ceil(len / 8);
 

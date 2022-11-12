@@ -171,7 +171,7 @@ function pluckv(obj: Object, key: String): Array
  * depth).forEach(callback), except that the intermediate array is never
  * created.
  */
-function flattenIter(data: Object, depth: String, callback: Function): Void
+function flattenIter(data: Object, depth: String, callback: String): Void
 {
 	doFlattenIter(data, depth, [], callback);
 }
@@ -250,7 +250,7 @@ var RFC1123_MONTHS: Array = [
 var RFC1123_DAYS: Array = [
     'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-function rfc1123(date: HTMLElement): Object {
+function rfc1123(date: HTMLElement): String {
 	return (mod_extsprintf.sprintf('%s, %02d %s %04d %02d:%02d:%02d GMT',
 	    RFC1123_DAYS[date.getUTCDay()], date.getUTCDate(),
 	    RFC1123_MONTHS[date.getUTCMonth()], date.getUTCFullYear(),
@@ -562,7 +562,7 @@ function validateJsonObjectJS(schema: String, input: Element): Object
 	return (rv);
 }
 
-function randElt(arr: Array): Object
+function randElt(arr: Array): String
 {
 	mod_assert.ok(Array.isArray(arr) && arr.length > 0,
 	    'randElt argument must be a non-empty array');

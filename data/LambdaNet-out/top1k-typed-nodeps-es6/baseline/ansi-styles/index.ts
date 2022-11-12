@@ -214,6 +214,6 @@ function assembleStyles(): HTMLElement {
 	return styles;
 }
 
-const ansiStyles: Object = assembleStyles();
+const ansiStyles: Array = assembleStyles();
 
 export default ansiStyles;

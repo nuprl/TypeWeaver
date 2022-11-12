@@ -10,6 +10,8 @@ index.ts(14,16): error TS2339: Property '__specs' does not exist on type 'FiggyP
 index.ts(20,10): error TS2339: Property '__opts' does not exist on type 'FiggyPudding'.
 index.ts(21,10): error TS2339: Property '__providers' does not exist on type 'FiggyPudding'.
 index.ts(24,10): error TS2339: Property '__isFiggyPudding' does not exist on type 'FiggyPudding'.
+index.ts(27,19): error TS2345: Argument of type 'this' is not assignable to parameter of type 'HTMLElement'.
+  Type 'FiggyPudding' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 index.ts(31,35): error TS2554: Expected 1 arguments, but got 0.
 index.ts(38,11): error TS2538: Type 'String' cannot be used as an index type.
 index.ts(43,38): error TS2339: Property '__specs' does not exist on type 'FiggyPudding'.
@@ -28,27 +30,27 @@ index.ts(79,20): error TS2339: Property '__providers' does not exist on type 'Fi
 index.ts(85,31): error TS2339: Property 'inspect' does not exist on type 'String'.
 index.ts(88,14): error TS2339: Property 'inspect' does not exist on type 'String'.
 index.ts(92,37): error TS2304: Cannot find name 'Void'.
-index.ts(98,70): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(99,32): error TS2339: Property '__specs' does not exist on type 'FiggyPudding'.
-index.ts(100,34): error TS2339: Property '__opts' does not exist on type 'FiggyPudding'.
-index.ts(100,55): error TS2339: Property '__opts' does not exist on type 'FiggyPudding'.
-index.ts(103,18): error TS2740: Type '{}' is missing the following properties from type 'FiggyPudding': get, forEach, toJSON, entries, and 5 more.
-index.ts(105,23): error TS2339: Property '__providers' does not exist on type 'FiggyPudding'.
+index.ts(98,69): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(99,31): error TS2339: Property '__specs' does not exist on type 'HTMLElement'.
+index.ts(100,34): error TS2339: Property '__opts' does not exist on type 'HTMLElement'.
+index.ts(100,55): error TS2339: Property '__opts' does not exist on type 'HTMLElement'.
+index.ts(103,18): error TS2740: Type '{}' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
+index.ts(105,23): error TS2339: Property '__providers' does not exist on type 'HTMLElement'.
 index.ts(106,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-index.ts(107,37): error TS2339: Property 'aliases' does not exist on type 'FiggyPudding'.
-index.ts(107,53): error TS2339: Property 'aliases' does not exist on type 'FiggyPudding'.
-index.ts(108,32): error TS2339: Property 'aliases' does not exist on type 'FiggyPudding'.
+index.ts(107,37): error TS2339: Property 'aliases' does not exist on type 'HTMLElement'.
+index.ts(107,53): error TS2339: Property 'aliases' does not exist on type 'HTMLElement'.
+index.ts(108,32): error TS2339: Property 'aliases' does not exist on type 'HTMLElement'.
 index.ts(110,11): error TS2322: Type 'Object' is not assignable to type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-index.ts(120,35): error TS2339: Property 'default' does not exist on type 'FiggyPudding'.
-index.ts(121,23): error TS2339: Property 'default' does not exist on type 'FiggyPudding'.
-index.ts(122,21): error TS2339: Property 'default' does not exist on type 'FiggyPudding'.
-index.ts(124,21): error TS2339: Property 'default' does not exist on type 'FiggyPudding'.
+index.ts(120,35): error TS2339: Property 'default' does not exist on type 'HTMLElement'.
+index.ts(121,23): error TS2339: Property 'default' does not exist on type 'HTMLElement'.
+index.ts(122,21): error TS2339: Property 'default' does not exist on type 'HTMLElement'.
+index.ts(124,21): error TS2339: Property 'default' does not exist on type 'HTMLElement'.
 index.ts(134,9): error TS2339: Property '__isFiggyPudding' does not exist on type 'Object'.
-index.ts(135,18): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'FiggyPudding'.
+index.ts(135,18): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'FiggyPudding': get, forEach, toJSON, entries, and 5 more.
+    Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 index.ts(136,23): error TS2339: Property 'get' does not exist on type 'Object'.
 index.ts(137,13): error TS2339: Property 'get' does not exist on type 'Object'.
 index.ts(139,13): error TS2538: Type 'String' cannot be used as an index type.

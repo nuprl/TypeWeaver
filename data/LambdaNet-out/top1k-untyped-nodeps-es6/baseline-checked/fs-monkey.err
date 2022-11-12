@@ -45,6 +45,7 @@ src/patchRequire.ts(86,51): error TS2345: Argument of type 'String' is not assig
 src/patchRequire.ts(87,35): error TS2339: Property 'set' does not exist on type 'Object'.
 src/patchRequire.ts(88,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+src/patchRequire.ts(96,47): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 src/patchRequire.ts(97,20): error TS2339: Property 'realpathSync' does not exist on type 'Object'.
 src/patchRequire.ts(103,49): error TS2538: Type 'String' cannot be used as an index type.
 src/patchRequire.ts(107,47): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -80,7 +81,6 @@ src/patchRequire.ts(203,17): error TS2322: Type 'String' is not assignable to ty
 src/patchRequire.ts(207,25): error TS2322: Type 'string' is not assignable to type 'Number'.
 src/patchRequire.ts(207,49): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-src/patchRequire.ts(209,25): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
 src/patchRequire.ts(213,25): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
 src/patchRequire.ts(213,51): error TS2339: Property '_extensions' does not exist on type 'HTMLElement'.
 src/patchRequire.ts(214,21): error TS2322: Type 'Boolean' is not assignable to type 'Number'.

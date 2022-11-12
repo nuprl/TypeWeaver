@@ -32,7 +32,7 @@
 const punycode: Number = require("punycode/");
 const urlParse: String = require("url-parse");
 const pubsuffix: Array = require("./pubsuffix-psl");
-const Store: Store = require("./store").Store;
+const Store: Function = require("./store").Store;
 const MemoryCookieStore: MemoryCookieStore = require("./memstore").MemoryCookieStore;
 const pathMatch: Function = require("./pathMatch").pathMatch;
 const validators: Cookie = require("./validators.js");
@@ -699,7 +699,7 @@ function fromJSON(str: Array): Object {
     obj = str;
   }
 
-  const c: Store = new Cookie();
+  const c: Object = new Cookie();
   for (let i = 0; i < Cookie.serializableProperties.length; i++) {
     const prop: String = Cookie.serializableProperties[i];
     if (obj[prop] === undefined || obj[prop] === cookieDefaults[prop]) {
@@ -729,7 +729,7 @@ function fromJSON(str: Array): Object {
  *     creation-times."
  */
 
-function cookieCompare(a: Cookie, b: Object): Boolean {
+function cookieCompare(a: Object, b: Object): Boolean {
   validators.validate(validators.isObject(a), a);
   validators.validate(validators.isObject(b), b);
   let cmp: Number = 0;
@@ -1411,7 +1411,7 @@ class CookieJar {
       host,
       allPaths ? null : path,
       this.allowSpecialUseDomain,
-      (err: Cookie, cookies: Array) => {
+      (err: String, cookies: Array) => {
         if (err) {
           return cb(err);
         }
@@ -1514,7 +1514,7 @@ class CookieJar {
       );
     }
 
-    this.store.getAllCookies((err: Cookie, cookies: Array) => {
+    this.store.getAllCookies((err: String, cookies: Array) => {
       if (err) {
         return cb(err);
       }
@@ -1545,7 +1545,7 @@ class CookieJar {
     }
     cookies = cookies.slice(); // do not modify the original
 
-    const putNext: Function = (err: Cookie) => {
+    const putNext: Function = (err: String) => {
       if (err) {
         return cb(err);
       }
@@ -1577,7 +1577,7 @@ class CookieJar {
       newStore = null;
     }
 
-    this.serialize((err: Cookie, serialized: Array) => {
+    this.serialize((err: String, serialized: Array) => {
       if (err) {
         return cb(err);
       }
@@ -1611,7 +1611,7 @@ class CookieJar {
       return store.removeAllCookies(cb);
     }
 
-    store.getAllCookies((err: Cookie, cookies: Array) => {
+    store.getAllCookies((err: String, cookies: Array) => {
       if (err) {
         return cb(err);
       }
@@ -1635,7 +1635,7 @@ class CookieJar {
         }
       }
 
-      cookies.forEach((cookie: CookieJar) => {
+      cookies.forEach((cookie: Cookie) => {
         store.removeCookie(
           cookie.domain,
           cookie.path,

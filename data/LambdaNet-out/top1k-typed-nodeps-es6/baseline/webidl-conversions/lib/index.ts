@@ -120,7 +120,7 @@ function createIntegerConversion(bitLength: Number, { unsigned }): Void {
   };
 }
 
-function createLongLongConversion(bitLength: Number, { unsigned }): Void {
+function createLongLongConversion(bitLength: Number, { unsigned }): Promise {
   const upperBound = Number.MAX_SAFE_INTEGER;
   const lowerBound = unsigned ? 0 : Number.MIN_SAFE_INTEGER;
   const asBigIntN = unsigned ? BigInt.asUintN : BigInt.asIntN;

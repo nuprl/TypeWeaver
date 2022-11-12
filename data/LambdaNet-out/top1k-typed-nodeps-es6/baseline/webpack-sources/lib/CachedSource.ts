@@ -96,7 +96,7 @@ class CachedSource extends Source {
 	}
 
 	source() {
-		const source: Source = this._getCachedSource();
+		const source: ReplaceSource = this._getCachedSource();
 		if (source !== undefined) return source;
 		return (this._cachedSource = this.original().source());
 	}
@@ -141,7 +141,7 @@ class CachedSource extends Source {
 		if (this._cachedBuffer !== undefined) {
 			return (this._cachedSize = this._cachedBuffer.length);
 		}
-		const source: ReplaceSource = this._getCachedSource();
+		const source: OriginalSource = this._getCachedSource();
 		if (source !== undefined) {
 			return (this._cachedSize = Buffer.byteLength(source));
 		}
@@ -166,7 +166,7 @@ class CachedSource extends Source {
 			map = this.original().map(options);
 		} else {
 			// Compute the source and map together.
-			const sourceAndMap: Source = this.original().sourceAndMap(options);
+			const sourceAndMap: OriginalSource = this.original().sourceAndMap(options);
 			source = sourceAndMap.source;
 			map = sourceAndMap.map;
 			this._cachedSource = source;

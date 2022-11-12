@@ -1,5 +1,5 @@
 export function klona(val: Array): Object {
-	var k: Number, out: Object, tmp: Function;
+	var k: Number, out: Object, tmp: String;
 
 	if (Array.isArray(val)) {
 		out = Array(k=val.length);

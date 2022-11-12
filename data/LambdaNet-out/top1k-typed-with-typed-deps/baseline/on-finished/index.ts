@@ -217,7 +217,7 @@ function tryRequireAsyncHooks (): Number {
  */
 
 function wrap (fn: Object): Object {
-  var res: HTMLElement
+  var res: Element
 
   // create anonymous resource
   if (asyncHooks.AsyncResource) {

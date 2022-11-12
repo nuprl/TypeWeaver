@@ -7,7 +7,7 @@ var notifications: Array = [
     muffinopts: Object = { label: 'muffin', icon: 'muffin.png' },
     cakeopts: Object = { label: 'cake', title: 'Cake is ready!', icon: 'cake.png', sticky: true };
 
-growly.register('Bakery', 'muffin.png', notifications, function(err: String) {
+growly.register('Bakery', 'muffin.png', notifications, function(err: Boolean) {
     if (err) { 
         console.log(err);
         return;

@@ -246,7 +246,7 @@ function onceWrapper(): Array {
 
 function _onceWrap(target: Object, type: String, listener: String): Object {
   var state: Object = { fired: false, wrapFn: undefined, target: target, type: type, listener: listener };
-  var wrapped: HTMLElement = onceWrapper.bind(state);
+  var wrapped: Object = onceWrapper.bind(state);
   wrapped.listener = listener;
   state.wrapFn = wrapped;
   return wrapped;

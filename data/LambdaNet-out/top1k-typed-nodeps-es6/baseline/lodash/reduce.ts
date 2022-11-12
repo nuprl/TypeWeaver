@@ -37,7 +37,7 @@ import baseReduce from './.internal/baseReduce.js'
  */
 function reduce(collection: Function, iteratee: Function, accumulator: Stack): Stack {
   const func: Function = Array.isArray(collection) ? arrayReduce : baseReduce
-  const initAccum: Boolean = arguments.length < 3
+  const initAccum: Number = arguments.length < 3
   return func(collection, iteratee, accumulator, initAccum, baseEach)
 }
 

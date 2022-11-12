@@ -13,7 +13,6 @@ lib/SymbolTree.ts(163,25): error TS2740: Type 'SymbolTree' is missing the follow
 lib/SymbolTree.ts(193,70): error TS2339: Property 'previousSibling' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTree.ts(200,43): error TS2339: Property 'parent' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTree.ts(225,81): error TS2339: Property 'firstChild' does not exist on type 'SymbolTreeNode'.
-lib/SymbolTree.ts(234,29): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
 lib/SymbolTree.ts(238,75): error TS2339: Property 'nextSibling' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTree.ts(244,55): error TS2339: Property 'parent' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTree.ts(267,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -45,18 +44,20 @@ lib/SymbolTree.ts(496,49): error TS2339: Property 'nextSibling' does not exist o
 lib/SymbolTree.ts(508,27): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/SymbolTree.ts(509,39): error TS2339: Property 'nextSibling' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTree.ts(512,28): error TS2339: Property 'childIndexCachedUpTo' does not exist on type 'SymbolTreeNode'.
-lib/SymbolTree.ts(529,23): error TS2322: Type 'SymbolTreeNode' is not assignable to type 'String'.
-lib/SymbolTree.ts(531,33): error TS2339: Property 'lastChild' does not exist on type 'String'.
+lib/SymbolTree.ts(531,33): error TS2339: Property 'lastChild' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTree.ts(535,24): error TS2365: Operator '+' cannot be applied to types 'number | Number' and 'number'.
-lib/SymbolTree.ts(535,46): error TS2339: Property 'lastChild' does not exist on type 'String'.
+lib/SymbolTree.ts(535,46): error TS2339: Property 'lastChild' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTree.ts(575,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/SymbolTree.ts(590,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/SymbolTree.ts(604,23): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lib/SymbolTree.ts(606,30): error TS2367: This condition will always return 'true' since the types 'Number' and 'String' have no overlap.
 lib/SymbolTree.ts(616,31): error TS2322: Type 'String' is not assignable to type 'Number'.
 lib/SymbolTree.ts(617,31): error TS2322: Type 'String' is not assignable to type 'Number'.
+lib/SymbolTree.ts(627,23): error TS2322: Type 'Number | -1' is not assignable to type 'String'.
+  Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/SymbolTree.ts(627,88): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/SymbolTree.ts(628,89): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/SymbolTree.ts(630,24): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
 lib/SymbolTree.ts(647,23): error TS2740: Type 'SymbolTreeNode' is missing the following properties from type 'SymbolTree': initialize, _node, firstChild, lastChild, and 22 more.
 lib/SymbolTree.ts(653,40): error TS2339: Property 'firstChild' does not exist on type 'SymbolTreeNode'.
 lib/SymbolTree.ts(654,44): error TS2339: Property 'firstChild' does not exist on type 'SymbolTreeNode'.
@@ -113,12 +114,12 @@ lib/SymbolTreeNode.ts(52,22): error TS2339: Property 'cachedIndex' does not exis
 lib/TreeIterator.ts(3,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/TreeIterator.ts(4,7): error TS2322: Type 'typeof ROOT' is not assignable to type 'String'.
 lib/TreeIterator.ts(5,7): error TS2322: Type 'typeof NEXT' is not assignable to type 'String'.
-lib/TreeIterator.ts(6,7): error TS2322: Type 'typeof ITERATE_FUNC' is not assignable to type 'Number'.
+lib/TreeIterator.ts(6,7): error TS2322: Type 'typeof ITERATE_FUNC' is not assignable to type 'String'.
 lib/TreeIterator.ts(11,22): error TS2538: Type 'String' cannot be used as an index type.
 lib/TreeIterator.ts(12,22): error TS2538: Type 'String' cannot be used as an index type.
-lib/TreeIterator.ts(13,22): error TS2538: Type 'Number' cannot be used as an index type.
+lib/TreeIterator.ts(13,22): error TS2538: Type 'String' cannot be used as an index type.
 lib/TreeIterator.ts(17,29): error TS2304: Cannot find name 'SymbolTree'.
-lib/TreeIterator.ts(18,50): error TS2538: Type 'Number' cannot be used as an index type.
+lib/TreeIterator.ts(18,50): error TS2538: Type 'String' cannot be used as an index type.
 lib/TreeIterator.ts(19,43): error TS2538: Type 'String' cannot be used as an index type.
 lib/TreeIterator.ts(21,27): error TS2538: Type 'String' cannot be used as an index type.
 lib/TreeIterator.ts(28,44): error TS2538: Type 'String' cannot be used as an index type.

@@ -69,7 +69,7 @@ function rimraf (p: String, options: Object, cb: Function): Void {
 //
 // If anyone ever complains about this, then I guess the strategy could
 // be made configurable somehow.  But until then, YAGNI.
-function rimraf_ (p: Object, options: Object, cb: Function): Void {
+function rimraf_ (p: Function, options: Object, cb: Function): Void {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
@@ -256,7 +256,7 @@ function rimrafSync (p: String, options: Object): Void {
   }
 }
 
-function rmdirSync (p: String, options: Object, originalEr: Number): Void {
+function rmdirSync (p: Function, options: Object, originalEr: Number): Void {
   assert(p)
   assert(options)
 
@@ -273,7 +273,7 @@ function rmdirSync (p: String, options: Object, originalEr: Number): Void {
   }
 }
 
-function rmkidsSync (p: String, options: Object): Object {
+function rmkidsSync (p: String, options: Object): Promise {
   assert(p)
   assert(options)
   options.readdirSync(p).forEach((f: String) => rimrafSync(path.join(p, f), options))

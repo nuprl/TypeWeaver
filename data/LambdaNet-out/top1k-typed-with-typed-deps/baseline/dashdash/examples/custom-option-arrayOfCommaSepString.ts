@@ -13,7 +13,7 @@ var format: Number = require('util').format;
 var dashdash: Object = require('../lib/dashdash');
 
 
-function parseCommaSepStringNoEmpties(option: String, optstr: Number, arg: String): Array {
+function parseCommaSepStringNoEmpties(option: String, optstr: Array, arg: String): Array {
     return arg.trim().split(/\s*,\s*/g)
         .filter(function (part: Array) { return part; });
 }

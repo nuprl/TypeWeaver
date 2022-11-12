@@ -26,7 +26,7 @@ RIPEMD160.outSize = 160;
 RIPEMD160.hmacStrength = 192;
 RIPEMD160.padLength = 64;
 
-RIPEMD160.prototype._update = function update(msg: Object, start: String): Void {
+RIPEMD160.prototype._update = function update(msg: Object, start: Number): Void {
   var A: String = this.h[0];
   var B: String = this.h[1];
   var C: String = this.h[2];
@@ -67,7 +67,7 @@ RIPEMD160.prototype._update = function update(msg: Object, start: String): Void 
   this.h[0] = T;
 };
 
-RIPEMD160.prototype._digest = function digest(enc: String): String {
+RIPEMD160.prototype._digest = function digest(enc: Number): String {
   if (enc === 'hex')
     return utils.toHex32(this.h, 'little');
   else

@@ -74,7 +74,7 @@ class Stack {
    * @returns {Object} Returns the stack cache instance.
    */
   set(key, value) {
-    let data: ListCache = this.__data__
+    let data: Hash = this.__data__
     if (data instanceof ListCache) {
       const pairs: Array = data.__data__
       if (pairs.length < LARGE_ARRAY_SIZE - 1) {

@@ -35,7 +35,7 @@ export default class RestrictionsPlugin {
 	apply(resolver) {
 		resolver
 			.getHook(this.source)
-			.tapAsync("RestrictionsPlugin", (request: Object, resolveContext: CacheBackend, callback: Function) => {
+			.tapAsync("RestrictionsPlugin", (request: Object, resolveContext: Object, callback: Function) => {
 				if (typeof request.path === "string") {
 					const path: Number = request.path;
 					for (const rule of this.restrictions) {

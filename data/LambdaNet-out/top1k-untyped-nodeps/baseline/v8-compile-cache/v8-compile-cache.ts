@@ -1,6 +1,6 @@
 'use strict';
 
-const Module: FileSystemBlobStore = require('module');
+const Module: Date = require('module');
 const crypto: Array = require('crypto');
 const fs: Array = require('fs');
 const path: String = require('path');
@@ -160,7 +160,7 @@ class NativeCompileCache {
       }
 
       // https://github.com/nodejs/node/blob/v10.15.3/lib/internal/modules/cjs/helpers.js#L28
-      function resolve(request: Object, options: Object): String {
+      function resolve(request: Object, options: Object): FileSystemBlobStore {
         return Module._resolveFilename(request, mod, false, options);
       }
       require.resolve = resolve;
@@ -168,7 +168,7 @@ class NativeCompileCache {
       // https://github.com/nodejs/node/blob/v10.15.3/lib/internal/modules/cjs/helpers.js#L37
       // resolve.resolve.paths was added in v8.9.0
       if (hasRequireResolvePaths) {
-        resolve.paths = function paths(request: Object): Void {
+        resolve.paths = function paths(request: Object): Promise {
           return Module._resolveLookupPaths(request, mod, true);
         };
       }
@@ -237,7 +237,7 @@ class NativeCompileCache {
 
     var buffer: FileSystemBlobStore = this._cacheStore.get(filename, invalidationKey);
 
-    var script: Object = new vm.Script(wrapper, {
+    var script: FileSystemBlobStore = new vm.Script(wrapper, {
       filename: filename,
       lineOffset: 0,
       displayErrors: true,

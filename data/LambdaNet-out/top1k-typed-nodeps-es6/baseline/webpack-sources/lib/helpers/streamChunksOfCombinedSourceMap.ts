@@ -14,7 +14,7 @@ const streamChunksOfCombinedSourceMap: Function = (
 	innerSourceName: String,
 	innerSource: String,
 	innerSourceMap: String,
-	removeInnerSource: SourceMapSource,
+	removeInnerSource: OriginalSource,
 	onChunk: Object,
 	onSource: Function,
 	onName: Function,
@@ -87,7 +87,7 @@ const streamChunksOfCombinedSourceMap: Function = (
 									? innerSourceContentLines[innerSourceIndex]
 									: null;
 							if (originalSourceLines === undefined) {
-								const originalSource: Source = innerSourceContents[innerSourceIndex];
+								const originalSource: OriginalSource = innerSourceContents[innerSourceIndex];
 								originalSourceLines = originalSource
 									? splitIntoLines(originalSource)
 									: null;
@@ -161,7 +161,7 @@ const streamChunksOfCombinedSourceMap: Function = (
 							let originalSourceLines: Array =
 								innerSourceContentLines[innerSourceIndex];
 							if (originalSourceLines === undefined) {
-								const originalSource: Source = innerSourceContents[innerSourceIndex];
+								const originalSource: OriginalSource = innerSourceContents[innerSourceIndex];
 								originalSourceLines = originalSource
 									? splitIntoLines(originalSource)
 									: null;

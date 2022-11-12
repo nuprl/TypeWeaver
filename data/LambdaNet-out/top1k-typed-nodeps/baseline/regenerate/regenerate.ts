@@ -980,7 +980,7 @@
 		return optimizeSurrogateMappings(surrogateMappings);
 	};
 
-	var createSurrogateCharacterClasses: Function = function(surrogateMappings: Number) {
+	var createSurrogateCharacterClasses: Function = function(surrogateMappings: String) {
 		var result: Array = [];
 		forEach(surrogateMappings, function(surrogateMapping: Promise) {
 			var highSurrogates: String = surrogateMapping[0];
@@ -1001,7 +1001,7 @@
 
 		var parts: HTMLElement = splitAtBMP(data);
 		var loneHighSurrogates: Number = parts.loneHighSurrogates;
-		var loneLowSurrogates: Number = parts.loneLowSurrogates;
+		var loneLowSurrogates: Function = parts.loneLowSurrogates;
 		var bmp: String = parts.bmp;
 		var astral: Function = parts.astral;
 		var hasLoneHighSurrogates: Boolean = !dataIsEmpty(loneHighSurrogates);
@@ -1066,7 +1066,7 @@
 
 	var proto: Object = regenerate.prototype;
 	extend(proto, {
-		'add': function(value: String) {
+		'add': function(value: Array) {
 			var $this: HTMLElement = this;
 			if (value == null) {
 				return $this;

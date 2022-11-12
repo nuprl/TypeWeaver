@@ -1,5 +1,5 @@
 index.ts(4,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(12,3): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+index.ts(12,3): error TS2322: Type 'Number' is not assignable to type 'String'.
 index.ts(12,24): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
@@ -8,7 +8,9 @@ index.ts(18,26): error TS2345: Argument of type 'Boolean' is not assignable to p
   Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(47,47): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
   Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-index.ts(53,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'Number'.
+index.ts(51,9): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+index.ts(52,9): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
+index.ts(53,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'String'.
 index.ts(61,30): error TS2339: Property 'nul' does not exist on type 'Object'.
 index.ts(62,60): error TS2339: Property 'control' does not exist on type 'Object'.
 index.ts(68,10): error TS2365: Operator '+' cannot be applied to types 'number' and 'boolean'.

@@ -76,8 +76,10 @@
 .internal/addSetEntry.ts(9,27): error TS2304: Cannot find name 'SetCache'.
 .internal/addSetEntry.ts(9,53): error TS2304: Cannot find name 'ListCache'.
 .internal/arrayEach.ts(9,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+.internal/arrayEach.ts(9,55): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 .internal/arrayEach.ts(13,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 .internal/arrayEachRight.ts(9,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+.internal/arrayEachRight.ts(9,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 .internal/arrayEachRight.ts(12,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 .internal/arrayIncludes.ts(12,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 .internal/arrayIncludes.ts(14,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
@@ -184,6 +186,8 @@
 .internal/baseDifference.ts(49,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 .internal/baseEach.ts(12,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 .internal/baseEach.ts(12,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+.internal/baseEach.ts(17,35): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
+  Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 .internal/baseEach.ts(23,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 .internal/baseEach.ts(24,27): error TS2538: Type 'Number' cannot be used as an index type.
 .internal/baseEachRight.ts(12,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -204,6 +208,8 @@
 .internal/baseFor.ts(14,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 .internal/baseFor.ts(19,33): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 .internal/baseFor.ts(20,27): error TS2538: Type 'String' cannot be used as an index type.
+.internal/baseForOwn.ts(13,36): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'Function'.
+  Type 'Number' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 .internal/baseForOwnRight.ts(13,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 .internal/baseForRight.ts(11,80): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 .internal/baseForRight.ts(13,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -260,7 +266,8 @@
 .internal/baseIsEqualDeep.ts(60,19): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 .internal/baseIsEqualDeep.ts(65,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 .internal/baseIsEqualDeep.ts(65,57): error TS2339: Property 'value' does not exist on type 'Object'.
-.internal/baseIsEqualDeep.ts(66,57): error TS2339: Property 'value' does not exist on type 'Object'.
+.internal/baseIsEqualDeep.ts(66,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+.internal/baseIsEqualDeep.ts(66,56): error TS2339: Property 'value' does not exist on type 'Object'.
 .internal/baseIsEqualDeep.ts(68,25): error TS2554: Expected 1 arguments, but got 0.
 .internal/baseIsEqualDeep.ts(75,21): error TS2554: Expected 1 arguments, but got 0.
 .internal/baseIsEqualDeep.ts(76,47): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
@@ -361,20 +368,29 @@
 .internal/baseSortedIndex.ts(26,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 .internal/baseSortedIndex.ts(28,42): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 .internal/baseSortedIndex.ts(30,15): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+.internal/baseSortedIndex.ts(37,68): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Number'.
 .internal/baseSortedIndexBy.ts(5,33): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 .internal/baseSortedIndexBy.ts(20,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 .internal/baseSortedIndexBy.ts(31,41): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 .internal/baseSortedIndexBy.ts(36,37): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 .internal/baseSortedIndexBy.ts(41,43): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+.internal/baseSortedIndexBy.ts(44,7): error TS2322: Type 'Number | Boolean' is not assignable to type 'Boolean'.
+  Type 'Number' is not assignable to type 'Boolean'.
+    The types returned by 'valueOf()' are incompatible between these types.
+      Type 'number' is not assignable to type 'boolean'.
+.internal/baseSortedIndexBy.ts(46,7): error TS2322: Type 'Number | Boolean' is not assignable to type 'Boolean'.
+  Type 'Number' is not assignable to type 'Boolean'.
+.internal/baseSortedIndexBy.ts(48,7): error TS2322: Type 'boolean | Number' is not assignable to type 'Boolean'.
+  Type 'Number' is not assignable to type 'Boolean'.
+.internal/baseSortedIndexBy.ts(50,7): error TS2322: Type 'boolean | Number' is not assignable to type 'Boolean'.
+  Type 'Number' is not assignable to type 'Boolean'.
 .internal/baseSortedIndexBy.ts(57,13): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 .internal/baseSortedIndexBy.ts(62,19): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 .internal/baseSortedUniq.ts(11,32): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-.internal/baseSortedUniq.ts(11,60): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 .internal/baseSortedUniq.ts(17,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 .internal/baseSortedUniq.ts(19,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 .internal/baseSortedUniq.ts(21,33): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
-  Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 .internal/baseSortedUniq.ts(22,7): error TS2322: Type 'String' is not assignable to type 'Function'.
 .internal/baseSortedUniq.ts(23,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 .internal/baseSum.ts(9,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -409,7 +425,7 @@
 .internal/baseXor.ts(15,72): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 .internal/baseXor.ts(18,21): error TS2554: Expected 3 arguments, but got 1.
 .internal/baseXor.ts(23,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-.internal/baseXor.ts(24,18): error TS2304: Cannot find name 'Hash'.
+.internal/baseXor.ts(24,18): error TS2304: Cannot find name 'ListCache'.
 .internal/baseXor.ts(27,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 .internal/baseXor.ts(29,16): error TS2538: Type 'Number' cannot be used as an index type.
 .internal/baseXor.ts(29,47): error TS2538: Type 'Number' cannot be used as an index type.
@@ -435,13 +451,10 @@
 .internal/charsStartIndex.ts(12,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 .internal/charsStartIndex.ts(16,12): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 .internal/charsStartIndex.ts(16,73): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Boolean'.
-.internal/cloneArrayBuffer.ts(9,30): error TS2351: This expression is not constructable.
+.internal/cloneArrayBuffer.ts(9,17): error TS2304: Cannot find name 'Stack'.
+.internal/cloneArrayBuffer.ts(9,29): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
-.internal/cloneArrayBuffer.ts(9,66): error TS2339: Property 'byteLength' does not exist on type 'HTMLInputElement'.
-.internal/cloneArrayBuffer.ts(10,18): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type 'Object' is not assignable to parameter of type 'ArrayBufferLike'.
-      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+.internal/cloneArrayBuffer.ts(9,65): error TS2339: Property 'byteLength' does not exist on type 'HTMLInputElement'.
 .internal/cloneArrayBuffer.ts(10,45): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'HTMLInputElement' is not assignable to parameter of type 'ArrayBufferLike'.
@@ -455,8 +468,8 @@
 .internal/cloneBuffer.ts(28,66): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
 .internal/cloneBuffer.ts(30,10): error TS2339: Property 'copy' does not exist on type 'Object'.
-.internal/cloneDataView.ts(11,60): error TS2304: Cannot find name 'Stack'.
-.internal/cloneDataView.ts(12,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+.internal/cloneDataView.ts(11,60): error TS2304: Cannot find name 'Hash'.
+.internal/cloneDataView.ts(12,17): error TS2304: Cannot find name 'Stack'.
 .internal/cloneDataView.ts(12,60): error TS2339: Property 'buffer' does not exist on type 'Object'.
 .internal/cloneDataView.ts(12,79): error TS2339: Property 'buffer' does not exist on type 'Object'.
 .internal/cloneDataView.ts(13,14): error TS2351: This expression is not constructable.
@@ -467,8 +480,8 @@
 .internal/cloneRegExp.ts(11,37): error TS2304: Cannot find name 'Hash'.
 .internal/cloneRegExp.ts(12,17): error TS2304: Cannot find name 'Hash'.
 .internal/cloneTypedArray.ts(11,38): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-.internal/cloneTypedArray.ts(11,61): error TS2304: Cannot find name 'Stack'.
-.internal/cloneTypedArray.ts(12,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+.internal/cloneTypedArray.ts(11,61): error TS2304: Cannot find name 'Hash'.
+.internal/cloneTypedArray.ts(12,17): error TS2304: Cannot find name 'Stack'.
 .internal/compareAscending.ts(12,7): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 .internal/compareAscending.ts(21,43): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 .internal/compareAscending.ts(24,29): error TS2769: No overload matches this call.
@@ -537,7 +550,7 @@
 .internal/createPadding.ts(24,49): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 .internal/createPadding.ts(26,40): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Boolean'.
 .internal/createPadding.ts(26,51): error TS2339: Property 'join' does not exist on type 'String'.
-.internal/createRange.ts(11,33): error TS2304: Cannot find name 'Hash'.
+.internal/createRange.ts(11,33): error TS2304: Cannot find name 'ListCache'.
 .internal/createRound.ts(9,31): error TS2538: Type 'String' cannot be used as an index type.
 .internal/createRound.ts(11,68): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -552,12 +565,14 @@
 .internal/customDefaultsMerge.ts(22,67): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Stack'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'Stack': clear, delete, get, has, set
+.internal/deburrLetter.ts(69,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 .internal/equalArrays.ts(22,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 .internal/equalArrays.ts(22,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 .internal/equalArrays.ts(23,9): error TS2322: Type 'number' is not assignable to type 'Boolean'.
 .internal/equalArrays.ts(23,30): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 .internal/equalArrays.ts(23,40): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-.internal/equalArrays.ts(31,33): error TS2339: Property 'get' does not exist on type 'Object'.
+.internal/equalArrays.ts(31,18): error TS2304: Cannot find name 'Stack'.
+.internal/equalArrays.ts(31,32): error TS2339: Property 'get' does not exist on type 'Object'.
 .internal/equalArrays.ts(32,24): error TS2339: Property 'get' does not exist on type 'Object'.
 .internal/equalArrays.ts(37,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 .internal/equalArrays.ts(37,24): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -658,7 +673,7 @@
 .internal/isKey.ts(23,58): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 .internal/isKey.ts(24,24): error TS2360: The left-hand side of an 'in' expression must be a private identifier or of type 'any', 'string', 'number', or 'symbol'.
-.internal/isPrototype.ts(15,10): error TS2367: This condition will always return 'false' since the types 'String' and 'Boolean' have no overlap.
+.internal/isPrototype.ts(15,10): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
 .internal/iteratorToArray.ts(8,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 .internal/iteratorToArray.ts(10,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 .internal/iteratorToArray.ts(12,28): error TS2339: Property 'next' does not exist on type 'Object'.
@@ -789,7 +804,7 @@ debounce.ts(88,42): error TS2339: Property 'maxWait' does not exist on type 'Obj
 debounce.ts(88,56): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 debounce.ts(89,50): error TS2339: Property 'trailing' does not exist on type 'Object'.
-debounce.ts(93,11): error TS2322: Type 'Function' is not assignable to type 'String'.
+debounce.ts(93,17): error TS2304: Cannot find name 'Stack'.
 debounce.ts(104,12): error TS2339: Property 'cancelAnimationFrame' does not exist on type 'Boolean'.
 debounce.ts(105,19): error TS2339: Property 'requestAnimationFrame' does not exist on type 'Boolean'.
 debounce.ts(107,5): error TS2739: Type 'Timeout' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
@@ -802,7 +817,7 @@ debounce.ts(107,23): error TS2769: No overload matches this call.
       Type 'Number' provides no match for the signature '(args: void): void'.
   Overload 3 of 3, '(handler: TimerHandler, timeout?: number, ...arguments: any[]): number', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'TimerHandler'.
-      Type 'Number' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+      Type 'Number' is not assignable to type 'Function'.
 debounce.ts(110,37): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 debounce.ts(112,19): error TS2339: Property 'cancelAnimationFrame' does not exist on type 'Boolean'.
 debounce.ts(114,18): error TS2769: No overload matches this call.
@@ -849,10 +864,6 @@ deburr.ts(21,36): error TS2769: No overload matches this call.
     Argument of type 'String' is not assignable to parameter of type 'string'.
       'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 deburr.ts(40,3): error TS2322: Type 'string' is not assignable to type 'Boolean'.
-deburr.ts(40,44): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type 'Function' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
-      Type 'Function' provides no match for the signature '(substring: string, ...args: any[]): string'.
 deburr.ts(40,66): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'string | RegExp'.
@@ -899,7 +910,7 @@ eqDeep.ts(29,49): error TS2314: Generic type 'Array<T>' requires 1 type argument
 eqDeep.ts(30,10): error TS2554: Expected 5 arguments, but got 2.
 escape.ts(12,7): error TS2322: Type 'RegExp' is not assignable to type 'Number'.
 escape.ts(42,40): error TS2339: Property 'test' does not exist on type 'Number'.
-escape.ts(43,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+escape.ts(43,68): error TS2538: Type 'String' cannot be used as an index type.
 escapeRegExp.ts(6,7): error TS2322: Type 'RegExp' is not assignable to type 'Number'.
 escapeRegExp.ts(23,37): error TS2339: Property 'test' does not exist on type 'Number'.
 every.ts(22,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -932,8 +943,11 @@ findLastKey.ts(26,60): error TS2314: Generic type 'Promise<T>' requires 1 type a
 findLastKey.ts(27,22): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Number'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 flatMap.ts(25,10): error TS2554: Expected 5 arguments, but got 2.
+flatMap.ts(25,38): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 flatMapDeep.ts(27,10): error TS2554: Expected 5 arguments, but got 2.
+flatMapDeep.ts(27,38): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 flatMapDepth.ts(26,10): error TS2554: Expected 5 arguments, but got 2.
+flatMapDepth.ts(26,38): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 flatten.ts(16,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 flatten.ts(16,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 flatten.ts(18,19): error TS2554: Expected 5 arguments, but got 2.
@@ -943,6 +957,7 @@ flattenDeep.ts(21,19): error TS2554: Expected 5 arguments, but got 2.
 flattenDepth.ts(22,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 flattenDepth.ts(22,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 flattenDepth.ts(28,10): error TS2554: Expected 5 arguments, but got 2.
+floor.ts(22,14): error TS2304: Cannot find name 'Stack'.
 flow.ts(26,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 flow.ts(27,22): error TS2538: Type 'Number' cannot be used as an index type.
 flow.ts(33,41): error TS2538: Type 'Number' cannot be used as an index type.
@@ -950,7 +965,7 @@ flow.ts(34,14): error TS2356: An arithmetic operand must be of type 'any', 'numb
 flow.ts(35,22): error TS2538: Type 'Number' cannot be used as an index type.
 flowRight.ts(24,31): error TS2304: Cannot find name 'Stack'.
 forEach.ts(28,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-forEach.ts(28,58): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+forEach.ts(28,56): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 forEachRight.ts(20,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 forEachRight.ts(20,61): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 forOwn.ts(26,54): error TS2304: Cannot find name 'Void'.
@@ -961,6 +976,7 @@ forOwnRight.ts(31,10): error TS2356: An arithmetic operand must be of type 'any'
 fromEntries.ts(14,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 functions.ts(22,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 functions.ts(26,68): error TS2538: Type 'String' cannot be used as an index type.
+groupBy.ts(24,59): error TS2304: Cannot find name 'Stack'.
 groupBy.ts(25,17): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 groupBy.ts(28,14): error TS2538: Type 'String' cannot be used as an index type.
 groupBy.ts(30,37): error TS2322: Type 'String' is not assignable to type 'string'.
@@ -1015,8 +1031,8 @@ isBoolean.ts(20,10): error TS2367: This condition will always return 'false' sin
 isBoolean.ts(20,28): error TS2367: This condition will always return 'false' since the types 'String' and 'boolean' have no overlap.
 isBuffer.ts(7,100): error TS2339: Property 'nodeType' does not exist on type 'NodeModule'.
 isBuffer.ts(10,57): error TS2339: Property 'exports' does not exist on type 'Object'.
-isBuffer.ts(13,50): error TS2339: Property 'Buffer' does not exist on type 'Boolean'.
-isBuffer.ts(16,48): error TS2339: Property 'isBuffer' does not exist on type 'HTMLElement'.
+isBuffer.ts(13,15): error TS2304: Cannot find name 'ListCache'.
+isBuffer.ts(13,48): error TS2339: Property 'Buffer' does not exist on type 'Boolean'.
 isBuffer.ts(33,7): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Types of property 'valueOf' are incompatible.
     Type '() => Object' is not assignable to type '() => boolean'.
@@ -1092,8 +1108,10 @@ maxBy.ts(20,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(
 maxBy.ts(30,43): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 mean.ts(15,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 mean.ts(15,30): error TS2304: Cannot find name 'Stack'.
+mean.ts(16,26): error TS2345: Argument of type '(value: String) => String' is not assignable to parameter of type 'String'.
 meanBy.ts(23,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 meanBy.ts(25,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+meanBy.ts(25,35): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 meanBy.ts(25,47): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 memoize.ts(43,55): error TS2304: Cannot find name 'Hash'.
 memoize.ts(49,18): error TS2304: Cannot find name 'ListCache'.
@@ -1155,8 +1173,7 @@ pullAll.ts(22,48): error TS2314: Generic type 'Array<T>' requires 1 type argumen
 pullAll.ts(24,7): error TS2554: Expected 4 arguments, but got 2.
 pullAllBy.ts(25,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 pullAllBy.ts(25,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-pullAllBy.ts(25,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-pullAllBy.ts(25,67): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+pullAllBy.ts(25,68): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 pullAllBy.ts(27,7): error TS2554: Expected 4 arguments, but got 3.
 pullAllWith.ts(25,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 pullAllWith.ts(25,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -1166,7 +1183,7 @@ pullAt.ts(30,24): error TS2314: Generic type 'Array<T>' requires 1 type argument
 pullAt.ts(30,44): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 pullAt.ts(32,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 pullAt.ts(34,94): error TS2339: Property 'sort' does not exist on type 'Object'.
-random.ts(4,23): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+random.ts(4,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 random.ts(65,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 random.ts(65,32): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 random.ts(68,21): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
@@ -1178,11 +1195,14 @@ random.ts(68,92): error TS2345: Argument of type 'Number' is not assignable to p
 random.ts(70,10): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 random.ts(70,46): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 random.ts(70,54): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-range.ts(42,23): error TS2554: Expected 1 arguments, but got 0.
+range.ts(42,14): error TS2304: Cannot find name 'Hash'.
+range.ts(42,21): error TS2554: Expected 1 arguments, but got 0.
 reduce.ts(38,72): error TS2304: Cannot find name 'Stack'.
 reduce.ts(38,80): error TS2304: Cannot find name 'Stack'.
+reduce.ts(40,9): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 reduceRight.ts(23,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-reduceRight.ts(23,83): error TS2304: Cannot find name 'Stack'.
+reduceRight.ts(23,81): error TS2304: Cannot find name 'Stack'.
+reduceRight.ts(25,9): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 reject.ts(25,59): error TS2304: Cannot find name 'Stack'.
 remove.ts(28,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 remove.ts(28,53): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -1211,6 +1231,7 @@ sampleSize.ts(33,34): error TS2538: Type 'String' cannot be used as an index typ
 sampleSize.ts(34,12): error TS2538: Type 'String' cannot be used as an index type.
 sampleSize.ts(34,27): error TS2538: Type 'Number' cannot be used as an index type.
 sampleSize.ts(35,12): error TS2538: Type 'Number' cannot be used as an index type.
+set.ts(30,60): error TS2304: Cannot find name 'Stack'.
 set.ts(31,36): error TS2554: Expected 4 arguments, but got 3.
 setWith.ts(25,84): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 setWith.ts(27,65): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
@@ -1265,8 +1286,8 @@ sortedUniq.ts(18,28): error TS2314: Generic type 'Array<T>' requires 1 type argu
 sortedUniq.ts(18,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 sortedUniq.ts(20,7): error TS2554: Expected 2 arguments, but got 1.
 sortedUniqBy.ts(17,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-sortedUniqBy.ts(17,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-sortedUniqBy.ts(17,55): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+sortedUniqBy.ts(17,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+sortedUniqBy.ts(19,29): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 split.ts(26,67): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 split.ts(27,52): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 split.ts(36,47): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Boolean'.
@@ -1286,6 +1307,7 @@ subtract.ts(16,99): error TS2363: The right-hand side of an arithmetic operation
 subtract.ts(16,111): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 sum.ts(15,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 sumBy.ts(20,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+sumBy.ts(22,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 tail.ts(13,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 tail.ts(13,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 take.ts(25,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -1335,8 +1357,6 @@ toInteger.ts(32,22): error TS2362: The left-hand side of an arithmetic operation
 toInteger.ts(32,31): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 toLength.ts(33,5): error TS2322: Type 'number' is not assignable to type 'Boolean'.
 toLength.ts(35,3): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'number' is not assignable to type 'boolean'.
 toLength.ts(35,21): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'String'.
 toLength.ts(36,7): error TS2365: Operator '<' cannot be applied to types 'Boolean' and 'number'.
 toLength.ts(37,5): error TS2322: Type 'number' is not assignable to type 'Boolean'.
@@ -1361,6 +1381,7 @@ toSafeInteger.ts(32,21): error TS2345: Argument of type 'Number' is not assignab
 toSafeInteger.ts(34,5): error TS2322: Type 'number' is not assignable to type 'Boolean'.
 toSafeInteger.ts(37,5): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
 toSafeInteger.ts(39,3): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+toString.ts(35,77): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 toString.ts(41,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 transform.ts(36,69): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 transform.ts(38,39): error TS2349: This expression is not callable.
@@ -1369,6 +1390,8 @@ transform.ts(43,33): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
 transform.ts(45,23): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+transform.ts(54,48): error TS2345: Argument of type '(value: Number, index: Number, object: Object) => any' is not assignable to parameter of type 'Function & Number'.
+  Type '(value: Number, index: Number, object: Object) => any' is not assignable to type 'Number'.
 trim.ts(31,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 trim.ts(31,43): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 trim.ts(32,9): error TS2322: Type 'Number' is not assignable to type 'String'.
@@ -1382,7 +1405,7 @@ trimEnd.ts(33,32): error TS2345: Argument of type 'number' is not assignable to 
 trimEnd.ts(33,40): error TS2339: Property 'join' does not exist on type 'String'.
 trimStart.ts(24,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 trimStart.ts(32,9): error TS2322: Type 'Number' is not assignable to type 'String'.
-trimStart.ts(32,67): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
+trimStart.ts(32,67): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'String'.
 trimStart.ts(33,10): error TS2554: Expected 3 arguments, but got 2.
 trimStart.ts(33,39): error TS2339: Property 'join' does not exist on type 'String'.
 truncate.ts(53,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -1425,7 +1448,7 @@ uniq.ts(20,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s
 uniq.ts(20,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 uniq.ts(22,7): error TS2554: Expected 3 arguments, but got 1.
 uniqBy.ts(21,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-uniqBy.ts(21,52): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+uniqBy.ts(21,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 uniqBy.ts(23,7): error TS2554: Expected 3 arguments, but got 2.
 uniqWith.ts(22,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 uniqWith.ts(22,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

@@ -223,7 +223,7 @@
    *
    */
   P.clampedTo = P.clamp = function (min: Object, max: String) {
-    var k: Number,
+    var k: String,
       x: Array = this,
       Ctor: Object = x.constructor;
     min = new Ctor(min);
@@ -1947,7 +1947,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toBinary = function (sd: Function, rm: Array) {
+  P.toBinary = function (sd: String, rm: Array) {
     return toStringBinary(this, 2, sd, rm);
   };
 
@@ -2128,7 +2128,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toHexadecimal = P.toHex = function (sd: Function, rm: Array) {
+  P.toHexadecimal = P.toHex = function (sd: String, rm: Array) {
     return toStringBinary(this, 16, sd, rm);
   };
 
@@ -2217,7 +2217,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toOctal = function (sd: Function, rm: Array) {
+  P.toOctal = function (sd: String, rm: Array) {
     return toStringBinary(this, 8, sd, rm);
   };
 
@@ -2267,7 +2267,7 @@
    */
   P.toPower = P.pow = function (y: Object) {
     var e: Number, k: Number, pr: Number, r: Object, rm: Number, s: Number,
-      x: String = this,
+      x: Array = this,
       Ctor: Object = x.constructor,
       yn: Number = +(y = new Ctor(y));
 

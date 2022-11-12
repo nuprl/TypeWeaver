@@ -78,8 +78,8 @@ lib/CachedSource.ts(141,12): error TS2339: Property '_cachedBuffer' does not exi
 lib/CachedSource.ts(142,17): error TS2339: Property '_cachedSize' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(142,36): error TS2339: Property '_cachedBuffer' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(146,17): error TS2339: Property '_cachedSize' does not exist on type 'CachedSource'.
-lib/CachedSource.ts(146,49): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string | ArrayBuffer | SharedArrayBuffer | ArrayBufferView'.
-  Type 'String' is missing the following properties from type 'BigUint64Array': BYTES_PER_ELEMENT, buffer, byteLength, byteOffset, and 20 more.
+lib/CachedSource.ts(146,49): error TS2345: Argument of type 'OriginalSource' is not assignable to parameter of type 'string | ArrayBuffer | SharedArrayBuffer | ArrayBufferView'.
+  Type 'OriginalSource' is missing the following properties from type 'BigUint64Array': BYTES_PER_ELEMENT, byteLength, byteOffset, copyWithin, and 25 more.
 lib/CachedSource.ts(148,16): error TS2339: Property '_cachedSize' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(153,35): error TS2339: Property '_cachedMaps' does not exist on type 'CachedSource'.
 lib/CachedSource.ts(157,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -122,7 +122,7 @@ lib/ConcatSource.ts(10,17): error TS2451: Cannot redeclare block-scoped variable
 lib/ConcatSource.ts(12,7): error TS2740: Type 'WeakSet<object>' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lib/ConcatSource.ts(14,28): error TS2507: Type 'String' is not a constructor function type.
 lib/ConcatSource.ts(17,8): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
-lib/ConcatSource.ts(21,30): error TS2551: Property '_children' does not exist on type 'HTMLElement & ConcatSource'. Did you mean 'children'?
+lib/ConcatSource.ts(21,30): error TS2339: Property '_children' does not exist on type 'CachedSource & ConcatSource'.
 lib/ConcatSource.ts(22,11): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(25,10): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(28,8): error TS2339: Property '_isOptimized' does not exist on type 'ConcatSource'.
@@ -145,7 +145,7 @@ lib/ConcatSource.ts(100,12): error TS2339: Property '_children' does not exist o
 lib/ConcatSource.ts(101,16): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(104,22): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/ConcatSource.ts(105,20): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/ConcatSource.ts(106,9): error TS2322: Type 'boolean' is not assignable to type 'PrefixSource'.
+lib/ConcatSource.ts(106,22): error TS2749: 'Source' refers to a value, but is being used as a type here. Did you mean 'typeof Source'?
 lib/ConcatSource.ts(109,27): error TS2339: Property '_children' does not exist on type 'ConcatSource'.
 lib/ConcatSource.ts(110,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ConcatSource.ts(111,10): error TS2740: Type 'undefined[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
@@ -199,7 +199,7 @@ lib/OriginalSource.ts(57,9): error TS2339: Property '_value' does not exist on t
 lib/OriginalSource.ts(57,23): error TS2339: Property '_valueAsBuffer' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(59,20): error TS2339: Property '_name' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(59,32): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
-lib/OriginalSource.ts(60,9): error TS2322: Type 'boolean' is not assignable to type 'PrefixSource'.
+lib/OriginalSource.ts(60,22): error TS2749: 'Source' refers to a value, but is being used as a type here. Did you mean 'typeof Source'?
 lib/OriginalSource.ts(63,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/OriginalSource.ts(63,57): error TS2339: Property '_value' does not exist on type 'OriginalSource'.
 lib/OriginalSource.ts(76,7): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -230,9 +230,9 @@ lib/PrefixSource.ts(19,11): error TS2351: This expression is not constructable.
 lib/PrefixSource.ts(21,8): error TS2339: Property '_prefix' does not exist on type 'PrefixSource'.
 lib/PrefixSource.ts(25,15): error TS2339: Property '_prefix' does not exist on type 'PrefixSource'.
 lib/PrefixSource.ts(29,15): error TS2551: Property '_source' does not exist on type 'PrefixSource'. Did you mean 'source'?
-lib/PrefixSource.ts(33,35): error TS2551: Property '_source' does not exist on type 'PrefixSource'. Did you mean 'source'?
+lib/PrefixSource.ts(33,15): error TS2749: 'RawSource' refers to a value, but is being used as a type here. Did you mean 'typeof RawSource'?
+lib/PrefixSource.ts(33,32): error TS2551: Property '_source' does not exist on type 'PrefixSource'. Did you mean 'source'?
 lib/PrefixSource.ts(34,31): error TS2339: Property '_prefix' does not exist on type 'PrefixSource'.
-lib/PrefixSource.ts(35,24): error TS2339: Property 'replace' does not exist on type 'ConcatSource'.
 lib/PrefixSource.ts(49,31): error TS2339: Property '_prefix' does not exist on type 'PrefixSource'.
 lib/PrefixSource.ts(52,54): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
@@ -651,8 +651,8 @@ lib/helpers/streamAndGetSourceAndMap.ts(11,7): error TS2451: Cannot redeclare bl
 lib/helpers/streamAndGetSourceAndMap.ts(20,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/helpers/streamAndGetSourceAndMap.ts(21,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/helpers/streamAndGetSourceAndMap.ts(22,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/helpers/streamAndGetSourceAndMap.ts(26,8): error TS2322: Type 'boolean' is not assignable to type 'PrefixSource'.
-lib/helpers/streamAndGetSourceAndMap.ts(26,58): error TS2339: Property 'finalSource' does not exist on type 'Object'.
+lib/helpers/streamAndGetSourceAndMap.ts(26,21): error TS2749: 'Source' refers to a value, but is being used as a type here. Did you mean 'typeof Source'?
+lib/helpers/streamAndGetSourceAndMap.ts(26,52): error TS2339: Property 'finalSource' does not exist on type 'Object'.
 lib/helpers/streamAndGetSourceAndMap.ts(27,53): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 lib/helpers/streamAndGetSourceAndMap.ts(39,29): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
@@ -743,16 +743,15 @@ lib/helpers/streamChunksOfRawSource.ts(11,7): error TS2451: Cannot redeclare blo
 lib/helpers/streamChunksOfRawSource.ts(13,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/helpers/streamChunksOfRawSource.ts(14,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/helpers/streamChunksOfRawSource.ts(17,3): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/helpers/streamChunksOfRawSource.ts(30,99): error TS2749: 'Source' refers to a value, but is being used as a type here. Did you mean 'typeof Source'?
 lib/helpers/streamChunksOfSourceMap.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'getGeneratedSourceInfo'.
 lib/helpers/streamChunksOfSourceMap.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'getSource'.
 lib/helpers/streamChunksOfSourceMap.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'readMappings'.
 lib/helpers/streamChunksOfSourceMap.ts(11,7): error TS2451: Cannot redeclare block-scoped variable 'splitIntoLines'.
 lib/helpers/streamChunksOfSourceMap.ts(20,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/helpers/streamChunksOfSourceMap.ts(27,10): error TS2339: Property 'sources' does not exist on type 'SourceMapSource'.
-lib/helpers/streamChunksOfSourceMap.ts(27,19): error TS2339: Property 'sourcesContent' does not exist on type 'SourceMapSource'.
-lib/helpers/streamChunksOfSourceMap.ts(27,35): error TS2339: Property 'names' does not exist on type 'SourceMapSource'.
-lib/helpers/streamChunksOfSourceMap.ts(27,42): error TS2339: Property 'mappings' does not exist on type 'SourceMapSource'.
+lib/helpers/streamChunksOfSourceMap.ts(27,10): error TS2339: Property 'sources' does not exist on type 'CachedSource'.
+lib/helpers/streamChunksOfSourceMap.ts(27,19): error TS2339: Property 'sourcesContent' does not exist on type 'CachedSource'.
+lib/helpers/streamChunksOfSourceMap.ts(27,35): error TS2339: Property 'names' does not exist on type 'CachedSource'.
+lib/helpers/streamChunksOfSourceMap.ts(27,42): error TS2339: Property 'mappings' does not exist on type 'CachedSource'.
 lib/helpers/streamChunksOfSourceMap.ts(41,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/helpers/streamChunksOfSourceMap.ts(53,6): error TS2322: Type 'number' is not assignable to type 'String'.
 lib/helpers/streamChunksOfSourceMap.ts(64,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -799,10 +798,10 @@ lib/helpers/streamChunksOfSourceMap.ts(229,10): error TS2362: The left-hand side
 lib/helpers/streamChunksOfSourceMap.ts(239,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/helpers/streamChunksOfSourceMap.ts(259,10): error TS2339: Property 'generatedLine' does not exist on type 'Object'.
 lib/helpers/streamChunksOfSourceMap.ts(259,36): error TS2339: Property 'generatedColumn' does not exist on type 'Object'.
-lib/helpers/streamChunksOfSourceMap.ts(262,10): error TS2339: Property 'sources' does not exist on type 'SourceMapSource'.
-lib/helpers/streamChunksOfSourceMap.ts(262,19): error TS2339: Property 'sourcesContent' does not exist on type 'SourceMapSource'.
-lib/helpers/streamChunksOfSourceMap.ts(262,35): error TS2339: Property 'names' does not exist on type 'SourceMapSource'.
-lib/helpers/streamChunksOfSourceMap.ts(262,42): error TS2339: Property 'mappings' does not exist on type 'SourceMapSource'.
+lib/helpers/streamChunksOfSourceMap.ts(262,10): error TS2339: Property 'sources' does not exist on type 'CachedSource'.
+lib/helpers/streamChunksOfSourceMap.ts(262,19): error TS2339: Property 'sourcesContent' does not exist on type 'CachedSource'.
+lib/helpers/streamChunksOfSourceMap.ts(262,35): error TS2339: Property 'names' does not exist on type 'CachedSource'.
+lib/helpers/streamChunksOfSourceMap.ts(262,42): error TS2339: Property 'mappings' does not exist on type 'CachedSource'.
 lib/helpers/streamChunksOfSourceMap.ts(302,4): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
 lib/helpers/streamChunksOfSourceMap.ts(303,14): error TS2367: This condition will always return 'false' since the types 'Number' and 'Boolean' have no overlap.
 lib/helpers/streamChunksOfSourceMap.ts(320,10): error TS2339: Property 'generatedLine' does not exist on type 'Object'.
@@ -811,6 +810,5 @@ lib/helpers/streamChunksOfSourceMap.ts(328,10): error TS2339: Property 'sources'
 lib/helpers/streamChunksOfSourceMap.ts(328,19): error TS2339: Property 'sourcesContent' does not exist on type 'SourceMapSource'.
 lib/helpers/streamChunksOfSourceMap.ts(328,35): error TS2339: Property 'mappings' does not exist on type 'SourceMapSource'.
 lib/helpers/streamChunksOfSourceMap.ts(363,27): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
-lib/helpers/streamChunksOfSourceMap.ts(376,15): error TS2749: 'Source' refers to a value, but is being used as a type here. Did you mean 'typeof Source'?
 lib/index.ts(8,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.
 

@@ -7,7 +7,7 @@ module.exports = function(val: Number) {
   return kindOf(val);
 };
 
-function kindOf(val: Number): String {
+function kindOf(val: String): String {
   if (val === void 0) {
     return 'undefined';
   }

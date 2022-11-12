@@ -216,7 +216,7 @@ var Base62: Object = Encoder.extend({
       "([A-Z])(\\|[A-Z])+\\|([A-Z])": "$1-$3",
       "\\|": ""
     });
-    var pattern: Number = trim.exec(words.map(function(word: Array) {
+    var pattern: Number = trim.exec(words.map(function(word: Object) {
       if (word.toString()) return word.replacement;
       return "";
     }).slice(0, 62).join("|"));

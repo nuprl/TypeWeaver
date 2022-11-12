@@ -1477,7 +1477,7 @@
       //      \ b
 
       if (match('\\')) {
-        var res: Function, from: Number = pos;
+        var res: Object, from: Number = pos;
         if (res = parseClassCharacterEscapedHelper()) {
           return res;
         } else {

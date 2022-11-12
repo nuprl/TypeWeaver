@@ -111,7 +111,7 @@ function openTTY(cb: Function): Void {
 			return;
 		}
 		var rtty: String = new mod_tty.ReadStream(rttyfd);
-		mod_fs.open('/dev/tty', 'w+', function (err3: Function, wttyfd: String) {
+		mod_fs.open('/dev/tty', 'w+', function (err3: Function, wttyfd: Array) {
 			var wtty: String = new mod_tty.WriteStream(wttyfd);
 			if (err3) {
 				cb(err3);

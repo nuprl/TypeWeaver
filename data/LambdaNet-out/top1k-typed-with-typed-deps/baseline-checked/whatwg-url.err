@@ -123,6 +123,7 @@ lib/URLSearchParams-impl.ts(128,48): error TS2339: Property '_list' does not exi
 lib/encoding.ts(2,7): error TS2740: Type 'TextEncoder' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lib/encoding.ts(3,7): error TS2740: Type 'TextDecoder' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lib/encoding.ts(5,10): error TS2451: Cannot redeclare block-scoped variable 'utf8Encode'.
+lib/encoding.ts(5,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/encoding.ts(6,22): error TS2339: Property 'encode' does not exist on type 'HTMLElement'.
 lib/encoding.ts(9,10): error TS2451: Cannot redeclare block-scoped variable 'utf8DecodeWithoutBOM'.
 lib/encoding.ts(9,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -520,8 +521,6 @@ lib/urlencoded.ts(18,30): error TS2314: Generic type 'Array<T>' requires 1 type 
 lib/urlencoded.ts(23,27): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/urlencoded.ts(29,44): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
 lib/urlencoded.ts(30,46): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-lib/urlencoded.ts(42,26): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Element'.
-  Type 'String' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 159 more.
 lib/urlencoded.ts(42,37): error TS2345: Argument of type 'Element' is not assignable to parameter of type 'String'.
 lib/urlencoded.ts(46,38): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/urlencoded.ts(57,60): error TS2345: Argument of type '(c: String) => Boolean' is not assignable to parameter of type 'Boolean'.

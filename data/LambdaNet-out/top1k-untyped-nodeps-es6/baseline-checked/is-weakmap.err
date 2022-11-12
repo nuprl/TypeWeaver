@@ -2,7 +2,8 @@ index.ts(3,5): error TS2740: Type 'WeakMapConstructor' is missing the following 
 index.ts(4,5): error TS2740: Type 'WeakSetConstructor' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 index.ts(10,2): error TS2322: Type '(x: String) => Boolean' is not assignable to type 'String'.
 index.ts(16,45): error TS2339: Property 'prototype' does not exist on type 'String'.
-index.ts(17,45): error TS2339: Property 'prototype' does not exist on type 'String'.
+index.ts(17,43): error TS2339: Property 'prototype' does not exist on type 'String'.
 index.ts(20,2): error TS2322: Type '(x: String) => Boolean' is not assignable to type 'String'.
+index.ts(34,13): error TS2339: Property 'call' does not exist on type 'String'.
 index.ts(39,23): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 

@@ -1,5 +1,5 @@
 //.CommonJS
-var CSSOM: HTMLElement = {
+var CSSOM: Element = {
 	CSSRule: require("./CSSRule").CSSRule,
 	CSSStyleSheet: require("./CSSStyleSheet").CSSStyleSheet,
 	MediaList: require("./MediaList").MediaList

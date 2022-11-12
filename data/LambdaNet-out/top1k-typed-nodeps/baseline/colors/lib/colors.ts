@@ -135,7 +135,7 @@ function applyStyle(): String {
     var code: HTMLElement = ansiStyles[nestedStyles[i]];
     str = code.open + str.replace(code.closeRe, code.open) + code.close;
     if (newLinesPresent) {
-      str = str.replace(newLineRegex, function(match: Number) {
+      str = str.replace(newLineRegex, function(match: String) {
         return code.close + match + code.open;
       });
     }

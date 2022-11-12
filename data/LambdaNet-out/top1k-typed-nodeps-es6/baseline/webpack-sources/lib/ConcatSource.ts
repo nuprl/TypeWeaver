@@ -103,7 +103,7 @@ class ConcatSource extends Source {
 		let currentColumnOffset: Number = 0;
 		let sourceMapping: Map = new Map();
 		let nameMapping: Map = new Map();
-		const finalSource: PrefixSource = !!(options && options.finalSource);
+		const finalSource: Source = !!(options && options.finalSource);
 		let code: String = "";
 		let needToCloseMapping: Boolean = false;
 		for (const item of this._children) {
@@ -271,11 +271,11 @@ class ConcatSource extends Source {
 		};
 		const mergeRawSources: Function = () => {
 			if (Array.isArray(currentRawSources)) {
-				const rawSource: Source = new RawSource(currentRawSources.join(""));
+				const rawSource: RawSource = new RawSource(currentRawSources.join(""));
 				stringsAsRawSources.add(rawSource);
 				newChildren.push(rawSource);
 			} else if (typeof currentRawSources === "string") {
-				const rawSource: Source = new RawSource(currentRawSources);
+				const rawSource: RawSource = new RawSource(currentRawSources);
 				stringsAsRawSources.add(rawSource);
 				newChildren.push(rawSource);
 			} else {

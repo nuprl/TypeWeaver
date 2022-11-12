@@ -26,7 +26,7 @@ SHA384.outSize = 384;
 SHA384.hmacStrength = 192;
 SHA384.padLength = 128;
 
-SHA384.prototype._digest = function digest(enc: String): String {
+SHA384.prototype._digest = function digest(enc: Number): String {
   if (enc === 'hex')
     return utils.toHex32(this.h.slice(0, 12), 'big');
   else

@@ -57,7 +57,7 @@ class OriginalSource extends Source {
 			this._value = this._valueAsBuffer.toString("utf-8");
 		}
 		onSource(0, this._name, this._value);
-		const finalSource: PrefixSource = !!(options && options.finalSource);
+		const finalSource: Source = !!(options && options.finalSource);
 		if (!options || options.columns !== false) {
 			// With column info we need to read all lines and split them
 			const matches: Array = splitIntoPotentialTokens(this._value);

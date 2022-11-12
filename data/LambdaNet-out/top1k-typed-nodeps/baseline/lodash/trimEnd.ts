@@ -21,7 +21,7 @@ const methodName: String = ''.trimRight ? 'trimRight': 'trimEnd'
  * trimEnd('-_-abc-_-', '_-')
  * // => '-_-abc'
  */
-function trimEnd(string: Array, chars: Boolean): String {
+function trimEnd(string: Array, chars: Number): String {
   if (string && chars === undefined) {
     return string[methodName]()
   }

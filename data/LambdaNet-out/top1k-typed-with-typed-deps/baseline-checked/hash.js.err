@@ -203,12 +203,14 @@ lib/hash/sha/512.ts(118,74): error TS2304: Cannot find name 'Void'.
 lib/hash/sha/512.ts(121,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/hash/sha/512.ts(142,9): error TS2322: Type 'Function' is not assignable to type 'String'.
 lib/hash/sha/512.ts(144,9): error TS2322: Type 'Number' is not assignable to type 'Function'.
-lib/hash/sha/512.ts(145,9): error TS2322: Type 'Number' is not assignable to type 'String'.
-lib/hash/sha/512.ts(146,9): error TS2322: Type 'Number' is not assignable to type 'Function'.
-lib/hash/sha/512.ts(146,55): error TS2554: Expected 5 arguments, but got 6.
+lib/hash/sha/512.ts(144,37): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+lib/hash/sha/512.ts(145,9): error TS2322: Type 'Number' is not assignable to type 'Function'.
+lib/hash/sha/512.ts(145,37): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+lib/hash/sha/512.ts(146,9): error TS2322: Type 'Number' is not assignable to type 'String'.
+lib/hash/sha/512.ts(146,53): error TS2554: Expected 5 arguments, but got 6.
 lib/hash/sha/512.ts(147,9): error TS2322: Type 'Number' is not assignable to type 'Function'.
 lib/hash/sha/512.ts(147,35): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
-lib/hash/sha/512.ts(153,9): error TS2322: Type 'Number' is not assignable to type 'Function'.
+lib/hash/sha/512.ts(153,9): error TS2322: Type 'Number' is not assignable to type 'String'.
 lib/hash/sha/512.ts(155,7): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 lib/hash/sha/512.ts(159,9): error TS2322: Type 'Number' is not assignable to type 'String'.
 lib/hash/sha/512.ts(160,7): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
@@ -218,29 +220,29 @@ lib/hash/sha/512.ts(167,5): error TS2322: Type 'Number' is not assignable to typ
 lib/hash/sha/512.ts(167,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 lib/hash/sha/512.ts(168,5): error TS2322: Type 'Number' is not assignable to type 'Function'.
 lib/hash/sha/512.ts(168,42): error TS2554: Expected 5 arguments, but got 6.
-lib/hash/sha/512.ts(169,5): error TS2322: Type 'Number' is not assignable to type 'String'.
+lib/hash/sha/512.ts(169,5): error TS2322: Type 'Number' is not assignable to type 'Function'.
 lib/hash/sha/512.ts(169,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 lib/hash/sha/512.ts(171,9): error TS2322: Type 'Number' is not assignable to type 'String'.
 lib/hash/sha/512.ts(171,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-lib/hash/sha/512.ts(172,9): error TS2322: Type 'Number' is not assignable to type 'Function'.
-lib/hash/sha/512.ts(172,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+lib/hash/sha/512.ts(172,9): error TS2322: Type 'Number' is not assignable to type 'String'.
+lib/hash/sha/512.ts(172,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 lib/hash/sha/512.ts(174,5): error TS2322: Type 'String' is not assignable to type 'Function'.
 lib/hash/sha/512.ts(183,5): error TS2322: Type 'Number' is not assignable to type 'String'.
 lib/hash/sha/512.ts(183,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 lib/hash/sha/512.ts(184,5): error TS2322: Type 'Number' is not assignable to type 'String'.
 lib/hash/sha/512.ts(184,19): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 lib/hash/sha/512.ts(195,5): error TS2322: Type 'Number' is not assignable to type 'String'.
-lib/hash/sha/512.ts(195,19): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+lib/hash/sha/512.ts(195,26): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 lib/hash/sha/512.ts(196,5): error TS2322: Type 'Number' is not assignable to type 'String'.
-lib/hash/sha/512.ts(196,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
-lib/hash/sha/512.ts(199,17): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-lib/hash/sha/512.ts(200,17): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-lib/hash/sha/512.ts(201,17): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-lib/hash/sha/512.ts(202,17): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-lib/hash/sha/512.ts(203,17): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-lib/hash/sha/512.ts(204,17): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-lib/hash/sha/512.ts(205,17): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
-lib/hash/sha/512.ts(206,17): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+lib/hash/sha/512.ts(196,19): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+lib/hash/sha/512.ts(199,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/hash/sha/512.ts(200,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/hash/sha/512.ts(201,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/hash/sha/512.ts(202,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/hash/sha/512.ts(203,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/hash/sha/512.ts(204,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/hash/sha/512.ts(205,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/hash/sha/512.ts(206,21): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 lib/hash/sha/512.ts(210,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/hash/sha/512.ts(211,18): error TS2339: Property 'toHex32' does not exist on type 'String'.
 lib/hash/sha/512.ts(213,18): error TS2551: Property 'split32' does not exist on type 'String'. Did you mean 'split'?
@@ -289,19 +291,19 @@ lib/hash/sha/512.ts(260,27): error TS2363: The right-hand side of an arithmetic 
 lib/hash/sha/512.ts(260,35): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/sha/512.ts(262,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/hash/sha/512.ts(267,7): error TS2322: Type 'Number' is not assignable to type 'String'.
-lib/hash/sha/512.ts(267,37): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/hash/sha/512.ts(267,33): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 lib/hash/sha/512.ts(268,7): error TS2322: Type 'Number' is not assignable to type 'String'.
-lib/hash/sha/512.ts(268,37): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/hash/sha/512.ts(268,33): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 lib/hash/sha/512.ts(269,7): error TS2322: Type 'Number' is not assignable to type 'String'.
-lib/hash/sha/512.ts(269,37): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/hash/sha/512.ts(269,33): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 lib/hash/sha/512.ts(271,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/sha/512.ts(271,27): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/sha/512.ts(271,35): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/sha/512.ts(273,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/hash/sha/512.ts(278,7): error TS2322: Type 'Number' is not assignable to type 'String'.
-lib/hash/sha/512.ts(278,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/hash/sha/512.ts(278,33): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
 lib/hash/sha/512.ts(279,7): error TS2322: Type 'Number' is not assignable to type 'String'.
-lib/hash/sha/512.ts(279,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/hash/sha/512.ts(279,33): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
 lib/hash/sha/512.ts(280,7): error TS2322: Type 'Number' is not assignable to type 'String'.
 lib/hash/sha/512.ts(280,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 lib/hash/sha/512.ts(282,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -330,21 +332,21 @@ lib/hash/sha/512.ts(304,27): error TS2363: The right-hand side of an arithmetic 
 lib/hash/sha/512.ts(304,35): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/sha/512.ts(306,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/hash/sha/512.ts(311,7): error TS2322: Type 'Number' is not assignable to type 'String'.
-lib/hash/sha/512.ts(311,37): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/hash/sha/512.ts(311,33): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 lib/hash/sha/512.ts(312,7): error TS2322: Type 'Number' is not assignable to type 'String'.
-lib/hash/sha/512.ts(312,37): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/hash/sha/512.ts(312,37): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
 lib/hash/sha/512.ts(313,7): error TS2322: Type 'Number' is not assignable to type 'String'.
-lib/hash/sha/512.ts(313,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+lib/hash/sha/512.ts(313,32): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 lib/hash/sha/512.ts(315,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/sha/512.ts(315,27): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/sha/512.ts(315,35): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/sha/512.ts(317,5): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/hash/sha/512.ts(322,7): error TS2322: Type 'Number' is not assignable to type 'String'.
-lib/hash/sha/512.ts(322,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/hash/sha/512.ts(322,33): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
 lib/hash/sha/512.ts(323,7): error TS2322: Type 'Number' is not assignable to type 'String'.
 lib/hash/sha/512.ts(323,33): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 lib/hash/sha/512.ts(324,7): error TS2322: Type 'Number' is not assignable to type 'String'.
-lib/hash/sha/512.ts(324,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/hash/sha/512.ts(324,32): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
 lib/hash/sha/512.ts(326,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/sha/512.ts(326,27): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/sha/512.ts(326,35): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -486,17 +488,17 @@ lib/hash/utils.ts(179,11): error TS2365: Operator '+' cannot be applied to types
 lib/hash/utils.ts(183,10): error TS2300: Duplicate identifier 'sum32_5'.
 lib/hash/utils.ts(184,11): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 lib/hash/utils.ts(188,67): error TS2304: Cannot find name 'Void'.
-lib/hash/utils.ts(189,24): error TS2538: Type 'String' cannot be used as an index type.
-lib/hash/utils.ts(190,24): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+lib/hash/utils.ts(189,24): error TS2538: Type 'Number' cannot be used as an index type.
+lib/hash/utils.ts(190,24): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/hash/utils.ts(192,21): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.
 lib/hash/utils.ts(193,20): error TS2365: Operator '+' cannot be applied to types 'number' and 'String'.
-lib/hash/utils.ts(194,7): error TS2538: Type 'String' cannot be used as an index type.
+lib/hash/utils.ts(194,7): error TS2538: Type 'Number' cannot be used as an index type.
 lib/hash/utils.ts(194,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/hash/utils.ts(195,7): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+lib/hash/utils.ts(195,7): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/hash/utils.ts(200,21): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 lib/hash/utils.ts(201,20): error TS2365: Operator '+' cannot be applied to types 'number' and 'String'.
 lib/hash/utils.ts(202,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/hash/utils.ts(207,20): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
+lib/hash/utils.ts(207,20): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 lib/hash/utils.ts(208,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/utils.ts(214,7): error TS2322: Type 'String' is not assignable to type 'Number'.
 lib/hash/utils.ts(215,9): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.

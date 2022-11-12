@@ -87,7 +87,6 @@ tslib.es6.ts(146,25): error TS2339: Property 'done' does not exist on type 'Obje
 tslib.es6.ts(156,24): error TS2554: Expected 2 arguments, but got 1.
 tslib.es6.ts(169,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 tslib.es6.ts(169,48): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-tslib.es6.ts(179,37): error TS2304: Cannot find name 'Void'.
 tslib.es6.ts(180,59): error TS2350: Only a void function can be called with the 'new' keyword.
 tslib.es6.ts(185,79): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 tslib.es6.ts(186,5): error TS2322: Type 'Object' is not assignable to type 'Boolean'.
@@ -125,10 +124,10 @@ tslib.es6.ts(205,114): error TS2314: Generic type 'Array<T>' requires 1 type arg
 tslib.es6.ts(205,145): error TS2538: Type 'String' cannot be used as an index type.
 tslib.es6.ts(205,178): error TS2339: Property 'done' does not exist on type 'Object'.
 tslib.es6.ts(205,186): error TS2339: Property 'value' does not exist on type 'Object'.
-tslib.es6.ts(206,71): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-tslib.es6.ts(206,79): error TS2304: Cannot find name 'Void'.
-tslib.es6.ts(206,167): error TS2345: Argument of type 'String' is not assignable to parameter of type '(reason: any) => PromiseLike<never>'.
-  Type 'String' provides no match for the signature '(reason: any): PromiseLike<never>'.
+tslib.es6.ts(206,82): error TS2304: Cannot find name 'Void'.
+tslib.es6.ts(206,113): error TS2345: Argument of type '(v: String) => void' is not assignable to parameter of type '(value: Function) => Function | PromiseLike<Function>'.
+  Types of parameters 'v' and 'value' are incompatible.
+    Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 tslib.es6.ts(210,104): error TS2339: Property 'raw' does not exist on type 'Object'.
 tslib.es6.ts(214,65): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 tslib.es6.ts(221,20): error TS2339: Property '__esModule' does not exist on type 'Object'.
@@ -151,9 +150,13 @@ tslib.es6.ts(245,46): error TS2314: Generic type 'Map<K, V>' requires 2 type arg
 tslib.ts(43,16): error TS2304: Cannot find name 'define'.
 tslib.ts(43,41): error TS2304: Cannot find name 'define'.
 tslib.ts(44,9): error TS2304: Cannot find name 'define'.
+tslib.ts(44,90): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 tslib.ts(44,96): error TS2554: Expected 2 arguments, but got 1.
+tslib.ts(47,32): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 tslib.ts(47,38): error TS2554: Expected 2 arguments, but got 1.
 tslib.ts(50,17): error TS2554: Expected 2 arguments, but got 1.
+tslib.ts(53,13): error TS2367: This condition will always return 'true' since the types 'Number' and 'String' have no overlap.
 tslib.ts(58,17): error TS1184: Modifiers cannot appear here.
 tslib.ts(61,26): error TS2300: Duplicate identifier 'id'.
 tslib.ts(62,13): error TS1184: Modifiers cannot appear here.
@@ -269,9 +272,10 @@ tslib.ts(249,118): error TS2314: Generic type 'Array<T>' requires 1 type argumen
 tslib.ts(249,149): error TS2538: Type 'String' cannot be used as an index type.
 tslib.ts(249,182): error TS2339: Property 'done' does not exist on type 'Object'.
 tslib.ts(249,190): error TS2339: Property 'value' does not exist on type 'Object'.
-tslib.ts(250,75): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-tslib.ts(250,83): error TS2304: Cannot find name 'Void'.
-tslib.ts(250,171): error TS2345: Argument of type 'String' is not assignable to parameter of type '(reason: any) => PromiseLike<never>'.
+tslib.ts(250,86): error TS2304: Cannot find name 'Void'.
+tslib.ts(250,117): error TS2345: Argument of type '(v: String) => void' is not assignable to parameter of type '(value: Function) => Function | PromiseLike<Function>'.
+  Types of parameters 'v' and 'value' are incompatible.
+    Type 'Function' is not assignable to type 'String'.
 tslib.ts(254,108): error TS2339: Property 'raw' does not exist on type 'Object'.
 tslib.ts(258,69): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 tslib.ts(265,24): error TS2339: Property '__esModule' does not exist on type 'Object'.

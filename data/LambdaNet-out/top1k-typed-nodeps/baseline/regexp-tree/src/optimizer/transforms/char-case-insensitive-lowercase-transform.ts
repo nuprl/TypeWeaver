@@ -54,7 +54,7 @@ module.exports = {
   }
 };
 
-function isAZClassRange(classRange: NonSurrogateRange): Boolean {
+function isAZClassRange(classRange: Object): Boolean {
   const {from, to} = classRange;
   // A-Z
   return from.codePoint >= UPPER_A_CP && from.codePoint <= UPPER_Z_CP &&

@@ -1,4 +1,4 @@
-let fastProto: Function = null;
+let fastProto: Object = null;
 
 // Creates an object with permanently fast properties in V8. See Toon Verwaest's
 // post https://medium.com/@tverwaes/setting-up-prototypes-in-v8-ec9c9491dfe2#5f62
@@ -26,6 +26,6 @@ for (let index = 0; index <= inlineCacheCutoff; index++) {
 	FastObject();
 }
 
-export default function toFastproperties(object: Object): String {
+export default function toFastproperties(object: Object): Boolean {
 	return FastObject(object);
 }

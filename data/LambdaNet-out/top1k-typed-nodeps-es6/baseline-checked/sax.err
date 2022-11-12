@@ -31,7 +31,7 @@ examples/get-products.ts(13,21): error TS2769: No overload matches this call.
   Overload 2 of 2, '(options: ServerOptions<typeof IncomingMessage, typeof ServerResponse>, requestListener?: RequestListener<typeof IncomingMessage, typeof ServerResponse>): Server<...>', gave the following error.
     Type '(req: Function, res: any) => void' has no properties in common with type 'ServerOptions<typeof IncomingMessage, typeof ServerResponse>'.
 examples/get-products.ts(13,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-examples/get-products.ts(15,37): error TS2554: Expected 0 arguments, but got 1.
+examples/get-products.ts(15,37): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 examples/get-products.ts(18,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/get-products.ts(22,12): error TS2339: Property 'onclosetag' does not exist on type 'HTMLElement'.
 examples/get-products.ts(28,36): error TS2339: Property 'parent' does not exist on type 'Object'.
@@ -49,7 +49,6 @@ examples/get-products.ts(42,25): error TS2339: Property 'parent' does not exist 
 examples/get-products.ts(46,12): error TS2339: Property 'ontext' does not exist on type 'HTMLElement'.
 examples/get-products.ts(47,34): error TS2339: Property 'children' does not exist on type 'Object'.
 examples/get-products.ts(50,12): error TS2339: Property 'onend' does not exist on type 'HTMLElement'.
-examples/get-products.ts(51,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/get-products.ts(57,12): error TS2339: Property 'write' does not exist on type 'HTMLElement'.
 examples/hello-world.ts(1,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/pretty-print.ts(1,17): error TS2306: File '/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/sax/lib/sax.ts' is not a module.
@@ -791,7 +790,6 @@ lib/sax.ts(1529,52): error TS2538: Type 'Number' cannot be used as an index type
 lib/sax.ts(1531,23): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/sax.ts(1542,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/sax.ts(1543,13): error TS2322: Type 'number' is not assignable to type 'String'.
 lib/sax.ts(1543,30): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/sax.ts(1544,13): error TS2322: Type 'number' is not assignable to type 'String'.
 lib/sax.ts(1544,29): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.

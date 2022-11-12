@@ -186,7 +186,7 @@ Yallist.prototype.getReverse = function (n: Number) {
   }
 }
 
-Yallist.prototype.map = function (fn: Function, thisp: Number) {
+Yallist.prototype.map = function (fn: Function, thisp: String) {
   thisp = thisp || this
   var res: Array = new Yallist()
   for (var walker = this.head; walker !== null;) {
@@ -196,7 +196,7 @@ Yallist.prototype.map = function (fn: Function, thisp: Number) {
   return res
 }
 
-Yallist.prototype.mapReverse = function (fn: Function, thisp: Number) {
+Yallist.prototype.mapReverse = function (fn: Function, thisp: String) {
   thisp = thisp || this
   var res: Array = new Yallist()
   for (var walker = this.tail; walker !== null;) {

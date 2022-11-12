@@ -19,7 +19,7 @@ function wrapIterator(iterator: Function): Function
 
   return function(item: String, key: String, cb: String)
   {
-    var aborter: Boolean
+    var aborter: Number
       , wrappedCb: Array = async(wrapIteratorCallback.call(stream, cb, key))
       ;
 

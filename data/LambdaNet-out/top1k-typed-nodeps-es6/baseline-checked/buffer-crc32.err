@@ -8,14 +8,14 @@ index.ts(63,36): error TS2769: No overload matches this call.
     Argument of type 'String' is not assignable to parameter of type 'Buffer'.
       Type 'String' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 90 more.
 index.ts(64,10): error TS2339: Property 'fill' does not exist on type 'Element'.
-index.ts(68,39): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(78,67): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.
+index.ts(68,41): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(90,34): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Function'.
 index.ts(91,7): error TS2339: Property 'writeInt32BE' does not exist on type 'String'.
+index.ts(92,3): error TS2740: Type 'String' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 276 more.
 index.ts(95,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(98,5): error TS2322: Type 'number' is not assignable to type 'String'.
 index.ts(102,22): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(102,47): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(104,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(108,3): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+index.ts(108,3): error TS2740: Type 'HTMLElement' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 

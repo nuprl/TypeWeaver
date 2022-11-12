@@ -92,11 +92,11 @@ Object.defineProperty(module.exports, "tokTypes", {
 
 function plugin(options: Object, Parser: Object): Object {
   const acorn: HTMLElement = Parser.acorn || require("acorn");
-  const acornJsx: Object = getJsxTokens(acorn);
+  const acornJsx: HTMLElement = getJsxTokens(acorn);
   const tt: HTMLInputElement = acorn.tokTypes;
-  const tok: Object = acornJsx.tokTypes;
+  const tok: Function = acornJsx.tokTypes;
   const tokContexts: Function = acorn.tokContexts;
-  const tc_oTag: String = acornJsx.tokContexts.tc_oTag;
+  const tc_oTag: Function = acornJsx.tokContexts.tc_oTag;
   const tc_cTag: String = acornJsx.tokContexts.tc_cTag;
   const tc_expr: Function = acornJsx.tokContexts.tc_expr;
   const isNewLine: Boolean = acorn.isNewLine;

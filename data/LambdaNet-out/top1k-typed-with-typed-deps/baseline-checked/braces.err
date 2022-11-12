@@ -47,7 +47,8 @@ index.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'expand'.
 index.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'parse'.
 index.ts(22,34): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(23,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(27,35): error TS2339: Property 'create' does not exist on type 'Function'.
+index.ts(27,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(27,34): error TS2339: Property 'create' does not exist on type 'Function'.
 index.ts(35,31): error TS2339: Property 'create' does not exist on type 'Function'.
 index.ts(38,26): error TS2339: Property 'expand' does not exist on type 'Object'.
 index.ts(38,53): error TS2339: Property 'nodupes' does not exist on type 'Object'.
@@ -72,10 +73,11 @@ lib/compile.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'utils
 lib/compile.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'compile'.
 lib/compile.ts(6,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/compile.ts(7,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/compile.ts(8,39): error TS2339: Property 'isInvalidBrace' does not exist on type 'String'.
+lib/compile.ts(8,38): error TS2339: Property 'isInvalidBrace' does not exist on type 'String'.
 lib/compile.ts(9,9): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 lib/compile.ts(9,36): error TS2339: Property 'invalid' does not exist on type 'Object'.
 lib/compile.ts(9,64): error TS2339: Property 'escapeInvalid' does not exist on type 'Object'.
+lib/compile.ts(10,28): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
 lib/compile.ts(10,53): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
 lib/compile.ts(11,34): error TS2339: Property 'escapeInvalid' does not exist on type 'Object'.
 lib/compile.ts(14,14): error TS2339: Property 'isOpen' does not exist on type 'Object'.

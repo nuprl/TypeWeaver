@@ -153,8 +153,6 @@ examples/option-onResult.ts(9,7): error TS2451: Cannot redeclare block-scoped va
 examples/option-onResult.ts(9,28): error TS2551: Property 'matcher' does not exist on type 'String'. Did you mean 'match'?
 examples/regex-quantifier.ts(9,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/regex-quantifier.ts(37,7): error TS2451: Cannot redeclare block-scoped variable 'isMatch'.
-examples/regex-quantifier.ts(43,44): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
 examples/scan.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'pm'.
 examples/scan.ts(5,16): error TS2339: Property 'scan' does not exist on type 'String'.
 examples/scan.ts(6,16): error TS2339: Property 'scan' does not exist on type 'String'.
@@ -462,10 +460,11 @@ lib/parse.ts(693,68): error TS2349: This expression is not callable.
 lib/parse.ts(698,24): error TS2339: Property 'type' does not exist on type 'Object'.
 lib/parse.ts(699,30): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
+lib/parse.ts(702,13): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/parse.ts(702,36): error TS2339: Property 'supportsLookbehinds' does not exist on type 'HTMLElement'.
 lib/parse.ts(706,19): error TS2339: Property 'value' does not exist on type 'Object'.
-lib/parse.ts(706,51): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/parse.ts(706,51): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
+lib/parse.ts(706,62): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/parse.ts(714,16): error TS2339: Property 'dot' does not exist on type 'HTMLElement'.
 lib/parse.ts(714,38): error TS2339: Property 'type' does not exist on type 'Object'.
 lib/parse.ts(714,63): error TS2339: Property 'type' does not exist on type 'Object'.

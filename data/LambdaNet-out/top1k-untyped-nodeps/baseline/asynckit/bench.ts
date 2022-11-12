@@ -32,7 +32,7 @@ suite
       cb(null, total);
     });
   },
-  function(err: Function, result: Array)
+  function(err: String, result: Array)
   {
     assert.ifError(err);
     assert.equal(result[result.length - 1], expected);
@@ -54,7 +54,7 @@ suite
       cb(null, total);
     });
   },
-  function(err: Function, result: Array)
+  function(err: String, result: Array)
   {
     assert.ifError(err);
     assert.equal(result[result.length - 1], expected);

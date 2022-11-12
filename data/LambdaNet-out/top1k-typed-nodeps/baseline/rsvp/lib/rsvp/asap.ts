@@ -30,7 +30,7 @@ function useNextTick(): Function {
 
 // vertx
 let vertxNext: Function;
-function useVertxTimer(): Object {
+function useVertxTimer(): Function {
   if (typeof vertxNext !== 'undefined') {
     return function() {
       vertxNext(flush);
@@ -77,7 +77,7 @@ function flush(): Void {
 
 function attemptVertex(): Boolean {
   try {
-    const vertx: HTMLElement = Function('return this')().require('vertx');
+    const vertx: Enumerator = Function('return this')().require('vertx');
     vertxNext = vertx.runOnLoop || vertx.runOnContext;
     return useVertxTimer();
   } catch(e) {

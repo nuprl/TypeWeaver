@@ -72,7 +72,7 @@ Growly.prototype.setHost = function(host: Function, port: Number) {
  * @api public
  */
 
-Growly.prototype.register = function(appname: Function, appicon: Array, notifications: Array, callback: Function) {
+Growly.prototype.register = function(appname: Array, appicon: Array, notifications: Array, callback: Function) {
     var gntp: HTMLElement;
 
     if (typeof appicon === 'object') {

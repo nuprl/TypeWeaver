@@ -17,7 +17,7 @@ function BlockHash(): Void {
 }
 exports.BlockHash = BlockHash;
 
-BlockHash.prototype.update = function update(msg: Array, enc: Function): Object {
+BlockHash.prototype.update = function update(msg: Array, enc: String): Object {
   // Convert message to array, pad it, and join into 32bit blocks
   msg = utils.toArray(msg, enc);
   if (!this.pending)
@@ -44,7 +44,7 @@ BlockHash.prototype.update = function update(msg: Array, enc: Function): Object 
   return this;
 };
 
-BlockHash.prototype.digest = function digest(enc: Function): String {
+BlockHash.prototype.digest = function digest(enc: String): String {
   this.update(this._pad());
   assert(this.pending === null);
 

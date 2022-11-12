@@ -1,5 +1,5 @@
 // See: http://code.google.com/p/google-diff-match-patch/wiki/API
-export function convertChangesToDMP(changes: Array): Promise {
+export function convertChangesToDMP(changes: Array): Array {
   let ret: Array = [],
       change: Object,
       operation: Number;

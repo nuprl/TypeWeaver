@@ -18,7 +18,7 @@ module.exports = callBound('%Symbol.prototype.description%', true) || function g
 	}
 
 	// will throw if not a symbol primitive or wrapper object
-	var sym: String = thisSymbolValue(symbol);
+	var sym: Number = thisSymbolValue(symbol);
 
 	if (getInferredName) {
 		var name: String = getInferredName(sym);

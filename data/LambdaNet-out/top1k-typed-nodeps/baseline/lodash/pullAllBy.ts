@@ -22,7 +22,7 @@ import basePullAll from './.internal/basePullAll.js'
  * console.log(array)
  * // => [{ 'x': 2 }]
  */
-function pullAllBy(array: Array, values: Array, iteratee: String): Array {
+function pullAllBy(array: Array, values: Array, iteratee: Array): Array {
   return (array != null && array.length && values != null && values.length)
     ? basePullAll(array, values, iteratee)
     : array

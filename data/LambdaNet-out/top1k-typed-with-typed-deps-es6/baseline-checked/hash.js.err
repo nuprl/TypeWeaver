@@ -61,6 +61,7 @@ lib/hash/ripemd.ts(65,15): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 lib/hash/ripemd.ts(66,15): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
+lib/hash/ripemd.ts(71,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/hash/ripemd.ts(79,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/ripemd.ts(79,16): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/ripemd.ts(79,20): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -86,6 +87,12 @@ lib/hash/sha/1.ts(20,12): error TS2350: Only a void function can be called with 
 lib/hash/sha/1.ts(37,72): error TS2304: Cannot find name 'Void'.
 lib/hash/sha/1.ts(38,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/hash/sha/1.ts(41,16): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
+lib/hash/sha/1.ts(44,12): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/hash/sha/1.ts(54,29): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
+lib/hash/sha/1.ts(57,9): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
 lib/hash/sha/1.ts(62,15): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 lib/hash/sha/1.ts(63,15): error TS2349: This expression is not callable.
@@ -96,8 +103,10 @@ lib/hash/sha/1.ts(65,15): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 lib/hash/sha/1.ts(66,15): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
+lib/hash/sha/1.ts(70,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/hash/sha/224.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/sha/224.ts(8,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/hash/sha/224.ts(25,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/hash/sha/256.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/sha/256.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
 lib/hash/sha/256.ts(5,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/sha/common"' has no default export.
@@ -128,8 +137,10 @@ lib/hash/sha/256.ts(96,15): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 lib/hash/sha/256.ts(97,15): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
+lib/hash/sha/256.ts(101,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/hash/sha/384.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/sha/384.ts(8,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/hash/sha/384.ts(30,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/hash/sha/512.ts(3,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/hash.js/lib/hash/utils"' has no default export.
 lib/hash/sha/512.ts(4,8): error TS1192: Module '"lib/hash/common"' has no default export.
 lib/hash/sha/512.ts(21,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -178,6 +189,7 @@ lib/hash/sha/512.ts(205,3): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
 lib/hash/sha/512.ts(206,3): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
+lib/hash/sha/512.ts(210,7): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/hash/sha/512.ts(217,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/sha/512.ts(217,25): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/sha/512.ts(217,40): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -399,17 +411,17 @@ lib/hash/utils.ts(174,11): error TS2365: Operator '+' cannot be applied to types
 lib/hash/utils.ts(179,11): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 lib/hash/utils.ts(184,11): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 lib/hash/utils.ts(188,67): error TS2304: Cannot find name 'Void'.
-lib/hash/utils.ts(189,24): error TS2538: Type 'String' cannot be used as an index type.
-lib/hash/utils.ts(190,24): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+lib/hash/utils.ts(189,24): error TS2538: Type 'Number' cannot be used as an index type.
+lib/hash/utils.ts(190,24): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/hash/utils.ts(192,21): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.
 lib/hash/utils.ts(193,20): error TS2365: Operator '+' cannot be applied to types 'number' and 'String'.
-lib/hash/utils.ts(194,7): error TS2538: Type 'String' cannot be used as an index type.
+lib/hash/utils.ts(194,7): error TS2538: Type 'Number' cannot be used as an index type.
 lib/hash/utils.ts(194,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/hash/utils.ts(195,7): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
+lib/hash/utils.ts(195,7): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/hash/utils.ts(200,21): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 lib/hash/utils.ts(201,20): error TS2365: Operator '+' cannot be applied to types 'number' and 'String'.
 lib/hash/utils.ts(202,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/hash/utils.ts(207,20): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
+lib/hash/utils.ts(207,20): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.
 lib/hash/utils.ts(208,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/hash/utils.ts(214,7): error TS2322: Type 'String' is not assignable to type 'Number'.
 lib/hash/utils.ts(215,9): error TS2365: Operator '+' cannot be applied to types 'Number' and 'String'.

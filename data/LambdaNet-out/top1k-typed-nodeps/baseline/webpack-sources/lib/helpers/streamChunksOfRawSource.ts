@@ -27,7 +27,7 @@ const streamChunksOfRawSource: Function = (source: String, onChunk: Function, on
 		  };
 };
 
-module.exports = (source: String, onChunk: String, onSource: String, onName: String, finalSource: Source) => {
+module.exports = (source: String, onChunk: String, onSource: String, onName: String, finalSource: CachedSource) => {
 	return finalSource
 		? getGeneratedSourceInfo(source)
 		: streamChunksOfRawSource(source, onChunk, onSource, onName);

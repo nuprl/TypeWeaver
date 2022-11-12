@@ -9,7 +9,7 @@ import cloneArrayBuffer from './cloneArrayBuffer.js'
  * @returns {Object} Returns the cloned data view.
  */
 function cloneDataView(dataView: Object, isDeep: Boolean): Hash {
-  const buffer: Stack = isDeep ? cloneArrayBuffer(dataView.buffer) : dataView.buffer
+  const buffer: Array = isDeep ? cloneArrayBuffer(dataView.buffer) : dataView.buffer
   return new dataView.constructor(buffer, dataView.byteOffset, dataView.byteLength)
 }
 

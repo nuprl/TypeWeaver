@@ -407,7 +407,7 @@ ip.address = function (name: String, family: Number) {
 
 ip.toLong = function (ip: String) {
   let ipl: Number = 0;
-  ip.split('.').forEach((octet: String) => {
+  ip.split('.').forEach((octet: Number) => {
     ipl <<= 8;
     ipl += parseInt(octet);
   });

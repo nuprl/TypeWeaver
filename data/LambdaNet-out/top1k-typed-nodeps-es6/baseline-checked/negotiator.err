@@ -22,9 +22,9 @@ examples/charset.ts(31,57): error TS2314: Generic type 'Array<T>' requires 1 typ
 examples/charset.ts(33,22): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
 examples/charset.ts(34,42): error TS2339: Property 'headers' does not exist on type 'Object'.
-examples/charset.ts(35,45): error TS2339: Property 'charsets' does not exist on type 'HTMLElement'.
-examples/charset.ts(36,44): error TS2339: Property 'charsets' does not exist on type 'HTMLElement'.
-examples/charset.ts(37,26): error TS2339: Property 'charset' does not exist on type 'HTMLElement'.
+examples/charset.ts(35,45): error TS2339: Property 'charsets' does not exist on type 'Object'.
+examples/charset.ts(36,44): error TS2339: Property 'charsets' does not exist on type 'Object'.
+examples/charset.ts(37,26): error TS2339: Property 'charset' does not exist on type 'Object'.
 examples/charset.ts(43,31): error TS2538: Type 'String' cannot be used as an index type.
 examples/charset.ts(50,10): error TS2339: Property 'listen' does not exist on type 'Object'.
 examples/encoding.ts(14,8): error TS2339: Property 'gzip' does not exist on type 'String'.
@@ -38,9 +38,9 @@ examples/encoding.ts(27,59): error TS2314: Generic type 'Array<T>' requires 1 ty
 examples/encoding.ts(29,24): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
 examples/encoding.ts(30,45): error TS2339: Property 'headers' does not exist on type 'Object'.
-examples/encoding.ts(31,47): error TS2339: Property 'encodings' does not exist on type 'HTMLElement'.
-examples/encoding.ts(32,46): error TS2339: Property 'encodings' does not exist on type 'HTMLElement'.
-examples/encoding.ts(33,29): error TS2339: Property 'encoding' does not exist on type 'HTMLElement'.
+examples/encoding.ts(31,47): error TS2339: Property 'encodings' does not exist on type 'Object'.
+examples/encoding.ts(32,46): error TS2339: Property 'encodings' does not exist on type 'Object'.
+examples/encoding.ts(33,29): error TS2339: Property 'encoding' does not exist on type 'Object'.
 examples/encoding.ts(39,33): error TS2538: Type 'String' cannot be used as an index type.
 examples/encoding.ts(45,19): error TS2339: Property 'listen' does not exist on type 'Object'.
 examples/language.ts(14,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -203,7 +203,6 @@ lib/mediaType.ts(35,9): error TS2322: Type 'Object' is not assignable to type 'S
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/mediaType.ts(54,50): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/mediaType.ts(59,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mediaType.ts(63,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mediaType.ts(63,49): error TS2339: Property 'map' does not exist on type 'Object'.
 lib/mediaType.ts(76,24): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.

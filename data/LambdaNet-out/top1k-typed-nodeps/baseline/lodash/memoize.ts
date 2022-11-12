@@ -44,7 +44,7 @@ function memoize(func: Function, resolver: Function): Hash {
   if (typeof func !== 'function' || (resolver != null && typeof resolver !== 'function')) {
     throw new TypeError('Expected a function')
   }
-  const memoized: Object = function(...args) {
+  const memoized: Function = function(...args) {
     const key: String = resolver ? resolver.apply(this, args) : args[0]
     const cache: ListCache = memoized.cache
 

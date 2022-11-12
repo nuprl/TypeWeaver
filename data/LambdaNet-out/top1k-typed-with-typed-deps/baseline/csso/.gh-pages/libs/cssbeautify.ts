@@ -109,7 +109,7 @@
         }
 
         if (String.prototype.trimRight) {
-            trimRight = function (s: TRBL) {
+            trimRight = function (s: Object) {
                 return s.trimRight();
             };
         } else {

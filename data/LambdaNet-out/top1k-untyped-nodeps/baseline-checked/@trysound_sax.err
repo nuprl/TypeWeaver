@@ -145,7 +145,8 @@ lib/sax.ts(181,39): error TS2367: This condition will always return 'false' sinc
 lib/sax.ts(181,53): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/sax.ts(185,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/sax.ts(185,25): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/sax.ts(189,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+lib/sax.ts(189,38): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lib/sax.ts(193,18): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
 lib/sax.ts(197,21): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'HTMLElement'.
   Type 'Function' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
@@ -245,7 +246,6 @@ lib/sax.ts(564,50): error TS2339: Property 'opt' does not exist on type 'String'
 lib/sax.ts(568,58): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(572,16): error TS2339: Property 'strict' does not exist on type '{}'.
 lib/sax.ts(573,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
-  Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lib/sax.ts(577,42): error TS2304: Cannot find name 'Void'.
 lib/sax.ts(578,17): error TS2339: Property 'strict' does not exist on type 'HTMLElement'.
 lib/sax.ts(578,32): error TS2540: Cannot assign to 'tagName' because it is a read-only property.
@@ -705,7 +705,6 @@ lib/sax.ts(1293,20): error TS2339: Property 'attribValue' does not exist on type
 lib/sax.ts(1294,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
 lib/sax.ts(1294,30): error TS2339: Property 'ATTRIB_NAME' does not exist on type 'String'.
 lib/sax.ts(1300,16): error TS2339: Property 'ATTRIB_VALUE_UNQUOTED' does not exist on type 'String'.
-lib/sax.ts(1301,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 lib/sax.ts(1303,22): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
 lib/sax.ts(1303,32): error TS2339: Property 'ATTRIB_VALUE_ENTITY_U' does not exist on type 'String'.
 lib/sax.ts(1305,22): error TS2339: Property 'attribValue' does not exist on type 'HTMLElement'.

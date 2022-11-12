@@ -9,9 +9,11 @@ index.ts(48,10): error TS2339: Property 'skipKeywords' does not exist on type 'F
 index.ts(70,208): error TS2304: Cannot find name 'Void'.
 index.ts(74,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(76,29): error TS2339: Property 'arrayKeywords' does not exist on type 'Function'.
-index.ts(78,48): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
+index.ts(78,91): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'string' is not assignable to type 'boolean'.
 index.ts(80,34): error TS2339: Property 'propsKeywords' does not exist on type 'Function'.
-index.ts(83,51): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
+index.ts(83,112): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Boolean'.
 index.ts(85,34): error TS2339: Property 'keywords' does not exist on type 'Function'.
 index.ts(85,52): error TS2339: Property 'allKeys' does not exist on type 'Object'.
 index.ts(85,81): error TS2339: Property 'skipKeywords' does not exist on type 'Function'.

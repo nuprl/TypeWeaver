@@ -2,7 +2,7 @@
 
 export default repeat;
 
-function repeat(ele: String, num: Number): Array {
+function repeat(ele: Function, num: Number): Array {
   if (num === 0) return [];
 
   var res: Array = [ele];

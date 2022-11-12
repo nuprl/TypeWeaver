@@ -6,7 +6,7 @@
 'use strict';
 
 const NFA: DFA = require('./nfa');
-const NFAState: State = require('./nfa-state');
+const NFAState: NFA = require('./nfa-state');
 
 const {EPSILON} = require('../special-symbols');
 
@@ -20,7 +20,7 @@ const {EPSILON} = require('../special-symbols');
  *
  * [in] --c--> [out]
  */
-function char(c: String): State {
+function char(c: String): NodePath {
   const inState: State = new NFAState();
   const outState: State = new NFAState({
     accepting: true,
@@ -39,7 +39,7 @@ function char(c: String): State {
  *
  * [in] --ε--> [out]
  */
-function e(): Void {
+function e(): String {
   return char(EPSILON);
 }
 
@@ -51,7 +51,7 @@ function e(): Void {
  *
  * [in-a] --a--> [out-a] --ε--> [in-b] --b--> [out-b]
  */
-function altPair(first: Writer, second: HTMLElement): State {
+function altPair(first: Writer, second: Writer): DFA {
   first.out.accepting = false;
   second.out.accepting = true;
 
@@ -65,7 +65,7 @@ function altPair(first: Writer, second: HTMLElement): State {
  *
  * Creates a alteration NFA for (at least) two NFA-fragments.
  */
-function alt(first: String, ...fragments): String {
+function alt(first: DFA, ...fragments): String {
   for (let fragment of fragments) {
     first = altPair(first, fragment);
   }
@@ -78,9 +78,9 @@ function alt(first: String, ...fragments): String {
 /**
  * Creates a disjunction choice between two fragments.
  */
-function orPair(first: Writer, second: HTMLElement): State {
+function orPair(first: Writer, second: Writer): DFA {
   const inState: State = new NFAState();
-  const outState: State = new NFAState();
+  const outState: NodePath = new NFAState();
 
   inState.addTransition(EPSILON, first.in);
   inState.addTransition(EPSILON, second.in);
@@ -100,7 +100,7 @@ function orPair(first: Writer, second: HTMLElement): State {
  *
  * Creates a disjunction NFA for (at least) two NFA-fragments.
  */
-function or(first: State, ...fragments): State {
+function or(first: DFA, ...fragments): DFA {
   for (let fragment of fragments) {
     first = orPair(first, fragment);
   }
@@ -115,7 +115,7 @@ function or(first: State, ...fragments): State {
  *
  * a*
  */
-function repExplicit(fragment: HTMLElement): State {
+function repExplicit(fragment: Writer): DFA {
   const inState: State = new NFAState();
   const outState: State = new NFAState({
     accepting: true,
@@ -136,7 +136,7 @@ function repExplicit(fragment: HTMLElement): State {
  * Optimized Kleene-star: just adds ε-transitions from
  * input to the output, and back.
  */
-function rep(fragment: DFA): DFA {
+function rep(fragment: Writer): DFA {
   fragment.in.addTransition(EPSILON, fragment.out);
   fragment.out.addTransition(EPSILON, fragment.in);
   return fragment;
@@ -146,7 +146,7 @@ function rep(fragment: DFA): DFA {
  * Optimized Plus: just adds ε-transitions from
  * the output to the input.
  */
-function plusRep(fragment: DFA): DFA {
+function plusRep(fragment: Writer): DFA {
   fragment.out.addTransition(EPSILON, fragment.in);
   return fragment;
 }
@@ -155,7 +155,7 @@ function plusRep(fragment: DFA): DFA {
  * Optimized ? repetition: just adds ε-transitions from
  * the input to the output.
  */
-function questionRep(fragment: Object): DFA {
+function questionRep(fragment: Writer): DFA {
   fragment.in.addTransition(EPSILON, fragment.out);
   return fragment;
 }

@@ -575,7 +575,7 @@ LongPrototype.getLowBitsUnsigned = function getLowBitsUnsigned(): Boolean {
  * @this {!Long}
  * @returns {number}
  */
-LongPrototype.getNumBitsAbs = function getNumBitsAbs(): Boolean {
+LongPrototype.getNumBitsAbs = function getNumBitsAbs(): Number {
   if (this.isNegative()) // Unsigned Longs are never negative
     return this.eq(MIN_VALUE) ? 64 : this.neg().getNumBitsAbs();
   var val: String = this.high != 0 ? this.high : this.low;
@@ -887,7 +887,7 @@ LongPrototype.sub = LongPrototype.subtract;
  * @param {!Long|number|string} multiplier Multiplier
  * @returns {!Long} Product
  */
-LongPrototype.multiply = function multiply(multiplier: HTMLElement): String {
+LongPrototype.multiply = function multiply(multiplier: HTMLElement): Array {
   if (this.isZero())
     return this;
   if (!isLong(multiplier))
@@ -1293,7 +1293,7 @@ LongPrototype.shr_u = LongPrototype.shiftRightUnsigned;
  * @param {number|!Long} numBits Number of bits
  * @returns {!Long} Rotated Long
  */
-LongPrototype.rotateLeft = function rotateLeft(numBits: Number): String {
+LongPrototype.rotateLeft = function rotateLeft(numBits: Number): Array {
   var b: Number;
   if (isLong(numBits)) numBits = numBits.toInt();
   if ((numBits &= 63) === 0) return this;
@@ -1357,7 +1357,7 @@ LongPrototype.toSigned = function toSigned(): Array {
  * @this {!Long}
  * @returns {!Long} Unsigned long
  */
-LongPrototype.toUnsigned = function toUnsigned(): Array {
+LongPrototype.toUnsigned = function toUnsigned(): String {
   if (this.unsigned)
     return this;
   return fromBits(this.low, this.high, true);

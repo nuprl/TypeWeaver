@@ -9,13 +9,13 @@ const SourceNode: String = require("./SourceNode");
 const CodeNode: String = require("./CodeNode");
 const SourceListMap: SourceListMap = require("./SourceListMap");
 
-module.exports = function fromStringWithSourceMap(code: String, map: Object): String {
+module.exports = function fromStringWithSourceMap(code: String, map: Object): SourceNode {
 	const sources: Object = map.sources;
 	const sourcesContent: Object = map.sourcesContent;
 	const mappings: Array = map.mappings.split(";");
 	const lines: Array = code.split("\n");
 	const nodes: Array = [];
-	let currentNode: SourceNode = null;
+	let currentNode: SingleLineNode = null;
 	let currentLine: Number = 1;
 	let currentSourceIdx: Number = 0;
 	let currentSourceNodeLine: Number;

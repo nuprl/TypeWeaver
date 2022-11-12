@@ -186,7 +186,8 @@ lib/CachedInputFileSystem.ts(380,8): error TS2339: Property '_lstatBackend' does
 lib/CachedInputFileSystem.ts(382,9): error TS2339: Property 'fileSystem' does not exist on type 'CachedInputFileSystem'.
 lib/CachedInputFileSystem.ts(383,9): error TS2339: Property 'fileSystem' does not exist on type 'CachedInputFileSystem'.
 lib/CachedInputFileSystem.ts(384,9): error TS2339: Property 'fileSystem' does not exist on type 'CachedInputFileSystem'.
-lib/CachedInputFileSystem.ts(386,32): error TS2339: Property '_lstatBackend' does not exist on type 'CachedInputFileSystem'.
+lib/CachedInputFileSystem.ts(386,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/CachedInputFileSystem.ts(386,29): error TS2339: Property '_lstatBackend' does not exist on type 'CachedInputFileSystem'.
 lib/CachedInputFileSystem.ts(387,8): error TS2339: Property 'lstat' does not exist on type 'CachedInputFileSystem'.
 lib/CachedInputFileSystem.ts(388,36): error TS2339: Property '_lstatBackend' does not exist on type 'CachedInputFileSystem'.
 lib/CachedInputFileSystem.ts(389,8): error TS2339: Property 'lstatSync' does not exist on type 'CachedInputFileSystem'.
@@ -268,8 +269,7 @@ lib/ConditionalPlugin.ts(34,17): error TS2339: Property 'message' does not exist
 lib/ConditionalPlugin.ts(34,26): error TS2339: Property 'allowAlternatives' does not exist on type 'ConditionalPlugin'.
 lib/ConditionalPlugin.ts(35,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ConditionalPlugin.ts(37,18): error TS2339: Property 'source' does not exist on type 'ConditionalPlugin'.
-lib/ConditionalPlugin.ts(49,15): error TS2304: Cannot find name 'CacheBackend'.
-lib/ConditionalPlugin.ts(49,37): error TS2304: Cannot find name 'CachedInputFileSystem'.
+lib/ConditionalPlugin.ts(49,31): error TS2304: Cannot find name 'CachedInputFileSystem'.
 lib/DescriptionFilePlugin.ts(8,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-with-typed-deps-es6/baseline/enhanced-resolve/lib/DescriptionFileUtils"' has no default export.
 lib/DescriptionFilePlugin.ts(21,8): error TS2339: Property 'source' does not exist on type 'DescriptionFilePlugin'.
 lib/DescriptionFilePlugin.ts(22,8): error TS2339: Property 'filenames' does not exist on type 'DescriptionFilePlugin'.
@@ -291,7 +291,6 @@ lib/DescriptionFilePlugin.ts(60,25): error TS2339: Property 'log' does not exist
 lib/DescriptionFilePlugin.ts(66,20): error TS2339: Property 'substr' does not exist on type 'Number'.
 lib/DescriptionFilePlugin.ts(83,33): error TS2304: Cannot find name 'CachedInputFileSystem'.
 lib/DescriptionFileUtils.ts(35,12): error TS2304: Cannot find name 'Resolver'.
-lib/DescriptionFileUtils.ts(37,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/DescriptionFileUtils.ts(41,4): error TS2304: Cannot find name 'Void'.
 lib/DescriptionFileUtils.ts(42,35): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/DescriptionFileUtils.ts(43,26): error TS2339: Property 'directory' does not exist on type 'Object'.
@@ -391,8 +390,7 @@ lib/ExtensionAliasPlugin.ts(33,37): error TS2339: Property 'options' does not ex
 lib/ExtensionAliasPlugin.ts(35,18): error TS2339: Property 'source' does not exist on type 'ExtensionAliasPlugin'.
 lib/ExtensionAliasPlugin.ts(37,41): error TS2339: Property 'request' does not exist on type 'Object'.
 lib/ExtensionAliasPlugin.ts(39,57): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ExtensionAliasPlugin.ts(53,46): error TS2304: Cannot find name 'CacheBackend'.
-lib/ExtensionAliasPlugin.ts(53,68): error TS2304: Cannot find name 'ResultPlugin'.
+lib/ExtensionAliasPlugin.ts(53,62): error TS2304: Cannot find name 'ResultPlugin'.
 lib/FileExistsPlugin.ts(17,8): error TS2339: Property 'source' does not exist on type 'FileExistsPlugin'.
 lib/FileExistsPlugin.ts(18,8): error TS2339: Property 'target' does not exist on type 'FileExistsPlugin'.
 lib/FileExistsPlugin.ts(26,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -525,7 +523,6 @@ lib/ModulesInHierarchicalDirectoriesPlugin.ts(33,18): error TS2339: Property 'so
 lib/ModulesInHierarchicalDirectoriesPlugin.ts(38,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ModulesInHierarchicalDirectoriesPlugin.ts(38,44): error TS2339: Property 'path' does not exist on type 'Object'.
 lib/ModulesInHierarchicalDirectoriesPlugin.ts(39,8): error TS2339: Property 'paths' does not exist on type 'Object'.
-lib/ModulesInHierarchicalDirectoriesPlugin.ts(39,22): error TS2304: Cannot find name 'CacheBackend'.
 lib/ModulesInHierarchicalDirectoriesPlugin.ts(40,20): error TS2339: Property 'directories' does not exist on type 'ModulesInHierarchicalDirectoriesPlugin'.
 lib/ModulesInHierarchicalDirectoriesPlugin.ts(42,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ModulesInHierarchicalDirectoriesPlugin.ts(49,11): error TS2339: Property 'stat' does not exist on type 'Function'.
@@ -626,9 +623,9 @@ lib/Resolver.ts(305,24): error TS2554: Expected 2 arguments, but got 1.
 lib/Resolver.ts(306,9): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
 lib/Resolver.ts(313,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Resolver.ts(315,10): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
-lib/Resolver.ts(329,29): error TS2304: Cannot find name 'CachedInputFileSystem'.
+lib/Resolver.ts(329,29): error TS2304: Cannot find name 'ResultPlugin'.
 lib/Resolver.ts(342,10): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
-lib/Resolver.ts(353,29): error TS2304: Cannot find name 'CachedInputFileSystem'.
+lib/Resolver.ts(353,29): error TS2304: Cannot find name 'ResultPlugin'.
 lib/Resolver.ts(364,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Resolver.ts(367,12): error TS2339: Property 'hooks' does not exist on type 'Resolver'.
 lib/Resolver.ts(375,31): error TS2304: Cannot find name 'CachedInputFileSystem'.
@@ -767,13 +764,17 @@ lib/RestrictionsPlugin.ts(14,51): error TS2314: Generic type 'Array<T>' requires
 lib/RestrictionsPlugin.ts(27,8): error TS2339: Property 'source' does not exist on type 'RestrictionsPlugin'.
 lib/RestrictionsPlugin.ts(28,8): error TS2339: Property 'restrictions' does not exist on type 'RestrictionsPlugin'.
 lib/RestrictionsPlugin.ts(37,18): error TS2339: Property 'source' does not exist on type 'RestrictionsPlugin'.
-lib/RestrictionsPlugin.ts(38,70): error TS2304: Cannot find name 'CacheBackend'.
 lib/RestrictionsPlugin.ts(39,24): error TS2339: Property 'path' does not exist on type 'Object'.
 lib/RestrictionsPlugin.ts(40,35): error TS2339: Property 'path' does not exist on type 'Object'.
 lib/RestrictionsPlugin.ts(41,30): error TS2339: Property 'restrictions' does not exist on type 'RestrictionsPlugin'.
+lib/RestrictionsPlugin.ts(44,28): error TS2339: Property 'log' does not exist on type 'Object'.
+lib/RestrictionsPlugin.ts(45,25): error TS2339: Property 'log' does not exist on type 'Object'.
+lib/RestrictionsPlugin.ts(52,27): error TS2339: Property 'log' does not exist on type 'Object'.
+lib/RestrictionsPlugin.ts(53,24): error TS2339: Property 'log' does not exist on type 'Object'.
 lib/ResultPlugin.ts(16,8): error TS2339: Property 'source' does not exist on type 'ResultPlugin'.
 lib/ResultPlugin.ts(24,8): error TS2339: Property 'source' does not exist on type 'ResultPlugin'.
-lib/ResultPlugin.ts(26,45): error TS2304: Cannot find name 'Resolver'.
+lib/ResultPlugin.ts(26,14): error TS2304: Cannot find name 'AliasPlugin'.
+lib/ResultPlugin.ts(26,44): error TS2304: Cannot find name 'Resolver'.
 lib/ResultPlugin.ts(29,52): error TS2339: Property 'path' does not exist on type 'Object'.
 lib/RootsPlugin.ts(20,8): error TS2339: Property 'roots' does not exist on type 'RootsPlugin'.
 lib/RootsPlugin.ts(21,8): error TS2339: Property 'source' does not exist on type 'RootsPlugin'.
@@ -815,11 +816,10 @@ lib/SymlinkPlugin.ts(45,7): error TS2356: An arithmetic operand must be of type 
 lib/SymlinkPlugin.ts(46,26): error TS2339: Property 'fileDependencies' does not exist on type 'Object'.
 lib/SymlinkPlugin.ts(47,23): error TS2339: Property 'fileDependencies' does not exist on type 'Object'.
 lib/SymlinkPlugin.ts(48,10): error TS2339: Property 'readlink' does not exist on type 'Function'.
-lib/SymlinkPlugin.ts(64,12): error TS2304: Cannot find name 'CacheBackend'.
 lib/SymlinkPlugin.ts(66,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/SyncAsyncFileSystemDecorator.ts(15,52): error TS2304: Cannot find name 'Void'.
 lib/SyncAsyncFileSystemDecorator.ts(20,33): error TS2339: Property 'lstatSync' does not exist on type 'String'.
-lib/SyncAsyncFileSystemDecorator.ts(23,16): error TS2304: Cannot find name 'CachedInputFileSystem'.
+lib/SyncAsyncFileSystemDecorator.ts(23,16): error TS2304: Cannot find name 'ResultPlugin'.
 lib/SyncAsyncFileSystemDecorator.ts(27,12): error TS2349: This expression is not callable.
   No constituent of type 'Object | Number' is callable.
 lib/SyncAsyncFileSystemDecorator.ts(29,4): error TS2349: This expression is not callable.
@@ -882,7 +882,7 @@ lib/UnsafeCachePlugin.ts(56,36): error TS2339: Property 'cache' does not exist o
 lib/UnsafeCachePlugin.ts(59,72): error TS2339: Property 'yield' does not exist on type 'Object'.
 lib/UnsafeCachePlugin.ts(72,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/UnsafeCachePlugin.ts(74,31): error TS2339: Property 'yield' does not exist on type 'Object'.
-lib/UnsafeCachePlugin.ts(75,24): error TS2304: Cannot find name 'CachedInputFileSystem'.
+lib/UnsafeCachePlugin.ts(75,24): error TS2304: Cannot find name 'ResultPlugin'.
 lib/UnsafeCachePlugin.ts(85,30): error TS2304: Cannot find name 'ResultPlugin'.
 lib/UnsafeCachePlugin.ts(90,13): error TS2339: Property 'cache' does not exist on type 'UnsafeCachePlugin'.
 lib/UnsafeCachePlugin.ts(93,47): error TS2339: Property 'cache' does not exist on type 'UnsafeCachePlugin'.
@@ -934,8 +934,8 @@ lib/getInnerRequest.ts(26,18): error TS2339: Property '__innerRequest' does not 
 lib/getPaths.ts(10,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/getPaths.ts(11,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/getPaths.ts(12,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/getPaths.ts(30,24): error TS2304: Cannot find name 'CloneBasenamePlugin'.
-lib/getPaths.ts(30,79): error TS2304: Cannot find name 'Resolver'.
+lib/getPaths.ts(30,24): error TS2304: Cannot find name 'AppendPlugin'.
+lib/getPaths.ts(30,72): error TS2304: Cannot find name 'Resolver'.
 lib/getPaths.ts(35,11): error TS2304: Cannot find name 'Resolver'.
 lib/getPaths.ts(35,34): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/index.ts(10,8): error TS1192: Module '"lib/ResolverFactory"' has no default export.
@@ -958,15 +958,11 @@ lib/index.ts(72,4): error TS2696: The 'Object' type is assignable to very few ot
   Type 'Object' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lib/index.ts(75,4): error TS2322: Type 'String' is not assignable to type 'Function'.
 lib/index.ts(87,18): error TS2304: Cannot find name 'Resolver'.
-lib/index.ts(88,59): error TS2304: Cannot find name 'ResultPlugin'.
+lib/index.ts(90,4): error TS2741: Property 'purge' is missing in type 'String' but required in type 'CachedInputFileSystem'.
 lib/index.ts(92,4): error TS2322: Type 'Object' is not assignable to type 'Number'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/index.ts(105,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/index.ts(107,31): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'PropertyDescriptorMap & ThisType<any>'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is not assignable to type 'PropertyDescriptorMap'.
-      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-        Index signature for type 'string' is missing in type 'Object'.
+lib/index.ts(106,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/util/entrypoints.ts(91,14): error TS2322: Type '(exportsField: String) => Resolver' is not assignable to type 'String'.
 lib/util/entrypoints.ts(93,4): error TS2304: Cannot find name 'Resolver'.
 lib/util/entrypoints.ts(97,3): error TS2345: Argument of type '(exp: String, expectFolder: Boolean) => Void' is not assignable to parameter of type 'Number'.
@@ -977,7 +973,6 @@ lib/util/entrypoints.ts(122,42): error TS2314: Generic type 'Array<T>' requires 
 lib/util/entrypoints.ts(122,75): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/util/entrypoints.ts(125,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/util/entrypoints.ts(154,4): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/util/entrypoints.ts(167,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/util/entrypoints.ts(186,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/util/entrypoints.ts(207,66): error TS2304: Cannot find name 'Void'.
@@ -1001,26 +996,26 @@ lib/util/entrypoints.ts(324,38): error TS2339: Property 'children' does not exis
 lib/util/entrypoints.ts(331,23): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/util/entrypoints.ts(332,37): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/util/entrypoints.ts(335,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/util/entrypoints.ts(336,41): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/util/entrypoints.ts(338,29): error TS2339: Property 'files' does not exist on type 'Object'.
 lib/util/entrypoints.ts(346,29): error TS2339: Property 'wildcards' does not exist on type 'Object'.
 lib/util/entrypoints.ts(372,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/util/entrypoints.ts(375,4): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/util/entrypoints.ts(380,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Boolean'.
+lib/util/entrypoints.ts(380,36): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Boolean'.
   The types returned by 'valueOf()' are incompatible between these types.
-    Type 'string' is not assignable to type 'boolean'.
+    Type 'Object' is not assignable to type 'boolean'.
 lib/util/entrypoints.ts(384,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/util/entrypoints.ts(389,37): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Boolean'.
+lib/util/entrypoints.ts(389,37): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Boolean'.
 lib/util/entrypoints.ts(394,18): error TS2304: Cannot find name 'Resolver'.
 lib/util/entrypoints.ts(430,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 lib/util/entrypoints.ts(441,76): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-lib/util/entrypoints.ts(441,82): error TS2304: Cannot find name 'CacheBackend'.
 lib/util/entrypoints.ts(443,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/util/entrypoints.ts(460,30): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
   Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+lib/util/entrypoints.ts(467,5): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/util/entrypoints.ts(473,30): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
+lib/util/entrypoints.ts(480,5): error TS2322: Type 'Function' is not assignable to type 'String'.
 lib/util/entrypoints.ts(510,55): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/util/entrypoints.ts(510,63): error TS2304: Cannot find name 'Void'.
 lib/util/entrypoints.ts(512,8): error TS2339: Property 'folder' does not exist on type 'Object'.
@@ -1048,8 +1043,11 @@ lib/util/entrypoints.ts(554,9): error TS2339: Property 'wildcards' does not exis
 lib/util/entrypoints.ts(556,9): error TS2339: Property 'files' does not exist on type 'Error'.
 lib/util/entrypoints.ts(565,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/util/entrypoints.ts(565,51): error TS2304: Cannot find name 'CacheBackend'.
-lib/util/entrypoints.ts(566,14): error TS2304: Cannot find name 'CacheBackend'.
+lib/util/entrypoints.ts(570,8): error TS2339: Property 'files' does not exist on type 'Object'.
+lib/util/entrypoints.ts(574,8): error TS2339: Property 'files' does not exist on type 'Object'.
 lib/util/entrypoints.ts(579,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/util/entrypoints.ts(599,10): error TS2339: Property 'files' does not exist on type 'Object'.
+lib/util/entrypoints.ts(611,9): error TS2339: Property 'files' does not exist on type 'Object'.
 lib/util/entrypoints.ts(633,52): error TS2304: Cannot find name 'Resolver'.
 lib/util/entrypoints.ts(634,14): error TS2304: Cannot find name 'Resolver'.
 lib/util/entrypoints.ts(636,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -1137,8 +1135,9 @@ tooling/format-file-header.ts(27,8): error TS2339: Property 'key' does not exist
 tooling/format-file-header.ts(27,16): error TS2339: Property 'key' does not exist on type 'Object'.
 tooling/format-file-header.ts(28,8): error TS2339: Property 'key' does not exist on type 'Object'.
 tooling/format-file-header.ts(28,16): error TS2339: Property 'key' does not exist on type 'Object'.
-tooling/format-file-header.ts(32,57): error TS2304: Cannot find name 'CacheBackend'.
 tooling/format-file-header.ts(33,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+tooling/format-file-header.ts(34,29): error TS2339: Property 'exec' does not exist on type 'HTMLElement'.
+tooling/format-file-header.ts(40,18): error TS2339: Property 'exec' does not exist on type 'HTMLElement'.
 tooling/format-file-header.ts(45,15): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 tooling/format-file-header.ts(115,24): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
 tooling/format-file-header.ts(117,12): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).

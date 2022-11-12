@@ -12,7 +12,7 @@ const splitIntoLines: Function = require("./splitIntoLines");
 
 const streamChunksOfSourceMapFull: Function = (
 	source: String,
-	sourceMap: SourceMapSource,
+	sourceMap: CachedSource,
 	onChunk: Object,
 	onSource: Function,
 	onName: Function
@@ -250,7 +250,7 @@ const streamChunksOfSourceMapLinesFull: Function = (
 
 const streamChunksOfSourceMapFinal: Function = (
 	source: String,
-	sourceMap: SourceMapSource,
+	sourceMap: CachedSource,
 	onChunk: Function,
 	onSource: Function,
 	onName: Function
@@ -280,7 +280,7 @@ const streamChunksOfSourceMapFinal: Function = (
 		generatedColumn: Number,
 		sourceIndex: Number,
 		originalLine: OriginalSource,
-		originalColumn: String,
+		originalColumn: OriginalSource,
 		nameIndex: String
 	) => {
 		if (
@@ -373,7 +373,7 @@ module.exports = (
 	onChunk: String,
 	onSource: String,
 	onName: String,
-	finalSource: Source,
+	finalSource: CachedSource,
 	columns: Boolean
 ) => {
 	if (columns) {

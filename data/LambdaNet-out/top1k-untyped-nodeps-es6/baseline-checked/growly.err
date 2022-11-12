@@ -1,5 +1,5 @@
 example/bakery.ts(3,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/gntp.ts(15,44): error TS2304: Cannot find name 'Void'.
+lib/gntp.ts(15,44): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
 lib/gntp.ts(18,22): error TS2339: Property 'host' does not exist on type 'Object'.
 lib/gntp.ts(19,22): error TS2339: Property 'port' does not exist on type 'Object'.
 lib/gntp.ts(47,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -53,8 +53,9 @@ lib/gntp.ts(195,98): error TS2339: Property 'port' does not exist on type 'HTMLE
 lib/gntp.ts(196,16): error TS2339: Property 'destroy' does not exist on type 'HTMLInputElement'.
 lib/growly.ts(9,20): error TS2304: Cannot find name 'Void'.
 lib/growly.ts(30,22): error TS2339: Property 'label' does not exist on type 'Object'.
-lib/growly.ts(75,66): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/growly.ts(75,88): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/growly.ts(75,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/growly.ts(75,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/growly.ts(75,85): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/growly.ts(98,12): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/growly.ts(99,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 lib/growly.ts(100,10): error TS2339: Property 'add' does not exist on type 'HTMLElement'.

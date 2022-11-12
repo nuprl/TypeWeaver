@@ -13,7 +13,7 @@ if (!$Map) {
 	};
 }
 
-var $mapHas: Function = $Map ? Map.prototype.has : null;
+var $mapHas: String = $Map ? Map.prototype.has : null;
 var $setHas: String = $Set ? Set.prototype.has : null;
 if (!exported && !$mapHas) {
 	// eslint-disable-next-line no-unused-vars

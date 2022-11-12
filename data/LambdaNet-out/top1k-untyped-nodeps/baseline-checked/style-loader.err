@@ -1,5 +1,4 @@
-babel.config.ts(4,7): error TS2339: Property 'assertVersion' does not exist on type 'Object'.
-babel.config.ts(5,7): error TS2339: Property 'cache' does not exist on type 'Object'.
+babel.config.ts(3,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/cjs.ts(1,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/index.ts(23,20): error TS2732: Cannot find module './options.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 src/index.ts(27,11): error TS2339: Property 'pitch' does not exist on type 'Function'.
@@ -257,6 +256,7 @@ src/utils.ts(341,22): error TS2339: Property 'styleTagTransform' does not exist 
 src/utils.ts(342,46): error TS2339: Property 'styleTagTransform' does not exist on type 'Object'.
 src/utils.ts(347,47): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'HTMLElement'.
 src/utils.ts(356,47): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'HTMLElement'.
+src/utils.ts(364,91): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/utils.ts(367,22): error TS2339: Property 'attributes' does not exist on type 'Object'.
 src/utils.ts(369,15): error TS2339: Property 'attributes' does not exist on type 'Object'.
 src/utils.ts(371,13): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.

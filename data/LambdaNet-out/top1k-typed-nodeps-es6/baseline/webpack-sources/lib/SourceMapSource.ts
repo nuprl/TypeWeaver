@@ -27,7 +27,7 @@ class SourceMapSource extends Source {
 
 		this._hasSourceMap = !!sourceMap;
 		const sourceMapIsBuffer: String = Buffer.isBuffer(sourceMap);
-		const sourceMapIsString: Number = typeof sourceMap === "string";
+		const sourceMapIsString: Boolean = typeof sourceMap === "string";
 		this._sourceMapAsObject =
 			sourceMapIsBuffer || sourceMapIsString ? undefined : sourceMap;
 		this._sourceMapAsString = sourceMapIsString ? sourceMap : undefined;

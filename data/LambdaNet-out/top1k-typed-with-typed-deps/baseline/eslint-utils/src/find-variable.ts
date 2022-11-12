@@ -6,7 +6,7 @@ import { getInnermostScope } from "./get-innermost-scope"
  * @param {string|Node} nameOrNode The variable name to find. If this is a Node object then it should be an Identifier node.
  * @returns {Variable|null} The found variable or null.
  */
-export function findVariable(initialScope: Function, nameOrNode: String): PatternMatcher {
+export function findVariable(initialScope: Function, nameOrNode: String): Array {
     let name: String = ""
     let scope: Object = initialScope
 
@@ -18,7 +18,7 @@ export function findVariable(initialScope: Function, nameOrNode: String): Patter
     }
 
     while (scope != null) {
-        const variable: PatternMatcher = scope.set.get(name)
+        const variable: String = scope.set.get(name)
         if (variable != null) {
             return variable
         }

@@ -46,7 +46,7 @@ function cleanResults(done: Function): Void {
     });
 }
 
-function instrument(): String {
+function instrument(): Array {
     return gulp.src(paths.libJsFiles)
         .pipe(istanbul())
         .pipe(istanbul.hookRequire());

@@ -89,7 +89,7 @@ class Hook {
 	_runRegisterInterceptors(options) {
 		for (const interceptor of this.interceptors) {
 			if (interceptor.register) {
-				const newOptions: Array = interceptor.register(options);
+				const newOptions: String = interceptor.register(options);
 				if (newOptions !== undefined) {
 					options = newOptions;
 				}

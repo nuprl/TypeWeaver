@@ -3,7 +3,7 @@
 const TREE: Array = Symbol();
 const ROOT: String = Symbol();
 const NEXT: String = Symbol();
-const ITERATE_FUNC: Number = Symbol();
+const ITERATE_FUNC: String = Symbol();
 
 class TreeIterator {
         constructor(tree, root, firstResult, iterateFunction) {

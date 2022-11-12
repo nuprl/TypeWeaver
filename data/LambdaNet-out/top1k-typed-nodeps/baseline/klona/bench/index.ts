@@ -20,7 +20,7 @@ const clonedeep: String = require('clone-deep');
 console.timeEnd('clone-deep');
 
 console.time('deep-copy');
-const deepcopy: Number = require('deep-copy');
+const deepcopy: String = require('deep-copy');
 console.timeEnd('deep-copy');
 
 console.time('klona/full');
@@ -63,7 +63,7 @@ function runner(name: String, contenders: Object): Void {
 
 	const INPUT: String = require(fixture);
 	console.log('\nBenchmark :: %s', name);
-	const bench: Array = new Suite().on('cycle', (e: HTMLElement) => {
+	const bench: Array = new Suite().on('cycle', (e: Test) => {
 		console.log('  ' + e.target);
 	});
 

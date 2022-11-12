@@ -9,6 +9,7 @@ src/main.ts(36,40): error TS2769: No overload matches this call.
     Type 'String' is not assignable to type 'number'.
   Overload 2 of 4, '(arrayLike: ArrayLike<Number>, mapfn: (v: Number, k: number) => any, thisArg?: any): any[]', gave the following error.
     Type 'String' is not assignable to type 'number'.
+src/main.ts(42,72): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 src/main.ts(49,11): error TS2339: Property 'name' does not exist on type 'Object'.
 src/main.ts(49,17): error TS2339: Property 'description' does not exist on type 'Object'.
 src/main.ts(49,30): error TS2339: Property 'supported' does not exist on type 'Object'.

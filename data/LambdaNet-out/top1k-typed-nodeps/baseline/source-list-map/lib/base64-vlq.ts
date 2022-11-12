@@ -51,7 +51,7 @@ var base64: Object = {};
 /**
  * Encode an integer in the range of 0 to 63 to a single base 64 digit.
  */
-base64.encode = function base64_encode(aNumber: Number): Object {
+base64.encode = function base64_encode(aNumber: Number): SingleLineNode {
   if (aNumber in intToCharMap) {
     return intToCharMap[aNumber];
   }
@@ -61,7 +61,7 @@ base64.encode = function base64_encode(aNumber: Number): Object {
 /**
  * Decode a single base 64 digit to an integer.
  */
-base64.decode = function base64_decode(aChar: Number): Object {
+base64.decode = function base64_decode(aChar: Number): CodeNode {
   if (aChar in charToIntMap) {
     return charToIntMap[aChar];
   }

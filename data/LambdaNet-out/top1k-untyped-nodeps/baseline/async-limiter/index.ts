@@ -40,7 +40,7 @@ function run(): Void {
 // Replicate popular array methods to queue up jobs.
 ['push', 'splice', 'unshift'].forEach(function(method: String) {
   Queue.prototype[method] = function() {
-    var methodResult: Object = Array.prototype[method].apply(this.jobs, arguments);
+    var methodResult: Array = Array.prototype[method].apply(this.jobs, arguments);
     process.nextTick(this._run);
     return methodResult;
   };

@@ -15,7 +15,7 @@
  *  http://javascript.nwbox.com/nwsapi/nwsapi.js
  */
 
-(function Export(global: HTMLElement, factory: Function): Void {
+(function Export(global: Object, factory: Function): Void {
 
   'use strict';
 
@@ -32,7 +32,7 @@
 
   var version: String = 'nwsapi-2.2.2',
 
-  doc: String = global.document,
+  doc: Function = global.document,
   root: String = doc.documentElement,
   slice: Function = Array.prototype.slice,
 
@@ -139,7 +139,7 @@
   },
 
   NAMESPACE: String,
-  QUIRKS_MODE: Function,
+  QUIRKS_MODE: Number,
   HTML_DOCUMENT: Element,
 
   ATTR_STD_OPS: Object = {

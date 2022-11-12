@@ -19,6 +19,6 @@ import createRound from './.internal/createRound.js'
  * floor(4060, -2)
  * // => 4000
  */
-const floor: Object = createRound('floor')
+const floor: Stack = createRound('floor')
 
 export default floor

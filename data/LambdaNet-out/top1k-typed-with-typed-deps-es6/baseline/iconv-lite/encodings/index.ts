@@ -19,5 +19,5 @@ for (var i = 0; i < modules.length; i++) {
     var module: Array = modules[i];
     for (var enc in module)
         if (Object.prototype.hasOwnProperty.call(module, enc))
-            export const enc: Number = module[enc];
+            export const enc: Boolean = module[enc];
 }

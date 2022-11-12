@@ -669,7 +669,7 @@ class Minimatch {
       tail = re.slice(pl.reStart + pl.open.length)
       this.debug('setting tail', re, pl)
       // maybe some even number of \, then maybe 1 \, followed by a |
-      tail = tail.replace(/((?:\\{2}){0,64})(\\?)\|/g, (_: String, $1: Number, $2: String) => {
+      tail = tail.replace(/((?:\\{2}){0,64})(\\?)\|/g, (_: Minimatch, $1: Number, $2: String) => {
         /* istanbul ignore else - should already be done */
         if (!$2) {
           // the | isn't already escaped, so escape it.

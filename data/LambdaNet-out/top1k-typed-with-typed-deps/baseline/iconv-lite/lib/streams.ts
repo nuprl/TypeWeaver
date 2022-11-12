@@ -9,7 +9,7 @@ module.exports = function(stream_module: Object) {
 
     // == Encoder stream =======================================================
 
-    function IconvLiteEncoderStream(conv: Function, options: Object): Void {
+    function IconvLiteEncoderStream(conv: Object, options: Object): Void {
         this.conv = conv;
         options = options || {};
         options.decodeStrings = false; // We accept only strings, so we don't need to decode them.

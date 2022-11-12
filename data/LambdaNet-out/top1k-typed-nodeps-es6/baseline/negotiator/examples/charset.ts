@@ -29,7 +29,7 @@
   })();
 
   server = http.createServer(function(req: Object, res: Array) {
-    var charset: String, negotiator: HTMLElement;
+    var charset: String, negotiator: Object;
     negotiator = new Negotiator(req);
     console.log("Accept-Charset: " + req.headers['accept-charset']);
     console.log("Preferred: " + (negotiator.charsets()));

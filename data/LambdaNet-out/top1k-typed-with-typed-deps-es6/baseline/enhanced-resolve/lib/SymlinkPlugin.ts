@@ -61,7 +61,7 @@ export default class SymlinkPlugin {
 							callback();
 						});
 					},
-					(err: CacheBackend, idx: String) => {
+					(err: Function, idx: String) => {
 						if (!containsSymlink) return callback();
 						const resultSegments: Array =
 							typeof idx === "number"

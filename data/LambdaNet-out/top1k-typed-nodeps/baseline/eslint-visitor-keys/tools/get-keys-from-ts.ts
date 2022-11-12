@@ -89,7 +89,7 @@ function isPropertyExcluded(property: String, excludedProperties: String): Boole
  * @param {KeysStrict} initialNodes Initial node list to sort
  * @returns {KeysStrict} The keys
  */
-function alphabetizeKeyInterfaces(initialNodes: Array): Promise {
+function alphabetizeKeyInterfaces(initialNodes: Array): Object {
 
     /**
      * Alphabetize

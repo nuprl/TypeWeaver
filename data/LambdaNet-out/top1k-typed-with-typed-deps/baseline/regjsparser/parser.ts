@@ -1014,7 +1014,7 @@
       }
     }
 
-    function parseRegExpUnicodeEscapeSequence(): String {
+    function parseRegExpUnicodeEscapeSequence(): Boolean {
       var res: Object;
       if (res = matchReg(/^u([0-9a-fA-F]{4})/)) {
         // UnicodeEscapeSequence
@@ -1469,7 +1469,7 @@
       return start;
     }
 
-    function parseClassCharacter(): Array {
+    function parseClassCharacter(): String {
       // ClassCharacter ::
       //      [lookahead ∉ ClassReservedDouble] SourceCharacter but not ClassSyntaxCharacter
       //      \ CharacterEscape[+U]
@@ -1477,7 +1477,7 @@
       //      \ b
 
       if (match('\\')) {
-        var res: Object, from: Number = pos;
+        var res: Function, from: Number = pos;
         if (res = parseClassCharacterEscapedHelper()) {
           return res;
         } else {

@@ -32,9 +32,9 @@ lib/index.ts(107,20): error TS2339: Property 'code' does not exist on type 'Obje
 lib/index.ts(107,45): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/index.ts(113,7): error TS2740: Type 'ReadStream' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/index.ts(113,45): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
-lib/index.ts(114,33): error TS2345: Argument of type '(err3: Function, wttyfd: String) => void' is not assignable to parameter of type '(err: ErrnoException, fd: number) => void'.
+lib/index.ts(114,33): error TS2345: Argument of type '(err3: Function, wttyfd: any) => void' is not assignable to parameter of type '(err: ErrnoException, fd: number) => void'.
   Types of parameters 'err3' and 'err' are incompatible.
     Type 'ErrnoException' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
+lib/index.ts(114,67): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/index.ts(115,8): error TS2740: Type 'WriteStream' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-lib/index.ts(115,47): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
 

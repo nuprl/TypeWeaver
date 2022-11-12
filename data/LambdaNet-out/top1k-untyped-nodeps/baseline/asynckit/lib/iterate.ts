@@ -58,7 +58,7 @@ function iterate(list: Object, iterator: String, state: Object, callback: Functi
  */
 function runJob(iterator: Function, key: String, item: String, callback: String): Object
 {
-  var aborter: Boolean;
+  var aborter: Array;
 
   // allow shortcut if iterator expects only two arguments
   if (iterator.length == 2)

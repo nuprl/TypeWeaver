@@ -1,6 +1,6 @@
 import {diffLines} from '../diff/line';
 
-export function structuredPatch(oldFileName: String, newFileName: String, oldStr: Array, newStr: String, oldHeader: String, newHeader: String, options: Object): Object {
+export function structuredPatch(oldFileName: String, newFileName: String, oldStr: String, newStr: String, oldHeader: String, newHeader: String, options: Object): Object {
   if (!options) {
     options = {};
   }

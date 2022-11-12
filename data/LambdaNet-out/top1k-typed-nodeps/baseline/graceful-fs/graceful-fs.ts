@@ -68,7 +68,7 @@ if (!fs[gracefulQueue]) {
     return close
   })(fs.close)
 
-  fs.closeSync = (function (fs$closeSync: Function) {
+  fs.closeSync = (function (fs$closeSync: Array) {
     function closeSync (fd: Function): Void {
       // This function uses the graceful-fs shared queue
       fs$closeSync.apply(fs, arguments)

@@ -135,7 +135,7 @@ function file(options: Object, callback: Function): Void {
     if (err) return cb(err);
 
     // create and open the file
-    fs.open(name, CREATE_FLAGS, opts.mode || FILE_MODE, function _fileCreated(err: Function, fd: Number): String {
+    fs.open(name, CREATE_FLAGS, opts.mode || FILE_MODE, function _fileCreated(err: Function, fd: Number): Number {
       /* istanbu ignore else */
       if (err) return cb(err);
 
@@ -625,7 +625,7 @@ function _isENOENT(error: Object): Boolean {
  * @param {string} code
  * @private
  */
-function _isExpectedError(error: Object, errno: Array, code: String): Boolean {
+function _isExpectedError(error: Object, errno: Number, code: String): Boolean {
   return IS_WIN32 ? error.code === code : error.code === code && error.errno === errno;
 }
 

@@ -44,7 +44,7 @@ function Color(object: Function, model: String): String {
 		this.color = [...object.color];
 		this.valpha = object.valpha;
 	} else if (typeof object === 'string') {
-		const result: HTMLElement = colorString.get(object);
+		const result: Object = colorString.get(object);
 		if (result === null) {
 			throw new Error('Unable to parse color from string: ' + object);
 		}
@@ -483,7 +483,7 @@ function assertArray(value: String): Array {
 	return Array.isArray(value) ? value : [value];
 }
 
-function zeroArray(array: Object, length: String): Object {
+function zeroArray(array: Object, length: Number): Object {
 	for (let i = 0; i < length; i++) {
 		if (typeof array[i] !== 'number') {
 			array[i] = 0;

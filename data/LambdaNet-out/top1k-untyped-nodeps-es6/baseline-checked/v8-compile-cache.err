@@ -90,10 +90,10 @@ v8-compile-cache.ts(192,40): error TS2339: Property 'exports' does not exist on 
 v8-compile-cache.ts(197,22): error TS2339: Property '_compile' does not exist on type 'Module'.
 v8-compile-cache.ts(197,38): error TS2339: Property '_previousModuleCompile' does not exist on type 'NativeCompileCache'.
 v8-compile-cache.ts(214,33): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+v8-compile-cache.ts(231,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 v8-compile-cache.ts(238,44): error TS2551: Property '_cacheStore' does not exist on type 'NativeCompileCache'. Did you mean 'setCacheStore'?
 v8-compile-cache.ts(240,9): error TS2740: Type 'Script' is missing the following properties from type 'FileSystemBlobStore': has, get, set, delete, and 4 more.
-v8-compile-cache.ts(240,53): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+v8-compile-cache.ts(244,7): error TS2740: Type 'FileSystemBlobStore' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 96 more.
 v8-compile-cache.ts(248,16): error TS2339: Property 'cachedDataProduced' does not exist on type 'FileSystemBlobStore'.
 v8-compile-cache.ts(249,12): error TS2551: Property '_cacheStore' does not exist on type 'NativeCompileCache'. Did you mean 'setCacheStore'?
 v8-compile-cache.ts(249,62): error TS2339: Property 'cachedData' does not exist on type 'FileSystemBlobStore'.

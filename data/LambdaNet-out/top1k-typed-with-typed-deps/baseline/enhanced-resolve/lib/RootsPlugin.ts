@@ -32,7 +32,7 @@ class RootsPlugin {
 		resolver
 			.getHook(this.source)
 			.tapAsync("RootsPlugin", (request: Request, resolveContext: Function, callback: Function) => {
-				const req: Array = request.request;
+				const req: String = request.request;
 				if (!req) return callback();
 				if (!req.startsWith("/")) return callback();
 

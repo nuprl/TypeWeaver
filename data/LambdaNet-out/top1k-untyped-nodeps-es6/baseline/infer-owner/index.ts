@@ -4,7 +4,7 @@ import { dirname, resolve } from 'path';
 
 
 const lstat: Function = (path: String) => new Promise((res: Function, rej: Function) =>
-  fs.lstat(path, (er: Boolean, st: Number) => er ? rej(er) : res(st)))
+  fs.lstat(path, (er: Number, st: Number) => er ? rej(er) : res(st)))
 
 const inferOwner: Function = (path: String) => {
   path = resolve(path)
@@ -17,7 +17,7 @@ const inferOwner: Function = (path: String) => {
     return { uid, gid }
   }
   const parent: Number = dirname(path)
-  const parentTrap: Function = parent === path ? null : (er: Function) => {
+  const parentTrap: Function = parent === path ? null : (er: String) => {
     return inferOwner(parent).then((owner: Array) => {
       cache.set(path, owner)
       return owner

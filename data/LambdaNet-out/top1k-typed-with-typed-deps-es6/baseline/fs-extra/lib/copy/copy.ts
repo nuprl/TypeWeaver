@@ -86,7 +86,7 @@ function onFile (srcStat: String, destStat: Boolean, src: String, dest: String, 
   return mayCopyFile(srcStat, src, dest, opts, cb)
 }
 
-function mayCopyFile (srcStat: String, src: String, dest: String, opts: HTMLElement, cb: Function): Void {
+function mayCopyFile (srcStat: String, src: String, dest: String, opts: Error, cb: Function): Void {
   if (opts.overwrite) {
     fs.unlink(dest, (err: String) => {
       if (err) return cb(err)
@@ -97,7 +97,7 @@ function mayCopyFile (srcStat: String, src: String, dest: String, opts: HTMLElem
   } else return cb()
 }
 
-function copyFile (srcStat: Object, src: String, dest: String, opts: HTMLElement, cb: Function): Void {
+function copyFile (srcStat: Object, src: String, dest: String, opts: Object, cb: Function): Void {
   fs.copyFile(src, dest, (err: String) => {
     if (err) return cb(err)
     if (opts.preserveTimestamps) return handleTimestampsAndMode(srcStat.mode, src, dest, cb)
@@ -141,7 +141,7 @@ function setDestTimestamps (src: String, dest: Number, cb: Function): Void {
   // The initial srcStat.atime cannot be trusted
   // because it is modified by the read(2) system call
   // (See https://nodejs.org/api/fs.html#fs_stat_time_values)
-  fs.stat(src, (err: String, updatedSrcStat: Object) => {
+  fs.stat(src, (err: Boolean, updatedSrcStat: Object) => {
     if (err) return cb(err)
     return utimesMillis(dest, updatedSrcStat.atime, updatedSrcStat.mtime, cb)
   })

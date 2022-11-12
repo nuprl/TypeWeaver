@@ -102,7 +102,6 @@ index.ts(569,15): error TS2339: Property 'getLowBitsUnsigned' does not exist on 
 index.ts(570,3): error TS2322: Type 'number' is not assignable to type 'Boolean'.
 index.ts(578,15): error TS2339: Property 'getNumBitsAbs' does not exist on type 'HTMLElement'.
 index.ts(583,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(585,3): error TS2322: Type 'number' is not assignable to type 'Boolean'.
 index.ts(593,15): error TS2339: Property 'isZero' does not exist on type 'HTMLElement'.
 index.ts(601,15): error TS2339: Property 'eqz' does not exist on type 'HTMLElement'.
 index.ts(601,35): error TS2339: Property 'isZero' does not exist on type 'HTMLElement'.
@@ -181,20 +180,15 @@ index.ts(873,30): error TS2339: Property 'neg' does not exist on type 'Object'.
 index.ts(882,15): error TS2339: Property 'sub' does not exist on type 'HTMLElement'.
 index.ts(882,35): error TS2339: Property 'subtract' does not exist on type 'HTMLElement'.
 index.ts(890,15): error TS2339: Property 'multiply' does not exist on type 'HTMLElement'.
+index.ts(890,70): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(894,5): error TS2740: Type 'Boolean' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 index.ts(894,18): error TS2554: Expected 2 arguments, but got 1.
 index.ts(900,18): error TS2339: Property 'low' does not exist on type 'HTMLElement'.
 index.ts(901,18): error TS2339: Property 'high' does not exist on type 'HTMLElement'.
 index.ts(902,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 index.ts(905,18): error TS2339: Property 'isZero' does not exist on type 'HTMLElement'.
-index.ts(906,5): error TS2322: Type 'Object' is not assignable to type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-index.ts(908,5): error TS2322: Type 'Object' is not assignable to type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(908,23): error TS2339: Property 'isOdd' does not exist on type 'HTMLElement'.
 index.ts(909,18): error TS2339: Property 'eq' does not exist on type 'HTMLElement'.
-index.ts(910,5): error TS2322: Type 'Object' is not assignable to type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 index.ts(913,20): error TS2339: Property 'isNegative' does not exist on type 'HTMLElement'.
 index.ts(914,40): error TS2339: Property 'neg' does not exist on type 'HTMLElement'.
 index.ts(917,25): error TS2339: Property 'isNegative' does not exist on type 'HTMLElement'.
@@ -362,6 +356,7 @@ index.ts(1280,36): error TS2339: Property 'shiftRightUnsigned' does not exist on
 index.ts(1288,15): error TS2339: Property 'shr_u' does not exist on type 'HTMLElement'.
 index.ts(1288,37): error TS2339: Property 'shiftRightUnsigned' does not exist on type 'HTMLElement'.
 index.ts(1296,15): error TS2339: Property 'rotateLeft' does not exist on type 'HTMLElement'.
+index.ts(1296,66): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(1298,42): error TS2339: Property 'toInt' does not exist on type 'Number'.
 index.ts(1299,8): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1302,15): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -397,7 +392,6 @@ index.ts(1349,15): error TS2339: Property 'toSigned' does not exist on type 'HTM
 index.ts(1349,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(1352,40): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
 index.ts(1360,15): error TS2339: Property 'toUnsigned' does not exist on type 'HTMLElement'.
-index.ts(1360,51): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(1363,40): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
 index.ts(1372,15): error TS2339: Property 'toBytes' does not exist on type 'HTMLElement'.
 index.ts(1372,56): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).

@@ -147,7 +147,7 @@
         return parseInt(string, 10);
     }
 
-    function padPart (part: String, length: String): String {
+    function padPart (part: String, length: Number): String {
         while (part.length < length) {
             part = `0${part}`;
         }

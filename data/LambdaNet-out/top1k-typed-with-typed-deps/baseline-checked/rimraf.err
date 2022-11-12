@@ -12,23 +12,6 @@
 bin.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 bin.ts(7,74): error TS2339: Property 'resolve' does not exist on type 'String'.
 bin.ts(21,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-bin.ts(21,50): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(predicate: (value: string, index: number, array: string[]) => value is string, thisArg?: any): string[]', gave the following error.
-    Argument of type '(arg: Number) => boolean' is not assignable to parameter of type '(value: string, index: number, array: string[]) => value is string'.
-      Types of parameters 'arg' and 'value' are incompatible.
-        Type 'string' is not assignable to type 'Number'.
-  Overload 2 of 2, '(predicate: (value: string, index: number, array: string[]) => unknown, thisArg?: any): string[]', gave the following error.
-    Argument of type '(arg: Number) => boolean' is not assignable to parameter of type '(value: string, index: number, array: string[]) => unknown'.
-      Types of parameters 'arg' and 'value' are incompatible.
-        Type 'string' is not assignable to type 'Number'.
-bin.ts(24,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-bin.ts(26,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-bin.ts(26,35): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-bin.ts(28,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-bin.ts(28,32): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-bin.ts(30,16): error TS2339: Property 'match' does not exist on type 'Number'.
-bin.ts(32,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-bin.ts(34,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 bin.ts(47,8): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 bin.ts(54,3): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.

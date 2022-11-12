@@ -142,15 +142,15 @@ SHA512.prototype._update = function _update(msg: String, start: String): Void {
     var c0_hi: String = hh;
     var c0_lo: String = hl;
     var c1_hi: Function = s1_512_hi(eh, el);
-    var c1_lo: String = s1_512_lo(eh, el);
-    var c2_hi: Function = ch64_hi(eh, el, fh, fl, gh, gl);
+    var c1_lo: Function = s1_512_lo(eh, el);
+    var c2_hi: String = ch64_hi(eh, el, fh, fl, gh, gl);
     var c2_lo: Function = ch64_lo(eh, el, fh, fl, gh, gl);
-    var c3_hi: String = this.k[i];
-    var c3_lo: Function = this.k[i + 1];
+    var c3_hi: Function = this.k[i];
+    var c3_lo: String = this.k[i + 1];
     var c4_hi: String = W[i];
     var c4_lo: String = W[i + 1];
 
-    var T1_hi: Function = sum64_5_hi(
+    var T1_hi: String = sum64_5_hi(
       c0_hi, c0_lo,
       c1_hi, c1_lo,
       c2_hi, c2_lo,
@@ -169,7 +169,7 @@ SHA512.prototype._update = function _update(msg: String, start: String): Void {
     c1_lo = maj64_lo(ah, al, bh, bl, ch, cl);
 
     var T2_hi: String = sum64_hi(c0_hi, c0_lo, c1_hi, c1_lo);
-    var T2_lo: Function = sum64_lo(c0_hi, c0_lo, c1_hi, c1_lo);
+    var T2_lo: String = sum64_lo(c0_hi, c0_lo, c1_hi, c1_lo);
 
     hh = gh;
     hl = gl;
@@ -263,7 +263,7 @@ function s0_512_lo(xh: Function, xl: String): Number {
   return r;
 }
 
-function s1_512_hi(xh: String, xl: String): Number {
+function s1_512_hi(xh: Function, xl: Function): Number {
   var c0_hi: String = rotr64_hi(xh, xl, 14);
   var c1_hi: String = rotr64_hi(xh, xl, 18);
   var c2_hi: String = rotr64_hi(xl, xh, 9);  // 41
@@ -274,7 +274,7 @@ function s1_512_hi(xh: String, xl: String): Number {
   return r;
 }
 
-function s1_512_lo(xh: String, xl: String): Number {
+function s1_512_lo(xh: Function, xl: String): Number {
   var c0_lo: String = rotr64_lo(xh, xl, 14);
   var c1_lo: String = rotr64_lo(xh, xl, 18);
   var c2_lo: String = rotr64_lo(xl, xh, 9);  // 41
@@ -307,7 +307,7 @@ function g0_512_lo(xh: String, xl: String): Number {
   return r;
 }
 
-function g1_512_hi(xh: String, xl: String): Number {
+function g1_512_hi(xh: Function, xl: String): Number {
   var c0_hi: String = rotr64_hi(xh, xl, 19);
   var c1_hi: String = rotr64_hi(xl, xh, 29);  // 61
   var c2_hi: String = shr64_hi(xh, xl, 6);
@@ -318,7 +318,7 @@ function g1_512_hi(xh: String, xl: String): Number {
   return r;
 }
 
-function g1_512_lo(xh: String, xl: String): Number {
+function g1_512_lo(xh: Function, xl: String): Number {
   var c0_lo: String = rotr64_lo(xh, xl, 19);
   var c1_lo: String = rotr64_lo(xl, xh, 29);  // 61
   var c2_lo: String = shr64_lo(xh, xl, 6);

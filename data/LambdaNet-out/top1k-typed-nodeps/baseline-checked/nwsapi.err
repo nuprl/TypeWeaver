@@ -322,16 +322,20 @@ build/packer/base2.ts(1137,19): error TS2538: Type 'String' cannot be used as an
 build/packer/base2.ts(1137,31): error TS2538: Type 'String' cannot be used as an index type.
 build/packer/base2.ts(1138,12): error TS2538: Type 'String' cannot be used as an index type.
 build/packer/base2.ts(1138,24): error TS2538: Type 'String' cannot be used as an index type.
-build/packer/base2.ts(1149,34): error TS2339: Property 'extend' does not exist on type 'Object'.
+build/packer/base2.ts(1149,32): error TS2339: Property 'extend' does not exist on type 'Object'.
 build/packer/base2.ts(1152,11): error TS2554: Expected 3 arguments, but got 2.
 build/packer/base2.ts(1153,13): error TS2538: Type 'String' cannot be used as an index type.
 build/packer/base2.ts(1153,35): error TS2339: Property 'prototype' does not exist on type 'Object'.
-build/packer/base2.ts(1154,13): error TS2339: Property 'namespace' does not exist on type 'Function'.
+build/packer/base2.ts(1154,13): error TS2339: Property 'namespace' does not exist on type 'Object'.
 build/packer/base2.ts(1154,50): error TS2554: Expected 1 arguments, but got 3.
 build/packer/base2.ts(1156,3): error TS2554: Expected 4 arguments, but got 3.
-build/packer/base2.ts(1156,47): error TS2339: Property 'implement' does not exist on type 'Function'.
+build/packer/base2.ts(1156,47): error TS2339: Property 'implement' does not exist on type 'Object'.
 build/packer/base2.ts(1159,7): error TS2322: Type '() => any' is not assignable to type 'HTMLElement'.
+build/packer/base2.ts(1160,12): error TS2349: This expression is not callable.
+  Type 'Object' has no call signatures.
 build/packer/base2.ts(1162,11): error TS2339: Property 'prototype' does not exist on type 'HTMLElement'.
+build/packer/base2.ts(1162,31): error TS2339: Property 'prototype' does not exist on type 'Object'.
+build/packer/base2.ts(1168,22): error TS2339: Property 'prototype' does not exist on type 'Object'.
 build/packer/base2.ts(1172,11): error TS2339: Property 'ancestor' does not exist on type 'HTMLElement'.
 build/packer/base2.ts(1173,18): error TS2339: Property 'extend' does not exist on type 'HTMLElement'.
 build/packer/base2.ts(1176,11): error TS2339: Property 'namespace' does not exist on type 'HTMLElement'.
@@ -563,7 +567,7 @@ build/packer/packer.ts(208,18): error TS2339: Property 'size' does not exist on 
 build/packer/packer.ts(211,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build/packer/packer.ts(213,28): error TS2304: Cannot find name 'RegGrp'.
 build/packer/packer.ts(219,32): error TS2339: Property 'exec' does not exist on type 'Object'.
-build/packer/packer.ts(219,62): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+build/packer/packer.ts(220,40): error TS2339: Property 'replacement' does not exist on type 'Object'.
 build/packer/packer.ts(226,5): error TS2322: Type 'string' is not assignable to type 'Number'.
 build/packer/packer.ts(230,7): error TS2322: Type 'string' is not assignable to type 'Number'.
 build/packer/packer.ts(231,23): error TS2304: Cannot find name 'Packer'.
@@ -787,15 +791,13 @@ src/modules/nwsapi-traversal.ts(87,5): error TS2339: Property 'down' does not ex
 src/modules/nwsapi-traversal.ts(88,5): error TS2339: Property 'next' does not exist on type 'Object'.
 src/modules/nwsapi-traversal.ts(89,5): error TS2339: Property 'previous' does not exist on type 'Object'.
 src/modules/nwsapi-traversal.ts(90,4): error TS2304: Cannot find name 'NW'.
-src/nwsapi.ts(18,59): error TS2304: Cannot find name 'Void'.
+src/nwsapi.ts(18,54): error TS2304: Cannot find name 'Void'.
 src/nwsapi.ts(24,21): error TS2304: Cannot find name 'define'.
 src/nwsapi.ts(24,45): error TS2304: Cannot find name 'define'.
 src/nwsapi.ts(25,5): error TS2304: Cannot find name 'define'.
-src/nwsapi.ts(27,12): error TS2339: Property 'NW' does not exist on type 'HTMLElement'.
-src/nwsapi.ts(27,26): error TS2339: Property 'NW' does not exist on type 'HTMLElement'.
-src/nwsapi.ts(28,12): error TS2339: Property 'NW' does not exist on type 'HTMLElement'.
-src/nwsapi.ts(31,4): error TS2345: Argument of type 'typeof globalThis' is not assignable to parameter of type 'HTMLElement'.
-  Type 'typeof globalThis' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 184 more.
+src/nwsapi.ts(27,12): error TS2339: Property 'NW' does not exist on type 'Object'.
+src/nwsapi.ts(27,26): error TS2339: Property 'NW' does not exist on type 'Object'.
+src/nwsapi.ts(28,12): error TS2339: Property 'NW' does not exist on type 'Object'.
 src/nwsapi.ts(35,26): error TS2339: Property 'document' does not exist on type 'Object'.
 src/nwsapi.ts(36,22): error TS2339: Property 'documentElement' does not exist on type 'Function'.
 src/nwsapi.ts(57,5): error TS2322: Type '{ HasEscapes: RegExp; HexNumbers: RegExp; EscOrQuote: RegExp; RegExpChar: RegExp; TrimSpaces: RegExp; CommaGroup: RegExp; SplitGroup: RegExp; FixEscapes: RegExp; CombineWSP: RegExp; TabCharWSP: RegExp; PseudosWSP: RegExp; }' is not assignable to type 'HTMLInputElement'.

@@ -10,7 +10,7 @@
 
   // JavaScript engine analysis
   var canary: Number = 0xdeadbeefcafe;
-  var j_lm: Boolean = (canary & 0xffffff) == 0xefcafe;
+  var j_lm: Number = (canary & 0xffffff) == 0xefcafe;
 
   // (public) Constructor
   function BigInteger(a: String, b: String, c: String): Void {
@@ -396,7 +396,7 @@
 
   // (protected) r = this * a, r != this,a (HAC 14.12)
   // "this" should be the larger one if appropriate.
-  function bnpMultiplyTo(a: Object, r: Object): Void {
+  function bnpMultiplyTo(a: HTMLElement, r: Object): Void {
     var x: HTMLElement = this.abs(),
       y: Object = a.abs();
     var i: Number = x.t;
@@ -564,7 +564,7 @@
 
   // xR mod m
   function montConvert(x: Function): String {
-    var r: Object = nbi();
+    var r: Function = nbi();
     x.abs().dlShiftTo(this.m.t, r);
     r.divRemTo(this.m, null, r);
     if (x.s < 0 && r.compareTo(BigInteger.ZERO) > 0) this.m.subTo(r, r);
@@ -720,7 +720,7 @@
   }
 
   // (public) return value as short (assumes DB>=16)
-  function bnShortValue(): Boolean {
+  function bnShortValue(): Number {
     return this.t == 0 ? this.s : (this[0] << 16) >> 16;
   }
 
@@ -995,14 +995,14 @@
   }
 
   // (protected) this op (1<<n)
-  function bnpChangeBit(n: String, op: Number): Array {
+  function bnpChangeBit(n: Number, op: Number): Array {
     var r: String = BigInteger.ONE.shiftLeft(n);
     this.bitwiseTo(r, op, r);
     return r;
   }
 
   // (public) this | (1<<n)
-  function bnSetBit(n: Number): Object {
+  function bnSetBit(n: Number): Promise {
     return this.changeBit(n, op_or);
   }
 
@@ -1137,7 +1137,7 @@
   NullExp.prototype.sqrTo = nSqrTo;
 
   // (public) this^e
-  function bnPow(e: Array): Promise {
+  function bnPow(e: Array): Object {
     return this.exp(e, new NullExp());
   }
 
@@ -1226,7 +1226,7 @@
   Barrett.prototype.sqrTo = barrettSqrTo;
 
   // (public) this^e % m (HAC 14.85)
-  function bnModPow(e: Array, m: String): Object {
+  function bnModPow(e: Array, m: Function): String {
     var i: Number = e.bitLength(),
       k: Number,
       r: String = nbv(1),
@@ -1581,7 +1581,7 @@
   // (public) test primality with certainty >= 1-.5^t
   function bnIsProbablePrime(t: String): Boolean {
     var i: Number,
-      x: Object = this.abs();
+      x: Function = this.abs();
     if (x.t == 1 && x[0] <= lowprimes[lowprimes.length - 1]) {
       for (i = 0; i < lowprimes.length; ++i)
         if (x[0] == lowprimes[i]) return true;

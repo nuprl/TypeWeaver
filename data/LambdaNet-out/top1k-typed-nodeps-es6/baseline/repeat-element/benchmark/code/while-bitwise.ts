@@ -1,7 +1,7 @@
 
 export default repeat;
 
-function repeat(ele: String, num: Number): Array {
+function repeat(ele: Function, num: Number): Array {
   var arr: Array = [ele];
   var res: Array = [];
 

@@ -332,7 +332,7 @@ function findMatch(request: String, treeRoot: Object): Array {
 		slashIndex = request.indexOf("/", lastNonSlashIndex);
 	}
 
-	const remainingRequest: Array =
+	const remainingRequest: String =
 		lastNonSlashIndex > 0 ? request.slice(lastNonSlashIndex) : request;
 
 	const value: String = node.files.get(remainingRequest);
@@ -368,7 +368,7 @@ function isConditionalMapping(mapping: Number): Boolean {
  */
 function directMapping(
 	remainingRequest: String,
-	subpathMapping: String,
+	subpathMapping: Function,
 	mappingTarget: Array,
 	conditionNames: Function,
 	assert: String
@@ -438,7 +438,7 @@ function targetMapping(
  * @param {Set<string>} conditionNames condition names
  * @returns {DirectMapping|null} direct mapping if found
  */
-function conditionalMapping(conditionalMapping_: Function, conditionNames: Map): CacheBackend {
+function conditionalMapping(conditionalMapping_: Function, conditionNames: Map): String {
 	/** @type {[ConditionalMapping, string[], number][]} */
 	let lookup: Array = [[conditionalMapping_, Object.keys(conditionalMapping_), 0]];
 
@@ -563,7 +563,7 @@ function walkPath(root: Object, path: String, target: Array): Void {
  * @returns {PathTreeNode} tree root
  */
 function buildExportsFieldPathTree(field: Array): CacheBackend {
-	const root: CacheBackend = createNode();
+	const root: Object = createNode();
 
 	// handle syntax sugar, if exports field is direct mapping for "."
 	if (typeof field === "string") {

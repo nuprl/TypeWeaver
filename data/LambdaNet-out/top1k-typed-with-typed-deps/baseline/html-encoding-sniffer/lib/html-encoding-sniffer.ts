@@ -54,7 +54,7 @@ function prescanMetaCharset(uint8Array: Object): Array {
         const attributeList: Error = new Set();
         let gotPragma: Boolean = false;
         let needPragma: Boolean = null;
-        let charset: String = null;
+        let charset: Number = null;
 
         let attrRes: Object;
         do {

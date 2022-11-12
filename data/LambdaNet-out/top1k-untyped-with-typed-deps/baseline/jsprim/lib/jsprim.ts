@@ -49,7 +49,7 @@ exports.hrtimeMillisec = hrtimeMillisec;
  * scalars (strings, numbers, booleans) and arbitrarily deep arrays and objects
  * containing these.  This does *not* handle instances of other classes.
  */
-function deepCopy(obj: Object): Object
+function deepCopy(obj: Object): Array
 {
 	var ret: Array, key: Number;
 	var marker: String = '__deepCopy';
@@ -222,7 +222,7 @@ function flattenObject(data: Object, depth: Number): Array
 	return (rv);
 }
 
-function startsWith(str: String, prefix: Array): Boolean
+function startsWith(str: String, prefix: String): Boolean
 {
 	return (str.substr(0, prefix.length) == prefix);
 }

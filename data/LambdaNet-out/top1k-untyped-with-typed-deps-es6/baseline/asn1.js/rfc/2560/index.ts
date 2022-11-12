@@ -3,7 +3,7 @@
 import asn1 from 'asn1.js';
 import rfc5280 from 'asn1.js-rfc5280';
 
-const OCSPRequest: Array = asn1.define('OCSPRequest', function() {
+const OCSPRequest: String = asn1.define('OCSPRequest', function() {
   this.seq().obj(
     this.key('tbsRequest').use(TBSRequest),
     this.key('optionalSignature').optional().explicit(0).use(Signature)
@@ -11,7 +11,7 @@ const OCSPRequest: Array = asn1.define('OCSPRequest', function() {
 });
 exports.OCSPRequest = OCSPRequest;
 
-const TBSRequest: Array = asn1.define('TBSRequest', function() {
+const TBSRequest: String = asn1.define('TBSRequest', function() {
   this.seq().obj(
     this.key('version').def('v1').explicit(0).use(rfc5280.Version),
     this.key('requestorName').optional().explicit(1).use(rfc5280.GeneralName),

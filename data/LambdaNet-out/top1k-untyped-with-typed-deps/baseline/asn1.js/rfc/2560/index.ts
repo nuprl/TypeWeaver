@@ -11,7 +11,7 @@ const OCSPRequest: Array = asn1.define('OCSPRequest', function() {
 });
 exports.OCSPRequest = OCSPRequest;
 
-const TBSRequest: Array = asn1.define('TBSRequest', function() {
+const TBSRequest: String = asn1.define('TBSRequest', function() {
   this.seq().obj(
     this.key('version').def('v1').explicit(0).use(rfc5280.Version),
     this.key('requestorName').optional().explicit(1).use(rfc5280.GeneralName),

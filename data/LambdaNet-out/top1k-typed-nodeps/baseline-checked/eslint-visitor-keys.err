@@ -13,6 +13,8 @@ lib/index.ts(56,51): error TS2769: No overload matches this call.
 lib/visitor-keys.ts(307,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 tools/build-keys-from-ts.ts(17,53): error TS2554: Expected 2 arguments, but got 1.
 tools/build-keys-from-ts.ts(19,9): error TS2345: Argument of type 'string' is not assignable to parameter of type 'HTMLElement'.
+tools/build-keys-from-ts.ts(25,11): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 tools/get-keys-from-ts.ts(15,32): error TS2307: Cannot find module '@typescript-eslint/parser' or its corresponding type declarations.
 tools/get-keys-from-ts.ts(16,21): error TS2307: Cannot find module 'esquery' or its corresponding type declarations.
 tools/get-keys-from-ts.ts(26,7): error TS2322: Type 'Set<string>' is not assignable to type 'Error'.
@@ -28,7 +30,6 @@ tools/get-keys-from-ts.ts(70,25): error TS2339: Property 'literal' does not exis
 tools/get-keys-from-ts.ts(80,62): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 tools/get-keys-from-ts.ts(92,49): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-tools/get-keys-from-ts.ts(92,57): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 tools/get-keys-from-ts.ts(100,45): error TS2304: Cannot find name 'Void'.
 tools/get-keys-from-ts.ts(103,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 tools/get-keys-from-ts.ts(103,72): error TS2345: Argument of type '([typeA]: [any], [typeB]: [any]) => Void' is not assignable to parameter of type '(a: [string, unknown], b: [string, unknown]) => number'.

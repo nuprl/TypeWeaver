@@ -81,7 +81,6 @@ watchman/node/bser/index.ts(127,23): error TS2359: The right-hand side of an 'in
 watchman/node/bser/index.ts(127,41): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'number'.
 watchman/node/bser/index.ts(128,5): error TS2322: Type 'Object' is not assignable to type 'HTMLElement'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-watchman/node/bser/index.ts(142,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/bser/index.ts(220,23): error TS2304: Cannot find name 'Void'.
 watchman/node/bser/index.ts(222,14): error TS2350: Only a void function can be called with the 'new' keyword.
 watchman/node/bser/index.ts(222,14): error TS2554: Expected 1 arguments, but got 0.
@@ -154,6 +153,8 @@ watchman/node/bser/index.ts(542,11): error TS2356: An arithmetic operand must be
 watchman/node/bser/index.ts(545,16): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'HTMLElement'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 watchman/node/bser/index.ts(548,29): error TS2538: Type 'String' cannot be used as an index type.
+watchman/node/bser/index.ts(553,23): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+watchman/node/bser/index.ts(555,25): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 watchman/node/bser/index.ts(570,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 watchman/node/bser/index.ts(571,26): error TS2350: Only a void function can be called with the 'new' keyword.
 watchman/node/bser/index.ts(571,26): error TS2554: Expected 1 arguments, but got 0.
@@ -161,6 +162,7 @@ watchman/node/bser/index.ts(573,7): error TS2339: Property 'writeByte' does not 
 watchman/node/bser/index.ts(574,7): error TS2339: Property 'writeByte' does not exist on type 'HTMLElement'.
 watchman/node/bser/index.ts(576,7): error TS2339: Property 'writeByte' does not exist on type 'HTMLElement'.
 watchman/node/bser/index.ts(577,7): error TS2339: Property 'writeInt' does not exist on type 'HTMLElement'.
+watchman/node/bser/index.ts(579,17): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 watchman/node/bser/index.ts(582,25): error TS2339: Property 'writeOffset' does not exist on type 'HTMLElement'.
 watchman/node/bser/index.ts(583,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 watchman/node/bser/index.ts(584,7): error TS2339: Property 'writeOffset' does not exist on type 'HTMLElement'.
@@ -274,7 +276,7 @@ watchman/node/index.ts(282,10): error TS2339: Property 'capabilities' does not e
 watchman/node/index.ts(284,12): error TS2339: Property 'error' does not exist on type 'HTMLElement'.
 watchman/node/index.ts(292,31): error TS2339: Property 'optional' does not exist on type 'Object'.
 watchman/node/index.ts(293,31): error TS2339: Property 'required' does not exist on type 'Object'.
-watchman/node/index.ts(294,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+watchman/node/index.ts(306,19): error TS2339: Property '_synthesizeCapabilityCheck' does not exist on type 'HTMLElement'.
 watchman/node/index.ts(307,16): error TS2339: Property 'error' does not exist on type 'Object'.
 watchman/node/index.ts(308,32): error TS2339: Property 'error' does not exist on type 'Object'.
 watchman/node/index.ts(309,15): error TS2339: Property 'watchmanResponse' does not exist on type 'Object'.

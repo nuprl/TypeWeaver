@@ -214,7 +214,7 @@ function bufferClone(buf: Array): Array {
 function Body(): String {
   this.bodyUsed = false
 
-  this._initBody = function(body: Object) {
+  this._initBody = function(body: Array) {
     /*
       fetch-mock wraps the Response object in an ES6 Proxy to
       provide useful test harness features such as flush. However, on

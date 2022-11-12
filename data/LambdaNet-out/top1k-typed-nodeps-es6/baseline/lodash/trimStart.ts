@@ -21,7 +21,7 @@ const methodName: String =  ''.trimLeft ? 'trimLeft' : 'trimStart'
  * trimStart('-_-abc-_-', '_-')
  * // => 'abc-_-'
  */
-function trimStart(string: Array, chars: Number): String {
+function trimStart(string: Array, chars: Boolean): String {
   if (string && chars === undefined) {
     return string[methodName]()
   }

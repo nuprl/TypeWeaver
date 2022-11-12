@@ -42,7 +42,7 @@ EDE.create = function create(options: Object): String {
   return new EDE(options);
 };
 
-EDE.prototype._update = function _update(inp: String, inOff: String, out: Function, outOff: Function): Void {
+EDE.prototype._update = function _update(inp: Function, inOff: String, out: Function, outOff: Function): Void {
   var state: HTMLElement = this._edeState;
 
   state.ciphers[0]._update(inp, inOff, out, outOff);

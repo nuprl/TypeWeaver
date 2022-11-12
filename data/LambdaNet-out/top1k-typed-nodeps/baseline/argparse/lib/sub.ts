@@ -9,7 +9,7 @@ const { inspect } = require('util')
 module.exports = function sub(pattern: String, ...values): String {
     let regex: RegExp = /%(?:(%)|(-)?(\*)?(?:\((\w+)\))?([A-Za-z]))/g
 
-    let result: String = pattern.replace(regex, function (_: String, is_literal: Boolean, is_left_align: Boolean, is_padded: Boolean, name: String, format: String) {
+    let result: String = pattern.replace(regex, function (_: TextWrapper, is_literal: Boolean, is_left_align: Boolean, is_padded: Boolean, name: String, format: String) {
         if (is_literal) return '%'
 
         let padded_count: Number = 0

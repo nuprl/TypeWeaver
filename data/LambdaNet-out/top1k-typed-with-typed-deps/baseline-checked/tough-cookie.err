@@ -1,7 +1,6 @@
 lib/cookie.ts(34,7): error TS2451: Cannot redeclare block-scoped variable 'pubsuffix'.
 lib/cookie.ts(34,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(35,7): error TS2451: Cannot redeclare block-scoped variable 'Store'.
-lib/cookie.ts(35,14): error TS2749: 'Store' refers to a value, but is being used as a type here. Did you mean 'typeof Store'?
 lib/cookie.ts(36,7): error TS2451: Cannot redeclare block-scoped variable 'MemoryCookieStore'.
 lib/cookie.ts(36,26): error TS2749: 'MemoryCookieStore' refers to a value, but is being used as a type here. Did you mean 'typeof MemoryCookieStore'?
 lib/cookie.ts(37,7): error TS2451: Cannot redeclare block-scoped variable 'pathMatch'.
@@ -118,22 +117,28 @@ lib/cookie.ts(679,22): error TS2345: Argument of type 'String' is not assignable
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/cookie.ts(686,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(687,26): error TS2339: Property 'isEmptyString' does not exist on type 'Cookie'.
-lib/cookie.ts(702,12): error TS2749: 'Store' refers to a value, but is being used as a type here. Did you mean 'typeof Store'?
+lib/cookie.ts(702,9): error TS2322: Type 'Cookie' is not assignable to type 'Object'.
+  The types returned by 'toString()' are incompatible between these types.
+    Type 'String' is not assignable to type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/cookie.ts(703,30): error TS2339: Property 'serializableProperties' does not exist on type 'typeof Cookie'.
 lib/cookie.ts(704,33): error TS2339: Property 'serializableProperties' does not exist on type 'typeof Cookie'.
 lib/cookie.ts(705,13): error TS2538: Type 'String' cannot be used as an index type.
 lib/cookie.ts(705,40): error TS2538: Type 'String' cannot be used as an index type.
 lib/cookie.ts(705,65): error TS2538: Type 'String' cannot be used as an index type.
 lib/cookie.ts(710,15): error TS2538: Type 'String' cannot be used as an index type.
+lib/cookie.ts(711,11): error TS2538: Type 'String' cannot be used as an index type.
+lib/cookie.ts(713,11): error TS2538: Type 'String' cannot be used as an index type.
 lib/cookie.ts(713,23): error TS2538: Type 'String' cannot be used as an index type.
 lib/cookie.ts(713,71): error TS2538: Type 'String' cannot be used as an index type.
+lib/cookie.ts(716,9): error TS2538: Type 'String' cannot be used as an index type.
 lib/cookie.ts(716,21): error TS2538: Type 'String' cannot be used as an index type.
 lib/cookie.ts(733,23): error TS2554: Expected 0 arguments, but got 2.
 lib/cookie.ts(733,34): error TS2339: Property 'isObject' does not exist on type 'Cookie'.
 lib/cookie.ts(734,23): error TS2554: Expected 0 arguments, but got 2.
 lib/cookie.ts(734,34): error TS2339: Property 'isObject' does not exist on type 'Cookie'.
-lib/cookie.ts(738,30): error TS2339: Property 'path' does not exist on type 'Cookie'.
-lib/cookie.ts(738,39): error TS2339: Property 'path' does not exist on type 'Cookie'.
+lib/cookie.ts(738,30): error TS2339: Property 'path' does not exist on type 'Object'.
+lib/cookie.ts(738,39): error TS2339: Property 'path' does not exist on type 'Object'.
 lib/cookie.ts(739,30): error TS2339: Property 'path' does not exist on type 'Object'.
 lib/cookie.ts(739,39): error TS2339: Property 'path' does not exist on type 'Object'.
 lib/cookie.ts(740,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -141,14 +146,14 @@ lib/cookie.ts(740,20): error TS2363: The right-hand side of an arithmetic operat
 lib/cookie.ts(742,5): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'number' is not assignable to type 'boolean'.
-lib/cookie.ts(746,27): error TS2339: Property 'creation' does not exist on type 'Cookie'.
-lib/cookie.ts(746,40): error TS2339: Property 'creation' does not exist on type 'Cookie'.
+lib/cookie.ts(746,27): error TS2339: Property 'creation' does not exist on type 'Object'.
+lib/cookie.ts(746,40): error TS2339: Property 'creation' does not exist on type 'Object'.
 lib/cookie.ts(747,27): error TS2339: Property 'creation' does not exist on type 'Object'.
 lib/cookie.ts(747,40): error TS2339: Property 'creation' does not exist on type 'Object'.
 lib/cookie.ts(748,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/cookie.ts(748,17): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/cookie.ts(750,5): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
-lib/cookie.ts(754,11): error TS2339: Property 'creationIndex' does not exist on type 'Cookie'.
+lib/cookie.ts(754,11): error TS2339: Property 'creationIndex' does not exist on type 'Object'.
 lib/cookie.ts(754,29): error TS2339: Property 'creationIndex' does not exist on type 'Object'.
 lib/cookie.ts(756,3): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
 lib/cookie.ts(761,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -381,9 +386,9 @@ lib/cookie.ts(1614,48): error TS2314: Generic type 'Array<T>' requires 1 type ar
 lib/cookie.ts(1624,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/cookie.ts(1626,51): error TS2304: Cannot find name 'Void'.
 lib/cookie.ts(1631,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/cookie.ts(1640,18): error TS2339: Property 'domain' does not exist on type 'CookieJar'.
-lib/cookie.ts(1641,18): error TS2339: Property 'path' does not exist on type 'CookieJar'.
-lib/cookie.ts(1642,18): error TS2339: Property 'key' does not exist on type 'CookieJar'.
+lib/cookie.ts(1640,18): error TS2551: Property 'domain' does not exist on type 'Cookie'. Did you mean 'cdomain'?
+lib/cookie.ts(1641,18): error TS2339: Property 'path' does not exist on type 'Cookie'.
+lib/cookie.ts(1642,18): error TS2339: Property 'key' does not exist on type 'Cookie'.
 lib/cookie.ts(1655,25): error TS2554: Expected 0 arguments, but got 2.
 lib/cookie.ts(1655,36): error TS2339: Property 'isFunction' does not exist on type 'Cookie'.
 lib/cookie.ts(1657,21): error TS2749: 'Store' refers to a value, but is being used as a type here. Did you mean 'typeof Store'?
@@ -407,6 +412,7 @@ lib/memstore.ts(34,7): error TS2451: Cannot redeclare block-scoped variable 'per
 lib/memstore.ts(35,7): error TS2451: Cannot redeclare block-scoped variable 'pathMatch'.
 lib/memstore.ts(36,9): error TS2451: Cannot redeclare block-scoped variable 'getCustomInspectSymbol'.
 lib/memstore.ts(38,7): error TS2451: Cannot redeclare block-scoped variable 'MemoryCookieStore'.
+lib/memstore.ts(38,33): error TS2507: Type 'Function' is not a constructor function type.
 lib/memstore.ts(41,10): error TS2339: Property 'synchronous' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(42,10): error TS2339: Property 'idx' does not exist on type 'MemoryCookieStore'.
 lib/memstore.ts(45,12): error TS2538: Type 'Boolean' cannot be used as an index type.
@@ -470,9 +476,7 @@ lib/pathMatch.ts(42,39): error TS2345: Argument of type 'String' is not assignab
 lib/permuteDomain.ts(32,7): error TS2451: Cannot redeclare block-scoped variable 'pubsuffix'.
 lib/permuteDomain.ts(37,10): error TS2451: Cannot redeclare block-scoped variable 'permuteDomain'.
 lib/permuteDomain.ts(37,72): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/permuteDomain.ts(54,9): error TS2322: Type 'string' is not assignable to type 'Cookie'.
 lib/permuteDomain.ts(55,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/permuteDomain.ts(55,31): error TS2339: Property 'split' does not exist on type 'Cookie'.
 lib/permuteDomain.ts(57,23): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/pubsuffix-psl.ts(32,12): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/pubsuffix-psl.ts(35,28): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

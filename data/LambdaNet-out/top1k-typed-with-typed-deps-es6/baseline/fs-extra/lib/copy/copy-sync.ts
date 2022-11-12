@@ -60,7 +60,7 @@ function onFile (srcStat: String, destStat: Boolean, src: String, dest: String, 
   return mayCopyFile(srcStat, src, dest, opts)
 }
 
-function mayCopyFile (srcStat: String, src: String, dest: String, opts: HTMLElement): String {
+function mayCopyFile (srcStat: String, src: String, dest: String, opts: Error): String {
   if (opts.overwrite) {
     fs.unlinkSync(dest)
     return copyFile(srcStat, src, dest, opts)

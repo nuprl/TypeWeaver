@@ -154,7 +154,7 @@ rfc5280.SubjectPublicKeyInfo = SubjectPublicKeyInfo;
 //           crlEntryExtensions      Extensions OPTIONAL
 //      }  OPTIONAL,
 //      crlExtensions           [0] Extensions OPTIONAL }
-const TBSCertList: Array = asn1.define('TBSCertList', function() {
+const TBSCertList: String = asn1.define('TBSCertList', function() {
   this.seq().obj(
     this.key('version').optional().int(),
     this.key('signature').use(AlgorithmIdentifier),
@@ -597,7 +597,7 @@ rfc5280.PolicyQualifierId = PolicyQualifierId;
 // PolicyMappings ::= SEQUENCE SIZE (1..MAX) OF SEQUENCE {
 //      issuerDomainPolicy      CertPolicyId,
 //      subjectDomainPolicy     CertPolicyId }
-const PolicyMappings: Number = asn1.define('PolicyMappings', function() {
+const PolicyMappings: String = asn1.define('PolicyMappings', function() {
   this.seqof(PolicyMapping);
 });
 rfc5280.PolicyMappings = PolicyMappings;

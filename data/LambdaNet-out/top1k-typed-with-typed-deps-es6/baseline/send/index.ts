@@ -333,7 +333,7 @@ SendStream.prototype.isPreconditionFailure = function isPreconditionFailure (): 
   // if-match
   var match: String = req.headers['if-match']
   if (match) {
-    var etag: Number = res.getHeader('ETag')
+    var etag: String = res.getHeader('ETag')
     return !etag || (match !== '*' && parseTokenList(match).every(function (match: Number) {
       return match !== etag && match !== 'W/' + etag && 'W/' + match !== etag
     }))

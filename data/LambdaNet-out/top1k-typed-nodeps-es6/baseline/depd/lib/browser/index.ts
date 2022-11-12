@@ -17,7 +17,7 @@ export default depd;
  * Create deprecate for namespace in caller.
  */
 
-function depd (namespace: Number): Element {
+function depd (namespace: String): Element {
   if (!namespace) {
     throw new TypeError('argument namespace is required')
   }

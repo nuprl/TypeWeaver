@@ -58,17 +58,17 @@ lib/DirectoryWatcher.ts(133,9): error TS2339: Property 'initialScanRemoved' does
 lib/DirectoryWatcher.ts(136,38): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(138,13): error TS2339: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(139,9): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(141,57): error TS2339: Property 'emit' does not exist on type 'LinkResolver'.
+lib/DirectoryWatcher.ts(141,61): error TS2339: Property 'emit' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(143,30): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(144,8): error TS2339: Property 'emit' does not exist on type 'LinkResolver'.
+lib/DirectoryWatcher.ts(144,8): error TS2339: Property 'emit' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(149,32): error TS2339: Property 'files' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(151,9): error TS2339: Property 'files' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(153,31): error TS2339: Property 'filesWithoutCase' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(155,10): error TS2339: Property 'filesWithoutCase' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(156,58): error TS2339: Property 'emit' does not exist on type 'LinkResolver'.
+lib/DirectoryWatcher.ts(156,62): error TS2339: Property 'emit' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(158,10): error TS2339: Property 'filesWithoutCase' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(162,30): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(163,8): error TS2339: Property 'emit' does not exist on type 'LinkResolver'.
+lib/DirectoryWatcher.ts(163,8): error TS2339: Property 'emit' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(172,12): error TS2339: Property 'ignored' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(174,28): error TS2339: Property 'files' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(178,15): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
@@ -81,14 +81,14 @@ lib/DirectoryWatcher.ts(203,31): error TS2339: Property 'filesWithoutCase' does 
 lib/DirectoryWatcher.ts(204,9): error TS2339: Property 'filesWithoutCase' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(204,35): error TS2365: Operator '+' cannot be applied to types 'number | String' and 'number'.
 lib/DirectoryWatcher.ts(216,8): error TS2339: Property 'emit' does not exist on type 'Watcher'.
-lib/DirectoryWatcher.ts(220,57): error TS2339: Property 'emit' does not exist on type 'LinkResolver'.
+lib/DirectoryWatcher.ts(220,61): error TS2339: Property 'emit' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(222,28): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(224,7): error TS2339: Property 'emit' does not exist on type 'Watcher'.
 lib/DirectoryWatcher.ts(230,12): error TS2339: Property 'ignored' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(231,30): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(233,30): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(234,8): error TS2339: Property 'emit' does not exist on type 'LinkResolver'.
-lib/DirectoryWatcher.ts(238,39): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
+lib/DirectoryWatcher.ts(234,8): error TS2339: Property 'emit' does not exist on type 'DirectoryWatcher'.
+lib/DirectoryWatcher.ts(238,29): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(242,14): error TS2339: Property 'nestedWatching' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(245,11): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(250,17): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
@@ -122,8 +122,8 @@ lib/DirectoryWatcher.ts(321,20): error TS2339: Property 'lastWatchEvent' does no
 lib/DirectoryWatcher.ts(322,29): error TS2339: Property 'files' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(324,25): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-lib/DirectoryWatcher.ts(327,32): error TS2339: Property 'files' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(330,22): error TS2339: Property 'safeTime' does not exist on type 'Watcher'.
+lib/DirectoryWatcher.ts(327,41): error TS2339: Property 'files' does not exist on type 'DirectoryWatcher'.
+lib/DirectoryWatcher.ts(330,22): error TS2339: Property 'safeTime' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(338,15): error TS2551: Property 'closed' does not exist on type 'DirectoryWatcher'. Did you mean 'close'?
 lib/DirectoryWatcher.ts(339,28): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(340,15): error TS2339: Property 'emit' does not exist on type 'Watchpack'.
@@ -184,7 +184,7 @@ lib/DirectoryWatcher.ts(511,11): error TS2339: Property 'parentWatcher' does not
 lib/DirectoryWatcher.ts(512,11): error TS2339: Property 'parentWatcher' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(515,15): error TS2551: Property 'watcher' does not exist on type 'DirectoryWatcher'. Did you mean 'watch'?
 lib/DirectoryWatcher.ts(520,31): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(521,9): error TS2339: Property 'emit' does not exist on type 'LinkResolver'.
+lib/DirectoryWatcher.ts(521,9): error TS2339: Property 'emit' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(521,29): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(525,9): error TS2339: Property 'parentWatcher' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(532,12): error TS2339: Property 'scanning' does not exist on type 'DirectoryWatcher'.
@@ -373,7 +373,7 @@ lib/watchEventSource.ts(8,7): error TS2451: Cannot redeclare block-scoped variab
 lib/watchEventSource.ts(9,9): error TS2451: Cannot redeclare block-scoped variable 'EventEmitter'.
 lib/watchEventSource.ts(12,7): error TS2451: Cannot redeclare block-scoped variable 'IS_OSX'.
 lib/watchEventSource.ts(14,7): error TS2739: Type 'Boolean' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
-lib/watchEventSource.ts(19,7): error TS2322: Type 'boolean' is not assignable to type 'WatcherManager'.
+lib/watchEventSource.ts(19,7): error TS2322: Type 'boolean' is not assignable to type 'RecursiveWatcher'.
 lib/watchEventSource.ts(26,24): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/watchEventSource.ts(29,26): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/watchEventSource.ts(32,23): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
@@ -422,7 +422,7 @@ lib/watchEventSource.ts(153,10): error TS2322: Type 'Set<unknown>' is not assign
 lib/watchEventSource.ts(154,11): error TS2339: Property 'add' does not exist on type 'Error'.
 lib/watchEventSource.ts(155,9): error TS2339: Property 'mapPathToWatchers' does not exist on type 'RecursiveWatcher'.
 lib/watchEventSource.ts(157,8): error TS2554: Expected 2 arguments, but got 1.
-lib/watchEventSource.ts(162,42): error TS2339: Property 'mapWatcherToPath' does not exist on type 'RecursiveWatcher'.
+lib/watchEventSource.ts(162,32): error TS2339: Property 'mapWatcherToPath' does not exist on type 'RecursiveWatcher'.
 lib/watchEventSource.ts(164,8): error TS2339: Property 'mapWatcherToPath' does not exist on type 'RecursiveWatcher'.
 lib/watchEventSource.ts(165,14): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/watchEventSource.ts(165,25): error TS2339: Property 'mapPathToWatchers' does not exist on type 'RecursiveWatcher'.
@@ -436,25 +436,20 @@ lib/watchEventSource.ts(176,54): error TS2339: Property 'rootPath' does not exis
 lib/watchEventSource.ts(183,15): error TS2339: Property 'mapWatcherToPath' does not exist on type 'RecursiveWatcher'.
 lib/watchEventSource.ts(187,7): error TS2300: Duplicate identifier 'Watcher'.
 lib/watchEventSource.ts(187,23): error TS2507: Type 'String' is not a constructor function type.
-lib/watchEventSource.ts(202,8): error TS2740: Type 'DirectWatcher' is missing the following properties from type 'Watchpack': watch, close, pause, getTimes, and 6 more.
-lib/watchEventSource.ts(210,8): error TS2740: Type 'RecursiveWatcher' is missing the following properties from type 'Watchpack': watch, close, pause, getTimes, and 6 more.
+lib/watchEventSource.ts(202,8): error TS2739: Type 'DirectWatcher' is missing the following properties from type 'WatcherManager': getDirectoryWatcher, watchFile, watchDirectory
+lib/watchEventSource.ts(210,8): error TS2739: Type 'RecursiveWatcher' is missing the following properties from type 'WatcherManager': getDirectoryWatcher, watchFile, watchDirectory
 lib/watchEventSource.ts(217,13): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/watchEventSource.ts(219,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/watchEventSource.ts(234,38): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/watchEventSource.ts(234,53): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/watchEventSource.ts(239,33): error TS2554: Expected 2 arguments, but got 1.
-lib/watchEventSource.ts(241,7): error TS2554: Expected 2 arguments, but got 1.
 lib/watchEventSource.ts(250,23): error TS2339: Property 'join' does not exist on type 'String'.
 lib/watchEventSource.ts(261,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/watchEventSource.ts(261,38): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/watchEventSource.ts(270,7): error TS2554: Expected 2 arguments, but got 1.
 lib/watchEventSource.ts(274,10): error TS2322: Type 'Set<unknown>' is not assignable to type 'Error'.
 lib/watchEventSource.ts(275,18): error TS2339: Property 'size' does not exist on type 'Error'.
 lib/watchEventSource.ts(284,28): error TS2488: Type 'Error' must have a '[Symbol.iterator]()' method that returns an iterator.
-lib/watchEventSource.ts(289,9): error TS2554: Expected 2 arguments, but got 1.
-lib/watchEventSource.ts(299,8): error TS2322: Type 'Watcher' is not assignable to type 'Watchpack'.
-lib/watchEventSource.ts(299,29): error TS2554: Expected 3 arguments, but got 0.
-lib/watchEventSource.ts(303,17): error TS2554: Expected 2 arguments, but got 1.
+lib/watchEventSource.ts(299,8): error TS2740: Type 'Watcher' is missing the following properties from type 'DirectoryWatcher': createWatcher, forEachWatcher, setMissing, setFileTime, and 14 more.
+lib/watchEventSource.ts(299,36): error TS2554: Expected 3 arguments, but got 0.
 lib/watchEventSource.ts(306,6): error TS2739: Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 lib/watchEventSource.ts(313,31): error TS2339: Property 'dirname' does not exist on type 'String'.
 lib/watchEventSource.ts(314,7): error TS2367: This condition will always return 'false' since the types 'String' and 'Number' have no overlap.
@@ -484,7 +479,6 @@ lib/watchpack.ts(54,17): error TS2339: Property 'poll' does not exist on type 'O
 lib/watchpack.ts(58,7): error TS2322: Type 'WeakMap<object, any>' is not assignable to type 'Error'.
 lib/watchpack.ts(60,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/watchpack.ts(60,43): error TS2339: Property 'get' does not exist on type 'Error'.
-lib/watchpack.ts(62,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/watchpack.ts(63,17): error TS2339: Property 'set' does not exist on type 'Error'.
 lib/watchpack.ts(69,8): error TS2339: Property 'files' does not exist on type 'WatchpackFileWatcher'.
 lib/watchpack.ts(70,8): error TS2339: Property 'watcher' does not exist on type 'WatchpackFileWatcher'.
@@ -500,7 +494,6 @@ lib/watchpack.ts(102,8): error TS2339: Property 'watcher' does not exist on type
 lib/watchpack.ts(108,8): error TS2339: Property 'directories' does not exist on type 'WatchpackDirectoryWatcher'.
 lib/watchpack.ts(109,8): error TS2339: Property 'watcher' does not exist on type 'WatchpackDirectoryWatcher'.
 lib/watchpack.ts(111,28): error TS2339: Property 'directories' does not exist on type 'WatchpackDirectoryWatcher'.
-lib/watchpack.ts(115,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/watchpack.ts(116,28): error TS2339: Property 'directories' does not exist on type 'WatchpackDirectoryWatcher'.
 lib/watchpack.ts(121,28): error TS2339: Property 'directories' does not exist on type 'WatchpackDirectoryWatcher'.
 lib/watchpack.ts(129,13): error TS2339: Property 'directories' does not exist on type 'WatchpackDirectoryWatcher'.
@@ -575,7 +568,7 @@ lib/watchpack.ts(334,19): error TS2488: Type 'Error' must have a '[Symbol.iterat
 lib/watchpack.ts(340,12): error TS2339: Property 'aggregateTimer' does not exist on type 'Watchpack'.
 lib/watchpack.ts(341,22): error TS2339: Property 'aggregateTimer' does not exist on type 'Watchpack'.
 lib/watchpack.ts(342,9): error TS2339: Property 'aggregateTimer' does not exist on type 'Watchpack'.
-lib/watchpack.ts(344,38): error TS2339: Property 'aggregatedChanges' does not exist on type 'Watchpack'.
+lib/watchpack.ts(344,34): error TS2339: Property 'aggregatedChanges' does not exist on type 'Watchpack'.
 lib/watchpack.ts(345,33): error TS2339: Property 'aggregatedRemovals' does not exist on type 'Watchpack'.
 lib/watchpack.ts(346,8): error TS2339: Property 'aggregatedChanges' does not exist on type 'Watchpack'.
 lib/watchpack.ts(347,8): error TS2339: Property 'aggregatedRemovals' does not exist on type 'Watchpack'.

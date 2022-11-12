@@ -187,7 +187,7 @@ regenerate.ts(984,15): error TS2314: Generic type 'Array<T>' requires 1 type arg
 regenerate.ts(985,57): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 regenerate.ts(1000,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 regenerate.ts(1003,42): error TS2339: Property 'loneHighSurrogates' does not exist on type 'HTMLElement'.
-regenerate.ts(1004,41): error TS2339: Property 'loneLowSurrogates' does not exist on type 'HTMLElement'.
+regenerate.ts(1004,43): error TS2339: Property 'loneLowSurrogates' does not exist on type 'HTMLElement'.
 regenerate.ts(1005,27): error TS2339: Property 'bmp' does not exist on type 'HTMLElement'.
 regenerate.ts(1006,32): error TS2339: Property 'astral' does not exist on type 'HTMLElement'.
 regenerate.ts(1062,15): error TS2351: This expression is not constructable.
@@ -199,10 +199,9 @@ regenerate.ts(1076,48): error TS2339: Property 'data' does not exist on type 'Fu
 regenerate.ts(1084,12): error TS2339: Property 'add' does not exist on type 'HTMLElement'.
 regenerate.ts(1088,10): error TS2339: Property 'data' does not exist on type 'HTMLElement'.
 regenerate.ts(1089,11): error TS2339: Property 'data' does not exist on type 'HTMLElement'.
-regenerate.ts(1094,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 regenerate.ts(1101,11): error TS2339: Property 'data' does not exist on type 'Object'.
 regenerate.ts(1101,39): error TS2339: Property 'data' does not exist on type 'Object'.
-regenerate.ts(1101,51): error TS2339: Property 'data' does not exist on type '{}'.
+regenerate.ts(1101,51): error TS2339: Property 'data' does not exist on type 'Function'.
 regenerate.ts(1109,12): error TS2339: Property 'remove' does not exist on type 'Object'.
 regenerate.ts(1113,10): error TS2339: Property 'data' does not exist on type 'Object'.
 regenerate.ts(1114,11): error TS2339: Property 'data' does not exist on type 'Object'.
@@ -215,9 +214,9 @@ regenerate.ts(1142,15): error TS2314: Generic type 'Array<T>' requires 1 type ar
 regenerate.ts(1143,26): error TS2339: Property 'data' does not exist on type '{}'.
 regenerate.ts(1145,10): error TS2339: Property 'data' does not exist on type 'Object'.
 regenerate.ts(1145,40): error TS2339: Property 'data' does not exist on type 'Object'.
-regenerate.ts(1155,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-regenerate.ts(1155,25): error TS2351: This expression is not constructable.
+regenerate.ts(1155,26): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
+regenerate.ts(1156,8): error TS2339: Property 'data' does not exist on type 'Object'.
 regenerate.ts(1162,23): error TS2339: Property 'bmpOnly' does not exist on type 'Object'.
 regenerate.ts(1163,23): error TS2339: Property 'hasUnicodeFlag' does not exist on type 'Object'.
 regenerate.ts(1180,18): error TS2769: No overload matches this call.

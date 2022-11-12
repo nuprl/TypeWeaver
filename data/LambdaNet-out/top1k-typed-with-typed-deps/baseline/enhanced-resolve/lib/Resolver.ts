@@ -234,7 +234,7 @@ class Resolver {
 		/** @type {string | false | undefined} */
 		let result: Resolver = undefined;
 		let sync: Boolean = false;
-		this.resolve(context, path, request, {}, (e: String, r: String) => {
+		this.resolve(context, path, request, {}, (e: Resolver, r: String) => {
 			err = e;
 			result = r;
 			sync = true;

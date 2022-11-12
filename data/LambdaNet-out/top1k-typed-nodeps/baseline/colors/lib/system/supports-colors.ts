@@ -42,7 +42,7 @@ if ('FORCE_COLOR' in env) {
     || parseInt(env.FORCE_COLOR, 10) !== 0;
 }
 
-function translateLevel(level: Number): Boolean {
+function translateLevel(level: Number): Void {
   if (level === 0) {
     return false;
   }

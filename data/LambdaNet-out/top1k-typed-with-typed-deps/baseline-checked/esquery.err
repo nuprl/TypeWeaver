@@ -194,6 +194,7 @@ parser.ts(183,27): error TS2339: Property 'subject' does not exist on type 'Obje
 parser.ts(187,9): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(187,57): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
+parser.ts(188,41): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 parser.ts(190,9): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(190,57): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
@@ -223,9 +224,7 @@ parser.ts(214,58): error TS2345: Argument of type 'boolean' is not assignable to
 parser.ts(216,9): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(216,64): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
-parser.ts(218,9): error TS2322: Type 'Object' is not assignable to type 'Function'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-parser.ts(218,58): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
+parser.ts(218,56): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
 parser.ts(219,9): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(220,69): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
@@ -236,9 +235,7 @@ parser.ts(225,57): error TS2345: Argument of type 'boolean' is not assignable to
 parser.ts(227,9): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(227,63): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
-parser.ts(229,9): error TS2322: Type 'Object' is not assignable to type 'Function'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-parser.ts(229,64): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
+parser.ts(229,62): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
 parser.ts(230,54): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 parser.ts(237,9): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -246,7 +243,9 @@ parser.ts(237,61): error TS2345: Argument of type 'boolean' is not assignable to
 parser.ts(239,9): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(239,62): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Number'.
-parser.ts(241,55): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
+parser.ts(241,9): error TS2322: Type 'Object' is not assignable to type 'Function'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+parser.ts(241,57): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
 parser.ts(242,41): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 parser.ts(244,9): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -269,7 +268,9 @@ parser.ts(259,9): error TS2322: Type 'Object' is not assignable to type 'Functio
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(259,65): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
 parser.ts(260,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-parser.ts(262,59): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
+parser.ts(262,9): error TS2322: Type 'Object' is not assignable to type 'Function'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+parser.ts(262,61): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
 parser.ts(263,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 parser.ts(265,9): error TS2322: Type 'Object' is not assignable to type 'Function'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
@@ -733,7 +734,8 @@ parser.ts(1426,32): error TS2345: Argument of type 'Number' is not assignable to
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(1428,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 parser.ts(1430,13): error TS2322: Type 'Number' is not assignable to type 'String'.
-parser.ts(1431,51): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+parser.ts(1431,51): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(1433,15): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 parser.ts(1435,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -753,7 +755,8 @@ parser.ts(1465,34): error TS2345: Argument of type 'Number' is not assignable to
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(1467,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 parser.ts(1469,15): error TS2322: Type 'Number' is not assignable to type 'String'.
-parser.ts(1470,53): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+parser.ts(1470,53): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(1472,17): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 parser.ts(1474,35): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -785,7 +788,8 @@ parser.ts(1538,34): error TS2345: Argument of type 'Number' is not assignable to
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(1540,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 parser.ts(1542,15): error TS2322: Type 'Number' is not assignable to type 'String'.
-parser.ts(1543,53): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+parser.ts(1543,53): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(1545,17): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 parser.ts(1547,35): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -805,7 +809,8 @@ parser.ts(1577,36): error TS2345: Argument of type 'Number' is not assignable to
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(1579,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 parser.ts(1581,17): error TS2322: Type 'Number' is not assignable to type 'String'.
-parser.ts(1582,55): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+parser.ts(1582,55): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(1584,19): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 parser.ts(1586,37): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -834,7 +839,8 @@ parser.ts(1653,27): error TS2345: Argument of type 'Number' is not assignable to
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(1654,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 parser.ts(1656,9): error TS2322: Type 'Number' is not assignable to type 'String'.
-parser.ts(1657,47): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+parser.ts(1657,47): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(1659,14): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 parser.ts(1661,39): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -842,7 +848,8 @@ parser.ts(1662,29): error TS2345: Argument of type 'Number' is not assignable to
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(1663,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 parser.ts(1665,11): error TS2322: Type 'Number' is not assignable to type 'String'.
-parser.ts(1666,49): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+parser.ts(1666,49): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(1670,30): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(1672,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
@@ -852,13 +859,15 @@ parser.ts(1693,39): error TS2345: Argument of type 'Number' is not assignable to
 parser.ts(1694,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(1695,11): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-parser.ts(1698,49): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+parser.ts(1698,49): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(1703,43): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(1704,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(1705,15): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-parser.ts(1708,53): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+parser.ts(1708,53): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(1727,24): error TS2538: Type 'String' cannot be used as an index type.
 parser.ts(1729,7): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
 parser.ts(1735,11): error TS2322: Type 'number' is not assignable to type 'String'.
@@ -899,8 +908,7 @@ parser.ts(1796,55): error TS2345: Argument of type 'Function' is not assignable 
 parser.ts(1805,36): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(1807,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-parser.ts(1810,55): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+parser.ts(1810,55): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 parser.ts(1815,17): error TS2322: Type 'String' is not assignable to type 'Number'.
 parser.ts(1837,24): error TS2538: Type 'String' cannot be used as an index type.
 parser.ts(1839,7): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
@@ -1025,8 +1033,7 @@ parser.ts(2082,36): error TS2345: Argument of type 'Number' is not assignable to
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(2084,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 parser.ts(2086,17): error TS2322: Type 'Number' is not assignable to type 'String'.
-parser.ts(2087,55): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+parser.ts(2087,55): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 parser.ts(2089,19): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 parser.ts(2092,17): error TS2322: Type 'String' is not assignable to type 'Number'.
 parser.ts(2114,24): error TS2538: Type 'String' cannot be used as an index type.
@@ -1050,8 +1057,7 @@ parser.ts(2146,36): error TS2345: Argument of type 'Number' is not assignable to
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(2148,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 parser.ts(2150,17): error TS2322: Type 'Number' is not assignable to type 'String'.
-parser.ts(2151,55): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+parser.ts(2151,55): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 parser.ts(2153,19): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 parser.ts(2156,17): error TS2322: Type 'String' is not assignable to type 'Number'.
 parser.ts(2178,24): error TS2538: Type 'String' cannot be used as an index type.
@@ -1065,8 +1071,7 @@ parser.ts(2196,24): error TS2345: Argument of type 'Number' is not assignable to
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(2198,9): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 parser.ts(2200,9): error TS2322: Type 'Number' is not assignable to type 'String'.
-parser.ts(2201,47): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+parser.ts(2201,47): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 parser.ts(2203,11): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 parser.ts(2205,13): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 parser.ts(2206,11): error TS2322: Type 'Boolean' is not assignable to type 'String'.
@@ -1076,8 +1081,7 @@ parser.ts(2210,36): error TS2345: Argument of type 'Number' is not assignable to
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(2212,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 parser.ts(2214,17): error TS2322: Type 'Number' is not assignable to type 'String'.
-parser.ts(2215,55): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+parser.ts(2215,55): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 parser.ts(2217,19): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 parser.ts(2220,17): error TS2322: Type 'String' is not assignable to type 'Number'.
 parser.ts(2242,24): error TS2538: Type 'String' cannot be used as an index type.
@@ -1129,7 +1133,8 @@ parser.ts(2334,31): error TS2345: Argument of type 'Number' is not assignable to
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(2335,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 parser.ts(2337,13): error TS2322: Type 'Number' is not assignable to type 'String'.
-parser.ts(2338,51): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+parser.ts(2338,51): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(2340,15): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 parser.ts(2341,20): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 parser.ts(2343,45): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
@@ -1138,12 +1143,12 @@ parser.ts(2344,35): error TS2345: Argument of type 'Number' is not assignable to
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(2345,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 parser.ts(2347,17): error TS2322: Type 'Number' is not assignable to type 'String'.
-parser.ts(2348,55): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+parser.ts(2348,55): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(2357,36): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(2359,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-parser.ts(2362,55): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+parser.ts(2362,55): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 parser.ts(2367,17): error TS2322: Type 'String' is not assignable to type 'Number'.
 parser.ts(2389,24): error TS2538: Type 'String' cannot be used as an index type.
 parser.ts(2391,7): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
@@ -1166,7 +1171,8 @@ parser.ts(2419,31): error TS2345: Argument of type 'Number' is not assignable to
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(2420,13): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 parser.ts(2422,13): error TS2322: Type 'Number' is not assignable to type 'String'.
-parser.ts(2423,51): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+parser.ts(2423,51): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(2425,15): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 parser.ts(2426,20): error TS2367: This condition will always return 'true' since the types 'String' and 'Number' have no overlap.
 parser.ts(2428,45): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
@@ -1175,12 +1181,12 @@ parser.ts(2429,35): error TS2345: Argument of type 'Number' is not assignable to
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(2430,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 parser.ts(2432,17): error TS2322: Type 'Number' is not assignable to type 'String'.
-parser.ts(2433,55): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+parser.ts(2433,55): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(2442,36): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 parser.ts(2444,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-parser.ts(2447,55): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+parser.ts(2447,55): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 parser.ts(2452,17): error TS2322: Type 'String' is not assignable to type 'Number'.
 parser.ts(2474,24): error TS2538: Type 'String' cannot be used as an index type.
 parser.ts(2476,7): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
@@ -1245,9 +1251,10 @@ parser.ts(2572,18): error TS2678: Type 'string' is not comparable to type 'Numbe
 parser.ts(2582,7): error TS2322: Type 'Number' is not assignable to type 'String'.
 parser.ts(2585,18): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-parser.ts(2590,9): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
 parser.ts(2590,54): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
+parser.ts(2591,9): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 parser.ts(2592,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 parser.ts(2592,49): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 parser.ts(2593,33): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.

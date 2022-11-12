@@ -138,7 +138,7 @@ exports.join32 = join32;
 function split32(msg: Array, endian: Number): Object {
   var res: Object = new Array(msg.length * 4);
   for (var i = 0, k = 0; i < msg.length; i++, k += 4) {
-    var m: Number = msg[i];
+    var m: String = msg[i];
     if (endian === 'big') {
       res[k] = m >>> 24;
       res[k + 1] = (m >>> 16) & 0xff;
@@ -185,7 +185,7 @@ function sum32_5(a: String, b: String, c: String, d: String, e: String): Number 
 }
 exports.sum32_5 = sum32_5;
 
-function sum64(buf: Object, pos: String, ah: String, al: Number): Void {
+function sum64(buf: Object, pos: Number, ah: String, al: Number): Void {
   var bh: String = buf[pos];
   var bl: String = buf[pos + 1];
 
@@ -203,7 +203,7 @@ function sum64_hi(ah: String, al: Number, bh: Number, bl: Number): Number {
 }
 exports.sum64_hi = sum64_hi;
 
-function sum64_lo(ah: Function, al: String, bh: Function, bl: String): Number {
+function sum64_lo(ah: Function, al: Number, bh: Function, bl: String): Number {
   var lo: String = al + bl;
   return lo >>> 0;
 }

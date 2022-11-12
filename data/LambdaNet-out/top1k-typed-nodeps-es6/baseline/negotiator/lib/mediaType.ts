@@ -56,7 +56,7 @@ function parseMediaType(str: String, i: Number): Object {
 
   var params: Object = Object.create(null);
   var q: Number = 1;
-  var subtype: Array = match[2];
+  var subtype: String = match[2];
   var type: String = match[1];
 
   if (match[3]) {

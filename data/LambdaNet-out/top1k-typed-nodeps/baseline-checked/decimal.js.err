@@ -22,7 +22,6 @@ decimal.ts(231,38): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
 decimal.ts(232,13): error TS2339: Property 'gt' does not exist on type 'Object'.
 decimal.ts(232,34): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
-decimal.ts(234,12): error TS2365: Operator '<' cannot be applied to types 'String' and 'number'.
 decimal.ts(234,53): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
 decimal.ts(246,5): error TS2339: Property 'comparedTo' does not exist on type 'HTMLElement'.
@@ -93,8 +92,8 @@ decimal.ts(377,14): error TS2339: Property 'times' does not exist on type 'Objec
 decimal.ts(378,20): error TS2339: Property 'plus' does not exist on type 'Object'.
 decimal.ts(379,11): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-decimal.ts(379,26): error TS2339: Property 'plus' does not exist on type 'HTMLElement'.
-decimal.ts(379,52): error TS2339: Property 'plus' does not exist on type 'HTMLElement'.
+decimal.ts(379,26): error TS2339: Property 'plus' does not exist on type 'Object'.
+decimal.ts(379,52): error TS2339: Property 'plus' does not exist on type 'Object'.
 decimal.ts(379,62): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 decimal.ts(382,28): error TS2339: Property 'd' does not exist on type 'Object'.
 decimal.ts(382,40): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
@@ -763,8 +762,9 @@ decimal.ts(1936,23): error TS2554: Expected 4 arguments, but got 3.
 decimal.ts(1936,40): error TS2339: Property 'precision' does not exist on type 'Object'.
 decimal.ts(1936,56): error TS2339: Property 'rounding' does not exist on type 'Object'.
 decimal.ts(1950,5): error TS2339: Property 'toBinary' does not exist on type 'HTMLElement'.
-decimal.ts(1950,42): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-decimal.ts(1951,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+decimal.ts(1950,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+decimal.ts(1951,36): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
+  Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 decimal.ts(1965,5): error TS2339: Property 'toDecimalPlaces' does not exist on type 'HTMLElement'.
 decimal.ts(1965,25): error TS2339: Property 'toDP' does not exist on type 'HTMLElement'.
 decimal.ts(1969,13): error TS2351: This expression is not constructable.
@@ -854,8 +854,8 @@ decimal.ts(2111,49): error TS2349: This expression is not callable.
 decimal.ts(2114,10): error TS2339: Property 'precision' does not exist on type 'Object'.
 decimal.ts(2131,5): error TS2339: Property 'toHexadecimal' does not exist on type 'HTMLElement'.
 decimal.ts(2131,23): error TS2339: Property 'toHex' does not exist on type 'HTMLElement'.
-decimal.ts(2131,57): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-decimal.ts(2132,37): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+decimal.ts(2131,59): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+decimal.ts(2132,37): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
 decimal.ts(2152,5): error TS2339: Property 'toNearest' does not exist on type 'HTMLElement'.
 decimal.ts(2156,13): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
@@ -880,21 +880,19 @@ decimal.ts(2192,9): error TS2339: Property 's' does not exist on type 'Object'.
 decimal.ts(2192,15): error TS2339: Property 's' does not exist on type 'Object'.
 decimal.ts(2205,5): error TS2339: Property 'toNumber' does not exist on type 'HTMLElement'.
 decimal.ts(2220,5): error TS2339: Property 'toOctal' does not exist on type 'HTMLElement'.
-decimal.ts(2220,41): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-decimal.ts(2221,36): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+decimal.ts(2220,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+decimal.ts(2221,36): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Number'.
 decimal.ts(2268,5): error TS2339: Property 'toPower' does not exist on type 'HTMLElement'.
 decimal.ts(2268,17): error TS2339: Property 'pow' does not exist on type 'HTMLElement'.
+decimal.ts(2270,10): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 decimal.ts(2272,30): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
-decimal.ts(2275,12): error TS2339: Property 'd' does not exist on type 'String'.
 decimal.ts(2275,20): error TS2339: Property 'd' does not exist on type 'Object'.
-decimal.ts(2275,28): error TS2339: Property 'd' does not exist on type 'String'.
 decimal.ts(2275,39): error TS2339: Property 'd' does not exist on type 'Object'.
 decimal.ts(2275,56): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
 decimal.ts(2277,13): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
-decimal.ts(2279,11): error TS2339: Property 'eq' does not exist on type 'String'.
 decimal.ts(2281,15): error TS2339: Property 'precision' does not exist on type 'Object'.
 decimal.ts(2282,15): error TS2339: Property 'rounding' does not exist on type 'Object'.
 decimal.ts(2284,11): error TS2339: Property 'eq' does not exist on type 'Object'.
@@ -906,21 +904,14 @@ decimal.ts(2292,16): error TS2339: Property 's' does not exist on type 'Object'.
 decimal.ts(2292,28): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
 decimal.ts(2292,45): error TS2554: Expected 4 arguments, but got 3.
-decimal.ts(2295,11): error TS2339: Property 's' does not exist on type 'String'.
 decimal.ts(2301,17): error TS2339: Property 'd' does not exist on type 'Object'.
 decimal.ts(2301,42): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
 decimal.ts(2304,14): error TS2339: Property 'd' does not exist on type 'Object'.
-decimal.ts(2307,13): error TS2339: Property 'e' does not exist on type 'String'.
-decimal.ts(2307,25): error TS2339: Property 'd' does not exist on type 'String'.
-decimal.ts(2307,40): error TS2339: Property 'd' does not exist on type 'String'.
-decimal.ts(2308,11): error TS2339: Property 's' does not exist on type 'String'.
 decimal.ts(2318,29): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 decimal.ts(2319,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 decimal.ts(2319,34): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-decimal.ts(2319,58): error TS2339: Property 'd' does not exist on type 'String'.
-decimal.ts(2319,78): error TS2339: Property 'e' does not exist on type 'String'.
 decimal.ts(2320,13): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
 decimal.ts(2325,18): error TS2339: Property 'maxE' does not exist on type 'Object'.
@@ -929,7 +920,6 @@ decimal.ts(2325,60): error TS2351: This expression is not constructable.
   Type 'Object' has no construct signatures.
 decimal.ts(2325,73): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 decimal.ts(2328,10): error TS2339: Property 'rounding' does not exist on type 'Object'.
-decimal.ts(2328,23): error TS2339: Property 's' does not exist on type 'String'.
 decimal.ts(2337,30): error TS2339: Property 'times' does not exist on type 'Object'.
 decimal.ts(2337,56): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 decimal.ts(2340,11): error TS2339: Property 'd' does not exist on type 'Object'.
@@ -1589,7 +1579,6 @@ decimal.ts(3750,9): error TS2322: Type 'String' is not assignable to type 'Numbe
 decimal.ts(3751,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 decimal.ts(3751,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 decimal.ts(3751,22): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-decimal.ts(3752,5): error TS2322: Type 'Number' is not assignable to type 'String'.
 decimal.ts(3759,26): error TS2339: Property 's' does not exist on type 'String'.
 decimal.ts(3760,37): error TS2339: Property 'precision' does not exist on type 'Object'.
 decimal.ts(3760,48): error TS2345: Argument of type 'number' is not assignable to parameter of type 'String'.

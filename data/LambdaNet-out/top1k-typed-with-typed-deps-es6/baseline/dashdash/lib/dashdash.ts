@@ -115,7 +115,7 @@ function parseNumber(option: Number, optstr: Number, arg: Number): Number {
     return num;
 }
 
-function parseInteger(option: String, optstr: String, arg: Number): Number {
+function parseInteger(option: String, optstr: Number, arg: Number): Number {
     assert.string(arg, 'arg');
     var num: Number = Number(arg);
     if (!/^[0-9-]+$/.test(arg) || isNaN(num)) {
@@ -126,7 +126,7 @@ function parseInteger(option: String, optstr: String, arg: Number): Number {
     return num;
 }
 
-function parsePositiveInteger(option: String, optstr: String, arg: Number): Number {
+function parsePositiveInteger(option: String, optstr: Number, arg: Number): Number {
     assert.string(arg, 'arg');
     var num: Number = Number(arg);
     if (!/^[0-9]+$/.test(arg) || isNaN(num) || num === 0) {
@@ -390,7 +390,7 @@ Parser.prototype.parse = function parse(inputs: Object): Object {
     var opts: Object = {};
     var _order: Array = [];
 
-    function addOpt(option: Object, optstr: String, key: String, val: Number, from: String): Void {
+    function addOpt(option: Object, optstr: Number, key: String, val: Number, from: String): Void {
         var type: Object = optionTypes[option.type];
         var parsedVal: Array = type.parseArg(option, optstr, val);
         if (type.array) {

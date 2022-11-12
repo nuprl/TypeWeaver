@@ -36,11 +36,11 @@ lib/copy/copy-sync.ts(52,38): error TS2740: Type 'Boolean' is missing the follow
 lib/copy/copy-sync.ts(52,52): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Boolean'.
 lib/copy/copy-sync.ts(53,20): error TS2339: Property 'isSocket' does not exist on type 'Function'.
 lib/copy/copy-sync.ts(54,20): error TS2339: Property 'isFIFO' does not exist on type 'Function'.
-lib/copy/copy-sync.ts(60,42): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
-  Type 'String' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 276 more.
-lib/copy/copy-sync.ts(64,12): error TS2339: Property 'overwrite' does not exist on type 'HTMLElement'.
+lib/copy/copy-sync.ts(60,42): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Error'.
+  Type 'String' is missing the following properties from type 'Error': name, message
+lib/copy/copy-sync.ts(64,12): error TS2339: Property 'overwrite' does not exist on type 'Error'.
 lib/copy/copy-sync.ts(65,19): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-lib/copy/copy-sync.ts(67,19): error TS2339: Property 'errorOnExist' does not exist on type 'HTMLElement'.
+lib/copy/copy-sync.ts(67,19): error TS2339: Property 'errorOnExist' does not exist on type 'Error'.
 lib/copy/copy-sync.ts(73,19): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
 lib/copy/copy-sync.ts(74,12): error TS2339: Property 'preserveTimestamps' does not exist on type 'Object'.
 lib/copy/copy-sync.ts(74,57): error TS2339: Property 'mode' does not exist on type 'Object'.
@@ -149,15 +149,15 @@ lib/copy/copy.ts(77,75): error TS2345: Argument of type 'Object' is not assignab
     Type 'Object' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
 lib/copy/copy.ts(78,22): error TS2339: Property 'isSocket' does not exist on type 'Function'.
 lib/copy/copy.ts(79,22): error TS2339: Property 'isFIFO' does not exist on type 'Function'.
-lib/copy/copy.ts(85,54): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
-lib/copy/copy.ts(86,42): error TS2345: Argument of type 'String' is not assignable to parameter of type 'HTMLElement'.
-lib/copy/copy.ts(89,101): error TS2304: Cannot find name 'Void'.
-lib/copy/copy.ts(90,12): error TS2339: Property 'overwrite' does not exist on type 'HTMLElement'.
+lib/copy/copy.ts(85,60): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+lib/copy/copy.ts(86,42): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Error'.
+lib/copy/copy.ts(89,95): error TS2304: Cannot find name 'Void'.
+lib/copy/copy.ts(90,12): error TS2339: Property 'overwrite' does not exist on type 'Error'.
 lib/copy/copy.ts(91,15): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-lib/copy/copy.ts(95,19): error TS2339: Property 'errorOnExist' does not exist on type 'HTMLElement'.
-lib/copy/copy.ts(100,98): error TS2304: Cannot find name 'Void'.
+lib/copy/copy.ts(95,19): error TS2339: Property 'errorOnExist' does not exist on type 'Error'.
+lib/copy/copy.ts(100,93): error TS2304: Cannot find name 'Void'.
 lib/copy/copy.ts(101,15): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-lib/copy/copy.ts(103,14): error TS2339: Property 'preserveTimestamps' does not exist on type 'HTMLElement'.
+lib/copy/copy.ts(103,14): error TS2339: Property 'preserveTimestamps' does not exist on type 'Object'.
 lib/copy/copy.ts(103,73): error TS2339: Property 'mode' does not exist on type 'Object'.
 lib/copy/copy.ts(104,38): error TS2339: Property 'mode' does not exist on type 'Object'.
 lib/copy/copy.ts(104,44): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
@@ -288,7 +288,7 @@ lib/ensure/link.ts(58,3): error TS2322: Type 'void' is not assignable to type 'B
 lib/ensure/link.ts(58,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
 lib/ensure/symlink-paths.ts(5,10): error TS2614: Module '"../path-exists"' has no exported member 'pathExists'. Did you mean to use 'import pathExists from "../path-exists"' instead?
 lib/ensure/symlink-paths.ts(29,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ensure/symlink-paths.ts(31,5): error TS2322: Type 'void' is not assignable to type 'String'.
+lib/ensure/symlink-paths.ts(31,5): error TS2322: Type 'void' is not assignable to type 'Number'.
 lib/ensure/symlink-paths.ts(31,36): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 lib/ensure/symlink-paths.ts(42,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
@@ -416,11 +416,8 @@ lib/move/move-sync.ts(21,39): error TS2345: Argument of type 'String' is not ass
 lib/move/move-sync.ts(22,9): error TS2740: Type 'ParsedPath' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/move/move-sync.ts(22,41): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 lib/move/move-sync.ts(23,21): error TS2339: Property 'root' does not exist on type 'String'.
-lib/move/move-sync.ts(27,48): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
-lib/move/move-sync.ts(30,30): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 lib/move/move-sync.ts(32,21): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
-lib/move/move-sync.ts(33,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
-lib/move/move-sync.ts(36,67): error TS2304: Cannot find name 'Void'.
+lib/move/move-sync.ts(36,65): error TS2304: Cannot find name 'Void'.
 lib/move/move-sync.ts(38,19): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
 lib/move/move-sync.ts(41,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 lib/move/move-sync.ts(45,75): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
@@ -435,10 +432,8 @@ lib/move/move.ts(21,38): error TS2345: Argument of type 'Object' is not assignab
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/move/move.ts(23,13): error TS2339: Property 'srcStat' does not exist on type 'Object'.
 lib/move/move.ts(23,22): error TS2339: Property 'isChangingCase' does not exist on type 'Object'.
-lib/move/move.ts(26,58): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 lib/move/move.ts(27,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-lib/move/move.ts(29,36): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
 lib/move/move.ts(36,9): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/move/move.ts(36,39): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
@@ -449,7 +444,7 @@ lib/move/move.ts(41,106): error TS2314: Generic type 'Array<T>' requires 1 type 
 lib/move/move.ts(56,79): error TS2304: Cannot find name 'Void'.
 lib/move/move.ts(57,13): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
 lib/move/move.ts(59,13): error TS2339: Property 'code' does not exist on type 'Object'.
-lib/move/move.ts(60,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/move/move.ts(60,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 lib/move/move.ts(64,89): error TS2304: Cannot find name 'Void'.
 lib/output-file/index.ts(7,10): error TS2614: Module '"../path-exists"' has no exported member 'pathExists'. Did you mean to use 'import pathExists from "../path-exists"' instead?
 lib/output-file/index.ts(9,89): error TS2304: Cannot find name 'Void'.
@@ -483,6 +478,7 @@ lib/remove/rimraf.ts(21,35): error TS2538: Type 'Number' cannot be used as an in
 lib/remove/rimraf.ts(24,11): error TS2339: Property 'maxBusyTries' does not exist on type 'Object'.
 lib/remove/rimraf.ts(24,34): error TS2339: Property 'maxBusyTries' does not exist on type 'Object'.
 lib/remove/rimraf.ts(27,61): error TS2304: Cannot find name 'Void'.
+lib/remove/rimraf.ts(43,11): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 lib/remove/rimraf.ts(45,15): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
 lib/remove/rimraf.ts(45,38): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
 lib/remove/rimraf.ts(45,65): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
@@ -490,6 +486,7 @@ lib/remove/rimraf.ts(46,31): error TS2339: Property 'maxBusyTries' does not exis
 lib/remove/rimraf.ts(47,9): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/remove/rimraf.ts(48,30): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/remove/rimraf.ts(50,9): error TS2739: Type 'Timeout' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
+lib/remove/rimraf.ts(50,41): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 lib/remove/rimraf.ts(50,58): error TS2769: No overload matches this call.
   Overload 1 of 3, '(callback: () => void, ms?: number): Timeout', gave the following error.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
@@ -501,25 +498,22 @@ lib/remove/rimraf.ts(50,58): error TS2769: No overload matches this call.
     Argument of type 'Number' is not assignable to parameter of type 'number'.
       'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 lib/remove/rimraf.ts(54,14): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
-lib/remove/rimraf.ts(72,62): error TS2304: Cannot find name 'Void'.
+lib/remove/rimraf.ts(72,64): error TS2304: Cannot find name 'Void'.
 lib/remove/rimraf.ts(79,11): error TS2339: Property 'lstat' does not exist on type 'Object'.
 lib/remove/rimraf.ts(79,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/remove/rimraf.ts(80,18): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/remove/rimraf.ts(85,18): error TS2339: Property 'code' does not exist on type 'Object'.
-lib/remove/rimraf.ts(86,26): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
+lib/remove/rimraf.ts(86,38): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-lib/remove/rimraf.ts(90,20): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/remove/rimraf.ts(90,20): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 lib/remove/rimraf.ts(93,13): error TS2339: Property 'unlink' does not exist on type 'Object'.
 lib/remove/rimraf.ts(95,16): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/remove/rimraf.ts(98,16): error TS2339: Property 'code' does not exist on type 'Object'.
-lib/remove/rimraf.ts(100,27): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
+lib/remove/rimraf.ts(100,39): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-lib/remove/rimraf.ts(101,21): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/remove/rimraf.ts(101,21): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 lib/remove/rimraf.ts(103,16): error TS2339: Property 'code' does not exist on type 'Object'.
-lib/remove/rimraf.ts(104,24): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/remove/rimraf.ts(104,24): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
 lib/remove/rimraf.ts(112,80): error TS2304: Cannot find name 'Void'.
 lib/remove/rimraf.ts(117,11): error TS2339: Property 'chmod' does not exist on type 'Object'.
 lib/remove/rimraf.ts(119,14): error TS2339: Property 'code' does not exist on type 'Object'.
@@ -532,7 +526,7 @@ lib/remove/rimraf.ts(134,68): error TS2314: Generic type 'Promise<T>' requires 1
 lib/remove/rimraf.ts(135,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/remove/rimraf.ts(141,13): error TS2339: Property 'chmodSync' does not exist on type 'Object'.
 lib/remove/rimraf.ts(151,21): error TS2339: Property 'statSync' does not exist on type 'Object'.
-lib/remove/rimraf.ts(161,27): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
+lib/remove/rimraf.ts(161,15): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 lib/remove/rimraf.ts(163,13): error TS2339: Property 'unlinkSync' does not exist on type 'Object'.
 lib/remove/rimraf.ts(167,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/remove/rimraf.ts(167,79): error TS2304: Cannot find name 'Void'.
@@ -551,9 +545,14 @@ lib/remove/rimraf.ts(206,19): error TS2339: Property 'rmdir' does not exist on t
 lib/remove/rimraf.ts(216,51): error TS2304: Cannot find name 'Void'.
 lib/remove/rimraf.ts(217,11): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/remove/rimraf.ts(228,18): error TS2339: Property 'lstatSync' does not exist on type 'Object'.
+lib/remove/rimraf.ts(243,17): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
 lib/remove/rimraf.ts(245,15): error TS2339: Property 'unlinkSync' does not exist on type 'Object'.
-lib/remove/rimraf.ts(259,70): error TS2304: Cannot find name 'Void'.
+lib/remove/rimraf.ts(251,70): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+lib/remove/rimraf.ts(255,15): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
+lib/remove/rimraf.ts(259,72): error TS2304: Cannot find name 'Void'.
 lib/remove/rimraf.ts(264,13): error TS2339: Property 'rmdirSync' does not exist on type 'Object'.
+lib/remove/rimraf.ts(269,18): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+lib/remove/rimraf.ts(276,51): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/remove/rimraf.ts(279,11): error TS2339: Property 'readdirSync' does not exist on type 'Object'.
 lib/remove/rimraf.ts(279,70): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
@@ -635,7 +634,6 @@ lib/util/stat.ts(140,81): error TS2538: Type 'String' cannot be used as an index
 lib/util/utimes.ts(5,89): error TS2304: Cannot find name 'Void'.
 lib/util/utimes.ts(7,11): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
 lib/util/utimes.ts(9,16): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
-lib/util/utimes.ts(9,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/util/utimes.ts(10,16): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
 lib/util/utimes.ts(18,34): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PathLike'.
 lib/util/utimes.ts(19,18): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.

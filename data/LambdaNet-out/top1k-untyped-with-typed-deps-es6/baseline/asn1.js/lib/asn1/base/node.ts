@@ -161,7 +161,7 @@ overrided.forEach(function(method: String) {
 tags.forEach(function(tag: Number) {
   Node.prototype[tag] = function _tagMethod(): Object {
     const state: Object = this._baseState;
-    const args: Array = Array.prototype.slice.call(arguments);
+    const args: String = Array.prototype.slice.call(arguments);
 
     assert(state.tag === null);
     state.tag = tag;

@@ -396,7 +396,7 @@
 
   // (protected) r = this * a, r != this,a (HAC 14.12)
   // "this" should be the larger one if appropriate.
-  function bnpMultiplyTo(a: Object, r: Object): Void {
+  function bnpMultiplyTo(a: HTMLElement, r: Object): Void {
     var x: HTMLElement = this.abs(),
       y: Object = a.abs();
     var i: Number = x.t;
@@ -430,7 +430,7 @@
 
   // (protected) divide this by m, quotient and remainder to q, r (HAC 14.20)
   // r != q, this != m.  q or r may be null.
-  function bnpDivRemTo(m: Object, q: String, r: Function): Void {
+  function bnpDivRemTo(m: HTMLElement, q: String, r: Function): Void {
     var pm: Object = m.abs();
     if (pm.t <= 0) return;
     var pt: HTMLElement = this.abs();
@@ -499,7 +499,7 @@
   }
 
   // Modular reduction using "classic" algorithm
-  function Classic(m: Object): Void {
+  function Classic(m: Object): String {
     this.m = m;
   }
   function cConvert(x: String): Object {
@@ -1002,7 +1002,7 @@
   }
 
   // (public) this | (1<<n)
-  function bnSetBit(n: Number): Object {
+  function bnSetBit(n: String): Object {
     return this.changeBit(n, op_or);
   }
 
@@ -1051,7 +1051,7 @@
   }
 
   // (public) this + a
-  function bnAdd(a: Function): String {
+  function bnAdd(a: Array): Object {
     var r: String = nbi();
     this.addTo(a, r);
     return r;
@@ -1143,7 +1143,7 @@
 
   // (protected) r = lower n words of "this * a", a.t <= n
   // "this" should be the larger one if appropriate.
-  function bnpMultiplyLowerTo(a: Object, n: Number, r: Object): Promise {
+  function bnpMultiplyLowerTo(a: Object, n: Number, r: Object): Void {
     var i: Number = Math.min(this.t + a.t, n);
     r.s = 0; // assumes a,this >= 0
     r.t = i;
@@ -1226,7 +1226,7 @@
   Barrett.prototype.sqrTo = barrettSqrTo;
 
   // (public) this^e % m (HAC 14.85)
-  function bnModPow(e: Array, m: String): String {
+  function bnModPow(e: Array, m: Function): Object {
     var i: Number = e.bitLength(),
       k: Number,
       r: String = nbv(1),

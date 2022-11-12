@@ -483,7 +483,7 @@ function assertArray(value: String): Array {
 	return Array.isArray(value) ? value : [value];
 }
 
-function zeroArray(array: Object, length: String): Object {
+function zeroArray(array: Object, length: Number): Object {
 	for (let i = 0; i < length; i++) {
 		if (typeof array[i] !== 'number') {
 			array[i] = 0;

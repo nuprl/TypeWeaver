@@ -97,6 +97,7 @@ lib/infra.ts(14,42): error TS2345: Argument of type 'String' is not assignable t
 lib/percent-encoding.ts(2,10): error TS2614: Module '"./infra"' has no exported member 'isASCIIHex'. Did you mean to use 'import isASCIIHex from "./infra"' instead?
 lib/percent-encoding.ts(3,10): error TS2614: Module '"./encoding"' has no exported member 'utf8Encode'. Did you mean to use 'import utf8Encode from "./encoding"' instead?
 lib/percent-encoding.ts(11,32): error TS2554: Expected 0 arguments, but got 1.
+lib/percent-encoding.ts(20,45): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/percent-encoding.ts(21,17): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/percent-encoding.ts(21,46): error TS2339: Property 'byteLength' does not exist on type 'Object'.
 lib/percent-encoding.ts(23,29): error TS2339: Property 'byteLength' does not exist on type 'Object'.
@@ -104,9 +105,6 @@ lib/percent-encoding.ts(25,9): error TS2367: This condition will always return '
 lib/percent-encoding.ts(26,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/percent-encoding.ts(28,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/percent-encoding.ts(31,14): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/percent-encoding.ts(42,3): error TS2322: Type 'String' is not assignable to type 'Boolean'.
-  The types returned by 'valueOf()' are incompatible between these types.
-    Type 'string' is not assignable to type 'boolean'.
 lib/percent-encoding.ts(51,7): error TS2739: Type 'Set<Number>' is missing the following properties from type 'Error': name, message
 lib/percent-encoding.ts(53,35): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 lib/percent-encoding.ts(53,71): error TS2339: Property 'has' does not exist on type 'Error'.
@@ -123,6 +121,8 @@ lib/percent-encoding.ts(89,73): error TS2339: Property 'has' does not exist on t
 lib/percent-encoding.ts(98,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/percent-encoding.ts(105,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
 lib/percent-encoding.ts(113,3): error TS2322: Type 'String' is not assignable to type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'string' is not assignable to type 'boolean'.
 lib/percent-encoding.ts(113,66): error TS2345: Argument of type 'String' is not assignable to parameter of type 'number'.
 lib/percent-encoding.ts(113,78): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Function'.
   Type 'Boolean' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.

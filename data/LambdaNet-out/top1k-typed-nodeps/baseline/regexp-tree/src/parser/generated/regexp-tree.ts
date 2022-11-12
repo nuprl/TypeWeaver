@@ -83,7 +83,7 @@ const productions: Array = [[-1,1,(_1: Object,_1loc: String) => { __loc = yyloc(
 [4,1,(_1: Object,_1loc: String) => { __loc = yyloc(_1loc, _1loc);__ = _1 }],
 [4,3,(_1: String,_2: Function,_3: String,_1loc: String,_2loc: Boolean,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
       // Location for empty disjunction: /|/
-      let _loc: String = null;
+      let _loc: NodePath = null;
 
       if (_2loc) {
         _loc = loc(_1loc || _2loc, _3loc || _2loc);
@@ -227,7 +227,7 @@ const productions: Array = [[-1,1,(_1: Object,_1loc: String) => { __loc = yyloc(
      }],
 [14,1,(_1: Object,_1loc: String) => { __loc = yyloc(_1loc, _1loc);__ = _1 }],
 [14,1,(_1: Object,_1loc: String) => { __loc = yyloc(_1loc, _1loc);__ = _1 }],
-[15,3,(_1: HTMLElement,_2: String,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
+[15,3,(_1: Writer,_2: String,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
       const nameRaw: String = String(_1);
       const name: String = decodeUnicodeGroupName(nameRaw);
       if (!yy.options.allowGroupNameDuplicates && namedGroups.hasOwnProperty(name)) {
@@ -245,7 +245,7 @@ const productions: Array = [[-1,1,(_1: Object,_1loc: String) => { __loc = yyloc(
         expression: _2,
       }, __loc);
      }],
-[15,3,(_1: DFA,_2: String,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
+[15,3,(_1: Writer,_2: String,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
       __ = Node({
         type: 'Group',
         capturing: true,
@@ -864,7 +864,7 @@ let namedGroups: Object = {};
  */
 let parsingString: String = '';
 
-yyparse.onParseBegin = (string: String, lexer: Object) => {
+yyparse.onParseBegin = (string: String, lexer: Writer) => {
   parsingString = string;
   capturingGroupsCount = 0;
   namedGroups = {};
@@ -975,7 +975,7 @@ function UnicodeProperty(matched: String, loc: String): String {
  * Creates a character node.
  */
 function Char(value: String, kind: String, loc: String): String {
-  let symbol: String;
+  let symbol: NodePath;
   let codePoint: Number;
 
   switch (kind) {
@@ -1115,7 +1115,7 @@ const ucpReAnywhere: RegExp = /\\u\{[0-9a-fA-F]{1,}\}/; // matches anywhere in s
  * Validates Unicode group name.
  */
 function validateUnicodeGroupName(name: String, state: String): String {
-  const isUnicodeName: Number = ucpReAnywhere.test(name);
+  const isUnicodeName: Boolean = ucpReAnywhere.test(name);
   const isUnicodeState: Boolean = (state === 'u' || state === 'xu' || state === 'u_class');
 
   if (isUnicodeName && !isUnicodeState) {
@@ -1274,7 +1274,7 @@ function NamedGroupRefOrChars(text: String, textLoc: Object): Array {
 /**
  * Creates an AST node with a location.
  */
-function Node(node: NodePath, loc: Object): String {
+function Node(node: NodePath, loc: Object): NodePath {
   if (yy.options.captureLocations) {
     node.loc = {
       source: parsingString.slice(loc.startOffset, loc.endOffset),

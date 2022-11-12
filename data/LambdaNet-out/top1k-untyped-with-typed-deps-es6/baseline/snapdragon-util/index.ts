@@ -433,7 +433,7 @@ utils.shiftNode = function(node: Array) {
  * @api public
  */
 
-utils.removeNode = function(parent: Map, node: Object) {
+utils.removeNode = function(parent: HTMLElement, node: Object) {
   assert(utils.isNode(parent), 'expected parent to be an instance of Node');
   if (!parent.nodes) return;
   if (!node) return;

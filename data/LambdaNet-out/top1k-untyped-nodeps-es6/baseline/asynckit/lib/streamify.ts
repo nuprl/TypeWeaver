@@ -19,7 +19,7 @@ function wrapIterator(iterator: Function): Function
 
   return function(item: String, key: String, cb: String)
   {
-    var aborter: Number
+    var aborter: Array
       , wrappedCb: Array = async(wrapIteratorCallback.call(stream, cb, key))
       ;
 
@@ -49,7 +49,7 @@ function wrapIterator(iterator: Function): Function
  * @param   {function} callback - function to wrap
  * @returns {function} - wrapped function
  */
-function wrapCallback(callback: Function): Function
+function wrapCallback(callback: String): Function
 {
   var stream: Array = this;
 

@@ -314,7 +314,7 @@ const rimrafSync: Function = (p: String, options: Object) => {
   }
 }
 
-const rmdirSync: Function = (p: Array, options: Object, originalEr: String) => {
+const rmdirSync: Function = (p: Array, options: Object, originalEr: Number) => {
   assert(p)
   assert(options)
 

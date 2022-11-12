@@ -50,9 +50,9 @@ lib/mkdirp-manual.ts(4,8): error TS2339: Property 'recursive' does not exist on 
 lib/mkdirp-manual.ts(7,17): error TS2339: Property 'mkdirAsync' does not exist on type 'HTMLElement'.
 lib/mkdirp-manual.ts(10,14): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/mkdirp-manual.ts(15,15): error TS2339: Property 'mkdirAsync' does not exist on type 'HTMLElement'.
-lib/mkdirp-manual.ts(16,12): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
-lib/mkdirp-manual.ts(19,12): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
-lib/mkdirp-manual.ts(19,36): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
+lib/mkdirp-manual.ts(16,12): error TS2339: Property 'code' does not exist on type 'Object'.
+lib/mkdirp-manual.ts(19,12): error TS2339: Property 'code' does not exist on type 'Object'.
+lib/mkdirp-manual.ts(19,36): error TS2339: Property 'code' does not exist on type 'Object'.
 lib/mkdirp-manual.ts(21,17): error TS2339: Property 'statAsync' does not exist on type 'HTMLElement'.
 lib/mkdirp-manual.ts(21,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/mkdirp-manual.ts(30,7): error TS2451: Cannot redeclare block-scoped variable 'mkdirpManualSync'.
@@ -105,8 +105,8 @@ lib/path-arg.ts(16,7): error TS2367: This condition will always return 'false' s
 lib/use-native.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
 lib/use-native.ts(5,7): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 lib/use-native.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'useNative'.
-lib/use-native.ts(7,84): error TS2339: Property 'mkdir' does not exist on type 'HTMLElement'.
-lib/use-native.ts(7,97): error TS2339: Property 'mkdir' does not exist on type 'Function'.
+lib/use-native.ts(7,79): error TS2339: Property 'mkdir' does not exist on type 'Object'.
+lib/use-native.ts(7,92): error TS2339: Property 'mkdir' does not exist on type 'Function'.
 lib/use-native.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'useNativeSync'.
 lib/use-native.ts(8,88): error TS2339: Property 'mkdirSync' does not exist on type 'HTMLElement'.
 lib/use-native.ts(8,105): error TS2339: Property 'mkdirSync' does not exist on type 'Function'.

@@ -361,7 +361,7 @@ function getExportLazyStyleCode(esModule: Boolean, loaderContext: Number, reques
     : "module.exports = exported;";
 }
 
-function getSetAttributesCode(esModule: Boolean, loaderContext: String, options: Object): String {
+function getSetAttributesCode(esModule: Boolean, loaderContext: String, options: Object): Array {
   let modulePath: String;
 
   if (typeof options.attributes !== "undefined") {

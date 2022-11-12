@@ -7,7 +7,7 @@ import fs from 'fs';
 var readFile: String = fs.readFile.bind(fs);
 import loadLoader from './loadLoader';
 
-function utf8BufferToString(buf: String): String {
+function utf8BufferToString(buf: String): Array {
 	var str: String = buf.toString("utf-8");
 	if(str.charCodeAt(0) === 0xFEFF) {
 		return str.slice(1);
@@ -313,7 +313,7 @@ export const runLoaders: String = function runLoaders(options: Object, callback:
 	loaderContext.getDependencies = function getDependencies(): Array {
 		return fileDependencies.slice();
 	};
-	loaderContext.getContextDependencies = function getContextDependencies(): Array {
+	loaderContext.getContextDependencies = function getContextDependencies(): Promise {
 		return contextDependencies.slice();
 	};
 	loaderContext.getMissingDependencies = function getMissingDependencies(): Array {

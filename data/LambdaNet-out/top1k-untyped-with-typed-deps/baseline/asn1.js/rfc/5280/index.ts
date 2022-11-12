@@ -154,7 +154,7 @@ rfc5280.SubjectPublicKeyInfo = SubjectPublicKeyInfo;
 //           crlEntryExtensions      Extensions OPTIONAL
 //      }  OPTIONAL,
 //      crlExtensions           [0] Extensions OPTIONAL }
-const TBSCertList: String = asn1.define('TBSCertList', function() {
+const TBSCertList: Array = asn1.define('TBSCertList', function() {
   this.seq().obj(
     this.key('version').optional().int(),
     this.key('signature').use(AlgorithmIdentifier),

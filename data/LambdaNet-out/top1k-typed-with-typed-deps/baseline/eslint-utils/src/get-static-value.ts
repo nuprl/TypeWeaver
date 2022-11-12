@@ -160,7 +160,7 @@ function getElementValues(nodeList: Array, initialScope: String): Array {
             }
             valueList.push(...argument.value)
         } else {
-            const element: ReferenceTracker = getStaticValueR(elementNode, initialScope)
+            const element: Element = getStaticValueR(elementNode, initialScope)
             if (element == null) {
                 return null
             }

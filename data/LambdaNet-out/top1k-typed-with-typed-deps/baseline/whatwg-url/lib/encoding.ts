@@ -2,7 +2,7 @@
 const utf8Encoder: HTMLElement = new TextEncoder();
 const utf8Decoder: HTMLElement = new TextDecoder("utf-8", { ignoreBOM: true });
 
-function utf8Encode(string: String): String {
+function utf8Encode(string: String): Array {
   return utf8Encoder.encode(string);
 }
 

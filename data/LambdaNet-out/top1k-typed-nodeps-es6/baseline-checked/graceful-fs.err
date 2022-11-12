@@ -48,13 +48,11 @@ graceful-fs.ts(103,13): error TS2345: Argument of type 'Object' is not assignabl
 graceful-fs.ts(104,6): error TS2339: Property 'gracefulify' does not exist on type 'Object'.
 graceful-fs.ts(106,6): error TS2339: Property 'createReadStream' does not exist on type 'Object'.
 graceful-fs.ts(107,6): error TS2339: Property 'createWriteStream' does not exist on type 'Object'.
-graceful-fs.ts(108,32): error TS2339: Property 'readFile' does not exist on type 'Object'.
+graceful-fs.ts(108,34): error TS2339: Property 'readFile' does not exist on type 'Object'.
 graceful-fs.ts(109,6): error TS2339: Property 'readFile' does not exist on type 'Object'.
 graceful-fs.ts(112,7): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 graceful-fs.ts(114,5): error TS2740: Type 'Boolean' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 graceful-fs.ts(114,12): error TS2554: Expected 4 arguments, but got 3.
-graceful-fs.ts(117,14): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
 graceful-fs.ts(118,25): error TS2339: Property 'code' does not exist on type 'Object'.
 graceful-fs.ts(118,50): error TS2339: Property 'code' does not exist on type 'Object'.
 graceful-fs.ts(128,21): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -293,9 +291,7 @@ polyfills.ts(244,10): error TS2339: Property 'lutimes' does not exist on type 'S
 polyfills.ts(244,110): error TS2345: Argument of type 'Boolean' is not assignable to parameter of type 'Function'.
 polyfills.ts(245,10): error TS2339: Property 'lutimesSync' does not exist on type 'String'.
 polyfills.ts(251,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-polyfills.ts(252,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 polyfills.ts(273,68): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-polyfills.ts(274,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 polyfills.ts(296,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 polyfills.ts(301,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 polyfills.ts(301,55): error TS2304: Cannot find name 'Void'.

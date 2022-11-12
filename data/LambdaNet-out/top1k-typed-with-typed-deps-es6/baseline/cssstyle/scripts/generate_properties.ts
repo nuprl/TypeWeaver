@@ -40,7 +40,7 @@ function isModuleDotExports(node: Object): Boolean {
     t.isIdentifier(node.property, { name: 'exports' })
   );
 }
-function isRequire(node: Object, filename: String): Boolean {
+function isRequire(node: HTMLElement, filename: String): Boolean {
   if (
     t.isCallExpression(node) &&
     t.isIdentifier(node.callee, { name: 'require' }) &&

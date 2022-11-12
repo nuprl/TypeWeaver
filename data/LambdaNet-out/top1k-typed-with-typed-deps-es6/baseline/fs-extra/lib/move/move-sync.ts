@@ -33,7 +33,7 @@ function doRename (src: String, dest: String, overwrite: String, isChangingCase:
   return rename(src, dest, overwrite)
 }
 
-function rename (src: String, dest: String, overwrite: Function): Void {
+function rename (src: String, dest: String, overwrite: String): Void {
   try {
     fs.renameSync(src, dest)
   } catch (err) {

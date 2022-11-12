@@ -72,7 +72,7 @@ function patch (fs: String): Void {
 
   // if lchmod/lchown do not exist, then make them no-ops
   if (fs.chmod && !fs.lchmod) {
-    fs.lchmod = function (path: String, mode: Number, cb: Boolean) {
+    fs.lchmod = function (path: String, mode: String, cb: Boolean) {
       if (cb) process.nextTick(cb)
     }
     fs.lchmodSync = function () {}
@@ -207,21 +207,21 @@ function patch (fs: String): Void {
 
   function patchLutimes (fs: String): Void {
     if (constants.hasOwnProperty("O_SYMLINK") && fs.futimes) {
-      fs.lutimes = function (path: String, at: String, mt: Function, cb: Function) {
-        fs.open(path, constants.O_SYMLINK, function (er: String, fd: String) {
+      fs.lutimes = function (path: String, at: String, mt: String, cb: Function) {
+        fs.open(path, constants.O_SYMLINK, function (er: Number, fd: String) {
           if (er) {
             if (cb) cb(er)
             return
           }
           fs.futimes(fd, at, mt, function (er: String) {
-            fs.close(fd, function (er2: Boolean) {
+            fs.close(fd, function (er2: Number) {
               if (cb) cb(er || er2)
             })
           })
         })
       }
 
-      fs.lutimesSync = function (path: String, at: String, mt: Function) {
+      fs.lutimesSync = function (path: String, at: String, mt: String) {
         var fd: Number = fs.openSync(path, constants.O_SYMLINK)
         var ret: Number
         var threw: Boolean = true
@@ -249,7 +249,7 @@ function patch (fs: String): Void {
   function chmodFix (orig: Function): Function {
     if (!orig) return orig
     return function (target: Object, mode: String, cb: Array) {
-      return orig.call(fs, target, mode, function (er: Array) {
+      return orig.call(fs, target, mode, function (er: String) {
         if (chownErOk(er)) er = null
         if (cb) cb.apply(this, arguments)
       })
@@ -271,7 +271,7 @@ function patch (fs: String): Void {
   function chownFix (orig: Function): Function {
     if (!orig) return orig
     return function (target: Object, uid: String, gid: String, cb: Array) {
-      return orig.call(fs, target, uid, gid, function (er: Array) {
+      return orig.call(fs, target, uid, gid, function (er: String) {
         if (chownErOk(er)) er = null
         if (cb) cb.apply(this, arguments)
       })

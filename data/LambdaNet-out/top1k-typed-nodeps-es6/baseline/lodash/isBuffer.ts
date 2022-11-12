@@ -10,7 +10,7 @@ const freeModule: Object = freeExports && typeof module === 'object' && module !
 const moduleExports: Boolean = freeModule && freeModule.exports === freeExports
 
 /** Built-in value references. */
-const Buffer: HTMLElement = moduleExports ? root.Buffer : undefined
+const Buffer: ListCache = moduleExports ? root.Buffer : undefined
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 const nativeIsBuffer: Object = Buffer ? Buffer.isBuffer : undefined

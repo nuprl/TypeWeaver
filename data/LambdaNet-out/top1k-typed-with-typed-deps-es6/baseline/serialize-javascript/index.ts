@@ -30,7 +30,7 @@ var ESCAPED_CHARS: Object = {
     '\u2029': '\\u2029'
 };
 
-function escapeUnsafeChars(unsafeChar: String): String {
+function escapeUnsafeChars(unsafeChar: String): Object {
     return ESCAPED_CHARS[unsafeChar];
 }
 
@@ -160,7 +160,7 @@ export default function serialize(obj: String, options: Object): String {
       var def: Array = serializedFn.substr(0, argsStartsAt)
         .trim()
         .split(' ')
-        .filter(function(val: Array) { return val.length > 0 });
+        .filter(function(val: Promise) { return val.length > 0 });
 
       var nonReservedSymbols: Array = def.filter(function(val: String) {
         return RESERVED_SYMBOLS.indexOf(val) === -1

@@ -55,7 +55,7 @@
             return "any character";
           },
 
-          end: function(expectation: String) {
+          end: function(expectation: Function) {
             return "end of input";
           },
 
@@ -152,7 +152,7 @@
           },
         peg$c1: Function = function() { return void 0; },
         peg$c2: String = " ",
-        peg$c3: Function = peg$literalExpectation(" ", false),
+        peg$c3: Object = peg$literalExpectation(" ", false),
         peg$c4: RegExp = /^[^ [\],():#!=><~+.]/,
         peg$c5: Function = peg$classExpectation([" ", "[", "]", ",", "(", ")", ":", "#", "!", "=", ">", "<", "~", "+", "."], true, false),
         peg$c6: Function = function(i: Array) { return i.join(''); },
@@ -167,7 +167,7 @@
         peg$c15: Function = function() { return 'adjacent'; },
         peg$c16: Function = function() { return 'descendant'; },
         peg$c17: String = ",",
-        peg$c18: Object = peg$literalExpectation(",", false),
+        peg$c18: Function = peg$literalExpectation(",", false),
         peg$c19: Function = function(s: String, ss: Array) {
           return [s].concat(ss.map(function (s: Promise) { return s[3]; }));
         },
@@ -238,7 +238,7 @@
         peg$c66: RegExp = /^[^ )]/,
         peg$c67: Function = peg$classExpectation([" ", ")"], true, false),
         peg$c68: String = ")",
-        peg$c69: Function = peg$literalExpectation(")", false),
+        peg$c69: Object = peg$literalExpectation(")", false),
         peg$c70: Function = function(t: Array) { return { type: 'type', value: t.join('') }; },
         peg$c71: RegExp = /^[imsu]/,
         peg$c72: Function = peg$classExpectation(["i", "m", "s", "u"], false, false),
@@ -268,17 +268,17 @@
         peg$c92: Function = peg$literalExpectation(":last-child", false),
         peg$c93: Function = function() { return nthLast(1); },
         peg$c94: String = ":nth-child(",
-        peg$c95: Object = peg$literalExpectation(":nth-child(", false),
+        peg$c95: Function = peg$literalExpectation(":nth-child(", false),
         peg$c96: Function = function(n: Array) { return nth(parseInt(n.join(''), 10)); },
         peg$c97: String = ":nth-last-child(",
         peg$c98: Function = peg$literalExpectation(":nth-last-child(", false),
         peg$c99: Function = function(n: Array) { return nthLast(parseInt(n.join(''), 10)); },
         peg$c100: String = ":",
-        peg$c101: Function = peg$literalExpectation(":", false),
+        peg$c101: Object = peg$literalExpectation(":", false),
         peg$c102: String = "statement",
         peg$c103: Function = peg$literalExpectation("statement", true),
         peg$c104: String = "expression",
-        peg$c105: Object = peg$literalExpectation("expression", true),
+        peg$c105: Function = peg$literalExpectation("expression", true),
         peg$c106: String = "declaration",
         peg$c107: Function = peg$literalExpectation("declaration", true),
         peg$c108: String = "function",
@@ -418,7 +418,7 @@
       return new peg$SyntaxError(message, null, null, location);
     }
 
-    function peg$buildStructuredError(expected: String, found: String, location: Number): String {
+    function peg$buildStructuredError(expected: String, found: Function, location: String): String {
       return new peg$SyntaxError(
         peg$SyntaxError.buildMessage(expected, found),
         expected,

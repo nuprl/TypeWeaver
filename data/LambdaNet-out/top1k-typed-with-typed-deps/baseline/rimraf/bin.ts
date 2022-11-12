@@ -18,7 +18,7 @@ let help: Boolean = false
 let dashdash: Boolean = false
 let noglob: Boolean = false
 let preserveRoot: Boolean = true
-const args: Array = process.argv.slice(2).filter((arg: Number) => {
+const args: Array = process.argv.slice(2).filter((arg: String) => {
   if (dashdash)
     return !!arg
   else if (arg === '--')

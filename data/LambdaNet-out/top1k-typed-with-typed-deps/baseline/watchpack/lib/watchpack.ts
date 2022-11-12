@@ -59,7 +59,7 @@ const normalizeCache: Error = new WeakMap();
 const cachedNormalizeOptions: Function = (options: Function) => {
 	const cacheEntry: Array = normalizeCache.get(options);
 	if (cacheEntry !== undefined) return cacheEntry;
-	const normalized: Array = normalizeOptions(options);
+	const normalized: String = normalizeOptions(options);
 	normalizeCache.set(options, normalized);
 	return normalized;
 };
@@ -112,7 +112,7 @@ class WatchpackDirectoryWatcher {
 				watchpack._onRemove(item, item, type);
 			}
 		});
-		watcher.on("change", (file: String, mtime: Array, type: Number) => {
+		watcher.on("change", (file: String, mtime: Number, type: Number) => {
 			for (const item of this.directories) {
 				watchpack._onChange(item, mtime, file, type);
 			}
@@ -253,7 +253,7 @@ class Watchpack extends EventEmitter {
 		// Close unneeded old watchers
 		// and update existing watchers
 		for (const [key, w] of fileWatchers) {
-			const needed: RecursiveWatcher = fileWatchersNeeded.get(key);
+			const needed: String = fileWatchersNeeded.get(key);
 			if (needed === undefined) {
 				w.close();
 				fileWatchers.delete(key);
@@ -263,7 +263,7 @@ class Watchpack extends EventEmitter {
 			}
 		}
 		for (const [key, w] of directoryWatchers) {
-			const needed: RecursiveWatcher = directoryWatchersNeeded.get(key);
+			const needed: String = directoryWatchersNeeded.get(key);
 			if (needed === undefined) {
 				w.close();
 				directoryWatchers.delete(key);
@@ -341,7 +341,7 @@ class Watchpack extends EventEmitter {
 			clearTimeout(this.aggregateTimer);
 			this.aggregateTimer = undefined;
 		}
-		const changes: LinkResolver = this.aggregatedChanges;
+		const changes: Function = this.aggregatedChanges;
 		const removals: Number = this.aggregatedRemovals;
 		this.aggregatedChanges = new Set();
 		this.aggregatedRemovals = new Set();

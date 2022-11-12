@@ -333,7 +333,7 @@
     }
 
 
-    function scanTypeName(): Number {
+    function scanTypeName(): String {
         var ch: Number, ch2: Number;
 
         value = advance();

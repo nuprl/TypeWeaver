@@ -34,7 +34,7 @@ index.ts(155,33): error TS2345: Argument of type 'String' is not assignable to p
 index.ts(160,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(160,47): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
-index.ts(163,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+index.ts(163,31): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 index.ts(165,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(173,35): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -46,9 +46,8 @@ index.ts(197,77): error TS2339: Property 'space' does not exist on type 'Object'
 index.ts(209,17): error TS2339: Property 'unsafe' does not exist on type 'Object'.
 index.ts(210,48): error TS2769: No overload matches this call.
   The last overload gave the following error.
-    Argument of type '(unsafeChar: String) => String' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
-      Type 'String' is not assignable to type 'string'.
-        'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+    Argument of type '(unsafeChar: String) => Object' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
+      Type 'Object' is not assignable to type 'string'.
 index.ts(220,24): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'Object' is not assignable to parameter of type 'string | RegExp'.

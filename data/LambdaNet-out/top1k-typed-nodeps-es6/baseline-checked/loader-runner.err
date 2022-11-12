@@ -1,3 +1,4 @@
+lib/LoaderRunner.ts(10,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(11,33): error TS2554: Expected 0 arguments, but got 1.
 lib/LoaderRunner.ts(26,13): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(26,55): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -131,7 +132,7 @@ lib/LoaderRunner.ts(310,87): error TS2304: Cannot find name 'Void'.
 lib/LoaderRunner.ts(313,16): error TS2339: Property 'getDependencies' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(313,62): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(316,16): error TS2339: Property 'getContextDependencies' does not exist on type 'HTMLElement'.
-lib/LoaderRunner.ts(316,76): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/LoaderRunner.ts(316,76): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(319,16): error TS2339: Property 'getMissingDependencies' does not exist on type 'HTMLElement'.
 lib/LoaderRunner.ts(319,76): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/LoaderRunner.ts(322,16): error TS2339: Property 'clearDependencies' does not exist on type 'HTMLElement'.

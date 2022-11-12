@@ -381,18 +381,18 @@ browser/type-check.ts(919,36): error TS2365: Operator '<' cannot be applied to t
 browser/type-check.ts(919,49): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/type-check.ts(930,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(930,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(930,100): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(930,144): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(930,173): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(930,98): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(930,142): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(930,171): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(932,18): error TS2322: Type 'number' is not assignable to type 'Function'.
 browser/type-check.ts(932,42): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
 browser/type-check.ts(932,54): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/type-check.ts(933,27): error TS2538: Type 'Number' cannot be used as an index type.
-browser/type-check.ts(937,37): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
+browser/type-check.ts(937,37): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
 browser/type-check.ts(937,50): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/type-check.ts(939,43): error TS2739: Type 'Function' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 browser/type-check.ts(941,36): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-browser/type-check.ts(944,39): error TS2365: Operator '<' cannot be applied to types 'Number' and 'Function'.
+browser/type-check.ts(944,39): error TS2365: Operator '<' cannot be applied to types 'Number' and 'String'.
 browser/type-check.ts(944,52): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 browser/type-check.ts(953,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(953,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -568,7 +568,7 @@ browser/type-check.ts(1451,26): error TS2314: Generic type 'Array<T>' requires 1
 browser/type-check.ts(1457,3): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 browser/type-check.ts(1457,12): error TS2554: Expected 2 arguments, but got 1.
 browser/type-check.ts(1460,28): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-browser/type-check.ts(1461,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+browser/type-check.ts(1461,7): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
 browser/type-check.ts(1469,37): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type '(arg$: Function, c: String) => string' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.

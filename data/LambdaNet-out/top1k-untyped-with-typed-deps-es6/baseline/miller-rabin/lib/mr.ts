@@ -6,7 +6,7 @@ function MillerRabin(rand: String): Void {
 }
 export default MillerRabin;
 
-MillerRabin.create = function create(rand: Function): String {
+MillerRabin.create = function create(rand: String): String {
   return new MillerRabin(rand);
 };
 
@@ -88,7 +88,7 @@ MillerRabin.prototype.getDivisor = function getDivisor(n: Object, k: Number): Bo
   for (; k > 0; k--) {
     var a: HTMLElement = this._randrange(new bn(2), n1);
 
-    var g: Boolean = n.gcd(a);
+    var g: Number = n.gcd(a);
     if (g.cmpn(1) !== 0)
       return g;
 

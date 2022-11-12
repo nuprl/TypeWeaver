@@ -132,14 +132,11 @@ lib/rsvp/asap.ts(53,7): error TS2740: Type 'MessageChannel' is missing the follo
 lib/rsvp/asap.ts(54,11): error TS2339: Property 'port1' does not exist on type 'HTMLElement'.
 lib/rsvp/asap.ts(55,24): error TS2339: Property 'port2' does not exist on type 'HTMLElement'.
 lib/rsvp/asap.ts(64,19): error TS2304: Cannot find name 'Void'.
-lib/rsvp/asap.ts(81,23): error TS2339: Property 'runOnLoop' does not exist on type 'HTMLElement'.
-lib/rsvp/asap.ts(81,42): error TS2339: Property 'runOnContext' does not exist on type 'HTMLElement'.
-lib/rsvp/asap.ts(82,5): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/rsvp/asap.ts(80,18): error TS2304: Cannot find name 'Enumerator'.
+lib/rsvp/asap.ts(82,5): error TS2322: Type 'Function' is not assignable to type 'Boolean'.
   The types returned by 'valueOf()' are incompatible between these types.
     Type 'Object' is not assignable to type 'boolean'.
 lib/rsvp/asap.ts(84,5): error TS2322: Type 'Function' is not assignable to type 'Boolean'.
-  Types of property 'valueOf' are incompatible.
-    Type '() => Object' is not assignable to type '() => boolean'.
 lib/rsvp/asap.ts(97,3): error TS2322: Type 'Boolean' is not assignable to type 'Function'.
 lib/rsvp/config.ts(11,12): error TS2538: Type 'String' cannot be used as an index type.
 lib/rsvp/config.ts(13,19): error TS2538: Type 'String' cannot be used as an index type.
@@ -287,9 +284,9 @@ lib/rsvp/node.ts(237,18): error TS2339: Property 'all' does not exist on type 't
 lib/rsvp/node.ts(238,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/rsvp/promise-hash.ts(14,10): error TS2339: Property '_result' does not exist on type 'PromiseHash'.
 lib/rsvp/promise-hash.ts(19,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/rsvp/promise-hash.ts(22,32): error TS2339: Property 'promise' does not exist on type 'PromiseHash'.
+lib/rsvp/promise-hash.ts(22,18): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
+lib/rsvp/promise-hash.ts(22,33): error TS2339: Property 'promise' does not exist on type 'PromiseHash'.
 lib/rsvp/promise-hash.ts(23,10): error TS2339: Property '_remaining' does not exist on type 'PromiseHash'.
-lib/rsvp/promise-hash.ts(26,29): error TS2339: Property '_state' does not exist on type 'String'.
 lib/rsvp/promise-hash.ts(28,19): error TS2538: Type 'String' cannot be used as an index type.
 lib/rsvp/promise.ts(18,27): error TS2304: Cannot find name 'Void'.
 lib/rsvp/promise.ts(22,22): error TS2304: Cannot find name 'Void'.

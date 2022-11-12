@@ -42,7 +42,7 @@
         };
       }
     },
-    Undefined: function(it: Number){
+    Undefined: function(it: String){
       if (it === 'undefined' || it === void 8) {
         return {
           type: 'Just',
@@ -66,7 +66,7 @@
         };
       }
     },
-    NaN: function(it: Number){
+    NaN: function(it: String){
       if (it === 'NaN') {
         return {
           type: 'Just',
@@ -169,7 +169,7 @@
         };
       }
       replace = function(value: String, quote: String){
-        return value.replace(/\\([^u]|u[0-9a-fA-F]{4})/g, function(all: Number, escaped: Promise){
+        return value.replace(/\\([^u]|u[0-9a-fA-F]{4})/g, function(all: String, escaped: Promise){
           switch (escaped[0]) {
           case quote:
             return quote;

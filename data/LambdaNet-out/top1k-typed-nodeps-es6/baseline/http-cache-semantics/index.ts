@@ -1,6 +1,6 @@
 'use strict';
 // rfc7231 6.1
-const statusCodeCacheableByDefault: Map = new Set([
+const statusCodeCacheableByDefault: Error = new Set([
     200,
     203,
     204,

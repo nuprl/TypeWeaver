@@ -223,10 +223,9 @@ lib/fromStringWithSourceMap.ts(35,16): error TS2339: Property 'source' does not 
 lib/fromStringWithSourceMap.ts(39,4): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/fromStringWithSourceMap.ts(42,28): error TS2365: Operator '+' cannot be applied to types 'Number' and 'number'.
 lib/fromStringWithSourceMap.ts(54,17): error TS2339: Property 'rest' does not exist on type 'Object'.
-lib/fromStringWithSourceMap.ts(55,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'CodeNode'.
-  Type 'String' is missing the following properties from type 'CodeNode': clone, getGeneratedCode, getMappings, addGeneratedCode, and 3 more.
 lib/fromStringWithSourceMap.ts(63,4): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/fromStringWithSourceMap.ts(67,9): error TS2554: Expected 3 arguments, but got 1.
+lib/fromStringWithSourceMap.ts(68,49): error TS2304: Cannot find name 'SingleLineNode'.
 lib/fromStringWithSourceMap.ts(69,14): error TS2339: Property 'rest' does not exist on type 'Object'.
 lib/fromStringWithSourceMap.ts(69,30): error TS2339: Property 'rest' does not exist on type 'Object'.
 lib/fromStringWithSourceMap.ts(70,29): error TS2339: Property 'rest' does not exist on type 'Object'.
@@ -244,8 +243,6 @@ lib/fromStringWithSourceMap.ts(92,14): error TS2339: Property 'rest' does not ex
 lib/fromStringWithSourceMap.ts(93,33): error TS2339: Property 'rest' does not exist on type 'Object'.
 lib/fromStringWithSourceMap.ts(94,12): error TS2339: Property 'rest' does not exist on type 'Object'.
 lib/fromStringWithSourceMap.ts(94,46): error TS2339: Property 'rest' does not exist on type 'Object'.
-lib/fromStringWithSourceMap.ts(98,14): error TS2345: Argument of type 'CodeNode' is not assignable to parameter of type 'String'.
-  Type 'CodeNode' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/fromStringWithSourceMap.ts(98,38): error TS2538: Type 'Number' cannot be used as an index type.
 lib/fromStringWithSourceMap.ts(98,89): error TS2538: Type 'Number' cannot be used as an index type.
 lib/helpers.ts(7,14): error TS2322: Type '(str: String) => Number' is not assignable to type 'String'.

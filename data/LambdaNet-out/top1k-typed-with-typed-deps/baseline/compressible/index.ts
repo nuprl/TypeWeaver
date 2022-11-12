@@ -38,7 +38,7 @@ module.exports = compressible
  * @public
  */
 
-function compressible (type: String): Boolean {
+function compressible (type: Number): Boolean {
   if (!type || typeof type !== 'string') {
     return false
   }

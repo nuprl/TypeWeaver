@@ -63,7 +63,7 @@ ECDH.prototype.computeSecret = function (other: Array, inenc: Number, enc: Strin
   if (!Buffer.isBuffer(other)) {
     other = new Buffer(other, inenc)
   }
-  var otherPub: HTMLElement = this.curve.keyFromPublic(other).getPublic()
+  var otherPub: Object = this.curve.keyFromPublic(other).getPublic()
   var out: String = otherPub.mul(this.keys.getPrivate()).getX()
   return formatReturnValue(out, enc, this.curveType.byteLength)
 }

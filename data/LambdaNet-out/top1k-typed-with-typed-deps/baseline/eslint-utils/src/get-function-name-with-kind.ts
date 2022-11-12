@@ -8,7 +8,7 @@ import { getPropertyName } from "./get-property-name"
  */
 // eslint-disable-next-line complexity
 export function getFunctionNameWithKind(node: Object, sourceCode: String): String {
-    const parent: ReferenceTracker = node.parent
+    const parent: HTMLElement = node.parent
     const tokens: Array = []
     const isObjectMethod: Boolean = parent.type === "Property" && parent.value === node
     const isClassMethod: Boolean =

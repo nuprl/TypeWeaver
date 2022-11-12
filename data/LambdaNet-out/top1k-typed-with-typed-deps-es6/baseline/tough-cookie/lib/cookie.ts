@@ -415,7 +415,7 @@ function defaultPath(path: Number): String {
     return path;
   }
 
-  const rightSlash: Boolean = path.lastIndexOf("/");
+  const rightSlash: Number = path.lastIndexOf("/");
   if (rightSlash === 0) {
     return "/";
   }
@@ -1272,7 +1272,7 @@ class CookieJar {
     const store: Store = this.store;
 
     if (!store.updateCookie) {
-      store.updateCookie = function(oldCookie: Cookie, newCookie: Cookie, cb: String) {
+      store.updateCookie = function(oldCookie: Cookie, newCookie: Cookie, cb: Function) {
         this.putCookie(newCookie, cb);
       };
     }
@@ -1411,7 +1411,7 @@ class CookieJar {
       host,
       allPaths ? null : path,
       this.allowSpecialUseDomain,
-      (err: CookieJar, cookies: Array) => {
+      (err: String, cookies: Array) => {
         if (err) {
           return cb(err);
         }
@@ -1438,7 +1438,7 @@ class CookieJar {
   getCookieString(...args) {
     const cb: Function = args.pop();
     validators.validate(validators.isFunction(cb), cb);
-    const next: Function = function(err: CookieJar, cookies: Array) {
+    const next: Function = function(err: Function, cookies: Array) {
       if (err) {
         cb(err);
       } else {
@@ -1458,7 +1458,7 @@ class CookieJar {
   getSetCookieStrings(...args) {
     const cb: Function = args.pop();
     validators.validate(validators.isFunction(cb), cb);
-    const next: Function = function(err: CookieJar, cookies: Array) {
+    const next: Function = function(err: Function, cookies: Array) {
       if (err) {
         cb(err);
       } else {
@@ -1514,7 +1514,7 @@ class CookieJar {
       );
     }
 
-    this.store.getAllCookies((err: CookieJar, cookies: Array) => {
+    this.store.getAllCookies((err: String, cookies: Array) => {
       if (err) {
         return cb(err);
       }
@@ -1545,7 +1545,7 @@ class CookieJar {
     }
     cookies = cookies.slice(); // do not modify the original
 
-    const putNext: Function = (err: Cookie) => {
+    const putNext: Function = (err: String) => {
       if (err) {
         return cb(err);
       }
@@ -1611,7 +1611,7 @@ class CookieJar {
       return store.removeAllCookies(cb);
     }
 
-    store.getAllCookies((err: CookieJar, cookies: Array) => {
+    store.getAllCookies((err: String, cookies: Array) => {
       if (err) {
         return cb(err);
       }
@@ -1635,7 +1635,7 @@ class CookieJar {
         }
       }
 
-      cookies.forEach((cookie: CookieJar) => {
+      cookies.forEach((cookie: Cookie) => {
         store.removeCookie(
           cookie.domain,
           cookie.path,

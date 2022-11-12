@@ -52,12 +52,8 @@ lib/ber/writer.ts(45,19): error TS2345: Argument of type 'Object' is not assigna
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
     Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 lib/ber/writer.ts(47,36): error TS2339: Property 'size' does not exist on type 'Object'.
-lib/ber/writer.ts(60,13): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
 lib/ber/writer.ts(66,43): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ber/writer.ts(85,5): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ber/writer.ts(90,11): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
 lib/ber/writer.ts(92,16): error TS2365: Operator '+' cannot be applied to types 'number' and 'Number'.
 lib/ber/writer.ts(96,10): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ber/writer.ts(150,47): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
@@ -86,8 +82,6 @@ lib/ber/writer.ts(212,33): error TS2345: Argument of type 'String' is not assign
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/ber/writer.ts(215,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/ber/writer.ts(219,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/ber/writer.ts(246,11): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
 lib/ber/writer.ts(263,23): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
 lib/ber/writer.ts(264,36): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ber/writer.ts(268,15): error TS2538: Type 'String' cannot be used as an index type.
@@ -103,8 +97,6 @@ lib/ber/writer.ts(280,26): error TS2362: The left-hand side of an arithmetic ope
 lib/ber/writer.ts(281,15): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
 lib/ber/writer.ts(281,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ber/writer.ts(282,15): error TS2365: Operator '+' cannot be applied to types 'String' and 'number'.
-lib/ber/writer.ts(284,11): error TS2349: This expression is not callable.
-  Type 'Object' has no call signatures.
 lib/ber/writer.ts(294,29): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 lib/ber/writer.ts(294,51): error TS2365: Operator '+' cannot be applied to types 'Number' and 'Number'.
 lib/ber/writer.ts(303,9): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.

@@ -302,7 +302,7 @@ function derDecodeTag(buf: HTMLElement, fail: String): Number {
   };
 }
 
-function derDecodeLen(buf: HTMLElement, primitive: Boolean, fail: String): Number {
+function derDecodeLen(buf: HTMLElement, primitive: Boolean, fail: Number): Number {
   let len: Number = buf.readUInt8(fail);
   if (buf.isError(len))
     return len;

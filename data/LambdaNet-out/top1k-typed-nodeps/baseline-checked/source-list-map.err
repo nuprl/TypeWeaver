@@ -107,18 +107,12 @@ lib/SourceListMap.ts(51,10): error TS2339: Property 'children' does not exist on
 lib/SourceListMap.ts(54,9): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(65,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/SourceListMap.ts(66,8): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
-lib/SourceListMap.ts(66,39): error TS2749: 'SourceNode' refers to a value, but is being used as a type here. Did you mean 'typeof SourceNode'?
-lib/SourceListMap.ts(67,55): error TS2749: 'SourceNode' refers to a value, but is being used as a type here. Did you mean 'typeof SourceNode'?
 lib/SourceListMap.ts(71,25): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/SourceListMap.ts(72,41): error TS2749: 'SourceNode' refers to a value, but is being used as a type here. Did you mean 'typeof SourceNode'?
-lib/SourceListMap.ts(77,17): error TS2749: 'SourceNode' refers to a value, but is being used as a type here. Did you mean 'typeof SourceNode'?
 lib/SourceListMap.ts(86,10): error TS2554: Expected 3 arguments, but got 1.
 lib/SourceListMap.ts(90,15): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
-lib/SourceListMap.ts(90,42): error TS2749: 'SourceNode' refers to a value, but is being used as a type here. Did you mean 'typeof SourceNode'?
 lib/SourceListMap.ts(97,31): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
-lib/SourceListMap.ts(97,58): error TS2749: 'SourceNode' refers to a value, but is being used as a type here. Did you mean 'typeof SourceNode'?
 lib/SourceListMap.ts(100,33): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
-lib/SourceListMap.ts(100,60): error TS2749: 'SourceNode' refers to a value, but is being used as a type here. Did you mean 'typeof SourceNode'?
 lib/SourceListMap.ts(109,21): error TS2339: Property 'sources' does not exist on type 'Object'.
 lib/SourceListMap.ts(110,37): error TS2339: Property 'hasSourceContent' does not exist on type 'MappingsContext'.
 lib/SourceListMap.ts(110,63): error TS2339: Property 'sourcesContent' does not exist on type 'Object'.
@@ -228,20 +222,24 @@ lib/fromStringWithSourceMap.ts(7,7): error TS2451: Cannot redeclare block-scoped
 lib/fromStringWithSourceMap.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'SourceNode'.
 lib/fromStringWithSourceMap.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'CodeNode'.
 lib/fromStringWithSourceMap.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'SourceListMap'.
+lib/fromStringWithSourceMap.ts(12,79): error TS2749: 'SourceNode' refers to a value, but is being used as a type here. Did you mean 'typeof SourceNode'?
 lib/fromStringWithSourceMap.ts(13,30): error TS2339: Property 'sources' does not exist on type 'Object'.
 lib/fromStringWithSourceMap.ts(14,37): error TS2339: Property 'sourcesContent' does not exist on type 'Object'.
 lib/fromStringWithSourceMap.ts(15,18): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/fromStringWithSourceMap.ts(15,30): error TS2339: Property 'mappings' does not exist on type 'Object'.
 lib/fromStringWithSourceMap.ts(16,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/fromStringWithSourceMap.ts(17,15): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/fromStringWithSourceMap.ts(18,19): error TS2749: 'SourceNode' refers to a value, but is being used as a type here. Did you mean 'typeof SourceNode'?
 lib/fromStringWithSourceMap.ts(22,43): error TS2304: Cannot find name 'Void'.
 lib/fromStringWithSourceMap.ts(25,51): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+lib/fromStringWithSourceMap.ts(26,16): error TS2551: Property 'addGeneratedCode' does not exist on type 'SingleLineNode'. Did you mean 'mapGeneratedCode'?
 lib/fromStringWithSourceMap.ts(27,4): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+lib/fromStringWithSourceMap.ts(29,4): error TS2741: Property 'mergeSingleLineNode' is missing in type 'CodeNode' but required in type 'SingleLineNode'.
 lib/fromStringWithSourceMap.ts(33,52): error TS2749: 'SourceNode' refers to a value, but is being used as a type here. Did you mean 'typeof SourceNode'?
 lib/fromStringWithSourceMap.ts(33,80): error TS2749: 'SourceNode' refers to a value, but is being used as a type here. Did you mean 'typeof SourceNode'?
 lib/fromStringWithSourceMap.ts(33,115): error TS2304: Cannot find name 'Void'.
 lib/fromStringWithSourceMap.ts(34,44): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
+lib/fromStringWithSourceMap.ts(35,16): error TS2339: Property 'source' does not exist on type 'SingleLineNode'.
+lib/fromStringWithSourceMap.ts(38,16): error TS2551: Property 'addGeneratedCode' does not exist on type 'SingleLineNode'. Did you mean 'mapGeneratedCode'?
 lib/fromStringWithSourceMap.ts(39,4): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 lib/fromStringWithSourceMap.ts(41,22): error TS2351: This expression is not constructable.
   Type 'String' has no construct signatures.
@@ -250,7 +248,6 @@ lib/fromStringWithSourceMap.ts(54,17): error TS2339: Property 'rest' does not ex
 lib/fromStringWithSourceMap.ts(55,40): error TS2345: Argument of type 'String' is not assignable to parameter of type 'SingleLineNode'.
   Type 'String' is missing the following properties from type 'SingleLineNode': clone, getGeneratedCode, getMappings, getNormalizedNodes, and 3 more.
 lib/fromStringWithSourceMap.ts(63,4): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/fromStringWithSourceMap.ts(67,2): error TS2740: Type 'SourceListMap' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/fromStringWithSourceMap.ts(67,9): error TS2554: Expected 3 arguments, but got 1.
 lib/fromStringWithSourceMap.ts(69,14): error TS2339: Property 'rest' does not exist on type 'Object'.
 lib/fromStringWithSourceMap.ts(69,30): error TS2339: Property 'rest' does not exist on type 'Object'.

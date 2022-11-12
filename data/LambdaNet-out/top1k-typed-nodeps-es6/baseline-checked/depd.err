@@ -76,6 +76,7 @@ index.ts(269,31): error TS2339: Property 'getLineNumber' does not exist on type 
 index.ts(270,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(270,30): error TS2339: Property 'getColumnNumber' does not exist on type 'HTMLElement'.
 index.ts(272,16): error TS2339: Property 'isEval' does not exist on type 'HTMLElement'.
+index.ts(273,5): error TS2322: Type 'string' is not assignable to type 'Number'.
 index.ts(273,21): error TS2339: Property 'getEvalOrigin' does not exist on type 'HTMLElement'.
 index.ts(276,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(279,24): error TS2339: Property 'getFunctionName' does not exist on type 'HTMLElement'.
@@ -122,7 +123,7 @@ index.ts(485,30): error TS2345: Argument of type 'String' is not assignable to p
 index.ts(532,41): error TS2304: Cannot find name 'Void'.
 index.ts(533,7): error TS2322: Type 'Number' is not assignable to type 'String'.
 lib/browser/index.ts(25,41): error TS2304: Cannot find name 'Void'.
-lib/browser/index.ts(38,3): error TS2740: Type '{ (message: String): Void; _file: any; _ignored: boolean; _namespace: Number; _traced: boolean; _warned: any; function: (fn: String, message: String) => String; property: (obj: String, prop: String, message: String) => Void; }' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
+lib/browser/index.ts(38,3): error TS2740: Type '{ (message: String): Void; _file: any; _ignored: boolean; _namespace: String; _traced: boolean; _warned: any; function: (fn: String, message: String) => String; property: (obj: String, prop: String, message: String) => Void; }' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 160 more.
 lib/browser/index.ts(63,69): error TS2304: Cannot find name 'Void'.
 lib/browser/index.ts(68,7): error TS2739: Type 'PropertyDescriptor' is missing the following properties from type 'Error': name, message
 lib/browser/index.ts(68,64): error TS2345: Argument of type 'String' is not assignable to parameter of type 'PropertyKey'.

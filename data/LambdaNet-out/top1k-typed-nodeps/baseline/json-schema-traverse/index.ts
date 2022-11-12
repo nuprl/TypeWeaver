@@ -64,7 +64,7 @@ traverse.skipKeywords = {
 };
 
 
-function _traverse(opts: Object, pre: Function, post: Function, schema: Object, jsonPtr: String, rootSchema: String, parentJsonPtr: Boolean, parentKeyword: Boolean, parentSchema: Boolean, keyIndex: String): Void {
+function _traverse(opts: Object, pre: Function, post: Function, schema: Object, jsonPtr: Number, rootSchema: String, parentJsonPtr: Boolean, parentKeyword: Boolean, parentSchema: Boolean, keyIndex: String): Void {
   if (schema && typeof schema == 'object' && !Array.isArray(schema)) {
     pre(schema, jsonPtr, rootSchema, parentJsonPtr, parentKeyword, parentSchema, keyIndex);
     for (var key in schema) {

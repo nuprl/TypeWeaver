@@ -1,4 +1,5 @@
-examples/custom-option-arrayOfCommaSepString.ts(16,85): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+examples/custom-option-arrayOfCommaSepString.ts(16,63): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+examples/custom-option-arrayOfCommaSepString.ts(16,84): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/custom-option-arrayOfCommaSepString.ts(18,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 examples/custom-option-arrayOfCommaSepString.ts(21,10): error TS2339: Property 'addOptionType' does not exist on type 'Object'.
 examples/custom-option-arrayOfCommaSepString.ts(28,10): error TS2339: Property 'addOptionType' does not exist on type 'Object'.
@@ -134,7 +135,10 @@ lib/dashdash.ts(62,16): error TS2314: Generic type 'Array<T>' requires 1 type ar
 lib/dashdash.ts(64,47): error TS2304: Cannot find name 'Void'.
 lib/dashdash.ts(67,13): error TS2365: Operator '+=' cannot be applied to types 'Number' and 'number'.
 lib/dashdash.ts(76,9): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+lib/dashdash.ts(97,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/dashdash.ts(101,46): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/dashdash.ts(102,12): error TS2551: Property 'string' does not exist on type 'String'. Did you mean 'toString'?
+lib/dashdash.ts(103,5): error TS2740: Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 lib/dashdash.ts(107,12): error TS2551: Property 'string' does not exist on type 'String'. Did you mean 'toString'?
 lib/dashdash.ts(109,15): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -543,6 +547,7 @@ lib/dashdash.ts(1061,34): error TS2339: Property 'arrayFlatten' does not exist o
 lib/dashdash.ts(1062,29): error TS2339: Property 'default' does not exist on type 'Object'.
 lib/dashdash.ts(1067,12): error TS2551: Property 'string' does not exist on type 'String'. Did you mean 'toString'?
 lib/dashdash.ts(1068,24): error TS2538: Type 'String' cannot be used as an index type.
+lib/dashdash.ts(1080,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/dashdash.ts(1081,12): error TS2339: Property 'object' does not exist on type 'String'.
 lib/dashdash.ts(1086,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/dashdash.ts(1086,26): error TS2339: Property 'names' does not exist on type 'Object'.

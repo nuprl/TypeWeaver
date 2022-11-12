@@ -49,7 +49,7 @@ var __createBinding: Function;
     else {
         factory(createExporter(root));
     }
-    function createExporter(exports: String, previous: Function): Function {
+    function createExporter(exports: Number, previous: Function): Function {
         if (exports !== root) {
             if (typeof Object.create === "function") {
                 Object.defineProperty(exports, "__esModule", { value: true });
@@ -247,7 +247,7 @@ var __createBinding: Function;
         var m: Function = o[Symbol.asyncIterator], i: Object;
         return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () { return this; }, i);
         function verb(n: String): Void { i[n] = o[n] && function (v: Object) { return new Promise(function (resolve: Array, reject: String) { v = o[n](v), settle(resolve, reject, v.done, v.value); }); }; }
-        function settle(resolve: Function, reject: String, d: Boolean, v: Array): Void { Promise.resolve(v).then(function(v: String) { resolve({ value: v, done: d }); }, reject); }
+        function settle(resolve: Function, reject: String, d: Boolean, v: Function): Void { Promise.resolve(v).then(function(v: String) { resolve({ value: v, done: d }); }, reject); }
     };
 
     __makeTemplateObject = function (cooked: Object, raw: String) {

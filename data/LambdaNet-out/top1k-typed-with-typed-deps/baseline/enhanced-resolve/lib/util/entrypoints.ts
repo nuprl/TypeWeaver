@@ -321,7 +321,7 @@ function findMatch(request: String, treeRoot: Object): Array {
 
 		if (node.children === null) return lastFolderMatch;
 
-		const newNode: CacheBackend = node.children.get(folder);
+		const newNode: Resolver = node.children.get(folder);
 
 		if (!newNode) {
 			return lastFolderMatch;

@@ -13,7 +13,7 @@ var CSSOM: String = {
  * @see http://dev.w3.org/csswg/cssom/#cssmediarule
  * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSMediaRule
  */
-CSSOM.CSSMediaRule = function CSSMediaRule(): Void {
+CSSOM.CSSMediaRule = function CSSMediaRule(): Promise {
 	CSSOM.CSSConditionRule.call(this);
 	this.media = new CSSOM.MediaList();
 };

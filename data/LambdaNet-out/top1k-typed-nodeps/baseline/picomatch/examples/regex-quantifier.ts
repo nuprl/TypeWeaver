@@ -34,10 +34,10 @@ const files: Array = [
 // picomatch to treat those characters as a regex quantifier, versus
 // a brace pattern.
 
-const isMatch: Object = pico('data/100-123?\\{0,3}_files/{0..3}/', { unescape: true });
+const isMatch: Function = pico('data/100-123?\\{0,3}_files/{0..3}/', { unescape: true });
 console.log(files.filter((name: String) => isMatch(name)));
 
 // Alternatively, we can use a regex character class to be more specific
 // In the following example, we'll only match uppercase alpha characters
-const isMatch2: Object = pico('data/100-123[A-Z]*_files/{0..3}/', { unescape: true });
+const isMatch2: Function = pico('data/100-123[A-Z]*_files/{0..3}/', { unescape: true });
 console.log(files.filter((name: String) => isMatch2(name)));

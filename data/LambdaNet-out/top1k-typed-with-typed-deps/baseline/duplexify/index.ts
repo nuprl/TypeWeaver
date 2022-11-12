@@ -203,7 +203,7 @@ Duplexify.prototype._destroy = function(err: String) {
   this.emit('close')
 }
 
-Duplexify.prototype._write = function(data: Object, enc: String, cb: Function) {
+Duplexify.prototype._write = function(data: Object, enc: Function, cb: Function) {
   if (this.destroyed) return
   if (this._corked) return onuncork(this, this._write.bind(this, data, enc, cb))
   if (data === SIGNAL_FLUSH) return this._finish(cb)

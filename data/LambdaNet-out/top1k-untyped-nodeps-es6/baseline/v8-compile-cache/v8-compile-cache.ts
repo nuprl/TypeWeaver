@@ -160,7 +160,7 @@ class NativeCompileCache {
       }
 
       // https://github.com/nodejs/node/blob/v10.15.3/lib/internal/modules/cjs/helpers.js#L28
-      function resolve(request: Object, options: Object): String {
+      function resolve(request: Object, options: Object): FileSystemBlobStore {
         return Module._resolveFilename(request, mod, false, options);
       }
       require.resolve = resolve;
@@ -228,7 +228,7 @@ class NativeCompileCache {
     }
 
     // create wrapper function
-    var wrapper: String = Module.wrap(content);
+    var wrapper: Array = Module.wrap(content);
 
     var invalidationKey: String = crypto
       .createHash('sha1')

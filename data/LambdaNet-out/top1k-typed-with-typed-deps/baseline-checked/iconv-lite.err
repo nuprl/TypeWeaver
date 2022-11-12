@@ -206,11 +206,8 @@ encodings/internal.ts(26,29): error TS2339: Property 'encodingName' does not exi
 encodings/internal.ts(27,34): error TS2339: Property 'bomAware' does not exist on type 'Object'.
 encodings/internal.ts(38,20): error TS2339: Property 'from' does not exist on type 'Element'.
 encodings/internal.ts(40,45): error TS2339: Property 'defaultCharUnicode' does not exist on type 'Object'.
-encodings/internal.ts(53,20): error TS2339: Property 'prototype' does not exist on type 'HTMLElement'.
-encodings/internal.ts(54,19): error TS2339: Property 'prototype' does not exist on type 'HTMLElement'.
+encodings/internal.ts(51,20): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 encodings/internal.ts(57,59): error TS2304: Cannot find name 'Void'.
-encodings/internal.ts(58,24): error TS2351: This expression is not constructable.
-  Type 'HTMLElement' has no construct signatures.
 encodings/internal.ts(58,44): error TS2339: Property 'enc' does not exist on type 'Object'.
 encodings/internal.ts(61,49): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 encodings/internal.ts(62,17): error TS2339: Property 'isBuffer' does not exist on type 'Element'.
@@ -564,8 +561,10 @@ generation/research/gen-normalization.ts(16,11): error TS2339: Property 'parseTe
 generation/research/gen-normalization.ts(16,26): error TS2339: Property 'data' does not exist on type 'Object'.
 generation/research/gen-normalization.ts(16,53): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 generation/research/gen-normalization.ts(20,41): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-generation/research/gen-normalization.ts(23,84): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+generation/research/gen-normalization.ts(23,47): error TS2345: Argument of type '(s: Number) => number' is not assignable to parameter of type '(value: string, index: number, array: string[]) => number'.
+  Types of parameters 's' and 'value' are incompatible.
+    Type 'string' is not assignable to type 'Number'.
+generation/research/gen-normalization.ts(23,84): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
 generation/research/gen-normalization.ts(33,22): error TS2538: Type 'Number' cannot be used as an index type.
 generation/research/gen-normalization.ts(42,11): error TS2339: Property 'parseText' does not exist on type 'HTMLElement'.
 generation/research/gen-normalization.ts(42,26): error TS2339: Property 'exclusions' does not exist on type 'Object'.
@@ -608,10 +607,9 @@ generation/research/get-iconv-encodings.ts(8,5): error TS2403: Subsequent variab
 generation/research/get-iconv-encodings.ts(16,50): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
 generation/research/get-iconv-encodings.ts(22,27): error TS2339: Property 'filter' does not exist on type 'Object'.
 generation/research/get-iconv-encodings.ts(24,58): error TS2339: Property 'from' does not exist on type 'Element'.
-generation/research/get-iconv-encodings.ts(25,31): error TS2538: Type 'String' cannot be used as an index type.
+generation/research/get-iconv-encodings.ts(25,31): error TS2538: Type 'Function' cannot be used as an index type.
 generation/research/get-iconv-encodings.ts(38,27): error TS2339: Property 'map' does not exist on type 'Object'.
-generation/research/get-iconv-encodings.ts(40,19): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-generation/research/get-iconv-encodings.ts(40,32): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
+generation/research/get-iconv-encodings.ts(40,40): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
 generation/research/get-iconv-encodings.ts(42,85): error TS2339: Property 'alloc' does not exist on type 'Element'.
 generation/research/get-iconv-encodings.ts(55,66): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 generation/research/get-iconv-encodings.ts(56,21): error TS2339: Property 'isASCII' does not exist on type 'Object'.
@@ -622,12 +620,15 @@ generation/research/get-iconv-encodings.ts(58,21): error TS2339: Property 'isDBC
 generation/research/get-iconv-encodings.ts(58,34): error TS2339: Property 'isDBCS' does not exist on type 'Object'.
 generation/research/get-iconv-encodings.ts(59,21): error TS2339: Property 'maxChars' does not exist on type 'Object'.
 generation/research/get-iconv-encodings.ts(59,45): error TS2339: Property 'maxChars' does not exist on type 'Object'.
+generation/research/get-iconv-encodings.ts(60,22): error TS2339: Property 'update' does not exist on type 'HTMLElement'.
 generation/research/get-iconv-encodings.ts(62,25): error TS2339: Property 'valid' does not exist on type 'Object'.
+generation/research/get-iconv-encodings.ts(63,26): error TS2339: Property 'update' does not exist on type 'HTMLElement'.
 generation/research/get-iconv-encodings.ts(65,25): error TS2339: Property 'invalid' does not exist on type 'Object'.
 generation/research/get-iconv-encodings.ts(67,25): error TS2339: Property 'valid' does not exist on type 'Object'.
 generation/research/get-iconv-encodings.ts(67,37): error TS2339: Property 'invalid' does not exist on type 'Object'.
 generation/research/get-iconv-encodings.ts(72,17): error TS2339: Property 'bad' does not exist on type 'Object'.
 generation/research/get-iconv-encodings.ts(75,13): error TS2339: Property 'hash' does not exist on type 'Object'.
+generation/research/get-iconv-encodings.ts(75,25): error TS2339: Property 'digest' does not exist on type 'HTMLElement'.
 generation/research/get-iconv-encodings.ts(76,24): error TS2339: Property 'hash' does not exist on type 'Object'.
 generation/research/get-iconv-encodings.ts(77,24): error TS2339: Property 'hash' does not exist on type 'Object'.
 generation/research/get-iconv-encodings.ts(79,24): error TS2339: Property 'hash' does not exist on type 'Object'.
@@ -692,13 +693,13 @@ lib/index.ts(118,46): error TS2339: Property 'addBOM' does not exist on type 'Ob
 lib/index.ts(126,37): error TS2339: Property 'decoder' does not exist on type 'Object'.
 lib/index.ts(128,15): error TS2339: Property 'bomAware' does not exist on type 'Object'.
 lib/index.ts(128,48): error TS2339: Property 'stripBOM' does not exist on type 'Object'.
-lib/index.ts(139,80): error TS2304: Cannot find name 'Void'.
+lib/index.ts(139,81): error TS2304: Cannot find name 'Void'.
 lib/index.ts(147,44): error TS2339: Property 'IconvLiteEncoderStream' does not exist on type 'Object'.
 lib/index.ts(148,44): error TS2339: Property 'IconvLiteDecoderStream' does not exist on type 'Object'.
 lib/index.ts(168,36): error TS2339: Property 'Transform' does not exist on type 'String'.
 lib/streams.ts(3,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/streams.ts(8,45): error TS2339: Property 'Transform' does not exist on type 'Object'.
-lib/streams.ts(12,71): error TS2304: Cannot find name 'Void'.
+lib/streams.ts(12,69): error TS2304: Cannot find name 'Void'.
 lib/streams.ts(15,17): error TS2339: Property 'decodeStrings' does not exist on type 'Object'.
 lib/streams.ts(27,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/streams.ts(38,22): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

@@ -18,7 +18,7 @@ import baseUniq from './.internal/baseUniq.js'
  * uniqBy([2.1, 1.2, 2.3], Math.floor)
  * // => [2.1, 1.2]
  */
-function uniqBy(array: Array, iteratee: Function): Array {
+function uniqBy(array: Array, iteratee: String): Array {
   return (array != null && array.length)
     ? baseUniq(array, iteratee)
     : []

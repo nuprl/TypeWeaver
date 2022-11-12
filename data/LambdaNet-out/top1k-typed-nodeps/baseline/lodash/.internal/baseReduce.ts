@@ -12,7 +12,7 @@
  * @returns {*} Returns the accumulated value.
  */
 function baseReduce(collection: String, iteratee: Function, accumulator: String, initAccum: Boolean, eachFunc: Function): String {
-  eachFunc(collection, (value: String, index: Number, collection: Boolean) => {
+  eachFunc(collection, (value: String, index: Number, collection: Number) => {
     accumulator = initAccum
       ? (initAccum = false, value)
       : iteratee(accumulator, value, index, collection)

@@ -94,11 +94,11 @@ function optionKeyFromName(name: String): String {
 
 // ---- Option types
 
-function parseBool(option: String, optstr: Number, arg: Boolean): Boolean {
+function parseBool(option: String, optstr: Array, arg: Boolean): Boolean {
     return Boolean(arg);
 }
 
-function parseString(option: String, optstr: Number, arg: String): String {
+function parseString(option: String, optstr: Array, arg: Number): String {
     assert.string(arg, 'arg');
     return arg;
 }
@@ -1077,7 +1077,7 @@ function getOptionType(name: String): String {
  *      > synopsisFromOpt({name: 'file', type: 'string', helpArg: 'FILE'});
  *      '[ --file=FILE ]'
  */
-function synopsisFromOpt(o: Object): String {
+function synopsisFromOpt(o: Object): Array {
     assert.object(o, 'o');
 
     if (Object.prototype.hasOwnProperty.call(o, 'group')) {

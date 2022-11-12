@@ -86,7 +86,7 @@ function hmacsign (httpMethod: String, base_uri: String, params: Function, consu
   return sha(key, base, 'sha1')
 }
 
-function hmacsign256 (httpMethod: String, base_uri: String, params: Function, consumer_secret: Number, token_secret: String): String {
+function hmacsign256 (httpMethod: String, base_uri: String, params: Function, consumer_secret: Number, token_secret: Number): String {
   var base: String = generateBase(httpMethod, base_uri, params)
   var key: String = [
     consumer_secret || '',

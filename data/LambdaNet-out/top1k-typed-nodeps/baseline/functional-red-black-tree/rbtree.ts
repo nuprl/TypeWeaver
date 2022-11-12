@@ -93,7 +93,7 @@ proto.insert = function(key: String, value: Number) {
   //Rebalance tree using rotations
   //console.log("start insert", key, d_stack)
   for(var s=n_stack.length-1; s>1; --s) {
-    var p: Object = n_stack[s-1]
+    var p: Array = n_stack[s-1]
     var n: Array = n_stack[s]
     if(p._color === BLACK || n._color === BLACK) {
       break
@@ -279,7 +279,7 @@ function doVisit(lo: String, hi: String, compare: Function, visit: Function, nod
 }
 
 
-proto.forEach = function rbTreeForEach(visit: String, lo: String, hi: String): String {
+proto.forEach = function rbTreeForEach(visit: String, lo: String, hi: String): Promise {
   if(!this.root) {
     return
   }

@@ -114,7 +114,7 @@ function preservesOpeningCurlyBraceEscape(index: Number, parent: Object): Boolea
 
   let nbFollowingNumbers: String = consumeNumbers(index + 1, parent);
   let i: String = index + nbFollowingNumbers + 1;
-  let nextSiblingNode: NFAState = i < parent.expressions.length && parent.expressions[i];
+  let nextSiblingNode: NodePath = i < parent.expressions.length && parent.expressions[i];
 
   if (nbFollowingNumbers) {
     // Avoid \{3} turning into {3}

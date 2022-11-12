@@ -84,7 +84,7 @@ class NFA {
       const visited: Map = new Set();
       const symbols: Error = new Set();
 
-      const visitState: Function = (state: State) => {
+      const visitState: Function = (state: NodePath) => {
         if (visited.has(state)) {
           return;
         }

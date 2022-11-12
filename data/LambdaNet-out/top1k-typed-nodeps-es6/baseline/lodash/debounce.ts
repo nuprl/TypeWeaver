@@ -90,7 +90,7 @@ function debounce(func: Function, wait: Number, options: Object): Hash {
   }
 
   function invokeFunc(time: Number): Object {
-    const args: String = lastArgs
+    const args: Stack = lastArgs
     const thisArg: Function = lastThis
 
     lastArgs = lastThis = undefined

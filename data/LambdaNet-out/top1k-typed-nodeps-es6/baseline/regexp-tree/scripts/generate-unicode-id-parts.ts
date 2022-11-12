@@ -1,7 +1,7 @@
 // based on https://github.com/microsoft/TypeScript/tree/master/scripts/regenerate-unicode-identifier-parts.js
 
 /** @param {number} i */
-function toHex4Digits(i: String): String {
+function toHex4Digits(i: NonSurrogateRange): String {
   let s: String = i.toString(16);
   while (s.length < 4) {
     s = '0' + s;

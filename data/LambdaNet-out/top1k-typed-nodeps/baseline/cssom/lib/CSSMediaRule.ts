@@ -1,5 +1,5 @@
 //.CommonJS
-var CSSOM: HTMLElement = {
+var CSSOM: Element = {
 	CSSRule: require("./CSSRule").CSSRule,
 	CSSGroupingRule: require("./CSSGroupingRule").CSSGroupingRule,
 	CSSConditionRule: require("./CSSConditionRule").CSSConditionRule,

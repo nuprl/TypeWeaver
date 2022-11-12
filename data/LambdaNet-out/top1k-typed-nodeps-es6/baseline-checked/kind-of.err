@@ -9,9 +9,7 @@ benchmark/code/switch.ts(17,7): error TS2367: This condition will always return 
 benchmark/code/switch.ts(17,23): error TS2367: This condition will always return 'false' since the types 'Number' and 'boolean' have no overlap.
 benchmark/code/switch.ts(29,26): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'String'.
   Type 'Number' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
-benchmark/code/switch.ts(101,21): error TS2339: Property 'throw' does not exist on type 'Object'.
-benchmark/code/switch.ts(102,19): error TS2339: Property 'return' does not exist on type 'Object'.
-benchmark/code/switch.ts(103,19): error TS2339: Property 'next' does not exist on type 'Object'.
+benchmark/code/switch.ts(100,30): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 benchmark/code/switch.ts(112,49): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
 benchmark/code/switch.ts(113,28): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
 benchmark/fixtures/generator.ts(1,35): error TS2304: Cannot find name 'Void'.
@@ -53,9 +51,7 @@ browser.ts(93,23): error TS2339: Property 'flags' does not exist on type 'HTMLEl
 browser.ts(94,21): error TS2339: Property 'ignoreCase' does not exist on type 'HTMLElement'.
 browser.ts(95,21): error TS2339: Property 'multiline' does not exist on type 'HTMLElement'.
 browser.ts(96,21): error TS2339: Property 'global' does not exist on type 'HTMLElement'.
-browser.ts(104,23): error TS2339: Property 'throw' does not exist on type 'Object'.
-browser.ts(105,21): error TS2339: Property 'return' does not exist on type 'Object'.
-browser.ts(106,21): error TS2339: Property 'next' does not exist on type 'Object'.
+browser.ts(103,32): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 browser.ts(109,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser.ts(128,51): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
 browser.ts(129,30): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
@@ -72,9 +68,7 @@ index.ts(90,21): error TS2339: Property 'flags' does not exist on type 'HTMLElem
 index.ts(91,19): error TS2339: Property 'ignoreCase' does not exist on type 'HTMLElement'.
 index.ts(92,19): error TS2339: Property 'multiline' does not exist on type 'HTMLElement'.
 index.ts(93,19): error TS2339: Property 'global' does not exist on type 'HTMLElement'.
-index.ts(101,21): error TS2339: Property 'throw' does not exist on type 'Object'.
-index.ts(102,19): error TS2339: Property 'return' does not exist on type 'Object'.
-index.ts(103,19): error TS2339: Property 'next' does not exist on type 'Object'.
+index.ts(100,30): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
 index.ts(106,27): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(125,49): error TS2339: Property 'isBuffer' does not exist on type 'Function'.
 index.ts(126,28): error TS2339: Property 'isBuffer' does not exist on type 'Function'.

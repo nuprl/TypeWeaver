@@ -50,7 +50,7 @@ CSSOM.CSSStyleRule.parse = function(ruleText: String) {
 	var i: Number = 0;
 	var state: String = "selector";
 	var index: Number;
-	var j: Number = i;
+	var j: String = i;
 	var buffer: String = "";
 
 	var SIGNIFICANT_WHITESPACE: Object = {

@@ -236,7 +236,7 @@ DERNode.prototype._encodeInt = function encodeInt(num: String, values: Object): 
   return this._createEncoderBuffer(Buffer.from(out));
 };
 
-DERNode.prototype._encodeBool = function encodeBool(value: Boolean): String {
+DERNode.prototype._encodeBool = function encodeBool(value: Boolean): Object {
   return this._createEncoderBuffer(value ? 0xff : 0);
 };
 

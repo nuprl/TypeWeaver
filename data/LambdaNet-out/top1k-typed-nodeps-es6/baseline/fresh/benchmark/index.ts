@@ -3,7 +3,7 @@ import path from 'path';
 import { spawn } from 'child_process';
 
 var exe: String = process.argv[0]
-var cwd: Number = process.cwd()
+var cwd: String = process.cwd()
 
 for (var dep in process.versions) {
   console.log('  %s@%s', dep, process.versions[dep])

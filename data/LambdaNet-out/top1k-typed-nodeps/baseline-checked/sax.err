@@ -180,7 +180,7 @@ lib/sax.ts(287,39): error TS2367: This condition will always return 'false' sinc
 lib/sax.ts(287,53): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/sax.ts(291,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/sax.ts(291,25): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
-lib/sax.ts(295,12): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
+lib/sax.ts(295,38): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 lib/sax.ts(299,18): error TS2339: Property 'test' does not exist on type 'HTMLElement'.
 lib/sax.ts(303,21): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'HTMLElement'.
   Type 'Function' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 277 more.
@@ -730,7 +730,6 @@ lib/sax.ts(1397,20): error TS2339: Property 'attribValue' does not exist on type
 lib/sax.ts(1398,20): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
 lib/sax.ts(1398,30): error TS2339: Property 'ATTRIB_NAME' does not exist on type 'String'.
 lib/sax.ts(1404,16): error TS2339: Property 'ATTRIB_VALUE_UNQUOTED' does not exist on type 'String'.
-lib/sax.ts(1405,28): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
 lib/sax.ts(1407,22): error TS2339: Property 'state' does not exist on type 'HTMLElement'.
 lib/sax.ts(1407,32): error TS2339: Property 'ATTRIB_VALUE_ENTITY_U' does not exist on type 'String'.
 lib/sax.ts(1409,22): error TS2339: Property 'attribValue' does not exist on type 'HTMLElement'.

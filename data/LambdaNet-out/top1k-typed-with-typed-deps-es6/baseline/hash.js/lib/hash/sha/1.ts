@@ -4,7 +4,7 @@ import utils from '../utils';
 import common from '../common';
 import shaCommon from './common';
 
-var rotl32: Function = utils.rotl32;
+var rotl32: Object = utils.rotl32;
 var sum32: Object = utils.sum32;
 var sum32_5: Function = utils.sum32_5;
 var ft_1: Function = shaCommon.ft_1;
@@ -66,7 +66,7 @@ SHA1.prototype._update = function _update(msg: Object, start: Number): Void {
   this.h[4] = sum32(this.h[4], e);
 };
 
-SHA1.prototype._digest = function digest(enc: String): String {
+SHA1.prototype._digest = function digest(enc: Number): String {
   if (enc === 'hex')
     return utils.toHex32(this.h, 'big');
   else

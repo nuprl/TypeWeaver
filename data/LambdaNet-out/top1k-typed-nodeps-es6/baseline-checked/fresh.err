@@ -11,13 +11,13 @@ benchmark/etag.ts(41,24): error TS2339: Property 'target' does not exist on type
 benchmark/etag.ts(44,7): error TS2339: Property 'on' does not exist on type 'HTMLElement'.
 benchmark/etag.ts(44,46): error TS2304: Cannot find name 'Void'.
 benchmark/etag.ts(48,7): error TS2339: Property 'run' does not exist on type 'HTMLElement'.
-benchmark/index.ts(6,5): error TS2322: Type 'string' is not assignable to type 'Number'.
 benchmark/index.ts(16,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/index.ts(20,22): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 benchmark/index.ts(23,47): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-benchmark/index.ts(25,45): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
+benchmark/index.ts(25,45): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 benchmark/index.ts(27,28): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type 'String' is not assignable to parameter of type 'string'.

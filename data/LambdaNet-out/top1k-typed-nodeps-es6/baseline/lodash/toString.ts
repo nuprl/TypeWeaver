@@ -32,7 +32,7 @@ function toString(value: String): String {
   }
   if (Array.isArray(value)) {
     // Recursively convert values (susceptible to call stack limits).
-    return `${value.map((other: String) => other == null ? other : toString(other))}`
+    return `${value.map((other: Number) => other == null ? other : toString(other))}`
   }
   if (isSymbol(value)) {
     return value.toString()

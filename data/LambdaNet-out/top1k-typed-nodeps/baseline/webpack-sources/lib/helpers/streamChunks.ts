@@ -12,7 +12,7 @@ module.exports = (source: OriginalSource, options: Object, onChunk: String, onSo
 	if (typeof source.streamChunks === "function") {
 		return source.streamChunks(options, onChunk, onSource, onName);
 	} else {
-		const sourceAndMap: SourceMapSource = source.sourceAndMap(options);
+		const sourceAndMap: OriginalSource = source.sourceAndMap(options);
 		if (sourceAndMap.map) {
 			return streamChunksOfSourceMap(
 				sourceAndMap.source,

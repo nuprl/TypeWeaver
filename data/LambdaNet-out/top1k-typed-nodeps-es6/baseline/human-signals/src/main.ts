@@ -39,7 +39,7 @@ const getSignalsByNumber: Function = function () {
   return Object.assign({}, ...signalsA)
 }
 
-const getSignalByNumber: Function = function (number: String, signals: String) {
+const getSignalByNumber: Function = function (number: String, signals: Array) {
   const signal: Object = findSignalByNumber(number, signals)
 
   if (signal === undefined) {

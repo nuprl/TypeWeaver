@@ -180,7 +180,7 @@ function getImportInsertStyleElementCode(esModule: Boolean, loaderContext: Numbe
     : `var insertStyleElement = require(${modulePath});`;
 }
 
-function getStyleHmrCode(esModule: Boolean, loaderContext: Number, request: String, lazy: Boolean): String {
+function getStyleHmrCode(esModule: Boolean, loaderContext: String, request: String, lazy: Boolean): String {
   const modulePath: String = stringifyRequest(loaderContext, `!!${request}`);
 
   return `

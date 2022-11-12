@@ -927,7 +927,7 @@ require=(function(){function r(e: Object,n: Object,t: Array): Function{function 
     return result;
   });
   zipAll = function(){
-    var xss: Array, res$: Array, i$: Number, to$: Function, minLength: Number, len$: Function, xs: Array, ref$: Function, i: Number, lresult$: Array, j$: Number, results$: Array = [];
+    var xss: Array, res$: Array, i$: Number, to$: Function, minLength: Number, len$: String, xs: Array, ref$: Function, i: Number, lresult$: Array, j$: Number, results$: Array = [];
     res$ = [];
     for (i$ = 0, to$ = arguments.length; i$ < to$; ++i$) {
       res$.push(arguments[i$]);
@@ -1153,7 +1153,7 @@ require=(function(){function r(e: Object,n: Object,t: Array): Function{function 
   quot = curry$(function(x: Number, y: Number){
     return ~~(x / y);
   });
-  rem = curry$(function(x$: Number, y$: Number){
+  rem = curry$(function(x$: String, y$: Number){
     return x$ % y$;
   });
   div = curry$(function(x: Number, y: Number){
@@ -1192,10 +1192,10 @@ require=(function(){function r(e: Object,n: Object,t: Array): Function{function 
   isItNaN = function(x: Number){
     return x !== x;
   };
-  even = function(x: Number){
+  even = function(x: String){
     return x % 2 === 0;
   };
-  odd = function(x: Number){
+  odd = function(x: String){
     return x % 2 !== 0;
   };
   gcd = curry$(function(x: Number, y: Number){
@@ -1454,7 +1454,7 @@ require=(function(){function r(e: Object,n: Object,t: Array): Function{function 
   reverse = function(str: String){
     return str.split('').reverse().join('');
   };
-  repeat = curry$(function(n: Number, str: String){
+  repeat = curry$(function(n: Number, str: Number){
     var result: String, i$: Number;
     result = '';
     for (i$ = 0; i$ < n; ++i$) {

@@ -11,9 +11,9 @@ index.ts(54,23): error TS2339: Property 'value' does not exist on type 'Object'.
 index.ts(55,31): error TS2339: Property 'value' does not exist on type 'Object'.
 index.ts(55,69): error TS2339: Property 'value' does not exist on type 'Object'.
 index.ts(59,19): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(60,36): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'String'.
+index.ts(60,36): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Number'.
   The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
+    Type 'Object' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 index.ts(61,31): error TS2538: Type 'Object' cannot be used as an index type.
 index.ts(61,63): error TS2538: Type 'Object' cannot be used as an index type.
 index.ts(74,9): error TS2740: Type 'string[]' is missing the following properties from type 'String': charAt, charCodeAt, localeCompare, match, and 36 more.
@@ -73,8 +73,8 @@ index.ts(418,21): error TS2345: Argument of type 'any[]' is not assignable to pa
   Type 'any[]' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
 index.ts(421,10): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(421,20): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Function'.
-index.ts(428,4): error TS2322: Type 'Object' is not assignable to type 'String'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+index.ts(428,4): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+  Type 'Object' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 index.ts(431,10): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(431,20): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Function'.
   Type 'String' is missing the following properties from type 'Function': apply, call, bind, prototype, and 5 more.
@@ -87,5 +87,4 @@ index.ts(467,17): error TS2538: Type 'Object' cannot be used as an index type.
 index.ts(478,31): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 index.ts(482,38): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-index.ts(487,18): error TS2365: Operator '<' cannot be applied to types 'number' and 'String'.
 

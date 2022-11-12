@@ -200,7 +200,7 @@
 
     this._decoder = null
 
-    streamWraps.forEach(function (ev: String) {
+    streamWraps.forEach(function (ev: Number) {
       Object.defineProperty(me, 'on' + ev, {
         get: function () {
           return me._parser['on' + ev]
@@ -1517,7 +1517,7 @@
       var fromCodePoint: Function = function () {
         var MAX_SIZE: Number = 0x4000
         var codeUnits: Array = []
-        var highSurrogate: String
+        var highSurrogate: Number
         var lowSurrogate: String
         var index: Number = -1
         var length: Number = arguments.length

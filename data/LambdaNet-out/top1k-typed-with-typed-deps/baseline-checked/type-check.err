@@ -452,11 +452,12 @@ browser/type-check.ts(1126,189): error TS2314: Generic type 'Array<T>' requires 
 browser/type-check.ts(1126,200): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(1126,238): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(1126,264): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(1126,291): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(1126,305): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(1126,339): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(1126,355): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/type-check.ts(1126,446): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(1126,277): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(1126,290): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(1126,304): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(1126,338): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(1126,354): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/type-check.ts(1126,445): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/type-check.ts(1127,1): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
 browser/type-check.ts(1127,7): error TS2554: Expected 2 arguments, but got 1.
 browser/type-check.ts(1130,1): error TS2322: Type 'Boolean' is not assignable to type 'Number'.
@@ -485,7 +486,6 @@ browser/type-check.ts(1168,19): error TS2345: Argument of type 'Number' is not a
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
 browser/type-check.ts(1170,1): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
 browser/type-check.ts(1172,1): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
-browser/type-check.ts(1174,1): error TS2322: Type '(x: number) => number' is not assignable to type 'String'.
 browser/type-check.ts(1176,9): error TS2554: Expected 2 arguments, but got 1.
 browser/type-check.ts(1177,21): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'number'.
   'number' is a primitive, but 'Number' is a wrapper object. Prefer using 'number' when possible.
@@ -568,7 +568,7 @@ browser/type-check.ts(1440,24): error TS2314: Generic type 'Array<T>' requires 1
 browser/type-check.ts(1446,1): error TS2322: Type 'Boolean' is not assignable to type 'String'.
 browser/type-check.ts(1446,10): error TS2554: Expected 2 arguments, but got 1.
 browser/type-check.ts(1449,26): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-browser/type-check.ts(1450,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'String'.
+browser/type-check.ts(1450,5): error TS2365: Operator '+=' cannot be applied to types 'String' and 'Number'.
 browser/type-check.ts(1458,35): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type '(arg$: Function, c: String) => string' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.

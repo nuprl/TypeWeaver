@@ -36,6 +36,8 @@ aws4.ts(71,32): error TS2339: Property 'Host' does not exist on type 'HTMLElemen
 aws4.ts(71,48): error TS2339: Property 'host' does not exist on type 'HTMLElement'.
 aws4.ts(73,67): error TS2339: Property 'method' does not exist on type 'Object'.
 aws4.ts(77,14): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+aws4.ts(77,35): error TS2339: Property 'match' does not exist on type 'Number | ""'.
+  Property 'match' does not exist on type 'Number'.
 aws4.ts(84,27): error TS2339: Property 'reverse' does not exist on type 'Object'.
 aws4.ts(114,10): error TS2365: Operator '+' cannot be applied to types 'String' and 'String'.
 aws4.ts(120,65): error TS2339: Property 'headers' does not exist on type 'Object'.
@@ -57,7 +59,6 @@ aws4.ts(213,16): error TS2554: Expected 3 arguments, but got 2.
 aws4.ts(214,20): error TS2554: Expected 3 arguments, but got 2.
 aws4.ts(217,50): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Number'.
 aws4.ts(236,7): error TS2322: Type 'boolean' is not assignable to type 'Number'.
-aws4.ts(238,7): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 aws4.ts(252,9): error TS2696: The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 aws4.ts(254,11): error TS2538: Type 'String' cannot be used as an index type.

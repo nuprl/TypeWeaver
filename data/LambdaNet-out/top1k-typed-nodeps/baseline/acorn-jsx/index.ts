@@ -13,7 +13,7 @@ function getJsxTokens(acorn: HTMLElement): Object {
   acorn = acorn.Parser.acorn || acorn;
   let acornJsx: Object = acornJsxMap.get(acorn);
   if (!acornJsx) {
-    const tt: HTMLInputElement = acorn.tokTypes;
+    const tt: HTMLElement = acorn.tokTypes;
     const TokContext: Object = acorn.TokContext;
     const TokenType: Function = acorn.TokenType;
     const tc_oTag: String = new TokContext('<tag', false);

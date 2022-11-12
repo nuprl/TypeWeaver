@@ -4,7 +4,7 @@ import ArrayIterator from './array-iterator';
 import ObjectIterator from './object-iterator';
 
 export default iterate;
-function iterate(iterable: Function, start: String, stop: Function, step: String): Array {
+function iterate(iterable: Function, start: String, stop: Function, step: String): String {
     if (!iterable) {
         return empty;
     } else if (Array.isArray(iterable)) {

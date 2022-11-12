@@ -63,7 +63,7 @@ function baseIsEqualDeep(object: Object, other: Object, bitmask: Number, customi
 
     if (objIsWrapped || othIsWrapped) {
       const objUnwrapped: Array = objIsWrapped ? object.value() : object
-      const othUnwrapped: String = othIsWrapped ? other.value() : other
+      const othUnwrapped: Array = othIsWrapped ? other.value() : other
 
       stack || (stack = new Stack)
       return equalFunc(objUnwrapped, othUnwrapped, bitmask, customizer, stack)

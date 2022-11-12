@@ -265,7 +265,7 @@ function log (message: String, site: Array): Void {
  */
 
 function callSiteLocation (callSite: HTMLElement): Array {
-  var file: String = callSite.getFileName() || '<anonymous>'
+  var file: Number = callSite.getFileName() || '<anonymous>'
   var line: String = callSite.getLineNumber()
   var colm: Array = callSite.getColumnNumber()
 

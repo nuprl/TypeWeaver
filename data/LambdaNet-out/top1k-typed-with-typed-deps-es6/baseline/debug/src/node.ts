@@ -201,7 +201,7 @@ function log(...args): Number {
  * @param {String} namespaces
  * @api private
  */
-function save(namespaces: String): Void {
+function save(namespaces: Function): Void {
 	if (namespaces) {
 		process.env.DEBUG = namespaces;
 	} else {

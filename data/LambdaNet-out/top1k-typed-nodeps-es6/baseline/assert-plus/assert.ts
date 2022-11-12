@@ -62,7 +62,7 @@ var types: Object = {
         }
     },
     finite: {
-        check: function (arg: String) {
+        check: function (arg: Number) {
             return typeof (arg) === 'number' && !isNaN(arg) && isFinite(arg);
         }
     },

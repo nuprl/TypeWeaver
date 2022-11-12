@@ -53,7 +53,7 @@ function feFpSubtract(b: Object): Object {
   );
 }
 
-function feFpMultiply(b: Object): Object {
+function feFpMultiply(b: Object): Promise {
   return new ECFieldElementFp(
     this.q,
     this.x.multiply(b.toBigInteger()).mod(this.q)

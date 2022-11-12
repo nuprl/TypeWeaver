@@ -1,8 +1,6 @@
 lib/mr.ts(4,37): error TS2304: Cannot find name 'Void'.
 lib/mr.ts(5,23): error TS2554: Expected 1 arguments, but got 0.
 lib/mr.ts(10,10): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/mr.ts(10,26): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
-  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/mr.ts(14,23): error TS2339: Property 'bitLength' does not exist on type 'Function'.
 lib/mr.ts(15,37): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/mr.ts(20,9): error TS2740: Type 'BN' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
@@ -42,8 +40,11 @@ lib/mr.ts(83,23): error TS2339: Property 'testn' does not exist on type 'HTMLEle
 lib/mr.ts(84,21): error TS2339: Property 'shrn' does not exist on type 'Object'.
 lib/mr.ts(86,24): error TS2339: Property 'toRed' does not exist on type 'HTMLElement'.
 lib/mr.ts(88,17): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-lib/mr.ts(91,24): error TS2339: Property 'gcd' does not exist on type 'Object'.
-lib/mr.ts(92,11): error TS2339: Property 'cmpn' does not exist on type 'Boolean'.
+lib/mr.ts(91,23): error TS2339: Property 'gcd' does not exist on type 'Object'.
+lib/mr.ts(92,11): error TS2339: Property 'cmpn' does not exist on type 'Number'.
+lib/mr.ts(93,7): error TS2322: Type 'Number' is not assignable to type 'Boolean'.
+  The types returned by 'valueOf()' are incompatible between these types.
+    Type 'number' is not assignable to type 'boolean'.
 lib/mr.ts(95,28): error TS2339: Property 'toRed' does not exist on type 'HTMLElement'.
 lib/mr.ts(96,11): error TS2339: Property 'cmp' does not exist on type 'HTMLElement'.
 lib/mr.ts(96,32): error TS2339: Property 'cmp' does not exist on type 'HTMLElement'.

@@ -737,7 +737,7 @@
      *
      * Ex: new Fraction("1.'3'").toFraction(true) => "4 1/3"
      **/
-    'toFraction': function(excludeWhole: Boolean) {
+    'toFraction': function(excludeWhole: Number) {
 
       var whole: Number, str: String = "";
       var n: Number = this["n"];
@@ -768,7 +768,7 @@
      *
      * Ex: new Fraction("1.'3'").toLatex() => "\frac{4}{3}"
      **/
-    'toLatex': function(excludeWhole: Boolean) {
+    'toLatex': function(excludeWhole: Number) {
 
       var whole: Number, str: String = "";
       var n: Number = this["n"];

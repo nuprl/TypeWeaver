@@ -339,7 +339,7 @@
     return 0;
   }
 
-  function gcd(a: Number, b: Number): Number {
+  function gcd(a: Number, b: Boolean): Number {
 
     if (!a)
       return b;

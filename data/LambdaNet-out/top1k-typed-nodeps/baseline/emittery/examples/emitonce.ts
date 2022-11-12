@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import Emittery from '../index.js';
 
-const myEmitter: HTMLElement = new Emittery();
+const myEmitter: Clock = new Emittery();
 
 // Register listener for only the one event
 (async () => {

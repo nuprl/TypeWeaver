@@ -223,7 +223,7 @@
    *
    */
   P.clampedTo = P.clamp = function (min: Object, max: String) {
-    var k: String,
+    var k: Number,
       x: Array = this,
       Ctor: Object = x.constructor;
     min = new Ctor(min);
@@ -332,7 +332,7 @@
    *
    */
   P.cubeRoot = P.cbrt = function () {
-    var e: Number, m: Boolean, n: String, r: Object, rep: Number, s: Number, sd: Number, t: Object, t3: Object, t3plusx: HTMLElement,
+    var e: Number, m: Boolean, n: String, r: Object, rep: Number, s: Number, sd: Number, t: Object, t3: Object, t3plusx: Object,
       x: String = this,
       Ctor: Object = x.constructor;
 
@@ -1947,7 +1947,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toBinary = function (sd: String, rm: Array) {
+  P.toBinary = function (sd: Function, rm: Array) {
     return toStringBinary(this, 2, sd, rm);
   };
 
@@ -2128,7 +2128,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toHexadecimal = P.toHex = function (sd: String, rm: Array) {
+  P.toHexadecimal = P.toHex = function (sd: Function, rm: Array) {
     return toStringBinary(this, 16, sd, rm);
   };
 
@@ -2217,7 +2217,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toOctal = function (sd: String, rm: Array) {
+  P.toOctal = function (sd: Function, rm: Array) {
     return toStringBinary(this, 8, sd, rm);
   };
 
@@ -2267,7 +2267,7 @@
    */
   P.toPower = P.pow = function (y: Object) {
     var e: Number, k: Number, pr: Number, r: Object, rm: Number, s: Number,
-      x: String = this,
+      x: Array = this,
       Ctor: Object = x.constructor,
       yn: Number = +(y = new Ctor(y));
 
@@ -3746,7 +3746,7 @@
 
 
   // Exponent e must be positive and non-zero.
-  function tinyPow(b: String, e: Number): String {
+  function tinyPow(b: String, e: Number): Number {
     var n: Number = b;
     while (--e) n *= b;
     return n;

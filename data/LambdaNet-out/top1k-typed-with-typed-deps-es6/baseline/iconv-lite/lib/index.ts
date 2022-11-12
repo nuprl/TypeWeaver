@@ -19,7 +19,7 @@ iconv.encode = function encode(str: Number, encoding: String, options: Object): 
 
     var encoder: HTMLElement = iconv.getEncoder(encoding, options);
 
-    var res: String = encoder.write(str);
+    var res: Array = encoder.write(str);
     var trail: Array = encoder.end();
     
     return (trail && trail.length > 0) ? Buffer.concat([res, trail]) : res;
@@ -111,7 +111,7 @@ iconv._canonicalizeEncoding = function(encoding: String) {
     return (''+encoding).toLowerCase().replace(/:\d{4}$|[^0-9a-z]/g, "");
 }
 
-iconv.getEncoder = function getEncoder(encoding: String, options: Object): Object {
+iconv.getEncoder = function getEncoder(encoding: String, options: Object): String {
     var codec: Object = iconv.getCodec(encoding),
         encoder: String = new codec.encoder(options, codec);
 
@@ -121,7 +121,7 @@ iconv.getEncoder = function getEncoder(encoding: String, options: Object): Objec
     return encoder;
 }
 
-iconv.getDecoder = function getDecoder(encoding: String, options: Object): Object {
+iconv.getDecoder = function getDecoder(encoding: String, options: Object): String {
     var codec: Object = iconv.getCodec(encoding),
         decoder: String = new codec.decoder(options, codec);
 
@@ -136,7 +136,7 @@ iconv.getDecoder = function getDecoder(encoding: String, options: Object): Objec
 // up to 100Kb to the output bundle. To avoid unnecessary code bloat, we don't enable Streaming API in browser by default.
 // If you would like to enable it explicitly, please add the following code to your app:
 // > iconv.enableStreamingAPI(require('stream'));
-iconv.enableStreamingAPI = function enableStreamingAPI(stream_module: Boolean): Void {
+iconv.enableStreamingAPI = function enableStreamingAPI(stream_module: Number): Void {
     if (iconv.supportsStreams)
         return;
 

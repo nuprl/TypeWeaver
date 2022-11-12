@@ -623,7 +623,7 @@ class SymbolTree {
                 }
 
                 // indexes within the common ancestor
-                const leftIndex: Number  = this.index(reverseArrayIndex(leftAncestors, commonAncestorIndex + 1));
+                const leftIndex: String  = this.index(reverseArrayIndex(leftAncestors, commonAncestorIndex + 1));
                 const rightIndex: Number = this.index(reverseArrayIndex(rightAncestors, commonAncestorIndex + 1));
 
                 return rightIndex < leftIndex

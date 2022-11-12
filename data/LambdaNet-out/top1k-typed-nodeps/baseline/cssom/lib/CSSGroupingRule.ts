@@ -1,5 +1,5 @@
 //.CommonJS
-var CSSOM: HTMLInputElement = {
+var CSSOM: HTMLElement = {
 	CSSRule: require("./CSSRule").CSSRule
 };
 ///CommonJS

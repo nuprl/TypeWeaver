@@ -32,7 +32,7 @@
         VisitorOption: Object,
         VisitorKeys: Object,
         BREAK: Number,
-        SKIP: Function,
+        SKIP: Number,
         REMOVE: String;
 
     function deepCopy(obj: Object): Object {

@@ -85,7 +85,7 @@ function createSync(options: Object): Function {
 		...options
 	};
 	const resolver: Resolver = ResolverFactory.createResolver(options);
-	return function (context: Number, path: String, request: ResultPlugin) {
+	return function (context: Number, path: String, request: CachedInputFileSystem) {
 		if (typeof context === "string") {
 			request = path;
 			path = context;
@@ -103,7 +103,7 @@ function createSync(options: Object): Function {
  * @returns {A & B} merged
  */
 const mergeExports: Function = (obj: Array, exports: String) => {
-	const descriptors: Object = Object.getOwnPropertyDescriptors(exports);
+	const descriptors: Array = Object.getOwnPropertyDescriptors(exports);
 	Object.defineProperties(obj, descriptors);
 	return /** @type {A & B} */ (Object.freeze(obj));
 };

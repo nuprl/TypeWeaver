@@ -9,7 +9,7 @@ var xmlFile: String = path.resolve(__dirname, 'shopping.xml')
 import util from 'util';
 import http from 'http';
 
-fs.readFile(xmlFile, function (er: Boolean, d: String) {
+fs.readFile(xmlFile, function (er: Boolean, d: Number) {
   http.createServer(function (req: Function, res: Array) {
     if (er) throw er
     var xmlstr: String = d.toString('utf8')
@@ -48,7 +48,7 @@ fs.readFile(xmlFile, function (er: Boolean, d: String) {
     }
 
     parser.onend = function () {
-      var out: Array = util.inspect(products, false, 3, true)
+      var out: String = util.inspect(products, false, 3, true)
       res.writeHead(200, {'content-type': 'application/json'})
       res.end('{"ok":true}')
     // res.end(JSON.stringify(products))

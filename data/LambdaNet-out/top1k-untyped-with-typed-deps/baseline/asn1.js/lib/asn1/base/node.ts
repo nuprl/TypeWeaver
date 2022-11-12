@@ -29,7 +29,7 @@ const overrided: Array = [
   '_encodeNull', '_encodeInt', '_encodeBool'
 ];
 
-function Node(enc: String, parent: String, name: String): Void {
+function Node(enc: Function, parent: String, name: String): Void {
   const state: Object = {};
   this._baseState = state;
 
@@ -272,7 +272,7 @@ Node.prototype.contains = function contains(item: Number): Object {
 // Decoding
 //
 
-Node.prototype._decode = function decode(input: Function, options: Object): Boolean {
+Node.prototype._decode = function decode(input: Object, options: Object): Boolean {
   const state: Object = this._baseState;
 
   // Decode root node

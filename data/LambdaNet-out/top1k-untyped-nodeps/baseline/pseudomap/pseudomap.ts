@@ -90,7 +90,7 @@ function Entry (k: String, v: String, i: String): Void {
   this._index = i
 }
 
-function find (data: Object, k: Number): String {
+function find (data: Object, k: String): String {
   for (var i = 0, s = '_' + k, key = s;
        hasOwnProperty.call(data, key);
        key = s + i++) {

@@ -152,6 +152,7 @@ index.ts(1,6): error TS2339: Property 'Flatted' does not exist on type 'Window &
 index.ts(7,12): error TS2630: Cannot assign to '_typeof' because it is a function.
 index.ts(18,27): error TS2322: Type 'StringConstructor' is not assignable to type 'String'.
 index.ts(22,7): error TS2740: Type '{}' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+index.ts(25,7): error TS2322: Type '(_: String, value: String) => String' is not assignable to type 'Number'.
 index.ts(30,29): error TS2359: The right-hand side of an 'instanceof' expression must be of type 'any' or of a type assignable to the 'Function' interface type.
 index.ts(30,41): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
@@ -177,10 +178,10 @@ index.ts(68,43): error TS2314: Generic type 'Map<K, V>' requires 2 type argument
 index.ts(68,55): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 index.ts(69,25): error TS2349: This expression is not callable.
   Type 'String' has no call signatures.
-index.ts(77,9): error TS2322: Type 'Function | String' is not assignable to type 'Function'.
+index.ts(77,9): error TS2322: Type 'String | Number' is not assignable to type 'Function'.
   Type 'String' is not assignable to type 'Function'.
 index.ts(78,23): error TS2367: This condition will always return 'false' since the types 'Boolean' and 'String' have no overlap.
-index.ts(84,9): error TS2322: Type 'Function | String' is not assignable to type 'Function'.
+index.ts(84,9): error TS2322: Type 'String | Number | ((k: String, v: Number) => Number)' is not assignable to type 'Function'.
   Type 'String' is not assignable to type 'Function'.
 index.ts(84,35): error TS2367: This condition will always return 'false' since the types 'Boolean' and 'String' have no overlap.
 index.ts(85,48): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
@@ -211,41 +212,42 @@ min.ts(2,152): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s
 min.ts(2,341): error TS2367: This condition will always return 'false' since the types 'Boolean' and 'String' have no overlap.
 min.ts(2,354): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
-min.ts(2,398): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-min.ts(2,508): error TS2538: Type 'String' cannot be used as an index type.
-min.ts(2,546): error TS2538: Type 'String' cannot be used as an index type.
-min.ts(2,549): error TS2367: This condition will always return 'true' since the types 'Boolean' and 'String' have no overlap.
-min.ts(2,570): error TS2538: Type 'String' cannot be used as an index type.
-min.ts(2,599): error TS2538: Type 'String' cannot be used as an index type.
-min.ts(2,638): error TS2538: Type 'String' cannot be used as an index type.
-min.ts(2,649): error TS2538: Type 'String' cannot be used as an index type.
-min.ts(2,721): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-min.ts(2,729): error TS2339: Property 'k' does not exist on type 'Object'.
-min.ts(2,734): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-min.ts(2,742): error TS2339: Property 'a' does not exist on type 'Object'.
-min.ts(2,811): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
-min.ts(2,818): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-min.ts(2,970): error TS2322: Type 'Function | String' is not assignable to type 'Function'.
+min.ts(2,511): error TS2538: Type 'String' cannot be used as an index type.
+min.ts(2,549): error TS2538: Type 'String' cannot be used as an index type.
+min.ts(2,552): error TS2367: This condition will always return 'true' since the types 'Boolean' and 'String' have no overlap.
+min.ts(2,564): error TS2339: Property 'has' does not exist on type 'Object'.
+min.ts(2,573): error TS2538: Type 'String' cannot be used as an index type.
+min.ts(2,593): error TS2339: Property 'add' does not exist on type 'Object'.
+min.ts(2,602): error TS2538: Type 'String' cannot be used as an index type.
+min.ts(2,641): error TS2538: Type 'String' cannot be used as an index type.
+min.ts(2,652): error TS2538: Type 'String' cannot be used as an index type.
+min.ts(2,724): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+min.ts(2,732): error TS2339: Property 'k' does not exist on type 'Object'.
+min.ts(2,737): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+min.ts(2,745): error TS2339: Property 'a' does not exist on type 'Object'.
+min.ts(2,814): error TS2314: Generic type 'Map<K, V>' requires 2 type argument(s).
+min.ts(2,821): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+min.ts(2,973): error TS2322: Type 'Function | String' is not assignable to type 'Function'.
   Type 'String' is not assignable to type 'Function'.
-min.ts(2,997): error TS2367: This condition will always return 'false' since the types 'Boolean' and 'String' have no overlap.
-min.ts(2,1121): error TS2367: This condition will always return 'false' since the types 'Boolean' and 'String' have no overlap.
-min.ts(2,1187): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+min.ts(2,1000): error TS2367: This condition will always return 'false' since the types 'Boolean' and 'String' have no overlap.
+min.ts(2,1124): error TS2367: This condition will always return 'false' since the types 'Boolean' and 'String' have no overlap.
+min.ts(2,1190): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
   'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
-min.ts(2,1236): error TS2339: Property 'call' does not exist on type 'Function | String'.
+min.ts(2,1239): error TS2339: Property 'call' does not exist on type 'Function | String'.
   Property 'call' does not exist on type 'String'.
-min.ts(2,1282): error TS2349: This expression is not callable.
+min.ts(2,1285): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-min.ts(2,1397): error TS2339: Property 'call' does not exist on type 'Function | String'.
+min.ts(2,1400): error TS2339: Property 'call' does not exist on type 'Function | String'.
   Property 'call' does not exist on type 'String'.
-min.ts(2,1430): error TS2678: Type 'String' is not comparable to type 'Boolean'.
-min.ts(2,1458): error TS2678: Type 'String' is not comparable to type 'Boolean'.
-min.ts(2,1506): error TS2339: Property 'fromJSON' does not exist on type 'Number'.
-min.ts(2,1544): error TS2349: This expression is not callable.
+min.ts(2,1433): error TS2678: Type 'String' is not comparable to type 'Boolean'.
+min.ts(2,1461): error TS2678: Type 'String' is not comparable to type 'Boolean'.
+min.ts(2,1509): error TS2339: Property 'fromJSON' does not exist on type 'Number'.
+min.ts(2,1547): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
-min.ts(2,1553): error TS2339: Property 'parse' does not exist on type 'Number'.
-min.ts(2,1563): error TS2339: Property 'stringify' does not exist on type 'Number'.
-min.ts(2,1577): error TS2339: Property 'toJSON' does not exist on type 'Number'.
-min.ts(2,1623): error TS2345: Argument of type '{}' is not assignable to parameter of type 'Number'.
+min.ts(2,1556): error TS2339: Property 'parse' does not exist on type 'Number'.
+min.ts(2,1566): error TS2339: Property 'stringify' does not exist on type 'Number'.
+min.ts(2,1580): error TS2339: Property 'toJSON' does not exist on type 'Number'.
+min.ts(2,1626): error TS2345: Argument of type '{}' is not assignable to parameter of type 'Number'.
   Type '{}' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 rollup/babel.config.ts(1,19): error TS2307: Cannot find module 'rollup-plugin-babel' or its corresponding type declarations.
 rollup/es.config.ts(1,22): error TS2307: Cannot find module 'rollup-plugin-terser' or its corresponding type declarations.

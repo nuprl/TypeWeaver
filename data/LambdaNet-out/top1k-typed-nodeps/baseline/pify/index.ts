@@ -70,7 +70,7 @@ export default function pify(input: HTMLElement, options: Object): Object {
 
 	const cache: Error = new WeakMap();
 
-	const proxy: Array = new Proxy(input, {
+	const proxy: Function = new Proxy(input, {
 		apply(target, thisArg, args) {
 			const cached = cache.get(target);
 

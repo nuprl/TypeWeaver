@@ -65,7 +65,7 @@ var pump: Function = function () {
 
   var error: Object
   var destroys: Array = streams.map(function (stream: Array, i: Number) {
-    var reading: Boolean = i < streams.length - 1
+    var reading: Number = i < streams.length - 1
     var writing: Boolean = i > 0
     return destroyer(stream, reading, writing, function (err: Number) {
       if (!error) error = err

@@ -16,7 +16,7 @@ class ConcatSource extends Source {
 		super();
 		this._children = [];
 		for (let i = 0; i < arguments.length; i++) {
-			const item: HTMLElement = arguments[i];
+			const item: CachedSource = arguments[i];
 			if (item instanceof ConcatSource) {
 				for (const child of item._children) {
 					this._children.push(child);
@@ -103,7 +103,7 @@ class ConcatSource extends Source {
 		let currentColumnOffset: Number = 0;
 		let sourceMapping: Map = new Map();
 		let nameMapping: Map = new Map();
-		const finalSource: PrefixSource = !!(options && options.finalSource);
+		const finalSource: Source = !!(options && options.finalSource);
 		let code: String = "";
 		let needToCloseMapping: Boolean = false;
 		for (const item of this._children) {
@@ -255,7 +255,7 @@ class ConcatSource extends Source {
 				];
 			}
 		};
-		const addSourceToRawSources: Function = (source: ReplaceSource) => {
+		const addSourceToRawSources: Function = (source: ConcatSource) => {
 			if (currentRawSources === undefined) {
 				currentRawSources = source;
 			} else if (Array.isArray(currentRawSources)) {

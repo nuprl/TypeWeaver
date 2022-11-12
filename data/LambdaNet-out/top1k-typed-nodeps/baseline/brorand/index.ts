@@ -7,7 +7,7 @@ module.exports = function rand(len: String): Boolean {
   return r.generate(len);
 };
 
-function Rand(rand: Function): Void {
+function Rand(rand: Object): Void {
   this.rand = rand;
 }
 module.exports.Rand = Rand;
@@ -31,7 +31,7 @@ if (typeof self === 'object') {
   if (self.crypto && self.crypto.getRandomValues) {
     // Modern browsers
     Rand.prototype._rand = function _rand(n: String): Object {
-      var arr: Object = new Uint8Array(n);
+      var arr: String = new Uint8Array(n);
       self.crypto.getRandomValues(arr);
       return arr;
     };

@@ -9,7 +9,7 @@ import errors from './errors';
 
 // --- Globals
 
-var newInvalidAsn1Error: Object = errors.newInvalidAsn1Error;
+var newInvalidAsn1Error: Function = errors.newInvalidAsn1Error;
 
 var DEFAULT_OPTS: Object = {
   size: 1024,

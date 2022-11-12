@@ -17,6 +17,7 @@ gulpfile.ts(41,30): error TS2345: Argument of type '(err: String) => any' is not
   Types of parameters 'err' and 'error' are incompatible.
     Type 'Error' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 44 more.
 gulpfile.ts(45,34): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'Mode | Options'.
+gulpfile.ts(49,24): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 gulpfile.ts(50,27): error TS2339: Property 'libJsFiles' does not exist on type 'Object'.
 gulpfile.ts(55,21): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
 gulpfile.ts(56,27): error TS2339: Property 'specFiles' does not exist on type 'Object'.

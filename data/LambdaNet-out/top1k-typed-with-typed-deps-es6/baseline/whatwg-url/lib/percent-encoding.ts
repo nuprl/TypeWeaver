@@ -17,7 +17,7 @@ function percentEncode(c: String): String {
 }
 
 // https://url.spec.whatwg.org/#percent-decode
-function percentDecodeBytes(input: Object): String {
+function percentDecodeBytes(input: Object): Array {
   const output: Array = new Uint8Array(input.byteLength);
   let outputIndex: Number = 0;
   for (let i = 0; i < input.byteLength; ++i) {

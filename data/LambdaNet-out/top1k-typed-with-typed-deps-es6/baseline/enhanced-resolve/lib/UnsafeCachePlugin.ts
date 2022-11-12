@@ -72,7 +72,7 @@ export default class UnsafeCachePlugin {
 				const yieldResult: Array = [];
 				if (isYield) {
 					yieldFn = resolveContext.yield;
-					yield_ = (result: CachedInputFileSystem) => {
+					yield_ = (result: ResultPlugin) => {
 						yieldResult.push(result);
 					};
 				}

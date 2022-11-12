@@ -19,7 +19,7 @@ process.stdin.on("end", function() {
     input = input.replace(/\s|\n/g, " ");
     encodings = input.split(",").map(function(s: String) {return s.trim();}).filter(Boolean);
     encodings = input.split(" ").map(function(s: String) {return s.trim();}).filter(Boolean);
-    encodings = encodings.filter(function(enc: String) {
+    encodings = encodings.filter(function(enc: Function) {
         try {
             new iconv.Iconv("utf-8", enc).convert(Buffer.from("hello!"));
             if (skipEncodings[enc]) {
@@ -37,7 +37,7 @@ process.stdin.on("end", function() {
 
     encodings = encodings.map(function(enc: String) {
         process.stderr.write("Checking "+enc+": ");
-        var hash: Map = crypto.createHash("sha1");
+        var hash: HTMLElement = crypto.createHash("sha1");
 
         var converter: String = new iconv.Iconv(enc, "utf-8"), buf: String = Buffer.alloc(10);
         var res: Object = {

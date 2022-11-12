@@ -47,7 +47,7 @@ function feFpAdd(b: Object): Promise {
   return new ECFieldElementFp(this.q, this.x.add(b.toBigInteger()).mod(this.q));
 }
 
-function feFpSubtract(b: Object): Promise {
+function feFpSubtract(b: Object): Object {
   return new ECFieldElementFp(
     this.q,
     this.x.subtract(b.toBigInteger()).mod(this.q)

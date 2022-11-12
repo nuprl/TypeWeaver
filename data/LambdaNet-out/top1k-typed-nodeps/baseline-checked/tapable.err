@@ -138,8 +138,8 @@ lib/HookCodeFactory.ts(119,33): error TS2339: Property 'options' does not exist 
 lib/HookCodeFactory.ts(120,42): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
 lib/HookCodeFactory.ts(121,25): error TS2339: Property 'error' does not exist on type 'Object'.
 lib/HookCodeFactory.ts(132,33): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
-lib/HookCodeFactory.ts(133,47): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
-lib/HookCodeFactory.ts(134,25): error TS2339: Property 'result' does not exist on type 'HTMLElement'.
+lib/HookCodeFactory.ts(133,28): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/HookCodeFactory.ts(133,40): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
 lib/HookCodeFactory.ts(145,33): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
 lib/HookCodeFactory.ts(146,42): error TS2339: Property 'options' does not exist on type 'HookCodeFactory'.
 lib/HookCodeFactory.ts(147,25): error TS2339: Property 'done' does not exist on type 'Object'.
@@ -217,8 +217,8 @@ lib/SyncBailHook.ts(25,16): error TS2749: 'Hook' refers to a value, but is being
 lib/SyncBailHook.ts(27,7): error TS2451: Cannot redeclare block-scoped variable 'TAP_ASYNC'.
 lib/SyncBailHook.ts(31,7): error TS2451: Cannot redeclare block-scoped variable 'TAP_PROMISE'.
 lib/SyncBailHook.ts(35,7): error TS2451: Cannot redeclare block-scoped variable 'COMPILE'.
-lib/SyncBailHook.ts(40,23): error TS2322: Type 'undefined[]' is not assignable to type 'String'.
-lib/SyncBailHook.ts(40,69): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
+lib/SyncBailHook.ts(40,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/SyncBailHook.ts(40,68): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
 lib/SyncBailHook.ts(41,14): error TS2749: 'Hook' refers to a value, but is being used as a type here. Did you mean 'typeof Hook'?
 lib/SyncHook.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Hook'.
 lib/SyncHook.ts(7,13): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).

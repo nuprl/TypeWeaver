@@ -5,7 +5,7 @@ const utils: String = require('./utils');
 
 const compile: Function = (ast: Array, options: Object = {}) => {
   let walk: Function = (node: Object, parent: Array = {}) => {
-    let invalidBlock: Boolean = utils.isInvalidBrace(parent);
+    let invalidBlock: Number = utils.isInvalidBrace(parent);
     let invalidNode: Number = node.invalid === true && options.escapeInvalid === true;
     let invalid: Boolean = invalidBlock === true || invalidNode === true;
     let prefix: String = options.escapeInvalid === true ? '\\' : '';

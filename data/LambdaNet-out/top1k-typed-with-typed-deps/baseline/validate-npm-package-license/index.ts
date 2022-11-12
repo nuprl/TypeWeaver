@@ -10,7 +10,7 @@ var genericWarning: String = (
 
 var fileReferenceRE: RegExp = /^SEE LICEN[CS]E IN (.+)$/;
 
-function startsWith(prefix: String, string: String): Boolean {
+function startsWith(prefix: Array, string: String): Boolean {
   return string.slice(0, prefix.length) === prefix;
 }
 

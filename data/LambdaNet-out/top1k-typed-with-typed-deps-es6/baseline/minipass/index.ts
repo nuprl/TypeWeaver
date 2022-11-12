@@ -397,7 +397,7 @@ export default class Minipass extends Stream {
   }
 
   unpipe (dest) {
-    const p: Pipe = this.pipes.find((p: Object) => p.dest === dest)
+    const p: Minipass = this.pipes.find((p: Object) => p.dest === dest)
     if (p) {
       this.pipes.splice(this.pipes.indexOf(p), 1)
       p.unpipe()
@@ -409,7 +409,7 @@ export default class Minipass extends Stream {
   }
 
   on (ev, fn) {
-    const ret: Pipe = super.on(ev, fn)
+    const ret: Array = super.on(ev, fn)
     if (ev === 'data' && !this.pipes.length && !this.flowing)
       this[RESUME]()
     else if (ev === 'readable' && this[BUFFERLENGTH] !== 0)
@@ -480,7 +480,7 @@ export default class Minipass extends Stream {
     }
 
     // Some other unknown event
-    const ret: Number = super.emit(ev, data, ...extra)
+    const ret: String = super.emit(ev, data, ...extra)
     this[MAYBE_EMIT_END]()
     return ret
   }
@@ -556,7 +556,7 @@ export default class Minipass extends Stream {
   promise () {
     return new Promise((resolve: Function, reject: Function) => {
       this.on(DESTROYED, () => reject(new Error('stream destroyed')))
-      this.on('error', (er: Number) => reject(er))
+      this.on('error', (er: String) => reject(er))
       this.on('end', () => resolve())
     })
   }

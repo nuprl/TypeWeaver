@@ -8,7 +8,7 @@ import { STATUS_MAPPING } from '../lib/statusMapping.js';
 
 async function main(): Map {
   const response: Element = await fetch(`https://unicode.org/Public/idna/${unicodeVersion}/IdnaMappingTable.txt`);
-  const body: Array = await response.text();
+  const body: String = await response.text();
 
   const lines: Array = [];
 

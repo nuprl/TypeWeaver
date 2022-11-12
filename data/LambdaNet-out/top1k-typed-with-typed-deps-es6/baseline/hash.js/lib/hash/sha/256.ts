@@ -97,7 +97,7 @@ SHA256.prototype._update = function _update(msg: Object, start: Number): Void {
   this.h[7] = sum32(this.h[7], h);
 };
 
-SHA256.prototype._digest = function digest(enc: String): String {
+SHA256.prototype._digest = function digest(enc: Number): String {
   if (enc === 'hex')
     return utils.toHex32(this.h, 'big');
   else

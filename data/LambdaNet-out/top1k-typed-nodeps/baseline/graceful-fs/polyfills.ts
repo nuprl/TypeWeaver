@@ -72,7 +72,7 @@ function patch (fs: String): Void {
 
   // if lchmod/lchown do not exist, then make them no-ops
   if (fs.chmod && !fs.lchmod) {
-    fs.lchmod = function (path: String, mode: String, cb: Boolean) {
+    fs.lchmod = function (path: String, mode: Number, cb: Boolean) {
       if (cb) process.nextTick(cb)
     }
     fs.lchmodSync = function () {}

@@ -326,7 +326,7 @@ class Resolver {
 					missingDependencies: resolveContext.missingDependencies,
 					stack: resolveContext.stack
 				},
-				(err: Function, result: CachedInputFileSystem) => {
+				(err: Function, result: ResultPlugin) => {
 					if (err) return callback(err);
 
 					if (yieldCalled || (result && yield_)) return finishYield(result);
@@ -350,7 +350,7 @@ class Resolver {
 					missingDependencies: resolveContext.missingDependencies,
 					stack: resolveContext.stack
 				},
-				(err: Function, result: CachedInputFileSystem) => {
+				(err: Function, result: ResultPlugin) => {
 					if (err) return callback(err);
 
 					if (yieldCalled || (result && yield_)) return finishYield(result);

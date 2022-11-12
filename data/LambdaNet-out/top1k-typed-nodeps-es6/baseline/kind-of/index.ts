@@ -97,7 +97,7 @@ function isGeneratorFn(name: String, val: Number): Boolean {
   return ctorName(name) === 'GeneratorFunction';
 }
 
-function isGeneratorObj(val: Object): Boolean {
+function isGeneratorObj(val: Map): Boolean {
   return typeof val.throw === 'function'
     && typeof val.return === 'function'
     && typeof val.next === 'function';

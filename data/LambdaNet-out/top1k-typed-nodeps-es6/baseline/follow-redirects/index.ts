@@ -280,7 +280,7 @@ RedirectableRequest.prototype._performRequest = function () {
   }
 
   // Create the native request and set up its event handlers
-  var request: NextFunction = this._currentRequest =
+  var request: ChildProcess = this._currentRequest =
         nativeProtocol.request(this._options, this._onNativeResponse);
   request._redirectable = this;
   for (var event of events) {

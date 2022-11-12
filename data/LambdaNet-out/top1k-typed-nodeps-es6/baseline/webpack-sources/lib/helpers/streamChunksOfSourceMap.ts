@@ -12,7 +12,7 @@ import splitIntoLines from './splitIntoLines';
 
 const streamChunksOfSourceMapFull: Function = (
 	source: String,
-	sourceMap: SourceMapSource,
+	sourceMap: CachedSource,
 	onChunk: Object,
 	onSource: Function,
 	onName: Function
@@ -186,7 +186,7 @@ const streamChunksOfSourceMapLinesFull: Function = (
 		_generatedColumn: Number,
 		sourceIndex: String,
 		originalLine: OriginalSource,
-		originalColumn: String,
+		originalColumn: OriginalSource,
 		_nameIndex: String
 	) => {
 		if (
@@ -250,7 +250,7 @@ const streamChunksOfSourceMapLinesFull: Function = (
 
 const streamChunksOfSourceMapFinal: Function = (
 	source: String,
-	sourceMap: SourceMapSource,
+	sourceMap: CachedSource,
 	onChunk: Function,
 	onSource: Function,
 	onName: Function
@@ -280,7 +280,7 @@ const streamChunksOfSourceMapFinal: Function = (
 		generatedColumn: Number,
 		sourceIndex: Number,
 		originalLine: OriginalSource,
-		originalColumn: String,
+		originalColumn: OriginalSource,
 		nameIndex: String
 	) => {
 		if (
@@ -343,7 +343,7 @@ const streamChunksOfSourceMapLinesFinal: Function = (
 		_generatedColumn: Number,
 		sourceIndex: Number,
 		originalLine: OriginalSource,
-		originalColumn: String,
+		originalColumn: OriginalSource,
 		_nameIndex: String
 	) => {
 		if (
@@ -373,7 +373,7 @@ export default (
 	onChunk: String,
 	onSource: String,
 	onName: String,
-	finalSource: Source,
+	finalSource: CachedSource,
 	columns: Boolean
 ) => {
 	if (columns) {

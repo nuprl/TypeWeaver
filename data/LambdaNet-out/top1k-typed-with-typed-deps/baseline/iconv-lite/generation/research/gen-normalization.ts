@@ -20,7 +20,7 @@ async.parallel({
         var canonical: Boolean, decomp: Array;
 
         if (decompStr.length > 0) {
-            decomp = decompStr.split(" ").map(function(s: String) {return parseInt(s, 16)});;
+            decomp = decompStr.split(" ").map(function(s: Number) {return parseInt(s, 16)});;
             canonical = true;
             if (isNaN(decomp[0])) {  // When first item is a tag (unparsable as int), this is a 'compatibility decomposition'
                 canonical = false;

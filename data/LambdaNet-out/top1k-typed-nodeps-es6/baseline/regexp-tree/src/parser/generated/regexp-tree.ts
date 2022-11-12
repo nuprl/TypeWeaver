@@ -128,26 +128,26 @@ const productions: Array = [[-1,1,(_1: Object,_1loc: String) => { __loc = yyloc(
 [8,1,(_1: Function,_1loc: String) => { __loc = yyloc(_1loc, _1loc); __ = { kind: '$' }  }],
 [8,1,(_1: Function,_1loc: String) => { __loc = yyloc(_1loc, _1loc); __ = { kind: '\\b' }  }],
 [8,1,(_1: Function,_1loc: String) => { __loc = yyloc(_1loc, _1loc); __ = { kind: '\\B' }  }],
-[8,3,(_1: DFA,_2: String,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
+[8,3,(_1: NodePath,_2: String,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
       __ = {
         kind: 'Lookahead',
         assertion: _2,
       }
      }],
-[8,3,(_1: DFA,_2: String,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
+[8,3,(_1: NodePath,_2: String,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
       __ = {
         kind: 'Lookahead',
         negative: true,
         assertion: _2,
       }
      }],
-[8,3,(_1: DFA,_2: String,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
+[8,3,(_1: NodePath,_2: String,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
       __ = {
         kind: 'Lookbehind',
         assertion: _2,
       }
      }],
-[8,3,(_1: DFA,_2: String,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
+[8,3,(_1: NodePath,_2: String,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
       __ = {
         kind: 'Lookbehind',
         negative: true,
@@ -253,21 +253,21 @@ const productions: Array = [[-1,1,(_1: Object,_1loc: String) => { __loc = yyloc(
         expression: _2,
       }, __loc);
      }],
-[16,3,(_1: DFA,_2: String,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
+[16,3,(_1: NodePath,_2: String,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
       __ = Node({
         type: 'Group',
         capturing: false,
         expression: _2,
       }, __loc)
      }],
-[17,3,(_1: DFA,_2: Array,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
+[17,3,(_1: NodePath,_2: Array,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
       __ = Node({
         type: 'CharacterClass',
         negative: true,
         expressions: _2,
       }, __loc)
      }],
-[17,3,(_1: DFA,_2: Array,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
+[17,3,(_1: NodePath,_2: Array,_3: Function,_1loc: String,_2loc: String,_3loc: String) => { __loc = yyloc(_1loc, _3loc);
       __ = Node({
         type: 'CharacterClass',
         expressions: _2,
@@ -864,7 +864,7 @@ let namedGroups: Object = {};
  */
 let parsingString: String = '';
 
-yyparse.onParseBegin = (string: String, lexer: Writer) => {
+yyparse.onParseBegin = (string: String, lexer: Object) => {
   parsingString = string;
   capturingGroupsCount = 0;
   namedGroups = {};
@@ -975,7 +975,7 @@ function UnicodeProperty(matched: String, loc: String): String {
  * Creates a character node.
  */
 function Char(value: String, kind: String, loc: String): String {
-  let symbol: String;
+  let symbol: NodePath;
   let codePoint: Number;
 
   switch (kind) {

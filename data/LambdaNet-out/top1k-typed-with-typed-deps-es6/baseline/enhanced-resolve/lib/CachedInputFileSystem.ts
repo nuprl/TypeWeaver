@@ -383,7 +383,7 @@ export default class CachedInputFileSystem {
 			this.fileSystem.lstatSync,
 			this.fileSystem
 		);
-		const lstat: Function = this._lstatBackend.provide;
+		const lstat: Array = this._lstatBackend.provide;
 		this.lstat = /** @type {FileSystem["lstat"]} */ (lstat);
 		const lstatSync: Function = this._lstatBackend.provideSync;
 		this.lstatSync = /** @type {SyncFileSystem["lstatSync"]} */ (lstatSync);

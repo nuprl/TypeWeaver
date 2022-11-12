@@ -382,7 +382,7 @@ ip.address = function (name: String, family: Number) {
     return res[0].address;
   }
 
-  const all: Array = Object.keys(interfaces).map((nic: Array) => {
+  const all: Array = Object.keys(interfaces).map((nic: String) => {
     //
     // Note: name will only be `public` or `private`
     // when this is called.
@@ -407,7 +407,7 @@ ip.address = function (name: String, family: Number) {
 
 ip.toLong = function (ip: String) {
   let ipl: Number = 0;
-  ip.split('.').forEach((octet: String) => {
+  ip.split('.').forEach((octet: Number) => {
     ipl <<= 8;
     ipl += parseInt(octet);
   });

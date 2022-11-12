@@ -29,7 +29,7 @@ const sortImport: Function = (a: Object, b: Object) => {
 	return 0;
 };
 
-const execToArray: Function = (content: String, regexp: CacheBackend) => {
+const execToArray: Function = (content: String, regexp: HTMLElement) => {
 	const items: Array = [];
 	let match: Object = regexp.exec(content);
 	while (match) {

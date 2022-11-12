@@ -6,7 +6,7 @@
  * @returns {ArrayBuffer} Returns the cloned array buffer.
  */
 function cloneArrayBuffer(arrayBuffer: HTMLInputElement): Object {
-  const result: Object = new arrayBuffer.constructor(arrayBuffer.byteLength)
+  const result: Hash = new arrayBuffer.constructor(arrayBuffer.byteLength)
   new Uint8Array(result).set(new Uint8Array(arrayBuffer))
   return result
 }

@@ -696,7 +696,7 @@ const parse: Function = (input: Array, options: Object) => {
       }
 
       if (prev && prev.type === 'paren') {
-        const next: String = peek();
+        const next: Number = peek();
         let output: String = value;
 
         if (next === '<' && !utils.supportsLookbehinds()) {

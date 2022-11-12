@@ -19,7 +19,7 @@ function _capitalize(str: String): String {
     return (str.charAt(0).toUpperCase() + str.slice(1));
 }
 
-function _toss(name: String, expected: String, oper: Number, arg: String, actual: Function): Void {
+function _toss(name: String, expected: String, oper: String, arg: String, actual: Function): Void {
     throw new assert.AssertionError({
         message: util.format('%s (%s) is required', name, expected),
         actual: (actual === undefined) ? typeof (arg) : actual(arg),
@@ -133,7 +133,7 @@ function _setExports(ndebug: Boolean): Object {
             return;
         }
         var type: Object = types[k];
-        out[name] = function (arg: String, msg: String) {
+        out[name] = function (arg: Number, msg: String) {
             if (arg === undefined || arg === null) {
                 return;
             }

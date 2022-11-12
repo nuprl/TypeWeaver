@@ -7,7 +7,7 @@
 
 import createMappingsSerializer from './createMappingsSerializer';
 
-export const getSourceAndMap: Function = (inputSource: Source, options: Object) => {
+export const getSourceAndMap: Function = (inputSource: OriginalSource, options: Object) => {
 	let code: String = "";
 	let mappings: String = "";
 	let sources: Array = [];

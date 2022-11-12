@@ -16,12 +16,12 @@ object-iterator.ts(17,33): error TS2339: Property 'value' does not exist on type
 object-iterator.ts(18,12): error TS2350: Only a void function can be called with the 'new' keyword.
 object-iterator.ts(18,38): error TS2538: Type 'String' cannot be used as an index type.
 object-iterator.ts(18,44): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'String'.
-pop-iterate.ts(7,84): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 pop-iterate.ts(9,16): error TS2304: Cannot find name 'empty'.
 pop-iterate.ts(11,16): error TS2350: Only a void function can be called with the 'new' keyword.
 pop-iterate.ts(11,44): error TS2345: Argument of type 'String' is not assignable to parameter of type 'Number'.
   Type 'String' is missing the following properties from type 'Number': toFixed, toExponential, toPrecision
 pop-iterate.ts(12,32): error TS2339: Property 'next' does not exist on type 'Function'.
+pop-iterate.ts(13,9): error TS2740: Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 pop-iterate.ts(14,32): error TS2339: Property 'iterate' does not exist on type 'Function'.
 pop-iterate.ts(15,25): error TS2339: Property 'iterate' does not exist on type 'Function'.
 pop-iterate.ts(17,16): error TS2350: Only a void function can be called with the 'new' keyword.

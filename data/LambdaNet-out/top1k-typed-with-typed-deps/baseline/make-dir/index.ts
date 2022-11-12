@@ -43,7 +43,7 @@ const permissionError: Function = (pth: String) => {
 	return error;
 };
 
-const makeDir: String = async (input: HTMLElement, options: Object) => {
+const makeDir: Array = async (input: HTMLElement, options: Object) => {
 	checkPath(input);
 	options = processOptions(options);
 

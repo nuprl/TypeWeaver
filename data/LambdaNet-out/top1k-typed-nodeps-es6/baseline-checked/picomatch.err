@@ -342,9 +342,10 @@ lib/parse.ts(693,68): error TS2349: This expression is not callable.
 lib/parse.ts(698,24): error TS2339: Property 'type' does not exist on type 'Object'.
 lib/parse.ts(699,30): error TS2349: This expression is not callable.
   Type 'Object' has no call signatures.
+lib/parse.ts(702,13): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/parse.ts(706,19): error TS2339: Property 'value' does not exist on type 'Object'.
-lib/parse.ts(706,51): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/parse.ts(706,51): error TS2345: Argument of type 'Number' is not assignable to parameter of type 'string'.
+lib/parse.ts(706,62): error TS2367: This condition will always return 'false' since the types 'Number' and 'string' have no overlap.
 lib/parse.ts(714,16): error TS2339: Property 'dot' does not exist on type 'HTMLElement'.
 lib/parse.ts(714,38): error TS2339: Property 'type' does not exist on type 'Object'.
 lib/parse.ts(714,63): error TS2339: Property 'type' does not exist on type 'Object'.
@@ -527,7 +528,7 @@ lib/parse.ts(1084,22): error TS2339: Property 'strictSlashes' does not exist on 
 lib/parse.ts(1085,5): error TS2322: Type 'string' is not assignable to type 'Number'.
 lib/picomatch.ts(6,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/LambdaNet-out/top1k-typed-nodeps-es6/baseline/picomatch/lib/utils"' has no default export.
 lib/picomatch.ts(32,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/picomatch.ts(32,62): error TS2322: Type 'boolean' is not assignable to type 'Number'.
+lib/picomatch.ts(32,60): error TS2322: Type 'boolean' is not assignable to type 'Number'.
 lib/picomatch.ts(34,16): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/picomatch.ts(54,17): error TS2339: Property 'compileRe' does not exist on type 'Function'.
 lib/picomatch.ts(55,17): error TS2339: Property 'makeRe' does not exist on type 'Function'.

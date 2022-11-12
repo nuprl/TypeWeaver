@@ -2,7 +2,7 @@
  * extsprintf.js: extended POSIX-style sprintf
  */
 
-var mod_assert: Array = require('assert');
+var mod_assert: String = require('assert');
 var mod_util: Array = require('util');
 
 /*

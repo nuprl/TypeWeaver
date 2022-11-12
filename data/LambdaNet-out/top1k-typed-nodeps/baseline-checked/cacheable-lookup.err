@@ -34,14 +34,14 @@ benchmark.ts(56,8): error TS2339: Property 'run' does not exist on type 'HTMLEle
 source/index.ts(14,7): error TS2322: Type 'typeof kCacheableLookupCreateConnection' is not assignable to type 'String'.
 source/index.ts(15,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 source/index.ts(16,7): error TS2322: Type 'typeof kExpires' is not assignable to type 'String'.
-source/index.ts(21,30): error TS2339: Property 'createConnection' does not exist on type 'Object'.
+source/index.ts(20,39): error TS2749: 'CacheableLookup' refers to a value, but is being used as a type here. Did you mean 'typeof CacheableLookup'?
 source/index.ts(26,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 source/index.ts(41,40): error TS2339: Property 'networkInterfaces' does not exist on type 'String'.
 source/index.ts(42,23): error TS2488: Type 'unknown' must have a '[Symbol.iterator]()' method that returns an iterator.
 source/index.ts(66,53): error TS2314: Generic type 'Promise<T>' requires 1 type argument(s).
-source/index.ts(69,10): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
-source/index.ts(70,10): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
-source/index.ts(71,10): error TS2339: Property 'code' does not exist on type 'HTMLElement'.
+source/index.ts(69,10): error TS2339: Property 'code' does not exist on type 'Object'.
+source/index.ts(70,10): error TS2339: Property 'code' does not exist on type 'Object'.
+source/index.ts(71,10): error TS2339: Property 'code' does not exist on type 'Object'.
 source/index.ts(85,7): error TS2451: Cannot redeclare block-scoped variable 'CacheableLookup'.
 source/index.ts(94,8): error TS2339: Property 'maxTtl' does not exist on type 'CacheableLookup'.
 source/index.ts(95,8): error TS2339: Property 'errorTtl' does not exist on type 'CacheableLookup'.

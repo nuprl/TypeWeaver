@@ -38,7 +38,7 @@ function char(c: String): State {
  *
  * [in] --ε--> [out]
  */
-function e(): String {
+function e(): State {
   return char(EPSILON);
 }
 
@@ -145,7 +145,7 @@ function rep(fragment: Writer): DFA {
  * Optimized Plus: just adds ε-transitions from
  * the output to the input.
  */
-function plusRep(fragment: Writer): DFA {
+function plusRep(fragment: DFA): DFA {
   fragment.out.addTransition(EPSILON, fragment.in);
   return fragment;
 }
@@ -154,7 +154,7 @@ function plusRep(fragment: Writer): DFA {
  * Optimized ? repetition: just adds ε-transitions from
  * the input to the output.
  */
-function questionRep(fragment: Writer): DFA {
+function questionRep(fragment: DFA): DFA {
   fragment.in.addTransition(EPSILON, fragment.out);
   return fragment;
 }

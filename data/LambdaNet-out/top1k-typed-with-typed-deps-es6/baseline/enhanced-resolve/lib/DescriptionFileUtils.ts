@@ -34,7 +34,7 @@ import forEachBail from './forEachBail';
 function loadDescriptionFile(
 	resolver: Resolver,
 	directory: Boolean,
-	filenames: Array,
+	filenames: Function,
 	oldInfo: Object,
 	resolveContext: Object,
 	callback: Function

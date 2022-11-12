@@ -198,7 +198,7 @@ function baseClone(value: Array, bitmask: Number, customizer: Function, key: Str
   }
   // Check for circular references and return its corresponding clone.
   stack || (stack = new Stack)
-  const stacked: String = stack.get(value)
+  const stacked: Stack = stack.get(value)
   if (stacked) {
     return stacked
   }

@@ -21,7 +21,7 @@ function baseXor(arrays: Array, iteratee: String, comparator: String): Array {
   const result: Object = new Array(length)
 
   while (++index < length) {
-    const array: Hash = arrays[index]
+    const array: ListCache = arrays[index]
     let othIndex: Number = -1
 
     while (++othIndex < length) {
