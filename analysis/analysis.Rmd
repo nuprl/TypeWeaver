@@ -47,18 +47,21 @@ typechecks_pct
 ## Percentage of files that type check
 
 ```{r}
-dt_files <- read_csv("../data/notes/DeepTyper/errors_per_file.csv", col_types = "ccci") %>%
-  rename(dataset = 1, package = 2, file = 3, dt = 4) %>%
+dt.errors_per_file <- read_csv("../data/notes/DeepTyper/errors_per_file.csv", col_types = "ccci") %>%
+  rename(dataset = 1, package = 2, file = 3, dt = 4)
+dt_files <- dt.errors_per_file %>%
   group_by(dataset) %>%
   summarize(dt.no_errors = sum(dt == 0), dt.n = n(), dt.pct = dt.no_errors / dt.n * 100)
 
-ln_files <- read_csv("../data/notes/LambdaNet/errors_per_file.csv", col_types = "ccci") %>%
-  rename(dataset = 1, package = 2, file = 3, ln = 4) %>%
+ln.errors_per_file <- read_csv("../data/notes/LambdaNet/errors_per_file.csv", col_types = "ccci") %>%
+  rename(dataset = 1, package = 2, file = 3, ln = 4)
+ln_files <- ln.errors_per_file %>%
   group_by(dataset) %>%
   summarize(ln.no_errors = sum(ln == 0), ln.n = n(), ln.pct = ln.no_errors / ln.n * 100)
 
-ic_files <- read_csv("../data/notes/InCoder/errors_per_file.csv", col_types = "ccci") %>%
-  rename(dataset = 1, package = 2, file = 3, ic = 4) %>%
+ic.errors_per_file <- read_csv("../data/notes/InCoder/errors_per_file.csv", col_types = "ccci") %>%
+  rename(dataset = 1, package = 2, file = 3, ic = 4)
+ic_files <- ic.errors_per_file %>%
   group_by(dataset) %>%
   summarize(ic.no_errors = sum(ic == 0), ic.n = n(), ic.pct = ic.no_errors / ic.n * 100)
 ```
